@@ -48,7 +48,8 @@ export const BLOG_DATES_BY_SLUG = {
   "whatsapp-opt-in-shopify-india": "2026-10-21",
   "updatrr-alternative-shopify-india": "2026-10-21",
   "cod-to-prepaid-whatsapp-shopify-india": "2026-10-22",
-  "best-shopify-app-for-abandoned-cart-recovery-india": "2026-10-30"
+  "best-shopify-app-for-abandoned-cart-recovery-india": "2026-10-30",
+  "ecommerce-funnel-drop-off-benchmarks-visitor-identity-resolution": "2026-11-01"
 } as const;
 
 export type ContentDateKey = keyof typeof CONTENT_DATES;

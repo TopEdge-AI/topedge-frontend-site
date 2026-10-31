@@ -82,6 +82,7 @@ export const COMPARE_MULTIWAY_SLUGS = [
 export const TOPIC_SLUGS = ['shopify-whatsapp-integration'];
 
 export const BLOG_SLUGS = [
+  'ecommerce-funnel-drop-off-benchmarks-visitor-identity-resolution',
   'whatsapp-abandoned-cart-recovery-shopify',
   'best-shopify-app-for-abandoned-cart-recovery-india',
   'whatsapp-automation-for-shopify',

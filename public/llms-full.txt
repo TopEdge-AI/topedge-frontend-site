@@ -659,6 +659,18 @@ Sourcing: Board compiled Sep 2026 from TopEdge product positioning vs publicly d
 
 ## Playbooks
 
+### Ecommerce Funnel Drop-Off Benchmarks (2026) & Identity Guide
+
+https://topedgeai.com/blog/ecommerce-funnel-drop-off-benchmarks-visitor-identity-resolution · published 2026-11-01 · updated 2026-11-01 · by Moksh Patel
+
+Checked 31 October 2026. Every benchmark on this page comes from a published dataset named beside it, with its sample and date. Benchmarks move every month, so re-check the source before you quote a number in a board deck.
+
+- **Why does my Meta ad campaign have a high CTR but a low ROI?** CTR measures how many people clicked your ad. ROI measures how many of those visits became paid, delivered orders, and that depends on your store, not on Meta. A high CTR with a low ROI means the creative works and the funnel after the click does not: weak add-to-cart proof, no reason to move from cart to checkout, checkout friction, or no way to recognise and follow up with the visitor who left. Paid social is also the dearest sale to buy in published data: in IRP Commerce’s September 2026 market data, marketing cost was 49.76% of revenue on Facebook Paid against 11.19% on Google PPC.
+- **What is a good add to cart rate and checkout completion rate in 2026?** Across 436 Shopify stores Littledata benchmarked over the 90 days to 24 October 2026, the median store added to cart in 6.8% of sessions, and 49% of sessions that started checkout went on to purchase. Top 20% stores reach 12% add to cart and 66% checkout completion. Category matters: beauty and skincare stores run a 12% median add to cart rate, home and furniture stores 5.0%. Benchmark against your own category, not the all-store median.
+- **What share of ecommerce sessions end without a purchase?** For the median Shopify store, about 98.6%. Littledata’s October 2026 benchmark puts the median conversion rate at 1.4% of sessions, with the top 20% of stores at 2.7% or better and the top 10% at 3.7% or better. That is a blended figure across every traffic source, so cold paid social traffic usually converts below it.
+- **Why do some ecommerce opt-in tools report inaccurate store visitor numbers?** Because they count events, not sessions. If a tool logs the landing, the popup view, the spin and each product view as separate visits, one shopper on a 90-second browse shows up as five or six visits with no order, and your conversion rate looks far worse than it is. A tool built on session deduplication records that shopper as one visit and keeps the popup interactions and product views as events inside it.
+- **How does unified customer identity reduce WhatsApp marketing costs?** Meta bills each delivered marketing message, ₹0.8631 per message in India before GST. If the same person sits in your list under three phone numbers, a broadcast pays three times to reach one buyer. Merging those numbers into one profile and sending to a primary contact removes the duplicate sends, so the saving equals your duplicate share: 6,000 duplicate numbers in a 40,000-record list is ₹5,179 saved on every broadcast.
+
 ### Best Shopify App for Abandoned Cart Recovery India
 
 https://topedgeai.com/blog/best-shopify-app-for-abandoned-cart-recovery-india · published 2026-10-30 · updated 2026-10-30 · by Moksh Patel

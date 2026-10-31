@@ -63,7 +63,7 @@ export const BLOG_CATEGORIES: BlogCategory[] = [
     label: 'Growth',
     blurb:
       'Organic against paid, what a profitable Indian D2C store actually looks like, and where short-form video fits.',
-    matches: ['Strategy', 'Growth', 'Guides'],
+    matches: ['Strategy', 'Growth', 'Guides', 'Ecommerce CRO & Analytics'],
   },
 ];
 

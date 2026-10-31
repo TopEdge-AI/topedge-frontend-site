@@ -160,6 +160,105 @@ export const SOURCES = {
       'Growth $29.99/month, Pro $49.99/month, Pro AI $99.99/month, all with a 7-day free trial and no card required. Updatrr states it does not add a markup on Meta’s conversation fees and that Meta bills WhatsApp conversations separately. The page publishes no per-conversation AI fee, and AI sits on the $99.99 Pro AI tier.',
     verified: '2026-10-21',
   },
+  littledataConversion: {
+    id: 'littledataConversion',
+    url: 'https://www.littledata.io/ecommerce-conversion-rate',
+    label: 'Littledata’s Shopify conversion rate benchmark',
+    publisher: 'Littledata',
+    claim:
+      'Median conversion rate 1.4% of sessions across 436 Shopify stores sending data to GA4, 90 days Jul 27 to Oct 24, 2026, generated Oct 28, 2026. Bottom 10% 0.3%, bottom 20% 0.5%, top 20% 2.7%, top 10% 3.7%. Mobile median 1.5%, desktop 1.4%. Definition: sessions with at least one purchase divided by all sessions.',
+    verified: '2026-10-31',
+  },
+  littledataAddToCart: {
+    id: 'littledataAddToCart',
+    url: 'https://www.littledata.io/benchmarks/add-to-cart-rate',
+    label: 'Littledata’s Shopify add to cart rate benchmark',
+    publisher: 'Littledata',
+    claim:
+      'Median add to cart rate 6.8% of sessions. Bottom 10% 2.1%, bottom 20% 3.4%, top 20% 12%, top 10% 17%. Definition: the share of sessions in which a product was added to the cart. Same 436-store sample and 90-day window to Oct 24, 2026.',
+    verified: '2026-10-31',
+  },
+  littledataCartAbandonment: {
+    id: 'littledataCartAbandonment',
+    url: 'https://www.littledata.io/benchmarks/cart-abandonment-rate',
+    label: 'Littledata’s Shopify cart abandonment benchmark',
+    publisher: 'Littledata',
+    claim:
+      'Median cart abandonment 79% across 433 Shopify stores. Best 10% 56%, best 20% 65%, worst 20% 90%, worst 10% 94%. Definition: of the sessions that added to cart, the share that did not purchase. 90 days to Oct 24, 2026.',
+    verified: '2026-10-31',
+  },
+  littledataCheckout: {
+    id: 'littledataCheckout',
+    url: 'https://www.littledata.io/benchmarks/checkout-completion-rate',
+    label: 'Littledata’s Shopify checkout completion benchmark',
+    publisher: 'Littledata',
+    claim:
+      'Median checkout completion 49% across 435 Shopify stores. Bottom 10% 15%, bottom 20% 26%, top 20% 66%, top 10% 74%. Mobile median 63% (414 stores), desktop median 35% (412 stores). Definition: of the sessions that started checkout, the share that went on to purchase. 90 days to Oct 24, 2026.',
+    verified: '2026-10-31',
+  },
+  littledataBounce: {
+    id: 'littledataBounce',
+    url: 'https://www.littledata.io/benchmarks/bounce-rate',
+    label: 'Littledata’s Shopify bounce rate benchmark',
+    publisher: 'Littledata',
+    claim:
+      'Median bounce rate 40% across 436 Shopify stores. Best 10% below 9.8%, best 20% below 20%, worst 20% above 56%, worst 10% above 63%. Definition: the share of sessions that were not engaged (under 10 seconds, one page and no conversion). 90 days to Oct 24, 2026.',
+    verified: '2026-10-31',
+  },
+  littledataBeauty: {
+    id: 'littledataBeauty',
+    url: 'https://www.littledata.io/benchmarks/beauty',
+    label: 'Littledata’s beauty and skincare benchmark',
+    publisher: 'Littledata',
+    claim:
+      '39 beauty and skincare Shopify stores, medians: conversion 2.5%, add to cart 12%, checkout completion 50%, cart abandonment 75%, bounce 38%, AOV $69, mobile traffic share 69%. 90 days to Oct 24, 2026.',
+    verified: '2026-10-31',
+  },
+  littledataSupplements: {
+    id: 'littledataSupplements',
+    url: 'https://www.littledata.io/benchmarks/supplements',
+    label: 'Littledata’s health and supplements benchmark',
+    publisher: 'Littledata',
+    claim:
+      '35 health and supplements Shopify stores, medians: conversion 2.4%, add to cart 8.2%, checkout completion 60%, cart abandonment 70%, bounce 47%, AOV $75, mobile traffic share 67%. 90 days to Oct 24, 2026.',
+    verified: '2026-10-31',
+  },
+  littledataFood: {
+    id: 'littledataFood',
+    url: 'https://www.littledata.io/benchmarks/food-and-beverage',
+    label: 'Littledata’s food and beverage benchmark',
+    publisher: 'Littledata',
+    claim:
+      '32 food and beverage Shopify stores, medians: conversion 2.3%, add to cart 11%, checkout completion 53%, cart abandonment 77%, bounce 42%, AOV $85, mobile traffic share 54%. 90 days to Oct 24, 2026.',
+    verified: '2026-10-31',
+  },
+  littledataFashion: {
+    id: 'littledataFashion',
+    url: 'https://www.littledata.io/benchmarks/fashion',
+    label: 'Littledata’s fashion and apparel benchmark',
+    publisher: 'Littledata',
+    claim:
+      '76 fashion and clothing Shopify stores, medians: conversion 1.0%, add to cart 6.0%, checkout completion 48%, cart abandonment 81%, bounce 42%, AOV $113, mobile traffic share 68%. 90 days to Oct 24, 2026.',
+    verified: '2026-10-31',
+  },
+  littledataHome: {
+    id: 'littledataHome',
+    url: 'https://www.littledata.io/benchmarks/home',
+    label: 'Littledata’s home and furniture benchmark',
+    publisher: 'Littledata',
+    claim:
+      '63 home and furniture Shopify stores, medians: conversion 1.0%, add to cart 5.0%, checkout completion 51%, cart abandonment 80%, bounce 42%, AOV $211, mobile traffic share 65%. 90 days to Oct 24, 2026.',
+    verified: '2026-10-31',
+  },
+  irpMarketData: {
+    id: 'irpMarketData',
+    url: 'https://www.irpcommerce.com/en/gb/ecommercemarketdata.aspx',
+    label: 'IRP Commerce’s ecommerce market data',
+    publisher: 'IRP Commerce',
+    claim:
+      'September 2026 view (the page defaults to the latest month): all-market conversion rate 1.97% (1.68% a year earlier), bounce rate 41.55%. CPA, which IRP defines as total marketing cost divided by total revenue, by traffic source: Google PPC 11.19%, Email Marketing 0.85%, Bing and Yahoo PPC 11.53%, Facebook Paid 49.76%. Sales by channel: Paid Search 63.5%, Direct 20.2%, Email 10%, Paid Social 0.5%. Retailers on IRP’s platform, reported in pounds. Free to use with the source cited.',
+    verified: '2026-10-31',
+  },
 } as const satisfies Record<string, Source>;
 
 export type SourceId = keyof typeof SOURCES;

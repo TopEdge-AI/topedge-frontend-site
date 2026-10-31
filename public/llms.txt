@@ -124,6 +124,7 @@ Setup guides and screen-by-screen reference, written for the person running the 
 
 ## Playbooks
 
+- [Ecommerce Funnel Drop-Off Benchmarks (2026) & Identity Guide](https://topedgeai.com/blog/ecommerce-funnel-drop-off-benchmarks-visitor-identity-resolution): Ecommerce funnel benchmarks from 436 Shopify stores: add to cart, checkout and conversion by industry, and how visitor identity resolution works.
 - [Best Shopify App for Abandoned Cart Recovery India](https://topedgeai.com/blog/best-shopify-app-for-abandoned-cart-recovery-india): Best Shopify app for abandoned cart recovery India: WhatsApp, email and SMS apps ranked on events, suppression, opt-in and what Meta charges per message.
 - [COD to Prepaid on WhatsApp for Shopify India 2026](https://topedgeai.com/blog/cod-to-prepaid-whatsapp-shopify-india): Convert Shopify India COD orders to UPI prepaid on WhatsApp before dispatch: the ₹68 saved per order, the ₹0.1150 against ₹0.8631 template split, and the flow.
 - [Best Updatrr Alternative for Shopify India (2026)](https://topedgeai.com/blog/updatrr-alternative-shopify-india): An Updatrr alternative for Shopify India: flat INR plans from ₹1,999/mo, a 14-day trial and BYOK AI on every plan, against USD tiers that gate AI at $99.99.
@@ -160,7 +161,7 @@ Setup guides and screen-by-screen reference, written for the person running the 
 
 ## Canonical URL directory
 
-All 128 indexable URLs on this domain, no trailing slash except the root.
+All 129 indexable URLs on this domain, no trailing slash except the root.
 
 - https://topedgeai.com/
 - https://topedgeai.com/pricing
@@ -219,6 +220,7 @@ All 128 indexable URLs on this domain, no trailing slash except the root.
 - https://topedgeai.com/whatsapp-journey-examples/cod-confirmation
 - https://topedgeai.com/whatsapp-journey-examples/cod-to-prepaid
 - https://topedgeai.com/whatsapp-journey-examples/order-status-updates
+- https://topedgeai.com/blog/ecommerce-funnel-drop-off-benchmarks-visitor-identity-resolution
 - https://topedgeai.com/blog/whatsapp-abandoned-cart-recovery-shopify
 - https://topedgeai.com/blog/best-shopify-app-for-abandoned-cart-recovery-india
 - https://topedgeai.com/blog/whatsapp-automation-for-shopify
