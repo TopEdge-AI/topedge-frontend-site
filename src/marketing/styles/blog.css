@@ -15,8 +15,8 @@
  */
 .mkt-blog-index,
 .mkt-blog-article {
-  --mkt-body: #0c1222;
-  --mkt-body-2: #0c1222;
+  --mkt-body: #1b2232;
+  --mkt-body-2: #1b2232;
   --mkt-muted: #1f2937;
   --mkt-faint: #374151;
 }
@@ -228,11 +228,10 @@
   z-index: 1;
   padding: 0.28rem 0.65rem;
   border-radius: 9999px;
-  font-size: 0.6875rem;
+  font-size: 0.8rem;
   font-weight: 600;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: #fff;
+  letter-spacing: 0.005em;
+    color: #fff;
   background: rgba(15, 23, 42, 0.55);
   backdrop-filter: blur(8px);
   border: 1px solid rgba(255, 255, 255, 0.18);
@@ -349,11 +348,10 @@
   align-items: center;
   padding: 0.3rem 0.7rem;
   border-radius: 9999px;
-  font-size: 0.6875rem;
+  font-size: 0.8rem;
   font-weight: 600;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--mkt-violet);
+  letter-spacing: 0.005em;
+    color: var(--mkt-violet);
   background: var(--mkt-violet-light);
   border: 1px solid rgba(124, 58, 237, 0.12);
 }
@@ -728,10 +726,12 @@
 
 .mkt-blog-prose .mkt-blog-callout {
   margin: calc(var(--mkt-blog-rhythm) * 1.6) 0;
-  padding: 1.15rem 1.35rem;
-  border: 1px solid var(--mkt-border);
+  padding: 1.25rem 1.4rem 1.25rem 1.5rem;
+  border: 1px solid #e6e0f7;
+  border-left: 3px solid var(--mkt-violet);
   border-radius: 14px;
-  background: #faf9ff;
+  background: linear-gradient(135deg, #faf8ff 0%, #f5f2ff 100%);
+  box-shadow: 0 8px 24px -16px rgba(76, 29, 149, 0.18);
 }
 
 .mkt-blog-prose .mkt-blog-callout p {
@@ -854,139 +854,163 @@
   text-decoration: underline;
 }
 
+/*
+ * Tables.
+ *
+ * On phones they used to restack into one card per row, which kept them on
+ * screen but broke the one thing a table is for: reading down a column to
+ * compare. They now stay tables at every width and scroll sideways inside
+ * their frame. The first column is pinned, so a row never loses its label
+ * while you swipe, and a hint line appears only when there is something off
+ * screen to swipe to.
+ */
 .mkt-blog-prose .mkt-blog-table-wrap {
-  /* A table is a block in the argument, so it gets the air a section break
-     does; it was sitting 1.25rem off the paragraph above, close enough that
-     the two read as one dense slab. */
+  --mkt-table-head: #f6f4fd;
+  --mkt-table-stripe: #fbfaff;
+  --mkt-table-line: #ece8f6;
+  position: relative;
   margin: calc(var(--mkt-blog-rhythm) * 1.8) 0;
+  border: 1px solid var(--mkt-table-line);
+  border-radius: 16px;
+  background: #fff;
+  box-shadow:
+    0 1px 2px rgba(15, 23, 42, 0.04),
+    0 8px 24px -12px rgba(76, 29, 149, 0.12);
   overflow: hidden;
-  border: 1px solid var(--mkt-border);
-  border-radius: 14px;
 }
 
-/*
- * Tables and figures sit on the text measure, like everything else.
- *
- * They used to break out 2rem either side, back when the prose column was
- * narrow and centred with slack around it. The column is now left-aligned
- * and runs the full width of its grid track, so breaking out would hang a
- * table past the left edge every other block starts on — and the measure is
- * wide enough that a three-column table no longer needs the extra room.
- */
+.mkt-blog-prose .mkt-blog-table-hint {
+  display: none;
+  margin: 0;
+  padding: 0.55rem 1rem;
+  border-bottom: 1px solid var(--mkt-table-line);
+  background: var(--mkt-table-head);
+  font-size: 0.78rem;
+  font-weight: 500;
+  line-height: 1.4;
+  color: var(--mkt-violet);
+}
+
+.mkt-blog-prose .mkt-blog-table-wrap.is-scrollable .mkt-blog-table-hint {
+  display: block;
+}
 
 .mkt-blog-prose .mkt-blog-table-scroll {
   overflow-x: auto;
+  overscroll-behavior-x: contain;
   -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+  scrollbar-color: #d9d2ef transparent;
 }
 
-.mkt-blog-prose .mkt-blog-table-scroll[data-fade='right'] {
-  -webkit-mask-image: linear-gradient(to right, #000 calc(100% - 2.5rem), transparent);
-  mask-image: linear-gradient(to right, #000 calc(100% - 2.5rem), transparent);
+.mkt-blog-prose .mkt-blog-table-scroll:focus-visible {
+  outline: 2px solid var(--mkt-violet);
+  outline-offset: -2px;
 }
 
-.mkt-blog-prose .mkt-blog-table-scroll[data-fade='left'] {
-  -webkit-mask-image: linear-gradient(to left, #000 calc(100% - 2.5rem), transparent);
-  mask-image: linear-gradient(to left, #000 calc(100% - 2.5rem), transparent);
+.mkt-blog-prose .mkt-blog-table-scroll::-webkit-scrollbar {
+  height: 6px;
 }
 
-.mkt-blog-prose .mkt-blog-table-scroll[data-fade='left right'] {
-  -webkit-mask-image: linear-gradient(to right, transparent, #000 2.5rem, #000 calc(100% - 2.5rem), transparent);
-  mask-image: linear-gradient(to right, transparent, #000 2.5rem, #000 calc(100% - 2.5rem), transparent);
+.mkt-blog-prose .mkt-blog-table-scroll::-webkit-scrollbar-thumb {
+  border-radius: 9999px;
+  background: #d9d2ef;
+}
+
+/* Only the right edge fades: the left edge is the pinned column, which carries its own shadow. */
+.mkt-blog-prose .mkt-blog-table-scroll:is([data-fade='right'], [data-fade='left right']) {
+  -webkit-mask-image: linear-gradient(to right, #000 calc(100% - 2.25rem), transparent);
+  mask-image: linear-gradient(to right, #000 calc(100% - 2.25rem), transparent);
 }
 
 .mkt-blog-prose table {
   width: 100%;
-  border-collapse: collapse;
+  border-collapse: separate;
+  border-spacing: 0;
   font-size: var(--mkt-blog-small);
   line-height: 1.55;
+  font-variant-numeric: tabular-nums;
 }
 
 .mkt-blog-prose th,
 .mkt-blog-prose td {
-  padding: 0.8em 0.95em;
+  padding: 0.85em 1em;
   text-align: left;
   vertical-align: top;
-  border-bottom: 1px solid var(--mkt-border);
+  border-bottom: 1px solid var(--mkt-table-line);
 }
 
 .mkt-blog-prose th {
-  background: #f8f7fc;
+  background: var(--mkt-table-head);
   font-weight: 600;
-  color: #0c1222;
+  color: var(--mkt-ink);
   white-space: nowrap;
 }
 
-.mkt-blog-prose tr:last-child td {
+.mkt-blog-prose tbody tr:nth-child(even) td {
+  background: var(--mkt-table-stripe);
+}
+
+.mkt-blog-prose tbody tr:last-child td {
   border-bottom: none;
 }
 
-/* Card layout for dense (4+ col) tables, or narrower ones that overflow; labels come from data-label. */
-@media (max-width: 639px) {
-  .mkt-blog-prose .mkt-blog-table-wrap:is(.is-dense, .is-stacked) {
-    overflow: visible;
-    border: none;
-    border-radius: 0;
+.mkt-blog-prose td:first-child {
+  color: var(--mkt-ink);
+}
+
+@media (hover: hover) {
+  .mkt-blog-prose tbody tr:hover td {
+    background: #f4f1fc;
+  }
+}
+
+/*
+ * Small screens: keep the table, give each column room to breathe, and pin
+ * the first column. Cells wrap inside a sensible width instead of crushing
+ * every column into the phone, which is what made the old tables unreadable.
+ */
+@media (max-width: 767px) {
+  .mkt-blog-prose table {
+    width: max-content;
+    min-width: 100%;
   }
 
-  .mkt-blog-prose :is(.is-dense, .is-stacked) .mkt-blog-table-scroll {
-    overflow: visible;
-    -webkit-mask-image: none;
-    mask-image: none;
+  .mkt-blog-prose th,
+  .mkt-blog-prose td {
+    min-width: 7.5rem;
+    max-width: 15rem;
+    padding: 0.75em 0.9em;
   }
 
-  .mkt-blog-prose :is(.is-dense, .is-stacked) :is(table, tbody, tr, td) {
-    display: block;
-    width: 100%;
+  .mkt-blog-prose th {
+    white-space: normal;
   }
 
-  .mkt-blog-prose :is(.is-dense, .is-stacked) thead {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
-    clip: rect(0 0 0 0);
-    white-space: nowrap;
-  }
-
-  .mkt-blog-prose :is(.is-dense, .is-stacked) tr {
-    margin: 0 0 0.625rem;
-    padding: 0.25rem 1rem 0.5rem;
-    border: 1px solid var(--mkt-border);
-    border-radius: 12px;
+  .mkt-blog-prose :is(th, td):first-child {
+    position: sticky;
+    left: 0;
+    z-index: 1;
+    min-width: 8.5rem;
+    max-width: 10.5rem;
     background: #fff;
+    box-shadow: inset -1px 0 0 var(--mkt-table-line);
   }
 
-  .mkt-blog-prose :is(.is-dense, .is-stacked) tr:last-child {
-    margin-bottom: 0;
+  .mkt-blog-prose th:first-child {
+    z-index: 2;
+    background: var(--mkt-table-head);
   }
 
-  .mkt-blog-prose :is(.is-dense, .is-stacked) td {
-    padding: 0.45rem 0;
-    border-bottom: none;
+  .mkt-blog-prose tbody tr:nth-child(even) td:first-child {
+    background: var(--mkt-table-stripe);
   }
 
-  .mkt-blog-prose :is(.is-dense, .is-stacked) td::before {
-    content: attr(data-label);
-    display: block;
-    margin-bottom: 0.1rem;
-    font-size: 0.78em;
-    font-weight: 600;
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
-    color: var(--mkt-muted);
-  }
-
-  .mkt-blog-prose :is(.is-dense, .is-stacked) td:first-child {
-    margin-bottom: 0.2rem;
-    padding: 0.6rem 0;
-    border-bottom: 1px solid var(--mkt-border);
-    font-size: 1em;
-    font-weight: 600;
-    color: var(--mkt-ink);
-  }
-
-  .mkt-blog-prose :is(.is-dense, .is-stacked) td:first-child::before {
-    content: none;
+  /* Once the reader has scrolled, a soft shadow shows the pinned column is floating over the rest. */
+  .mkt-blog-prose .mkt-blog-table-scroll:is([data-fade='left'], [data-fade='left right']) :is(th, td):first-child {
+    box-shadow:
+      inset -1px 0 0 var(--mkt-table-line),
+      6px 0 12px -6px rgba(15, 23, 42, 0.14);
   }
 }
 
@@ -1145,11 +1169,10 @@
 }
 
 .mkt-blog-related__card-cat {
-  font-size: 0.6875rem;
+  font-size: 0.8rem;
   font-weight: 600;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--mkt-violet);
+  letter-spacing: 0.005em;
+    color: var(--mkt-violet);
 }
 
 .mkt-blog-related__card-title {
@@ -1187,11 +1210,10 @@
   left: 1rem;
   bottom: 1rem;
   right: 1rem;
-  font-size: 0.75rem;
+  font-size: 0.8125rem;
   font-weight: 550;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.88);
+  letter-spacing: 0.005em;
+    color: rgba(255, 255, 255, 0.88);
 }
 
 /* ===================================================================
@@ -1327,11 +1349,10 @@
 
 .mkt-blog-toc__label {
   margin: 0 0 0.7rem;
-  font-size: 0.72rem;
+  font-size: 0.875rem;
   font-weight: 600;
-  letter-spacing: 0.09em;
-  text-transform: uppercase;
-  color: var(--mkt-violet);
+  letter-spacing: 0.005em;
+    color: var(--mkt-violet);
 }
 
 .mkt-blog-toc__list {

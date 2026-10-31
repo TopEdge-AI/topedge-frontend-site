@@ -83,8 +83,6 @@ function staticFaqs(root: HTMLElement) {
   });
 }
 
-const DENSE_TABLE_MIN_COLS = 4;
-
 function prepareTables(root: HTMLElement) {
   const doc = root.ownerDocument;
   root.querySelectorAll<HTMLElement>('.mkt-blog-table-wrap').forEach((wrap) => {
@@ -97,13 +95,25 @@ function prepareTables(root: HTMLElement) {
         if (labels[i]) cell.setAttribute('data-label', labels[i]);
       });
     });
-    if (labels.length >= DENSE_TABLE_MIN_COLS) wrap.classList.add('is-dense');
 
     if (table.parentElement === wrap) {
       const scroller = doc.createElement('div');
       scroller.className = 'mkt-blog-table-scroll';
+      // Keyboard users can scroll a wide table without a mouse or touch.
+      scroller.setAttribute('tabindex', '0');
+      scroller.setAttribute('role', 'region');
+      scroller.setAttribute('aria-label', 'Scrollable table');
       table.replaceWith(scroller);
       scroller.append(table);
+    }
+
+    // Shown only while the table is wider than its column (see bindBlogTables).
+    if (!wrap.querySelector('.mkt-blog-table-hint')) {
+      const hint = doc.createElement('p');
+      hint.className = 'mkt-blog-table-hint';
+      hint.setAttribute('aria-hidden', 'true');
+      hint.textContent = 'Swipe sideways to see every column';
+      wrap.prepend(hint);
     }
   });
 }
@@ -349,17 +359,19 @@ export function enhanceBlogHtml(html: string, inlineImages: InlineImage[] = []):
   return root.innerHTML;
 }
 
-const STACK_QUERY = '(max-width: 639px)';
-
 /**
- * Live layout pass for tables: stacks non-dense tables that overflow on small screens and
- * marks which edges of a scrollable table have hidden content. Returns a cleanup function.
+ * Live layout pass for tables: marks a table that is wider than its column as
+ * scrollable and records which edges have hidden content.
+ *
+ * Tables used to restack into one card per row on phones. That kept them
+ * inside the screen, but a row-per-card list cannot be compared down a
+ * column, which is the whole reason the data is in a table. They now stay
+ * tables and scroll sideways, with the first column pinned so every row keeps
+ * its label. Returns a cleanup function.
  */
 export function bindBlogTables(prose: HTMLElement): () => void {
   const wraps = [...prose.querySelectorAll<HTMLElement>('.mkt-blog-table-wrap')];
   if (!wraps.length) return () => {};
-  const mq = window.matchMedia(STACK_QUERY);
-
   const updateFade = (scroller: HTMLElement) => {
     const max = scroller.scrollWidth - scroller.clientWidth;
     const edges = [];
@@ -373,10 +385,7 @@ export function bindBlogTables(prose: HTMLElement): () => void {
       const scroller = wrap.querySelector<HTMLElement>('.mkt-blog-table-scroll');
       const table = wrap.querySelector('table');
       if (!scroller || !table) continue;
-      if (!wrap.classList.contains('is-dense')) {
-        wrap.classList.remove('is-stacked');
-        if (mq.matches && table.scrollWidth > scroller.clientWidth + 1) wrap.classList.add('is-stacked');
-      }
+      wrap.classList.toggle('is-scrollable', table.scrollWidth > scroller.clientWidth + 1);
       updateFade(scroller);
     }
   };
