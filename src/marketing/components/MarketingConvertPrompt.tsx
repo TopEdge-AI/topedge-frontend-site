@@ -16,6 +16,24 @@ const MIN_DWELL_MS = 18_000;
 /** Extra delay after thresholds so it does not pop mid-flick. */
 const SETTLE_MS = 900;
 
+/**
+ * Blog posts arm much sooner. Readers skim a post fast and leave, so the
+ * 58%-depth and 18s gates meant most of them never saw the offer. On a post
+ * the prompt shows about 4s after landing, once the reader has started to
+ * scroll (a real scroll, so a bounce never sees it).
+ */
+const BLOG_RULES = { ratio: 0, minScrollPx: 150, dwellMs: 4_000, settleMs: 400 };
+const DEFAULT_RULES = {
+  ratio: SCROLL_RATIO,
+  minScrollPx: MIN_SCROLL_PX,
+  dwellMs: MIN_DWELL_MS,
+  settleMs: SETTLE_MS,
+};
+
+function rulesFor(pathname: string) {
+  return /^\/blog\/(?!page\/|category\/)[^/]+\/?$/.test(pathname) ? BLOG_RULES : DEFAULT_RULES;
+}
+
 const SKIP_PREFIXES = [
   '/signup',
   '/login',
@@ -60,6 +78,7 @@ function markSeen() {
 /**
  * One soft convert prompt per browser session after real engagement:
  * ~58% page depth AND 1400px scrolled, plus ~18s dwell, then a short settle.
+ * Blog posts use BLOG_RULES instead: about 4s after landing, once scrolling.
  * Skips signup/login/legal/pricing/contact (those pages already convert).
  */
 export default function MarketingConvertPrompt() {
@@ -85,6 +104,7 @@ export default function MarketingConvertPrompt() {
       return undefined;
     }
 
+    const rules = rulesFor(location.pathname);
     let armed = true;
     let settleTimer: ReturnType<typeof setTimeout> | null = null;
     let dwellTimer: ReturnType<typeof setTimeout> | null = null;
@@ -114,12 +134,12 @@ export default function MarketingConvertPrompt() {
       const doc = document.documentElement;
       const maxScroll = Math.max(doc.scrollHeight - window.innerHeight, 1);
       const progress = window.scrollY / maxScroll;
-      return progress >= SCROLL_RATIO && window.scrollY >= MIN_SCROLL_PX;
+      return progress >= rules.ratio && window.scrollY >= rules.minScrollPx;
     };
 
     const scheduleShow = () => {
       if (!armed || settleTimer) return;
-      settleTimer = setTimeout(show, SETTLE_MS);
+      settleTimer = setTimeout(show, rules.settleMs);
     };
 
     const onScroll = () => {
@@ -129,7 +149,7 @@ export default function MarketingConvertPrompt() {
         return;
       }
 
-      const remainingDwell = MIN_DWELL_MS - (Date.now() - pageEnteredAt);
+      const remainingDwell = rules.dwellMs - (Date.now() - pageEnteredAt);
       if (remainingDwell > 0) {
         if (dwellTimer) return;
         dwellTimer = setTimeout(() => {

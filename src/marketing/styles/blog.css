@@ -366,7 +366,7 @@
 .mkt-blog-title {
   margin-top: 0.95rem;
   font-family: var(--mkt-font);
-  font-size: clamp(1.75rem, 3.2vw, 2.4rem);
+  font-size: clamp(1.625rem, 2.4vw, 2rem);
   font-weight: 600;
   line-height: 1.16;
   letter-spacing: -0.03em;
@@ -376,7 +376,7 @@
 
 .mkt-blog-lede {
   margin-top: 1.1rem;
-  font-size: 1.0625rem;
+  font-size: 1rem;
   line-height: 1.65;
   color: var(--mkt-body-2);
   text-wrap: pretty;
@@ -384,7 +384,7 @@
 
 @media (min-width: 900px) {
   .mkt-blog-lede {
-    font-size: 1.125rem;
+    font-size: 1.0625rem;
   }
 }
 
@@ -519,7 +519,7 @@
 @media (min-width: 640px) {
   .mkt-blog-layout {
     --mkt-blog-measure: 42rem;
-    --mkt-blog-body-size: 1.0625rem;
+    --mkt-blog-body-size: 1rem;
     --mkt-blog-body-lh: 1.85;
   }
 }
@@ -529,7 +529,10 @@
     /* Fill the column up to the contents rail: a fixed 50rem left a wide
        empty gutter beside the rail on desktop. */
     --mkt-blog-measure: 100%;
-    --mkt-blog-body-size: 1.125rem;
+    /* 16px, matching Getgabs (Wati runs 18px). At 18px across this wide a
+       column the page read as oversized; the extra leading keeps it airy. */
+    --mkt-blog-body-size: 1rem;
+    --mkt-blog-body-lh: 1.9;
   }
 }
 
@@ -550,8 +553,8 @@
    */
   /* h2 steps down on a phone: 1.6x a 16px body is 25.6px, which in a 335px
      column broke most section titles over three short lines. */
-  --mkt-blog-h2: 1.45em;
-  --mkt-blog-h3: 1.2em;
+  --mkt-blog-h2: 1.375em;
+  --mkt-blog-h3: 1.125em;
   --mkt-blog-small: 0.875em;
   max-width: var(--mkt-blog-measure);
   margin: 0 auto 0 0;
@@ -560,7 +563,9 @@
 
 @media (min-width: 640px) {
   .mkt-blog-body-wrap {
-    --mkt-blog-h2: 1.6em;
+    /* 26px and 20px on a 16px body: between Getgabs (32 / 20) and Wati
+       (30 / 24), so sections still read as steps without shouting. */
+    --mkt-blog-h2: 1.625em;
     --mkt-blog-h3: 1.25em;
   }
 }
