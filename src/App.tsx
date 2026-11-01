@@ -46,6 +46,12 @@ function JourneyExampleRoute() {
   return <JourneyExamplePage slug={journey ?? ''} />;
 }
 
+/** `/whatsapp-festival-templates/:festival` → one festival's four templates. */
+function FestivalTemplateRoute() {
+  const { festival } = useParams<{ festival: string }>();
+  return <FestivalTemplatePage slug={festival ?? ''} />;
+}
+
 function BlogPageRoute() {
   const { page } = useParams<{ page: string }>();
   const n = Number(page);
@@ -73,6 +79,10 @@ const JourneyExamplesIndexPage = React.lazy(
   () => import('./marketing/pages/JourneyExamplesIndexPage'),
 );
 const JourneyExamplePage = React.lazy(() => import('./marketing/pages/JourneyExamplePage'));
+const FestivalTemplatesPage = React.lazy(
+  () => import('./marketing/pages/FestivalTemplatesPage'),
+);
+const FestivalTemplatePage = React.lazy(() => import('./marketing/pages/FestivalTemplatePage'));
 const WhatsAppTemplatesPage = React.lazy(
   () => import('./marketing/pages/WhatsAppTemplatesPage'),
 );
@@ -249,6 +259,11 @@ const AnimatedRoutes = () => {
           <Route path="/blog/category/:category" element={<BlogCategoryRoute />} />
           <Route path="/blog/:slug" element={<BlogPost />} />
           <Route path="/whatsapp-templates" element={<WhatsAppTemplatesPage />} />
+          <Route path="/whatsapp-festival-templates" element={<FestivalTemplatesPage />} />
+          <Route
+            path="/whatsapp-festival-templates/:festival"
+            element={<FestivalTemplateRoute />}
+          />
           <Route path="/whatsapp-journey-examples" element={<JourneyExamplesIndexPage />} />
           <Route path="/whatsapp-journey-examples/:journey" element={<JourneyExampleRoute />} />
           <Route

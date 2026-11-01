@@ -1,0 +1,1320 @@
+/**
+ * Festive template library.
+ *
+ * Built on the same tokens as the rest of the marketing site — var(--mkt-*)
+ * for colour, radius and width — so these pages sit inside the system rather
+ * than beside it. Three layout rules drive everything here:
+ *
+ *   1. Mobile first and mobile honest. Every grid starts at one column and the
+ *      template card is designed at 360px, because the merchant reading a page
+ *      about WhatsApp templates is, more often than not, holding WhatsApp.
+ *   2. One card height per row. The preview pane flexes and the copy block does
+ *      not, so three cards in a row start their headings on the same line
+ *      instead of stepping down the page.
+ *   3. Nothing scrolls sideways. The only horizontal scroller is the stage chip
+ *      row, which is deliberate and scroll-snapped.
+ */
+
+/* ──────────────────────────────────────────────────────────────────────────
+   Artwork
+   ────────────────────────────────────────────────────────────────────────── */
+
+.mkt-fest-mark {
+  display: block;
+  width: 2.25rem;
+  height: 2.25rem;
+  flex: none;
+  line-height: 0;
+}
+
+.mkt-fest-mark > svg {
+  display: block;
+  border-radius: 11px;
+}
+
+.mkt-fest-art {
+  display: block;
+  width: 100%;
+  height: 100%;
+  line-height: 0;
+}
+
+.mkt-fest-art > svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/* ──────────────────────────────────────────────────────────────────────────
+   Template card
+   ────────────────────────────────────────────────────────────────────────── */
+
+.mkt-ftc {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  overflow: hidden;
+  border: 1px solid var(--mkt-border);
+  border-radius: var(--mkt-radius-card);
+  background: #ffffff;
+  transition: border-color 0.18s ease, box-shadow 0.18s ease, transform 0.18s ease;
+}
+
+.mkt-ftc:hover {
+  border-color: #c4b5fd;
+  box-shadow: 0 18px 38px -28px rgba(76, 29, 149, 0.5);
+  transform: translateY(-2px);
+}
+
+.mkt-ftc__head {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 0.85rem 1rem;
+  border-bottom: 1px solid var(--mkt-border);
+  background: linear-gradient(180deg, #fbfaff, #ffffff);
+}
+
+.mkt-ftc__mark {
+  flex: none;
+}
+
+.mkt-ftc__mark .mkt-fest-mark {
+  width: 2rem;
+  height: 2rem;
+}
+
+.mkt-ftc__heading {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+  min-width: 0;
+  flex: 1 1 auto;
+}
+
+.mkt-ftc__festival {
+  font-size: 0.82rem;
+  font-weight: 600;
+  line-height: 1.25;
+  color: var(--mkt-ink);
+  text-decoration: none;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.mkt-ftc__festival:hover {
+  color: var(--mkt-violet);
+}
+
+.mkt-ftc__stage {
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: var(--mkt-violet);
+}
+
+.mkt-ftc__when {
+  flex: none;
+  padding: 0.2rem 0.5rem;
+  border-radius: 999px;
+  background: #f4f1fe;
+  font-size: 0.66rem;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  color: #6d28d9;
+  white-space: nowrap;
+}
+
+/* Grows so every card in a row shares one height and the titles underneath
+   line up, which is the whole reason the preview is not a fixed box. */
+.mkt-ftc__preview {
+  flex: 1 1 auto;
+  display: flex;
+  border-bottom: 1px solid var(--mkt-border);
+}
+
+.mkt-ftc__preview .mkt-ph {
+  flex: 1 1 auto;
+}
+
+.mkt-ftc__body {
+  display: flex;
+  flex-direction: column;
+  padding: 0.9rem 0.95rem 1rem;
+}
+
+.mkt-ftc__title {
+  margin: 0;
+  font-size: 0.95rem;
+  font-weight: 500;
+  line-height: 1.3;
+  color: var(--mkt-ink);
+}
+
+/* Holds two lines whatever the copy does, so four cards in a row start their
+   meta rows on the same line instead of stepping down by one line height. */
+.mkt-ftc__purpose {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+  min-height: 2.46rem;
+  margin: 0.35rem 0 0;
+  font-size: 0.82rem;
+  line-height: 1.5;
+  color: var(--mkt-muted);
+}
+
+.mkt-ftc__meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.3rem 0.4rem;
+  margin: 0.75rem 0 0;
+  padding: 0.65rem 0 0;
+  border-top: 1px dashed var(--mkt-border);
+  font-size: 0.78rem;
+  line-height: 1.4;
+  color: var(--mkt-muted);
+}
+
+.mkt-ftc__rate {
+  font-variant-numeric: tabular-nums;
+  font-weight: 600;
+  color: var(--mkt-ink);
+}
+
+.mkt-ftc__name {
+  margin: 0.4rem 0 0;
+}
+
+.mkt-ftc__name code {
+  display: inline-block;
+  max-width: 100%;
+  padding: 0.1rem 0.35rem;
+  border-radius: 5px;
+  background: #f6f4fd;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.68rem;
+  color: #5b21b6;
+  overflow-wrap: anywhere;
+}
+
+.mkt-ftc__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  align-self: flex-start;
+  margin-top: 0.85rem;
+  font-size: 0.83rem;
+  font-weight: 500;
+  color: var(--mkt-violet);
+  text-decoration: none;
+}
+
+.mkt-ftc__cta:hover {
+  text-decoration: underline;
+}
+
+/* ──────────────────────────────────────────────────────────────────────────
+   Festival card
+   ────────────────────────────────────────────────────────────────────────── */
+
+.mkt-fc {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.85rem;
+  height: 100%;
+  padding: 1rem 1.05rem;
+  border: 1px solid var(--mkt-border);
+  border-radius: var(--mkt-radius-card);
+  background: #ffffff;
+  text-decoration: none;
+  transition: border-color 0.18s ease, box-shadow 0.18s ease, transform 0.18s ease;
+}
+
+.mkt-fc:hover {
+  border-color: #c4b5fd;
+  box-shadow: 0 16px 34px -26px rgba(76, 29, 149, 0.45);
+  transform: translateY(-2px);
+}
+
+.mkt-fc__main {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  min-width: 0;
+  flex: 1 1 auto;
+}
+
+.mkt-fc__top {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.4rem 0.55rem;
+}
+
+.mkt-fc__name {
+  font-size: 0.98rem;
+  font-weight: 500;
+  line-height: 1.3;
+  color: var(--mkt-ink);
+}
+
+.mkt-fc__when {
+  padding: 0.12rem 0.45rem;
+  border-radius: 999px;
+  font-size: 0.66rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.mkt-fc__when--now {
+  background: #fef2f2;
+  color: #b91c1c;
+}
+
+.mkt-fc__when--soon {
+  background: #ecfdf5;
+  color: #047857;
+}
+
+.mkt-fc__when--later {
+  background: #f4f1fe;
+  color: #6d28d9;
+}
+
+.mkt-fc__when--past {
+  background: #f3f4f6;
+  color: var(--mkt-faint);
+}
+
+.mkt-fc__date {
+  font-size: 0.78rem;
+  color: var(--mkt-faint);
+  font-variant-numeric: tabular-nums;
+}
+
+.mkt-fc__peak {
+  margin-top: 0.15rem;
+  font-size: 0.82rem;
+  line-height: 1.5;
+  color: var(--mkt-muted);
+}
+
+.mkt-fc__stages {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+  margin-top: 0.5rem;
+}
+
+.mkt-fc__chip {
+  padding: 0.14rem 0.45rem;
+  border: 1px solid var(--mkt-border);
+  border-radius: 999px;
+  font-size: 0.66rem;
+  font-weight: 500;
+  color: var(--mkt-muted);
+}
+
+.mkt-fc__go {
+  display: inline-flex;
+  flex: none;
+  align-self: center;
+  color: #c4b5fd;
+  transition: color 0.15s ease, transform 0.15s ease;
+}
+
+.mkt-fc:hover .mkt-fc__go {
+  color: var(--mkt-violet);
+  transform: translateX(2px);
+}
+
+.mkt-fc--large {
+  padding: 1.15rem 1.2rem;
+}
+
+/* On a phone the arrow is decoration competing with the chips for the row, so
+   it goes and the card uses the width for the copy instead. */
+@media (max-width: 480px) {
+  .mkt-fc__go {
+    display: none;
+  }
+}
+
+/* ──────────────────────────────────────────────────────────────────────────
+   Library: controls and grid
+   ────────────────────────────────────────────────────────────────────────── */
+
+.mkt-flib {
+  max-width: 76rem;
+  margin: 0 auto;
+}
+
+.mkt-flib__controls {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+  padding: 1.1rem;
+  border: 1px solid var(--mkt-border);
+  border-radius: var(--mkt-radius-card);
+  background: linear-gradient(180deg, #fbfaff, #ffffff);
+}
+
+.mkt-flib__row {
+  display: grid;
+  gap: 0.75rem;
+}
+
+@media (min-width: 720px) {
+  .mkt-flib__row {
+    grid-template-columns: minmax(0, 18rem) minmax(0, 1fr);
+    align-items: end;
+  }
+}
+
+.mkt-flib__field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  min-width: 0;
+}
+
+.mkt-flib__label {
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--mkt-faint);
+}
+
+.mkt-flib__select,
+.mkt-flib__input {
+  width: 100%;
+  min-width: 0;
+  font: inherit;
+  font-size: 0.9rem;
+  color: var(--mkt-ink);
+  background: #ffffff;
+}
+
+.mkt-flib__select {
+  /* 2.75rem keeps the native select above the 44px tap target on iOS. */
+  height: 2.75rem;
+  padding: 0 2rem 0 0.8rem;
+  border: 1px solid var(--mkt-border);
+  border-radius: var(--mkt-radius-control);
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%235a6474' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.7rem center;
+  background-size: 1rem;
+  cursor: pointer;
+}
+
+.mkt-flib__select:focus-visible,
+.mkt-flib__search:focus-within {
+  outline: 2px solid #c4b5fd;
+  outline-offset: 1px;
+  border-color: var(--mkt-violet);
+}
+
+.mkt-flib__search {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  height: 2.75rem;
+  padding: 0 0.8rem;
+  border: 1px solid var(--mkt-border);
+  border-radius: var(--mkt-radius-control);
+  background: #ffffff;
+  color: var(--mkt-faint);
+}
+
+.mkt-flib__input {
+  border: 0;
+  outline: none;
+  background: transparent;
+}
+
+.mkt-flib__input::placeholder {
+  color: #9aa3b0;
+}
+
+.mkt-flib__stages {
+  display: flex;
+  gap: 0.45rem;
+  overflow-x: auto;
+  padding-bottom: 0.2rem;
+  scrollbar-width: none;
+  scroll-snap-type: x proximity;
+  -webkit-overflow-scrolling: touch;
+}
+
+.mkt-flib__stages::-webkit-scrollbar {
+  display: none;
+}
+
+.mkt-flib__chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  flex: none;
+  scroll-snap-align: start;
+  min-height: 2.35rem;
+  padding: 0.4rem 0.8rem;
+  border: 1px solid var(--mkt-border);
+  border-radius: 999px;
+  background: #ffffff;
+  font: inherit;
+  font-size: 0.84rem;
+  font-weight: 500;
+  color: var(--mkt-body-2);
+  cursor: pointer;
+  white-space: nowrap;
+  transition: border-color 0.15s ease, background 0.15s ease, color 0.15s ease;
+}
+
+.mkt-flib__chip:hover {
+  border-color: #c4b5fd;
+  color: var(--mkt-ink);
+}
+
+.mkt-flib__chip.is-active {
+  border-color: var(--mkt-violet);
+  background: var(--mkt-violet);
+  color: #ffffff;
+}
+
+.mkt-flib__count {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 1.4rem;
+  height: 1.3rem;
+  padding: 0 0.32rem;
+  border-radius: 999px;
+  background: #f1f5f9;
+  font-size: 0.7rem;
+  font-variant-numeric: tabular-nums;
+  color: var(--mkt-muted);
+}
+
+.mkt-flib__chip.is-active .mkt-flib__count {
+  background: rgba(255, 255, 255, 0.22);
+  color: #ffffff;
+}
+
+.mkt-flib__status {
+  margin: 0;
+  font-size: 0.8rem;
+  color: var(--mkt-faint);
+  font-variant-numeric: tabular-nums;
+}
+
+.mkt-flib__grid {
+  display: grid;
+  gap: 1.1rem;
+  margin: 1.6rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+@media (min-width: 640px) {
+  .mkt-flib__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1040px) {
+  .mkt-flib__grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1280px) {
+  .mkt-flib__grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+.mkt-flib__grid > li {
+  display: flex;
+}
+
+.mkt-flib__empty {
+  margin: 2rem 0 0;
+  padding: 2rem 1.25rem;
+  border: 1px dashed var(--mkt-border);
+  border-radius: var(--mkt-radius-card);
+  text-align: center;
+  font-size: 0.92rem;
+  color: var(--mkt-muted);
+}
+
+.mkt-flib__more {
+  display: flex;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+
+.mkt-flib__more-btn {
+  min-height: 2.75rem;
+  padding: 0.6rem 1.5rem;
+  border: 1px solid var(--mkt-border);
+  border-radius: 999px;
+  background: #ffffff;
+  font: inherit;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--mkt-violet);
+  cursor: pointer;
+  transition: border-color 0.15s ease, background 0.15s ease;
+}
+
+.mkt-flib__more-btn:hover {
+  border-color: #c4b5fd;
+  background: var(--mkt-violet-light);
+}
+
+/* ──────────────────────────────────────────────────────────────────────────
+   Stage track
+   ────────────────────────────────────────────────────────────────────────── */
+
+.mkt-fst {
+  display: grid;
+  gap: 0;
+  max-width: 48rem;
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+  counter-reset: none;
+}
+
+.mkt-fst__step {
+  display: grid;
+  grid-template-columns: 2.4rem minmax(0, 1fr);
+  gap: 0 0.9rem;
+}
+
+.mkt-fst__rail {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+/* The connecting line, drawn behind the numbered dots and stopped on the last
+   step so the sequence does not trail off into the next section. */
+.mkt-fst__rail::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 2px;
+  transform: translateX(-50%);
+  background: linear-gradient(180deg, #e9e3fb, #f3effe);
+}
+
+.mkt-fst__step:first-child .mkt-fst__rail::before {
+  top: 1.1rem;
+}
+
+.mkt-fst__step:last-of-type .mkt-fst__rail::before {
+  bottom: auto;
+  height: 1.1rem;
+}
+
+.mkt-fst__dot {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.1rem;
+  height: 2.1rem;
+  margin-top: 0.05rem;
+  border-radius: 999px;
+  background: var(--mkt-violet);
+  color: #ffffff;
+  font-size: 0.85rem;
+  font-weight: 600;
+  box-shadow: 0 0 0 4px #ffffff;
+}
+
+.mkt-fst__body {
+  padding: 0 0 1.6rem;
+}
+
+.mkt-fst__step:last-of-type .mkt-fst__body {
+  padding-bottom: 0.4rem;
+}
+
+.mkt-fst__when {
+  margin: 0.25rem 0 0;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: var(--mkt-violet);
+}
+
+.mkt-fst__title {
+  margin: 0.25rem 0 0;
+  font-size: 1.08rem;
+  font-weight: 500;
+  line-height: 1.3;
+  color: var(--mkt-ink);
+}
+
+.mkt-fst__purpose {
+  margin: 0.35rem 0 0;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--mkt-body);
+}
+
+.mkt-fst__why {
+  margin: 0.45rem 0 0;
+  padding-left: 0.75rem;
+  border-left: 2px solid #e9e3fb;
+  font-size: 0.88rem;
+  line-height: 1.6;
+  color: var(--mkt-muted);
+}
+
+.mkt-fst__note {
+  margin-top: 0.2rem;
+  padding: 0.8rem 1rem;
+  border-radius: var(--mkt-radius-control);
+  background: var(--mkt-violet-light);
+  font-size: 0.85rem;
+  line-height: 1.6;
+  color: #5b21b6;
+}
+
+/* ──────────────────────────────────────────────────────────────────────────
+   Calendar rail
+   ────────────────────────────────────────────────────────────────────────── */
+
+.mkt-fcal {
+  display: grid;
+  gap: 0.6rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@media (min-width: 640px) {
+  .mkt-fcal {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1024px) {
+  .mkt-fcal {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+.mkt-fcal__item {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  height: 100%;
+  padding: 0.7rem 0.8rem;
+  border: 1px solid var(--mkt-border);
+  border-radius: var(--mkt-radius-control);
+  background: #ffffff;
+  text-decoration: none;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.mkt-fcal__item:hover {
+  border-color: #c4b5fd;
+  box-shadow: 0 12px 26px -22px rgba(76, 29, 149, 0.45);
+}
+
+.mkt-fcal__mark .mkt-fest-mark {
+  width: 1.9rem;
+  height: 1.9rem;
+}
+
+.mkt-fcal__text {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  flex: 1 1 auto;
+}
+
+.mkt-fcal__name {
+  font-size: 0.86rem;
+  font-weight: 500;
+  color: var(--mkt-ink);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.mkt-fcal__date {
+  font-size: 0.72rem;
+  color: var(--mkt-faint);
+  font-variant-numeric: tabular-nums;
+}
+
+.mkt-fcal__badge {
+  flex: none;
+  padding: 0.14rem 0.45rem;
+  border-radius: 999px;
+  font-size: 0.66rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.mkt-fcal__badge--now {
+  background: #fef2f2;
+  color: #b91c1c;
+}
+
+.mkt-fcal__badge--soon {
+  background: #ecfdf5;
+  color: #047857;
+}
+
+.mkt-fcal__badge--later,
+.mkt-fcal__badge--none {
+  background: #f4f1fe;
+  color: #6d28d9;
+}
+
+.mkt-fcal__badge--past {
+  background: #f3f4f6;
+  color: var(--mkt-faint);
+}
+
+/* ──────────────────────────────────────────────────────────────────────────
+   Personalise
+   ────────────────────────────────────────────────────────────────────────── */
+
+.mkt-fper {
+  display: grid;
+  gap: 1.1rem;
+  max-width: 68rem;
+  margin: 0 auto;
+}
+
+@media (min-width: 900px) {
+  .mkt-fper {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    align-items: start;
+  }
+}
+
+.mkt-fper__fields,
+.mkt-fper__steps {
+  padding: 1.3rem 1.3rem 1.4rem;
+  border: 1px solid var(--mkt-border);
+  border-radius: var(--mkt-radius-card);
+  background: #ffffff;
+}
+
+.mkt-fper__steps {
+  background: linear-gradient(180deg, #fbfaff, #ffffff);
+}
+
+.mkt-fper__h3 {
+  margin: 0 0 0.9rem;
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: var(--mkt-ink);
+}
+
+.mkt-fper__list,
+.mkt-fper__ol {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.mkt-fper__list > li,
+.mkt-fper__ol > li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+}
+
+.mkt-fper__list strong,
+.mkt-fper__ol strong {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 600;
+  line-height: 1.4;
+  color: var(--mkt-ink);
+}
+
+.mkt-fper__detail {
+  display: block;
+  margin-top: 0.2rem;
+  font-size: 0.85rem;
+  line-height: 1.6;
+  color: var(--mkt-muted);
+}
+
+.mkt-fper__tick {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.3rem;
+  height: 1.3rem;
+  flex: none;
+  margin-top: 0.1rem;
+  border-radius: 999px;
+  background: #ecfdf5;
+  color: #047857;
+}
+
+.mkt-fper__num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.5rem;
+  height: 1.5rem;
+  flex: none;
+  border-radius: 999px;
+  background: var(--mkt-violet);
+  color: #ffffff;
+  font-size: 0.76rem;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+
+.mkt-fper__cta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.6rem 1rem;
+  margin-top: 1.25rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--mkt-border);
+}
+
+.mkt-fper__link {
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: var(--mkt-violet);
+  text-decoration: none;
+}
+
+.mkt-fper__link:hover {
+  text-decoration: underline;
+}
+
+.mkt-fper__fine {
+  margin: 0.7rem 0 0;
+  font-size: 0.78rem;
+  line-height: 1.5;
+  color: var(--mkt-faint);
+}
+
+/* ──────────────────────────────────────────────────────────────────────────
+   Festival page: hero plate and commercial brief
+   ────────────────────────────────────────────────────────────────────────── */
+
+.mkt-fplate {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem 0.65rem;
+  margin: 1.1rem auto 0;
+}
+
+.mkt-fplate__pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.32rem 0.7rem;
+  border: 1px solid var(--mkt-border);
+  border-radius: 999px;
+  background: #ffffff;
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: var(--mkt-body-2);
+  font-variant-numeric: tabular-nums;
+}
+
+.mkt-fplate__pill--date {
+  border-color: #ddd6fe;
+  background: var(--mkt-violet-light);
+  color: #5b21b6;
+}
+
+.mkt-fplate__pill--now {
+  border-color: #fecaca;
+  background: #fef2f2;
+  color: #b91c1c;
+}
+
+.mkt-fplate__pill--soon {
+  border-color: #a7f3d0;
+  background: #ecfdf5;
+  color: #047857;
+}
+
+.mkt-fbrief {
+  display: grid;
+  gap: 0.9rem;
+  max-width: 62rem;
+  margin: 0 auto;
+}
+
+@media (min-width: 820px) {
+  .mkt-fbrief {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .mkt-fbrief__item--wide {
+    grid-column: 1 / -1;
+  }
+}
+
+.mkt-fbrief__item {
+  padding: 1.1rem 1.15rem 1.2rem;
+  border: 1px solid var(--mkt-border);
+  border-radius: var(--mkt-radius-card);
+  background: #ffffff;
+}
+
+.mkt-fbrief__item--warn {
+  border-color: #fde68a;
+  background: #fffbeb;
+}
+
+.mkt-fbrief__label {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin: 0;
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: var(--mkt-violet);
+}
+
+.mkt-fbrief__item--warn .mkt-fbrief__label {
+  color: #b45309;
+}
+
+.mkt-fbrief__text {
+  margin: 0.5rem 0 0;
+  font-size: 0.93rem;
+  line-height: 1.65;
+  color: var(--mkt-body);
+}
+
+.mkt-fbrief__sells {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  margin: 0.6rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.mkt-fbrief__sells > li {
+  position: relative;
+  padding-left: 1.1rem;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: var(--mkt-body-2);
+}
+
+.mkt-fbrief__sells > li::before {
+  content: '';
+  position: absolute;
+  top: 0.58rem;
+  left: 0.1rem;
+  width: 0.35rem;
+  height: 0.35rem;
+  border-radius: 999px;
+  background: #c4b5fd;
+}
+
+/* Sequence cards on a festival page: four, so two up reads better than three
+   and leaves the previews legible. */
+.mkt-fseq {
+  display: grid;
+  gap: 1.1rem;
+  max-width: 62rem;
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+}
+
+@media (min-width: 760px) {
+  .mkt-fseq {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* Four across, because the four messages ARE the sequence and seeing them side
+   by side is the argument. Wider than the 62rem text column to fit them. */
+@media (min-width: 1180px) {
+  .mkt-fseq {
+    max-width: 78rem;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 0.9rem;
+  }
+}
+
+.mkt-fseq > li {
+  display: flex;
+}
+
+/* Cluster groups on the hub. */
+.mkt-fgroup + .mkt-fgroup {
+  margin-top: 2.5rem;
+}
+
+.mkt-fgroup__head {
+  max-width: 44rem;
+  margin: 0 0 1rem;
+}
+
+.mkt-fgroup__title {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.5rem;
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--mkt-ink);
+}
+
+.mkt-fgroup__count {
+  padding: 0.12rem 0.45rem;
+  border-radius: 999px;
+  background: var(--mkt-violet-light);
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: #6d28d9;
+  font-variant-numeric: tabular-nums;
+}
+
+.mkt-fgroup__blurb {
+  margin: 0.4rem 0 0;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: var(--mkt-muted);
+}
+
+.mkt-fgroup__grid {
+  display: grid;
+  gap: 0.75rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@media (min-width: 680px) {
+  .mkt-fgroup__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1100px) {
+  .mkt-fgroup__grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+.mkt-fgroup__grid > li {
+  display: flex;
+}
+
+/* ──────────────────────────────────────────────────────────────────────────
+   Phone-width tightening
+   ────────────────────────────────────────────────────────────────────────── */
+
+@media (max-width: 480px) {
+  .mkt-ftc__head {
+    padding: 0.75rem 0.85rem;
+  }
+
+  .mkt-ftc__body {
+    padding: 0.9rem 0.95rem 1rem;
+  }
+
+  .mkt-flib__controls {
+    padding: 0.9rem;
+  }
+
+  .mkt-fper__fields,
+  .mkt-fper__steps {
+    padding: 1.1rem 1rem 1.15rem;
+  }
+
+  .mkt-fst__step {
+    grid-template-columns: 1.9rem minmax(0, 1fr);
+    gap: 0 0.7rem;
+  }
+
+  .mkt-fst__dot {
+    width: 1.75rem;
+    height: 1.75rem;
+    font-size: 0.78rem;
+  }
+}
+
+/* A real photo in the slot the drawn mark otherwise fills. Same box either
+   way, so swapping one in does not move the layout. */
+.mkt-fest-photo {
+  display: block;
+  width: 100%;
+  height: 100%;
+  line-height: 0;
+  background: #f8f5ff;
+}
+
+.mkt-fest-photo > img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ──────────────────────────────────────────────────────────────────────────
+   Copy and download
+   ────────────────────────────────────────────────────────────────────────── */
+
+.mkt-ftc__actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem 0.75rem;
+  margin-top: 0.85rem;
+}
+
+/* The CTA loses its own top margin here — the row owns the spacing now. */
+.mkt-ftc__actions .mkt-ftc__cta {
+  margin-top: 0;
+}
+
+.mkt-fcopy {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  min-height: 2rem;
+  padding: 0.3rem 0.7rem;
+  border: 1px solid var(--mkt-border);
+  border-radius: 999px;
+  background: #ffffff;
+  font: inherit;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--mkt-body-2);
+  cursor: pointer;
+  transition: border-color 0.15s ease, background 0.15s ease, color 0.15s ease;
+}
+
+.mkt-fcopy:hover {
+  border-color: #c4b5fd;
+  color: var(--mkt-ink);
+}
+
+.mkt-fcopy.is-copied {
+  border-color: #a7f3d0;
+  background: #ecfdf5;
+  color: #047857;
+}
+
+/* The clipboard API rejects in an insecure context and in some older mobile
+   browsers. Saying so beats a button that appears to do nothing. */
+.mkt-fcopy.is-failed {
+  border-color: #fde68a;
+  background: #fffbeb;
+  color: #b45309;
+}
+
+.mkt-fcopy__icon {
+  display: inline-flex;
+  flex: none;
+}
+
+.mkt-flib__foot {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.6rem 1rem;
+}
+
+.mkt-flib__download,
+.mkt-fdl__btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  min-height: 2.5rem;
+  padding: 0.45rem 1rem;
+  border: 1px solid #ddd6fe;
+  border-radius: 999px;
+  background: var(--mkt-violet-light);
+  font: inherit;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #5b21b6;
+  cursor: pointer;
+  transition: border-color 0.15s ease, background 0.15s ease;
+}
+
+.mkt-flib__download:hover,
+.mkt-fdl__btn:hover {
+  border-color: var(--mkt-violet);
+  background: #ede9fe;
+}
+
+.mkt-flib__download:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.mkt-fdl {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem 0.85rem;
+  max-width: 62rem;
+  margin: 0 auto 1.4rem;
+  text-align: center;
+}
+
+.mkt-fdl__note {
+  font-size: 0.8rem;
+  line-height: 1.5;
+  color: var(--mkt-faint);
+}
+
+@media (max-width: 480px) {
+  .mkt-flib__foot {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .mkt-flib__download {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .mkt-fdl__btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
