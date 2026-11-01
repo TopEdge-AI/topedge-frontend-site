@@ -147,6 +147,47 @@ export function blogPageNumbers() {
   return Array.from({ length: total - 1 }, (_, i) => i + 2);
 }
 
+/**
+ * Festive template pages (src/marketing/data/festivalTemplates.ts).
+ *
+ * Calendar order, matching FESTIVALS in that file. `check:festivals` fails the
+ * build when the two lists disagree, because a slug that exists here and not
+ * there sitemaps a 404, and one that exists there and not here ships a page
+ * Googlebot is never told about.
+ */
+export const FESTIVAL_SLUGS = [
+  // January
+  'new-year',
+  'makar-sankranti-pongal',
+  'vasant-panchami',
+  // February to April
+  'maha-shivaratri',
+  'holi',
+  'ugadi-gudi-padwa',
+  'eid-ul-fitr',
+  'rama-navami',
+  'good-friday',
+  'easter',
+  'akshaya-tritiya',
+  // May to August
+  'eid-ul-adha',
+  'onam',
+  'milad-un-nabi',
+  'raksha-bandhan',
+  // September to November
+  'krishna-janmashtami',
+  'ganesh-chaturthi',
+  'navratri-durga-puja',
+  'dussehra',
+  'karwa-chauth',
+  'dhanteras',
+  'diwali',
+  'bhai-dooj',
+  'chhath-puja',
+  // December
+  'christmas',
+];
+
 /** Worked journey examples (src/marketing/data/journeyExamples.ts). */
 export const JOURNEY_EXAMPLE_SLUGS = [
   'abandoned-cart-recovery',
@@ -181,6 +222,8 @@ export function getMarketingPrerenderPaths() {
     '/tools/cart-recovery-calculator',
     '/tools/whatsapp-link-generator',
     '/whatsapp-templates',
+    '/whatsapp-festival-templates',
+    ...FESTIVAL_SLUGS.map((s) => `/whatsapp-festival-templates/${s}`),
     '/whatsapp-journey-examples',
     ...JOURNEY_EXAMPLE_SLUGS.map((s) => `/whatsapp-journey-examples/${s}`),
     ...BLOG_SLUGS.map((s) => `/blog/${s}`),

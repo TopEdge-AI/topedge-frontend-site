@@ -1,4 +1,4 @@
-import { Fragment } from 'react';
+import { Fragment, type ReactNode } from 'react';
 import '../../styles/phone-mock.css';
 
 /**
@@ -20,21 +20,46 @@ import '../../styles/phone-mock.css';
 export type TemplateMessage = {
   /** Media header, where the slot defines one. */
   header?: string;
-  /** Body. `{{value}}` renders as a highlighted order field. */
+  /**
+   * Artwork for the media header, instead of the default product shot.
+   *
+   * The festive library uses this to put the festival's own mark in the header
+   * slot, because a linen shirt is the wrong picture above a Diwali message.
+   * Only rendered when `header` is set, so it cannot invent a header component
+   * on a template that does not have one.
+   */
+  headerArt?: ReactNode;
+  /**
+   * Body. `{{value}}` renders as a highlighted order field, and `[Value]` as a
+   * merchant-filled field — the festive catalog writes its editable slots in
+   * square brackets, so both notations have to render as chips rather than as
+   * literal punctuation the reader has to decode.
+   */
   body: string;
+  /** Footer line under the body. Every festive marketing template has one. */
+  footer?: string;
   buttons?: string[];
 };
 
+/** `{{order field}}` and `[Merchant field]`, both rendered as chips. */
 function renderBody(body: string) {
-  return body.split(/(\{\{[^}]+\}\})/g).map((part, i) =>
-    /^\{\{[^}]+\}\}$/.test(part) ? (
-      <span key={i} className="mkt-ph__var">
-        {part.replace(/[{}]/g, '')}
-      </span>
-    ) : (
-      <Fragment key={i}>{part}</Fragment>
-    ),
-  );
+  return body.split(/(\{\{[^}]+\}\}|\[[^\]]+\])/g).map((part, i) => {
+    if (/^\{\{[^}]+\}\}$/.test(part)) {
+      return (
+        <span key={i} className="mkt-ph__var">
+          {part.replace(/[{}]/g, '')}
+        </span>
+      );
+    }
+    if (/^\[[^\]]+\]$/.test(part)) {
+      return (
+        <span key={i} className="mkt-ph__var mkt-ph__var--merchant">
+          {part.slice(1, -1)}
+        </span>
+      );
+    }
+    return <Fragment key={i}>{part}</Fragment>;
+  });
 }
 
 export default function PhoneMock({
@@ -86,22 +111,29 @@ export default function PhoneMock({
 
           <div className="mkt-ph__chat">
             <div className="mkt-ph__bubble">
-              {message.header && (
-                <figure className="mkt-ph__media" aria-hidden>
-                  <img
-                    className="mkt-ph__media-art"
-                    src="/marketing/journeys/product-linen-shirt.webp"
-                    alt=""
-                    aria-hidden
-                    width={320}
-                    height={240}
-                    loading="lazy"
-                    decoding="async"
-                  />
-                </figure>
-              )}
+              {message.header &&
+                (message.headerArt ? (
+                  <figure className="mkt-ph__media mkt-ph__media--art" aria-hidden>
+                    {message.headerArt}
+                  </figure>
+                ) : (
+                  <figure className="mkt-ph__media" aria-hidden>
+                    <img
+                      className="mkt-ph__media-art"
+                      src="/marketing/journeys/product-linen-shirt.webp"
+                      alt=""
+                      aria-hidden
+                      width={320}
+                      height={240}
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </figure>
+                ))}
 
               <p className="mkt-ph__body">{renderBody(message.body)}</p>
+
+              {message.footer && <p className="mkt-ph__footer">{message.footer}</p>}
 
               <span className="mkt-ph__stamp" aria-hidden>
                 9:41

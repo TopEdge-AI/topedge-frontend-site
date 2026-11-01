@@ -29,6 +29,9 @@ const TITLE = 'WhatsApp Templates for Shopify India | TopEdge AI';
 const DESCRIPTION =
   'The 11 WhatsApp templates TopEdge ships for Shopify India: order updates, COD confirmation, cart recovery and festive copy, with category and ₹ rate.';
 
+/** The festive library lives on its own pages — see FestivalTemplatesPage. */
+const FESTIVAL_PATH = '/whatsapp-festival-templates';
+
 const FAQS = [
   {
     question: 'What is a WhatsApp message template?',
@@ -53,7 +56,7 @@ const FAQS = [
   {
     question: 'Do you have Diwali and festival templates?',
     answer:
-      'Festive copy is a seasonal rewrite of a template you already have, submitted as its own template. There are three worked examples on this page. A festive greeting added to an order update turns a ₹0.1150 utility message into a ₹0.8631 marketing one, which is worth knowing before you write it.',
+      'A hundred of them: four messages each across twenty-five festivals, from Diwali and Dhanteras to Holi, Eid, Rakhi and Christmas, on the festival templates page. The three examples on this page are a different thing — they show what happens when you add festive wording to a template you already send, which turns a ₹0.1150 utility message into a ₹0.8631 marketing one.',
   },
   {
     question: 'How many templates do I need to start?',
@@ -125,7 +128,7 @@ type LibraryItem = {
   message: TemplateMessage;
 };
 
-const FESTIVE_GROUP = { id: 'festive', label: 'Festive' };
+const FESTIVE_GROUP = { id: 'festive', label: 'Festive rewrites' };
 
 const LIBRARY: LibraryItem[] = [
   ...TEMPLATE_GROUPS.flatMap((g) =>
@@ -253,10 +256,10 @@ export default function WhatsAppTemplatesPage() {
             <>
               <PrimaryButton to="/signup">Start free</PrimaryButton>
               <Link
-                to="/whatsapp-journey-examples"
+                to={FESTIVAL_PATH}
                 className="text-sm font-medium text-[#7C3AED] hover:underline"
               >
-                See the journeys that send them
+                See the 100 festival templates
               </Link>
             </>
           }
@@ -264,6 +267,39 @@ export default function WhatsAppTemplatesPage() {
 
         <Section className="!pt-12 md:!pt-16" id="library">
           <TemplateLibrary />
+
+          {/*
+            The three festive cards above are rewrites of order-flow templates,
+            kept because they are the clearest way to show how a festive line
+            reclassifies a utility message. The actual festive library is a
+            hundred templates on its own pages, and a merchant who came here
+            searching for "Diwali template" needs to be sent there rather than
+            left thinking three is all there is.
+          */}
+          <div className="mx-auto mt-6 max-w-5xl">
+            <Link to="/whatsapp-festival-templates" className="mkt-jx-note">
+              <span className="mkt-jx-note__icon" aria-hidden>
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M7 21h10c0-3.5-2.6-6-5-6s-5 2.5-5 6Z" />
+                  <path d="M12 12c1.8-2.4 0-5 0-5s-3 2.5-3 5a3 3 0 0 0 6 0" />
+                </svg>
+              </span>
+              <span className="mkt-jx-note__body">
+                <span className="mkt-jx-note__tag">100 more templates</span>
+                <span className="mkt-jx-note__title">Festival templates, 25 festivals</span>
+                <span className="mkt-jx-note__desc">
+                  Four ready messages each for Diwali, Dhanteras, Holi, Eid, Rakhi, Navratri,
+                  Christmas and eighteen more — with the send dates and what each one costs.
+                </span>
+              </span>
+              <span className="mkt-jx-note__cta">
+                Browse festival templates
+                <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M5 12h14M13 6l6 6-6 6" />
+                </svg>
+              </span>
+            </Link>
+          </div>
         </Section>
 
         <Section wash="soft">
@@ -290,6 +326,7 @@ export default function WhatsAppTemplatesPage() {
 
           <ul className="mx-auto mt-10 flex max-w-3xl flex-wrap justify-center gap-3">
             {[
+              { label: 'Festival templates', href: '/whatsapp-festival-templates' },
               { label: 'Journey examples', href: '/whatsapp-journey-examples' },
               { label: 'Meta template manager', href: '/features/meta-manager' },
               { label: 'Meta India rate card', href: '/pricing/meta-rates' },

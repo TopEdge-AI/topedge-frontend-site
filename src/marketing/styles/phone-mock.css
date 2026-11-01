@@ -339,3 +339,43 @@
 .mkt-ph--compact .mkt-ph__button {
   font-size: 0.74rem;
 }
+
+/* Merchant-filled slots, which the festive catalog writes as [Store Name]
+   rather than {{order_field}}. Tinted differently from the order variables
+   above because the distinction is the point: one is filled automatically from
+   Shopify, the other is a blank the merchant types into once. */
+.mkt-ph__var--merchant {
+  padding: 0 0.18rem;
+  background: #fef3c7;
+  color: #92400e;
+}
+
+/* The footer line Meta renders under the body. Every festive marketing
+   template carries one, and leaving it out of the preview hid the single
+   component most likely to be the reason a template is approved. */
+.mkt-ph__footer {
+  margin: 0.3rem 0 0;
+  font-size: 0.64rem;
+  line-height: 1.4;
+  color: #8696a0;
+}
+
+/* A drawn festival mark in the header slot, rather than a product photo. */
+/* A banner, not a hero. At 16/9 the drawn mark took more of the bubble than
+   the message did, which inverts what the card is for. The artwork is cropped
+   to this ratio rather than redrawn, and the centred glyph stays inside it. */
+.mkt-ph__media--art {
+  display: block;
+  aspect-ratio: 2.4 / 1;
+  background: #f8f5ff;
+}
+
+.mkt-ph__media--art > * {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.mkt-ph--compact .mkt-ph__footer {
+  font-size: 0.66rem;
+}

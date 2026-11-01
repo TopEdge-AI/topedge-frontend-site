@@ -68,6 +68,7 @@ const columns: { title: string; links: FootLink[] }[] = [
     links: [
       { label: 'Journey examples', href: '/whatsapp-journey-examples' },
       { label: 'WhatsApp templates', href: '/whatsapp-templates' },
+      { label: 'Festival templates', href: '/whatsapp-festival-templates', badge: 'New' },
       { label: 'Shopify WhatsApp integration', href: '/shopify-whatsapp-integration' },
       { label: 'Integrations', href: '/integrations' },
       { label: 'Meta India rate card', href: '/pricing/meta-rates' },
