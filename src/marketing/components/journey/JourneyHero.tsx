@@ -42,6 +42,8 @@ export default function JourneyHero({
   trust,
   image,
   imageAlt,
+  imageWidth = 1200,
+  imageHeight = 900,
   children,
 }: {
   /** Small caps label over the headline. Omit it where the headline is enough. */
@@ -55,6 +57,11 @@ export default function JourneyHero({
   trust?: boolean;
   image?: string;
   imageAlt?: string;
+  /* The intrinsic size, so the browser reserves the right box before the
+     image lands. The default is the 4:3 of the product compositions; pass the
+     real numbers for anything else or the hero jumps on load. */
+  imageWidth?: number;
+  imageHeight?: number;
   /** Used instead of a single image, e.g. the index thumbnail strip. */
   children?: ReactNode;
 }) {
@@ -77,8 +84,8 @@ export default function JourneyHero({
           <img
             src={image}
             alt={imageAlt ?? ''}
-            width={1200}
-            height={900}
+            width={imageWidth}
+            height={imageHeight}
             loading="eager"
             decoding="async"
           />

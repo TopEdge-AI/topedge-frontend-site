@@ -236,8 +236,10 @@ export default function FestivalTemplatesPage() {
           accent="Free WhatsApp marketing templates"
           trust
           subtitle={`${FESTIVAL_TEMPLATE_COUNT} ready-written WhatsApp message templates across ${FESTIVALS.length} festivals — four per festival, written as a campaign rather than a blast. Copy the text, edit it to your brand, download the set, and submit it to Meta from your own WhatsApp Business account.`}
-          image="/marketing/journeys/hero-whatsapp-templates.webp"
-          imageAlt="Free WhatsApp marketing template examples previewed on a phone"
+          image="/marketing/journeys/hero-festival-templates.webp"
+          imageAlt="A festival campaign calendar running Dussehra to Bhai Dooj beside an approved Diwali WhatsApp template"
+          imageWidth={1672}
+          imageHeight={941}
           /* Stacked, not side by side: one primary action on the centre line,
              and the library link under it as the quieter second choice. */
           actions={
