@@ -70,14 +70,19 @@ const UPDATRR_FAQS: Faq[] = [
 
 const AISENSY_FAQS: Faq[] = [
   {
-    question: 'Is AiSensy good for Shopify COD confirmation?',
+    question: 'What is the best AiSensy alternative for WhatsApp in India?',
     answer:
-      'AiSensy can send COD confirmation messages, but according to our September 2026 research the COD-to-prepaid payment link step usually needs API integration and manual template mapping. If COD to prepaid conversion is your main goal, test that exact flow on a live Shopify store before you commit.',
+      'There is no single best one, because AiSensy is three products at once: a broadcast tool, a chatbot builder and a team inbox. If you left because of Shopify depth and the service message markup, a Shopify-native tool on flat INR plans like TopEdge AI is the closest fit. If you left because support is your bottleneck, WATI or Gallabox are shared-inbox tools first. If you left because you want to build your own messaging stack, Twilio sells the official WhatsApp Business API and nothing else. Pick by which of those three jobs you are actually replacing.',
   },
   {
-    question: 'Why do Shopify brands look for an AiSensy alternative?',
+    question: 'Is there a free AiSensy alternative?',
     answer:
-      'The common reasons are platform charges added on top of Meta rates, credit-based AI usage, and chatbot flow features that sit on higher plans. None of these is a flaw on its own. They matter when your volume grows and the bill stops tracking your order count.',
+      'Free plans exist, but none of them make WhatsApp free. Meta charges your own WhatsApp Business Account for every template you send, at ₹0.8631 per marketing message and ₹0.1150 per utility or service message in India, whichever platform sends it. So a free plan only removes the software fee, usually in exchange for a contact cap, a single agent seat, no chatbot builder and no automation. AiSensy itself does not publish a permanently free tier for Indian businesses, it publishes 1,000 free service messages a month per number. The honest version of free is a free trial: AiSensy, Interakt and TopEdge AI all run one, and 14 days is enough to send real messages before you pay anything.',
+  },
+  {
+    question: 'What do people on Reddit say about AiSensy alternatives?',
+    answer:
+      'We do not quote threads we have not read, so treat this as our own summary of the questions Indian store owners keep asking us, which are the same ones that come up in founder groups and on r/IndianStartups and r/shopify. Four recur: does the platform add its own charge on top of Meta rates, is the chatbot builder usable without a developer, can I move my WhatsApp number without losing approved templates, and does anyone do COD to prepaid properly. Those four are checkable before you buy, which is more useful than any opinion. The service message rate is published, template ownership sits with your WhatsApp Business Account rather than the vendor, and COD to prepaid can be run end to end on a trial.',
   },
   {
     question: 'Does AiSensy mark up Meta’s WhatsApp rates in India?',
@@ -85,14 +90,39 @@ const AISENSY_FAQS: Faq[] = [
       'On the service message line, yes, and AiSensy publishes it. Its pricing page states that from 1 October 2026 every WhatsApp Business number gets 1,000 free service messages a month and that service messages are then ₹0.145 each for Indian users. Meta’s own published India service and utility rate is ₹0.1150, so that is ₹0.030 more per reply, a 26.1% markup on every support or bot reply past the free thousand. Verify both on the live pages before you decide.',
   },
   {
-    question: 'What should I test before switching from AiSensy?',
+    question: 'AiSensy vs Interakt: which is cheaper for a Shopify store?',
     answer:
-      'Run one real abandoned checkout, one real COD order and one inbound customer chat on the new platform, using the templates you actually send today. If all three behave on a real phone, the migration risk is low.',
+      'They lose money in different places, so the answer depends on your mix. AiSensy costs more on support volume, because of the ₹0.145 service message rate against Meta’s ₹0.1150. Interakt costs more on AI volume, because its WhatsApp AI Agents are a ₹3,000 add-on on Growth and Advanced with 100 free AI messages a month and ₹0.50 per AI message after that, on top of a ₹2,799 Growth plan. A support-heavy store pays AiSensy more. A store running an AI catalogue bot pays Interakt more. Work out your own number from your real monthly reply count rather than the headline plan price.',
   },
   {
-    question: 'Do I lose chat history when I switch WhatsApp platforms?',
+    question: 'AiSensy vs WATI vs Gallabox: what is the actual difference?',
     answer:
-      'Usually yes for the conversation history inside the old tool, because it lives in that vendor’s database. Export what you need first. Your contacts, opt-in records and approved templates are the parts you must keep.',
+      'AiSensy is campaign-led, built around WhatsApp broadcasts and chatbot flows. WATI is support-led, built around a shared team inbox with agents, assignment and ticketing. Gallabox sits between the two as a WhatsApp CRM, with a shared inbox, a drag and drop chatbot builder and lead qualification for sales teams. None of the three is Shopify-first, so cart recovery, order context in the inbox and COD to prepaid are integration work on all of them rather than defaults. That is the gap a Shopify-native tool fills, and the reason the comparison is rarely just about price.',
+  },
+  {
+    question: 'Is Twilio a realistic AiSensy alternative?',
+    answer:
+      'Only if you have developers. Twilio is an official WhatsApp Business Solution Provider and sells access to the API, message delivery and a flow builder, but it does not ship the things a marketer opens every day: no campaign scheduler aimed at a Shopify segment, no catalogue, no abandoned cart journey, no Indian GST invoice by default. You get infrastructure and you build the product on top. For an engineering team that wants full control it is the most flexible option on this list. For a five person D2C brand it is a way to spend three months rebuilding what AiSensy already does.',
+  },
+  {
+    question: 'Will I lose my approved templates and my WhatsApp number if I switch?',
+    answer:
+      'No, if you plan it. Approved templates and your phone number belong to your WhatsApp Business Account, not to the platform. When the new provider connects to the same WABA your templates and number come with you and nothing goes back through Meta review. What you do lose is conversation history stored inside the old vendor, so export what you need first. One number can only be connected to one platform at a time, so expect a short cutover window rather than a parallel run.',
+  },
+  {
+    question: 'Is AiSensy good for Shopify COD confirmation?',
+    answer:
+      'AiSensy can send COD confirmation messages, but according to our September 2026 research the COD-to-prepaid payment link step usually needs API integration and manual template mapping. If COD to prepaid conversion is your main goal, test that exact flow on a live Shopify store before you commit.',
+  },
+  {
+    question: 'What should I test before switching from AiSensy?',
+    answer:
+      'Run one real abandoned checkout, one real COD order and one inbound customer chat on the new platform, using the templates you actually send today. If all three behave on a real phone, the migration risk is low. Add a fourth test if you run broadcasts: send one campaign to a 50 contact segment and check the delivery report, because that is where template category and opt-in problems surface.',
+  },
+  {
+    question: 'How long does it take to move from AiSensy to another platform?',
+    answer:
+      'The technical move is short, usually an afternoon, because the number and templates stay on your WhatsApp Business Account. What takes time is rebuilding automation: every flow, every tag and every campaign segment has to be recreated on the new tool. Budget a week for a store with a handful of journeys and two to three weeks if you run a large chatbot tree, and keep the old flows paused rather than deleted until the new ones have run on real orders.',
   },
 ];
 
@@ -424,16 +454,17 @@ ${faqHtml(WATI_FAQS)}
     id: 28,
     title: 'Best AiSensy Alternative for Shopify India (2026)',
     description:
-      'Outgrowing AiSensy broadcasts on Shopify India? Compare 0% Meta markup (₹0.115 service vs ₹0.145 on AiSensy), BYOK AI, and native COD-to-prepaid flows.',
+      'AiSensy alternative for Shopify India: AiSensy vs Interakt, WATI, Gallabox and Twilio on price, AI cost and COD to prepaid.',
     summary: [
-      'From 1 October 2026 AiSensy charges Indian users ₹0.145 per service message, against Meta’s own ₹0.1150 rate.',
-      'That gap is a markup on a fee Meta already bills you, and it scales with every service reply you send.',
-      'Before leaving, test the three things a broadcast tool usually lacks: COD to prepaid, your own AI key, and order context in the inbox.',
+      'The right AiSensy alternative depends on which job you are replacing: broadcasts, the chatbot builder, or the team inbox.',
+      'From 1 October 2026 AiSensy charges Indian users ₹0.145 per service message, against Meta’s own ₹0.1150 rate, a 26.1% markup on that line.',
+      'No WhatsApp tool can be free, because Meta bills your own WhatsApp Business Account per message whichever platform sends it.',
+      'This page compares AiSensy with Interakt, WATI, Gallabox, Twilio and TopEdge AI on cost, Shopify depth and COD to prepaid.',
     ],
     slug: 'aisensy-alternative-shopify-india',
     date: '2026-10-08',
     updated: '2026-10-21',
-    readTime: '9 min',
+    readTime: '14 min',
     category: 'Comparisons',
     author: 'Moksh Patel',
     image: '/blog/aisensy-alternative-shopify-india.jpg',
@@ -442,8 +473,14 @@ ${faqHtml(WATI_FAQS)}
       'AiSensy alternative for Shopify India, with 0% Meta markup and native COD-to-prepaid conversion on WhatsApp',
     keywords: [
       'AiSensy alternative',
-      'AiSensy alternative India',
+      'AiSensy alternative for WhatsApp',
+      'AiSensy alternative free',
+      'AiSensy alternative in India',
       'AiSensy alternative Shopify',
+      'AiSensy vs Interakt',
+      'AiSensy vs WATI',
+      'AiSensy vs Gallabox',
+      'AiSensy vs Twilio',
       'AiSensy vs TopEdge',
       'AiSensy pricing India',
       'WhatsApp marketing Shopify India',
@@ -465,19 +502,52 @@ ${faqHtml(WATI_FAQS)}
         software: { category: 'BusinessApplication', operatingSystem: 'Web' },
       },
     ],
-    content: `
-${verdict(`<p><strong>AiSensy is a strong broadcast and campaign tool.</strong> Look for an alternative if you care more about native cart recovery, a COD-to-prepaid flow and predictable cost as volume grows. If most of your value is one-off broadcasts, the switch may not be worth it.</p>`)}
+    content: `${verdict(`<p><strong>The best AiSensy alternative depends on which of its three jobs you are replacing.</strong> For Shopify depth, native cart recovery and COD to prepaid, a Shopify-first tool on flat INR plans fits. For support volume, a shared team inbox tool like WATI or Gallabox fits. For full control, Twilio sells the raw API. If most of your value is one-off WhatsApp broadcasts, AiSensy is already good at that and the switch may not be worth it.</p>`)}
 
-<p>AiSensy is one of the most visible WhatsApp marketing platforms in India and appears in most roundups. That visibility is exactly why teams compare it with Shopify-native tools once their store scales.</p>
+<p>Most people searching for an <strong>AiSensy alternative</strong> are not unhappy with AiSensy. They have outgrown the shape of it. AiSensy is one of the most visible WhatsApp Business API platforms in India, it is an official Meta Business Solution Provider, and it is genuinely good at broadcasting to a list. The friction starts when a Shopify store needs the message to know what the customer bought, and when the bill stops tracking the order count.</p>
+<p>This page compares AiSensy with the five platforms Indian D2C brands actually shortlist against it: Interakt, WATI, Gallabox, Twilio and TopEdge AI. It uses published prices where the vendor publishes them, and says so plainly where it cannot.</p>
+
+<h2>What is the best AiSensy alternative for WhatsApp in India?</h2>
+<p>Start by naming what you are replacing, because AiSensy is three products sold as one.</p>
+<ul>
+<li><strong>A broadcast tool.</strong> Segments, campaign scheduling, template management, delivery reports. If this is all you use, almost nothing on this list is a clear upgrade and you should stay.</li>
+<li><strong>A chatbot builder.</strong> Keyword and flow based automation that answers customers without an agent. Every tool here has one. They differ in whether the good version sits on your plan or two plans up.</li>
+<li><strong>A team inbox.</strong> Shared conversations, agents, assignment. AiSensy has one; it is not what the product is built around.</li>
+</ul>
+<p>Once you know which of the three is failing, the shortlist writes itself:</p>
+<ul>
+<li>Shopify cart recovery, order context and COD to prepaid are failing, so you want a <strong>Shopify-native</strong> tool.</li>
+<li>Support volume is failing, so you want an <strong>inbox-first</strong> tool: WATI or Gallabox.</li>
+<li>Cost per message is failing, so you want a platform with <strong>no markup on Meta charges</strong>.</li>
+<li>Nothing is failing except flexibility, so you want the <strong>official WhatsApp Business API</strong> direct, which is Twilio.</li>
+</ul>
+
+<h2>AiSensy alternative comparison: six WhatsApp platforms side by side</h2>
+<p>Every platform below is an official WhatsApp Business Solution Provider, so the Meta message rate is identical on all six. What differs is the software fee, whether the vendor adds its own charge on top, and how much of a Shopify store it can actually reach.</p>
+<div class="mkt-blog-table-wrap">
+<table>
+<thead><tr><th>Platform</th><th>Built around</th><th>Markup on Meta rates</th><th>Shopify depth</th><th>Best for</th></tr></thead>
+<tbody>
+<tr><td><strong>AiSensy</strong></td><td>WhatsApp broadcasts and chatbot flows</td><td>Yes, on the service line: <strong>₹0.145</strong> vs Meta’s <strong>₹0.1150</strong> (published)</td><td>App plus API work for order-aware journeys</td><td>Campaign-led businesses with a big list</td></tr>
+<tr><td><strong>Interakt</strong></td><td>WhatsApp plus a sales CRM</td><td>No published per-message markup; AI billed separately at <strong>₹0.50</strong> per AI message after 100 free (published)</td><td>Shopify templates, COD to prepaid on higher tiers</td><td>Stores that want CRM and WhatsApp in one place</td></tr>
+<tr><td><strong>WATI</strong></td><td>Shared team inbox and agents</td><td>Check the live pricing page; conversation based historically</td><td>Shopify app, support-first rather than journey-first</td><td>Support desks with several agents</td></tr>
+<tr><td><strong>Gallabox</strong></td><td>WhatsApp CRM, drag and drop chatbot builder</td><td>Check the live pricing page</td><td>Integrations and lead routing, not cart journeys</td><td>Sales teams that qualify leads over WhatsApp</td></tr>
+<tr><td><strong>Twilio</strong></td><td>The raw API, billed per message in USD</td><td>Platform fee per message on top of Meta charges</td><td>None out of the box; you build it</td><td>Teams with developers who want full control</td></tr>
+<tr><td><strong>TopEdge AI</strong></td><td>Shopify order lifecycle on WhatsApp</td><td>None. Meta rates passed through at <strong>₹0.1150</strong> and <strong>₹0.8631</strong></td><td>Native cart recovery, COD confirmation, COD to prepaid, warranty</td><td>Indian D2C stores on Shopify</td></tr>
+</tbody>
+</table>
+</div>
+<p>Two honest caveats on that table. The AiSensy and Interakt figures are read off their own pricing pages and dated in the footnote. The WATI, Gallabox and Twilio rows deliberately carry no price, because we will not quote a number we have not opened the page to check on the day of writing. Open all three before you budget.</p>
 
 <h2>Where do Shopify brands hit limits with AiSensy?</h2>
 <ul>
 <li><strong>Platform usage charges</strong> are applied on top of Meta’s base message rates. AiSensy publishes the exact figure, which makes this one checkable rather than a vibe. See the table below.</li>
 <li><strong>AI is credit based</strong>, with a per-message fee structure that grows with chat volume.</li>
-<li><strong>Chatbot flow builder</strong> features sit on higher plans or add-on modules.</li>
-<li><strong>COD to prepaid</strong> typically needs API integration and manual mapping of payment links.</li>
+<li><strong>Chatbot builder depth</strong> sits on higher plans or add-on modules, so the flow you designed on a demo may not be the flow your plan runs.</li>
+<li><strong>COD to prepaid</strong> typically needs API integration and manual mapping of payment links, rather than being a journey you switch on.</li>
+<li><strong>Order context in the inbox.</strong> An agent answering "where is my order" wants the order on the same screen. Getting Shopify order data into a campaign-led inbox is integration work.</li>
 </ul>
-<p>These are findings from our research, not guarantees. Plans change, so check the live page.</p>
+<p>None of these is a flaw on its own. They matter when volume grows and the bill stops tracking your order count. These are findings from our research, not guarantees. Plans change, so check the live page.</p>
 
 <h2>The service message markup: ₹0.145 against Meta’s ₹0.115</h2>
 <p>Most "platform charges apply" claims are impossible to check. This one is not, because both numbers are published.</p>
@@ -494,10 +564,54 @@ ${verdict(`<p><strong>AiSensy is a strong broadcast and campaign tool.</strong> 
 </tbody>
 </table>
 </div>
-<p>Read the shape of that column, not just the amounts. At 4,000 replies the markup is ₹120 and nobody should switch platforms over it. At 100,000 replies in a festive month it is ₹3,000, and it scales with exactly the thing you are trying to grow. That is the cost shape worth avoiding, and it is why the 1 October 2026 service-message change matters more than the January marketing rise for support-heavy stores. Full breakdown in the <a href="/blog/whatsapp-business-api-pricing-india">India WhatsApp API pricing guide</a>.</p>
+<p>Read the shape of that column, not just the amounts. At 4,000 replies the markup is ₹120 and nobody should switch platforms over it. At 100,000 replies in a festive month it is ₹3,000, and it scales with exactly the thing you are trying to grow: conversations with customers. That is the cost shape worth avoiding, and it is why the 1 October 2026 service-message change matters more than the January marketing rise for support-heavy stores. Full breakdown in the <a href="/blog/whatsapp-business-api-pricing-india">India WhatsApp API pricing guide</a>.</p>
 <p>To be fair to AiSensy: a markup is not dishonest, it is a business model, and they publish it openly, which is more than many do. The question is only whether you would rather pay it on the message line or on a flat subscription.</p>
 
-<h2>AiSensy vs a Shopify-native alternative</h2>
+<h2>Is there a free AiSensy alternative?</h2>
+<p>This is the most common follow-up search, and it has an uncomfortable answer: <strong>no WhatsApp platform can make WhatsApp free</strong>, because the messages are not the platform’s to give away.</p>
+<p>Meta bills your own WhatsApp Business Account directly, at ₹0.8631 per delivered marketing template and ₹0.1150 per utility or service message in India. Since 1 October 2026 service replies past 1,000 a month per number are billable too. Those Meta charges are identical on every tool on this page, including the ones with a free plan.</p>
+<p>So a free plan only removes the software fee. What it usually costs you instead:</p>
+<ul>
+<li>A contact cap, often a few hundred, which a live store passes in a month.</li>
+<li>One agent seat, which means no shared team inbox.</li>
+<li>No chatbot builder, or a basic keyword responder rather than a real flow.</li>
+<li>No automation triggered by Shopify events, which is the part that earns money.</li>
+<li>Vendor branding on messages, on some tools.</li>
+</ul>
+<p>AiSensy does not publish a permanently free tier for Indian businesses; what it publishes is 1,000 free service messages a month per number. The practical free option across this whole category is the <strong>free trial</strong>. AiSensy, Interakt and TopEdge AI all run one, and 14 days is long enough to connect your WhatsApp number, send real templates and watch a real COD order go through before any money changes hands. If a tool will not let you test the one flow you came for, that is the answer.</p>
+<p>One genuinely free thing worth knowing: Shopify’s own abandoned checkout email is already included in your Shopify plan. If budget is the whole constraint, turn that on first and add WhatsApp when the order volume justifies it.</p>
+
+<h2>What people actually ask before choosing an AiSensy alternative</h2>
+<p>We will not quote Reddit threads we have not read, so treat this as our own summary of what Indian store owners ask us, which lines up with what comes up in founder groups and on r/shopify and r/IndianStartups. Four questions repeat, and all four are checkable before you pay.</p>
+<ol>
+<li><strong>"Does the platform charge on top of Meta?"</strong> Ask for the per-message rate in writing, by category, for India. Compare it against Meta’s published rate card. A vendor that will not put the number on a page is telling you something.</li>
+<li><strong>"Can I build a chatbot without a developer?"</strong> Open the flow builder during the trial and build the real flow, not the demo. Branching, API calls and handoff to a human are where free-looking builders stop.</li>
+<li><strong>"Will I lose my number and my templates?"</strong> No, if the new provider connects to the same WhatsApp Business Account. Templates and the number belong to your WABA, not the vendor. Conversation history inside the old tool does not move, so export it.</li>
+<li><strong>"Does anyone do COD to prepaid properly?"</strong> This is the Indian question nobody outside India asks. Run one real COD order end to end on a trial, including the payment link, the retry and what happens when the customer ignores it.</li>
+</ol>
+<p>Opinions in a thread are worth less than the result of those four tests on your own store.</p>
+
+<h2>AiSensy vs Interakt</h2>
+<p>The closest like-for-like swap, and the one most Indian stores look at first. Both are Indian, both are official Meta partners, both have a Shopify app.</p>
+<p>They lose money in different places. AiSensy costs more on <strong>support volume</strong>, because of the ₹0.145 service rate. Interakt costs more on <strong>AI volume</strong>: <a href="https://www.interakt.shop/pricing/" target="_blank" rel="noopener noreferrer">its pricing page</a> lists Growth at ₹2,799 a month as the cheapest plan that includes WhatsApp, with WhatsApp AI Agents sold as a ₹3,000 add-on that includes 100 AI messages a month and charges ₹0.50 per AI message after that.</p>
+<p>So: a store answering thousands of support replies pays AiSensy more. A store running an AI catalogue bot pays Interakt more. Work it out from your own reply count. Full breakdown on the <a href="/blog/interakt-alternative-shopify-india">Interakt alternative</a> page.</p>
+
+<h2>AiSensy vs WATI</h2>
+<p>This is not a like-for-like comparison and treating it as one is the mistake. AiSensy is campaign-led. WATI is support-led: the product is built around a shared team inbox, with agents, assignment rules, canned replies and ticket-style handling of conversations.</p>
+<p>Move to WATI if your bottleneck is <strong>people answering customers</strong> and you need several agents working one WhatsApp number without stepping on each other. Do not move to WATI expecting better broadcasting or deeper Shopify automation; that is not the job it is built for. Our full read is on the <a href="/blog/wati-alternative-shopify-india">WATI alternative</a> page and the <a href="/compare/topedge-vs-wati-vs-aisensy">TopEdge vs WATI vs AiSensy</a> three-way board.</p>
+
+<h2>AiSensy vs Gallabox</h2>
+<p>Gallabox sits between the two. It is an Indian WhatsApp CRM: shared inbox, a drag and drop chatbot builder, contact properties, and routing built for sales teams that <strong>qualify leads</strong> over chat rather than for stores that recover carts.</p>
+<p>It is a real alternative if your WhatsApp number is a sales channel, with a human closing deals and a bot collecting requirements first. It is a weaker alternative if your WhatsApp number is an order channel, because Shopify order state, COD confirmation and cart recovery are integration work rather than built-in journeys. Like WATI, check its current plans yourself; we are not quoting a price we have not verified on the day.</p>
+
+<h2>AiSensy vs Twilio</h2>
+<p>Twilio is the only name on this list that is not really a competitor to AiSensy. It is infrastructure. Twilio is an official WhatsApp Business Solution Provider and sells API access, message delivery, a flow builder and the plumbing around them, billed per message in USD on top of what Meta charges.</p>
+<p>What you do not get: a campaign scheduler aimed at a Shopify segment, a product catalogue, an abandoned cart journey, a COD flow, an Indian GST invoice by default, or a screen your marketing lead can open on Monday morning. You get building blocks.</p>
+<p>Choose Twilio when you have engineers, you want to own the messaging layer, and your requirements are strange enough that no packaged tool fits. Do not choose it to save money on a five person D2C brand: the licence saving disappears into three months of development and then someone has to maintain it.</p>
+
+<h2>AiSensy vs TopEdge AI</h2>
+<p>Our own position, stated as a comparison you can check rather than a claim.</p>
+<div class="mkt-blog-table-wrap">
 <table>
 <thead><tr><th>Question</th><th>AiSensy (public patterns)</th><th>TopEdge AI</th></tr></thead>
 <tbody>
@@ -505,28 +619,73 @@ ${verdict(`<p><strong>AiSensy is a strong broadcast and campaign tool.</strong> 
 <tr><td>Meta message markup</td><td>+26.1% on the service line</td><td>No markup on Meta rates</td></tr>
 <tr><td>AI cost model</td><td>Per-message credits</td><td>Bring your own key, roughly ₹0.10 to ₹0.30 a reply paid to the model provider</td></tr>
 <tr><td>COD to prepaid</td><td>API plus manual mapping</td><td>Built into journeys on Growth and Scale</td></tr>
-<tr><td>Flow limits</td><td>Capped by plan and credits</td><td>Flow builder on all plans</td></tr>
+<tr><td>Chatbot builder limits</td><td>Capped by plan and credits</td><td>Flow builder on all plans</td></tr>
+<tr><td>Order context in the inbox</td><td>Integration work</td><td>Shopify order, COD status and warranty on the conversation</td></tr>
+<tr><td>Subscription</td><td>Plan based, per the live pricing page</td><td>Flat INR from ₹1,999 a month plus GST</td></tr>
 <tr><td>Best for</td><td>Broadcasts and campaigns</td><td>Shopify cart, COD and order lifecycle</td></tr>
 </tbody>
 </table>
-<p>Tradeoff: bring-your-own-key AI means you manage a model account. That is cheaper at volume, but it is one more thing to set up.</p>
+</div>
+<p>Tradeoff, stated honestly: bring-your-own-key AI means you manage an OpenAI or Gemini account and watch that bill yourself. It is cheaper at volume and it is one more thing to set up. And if broadcasting to a large list is 90% of what you do, AiSensy already does that well and we are not a compelling swap. The full scorecard is the <a href="/compare/aisensy">AiSensy alternative comparison</a>.</p>
+
+<h2>Features to check before you pick an AiSensy alternative</h2>
+<p>Price is the easy comparison and usually the wrong one. These are the lines that decide whether the tool works in month three.</p>
+<ul>
+<li><strong>Official WhatsApp Business API access.</strong> Confirm the vendor is a Meta Business Solution Provider and that the number sits on <em>your</em> WhatsApp Business Account, not the vendor’s. That is what makes leaving possible later.</li>
+<li><strong>Chatbot builder on your plan.</strong> Build the real branching flow during the trial, with an API call and a human handoff in it.</li>
+<li><strong>Shared team inbox.</strong> How many agent seats are included, and what does the next seat cost.</li>
+<li><strong>WhatsApp broadcasts and segments.</strong> Can you send to a Shopify segment such as "bought twice, not in 90 days", or only to an uploaded CSV.</li>
+<li><strong>Shopify integrations.</strong> Order created, fulfilled, cancelled, abandoned checkout. Which of these can trigger automation without a developer.</li>
+<li><strong>Who pays Meta.</strong> Direct billing to your WABA is cleaner than wallet credits you top up with the vendor.</li>
+<li><strong>Opt-in handling.</strong> Marketing templates need consent. See the <a href="/blog/whatsapp-opt-in-shopify-india">WhatsApp opt-in rules for Shopify India</a>.</li>
+<li><strong>Template approval support.</strong> Rejections are the most common first-week blocker: <a href="/blog/whatsapp-template-rejected-meta-shopify-fix">why templates get rejected and how to fix them</a>.</li>
+</ul>
+
+<h2>How to move your WhatsApp number without downtime</h2>
+<p>The technical migration is smaller than people expect, because the number and the approved templates belong to your WhatsApp Business Account.</p>
+<ol>
+<li><strong>Export first.</strong> Contacts, opt-in records with timestamps, and any conversation history you are required to keep. History inside the old vendor does not travel.</li>
+<li><strong>Connect the new platform to the same WABA.</strong> Templates and the number carry over without going back through Meta review.</li>
+<li><strong>Rebuild the top three flows only.</strong> Cart recovery, order confirmation, COD confirmation. Not all twenty.</li>
+<li><strong>Test on a spare number.</strong> One abandoned checkout, one COD order, one inbound chat, on a real phone.</li>
+<li><strong>Cut over in a quiet hour.</strong> One number connects to one platform at a time, so there is a short window. Pause the old journeys rather than deleting them.</li>
+<li><strong>Watch the first 48 hours.</strong> Delivery rate, template rejections and your quality rating in WhatsApp Manager.</li>
+</ol>
+<p>Budget an afternoon for the connection and a week or two for the automation, depending on how deep your chatbot tree goes.</p>
 
 <h2>What to test before you leave AiSensy</h2>
 <ol>
 <li>Export contacts and opt-in records, not only the list.</li>
 <li>Rebuild your top three flows on the new tool, not all of them.</li>
 <li>Run one abandoned checkout and one COD order end to end.</li>
-<li>Compare Meta fees plus platform fees at your busiest month.</li>
+<li>Send one broadcast to a 50 contact segment and read the delivery report.</li>
+<li>Compare Meta charges plus platform fees at your busiest month, not an average one.</li>
 </ol>
-<p>The full scorecard is on <a href="/compare/aisensy">TopEdge vs AiSensy</a>, and the three-way view is <a href="/compare/topedge-vs-wati-vs-aisensy">TopEdge vs WATI vs AiSensy</a>.</p>
+<p>The three-way view is <a href="/compare/topedge-vs-wati-vs-aisensy">TopEdge vs WATI vs AiSensy</a>.</p>
+
+<h2>Which AiSensy alternative fits which store</h2>
+<div class="mkt-blog-table-wrap">
+<table>
+<thead><tr><th>If this is true of your store</th><th>Look at</th><th>Why</th></tr></thead>
+<tbody>
+<tr><td>Shopify, COD heavy, cart recovery matters most</td><td>TopEdge AI</td><td>COD confirmation and COD to prepaid are journeys, not integration work</td></tr>
+<tr><td>You want WhatsApp and a sales CRM in one tool</td><td>Interakt</td><td>CRM plus Shopify templates, if you can carry the AI add-on cost</td></tr>
+<tr><td>Several agents answering one number all day</td><td>WATI</td><td>Shared team inbox with assignment and ticketing is the core product</td></tr>
+<tr><td>WhatsApp is a sales channel and you qualify leads on it</td><td>Gallabox</td><td>WhatsApp CRM with a usable chatbot builder for lead capture</td></tr>
+<tr><td>You have developers and unusual requirements</td><td>Twilio</td><td>Official API access and nothing you did not build</td></tr>
+<tr><td>Broadcasting to a large list is 90% of your use</td><td>Stay on AiSensy</td><td>It is good at that, and switching costs you a working setup</td></tr>
+</tbody>
+</table>
+</div>
+<p>That last row is the one most comparison pages will not write. Switching has a real cost in retraining and rebuilt automation, and it is only worth paying when the thing that is broken is structural rather than irritating.</p>
 
 ${faqHtml(AISENSY_FAQS)}
 
 
 <p>Also compare: <a href="/blog/wati-alternative-shopify-india">WATI alternative</a>, <a href="/blog/interakt-alternative-shopify-india">Interakt alternative</a>, <a href="/blog/bitespeed-alternative-shopify-india">Bitespeed alternative</a>, <a href="/blog/zoko-alternative-shopify-india">Zoko alternative</a>, <a href="/blog/getgabs-alternative-shopify-whatsapp">Getgabs alternative</a>, <a href="/blog/kanal-whatsapp-alternative-shopify">Kanal alternative</a> and <a href="/blog/dondy-alternative-shopify-india">Dondy alternative</a> and <a href="/blog/updatrr-alternative-shopify-india">Updatrr alternative</a>.</p>
 
-<p>Related: <a href="/blog/whatsapp-business-api-pricing-india">WhatsApp Business API pricing in India</a>, <a href="/pricing">TopEdge pricing</a>, <a href="/blog/how-to-reduce-rto-with-whatsapp-cod-confirmation">COD confirmation on WhatsApp</a>.</p>
-<p class="mkt-blog-footnote">The ₹0.145 service message rate and the 1,000 free allowance were read off <a href="https://aisensy.com/pricing" target="_blank" rel="noopener noreferrer">AiSensy’s own pricing page</a> on 21 October 2026. Remaining AiSensy statements reflect public listings and our own research. Confirm plan limits, credits and fees on aisensy.com before purchase. Per-message rates, categories and volume tiers: <a href="https://developers.facebook.com/docs/whatsapp/pricing/" target="_blank" rel="noopener noreferrer">Meta’s WhatsApp Business Platform pricing documentation</a>. Template categories, review and the reasons templates get rejected: <a href="https://developers.facebook.com/docs/whatsapp/message-templates/guidelines/" target="_blank" rel="noopener noreferrer">Meta’s message template guidelines</a>.</p>
+<p>Related: <a href="/blog/whatsapp-business-api-pricing-india">WhatsApp Business API pricing in India</a>, <a href="/pricing">TopEdge pricing</a>, <a href="/blog/how-to-reduce-rto-with-whatsapp-cod-confirmation">COD confirmation on WhatsApp</a>, <a href="/blog/cod-to-prepaid-whatsapp-shopify-india">COD to prepaid on WhatsApp</a>.</p>
+<p class="mkt-blog-footnote">The ₹0.145 service message rate and the 1,000 free allowance were read off <a href="https://aisensy.com/pricing" target="_blank" rel="noopener noreferrer">AiSensy’s own pricing page</a> on 21 October 2026. Interakt’s ₹2,799 Growth plan, ₹3,000 AI add-on, 100 free AI messages and ₹0.50 per AI message were read off <a href="https://www.interakt.shop/pricing/" target="_blank" rel="noopener noreferrer">Interakt’s pricing page</a> on the same date. WATI, Gallabox and Twilio are described from their public product pages and carry no price here on purpose: confirm their current plans on their own sites before you budget. Remaining statements reflect public listings and our own research. Per-message rates, categories and volume tiers: <a href="https://developers.facebook.com/docs/whatsapp/pricing/" target="_blank" rel="noopener noreferrer">Meta’s WhatsApp Business Platform pricing documentation</a>. Template categories, review and the reasons templates get rejected: <a href="https://developers.facebook.com/docs/whatsapp/message-templates/guidelines/" target="_blank" rel="noopener noreferrer">Meta’s message template guidelines</a>.</p>
 `,
   },
   {
