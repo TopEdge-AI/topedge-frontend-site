@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import FestivalMark from './FestivalMark';
+import FestivalImage from './FestivalImage';
 import {
   FESTIVAL_STAGES,
   festivalPath,
@@ -10,10 +10,11 @@ import {
 /**
  * A festival, as a card that links to its page.
  *
- * Carries the three things that decide whether a merchant opens it: how far
- * away the festival is, where in India it matters, and the first line of the
- * commercial brief. The four stage chips are there to say, without a sentence,
- * that a page has four ready templates behind it rather than one.
+ * The cover carries the festival's own artwork, because a grid of twenty-five
+ * rows that differ only in their text is a list a merchant scrolls past. The
+ * countdown sits on the image where the eye already is, and the body keeps the
+ * three things that decide whether the card gets opened: the date, the first
+ * line of the commercial brief, and the fact that four templates are behind it.
  */
 export default function FestivalCard({
   festival,
@@ -30,23 +31,20 @@ export default function FestivalCard({
       to={festivalPath(festival.slug)}
       className={`mkt-fc${large ? ' mkt-fc--large' : ''}`}
     >
-      <span className="mkt-fc__mark">
-        <FestivalMark festivalName={festival.catalogName} />
+      <span className="mkt-fc__cover">
+        <FestivalImage catalogName={festival.catalogName} />
+        {/*
+          Only when it adds something. Beyond thirty days out the timing label
+          IS the date, and the full date renders below, so the badge was
+          printing "17 May 2027" above "Mon, 17 May, 2027".
+        */}
+        {timing.label && timing.tone !== 'later' && (
+          <span className={`mkt-fc__when mkt-fc__when--${timing.tone}`}>{timing.label}</span>
+        )}
       </span>
 
       <span className="mkt-fc__main">
-        <span className="mkt-fc__top">
-          <span className="mkt-fc__name">{festival.name}</span>
-          {/*
-            Only when it adds something. Beyond thirty days out the timing
-            label IS the date, and the full date renders on the line below, so
-            the pill was printing "17 May 2027" above "Mon, 17 May, 2027".
-          */}
-          {timing.label && timing.tone !== 'later' && (
-            <span className={`mkt-fc__when mkt-fc__when--${timing.tone}`}>{timing.label}</span>
-          )}
-        </span>
-
+        <span className="mkt-fc__name">{festival.name}</span>
         <span className="mkt-fc__date">{timing.fullLabel || festival.regions}</span>
 
         {large && <span className="mkt-fc__peak">{festival.peak}</span>}
@@ -58,12 +56,13 @@ export default function FestivalCard({
             </span>
           ))}
         </span>
-      </span>
 
-      <span className="mkt-fc__go" aria-hidden>
-        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
-          <path d="M5 12h14M13 6l6 6-6 6" />
-        </svg>
+        <span className="mkt-fc__go">
+          See the 4 templates
+          <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+            <path d="M5 12h14M13 6l6 6-6 6" />
+          </svg>
+        </span>
       </span>
     </Link>
   );

@@ -1,53 +1,54 @@
 /**
- * Festival photography.
+ * Festival artwork.
  *
- * ── How to add an image ──────────────────────────────────────────────────
- * Paste a direct image URL next to the festival name below. The key must match
- * `catalogName` in festivalTemplates.ts exactly. Anything left empty falls back
- * to the drawn festival mark, and a URL that fails to load falls back to the
- * same thing, so a dead link never leaves a blank card.
+ * Each festival points at a drawn scene in `public/marketing/festivals/`, built
+ * by `scripts/gen-festival-art.mjs`: a lit background in the festival's own
+ * palette with the subject composed around the centre, so the same file works
+ * as a 2.4:1 WhatsApp media header, a 16:9 card cover and a square thumbnail.
  *
- * You can also drop files into `public/marketing/festivals/<slug>.webp` and
- * reference them as `/marketing/festivals/<slug>.webp` — a local file is faster
- * than a hotlink, survives the other host going down, and is the better option
- * for anything you will keep.
+ * ── Swapping in a photograph ─────────────────────────────────────────────
+ * Replace a value below with your own URL. The key must match `catalogName` in
+ * festivalTemplates.ts exactly. Local files are better than hotlinks — drop
+ * them in `public/marketing/festivals/` and reference them as
+ * `/marketing/festivals/<name>.webp`. A hotlink needs a host that serves HTTPS
+ * and allows it, should stay under about 100 KB (the build's image-weight check
+ * only measures local files), and has to be an image you hold the commercial
+ * rights to: these render on public marketing pages, which is exactly where an
+ * unlicensed stock photo turns into an invoice.
  *
- * ── Before you paste one ─────────────────────────────────────────────────
- * Use a host that serves HTTPS and allows hotlinking, keep each image under
- * about 100 KB (the build's image-weight check only measures local files, so
- * nothing will catch a 2 MB hotlink for you), and make sure you hold the
- * commercial rights. These render on public marketing pages, which is exactly
- * where an unlicensed stock photo turns into an invoice.
- *
- * Landscape crops work best: the slot renders at roughly 2.4:1 inside the
- * WhatsApp header and 16:9 on a card cover.
+ * Anything left empty, and any URL that fails to load, falls back to the drawn
+ * festival mark at runtime, so a dead link never leaves a blank card.
  */
+
+/** Everything under `public/marketing/festivals/`, keyed by festival slug. */
+const scene = (slug: string) => `/marketing/festivals/${slug}.svg`;
+
 export const FESTIVAL_IMAGES: Record<string, string> = {
-  "New Year's Day": '',
-  'Makar Sankranti / Pongal': '',
-  'Vasant Panchami': '',
-  'Maha Shivaratri': '',
-  Holi: '',
-  'Ugadi / Gudi Padwa': '',
-  'Eid-ul-Fitr / Ramzan Eid': '',
-  'Rama Navami': '',
-  'Good Friday': '',
-  Easter: '',
-  'Akshaya Tritiya': '',
-  'Eid-ul-Adha / Bakri Eid': '',
-  Onam: '',
-  'Milad-un-Nabi': '',
-  'Raksha Bandhan': '',
-  'Krishna Janmashtami': '',
-  'Ganesh Chaturthi': '',
-  'Navratri / Durga Puja': '',
-  Dussehra: '',
-  'Karwa Chauth': '',
-  Dhanteras: '',
-  Diwali: '',
-  'Bhai Dooj': '',
-  'Chhath Puja': '',
-  Christmas: '',
+  "New Year's Day": scene('new-year'),
+  'Makar Sankranti / Pongal': scene('makar-sankranti-pongal'),
+  'Vasant Panchami': scene('vasant-panchami'),
+  'Maha Shivaratri': scene('maha-shivaratri'),
+  Holi: scene('holi'),
+  'Ugadi / Gudi Padwa': scene('ugadi-gudi-padwa'),
+  'Eid-ul-Fitr / Ramzan Eid': scene('eid-ul-fitr'),
+  'Rama Navami': scene('rama-navami'),
+  'Good Friday': scene('good-friday'),
+  Easter: scene('easter'),
+  'Akshaya Tritiya': scene('akshaya-tritiya'),
+  'Eid-ul-Adha / Bakri Eid': scene('eid-ul-adha'),
+  Onam: scene('onam'),
+  'Milad-un-Nabi': scene('milad-un-nabi'),
+  'Raksha Bandhan': scene('raksha-bandhan'),
+  'Krishna Janmashtami': scene('krishna-janmashtami'),
+  'Ganesh Chaturthi': scene('ganesh-chaturthi'),
+  'Navratri / Durga Puja': scene('navratri-durga-puja'),
+  Dussehra: scene('dussehra'),
+  'Karwa Chauth': scene('karwa-chauth'),
+  Dhanteras: scene('dhanteras'),
+  Diwali: scene('diwali'),
+  'Bhai Dooj': scene('bhai-dooj'),
+  'Chhath Puja': scene('chhath-puja'),
+  Christmas: scene('christmas'),
 };
 
 /** A usable image URL for a festival, or null to fall back to the drawn mark. */

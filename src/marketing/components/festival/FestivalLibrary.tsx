@@ -143,27 +143,6 @@ export default function FestivalLibrary() {
             {shown.length < results.length ? ` · showing ${shown.length}` : ''}
           </p>
 
-          {/* Downloads what is filtered, not always all hundred — the filter is
-              how someone narrows to the set they actually want. */}
-          <button
-            type="button"
-            className="mkt-flib__download"
-            disabled={results.length === 0}
-            onClick={() =>
-              downloadTemplatesCsv(
-                results,
-                results.length === FESTIVAL_TEMPLATE_COUNT
-                  ? 'whatsapp-festival-templates.csv'
-                  : 'whatsapp-templates-selection.csv',
-              )
-            }
-          >
-            <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
-              <path d="M12 4v11m0 0 4-4m-4 4-4-4" />
-              <path d="M4 19h16" />
-            </svg>
-            Download {results.length === FESTIVAL_TEMPLATE_COUNT ? 'all' : results.length} as CSV
-          </button>
         </div>
       </div>
 
@@ -192,6 +171,36 @@ export default function FestivalLibrary() {
               </button>
             </div>
           )}
+
+          {/*
+            Under the grid, not above it. The download takes whatever the
+            filters currently hold, so it belongs after the set it describes —
+            above the cards it was a button for templates the visitor had not
+            looked at yet.
+          */}
+          <div className="mkt-fdl mkt-fdl--after">
+            <button
+              type="button"
+              className="mkt-fdl__btn"
+              onClick={() =>
+                downloadTemplatesCsv(
+                  results,
+                  results.length === FESTIVAL_TEMPLATE_COUNT
+                    ? 'whatsapp-festival-templates.csv'
+                    : 'whatsapp-templates-selection.csv',
+                )
+              }
+            >
+              <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+                <path d="M12 4v11m0 0 4-4m-4 4-4-4" />
+                <path d="M4 19h16" />
+              </svg>
+              Download {results.length === FESTIVAL_TEMPLATE_COUNT ? `all ${FESTIVAL_TEMPLATE_COUNT}` : results.length} as CSV
+            </button>
+            <span className="mkt-fdl__note">
+              Free, no sign-up. Copy any single message with the button on its card.
+            </span>
+          </div>
         </>
       )}
     </div>

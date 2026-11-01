@@ -44,7 +44,8 @@ export default function JourneyHero({
   imageAlt,
   children,
 }: {
-  eyebrow: string;
+  /** Small caps label over the headline. Omit it where the headline is enough. */
+  eyebrow?: string;
   title: string;
   /** Phrase inside `title` to highlight in violet, as on the blog index. */
   accent?: string;
@@ -60,7 +61,7 @@ export default function JourneyHero({
   return (
     <header className="mkt-jh">
       <div className="mkt-jh__inner">
-        <p className="mkt-jh__eyebrow">{eyebrow}</p>
+        {eyebrow && <p className="mkt-jh__eyebrow">{eyebrow}</p>}
         <h1 className="mkt-jh__title">{renderAccent(title, accent)}</h1>
         <p className="mkt-jh__sub">{subtitle}</p>
         {actions && <div className="mkt-jh__actions">{actions}</div>}

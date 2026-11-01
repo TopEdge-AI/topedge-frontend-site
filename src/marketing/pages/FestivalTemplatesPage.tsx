@@ -232,26 +232,26 @@ export default function FestivalTemplatesPage() {
       />
       <MarketingPage>
         <JourneyHero
-          eyebrow="Free template library"
           title="Free WhatsApp marketing templates for every festival"
           accent="Free WhatsApp marketing templates"
           trust
           subtitle={`${FESTIVAL_TEMPLATE_COUNT} ready-written WhatsApp message templates across ${FESTIVALS.length} festivals — four per festival, written as a campaign rather than a blast. Copy the text, edit it to your brand, download the set, and submit it to Meta from your own WhatsApp Business account.`}
           image="/marketing/journeys/hero-whatsapp-templates.webp"
           imageAlt="Free WhatsApp marketing template examples previewed on a phone"
+          /* Stacked, not side by side: one primary action on the centre line,
+             and the library link under it as the quieter second choice. */
           actions={
-            <>
+            <div className="mkt-fhero-actions">
               <PrimaryButton to="/signup">Start free</PrimaryButton>
-              <Link to="#library" className="text-sm font-medium text-[#7C3AED] hover:underline">
+              <Link to="#library" className="mkt-fhero-actions__link">
                 Browse all {FESTIVAL_TEMPLATE_COUNT} templates
               </Link>
-            </>
+            </div>
           }
         />
 
         <Section className="!pt-10 md:!pt-12">
           <SectionHeading
-            eyebrow="Next up"
             title="The festivals you can still act on"
             accent="still act on"
             subtitle="Meta approval takes hours once your business is verified, so anything more than a week out is comfortably reachable. Each one opens on its own page with the four messages and when to send them."
@@ -261,7 +261,6 @@ export default function FestivalTemplatesPage() {
 
         <Section wash="soft">
           <SectionHeading
-            eyebrow="The shape of the campaign"
             title="Four messages, and the order is the product"
             accent="the order is the product"
             subtitle="Every festival in the library ships the same four-message arc. Sent in sequence they answer four different reasons a customer has not bought yet."
@@ -271,7 +270,6 @@ export default function FestivalTemplatesPage() {
 
         <Section>
           <SectionHeading
-            eyebrow="By the calendar"
             title="Browse festivals by when they land"
             accent="when they land"
             subtitle="Grouped the way a merchant plans — the quarter the festival falls in, not the alphabet. Each card opens a page with the four templates, the demand window and what sells."
@@ -298,17 +296,15 @@ export default function FestivalTemplatesPage() {
 
         <Section wash="soft" id="library">
           <SectionHeading
-            eyebrow="The full library"
             title={`All ${FESTIVAL_TEMPLATE_COUNT} festive templates`}
             accent="festive templates"
-            subtitle="Filter by festival or by stage, or search the copy itself. Each preview is the template exactly as the dashboard hands it over — the real body, footer and button, with the blanks you fill marked in amber."
+            subtitle="Filter by festival or by stage, or search the copy itself. Each preview is the template exactly as the dashboard hands it over — the real body, footer and button, with the blanks you fill marked in amber. Download the set from the button under the grid."
           />
           <FestivalLibrary />
         </Section>
 
         <Section>
           <SectionHeading
-            eyebrow="Yours, not ours"
             title="Customise and personalise it in the dashboard"
             accent="personalise it"
             subtitle="These are drafts, not scripts. Every template is submitted to Meta from your own WhatsApp Business account, under your brand, with your offer in it."

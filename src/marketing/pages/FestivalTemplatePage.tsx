@@ -61,7 +61,7 @@ export default function FestivalTemplatePage({ slug }: { slug: string }) {
     ...festival.faqs,
     {
       question: `Can I download these ${festival.shortName} WhatsApp templates for free?`,
-      answer: `Yes. Download all four as a CSV from the button above the previews, or copy any single message with the button on its card. The CSV carries the body, footer, button label, Meta template name and send window in separate columns. No sign-up, no email.`,
+      answer: `Yes. Download all four as a CSV from the button under the previews, or copy any single message with the button on its card. The CSV carries the body, footer, button label, Meta template name and send window in separate columns. No sign-up, no email.`,
     },
     {
       question: `Can I edit the ${festival.shortName} template copy?`,
@@ -174,21 +174,19 @@ export default function FestivalTemplatePage({ slug }: { slug: string }) {
       />
       <MarketingPage>
         <JourneyHero
-          eyebrow={festival.eyebrow}
           title={festival.h1}
           accent={festival.h1Accent}
           subtitle={festival.subtitle}
           trust
+          /* Stacked, not side by side: one primary action on the centre line,
+             and the way back to the library under it. */
           actions={
-            <>
+            <div className="mkt-fhero-actions">
               <PrimaryButton to="/signup">Personalise these free</PrimaryButton>
-              <Link
-                to={FESTIVAL_HUB_PATH}
-                className="text-sm font-medium text-[#7C3AED] hover:underline"
-              >
+              <Link to={FESTIVAL_HUB_PATH} className="mkt-fhero-actions__link">
                 All 25 festivals
               </Link>
-            </>
+            </div>
           }
         />
 
@@ -198,7 +196,7 @@ export default function FestivalTemplatePage({ slug }: { slug: string }) {
               {timing.fullLabel && (
                 <span className="mkt-fplate__pill mkt-fplate__pill--date">{timing.fullLabel}</span>
               )}
-              {timing.label && timing.tone !== 'past' && (
+              {timing.label && timing.tone !== 'past' && timing.tone !== 'later' && (
                 <span className={`mkt-fplate__pill mkt-fplate__pill--${timing.tone}`}>
                   {timing.label}
                 </span>
@@ -213,13 +211,23 @@ export default function FestivalTemplatePage({ slug }: { slug: string }) {
           </div>
         </Section>
 
+        {/*
+          No heading over the previews. Someone who searched for a
+          "{festival} WhatsApp message" has already read the hero and the lead
+          line; a second title between them and the thing they came for is a
+          screenful of furniture. The download sits under the four cards
+          instead, where it is an action on something already seen rather than
+          a button for a set still out of frame.
+        */}
         <Section className="!pt-4 md:!pt-6">
-          <SectionHeading
-            eyebrow="The sequence"
-            title={`The four ${festival.shortName} messages, in order`}
-            accent="in order"
-            subtitle="Each preview is the real template — the exact body, the footer Meta needs, and the button. Amber marks the blanks you fill in. Copy any one of them, or download all four."
-          />
+          <ul className="mkt-fseq">
+            {items.map((item, i) => (
+              <li key={item.id} id={item.row.metaName}>
+                <FestivalTemplateCard item={item} linkFestival={false} step={i + 1} />
+              </li>
+            ))}
+          </ul>
+
           <div className="mkt-fdl">
             <button
               type="button"
@@ -234,19 +242,10 @@ export default function FestivalTemplatePage({ slug }: { slug: string }) {
             </button>
             <span className="mkt-fdl__note">Free, no sign-up. Copy any single message with the button on its card.</span>
           </div>
-
-          <ul className="mkt-fseq">
-            {items.map((item, i) => (
-              <li key={item.id} id={item.row.metaName}>
-                <FestivalTemplateCard item={item} linkFestival={false} step={i + 1} />
-              </li>
-            ))}
-          </ul>
         </Section>
 
         <Section wash="soft">
           <SectionHeading
-            eyebrow="The brief"
             title={`What moves at ${festival.shortName}`}
             accent={festival.shortName}
             subtitle="The commercial facts behind the copy: when the money moves, what sells, and where in India it matters."
@@ -281,7 +280,6 @@ export default function FestivalTemplatePage({ slug }: { slug: string }) {
 
         <Section wash="soft">
           <SectionHeading
-            eyebrow="Yours, not ours"
             title="Customise and personalise it in the dashboard"
             accent="personalise it"
             subtitle={`The ${festival.shortName} copy is a draft, not a script. Rewrite it, set your own offer, pick the audience, and submit it to Meta from your own WhatsApp Business account.`}

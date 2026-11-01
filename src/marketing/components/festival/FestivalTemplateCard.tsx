@@ -1,7 +1,6 @@
 import { Link } from 'react-router-dom';
 import PhoneMock from '../journey/PhoneMock';
-import FestivalMark from './FestivalMark';
-import FestivalImage from './FestivalImage';
+import FestivalImage, { FestivalThumb } from './FestivalImage';
 import CopyButton from './CopyButton';
 import {
   FESTIVAL_MARKETING_RATE,
@@ -42,7 +41,7 @@ export default function FestivalTemplateCard({
     <article className="mkt-ftc">
       <header className="mkt-ftc__head">
         <span className="mkt-ftc__mark">
-          <FestivalMark festivalName={festival.catalogName} />
+          <FestivalThumb catalogName={festival.catalogName} />
         </span>
         {/*
           On the hub the festival is what identifies a card, because the grid
@@ -99,24 +98,19 @@ export default function FestivalTemplateCard({
             Marketing <span className="mkt-ftc__rate">{FESTIVAL_MARKETING_RATE}</span>
           </span>
         </p>
-        <p className="mkt-ftc__name">
-          <code>{row.metaName}</code>
-        </p>
-
         {/*
-          Copy first, sign-up second. Someone who came here for the words
-          should get the words; asking them to create an account to read text
-          that is already on screen is the kind of thing that sends them back
-          to the search results.
+          Copy sits at the end of the row, where a thumb lands and where the
+          eye finishes reading the card. Nothing is gated behind the sign-up
+          link beside it — someone who came here for the words gets the words.
         */}
         <div className="mkt-ftc__actions">
-          <CopyButton text={templateBodyText(item)} />
           <Link to="/signup" className="mkt-ftc__cta">
             Edit &amp; use
             <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
               <path d="M5 12h14M13 6l6 6-6 6" />
             </svg>
           </Link>
+          <CopyButton text={templateBodyText(item)} />
         </div>
       </div>
     </article>

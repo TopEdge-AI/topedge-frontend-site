@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import FestivalMark from './FestivalMark';
+import { FestivalThumb } from './FestivalImage';
 import { festivalPath, upcomingFestivals } from '../../data/festivalTemplates';
 
 /**
@@ -23,7 +23,7 @@ export default function FestivalCalendarRail({ limit = 4 }: { limit?: number }) 
         <li key={festival.slug}>
           <Link to={festivalPath(festival.slug)} className="mkt-fcal__item">
             <span className="mkt-fcal__mark">
-              <FestivalMark festivalName={festival.catalogName} />
+              <FestivalThumb catalogName={festival.catalogName} />
             </span>
             <span className="mkt-fcal__text">
               <span className="mkt-fcal__name">{festival.shortName}</span>
