@@ -32,11 +32,31 @@ import '../styles/journey-flow.css';
 import '../styles/festival-templates.css';
 
 const PATH = FESTIVAL_HUB_PATH;
-const TITLE = 'Festival WhatsApp Templates for Shopify India | TopEdge AI';
+const TITLE = '100 Free WhatsApp Marketing Templates: Copy, Edit, Send';
 const DESCRIPTION =
-  'A hundred festival WhatsApp templates for Shopify India across 25 festivals — Diwali, Holi, Eid, Rakhi and more — with send timing, ₹ cost and previews.';
+  '100 free WhatsApp marketing message templates across 25 festivals. Copy the text, edit it, download the set and submit it to Meta from your own account.';
 
 const FAQS = [
+  {
+    question: 'What is the best WhatsApp template for marketing?',
+    answer:
+      'There is no single best one — the best marketing template is the one that matches where the customer already is. For a festival that means four: an early-access message for people who would buy at full price, a gift guide for the undecided, a discount for the price-sensitive, and an offer-free greeting that keeps the list subscribed. A single "best" template sent to everyone reaches only the people who were going to buy anyway.',
+  },
+  {
+    question: 'Can I download these WhatsApp templates for free?',
+    answer:
+      'Yes. Every template on this page can be copied with the button on its card, and the Download as CSV button hands you the whole filtered set — all 100, or just the festival you selected — as a spreadsheet with the body, footer, button label, Meta template name and send window in separate columns. No sign-up, no email, nothing logged.',
+  },
+  {
+    question: 'How do I create a WhatsApp message template?',
+    answer:
+      'Write the body, add a footer and up to three buttons, pick a category and a language, then submit it to Meta from your WhatsApp Business account and wait for approval. The part people get wrong is the sample values: every variable needs a realistic example or Meta rejects the template without reading the copy. Starting from a template here means the structure is already right and you are only changing words.',
+  },
+  {
+    question: 'Can I edit a WhatsApp template after Meta approves it?',
+    answer:
+      'You can edit an approved template a limited number of times per month, and the edit goes back through review. What you cannot do is change its category without resubmitting. In practice it is cleaner to treat each festival as a new template rather than rewriting last year\u2019s, which also keeps your approval history readable.',
+  },
   {
     question: 'What is a festival WhatsApp template?',
     answer:
@@ -73,7 +93,7 @@ const FAQS = [
       'Usually hours rather than days once your business is verified, though Meta publishes no guarantee and festive marketing templates get a closer read than order updates. Submit a week before you plan to send, and leave the media header off unless you need it — it is the component most often responsible for a rejection.',
   },
   {
-    question: 'Which festival should a Shopify store start with?',
+    question: 'Which festival should a business start with?',
     answer:
       'The next one more than ten days away, so there is time for Meta approval. If you are choosing on value instead of timing: Diwali and Dhanteras carry the most volume, Raksha Bandhan has the cleanest gifting intent, and Holi is the biggest spring event most stores under-plan.',
   },
@@ -180,7 +200,7 @@ export default function FestivalTemplatesPage() {
       <MarketingSEO
         title={TITLE}
         description={DESCRIPTION}
-        keywords="festival WhatsApp templates, Diwali WhatsApp template, Holi WhatsApp message, festive WhatsApp campaign India, Shopify festival marketing templates, WhatsApp festival offer message"
+        keywords="best whatsapp template for marketing, free whatsapp marketing templates, whatsapp message template example, create whatsapp message template free, whatsapp template download, meta templates whatsapp, festival whatsapp templates, diwali whatsapp template, holi whatsapp message"
         path={PATH}
         noSuffix
         faqSchema={FAQS}
@@ -188,13 +208,13 @@ export default function FestivalTemplatesPage() {
           organizationJsonLd(),
           softwareApplicationJsonLd(),
           webPageJsonLd({
-            name: 'Festival WhatsApp templates for Shopify',
+            name: 'Free WhatsApp marketing templates for every festival',
             description: DESCRIPTION,
             path: PATH,
           }),
           breadcrumbJsonLd([
             { name: 'Home', path: '/' },
-            { name: 'Festival WhatsApp templates', path: PATH },
+            { name: 'Free WhatsApp marketing templates', path: PATH },
           ]),
           {
             '@context': 'https://schema.org',
@@ -212,13 +232,13 @@ export default function FestivalTemplatesPage() {
       />
       <MarketingPage>
         <JourneyHero
-          eyebrow="Festive template library"
-          title="Festival WhatsApp templates for Shopify stores"
-          accent="Festival WhatsApp templates"
+          eyebrow="Free template library"
+          title="Free WhatsApp marketing templates for every festival"
+          accent="Free WhatsApp marketing templates"
           trust
-          subtitle={`${FESTIVAL_TEMPLATE_COUNT} ready festive templates across ${FESTIVALS.length} festivals — four messages each, written as a campaign rather than a blast. Personalise them in the dashboard and submit to Meta from your own account.`}
+          subtitle={`${FESTIVAL_TEMPLATE_COUNT} ready-written WhatsApp message templates across ${FESTIVALS.length} festivals — four per festival, written as a campaign rather than a blast. Copy the text, edit it to your brand, download the set, and submit it to Meta from your own WhatsApp Business account.`}
           image="/marketing/journeys/hero-whatsapp-templates.webp"
-          imageAlt="WhatsApp festive template previews inside the TopEdge dashboard"
+          imageAlt="Free WhatsApp marketing template examples previewed on a phone"
           actions={
             <>
               <PrimaryButton to="/signup">Start free</PrimaryButton>
@@ -297,7 +317,7 @@ export default function FestivalTemplatesPage() {
         </Section>
 
         <Section wash="soft">
-          <TrustBand />
+          <TrustBand title="Brands already sending festive campaigns on WhatsApp" />
         </Section>
 
         <Section>
@@ -330,7 +350,7 @@ export default function FestivalTemplatesPage() {
 
         <MarketingCtaBand
           title="Set up your next festival this week"
-          subtitle="Connect Shopify, personalise the four templates for the next festival, push them to Meta for approval and schedule the sends. Free for 14 days, no card."
+          subtitle="Copy the four templates for the next festival, edit them to your brand, push them to Meta for approval and schedule the sends. Free for 14 days, no card."
           primaryLabel="Start free"
           secondaryLabel="See pricing"
           secondaryTo="/pricing"

@@ -170,6 +170,25 @@ for (const f of festivals) {
   }
 }
 
+/*
+ * 4b — uniqueness. Twenty-five pages generated from one shape is exactly where
+ * duplicate titles and descriptions appear, and Google treats a set of pages
+ * sharing a snippet as one page worth indexing. Catching it here is cheaper
+ * than reading it off a Search Console coverage report three months later.
+ */
+for (const field of ['title', 'description', 'h1']) {
+  const seen = new Map();
+  for (const f of festivals) {
+    const value = (f[field] || '').trim().toLowerCase();
+    if (!value) continue;
+    if (seen.has(value)) {
+      fail(`${f.slug} and ${seen.get(value)} share the same ${field}: "${f[field]}"`);
+    } else {
+      seen.set(value, f.slug);
+    }
+  }
+}
+
 /* 5 — route registry */
 const dataSlugs = festivals.map((f) => f.slug);
 const missing = dataSlugs.filter((s) => !REGISTERED_SLUGS.includes(s));

@@ -1189,3 +1189,132 @@ a.mkt-ftc__festival:hover {
   height: 100%;
   object-fit: cover;
 }
+
+/* ──────────────────────────────────────────────────────────────────────────
+   Copy and download
+   ────────────────────────────────────────────────────────────────────────── */
+
+.mkt-ftc__actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem 0.75rem;
+  margin-top: 0.85rem;
+}
+
+/* The CTA loses its own top margin here — the row owns the spacing now. */
+.mkt-ftc__actions .mkt-ftc__cta {
+  margin-top: 0;
+}
+
+.mkt-fcopy {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  min-height: 2rem;
+  padding: 0.3rem 0.7rem;
+  border: 1px solid var(--mkt-border);
+  border-radius: 999px;
+  background: #ffffff;
+  font: inherit;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--mkt-body-2);
+  cursor: pointer;
+  transition: border-color 0.15s ease, background 0.15s ease, color 0.15s ease;
+}
+
+.mkt-fcopy:hover {
+  border-color: #c4b5fd;
+  color: var(--mkt-ink);
+}
+
+.mkt-fcopy.is-copied {
+  border-color: #a7f3d0;
+  background: #ecfdf5;
+  color: #047857;
+}
+
+/* The clipboard API rejects in an insecure context and in some older mobile
+   browsers. Saying so beats a button that appears to do nothing. */
+.mkt-fcopy.is-failed {
+  border-color: #fde68a;
+  background: #fffbeb;
+  color: #b45309;
+}
+
+.mkt-fcopy__icon {
+  display: inline-flex;
+  flex: none;
+}
+
+.mkt-flib__foot {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.6rem 1rem;
+}
+
+.mkt-flib__download,
+.mkt-fdl__btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  min-height: 2.5rem;
+  padding: 0.45rem 1rem;
+  border: 1px solid #ddd6fe;
+  border-radius: 999px;
+  background: var(--mkt-violet-light);
+  font: inherit;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #5b21b6;
+  cursor: pointer;
+  transition: border-color 0.15s ease, background 0.15s ease;
+}
+
+.mkt-flib__download:hover,
+.mkt-fdl__btn:hover {
+  border-color: var(--mkt-violet);
+  background: #ede9fe;
+}
+
+.mkt-flib__download:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.mkt-fdl {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem 0.85rem;
+  max-width: 62rem;
+  margin: 0 auto 1.4rem;
+  text-align: center;
+}
+
+.mkt-fdl__note {
+  font-size: 0.8rem;
+  line-height: 1.5;
+  color: var(--mkt-faint);
+}
+
+@media (max-width: 480px) {
+  .mkt-flib__foot {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .mkt-flib__download {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .mkt-fdl__btn {
+    width: 100%;
+    justify-content: center;
+  }
+}

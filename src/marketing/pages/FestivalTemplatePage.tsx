@@ -28,6 +28,8 @@ import {
   softwareApplicationJsonLd,
   webPageJsonLd,
 } from '../data/pageSeo';
+import { downloadTemplatesCsv } from '../lib/templateExport';
+import { SITE_URL } from '../data/marketingSeo';
 import '../styles/journey-flow.css';
 import '../styles/festival-templates.css';
 
@@ -48,6 +50,24 @@ export default function FestivalTemplatePage({ slug }: { slug: string }) {
   const timing = festivalTiming(festival);
   const items = festivalTemplateItems(festival);
   const siblings = nearbyFestivals(festival, 3);
+
+  /*
+   * Two FAQs every one of these pages earns, built from the festival name so
+   * each page's FAQPage block stays distinct rather than twenty-five copies of
+   * the same two questions. They are here and not in the data file because
+   * they describe what the page does, not what the festival is.
+   */
+  const faqs = [
+    ...festival.faqs,
+    {
+      question: `Can I download these ${festival.shortName} WhatsApp templates for free?`,
+      answer: `Yes. Download all four as a CSV from the button above the previews, or copy any single message with the button on its card. The CSV carries the body, footer, button label, Meta template name and send window in separate columns. No sign-up, no email.`,
+    },
+    {
+      question: `Can I edit the ${festival.shortName} template copy?`,
+      answer: `You are expected to. Each template arrives with the body, footer and button already in place and your store name and discount code left as blanks, so you change the wording, the offer, the button and the language, then submit it to Meta under your own WhatsApp Business account. The copy here is a starting draft, not a script.`,
+    },
+  ];
 
   const blocks: TopicBlock[] = [
     {
@@ -114,16 +134,42 @@ export default function FestivalTemplatePage({ slug }: { slug: string }) {
         keywords={festival.keywords}
         path={path}
         noSuffix
-        faqSchema={festival.faqs}
+        faqSchema={faqs}
         jsonLd={[
           organizationJsonLd(),
           softwareApplicationJsonLd(),
           webPageJsonLd({ name: festival.h1, description: festival.description, path }),
           breadcrumbJsonLd([
             { name: 'Home', path: '/' },
-            { name: 'Festival WhatsApp templates', path: FESTIVAL_HUB_PATH },
+            { name: 'Free WhatsApp marketing templates', path: FESTIVAL_HUB_PATH },
             { name: festival.shortName, path },
           ]),
+          {
+            '@context': 'https://schema.org',
+            '@type': 'ItemList',
+            name: `${festival.name} WhatsApp message templates`,
+            numberOfItems: items.length,
+            itemListElement: items.map((item, i) => ({
+              '@type': 'ListItem',
+              position: i + 1,
+              name: item.row.internalName,
+              description: item.stage.purpose,
+              url: `${SITE_URL}${path}#${item.row.metaName}`,
+            })),
+          },
+          {
+            '@context': 'https://schema.org',
+            '@type': 'HowTo',
+            name: `How to send a ${festival.shortName} WhatsApp campaign`,
+            description: `Copy, edit and submit the four ${festival.shortName} WhatsApp message templates, then schedule the sequence against the festival date.`,
+            step: items.map((item, i) => ({
+              '@type': 'HowToStep',
+              position: i + 1,
+              name: `${item.stage.label} — ${stageSendWindow(festival, item.stage)}`,
+              text: item.stage.purpose,
+              url: `${SITE_URL}${path}#${item.row.metaName}`,
+            })),
+          },
         ]}
       />
       <MarketingPage>
@@ -172,11 +218,26 @@ export default function FestivalTemplatePage({ slug }: { slug: string }) {
             eyebrow="The sequence"
             title={`The four ${festival.shortName} messages, in order`}
             accent="in order"
-            subtitle="Each preview is the template exactly as the dashboard hands it over — the real body, the footer Meta needs, and the button. Amber marks the blanks you fill."
+            subtitle="Each preview is the real template — the exact body, the footer Meta needs, and the button. Amber marks the blanks you fill in. Copy any one of them, or download all four."
           />
+          <div className="mkt-fdl">
+            <button
+              type="button"
+              className="mkt-fdl__btn"
+              onClick={() => downloadTemplatesCsv(items, `${festival.slug}-whatsapp-templates.csv`)}
+            >
+              <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+                <path d="M12 4v11m0 0 4-4m-4 4-4-4" />
+                <path d="M4 19h16" />
+              </svg>
+              Download all 4 as CSV
+            </button>
+            <span className="mkt-fdl__note">Free, no sign-up. Copy any single message with the button on its card.</span>
+          </div>
+
           <ul className="mkt-fseq">
             {items.map((item, i) => (
-              <li key={item.id}>
+              <li key={item.id} id={item.row.metaName}>
                 <FestivalTemplateCard item={item} linkFestival={false} step={i + 1} />
               </li>
             ))}
@@ -223,19 +284,19 @@ export default function FestivalTemplatePage({ slug }: { slug: string }) {
             eyebrow="Yours, not ours"
             title="Customise and personalise it in the dashboard"
             accent="personalise it"
-            subtitle={`The ${festival.shortName} copy is a draft. You rewrite it, set your own offer, pick the audience, and submit it to Meta from your own WhatsApp Business account.`}
+            subtitle={`The ${festival.shortName} copy is a draft, not a script. Rewrite it, set your own offer, pick the audience, and submit it to Meta from your own WhatsApp Business account.`}
           />
           <FestivalPersonalise />
         </Section>
 
         <Section>
-          <TrustBand />
+          <TrustBand title="Brands already sending these campaigns on WhatsApp" />
         </Section>
 
         <Section wash="soft">
           <SectionHeading title={`${festival.shortName} questions teams ask`} accent="teams ask" />
           <div className="mx-auto max-w-3xl">
-            <FaqAccordion items={festival.faqs} />
+            <FaqAccordion items={faqs} />
           </div>
         </Section>
 
@@ -255,7 +316,7 @@ export default function FestivalTemplatePage({ slug }: { slug: string }) {
 
           <ul className="mx-auto mt-8 flex max-w-3xl flex-wrap justify-center gap-3">
             {[
-              { label: `All 100 festive templates`, href: FESTIVAL_HUB_PATH },
+              { label: 'All 100 free templates', href: FESTIVAL_HUB_PATH },
               { label: 'All WhatsApp templates', href: '/whatsapp-templates' },
               { label: 'Audience campaigns', href: '/features/campaigns' },
               { label: 'Meta template manager', href: '/features/meta-manager' },
@@ -276,7 +337,7 @@ export default function FestivalTemplatePage({ slug }: { slug: string }) {
 
         <MarketingCtaBand
           title={`Run your ${festival.shortName} campaign on WhatsApp`}
-          subtitle="Connect Shopify, personalise the four templates, push them to Meta for approval and schedule the sends. Free for 14 days, no card."
+          subtitle="Copy the four templates, edit them to your brand, push them to Meta for approval and schedule the sends. Free for 14 days, no card."
           primaryLabel="Start free"
           secondaryLabel="See pricing"
           secondaryTo="/pricing"

@@ -1,5 +1,6 @@
 import { useMemo, useState } from 'react';
 import FestivalTemplateCard from './FestivalTemplateCard';
+import { downloadTemplatesCsv } from '../../lib/templateExport';
 import {
   FESTIVALS,
   FESTIVAL_LIBRARY,
@@ -134,12 +135,36 @@ export default function FestivalLibrary() {
           ))}
         </div>
 
-        <p className="mkt-flib__status" role="status">
-          {results.length === FESTIVAL_TEMPLATE_COUNT
-            ? `All ${FESTIVAL_TEMPLATE_COUNT} templates`
-            : `${results.length} of ${FESTIVAL_TEMPLATE_COUNT} templates`}
-          {shown.length < results.length ? ` · showing ${shown.length}` : ''}
-        </p>
+        <div className="mkt-flib__foot">
+          <p className="mkt-flib__status" role="status">
+            {results.length === FESTIVAL_TEMPLATE_COUNT
+              ? `All ${FESTIVAL_TEMPLATE_COUNT} templates`
+              : `${results.length} of ${FESTIVAL_TEMPLATE_COUNT} templates`}
+            {shown.length < results.length ? ` · showing ${shown.length}` : ''}
+          </p>
+
+          {/* Downloads what is filtered, not always all hundred — the filter is
+              how someone narrows to the set they actually want. */}
+          <button
+            type="button"
+            className="mkt-flib__download"
+            disabled={results.length === 0}
+            onClick={() =>
+              downloadTemplatesCsv(
+                results,
+                results.length === FESTIVAL_TEMPLATE_COUNT
+                  ? 'whatsapp-festival-templates.csv'
+                  : 'whatsapp-templates-selection.csv',
+              )
+            }
+          >
+            <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+              <path d="M12 4v11m0 0 4-4m-4 4-4-4" />
+              <path d="M4 19h16" />
+            </svg>
+            Download {results.length === FESTIVAL_TEMPLATE_COUNT ? 'all' : results.length} as CSV
+          </button>
+        </div>
       </div>
 
       {results.length === 0 ? (

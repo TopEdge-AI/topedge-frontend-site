@@ -135,7 +135,7 @@ export const FESTIVAL_CLUSTERS: FestivalCluster[] = [
     id: 'spring',
     label: 'February to April — spring and the regional new years',
     blurb:
-      'The second-biggest gifting run of the year, and the one most Shopify stores skip. Holi, Eid and four regional new years land inside seven weeks.',
+      'The second-biggest gifting run of the year, and the one most brands skip. Holi, Eid and four regional new years land inside seven weeks.',
   },
   {
     id: 'mid-year',
@@ -328,16 +328,20 @@ export const FESTIVALS: Festival[] = [
     cluster: 'january',
     tradition: 'secular',
     regions: 'Pan-India, and the one festival your NRI segment keeps the same date for',
-    title: 'New Year WhatsApp Templates for Shopify | TopEdge AI',
+    title:
+      'New Year WhatsApp Marketing Templates: 4 Free Examples',
     description:
-      'Four New Year WhatsApp templates for Shopify India — early access, gift picks, a flash sale and a day-one greeting — with the send order and ₹ cost.',
+      '4 free New Year WhatsApp message templates to copy, edit and send. Ready marketing copy with send dates, Meta category and cost per message.',
     keywords:
-      'New Year WhatsApp template, happy new year message for customers, new year sale WhatsApp message, Shopify new year campaign India',
-    eyebrow: 'New Year campaign',
-    h1: 'New Year WhatsApp templates for Shopify stores',
-    h1Accent: 'New Year',
+      'new year whatsapp template, happy new year message for customers, new year whatsapp marketing message, free whatsapp template download, new year business message example',
+    eyebrow:
+      'New Year campaign',
+    h1:
+      'New Year WhatsApp marketing templates',
+    h1Accent:
+      'New Year',
     subtitle:
-      'The four messages that carry a New Year campaign on WhatsApp — early access, gift picks, the sale and the greeting — ready to personalise and submit to Meta.',
+      'Four free New Year WhatsApp templates you can copy, edit and submit to Meta — early access, gift picks, the sale and the greeting.',
     answerFirst:
       'A New Year campaign is four messages across the last week of December, not one on 1 January. The money moves before midnight — the 1st only needs the greeting.',
     peak:
@@ -380,16 +384,20 @@ export const FESTIVALS: Festival[] = [
     cluster: 'january',
     tradition: 'hindu',
     regions: 'Gujarat and Maharashtra as Sankranti, Tamil Nadu as Pongal, Punjab as Lohri, Assam as Bihu',
-    title: 'Makar Sankranti WhatsApp Templates | TopEdge AI',
+    title:
+      'Makar Sankranti WhatsApp Templates: 4 Free Examples',
     description:
-      'Four Makar Sankranti and Pongal WhatsApp templates for Shopify India, with the regional send windows, what sells in each market and the ₹ cost per run.',
+      '4 free Makar Sankranti and Pongal WhatsApp message templates to copy and edit, with regional send windows, what sells and cost per message.',
     keywords:
-      'Makar Sankranti WhatsApp template, Pongal WhatsApp message, Sankranti sale message customers, Shopify Pongal campaign India',
-    eyebrow: 'Makar Sankranti and Pongal',
-    h1: 'Makar Sankranti WhatsApp templates for Shopify stores',
-    h1Accent: 'Makar Sankranti',
+      'makar sankranti whatsapp template, pongal whatsapp message, sankranti marketing message, free whatsapp template download, pongal wishes message for customers',
+    eyebrow:
+      'Makar Sankranti and Pongal',
+    h1:
+      'Makar Sankranti WhatsApp marketing templates',
+    h1Accent:
+      'Makar Sankranti',
     subtitle:
-      'One date, four regional festivals and four messages. Sankranti, Pongal, Lohri and Bihu copy you can personalise per market and submit to Meta.',
+      'Four free Sankranti, Pongal, Lohri and Bihu WhatsApp templates to copy, edit per market and submit to Meta.',
     answerFirst:
       'One week, four names: Sankranti in the west, Pongal in Tamil Nadu, Lohri in Punjab, Bihu in Assam. Same four messages, with the festival name changed per state.',
     peak:
@@ -433,16 +441,20 @@ export const FESTIVALS: Festival[] = [
     cluster: 'january',
     tradition: 'hindu',
     regions: 'North India, Bihar, West Bengal as Saraswati Puja',
-    title: 'Vasant Panchami WhatsApp Templates | TopEdge AI',
+    title:
+      'Vasant Panchami WhatsApp Templates: Free Examples',
     description:
-      'Four Vasant Panchami WhatsApp templates for Shopify India, with the Saraswati Puja send window, the categories that move and what the campaign costs.',
+      '4 free Vasant Panchami and Saraswati Puja WhatsApp message templates to copy and edit, with the send window, what sells and cost per message.',
     keywords:
-      'Vasant Panchami WhatsApp template, Basant Panchami message customers, Saraswati Puja WhatsApp campaign, Shopify Vasant Panchami India',
-    eyebrow: 'Vasant Panchami',
-    h1: 'Vasant Panchami WhatsApp templates for Shopify stores',
-    h1Accent: 'Vasant Panchami',
+      'vasant panchami whatsapp template, basant panchami message for customers, saraswati puja whatsapp message, free whatsapp marketing template, festival message example',
+    eyebrow:
+      'Vasant Panchami',
+    h1:
+      'Vasant Panchami WhatsApp marketing templates',
+    h1Accent:
+      'Vasant Panchami',
     subtitle:
-      'A small, high-intent festival most stores skip. Four Vasant Panchami and Saraswati Puja messages ready to personalise and submit to Meta.',
+      'Four free Vasant Panchami and Saraswati Puja WhatsApp templates, ready to copy, edit and submit to Meta.',
     answerFirst:
       'A three-day festival almost no D2C brand sends for, which is exactly why it converts. Yellow sells, the inbox is empty, and three messages beat four.',
     peak:
@@ -485,16 +497,20 @@ export const FESTIVALS: Festival[] = [
     cluster: 'spring',
     tradition: 'hindu',
     regions: 'Pan-India, strongest in Uttar Pradesh, Madhya Pradesh, Maharashtra and Karnataka',
-    title: 'Maha Shivaratri WhatsApp Templates | TopEdge AI',
+    title:
+      'Maha Shivaratri WhatsApp Templates: Free Examples',
     description:
-      'Four Maha Shivaratri WhatsApp templates for Shopify India, with the devotional send window, the categories that convert and the ₹ cost of the run.',
+      '4 free Maha Shivaratri WhatsApp message templates to copy and edit, written for a fasting day rather than a hard sale, with send timing and cost.',
     keywords:
-      'Maha Shivaratri WhatsApp template, Shivratri message to customers, Mahashivratri marketing message, Shopify Shivratri campaign India',
-    eyebrow: 'Maha Shivaratri',
-    h1: 'Maha Shivaratri WhatsApp templates for Shopify stores',
-    h1Accent: 'Maha Shivaratri',
+      'maha shivaratri whatsapp template, shivratri message to customers, mahashivratri marketing message, free whatsapp message template, festival greeting message business',
+    eyebrow:
+      'Maha Shivaratri',
+    h1:
+      'Maha Shivaratri WhatsApp marketing templates',
+    h1Accent:
+      'Maha Shivaratri',
     subtitle:
-      'A devotional festival where a hard discount reads badly. Four Maha Shivaratri messages written to respect that, ready to personalise and submit to Meta.',
+      'Four free Maha Shivaratri WhatsApp templates written for a devotional day, ready to copy, edit and submit to Meta.',
     answerFirst:
       'A fasting and vigil day with no gifting obligation, so a loud discount lands badly. Lead with puja items, vrat food and temple wear, and keep the offer quiet.',
     peak:
@@ -537,16 +553,20 @@ export const FESTIVALS: Festival[] = [
     cluster: 'spring',
     tradition: 'hindu',
     regions: 'Pan-India, with the longest run-up in Uttar Pradesh, Bihar, Rajasthan and Delhi NCR',
-    title: 'Holi WhatsApp Templates for Shopify | TopEdge AI',
+    title:
+      'Holi WhatsApp Marketing Templates: 4 Free Examples',
     description:
-      'Four Holi WhatsApp templates for Shopify India — early access, gift picks, flash sale and greeting — with the send window, what sells and the ₹ cost.',
+      '4 free Holi WhatsApp message templates to copy, edit and send — early access, gift picks, flash sale and greeting, with send dates and cost.',
     keywords:
-      'Holi WhatsApp template, Holi sale message to customers, Holi offer WhatsApp message, Shopify Holi campaign India, happy Holi message business',
-    eyebrow: 'Holi campaign',
-    h1: 'Holi WhatsApp templates for Shopify stores',
-    h1Accent: 'Holi',
+      'holi whatsapp template, holi sale message to customers, holi offer whatsapp message, free whatsapp marketing template download, happy holi message business',
+    eyebrow:
+      'Holi campaign',
+    h1:
+      'Holi WhatsApp marketing templates',
+    h1Accent:
+      'Holi',
     subtitle:
-      'The second-biggest gifting week of the Indian year and the one most stores under-plan. Four Holi messages ready to personalise and submit to Meta.',
+      'Four free Holi WhatsApp templates you can copy, edit and submit to Meta — the biggest spring week, and the one most brands under-plan.',
     answerFirst:
       'India\'s biggest spring retail week, with an absolute deadline — nobody wants white clothes the day after. Bundle rather than discount, and stop promising delivery three days out.',
     peak:
@@ -590,16 +610,20 @@ export const FESTIVALS: Festival[] = [
     cluster: 'spring',
     tradition: 'hindu',
     regions: 'Karnataka and Andhra Pradesh as Ugadi, Maharashtra as Gudi Padwa, Kashmir as Navreh',
-    title: 'Ugadi and Gudi Padwa WhatsApp Templates | TopEdge AI',
+    title:
+      'Ugadi & Gudi Padwa WhatsApp Templates: Free Examples',
     description:
-      'Four Ugadi and Gudi Padwa WhatsApp templates for Shopify India, with the regional new-year send window, the big-ticket categories and the ₹ cost.',
+      '4 free Ugadi and Gudi Padwa WhatsApp message templates to copy and edit, with the regional new-year send window and cost per message.',
     keywords:
-      'Ugadi WhatsApp template, Gudi Padwa message to customers, Gudi Padwa offer WhatsApp, Shopify Ugadi campaign India',
-    eyebrow: 'Ugadi and Gudi Padwa',
-    h1: 'Ugadi and Gudi Padwa WhatsApp templates for Shopify stores',
-    h1Accent: 'Ugadi and Gudi Padwa',
+      'ugadi whatsapp template, gudi padwa message to customers, gudi padwa offer whatsapp, free whatsapp template example, regional new year marketing message',
+    eyebrow:
+      'Ugadi and Gudi Padwa',
+    h1:
+      'Ugadi and Gudi Padwa WhatsApp marketing templates',
+    h1Accent:
+      'Ugadi and Gudi Padwa',
     subtitle:
-      'A regional new year that behaves like an auspicious buying day. Four messages for Ugadi, Gudi Padwa and Navreh, ready to personalise and submit to Meta.',
+      'Four free Ugadi, Gudi Padwa and Navreh WhatsApp templates, ready to copy, edit per market and submit to Meta.',
     answerFirst:
       'A regional new year that is also one of the most auspicious buying days of the year. The one spring campaign where your most expensive product belongs in the message.',
     peak:
@@ -643,16 +667,20 @@ export const FESTIVALS: Festival[] = [
     cluster: 'spring',
     tradition: 'islamic',
     regions: 'Pan-India, strongest in Uttar Pradesh, Telangana, Kerala, West Bengal and urban Maharashtra',
-    title: 'Eid-ul-Fitr WhatsApp Templates for Shopify | TopEdge AI',
+    title:
+      'Eid-ul-Fitr WhatsApp Templates: 4 Free Examples',
     description:
-      'Four Eid-ul-Fitr WhatsApp templates for Shopify India, with the Ramadan send window, Chand Raat timing, what sells and the ₹ cost of the campaign.',
+      '4 free Eid-ul-Fitr WhatsApp message templates to copy and edit, timed around Ramadan and Chand Raat, with send dates and cost per message.',
     keywords:
-      'Eid WhatsApp template, Eid Mubarak message to customers, Ramzan Eid offer WhatsApp, Shopify Eid campaign India, Eid ul Fitr marketing message',
-    eyebrow: 'Eid-ul-Fitr',
-    h1: 'Eid-ul-Fitr WhatsApp templates for Shopify stores',
-    h1Accent: 'Eid-ul-Fitr',
+      'eid whatsapp template, eid mubarak message to customers, ramzan eid offer whatsapp, free whatsapp marketing template, eid greeting message for business',
+    eyebrow:
+      'Eid-ul-Fitr',
+    h1:
+      'Eid-ul-Fitr WhatsApp marketing templates',
+    h1Accent:
+      'Eid-ul-Fitr',
     subtitle:
-      'A month-long run-up and a one-night buying spike. Four Eid-ul-Fitr messages timed around Ramadan and Chand Raat, ready to personalise and submit to Meta.',
+      'Four free Eid-ul-Fitr WhatsApp templates timed around Ramadan and Chand Raat, ready to copy, edit and submit to Meta.',
     answerFirst:
       'Shopping builds through Ramadan and spikes on Chand Raat. Start early access in the last ten days, and never hard-code the date — it moves on moon sighting.',
     peak:
@@ -696,16 +724,20 @@ export const FESTIVALS: Festival[] = [
     cluster: 'spring',
     tradition: 'hindu',
     regions: 'Pan-India, strongest in Uttar Pradesh, Bihar, Maharashtra, Andhra Pradesh and Telangana',
-    title: 'Rama Navami WhatsApp Templates | TopEdge AI',
+    title:
+      'Rama Navami WhatsApp Templates: 4 Free Examples',
     description:
-      'Four Rama Navami WhatsApp templates for Shopify India, with the devotional send window, the categories that convert and the cost of the campaign in ₹.',
+      '4 free Rama Navami WhatsApp message templates to copy and edit, with the nine-day Chaitra Navratri send window and cost per message.',
     keywords:
-      'Rama Navami WhatsApp template, Ram Navami message to customers, Ram Navami marketing message, Shopify Rama Navami campaign India',
-    eyebrow: 'Rama Navami',
-    h1: 'Rama Navami WhatsApp templates for Shopify stores',
-    h1Accent: 'Rama Navami',
+      'rama navami whatsapp template, ram navami message to customers, ram navami marketing message, free whatsapp message template example, festival whatsapp copy',
+    eyebrow:
+      'Rama Navami',
+    h1:
+      'Rama Navami WhatsApp marketing templates',
+    h1Accent:
+      'Rama Navami',
     subtitle:
-      'The close of Chaitra Navratri and a devotional, not transactional, day. Four Rama Navami messages that respect that, ready to personalise and submit to Meta.',
+      'Four free Rama Navami WhatsApp templates for a devotional day, ready to copy, edit and submit to Meta.',
     answerFirst:
       'The buying happens across the nine days of Chaitra Navratri, not on the date itself. A campaign that starts on Rama Navami has already missed it.',
     peak:
@@ -749,16 +781,20 @@ export const FESTIVALS: Festival[] = [
     cluster: 'spring',
     tradition: 'christian',
     regions: 'Kerala, Goa, Tamil Nadu, the North East and metro Christian communities',
-    title: 'Good Friday WhatsApp Templates | TopEdge AI',
+    title:
+      'Good Friday WhatsApp Message Templates: 4 Examples',
     description:
-      'Four Good Friday WhatsApp templates for Shopify India, written for a day of mourning rather than a sale, with send timing and the ₹ cost per customer.',
+      '4 free Good Friday WhatsApp message templates, written for a day of mourning rather than a sale, with send timing and cost per message.',
     keywords:
-      'Good Friday WhatsApp template, Good Friday message to customers, Good Friday business message India, Shopify Easter weekend campaign',
-    eyebrow: 'Good Friday',
-    h1: 'Good Friday WhatsApp templates for Shopify stores',
-    h1Accent: 'Good Friday',
+      'good friday whatsapp template, good friday message to customers, good friday business message, free whatsapp message template, easter weekend marketing message',
+    eyebrow:
+      'Good Friday',
+    h1:
+      'Good Friday WhatsApp message templates',
+    h1Accent:
+      'Good Friday',
     subtitle:
-      'The one date on this list where the right campaign is almost no campaign. Four Good Friday messages written for a solemn day, ready to personalise in the dashboard.',
+      'Four free Good Friday WhatsApp templates written for a solemn day — the one date where the right campaign is almost no campaign.',
     answerFirst:
       'A day of mourning, not a shopping occasion. Send one quiet greeting, move the offer to the Thursday or Easter Saturday, and never discount on the day.',
     peak:
@@ -801,16 +837,20 @@ export const FESTIVALS: Festival[] = [
     cluster: 'spring',
     tradition: 'christian',
     regions: 'Kerala, Goa, Tamil Nadu, the North East and metro Christian communities',
-    title: 'Easter WhatsApp Templates for Shopify | TopEdge AI',
+    title:
+      'Easter WhatsApp Marketing Templates: 4 Free Examples',
     description:
-      'Four Easter WhatsApp templates for Shopify India, with the long-weekend send plan, the categories that sell and what the whole campaign costs in ₹.',
+      '4 free Easter WhatsApp message templates to copy and edit, with a long-weekend send plan that works around Good Friday, and cost per message.',
     keywords:
-      'Easter WhatsApp template, Easter message to customers, Easter sale WhatsApp message India, Shopify Easter campaign, Easter Sunday marketing',
-    eyebrow: 'Easter campaign',
-    h1: 'Easter WhatsApp templates for Shopify stores',
-    h1Accent: 'Easter',
+      'easter whatsapp template, easter message to customers, easter sale whatsapp message, free whatsapp marketing template download, easter greeting message business',
+    eyebrow:
+      'Easter campaign',
+    h1:
+      'Easter WhatsApp marketing templates',
+    h1Accent:
+      'Easter',
     subtitle:
-      'A long weekend, a gifting day and a clear audience. Four Easter messages that work around Good Friday, ready to personalise and submit to Meta.',
+      'Four free Easter WhatsApp templates that work around Good Friday, ready to copy, edit and submit to Meta.',
     answerFirst:
       'A long weekend with a clear audience and one hard rule: nothing sells on Good Friday. Run early access the week before and put the offer on Easter Saturday.',
     peak:
@@ -854,16 +894,20 @@ export const FESTIVALS: Festival[] = [
     cluster: 'spring',
     tradition: 'hindu',
     regions: 'Pan-India, strongest in Maharashtra, Gujarat, Tamil Nadu, Karnataka and West Bengal',
-    title: 'Akshaya Tritiya WhatsApp Templates | TopEdge AI',
+    title:
+      'Akshaya Tritiya WhatsApp Templates: Free Examples',
     description:
-      'Four Akshaya Tritiya WhatsApp templates for Shopify India, written for the highest-AOV buying day of spring, with send timing and the ₹ cost per run.',
+      '4 free Akshaya Tritiya WhatsApp message templates to copy and edit, written for the highest-value buying day of spring, with send dates and cost.',
     keywords:
-      'Akshaya Tritiya WhatsApp template, Akshaya Tritiya offer message, Akshaya Tritiya gold sale WhatsApp, Shopify Akshaya Tritiya campaign India',
-    eyebrow: 'Akshaya Tritiya',
-    h1: 'Akshaya Tritiya WhatsApp templates for Shopify stores',
-    h1Accent: 'Akshaya Tritiya',
+      'akshaya tritiya whatsapp template, akshaya tritiya offer message, gold sale whatsapp message, free whatsapp marketing template, high value offer message example',
+    eyebrow:
+      'Akshaya Tritiya',
+    h1:
+      'Akshaya Tritiya WhatsApp marketing templates',
+    h1Accent:
+      'Akshaya Tritiya',
     subtitle:
-      'The highest-intent purchase day in spring, and the one worth a premium pitch. Four Akshaya Tritiya messages ready to personalise and submit to Meta.',
+      'Four free Akshaya Tritiya WhatsApp templates for the highest-intent buying day in spring, ready to copy, edit and submit to Meta.',
     answerFirst:
       'Not a gifting festival — an auspicious buying day, where making the purchase is the point. Intent arrives already formed, so protect your price instead of cutting it.',
     peak:
@@ -907,16 +951,20 @@ export const FESTIVALS: Festival[] = [
     cluster: 'mid-year',
     tradition: 'islamic',
     regions: 'Pan-India, strongest in Uttar Pradesh, Telangana, Kerala, West Bengal and urban Maharashtra',
-    title: 'Eid-ul-Adha WhatsApp Templates | TopEdge AI',
+    title:
+      'Eid-ul-Adha WhatsApp Templates: 4 Free Examples',
     description:
-      'Four Eid-ul-Adha and Bakri Eid WhatsApp templates for Shopify India, with the send window, the hosting-led categories that sell and the ₹ cost per run.',
+      '4 free Eid-ul-Adha and Bakri Eid WhatsApp message templates to copy and edit, written for hosting rather than gifting, with send dates and cost.',
     keywords:
-      'Eid ul Adha WhatsApp template, Bakri Eid message to customers, Bakrid offer WhatsApp message, Shopify Eid ul Adha campaign India',
-    eyebrow: 'Eid-ul-Adha',
-    h1: 'Eid-ul-Adha WhatsApp templates for Shopify stores',
-    h1Accent: 'Eid-ul-Adha',
+      'eid ul adha whatsapp template, bakri eid message to customers, bakrid offer whatsapp message, free whatsapp template example, eid greeting message business',
+    eyebrow:
+      'Eid-ul-Adha',
+    h1:
+      'Eid-ul-Adha WhatsApp marketing templates',
+    h1Accent:
+      'Eid-ul-Adha',
     subtitle:
-      'A hosting festival rather than a gifting one, and it needs different copy. Four Bakri Eid messages ready to personalise and submit to Meta.',
+      'Four free Bakri Eid WhatsApp templates written for a hosting festival, ready to copy, edit and submit to Meta.',
     answerFirst:
       'Bakri Eid is hosting, not gifting, and Eid-ul-Fitr copy lands wrong here. Lead with cookware, serveware and grocery for feeding a crowd.',
     peak:
@@ -960,16 +1008,20 @@ export const FESTIVALS: Festival[] = [
     cluster: 'mid-year',
     tradition: 'hindu',
     regions: 'Kerala, plus Malayali communities in Bengaluru, Chennai, Mumbai and the Gulf',
-    title: 'Onam WhatsApp Templates for Shopify | TopEdge AI',
+    title:
+      'Onam WhatsApp Marketing Templates: 4 Free Examples',
     description:
-      'Four Onam WhatsApp templates for Shopify India, with the ten-day Kerala send window, the categories that convert and what the campaign costs in ₹.',
+      '4 free Onam WhatsApp message templates to copy and edit, with the ten-day Atham to Thiruvonam send plan, what sells and cost per message.',
     keywords:
-      'Onam WhatsApp template, Onam offer message to customers, Onam sale WhatsApp message, Shopify Onam campaign Kerala',
-    eyebrow: 'Onam campaign',
-    h1: 'Onam WhatsApp templates for Shopify stores',
-    h1Accent: 'Onam',
+      'onam whatsapp template, onam offer message to customers, onam sale whatsapp message, free whatsapp marketing template download, onam wishes message business',
+    eyebrow:
+      'Onam campaign',
+    h1:
+      'Onam WhatsApp marketing templates',
+    h1Accent:
+      'Onam',
     subtitle:
-      'Kerala’s biggest retail event, and a ten-day window rather than a single date. Four Onam messages ready to personalise and submit to Meta.',
+      'Four free Onam WhatsApp templates across the ten days to Thiruvonam, ready to copy, edit and submit to Meta.',
     answerFirst:
       'Kerala\'s biggest retail event, ten days from Atham to Thiruvonam. The spending sits in the last four days, so a campaign opening on Thiruvonam is already late.',
     peak:
@@ -1013,16 +1065,20 @@ export const FESTIVALS: Festival[] = [
     cluster: 'mid-year',
     tradition: 'islamic',
     regions: 'Kerala, Telangana, Uttar Pradesh, Jammu and Kashmir, West Bengal',
-    title: 'Milad-un-Nabi WhatsApp Templates | TopEdge AI',
+    title:
+      'Milad-un-Nabi WhatsApp Templates: 4 Examples',
     description:
-      'Four Milad-un-Nabi WhatsApp templates for Shopify India, written for an observance rather than a sale, with send timing and the ₹ cost per customer.',
+      '4 free Milad-un-Nabi WhatsApp message templates, written for an observance rather than a sale, with send timing and cost per delivered message.',
     keywords:
-      'Milad un Nabi WhatsApp template, Eid e Milad message customers, Milad un Nabi greeting business, Shopify Milad un Nabi campaign India',
-    eyebrow: 'Milad-un-Nabi',
-    h1: 'Milad-un-Nabi WhatsApp templates for Shopify stores',
-    h1Accent: 'Milad-un-Nabi',
+      'milad un nabi whatsapp template, eid e milad message customers, milad un nabi greeting business, free whatsapp message template, respectful festival message example',
+    eyebrow:
+      'Milad-un-Nabi',
+    h1:
+      'Milad-un-Nabi WhatsApp message templates',
+    h1Accent:
+      'Milad-un-Nabi',
     subtitle:
-      'A religious observance with almost no retail intent, and a greeting is usually the whole campaign. Four Milad-un-Nabi messages, ready to personalise.',
+      'Four free Milad-un-Nabi WhatsApp templates for an observance with almost no retail intent — usually a greeting is the whole campaign.',
     answerFirst:
       'An observance marked by processions, readings and charity, not shopping. For almost every store the right campaign is one respectful greeting and nothing else.',
     peak:
@@ -1065,16 +1121,20 @@ export const FESTIVALS: Festival[] = [
     cluster: 'mid-year',
     tradition: 'hindu',
     regions: 'North and West India, with strong metro demand nationwide',
-    title: 'Raksha Bandhan WhatsApp Templates | TopEdge AI',
+    title:
+      'Raksha Bandhan WhatsApp Templates: Free Examples',
     description:
-      'Four Raksha Bandhan WhatsApp templates for Shopify India — the gifting festival with the hardest delivery deadline — with send timing and ₹ cost.',
+      '4 free Raksha Bandhan WhatsApp message templates to copy and edit, built around the Rakhi delivery cut-off, with send dates and cost per message.',
     keywords:
-      'Raksha Bandhan WhatsApp template, Rakhi offer message to customers, Rakhi sale WhatsApp message, Shopify Raksha Bandhan campaign India',
-    eyebrow: 'Raksha Bandhan',
-    h1: 'Raksha Bandhan WhatsApp templates for Shopify stores',
-    h1Accent: 'Raksha Bandhan',
+      'raksha bandhan whatsapp template, rakhi offer message to customers, rakhi sale whatsapp message, free whatsapp marketing template download, rakhi wishes message business',
+    eyebrow:
+      'Raksha Bandhan',
+    h1:
+      'Raksha Bandhan WhatsApp marketing templates',
+    h1Accent:
+      'Raksha Bandhan',
     subtitle:
-      'Pure gifting, a fixed deadline and a quiet inbox. Four Rakhi messages built around the delivery cut-off, ready to personalise and submit to Meta.',
+      'Four free Rakhi WhatsApp templates built around the delivery cut-off, ready to copy, edit and submit to Meta.',
     answerFirst:
       'Pure gifting, a named recipient, and a quiet inbox. Delivery is the whole campaign, so the last offer goes on your shipping cut-off, not the day before.',
     peak:
@@ -1118,16 +1178,20 @@ export const FESTIVALS: Festival[] = [
     cluster: 'festive-quarter',
     tradition: 'hindu',
     regions: 'Uttar Pradesh, Maharashtra, Gujarat, Rajasthan and Odisha',
-    title: 'Janmashtami WhatsApp Templates for Shopify | TopEdge AI',
+    title:
+      'Janmashtami WhatsApp Templates: 4 Free Examples',
     description:
-      'Four Krishna Janmashtami WhatsApp templates for Shopify India, with the midnight-observance send timing, what sells and the ₹ cost of the campaign.',
+      '4 free Krishna Janmashtami WhatsApp message templates to copy and edit, with midnight-observance send timing, what sells and cost per message.',
     keywords:
-      'Janmashtami WhatsApp template, Krishna Janmashtami message customers, Janmashtami offer WhatsApp, Shopify Janmashtami campaign India',
-    eyebrow: 'Krishna Janmashtami',
-    h1: 'Krishna Janmashtami WhatsApp templates for Shopify stores',
-    h1Accent: 'Janmashtami',
+      'janmashtami whatsapp template, krishna janmashtami message customers, janmashtami offer whatsapp, free whatsapp template example, festival marketing message copy',
+    eyebrow:
+      'Krishna Janmashtami',
+    h1:
+      'Janmashtami WhatsApp marketing templates',
+    h1Accent:
+      'Janmashtami',
     subtitle:
-      'The first send of the festive quarter, and a useful rehearsal for it. Four Janmashtami messages ready to personalise and submit to Meta.',
+      'Four free Janmashtami WhatsApp templates and the first send of the festive quarter, ready to copy, edit and submit to Meta.',
     answerFirst:
       'The first send of the festive quarter, and a cheap place to test your cadence. The observance peaks at midnight, so the greeting goes out in the evening.',
     peak:
@@ -1171,16 +1235,20 @@ export const FESTIVALS: Festival[] = [
     cluster: 'festive-quarter',
     tradition: 'hindu',
     regions: 'Maharashtra above all, plus Karnataka, Goa, Telangana and Andhra Pradesh',
-    title: 'Ganesh Chaturthi WhatsApp Templates | TopEdge AI',
+    title:
+      'Ganesh Chaturthi WhatsApp Templates: Free Examples',
     description:
-      'Four Ganesh Chaturthi WhatsApp templates for Shopify India, with the eleven-day Maharashtra window, the categories that sell and the ₹ cost per run.',
+      '4 free Ganesh Chaturthi WhatsApp message templates to copy and edit, with the eleven-day send plan, what sells and cost per delivered message.',
     keywords:
-      'Ganesh Chaturthi WhatsApp template, Ganpati offer message customers, Ganesh Chaturthi sale WhatsApp, Shopify Ganpati campaign India',
-    eyebrow: 'Ganesh Chaturthi',
-    h1: 'Ganesh Chaturthi WhatsApp templates for Shopify stores',
-    h1Accent: 'Ganesh Chaturthi',
+      'ganesh chaturthi whatsapp template, ganpati offer message customers, ganesh chaturthi sale whatsapp, free whatsapp marketing template download, ganpati wishes message business',
+    eyebrow:
+      'Ganesh Chaturthi',
+    h1:
+      'Ganesh Chaturthi WhatsApp marketing templates',
+    h1Accent:
+      'Ganesh Chaturthi',
     subtitle:
-      'Eleven days of demand and the real start of the festive quarter. Four Ganpati messages ready to personalise and submit to Meta.',
+      'Four free Ganpati WhatsApp templates across eleven days of demand, ready to copy, edit and submit to Meta.',
     answerFirst:
       'Where the festive quarter actually begins, and in Maharashtra it outsells Diwali. Eleven days of demand, and most campaigns stop after day one.',
     peak:
@@ -1224,16 +1292,20 @@ export const FESTIVALS: Festival[] = [
     cluster: 'festive-quarter',
     tradition: 'hindu',
     regions: 'Gujarat as Navratri, West Bengal as Durga Puja, Maharashtra and Delhi NCR',
-    title: 'Navratri WhatsApp Templates for Shopify | TopEdge AI',
+    title:
+      'Navratri WhatsApp Marketing Templates: Free Examples',
     description:
-      'Four Navratri and Durga Puja WhatsApp templates for Shopify India, with the nine-day send plan, the colour-of-the-day angle and the ₹ cost per run.',
+      '4 free Navratri and Durga Puja WhatsApp message templates to copy and edit, with the nine-day send plan, colour angle and cost per message.',
     keywords:
-      'Navratri WhatsApp template, Durga Puja offer message, Navratri sale WhatsApp message, Shopify Navratri campaign India, garba offer message',
-    eyebrow: 'Navratri and Durga Puja',
-    h1: 'Navratri WhatsApp templates for Shopify stores',
-    h1Accent: 'Navratri',
+      'navratri whatsapp template, durga puja offer message, navratri sale whatsapp message, free whatsapp marketing template download, garba offer message example',
+    eyebrow:
+      'Navratri and Durga Puja',
+    h1:
+      'Navratri WhatsApp marketing templates',
+    h1Accent:
+      'Navratri',
     subtitle:
-      'Nine days of demand and a daily reason to message. Four Navratri and Durga Puja templates ready to personalise and submit to Meta.',
+      'Four free Navratri and Durga Puja WhatsApp templates across nine days of demand, ready to copy, edit and submit to Meta.',
     answerFirst:
       'Nine days, nine colours, and the only festival where sending more than four times is defensible. Gujarat buys garba wear, Bengal buys for Durga Puja — do not merge them.',
     peak:
@@ -1277,16 +1349,20 @@ export const FESTIVALS: Festival[] = [
     cluster: 'festive-quarter',
     tradition: 'hindu',
     regions: 'Pan-India, with Mysuru, Kullu, Delhi NCR and West Bengal as Bijoya Dashami',
-    title: 'Dussehra WhatsApp Templates for Shopify | TopEdge AI',
+    title:
+      'Dussehra WhatsApp Marketing Templates: Free Examples',
     description:
-      'Four Dussehra WhatsApp templates for Shopify India, written for the auspicious buying day before Diwali, with send timing and the ₹ cost per run.',
+      '4 free Dussehra WhatsApp message templates to copy and edit, written for an auspicious buying day, with send dates and cost per message.',
     keywords:
-      'Dussehra WhatsApp template, Dussehra offer message to customers, Vijayadashami sale WhatsApp, Shopify Dussehra campaign India',
-    eyebrow: 'Dussehra campaign',
-    h1: 'Dussehra WhatsApp templates for Shopify stores',
-    h1Accent: 'Dussehra',
+      'dussehra whatsapp template, dussehra offer message to customers, vijayadashami sale whatsapp, free whatsapp marketing template, dussehra wishes message business',
+    eyebrow:
+      'Dussehra campaign',
+    h1:
+      'Dussehra WhatsApp marketing templates',
+    h1Accent:
+      'Dussehra',
     subtitle:
-      'An auspicious purchase day that doubles as the warm-up for Diwali. Four Dussehra messages ready to personalise and submit to Meta.',
+      'Four free Dussehra WhatsApp templates for an auspicious buying day and the warm-up to Diwali, ready to copy and edit.',
     answerFirst:
       'An auspicious day to start something, so vehicles, electronics and appliances convert. Keep the discount small: Dhanteras and Diwali are barely two weeks away.',
     peak:
@@ -1330,16 +1406,20 @@ export const FESTIVALS: Festival[] = [
     cluster: 'festive-quarter',
     tradition: 'hindu',
     regions: 'Punjab, Haryana, Delhi NCR, Uttar Pradesh, Rajasthan and Madhya Pradesh',
-    title: 'Karwa Chauth WhatsApp Templates | TopEdge AI',
+    title:
+      'Karwa Chauth WhatsApp Templates: 4 Free Examples',
     description:
-      'Four Karwa Chauth WhatsApp templates for Shopify India, with the moonrise-evening timing, the gifting categories that convert and the ₹ cost per run.',
+      '4 free Karwa Chauth WhatsApp message templates to copy and edit, with moonrise-evening timing, the two buyers to target and cost per message.',
     keywords:
-      'Karwa Chauth WhatsApp template, Karva Chauth offer message, Karwa Chauth gift WhatsApp message, Shopify Karwa Chauth campaign India',
-    eyebrow: 'Karwa Chauth',
-    h1: 'Karwa Chauth WhatsApp templates for Shopify stores',
-    h1Accent: 'Karwa Chauth',
+      'karwa chauth whatsapp template, karva chauth offer message, karwa chauth gift whatsapp message, free whatsapp marketing template download, karwa chauth wishes business',
+    eyebrow:
+      'Karwa Chauth',
+    h1:
+      'Karwa Chauth WhatsApp marketing templates',
+    h1Accent:
+      'Karwa Chauth',
     subtitle:
-      'A one-day festival with two buyers and an evening deadline. Four Karwa Chauth messages ready to personalise and submit to Meta.',
+      'Four free Karwa Chauth WhatsApp templates for a day with two buyers and an evening deadline, ready to copy and edit.',
     answerFirst:
       'Two buyers, and most campaigns reach only one. Women plan ahead; husbands buy the moonrise gift in the final 48 hours, and that is where the money is.',
     peak:
@@ -1384,16 +1464,20 @@ export const FESTIVALS: Festival[] = [
     cluster: 'festive-quarter',
     tradition: 'hindu',
     regions: 'Pan-India, strongest in Gujarat, Maharashtra, Rajasthan and North India',
-    title: 'Dhanteras WhatsApp Templates for Shopify | TopEdge AI',
+    title:
+      'Dhanteras WhatsApp Templates: 4 Free Examples',
     description:
-      'Four Dhanteras WhatsApp templates for Shopify India, written for the biggest gold-buying day of the year, with send timing and the ₹ cost per run.',
+      '4 free Dhanteras WhatsApp message templates to copy and edit, written for the highest-value buying day of the year, with send dates and cost.',
     keywords:
-      'Dhanteras WhatsApp template, Dhanteras offer message customers, Dhanteras gold sale WhatsApp, Shopify Dhanteras campaign India',
-    eyebrow: 'Dhanteras',
-    h1: 'Dhanteras WhatsApp templates for Shopify stores',
-    h1Accent: 'Dhanteras',
+      'dhanteras whatsapp template, dhanteras offer message customers, dhanteras gold sale whatsapp, free whatsapp marketing template download, dhanteras wishes message business',
+    eyebrow:
+      'Dhanteras',
+    h1:
+      'Dhanteras WhatsApp marketing templates',
+    h1Accent:
+      'Dhanteras',
     subtitle:
-      'The highest-AOV day in the Indian retail year. Four Dhanteras messages written for buyers who have already decided, ready to personalise.',
+      'Four free Dhanteras WhatsApp templates for buyers who have already decided to spend, ready to copy, edit and submit to Meta.',
     answerFirst:
       'The biggest single buying day in Indian retail, where customers arrive having already decided to spend. Do not discount into demand that is already there.',
     peak:
@@ -1437,20 +1521,24 @@ export const FESTIVALS: Festival[] = [
     cluster: 'festive-quarter',
     tradition: 'hindu',
     regions: 'Pan-India, and the largest commercial event of the Indian year',
-    title: 'Diwali WhatsApp Templates for Shopify | TopEdge AI',
+    title:
+      'Diwali WhatsApp Marketing Templates: 4 Free Examples',
     description:
-      'Four Diwali WhatsApp templates for Shopify India — early access, gift picks, flash sale and greeting — with the send plan, timing and ₹ cost per customer.',
+      '4 free Diwali WhatsApp message templates to copy, edit and send — early access, gift picks, flash sale and greeting, with send dates and cost.',
     keywords:
-      'Diwali WhatsApp template, Diwali offer message to customers, Diwali sale WhatsApp message, Shopify Diwali campaign India, happy Diwali message business',
-    eyebrow: 'Diwali campaign',
-    h1: 'Diwali WhatsApp templates for Shopify stores',
-    h1Accent: 'Diwali',
+      'diwali whatsapp template, diwali offer message to customers, diwali sale whatsapp message, free whatsapp marketing template download, happy diwali message for business',
+    eyebrow:
+      'Diwali campaign',
+    h1:
+      'Diwali WhatsApp marketing templates',
+    h1Accent:
+      'Diwali',
     subtitle:
-      'The biggest week of the Indian D2C year, and the most crowded inbox. Four Diwali messages ready to personalise and submit to Meta.',
+      'Four free Diwali WhatsApp templates you can copy, edit and submit to Meta — the biggest week of the year, and the most crowded inbox.',
     answerFirst:
       'The largest commercial event in India and the hardest inbox of the year to be read in. Start ten to twelve days out, and stop promising delivery in the final three.',
     peak:
-      'Ten to four days before. The last three days belong to local delivery and quick commerce, not to a Shopify store shipping across the country.',
+      'Ten to four days before. The last three days belong to local delivery and quick commerce, not to anyone shipping across the country.',
     buyerIntent:
       'Three buyers at once, and they want different things. Corporate and bulk gifting is decided earliest and has the largest basket. Family gifting is the volume driver and stalls on indecision. Self-purchase — clothes, decor, electronics, the home upgrade — runs through the whole window. A campaign that writes one message for all three reaches none of them properly.',
     sells: [
@@ -1496,16 +1584,20 @@ export const FESTIVALS: Festival[] = [
     cluster: 'festive-quarter',
     tradition: 'hindu',
     regions: 'North and West India, Maharashtra as Bhau Beej, Bengal as Bhai Phonta',
-    title: 'Bhai Dooj WhatsApp Templates for Shopify | TopEdge AI',
+    title:
+      'Bhai Dooj WhatsApp Templates: 4 Free Examples',
     description:
-      'Four Bhai Dooj WhatsApp templates for Shopify India, with the post-Diwali send window, the sibling-gifting categories and the ₹ cost of the run.',
+      '4 free Bhai Dooj WhatsApp message templates to copy and edit, with the post-Diwali send window, sibling gifting angle and cost per message.',
     keywords:
-      'Bhai Dooj WhatsApp template, Bhai Dooj gift message, Bhau Beej offer WhatsApp, Shopify Bhai Dooj campaign India',
-    eyebrow: 'Bhai Dooj',
-    h1: 'Bhai Dooj WhatsApp templates for Shopify stores',
-    h1Accent: 'Bhai Dooj',
+      'bhai dooj whatsapp template, bhai dooj gift message, bhau beej offer whatsapp, free whatsapp message template example, bhai dooj wishes message business',
+    eyebrow:
+      'Bhai Dooj',
+    h1:
+      'Bhai Dooj WhatsApp marketing templates',
+    h1Accent:
+      'Bhai Dooj',
     subtitle:
-      'The last gifting day of the festive quarter, three days after Diwali. Four Bhai Dooj messages ready to personalise and submit to Meta.',
+      'Four free Bhai Dooj WhatsApp templates for the last gifting day of the festive quarter, ready to copy and edit.',
     answerFirst:
       'Sibling gifting three days after Diwali, into a list that has just had a full festive run. Send two or three messages, and make the offer a different one.',
     peak:
@@ -1549,16 +1641,20 @@ export const FESTIVALS: Festival[] = [
     cluster: 'festive-quarter',
     tradition: 'hindu',
     regions: 'Bihar, Jharkhand, eastern Uttar Pradesh, and migrant communities in Delhi and Mumbai',
-    title: 'Chhath Puja WhatsApp Templates | TopEdge AI',
+    title:
+      'Chhath Puja WhatsApp Templates: 4 Free Examples',
     description:
-      'Four Chhath Puja WhatsApp templates for Shopify India, with the four-day Bihar window, the strict purity rules that shape what sells, and ₹ costs.',
+      '4 free Chhath Puja WhatsApp message templates to copy and edit, with the four-day send window, the prescribed items that sell and cost per message.',
     keywords:
-      'Chhath Puja WhatsApp template, Chhath Puja offer message, Chhath message to customers, Shopify Chhath Puja campaign Bihar',
-    eyebrow: 'Chhath Puja',
-    h1: 'Chhath Puja WhatsApp templates for Shopify stores',
-    h1Accent: 'Chhath Puja',
+      'chhath puja whatsapp template, chhath puja offer message, chhath message to customers, free whatsapp marketing template, chhath puja wishes message business',
+    eyebrow:
+      'Chhath Puja',
+    h1:
+      'Chhath Puja WhatsApp marketing templates',
+    h1Accent:
+      'Chhath Puja',
     subtitle:
-      'A four-day observance with strict purity rules and a loyal regional audience. Four Chhath messages ready to personalise and submit to Meta.',
+      'Four free Chhath Puja WhatsApp templates for a strictly observed festival with a loyal regional audience, ready to copy and edit.',
     answerFirst:
       'The strictest festival here: the ritual prescribes the items, so availability beats discount. Everything has to be in hand before Nahay Khay.',
     peak:
@@ -1602,16 +1698,20 @@ export const FESTIVALS: Festival[] = [
     cluster: 'december',
     tradition: 'christian',
     regions: 'Pan-India in metros, strongest in Kerala, Goa, the North East, Mumbai and Bengaluru',
-    title: 'Christmas WhatsApp Templates for Shopify | TopEdge AI',
+    title:
+      'Christmas WhatsApp Templates: 4 Free Examples to Copy',
     description:
-      'Four Christmas WhatsApp templates for Shopify India, with the December send plan, the shipping cut-off that decides the campaign, and ₹ costs.',
+      '4 free Christmas WhatsApp message templates to copy, edit and send, with the December send plan, the shipping cut-off that decides it, and cost.',
     keywords:
-      'Christmas WhatsApp template, Christmas offer message to customers, Christmas sale WhatsApp message India, Shopify Christmas campaign',
-    eyebrow: 'Christmas campaign',
-    h1: 'Christmas WhatsApp templates for Shopify stores',
-    h1Accent: 'Christmas',
+      'christmas whatsapp template, christmas message to customers, christmas sale whatsapp message, free whatsapp marketing template download, merry christmas message for business',
+    eyebrow:
+      'Christmas campaign',
+    h1:
+      'Christmas WhatsApp marketing templates',
+    h1Accent:
+      'Christmas',
     subtitle:
-      'The longest lead time of any festival here and the hardest delivery deadline. Four Christmas messages ready to personalise and submit to Meta.',
+      'Four free Christmas WhatsApp templates built around your shipping cut-off, ready to copy, edit and submit to Meta.',
     answerFirst:
       'The longest lead time of any festival here, and the hardest deadline. Nationwide delivery stops being reliable around the 20th, so that is your last offer — not the 23rd.',
     peak:

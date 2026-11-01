@@ -2,12 +2,14 @@ import { Link } from 'react-router-dom';
 import PhoneMock from '../journey/PhoneMock';
 import FestivalMark from './FestivalMark';
 import FestivalImage from './FestivalImage';
+import CopyButton from './CopyButton';
 import {
   FESTIVAL_MARKETING_RATE,
   festivalPath,
   stageSendWindow,
   type FestivalTemplateItem,
 } from '../../data/festivalTemplates';
+import { templateBodyText } from '../../lib/templateExport';
 
 /**
  * One festive template, as a card.
@@ -101,12 +103,21 @@ export default function FestivalTemplateCard({
           <code>{row.metaName}</code>
         </p>
 
-        <Link to="/signup" className="mkt-ftc__cta">
-          Personalise this
-          <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
-            <path d="M5 12h14M13 6l6 6-6 6" />
-          </svg>
-        </Link>
+        {/*
+          Copy first, sign-up second. Someone who came here for the words
+          should get the words; asking them to create an account to read text
+          that is already on screen is the kind of thing that sends them back
+          to the search results.
+        */}
+        <div className="mkt-ftc__actions">
+          <CopyButton text={templateBodyText(item)} />
+          <Link to="/signup" className="mkt-ftc__cta">
+            Edit &amp; use
+            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+              <path d="M5 12h14M13 6l6 6-6 6" />
+            </svg>
+          </Link>
+        </div>
       </div>
     </article>
   );
