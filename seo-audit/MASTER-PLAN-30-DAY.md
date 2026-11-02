@@ -18,6 +18,7 @@ Supporting detail, all in `seo-audit/2026-11-02/`:
 | `09-gsc-findings.md` | Search Console diagnosis |
 | `10-positioning-and-onpage-audit.md` | 155-page crawl, category analysis |
 | `11-backlink-playbook.md` | Link strategy, Shopify link teardown |
+| `14-competitor-backlink-replication.md` | Which competitor links we can place ourselves vs must earn |
 | `disavow-UPLOAD-THIS.txt` | 37 spam domains, ready to upload |
 
 Tools in use: **OpenSEO** (project `852f0ce0-39cf-43e3-9b80-84ff3449a4a8`

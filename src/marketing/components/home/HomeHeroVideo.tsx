@@ -68,6 +68,17 @@ export default function HomeHeroVideo() {
   // Pick the file by viewport. A `media` attribute on <source> is ignored inside
   // <video>, and two <video> elements would download both files, so the choice
   // is made here, once, before anything is fetched.
+  //
+  // `src` is set after the window `load` event, for the same reason gtag and
+  // PostHog are (see lib/analytics.ts, lib/posthog.ts). With `preload="auto"`
+  // the browser starts pulling the film the instant this effect runs, and the
+  // mobile cut is ~9 MB: on a throttled phone connection Lighthouse measured
+  // 2.8 MB of it landing inside the first 2.3 s, against a page whose own
+  // assets are a tenth of that. It is bandwidth the first paint is competing
+  // with, and the decode is main-thread work on top. The poster is a webp
+  // preloaded at fetchpriority=high from Home.tsx, so the hero looks finished
+  // from the first frame either way; waiting for `load` costs the film about a
+  // second of delay and gives that second back to the paint behind it.
   useEffect(() => {
     const mq = window.matchMedia(MOBILE_QUERY);
     const motion = window.matchMedia('(prefers-reduced-motion: reduce)');
@@ -75,11 +86,31 @@ export default function HomeHeroVideo() {
       setReduced(motion.matches);
       setSrc(mq.matches ? MOBILE_SRC : DESKTOP_SRC);
     };
-    apply();
+
+    let idle = 0;
+    const start = () => {
+      // One more beat after `load` so the film queues behind any work the load
+      // handlers themselves kick off rather than racing it.
+      idle =
+        typeof window.requestIdleCallback === 'function'
+          ? window.requestIdleCallback(apply, { timeout: 2000 })
+          : window.setTimeout(apply, 200);
+    };
+
+    if (document.readyState === 'complete') start();
+    else window.addEventListener('load', start, { once: true });
+
     // Only react to the motion preference. Re-pointing `src` on every resize
     // would restart playback mid-watch when a phone rotates.
     motion.addEventListener('change', apply);
-    return () => motion.removeEventListener('change', apply);
+    return () => {
+      window.removeEventListener('load', start);
+      if (idle) {
+        if (typeof window.cancelIdleCallback === 'function') window.cancelIdleCallback(idle);
+        else window.clearTimeout(idle);
+      }
+      motion.removeEventListener('change', apply);
+    };
   }, []);
 
   /**

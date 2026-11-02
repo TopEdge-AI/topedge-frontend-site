@@ -78,6 +78,11 @@ export default function JourneyExamplePage({ slug }: { slug: string }) {
               platforms wants the shape of the automation before the argument
               for it, and the shape is the thing a feature list cannot show.
             */}
+            {/*
+              Hidden label for the diagram. The step titles inside it are H3s,
+              so they need an H2 above them rather than jumping from the H1.
+            */}
+            <h2 className="sr-only">{j.h1}: step by step</h2>
             <JourneyFlow trigger={j.trigger} triggerNote={j.triggerNote} steps={j.steps} />
 
             {j.blocks.length > 0 && (

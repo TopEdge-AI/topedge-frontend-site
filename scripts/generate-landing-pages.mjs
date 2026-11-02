@@ -1024,7 +1024,10 @@ const PILLARS = [
   'Zero message markup (keep total asset and phone number ownership)',
 ];
 
-const pillarsHtml = `<ul class="pil">${PILLARS.map(
+// The .vh heading is there so the three claims, which are h3s, sit under an h2
+// rather than jumping a level straight from the page h1. Hidden because the
+// hero reads as one block and a visible title over the ticks would break it.
+const pillarsHtml = `<h2 class="vh">Why brands choose TopEdge</h2><ul class="pil">${PILLARS.map(
   (x) => `<li><i class="pil-t">${TICK}</i><h3>${esc(x)}</h3></li>`,
 ).join('')}</ul>`;
 

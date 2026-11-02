@@ -203,6 +203,11 @@ function TemplateLibrary() {
 
   return (
     <div className="mkt-lib">
+      {/*
+        Hidden label for the library. Each card title is an H3, so the grid
+        needs an H2 over it instead of sitting directly under the page H1.
+      */}
+      <h2 className="sr-only">Every WhatsApp template in the library</h2>
       <div className="mkt-lib__filters" role="tablist" aria-label="Filter templates">
         {FILTERS.map((f) => {
           const count =

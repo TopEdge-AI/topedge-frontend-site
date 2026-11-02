@@ -259,6 +259,51 @@ export const SOURCES = {
       'September 2026 view (the page defaults to the latest month): all-market conversion rate 1.97% (1.68% a year earlier), bounce rate 41.55%. CPA, which IRP defines as total marketing cost divided by total revenue, by traffic source: Google PPC 11.19%, Email Marketing 0.85%, Bing and Yahoo PPC 11.53%, Facebook Paid 49.76%. Sales by channel: Paid Search 63.5%, Direct 20.2%, Email 10%, Paid Social 0.5%. Retailers on IRP’s platform, reported in pounds. Free to use with the source cited.',
     verified: '2026-10-31',
   },
+  watiPricing: {
+    id: 'watiPricing',
+    url: 'https://www.wati.io/pricing/',
+    label: 'WATI’s published pricing page',
+    publisher: 'WATI',
+    claim:
+      'India plans: Growth ₹2,699/month, Pro ₹5,799/month with additional users at ₹1,299/user/month, Business ₹16,799/month with additional users at ₹2,199/user/month. Conversation charges are listed as “Standard rates”, that is Meta’s own rate passed through, on every tier. Astra AI agents and advanced inbox features are gated to the upper tiers. Facebook Business verification is offered only to Business annual plan customers.',
+    verified: '2026-11-02',
+  },
+  zokoPricing: {
+    id: 'zokoPricing',
+    url: 'https://www.zoko.io/pricing',
+    label: 'Zoko’s published pricing page',
+    publisher: 'Zoko',
+    claim:
+      'Starter $49.99/month, Plus $79.99/month with extra agents at $15/agent/month, and a $139.99/month tier with extra agents at $12/agent/month. Priced in US dollars with no rupee plan published. Add-ons are metered on outcomes rather than seats: one at $24.99/month plus $0.09 per resolution, another at $24.99/month plus 3% of order value.',
+    verified: '2026-11-02',
+  },
+  bitespeedPricing: {
+    id: 'bitespeedPricing',
+    url: 'https://www.bitespeed.co/pricing',
+    label: 'BiteSpeed’s pricing page',
+    publisher: 'BiteSpeed',
+    claim:
+      'BiteSpeed publishes no prices. Requesting https://www.bitespeed.co/pricing returns a single redirect to https://www.bitespeed.co/request-demo, so there is no plan, tier or per-message rate a buyer can read before speaking to sales.',
+    verified: '2026-11-02',
+  },
+  dondyListing: {
+    id: 'dondyListing',
+    url: 'https://apps.shopify.com/dondy-marketing-ai',
+    label: 'Dondy’s Shopify App Store listing',
+    publisher: 'Shopify',
+    claim:
+      'Dondy lists a free plan and a free trial, is rated 4.9 from 835 reviews, and the listing states the developer is based in India. Listed categories are Abandoned cart and Chat, with COD verification named among the chat features. Interface languages are English, Spanish, Italian, Portuguese (Brazil) and French.',
+    verified: '2026-11-02',
+  },
+  delightchatPricing: {
+    id: 'delightchatPricing',
+    url: 'https://www.delightchat.io/pricing',
+    label: 'DelightChat’s published pricing page',
+    publisher: 'DelightChat',
+    claim:
+      'Three published tiers at $29, $99 and $299 a month. Overages are metered on support volume rather than messages: $10 per extra 100 tickets and $10 per extra 1,000 contacts. Every additional WhatsApp API number costs a further $25 a month. Priced in US dollars with no rupee plan published.',
+    verified: '2026-11-02',
+  },
 } as const satisfies Record<string, Source>;
 
 export type SourceId = keyof typeof SOURCES;

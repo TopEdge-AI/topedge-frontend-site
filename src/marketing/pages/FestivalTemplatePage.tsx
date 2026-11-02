@@ -220,6 +220,12 @@ export default function FestivalTemplatePage({ slug }: { slug: string }) {
           a button for a set still out of frame.
         */}
         <Section className="!pt-4 md:!pt-6">
+          {/*
+            Visually hidden on purpose: the comment above explains why no
+            visible title sits here. The heading still has to exist so the
+            card titles below are H3s under an H2, not H3s under the H1.
+          */}
+          <h2 className="sr-only">{festival.name} WhatsApp templates, ready to send</h2>
           <ul className="mkt-fseq">
             {items.map((item, i) => (
               <li key={item.id} id={item.row.metaName}>

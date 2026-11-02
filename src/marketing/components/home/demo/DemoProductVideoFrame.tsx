@@ -257,7 +257,16 @@ export default function DemoProductVideoFrame({
         <video
           ref={videoRef}
           className="demo-video-glow__el"
-          poster={poster}
+          /*
+            Gated on canPlay, not passed straight through. `preload="none"`
+            holds back the video bytes but it does not hold back the poster:
+            a <video poster> is fetched as soon as the element exists, so the
+            four demo posters on the homepage were pulling ~320 KB during the
+            first paint while the <img> above them was correctly lazy. Until
+            the observer opens the gate that <img> is what the visitor sees,
+            so the attribute has nothing to show anyway.
+          */
+          poster={canPlay ? poster : undefined}
           muted
           loop
           playsInline

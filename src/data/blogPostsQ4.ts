@@ -404,6 +404,9 @@ ${verdict(`<p><strong>A WATI alternative makes sense for Shopify India when</str
 <tr><td>Reporting in rupees recovered</td><td>Proves the tool pays for itself</td></tr>
 </tbody>
 </table>
+<p>Add one more requirement that the table cannot express, because it is about cost shape rather than capability: <strong>a pricing model that does not charge you per person.</strong></p>
+<p>This is the specific reason WATI stops fitting an Indian D2C store as it grows. <a href="https://www.wati.io/pricing/" target="_blank" rel="noopener noreferrer">WATI’s India pricing</a> runs Growth at ₹2,699, Pro at ₹5,799 and Business at ₹16,799, with additional users at ₹1,299 each on Pro and ₹2,199 each on Business. A four-person desk on Pro is ₹9,696 a month before a single message is sent. That is a perfectly normal helpdesk price and a poor match for a store whose shape is one or two people answering alongside a lot of automated sending.</p>
+<p><strong>Be fair about what WATI gets right, though.</strong> It lists conversations at standard rates on every tier, meaning Meta’s own pricing passed through rather than resold. On the markup question, which is the one that compounds, WATI is clean. The reason to leave is seat economics and Shopify depth, not the per-message line, and a replacement that marks up Meta rates would be a step backwards even at a lower subscription.</p>
 
 <h2>A worked month: 500 Shopify orders and 10,000 messages</h2>
 <p>"Platform charges above Meta rates" means nothing until you put volume behind it. Here is one realistic month on Meta's October 2026 India rate card, priced at 0% markup so you can see which half of the bill is actually yours to negotiate.</p>
@@ -984,16 +987,24 @@ ${verdict(`<p><strong>Most rejections come from five fixable things:</strong> wr
 </table>
 
 <h2>Utility or marketing: the category that costs money</h2>
-<p>Meta bills marketing templates at a higher rate than utility ones, and can reclassify a utility template that reads as promotional. An order confirmed message should state the order, items and delivery date. Add a discount code and it can flip to marketing. See how rates work in <a href="/blog/whatsapp-business-api-pricing-india">WhatsApp Business API pricing in India</a>.</p>
+<p>Meta bills marketing templates at a higher rate than utility ones, and can reclassify a utility template that reads as promotional. An order confirmed message should state the order, items and delivery date. Add a discount code and it can flip to marketing.</p>
+<p><strong>The gap is about seven to one.</strong> In India a delivered utility message is <strong>₹0.1150</strong> and a marketing one is <strong>₹0.8631</strong>. So a single promotional sentence added to a dispatch notification does not cost you a little extra, it multiplies the cost of every order you ship by roughly seven. On 800 orders a month that is the difference between about ₹92 and ₹690, for one line nobody asked for.</p>
+<p><strong>The test Meta applies is purpose, not politeness.</strong> A message about an order that already exists is utility, however briskly worded. A message trying to cause an order is marketing, however gently worded. That is why every cart reminder is marketing: at the moment it sends, there is no order. Writing it in a transactional tone does not change the category, it just makes the template read oddly.</p>
+<p><strong>Reclassification happens after approval, too.</strong> A template can pass review and later be recategorised once Meta sees how it is used, so the bill moves without anything in your account changing. If your messaging cost jumps without a volume change, compare the category on your highest-volume templates first. See how rates work in <a href="/blog/whatsapp-business-api-pricing-india">WhatsApp Business API pricing in India</a>.</p>
 
 <h2>Rewrite examples for Shopify</h2>
 <h3>Order confirmation (utility)</h3>
 <p>Hi {{1}}, your order {{2}} is confirmed. We will ship it to {{3}} and share tracking soon.</p>
+<p><strong>Why this clears review:</strong> it opens with a word rather than a variable, which is the single most common structural rejection. It states a fact about an order that exists, so the utility category is defensible. It makes no offer, so there is nothing for a reviewer to reclassify. And every variable sits next to text that explains it, so the reviewer can tell what {{2}} and {{3}} will contain.</p>
 <h3>COD confirmation (utility)</h3>
 <p>Hi {{1}}, please confirm your cash on delivery order {{2}} for ₹{{3}}. Reply YES to confirm or NO to cancel.</p>
+<p><strong>Why this clears review:</strong> it concerns a placed order, it asks for an action related to that order, and the instruction is unambiguous. The currency symbol sits outside the variable so the amount cannot be misread as arbitrary text.</p>
+<p><strong>Worth adding a third option.</strong> YES and NO force a customer who simply wants Tuesday instead of today into a cancellation. A reschedule branch converts orders that a binary template kills, and adding it later means resubmitting the template, so put it in the first submission.</p>
 <h3>Cart reminder (marketing)</h3>
 <p>Hi {{1}}, you left {{2}} in your cart. Your cart is saved here: {{3}}</p>
-<p>Tradeoff: a plain template converts less than a persuasive one, but a rejected template converts nothing. Start plain, then test one change at a time.</p>
+<p><strong>Why this clears review as marketing:</strong> it is honest about what it is. No order exists, so it is submitted as marketing and priced at ₹0.8631, and because the category is correct there is nothing for Meta to reclassify later.</p>
+<p><strong>What gets this one rejected</strong> is almost always urgency theatre: “last chance”, “only 2 left” or stacked exclamation marks when the claim is not true. Meta reads deceptive urgency as a policy problem rather than a style one, and the rejection reason you receive will be vague.</p>
+<p>Tradeoff: a plain template converts less than a persuasive one, but a rejected template converts nothing. Start plain, get approved, then test one change at a time and resubmit as a new variant rather than editing the one carrying your live traffic.</p>
 
 <h2>Workflow that avoids rejections</h2>
 <ol>
@@ -1072,7 +1083,10 @@ ${verdict(`<p><strong>Collect opt-in at checkout and on your site, word it clear
 <li>Offers an easy way to stop.</li>
 <li>Is separate from terms and conditions.</li>
 </ul>
-<p>Tradeoff: stricter wording and an unticked box reduce opt-in volume. The people who remain open and answer your messages, which keeps your quality rating high.</p>
+<p>Tradeoff: stricter wording and an unticked box reduce opt-in volume. The people who remain are the ones who open and answer your messages, which is what keeps your Meta quality rating high.</p>
+<p>That trade is better than it looks, because the list you lose is the part that would have cost you. Meta scores every business number on how recipients react, and blocks and reports from people who do not remember agreeing are what drag the score down. A throttled number restricts your order confirmations and COD checks, not just your campaigns, so a padded opt-in list can end up damaging the transactional messaging that was actually earning.</p>
+<p><strong>Keep the checkbox unticked, and keep it separate from your terms.</strong> Consent bundled into a terms-and-conditions acceptance is the first thing that fails if anyone ever asks you to produce it, and it is also the version that generates the complaints. A customer who deliberately ticked a box remembers doing it.</p>
+<p><strong>Name the channel explicitly.</strong> “Send me updates” is not consent to message someone on WhatsApp; it reads as email to most people. The wording has to say WhatsApp and say what will arrive, because order updates and promotional offers are different promises and a customer who agreed to the first will report the second.</p>
 
 <h2>What to record</h2>
 <ol>
@@ -1082,6 +1096,9 @@ ${verdict(`<p><strong>Collect opt-in at checkout and on your site, word it clear
 <li>The exact wording shown.</li>
 <li>Any later opt-out.</li>
 </ol>
+<p>Record it where you can retrieve it per customer, not in an export nobody can query. The moment this matters is a complaint about one phone number, and the only useful answer is a timestamp, a source and the exact sentence that person saw. “We collect consent at checkout” is not an answer.</p>
+<p><strong>Store the wording itself, not a version number.</strong> Opt-in copy gets edited, and a reference to “v2 of the checkout consent” is worthless if nobody kept v2. Snapshot the literal text shown at the moment of consent.</p>
+<p><strong>Treat opt-out as the same quality of record as opt-in.</strong> It has to stop marketing sends immediately and permanently, survive a platform migration, and remain visible to anyone who later imports a list. The most common way a store sends to someone who opted out is a CSV upload that predates the opt-out, which is also exactly the kind of send that produces a report to Meta.</p>
 
 <h2>Keep quality rating healthy</h2>
 <p>Blocks and reports lower quality and can limit sending. Send cart and COD messages soon after the trigger, include a clear stop option and avoid sending offers to people who only agreed to order updates. Our guide to <a href="/blog/whatsapp-abandoned-cart-recovery-shopify">WhatsApp abandoned cart recovery</a> covers timing in detail.</p>
@@ -1159,6 +1176,8 @@ ${verdict(`<p><strong>Updatrr is an honest Shopify-only WhatsApp app and it does
 
 <h2>Where the two products actually differ</h2>
 <p>Since the Meta line is identical on both sides, the comparison narrows to three real differences.</p>
+<p>That is worth pausing on, because it is unusual. <a href="https://www.updatrr.com/pricing" target="_blank" rel="noopener noreferrer">Updatrr states plainly on its pricing page</a> that it adds no markup on Meta’s conversation fees, and TopEdge takes the same position. So the cost that compounds with volume, and that separates most of the tools in this category, is the same whichever of the two you pick. Neither of us can win an argument about ₹0.8631 per marketing template or ₹0.1150 per service message, because both of us charge exactly that.</p>
+<p>What remains is currency, where AI sits in the plan ladder, and how deep each product reaches into the store. Those are the three below, and they are differences of shape rather than of honesty.</p>
 
 <h3>1. Currency and the shape of the bill</h3>
 <p>Updatrr bills in USD. For an Indian brand that means a plan cost that moves with the exchange rate, GST handling on a foreign invoice, and a number your finance team has to re-translate every month. Not fatal, just friction, and it is the friction that compounds when you are forecasting a festive quarter.</p>
@@ -1519,6 +1538,8 @@ ${faqHtml(COD_PREPAID_FAQS)}
 
 <h2>What the best Shopify app for abandoned cart recovery India has to do</h2>
 <p>Four capabilities decide whether an app pays for itself. Everything else on a pricing page is decoration.</p>
+<p>They are in this order for a reason. The first two are architectural, which means no amount of configuration fixes them later: an app either reads both abandonment events or it does not, and it either cancels queued messages on order creation or it does not. The third is a legal exposure that only becomes visible when someone complains. The fourth is a cost that is invisible in month one and compounds every month after.</p>
+<p>Judge an app on all four before you look at anything else, because a product can be excellent on templates, inbox design, analytics and reviews while failing the second test, and that single failure will send paid messages to people who have already paid you. Across 1,000 abandoned checkouts a month, a sequence that does not suppress sends roughly 20 to 40 unnecessary marketing messages to customers who just bought, which costs money twice: once to Meta, and once in the goodwill of a buyer who gets chased for a cart they completed.</p>
 
 <h3>1. Both events, not one</h3>
 <p>Shopify distinguishes between a shopper who added to cart and one who started checkout, and they are different people with different intent.</p>
@@ -1544,6 +1565,23 @@ ${faqHtml(COD_PREPAID_FAQS)}
 
 <h3>4. What it adds to Meta’s rate</h3>
 <p>Two apps at the same subscription can differ by thousands of rupees a month once messages start flowing, because some vendors resell Meta’s conversations at a markup and some pass them through. The subscription is the number on the pricing page. The markup is the number on your bill in October. Full rate card and the volume tiers: <a href="/blog/whatsapp-business-api-pricing-india">India WhatsApp API pricing</a>.</p>
+<p>Meta’s India rates are the fixed point to measure against: <strong>₹0.8631</strong> per delivered marketing template and <strong>₹0.1150</strong> per service message, with every business number getting 1,000 free service messages a month since 1 October 2026. Those numbers are the same whoever sends them. Anything above them is the platform’s margin, and a vendor who will not state the figure plainly is stating it by omission.</p>
+<p>Here is where the shortlist actually stands on published prices, read off each vendor’s own page:</p>
+<div class="mkt-blog-table-wrap">
+<table>
+<thead><tr><th>App</th><th>Entry plan with WhatsApp</th><th>Currency</th><th>Markup on Meta rates</th></tr></thead>
+<tbody>
+<tr><td><strong>TopEdge AI</strong></td><td>₹1,999/mo</td><td>INR</td><td>None stated, 0%</td></tr>
+<tr><td><strong>WATI</strong></td><td>₹2,699/mo</td><td>INR</td><td>Standard rates, passed through</td></tr>
+<tr><td><strong>Interakt</strong></td><td>₹2,799/mo (₹999 plan is Instagram only)</td><td>INR</td><td>Not stated on the plan table</td></tr>
+<tr><td><strong>Updatrr</strong></td><td>$29.99/mo</td><td>USD</td><td>States no markup</td></tr>
+<tr><td><strong>Zoko</strong></td><td>$49.99/mo</td><td>USD</td><td>Not stated; add-ons metered per resolution or at 3% of order value</td></tr>
+<tr><td><strong>AiSensy</strong></td><td>Published per-message</td><td>INR</td><td><strong>₹0.145</strong> per India service message against Meta’s ₹0.1150, about 26% above</td></tr>
+<tr><td><strong>BiteSpeed</strong></td><td>Not published</td><td>Not published</td><td>Not published</td></tr>
+</tbody>
+</table>
+</div>
+<p>Read that table as a method rather than a ranking. The question to carry into every demo is the same: at my volume, what is the total of the platform fee plus everything added to Meta’s own rate? A ₹700 difference in subscription is settled by a ₹0.03 per-message margin inside one festive week.</p>
 
 <h2>How to view abandoned carts on Shopify</h2>
 <p>Before you buy anything, look at what you already have. In your Shopify admin:</p>
@@ -1611,6 +1649,9 @@ ${faqHtml(COD_PREPAID_FAQS)}
 <h2>2. Shopify’s built-in abandoned checkout automation</h2>
 <p><strong>Best for:</strong> stores under roughly 100 orders a month, and anyone who has not yet switched it on.</p>
 <p>Free, already installed, email only, one send. It is the control group every paid app should be measured against, and the honest benchmark for whether an app is adding anything. Turn it on, leave it running for a month, and read the Email status column before you shop.</p>
+<p><strong>Know exactly what it does and does not catch.</strong> <a href="https://help.shopify.com/manual/orders/abandoned-checkouts" target="_blank" rel="noopener noreferrer">Shopify counts a checkout as abandoned</a> when it stays incomplete for more than ten minutes after the customer has given their email, and recovery emails are available on the Online Store and Buy Button channels only. Two consequences follow, and both are the reason paid apps exist. It fires on abandoned <em>checkout</em>, not abandoned cart, so every shopper who filled a cart and left before reaching the email field is invisible to it. And it needs an email address, which in an Indian D2C funnel is frequently the field the shopper abandoned at.</p>
+<p><strong>Set the benchmark properly before you spend.</strong> Run it for one full month untouched, then record three numbers: how many abandoned checkouts Shopify logged, how many recovery emails it sent, and how many orders carry a recovered-checkout attribution. That third number is your baseline. Every paid app on this page should be measured as a delta against it, not against zero. A store recovering 4% through the free email and 6% through a paid WhatsApp app has bought 2 points, not 6, and the 2 points are what has to cover the subscription.</p>
+<p><strong>Where it is not the answer:</strong> one send, no branching, no COD path, no reply. It cannot ask the question that is actually blocking an Indian cart, which is usually about cash on delivery, delivery time or returns.</p>
 
 <h2>3. Wiz AI Abandoned Cart Recovery</h2>
 <p><strong>Best for:</strong> an email-first store that wants more than Shopify’s single send without paying per message.</p>
@@ -1619,31 +1660,53 @@ ${faqHtml(COD_PREPAID_FAQS)}
 
 <h2>4. BiteSpeed</h2>
 <p><strong>Best for:</strong> brands whose main job is WhatsApp broadcast and campaigns, with recovery attached.</p>
-<p>India-focused and widely installed, sold primarily as a marketing platform. Price the recovery capability on the tier that actually carries it, and ask the suppression question in the demo. Full comparison: <a href="/blog/bitespeed-alternative-shopify-india">BiteSpeed alternatives for Shopify India</a>.</p>
+<p>BiteSpeed is India-focused, widely installed and sold primarily as a marketing platform rather than a recovery tool. That framing matters more than it sounds: campaign products are built to send to a list on a schedule, and recovery is an event-driven job that fires per shopper. The two use different plumbing, and a product optimised for the first often treats the second as a template you can trigger rather than a journey that can branch.</p>
+<p><strong>The pricing problem is the first thing you will hit.</strong> BiteSpeed publishes no prices at all. <a href="https://www.bitespeed.co/pricing" target="_blank" rel="noopener noreferrer">Requesting their pricing page</a> returns a redirect straight to a demo request form, so there is no plan, tier or per-message rate you can read before you talk to sales. You cannot put BiteSpeed in a spreadsheet next to Interakt at ₹2,799 and WATI at ₹2,699 until someone quotes you, and a quote is negotiated per account, which means the number you get is not the number your neighbour got.</p>
+<p><strong>On the four tests:</strong> ask all of them live. Specifically, ask whether recovery fires on abandoned cart as well as abandoned checkout, because the cart event is the one that needs a pre-checkout identity and the one campaign-led tools most often skip. Ask them to create a test order mid-sequence and show you the remaining two messages cancelling. And ask which tier carries recovery, because on a campaign-priced platform the automation you actually want is frequently a step above the plan you were quoted.</p>
+<p><strong>Where it is not the answer:</strong> if recovery is the reason you are buying, you are buying the secondary feature of a broadcast product and paying an unpublished price for it. Full comparison: <a href="/blog/bitespeed-alternative-shopify-india">BiteSpeed alternatives for Shopify India</a>.</p>
 
 <h2>5. Interakt</h2>
-<p><strong>Best for:</strong> stores already on the Jio-backed ecosystem wanting standard WhatsApp recovery templates.</p>
-<p>The trap here is tier selection: the cheapest published plan is Instagram only, so the price you compare against must be the lowest tier that includes WhatsApp. AI agents are an add-on rather than a plan feature. Detail: <a href="/blog/interakt-alternative-shopify-india">Interakt alternatives for Shopify India</a>.</p>
+<p><strong>Best for:</strong> stores already inside the Jio-backed ecosystem that want standard WhatsApp recovery templates on the official API.</p>
+<p>Interakt is a competent, well-distributed Business Solution Provider, and for a store that wants approved templates firing reliably it does the job. The reason it needs care is that its price list is shaped in a way that catches people who compare headline numbers.</p>
+<p><strong>Read the tiers properly.</strong> <a href="https://www.interakt.shop/pricing/" target="_blank" rel="noopener noreferrer">Interakt publishes</a> Starter at ₹999 a month, and that plan is <strong>Instagram only</strong>. It cannot send your WhatsApp cart reminders. The cheapest plan that includes WhatsApp is Growth at ₹2,799 a month, with Advanced at ₹3,799. So the honest comparison number for a WhatsApp recovery buyer is ₹2,799, not ₹999, and any shortlist that puts Interakt at the bottom on price has read the wrong row.</p>
+<p><strong>AI is an add-on, not a feature.</strong> WhatsApp AI Agents are sold as a ₹3,000 a month add-on on Growth and Advanced, with 100 free AI messages a month and ₹0.50 per AI message after that. If you want an assistant answering the "does this ship to Nagpur?" reply that a recovery message provokes, the real monthly cost is ₹2,799 plus ₹3,000 plus ₹0.50 per answered question past the first hundred, before Meta's own per-message charges. On 500 AI replies a month that is ₹5,999 in platform fees plus ₹200 in AI messages.</p>
+<p><strong>Where it is not the answer:</strong> COD confirmation and COD-to-prepaid are the journeys that pay for themselves in India, and they want branching on payment method rather than a linear template sequence. Detail: <a href="/blog/interakt-alternative-shopify-india">Interakt alternatives for Shopify India</a>.</p>
 
 <h2>6. AiSensy</h2>
-<p><strong>Best for:</strong> campaign-led brands that send far more broadcast than recovery.</p>
-<p>Worth modelling per-message rather than per-plan. AiSensy’s published pricing charges Indian service messages above Meta’s own India rate, which is exactly the markup question from earlier showing up on a real pricing page. Detail: <a href="/blog/aisensy-alternative-shopify-india">AiSensy alternatives for Shopify India</a>.</p>
+<p><strong>Best for:</strong> campaign-led brands that send far more broadcast than recovery, and know it.</p>
+<p>AiSensy is built for volume sending, and at volume sending it is good. It is on this list because it is the clearest published example of the markup question from earlier in this page showing up on a real pricing page, which makes it genuinely useful to study whatever you end up buying.</p>
+<p><strong>The markup, with the arithmetic.</strong> Since 1 October 2026 every WhatsApp Business number gets 1,000 free service messages a month, after which Meta charges ₹0.1150 per service message in India. <a href="https://aisensy.com/pricing" target="_blank" rel="noopener noreferrer">AiSensy's published pricing</a> charges Indian service messages at ₹0.145. That is ₹0.0300 above Meta's own rate on every service message, or about 26% on top. It is a small number per message and a real one per month: at 10,000 service messages past the free tier it is ₹300, at 50,000 it is ₹1,500, every month, on messages your customers sent you first.</p>
+<p>This is exactly the line to check on every vendor here, and it is the reason the comparison table in this guide has a markup column at all. A platform fee is a fixed cost you can plan around. A per-message margin scales with the thing you are trying to do more of.</p>
+<p><strong>On the four tests:</strong> campaign tooling is the strength, so press hardest on suppression. A broadcast engine that cancels queued sends when an order is created is doing something structurally different from one that sends a scheduled list, and you want to watch it happen on a test order rather than take the answer on trust.</p>
+<p><strong>Where it is not the answer:</strong> if your sending is mostly recovery and COD rather than campaigns, you are paying a per-message margin on your highest-frequency message type. Detail: <a href="/blog/aisensy-alternative-shopify-india">AiSensy alternatives for Shopify India</a>.</p>
 
 <h2>7. WATI</h2>
-<p><strong>Best for:</strong> stores whose real pain is support volume, with recovery as a secondary job.</p>
-<p>Shared inbox first, automation second. If you are drowning in WISMO tickets and losing carts, WATI solves the first problem better than the second. Detail: <a href="/blog/wati-alternative-shopify-india">WATI alternatives for Shopify India</a>.</p>
+<p><strong>Best for:</strong> stores whose real pain is support volume, with recovery as a genuine second priority.</p>
+<p>WATI is a shared-inbox product first and an automation product second, and it is honest about that. If your problem is that four people need to answer the same WhatsApp number without colliding, WATI is a better answer than a recovery tool with a chat tab bolted on. If your problem is that carts are leaking, you are buying a helpdesk to solve a journeys problem.</p>
+<p><strong>What it costs, and where the cost actually lands.</strong> <a href="https://www.wati.io/pricing/" target="_blank" rel="noopener noreferrer">WATI's India pricing</a> runs Growth at ₹2,699 a month, Pro at ₹5,799 and Business at ₹16,799. The number that catches people is the per-seat line on top: additional users are ₹1,299 a month each on Pro and ₹2,199 a month each on Business. A four-person support desk on Pro is ₹5,799 plus three extra seats at ₹1,299, so ₹9,696 a month before a single message is sent. That is not a criticism, it is what a seat-priced helpdesk costs, but it is the right number to compare against a flat plan rather than the ₹5,799 headline.</p>
+<p><strong>Credit where it is due on the Meta line.</strong> WATI lists conversation charges as standard rates on every tier, meaning Meta's own pricing passed through rather than marked up. On the fourth test in this guide, WATI passes. Note separately that Facebook Business verification support is offered only to Business annual plan customers, which is worth knowing if you are not yet verified and were counting on help with it.</p>
+<p><strong>Where it is not the answer:</strong> seat pricing punishes the Indian D2C shape, which is usually one or two people answering and a lot of automated sending. Detail: <a href="/blog/wati-alternative-shopify-india">WATI alternatives for Shopify India</a>.</p>
 
 <h2>8. Zoko</h2>
-<p><strong>Best for:</strong> catalogue-led selling where the WhatsApp thread is the storefront.</p>
-<p><a href="https://www.zoko.io/" target="_blank" rel="noopener noreferrer">Zoko</a> publishes COD flows alongside recovery and leans into selling inside the conversation. Detail: <a href="/blog/zoko-alternative-shopify-india">Zoko alternatives for Shopify India</a>.</p>
+<p><strong>Best for:</strong> catalogue-led selling where the WhatsApp thread genuinely is the storefront.</p>
+<p><a href="https://www.zoko.io/pricing" target="_blank" rel="noopener noreferrer">Zoko</a> leans harder than anything else on this list into selling inside the conversation rather than driving back to the website, and it publishes COD flows alongside recovery. For a brand that sells by sending a catalogue and taking the order in the thread, that is a real architectural difference and not a marketing line.</p>
+<p><strong>Priced in dollars, and metered in an unusual way.</strong> Zoko publishes Starter at $49.99 a month, Plus at $79.99 with extra agents at $15 each, and a $139.99 tier with extra agents at $12 each. There is no rupee plan, so your platform cost moves with the exchange rate while your revenue does not. At roughly ₹88 to the dollar, Plus is about ₹7,040 a month before agents.</p>
+<p>More interesting is the add-on model: Zoko sells metered extras at $24.99 a month plus $0.09 per resolution, and another at $24.99 a month plus <strong>3% of order value</strong>. A revenue share is a different kind of cost from a subscription. On ₹10 lakh of attributed monthly order value, 3% is ₹30,000. Model that against a flat plan at your real volume before you agree to it, because it is the one pricing shape on this page that grows faster than you do.</p>
+<p><strong>Where it is not the answer:</strong> if customers check out on your Shopify storefront rather than in the thread, you are paying for the catalogue-commerce half of the product and using the recovery half. Detail: <a href="/blog/zoko-alternative-shopify-india">Zoko alternatives for Shopify India</a>.</p>
 
 <h2>9. Updatrr</h2>
 <p><strong>Best for:</strong> stores comfortable with USD billing that want voice follow-up alongside WhatsApp.</p>
-<p><a href="https://www.updatrr.com/pricing" target="_blank" rel="noopener noreferrer">Updatrr publishes</a> a 7-day free trial with no card required and states it does not mark up Meta’s conversation fees. Seven days is enough to test a recovery flow and too short to test a COD programme. Detail: <a href="/blog/updatrr-alternative-shopify-india">Updatrr alternatives for Shopify India</a>.</p>
+<p>Updatrr is the closest thing on this list to a straight Shopify-native competitor, and it does the two things that matter most on this page correctly: it is built around Shopify events rather than a generic API, and <a href="https://www.updatrr.com/pricing" target="_blank" rel="noopener noreferrer">it states plainly on its pricing page</a> that it does not add a markup on Meta's conversation fees. On the fourth test it passes, and it says so without being asked, which is more than most.</p>
+<p><strong>What it costs.</strong> Growth at $29.99 a month, Pro at $49.99, Pro AI at $99.99, with a 7-day free trial and no card required. Two things follow from that shape. The first is currency: at roughly ₹88 to the dollar, Growth is about ₹2,640 and Pro AI about ₹8,800, and the rupee figure moves every month regardless of what your store did. The second is where AI sits. AI is on the $99.99 top tier only, so an assistant answering recovery replies costs about ₹8,800 a month in platform fees before Meta's charges.</p>
+<p><strong>Seven days is the real constraint.</strong> A trial is long enough to test a cart sequence, because carts abandon continuously and you will see twenty of them in a week. It is not long enough to test a COD programme. COD confirmation only proves itself when you can compare the RTO rate on confirmed orders against unconfirmed ones, and that needs a delivery cycle, which in India is seven to ten days by itself. Plan to evaluate the recovery flow inside the trial and the COD economics on a paid month.</p>
+<p><strong>Where it is not the answer:</strong> a Shopify-only app does not reach pre-checkout visitor identity, unified profiles across several phone numbers, or warranty and post-purchase workflows. Detail: <a href="/blog/updatrr-alternative-shopify-india">Updatrr alternatives for Shopify India</a>.</p>
 
 <h2>10. Dondy</h2>
-<p><strong>Best for:</strong> global stores where India is one market among several.</p>
-<p><a href="https://apps.shopify.com/dondy-marketing-ai" target="_blank" rel="noopener noreferrer">Dondy</a> covers WhatsApp marketing and abandoned cart automation on USD plans. Detail: <a href="/blog/dondy-alternative-shopify-india">Dondy alternatives for Shopify India</a>.</p>
+<p><strong>Best for:</strong> stores that want to start on a free plan and find out whether WhatsApp recovery works for them at all.</p>
+<p><a href="https://apps.shopify.com/dondy-marketing-ai" target="_blank" rel="noopener noreferrer">Dondy's Shopify listing</a> covers WhatsApp marketing and abandoned cart automation, is rated 4.9 from 835 reviews, and lists COD verification among its chat features. Worth correcting a common assumption, including one this guide used to make: the listing states the developer is based in India, so this is not only a global tool that happens to serve the market.</p>
+<p><strong>The free plan is the actual reason to look at it.</strong> Dondy lists a free plan alongside a free trial, which makes it the cheapest way on this page to answer a question worth answering before you spend anything: do your customers reply to WhatsApp at all? Run it for a month, send a recovery sequence, and count replies rather than recoveries. If nobody answers, no app on this list will fix that, and you have learned it for nothing. If they answer, you now know the channel works and can shop on features.</p>
+<p><strong>What to check before you stay.</strong> Interface languages are English, Spanish, Italian, Portuguese and French, which tells you where the product's centre of gravity is. Free plans on messaging apps are usually bounded by message volume rather than features, so find the ceiling before you build a journey on top of it, and confirm what happens to queued messages when you hit it.</p>
+<p><strong>Where it is not the answer:</strong> breadth across many markets tends to cost depth in any one of them, and the India-specific work here is COD, RTO and prepaid conversion. Detail: <a href="/blog/dondy-alternative-shopify-india">Dondy alternatives for Shopify India</a>.</p>
 
 <div class="mkt-blog-callout"><p><strong>How to read this list.</strong> Positions 4 to 10 are close enough that your own store decides the order. The gap that actually matters is between <em>any</em> of them and an app that fails one of the four tests at the top of this page. A beautifully rated app with no suppression will lose you money that a dull one with suppression keeps.</p></div>
 
