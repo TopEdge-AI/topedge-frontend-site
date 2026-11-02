@@ -76,24 +76,72 @@ subtitle and the G2 description.
 
 ---
 
-## 3. Tier 2: the shopify.com link
+## 3. Tier 2: Shopify links, and what they actually are
 
-DelightChat has 56 backlinks from shopify.com, first seen 2023. You have zero.
-This is the most valuable and most legitimate link in the category.
+**This section replaces what I wrote earlier today. I had the raw number right
+and the meaning wrong**, and the correction changes what you should do.
 
-They come from Shopify's own surfaces: the App Store listing itself, app
-collections, the Shopify blog, partner and developer pages, community answers.
-You cannot buy any of it. You get it by being a well-reviewed app that Shopify
-editorial has reason to reference.
+### 3.1 Do reviews create backlinks? No.
 
-Which puts **App Store reviews** on the critical path for links, not just for
-conversion. You are at **0**. Five merchants already reviewed you on Trustpilot
-(4.0 from 5) and three are named on the site with live stores. That is an ask,
-not a project, and it has been outstanding since 7 October.
+App Store reviews live on your listing page on apps.shopify.com. They do not
+create any link to topedgeai.com. Reviews matter enormously for **conversion
+and for ranking inside App Store search**, which is a different and arguably
+more valuable thing, but they are not a link-building tactic. Treat them as a
+sales asset, not an SEO one.
 
-Do that before anything in Tier 3.
+### 3.2 The "56 shopify.com backlinks" to DelightChat are one blog post
 
----
+I pulled every one of them. The reality:
+
+- **53 of 56** come from a single Shopify blog article, `/blog/average-order-value`,
+  which Shopify publishes in about 30 country versions (`/uk/`, `/in/`, `/au/`,
+  `/it/`, `/kr/`, `/pl/`, `/th/` and so on). DelightChat is mentioned once, in
+  that one article, first seen **May 2023**. Each localised URL counts as a
+  separate "backlink", which is how one mention inflates to 53.
+- **Every single one of those is `rel="nofollow noopener noreferrer"`.** They
+  pass no PageRank.
+- The handful that are **dofollow** come from `apps.shopify.com` itself:
+  DelightChat's own app listing, linking to `delightchat.io/changelog`.
+
+So the gap I described as "the most valuable link in the category" was mostly
+an artefact of locale duplication. Chasing a Shopify blog mention is still
+nice, but it is a nofollow brand mention, not an authority transfer.
+
+### 3.3 What your own listing already gives you, and the one thing to fix
+
+I fetched `apps.shopify.com/topedge-ai` and read its markup. Your listing
+already contains:
+
+| Link on your listing | Points to | Attribute |
+|---|---|---|
+| Pricing | `topedgeai.com/pricing` | **nofollow** |
+| Website | `topedgeai.com` | **dofollow** |
+| Docs | `dash.topedgeai.com/docs` | **dofollow** |
+| Privacy | `dash.topedgeai.com/privacy` | **dofollow** |
+
+Two observations, and the second is a free win:
+
+1. The **Pricing slot is nofollow** on your listing and was nofollow on
+   DelightChat's too. That appears to be how Shopify marks that field. Nothing
+   to do.
+2. **Two of your three dofollow slots point at `dash.topedgeai.com`, not at
+   `topedgeai.com`.** The docs link in particular points at the old location:
+   docs were moved back to `topedgeai.com/docs` (commit "Bring the docs home to
+   topedgeai.com/docs"), and `topedgeai.com/docs` is live, indexed and drawing
+   impressions. So a dofollow link from a DR-96 domain is currently pointing at
+   the wrong host.
+
+**Action, about five minutes in your Shopify Partner dashboard:** change the
+listing's docs URL from `dash.topedgeai.com/docs` to `topedgeai.com/docs`.
+Consider doing the same for privacy if a marketing-domain privacy page exists.
+That moves real dofollow equity from the app subdomain onto the domain you are
+trying to rank.
+
+Note the backlink index currently shows **zero** recorded links from any
+shopify.com surface to topedgeai.com, even though the dofollow website link is
+in the page markup. That is normal for a listing with little crawl attention,
+and it is another reason reviews matter: they are what gets a listing crawled
+and re-crawled.
 
 ## 4. Tier 3: the one asset that earns links by itself
 

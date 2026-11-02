@@ -82,41 +82,49 @@ the human scanning a result.
 
 ---
 
-## 3. The 25 festival pages are not indexed, and Google has already decided
+## 3. The 25 festival pages: RETRACTED, I got this wrong
 
-`/whatsapp-festival-templates/*` is the largest single family on the site:
-25 pages, every one between 2,044 and 2,218 words. Roughly **53,000 words**.
+**My original conclusion here was wrong and I am replacing it rather than
+quietly editing it.**
 
-Search Console, checked today:
+What I wrote: that Google had "crawled the hub, declined to index it, and not
+spent crawl budget on the children", that the family earned zero impressions
+in 3 months, and that the 25 pages should be consolidated away.
 
-| URL | Coverage state |
-|---|---|
-| `/whatsapp-festival-templates` (hub) | **Crawled, currently not indexed** (crawled 1 Nov) |
-| `/whatsapp-festival-templates/diwali` | **Discovered, currently not indexed** |
-| `/whatsapp-festival-templates/christmas` | **Discovered, currently not indexed** |
+What I missed: **the owner built these pages on 1 November 2026, the day
+before this audit.** That single fact invalidates the reasoning:
 
-**Impressions from the whole family over 3 months: zero.** Not low. Zero rows
-returned.
+- "Discovered, currently not indexed" is the **normal, expected state** for a
+  URL Google has just found in a sitemap. It is not a judgment. Most new pages
+  sit there for days or weeks.
+- "Crawled, currently not indexed" on the hub, crawled 1 Nov, is likewise
+  ordinary for a page crawled hours earlier. Google often indexes on a later
+  pass.
+- "Zero impressions over 3 months" was a meaningless statistic. The pages
+  existed for one of those days. Of course it is zero.
+- The 65 to 67% similarity figure counted shared nav, footer and CTA across a
+  common template, which is what every page on every site shares. It was not
+  evidence of duplication in the unique body copy, and I presented it as if it
+  leaned that way.
 
-Google crawled the hub, declined to index it, and has not spent crawl budget
-on the children at all. Comparing two children, the rendered text is 65 to 67%
-identical with 69% shared vocabulary (that figure includes shared nav and
-footer, so the unique portion is larger than the number suggests, but the
-pattern is a template with the festival name swapped).
+**Corrected recommendation: change nothing, and wait.** Re-inspect this family
+around **16 November 2026** (two weeks after publication). Judge it then on:
 
-This is the "thin programmatic page" trap, and not because the pages are
-short. They are long. They are thin on **information gain**, which is the
-thing Google actually measures here, and it has ruled.
+1. Coverage state. If the hub is indexed and a reasonable share of children
+   follow, it is working.
+2. Impressions per page once indexed.
+3. Whether distinct festivals attract distinct queries, which is the real test
+   of whether 25 separate URLs are justified rather than one pillar.
 
-**Recommended, and it is a Class B call for the owner:** consolidate the 25
-into the existing `/whatsapp-templates` pillar, which *is* indexed and is a
-strong 2,043-word page, then 301 the children to it and drop them from the
-sitemap. Keep at most two or three festivals that have genuine distinct search
-demand (Diwali almost certainly does) as real pages with their own data and
-examples. Nothing is lost: the family earns nothing today, and 25 unindexed
-URLs in the sitemap dilute the crawl budget that the money pages need.
+If, at that point, most are still unindexed and the indexed ones draw nothing,
+*then* the consolidation argument becomes worth having. Not before. Nothing in
+today's data supports touching them.
 
----
+**The generalisable lesson, for whoever reads this next:** never read index
+coverage on a page younger than about two weeks as a quality verdict, and
+always check a page's publish date before interpreting its GSC state. I did
+not, and reached a confident conclusion that the publication date alone
+refutes.
 
 ## 4. Depth: the money pages are the thinnest pages on the site
 
@@ -184,8 +192,8 @@ flight, and a sweeping rewrite would collide with it.
 
 | # | Action | Owner | Evidence |
 |---|---|---|---|
-| 1 | Decide the festival-page consolidation (§3) | You | 25 pages, 53k words, 0 impressions, Google declined |
-| 2 | Rebuild the 11 thin feature pages on the cod-confirmation pattern (§4.1) | Me | 720 median words, 1 ₹ figure |
+| 1 | Rebuild the 11 thin feature pages on the cod-confirmation pattern (§4.1) | Me | 720 median words, 1 ₹ figure |
+| 1b | Re-inspect the festival family on 16 Nov, change nothing until then (§3) | Me | published 1 Nov, too new to judge |
 | 3 | Finish the title re-framing on the remaining WhatsApp-led pages (§5) | Me, after you see #5 | position 50-70 on app-shaped queries |
 | 4 | Create `/shopify-abandoned-cart-app` style URLs for the app-shaped queries (§2.3) | Me | no such URL exists today |
 | 5 | Deepen `/integrations` (606 words) and the homepage (775) | Me | thinnest commercial pages |
