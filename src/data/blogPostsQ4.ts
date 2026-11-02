@@ -1908,6 +1908,9 @@ ${faqHtml(BEST_CART_APP_FAQS)}
 <h2>3. The tracking blunder: why some pixels and opt-in apps inflate visitor counts</h2>
 <p>Before you can improve your funnel ratios or identify anonymous visitors, your store has to count visitors correctly.</p>
 <p>Shopify’s own analytics counts sessions. Many third-party pixels and opt-in apps count something else: events. A tool that counts every widget interaction as a visit fills your dashboard with numbers that look like traffic and are not.</p>
+<p><strong>The damage is not the vanity, it is the denominator.</strong> Conversion rate is orders divided by visitors. Inflate the visitor count and every ratio you manage by gets worse on paper while the business is unchanged, so you go looking for a conversion problem that does not exist and ignore the one that does.</p>
+<p><strong>Spin wheels and popups are the usual culprits</strong> because they fire an event on open, on spin and on close, which can register as three visits from one person who never saw a product. Stores running several such apps at once can carry visitor counts well above reality.</p>
+<p><strong>Check it in ten minutes:</strong> put Shopify’s session count next to each third-party tool’s visitor count for the same seven days. They will never match exactly, since they define a session differently, but a gap of tens of percent means one of them is counting interactions. Trust the platform that owns the checkout and treat the rest as directional.</p>
 
 <h3>3.1. How spin wheels and consent tools corrupt unique visitor numbers</h3>
 <p>Here is how a tool without session deduplication can log one shopper who clicks your Instagram ad:</p>
@@ -1944,6 +1947,9 @@ ${faqHtml(BEST_CART_APP_FAQS)}
 <h2>4. How unified customer identity resolution actually works</h2>
 <p>Accurate sessions solve half the problem. The other half is connecting those sessions to a real person, so that when they leave without buying, or when you run a campaign, you know who they are.</p>
 <p>Most brands think they have a customer database. What they usually have is a pile of disconnected phone numbers and email addresses.</p>
+<p><strong>The Indian version of this problem is specific.</strong> One household, several numbers. She orders on her phone, the delivery contact is her husband’s, and the WhatsApp opt-in came from a giveaway on a third number two months ago. A system keyed to a phone number sees three customers, holds a third of the history against each, and has no way to know they are one buyer.</p>
+<p><strong>What it costs is measurable in two places.</strong> Every broadcast goes out up to three times to one household, so you pay ₹0.8631 per extra delivered marketing template for the privilege of irritating them. And the support agent handling an angry message about a late delivery cannot see the order, because it sits under a different number.</p>
+<p><strong>Resolution means matching on more than one key</strong> and keeping a primary contact for sending while retaining the others for lookup. The test is straightforward: search your system for a customer by the delivery phone number and see whether their order history, their opt-in and their past conversations all come back together.</p>
 
 <h3>4.1. One customer, several phones and emails: the fragmented profile problem</h3>
 <p>Think about how one real shopper meets your brand over six months:</p>
