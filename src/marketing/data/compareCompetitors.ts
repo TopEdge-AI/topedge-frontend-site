@@ -276,6 +276,7 @@ export const COMPARE_COMPETITORS: Record<string, CompareCompetitor> = {
     matrixNote:
       'Read off apps.shopify.com/whatsapp-button-chat on 21 Oct 2026. Starter $49.99/mo meters $0.015 per conversation with no cap. Plus $79.99/mo includes 5,000 conversations then $0.00199 each, with 5 agents and $15 per extra agent. Elite $139.99/mo includes 100,000 then $0.00099, 10 agents at $12 each. Max $499.99/mo includes 5M then $0.00049, 30 agents at $9 each. AI bot add-ons from $24.99/mo, custom flows $5.99 per flow per month, Instagram $9.99/mo. Confirm live on zoko.io/pricing before purchase; figures change.',
     related: [
+      { label: 'Zoko alternatives guide', href: '/blog/zoko-alternative-shopify-india' },
       { label: 'Alternatives index', href: '/compare/alternatives' },
       { label: 'vs Bitespeed', href: '/compare/bitespeed' },
       { label: 'vs Getgabs', href: '/compare/getgabs' },
@@ -311,6 +312,7 @@ export const COMPARE_COMPETITORS: Record<string, CompareCompetitor> = {
     matrixNote:
       'Getgabs pricing as of September 2026: getgabs.com lists Basic $15 · Plus $21 · Pro $59 (0% Meta markup claimed). Shopify App Store (apps.shopify.com/getgabs-whatsapp-chatbot-api) shows free to install, Plus $11/mo, Pro $59/mo, ~15 reviews. Figures disagree across surfaces, so confirm live before purchase.',
     related: [
+      { label: 'Getgabs alternatives guide', href: '/blog/getgabs-alternative-shopify-whatsapp' },
       { label: 'Alternatives index', href: '/compare/alternatives' },
       { label: 'vs Zoko', href: '/compare/zoko' },
       { label: 'vs Bitespeed', href: '/compare/bitespeed' },
@@ -346,6 +348,7 @@ export const COMPARE_COMPETITORS: Record<string, CompareCompetitor> = {
     matrixNote:
       'Kanal plans as of September 2026 from getkanal.com/pricing: Pro €89 · Scale €149 · Business €350 · Agency €1,900 /mo. Shopify App Store (apps.shopify.com/kanal-marketing-ai) shows Pro/Scale in USD (~$89/$149) and ~97 reviews @ 5.0. Verify live; currency display differs by surface.',
     related: [
+      { label: 'Kanal alternatives guide', href: '/blog/kanal-whatsapp-alternative-shopify' },
       { label: 'Alternatives index', href: '/compare/alternatives' },
       { label: 'vs Bitespeed', href: '/compare/bitespeed' },
       { label: 'vs Zoko', href: '/compare/zoko' },
@@ -462,6 +465,17 @@ export const COMPARE_COMPETITORS: Record<string, CompareCompetitor> = {
     ],
   },
 };
+
+/*
+ * Each competitor's `related` list opens with its alternatives guide on the
+ * blog. Until 2026-11-02 the two clusters were isolated: `/compare/*` pages
+ * linked only to each other and to /pricing, while the blog posts were linked
+ * only from other blog posts. GSC showed the split costing real ground --
+ * /blog/zoko-alternative-shopify-india drew 349 impressions at position 8.6
+ * while /compare/zoko drew 7 at 6.3, so the page Google actually ranks for
+ * "zoko alternative" was the one receiving no authority from the nav-linked
+ * side of the site. Gupshup has no alternatives post, so it has no such link.
+ */
 
 export function getCompareCompetitor(slug: string) {
   return COMPARE_COMPETITORS[slug] ?? null;

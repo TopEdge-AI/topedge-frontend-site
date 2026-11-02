@@ -277,6 +277,9 @@ export const PRODUCT_PAGES: Record<ProductPageId, ProductPage> = {
     relatedAccent: 'recovery + CRM',
     related: [
       { label: 'Cart recovery journeys', href: '/features/journeys#abandoned-cart' },
+      // A flow sends templates, so the library belongs in this cluster. Also
+      // helps "whatsapp flows shopify" reach the page that answers it.
+      { label: 'WhatsApp template library', href: '/whatsapp-templates' },
       { label: 'Live Chat handoff', href: '/features' },
       { label: 'Intent detection', href: '/features/intent-detection' },
       { label: 'Chat rules', href: '/features/chat-rules' },
@@ -1307,6 +1310,11 @@ export const PRODUCT_PAGES: Record<ProductPageId, ProductPage> = {
     relatedTitle: 'Related in this',
     relatedAccent: 'cluster',
     related: [
+      // First, deliberately. GSC showed this page absorbing "whatsapp flow
+      // template" (106 impressions, 0 clicks) because it out-matched the
+      // actual library on the word "template". Someone who lands here wanting
+      // example copy should reach /whatsapp-templates in one click.
+      { label: 'WhatsApp template library', href: '/whatsapp-templates' },
       { label: 'Meta templates guide', href: '/blog/meta-whatsapp-cloud-api-shopify-templates' },
       { label: 'API pricing India', href: '/blog/whatsapp-business-api-pricing-india' },
       { label: 'WhatsApp journeys', href: '/features/journeys' },

@@ -36,6 +36,19 @@ const FAQS = [
       'It is a message Meta has approved in advance, so a business can send it to a customer outside the 24-hour reply window. You submit it from your own WhatsApp Business account, Meta reviews it, and only then can automation send it. Until it is approved, a journey cannot use it.',
   },
   {
+    // GSC, 2026-11-02: "whatsapp flow template" drew 106 impressions in 28 days
+    // and "whatsapp flows shopify" another 16, both at 0% CTR, and Google was
+    // sending them to /features/meta-manager — the page about approval status,
+    // which is the worst of the three matches. This page is the template
+    // library and never used the word "flow", so it could not win them. The
+    // answer below is the honest join between the two: it describes how a
+    // template sits inside a flow, and claims nothing about Meta's separate
+    // WhatsApp Flows product, which is a different thing entirely.
+    question: 'Which template does each automation flow use?',
+    answer:
+      'Each flow sends one approved template at its trigger point. A cart recovery flow sends the cart template, a COD flow sends the COD confirmation, and order updates fire on Shopify fulfilment events. The flow owns the timing, the audience and the branching; the template is only the wording Meta has already signed off. That split is why you can rewrite the copy and resubmit it without rebuilding the automation around it.',
+  },
+  {
     question: 'Why does the template category matter so much?',
     answer:
       'Because Meta prices the category, not the message. In India a utility template costs ₹0.1150 per delivered message and a marketing one ₹0.8631, roughly seven times more. The same sentence with an offer added becomes a marketing template, so category is the single biggest lever on your WhatsApp bill.',
