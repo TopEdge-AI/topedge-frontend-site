@@ -1,10 +1,10 @@
-# TopEdge AI — SEO / AEO master plan
+# TopEdge AI: SEO / AEO master plan
 **Written 2026-11-02. Self-contained: everything needed to continue is in this
 file. Hand it to any person or any chat and they can pick up from here.**
 
 ---
 
-# PART 0 — HOW TO USE THIS
+# PART 0: HOW TO USE THIS
 
 Read Part 1 and Part 3 before doing anything. Part 3 contains the honest maths
 on the traffic goal and will stop you wasting a month on the wrong work.
@@ -20,13 +20,13 @@ Supporting detail, all in `seo-audit/2026-11-02/`:
 | `11-backlink-playbook.md` | Link strategy, Shopify link teardown |
 | `disavow-UPLOAD-THIS.txt` | 37 spam domains, ready to upload |
 
-Tools in use: **OpenSEO** (project `852f0ce0-39cf-43e3-9b80-84ff3449a4a8`,
+Tools in use: **OpenSEO** (project `852f0ce0-39cf-43e3-9b80-84ff3449a4a8`
 premium), **Google Search Console** (`sc-domain:topedgeai.com`), **GA4**
 (`G-Y8Z47DNJ6V`, live and collecting), **Google Ads** (`AW-18505393304`).
 
 ---
 
-# PART 1 — WHAT WE ARE
+# PART 1: WHAT WE ARE
 
 **TopEdge AI is an India-specific Shopify ecommerce operations and retention
 app. WhatsApp is the delivery channel, not the category.**
@@ -53,7 +53,7 @@ Shopify app is the noun. WhatsApp is the channel at the end. Never reverse it.
 
 ---
 
-# PART 2 — WHERE WE ARE (verified 2026-11-02)
+# PART 2: WHERE WE ARE (verified 2026-11-02)
 
 | Metric | Value | Source |
 |---|---|---|
@@ -81,7 +81,7 @@ chains. OpenSEO's full audit returned **zero critical and zero warning** issues.
 | bitespeed.co | **359** | **4** |
 | topedgeai.com | 2 | 3 |
 
-But DelightChat's 7,320 comes from `whatsapp business web` (135k,
+But DelightChat's 7,320 comes from `whatsapp business web` (135k
 navigational), `whatsapp qr code png`, `how to schedule messages on whatsapp`
 and two other companies' brand names. **That traffic does not buy anything.**
 And Bitespeed's four keywords are `bitespeed photos`, `bitespeed bangalore`
@@ -90,7 +90,7 @@ no competitor keyword strategy worth copying.**
 
 ---
 
-# PART 3 — THE HONEST MATHS ON 50–100 CLICKS A DAY
+# PART 3: THE HONEST MATHS ON 50–100 CLICKS A DAY
 
 Read this before committing to anything.
 
@@ -132,11 +132,11 @@ problem, and no amount of writing changes it.
 
 ---
 
-# PART 4 — THE STRATEGY: THREE TRACKS
+# PART 4: THE STRATEGY, THREE TRACKS
 
-## TRACK A — The free-tool cluster (this is the volume engine)
+## TRACK A: The free-tool cluster (this is the volume engine)
 
-**The single biggest finding in this plan.** There is a large, low-difficulty,
+**The single biggest finding in this plan.** There is a large, low-difficulty
 ICP-adjacent keyword cluster where **we already own the asset**:
 
 | Keyword | Volume/mo | KD |
@@ -163,10 +163,10 @@ qualifier in the title.
 **Actions:**
 1. Retitle to lead with the query: `WhatsApp Link Generator: Free wa.me Link &
    QR Code` (≤65 chars).
-2. Expand to ~2,000 words: what a wa.me link is, pre-filled message syntax,
+2. Expand to ~2,000 words: what a wa.me link is, pre-filled message syntax
    QR use, link-in-bio, ads, how to track clicks, common mistakes.
 3. Keep the Shopify CTA, demote it below the tool.
-4. Add FAQ schema for "how do I create a WhatsApp link", "what is wa.me",
+4. Add FAQ schema for "how do I create a WhatsApp link", "what is wa.me"
    "can I pre-fill a message".
 5. Build two sibling tools: **WhatsApp QR code generator** and **click-to-chat
    button generator**, interlinked.
@@ -175,11 +175,11 @@ qualifier in the title.
 someone generating a WhatsApp business link is running a business and may need
 automation later. Someone searching `whatsapp qr code png` wants an image.
 Adjacent is fine; irrelevant is not. **If this cluster starts pulling traffic
-that never signs up, stop and say so** — measure it in Part 8.
+that never signs up, stop and say so**, measure it in Part 8.
 
 **Expected:** this is the only realistic route to 1,000+ impressions/day.
 
-## TRACK B — The comparison cluster (this is the revenue engine)
+## TRACK B: The comparison cluster (this is the revenue engine)
 
 Low volume, high intent, already working. Current GSC positions:
 
@@ -194,15 +194,15 @@ Low volume, high intent, already working. Current GSC positions:
 Zoko (2,779 words) and Kanal (2,037 words) are already deepened. Remaining:
 
 1. Apply the same treatment to **Bitespeed, Interakt, AiSensy, WATI**
-   alternative posts: a cost-at-volume table, a genuine multi-vendor shortlist,
+   alternative posts: a cost-at-volume table, a genuine multi-vendor shortlist
    a "when to stay with them" section, "what carries over when you switch".
-2. `best whatsapp app for shopify` has **25.9% CTR from position 14.7** — the
+2. `best whatsapp app for shopify` has **25.9% CTR from position 14.7**, the
    snippet is already winning. It needs rank, not copy. Internal links from
    high-authority pages, and depth.
 3. Every comparison page must say where the competitor is **better**. That is
    what earns AI citation.
 
-## TRACK C — AEO / AI answer engines
+## TRACK C: AEO / AI answer engines
 
 Our measured position: **cited 12 times, recommended 7**. We are read and not
 chosen. See `13-ai-visibility-baseline.md`.
@@ -215,15 +215,15 @@ must work around it, not wait for it.**
 Work-arounds that do not depend on reviews:
 
 1. **Be in the third-party listicles the engines actually read.** From our
-   run: `blog.getmanifest.ai` (8 answers), `ominiflow.com` (8),
-   `eesel.ai` (7), `conecxt.com` (5), `pingcart.in` (5), `hillteck.com` (5),
+   run: `blog.getmanifest.ai` (8 answers), `ominiflow.com` (8)
+   `eesel.ai` (7), `conecxt.com` (5), `pingcart.in` (5), `hillteck.com` (5)
    `chatmitra.com` (9). Plus `com.bot` and `techmonk.io`, which rank for
    `bitespeed alternative`. **Pitch a factual correction/addition to each.**
    This is the highest-value Track C action and costs only outreach.
 2. **Contest the India-first slot.** Google's AI Overview for
    `best alternative bitespeed` says: *"For India-First / Rupee Pricing &
    Native Payments: WatEase offers... INR pricing, and 0% markup on WhatsApp
-   messages... without heavy USD tier lock-ins."* That is our positioning,
+   messages... without heavy USD tier lock-ins."* That is our positioning
    awarded to someone else. Publish a page that answers that exact framing
    better, with real numbers: **"India-first WhatsApp automation: what INR
    pricing and 0% Meta markup actually mean"**.
@@ -237,7 +237,7 @@ Work-arounds that do not depend on reviews:
 
 ---
 
-# PART 5 — THE 30-DAY PLAN
+# PART 5: THE 30-DAY PLAN
 
 Dates assume a 3 Nov start.
 
@@ -292,7 +292,7 @@ agreed, AI mention rate above 7/80.
       `zoko alternative` (both within striking distance).
 - [ ] Ship the **RTO cost calculator** and **cart recovery calculator**
       upgrades as linkable assets.
-- [ ] Tier-1 directory listings with the Part 1 sentence: AlternativeTo,
+- [ ] Tier-1 directory listings with the Part 1 sentence: AlternativeTo
       Crunchbase, Product Hunt, Capterra/GetApp, SaaSworthy.
 - [ ] Full measurement review against Part 8.
 
@@ -301,10 +301,10 @@ page 1.
 
 ---
 
-# PART 6 — CONTENT RULES (the "don't look AI-generated" problem)
+# PART 6: CONTENT RULES (the "don't look AI-generated" problem)
 
 **The actual rule, stated correctly:** Google does not penalise AI-assisted
-content. Its spam policy targets **"scaled content abuse"** — producing many
+content. Its spam policy targets **"scaled content abuse"**, producing many
 pages primarily to manipulate rankings rather than to help people. The test is
 **helpfulness and originality**, not authorship. A human-written thin page is
 penalised; an AI-assisted page with real first-party substance is not.
@@ -320,7 +320,7 @@ a human reviewer asking "did this help anyone?"
    our product, it fails. Rewrite it.
 2. **Date and source every claim.** "Read off interakt.shop/pricing on 21 Oct
    2026", not "Interakt is expensive". Every external link must be in
-   `src/data/sources.ts` — the build enforces this.
+   `src/data/sources.ts`, the build enforces this.
 3. **Say where the competitor is better.** Every comparison page. This is both
    honest and the single strongest citation signal.
 4. **No em dashes.** Owner's rule, build-enforced on blog posts by
@@ -347,9 +347,9 @@ job, with its own copy, its own FAQ, and its own examples. If we cannot write
 
 ---
 
-# PART 7 — WHAT NOT TO DO
+# PART 7: WHAT NOT TO DO
 
-- **Do not chase WhatsApp utility volume** (`whatsapp web`, `whatsapp dp`,
+- **Do not chase WhatsApp utility volume** (`whatsapp web`, `whatsapp dp`
   `whatsapp qr code png`). DelightChat's 7,320/mo proves it is reachable and
   worthless. Same trap as the salon traffic.
 - **Do not re-audit on-page SEO.** Three crawls agree it is clean.
@@ -363,12 +363,12 @@ job, with its own copy, its own FAQ, and its own examples. If we cannot write
 - **Do not paste the gtag.js snippet into `index.html`.**
   `src/marketing/lib/analytics.ts` already loads it after window load with
   consent defaults. A second copy double-counts and bypasses consent.
-- **Do not disavow** wanderlog.com, magicpin.in, bestsalons.com,
+- **Do not disavow** wanderlog.com, magicpin.in, bestsalons.com
   khojosale.com, shoplist.co. Real directories, already fading.
 
 ---
 
-# PART 8 — MEASUREMENT
+# PART 8: MEASUREMENT
 
 **Weekly, every Monday:**
 
@@ -395,7 +395,7 @@ defaults. Google Ads `AW-18505393304` live. OpenSEO AI tracker runs weekly
 
 ---
 
-# PART 9 — KNOWN TRAPS IN THIS CODEBASE
+# PART 9: KNOWN TRAPS IN THIS CODEBASE
 
 Things that will waste an hour if you do not know them.
 
@@ -407,19 +407,19 @@ Things that will waste an hour if you do not know them.
    `seoContracts.ts`. OpenSEO's audit uses 60 and will flag passing titles.
 3. **Trailing-slash duplicates are not a bug.** Canonicals are correct and
    `public/_redirects` documents why a force-301 self-loops on Netlify.
-4. **The build regenerates tracked files** (`sitemap.xml`, `llms.txt`,
+4. **The build regenerates tracked files** (`sitemap.xml`, `llms.txt`
    `contentDates`). Commit them; check the date bumps are real first.
 5. **`.env` is gitignored.** `VITE_GA_MEASUREMENT_ID` must live in Netlify env
    vars or GA4 goes inert at build time.
 6. **Netlify deploys `update-pricing`**, not `main`.
-7. **Run before every push:** `npm run build:netlify` — it runs check:pricing,
+7. **Run before every push:** `npm run build:netlify`, it runs check:pricing
    check:blog, check:festivals, check:links and the structured-data checks.
 8. **Two IndexNow keys are live** (`db2d3b12...` hardcoded in
    `scripts/indexnow.mjs`, and OpenSEO's `808945...`). Both valid.
 
 ---
 
-# PART 10 — THINGS I GOT WRONG (so they are not repeated)
+# PART 10: THINGS I GOT WRONG (so they are not repeated)
 
 Recorded because a plan that hides its errors cannot be trusted.
 
