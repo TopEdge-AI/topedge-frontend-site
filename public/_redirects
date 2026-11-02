@@ -144,6 +144,12 @@ https://www.topedgeai.com/*  https://topedgeai.com/:splat  301!
 /blog/ai-voice-agents-vs-human-receptionists-medical-roi-2025/  /features/ai-brain  301!
 /blog/ai-automation-revolutionizing-business-operations-2025  /blog/how-to-automate-ecommerce-store-india  301!
 /blog/ai-automation-revolutionizing-business-operations-2025/  /blog/how-to-automate-ecommerce-store-india  301!
+# Same retirement, missed when the four above were mapped on 2026-08-14. GSC
+# still reports impressions for it (4 in the 3 months to 30 Oct 2026) against a
+# 404, so the URL is indexed and dead. Same target as the sibling automation
+# post it duplicated.
+/blog/ai-business-automation-trends-2025  /blog/how-to-automate-ecommerce-store-india  301!
+/blog/ai-business-automation-trends-2025/  /blog/how-to-automate-ecommerce-store-india  301!
 
 # Cannibalisation consolidation (21 Oct 2026). Each pair targeted one query with
 # two URLs, so Google indexed neither well. The unique sections of the retired
@@ -175,6 +181,11 @@ https://www.topedgeai.com/*  https://topedgeai.com/:splat  301!
 /community/*  /404.html  410!
 /admin  /404.html  410!
 /admin/*  /404.html  410!
+
+# Trailing-slash 301s are OFF (ENABLE_SLASH_301 unset). Google indexes both
+# forms and picked the slash one as canonical for at least one blog post.
+# To turn them on: run `node scripts/check-trailing-slash.mjs`, and only if
+# it exits 0, rebuild with ENABLE_SLASH_301=1. Re-run it after deploying.
 
 # Soft-404: unknown paths get noindex 404.html — never homepage SEO
 # (Do not add trailing-slash force 301s — they self-loop with Pretty URLs.)

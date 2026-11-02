@@ -19,6 +19,14 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { getSitemapPaths } from './marketing-urls.mjs';
+
+/**
+ * Opt-in, off by default. See the long note above buildGeneratedBlock().
+ * Set ENABLE_SLASH_301=1 only after `node scripts/check-trailing-slash.mjs`
+ * exits 0 against the environment you are about to deploy to.
+ */
+const SLASH_301 = process.env.ENABLE_SLASH_301 === '1';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const redirectsPath = path.resolve(__dirname, '../public/_redirects');
@@ -53,6 +61,44 @@ const END = '# END GENERATED';
  * canonical tag is the signal.
  */
 
+/**
+ * One explicit `/<path>/  /<path>  301!` per sitemap URL, or nothing.
+ *
+ * Confirmed duplicate, 2026-11-02, Search Console URL Inspection API:
+ * /blog/whatsapp-abandoned-cart-recovery-shopify/ is "Submitted and indexed"
+ * with googleCanonical pointing at the TRAILING-SLASH form, against a page
+ * whose canonical tag and sitemap entry both name the slashless one. The
+ * canonical tag is losing, so the duplicate needs a redirect to settle it.
+ *
+ * Gated because this exact rule shape caused the 2026-10-08 outage, when
+ * Netlify's Pretty URLs 301'd the slashless form back and every marketing URL
+ * self-looped. scripts/check-trailing-slash.mjs probes production for that
+ * loop partner across all ten serving shapes on this site and exits non-zero
+ * if any of them still redirects to its own slash form. Run it first.
+ */
+function slashStripBlock() {
+  if (!SLASH_301) {
+    return (
+      '# Trailing-slash 301s are OFF (ENABLE_SLASH_301 unset). Google indexes both\n' +
+      '# forms and picked the slash one as canonical for at least one blog post.\n' +
+      '# To turn them on: run `node scripts/check-trailing-slash.mjs`, and only if\n' +
+      '# it exits 0, rebuild with ENABLE_SLASH_301=1. Re-run it after deploying.\n\n'
+    );
+  }
+  const paths = getSitemapPaths()
+    .map((p) => (typeof p === 'string' ? p : p.path || p.loc || ''))
+    .map((p) => p.replace(/^https?:\/\/[^/]+/, ''))
+    .filter((p) => p && p !== '/' && !p.endsWith('/'));
+  const uniq = [...new Set(paths)].sort();
+  const rules = uniq.map((p) => `${p}/  ${p}  301!`).join('\n');
+  return (
+    `# Trailing-slash duplicates: ${uniq.length} explicit 301s (ENABLE_SLASH_301=1).\n` +
+    `# Safe only while no slashless path 301s to its own slash form; verified by\n` +
+    `# scripts/check-trailing-slash.mjs. If the site ever loops, unset the flag.\n` +
+    `${rules}\n\n`
+  );
+}
+
 function buildGeneratedBlock() {
   return `${BEGIN}
 # Client-only SPA shells (must stay above the 404 catch-all)
@@ -70,7 +116,7 @@ function buildGeneratedBlock() {
 /admin  /404.html  410!
 /admin/*  /404.html  410!
 
-# Soft-404: unknown paths get noindex 404.html — never homepage SEO
+${slashStripBlock()}# Soft-404: unknown paths get noindex 404.html — never homepage SEO
 # (Do not add trailing-slash force 301s — they self-loop with Pretty URLs.)
 /*  /404.html  404
 ${END}
@@ -115,7 +161,7 @@ function main() {
       const m = l.match(/^(\/\S*?)\/\s+(\/\S*)\s+30[18]!/);
       return m && m[1] === m[2];
     });
-  if (selfSlashStrip.length) {
+  if (selfSlashStrip.length && !SLASH_301) {
     throw new Error(
       `Refusing to write ${selfSlashStrip.length} slash-stripping force 301s into _redirects ` +
         `(Netlify Pretty URLs 301s the slashless form back, so each one is a loop). ` +
@@ -123,7 +169,10 @@ function main() {
     );
   }
   fs.writeFileSync(redirectsPath, next, 'utf8');
-  console.log(`✅ Updated ${redirectsPath} (SPA shells + soft-404; no slash 301s)`);
+  console.log(
+    `✅ Updated ${redirectsPath} (SPA shells + soft-404; ` +
+      `${SLASH_301 ? `${selfSlashStrip.length} slash 301s` : 'no slash 301s'})`,
+  );
 }
 
 main();
