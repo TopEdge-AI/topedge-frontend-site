@@ -1953,8 +1953,8 @@ export const blogPosts: BlogPost[] = [
     ],
     slug: 'kanal-whatsapp-alternative-shopify',
     date: '2026-09-20',
-    updated: '2026-10-21',
-    readTime: '9 min',
+    updated: '2026-11-02',
+    readTime: '14 min',
     category: 'Comparisons',
     author: 'Moksh Patel',
     image: '/blog/kanal-whatsapp-alternative-shopify.jpg',
@@ -2019,6 +2019,42 @@ export const blogPosts: BlogPost[] = [
 </ul>
 <p>That India/INR angle is the same one that holds on our Bitespeed compare; it does <em>not</em> hold against India-native tools like Zoko. Do not reuse angles that fail a sanity check.</p>
 
+<h2>What does Kanal cost once it is in rupees?</h2>
+<p>Re-checked on <a href="https://getkanal.com/pricing" rel="noopener noreferrer" target="_blank">getkanal.com/pricing</a> on 2 November 2026: Pro 89&euro; a month with 1 user account, Scale 149&euro; with 5, Business 350&euro; and Agency 1,900&euro; with unlimited users. The same page adds a line that matters more to an India buyer than the headline tier: <strong>from Scale, each extra market costs 50&euro; a month.</strong> If India is a market you are adding rather than the market you sell in, that is a recurring line item on top.</p>
+<p>The forecasting problem is not that euros are expensive. It is that a euro price is a moving rupee price. The same three plans, at three different exchange rates:</p>
+<div class="mkt-blog-table-wrap">
+<table>
+<thead>
+<tr>
+<th>Plan</th>
+<th>At ₹90/&euro;</th>
+<th>At ₹95/&euro;</th>
+<th>At ₹100/&euro;</th>
+<th>Swing</th>
+</tr>
+</thead>
+<tbody>
+<tr><td><strong>Pro, 89&euro;</strong></td><td>₹8,010</td><td>₹8,455</td><td>₹8,900</td><td>₹890</td></tr>
+<tr><td><strong>Scale, 149&euro;</strong></td><td>₹13,410</td><td>₹14,155</td><td>₹14,900</td><td>₹1,490</td></tr>
+<tr><td><strong>Business, 350&euro;</strong></td><td>₹31,500</td><td>₹33,250</td><td>₹35,000</td><td>₹3,500</td></tr>
+</tbody>
+</table>
+</div>
+<p class="mkt-blog-footnote">The three rates are an illustrative band, not a forecast, and not today's rate. Use the rate your card or bank actually gives you on the day, which will also carry a conversion spread. The column that matters is the last one: it is the range the same unchanged plan can occupy across a year, before a single message is sent.</p>
+<p>That swing is the whole argument, and it is worth keeping in proportion. A few hundred rupees a month is not what kills a brand. It is that the number cannot be put in a budget and left alone, and that it moves in the direction of your costs exactly when the rupee is weak. For contrast, TopEdge publishes Launch ₹1,999, Growth ₹3,999 and Scale ₹6,499 a month by Shopify order volume, around 20% less billed yearly, plus 18% GST, with no per-seat charge. <strong>Read the inclusions before the totals</strong>: Kanal Pro includes one user account, so a three-person support team is already on Scale. See <a href="/pricing">TopEdge pricing</a>.</p>
+
+<h2>The shortlist: who else fits if Kanal does not?</h2>
+<p>Kanal sits on the global, euro-billed side of this market. The useful way to shortlist against it is to decide which side of that line you are on, because the India-native tools and the global ones fail in different directions.</p>
+<ul>
+<li><strong>Still global, still ESP-first.</strong> If Klaviyo is the centre of gravity and India is one market of several, the honest answer may be to stay where you are, or to look at other multi-market platforms rather than at India specialists. An India-shaped tool will feel narrow to you.</li>
+<li><strong>Interakt</strong>, for a conventional rupee plan ladder. Read off <a href="https://www.interakt.shop/pricing/" rel="noopener noreferrer" target="_blank">interakt.shop/pricing</a> on 21 October 2026: Starter ₹999 a month (Instagram only), Growth ₹2,799, Advanced ₹3,799. Billed in rupees, so the table above does not apply to it. See <a href="/blog/interakt-alternative-shopify-india">Interakt alternative</a>.</li>
+<li><strong>AiSensy</strong>, if broadcast is the main job, with one number to check: on <a href="https://aisensy.com/pricing" rel="noopener noreferrer" target="_blank">aisensy.com/pricing</a>, read 21 October 2026, service messages past the first 1,000 a month run ₹0.145 against Meta's published India rate of ₹0.1150. More in the <a href="/blog/aisensy-alternative-shopify-india">AiSensy alternative</a> piece.</li>
+<li><strong>Zoko</strong>, if catalog-in-chat selling is what you actually do. It bills in dollars, so it has the same currency characteristic as Kanal, just in a different currency. The <a href="/blog/zoko-alternative-shopify-india">Zoko alternative</a> post works through its conversation metering.</li>
+<li><strong>Getgabs</strong>, if entry price is the binding constraint: <a href="https://getgabs.com" rel="noopener noreferrer" target="_blank">getgabs.com</a> listed Basic $15, Plus $21 and Pro $59 in September 2026, though its Shopify listing showed different figures. See <a href="/blog/getgabs-alternative-shopify-whatsapp">Getgabs alternative</a>.</li>
+<li><strong>TopEdge AI</strong>, if India is the market rather than a market, COD is most of the order book, and you want the platform fee fixed in rupees. The section below is the case against that.</li>
+</ul>
+<p class="mkt-blog-footnote">We sell one of the tools on this list. Prices carry the date someone last opened the page, because all of them move.</p>
+
 <h2>When is TopEdge the India-shaped Kanal alternative?</h2>
 <p>TopEdge publishes flat INR Launch / Growth / Scale by Shopify order volume, ships COD-oriented journeys, and keeps Meta fees as pass-through. We do not try to replace Klaviyo. Keep your ESP if you have one.</p>
 <p>Scorecard and plan comparison: <a href="/compare/kanal">TopEdge vs Kanal</a>. Broader index: <a href="/compare/alternatives">alternatives</a>.</p>
@@ -2042,7 +2078,17 @@ export const blogPosts: BlogPost[] = [
 </tbody>
 </table>
 </div>
-<p class="mkt-blog-footnote">Kanal figures as published on getkanal.com/pricing in September 2026; its Shopify App Store listing showed the same tiers in USD. Currency display differs by surface.</p>
+<p class="mkt-blog-footnote">Kanal tiers re-checked on getkanal.com/pricing on 2 November 2026 and unchanged since the September reading. Its Shopify App Store listing has shown the same tiers in USD, so currency display differs by surface; confirm which one you are buying from.</p>
+
+<h2>When should you stay on Kanal?</h2>
+<p>Four cases where switching away would be the wrong call, and the first one is the one we are weakest on.</p>
+<ul>
+<li><strong>They have the reviews and we do not.</strong> Verified on 2 November 2026: Kanal's Shopify App Store listing shows <strong>5.0 stars from 139 reviews</strong>, with a free plan available. That is a real signal from real merchants and it is the single strongest argument for staying put. We are not going to pretend otherwise, and you should weigh it.</li>
+<li><strong>Klaviyo is your system of record.</strong> Kanal is built to sit beside an ESP rather than replace it. If your flows, segments and attribution already live in Klaviyo, moving WhatsApp away from a native integration costs you more than the plan fee saves.</li>
+<li><strong>You sell into several markets.</strong> The 50&euro; per extra market line reads as a cost until you need it, at which point it is a product that expects multi-market operation. Tools built for India alone generally do not model that at all.</li>
+<li><strong>You want RCS and iMessage.</strong> Kanal's pricing page lists RCS and SMS alongside WhatsApp, with iMessage marked as coming. If that roadmap is why you bought it, a WhatsApp-only tool is a step backwards regardless of currency.</li>
+</ul>
+<p>The honest summary is narrower than most comparison pages will give you. Kanal is a good product that bills in the wrong currency for an India-only P&amp;L, and the currency is the complaint. If euros are not a problem for you, most of this page is not about you.</p>
 
 <h2>How do you decide between Kanal and TopEdge?</h2>
 <p>Choose Kanal when Klaviyo-first global WhatsApp is the product you want. Choose TopEdge when Shopify India recovery, COD, and INR forecasting are the product you want.</p>
