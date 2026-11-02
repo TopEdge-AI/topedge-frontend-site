@@ -135,7 +135,13 @@ export default function CompareIndexPage() {
                 TopEdge <span>AI</span>
               </span>
             </span>
-            <span className="mkt-cmp__h1-vs">vs</span>
+            {/* Spaces sit inside the span, not between flex items: CSS trims
+                leading/trailing whitespace in a flex item so nothing moves,
+                while the extracted text reads "TopEdge AI vs WhatsApp tools"
+                instead of "TopEdge AIvsWhatsApp tools" for crawlers and
+                answer engines. A bare {' '} between items would become an
+                anonymous flex item and pick up the row gap. */}
+            <span className="mkt-cmp__h1-vs"> vs </span>
             <span className="mkt-cmp__h1-rest">WhatsApp tools for Shopify India</span>
           </h1>
           <p className="mkt-cmpx__sub">

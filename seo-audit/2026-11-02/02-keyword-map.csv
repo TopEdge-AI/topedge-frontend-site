@@ -1,0 +1,21 @@
+cluster,primary_keyword,volume_in,kd,cpc_usd,intent,target_url,page_type,business_value_0_3,verdict,evidence_note
+WhatsApp API pricing,whatsapp api pricing,5400,32,0.93,commercial,/pricing,money,3,BUILD-DEEPEN,Best existing asset-to-demand match. /pricing already 2000 prerendered words with Rs1999/0% markup in title.
+WhatsApp API pricing,whatsapp business api pricing india,,,,commercial,/pricing,money,3,BUILD-DEEPEN,SERP pulled 2026-11-02; volume not isolated in seed set.
+Shopify app ecosystem,shopify apps,5400,22,0.37,commercial,/integrations,money,3,REBUILD,Organic echo of paid AG13 (best account CTR 14.29%). Page is 541 words / 13 inbound links.
+Shopify app ecosystem,shopify india,2900,21,0.37,navigational,/shopify-whatsapp-integration,money,2,REBUILD,474 words / 17 inbound links. Thinnest money pages meet strongest proven demand.
+Shopify app ecosystem,shopify pricing india,720,8,0.10,commercial,new /guides/shopify-pricing-india,guide,1,CONSIDER,KD 8 - genuinely winnable for a low-authority domain.
+Shopify app ecosystem,shopify plans india,590,8,0.38,commercial,new /guides/shopify-pricing-india,guide,1,CONSIDER,Cluster with the row above onto one page; do not split.
+WhatsApp marketing,whatsapp marketing,4400,27,1.87,commercial,new /whatsapp-marketing-shopify,money,3,BUILD,Highest CPC in the set - strong commercial signal. No current page.
+WhatsApp bulk sending,whatsapp bulk message sender,12100,30,0.85,informational,TBD,guide,1,CAUTION,Highest volume found but intent skews to grey-market bulk senders - likely wrong ICP. Validate before building.
+WhatsApp bulk sending,bulk whatsapp sender,3600,29,1.04,transactional,TBD,guide,1,CAUTION,Same caveat as above.
+WhatsApp chatbot,whatsapp chatbot,4400,34,1.81,navigational,new /features/ai-reply-assistant,money,2,BUILD,Real shipped capability (AI reply assistant) with no page targeting it.
+Cart recovery (category),whatsapp cart recovery,10,,,informational,/features/abandoned-cart-recovery,money,3,KEEP-NOT-ORGANIC,~0 India volume. Two independent sources agree. Keep page for paid/App-Store landing and AI description; expect no organic volume.
+Cart recovery (category),whatsapp cart recovery shopify,10,,,navigational,/features/abandoned-cart-recovery,money,3,KEEP-NOT-ORGANIC,Same. AI Overview present on this SERP.
+Cart recovery (category),whatsapp abandoned cart recovery,10,,0.90,navigational,/features/abandoned-cart-recovery,money,3,KEEP-NOT-ORGANIC,Same.
+COD / RTO,cod order confirmation shopify,10,,,transactional,/features/cod-confirmation,money,3,KEEP-NOT-ORGANIC,~0 volume. Confirms Google Keyword Planner no-data result of 2026-10-25.
+COD / RTO,reduce rto shopify,,,,informational,/blog/cod-rto-benchmark-india-2026,guide,2,KEEP-NOT-ORGANIC,SERP has AI Overview; page-1 held by agency listicles.
+Comparison,wati alternative,,,,commercial,/compare/topedge-vs-wati,money,3,KEEP-NOT-ORGANIC,Seed returned unusable related set - no coherent cluster exists at this volume.
+Comparison,interakt alternative,,,,commercial,/compare/topedge-vs-interakt,money,3,KEEP-NOT-ORGANIC,Page 1 is third-party listicles; inclusion in those beats ranking our own page.
+Brand,topedge ai,,,,navigational,/,brand,3,FIX-ENTITY,CRITICAL - absent from top 20. SERP returns edge-AI hardware. See EXEC-SUMMARY section 1.
+Brand,topedgeai,,,,navigational,/,brand,3,FIX-ENTITY,CRITICAL - absent from top 20.
+Brand,topedge ai shopify whatsapp,,,,navigational,/,brand,3,WORKING,Ranks #3 /tools #5 /docs #14 /testimonials. Proves indexation and capability are fine.
