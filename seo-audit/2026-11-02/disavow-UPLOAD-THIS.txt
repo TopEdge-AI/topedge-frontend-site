@@ -1,0 +1,43 @@
+# Disavow file for topedgeai.com
+# Created 2026-11-02 from an OpenSEO/DataForSEO backlink pull.
+# 37 referring domains with a spam score of 45-80: paid-link sellers,
+# casino/betting, fake news syndication, URL shorteners, scrapers.
+# Deliberately excluded: wanderlog.com, magicpin.in, bestsalons.com,
+# khojosale.com, shoplist.co. Those are real directories, not spam.
+domain:growyoursitetraffic.shop
+domain:rank-seo-now.shop
+domain:seonix.agency
+domain:leonlinks.agency
+domain:mediaboooster.com
+domain:bestnz-poker-casinoslot.com
+domain:betwinnermirror.com
+domain:ufabettererm4.com
+domain:forbesstories.com
+domain:theforbestimes.com
+domain:thedocmag.com
+domain:techbumppy.com
+domain:fashionclothingnews.com
+domain:cmocheatsheets.com
+domain:quotesblom.com
+domain:betulcrime.com
+domain:anchorurl.cloud
+domain:urls-shortener.eu
+domain:buzzshrink.website
+domain:bye.fyi
+domain:quero.party
+domain:archive-hu.com
+domain:bureatag.com
+domain:clifflisting.com
+domain:cvillico.com
+domain:dbike-us.com
+domain:drjack.world
+domain:dupurgeniefr.com
+domain:ggmap.us.com
+domain:ready.pro
+domain:homesforsaleoldgreenwichct.com
+domain:kernelpanicpodcast.com
+domain:onvaxs.com
+domain:sahammurah.com
+domain:thcradar.com
+domain:uncledspizza.com
+domain:websquemolan.com
