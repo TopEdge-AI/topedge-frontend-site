@@ -514,10 +514,14 @@ export function softwareApplicationJsonLd() {
       'Meta WhatsApp Cloud API',
       'Ecommerce journey builder',
     ],
-    audience: {
-      '@type': 'Audience',
-      audienceType: 'Shopify D2C merchants and ecommerce agencies in India',
-    },
+    // No `audience` node. GSC's rich-results check reported
+    // `Invalid object type for field "audience"` on / and /pricing on
+    // 2026-11-02: the SoftwareApplication+Product+offers shape is coerced into
+    // Google's Merchant listings type, which expects a retail `PeopleAudience`,
+    // not the `Audience`/`BusinessAudience` that is correct for B2B SaaS.
+    // There is no shape that satisfies both, and who the product is for is
+    // already stated in Organization.description, disambiguatingDescription
+    // and knowsAbout, so the node was dropped rather than contorted.
   };
 }
 
@@ -578,10 +582,7 @@ export function featureSoftwareJsonLd(opts: { name: string; description: string;
     provider: ORG_REF,
     // Where the plans and the prices actually live.
     subjectOf: { '@type': 'WebPage', url: `${SITE_URL}/pricing` },
-    audience: {
-      '@type': 'Audience',
-      audienceType: 'Shopify D2C merchants and ecommerce agencies in India',
-    },
+    // No `audience` node, for the same reason as the block above.
   };
 }
 

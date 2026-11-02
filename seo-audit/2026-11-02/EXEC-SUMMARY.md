@@ -11,6 +11,26 @@ connected and remains the one real blocker (§6).
 Every number below is labelled **Verified** (I pulled it today),
 **Estimate** or **Hypothesis**. Raw exports are in `data/`.
 
+> ## ⚠ SUPERSEDED IN PART — read `09-gsc-findings.md` with this file
+>
+> Search Console was connected **later the same day**, after this file was
+> written, and the first-party data corrected two things here:
+>
+> 1. **§1 overstates the brand problem.** GSC shows `topedge ai` at average
+>    position **1.8** with 26.9% CTR. The site does rank for its own name; the
+>    real issue is that brand demand is tiny (~1 impression/day) and the cold,
+>    non-personalised SERP is contaminated. Narrower than §1 claims.
+> 2. **§3's "monitor, do not disavow" no longer holds.** That was written from
+>    the spam-filtered view of 8 domains. Unfiltered, **37 of 45 referring
+>    domains score 45–80 for spam** and new ones are still arriving.
+>
+> And it added the finding that outranks everything in this file: Google
+> substantially classifies topedgeai.com as an **Ahmedabad salon/spa business**,
+> because real local directories link to it as one. See `09-gsc-findings.md` §2.
+>
+> §2 (AI Overview on 16/16), §4 (the keyword thesis) and §6 (rendering is clean)
+> all still stand.
+
 ---
 
 ## 1. The single most important finding

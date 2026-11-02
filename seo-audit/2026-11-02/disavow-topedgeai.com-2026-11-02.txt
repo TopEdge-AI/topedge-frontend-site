@@ -1,0 +1,69 @@
+# Disavow file for topedgeai.com — prepared 2026-11-02
+#
+# DO NOT UPLOAD WITHOUT READING THE NOTES IN 09-gsc-findings.md FIRST.
+# Upload at: https://search.google.com/search-console/disavow-links
+# Select the sc-domain:topedgeai.com property. Uploading REPLACES any
+# previous file, so keep this as the single source of truth.
+#
+# Basis: OpenSEO/DataForSEO backlink pull 2026-11-02, hideSpam=false.
+# 45 referring domains returned; the 37 below carry a spam score of 45-80
+# and form a clear, ongoing pattern: paid-link sellers, casino/betting,
+# fake "news" syndication, URL shorteners and scraper domains. Dates cluster
+# Aug-Nov 2026, matching the +196 referring-domain spike in September that
+# then collapsed back to 47. growyoursitetraffic.shop was first seen
+# 2026-11-02 00:13 UTC, so this is still arriving.
+#
+# DELIBERATELY NOT LISTED: wanderlog.com, magicpin.in, bestsalons.com,
+# khojosale.com, shoplist.co. Those are real directories with spam score 0.
+# They are topically wrong rather than toxic, and Google names two of them as
+# referring URLs for the homepage. Fix those at source by asking for the
+# listing to be corrected or removed -- see 09-gsc-findings.md section 4.
+# Disavowing a legitimate directory is the heavier, less reversible move and
+# should only follow a failed removal request.
+
+# --- Paid link / SEO spam sellers ---
+domain:growyoursitetraffic.shop
+domain:rank-seo-now.shop
+domain:seonix.agency
+domain:leonlinks.agency
+domain:mediaboooster.com
+
+# --- Casino / betting ---
+domain:bestnz-poker-casinoslot.com
+domain:betwinnermirror.com
+domain:ufabettererm4.com
+
+# --- Fake news / syndicated PR ---
+domain:forbesstories.com
+domain:theforbestimes.com
+domain:thedocmag.com
+domain:techbumppy.com
+domain:fashionclothingnews.com
+domain:cmocheatsheets.com
+domain:quotesblom.com
+domain:betulcrime.com
+
+# --- URL shorteners / redirect chains ---
+domain:anchorurl.cloud
+domain:urls-shortener.eu
+domain:buzzshrink.website
+domain:bye.fyi
+domain:quero.party
+
+# --- Scraper / unrelated junk ---
+domain:archive-hu.com
+domain:bureatag.com
+domain:clifflisting.com
+domain:cvillico.com
+domain:dbike-us.com
+domain:drjack.world
+domain:dupurgeniefr.com
+domain:ggmap.us.com
+domain:ready.pro
+domain:homesforsaleoldgreenwichct.com
+domain:kernelpanicpodcast.com
+domain:onvaxs.com
+domain:sahammurah.com
+domain:thcradar.com
+domain:uncledspizza.com
+domain:websquemolan.com
