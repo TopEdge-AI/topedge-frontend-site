@@ -4,13 +4,13 @@
  */
 export const CONTENT_DATES = {
   /** Last edit of compare competitor data (+ feature matrix). */
-  compareTwoWay: '2026-10-21',
+  compareTwoWay: '2026-11-02',
   /** Last edit of 3-way compare page (+ feature matrix). */
   compareThreeWay: '2026-10-21',
   /** Last edit of blogPosts.ts (used as Article dateModified fallback). */
-  blogPosts: '2026-10-31',
+  blogPosts: '2026-11-02',
   /** Last edit of feature / product page content. */
-  featurePages: '2026-10-23',
+  featurePages: '2026-11-02',
   /** Last edit of published plan catalog (pricing Offers). */
   pricing: '2026-10-29',
 } as const;
@@ -26,9 +26,9 @@ export const BLOG_DATES_BY_SLUG = {
   "how-to-reduce-rto-with-whatsapp-cod-confirmation": "2026-10-21",
   "what-is-ecommerce-automation-shopify-whatsapp": "2026-10-21",
   "ai-whatsapp-chatbot-for-shopify-india": "2026-10-21",
-  "zoko-alternative-shopify-india": "2026-10-21",
+  "zoko-alternative-shopify-india": "2026-11-02",
   "getgabs-alternative-shopify-whatsapp": "2026-10-21",
-  "kanal-whatsapp-alternative-shopify": "2026-10-21",
+  "kanal-whatsapp-alternative-shopify": "2026-11-02",
   "how-to-choose-whatsapp-app-shopify-app-store": "2026-10-21",
   "whatsapp-business-api-pricing-india": "2026-10-21",
   "dondy-alternative-shopify-india": "2026-10-21",
