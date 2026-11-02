@@ -1637,8 +1637,8 @@ export const blogPosts: BlogPost[] = [
     ],
     slug: 'zoko-alternative-shopify-india',
     date: '2026-09-20',
-    updated: '2026-10-21',
-    readTime: '10 min',
+    updated: '2026-11-02',
+    readTime: '16 min',
     category: 'Comparisons',
     author: 'Moksh Patel',
     image: '/blog/zoko-alternative-shopify-india.jpg',
@@ -1702,6 +1702,43 @@ export const blogPosts: BlogPost[] = [
 </ul>
 <p>Those are the figures on <a href="https://apps.shopify.com/whatsapp-button-chat" rel="noopener noreferrer" target="_blank">Zoko's Shopify App Store listing</a>, read on 21 October 2026. Worth doing the sum for a festive month: a 7-agent support team on Plus pays $79.99 plus $30 for the two seats above the five included, and adding an AI bot ($24.99) and three custom flows ($17.97) takes it to <strong>$152.95 a month</strong>, or roughly ₹13,000, before a single Meta message is sent. Confirm on <a href="https://www.zoko.io/pricing" rel="noopener noreferrer" target="_blank">zoko.io/pricing</a> and the App Store listing before you decide, because the tiers move.</p>
 
+<h2>What does Zoko actually cost at your volume?</h2>
+<p>The plan price is the part people quote. The metering is the part that decides the bill. Starter is $49.99 a month and meters every conversation at $0.015 with no cap. Plus is $79.99 and includes 5,000 conversations, then charges $0.00199 each. Using only those published figures, here is the platform fee at three volumes.</p>
+<div class="mkt-blog-table-wrap">
+<table>
+<thead>
+<tr>
+<th>Conversations</th>
+<th>Starter</th>
+<th>Plus</th>
+<th>Cheaper</th>
+</tr>
+</thead>
+<tbody>
+<tr><td>1,000</td><td>$64.99</td><td>$79.99</td><td><strong>Starter, $64.99</strong></td></tr>
+<tr><td>5,000</td><td>$124.99</td><td>$79.99</td><td><strong>Plus, $79.99</strong></td></tr>
+<tr><td>20,000</td><td>$349.99</td><td>$109.84</td><td><strong>Plus, $109.84</strong></td></tr>
+</tbody>
+</table>
+</div>
+<p class="mkt-blog-footnote">Arithmetic on the rates published on <a href="https://apps.shopify.com/whatsapp-button-chat" rel="noopener noreferrer" target="_blank">Zoko's Shopify App Store listing</a>, read on 21 October 2026. Platform fee only. It excludes Meta's own per-message charges, agent seats above the number your plan includes, and any AI or custom-flow add-ons. Re-check before you buy.</p>
+<p>Two things fall out of that table. The tier that is cheapest flips between 1,000 and 5,000 conversations, so the right plan depends on a number most teams only learn after a festival week. And the jump from 5,000 to 20,000 conversations, a 4x rise in customer contact, moves the platform fee by about 37%, which is the part that works in Zoko's favour once you are past the included bucket. The volatility is at the bottom of the range, not the top.</p>
+<p>For comparison, TopEdge charges by Shopify orders rather than conversations: Launch ₹1,999 a month for 100 orders, Growth ₹3,999 for 800, Scale ₹6,499 for 1,500, each about 20% less billed yearly, plus 18% GST. <strong>Those units are not interchangeable</strong>, and anyone who tells you one is simply cheaper than the other is comparing orders with conversations. The honest question is which number your finance team can predict a quarter out. See <a href="/pricing">TopEdge pricing</a> for the current table.</p>
+
+<h2>The shortlist: who else replaces Zoko, and who each one suits</h2>
+<p>Most "Zoko alternative" lists are vendor pages dressed as research. Here is the shortlist as we would give it to a merchant who called us, including the cases where the answer is not us. Prices carry the date they were read, because every one of these moves.</p>
+<ul>
+<li><strong>Interakt</strong>, if you want a Shopify-first Indian tool with a conventional plan ladder. Read off <a href="https://www.interakt.shop/pricing/" rel="noopener noreferrer" target="_blank">interakt.shop/pricing</a> on 21 October 2026: Starter ₹999 a month (Instagram only), Growth ₹2,799 and Advanced ₹3,799 for WhatsApp plus Instagram, with AI Agents a ₹3,000 add-on on the upper two. Closest like-for-like swap for a Zoko user who wants to stay in rupees. See the <a href="/blog/interakt-alternative-shopify-india">Interakt alternative</a> write-up.</li>
+<li><strong>AiSensy</strong>, if broadcast marketing is the main job. Worth checking the message economics: on <a href="https://aisensy.com/pricing" rel="noopener noreferrer" target="_blank">aisensy.com/pricing</a>, read 21 October 2026, service messages past the first 1,000 a month are ₹0.145 against Meta's published India rate of ₹0.1150, so roughly a 26% markup on every support reply. Fine if volume is low, less so if your inbox is busy. More in the <a href="/blog/aisensy-alternative-shopify-india">AiSensy alternative</a> piece.</li>
+<li><strong>Getgabs</strong>, if entry price is the binding constraint. <a href="https://getgabs.com" rel="noopener noreferrer" target="_blank">getgabs.com</a> listed Basic $15, Plus $21 and Pro $59 in September 2026 with 0% Meta markup claimed, though the Shopify App Store showed different figures for the same plans, so confirm which surface you are buying from. Detail in <a href="/blog/getgabs-alternative-shopify-whatsapp">Getgabs alternative</a>.</li>
+<li><strong>Kanal</strong>, if you are global rather than India-first and already run Klaviyo. <a href="https://getkanal.com" rel="noopener noreferrer" target="_blank">getkanal.com</a> listed Pro €89, Scale €149 and Business €350 a month in September 2026. Billing in euros has the same forecasting problem as billing in dollars if your revenue is in rupees. See <a href="/blog/kanal-whatsapp-alternative-shopify">Kanal alternative</a>.</li>
+<li><strong>WATI</strong>, if you want the largest install base and the deepest partner network, and you are buying a WhatsApp business suite rather than a Shopify tool specifically. We have not verified its current plan limits, so confirm on wati.io.</li>
+<li><strong>Gupshup</strong>, if you are enterprise, need a CPaaS relationship and will negotiate a quote rather than pick a tier. Not the right shape for a store doing a few hundred orders a month.</li>
+<li><strong>DelightChat</strong>, if a shared support inbox across channels matters more than Shopify-specific automation. It is also the page currently ranking first for this very query, which tells you something about how it invests in content.</li>
+<li><strong>TopEdge AI</strong>, if your costs are in rupees, COD and RTO are what actually hurt, and you want the platform fee to track order volume instead of chatter. The next two sections are the honest version of that case, including when it does not apply.</li>
+</ul>
+<p class="mkt-blog-footnote">We sell one of the tools on this list, so read it with that in mind. Where we have not verified a price we have said so rather than repeating a number from someone else's listicle. Prices and plan limits change; the read date beside each one is when a person last opened the page.</p>
+
 <h2>What should a Zoko alternative actually include?</h2>
 <p>Do not replace Zoko with a thinner inbox that only looks cheaper on day one. Keep the jobs Zoko already does well in your shortlist criteria:</p>
 <ol>
@@ -1738,6 +1775,37 @@ export const blogPosts: BlogPost[] = [
 </table>
 </div>
 <p class="mkt-blog-footnote">Zoko plan prices, conversation buckets, per-conversation rates, agent seat charges and add-on prices read off <a href="https://apps.shopify.com/whatsapp-button-chat" target="_blank" rel="noopener noreferrer">Zoko's Shopify App Store listing</a> on 21 October 2026. Rupee conversions are indicative at round rates and will move with the exchange rate, which is itself part of the argument for INR billing. Re-check both pages before you buy, because the tiers move.</p>
+
+<h2>When should you stay on Zoko?</h2>
+<p>A comparison that never reaches this heading is an advertisement. Four cases where switching is the wrong call:</p>
+<ul>
+<li><strong>Catalog-in-chat is your sales motion.</strong> Zoko has built conversational selling off a WhatsApp catalog for longer than most of this market has existed. If your team closes orders inside the thread rather than sending people back to the storefront, that is the thing you would be giving up, and it is their strongest card.</li>
+<li><strong>You are past the included bucket and stable.</strong> The table above shows the metering gets proportionally kinder at volume. A predictable 20,000 conversations a month on Plus is not an expensive place to be.</li>
+<li><strong>Your revenue is in dollars.</strong> Most of the argument here is that USD billing against INR revenue is hard to forecast. If you sell internationally and hold dollars, that argument does not apply to you.</li>
+<li><strong>You are mid-peak.</strong> Never migrate a messaging stack in the fortnight before a sale. The cost of a broken COD confirmation during Diwali dwarfs a year of platform-fee savings.</li>
+</ul>
+
+<h2>What actually carries over when you switch?</h2>
+<p>The fear that stops most switches is losing approved templates and history. Here is what genuinely moves and what does not.</p>
+<div class="mkt-blog-table-wrap">
+<table>
+<thead>
+<tr>
+<th>Asset</th>
+<th>Carries over?</th>
+<th>What to know</th>
+</tr>
+</thead>
+<tbody>
+<tr><td><strong>Your WhatsApp number</strong></td><td>Yes</td><td>The number belongs to your WhatsApp Business Account, not the provider. Migrating it between platforms is a supported Meta operation.</td></tr>
+<tr><td><strong>Approved message templates</strong></td><td>Yes</td><td>Templates live on the WABA. They survive the switch as long as the new platform connects to the same account. A library that looks empty afterwards usually means the wrong WABA was bound, not that anything was deleted. See <a href="https://developers.facebook.com/docs/whatsapp/message-templates/guidelines/" rel="noopener noreferrer" target="_blank">Meta's message template guidelines</a>.</td></tr>
+<tr><td><strong>Quality rating and messaging limit</strong></td><td>Yes</td><td>Both are properties of the number and the WABA, so a good sending reputation is not reset by changing software. The corollary is that a poor one is not escaped either.</td></tr>
+<tr><td><strong>Past chat transcripts</strong></td><td>Usually not</td><td>Conversation history generally sits in the provider's own database. Export what you need for compliance before you cancel, not after.</td></tr>
+<tr><td><strong>Automation flows</strong></td><td>No</td><td>Every platform models branching differently, so flows are rebuilt rather than imported. This is the real work in a migration, and it is why the list of flows you actually use matters more than the list you once built.</td></tr>
+</tbody>
+</table>
+</div>
+<p>That last row is the one to plan around. Teams routinely discover they built eleven flows and depend on three. Audit before you rebuild, not after.</p>
 
 <h2>How do you evaluate a switch in one afternoon?</h2>
 <ol>
