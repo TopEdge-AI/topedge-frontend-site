@@ -446,6 +446,12 @@
   color: var(--mkt-violet);
 }
 
+/* The eyebrow is optional now, so the headline reclaims its top margin when
+   it is the first thing in the hero. */
+.mkt-jh__title:first-child {
+  margin-top: 0;
+}
+
 .mkt-jh__title {
   margin: 0.7rem 0 0;
   font-family: var(--mkt-font);

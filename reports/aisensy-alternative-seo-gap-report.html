@@ -1,0 +1,797 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>AiSensy Alternative Page: SEO Gap Analysis</title>
+<style>
+  @page { size: A4; margin: 18mm 15mm 20mm; }
+  :root{
+    --ink:#101828; --body:#344054; --muted:#667085; --line:#e4e7ec; --soft:#f9fafb;
+    --v:#6938ef; --v-soft:#f4f0ff; --v-line:#d9ccff;
+    --red:#b42318; --red-soft:#fef3f2; --red-line:#fecdca;
+    --amber:#b54708; --amber-soft:#fffaeb; --amber-line:#fedf89;
+    --green:#027a48; --green-soft:#ecfdf3; --green-line:#a6f4c5;
+    --blue:#175cd3; --blue-soft:#eff8ff; --blue-line:#b2ddff;
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0; font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;
+    color:var(--body); background:#fff; font-size:10pt; line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3,h4{color:var(--ink); font-weight:700; line-height:1.25; margin:0}
+  h2{font-size:17pt; letter-spacing:-.01em; margin:0 0 4mm; padding-bottom:2.5mm; border-bottom:2px solid var(--ink)}
+  h3{font-size:12pt; margin:7mm 0 2.5mm}
+  h4{font-size:10.5pt; margin:5mm 0 1.5mm}
+  p{margin:0 0 3mm}
+  ul,ol{margin:0 0 3mm; padding-left:5mm}
+  li{margin:0 0 1.5mm}
+  code{font-family:"SFMono-Regular",Menlo,Consolas,monospace; font-size:8.6pt; background:var(--soft); border:1px solid var(--line); border-radius:3px; padding:.4mm 1.2mm; color:var(--ink); word-break:break-all}
+  a{color:var(--v); text-decoration:none}
+  .page{page-break-after:always}
+  .page:last-child{page-break-after:auto}
+  .avoid{page-break-inside:avoid}
+  #advantage p, #advantage h3, #advantage li{page-break-inside:avoid}
+  #advantage h3{page-break-after:avoid}
+  h3,h4{page-break-after:avoid}
+  tbody tr{page-break-inside:avoid}
+
+  /* cover */
+  .cover{height:245mm; display:flex; flex-direction:column; justify-content:space-between; padding-top:8mm}
+  .cover__rule{height:5px; width:38mm; background:var(--v); border-radius:3px}
+  .cover__kicker{margin-top:9mm; font-size:9pt; letter-spacing:.16em; text-transform:uppercase; color:var(--v); font-weight:700}
+  .cover h1{font-size:33pt; letter-spacing:-.025em; margin:5mm 0 0; max-width:150mm}
+  .cover__sub{margin-top:5mm; font-size:12pt; color:var(--muted); max-width:135mm; line-height:1.5}
+  .cover__url{margin-top:7mm; font-size:9.5pt; color:var(--ink); border-left:3px solid var(--v-line); padding-left:4mm}
+  .cover__url span{display:block; color:var(--muted); font-size:8.5pt; letter-spacing:.08em; text-transform:uppercase; margin-bottom:1mm}
+  .cover__meta{border-top:1px solid var(--line); padding-top:5mm; display:flex; gap:12mm; font-size:9pt}
+  .cover__meta div span{display:block; color:var(--muted); font-size:7.8pt; letter-spacing:.08em; text-transform:uppercase; margin-bottom:1mm}
+  .cover__meta div b{color:var(--ink); font-weight:600}
+
+  /* scorecards */
+  .cards{display:flex; gap:3mm; margin:0 0 5mm}
+  .card{flex:1; border:1px solid var(--line); border-radius:8px; padding:3.5mm 4mm; background:#fff}
+  .card--you{border-color:var(--v-line); background:var(--v-soft)}
+  .card__label{font-size:7.6pt; letter-spacing:.09em; text-transform:uppercase; color:var(--muted); font-weight:700}
+  .card--you .card__label{color:var(--v)}
+  .card__n{font-size:21pt; font-weight:700; color:var(--ink); line-height:1.1; margin-top:1.5mm}
+  .card__n small{font-size:9pt; font-weight:600; color:var(--muted)}
+  .card__foot{font-size:8pt; color:var(--muted); margin-top:1mm}
+
+  /* tables */
+  table{width:100%; border-collapse:collapse; font-size:8.8pt; margin:0 0 4mm}
+  thead th{background:var(--ink); color:#fff; text-align:left; font-weight:600; padding:2.2mm 2.5mm; font-size:8.3pt; letter-spacing:.02em}
+  tbody td{border-bottom:1px solid var(--line); padding:2.2mm 2.5mm; vertical-align:top}
+  tbody tr:nth-child(even) td{background:var(--soft)}
+  .t-you{color:var(--v); font-weight:700}
+  .win{color:var(--green); font-weight:700}
+  .lose{color:var(--red); font-weight:700}
+  .num{font-variant-numeric:tabular-nums; white-space:nowrap}
+
+  /* chips */
+  .chip{display:inline-block; border-radius:99px; padding:.5mm 2mm; font-size:7.6pt; font-weight:700; letter-spacing:.03em; white-space:nowrap; border:1px solid}
+  .chip--p1{background:var(--red-soft); color:var(--red); border-color:var(--red-line)}
+  .chip--p2{background:var(--amber-soft); color:var(--amber); border-color:var(--amber-line)}
+  .chip--p3{background:var(--blue-soft); color:var(--blue); border-color:var(--blue-line)}
+  .chip--done{background:var(--green-soft); color:var(--green); border-color:var(--green-line)}
+  .chip--conf{background:var(--soft); color:var(--body); border-color:var(--line)}
+
+  /* toc */
+  .toc{margin-top:2mm}
+  .toc a{display:flex; align-items:baseline; gap:2mm; padding:2.3mm 0; border-bottom:1px solid var(--line); color:var(--ink); font-size:10pt}
+  .toc a b{color:var(--v); font-weight:700; width:7mm; flex:none}
+  .toc a i{flex:1; border-bottom:1px dotted var(--line); font-style:normal; margin:0 1mm; transform:translateY(-1mm)}
+  .toc a u{text-decoration:none; color:var(--muted); font-variant-numeric:tabular-nums; flex:none}
+
+  /* issue blocks */
+  .issue{border:1px solid var(--line); border-left:4px solid var(--muted); border-radius:0 8px 8px 0; padding:3.5mm 4mm; margin:0 0 4mm; background:#fff}
+  .issue--p1{border-left-color:var(--red)}
+  .issue--p2{border-left-color:var(--amber)}
+  .issue--p3{border-left-color:var(--blue)}
+  .issue--done{border-left-color:var(--green); background:var(--green-soft)}
+  .issue__head{display:flex; justify-content:space-between; align-items:flex-start; gap:4mm; margin-bottom:2mm}
+  .issue__title{font-size:11pt; font-weight:700; color:var(--ink); line-height:1.3}
+  .issue__chips{flex:none; display:flex; gap:1.5mm}
+  .kv{font-size:8.8pt; margin:0 0 1.5mm}
+  .kv b{color:var(--ink); font-weight:700}
+  .fixbox{background:var(--soft); border:1px solid var(--line); border-radius:6px; padding:2.5mm 3mm; margin:2mm 0 0; font-size:8.6pt}
+  .fixbox b{color:var(--ink)}
+  pre{margin:1.5mm 0 0; background:var(--ink); color:#e6edf3; border-radius:6px; padding:2.5mm 3mm; font-family:"SFMono-Regular",Menlo,Consolas,monospace; font-size:7.9pt; line-height:1.5; white-space:pre-wrap; word-break:break-word}
+  pre .c{color:#8b949e}
+  pre .g{color:#7ee787}
+  pre .r{color:#ffa198}
+
+  .note{border:1px solid var(--blue-line); background:var(--blue-soft); border-radius:8px; padding:3mm 3.5mm; font-size:8.8pt; margin:0 0 4mm}
+  .note b{color:var(--blue)}
+  .warnbox{border:1px solid var(--amber-line); background:var(--amber-soft); border-radius:8px; padding:3mm 3.5mm; font-size:8.8pt; margin:0 0 4mm}
+  .warnbox b{color:var(--amber)}
+  .lead{font-size:11pt; color:var(--ink); line-height:1.55; margin-bottom:4mm}
+  .section-kicker{font-size:8pt; letter-spacing:.14em; text-transform:uppercase; color:var(--v); font-weight:700; margin-bottom:2mm}
+</style>
+</head>
+<body>
+
+<!-- ───────────────────────── COVER ───────────────────────── -->
+<section class="page cover">
+  <div>
+    <div class="cover__rule"></div>
+    <div class="cover__kicker">On-page SEO gap analysis</div>
+    <h1>AiSensy Alternative page: what is wrong, where rivals win, and what to fix first</h1>
+    <p class="cover__sub">A competitive teardown of one ranking page against the three domains currently competing with it for <b>&ldquo;aisensy alternative&rdquo;</b>, built from a 64-check on-page audit and verified against the live DOM.</p>
+    <div class="cover__url">
+      <span>Page under review</span>
+      https://topedgeai.com/blog/aisensy-alternative-shopify-india
+    </div>
+    <div class="cover__url" style="margin-top:4mm">
+      <span>Benchmarked against</span>
+      whatchimp.com &nbsp;&middot;&nbsp; eazybe.com &nbsp;&middot;&nbsp; m.aisensy.com
+    </div>
+  </div>
+  <div class="cover__meta">
+    <div><span>Target keyword</span><b>aisensy alternative</b></div>
+    <div><span>Audit date</span><b>1 November 2026</b></div>
+    <div><span>Audit source</span><b>64-check on-page crawl + live DOM verification</b></div>
+    <div><span>Prepared for</span><b>TopEdge AI</b></div>
+  </div>
+</section>
+
+<!-- ───────────────────────── TOC ───────────────────────── -->
+<section class="page">
+  <h2>Contents</h2>
+  <nav class="toc">
+    <a href="#exec"><b>01</b> Executive summary <i></i><u>3</u></a>
+    <a href="#compare"><b>02</b> Your page versus the three ranking competitors <i></i><u>5</u></a>
+    <a href="#gap"><b>03</b> Detailed SEO gap analysis <i></i><u>7</u></a>
+    <a href="#critical"><b>04</b> Critical issues, with the fix for each <i></i><u>10</u></a>
+    <a href="#advantage"><b>05</b> Where competitors genuinely have an advantage <i></i><u>14</u></a>
+    <a href="#falsepos"><b>06</b> Audit warnings that are not real problems <i></i><u>16</u></a>
+    <a href="#plan"><b>07</b> Prioritised action plan <i></i><u>17</u></a>
+    <a href="#impl"><b>08</b> Step-by-step implementation guidance <i></i><u>19</u></a>
+    <a href="#measure"><b>09</b> Measurement plan <i></i><u>21</u></a>
+    <a href="#first5"><b>10</b> The first five actions <i></i><u>23</u></a>
+  </nav>
+
+  <div class="note" style="margin-top:8mm">
+    <b>How to read this report.</b> Every finding is labelled <span class="chip chip--conf">CONFIRMED</span> when it comes
+    straight from audit data or a live DOM check, or <span class="chip chip--conf">ASSUMPTION</span> when it is an inference
+    that still needs validating. Findings already resolved while this report was written carry
+    <span class="chip chip--done">FIXED</span> and show the before and after measurement. Nothing here promises a ranking
+    movement: on-page work changes what Google can understand about the page, not what it decides to rank.
+  </div>
+
+  <div class="warnbox">
+    <b>One scope note.</b> The audit compares a single URL against three competitor URLs. It measures on-page setup only.
+    It does not measure backlinks, domain authority, or query intent match, and the referring-domain gap between a
+    DR&nbsp;13 blog and these competitors is almost certainly the larger ranking factor. Treat everything below as
+    removing the on-page reasons not to rank, not as a complete ranking strategy.
+  </div>
+</section>
+
+<!-- ───────────────────────── EXEC ───────────────────────── -->
+<section class="page" id="exec">
+  <h2>01 &nbsp;Executive summary</h2>
+
+  <p class="lead">The page scored <b>95 of 100</b> on on-page setup, the highest of the four URLs tested, with zero
+  failures. That score is misleading. It measures whether the tags are configured, not whether the page answers the
+  query. On the thing that actually decides this SERP, the page was the weakest of the four.</p>
+
+  <div class="cards">
+    <div class="card card--you"><div class="card__label">You</div><div class="card__n">95<small>/100</small></div><div class="card__foot">53 pass &middot; 5 warn &middot; 0 fail</div></div>
+    <div class="card"><div class="card__label">whatchimp</div><div class="card__n">92<small>/100</small></div><div class="card__foot">40 pass &middot; 8 warn &middot; 0 fail</div></div>
+    <div class="card"><div class="card__label">eazybe</div><div class="card__n">91<small>/100</small></div><div class="card__foot">43 pass &middot; 5 warn &middot; 2 fail</div></div>
+    <div class="card"><div class="card__label">m.aisensy</div><div class="card__n">76<small>/100</small></div><div class="card__foot">31 pass &middot; 13 warn &middot; 3 fail</div></div>
+  </div>
+
+  <h3>The single sentence version</h3>
+  <p>A page titled <i>&ldquo;Best AiSensy Alternative&rdquo;</i> named exactly one alternative, ours, in 1,108 words, while
+  the pages beating it averaged 2,929 words and compared five or six products each. Everything else in this report is
+  downstream of that.</p>
+
+  <h3>The five findings that matter</h3>
+  <ol>
+    <li><b>Content depth gap of 1,821 words.</b> 1,108 against a competitor average of 2,929, and against 3,765 on
+      AiSensy&rsquo;s own page, which is the incumbent for its own brand query. <span class="chip chip--conf">CONFIRMED</span></li>
+    <li><b>The keyword was absent from four of the six places Google reads it.</b> Not in the meta description, not in the
+      first 100 words, not in any H2, not in any link anchor. It appeared twice in 1,108 words. <span class="chip chip--conf">CONFIRMED</span></li>
+    <li><b>The meta description was being truncated.</b> 1,003&nbsp;px against a desktop cut of roughly 920&nbsp;px, so the
+      end of the snippet never reached a searcher. <span class="chip chip--conf">CONFIRMED</span></li>
+    <li><b>The page did not serve the queries that surround the main one.</b> &ldquo;aisensy alternative free&rdquo;,
+      &ldquo;aisensy alternative reddit&rdquo; and the comparison names (Interakt, WATI, Gallabox, Twilio) had no section,
+      no heading and in three cases no mention at all. <span class="chip chip--conf">CONFIRMED</span></li>
+    <li><b>Topical coverage was thin against competitor vocabulary.</b> Nine phrases and more than twenty words used
+      repeatedly by two or three competitors never appeared on the page, including <i>chatbot builder</i>,
+      <i>team inbox</i>, <i>official WhatsApp</i>, <i>free plan</i> and <i>qualify leads</i>. <span class="chip chip--conf">CONFIRMED</span></li>
+  </ol>
+
+  <h3>What was already fixed</h3>
+  <p>All five findings above were addressed in the rewrite shipped with this report. Verified against the live DOM:</p>
+  <table class="avoid">
+    <thead><tr><th>Metric</th><th class="num">Before</th><th class="num">After</th><th class="num">Competitor avg</th><th>Status</th></tr></thead>
+    <tbody>
+      <tr><td>Body word count</td><td class="num">1,108</td><td class="num win">~4,150</td><td class="num">2,929</td><td><span class="chip chip--done">FIXED</span></td></tr>
+      <tr><td>H2 sections</td><td class="num">8</td><td class="num win">19</td><td class="num">14</td><td><span class="chip chip--done">FIXED</span></td></tr>
+      <tr><td>Exact keyword uses</td><td class="num">2</td><td class="num win">22</td><td class="num">8</td><td><span class="chip chip--done">FIXED</span></td></tr>
+      <tr><td>Keyword in meta description</td><td class="num lose">No</td><td class="num win">Yes</td><td class="num">1 of 3</td><td><span class="chip chip--done">FIXED</span></td></tr>
+      <tr><td>Meta description width</td><td class="num lose">1,003 px</td><td class="num win">868 px</td><td class="num">&lt; 920 px</td><td><span class="chip chip--done">FIXED</span></td></tr>
+      <tr><td>Keyword in first 100 words</td><td class="num lose">No</td><td class="num win">Yes</td><td class="num">1 of 3</td><td><span class="chip chip--done">FIXED</span></td></tr>
+      <tr><td>Keyword in an H2</td><td class="num lose">0</td><td class="num win">6</td><td class="num">8 (eazybe)</td><td><span class="chip chip--done">FIXED</span></td></tr>
+      <tr><td>Keyword in link anchors</td><td class="num lose">0</td><td class="num win">7</td><td class="num">present on 1 of 3</td><td><span class="chip chip--done">FIXED</span></td></tr>
+      <tr><td>Question headings</td><td class="num">7</td><td class="num win">14</td><td class="num">8</td><td><span class="chip chip--done">FIXED</span></td></tr>
+      <tr><td>Comparison tables</td><td class="num">2</td><td class="num win">4</td><td class="num">2</td><td><span class="chip chip--done">FIXED</span></td></tr>
+      <tr><td>Competitors named on page</td><td class="num lose">1</td><td class="num win">5</td><td class="num">4 to 6</td><td><span class="chip chip--done">FIXED</span></td></tr>
+    </tbody>
+  </table>
+
+  <p>What remains is in sections 04 and 07: one performance item that needs measuring before it is acted on, a source
+  registry gap that blocks three competitor price claims, and a set of structural sections competitors carry that this
+  page still does not.</p>
+</section>
+
+<!-- ───────────────────────── COMPARE ───────────────────────── -->
+<section class="page" id="compare">
+  <h2>02 &nbsp;Your page versus the three ranking competitors</h2>
+  <p class="lead">Every number below is from the audit. The <span class="win">green</span> cell in each row is the best of
+  the four. The pattern is consistent: you win every <i>technical</i> row and lose every <i>content</i> row.</p>
+
+  <table>
+    <thead><tr><th>Metric</th><th class="num">You<br><span style="font-weight:400;font-size:7.5pt">topedgeai.com</span></th><th class="num">whatchimp</th><th class="num">eazybe</th><th class="num">m.aisensy</th><th>Read</th></tr></thead>
+    <tbody>
+      <tr><td><b>On-page score</b></td><td class="num t-you win">95</td><td class="num">92</td><td class="num">91</td><td class="num">76</td><td>Setup, not substance</td></tr>
+      <tr><td>Content words</td><td class="num t-you lose">1,108</td><td class="num">2,313</td><td class="num">2,709</td><td class="num win">3,765</td><td><b>Largest single gap</b></td></tr>
+      <tr><td>H2 sections</td><td class="num t-you lose">8</td><td class="num win">20</td><td class="num">12</td><td class="num">9</td><td>Half the sub-topics</td></tr>
+      <tr><td>H3 sections</td><td class="num t-you lose">5</td><td class="num">15</td><td class="num">17</td><td class="num win">31</td><td>No depth under headings</td></tr>
+      <tr><td>Question headings</td><td class="num t-you">7</td><td class="num">5</td><td class="num">4</td><td class="num win">16</td><td>Competitive, not leading</td></tr>
+      <tr><td>Exact keyword uses</td><td class="num t-you">2</td><td class="num">1</td><td class="num win">23</td><td class="num">0</td><td>eazybe is the outlier</td></tr>
+      <tr><td>Keyword density</td><td class="num t-you">0.36%</td><td class="num">0.09%</td><td class="num">1.7%</td><td class="num">0%</td><td>Density is not a target</td></tr>
+      <tr><td>Keyword in title</td><td class="num t-you win">Yes</td><td class="num">Yes</td><td class="num">Yes</td><td class="num lose">No</td><td>Fine</td></tr>
+      <tr><td>Keyword in meta description</td><td class="num t-you lose">No</td><td class="num lose">No</td><td class="num win">Yes</td><td class="num lose">No</td><td>Was a miss</td></tr>
+      <tr><td>Keyword in first 100 words</td><td class="num t-you lose">No</td><td class="num win">Yes</td><td class="num lose">No</td><td class="num lose">No</td><td>Was a miss</td></tr>
+      <tr><td>Keyword in an H2</td><td class="num t-you lose">0</td><td class="num lose">0</td><td class="num win">8</td><td class="num lose">0</td><td>Was a miss</td></tr>
+      <tr><td>Keyword in link anchors</td><td class="num t-you lose">0</td><td class="num">&mdash;</td><td class="num win">yes</td><td class="num">&mdash;</td><td>Was a miss</td></tr>
+      <tr><td>Title width</td><td class="num t-you">552 px</td><td class="num">494 px</td><td class="num">542 px</td><td class="num">320 px</td><td>All fit (600 px)</td></tr>
+      <tr><td>Meta description width</td><td class="num t-you lose">1,003 px</td><td class="num">&mdash;</td><td class="num">&mdash;</td><td class="num">&mdash;</td><td><b>Cut off at ~920 px</b></td></tr>
+      <tr><td>Images</td><td class="num t-you lose">15</td><td class="num win">110</td><td class="num">46</td><td class="num">25</td><td>Thin visual support</td></tr>
+      <tr><td>Images missing alt</td><td class="num t-you win">0</td><td class="num win">0</td><td class="num win">0</td><td class="num">1</td><td>Tied best</td></tr>
+      <tr><td>Lists / tables</td><td class="num t-you lose">17 / 2</td><td class="num win">52 / 2</td><td class="num">23 / 1</td><td class="num">46 / 3</td><td>Fewer scannable blocks</td></tr>
+      <tr><td>Unique internal links</td><td class="num t-you">65</td><td class="num win">70</td><td class="num">60</td><td class="num">21</td><td>Strong</td></tr>
+      <tr><td>Unique external links</td><td class="num t-you">22</td><td class="num">15</td><td class="num">19</td><td class="num win">52</td><td>Well sourced</td></tr>
+      <tr><td>Broken links</td><td class="num t-you win">0</td><td class="num">&mdash;</td><td class="num">&mdash;</td><td class="num">&mdash;</td><td>Clean</td></tr>
+      <tr><td>Readability (Flesch)</td><td class="num t-you win">65</td><td class="num">59</td><td class="num">52</td><td class="num">37</td><td><b>Best of four</b></td></tr>
+      <tr><td>HTML size</td><td class="num t-you win">68 KB</td><td class="num">422 KB</td><td class="num">1,028 KB</td><td class="num">206 KB</td><td><b>6x lighter than nearest</b></td></tr>
+      <tr><td>HTML download time</td><td class="num t-you">993 ms</td><td class="num">1,523 ms</td><td class="num">2,291 ms</td><td class="num win">67 ms</td><td>See issue C-04</td></tr>
+      <tr><td>Last updated</td><td class="num t-you win">2026-10-21</td><td class="num lose">2026-01-06</td><td class="num">2026-08-04</td><td class="num">2026-10-&hellip;</td><td>Freshest</td></tr>
+    </tbody>
+  </table>
+
+  <div class="note">
+    <b>The honest summary of this table.</b> You are not losing on technical SEO. You are beating all three on HTML
+    weight, readability, broken links and freshness, and you match or beat them on internal linking and image alt text.
+    You were losing on one axis only: how much of the question the page actually answered.
+  </div>
+</section>
+
+<!-- ───────────────────────── GAP ───────────────────────── -->
+<section class="page" id="gap">
+  <h2>03 &nbsp;Detailed SEO gap analysis</h2>
+
+  <h3>3.1 &nbsp;Crawlability and indexability &mdash; no gap</h3>
+  <p>14 of 15 technical checks passed. Verified: HTTP 200; <code>robots: index, follow, max-image-preview:large,
+  max-snippet:-1, max-video-preview:-1</code>; Googlebot allowed in robots.txt with the sitemap declared; the URL is
+  listed in <code>https://topedgeai.com/sitemap.xml</code>; self-referencing canonical to
+  <code>https://topedgeai.com/blog/aisensy-alternative-shopify-india</code>; HTTPS with no mixed content; HSTS enabled;
+  brotli compression; <code>lang="en-IN"</code>; mobile viewport set; zero render-blocking scripts in head; 792 DOM
+  elements. <span class="chip chip--conf">CONFIRMED</span></p>
+  <p><b>No action required.</b> None of the competitors beat you here. Do not spend effort on this category.</p>
+
+  <h3>3.2 &nbsp;Title, meta and URL</h3>
+  <p>Title <code>Best AiSensy Alternative for Shopify India (2026) | TopEdge AI</code>, 62 characters, 552&nbsp;px of an
+  available 600&nbsp;px, exact keyword at character 6. URL <code>/blog/aisensy-alternative-shopify-india</code>, 60
+  characters, exact slug match. Both are correct and should not be touched: changing a live URL costs you whatever
+  equity it already has, and the title is already keyword-first.</p>
+  <p>The meta description was the one defect here, covered as C-01.</p>
+
+  <h3>3.3 &nbsp;Headings</h3>
+  <p>One H1 containing the keyword, correct, no skipped levels. The gap was quantity and phrasing: 8 H2s and 5 H3s
+  against 20/15, 12/17 and 9/31. More importantly, not one H2 contained the keyword or a variant, while eazybe carried
+  it in eight. Covered as C-03.</p>
+
+  <h3>3.4 &nbsp;Content and topical coverage</h3>
+  <p>This is the category that decided the gap. Beyond raw length, the audit surfaced vocabulary that two or three
+  competitors each repeat and your page never used once:</p>
+  <table class="avoid">
+    <thead><tr><th>Missing phrase</th><th class="num">Competitors using it</th><th class="num">Avg uses</th><th>Why it matters here</th></tr></thead>
+    <tbody>
+      <tr><td><code>official whatsapp</code></td><td class="num">2 of 3</td><td class="num">~9&times;</td><td>Buyers check the vendor is a real Meta partner</td></tr>
+      <tr><td><code>chatbot builder</code></td><td class="num">2 of 3</td><td class="num">~6&times;</td><td>One of the three jobs AiSensy does</td></tr>
+      <tr><td><code>team inbox</code></td><td class="num">2 of 3</td><td class="num">~6&times;</td><td>The reason support-led buyers switch</td></tr>
+      <tr><td><code>qualify leads</code></td><td class="num">2 of 3</td><td class="num">~5&times;</td><td>The sales-team use case entirely</td></tr>
+      <tr><td><code>whatsapp broadcasts</code></td><td class="num">2 of 3</td><td class="num">~3&times;</td><td>What AiSensy is actually for</td></tr>
+      <tr><td><code>shared team</code></td><td class="num">2 of 3</td><td class="num">~3&times;</td><td>Multi-agent requirement</td></tr>
+      <tr><td><code>whatsapp number</code></td><td class="num">2 of 3</td><td class="num">~3&times;</td><td>Migration anxiety, a top buyer objection</td></tr>
+      <tr><td><code>meta charges</code></td><td class="num">2 of 3</td><td class="num">~2&times;</td><td>The cost question under every comparison</td></tr>
+      <tr><td><code>free plan</code></td><td class="num">2 of 3</td><td class="num">~2&times;</td><td>Serves &ldquo;aisensy alternative free&rdquo;</td></tr>
+    </tbody>
+  </table>
+  <p>Single words at the same level: <code>agents</code> (3/3, ~12&times;), <code>basic</code> (3/3, ~9&times;),
+  <code>inbox</code> (3/3, ~7&times;), <code>official</code> (3/3, ~7&times;), <code>integrations</code> (3/3, ~6&times;),
+  <code>messaging</code> (3/3, ~5&times;), <code>sales</code> (~34&times;), <code>crm</code> (~29&times;),
+  <code>automation</code> (~20&times;), <code>unlimited</code> (~10&times;), <code>gallabox</code> (~9&times;),
+  <code>instagram</code> (~8&times;), <code>leads</code> (~8&times;), <code>chatbots</code> (~7&times;).
+  <span class="chip chip--conf">CONFIRMED</span></p>
+  <p>All nine phrases and the material words are now present and used in context, not stuffed. Verified counts after the
+  rewrite: <code>chatbot builder</code> 13, <code>team inbox</code> 10, <code>official whatsapp</code> 6,
+  <code>meta charges</code> 6, <code>free plan</code> 4, <code>whatsapp broadcast</code> 4, <code>qualify lead</code> 3,
+  <code>crm</code> 8, <code>integration</code> 9, <code>agents</code> 9. <span class="chip chip--done">FIXED</span></p>
+
+  <h3>3.5 &nbsp;Internal linking and URL structure &mdash; you lead</h3>
+  <p>95 links, 65 unique internal pages, 0 broken of 40 live-checked, 0 generic anchors such as &ldquo;click here&rdquo;,
+  0 internal links that redirect. The only defect was that none of them used the target keyword as anchor text, which is
+  now fixed. Competitors average 50 unique internal pages. <span class="chip chip--conf">CONFIRMED</span></p>
+
+  <h3>3.6 &nbsp;Schema markup</h3>
+  <p>The audit card reads &ldquo;Competitors use Article. You do not.&rdquo; <b>This is a false positive</b> and is
+  explained in section 06. Live DOM verification found <code>BlogPosting</code>, <code>Blog</code>, <code>WebPage</code>,
+  <code>ItemList</code>, <code>SoftwareApplication</code>, <code>FAQPage</code>, <code>Question</code>,
+  <code>Answer</code>, <code>BreadcrumbList</code>, <code>Organization</code>, <code>Person</code>,
+  <code>ImageObject</code> and <code>Offer</code> on the rendered page. <span class="chip chip--conf">CONFIRMED</span></p>
+
+  <h3>3.7 &nbsp;Images</h3>
+  <p>15 images, 0 missing an alt attribute, 0 missing width and height, none over 200&nbsp;KB, 9 of 15 in WebP. Two real
+  opportunities: six images are still JPG or PNG and could be WebP, and 15 images on a 4,000-word comparison page is thin
+  next to whatchimp&rsquo;s 110. Original screenshots of each platform would be the highest-value addition.</p>
+
+  <h3>3.8 &nbsp;Core Web Vitals and mobile</h3>
+  <p><b>Not measured by this audit.</b> The report carries a 993&nbsp;ms full-HTML download from the audit server and a
+  68&nbsp;KB document, which are inputs to LCP but are not LCP, INP or CLS. No field data was collected. Treat any CWV
+  claim as unverified until you pull the Core Web Vitals report in Search Console. The only directly relevant signal in
+  the audit is positive: 0 images without explicit width and height, which is the usual cause of CLS.
+  <span class="chip chip--conf">ASSUMPTION</span></p>
+</section>
+
+<!-- ───────────────────────── CRITICAL ───────────────────────── -->
+<section class="page" id="critical">
+  <h2>04 &nbsp;Critical issues, with the fix for each</h2>
+
+  <div class="issue issue--done avoid">
+    <div class="issue__head">
+      <div class="issue__title">C-01 &nbsp;Meta description truncated and missing the keyword</div>
+      <div class="issue__chips"><span class="chip chip--p1">P1</span><span class="chip chip--done">FIXED</span></div>
+    </div>
+    <p class="kv"><b>Evidence:</b> 151 characters, 1,003&nbsp;px measured against a desktop cut of about 920&nbsp;px, flagged
+    &ldquo;Too wide. Google will cut it on desktop.&rdquo; Separately flagged: &ldquo;Keyword in meta description: Not found.&rdquo;</p>
+    <p class="kv"><b>Competitor difference:</b> eazybe carries the exact keyword in a 148-character description. whatchimp runs 156
+    characters without it. You were the only one doing both things wrong at once.</p>
+    <p class="kv"><b>Why it matters:</b> Google bolds query terms in the snippet, which lifts CTR. The old description also spent its
+    visible characters on &ldquo;Outgrowing AiSensy broadcasts&rdquo; and put the proof after the cut, so the strongest part never showed.</p>
+    <div class="fixbox">
+      <b>The fix, as shipped</b>
+      <pre><span class="c">// src/data/blogPostsQ4.ts</span>
+<span class="r">- 'Outgrowing AiSensy broadcasts on Shopify India? Compare 0% Meta markup</span>
+<span class="r">-  (₹0.115 service vs ₹0.145 on AiSensy), BYOK AI, and native COD-to-prepaid flows.'</span>
+<span class="g">+ 'AiSensy alternative for Shopify India: AiSensy vs Interakt, WATI,</span>
+<span class="g">+  Gallabox and Twilio on price, AI cost and COD to prepaid.'</span>
+<span class="c">// 123 chars, 868 px measured in 16px Arial, keyword at position 0</span></pre>
+    </div>
+    <p class="kv" style="margin-top:2mm"><b>Validate:</b> re-measure the rendered <code>&lt;meta name="description"&gt;</code> in Arial at
+    16&nbsp;px; stay under 920&nbsp;px. Then watch CTR for this URL in Search Console, 28 days before against 28 days after.</p>
+  </div>
+
+  <div class="issue issue--done avoid">
+    <div class="issue__head">
+      <div class="issue__title">C-02 &nbsp;Keyword absent from the first 100 words</div>
+      <div class="issue__chips"><span class="chip chip--p1">P1</span><span class="chip chip--done">FIXED</span></div>
+    </div>
+    <p class="kv"><b>Evidence:</b> &ldquo;Keyword in first 100 words: Not found.&rdquo; The opening ran
+    &ldquo;AiSensy is one of the most visible WhatsApp marketing platforms in India&hellip;&rdquo;, which describes AiSensy rather than
+    the thing the searcher asked for.</p>
+    <p class="kv"><b>Competitor difference:</b> whatchimp places the exact phrase inside the first 100 words. You and the other two did not.</p>
+    <p class="kv"><b>Why it matters:</b> the opening paragraph is weighted heavily for topical relevance, and it is also what an AI
+    Overview or ChatGPT answer lifts as the summary of the page.</p>
+    <div class="fixbox">
+      <b>The fix, as shipped.</b> The first body sentence now reads: <i>&ldquo;Most people searching for an <b>AiSensy
+      alternative</b> are not unhappy with AiSensy. They have outgrown the shape of it.&rdquo;</i> Keyword at word 7, and the sentence
+      states the page&rsquo;s thesis rather than describing the incumbent.
+    </div>
+    <p class="kv" style="margin-top:2mm"><b>Validate:</b> extract the first 100 words of rendered body text and assert the phrase is present.</p>
+  </div>
+
+  <div class="issue issue--done avoid">
+    <div class="issue__head">
+      <div class="issue__title">C-03 &nbsp;Keyword in zero H2s, and only 8 H2s against an average of 14</div>
+      <div class="issue__chips"><span class="chip chip--p1">P1</span><span class="chip chip--done">FIXED</span></div>
+    </div>
+    <p class="kv"><b>Evidence:</b> &ldquo;Keyword in an H2: None.&rdquo; 8 H2 / 5 H3 against 20/15, 12/17 and 9/31.</p>
+    <p class="kv"><b>Competitor difference:</b> eazybe puts the keyword in eight headings, including
+    <i>&ldquo;Best WhatChimp Alternative: Eazybe For WhatsApp Sales And CRM&rdquo;</i>. whatchimp runs sections you had no equivalent
+    for at all: <i>&ldquo;When AiSensy is the better choice, and when it is not&rdquo;</i>, <i>&ldquo;Moving from AiSensy to
+    WhatChimp&rdquo;</i>, <i>&ldquo;Your number moves. Your customers notice nothing.&rdquo;</i></p>
+    <p class="kv"><b>Why it matters:</b> H2s are how Google maps a page to sub-queries, and how an AI answer picks which chunk to quote.
+    Eight headings cannot cover a six-product comparison.</p>
+    <div class="fixbox">
+      <b>The fix, as shipped.</b> 19 H2s, six carrying the keyword:
+      <ul style="margin:1.5mm 0 0">
+        <li>What is the best <b>AiSensy alternative</b> for WhatsApp in India?</li>
+        <li><b>AiSensy alternative</b> comparison: six WhatsApp platforms side by side</li>
+        <li>Is there a free <b>AiSensy alternative</b>?</li>
+        <li>What people actually ask before choosing an <b>AiSensy alternative</b></li>
+        <li>Features to check before you pick an <b>AiSensy alternative</b></li>
+        <li>Which <b>AiSensy alternative</b> fits which store</li>
+      </ul>
+      <p style="margin:2mm 0 0">Plus five dedicated head-to-head sections (<i>AiSensy vs Interakt / WATI / Gallabox / Twilio / TopEdge
+      AI</i>) and a migration section answering the number-move objection whatchimp owns.</p>
+    </div>
+  </div>
+</section>
+
+<section class="page">
+  <div class="issue issue--p2 avoid">
+    <div class="issue__head">
+      <div class="issue__title">C-04 &nbsp;993&nbsp;ms HTML download &mdash; measure before you act</div>
+      <div class="issue__chips"><span class="chip chip--p2">P2</span><span class="chip chip--conf">ASSUMPTION</span></div>
+    </div>
+    <p class="kv"><b>Evidence:</b> &ldquo;Page download time: 993&nbsp;ms to download the full HTML from the audit server.&rdquo;
+    m.aisensy returned in 67&nbsp;ms; whatchimp 1,523&nbsp;ms; eazybe 2,291&nbsp;ms.</p>
+    <p class="kv"><b>Why this is not yet a confirmed defect:</b> the document is only 68&nbsp;KB, brotli is on, HSTS is on, and there
+    are zero render-blocking scripts. A 68&nbsp;KB brotli response taking 993&nbsp;ms is almost certainly a cold edge node or the
+    audit server&rsquo;s distance from the CDN, not a server problem. The Netlify config already sets
+    <code>Netlify-CDN-Cache-Control: public, s-maxage=604800, stale-while-revalidate=604800, durable</code> on <code>/*</code>.</p>
+    <div class="fixbox">
+      <b>What to do, in order</b>
+      <ol style="margin:1.5mm 0 0">
+        <li>Run the URL through PageSpeed Insights and read the <b>field</b> TTFB, not the lab number. Field data is real users.</li>
+        <li><code>curl -o /dev/null -s -w "dns:%{time_namelookup} connect:%{time_connect} ttfb:%{time_starttransfer} total:%{time_total}\n" https://topedgeai.com/blog/aisensy-alternative-shopify-india</code> three times, and read the second and third runs (the first pays for a cold cache).</li>
+        <li>Check the response for <code>x-nf-request-id</code> and a cache-hit header. A MISS on a repeat request is the real finding.</li>
+        <li>Only if field TTFB exceeds about 600&nbsp;ms is there an action, and it is a CDN or hosting change, not a code change.</li>
+      </ol>
+    </div>
+    <p class="kv" style="margin-top:2mm"><b>Effort:</b> 30 minutes to measure. Unknown to fix, and possibly zero.</p>
+  </div>
+
+  <div class="issue issue--p2 avoid">
+    <div class="issue__head">
+      <div class="issue__title">C-05 &nbsp;Three competitor prices cannot be published, because nobody has read the source</div>
+      <div class="issue__chips"><span class="chip chip--p2">P2</span><span class="chip chip--conf">CONFIRMED</span></div>
+    </div>
+    <p class="kv"><b>Evidence:</b> <code>scripts/check-blog-sources.mjs</code> fails the build on any external link whose host is not
+    registered in <code>src/data/sources.ts</code>, which carries the date a human opened the URL. <code>aisensy.com</code> and
+    <code>interakt.shop</code> are registered. <code>wati.io</code>, <code>gallabox.com</code> and <code>twilio.com</code> are not.</p>
+    <p class="kv"><b>Consequence:</b> the WATI, Gallabox and Twilio rows in the new comparison table carry no price and no outbound link.
+    That is the honest position, but it is also a competitive weakness: eazybe and whatchimp both publish competitor plan names and tiers.</p>
+    <div class="fixbox">
+      <b>The fix</b>
+      <ol style="margin:1.5mm 0 0">
+        <li>A human opens <code>wati.io/pricing</code>, <code>gallabox.com/pricing</code> and <code>twilio.com/whatsapp/pricing</code> and records what each actually says, with the date.</li>
+        <li>Add an entry per source to <code>src/data/sources.ts</code> in the existing shape, which puts the host into <code>ALLOWED_EXTERNAL_HOSTS</code> automatically.</li>
+        <li>Fill the three table cells with the real figures and link each to its source, matching the AiSensy and Interakt rows.</li>
+        <li>Update the footnote, which currently says those three carry no price on purpose.</li>
+      </ol>
+    </div>
+    <p class="kv" style="margin-top:2mm"><b>Effort:</b> 45 minutes, mostly reading. <b>Impact:</b> high, because a comparison table with
+    three empty price cells is the first thing a sceptical reader notices.</p>
+  </div>
+
+  <div class="issue issue--p3 avoid">
+    <div class="issue__head">
+      <div class="issue__title">C-06 &nbsp;15 images on a comparison page, against 110 / 46 / 25</div>
+      <div class="issue__chips"><span class="chip chip--p3">P3</span><span class="chip chip--conf">CONFIRMED</span></div>
+    </div>
+    <p class="kv"><b>Evidence:</b> 15 images, of which only 5 are content images; the rest are logos, badges and AI-assistant icons.
+    Six of the 15 are still JPG or PNG rather than WebP.</p>
+    <p class="kv"><b>Why it matters:</b> image count is not a ranking factor, but a comparison page with no screenshots of the products
+    being compared reads as written from a distance. It also forfeits Google Images traffic for &ldquo;aisensy dashboard&rdquo; style queries.</p>
+    <div class="fixbox">
+      <b>The fix:</b> add one original screenshot per platform section (six total), each with a descriptive alt containing the platform
+      name, exported as WebP under 100&nbsp;KB to stay inside <code>scripts/check-image-weight.mjs</code>. Convert the six remaining
+      JPG/PNG assets to WebP at the same time.
+    </div>
+  </div>
+</section>
+
+<!-- ───────────────────────── ADVANTAGE ───────────────────────── -->
+<section class="page" id="advantage">
+  <h2>05 &nbsp;Where competitors genuinely have an advantage</h2>
+  <p class="lead">These are sections the audit found on competitor pages whose main words barely appear on yours. Each is a
+  sub-topic a searcher may want, and each is a reason Google may consider their page the more complete answer.</p>
+
+  <h3>5.1 &nbsp;whatchimp.com &mdash; owns the migration objection</h3>
+  <p>Its strongest structural asset is a block of headings aimed squarely at switching anxiety:
+  <i>&ldquo;Your number moves. Your customers notice nothing.&rdquo;</i>, <i>&ldquo;Limit, rating, name and tick&rdquo;</i>,
+  <i>&ldquo;About five minutes, no downtime&rdquo;</i>, <i>&ldquo;Moving from AiSensy to WhatChimp&rdquo;</i>. It also carries
+  <i>&ldquo;When AiSensy is the better choice, and when it is not&rdquo;</i>, which is a credibility move, and
+  <i>&ldquo;Success stories speak louder&rdquo;</i> plus <i>&ldquo;Trusted by businesses in 90+ countries&rdquo;</i>.</p>
+  <p><b>Closed:</b> the rewrite adds <i>&ldquo;How to move your WhatsApp number without downtime&rdquo;</i>, a six-step migration
+  sequence, and a &ldquo;stay on AiSensy&rdquo; row in the closing table. <span class="chip chip--done">FIXED</span></p>
+  <p><b>Still open:</b> no customer proof on the page. whatchimp has named success stories and a countries claim; you have neither
+  on this URL. <b>Action:</b> add one short case block with a real named store and a real number, linked to
+  <code>/customers</code>. <span class="chip chip--p2">P2</span></p>
+  <p><b>Still open:</b> plan tier names. whatchimp runs H3s called <i>Basic</i>, <i>Premium</i>, <i>Unlimited</i>, which capture
+  &ldquo;aisensy basic plan&rdquo; style queries. Your pricing lives on <code>/pricing</code> and is not restated here.
+  <span class="chip chip--p3">P3</span></p>
+
+  <h3>5.2 &nbsp;eazybe.com &mdash; owns the explicit pros and cons format</h3>
+  <p>It runs literal <i>Pros:</i> and <i>Cons:</i> H3s, uses the keyword 23 times at 1.7% density, and carries a set of sibling
+  comparison headings in the same page: <i>&ldquo;Eazybe vs Kommo&rdquo;</i>, <i>&ldquo;WA Web Plus Alternative&rdquo;</i>,
+  <i>&ldquo;Best WhatChimp Alternative&rdquo;</i>. It also has a genuinely differentiated angle in
+  <i>&ldquo;Use Eazybe And AiSensy Together With WhatsApp Coexistence&rdquo;</i>.</p>
+  <p><b>Still open:</b> a scannable pros and cons block. Your page argues in prose, which reads better but is harder for an AI answer
+  to lift. <b>Action:</b> add an <i>AiSensy: what it does well / where it runs out</i> two-column block near the top.
+  <span class="chip chip--p2">P2</span></p>
+  <p><b>Still open:</b> the coexistence angle. &ldquo;Can I run two tools on one number&rdquo; is a real question with a real answer
+  (one number, one platform at a time), and it is currently only inside an FAQ. <span class="chip chip--p3">P3</span></p>
+
+  <h3>5.3 &nbsp;m.aisensy.com &mdash; the incumbent, and it is beatable</h3>
+  <p>AiSensy&rsquo;s own page is 3,765 words and 31 H3s, which is why it ranks for its own brand query. But it scored 76, the lowest
+  of the four, with 13 warnings and 3 failures: no keyword in the title, no keyword in the URL, no keyword in the H1, no keyword
+  anywhere on the page, and a Flesch score of 37, which is the hardest to read of the four.</p>
+  <p><b>Read:</b> it ranks on brand authority and length, not on optimisation. That is the one competitor whose on-page position you
+  can realistically take, and depth was the only thing standing in the way.</p>
+  <p><b>Still open:</b> it carries <i>&ldquo;Is Interakt Still the Right Fit?&rdquo;</i> and a numbered <i>&ldquo;2. Twilio&rdquo;</i>
+  section, which tells you AiSensy itself expects this audience to be comparing those two names. Both are now covered on your page.
+  <span class="chip chip--done">FIXED</span></p>
+
+  <h3>5.4 &nbsp;Where you already lead, and should keep leading</h3>
+  <ul>
+    <li><b>Readability 65</b> against 59, 52 and 37. The easiest page to read in a category where everyone writes like a brochure.</li>
+    <li><b>68&nbsp;KB HTML</b> against 422, 1,028 and 206&nbsp;KB. Six times lighter than the nearest competitor.</li>
+    <li><b>Freshness.</b> Updated 2026-10-21; whatchimp has not been touched since 2026-01-06.</li>
+    <li><b>Sourcing.</b> 22 external links to primary documentation, with a build check that fails on an unregistered source. No
+      competitor here does that, and it is the single strongest E-E-A-T signal on the page.</li>
+    <li><b>Zero broken links, zero generic anchors, zero redirecting internal links</b> across 87 links.</li>
+  </ul>
+</section>
+
+<!-- ───────────────────────── FALSE POSITIVES ───────────────────────── -->
+<section class="page" id="falsepos">
+  <h2>06 &nbsp;Audit warnings that are not real problems</h2>
+  <p class="lead">Acting on these would waste effort or actively make the page worse. Each was checked against the live DOM
+  rather than taken from the report.</p>
+
+  <table>
+    <thead><tr><th style="width:34mm">Audit says</th><th>What is actually true</th><th style="width:34mm">Verdict</th></tr></thead>
+    <tbody>
+      <tr>
+        <td><b>&ldquo;Competitors use Article. You do not.&rdquo;</b></td>
+        <td>The rendered page emits <code>BlogPosting</code>, which is a subtype of <code>Article</code> in the schema.org
+          hierarchy and is the more specific, more correct type for a blog post. Verified in the live DOM alongside
+          <code>Blog</code>, <code>WebPage</code>, <code>ItemList</code>, <code>SoftwareApplication</code>, <code>FAQPage</code>
+          and <code>BreadcrumbList</code>. The audit appears to string-match the literal type name.</td>
+        <td><b>False positive.</b> Do not add a second <code>Article</code> block; duplicating the type would be worse than
+          leaving it.</td>
+      </tr>
+      <tr>
+        <td><b>&ldquo;7 images with empty alt=&quot;&quot;&rdquo;</b></td>
+        <td>Those seven are the site logo, the brand mark and five AI-assistant icons inside the &ldquo;Summarize this post
+          with&hellip;&rdquo; row. Each icon sits inside an <code>&lt;a&gt;</code> that already carries
+          <code>aria-label="Summarize this post with ChatGPT"</code>, and the image carries <code>aria-hidden</code>. Adding alt
+          text would make a screen reader announce the label twice. The audit&rsquo;s own note says empty alt is correct for
+          decoration.</td>
+        <td><b>Correct as built.</b> No change.</td>
+      </tr>
+      <tr>
+        <td><b>&ldquo;First image in HTML lazy loaded: No&rdquo;</b></td>
+        <td>This is an informational item and the current state is the desired one. Not lazy-loading the first image is what you
+          want when it is the LCP element.</td>
+        <td><b>Already right.</b></td>
+      </tr>
+      <tr>
+        <td><b>&ldquo;LocalBusiness schema: Not found&rdquo;</b><br>
+            <b>&ldquo;Map link or embed: Not found&rdquo;</b><br>
+            <b>&ldquo;Reviews markup: Not found&rdquo;</b></td>
+        <td>These are local-SEO checks applied to a national SaaS comparison article. A blog post is not a storefront, and
+          <code>LocalBusiness</code> on it would be inaccurate markup. Review markup must only describe genuine reviews shown on
+          the page, and there are none here.</td>
+        <td><b>Not applicable.</b> Ignore all three on this URL.</td>
+      </tr>
+      <tr>
+        <td><b>&ldquo;Text to HTML ratio: 13.8%&rdquo;</b></td>
+        <td>Passed, and the document is 68&nbsp;KB, the lightest of the four pages by a factor of three. A low ratio on a small
+          document is a React shell, not bloat.</td>
+        <td><b>Passed. Ignore.</b></td>
+      </tr>
+      <tr>
+        <td><b>&ldquo;AI training crawlers: Not blocked&rdquo;</b></td>
+        <td>Informational, and the audit states plainly that blocking them does not affect Google rankings. Leaving GPTBot and
+          ClaudeBot unblocked is what gets you cited in AI answers.</td>
+        <td><b>Deliberate. Keep.</b></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="note">
+    <b>Why this section exists.</b> An audit tool reports what it can measure, and five of the twelve items it raised on this URL
+    were either already correct or do not apply to a blog post. Working through a warning list top to bottom is how teams spend a
+    week adding <code>LocalBusiness</code> schema to an article and move nothing.
+  </div>
+</section>
+
+<!-- ───────────────────────── PLAN ───────────────────────── -->
+<section class="page" id="plan">
+  <h2>07 &nbsp;Prioritised action plan</h2>
+  <p class="lead">Ranked by expected impact against effort, with confidence stated. Items marked FIXED shipped with this report
+  and are listed so the record is complete.</p>
+
+  <h3>Immediate &mdash; done</h3>
+  <table class="avoid">
+    <thead><tr><th style="width:9mm">#</th><th>Action</th><th style="width:20mm">Effort</th><th style="width:22mm">Confidence</th><th style="width:20mm">Status</th></tr></thead>
+    <tbody>
+      <tr><td>1</td><td>Rewrite the meta description to lead with the keyword and fit under 920&nbsp;px</td><td>10 min</td><td>High</td><td><span class="chip chip--done">FIXED</span></td></tr>
+      <tr><td>2</td><td>Put the keyword in the first sentence of the body</td><td>10 min</td><td>High</td><td><span class="chip chip--done">FIXED</span></td></tr>
+      <tr><td>3</td><td>Add keyword-bearing H2s and expand from 8 to 19 sections</td><td>&mdash;</td><td>High</td><td><span class="chip chip--done">FIXED</span></td></tr>
+      <tr><td>4</td><td>Expand body from 1,108 to roughly 4,150 words, covering five named competitors</td><td>1 day</td><td>High</td><td><span class="chip chip--done">FIXED</span></td></tr>
+      <tr><td>5</td><td>Add sections for &ldquo;free&rdquo;, community questions, and number migration</td><td>&mdash;</td><td>High</td><td><span class="chip chip--done">FIXED</span></td></tr>
+      <tr><td>6</td><td>Use the keyword as anchor text on at least one internal link</td><td>5 min</td><td>Medium</td><td><span class="chip chip--done">FIXED</span></td></tr>
+      <tr><td>7</td><td>Work the nine missing competitor phrases into the copy in context</td><td>&mdash;</td><td>Medium</td><td><span class="chip chip--done">FIXED</span></td></tr>
+    </tbody>
+  </table>
+
+  <h3>High priority &mdash; next 7 days</h3>
+  <table class="avoid">
+    <thead><tr><th style="width:9mm">#</th><th>Action</th><th style="width:20mm">Effort</th><th style="width:22mm">Confidence</th><th style="width:20mm">Priority</th></tr></thead>
+    <tbody>
+      <tr><td>8</td><td>Request indexing for the URL in Search Console so the rewrite is recrawled rather than waiting</td><td>2 min</td><td>High</td><td><span class="chip chip--p1">P1</span></td></tr>
+      <tr><td>9</td><td>Read the WATI, Gallabox and Twilio pricing pages, register them in <code>sources.ts</code>, and fill the three empty price cells</td><td>45 min</td><td>High</td><td><span class="chip chip--p1">P1</span></td></tr>
+      <tr><td>10</td><td>Measure real TTFB from field data before touching anything about the 993&nbsp;ms figure</td><td>30 min</td><td>Medium</td><td><span class="chip chip--p2">P2</span></td></tr>
+      <tr><td>11</td><td>Add a scannable <i>what AiSensy does well / where it runs out</i> block, matching eazybe&rsquo;s pros and cons format</td><td>1 hr</td><td>Medium</td><td><span class="chip chip--p2">P2</span></td></tr>
+      <tr><td>12</td><td>Add one named customer proof block with a real number, linked to the customers page</td><td>2 hr</td><td>Medium</td><td><span class="chip chip--p2">P2</span></td></tr>
+    </tbody>
+  </table>
+
+  <h3>Competitive &mdash; next 30 days</h3>
+  <table class="avoid">
+    <thead><tr><th style="width:9mm">#</th><th>Action</th><th style="width:20mm">Effort</th><th style="width:22mm">Confidence</th><th style="width:20mm">Priority</th></tr></thead>
+    <tbody>
+      <tr><td>13</td><td>Add one original screenshot per platform section, WebP under 100&nbsp;KB, alt text naming the platform</td><td>half day</td><td>Medium</td><td><span class="chip chip--p2">P2</span></td></tr>
+      <tr><td>14</td><td>Convert the six remaining JPG/PNG images on the page to WebP</td><td>1 hr</td><td>Low</td><td><span class="chip chip--p3">P3</span></td></tr>
+      <tr><td>15</td><td>Build the two sibling pages this one should link to and receive links from: a Gallabox alternative post and a Twilio WhatsApp alternative post</td><td>2 days</td><td>Medium</td><td><span class="chip chip--p2">P2</span></td></tr>
+      <tr><td>16</td><td>Add plan-tier sub-headings so &ldquo;aisensy basic plan&rdquo; style queries have a target</td><td>1 hr</td><td>Low</td><td><span class="chip chip--p3">P3</span></td></tr>
+      <tr><td>17</td><td>Earn referring domains to this URL. At DR 13 against these competitors this is the ceiling, and no on-page work substitutes for it</td><td>ongoing</td><td>High</td><td><span class="chip chip--p1">P1</span></td></tr>
+    </tbody>
+  </table>
+
+  <h3>Ongoing</h3>
+  <ul>
+    <li>Re-read the AiSensy and Interakt pricing pages every quarter and update the footnote date. Those two numbers are the page&rsquo;s strongest asset and a stale price destroys the argument.</li>
+    <li>Re-run the on-page audit after each substantive edit and compare against the baseline in section 02.</li>
+    <li>Review the page against the live SERP every 90 days: if a new competitor enters the top five, add them to the comparison table.</li>
+  </ul>
+</section>
+
+<!-- ───────────────────────── IMPL ───────────────────────── -->
+<section class="page" id="impl">
+  <h2>08 &nbsp;Step-by-step implementation guidance</h2>
+
+  <h3>For the SEO specialist</h3>
+  <h4>Request a recrawl, correctly</h4>
+  <ol>
+    <li>Search Console, URL Inspection, paste the full URL of the post.</li>
+    <li>Confirm the <i>Coverage</i> panel says the URL is on Google and the canonical Google chose matches your declared canonical. A mismatch here outranks everything else in this report.</li>
+    <li><i>Test live URL</i>, then <i>View tested page</i> &rarr; <i>HTML</i>, and confirm the new H2s and the new meta description are present in the rendered HTML. If they are not, the prerender did not pick up the change and nothing else matters.</li>
+    <li><i>Request indexing</i>. Once. Repeated requests do not speed anything up.</li>
+  </ol>
+
+  <h4>Fill the three empty price cells</h4>
+  <ol>
+    <li>Open each pricing page and record, with the date: the entry plan name and price, whether messaging is extra, and whether the vendor states a markup on Meta rates.</li>
+    <li>Add each to <code>src/data/sources.ts</code>. The host is derived automatically into <code>ALLOWED_EXTERNAL_HOSTS</code>, so no second edit is needed.</li>
+    <li>Fill the cells in the six-platform table and link each figure to its source, exactly as the AiSensy and Interakt rows do.</li>
+    <li>Amend the footnote sentence that currently explains why those three carry no price.</li>
+    <li>Run <code>npm run check:blog</code>. It fails on an unregistered host and on em dashes, so this step is self-verifying.</li>
+  </ol>
+
+  <h3>For the developer</h3>
+  <h4>Verify the prerendered output, not the SPA</h4>
+  <p>Schema and meta are injected by Helmet and captured by <code>scripts/prerender-marketing.mjs</code>. Any change to post data
+  must be verified in the prerendered file, because that is what a crawler reads:</p>
+  <pre><span class="c"># build, prerender, then grep the actual artefact</span>
+npm run build:static
+grep -o '"@type":"BlogPosting"' dist/blog/aisensy-alternative-shopify-india/index.html
+grep -o '&lt;meta name="description"[^&gt;]*&gt;'  dist/blog/aisensy-alternative-shopify-india/index.html</pre>
+
+  <h4>Confirm the TTFB story before changing hosting</h4>
+  <pre>for i in 1 2 3; do
+  curl -o /dev/null -s -w "ttfb:%{time_starttransfer}s total:%{time_total}s\n" \
+    https://topedgeai.com/blog/aisensy-alternative-shopify-india
+done</pre>
+  <p>Read runs two and three. If TTFB is under about 200&nbsp;ms warm, the 993&nbsp;ms figure was the audit server&rsquo;s distance
+  from the edge and there is no work to do. The existing <code>Netlify-CDN-Cache-Control</code> rule in <code>netlify.toml</code>
+  is already correct and should not be changed speculatively.</p>
+
+  <h4>Watch the encoding when editing post data</h4>
+  <p>Post bodies contain <code>₹</code> and <code>&rsquo;</code>. Any script that rewrites <code>src/data/blogPostsQ4.ts</code> must
+  read and write UTF-8 explicitly. A round trip through a latin-1 decode turns <code>₹</code> into <code>&acirc;&sbquo;&sup1;</code>
+  in the rendered headings and the table of contents. This happened once during this work and was caught in a visual check, not by
+  any build gate, so treat a visual pass on the rendered page as part of the definition of done.</p>
+
+  <h4>Guard the regression</h4>
+  <p>Consider extending <code>scripts/check-blog-links.mjs</code> with two assertions that would have caught the original defects
+  automatically:</p>
+  <ul>
+    <li>Every post's <code>description</code> is between 110 and 155 characters and contains the post&rsquo;s primary keyword.</li>
+    <li>No post body contains a mojibake sequence (<code>/[ÂÃâ][\u0080-¿]/</code>).</li>
+  </ul>
+</section>
+
+<!-- ───────────────────────── MEASURE ───────────────────────── -->
+<section class="page" id="measure">
+  <h2>09 &nbsp;Measurement plan</h2>
+  <p class="lead">Measure the page, not the site. Filter every report below to the exact URL, or the signal disappears into
+  site-wide noise.</p>
+
+  <table>
+    <thead><tr><th style="width:34mm">What to measure</th><th style="width:34mm">Where</th><th style="width:28mm">Baseline to take now</th><th>What good looks like</th></tr></thead>
+    <tbody>
+      <tr><td><b>Impressions</b> for the URL</td><td>Search Console &rarr; Performance &rarr; Pages, filtered to the URL</td><td>Trailing 28 days, before the rewrite is recrawled</td><td>Rising first. Depth changes which queries you appear for before it changes position.</td></tr>
+      <tr><td><b>Query count</b> for the URL</td><td>Same report, Queries tab with the page filter applied</td><td>Number of distinct queries in 28 days</td><td>The clearest early signal. New sections should surface <i>free</i>, <i>interakt</i>, <i>wati</i>, <i>gallabox</i>, <i>twilio</i> queries that did not exist before.</td></tr>
+      <tr><td><b>CTR</b> for the URL</td><td>Same report</td><td>28-day CTR at current average position</td><td>Up, from the meta description fix alone. Compare at a similar average position or the comparison is meaningless.</td></tr>
+      <tr><td><b>Average position</b> for &ldquo;aisensy alternative&rdquo; and variants</td><td>Search Console, query filter contains &ldquo;aisensy&rdquo;</td><td>Per-query position today</td><td>Slowest metric to move. Judge at 8 to 12 weeks, not 2.</td></tr>
+      <tr><td><b>Indexed state</b></td><td>URL Inspection</td><td>Last crawl date and Google-selected canonical</td><td>Crawl date after the deploy, canonical matching yours.</td></tr>
+      <tr><td><b>Core Web Vitals</b></td><td>Search Console &rarr; Core Web Vitals, and PSI field data</td><td><b>No baseline exists.</b> Take one now.</td><td>LCP, INP and CLS all in the green band. The audit never measured these.</td></tr>
+      <tr><td><b>On-page re-audit</b></td><td>The same 64-check tool</td><td>Section 02 of this report</td><td>Word count, H2 count and the four keyword-placement cells all green.</td></tr>
+      <tr><td><b>Assisted conversions</b></td><td>GA4, landing page = this URL</td><td>Trial signups attributed to the URL, 28 days</td><td>The only metric that pays for the work. Impressions are a proxy for it, not a substitute.</td></tr>
+    </tbody>
+  </table>
+
+  <h3>Review cadence</h3>
+  <ul>
+    <li><b>Day 1 to 3.</b> Confirm the recrawl happened and the new content is in Google&rsquo;s rendered HTML. Nothing else is measurable yet.</li>
+    <li><b>Week 2.</b> Query count and impressions. Expect movement here first, and expect position to be flat or briefly worse while Google re-evaluates the page.</li>
+    <li><b>Week 4.</b> CTR against the pre-change baseline at comparable position. This is when the meta description fix should be readable.</li>
+    <li><b>Week 8 to 12.</b> Position for the head term. If depth was the constraint, this is when it shows. If nothing has moved by week 12 and impressions are up, the constraint is authority, not content, and action 17 is the only remaining lever.</li>
+  </ul>
+
+  <div class="warnbox">
+    <b>What would falsify this plan.</b> If impressions and query count do not rise within four weeks of a confirmed recrawl, the
+    content hypothesis was wrong and the page has a relevance or authority problem that more words will not solve. At that point,
+    stop editing the page and look at referring domains and at whether the SERP is actually dominated by listicles rather than
+    vendor pages.
+  </div>
+</section>
+
+<!-- ───────────────────────── FIRST 5 ───────────────────────── -->
+<section class="page" id="first5">
+  <h2>10 &nbsp;The first five actions</h2>
+  <p class="lead">Everything in section 07 marked FIXED has shipped. These five are what to do next, in this order.</p>
+
+  <div class="issue issue--p1 avoid">
+    <div class="issue__head"><div class="issue__title">1 &nbsp;Take the baseline before Google recrawls</div><div class="issue__chips"><span class="chip chip--p1">Today</span></div></div>
+    <p class="kv">Export the Search Console Performance report for this URL, 28 days, with queries. Save it. Once the rewrite is
+    recrawled you cannot recover the before picture, and without it none of section 09 can be answered. <b>Effort: 15 minutes.</b></p>
+  </div>
+
+  <div class="issue issue--p1 avoid">
+    <div class="issue__head"><div class="issue__title">2 &nbsp;Deploy, then verify the prerendered HTML, then request indexing</div><div class="issue__chips"><span class="chip chip--p1">Today</span></div></div>
+    <p class="kv">In that order. Use <i>Test live URL</i> &rarr; <i>View tested page</i> &rarr; <i>HTML</i> and confirm the new H2s
+    and the 123-character description are in the HTML Google renders. Only then request indexing. <b>Effort: 20 minutes.</b></p>
+  </div>
+
+  <div class="issue issue--p1 avoid">
+    <div class="issue__head"><div class="issue__title">3 &nbsp;Fill the three empty price cells</div><div class="issue__chips"><span class="chip chip--p1">This week</span></div></div>
+    <p class="kv">Read wati.io, gallabox.com and twilio.com pricing, register all three in <code>src/data/sources.ts</code> with the
+    date, and complete the comparison table. A six-platform table with three blanks is the weakest thing on the page right now, and
+    it is the first thing a reader comparing vendors will look at. <b>Effort: 45 minutes.</b></p>
+  </div>
+
+  <div class="issue issue--p2 avoid">
+    <div class="issue__head"><div class="issue__title">4 &nbsp;Measure TTFB from field data before changing any hosting</div><div class="issue__chips"><span class="chip chip--p2">This week</span></div></div>
+    <p class="kv">The 993&nbsp;ms figure is one synthetic sample of a 68&nbsp;KB brotli-compressed document behind a CDN that is
+    already configured correctly. Confirm it is real before anyone touches infrastructure. It is the single most likely item in this
+    report to waste a developer day on a problem that does not exist. <b>Effort: 30 minutes.</b></p>
+  </div>
+
+  <div class="issue issue--p1 avoid">
+    <div class="issue__head"><div class="issue__title">5 &nbsp;Start earning links to this URL</div><div class="issue__chips"><span class="chip chip--p1">Ongoing</span></div></div>
+    <p class="kv">At DR 13 against these competitors, on-page work removes the reasons not to rank but does not supply the authority
+    to rank. The ₹0.145 against ₹0.1150 markup calculation is genuinely original, checkable and quotable, and it is the only asset on
+    this page another site would cite. Pitch that number, not the page. <b>Effort: ongoing, and the highest ceiling of anything here.</b></p>
+  </div>
+
+  <h3>Closing note on expectations</h3>
+  <p>The on-page defects in this report were real and are now fixed, and the content gap that caused them was the largest of the
+  four pages tested. None of that guarantees a position change. What it does guarantee is that the page can now be understood as a
+  complete answer to &ldquo;aisensy alternative&rdquo;, which it could not before, and that the remaining variables are authority and
+  intent match rather than anything on the page itself. Measure against section 09, give it eight weeks, and if impressions rise
+  while position does not, the answer is links.</p>
+</section>
+
+</body>
+</html>

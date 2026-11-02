@@ -42,9 +42,12 @@ export default function JourneyHero({
   trust,
   image,
   imageAlt,
+  imageWidth = 1200,
+  imageHeight = 900,
   children,
 }: {
-  eyebrow: string;
+  /** Small caps label over the headline. Omit it where the headline is enough. */
+  eyebrow?: string;
   title: string;
   /** Phrase inside `title` to highlight in violet, as on the blog index. */
   accent?: string;
@@ -54,13 +57,18 @@ export default function JourneyHero({
   trust?: boolean;
   image?: string;
   imageAlt?: string;
+  /* The intrinsic size, so the browser reserves the right box before the
+     image lands. The default is the 4:3 of the product compositions; pass the
+     real numbers for anything else or the hero jumps on load. */
+  imageWidth?: number;
+  imageHeight?: number;
   /** Used instead of a single image, e.g. the index thumbnail strip. */
   children?: ReactNode;
 }) {
   return (
     <header className="mkt-jh">
       <div className="mkt-jh__inner">
-        <p className="mkt-jh__eyebrow">{eyebrow}</p>
+        {eyebrow && <p className="mkt-jh__eyebrow">{eyebrow}</p>}
         <h1 className="mkt-jh__title">{renderAccent(title, accent)}</h1>
         <p className="mkt-jh__sub">{subtitle}</p>
         {actions && <div className="mkt-jh__actions">{actions}</div>}
@@ -76,8 +84,8 @@ export default function JourneyHero({
           <img
             src={image}
             alt={imageAlt ?? ''}
-            width={1200}
-            height={900}
+            width={imageWidth}
+            height={imageHeight}
             loading="eager"
             decoding="async"
           />
