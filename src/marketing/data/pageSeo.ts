@@ -38,9 +38,25 @@ export type PageSeoEntry = {
   noSuffix?: boolean;
 };
 
+/*
+ * NOTE (2026-11-02): the per-feature entries below are NOT what renders.
+ * /features/* pages take their title and description from `seoTitle` /
+ * `seoDescription` in productPages.ts; these keys are dead config kept in
+ * sync by hand. Verified by loading /features/chat-rules, which served
+ * productPages.ts's title while this file said something else. Edit
+ * productPages.ts for those pages. `home`, `pricing` and the standalone
+ * pages in this file are live (src/pages/Home.tsx reads PAGE_SEO.home).
+ */
 export const PAGE_SEO = {
   home: {
-    title: 'WhatsApp Automation for Shopify India | COD & Carts | TopEdge AI',
+    // Re-led on the Shopify ecommerce job rather than the channel. GSC, 3 months:
+    // queries shaped "shopify <thing> app" sit at position 50-70 (abandoned cart
+    // recovery shopify app 64.8, best shopify abandoned cart app 62, shopify
+    // whatsapp app 70) while queries shaped "whatsapp <thing>" sit at 4-25.
+    // Sitewide the copy says WhatsApp 3,272 times against Shopify 2,415, so Google
+    // reads this as a messaging tool, not a Shopify app. WhatsApp stays in the
+    // title because it is the channel and a real qualifier, just not the noun.
+    title: 'Shopify Cart Recovery & COD App for India | TopEdge AI',
     description:
       'Automate Shopify WhatsApp cart recovery and COD confirmation to prepaid in India. 0% Meta markup, flat INR plans from ₹1,999/mo, 14-day free trial.',
     keywords:
@@ -151,6 +167,9 @@ export const FEATURE_SEO: Record<string, { title: string; description: string; k
       'WhatsApp journey builder Shopify, abandoned cart recovery WhatsApp India, COD confirmation journey, Meta template approval automation, Shopify order WhatsApp flows',
   },
   'live-chat': {
+    // Dead config: /features/live-chat 301s to /features (public/_redirects:73)
+    // and is not in the sitemap. Left as-is rather than re-framed, because
+    // re-titling a retired route would imply it still exists.
     title: 'WhatsApp Live Chat for Shopify | Shared Inbox & Orders',
     description:
       'Unified WhatsApp and Instagram Live Chat for Shopify: Customer 360 shows order #, COD status, LTV, and cart history so agents recover without leaving the thread.',
@@ -158,7 +177,7 @@ export const FEATURE_SEO: Record<string, { title: string; description: string; k
       'WhatsApp Live Chat Shopify, shared inbox WhatsApp Instagram, ecommerce customer support WhatsApp India, order context inbox Shopify',
   },
   'flow-builder': {
-    title: 'WhatsApp Flow Builder for Shopify | AI Chatbot Drafts',
+    title: 'Shopify Automation Flow Builder on WhatsApp | TopEdge AI',
     description:
       'Describe your niche and goals; TopEdge AI drafts a WhatsApp flow you edit node-by-node: menus, catalog sends, COD FAQs, conditions, and Live Chat handoff.',
     keywords:

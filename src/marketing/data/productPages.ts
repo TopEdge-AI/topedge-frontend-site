@@ -168,7 +168,7 @@ export const PRODUCT_PAGES: Record<ProductPageId, ProductPage> = {
           'Anything where a wrong answer costs money. Exchange steps, address updates and refund paths should be deterministic flows; open-ended catalog questions are where AI earns its place.',
       },
     ],
-    seoTitle: 'WhatsApp Flow Builder for Shopify India | TopEdge AI',
+    seoTitle: 'Shopify Automation Flows on WhatsApp | TopEdge AI',
     seoDescription:
       'Shopify WhatsApp flow builder: OAuth, order webhooks, Shopify tools on the canvas, and Live Chat handoff with order context.',
     keywords:
@@ -322,7 +322,7 @@ export const PRODUCT_PAGES: Record<ProductPageId, ProductPage> = {
           'Only if the shopper actively opts in and you log it. Keep the box unticked by default, record what was agreed and when, and keep that record, because Meta judges your quality rating on who complains.',
       },
     ],
-    seoTitle: 'WhatsApp Opt-in Tools for Shopify India | TopEdge AI',
+    seoTitle: 'Shopify Opt-in Tools for WhatsApp | Popup & Spin Wheel',
     seoDescription:
       'Capture WhatsApp numbers on Shopify with popup, spin wheel, and chat widget, then message only consented subscribers.',
     keywords:
@@ -460,7 +460,7 @@ export const PRODUCT_PAGES: Record<ProductPageId, ProductPage> = {
           'No. Anything not APPROVED is blocked from sending rather than queued, because a rejected template that goes out anyway is how a WhatsApp number loses its quality rating.',
       },
     ],
-    seoTitle: 'WhatsApp Campaigns for Shopify India | Meta-Safe Sends',
+    seoTitle: 'Shopify Campaigns on WhatsApp India | Meta-Safe Sends',
     seoDescription:
       'WhatsApp audience campaigns for Shopify India D2C: behavior segments, Meta-approved templates, frequency capping, and net-of-Meta ₹ reporting.',
     keywords:
@@ -612,7 +612,7 @@ export const PRODUCT_PAGES: Record<ProductPageId, ProductPage> = {
           'They merge into one profile, with both numbers, past orders and conversation history on a single timeline. That is what stops the same person getting the same campaign twice.',
       },
     ],
-    seoTitle: 'WhatsApp Audience CRM for Shopify India | Segments',
+    seoTitle: 'Shopify Customer CRM for WhatsApp India | Segments',
     seoDescription:
       'WhatsApp Audience CRM for Shopify India D2C: unified contact timeline, purchase-based lead scoring, in-product segments, and unlimited profiles on every plan.',
     keywords:
@@ -764,7 +764,7 @@ export const PRODUCT_PAGES: Record<ProductPageId, ProductPage> = {
           'No. TopEdge gates live sends on APPROVED templates so drafts and rejected copy cannot go out and damage quality rating.',
       },
     ],
-    seoTitle: 'WhatsApp Cart Recovery & COD Journeys | Shopify India',
+    seoTitle: 'Shopify Abandoned Cart & COD Journey Builder | TopEdge',
     seoDescription:
       'Build WhatsApp journeys for abandoned carts and COD confirmation in a visual editor. Meta approval gating, recovered revenue tracked in ₹. Try free.',
     keywords:
@@ -1070,7 +1070,7 @@ export const PRODUCT_PAGES: Record<ProductPageId, ProductPage> = {
           'You do, directly to OpenAI, Anthropic or Google, because you connect your own key. There is no per-message AI charge from us on any plan, and the estimated cost is roughly ₹0.10 to ₹0.30 per AI reply depending on the model.',
       },
     ],
-    seoTitle: 'WhatsApp AI for Shopify India (BYOK) | TopEdge AI',
+    seoTitle: 'Shopify AI Replies on WhatsApp (BYOK) | TopEdge AI',
     seoDescription:
       'Bring your own OpenAI or Claude key. Ground WhatsApp replies in store knowledge, route with Intent Detect, and pause AI on takeover.',
     keywords:
@@ -1202,7 +1202,7 @@ export const PRODUCT_PAGES: Record<ProductPageId, ProductPage> = {
           'Yes. Templates belong to your WhatsApp Business Account, not to the platform that submitted them. Keep the Meta Business Account in your own name and the library follows you.',
       },
     ],
-    seoTitle: 'Meta WhatsApp Templates for Shopify India | Approvals',
+    seoTitle: 'Shopify WhatsApp Template Approvals | Meta Manager',
     seoDescription:
       'Submit, track and approve Meta WhatsApp templates for Shopify India: utility and marketing categories, cart and COD Journey blueprints, catalog and wa.me QR.',
     keywords:
@@ -1358,7 +1358,7 @@ export const PRODUCT_PAGES: Record<ProductPageId, ProductPage> = {
           'No. Takeover pauses automation and AI on that thread until it is released, so a customer never gets a bot reply in the middle of a human conversation.',
       },
     ],
-    seoTitle: 'WhatsApp Chat Rules for Shopify India | Auto-Route',
+    seoTitle: 'Shopify Chat Routing on WhatsApp | Tag & Assign',
     seoDescription:
       'Route WhatsApp chats for Shopify India teams: keyword and intent rules for COD, refunds and VIP assignment, with Live Chat takeover that pauses the AI.',
     keywords:
@@ -1809,7 +1809,7 @@ export const PRODUCT_PAGES: Record<ProductPageId, ProductPage> = {
           'It falls through to AI Brain if AI is on, or to Live Chat if it is not. Nothing is answered by guessing, and nothing is left unanswered.',
       },
     ],
-    seoTitle: 'WhatsApp Intent Detection for Shopify India | TopEdge AI',
+    seoTitle: 'Shopify Intent Detection on WhatsApp | TopEdge AI',
     seoDescription:
       'Route shipping, returns, COD, and handoff on WhatsApp before you spend AI tokens. Works with AI Brain and Live Chat.',
     keywords:

@@ -2081,9 +2081,8 @@ export const blogPosts: BlogPost[] = [
 <p class="mkt-blog-footnote">Kanal tiers re-checked on getkanal.com/pricing on 2 November 2026 and unchanged since the September reading. Its Shopify App Store listing has shown the same tiers in USD, so currency display differs by surface; confirm which one you are buying from.</p>
 
 <h2>When should you stay on Kanal?</h2>
-<p>Four cases where switching away would be the wrong call, and the first one is the one we are weakest on.</p>
+<p>Three cases where switching away would be the wrong call.</p>
 <ul>
-<li><strong>They have the reviews and we do not.</strong> Verified on 2 November 2026: Kanal's Shopify App Store listing shows <strong>5.0 stars from 139 reviews</strong>, with a free plan available. That is a real signal from real merchants and it is the single strongest argument for staying put. We are not going to pretend otherwise, and you should weigh it.</li>
 <li><strong>Klaviyo is your system of record.</strong> Kanal is built to sit beside an ESP rather than replace it. If your flows, segments and attribution already live in Klaviyo, moving WhatsApp away from a native integration costs you more than the plan fee saves.</li>
 <li><strong>You sell into several markets.</strong> The 50&euro; per extra market line reads as a cost until you need it, at which point it is a product that expects multi-market operation. Tools built for India alone generally do not model that at all.</li>
 <li><strong>You want RCS and iMessage.</strong> Kanal's pricing page lists RCS and SMS alongside WhatsApp, with iMessage marked as coming. If that roadmap is why you bought it, a WhatsApp-only tool is a step backwards regardless of currency.</li>
