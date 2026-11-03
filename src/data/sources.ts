@@ -447,6 +447,94 @@ export const SOURCES = {
       'The listing page for Rebuy Personalization Engine states "This app is not currently available on the Shopify App Store. If you have support questions, contact Rebuy directly." No rating, review count, pricing or install button is shown. Rebuy was still being ranked, in one case first, by third-party "best Shopify upsell apps" roundups on this date.',
     verified: '2026-11-03',
   },
+  /*
+   * Vendor home pages. The roundup links each app to the maker's own site
+   * rather than to its App Store listing, because a merchant comparing apps
+   * wants the product's own pricing and documentation. The App Store listings
+   * stay cited in the footnote, since that is where the ratings, review counts
+   * and prices in the copy were actually read.
+   */
+  candyRackSite: {
+    id: 'candyRackSite',
+    url: 'https://www.digismoothie.com/apps/candy-rack',
+    label: 'Candy Rack’s own product page',
+    publisher: 'Digismoothie',
+    claim:
+      'Titled "Candy Rack: The All-in-One Upsell & Cross-sell App for Shopify". Digismoothie’s own page for the app, carrying its feature and pricing detail. Digismoothie is a Prague-based Shopify agency and app maker whose other products include Gift Box, Nada, Payster, PartnerJam and Setpilot.',
+    verified: '2026-11-03',
+  },
+  logbaseSite: {
+    id: 'logbaseSite',
+    url: 'https://www.logbase.io/',
+    label: 'Logbase, the maker of Selleasy',
+    publisher: 'Logbase',
+    claim:
+      'Titled "Shopify Apps to Grow & Scale Your Business - Logbase". The India-based maker of Upsell & Cross Sell by Selleasy.',
+    verified: '2026-11-03',
+  },
+  upsellDotCom: {
+    id: 'upsellDotCom',
+    url: 'https://upsell.com/',
+    label: 'Upsell.com, formerly ReConvert',
+    publisher: 'Upsell.com',
+    claim:
+      'Titled "Upsell & Cross-Sell App for Shopify and Wix | Upsell.com". The vendor behind ReConvert, whose Shopify App Store developer name now reads "Upsell.com ex ReConvert", so the brand is mid-rename.',
+    verified: '2026-11-03',
+  },
+  kachingSite: {
+    id: 'kachingSite',
+    url: 'https://www.kachingappz.com',
+    label: 'Kaching, the maker of Kaching Bundles and CartDrawer',
+    publisher: 'Kaching',
+    claim:
+      'Titled "Kaching: Shopify Apps for Bundles, Upsells and Subscriptions". The vendor behind Kaching Bundles & Upsells, Kaching CartDrawer Cart Upsell and Kaching Post Purchase Upsell.',
+    verified: '2026-11-03',
+  },
+  aftersellSite: {
+    id: 'aftersellSite',
+    url: 'https://www.aftersell.com/',
+    label: 'AfterSell’s own site',
+    publisher: 'Rokt',
+    claim:
+      'Titled "Shopify Post Purchase Upsell App | Aftersell". AfterSell is owned by Rokt, which is the developer name shown on its Shopify App Store listing.',
+    verified: '2026-11-03',
+  },
+  codeBlackBeltSite: {
+    id: 'codeBlackBeltSite',
+    url: 'https://web.codeblackbelt.com/products/frequently-bought-together',
+    label: 'Code Black Belt’s page for Frequently Bought Together',
+    publisher: 'Code Black Belt',
+    claim:
+      'The maker’s own product page for Frequently Bought Together, the Amazon-style product page recommendation app it has run since March 2017.',
+    verified: '2026-11-03',
+  },
+  releasitSite: {
+    id: 'releasitSite',
+    url: 'https://www.releas.it',
+    label: 'Releasit’s own site',
+    publisher: 'Releasit',
+    claim:
+      'The maker of Releasit COD Form & Upsells, a cash on delivery order form for Shopify with upsells, OTP verification and SMS built in.',
+    verified: '2026-11-03',
+  },
+  inCartUpsellSite: {
+    id: 'inCartUpsellSite',
+    url: 'https://www.incartupsell.com/',
+    label: 'In Cart Upsell’s own site',
+    publisher: 'In Cart Upsell',
+    claim:
+      'Titled "In Cart Upsell - Elevate Your Ecommerce Revenue". The maker of ICU In Cart Upsell & Cross Sell, live on the Shopify App Store since December 2015.',
+    verified: '2026-11-03',
+  },
+  shopifyHome: {
+    id: 'shopifyHome',
+    url: 'https://www.shopify.com/',
+    label: 'Shopify',
+    publisher: 'Shopify',
+    claim:
+      'The platform itself, cited as the vendor of its own first-party bundling and product recommendation features.',
+    verified: '2026-11-03',
+  },
   digismoothieWhatsappList: {
     id: 'digismoothieWhatsappList',
     url: 'https://www.digismoothie.com/best-shopify-apps/whatsapp-marketing',

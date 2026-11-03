@@ -1,17 +1,6 @@
 import type { BlogPost } from '../types/blog';
+import { faqHtml, type Faq } from './faqHtml';
 
-type Faq = { question: string; answer: string };
-
-/** FAQs render as open plain HTML (answer engines do not click accordions) and match `faqs` word for word. */
-function faqHtml(faqs: Faq[]): string {
-  const items = faqs
-    .map(
-      (f) =>
-        `<div class="mkt-blog-faq__item"><h3 class="mkt-blog-faq__q">${f.question}</h3><p>${f.answer}</p></div>`,
-    )
-    .join('\n');
-  return `<h2>Frequently asked questions</h2>\n<div class="mkt-blog-faq">\n${items}\n</div>`;
-}
 
 function verdict(html: string): string {
   return `<div class="mkt-blog-verdict">\n<p class="mkt-blog-verdict__label">Quick verdict</p>\n${html}\n</div>`;

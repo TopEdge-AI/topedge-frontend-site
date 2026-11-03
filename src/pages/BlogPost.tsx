@@ -1,4 +1,5 @@
 import { useLayoutEffect, useMemo, useRef } from 'react';
+import { faqAnswerParagraphs } from '../data/faqHtml';
 import { useParams, Link, Navigate } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import MarketingSEO, { canonicalUrlForPath } from '../marketing/components/MarketingSEO';
@@ -342,17 +343,24 @@ export default function BlogPost() {
                   {post.faqs.map((f) => (
                     <div key={f.question} className="mkt-blog-faq__item">
                       <h3 className="mkt-blog-faq__q">{f.question}</h3>
-                      <p>
-                        {splitNumericRanges(f.answer).map((part, i) =>
-                          part.range ? (
-                            <span key={i} className="mkt-nowrap">
-                              {part.text}
-                            </span>
-                          ) : (
-                            part.text
-                          ),
-                        )}
-                      </p>
+                      {/*
+                        Same split as the inlined blocks (src/data/faqHtml.ts),
+                        so a post that carries its FAQs here reads identically
+                        to one that inlines them into `content`.
+                      */}
+                      {faqAnswerParagraphs(f.answer).map((paragraph, p) => (
+                        <p key={p}>
+                          {splitNumericRanges(paragraph).map((part, i) =>
+                            part.range ? (
+                              <span key={i} className="mkt-nowrap">
+                                {part.text}
+                              </span>
+                            ) : (
+                              part.text
+                            ),
+                          )}
+                        </p>
+                      ))}
                     </div>
                   ))}
                 </div>

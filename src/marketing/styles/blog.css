@@ -729,19 +729,66 @@
   color: var(--mkt-muted);
 }
 
+/*
+ * Note box.
+ *
+ * The previous version was a violet left rail over a gradient wrap holding one
+ * long paragraph, which is the house style of every AI-written page on the
+ * internet and the owner called it out as such on 3 Nov 2026. Three things
+ * changed: the accent rail is gone, the gradient is a flat neutral tint, and
+ * the box now expects a short label plus either two short paragraphs or a
+ * list. If what you are about to put in here is one dense paragraph, it is not
+ * a note, it is prose, so leave it in the body.
+ */
 .mkt-blog-prose .mkt-blog-callout {
-  margin: calc(var(--mkt-blog-rhythm) * 1.6) 0;
-  padding: 1.25rem 1.4rem 1.25rem 1.5rem;
-  border: 1px solid #e6e0f7;
-  border-left: 3px solid var(--mkt-violet);
+  margin: calc(var(--mkt-blog-rhythm) * 1.7) 0;
+  padding: 1.2rem 1.35rem 1.25rem;
+  border: 1px solid var(--mkt-border);
   border-radius: 14px;
-  background: linear-gradient(135deg, #faf8ff 0%, #f5f2ff 100%);
-  box-shadow: 0 8px 24px -16px rgba(76, 29, 149, 0.18);
+  background: #fafafc;
+}
+
+.mkt-blog-prose .mkt-blog-callout__label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0 0 0.7rem;
+  font-family: var(--mkt-font);
+  font-size: var(--mkt-blog-small);
+  font-weight: 650;
+  letter-spacing: 0.02em;
+  line-height: 1.4;
+  color: var(--mkt-ink);
+}
+
+.mkt-blog-prose .mkt-blog-callout__label::before {
+  content: '';
+  flex: none;
+  width: 0.4rem;
+  height: 0.4rem;
+  border-radius: 999px;
+  background: var(--mkt-violet);
 }
 
 .mkt-blog-prose .mkt-blog-callout p {
-  margin: 0;
+  margin: 0 0 0.7em;
   font-size: 1em;
+  line-height: 1.7;
+}
+
+.mkt-blog-prose .mkt-blog-callout > *:last-child {
+  margin-bottom: 0;
+}
+
+.mkt-blog-prose .mkt-blog-callout :is(ul, ol) {
+  margin: 0;
+  padding-left: 1.15rem;
+}
+
+.mkt-blog-prose .mkt-blog-callout li {
+  margin: 0.45em 0;
+  padding-left: 0.2em;
+  line-height: 1.65;
 }
 
 .mkt-blog-prose .mkt-blog-verdict {
@@ -1044,48 +1091,93 @@
 }
 
 /* Shared by inline FAQs in post content and the template's fallback FAQ block; always expanded. */
+/*
+ * FAQ list.
+ *
+ * Reworked 3 Nov 2026. The old version packed a six-sentence answer into one
+ * block at 1.65 line-height, which the owner correctly called unreadable. Two
+ * fixes, and they work together: `faqAnswerHtml` in src/data/faqHtml.ts breaks
+ * a long answer into two or three paragraphs, and the spacing below gives
+ * those paragraphs somewhere to breathe. The question now carries a marker so
+ * the eye can find the next one while scrolling.
+ */
 .mkt-blog-faq {
   display: flex;
   flex-direction: column;
-  gap: 0.75rem;
+  gap: 0.9rem;
   margin: 1rem 0 1.5rem;
   font-size: var(--mkt-blog-body-size, 1rem);
   line-height: var(--mkt-blog-body-lh, 1.6);
 }
 
 .mkt-blog-faq :is(.mkt-blog-faq__item, details) {
-  padding: 1rem 1.05rem 1.05rem;
-  border: 1px solid #ebe8f5;
-  border-radius: 12px;
-  background: #fcfbff;
+  padding: 1.15rem 1.2rem 1.25rem;
+  border: 1px solid var(--mkt-border);
+  border-radius: 14px;
+  background: #fff;
 }
 
 @media (min-width: 640px) {
   .mkt-blog-faq :is(.mkt-blog-faq__item, details) {
-    padding: 1.15rem 1.35rem 1.2rem;
+    padding: 1.4rem 1.6rem 1.5rem;
   }
 }
 
 .mkt-blog-faq :is(.mkt-blog-faq__q, summary) {
+  display: flex;
+  align-items: baseline;
+  gap: 0.6rem;
   margin: 0;
   font-family: var(--mkt-font);
-  font-size: 1em;
-  font-weight: 600;
-  line-height: 1.45;
+  font-size: 1.02em;
+  font-weight: 650;
+  line-height: 1.5;
   letter-spacing: -0.01em;
   color: var(--mkt-ink);
   list-style: none;
   pointer-events: none;
+  text-wrap: pretty;
+}
+
+.mkt-blog-faq :is(.mkt-blog-faq__q, summary)::before {
+  content: '';
+  flex: none;
+  width: 0.4rem;
+  height: 0.4rem;
+  margin-top: 0.1em;
+  border-radius: 999px;
+  background: var(--mkt-violet);
+  transform: translateY(-0.15em);
 }
 
 .mkt-blog-faq summary::-webkit-details-marker {
   display: none;
 }
 
+.mkt-blog-faq :is(.mkt-blog-faq__item, details) :is(ul, ol) {
+  margin: 0.75em 0 0;
+  padding-left: 1.2rem;
+}
+
+.mkt-blog-faq :is(.mkt-blog-faq__item, details) li {
+  margin: 0.5em 0;
+  padding-left: 0.2em;
+  line-height: 1.7;
+  color: var(--mkt-body-2);
+}
+
+.mkt-blog-faq :is(.mkt-blog-faq__item, details) li::marker {
+  color: var(--mkt-violet);
+}
+
+.mkt-blog-faq :is(.mkt-blog-faq__item, details) p + p {
+  margin-top: 0.85em;
+}
+
 .mkt-blog-faq :is(.mkt-blog-faq__item, details) > :not(.mkt-blog-faq__q, summary) {
-  margin: 0.6em 0 0;
+  margin: 0.85em 0 0;
   font-size: 1em;
-  line-height: 1.65;
+  line-height: 1.75;
   color: var(--mkt-body-2);
 }
 

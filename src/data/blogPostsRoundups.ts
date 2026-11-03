@@ -1,4 +1,5 @@
 import type { BlogPost } from '../types/blog';
+import { faqHtml, type Faq } from './faqHtml';
 
 /**
  * Category roundups: posts that rank third-party tools or people rather than
@@ -25,18 +26,6 @@ import type { BlogPost } from '../types/blog';
  *      the only version of this format that is worth reading.
  */
 
-type Faq = { question: string; answer: string };
-
-/** FAQs render as open plain HTML (answer engines do not click accordions) and match `faqs` word for word. */
-function faqHtml(faqs: Faq[]): string {
-  const items = faqs
-    .map(
-      (f) =>
-        `<div class="mkt-blog-faq__item"><h3 class="mkt-blog-faq__q">${f.question}</h3><p>${f.answer}</p></div>`,
-    )
-    .join('\n');
-  return `<h2>Frequently asked questions</h2>\n<div class="mkt-blog-faq">\n${items}\n</div>`;
-}
 
 const UPSELL_FAQS: Faq[] = [
   {
@@ -216,70 +205,70 @@ export const blogPostsRoundups: BlogPost[] = [
     itemList: [
       {
         name: 'Candy Rack',
-        url: 'https://apps.shopify.com/candyrack',
+        url: 'https://www.digismoothie.com/apps/candy-rack',
         description:
           'Built for Shopify, 4.9 from 266 reviews. Offers in 8 placements across product page, cart, checkout and post-purchase, with plans banded by monthly order volume rather than by feature, so no stage is paywalled. 60-day money-back guarantee, 8-day free trial.',
         software: { category: 'BusinessApplication', operatingSystem: 'Shopify' },
       },
       {
         name: 'Upsell & Cross Sell — Selleasy',
-        url: 'https://apps.shopify.com/upsell-cross-sell-kit-1',
+        url: 'https://www.logbase.io/',
         description:
           'Logbase, 4.9 from 2,766 reviews. The cheapest competent entry point at ₹854.28 a month with a 30-day trial, covering in-cart, checkout and post-purchase offers.',
         software: { category: 'BusinessApplication', operatingSystem: 'Shopify' },
       },
       {
         name: 'ReConvert Post Purchase Upsell',
-        url: 'https://apps.shopify.com/reconvert',
+        url: 'https://upsell.com/',
         description:
           'Now shown as Upsell.com ex ReConvert, 4.8 from 3,127 reviews, the most-reviewed dedicated upsell app. Thank-you page and post-purchase funnel specialist, 14-day trial.',
         software: { category: 'BusinessApplication', operatingSystem: 'Shopify' },
       },
       {
         name: 'Kaching Bundles App & Upsells',
-        url: 'https://apps.shopify.com/bundle-deals',
+        url: 'https://www.kachingappz.com',
         description:
           '5.0 from 6,592 reviews, the most-reviewed app in Shopify’s own upsell category and absent from most third-party lists. Quantity breaks and volume bundles on the product page.',
         software: { category: 'BusinessApplication', operatingSystem: 'Shopify' },
       },
       {
         name: 'AfterSell Post Purchase Upsell',
-        url: 'https://apps.shopify.com/aftersell',
+        url: 'https://www.aftersell.com/',
         description:
           'Rokt, 4.9 from 1,115 reviews, 30-day trial. Strong one-click post-purchase and checkout offers, but the clearest example of tiers sold by surface: Post-Purchase, Pre-Purchase and Complete are separate prices.',
         software: { category: 'BusinessApplication', operatingSystem: 'Shopify' },
       },
       {
         name: 'Frequently Bought Together',
-        url: 'https://apps.shopify.com/frequently-bought-together',
+        url: 'https://web.codeblackbelt.com/products/frequently-bought-together',
         description:
           'Code Black Belt, 4.9 from 1,213 reviews, live since March 2017. A recommendation engine for the product page rather than a funnel builder, from ₹948.25 a month.',
         software: { category: 'BusinessApplication', operatingSystem: 'Shopify' },
       },
       {
         name: 'Releasit COD Form & Upsells',
-        url: 'https://apps.shopify.com/releasit-cod-order-form',
+        url: 'https://www.releas.it',
         description:
           'Built for Shopify, 4.9 from 2,419 reviews, free to install. A cash on delivery order form with upsells, OTP and SMS built in, and the first app Shopify’s own upsell category recommends.',
         software: { category: 'BusinessApplication', operatingSystem: 'Shopify' },
       },
       {
         name: 'ICU In Cart Upsell & Cross Sell',
-        url: 'https://apps.shopify.com/in-cart-upsell',
+        url: 'https://www.incartupsell.com/',
         description:
           '4.8 from 583 reviews and live since December 2015, the oldest app here. Cart and post-purchase offers with tiers banded by your Shopify plan, 30-day trial.',
         software: { category: 'BusinessApplication', operatingSystem: 'Shopify' },
       },
       {
         name: 'Kaching CartDrawer Cart Upsell',
-        url: 'https://apps.shopify.com/cart-upsell',
+        url: 'https://www.kachingappz.com',
         description:
           '5.0 from 1,590 reviews, launched December 2024. A slide-out cart with upsells and a free shipping bar, for stores whose only gap is the cart drawer.',
         software: { category: 'BusinessApplication', operatingSystem: 'Shopify' },
       },
       {
         name: 'Shopify native product recommendations and Bundles',
-        url: 'https://apps.shopify.com/shopify-bundles',
+        url: 'https://www.shopify.com/',
         description:
           'Free and already in your theme. Worth trying before you pay for anything, with the caveat that Shopify’s own Bundles app is rated 2.9 from 571 reviews while the paid alternatives sit at 4.5 to 5.0.',
       },
@@ -301,7 +290,15 @@ export const blogPostsRoundups: BlogPost[] = [
 
 <p>That is not a conspiracy, it is just how the category funds its content. But it has a measurable consequence, and here is the cleanest example of it. <strong>Rebuy Personalization Engine is no longer on the Shopify App Store.</strong> Its listing page now reads: "This app is not currently available on the Shopify App Store. If you have support questions, contact Rebuy directly." On the same day, a third-party roundup ranking for this exact query still had Rebuy in first place. Several others still list it.</p>
 
-<div class="mkt-blog-callout"><p><strong>Where we stand, so you can discount us accordingly.</strong> TopEdge AI does not sell an upsell app. We make a Shopify app for Indian D2C brands that automates abandoned cart recovery, COD confirmation and order updates over WhatsApp and email, so we have nothing in this category to rank first. We do have commercial relationships with vendors in the wider Shopify app ecosystem. What protects you is not our good character: it is that the ranking criterion is stated before the ranking, every figure links to the page it was read from, and every entry names where it is weaker than a rival. Disagree with the criterion and you can re-sort the list yourself.</p></div>
+<div class="mkt-blog-callout">
+<p class="mkt-blog-callout__label">Where we stand, so you can discount us accordingly</p>
+<p>TopEdge AI does not sell an upsell app. We make a Shopify app for Indian D2C brands that automates cart recovery, COD confirmation and order updates, so we have nothing in this category to rank first. We do have commercial relationships with vendors in the wider Shopify ecosystem.</p>
+<ul>
+<li>The ranking criterion is stated before the ranking, so you can disagree with it.</li>
+<li>Every figure links to the page it was read from, with the date.</li>
+<li>Every entry names where it is weaker than a rival.</li>
+</ul>
+</div>
 
 <h2>The four questions that decide which upsell app you need</h2>
 
@@ -399,7 +396,10 @@ export const blogPostsRoundups: BlogPost[] = [
 <li>Shopify also notes that under high load, post-purchase pages will not be surfaced at all.</li>
 </ul>
 
-<div class="mkt-blog-callout"><p><strong>If a lot of your checkout is Apple Pay or Google Pay, read that list again.</strong> A store where wallets carry half of checkout has just bought a post-purchase app that reaches the other half, and the app's dashboard will not frame it that way. Pull your payment method split from Shopify analytics before you choose where to put the offer.</p></div>
+<div class="mkt-blog-callout">
+<p class="mkt-blog-callout__label">Check your wallet share before you buy</p>
+<p>A store where Apple Pay and Google Pay carry half of checkout has bought a post-purchase app that reaches the other half, and the dashboard will not frame it that way. Pull your payment method split from Shopify analytics first.</p>
+</div>
 
 <h3>Shopify also tells you your analytics will under-report it</h3>
 
@@ -411,19 +411,47 @@ export const blogPostsRoundups: BlogPost[] = [
 
 <p><strong>The criterion, stated before the ranking:</strong> how much of the buying journey one app covers, at what price, with how much evidence that merchants keep it. Reviews break ties. Where an entry is weaker than a rival, we say so in its own section.</p>
 
+<p>The whole shortlist in one table first, so you can skip the write-ups if the answer is already obvious. Ratings, review counts and prices were read on 3 November 2026, and the rupee figures are Shopify's own estimates at its stated rate of 1 INR = 0.0105 USD.</p>
+
+<div class="mkt-blog-table-wrap">
+<table>
+<thead><tr><th>#</th><th>App</th><th>Rating</th><th>Where the offer appears</th><th>Entry tier</th><th>Trial</th></tr></thead>
+<tbody>
+<tr><td><strong>1</strong></td><td><strong>Candy Rack</strong></td><td><strong>4.9</strong> (266)</td><td>Product page, cart, checkout, post-purchase</td><td>₹2,846.65</td><td>8 days</td></tr>
+<tr><td>2</td><td>Selleasy</td><td>4.9 (2,766)</td><td>Product page, cart, checkout</td><td><strong>₹854.28</strong></td><td>30 days</td></tr>
+<tr><td>3</td><td>ReConvert</td><td>4.8 <strong>(3,127)</strong></td><td>Cart, checkout, post-purchase</td><td>₹948.25</td><td>14 days</td></tr>
+<tr><td>4</td><td>Kaching Bundles</td><td><strong>5.0 (6,592)</strong></td><td>Product page</td><td>₹1,422.85</td><td>7 days</td></tr>
+<tr><td>5</td><td>AfterSell</td><td>4.9 (1,115)</td><td>Checkout, thank you page</td><td>₹3,321.25</td><td>30 days</td></tr>
+<tr><td>6</td><td>Frequently Bought Together</td><td>4.9 (1,213)</td><td>Product page</td><td>₹948.25</td><td>14 days</td></tr>
+<tr><td>7</td><td>Releasit</td><td>4.9 (2,419)</td><td>COD order form</td><td>Free to install</td><td>Free plan</td></tr>
+<tr><td>8</td><td>In Cart Upsell</td><td>4.8 (583)</td><td>Cart, post-purchase</td><td>₹948.25</td><td>30 days</td></tr>
+<tr><td>9</td><td>Kaching CartDrawer</td><td>5.0 (1,590)</td><td>Cart drawer</td><td>Free plan</td><td>14 days</td></tr>
+<tr><td>10</td><td>Shopify native and Bundles</td><td>2.9 (571)</td><td>Product page, cart</td><td><strong>Free</strong></td><td>Included</td></tr>
+</tbody>
+</table>
+</div>
+
+<p>Three things fall out of that table that the write-ups below expand on. Candy Rack is the only entry reaching all four stages. Kaching Bundles has the most reviews of any app here by a distance and appears on almost no other list. And the free option at the bottom is Shopify's own, rated 2.9.</p>
+
 <h3>1. Candy Rack, for covering every stage in one app</h3>
 
-<p><a href="https://apps.shopify.com/candyrack" target="_blank" rel="noopener noreferrer">Candy Rack</a> by Digismoothie carries the Built for Shopify badge and is rated <strong>4.9 from 266 reviews</strong>, live since 17 October 2018. The listing claims offers in <strong>8 placements</strong> spanning product page, cart, checkout and post-purchase, which is the broadest single-app coverage we found in the category.</p>
+<p><a href="https://www.digismoothie.com/apps/candy-rack" target="_blank" rel="noopener noreferrer">Candy Rack</a> by Digismoothie carries the Built for Shopify badge and is rated <strong>4.9 from 266 reviews</strong>, live since 17 October 2018. The listing claims offers in <strong>8 placements</strong> spanning product page, cart, checkout and post-purchase, which is the broadest single-app coverage we found in the category.</p>
 
 <p>Two things earn it the top slot. First, the four stages are not sold separately: the plans are Lite ₹2,846.65 for up to 50 orders a month, Starter ₹3,795.85 for 51 to 200 and Growth ₹5,694.24 for 201 to 500, and every band lists the same capabilities, unlimited upsell orders and revenue, the built-in slide cart, tailored design and 24/7 chat and email support. You pay for scale, never for access. Second, every band carries a <strong>60-day money-back guarantee</strong>, which is longer than any free trial in this guide by a factor of two.</p>
 
 <p>The functional detail is unusually deep for one app: warranties and shipping protection as offer types, gift wrap, free gifts, quantity breaks and volume discounts, a cart drawer with a rewards bar, AI recommendations where you can choose the engine including Google Gemini, A/B testing through Intelligems, and 13 interface languages. Shopify Magic's merchant summary, which only appears on apps with 100 or more reviews and at least 4.0, reports merchants saying it reliably drives extra revenue and higher average order value and often pays for itself quickly.</p>
 
-<div class="mkt-blog-callout"><p><strong>Where it is weaker.</strong> Two places, both real. Its <strong>8-day free trial is the shortest here</strong>, against 30 days from AfterSell, Selleasy and In Cart Upsell, and 8 days is not long enough to read a product-page test. And at 266 reviews it has <strong>by far the smallest review base of this shortlist</strong>: ReConvert has 3,127 and Kaching Bundles has 6,592. If you weight social proof above coverage, it is not your first pick, and the 60-day guarantee is the thing that offsets the short trial.</p></div>
+<div class="mkt-blog-callout">
+<p class="mkt-blog-callout__label">Where Candy Rack is weaker</p>
+<ul>
+<li><strong>Shortest trial here at 8 days</strong>, against 30 from AfterSell, Selleasy and In Cart Upsell. Eight days is not long enough to read a product-page test, though the 60-day money-back guarantee offsets it.</li>
+<li><strong>Smallest review base of the shortlist at 266.</strong> ReConvert has 3,127 and Kaching Bundles 6,592. If you weight social proof above coverage, it is not your first pick.</li>
+</ul>
+</div>
 
 <h3>2. Selleasy, for the cheapest competent start</h3>
 
-<p><a href="https://apps.shopify.com/upsell-cross-sell-kit-1" target="_blank" rel="noopener noreferrer">Upsell &amp; Cross Sell by Selleasy</a>, built by Logbase, is rated <strong>4.9 from 2,766 reviews</strong> and has been live since 15 July 2021. Tiers run ₹854.28, ₹2,752.68 and ₹5,600.27, with a free plan and a <strong>30-day free trial</strong>.</p>
+<p><a href="https://www.logbase.io/" target="_blank" rel="noopener noreferrer">Upsell &amp; Cross Sell by Selleasy</a>, built by Logbase, is rated <strong>4.9 from 2,766 reviews</strong> and has been live since 15 July 2021. Tiers run ₹854.28, ₹2,752.68 and ₹5,600.27, with a free plan and a <strong>30-day free trial</strong>.</p>
 
 <p>This is the app we would put in front of a store running its first upsell. It covers frequently-bought-together bundles, in-cart offers, checkout and post-purchase one-click upsells and thank-you page cross-sells, the entry tier is the lowest here, and a month is long enough to actually learn something. Logbase is India-based, which in practice means support hours that overlap an Indian working day.</p>
 
@@ -431,7 +459,7 @@ export const blogPostsRoundups: BlogPost[] = [
 
 <h3>3. ReConvert, for the post-purchase funnel</h3>
 
-<p><a href="https://apps.shopify.com/reconvert" target="_blank" rel="noopener noreferrer">ReConvert Post Purchase Upsell</a> is rated <strong>4.8 from 3,127 reviews</strong>, live since 26 September 2018, with a free plan and a 14-day trial. Paid bands were ₹948.25 for 51 to 100 orders a month, ₹1,897.45 for 101 to 200 and ₹3,795.85 for 201 to 500.</p>
+<p><a href="https://upsell.com/" target="_blank" rel="noopener noreferrer">ReConvert Post Purchase Upsell</a> is rated <strong>4.8 from 3,127 reviews</strong>, live since 26 September 2018, with a free plan and a 14-day trial. Paid bands were ₹948.25 for 51 to 100 orders a month, ₹1,897.45 for 101 to 200 and ₹3,795.85 for 201 to 500.</p>
 
 <p>It is the most-reviewed dedicated upsell app in the category and the deepest tool for the page after payment: thank-you page funnels, one-click post-purchase offers, order tracking blocks and birthday collection. The listing now shows the developer as "Upsell.com ex ReConvert", so the brand is mid-rename, which is worth knowing before you search for support documentation under the old name.</p>
 
@@ -439,7 +467,7 @@ export const blogPostsRoundups: BlogPost[] = [
 
 <h3>4. Kaching Bundles, the most-reviewed app nobody lists</h3>
 
-<p><a href="https://apps.shopify.com/bundle-deals" target="_blank" rel="noopener noreferrer">Kaching Bundles App &amp; Upsells</a> is rated <strong>5.0 from 6,592 reviews</strong>, which makes it the most-reviewed app in Shopify's own Upsell and bundles category: more than twice ReConvert's total. It launched 11 August 2022, is free to install, has a 7-day trial and prices at ₹1,422.85, ₹2,846.65 and ₹5,694.24.</p>
+<p><a href="https://www.kachingappz.com" target="_blank" rel="noopener noreferrer">Kaching Bundles App &amp; Upsells</a> is rated <strong>5.0 from 6,592 reviews</strong>, which makes it the most-reviewed app in Shopify's own Upsell and bundles category: more than twice ReConvert's total. It launched 11 August 2022, is free to install, has a 7-day trial and prices at ₹1,422.85, ₹2,846.65 and ₹5,694.24.</p>
 
 <p>It is worth pausing on the fact that an app with 6,592 five-star reviews is absent from almost every "best Shopify upsell apps" list we read, which tells you more about how those lists are assembled than about the app. Its job is narrow and well done: quantity breaks and volume bundles on the product page, the "buy 2 save 10%" mechanic, which is the single highest-leverage offer for consumables and anything bought in multiples.</p>
 
@@ -447,7 +475,7 @@ export const blogPostsRoundups: BlogPost[] = [
 
 <h3>5. AfterSell, for checkout and post-purchase done properly</h3>
 
-<p><a href="https://apps.shopify.com/aftersell" target="_blank" rel="noopener noreferrer">Aftersell Post Purchase Upsell</a>, now owned by Rokt, is rated <strong>4.9 from 1,115 reviews</strong>, live since 31 December 2019, with a free plan and a <strong>30-day trial</strong>. Tiers are Post-Purchase ₹3,321.25, Pre-Purchase ₹5,694.24 and Complete ₹7,592.64.</p>
+<p><a href="https://www.aftersell.com/" target="_blank" rel="noopener noreferrer">Aftersell Post Purchase Upsell</a>, now owned by Rokt, is rated <strong>4.9 from 1,115 reviews</strong>, live since 31 December 2019, with a free plan and a <strong>30-day trial</strong>. Tiers are Post-Purchase ₹3,321.25, Pre-Purchase ₹5,694.24 and Complete ₹7,592.64.</p>
 
 <p>The one-click post-purchase and checkout offers are among the best built in the category, and a 30-day trial is genuinely enough to measure them. We have used its pricing as the example of surface-banded tiers twice in this guide, and that is not a criticism so much as a warning to read the tier names as a feature matrix: Post-Purchase at ₹3,321.25 does not include pre-purchase offers.</p>
 
@@ -455,7 +483,7 @@ export const blogPostsRoundups: BlogPost[] = [
 
 <h3>6. Frequently Bought Together, for recommendations that learn</h3>
 
-<p><a href="https://apps.shopify.com/frequently-bought-together" target="_blank" rel="noopener noreferrer">Frequently Bought Together</a> by Code Black Belt is rated <strong>4.9 from 1,213 reviews</strong> and launched 15 March 2017. Free plan, 14-day trial, tiers at ₹948.25, ₹2,372.05 and ₹3,795.85.</p>
+<p><a href="https://web.codeblackbelt.com/products/frequently-bought-together" target="_blank" rel="noopener noreferrer">Frequently Bought Together</a> by Code Black Belt is rated <strong>4.9 from 1,213 reviews</strong> and launched 15 March 2017. Free plan, 14-day trial, tiers at ₹948.25, ₹2,372.05 and ₹3,795.85.</p>
 
 <p>This is the Amazon-style product-page block, and it is the right choice when your catalogue is large enough that you cannot hand-pick pairings. Nearly a decade of operation on a single focused job is its own argument.</p>
 
@@ -463,7 +491,7 @@ export const blogPostsRoundups: BlogPost[] = [
 
 <h3>7. Releasit COD Form &amp; Upsells, for cash on delivery order books</h3>
 
-<p><a href="https://apps.shopify.com/releasit-cod-order-form" target="_blank" rel="noopener noreferrer">Releasit COD Form &amp; Upsells</a> carries the Built for Shopify badge, is rated <strong>4.9 from 2,419 reviews</strong>, launched 31 August 2021 and is free to install, with tiers at ₹1,090.63, ₹2,846.65 and ₹6,643.44.</p>
+<p><a href="https://www.releas.it" target="_blank" rel="noopener noreferrer">Releasit COD Form &amp; Upsells</a> carries the Built for Shopify badge, is rated <strong>4.9 from 2,419 reviews</strong>, launched 31 August 2021 and is free to install, with tiers at ₹1,090.63, ₹2,846.65 and ₹6,643.44.</p>
 
 <p>It is in this list because of where we found it. <strong>Shopify's own Upsell and bundles category page opens its recommended list with two cash on delivery upsell apps</strong>, Releasit at 4.9 from 2,419 reviews and EasySell COD Form &amp; Upsells at 4.9 from 987, ahead of every general upsell tool. If your order book is COD-heavy, Shopify is telling you something the third-party listicles are not: the offer and the order form are the same surface, and a one-page COD form with the upsell inside it converts better than a COD checkout with an offer bolted on.</p>
 
@@ -471,7 +499,7 @@ export const blogPostsRoundups: BlogPost[] = [
 
 <h3>8. ICU In Cart Upsell, the oldest one still worth installing</h3>
 
-<p><a href="https://apps.shopify.com/in-cart-upsell" target="_blank" rel="noopener noreferrer">ICU In Cart Upsell &amp; Cross Sell</a> is rated <strong>4.8 from 583 reviews</strong> and has been live since 8 December 2015, which makes it the oldest app in this guide by 15 months. Free plan, 30-day trial, tiers at ₹948.25, ₹1,897.45 and ₹4,745.05 banded by your Shopify plan.</p>
+<p><a href="https://www.incartupsell.com/" target="_blank" rel="noopener noreferrer">ICU In Cart Upsell &amp; Cross Sell</a> is rated <strong>4.8 from 583 reviews</strong> and has been live since 8 December 2015, which makes it the oldest app in this guide by 15 months. Free plan, 30-day trial, tiers at ₹948.25, ₹1,897.45 and ₹4,745.05 banded by your Shopify plan.</p>
 
 <p>Cart and post-purchase offers with conditional rules, and a decade of edge cases already found by other people. The 30-day trial and low entry price make it a low-risk second app alongside a product-page tool.</p>
 
@@ -479,7 +507,7 @@ export const blogPostsRoundups: BlogPost[] = [
 
 <h3>9. Kaching CartDrawer, if the cart drawer is your only gap</h3>
 
-<p><a href="https://apps.shopify.com/cart-upsell" target="_blank" rel="noopener noreferrer">Kaching CartDrawer Cart Upsell</a> is rated <strong>5.0 from 1,590 reviews</strong>, launched 9 December 2024, free plan available with a 14-day trial. A slide-out cart with upsell offers and a free shipping progress bar.</p>
+<p><a href="https://www.kachingappz.com" target="_blank" rel="noopener noreferrer">Kaching CartDrawer Cart Upsell</a> is rated <strong>5.0 from 1,590 reviews</strong>, launched 9 December 2024, free plan available with a 14-day trial. A slide-out cart with upsell offers and a free shipping progress bar.</p>
 
 <p>Narrow by design and very well rated for it. The free shipping progress bar is the most reliable average-order-value mechanic there is, because it asks the shopper to add value to claim something they already want.</p>
 
@@ -489,7 +517,7 @@ export const blogPostsRoundups: BlogPost[] = [
 
 <p>Shopify ships product recommendations in its themes, and its category page carries a "Built into Shopify" panel about them plus a named merchant example: Flakon uses Shopify Bundles to pair wine with an aerator at checkout. It costs nothing and it is in your admin now.</p>
 
-<p>Try it first. Then read this, because no vendor list will tell you: <a href="https://apps.shopify.com/shopify-bundles" target="_blank" rel="noopener noreferrer">Shopify Bundles</a>, Shopify's own first-party bundling app, is rated <strong>2.9 from 571 reviews</strong>, while every third-party app in the same category sits between 4.5 and 5.0. It is the lowest-rated app we encountered in Shopify's own Upsell and bundles category. The native route is the right place to start and, on the published evidence, the wrong place to stay.</p>
+<p>Try it first. Then read this, because no vendor list will tell you: <a href="https://www.shopify.com/" target="_blank" rel="noopener noreferrer">Shopify Bundles</a>, Shopify's own first-party bundling app, is rated <strong>2.9 from 571 reviews</strong>, while every third-party app in the same category sits between 4.5 and 5.0. It is the lowest-rated app we encountered in Shopify's own Upsell and bundles category. The native route is the right place to start and, on the published evidence, the wrong place to stay.</p>
 
 <h2>Cash on delivery changes the answer completely, and nobody writes this down</h2>
 
@@ -503,7 +531,14 @@ export const blogPostsRoundups: BlogPost[] = [
 
 <p>Work through what that means for an Indian store. If 60% of your orders are COD, a post-purchase upsell app can only ever reach the other 40%, and that is before the wallet exclusions take another slice out of the prepaid half. The dashboard will show you a healthy take rate, because it is calculated on offers <em>shown</em>, and the offers were only ever shown to the minority of buyers who could see them.</p>
 
-<div class="mkt-blog-callout"><p><strong>The practical consequence.</strong> For a COD-heavy Indian store, the money is in pre-purchase placements: product page, cart drawer, and the COD order form itself. That is why Releasit is on this list, and it is why Shopify's own category page leads with COD form apps. If you are COD-heavy and you buy a post-purchase specialist like ReConvert or AfterSell, you are buying a tool for the smaller half of your business.</p></div>
+<div class="mkt-blog-callout">
+<p class="mkt-blog-callout__label">What a COD-heavy store should do instead</p>
+<ul>
+<li>Put the offer <strong>before</strong> checkout: product page, cart drawer, or the COD order form itself.</li>
+<li>That is why Releasit is on this list, and why Shopify's own category page leads with COD form apps.</li>
+<li>Buy a post-purchase specialist like ReConvert or AfterSell and you are buying a tool for the smaller half of your order book.</li>
+</ul>
+</div>
 
 <h3>And the revenue you do book on COD is not all collectible</h3>
 
@@ -519,7 +554,14 @@ export const blogPostsRoundups: BlogPost[] = [
 
 <p>Add a cross-sell item to that parcel and you may cross into the next slab. On a delivered order that is fine, you sold more. On a returned one you pay the higher slab <strong>twice</strong>, because <a href="https://shipping.amazon.in/blog/what-is-rto-how-to-reduce-return-to-origin" target="_blank" rel="noopener noreferrer">Amazon Shipping India puts one RTO parcel at ₹180 to ₹240</a> in direct logistics: ₹60 to ₹100 forward, ₹50 to ₹80 reverse, ₹20 to ₹40 repackaging and quality check, ₹10 to ₹20 inventory holding in transit.</p>
 
-<div class="mkt-blog-callout"><p><strong>The rule this gives you.</strong> Report upsell lift separately for COD and prepaid orders, and net of shipping. An app dashboard showing blended attributed revenue is not telling you whether the offer made money on the half of your business that pays at the door. If your COD share is above about half, run the offer on prepaid orders first, prove the margin, then extend it.</p></div>
+<div class="mkt-blog-callout">
+<p class="mkt-blog-callout__label">The rule this gives you</p>
+<ul>
+<li>Report upsell lift <strong>separately for COD and prepaid</strong>, and net of shipping.</li>
+<li>A dashboard showing blended attributed revenue cannot tell you whether the offer made money on the half that pays at the door.</li>
+<li>Above about 50% COD, prove the margin on prepaid orders first, then extend.</li>
+</ul>
+</div>
 
 <h3>The fix is upstream of the upsell app</h3>
 
@@ -757,7 +799,14 @@ ${faqHtml(UPSELL_FAQS)}
 
 <p>And the technical hole is total. Across the pages we read, <code>/collections/all</code> duplication was covered by none, <code>?variant=</code> behaviour was named by none, paginated collection canonicals by none, and Shopify's forced <code>/collections/</code> and <code>/products/</code> URL structure was explained by none. Those are the actual mechanics of Shopify SEO.</p>
 
-<div class="mkt-blog-callout"><p><strong>What we are, so you can weigh this.</strong> TopEdge AI makes a Shopify app for Indian D2C brands that automates abandoned cart recovery, COD confirmation and order updates over WhatsApp and email. We do not sell SEO services, so nobody on this list is a competitor and we are not ranking ourselves. We do have commercial relationships with people and companies in the Shopify ecosystem. The protection for you is that every technical claim below is sourced to Shopify or Google and reproducible on your own store in about ten minutes.</p></div>
+<div class="mkt-blog-callout">
+<p class="mkt-blog-callout__label">What we are, so you can weigh this</p>
+<p>TopEdge AI makes a Shopify app for Indian D2C brands. We do not sell SEO services, so nobody on this list is a competitor and we are not ranking ourselves. We do have commercial relationships with people and companies in the Shopify ecosystem.</p>
+<ul>
+<li>Every technical claim below is sourced to Shopify or Google.</li>
+<li>All of it is reproducible on your own store in about ten minutes.</li>
+</ul>
+</div>
 
 <h2>Five questions that tell you in a minute whether someone really does Shopify SEO</h2>
 
