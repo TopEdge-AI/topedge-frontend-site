@@ -116,6 +116,8 @@ export const BLOG_SLUGS = [
   'whatsapp-opt-in-shopify-india',
   'updatrr-alternative-shopify-india',
   'cod-to-prepaid-whatsapp-shopify-india',
+  'best-shopify-upsell-apps',
+  'shopify-seo-experts',
 ];
 
 /** Soft-404 shell — prerendered to dist/404.html (Netlify 404 document). Not in sitemap. */

@@ -1,5 +1,6 @@
 import type { BlogPost } from '../types/blog';
 import { blogPostsQ4 } from './blogPostsQ4';
+import { blogPostsRoundups } from './blogPostsRoundups';
 
 /**
  * High-intent Shopify / WhatsApp / ecommerce automation playbooks
@@ -3845,6 +3846,7 @@ export const blogPosts: BlogPost[] = [
 
 
 <p>For the organic channel in most detail, see <a href="/blog/organic-ecommerce-leads-short-form-video">generating organic ecommerce leads from Reels and Shorts</a>: hooks, posting cadence, comment-to-DM capture and how to actually attribute the revenue. If you are still sizing up the unit economics behind either channel, start with <a href="/blog/profitable-ecommerce-business-india">profitable ecommerce in India</a>, and check where your paid clicks leak against the <a href="/blog/ecommerce-funnel-drop-off-benchmarks-visitor-identity-resolution">2026 ecommerce funnel benchmarks</a>.</p>
+<p>If organic is the asset you have decided to build, the people and free references worth starting from are in <a href="/blog/shopify-seo-experts">the Shopify SEO experts and resources worth your time</a>, which also carries the five Shopify-specific questions to vet any consultant with.</p>
 <p>Build the asset first, then scale: <a href="/features/journeys">Journeys</a> · <a href="/blog/whatsapp-abandoned-cart-recovery-shopify">cart recovery</a> · <a href="/pricing">pricing</a> · <a href="/signup">start free</a>.</p>
 <p class="mkt-blog-footnote">Industry click-share and offer-lift figures in this guide (e.g. ~27.6% organic vs ~2.1% paid top result; GWP vs discount; BOGO shopper usage) are cited as research snapshots from the source brief. Re-verify against current SERP studies and your category data before budgeting. This is an operating playbook, not a guarantee of results. How Shopify defines and recovers an abandoned checkout: <a href="https://help.shopify.com/manual/orders/abandoned-checkouts" target="_blank" rel="noopener noreferrer">Shopify’s abandoned checkout documentation</a>.</p>
 `,
@@ -4544,6 +4546,7 @@ export const blogPosts: BlogPost[] = [
 <p>Next steps: <a href="/features/journeys">set up COD confirmation and cart recovery journeys</a>, <a href="/features/profit-loss">measure your real margin after RTO</a>, read the <a href="/docs/guides/cod-confirmation">COD confirmation setup guide</a>, or <a href="/signup">start free on your Shopify store</a>.</p>
 
 <p>More in this series: <a href="/blog/ecommerce-funnel-drop-off-benchmarks-visitor-identity-resolution">ecommerce funnel drop-off benchmarks for 2026</a>, <a href="/blog/organic-vs-paid-ecommerce-marketing-2026">organic versus paid ecommerce marketing</a>, <a href="/blog/organic-ecommerce-leads-short-form-video">organic leads from Reels and Shorts</a>, <a href="/blog/trending-products-to-sell-online-india-2026">what to sell online in India</a> and <a href="/blog/how-to-automate-ecommerce-store-india">how to automate your ecommerce store</a>.</p>
+<p>On the two levers that move the numbers in this post: average order value, compared app by app in <a href="/blog/best-shopify-upsell-apps">the best Shopify upsell apps</a>, and organic acquisition, in <a href="/blog/shopify-seo-experts">the Shopify SEO experts and resources worth your time</a>.</p>
 <p class="mkt-blog-footnote">Sources and further reading. India RTO benchmarks (410M+ shipments, 6,000+ brands): <a href="https://unicommerce.com/india-d2c-report-2026-april/" target="_blank" rel="noopener noreferrer">Unicommerce’s India D2C Report 2026</a>.</p>
 `,
   },
@@ -4993,6 +4996,7 @@ export const blogPosts: BlogPost[] = [
 <p>Next: <a href="/features/opt-in-tools">capture consent from the traffic you earn</a>, <a href="/docs/guides/whatsapp-broadcast">learn how to message that audience safely</a>, or <a href="/signup">start free on your Shopify store</a>.</p>
 
 <p>More in this series: <a href="/blog/organic-vs-paid-ecommerce-marketing-2026">organic versus paid ecommerce marketing</a>, <a href="/blog/trending-products-to-sell-online-india-2026">what to sell online in India</a>, <a href="/blog/profitable-ecommerce-business-india">building a profitable ecommerce business in India</a> and <a href="/blog/how-to-automate-ecommerce-store-india">how to automate your ecommerce store</a>.</p>
+<p>Short-form video and search answer different parts of the same problem. If you want the search half, <a href="/blog/shopify-seo-experts">the Shopify SEO experts and resources worth your time</a> covers who to learn from and how to vet anyone you hire.</p>
 <p class="mkt-blog-footnote">Sources and further reading. Opt-in requirements: <a href="https://whatsappbusiness.com/policy/" target="_blank" rel="noopener noreferrer">the WhatsApp Business Messaging Policy</a>.</p>
 `,
   },
@@ -5185,4 +5189,5 @@ export const blogPosts: BlogPost[] = [
 `,
   },
   ...blogPostsQ4,
+  ...blogPostsRoundups,
 ];

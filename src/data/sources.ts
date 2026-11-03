@@ -304,6 +304,482 @@ export const SOURCES = {
       'Three published tiers at $29, $99 and $299 a month. Overages are metered on support volume rather than messages: $10 per extra 100 tickets and $10 per extra 1,000 contacts. Every additional WhatsApp API number costs a further $25 a month. Priced in US dollars with no rupee plan published.',
     verified: '2026-11-02',
   },
+
+  /*
+   * Upsell and Shopify-SEO sources, added 3 November 2026 for the two listicle
+   * posts. App Store prices below were read from an Indian IP, so the listing
+   * served rupees: Shopify states a merchant is billed in their own store's
+   * currency at the exchange rate on the day of each charge, so these are the
+   * rupee figures an Indian store sees, not a converted USD list price.
+   */
+  shopifySeoKeywords: {
+    id: 'shopifySeoKeywords',
+    url: 'https://help.shopify.com/en/manual/promoting-marketing/seo/adding-keywords',
+    label: 'Shopify’s own guide to editing titles and meta descriptions',
+    publisher: 'Shopify',
+    claim:
+      'States "You can enter up to 70 characters in the title" and recommends 60 or fewer to avoid truncation, and that "It’s recommended that 160 characters is used in the description". Says the title tag cannot be edited in HTML because it "is only included in one file of your Shopify theme: theme.liquid", and that where the field is left blank the theme generates the title from the shop name and the content title. Also states plainly "There’s no FTP access to your web pages" and "Your website isn’t made of static HTML pages that you can edit piece by piece". Notes search engines may rewrite titles and descriptions and that changes can take a couple of weeks to appear.',
+    verified: '2026-11-03',
+  },
+  shopifyRobotsTxt: {
+    id: 'shopifyRobotsTxt',
+    url: 'https://help.shopify.com/en/manual/promoting-marketing/seo/hide-a-page-from-search-engines',
+    label: 'Shopify’s guide to hiding a page from search engines',
+    publisher: 'Shopify',
+    claim:
+      'States "All Shopify stores have a preconfigured and optimized robots.txt.liquid template" and that "you don’t need to make any changes to your robots.txt.liquid file unless you have a specific reason to do so". For pages the file does not cover it directs merchants to customise the head section of theme.liquid instead.',
+    verified: '2026-11-03',
+  },
+  googleCanonical: {
+    id: 'googleCanonical',
+    url: 'https://developers.google.com/search/docs/crawling-indexing/consolidate-duplicate-urls',
+    label: 'Google Search Central on canonicalisation',
+    publisher: 'Google',
+    claim:
+      'Describes rel="canonical" as "A strong signal that the specified URL should become canonical" and a sitemap entry as "A weak signal that helps the URLs that are included in a sitemap become canonical". States that "Google will decide which pages (if any) are duplicates, based on similarity of content" and that where no canonical is specified "Google will identify which version of the URL is objectively the best version". Nowhere states that a declared canonical is obeyed.',
+    verified: '2026-11-03',
+  },
+  candyRackListing: {
+    id: 'candyRackListing',
+    url: 'https://apps.shopify.com/candyrack',
+    label: 'Candy Rack’s Shopify App Store listing',
+    publisher: 'Shopify',
+    claim:
+      'Candy Rack by Digismoothie, rated 4.9 from 266 reviews, launched 17 October 2018. Free plan available plus an 8-day free trial. Listing states offers in 8 placements across product page, cart, checkout and post-purchase, AI product suggestions with a choice of engine including Google Gemini, new volume bundles and quantity breaks, a built-in cart drawer with a rewards bar, and that it is built in the EU, collects no sensitive data and is GDPR-compliant. Four plans shown: Trial & Dev free, then Lite ₹2,846.65, Starter ₹3,795.85 and Growth ₹5,694.24 per month, banded by online store orders a month (0 to 50, 51 to 200, 201 to 500) rather than by feature, with every band listing unlimited upsell orders and revenue, built-in slide cart, tailored design, 24/7 chat and email support and a 60-day money-back guarantee. Shopify Magic’s merchant summary, shown only on apps with 100+ reviews and at least 4.0, reports merchants saying it reliably drives extra revenue and higher AOV and often pays for itself quickly.',
+    verified: '2026-11-03',
+  },
+  reconvertListing: {
+    id: 'reconvertListing',
+    url: 'https://apps.shopify.com/reconvert',
+    label: 'ReConvert’s Shopify App Store listing',
+    publisher: 'Shopify',
+    claim:
+      'ReConvert Post Purchase Upsell, developer shown as "Upsell.com ex ReConvert", rated 4.8 from 3,127 reviews, launched 26 September 2018. Free plan available plus a 14-day free trial. Paid bands shown were ₹948.25 for 51 to 100 orders, ₹1,897.45 for 101 to 200 and ₹3,795.85 for 201 to 500 a month.',
+    verified: '2026-11-03',
+  },
+  aftersellListing: {
+    id: 'aftersellListing',
+    url: 'https://apps.shopify.com/aftersell',
+    label: 'AfterSell’s Shopify App Store listing',
+    publisher: 'Shopify',
+    claim:
+      'Aftersell Post Purchase Upsell, developer Rokt, rated 4.9 from 1,115 reviews, launched 31 December 2019. Free plan available plus a 30-day free trial. Three paid tiers shown, split by what they reach rather than by order volume: Post-Purchase ₹3,321.25, Pre-Purchase ₹5,694.24 and Complete ₹7,592.64 per month.',
+    verified: '2026-11-03',
+  },
+  zipifyOcuListing: {
+    id: 'zipifyOcuListing',
+    url: 'https://apps.shopify.com/zipify-oneclickupsell',
+    label: 'Zipify OneClickUpsell’s Shopify App Store listing',
+    publisher: 'Shopify',
+    claim:
+      'One Click Upsell ‑ Zipify OCU, developer Zipify Apps, rated 4.5 from 572 reviews, launched 9 October 2020. Free plan available plus a 30-day free trial. The lowest rating of the major upsell apps checked on this date.',
+    verified: '2026-11-03',
+  },
+  selleasyListing: {
+    id: 'selleasyListing',
+    url: 'https://apps.shopify.com/upsell-cross-sell-kit-1',
+    label: 'Selleasy’s Shopify App Store listing',
+    publisher: 'Shopify',
+    claim:
+      'Upsell & Cross Sell — Selleasy, developer Logbase, rated 4.9 from 2,766 reviews, launched 15 July 2021. Free plan available plus a 30-day free trial. Three paid tiers shown at ₹854.28, ₹2,752.68 and ₹5,600.27 per month, the cheapest entry tier of the apps checked on this date.',
+    verified: '2026-11-03',
+  },
+  frequentlyBoughtListing: {
+    id: 'frequentlyBoughtListing',
+    url: 'https://apps.shopify.com/frequently-bought-together',
+    label: 'Frequently Bought Together’s Shopify App Store listing',
+    publisher: 'Shopify',
+    claim:
+      'Frequently Bought Together CBB, developer Code Black Belt, rated 4.9 from 1,213 reviews, launched 15 March 2017, the oldest of the upsell apps checked bar In Cart Upsell. Free plan available plus a 14-day free trial. Three paid tiers shown at ₹948.25, ₹2,372.05 and ₹3,795.85 per month.',
+    verified: '2026-11-03',
+  },
+  inCartUpsellListing: {
+    id: 'inCartUpsellListing',
+    url: 'https://apps.shopify.com/in-cart-upsell',
+    label: 'In Cart Upsell’s Shopify App Store listing',
+    publisher: 'Shopify',
+    claim:
+      'ICU • In Cart Upsell Cross Sell, developer In Cart Upsell, rated 4.8 from 583 reviews, launched 8 December 2015, the oldest upsell app checked. Free plan available plus a 30-day free trial. Paid tiers shown at ₹948.25, ₹1,897.45 and ₹4,745.05 per month, banded by the merchant’s Shopify plan rather than by order volume.',
+    verified: '2026-11-03',
+  },
+  releasitListing: {
+    id: 'releasitListing',
+    url: 'https://apps.shopify.com/releasit-cod-order-form',
+    label: 'Releasit COD Form & Upsells on the Shopify App Store',
+    publisher: 'Shopify',
+    claim:
+      'Releasit COD Form & Upsells, developer Releasit, rated 4.9 from 2,419 reviews, launched 31 August 2021, carries the Built for Shopify badge and is free to install. Subtitle reads "Cash on Delivery Form for Dropshipping: Upsells, OTP, SMS". Paid tiers shown at ₹1,090.63, ₹2,846.65 and ₹6,643.44 per month. Shopify’s own Upsell and bundles category page lists it first among recommended apps in that category.',
+    verified: '2026-11-03',
+  },
+  kachingBundlesListing: {
+    id: 'kachingBundlesListing',
+    url: 'https://apps.shopify.com/bundle-deals',
+    label: 'Kaching Bundles App & Upsells on the Shopify App Store',
+    publisher: 'Shopify',
+    claim:
+      'Kaching Bundles App & Upsells, developer Kaching Bundles & Upsells, rated 5.0 from 6,592 reviews, launched 11 August 2022, free to install with a 7-day free trial. Paid tiers shown at ₹1,422.85, ₹2,846.65 and ₹5,694.24 per month. At 6,592 reviews it is the most-reviewed app in Shopify’s own Upsell and bundles category, more than twice ReConvert’s 3,127.',
+    verified: '2026-11-03',
+  },
+  shopifyBundlesListing: {
+    id: 'shopifyBundlesListing',
+    url: 'https://apps.shopify.com/shopify-bundles',
+    label: 'Shopify Bundles on the Shopify App Store',
+    publisher: 'Shopify',
+    claim:
+      'Shopify Bundles, developer Shopify, rated 2.9 from 571 reviews, launched 11 July 2023, free. Shopify’s own first-party bundling app and the lowest-rated app encountered in its own Upsell and bundles category, where third-party apps in the same category sit at 4.5 to 5.0.',
+    verified: '2026-11-03',
+  },
+  shopifyUpsellCategory: {
+    id: 'shopifyUpsellCategory',
+    url: 'https://apps.shopify.com/categories/marketing-and-conversion-upsell-and-bundles',
+    label: 'Shopify’s own Upsell and bundles app category',
+    publisher: 'Shopify',
+    claim:
+      'Shopify’s recommended list for this category opens with two cash-on-delivery upsell apps, Releasit COD Form & Upsells 4.9 (2,419) and EasySell COD Form & Upsells 4.9 (987), ahead of the general upsell apps. The page also carries a "Built into Shopify" panel on native product recommendations, a "Made by Shopify" panel for Shopify Subscriptions, and a named merchant example, Flakon, using Shopify Bundles to pair wine with an aerator at checkout. Other rated apps shown include Kaching Bundles 5.0 (6,592), BOGOS 5.0 (4,589), Vitals 4.9 (2,975), AOV.ai 5.0 (1,688), Kaching CartDrawer 5.0 (1,590), Hextom Upsell Sales Boost 4.8 (1,505), Essent Cart Drawer 5.0 (1,169), Simple Bundles 4.9 (821) and GoKwik Cart Drawer & Upsell 4.6 (82).',
+    verified: '2026-11-03',
+  },
+  rebuyDelisted: {
+    id: 'rebuyDelisted',
+    url: 'https://apps.shopify.com/rebuy',
+    label: 'Rebuy Personalization Engine’s Shopify App Store page',
+    publisher: 'Shopify',
+    claim:
+      'The listing page for Rebuy Personalization Engine states "This app is not currently available on the Shopify App Store. If you have support questions, contact Rebuy directly." No rating, review count, pricing or install button is shown. Rebuy was still being ranked, in one case first, by third-party "best Shopify upsell apps" roundups on this date.',
+    verified: '2026-11-03',
+  },
+  digismoothieWhatsappList: {
+    id: 'digismoothieWhatsappList',
+    url: 'https://www.digismoothie.com/best-shopify-apps/whatsapp-marketing',
+    label: 'Digismoothie’s roundup of Shopify WhatsApp marketing apps',
+    publisher: 'Digismoothie',
+    claim:
+      'A "Top 10 best Shopify WhatsApp Marketing apps" roundup naming Kanal, Dondy, Zoko and Klaviyo among others, which links out to each app’s Shopify App Store listing with no rel="nofollow" or rel="sponsored" on those links. Digismoothie is the Prague-based maker of Candy Rack and publishes its own competing upsell roundup at /blog/best-shopify-upsell-apps.',
+    verified: '2026-11-03',
+  },
+  rahulShopifyWhatsapp: {
+    id: 'rahulShopifyWhatsapp',
+    url: 'https://rahuldsarker.co/shopify-whatsapp-order-notifications',
+    label: 'Rahul D Sarker’s Shopify WhatsApp order notifications guide',
+    publisher: 'Rahul D Sarker',
+    claim:
+      'A guide headed "Shopify WhatsApp order notifications: confirm COD orders, tag them, and only count the real ones", covering which notifications belong on WhatsApp, three ways to send them from Shopify, step-by-step COD confirmation, a cost-against-RTO-saved calculation, abandoned cart messages in India, a test plan, and whether the Meta Purchase event should fire on order or on WhatsApp confirmation. Carries its own Sources section citing Shopify Flow trigger and action docs and Meta’s pricing, opt-in and CAPI documentation. Outbound links carry no rel="nofollow".',
+    verified: '2026-11-03',
+  },
+  shopifyPostPurchase: {
+    id: 'shopifyPostPurchase',
+    url: 'https://shopify.dev/docs/apps/build/checkout/product-offers/post-purchase',
+    label: 'Shopify’s post-purchase product offers documentation',
+    publisher: 'Shopify',
+    claim:
+      'States "For render to be true, all the required conditions must be met. For example, the customer’s credit card must be vaulted before the post-purchase offer is displayed." No offer appears where "The initial purchase was made with a gift card or any payment method other than a credit card", nor where "The customer chooses to check out with an installment service or a wallet service" (examples given: Klarna, Affirm, AfterPay, Apple Pay, Amazon Pay, Google Pay). Also: "Orders need to be $0.50 or more to qualify for post-purchase offers", "Orders need to be placed through the Online Store sales channel", "A customer can accept a maximum of three post-purchase offers for each checkout", "Only one app can be selected for post-purchase product offers", and offers are not surfaced on orders with duties and multiple currencies, on orders for local delivery, or where the checkout creates an order without a shipping address. On analytics: services using the Pixel API "report only the purchase event and value for the initial purchase", and ScriptTag-based services "have incomplete conversion data, because they’re only triggered on the Order status page".',
+    verified: '2026-11-03',
+  },
+  shopifyCodPostPurchaseThread: {
+    id: 'shopifyCodPostPurchaseThread',
+    url: 'https://community.shopify.dev/t/post-purchase-extension-with-cash-on-delivery-cod/14296',
+    label: 'a Shopify developer forum thread on post-purchase extensions and cash on delivery',
+    publisher: 'Shopify',
+    claim:
+      'A thread on Shopify’s own developer community raising that post-purchase extensions do not render for cash on delivery orders, citing the documented requirement for a vaulted credit card and the exclusion of payment methods other than a credit card. Used as corroboration for an inference drawn from the primary documentation, not as the primary source.',
+    verified: '2026-11-03',
+  },
+  shopifyCheckoutLiquid: {
+    id: 'shopifyCheckoutLiquid',
+    url: 'https://shopify.dev/docs/storefronts/themes/architecture/layouts/checkout-liquid',
+    label: 'Shopify’s checkout.liquid reference',
+    publisher: 'Shopify',
+    claim:
+      'States "checkout.liquid is now unsupported for the Information, Shipping, and Payment checkout steps" and "checkout.liquid and additional scripts were sunset for the Thank you and Order status pages on August 28, 2025". On script tags: "Script tags were sunset on those pages on August 28, 2025 for Plus stores" and "are sunset for non-Plus stores on August 26, 2026".',
+    verified: '2026-11-03',
+  },
+  shopifyThankYouUpgrade: {
+    id: 'shopifyThankYouUpgrade',
+    url: 'https://help.shopify.com/en/manual/checkout-settings/checkout-extensibility/checkout-upgrade/thank-you-order-status-upgrade',
+    label: 'Shopify’s Thank you and Order status upgrade guide',
+    publisher: 'Shopify',
+    claim:
+      'Written in the past tense as of this reading: "August 26, 2026 was the deadline for stores on a non-Plus Shopify subscription plan to upgrade" their Thank you and Order status pages. Also states "As of August 28, 2025, the additional scripts section in the Checkout settings is view-only" and that stores on the Pause and Build plan are upgraded automatically. Mentions neither upsell apps nor post-purchase offers.',
+    verified: '2026-11-03',
+  },
+  shopifyCheckoutExtensions: {
+    id: 'shopifyCheckoutExtensions',
+    url: 'https://shopify.dev/docs/api/checkout-extensions/index',
+    label: 'Shopify’s checkout extensions overview',
+    publisher: 'Shopify',
+    claim:
+      'Settles plan availability in two statements: extensions on the information, shipping and payment steps "are available only to stores on a Shopify Plus plan", while extensions "that appear after a purchase has been completed will be available to all plans except Shopify Starter". So post-purchase and Thank you page upsells are not Plus-only; in-checkout upsells are.',
+    verified: '2026-11-03',
+  },
+  digismoothieUpsellBenchmarks: {
+    id: 'digismoothieUpsellBenchmarks',
+    url: 'https://www.digismoothie.com/blog/upsell-benchmarks',
+    label: 'Digismoothie’s 2026 Shopify upsell benchmarks',
+    publisher: 'Digismoothie',
+    claim:
+      'By Tomas Janu, published 10 September 2026 and updated 3 October 2026. Dataset: offers shown between 1 January and 31 August 2026 across the 3,199 of 5,000+ stores running Candy Rack that showed at least one offer, covering 39,007 offers, 218.6 million offer views (56.5 million on the product page pop-up) and 1.91 million upsell units sold; offer-level tables include only the 8,854 offers with at least 1,000 views, and all figures are medians across stores. Median upsell incremental revenue 2.4% (total sales divided by sales without upsells), top 10% close to 9%, best 20% and more, "which is often the number you see in the marketing materials". Median take rate 2.4% (upsell sold against upsell viewed), top 10% close to 10%. Offers with no discount convert about the same as offers at 1 to 20% off. AI recommendations convert at 3.2% against 1.9% for hand-picked. Offers showing 1 product convert at 1.5% against 3.1% for 3 or more; recommended 3 to 4 products.',
+    verified: '2026-11-03',
+  },
+  littledataAov: {
+    id: 'littledataAov',
+    url: 'https://www.littledata.io/average/average-order-value-(all-stores)',
+    label: 'Littledata’s Shopify average order value benchmark',
+    publisher: 'Littledata',
+    claim:
+      'Median average order value $110, "From 436 Shopify stores that use Littledata to send their data to Google Analytics 4", covering the 90 days from 27 July to 24 October 2026, figures generated 28 October 2026. Regenerated on a rolling 90-day window, so the figure moves.',
+    verified: '2026-11-03',
+  },
+  shopifySeoOverview: {
+    id: 'shopifySeoOverview',
+    url: 'https://help.shopify.com/en/manual/promoting-marketing/seo/seo-overview',
+    label: 'Shopify’s SEO overview',
+    publisher: 'Shopify',
+    claim:
+      'States "Shopify handles many technical SEO optimizations automatically, such as generating sitemaps and structured data", "Themes automatically generate title tags that include your store name", "Auto-generated canonical tags are added to pages to prevent duplicate content from appearing in search results" and "Your website’s sitemap.xml and robots.txt files are automatically generated". Confirms "You can edit the title tags, meta descriptions, and URLs for the various pages on your site". Best practices given: title "Less than 60 characters, include primary keyword", meta description "Less than 160 characters, include keywords naturally", "Create descriptive, hyphen-separated URLs" and "Set up 301 redirects when moving or discontinuing products".',
+    verified: '2026-11-03',
+  },
+  shopifySeoHub: {
+    id: 'shopifySeoHub',
+    url: 'https://help.shopify.com/en/manual/promoting-marketing/seo',
+    label: 'Shopify’s SEO manual',
+    publisher: 'Shopify',
+    claim:
+      'The hub page for Shopify’s merchant-facing SEO documentation, linking the SEO overview, editing robots.txt.liquid, adding keywords, optimising site structure, finding the sitemap, crawling the store and hiding a page from search engines.',
+    verified: '2026-11-03',
+  },
+  shopifyAiOptimisation: {
+    id: 'shopifyAiOptimisation',
+    url: 'https://help.shopify.com/en/manual/promoting-marketing/seo/optimizing-store-for-ai',
+    label: 'Shopify’s guidance on optimising a store for AI',
+    publisher: 'Shopify',
+    claim:
+      'First-party Shopify guidance on making a store legible to AI answer engines. Live on this date and referenced by none of the competing Shopify SEO guides reviewed.',
+    verified: '2026-11-03',
+  },
+  shopifyThemeMetadata: {
+    id: 'shopifyThemeMetadata',
+    url: 'https://shopify.dev/docs/storefronts/themes/seo/metadata',
+    label: 'Shopify’s theme metadata reference',
+    publisher: 'Shopify',
+    claim:
+      'States a theme "can include a <title> element for search engines to read the page title from" via the Liquid page_title object, a meta element for page_description, and that "You can specify a canonical URL for a given page using the global Liquid" canonical_url object. Publishes the Liquid snippet for all three. Does not discuss duplicate content or variant URLs, so canonical behaviour on parameterised URLs is undocumented.',
+    verified: '2026-11-03',
+  },
+  shopifyRobotsLiquid: {
+    id: 'shopifyRobotsLiquid',
+    url: 'https://shopify.dev/docs/storefronts/themes/seo/robots-txt',
+    label: 'Shopify’s robots.txt.liquid reference',
+    publisher: 'Shopify',
+    claim:
+      'States "Shopify generates a default robots.txt file that works for most stores" and "Adding the robots.txt.liquid template replaces Shopify’s generated robots.txt output". The template "supports only the following Liquid objects": robots, group, rule, user_agent, sitemap and request. Warns that "rendered template output doesn’t always match Shopify’s generated file exactly", advises saving a copy of the current /robots.txt output first, and says host-specific rules should only be used with Shopify Markets. Verified separately by reading the generated robots.txt of allbirds.com, rothys.com and gymshark.com on 3 November 2026: all three carry Disallow rules for /collections/*sort_by*, /collections/*+* and /collections/*filter*&*filter*, and none blocks a single filter parameter, so a URL of the form /collections/x?filter.p.tag=y is crawlable by default.',
+    verified: '2026-11-03',
+  },
+  shopifyHreflang: {
+    id: 'shopifyHreflang',
+    url: 'https://shopify.dev/docs/storefronts/themes/seo/hreflang',
+    label: 'Shopify’s hreflang documentation',
+    publisher: 'Shopify',
+    claim:
+      'Shopify adds hreflang tags automatically "If your store uses Shopify Markets", "through the content_for_header object, which your theme renders in the <head>". Tags "Stay in sync with each page’s canonical URL" and each localized URL must "reference itself as its own canonical URL". Warns that "Adding your own tags on top of the automatic ones can produce duplicate or conflicting annotations", and documents that Markets cannot coordinate hreflang across separate Shopify stores on different domains. Does not give subfolder against separate-domain guidance.',
+    verified: '2026-11-03',
+  },
+  shopifyThemePerformance: {
+    id: 'shopifyThemePerformance',
+    url: 'https://shopify.dev/docs/storefronts/themes/best-practices/performance',
+    label: 'Shopify’s theme performance best practices',
+    publisher: 'Shopify',
+    claim:
+      'States "LCP, CLS, and INP are the Core Web Vitals (CWV), which Google uses as a ranking signal" and "Core Web Vitals scores are measured on mobile by default, so mobile performance is theme performance". Carries the only hard numeric threshold Shopify publishes: "To be accepted into the Shopify Theme Store, a theme must have a minimum average Lighthouse performance score of 60", averaged across home, product and collection pages. Advises identifying and deferring app scripts that block HTML parsing, warns that "Badly written first-party code is just as damaging as a poorly implemented third-party script", that overusing preload "competes with the browser’s own prioritization and can make pages slower", and recommends keeping pagination under 25,000 objects and tap targets at least 48 by 48 px. Publishes no pass or fail threshold for individual Core Web Vitals.',
+    verified: '2026-11-03',
+  },
+  googleFacetedNav: {
+    id: 'googleFacetedNav',
+    url: 'https://developers.google.com/search/docs/crawling-indexing/crawling-managing-faceted-navigation',
+    label: 'Google Search Central on faceted navigation',
+    publisher: 'Google',
+    claim:
+      'States "If you don’t need the faceted navigation URLs potentially indexed, prevent crawling of these URLs" and "Oftentimes there’s no good reason to allow crawling of filtered items". On canonical tags for facets: they "may, over time, decrease the crawl volume of non-canonical versions of those URLs" but "these methods are generally less effective in the long term than the previously mentioned methods". Advises returning "an HTTP 404 status code when a filter combination doesn’t return results" rather than redirecting to a common error page, warns that comma, semicolon and bracket characters "are hard for crawlers to detect as parameter separators", and notes URL-fragment filtering "will have no impact on crawling (positive or negative)". The companion December 2024 Crawling December post calls faceted navigation "by far the most common source of overcrawl issues site owners report" and says most such cases "could have been avoided by following best practices".',
+    verified: '2026-11-03',
+  },
+  googleUrlStructure: {
+    id: 'googleUrlStructure',
+    url: 'https://developers.google.com/search/docs/crawling-indexing/url-structure',
+    label: 'Google Search Central on URL structure',
+    publisher: 'Google',
+    claim:
+      'Advises "Whenever possible, shorten URLs by trimming unnecessary parameters (meaning, parameters that don’t change the content)", warns that "Overly complex URLs, especially those containing multiple parameters, can cause problems for crawlers", and names "Shopping sorting parameters" among the irrelevant parameters that cause a large number of URLs. Shopify’s ?sort_by= is an instance of Google’s own example.',
+    verified: '2026-11-03',
+  },
+  ethercycleSite: {
+    id: 'ethercycleSite',
+    url: 'https://ethercycle.com/',
+    label: 'Ethercycle',
+    publisher: 'Ethercycle',
+    claim:
+      'Page title reads "Ethercycle | Shopify Experts & Hosts of the Unofficial Shopify Podcast". A comment in the live HTML states Ethercycle "is an ecommerce consultancy, Shopify-exclusive since 2014", and a source banner names Kurt Elster as sysop with Paul Reda as co-sysop. Claims circulating in third-party interview bios about a 2011 partner date and specific client names do not appear on the site itself and are treated as unverified.',
+    verified: '2026-11-03',
+  },
+  unofficialShopifyPodcast: {
+    id: 'unofficialShopifyPodcast',
+    url: 'https://unofficialshopifypodcast.com/',
+    label: 'the Unofficial Shopify Podcast',
+    publisher: 'Ethercycle',
+    claim:
+      'The podcast hosted by Kurt Elster with Paul Reda, independently listed on Apple Podcasts under id 918602360. Download figures circulating in directory listings vary by source and date, so no figure is cited.',
+    verified: '2026-11-03',
+  },
+  applePodcastsUnofficialShopify: {
+    id: 'applePodcastsUnofficialShopify',
+    url: 'https://podcasts.apple.com/podcast/id918602360',
+    label: 'the Unofficial Shopify Podcast on Apple Podcasts',
+    publisher: 'Apple',
+    claim:
+      'Independent third-party listing confirming the existence and hosts of the Unofficial Shopify Podcast. Ratings and review counts on directory pages drift, so none is cited.',
+    verified: '2026-11-03',
+  },
+  kaiDavisSite: {
+    id: 'kaiDavisSite',
+    url: 'https://kaidavis.com/',
+    label: 'Kai Davis',
+    publisher: 'Kai Davis',
+    claim:
+      'An independent consultant positioned on Shopify SEO specifically rather than ecommerce SEO generally, also operating doubleyourecommerce.com. Experience figures on third-party directory profiles are self-reported and not independently checkable, so none is cited.',
+    verified: '2026-11-03',
+  },
+  kaiDavisCollections: {
+    id: 'kaiDavisCollections',
+    url: 'https://badasscreatives.com/blog/shopify-seo-collections',
+    label: 'Kai Davis on Shopify collection pages',
+    publisher: 'Badass Creatives',
+    claim:
+      'Guest content carrying Kai Davis’s named thesis on collection pages, quoted as "almost every single store I work with isn’t creating enough collection pages". Hosted on a third-party site rather than his own.',
+    verified: '2026-11-03',
+  },
+  kaiDavisCourse: {
+    id: 'kaiDavisCourse',
+    url: 'https://kaidavis.gumroad.com/l/shopify-seo-simplified',
+    label: 'Shopify SEO Simplified',
+    publisher: 'Kai Davis',
+    claim:
+      'Kai Davis’s paid Shopify SEO course, publicly listed at $40 on Gumroad.',
+    verified: '2026-11-03',
+  },
+  kaspianFuadHiring: {
+    id: 'kaspianFuadHiring',
+    url: 'https://kaspianfuad.com/blog/hire-shopify-seo-consultant/',
+    label: 'Kaspian Fuad’s guide to hiring a Shopify SEO consultant',
+    publisher: 'Kaspian Fuad',
+    claim:
+      'Published 9 October 2026 and updated 30 October 2026. Covers collection-scoped product URLs, ?sort_by= and ?filter.p.product_type= parameters, robots.txt.liquid, JSON-LD in Liquid and dead URLs left by removed apps, and cites an external dataset alongside Google Search Central and Shopify’s own documentation, which no other page in this SERP does. The site carries a Shopify Select Partner badge linking to Shopify’s own partner directory. Experience figures, store counts and platform review scores on the page are self-reported and not cited here.',
+    verified: '2026-11-03',
+  },
+  kaspianFuadSite: {
+    id: 'kaspianFuadSite',
+    url: 'https://kaspianfuad.com/',
+    label: 'Kaspian Fuad',
+    publisher: 'Kaspian Fuad',
+    claim:
+      'An independent Shopify CRO consultant and Liquid developer, carrying a Shopify Select Partner badge that links through to Shopify’s partner directory.',
+    verified: '2026-11-03',
+  },
+  learningSeo: {
+    id: 'learningSeo',
+    url: 'https://learningseo.io/',
+    label: 'LearningSEO.io',
+    publisher: 'Aleyda Solis',
+    claim:
+      'A free structured SEO learning roadmap published by Aleyda Solis, accessible without an email gate.',
+    verified: '2026-11-03',
+  },
+  aleydaSolisSite: {
+    id: 'aleydaSolisSite',
+    url: 'https://www.aleydasolis.com/en/',
+    label: 'Aleyda Solis',
+    publisher: 'Aleyda Solis',
+    claim:
+      'Self-describes as "an experienced SEO and AI Search Optimization consultant specialized in International, Ecommerce, Marketplaces and SaaS SEO" and founder of Orainti. Publishes the Crawling Mondays series, including an episode on criteria for indexing faceted pages on ecommerce sites, and the SEOFOMO newsletter. Not a Shopify specialist, and the site blocks automated crawlers while remaining reachable in a browser.',
+    verified: '2026-11-03',
+  },
+  honestEcommerce: {
+    id: 'honestEcommerce',
+    url: 'https://honestecommerce.co/podcast',
+    label: 'the Honest Ecommerce podcast',
+    publisher: 'Electric Eye',
+    claim:
+      'A merchant-facing interview podcast hosted by Electric Eye co-founder Chase Clymer. Audible’s independent listing credits the show to Electric Eye with a copyright line of 2019. Current release cadence is unverified.',
+    verified: '2026-11-03',
+  },
+  electricEye: {
+    id: 'electricEye',
+    url: 'https://electriceye.io/',
+    label: 'Electric Eye',
+    publisher: 'Electric Eye',
+    claim:
+      'A Shopify agency co-founded by Chase Clymer, which produces the Honest Ecommerce podcast. A full-service agency rather than an SEO specialist.',
+    verified: '2026-11-03',
+  },
+  techSeoBoost: {
+    id: 'techSeoBoost',
+    url: 'https://techseoboost.com/',
+    label: 'TechSEO Boost',
+    publisher: 'TechSEO Boost',
+    claim:
+      'The technical SEO conference founded by Paul Shapiro, described as the industry’s first conference dedicated to technical SEO. Shapiro’s former role as Head of Technical SEO at Shopify is the safe claim; no source dated 2026 confirming his current employer was found, so his current role is treated as unverified.',
+    verified: '2026-11-03',
+  },
+  screamingFrog: {
+    id: 'screamingFrog',
+    url: 'https://www.screamingfrog.co.uk/seo-spider/',
+    label: 'Screaming Frog’s SEO Spider',
+    publisher: 'Screaming Frog',
+    claim:
+      'A desktop crawler with a free tier, used to enumerate a store’s own parameterised and collection-nested URLs and read the canonical each one emits. The current free-tier URL limit was not verified, so no figure is cited.',
+    verified: '2026-11-03',
+  },
+  shopifyCommunity: {
+    id: 'shopifyCommunity',
+    url: 'https://community.shopify.com/c/shopify-discussions/bd-p/shopify-discussion',
+    label: 'the Shopify Community discussions forum',
+    publisher: 'Shopify',
+    claim:
+      'Shopify’s own merchant discussion forum. On 3 November 2026 a thread here ranked second organically in the United States for "shopify seo experts", above every agency listicle in that result set.',
+    verified: '2026-11-03',
+  },
+  redditShopifySeo: {
+    id: 'redditShopifySeo',
+    url: 'https://www.reddit.com/r/ShopifySEO/',
+    label: 'r/ShopifySEO',
+    publisher: 'Reddit',
+    claim:
+      'A merchant discussion community for Shopify SEO. On 3 November 2026 it ranked fourth organically in the United States for "shopify seo experts", and Reddit threads also ranked on page one for "shopify seo agency", "shopify seo expert for hire" and "shopify seo consultant", in the last case a thread questioning whether to trust SEO specialists who send cold messages. Subscriber counts could not be read and are not cited.',
+    verified: '2026-11-03',
+  },
+  wordcampRahul: {
+    id: 'wordcampRahul',
+    url: 'https://asia.wordcamp.org/2023/speaker/rahul-d-sarker/',
+    label: 'Rahul D Sarker’s WordCamp Asia 2023 speaker page',
+    publisher: 'WordCamp Asia',
+    claim:
+      'A third-party speaker biography crediting Rahul D Sarker with "over 8 years of experience in SEO, Brand communication, Conversion optimization, Sales & Acquisition Funnel". Independent of his own site and the only non-self-reported corroboration of his background found.',
+    verified: '2026-11-03',
+  },
+  wordpressPlugins: {
+    id: 'wordpressPlugins',
+    url: 'https://wordpress.org/plugins/',
+    label: 'the WordPress.org plugin directory',
+    publisher: 'WordPress',
+    claim:
+      'The directory where Rahul D Sarker’s published plugin, Simple Customer CRM, is listed. Cited as a checkable artifact of his WordPress community work alongside his WordCamp organising and Bengali translation editing roles.',
+    verified: '2026-11-03',
+  },
+  rahulAboutPage: {
+    id: 'rahulAboutPage',
+    url: 'https://rahuldsarker.co/about',
+    label: 'Rahul D Sarker’s about page',
+    publisher: 'Rahul D Sarker',
+    claim:
+      'Describes himself as "A growth operator, not a marketer" building "revenue operating systems for growth-stage companies", and says "I speak in CAC, LTV, pipeline, and margin. Not likes, reach, or impressions." Based in Kolkata, working globally, contactable at hey@rahuldsarker.co. Targets companies between $1M and $15M ARR spending $4K to $25K a month on marketing. Work is organised in three layers: fractional CMO leadership, performance marketing across Meta, Google, LinkedIn and YouTube including Conversions API implementation, and RevOps covering HubSpot, Zoho and Salesforce, a GTM to GA4 to CRM attribution chain, Looker dashboards and WhatsApp automation. Engagements open with a two-week diagnostic to find the single revenue constraint.',
+    verified: '2026-11-03',
+  },
 } as const satisfies Record<string, Source>;
 
 export type SourceId = keyof typeof SOURCES;

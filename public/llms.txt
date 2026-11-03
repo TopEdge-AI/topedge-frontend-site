@@ -124,6 +124,8 @@ Setup guides and screen-by-screen reference, written for the person running the 
 
 ## Playbooks
 
+- [Top 10 Best Shopify Upsell Apps for 2027](https://topedgeai.com/blog/best-shopify-upsell-apps): The 10 best Shopify upsell apps for 2027, ranked by where the offer appears, with App Store ratings, launch dates and rupee pricing read on 3 November 2026.
+- [Top 10 Shopify SEO Experts and Resources for 2027](https://topedgeai.com/blog/shopify-seo-experts): The 10 Shopify SEO experts and resources worth your time, plus five Shopify-specific questions that tell you in a minute whether a consultant is real.
 - [Ecommerce Funnel Drop-Off Benchmarks (2026) & Identity Guide](https://topedgeai.com/blog/ecommerce-funnel-drop-off-benchmarks-visitor-identity-resolution): Ecommerce funnel benchmarks from 436 Shopify stores: add to cart, checkout and conversion by industry, and how visitor identity resolution works.
 - [Best Shopify App for Abandoned Cart Recovery India](https://topedgeai.com/blog/best-shopify-app-for-abandoned-cart-recovery-india): Best Shopify app for abandoned cart recovery India: WhatsApp, email and SMS apps ranked on events, suppression, opt-in and what Meta charges per message.
 - [COD to Prepaid on WhatsApp for Shopify India 2026](https://topedgeai.com/blog/cod-to-prepaid-whatsapp-shopify-india): Convert Shopify India COD orders to UPI prepaid on WhatsApp before dispatch: the ₹68 saved per order, the ₹0.1150 against ₹0.8631 template split, and the flow.
@@ -161,7 +163,7 @@ Setup guides and screen-by-screen reference, written for the person running the 
 
 ## Canonical URL directory
 
-All 155 indexable URLs on this domain, no trailing slash except the root.
+All 157 indexable URLs on this domain, no trailing slash except the root.
 
 - https://topedgeai.com/
 - https://topedgeai.com/pricing
@@ -280,6 +282,8 @@ All 155 indexable URLs on this domain, no trailing slash except the root.
 - https://topedgeai.com/blog/whatsapp-opt-in-shopify-india
 - https://topedgeai.com/blog/updatrr-alternative-shopify-india
 - https://topedgeai.com/blog/cod-to-prepaid-whatsapp-shopify-india
+- https://topedgeai.com/blog/best-shopify-upsell-apps
+- https://topedgeai.com/blog/shopify-seo-experts
 - https://topedgeai.com/docs
 - https://topedgeai.com/docs/quickstart
 - https://topedgeai.com/docs/connect-whatsapp
