@@ -157,8 +157,8 @@ export const SOURCES = {
     label: 'Updatrr’s published pricing page',
     publisher: 'Updatrr',
     claim:
-      'Growth $29.99/month, Pro $49.99/month, Pro AI $99.99/month, all with a 7-day free trial and no card required. Updatrr states it does not add a markup on Meta’s conversation fees and that Meta bills WhatsApp conversations separately. The page publishes no per-conversation AI fee, and AI sits on the $99.99 Pro AI tier.',
-    verified: '2026-10-21',
+      'Growth $29.99/month, Pro $49.99/month, Pro AI $99.99/month, all with a 7-day free trial and no card required. Updatrr states it does not add a markup on Meta’s conversation fees and that Meta bills WhatsApp conversations separately. The page publishes no per-conversation AI fee, and AI sits on the $99.99 Pro AI tier. It also says country-wise pricing is available inside the dashboard.',
+    verified: '2026-11-06',
   },
   littledataConversion: {
     id: 'littledataConversion',

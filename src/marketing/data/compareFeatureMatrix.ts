@@ -980,15 +980,8 @@ export const UPDATRR_PAIRWISE_MATRIX: PairwiseFeatureRow[] = [
     label: 'Subscription Model',
     topedge:
       '14-day free trial, then flat INR plans from ₹1,999/month (₹1,599/month billed yearly) + 18% GST',
-    competitor: '7 Days free trial, then starts from ~$19.99 (₹1,900)',
-  },
-  {
-    id: 'website-platform',
-    label: 'Website Platform',
-    description:
-      'Shows whether the software works on website or is dependent on platform like Shopify.',
-    topedge: 'Web-based Software',
-    competitor: 'Works only on Shopify',
+    competitor:
+      '7-day free trial with no card, then $29.99, $49.99 or $99.99 a month (read off updatrr.com/pricing on 6 Nov 2026; it says country-wise prices show inside its dashboard)',
   },
   {
     id: 'template-markup',
@@ -1008,7 +1001,7 @@ export const UPDATRR_PAIRWISE_MATRIX: PairwiseFeatureRow[] = [
     topedge:
       'Bring Your Own Key (BYOK) architecture with built-in RAG pipeline (est. ~₹0.10-₹0.30 per AI response depending on selected AI model)',
     competitor:
-      'Per-conversation pricing model (est. ~₹4.50 per AI conversation / plan-based usage fees)',
+      'AI chatbot on the $99.99 Pro AI tier; no per-conversation AI fee published (read 6 Nov 2026)',
   },
   {
     id: 'store-pixel',

@@ -20,6 +20,11 @@ import MarketingPageLoader from './marketing/components/MarketingPageLoader';
 import MetaPixel from './components/MetaPixel';
 import Analytics from './marketing/components/Analytics';
 import Home from './pages/Home';
+import {
+  getPrerenderSnapshot,
+  isChunkLoadError,
+  reloadOnceForChunkError,
+} from './marketing/lib/prerenderSnapshot';
 
 const About = React.lazy(() => import('./pages/About'));
 const Contact = React.lazy(() => import('./pages/Contact'));
@@ -167,10 +172,19 @@ class AppErrorBoundary extends React.Component<
 
   componentDidCatch(error: unknown, info: unknown) {
     console.error('App error boundary caught an error', error, info);
+    // After a client-side navigation there is no prerendered copy of the new URL,
+    // so fetch it fresh: a missing chunk there almost always means a newer deploy.
+    if (!getPrerenderSnapshot() && isChunkLoadError(error)) reloadOnceForChunkError();
   }
 
   render() {
     if (this.state.hasError) {
+      // Put the prerendered page back rather than replacing it with an error.
+      // See src/marketing/lib/prerenderSnapshot.ts for why.
+      const snapshot = getPrerenderSnapshot();
+      if (snapshot) {
+        return <div style={{ display: 'contents' }} dangerouslySetInnerHTML={{ __html: snapshot }} />;
+      }
       return (
         <div className="min-h-screen flex items-center justify-center bg-[#F8F9FB] text-slate-900">
           <div className="text-center px-6">

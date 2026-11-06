@@ -10,7 +10,8 @@
  *
  * - gtag.js loads after the window `load` event (never on the critical path).
  * - Page views are sent manually on every SPA route change.
- * - Clicks on signup links and WhatsApp sales links become events.
+ * - Clicks on signup, App Store and WhatsApp sales links become events
+ *   (signup and App Store clicks go to PostHog too, see initClickTracking).
  * - Skipped during prerender so crawlers' HTML is unchanged.
  *
  * CONSENT
@@ -37,6 +38,8 @@ declare global {
     __TOPEDGE_PRERENDER__?: boolean;
   }
 }
+
+import { phCaptureBeforeUnload } from './posthog';
 
 const env = (k: string): string => String(import.meta.env[k] ?? '').trim();
 
@@ -164,11 +167,29 @@ function onClick(e: MouseEvent): void {
   if (/^(\/signup|https:\/\/dash\.topedgeai\.com\/signup)/.test(href)) {
     const plan = new URLSearchParams(href.split('?')[1] || '').get('plan') || undefined;
     trackEvent('signup_click', { link_text: label, page_path: page, plan });
+    // Same name in PostHog, so one funnel can start from it: organic landing page,
+    // then signup click, then signup_complete on dash.topedgeai.com.
+    phCaptureBeforeUnload('signup_click', { link_text: label, page_path: page, plan });
     // Secondary conversion: reached signup. The account may not get created.
     trackAdsConversion(ADS_LP_CTA_LABEL, { page_path: page, plan });
+  } else if (/^https:\/\/apps\.shopify\.com\/topedge-ai/.test(href)) {
+    trackEvent('app_store_click', { link_text: label, page_path: page });
+    phCaptureBeforeUnload('app_store_click', { link_text: label, page_path: page });
   } else if (/^https:\/\/(wa\.me|api\.whatsapp\.com)\//.test(href)) {
     trackEvent('whatsapp_sales_click', { link_text: label, page_path: page });
   }
+}
+
+let clicksBound = false;
+
+/**
+ * Named click events for GA4 and PostHog. Bound on its own rather than inside
+ * initAnalytics, so PostHog still gets signup clicks if the GA id is ever unset.
+ */
+export function initClickTracking(): void {
+  if (clicksBound || typeof window === 'undefined' || window.__TOPEDGE_PRERENDER__) return;
+  clicksBound = true;
+  document.addEventListener('click', onClick, { capture: true });
 }
 
 export function initAnalytics(): void {
@@ -194,7 +215,6 @@ export function initAnalytics(): void {
   if (GA_ID) window.gtag!('config', GA_ID, { send_page_view: false });
   // Builds the remarketing audience. Without this config there is no list to retarget.
   if (ADS_ID) window.gtag!('config', ADS_ID);
-  document.addEventListener('click', onClick, { capture: true });
   if (document.readyState === 'complete') loadScript();
   else window.addEventListener('load', loadScript, { once: true });
 }

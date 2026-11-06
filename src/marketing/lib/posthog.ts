@@ -27,7 +27,11 @@ declare global {
   interface Window {
     posthog?: {
       init: (key: string, config: Record<string, unknown>) => void;
-      capture: (event: string, props?: Record<string, unknown>) => void;
+      capture: (
+        event: string,
+        props?: Record<string, unknown>,
+        options?: Record<string, unknown>,
+      ) => void;
       identify: (id: string, props?: Record<string, unknown>) => void;
       __loaded?: boolean;
     };
@@ -92,6 +96,21 @@ export function phCapture(event: string, props: Record<string, unknown> = {}): v
   if (!live()) return;
   try {
     window.posthog?.capture(event, props);
+  } catch {
+    /* ignore */
+  }
+}
+
+/**
+ * A named event fired on a click that navigates away (signup, App Store). PostHog
+ * batches events and flushes every few seconds, so a normal capture would usually
+ * die with the page; sendBeacon outlives it. Lost only if the visitor clicks
+ * before PostHog has loaded (it loads after the window `load` event).
+ */
+export function phCaptureBeforeUnload(event: string, props: Record<string, unknown> = {}): void {
+  if (!live()) return;
+  try {
+    window.posthog?.capture(event, props, { transport: 'sendBeacon', send_instantly: true });
   } catch {
     /* ignore */
   }

@@ -1,0 +1,2850 @@
+[
+ {
+  "url": "https://topedgeai.com/features",
+  "http": 200,
+  "verdict": "PASS",
+  "coverage": "Submitted and indexed",
+  "robots": "ALLOWED",
+  "indexing": "INDEXING_ALLOWED",
+  "lastCrawl": "2026-10-21T14:47:41Z",
+  "fetch": "SUCCESSFUL",
+  "googleCanonical": "https://topedgeai.com/features",
+  "userCanonical": "https://topedgeai.com/features",
+  "crawledAs": "MOBILE",
+  "sitemap": [
+   "https://topedgeai.com/sitemap.xml"
+  ],
+  "referring": [
+   "https://dash.topedgeai.com/docs",
+   "https://topedgeai.com/docs/reference/warranty-hub",
+   "https://topedgeai.com/sitemap.xml"
+  ]
+ },
+ {
+  "url": "https://topedgeai.com/",
+  "http": 200,
+  "verdict": "PASS",
+  "coverage": "Submitted and indexed",
+  "robots": "ALLOWED",
+  "indexing": "INDEXING_ALLOWED",
+  "lastCrawl": "2026-11-03T17:44:02Z",
+  "fetch": "SUCCESSFUL",
+  "googleCanonical": "https://topedgeai.com/",
+  "userCanonical": "https://topedgeai.com/",
+  "crawledAs": "MOBILE",
+  "sitemap": [
+   "https://topedgeai.com/sitemap.xml"
+  ],
+  "referring": [
+   "https://dash.topedgeai.com/docs",
+   "https://topedgeai.com/services",
+   "https://wanderlog.com/it/list/geoCategory/171069/best-spas-in-ahmedabad",
+   "http://topedgeai.com/"
+  ]
+ },
+ {
+  "url": "https://topedgeai.com/pricing",
+  "http": 200,
+  "verdict": "PASS",
+  "coverage": "Submitted and indexed",
+  "robots": "ALLOWED",
+  "indexing": "INDEXING_ALLOWED",
+  "lastCrawl": "2026-10-29T22:24:30Z",
+  "fetch": "SUCCESSFUL",
+  "googleCanonical": "https://topedgeai.com/pricing",
+  "userCanonical": "https://topedgeai.com/pricing",
+  "crawledAs": "MOBILE",
+  "sitemap": [
+   "https://topedgeai.com/sitemap.xml"
+  ],
+  "referring": [
+   "https://dash.topedgeai.com/docs",
+   "https://topedgeai.com/?ref=producthunt"
+  ]
+ },
+ {
+  "url": "https://topedgeai.com/pricing/meta-rates",
+  "http": 200,
+  "verdict": "PASS",
+  "coverage": "Submitted and indexed",
+  "robots": "ALLOWED",
+  "indexing": "INDEXING_ALLOWED",
+  "lastCrawl": "2026-11-04T12:52:51Z",
+  "fetch": "SUCCESSFUL",
+  "googleCanonical": "https://topedgeai.com/pricing/meta-rates",
+  "userCanonical": "https://topedgeai.com/pricing/meta-rates",
+  "crawledAs": "MOBILE",
+  "referring": [
+   "https://dash.topedgeai.com/docs",
+   "https://topedgeai.com/blog/meta-whatsapp-cloud-api-shopify-templates",
+   "https://topedgeai.com/compare/kanal",
+   "https://topedgeai.com/sitemap.xml"
+  ]
+ },
+ {
+  "url": "https://topedgeai.com/integrations",
+  "http": 200,
+  "verdict": "PASS",
+  "coverage": "Submitted and indexed",
+  "robots": "ALLOWED",
+  "indexing": "INDEXING_ALLOWED",
+  "lastCrawl": "2026-10-29T05:41:50Z",
+  "fetch": "SUCCESSFUL",
+  "googleCanonical": "https://topedgeai.com/integrations",
+  "userCanonical": "https://topedgeai.com/integrations",
+  "crawledAs": "MOBILE",
+  "sitemap": [
+   "https://topedgeai.com/sitemap.xml"
+  ],
+  "referring": [
+   "https://dash.topedgeai.com/docs",
+   "https://topedgeai.com/blog/meta-whatsapp-cloud-api-shopify-templates"
+  ]
+ },
+ {
+  "url": "https://topedgeai.com/services",
+  "http": 200,
+  "verdict": "PASS",
+  "coverage": "Submitted and indexed",
+  "robots": "ALLOWED",
+  "indexing": "INDEXING_ALLOWED",
+  "lastCrawl": "2026-10-29T03:02:32Z",
+  "fetch": "SUCCESSFUL",
+  "googleCanonical": "https://topedgeai.com/services",
+  "userCanonical": "https://topedgeai.com/services",
+  "crawledAs": "MOBILE",
+  "sitemap": [
+   "https://topedgeai.com/sitemap.xml"
+  ],
+  "referring": [
+   "https://topedgeai.com/features",
+   "https://dash.topedgeai.com/docs",
+   "https://topedgeai.com/blog/best-shopify-app-for-abandoned-cart-recovery-india",
+   "https://topedgeai.com/sitemap.xml"
+  ]
+ },
+ {
+  "url": "https://topedgeai.com/customers",
+  "http": 200,
+  "verdict": "PASS",
+  "coverage": "Submitted and indexed",
+  "robots": "ALLOWED",
+  "indexing": "INDEXING_ALLOWED",
+  "lastCrawl": "2026-10-31T06:17:04Z",
+  "fetch": "SUCCESSFUL",
+  "googleCanonical": "https://topedgeai.com/customers",
+  "userCanonical": "https://topedgeai.com/customers",
+  "crawledAs": "MOBILE",
+  "sitemap": [
+   "https://topedgeai.com/sitemap.xml"
+  ],
+  "referring": [
+   "https://dash.topedgeai.com/docs",
+   "https://topedgeai.com/testimonials",
+   "https://topedgeai.com/docs/reference/warranty-hub",
+   "https://topedgeai.com/contact"
+  ]
+ },
+ {
+  "url": "https://topedgeai.com/compare",
+  "http": 200,
+  "verdict": "PASS",
+  "coverage": "Submitted and indexed",
+  "robots": "ALLOWED",
+  "indexing": "INDEXING_ALLOWED",
+  "lastCrawl": "2026-11-02T23:58:52Z",
+  "fetch": "SUCCESSFUL",
+  "googleCanonical": "https://topedgeai.com/compare",
+  "userCanonical": "https://topedgeai.com/compare",
+  "crawledAs": "MOBILE",
+  "sitemap": [
+   "https://topedgeai.com/sitemap.xml"
+  ],
+  "referring": [
+   "https://dash.topedgeai.com/docs",
+   "https://topedgeai.com/docs/reference/meta-manager",
+   "https://topedgeai.com/docs/reference/orders"
+  ]
+ },
+ {
+  "url": "https://topedgeai.com/compare/topedge-vs-wati-vs-interakt-vs-aisensy",
+  "http": 200,
+  "verdict": "PASS",
+  "coverage": "Submitted and indexed",
+  "robots": "ALLOWED",
+  "indexing": "INDEXING_ALLOWED",
+  "lastCrawl": "2026-10-27T05:06:45Z",
+  "fetch": "SUCCESSFUL",
+  "googleCanonical": "https://topedgeai.com/compare/topedge-vs-wati-vs-interakt-vs-aisensy",
+  "crawledAs": "MOBILE",
+  "sitemap": [
+   "https://topedgeai.com/sitemap.xml"
+  ],
+  "referring": [
+   "https://dash.topedgeai.com/docs",
+   "https://topedgeai.com/blog/cod-rto-benchmark-india-2026",
+   "https://topedgeai.com/blog/meta-whatsapp-cloud-api-shopify-templates",
+   "https://topedgeai.com/whatsapp-journey-examples/cod-to-prepaid"
+  ]
+ },
+ {
+  "url": "https://topedgeai.com/about",
+  "http": 200,
+  "verdict": "PASS",
+  "coverage": "Submitted and indexed",
+  "robots": "ALLOWED",
+  "indexing": "INDEXING_ALLOWED",
+  "lastCrawl": "2026-10-20T04:44:21Z",
+  "fetch": "SUCCESSFUL",
+  "googleCanonical": "https://topedgeai.com/about",
+  "userCanonical": "https://topedgeai.com/about",
+  "crawledAs": "MOBILE",
+  "referring": [
+   "https://dash.topedgeai.com/docs",
+   "https://topedgeai.com/docs/reference/warranty-hub",
+   "https://topedgeai.com/sitemap.xml"
+  ]
+ },
+ {
+  "url": "https://topedgeai.com/compare/topedge-vs-wati-vs-aisensy",
+  "http": 200,
+  "verdict": "PASS",
+  "coverage": "Submitted and indexed",
+  "robots": "ALLOWED",
+  "indexing": "INDEXING_ALLOWED",
+  "lastCrawl": "2026-10-31T23:10:07Z",
+  "fetch": "SUCCESSFUL",
+  "googleCanonical": "https://topedgeai.com/compare/topedge-vs-wati-vs-aisensy",
+  "userCanonical": "https://topedgeai.com/compare/topedge-vs-wati-vs-aisensy",
+  "crawledAs": "MOBILE",
+  "sitemap": [
+   "https://topedgeai.com/sitemap.xml"
+  ],
+  "referring": [
+   "https://dash.topedgeai.com/docs",
+   "https://topedgeai.com/compare/topedge-vs-wati-vs-aisensy/",
+   "https://topedgeai.com/docs/reference/ai-brain",
+   "https://topedgeai.com/features/opt-in-tools"
+  ]
+ },
+ {
+  "url": "https://topedgeai.com/contact",
+  "http": 200,
+  "verdict": "PASS",
+  "coverage": "Submitted and indexed",
+  "robots": "ALLOWED",
+  "indexing": "INDEXING_ALLOWED",
+  "lastCrawl": "2026-10-21T14:46:16Z",
+  "fetch": "SUCCESSFUL",
+  "googleCanonical": "https://topedgeai.com/contact",
+  "userCanonical": "https://topedgeai.com/contact",
+  "crawledAs": "MOBILE",
+  "sitemap": [
+   "https://topedgeai.com/sitemap.xml"
+  ],
+  "referring": [
+   "https://dash.topedgeai.com/docs",
+   "https://topedgeai.com/docs/guides/whatsapp-broadcast",
+   "https://topedgeai.com/sitemap.xml"
+  ]
+ },
+ {
+  "url": "https://topedgeai.com/blog",
+  "http": 200,
+  "verdict": "PASS",
+  "coverage": "Submitted and indexed",
+  "robots": "ALLOWED",
+  "indexing": "INDEXING_ALLOWED",
+  "lastCrawl": "2026-10-04T08:48:35Z",
+  "fetch": "SUCCESSFUL",
+  "googleCanonical": "https://topedgeai.com/blog",
+  "userCanonical": "https://topedgeai.com/blog",
+  "crawledAs": "MOBILE",
+  "sitemap": [
+   "https://topedgeai.com/sitemap.xml"
+  ],
+  "referring": [
+   "https://dash.topedgeai.com/docs",
+   "https://topedgeai.com/features/ai-brain",
+   "https://topedgeai.com/blog/",
+   "https://topedgeai.com/sitemap.xml"
+  ]
+ },
+ {
+  "url": "https://topedgeai.com/blog/page/3",
+  "http": 200,
+  "verdict": "PASS",
+  "coverage": "Submitted and indexed",
+  "robots": "ALLOWED",
+  "indexing": "INDEXING_ALLOWED",
+  "lastCrawl": "2026-10-25T13:15:50Z",
+  "fetch": "SUCCESSFUL",
+  "googleCanonical": "https://topedgeai.com/blog/page/3",
+  "userCanonical": "https://topedgeai.com/blog/page/3",
+  "crawledAs": "MOBILE",
+  "sitemap": [
+   "https://topedgeai.com/sitemap.xml"
+  ],
+  "referring": [
+   "https://topedgeai.com/sitemap.xml"
+  ]
+ },
+ {
+  "url": "https://topedgeai.com/blog/page/2",
+  "http": 200,
+  "verdict": "PASS",
+  "coverage": "Submitted and indexed",
+  "robots": "ALLOWED",
+  "indexing": "INDEXING_ALLOWED",
+  "lastCrawl": "2026-10-25T09:46:09Z",
+  "fetch": "SUCCESSFUL",
+  "googleCanonical": "https://topedgeai.com/blog/page/2",
+  "userCanonical": "https://topedgeai.com/blog/page/2",
+  "crawledAs": "MOBILE",
+  "sitemap": [
+   "https://topedgeai.com/sitemap.xml"
+  ]
+ },
+ {
+  "url": "https://topedgeai.com/blog/category/comparisons",
+  "http": 200,
+  "verdict": "PASS",
+  "coverage": "Submitted and indexed",
+  "robots": "ALLOWED",
+  "indexing": "INDEXING_ALLOWED",
+  "lastCrawl": "2026-10-25T09:46:09Z",
+  "fetch": "SUCCESSFUL",
+  "googleCanonical": "https://topedgeai.com/blog/category/comparisons",
+  "userCanonical": "https://topedgeai.com/blog/category/comparisons",
+  "crawledAs": "MOBILE",
+  "sitemap": [
+   "https://topedgeai.com/sitemap.xml"
+  ],
+  "referring": [
+   "https://topedgeai.com/blog/shopify-seo-experts",
+   "https://topedgeai.com/blog/whatsapp-shared-inbox-shopify-order-context"
+  ]
+ },
+ {
+  "url": "https://topedgeai.com/blog/category/automation",
+  "http": 200,
+  "verdict": "PASS",
+  "coverage": "Submitted and indexed",
+  "robots": "ALLOWED",
+  "indexing": "INDEXING_ALLOWED",
+  "lastCrawl": "2026-10-28T13:52:27Z",
+  "fetch": "SUCCESSFUL",
+  "googleCanonical": "https://topedgeai.com/blog/category/automation",
+  "userCanonical": "https://topedgeai.com/blog/category/automation",
+  "crawledAs": "MOBILE",
+  "referring": [
+   "https://topedgeai.com/blog/whatsapp-shared-inbox-shopify-order-context"
+  ]
+ },
+ {
+  "url": "https://topedgeai.com/blog/category/cod-rto",
+  "http": 200,
+  "verdict": "PASS",
+  "coverage": "Submitted and indexed",
+  "robots": "ALLOWED",
+  "indexing": "INDEXING_ALLOWED",
+  "lastCrawl": "2026-10-27T08:36:28Z",
+  "fetch": "SUCCESSFUL",
+  "googleCanonical": "https://topedgeai.com/blog/category/cod-rto",
+  "crawledAs": "MOBILE",
+  "sitemap": [
+   "https://topedgeai.com/sitemap.xml"
+  ],
+  "referring": [
+   "https://topedgeai.com/blog/category/ai-and-inbox",
+   "https://topedgeai.com/blog/meta-whatsapp-cloud-api-shopify-templates"
+  ]
+ },
+ {
+  "url": "https://topedgeai.com/blog/category/meta-templates",
+  "http": 200,
+  "verdict": "PASS",
+  "coverage": "Submitted and indexed",
+  "robots": "ALLOWED",
+  "indexing": "INDEXING_ALLOWED",
+  "lastCrawl": "2026-10-25T09:46:09Z",
+  "fetch": "SUCCESSFUL",
+  "googleCanonical": "https://topedgeai.com/blog/category/meta-templates",
+  "userCanonical": "https://topedgeai.com/blog/category/meta-templates",
+  "crawledAs": "MOBILE",
+  "sitemap": [
+   "https://topedgeai.com/sitemap.xml"
+  ],
+  "referring": [
+   "https://topedgeai.com/blog/category/ai-and-inbox",
+   "https://topedgeai.com/blog/whatsapp-shared-inbox-shopify-order-context"
+  ]
+ },
+ {
+  "url": "https://topedgeai.com/blog/category/ai-and-inbox",
+  "http": 200,
+  "verdict": "PASS",
+  "coverage": "Submitted and indexed",
+  "robots": "ALLOWED",
+  "indexing": "INDEXING_ALLOWED",
+  "lastCrawl": "2026-10-25T23:23:35Z",
+  "fetch": "SUCCESSFUL",
+  "googleCanonical": "https://topedgeai.com/blog/category/ai-and-inbox",
+  "userCanonical": "https://topedgeai.com/blog/category/ai-and-inbox",
+  "crawledAs": "MOBILE",
+  "sitemap": [
+   "https://topedgeai.com/sitemap.xml"
+  ],
+  "referring": [
+   "https://topedgeai.com/blog/meta-whatsapp-cloud-api-shopify-templates",
+   "https://topedgeai.com/blog/whatsapp-shared-inbox-shopify-order-context"
+  ]
+ },
+ {
+  "url": "https://topedgeai.com/blog/category/growth",
+  "http": 200,
+  "verdict": "PASS",
+  "coverage": "Submitted and indexed",
+  "robots": "ALLOWED",
+  "indexing": "INDEXING_ALLOWED",
+  "lastCrawl": "2026-10-27T04:02:24Z",
+  "fetch": "SUCCESSFUL",
+  "googleCanonical": "https://topedgeai.com/blog/category/growth",
+  "userCanonical": "https://topedgeai.com/blog/category/growth",
+  "crawledAs": "MOBILE",
+  "sitemap": [
+   "https://topedgeai.com/sitemap.xml"
+  ],
+  "referring": [
+   "https://topedgeai.com/blog/category/ai-and-inbox",
+   "https://topedgeai.com/blog/meta-whatsapp-cloud-api-shopify-templates"
+  ]
+ },
+ {
+  "url": "https://topedgeai.com/features/journeys",
+  "http": 200,
+  "verdict": "PASS",
+  "coverage": "Submitted and indexed",
+  "robots": "ALLOWED",
+  "indexing": "INDEXING_ALLOWED",
+  "lastCrawl": "2026-11-03T16:10:52Z",
+  "fetch": "SUCCESSFUL",
+  "googleCanonical": "https://topedgeai.com/features/journeys",
+  "userCanonical": "https://topedgeai.com/features/journeys",
+  "crawledAs": "MOBILE",
+  "referring": [
+   "https://dash.topedgeai.com/docs",
+   "https://topedgeai.com/whatsapp-journey-examples/cod-to-prepaid",
+   "https://topedgeai.com/features/opt-in-tools"
+  ]
+ },
+ {
+  "url": "https://topedgeai.com/features/flow-builder",
+  "http": 200,
+  "verdict": "PASS",
+  "coverage": "Submitted and indexed",
+  "robots": "ALLOWED",
+  "indexing": "INDEXING_ALLOWED",
+  "lastCrawl": "2026-10-28T01:54:08Z",
+  "fetch": "SUCCESSFUL",
+  "googleCanonical": "https://topedgeai.com/features/flow-builder",
+  "userCanonical": "https://topedgeai.com/features/flow-builder",
+  "crawledAs": "MOBILE",
+  "sitemap": [
+   "https://topedgeai.com/sitemap.xml"
+  ],
+  "referring": [
+   "https://dash.topedgeai.com/docs",
+   "https://topedgeai.com/docs/reference/commerce"
+  ]
+ },
+ {
+  "url": "https://topedgeai.com/features/ai-brain",
+  "http": 200,
+  "verdict": "PASS",
+  "coverage": "Submitted and indexed",
+  "robots": "ALLOWED",
+  "indexing": "INDEXING_ALLOWED",
+  "lastCrawl": "2026-10-28T10:50:49Z",
+  "fetch": "SUCCESSFUL",
+  "googleCanonical": "https://topedgeai.com/features/ai-brain",
+  "userCanonical": "https://topedgeai.com/features/ai-brain",
+  "crawledAs": "MOBILE",
+  "sitemap": [
+   "https://topedgeai.com/sitemap.xml"
+  ],
+  "referring": [
+   "https://dash.topedgeai.com/docs",
+   "https://topedgeai.com/whatsapp-journey-examples/cod-to-prepaid",
+   "https://topedgeai.com/features/instagram",
+   "https://topedgeai.com/features/ai-brain/",
+   "https://topedgeai.com/"
+  ]
+ },
+ {
+  "url": "https://topedgeai.com/features/campaigns",
+  "http": 200,
+  "verdict": "PASS",
+  "coverage": "Submitted and indexed",
+  "robots": "ALLOWED",
+  "indexing": "INDEXING_ALLOWED",
+  "lastCrawl": "2026-09-22T04:55:25Z",
+  "fetch": "SUCCESSFUL",
+  "googleCanonical": "https://topedgeai.com/features/campaigns",
+  "userCanonical": "https://topedgeai.com/features/campaigns",
+  "crawledAs": "MOBILE",
+  "referring": [
+   "https://dash.topedgeai.com/docs",
+   "https://topedgeai.com/features/instagram",
+   "https://topedgeai.com/features/opt-in-tools",
+   "https://www.topedgeai.com/"
+  ]
+ },
+ {
+  "url": "https://topedgeai.com/features/analytics",
+  "http": 200,
+  "verdict": "PASS",
+  "coverage": "Submitted and indexed",
+  "robots": "ALLOWED",
+  "indexing": "INDEXING_ALLOWED",
+  "lastCrawl": "2026-10-08T05:50:49Z",
+  "fetch": "SUCCESSFUL",
+  "googleCanonical": "https://topedgeai.com/features/analytics",
+  "userCanonical": "https://topedgeai.com/features/analytics",
+  "crawledAs": "MOBILE",
+  "sitemap": [
+   "https://topedgeai.com/sitemap.xml"
+  ],
+  "referring": [
+   "https://dash.topedgeai.com/docs",
+   "https://topedgeai.com/blog/shopify-automation-checklist-whatsapp-cart-recovery",
+   "https://topedgeai.com/docs/reference/commerce",
+   "https://www.topedgeai.com/"
+  ]
+ },
+ {
+  "url": "https://topedgeai.com/features/meta-manager",
+  "http": 200,
+  "verdict": "PASS",
+  "coverage": "Submitted and indexed",
+  "robots": "ALLOWED",
+  "indexing": "INDEXING_ALLOWED",
+  "lastCrawl": "2026-10-13T08:58:58Z",
+  "fetch": "SUCCESSFUL",
+  "googleCanonical": "https://topedgeai.com/features/meta-manager",
+  "userCanonical": "https://topedgeai.com/features/meta-manager",
+  "crawledAs": "MOBILE",
+  "sitemap": [
+   "https://topedgeai.com/sitemap.xml"
+  ],
+  "referring": [
+   "https://topedgeai.com/blog/meta-whatsapp-cloud-api-shopify-templates",
+   "https://topedgeai.com/features/campaigns",
+   "https://www.topedgeai.com/"
+  ]
+ },
+ {
+  "url": "https://topedgeai.com/features/audience-crm",
+  "http": 200,
+  "verdict": "PASS",
+  "coverage": "Submitted and indexed",
+  "robots": "ALLOWED",
+  "indexing": "INDEXING_ALLOWED",
+  "lastCrawl": "2026-10-06T04:18:03Z",
+  "fetch": "SUCCESSFUL",
+  "googleCanonical": "https://topedgeai.com/features/audience-crm",
+  "userCanonical": "https://topedgeai.com/features/audience-crm",
+  "crawledAs": "MOBILE",
+  "sitemap": [
+   "https://topedgeai.com/sitemap.xml"
+  ],
+  "referring": [
+   "https://dash.topedgeai.com/docs",
+   "https://topedgeai.com/blog/whatsapp-shared-inbox-shopify-order-context",
+   "https://topedgeai.com/docs/reference/commerce"
+  ]
+ },
+ {
+  "url": "https://topedgeai.com/features/warranty",
+  "http": 200,
+  "verdict": "NEUTRAL",
+  "coverage": "Crawled - currently not indexed",
+  "robots": "ALLOWED",
+  "indexing": "INDEXING_STATE_UNSPECIFIED",
+  "lastCrawl": "2026-10-06T04:15:20Z",
+  "fetch": "SUCCESSFUL",
+  "crawledAs": "MOBILE",
+  "sitemap": [
+   "https://topedgeai.com/sitemap.xml"
+  ],
+  "referring": [
+   "https://dash.topedgeai.com/docs",
+   "https://topedgeai.com/docs/reference/ai-brain",
+   "https://topedgeai.com/docs/reference/commerce"
+  ]
+ },
+ {
+  "url": "https://topedgeai.com/features/chat-rules",
+  "http": 200,
+  "verdict": "PASS",
+  "coverage": "Submitted and indexed",
+  "robots": "ALLOWED",
+  "indexing": "INDEXING_ALLOWED",
+  "lastCrawl": "2026-10-08T03:09:37Z",
+  "fetch": "SUCCESSFUL",
+  "googleCanonical": "https://topedgeai.com/features/chat-rules",
+  "userCanonical": "https://topedgeai.com/features/chat-rules",
+  "crawledAs": "MOBILE",
+  "sitemap": [
+   "https://topedgeai.com/sitemap.xml"
+  ],
+  "referring": [
+   "https://dash.topedgeai.com/docs/reference/chat-rules/",
+   "https://topedgeai.com/blog/shopify-automation-checklist-whatsapp-cart-recovery"
+  ]
+ },
+ {
+  "url": "https://topedgeai.com/features/opt-in-tools",
+  "http": 200,
+  "verdict": "PASS",
+  "coverage": "Submitted and indexed",
+  "robots": "ALLOWED",
+  "indexing": "INDEXING_ALLOWED",
+  "lastCrawl": "2026-10-27T03:32:53Z",
+  "fetch": "SUCCESSFUL",
+  "googleCanonical": "https://topedgeai.com/features/opt-in-tools",
+  "userCanonical": "https://topedgeai.com/features/opt-in-tools",
+  "crawledAs": "MOBILE",
+  "sitemap": [
+   "https://topedgeai.com/sitemap.xml"
+  ],
+  "referring": [
+   "https://dash.topedgeai.com/docs",
+   "https://topedgeai.com/docs/reference/ai-brain",
+   "https://topedgeai.com/"
+  ]
+ },
+ {
+  "url": "https://topedgeai.com/features/profit-loss",
+  "http": 200,
+  "verdict": "PASS",
+  "coverage": "Submitted and indexed",
+  "robots": "ALLOWED",
+  "indexing": "INDEXING_ALLOWED",
+  "lastCrawl": "2026-11-03T15:40:28Z",
+  "fetch": "SUCCESSFUL",
+  "googleCanonical": "https://topedgeai.com/features/profit-loss",
+  "userCanonical": "https://topedgeai.com/features/profit-loss",
+  "crawledAs": "MOBILE",
+  "referring": [
+   "https://dash.topedgeai.com/docs",
+   "https://topedgeai.com/docs/guides/abandoned-cart-recovery",
+   "https://topedgeai.com/"
+  ]
+ },
+ {
+  "url": "https://topedgeai.com/features/cod-confirmation",
+  "http": 200,
+  "verdict": "NEUTRAL",
+  "coverage": "Soft 404",
+  "robots": "ALLOWED",
+  "indexing": "INDEXING_ALLOWED",
+  "lastCrawl": "2026-10-29T05:40:44Z",
+  "fetch": "SUCCESSFUL",
+  "crawledAs": "MOBILE",
+  "sitemap": [
+   "https://topedgeai.com/sitemap.xml"
+  ],
+  "referring": [
+   "https://dash.topedgeai.com/docs",
+   "https://topedgeai.com/whatsapp-journey-examples/cod-to-prepaid",
+   "https://topedgeai.com/docs/troubleshooting"
+  ]
+ },
+ {
+  "url": "https://topedgeai.com/features/intent-detection",
+  "http": 200,
+  "verdict": "PASS",
+  "coverage": "Submitted and indexed",
+  "robots": "ALLOWED",
+  "indexing": "INDEXING_ALLOWED",
+  "lastCrawl": "2026-10-09T02:22:44Z",
+  "fetch": "SUCCESSFUL",
+  "googleCanonical": "https://topedgeai.com/features/intent-detection",
+  "crawledAs": "MOBILE",
+  "referring": [
+   "https://dash.topedgeai.com/docs",
+   "https://topedgeai.com/docs/guides/segment-your-customers",
+   "https://topedgeai.com/docs/reference/commerce"
+  ]
+ },
+ {
+  "url": "https://topedgeai.com/compare/wati",
+  "http": 200,
+  "verdict": "PASS",
+  "coverage": "Submitted and indexed",
+  "robots": "ALLOWED",
+  "indexing": "INDEXING_ALLOWED",
+  "lastCrawl": "2026-11-03T07:51:19Z",
+  "fetch": "SUCCESSFUL",
+  "googleCanonical": "https://topedgeai.com/compare/wati",
+  "userCanonical": "https://topedgeai.com/compare/wati",
+  "crawledAs": "MOBILE",
+  "sitemap": [
+   "https://topedgeai.com/sitemap.xml"
+  ],
+  "referring": [
+   "https://dash.topedgeai.com/docs",
+   "https://topedgeai.com/whatsapp-journey-examples/cod-to-prepaid",
+   "https://topedgeai.com/compare/wati/",
+   "https://topedgeai.com/features/opt-in-tools"
+  ]
+ },
+ {
+  "url": "https://topedgeai.com/compare/aisensy",
+  "http": 200,
+  "verdict": "PASS",
+  "coverage": "Submitted and indexed",
+  "robots": "ALLOWED",
+  "indexing": "INDEXING_ALLOWED",
+  "lastCrawl": "2026-10-06T14:04:00Z",
+  "fetch": "SUCCESSFUL",
+  "googleCanonical": "https://topedgeai.com/compare/aisensy",
+  "userCanonical": "https://topedgeai.com/compare/aisensy",
+  "crawledAs": "MOBILE",
+  "sitemap": [
+   "https://topedgeai.com/sitemap.xml"
+  ],
+  "referring": [
+   "https://dash.topedgeai.com/docs",
+   "https://topedgeai.com/whatsapp-journey-examples/cod-to-prepaid",
+   "https://topedgeai.com/compare/aisensy/",
+   "https://topedgeai.com/features/opt-in-tools"
+  ]
+ },
+ {
+  "url": "https://topedgeai.com/compare/interakt",
+  "http": 200,
+  "verdict": "PASS",
+  "coverage": "Submitted and indexed",
+  "robots": "ALLOWED",
+  "indexing": "INDEXING_ALLOWED",
+  "lastCrawl": "2026-10-19T15:51:55Z",
+  "fetch": "SUCCESSFUL",
+  "googleCanonical": "https://topedgeai.com/compare/interakt",
+  "userCanonical": "https://topedgeai.com/compare/interakt",
+  "crawledAs": "MOBILE",
+  "sitemap": [
+   "https://topedgeai.com/sitemap.xml"
+  ],
+  "referring": [
+   "https://dash.topedgeai.com/docs",
+   "https://topedgeai.com/whatsapp-journey-examples/cod-to-prepaid",
+   "https://topedgeai.com/compare/interakt/",
+   "https://topedgeai.com/features/opt-in-tools"
+  ]
+ },
+ {
+  "url": "https://topedgeai.com/compare/bitespeed",
+  "http": 200,
+  "verdict": "PASS",
+  "coverage": "Submitted and indexed",
+  "robots": "ALLOWED",
+  "indexing": "INDEXING_ALLOWED",
+  "lastCrawl": "2026-11-02T06:42:59Z",
+  "fetch": "SUCCESSFUL",
+  "googleCanonical": "https://topedgeai.com/compare/bitespeed",
+  "userCanonical": "https://topedgeai.com/compare/bitespeed",
+  "crawledAs": "MOBILE",
+  "referring": [
+   "https://dash.topedgeai.com/docs",
+   "https://topedgeai.com/whatsapp-journey-examples/cod-to-prepaid",
+   "https://topedgeai.com/compare/bitespeed/",
+   "https://topedgeai.com/features/opt-in-tools"
+  ]
+ },
+ {
+  "url": "https://topedgeai.com/compare/zoko",
+  "http": 200,
+  "verdict": "PASS",
+  "coverage": "Submitted and indexed",
+  "robots": "ALLOWED",
+  "indexing": "INDEXING_ALLOWED",
+  "lastCrawl": "2026-10-13T17:29:06Z",
+  "fetch": "SUCCESSFUL",
+  "googleCanonical": "https://topedgeai.com/compare/zoko",
+  "userCanonical": "https://topedgeai.com/compare/zoko",
+  "crawledAs": "MOBILE",
+  "sitemap": [
+   "https://topedgeai.com/sitemap.xml"
+  ],
+  "referring": [
+   "https://dash.topedgeai.com/docs",
+   "https://topedgeai.com/whatsapp-journey-examples/cod-to-prepaid",
+   "https://topedgeai.com/docs/reference/chat-rules"
+  ]
+ },
+ {
+  "url": "https://topedgeai.com/compare/getgabs",
+  "http": 200,
+  "verdict": "PASS",
+  "coverage": "Submitted and indexed",
+  "robots": "ALLOWED",
+  "indexing": "INDEXING_ALLOWED",
+  "lastCrawl": "2026-10-09T08:30:07Z",
+  "fetch": "SUCCESSFUL",
+  "googleCanonical": "https://topedgeai.com/compare/getgabs",
+  "userCanonical": "https://topedgeai.com/compare/getgabs",
+  "crawledAs": "MOBILE",
+  "sitemap": [
+   "https://topedgeai.com/sitemap.xml"
+  ],
+  "referring": [
+   "https://dash.topedgeai.com/docs",
+   "https://topedgeai.com/whatsapp-journey-examples/cod-to-prepaid",
+   "https://topedgeai.com/features/campaigns"
+  ]
+ },
+ {
+  "url": "https://topedgeai.com/compare/kanal",
+  "http": 200,
+  "verdict": "PASS",
+  "coverage": "Submitted and indexed",
+  "robots": "ALLOWED",
+  "indexing": "INDEXING_ALLOWED",
+  "lastCrawl": "2026-10-09T07:21:05Z",
+  "fetch": "SUCCESSFUL",
+  "googleCanonical": "https://topedgeai.com/compare/kanal",
+  "userCanonical": "https://topedgeai.com/compare/kanal",
+  "crawledAs": "MOBILE",
+  "referring": [
+   "https://dash.topedgeai.com/docs",
+   "https://topedgeai.com/whatsapp-journey-examples/cod-to-prepaid",
+   "https://topedgeai.com/features/campaigns"
+  ]
+ },
+ {
+  "url": "https://topedgeai.com/compare/dondy",
+  "http": 200,
+  "verdict": "PASS",
+  "coverage": "Submitted and indexed",
+  "robots": "ALLOWED",
+  "indexing": "INDEXING_ALLOWED",
+  "lastCrawl": "2026-11-04T01:02:15Z",
+  "fetch": "SUCCESSFUL",
+  "googleCanonical": "https://topedgeai.com/compare/dondy",
+  "userCanonical": "https://topedgeai.com/compare/dondy",
+  "crawledAs": "MOBILE",
+  "sitemap": [
+   "https://topedgeai.com/sitemap.xml"
+  ],
+  "referring": [
+   "https://dash.topedgeai.com/docs",
+   "https://topedgeai.com/whatsapp-journey-examples/cod-to-prepaid",
+   "https://topedgeai.com/features/campaigns"
+  ]
+ },
+ {
+  "url": "https://topedgeai.com/compare/updatrr",
+  "http": 200,
+  "verdict": "PASS",
+  "coverage": "Submitted and indexed",
+  "robots": "ALLOWED",
+  "indexing": "INDEXING_ALLOWED",
+  "lastCrawl": "2026-10-31T12:28:29Z",
+  "fetch": "SUCCESSFUL",
+  "googleCanonical": "https://topedgeai.com/compare/updatrr",
+  "userCanonical": "https://topedgeai.com/compare/updatrr",
+  "crawledAs": "MOBILE",
+  "referring": [
+   "https://dash.topedgeai.com/docs",
+   "https://topedgeai.com/whatsapp-journey-examples/cod-to-prepaid",
+   "https://topedgeai.com/features/campaigns"
+  ]
+ },
+ {
+  "url": "https://topedgeai.com/compare/gupshup",
+  "http": 200,
+  "verdict": "PASS",
+  "coverage": "Submitted and indexed",
+  "robots": "ALLOWED",
+  "indexing": "INDEXING_ALLOWED",
+  "lastCrawl": "2026-10-09T03:14:58Z",
+  "fetch": "SUCCESSFUL",
+  "googleCanonical": "https://topedgeai.com/compare/gupshup",
+  "userCanonical": "https://topedgeai.com/compare/gupshup",
+  "crawledAs": "MOBILE",
+  "sitemap": [
+   "https://topedgeai.com/sitemap.xml"
+  ],
+  "referring": [
+   "https://dash.topedgeai.com/docs",
+   "https://topedgeai.com/whatsapp-journey-examples/cod-to-prepaid",
+   "https://topedgeai.com/docs/reference/chat-rules"
+  ]
+ },
+ {
+  "url": "https://topedgeai.com/shopify-whatsapp-integration",
+  "http": 200,
+  "verdict": "PASS",
+  "coverage": "Submitted and indexed",
+  "robots": "ALLOWED",
+  "indexing": "INDEXING_ALLOWED",
+  "lastCrawl": "2026-10-25T17:58:23Z",
+  "fetch": "SUCCESSFUL",
+  "googleCanonical": "https://topedgeai.com/shopify-whatsapp-integration",
+  "userCanonical": "https://topedgeai.com/shopify-whatsapp-integration",
+  "crawledAs": "MOBILE",
+  "sitemap": [
+   "https://topedgeai.com/sitemap.xml"
+  ],
+  "referring": [
+   "https://dash.topedgeai.com/docs",
+   "https://topedgeai.com/blog/meta-whatsapp-cloud-api-shopify-templates",
+   "https://dash.topedgeai.com/docs/connect-shopify"
+  ]
+ },
+ {
+  "url": "https://topedgeai.com/compare/alternatives",
+  "http": 200,
+  "verdict": "PASS",
+  "coverage": "Submitted and indexed",
+  "robots": "ALLOWED",
+  "indexing": "INDEXING_ALLOWED",
+  "lastCrawl": "2026-09-21T23:01:45Z",
+  "fetch": "SUCCESSFUL",
+  "googleCanonical": "https://topedgeai.com/compare/alternatives",
+  "userCanonical": "https://topedgeai.com/compare/alternatives",
+  "crawledAs": "MOBILE",
+  "sitemap": [
+   "https://topedgeai.com/sitemap.xml"
+  ],
+  "referring": [
+   "https://dash.topedgeai.com/docs",
+   "https://topedgeai.com/whatsapp-journey-examples/cod-to-prepaid",
+   "https://topedgeai.com/features/campaigns"
+  ]
+ },
+ {
+  "url": "https://topedgeai.com/tools",
+  "http": 200,
+  "verdict": "PASS",
+  "coverage": "Submitted and indexed",
+  "robots": "ALLOWED",
+  "indexing": "INDEXING_ALLOWED",
+  "lastCrawl": "2026-10-26T10:18:17Z",
+  "fetch": "SUCCESSFUL",
+  "googleCanonical": "https://topedgeai.com/tools",
+  "userCanonical": "https://topedgeai.com/tools",
+  "crawledAs": "MOBILE",
+  "sitemap": [
+   "https://topedgeai.com/sitemap.xml"
+  ],
+  "referring": [
+   "https://dash.topedgeai.com/docs",
+   "https://topedgeai.com/blog/whatsapp-template-rejected-meta-shopify-fix"
+  ]
+ },
+ {
+  "url": "https://topedgeai.com/tools/best-whatsapp-tool-for-shopify",
+  "http": 200,
+  "verdict": "PASS",
+  "coverage": "Submitted and indexed",
+  "robots": "ALLOWED",
+  "indexing": "INDEXING_ALLOWED",
+  "lastCrawl": "2026-10-29T06:58:41Z",
+  "fetch": "SUCCESSFUL",
+  "googleCanonical": "https://topedgeai.com/tools/best-whatsapp-tool-for-shopify",
+  "userCanonical": "https://topedgeai.com/tools/best-whatsapp-tool-for-shopify",
+  "crawledAs": "MOBILE",
+  "sitemap": [
+   "https://topedgeai.com/sitemap.xml"
+  ],
+  "referring": [
+   "https://dash.topedgeai.com/docs",
+   "https://topedgeai.com/blog/whatsapp-opt-in-shopify-india"
+  ]
+ },
+ {
+  "url": "https://topedgeai.com/tools/whatsapp-link-generator",
+  "http": 200,
+  "verdict": "NEUTRAL",
+  "coverage": "Soft 404",
+  "robots": "ALLOWED",
+  "indexing": "INDEXING_ALLOWED",
+  "lastCrawl": "2026-10-28T14:18:05Z",
+  "fetch": "SUCCESSFUL",
+  "crawledAs": "MOBILE",
+  "sitemap": [
+   "https://topedgeai.com/sitemap.xml"
+  ],
+  "referring": [
+   "https://dash.topedgeai.com/docs",
+   "https://topedgeai.com/tools/best-whatsapp-tool-for-shopify",
+   "https://topedgeai.com/blog/whatsapp-template-rejected-meta-shopify-fix"
+  ]
+ },
+ {
+  "url": "https://topedgeai.com/tools/rto-cost-calculator",
+  "http": 200,
+  "verdict": "NEUTRAL",
+  "coverage": "Crawled - currently not indexed",
+  "robots": "ALLOWED",
+  "indexing": "INDEXING_STATE_UNSPECIFIED",
+  "lastCrawl": "2026-10-27T07:10:55Z",
+  "fetch": "SUCCESSFUL",
+  "crawledAs": "MOBILE",
+  "sitemap": [
+   "https://topedgeai.com/sitemap.xml"
+  ],
+  "referring": [
+   "https://dash.topedgeai.com/docs",
+   "https://topedgeai.com/blog/category/cod-rto"
+  ]
+ },
+ {
+  "url": "https://topedgeai.com/tools/cart-recovery-calculator",
+  "http": 200,
+  "verdict": "PASS",
+  "coverage": "Submitted and indexed",
+  "robots": "ALLOWED",
+  "indexing": "INDEXING_ALLOWED",
+  "lastCrawl": "2026-10-28T03:53:33Z",
+  "fetch": "SUCCESSFUL",
+  "googleCanonical": "https://topedgeai.com/tools/cart-recovery-calculator",
+  "userCanonical": "https://topedgeai.com/tools/cart-recovery-calculator",
+  "crawledAs": "MOBILE",
+  "sitemap": [
+   "https://topedgeai.com/sitemap.xml"
+  ],
+  "referring": [
+   "https://dash.topedgeai.com/docs",
+   "https://topedgeai.com/blog/whatsapp-opt-in-shopify-india"
+  ]
+ },
+ {
+  "url": "https://topedgeai.com/whatsapp-templates",
+  "http": 200,
+  "verdict": "PASS",
+  "coverage": "Submitted and indexed",
+  "robots": "ALLOWED",
+  "indexing": "INDEXING_ALLOWED",
+  "lastCrawl": "2026-10-27T07:04:27Z",
+  "fetch": "SUCCESSFUL",
+  "googleCanonical": "https://topedgeai.com/whatsapp-templates",
+  "userCanonical": "https://topedgeai.com/whatsapp-templates",
+  "crawledAs": "MOBILE",
+  "referring": [
+   "https://dash.topedgeai.com/docs",
+   "https://topedgeai.com/blog/meta-whatsapp-cloud-api-shopify-templates",
+   "https://topedgeai.com/pricing/meta-rates",
+   "https://topedgeai.com/sitemap.xml"
+  ]
+ },
+ {
+  "url": "https://topedgeai.com/whatsapp-festival-templates",
+  "http": 200,
+  "verdict": "NEUTRAL",
+  "coverage": "Crawled - currently not indexed",
+  "robots": "ALLOWED",
+  "indexing": "INDEXING_STATE_UNSPECIFIED",
+  "lastCrawl": "2026-11-01T13:47:02Z",
+  "fetch": "SUCCESSFUL",
+  "crawledAs": "MOBILE",
+  "sitemap": [
+   "https://topedgeai.com/sitemap.xml"
+  ],
+  "referring": [
+   "https://dash.topedgeai.com/docs"
+  ]
+ },
+ {
+  "url": "https://topedgeai.com/whatsapp-festival-templates/new-year",
+  "http": 200,
+  "verdict": "NEUTRAL",
+  "coverage": "Discovered - currently not indexed",
+  "robots": "ROBOTS_TXT_STATE_UNSPECIFIED",
+  "indexing": "INDEXING_STATE_UNSPECIFIED",
+  "fetch": "PAGE_FETCH_STATE_UNSPECIFIED",
+  "crawledAs": "CRAWLING_USER_AGENT_UNSPECIFIED",
+  "sitemap": [
+   "https://topedgeai.com/sitemap.xml"
+  ],
+  "referring": [
+   "https://topedgeai.com/sitemap.xml"
+  ]
+ },
+ {
+  "url": "https://topedgeai.com/whatsapp-festival-templates/makar-sankranti-pongal",
+  "http": 200,
+  "verdict": "PASS",
+  "coverage": "Submitted and indexed",
+  "robots": "ALLOWED",
+  "indexing": "INDEXING_ALLOWED",
+  "lastCrawl": "2026-11-01T07:17:03Z",
+  "fetch": "SUCCESSFUL",
+  "googleCanonical": "https://topedgeai.com/whatsapp-festival-templates/makar-sankranti-pongal",
+  "userCanonical": "https://topedgeai.com/whatsapp-festival-templates/makar-sankranti-pongal",
+  "crawledAs": "MOBILE",
+  "sitemap": [
+   "https://topedgeai.com/sitemap.xml"
+  ],
+  "referring": [
+   "https://topedgeai.com/sitemap.xml"
+  ]
+ },
+ {
+  "url": "https://topedgeai.com/whatsapp-festival-templates/vasant-panchami",
+  "http": 200,
+  "verdict": "NEUTRAL",
+  "coverage": "Discovered - currently not indexed",
+  "robots": "ROBOTS_TXT_STATE_UNSPECIFIED",
+  "indexing": "INDEXING_STATE_UNSPECIFIED",
+  "fetch": "PAGE_FETCH_STATE_UNSPECIFIED",
+  "crawledAs": "CRAWLING_USER_AGENT_UNSPECIFIED",
+  "sitemap": [
+   "https://topedgeai.com/sitemap.xml"
+  ]
+ },
+ {
+  "url": "https://topedgeai.com/whatsapp-festival-templates/maha-shivaratri",
+  "http": 200,
+  "verdict": "NEUTRAL",
+  "coverage": "Discovered - currently not indexed",
+  "robots": "ROBOTS_TXT_STATE_UNSPECIFIED",
+  "indexing": "INDEXING_STATE_UNSPECIFIED",
+  "fetch": "PAGE_FETCH_STATE_UNSPECIFIED",
+  "crawledAs": "CRAWLING_USER_AGENT_UNSPECIFIED",
+  "sitemap": [
+   "https://topedgeai.com/sitemap.xml"
+  ]
+ },
+ {
+  "url": "https://topedgeai.com/whatsapp-festival-templates/holi",
+  "http": 200,
+  "verdict": "NEUTRAL",
+  "coverage": "URL is unknown to Google",
+  "robots": "ROBOTS_TXT_STATE_UNSPECIFIED",
+  "indexing": "INDEXING_STATE_UNSPECIFIED",
+  "fetch": "PAGE_FETCH_STATE_UNSPECIFIED"
+ },
+ {
+  "url": "https://topedgeai.com/whatsapp-festival-templates/ugadi-gudi-padwa",
+  "http": 200,
+  "verdict": "NEUTRAL",
+  "coverage": "Discovered - currently not indexed",
+  "robots": "ROBOTS_TXT_STATE_UNSPECIFIED",
+  "indexing": "INDEXING_STATE_UNSPECIFIED",
+  "fetch": "PAGE_FETCH_STATE_UNSPECIFIED",
+  "crawledAs": "CRAWLING_USER_AGENT_UNSPECIFIED",
+  "sitemap": [
+   "https://topedgeai.com/sitemap.xml"
+  ]
+ },
+ {
+  "url": "https://topedgeai.com/whatsapp-festival-templates/eid-ul-fitr",
+  "http": 200,
+  "verdict": "NEUTRAL",
+  "coverage": "Discovered - currently not indexed",
+  "robots": "ROBOTS_TXT_STATE_UNSPECIFIED",
+  "indexing": "INDEXING_STATE_UNSPECIFIED",
+  "fetch": "PAGE_FETCH_STATE_UNSPECIFIED",
+  "crawledAs": "CRAWLING_USER_AGENT_UNSPECIFIED",
+  "sitemap": [
+   "https://topedgeai.com/sitemap.xml"
+  ]
+ },
+ {
+  "url": "https://topedgeai.com/whatsapp-festival-templates/good-friday",
+  "http": 200,
+  "verdict": "NEUTRAL",
+  "coverage": "Discovered - currently not indexed",
+  "robots": "ROBOTS_TXT_STATE_UNSPECIFIED",
+  "indexing": "INDEXING_STATE_UNSPECIFIED",
+  "fetch": "PAGE_FETCH_STATE_UNSPECIFIED",
+  "crawledAs": "CRAWLING_USER_AGENT_UNSPECIFIED",
+  "sitemap": [
+   "https://topedgeai.com/sitemap.xml"
+  ]
+ },
+ {
+  "url": "https://topedgeai.com/whatsapp-festival-templates/rama-navami",
+  "http": 200,
+  "verdict": "NEUTRAL",
+  "coverage": "Discovered - currently not indexed",
+  "robots": "ROBOTS_TXT_STATE_UNSPECIFIED",
+  "indexing": "INDEXING_STATE_UNSPECIFIED",
+  "fetch": "PAGE_FETCH_STATE_UNSPECIFIED",
+  "crawledAs": "CRAWLING_USER_AGENT_UNSPECIFIED",
+  "sitemap": [
+   "https://topedgeai.com/sitemap.xml"
+  ]
+ },
+ {
+  "url": "https://topedgeai.com/whatsapp-festival-templates/easter",
+  "http": 200,
+  "verdict": "NEUTRAL",
+  "coverage": "Discovered - currently not indexed",
+  "robots": "ROBOTS_TXT_STATE_UNSPECIFIED",
+  "indexing": "INDEXING_STATE_UNSPECIFIED",
+  "fetch": "PAGE_FETCH_STATE_UNSPECIFIED",
+  "crawledAs": "CRAWLING_USER_AGENT_UNSPECIFIED",
+  "sitemap": [
+   "https://topedgeai.com/sitemap.xml"
+  ]
+ },
+ {
+  "url": "https://topedgeai.com/whatsapp-festival-templates/akshaya-tritiya",
+  "http": 200,
+  "verdict": "NEUTRAL",
+  "coverage": "URL is unknown to Google",
+  "robots": "ROBOTS_TXT_STATE_UNSPECIFIED",
+  "indexing": "INDEXING_STATE_UNSPECIFIED",
+  "fetch": "PAGE_FETCH_STATE_UNSPECIFIED"
+ },
+ {
+  "url": "https://topedgeai.com/whatsapp-festival-templates/eid-ul-adha",
+  "http": 200,
+  "verdict": "NEUTRAL",
+  "coverage": "Discovered - currently not indexed",
+  "robots": "ROBOTS_TXT_STATE_UNSPECIFIED",
+  "indexing": "INDEXING_STATE_UNSPECIFIED",
+  "fetch": "PAGE_FETCH_STATE_UNSPECIFIED",
+  "crawledAs": "CRAWLING_USER_AGENT_UNSPECIFIED",
+  "sitemap": [
+   "https://topedgeai.com/sitemap.xml"
+  ],
+  "referring": [
+   "https://topedgeai.com/sitemap.xml"
+  ]
+ },
+ {
+  "url": "https://topedgeai.com/whatsapp-festival-templates/onam",
+  "http": 200,
+  "verdict": "NEUTRAL",
+  "coverage": "URL is unknown to Google",
+  "robots": "ROBOTS_TXT_STATE_UNSPECIFIED",
+  "indexing": "INDEXING_STATE_UNSPECIFIED",
+  "fetch": "PAGE_FETCH_STATE_UNSPECIFIED"
+ },
+ {
+  "url": "https://topedgeai.com/whatsapp-festival-templates/milad-un-nabi",
+  "http": 200,
+  "verdict": "NEUTRAL",
+  "coverage": "Discovered - currently not indexed",
+  "robots": "ROBOTS_TXT_STATE_UNSPECIFIED",
+  "indexing": "INDEXING_STATE_UNSPECIFIED",
+  "fetch": "PAGE_FETCH_STATE_UNSPECIFIED",
+  "crawledAs": "CRAWLING_USER_AGENT_UNSPECIFIED",
+  "sitemap": [
+   "https://topedgeai.com/sitemap.xml"
+  ]
+ },
+ {
+  "url": "https://topedgeai.com/whatsapp-festival-templates/raksha-bandhan",
+  "http": 200,
+  "verdict": "NEUTRAL",
+  "coverage": "Discovered - currently not indexed",
+  "robots": "ROBOTS_TXT_STATE_UNSPECIFIED",
+  "indexing": "INDEXING_STATE_UNSPECIFIED",
+  "fetch": "PAGE_FETCH_STATE_UNSPECIFIED",
+  "crawledAs": "CRAWLING_USER_AGENT_UNSPECIFIED",
+  "sitemap": [
+   "https://topedgeai.com/sitemap.xml"
+  ]
+ },
+ {
+  "url": "https://topedgeai.com/whatsapp-festival-templates/krishna-janmashtami",
+  "http": 200,
+  "verdict": "NEUTRAL",
+  "coverage": "Discovered - currently not indexed",
+  "robots": "ROBOTS_TXT_STATE_UNSPECIFIED",
+  "indexing": "INDEXING_STATE_UNSPECIFIED",
+  "fetch": "PAGE_FETCH_STATE_UNSPECIFIED",
+  "crawledAs": "CRAWLING_USER_AGENT_UNSPECIFIED",
+  "sitemap": [
+   "https://topedgeai.com/sitemap.xml"
+  ]
+ },
+ {
+  "url": "https://topedgeai.com/whatsapp-festival-templates/ganesh-chaturthi",
+  "http": 200,
+  "verdict": "NEUTRAL",
+  "coverage": "Discovered - currently not indexed",
+  "robots": "ROBOTS_TXT_STATE_UNSPECIFIED",
+  "indexing": "INDEXING_STATE_UNSPECIFIED",
+  "fetch": "PAGE_FETCH_STATE_UNSPECIFIED",
+  "crawledAs": "CRAWLING_USER_AGENT_UNSPECIFIED",
+  "sitemap": [
+   "https://topedgeai.com/sitemap.xml"
+  ]
+ },
+ {
+  "url": "https://topedgeai.com/whatsapp-festival-templates/navratri-durga-puja",
+  "http": 200,
+  "verdict": "NEUTRAL",
+  "coverage": "Discovered - currently not indexed",
+  "robots": "ROBOTS_TXT_STATE_UNSPECIFIED",
+  "indexing": "INDEXING_STATE_UNSPECIFIED",
+  "fetch": "PAGE_FETCH_STATE_UNSPECIFIED",
+  "crawledAs": "CRAWLING_USER_AGENT_UNSPECIFIED",
+  "sitemap": [
+   "https://topedgeai.com/sitemap.xml"
+  ]
+ },
+ {
+  "url": "https://topedgeai.com/whatsapp-festival-templates/dussehra",
+  "http": 200,
+  "verdict": "NEUTRAL",
+  "coverage": "Discovered - currently not indexed",
+  "robots": "ROBOTS_TXT_STATE_UNSPECIFIED",
+  "indexing": "INDEXING_STATE_UNSPECIFIED",
+  "fetch": "PAGE_FETCH_STATE_UNSPECIFIED",
+  "crawledAs": "CRAWLING_USER_AGENT_UNSPECIFIED",
+  "sitemap": [
+   "https://topedgeai.com/sitemap.xml"
+  ]
+ },
+ {
+  "url": "https://topedgeai.com/whatsapp-festival-templates/karwa-chauth",
+  "http": 200,
+  "verdict": "NEUTRAL",
+  "coverage": "Discovered - currently not indexed",
+  "robots": "ROBOTS_TXT_STATE_UNSPECIFIED",
+  "indexing": "INDEXING_STATE_UNSPECIFIED",
+  "fetch": "PAGE_FETCH_STATE_UNSPECIFIED",
+  "crawledAs": "CRAWLING_USER_AGENT_UNSPECIFIED",
+  "sitemap": [
+   "https://topedgeai.com/sitemap.xml"
+  ]
+ },
+ {
+  "url": "https://topedgeai.com/whatsapp-festival-templates/dhanteras",
+  "http": 200,
+  "verdict": "NEUTRAL",
+  "coverage": "Discovered - currently not indexed",
+  "robots": "ROBOTS_TXT_STATE_UNSPECIFIED",
+  "indexing": "INDEXING_STATE_UNSPECIFIED",
+  "fetch": "PAGE_FETCH_STATE_UNSPECIFIED",
+  "crawledAs": "CRAWLING_USER_AGENT_UNSPECIFIED",
+  "sitemap": [
+   "https://topedgeai.com/sitemap.xml"
+  ]
+ },
+ {
+  "url": "https://topedgeai.com/whatsapp-festival-templates/diwali",
+  "http": 200,
+  "verdict": "NEUTRAL",
+  "coverage": "Discovered - currently not indexed",
+  "robots": "ROBOTS_TXT_STATE_UNSPECIFIED",
+  "indexing": "INDEXING_STATE_UNSPECIFIED",
+  "fetch": "PAGE_FETCH_STATE_UNSPECIFIED",
+  "crawledAs": "CRAWLING_USER_AGENT_UNSPECIFIED",
+  "sitemap": [
+   "https://topedgeai.com/sitemap.xml"
+  ],
+  "referring": [
+   "https://topedgeai.com/sitemap.xml"
+  ]
+ },
+ {
+  "url": "https://topedgeai.com/whatsapp-festival-templates/bhai-dooj",
+  "http": 200,
+  "verdict": "NEUTRAL",
+  "coverage": "Discovered - currently not indexed",
+  "robots": "ROBOTS_TXT_STATE_UNSPECIFIED",
+  "indexing": "INDEXING_STATE_UNSPECIFIED",
+  "fetch": "PAGE_FETCH_STATE_UNSPECIFIED",
+  "crawledAs": "CRAWLING_USER_AGENT_UNSPECIFIED",
+  "sitemap": [
+   "https://topedgeai.com/sitemap.xml"
+  ]
+ },
+ {
+  "url": "https://topedgeai.com/whatsapp-festival-templates/chhath-puja",
+  "http": 200,
+  "verdict": "NEUTRAL",
+  "coverage": "Discovered - currently not indexed",
+  "robots": "ROBOTS_TXT_STATE_UNSPECIFIED",
+  "indexing": "INDEXING_STATE_UNSPECIFIED",
+  "fetch": "PAGE_FETCH_STATE_UNSPECIFIED",
+  "crawledAs": "CRAWLING_USER_AGENT_UNSPECIFIED",
+  "sitemap": [
+   "https://topedgeai.com/sitemap.xml"
+  ]
+ },
+ {
+  "url": "https://topedgeai.com/whatsapp-festival-templates/christmas",
+  "http": 200,
+  "verdict": "NEUTRAL",
+  "coverage": "URL is unknown to Google",
+  "robots": "ROBOTS_TXT_STATE_UNSPECIFIED",
+  "indexing": "INDEXING_STATE_UNSPECIFIED",
+  "fetch": "PAGE_FETCH_STATE_UNSPECIFIED"
+ },
+ {
+  "url": "https://topedgeai.com/whatsapp-journey-examples",
+  "http": 200,
+  "verdict": "NEUTRAL",
+  "coverage": "Soft 404",
+  "robots": "ALLOWED",
+  "indexing": "INDEXING_ALLOWED",
+  "lastCrawl": "2026-10-29T07:05:34Z",
+  "fetch": "SUCCESSFUL",
+  "crawledAs": "MOBILE",
+  "sitemap": [
+   "https://topedgeai.com/sitemap.xml"
+  ],
+  "referring": [
+   "https://dash.topedgeai.com/docs",
+   "https://topedgeai.com/whatsapp-journey-examples/cod-to-prepaid",
+   "https://topedgeai.com/sitemap.xml"
+  ]
+ },
+ {
+  "url": "https://topedgeai.com/whatsapp-journey-examples/cod-confirmation",
+  "http": 200,
+  "verdict": "PASS",
+  "coverage": "Submitted and indexed",
+  "robots": "ALLOWED",
+  "indexing": "INDEXING_ALLOWED",
+  "lastCrawl": "2026-10-30T05:58:32Z",
+  "fetch": "SUCCESSFUL",
+  "googleCanonical": "https://topedgeai.com/whatsapp-journey-examples/cod-confirmation",
+  "userCanonical": "https://topedgeai.com/whatsapp-journey-examples/cod-confirmation",
+  "crawledAs": "MOBILE",
+  "sitemap": [
+   "https://topedgeai.com/sitemap.xml"
+  ],
+  "referring": [
+   "https://topedgeai.com/whatsapp-journey-examples/cod-to-prepaid",
+   "https://topedgeai.com/sitemap.xml"
+  ]
+ },
+ {
+  "url": "https://topedgeai.com/whatsapp-journey-examples/abandoned-cart-recovery",
+  "http": 200,
+  "verdict": "PASS",
+  "coverage": "Submitted and indexed",
+  "robots": "ALLOWED",
+  "indexing": "INDEXING_ALLOWED",
+  "lastCrawl": "2026-10-27T07:04:27Z",
+  "fetch": "SUCCESSFUL",
+  "googleCanonical": "https://topedgeai.com/whatsapp-journey-examples/abandoned-cart-recovery",
+  "crawledAs": "MOBILE",
+  "sitemap": [
+   "https://topedgeai.com/sitemap.xml"
+  ],
+  "referring": [
+   "https://topedgeai.com/sitemap.xml"
+  ]
+ },
+ {
+  "url": "https://topedgeai.com/whatsapp-journey-examples/order-status-updates",
+  "http": 200,
+  "verdict": "NEUTRAL",
+  "coverage": "Discovered - currently not indexed",
+  "robots": "ROBOTS_TXT_STATE_UNSPECIFIED",
+  "indexing": "INDEXING_STATE_UNSPECIFIED",
+  "fetch": "PAGE_FETCH_STATE_UNSPECIFIED",
+  "crawledAs": "CRAWLING_USER_AGENT_UNSPECIFIED",
+  "sitemap": [
+   "https://topedgeai.com/sitemap.xml"
+  ],
+  "referring": [
+   "https://topedgeai.com/sitemap.xml"
+  ]
+ },
+ {
+  "url": "https://topedgeai.com/whatsapp-journey-examples/cod-to-prepaid",
+  "http": 200,
+  "verdict": "NEUTRAL",
+  "coverage": "Crawled - currently not indexed",
+  "robots": "ALLOWED",
+  "indexing": "INDEXING_STATE_UNSPECIFIED",
+  "lastCrawl": "2026-10-25T13:20:32Z",
+  "fetch": "SUCCESSFUL",
+  "crawledAs": "MOBILE",
+  "sitemap": [
+   "https://topedgeai.com/sitemap.xml"
+  ],
+  "referring": [
+   "https://topedgeai.com/sitemap.xml"
+  ]
+ },
+ {
+  "url": "https://topedgeai.com/blog/whatsapp-abandoned-cart-recovery-shopify",
+  "http": 200,
+  "verdict": "PASS",
+  "coverage": "Submitted and indexed",
+  "robots": "ALLOWED",
+  "indexing": "INDEXING_ALLOWED",
+  "lastCrawl": "2026-10-30T17:43:53Z",
+  "fetch": "SUCCESSFUL",
+  "googleCanonical": "https://topedgeai.com/blog/whatsapp-abandoned-cart-recovery-shopify",
+  "userCanonical": "https://topedgeai.com/blog/whatsapp-abandoned-cart-recovery-shopify",
+  "crawledAs": "MOBILE",
+  "sitemap": [
+   "https://topedgeai.com/sitemap.xml"
+  ],
+  "referring": [
+   "https://topedgeai.com/whatsapp-cart-recovery/"
+  ]
+ },
+ {
+  "url": "https://topedgeai.com/blog/ecommerce-funnel-drop-off-benchmarks-visitor-identity-resolution",
+  "http": 200,
+  "verdict": "PASS",
+  "coverage": "Submitted and indexed",
+  "robots": "ALLOWED",
+  "indexing": "INDEXING_ALLOWED",
+  "lastCrawl": "2026-11-01T07:19:35Z",
+  "fetch": "SUCCESSFUL",
+  "googleCanonical": "https://topedgeai.com/blog/ecommerce-funnel-drop-off-benchmarks-visitor-identity-resolution",
+  "userCanonical": "https://topedgeai.com/blog/ecommerce-funnel-drop-off-benchmarks-visitor-identity-resolution",
+  "crawledAs": "MOBILE",
+  "sitemap": [
+   "https://topedgeai.com/sitemap.xml"
+  ],
+  "referring": [
+   "https://topedgeai.com/sitemap.xml"
+  ]
+ },
+ {
+  "url": "https://topedgeai.com/blog/whatsapp-automation-for-shopify",
+  "http": 200,
+  "verdict": "PASS",
+  "coverage": "Submitted and indexed",
+  "robots": "ALLOWED",
+  "indexing": "INDEXING_ALLOWED",
+  "lastCrawl": "2026-10-29T05:41:51Z",
+  "fetch": "SUCCESSFUL",
+  "googleCanonical": "https://topedgeai.com/blog/whatsapp-automation-for-shopify",
+  "userCanonical": "https://topedgeai.com/blog/whatsapp-automation-for-shopify",
+  "crawledAs": "MOBILE",
+  "referring": [
+   "https://topedgeai.com/blog/meta-whatsapp-cloud-api-shopify-templates"
+  ]
+ },
+ {
+  "url": "https://topedgeai.com/blog/best-shopify-app-for-abandoned-cart-recovery-india",
+  "http": 200,
+  "verdict": "PASS",
+  "coverage": "Submitted and indexed",
+  "robots": "ALLOWED",
+  "indexing": "INDEXING_ALLOWED",
+  "lastCrawl": "2026-11-03T05:47:17Z",
+  "fetch": "SUCCESSFUL",
+  "googleCanonical": "https://topedgeai.com/blog/best-shopify-app-for-abandoned-cart-recovery-india",
+  "userCanonical": "https://topedgeai.com/blog/best-shopify-app-for-abandoned-cart-recovery-india",
+  "crawledAs": "MOBILE",
+  "sitemap": [
+   "https://topedgeai.com/sitemap.xml"
+  ],
+  "referring": [
+   "https://dash.topedgeai.com/docs",
+   "https://topedgeai.com/sitemap.xml"
+  ]
+ },
+ {
+  "url": "https://topedgeai.com/blog/shopify-whatsapp-automation-what-to-automate-first",
+  "http": 200,
+  "verdict": "PASS",
+  "coverage": "Submitted and indexed",
+  "robots": "ALLOWED",
+  "indexing": "INDEXING_ALLOWED",
+  "lastCrawl": "2026-10-29T05:45:18Z",
+  "fetch": "SUCCESSFUL",
+  "googleCanonical": "https://topedgeai.com/blog/shopify-whatsapp-automation-what-to-automate-first",
+  "userCanonical": "https://topedgeai.com/blog/shopify-whatsapp-automation-what-to-automate-first",
+  "crawledAs": "MOBILE",
+  "referring": [
+   "https://topedgeai.com/blog/category/automation",
+   "https://topedgeai.com/blog/how-to-choose-whatsapp-app-shopify-app-store"
+  ]
+ },
+ {
+  "url": "https://topedgeai.com/blog/best-whatsapp-apps-for-shopify",
+  "http": 200,
+  "verdict": "PASS",
+  "coverage": "Submitted and indexed",
+  "robots": "ALLOWED",
+  "indexing": "INDEXING_ALLOWED",
+  "lastCrawl": "2026-11-03T05:48:13Z",
+  "fetch": "SUCCESSFUL",
+  "googleCanonical": "https://topedgeai.com/blog/best-whatsapp-apps-for-shopify",
+  "userCanonical": "https://topedgeai.com/blog/best-whatsapp-apps-for-shopify",
+  "crawledAs": "MOBILE",
+  "referring": [
+   "https://topedgeai.com/blog/whatsapp-shared-inbox-shopify-order-context"
+  ]
+ },
+ {
+  "url": "https://topedgeai.com/blog/meta-whatsapp-cloud-api-shopify-templates",
+  "http": 200,
+  "verdict": "PASS",
+  "coverage": "Submitted and indexed",
+  "robots": "ALLOWED",
+  "indexing": "INDEXING_ALLOWED",
+  "lastCrawl": "2026-10-06T03:11:06Z",
+  "fetch": "SUCCESSFUL",
+  "googleCanonical": "https://topedgeai.com/blog/meta-whatsapp-cloud-api-shopify-templates",
+  "userCanonical": "https://topedgeai.com/blog/meta-whatsapp-cloud-api-shopify-templates",
+  "crawledAs": "MOBILE",
+  "sitemap": [
+   "https://topedgeai.com/sitemap.xml"
+  ],
+  "referring": [
+   "https://topedgeai.com/whatsapp-journey-examples/order-status-updates",
+   "https://topedgeai.com/docs/platform/message-templates"
+  ]
+ },
+ {
+  "url": "https://topedgeai.com/blog/ecommerce-automation-whatsapp-vs-email-india",
+  "http": 200,
+  "verdict": "PASS",
+  "coverage": "Submitted and indexed",
+  "robots": "ALLOWED",
+  "indexing": "INDEXING_ALLOWED",
+  "lastCrawl": "2026-11-03T05:48:12Z",
+  "fetch": "SUCCESSFUL",
+  "googleCanonical": "https://topedgeai.com/blog/ecommerce-automation-whatsapp-vs-email-india",
+  "userCanonical": "https://topedgeai.com/blog/ecommerce-automation-whatsapp-vs-email-india",
+  "crawledAs": "MOBILE",
+  "sitemap": [
+   "https://topedgeai.com/sitemap.xml"
+  ],
+  "referring": [
+   "https://topedgeai.com/docs/reference/email"
+  ]
+ },
+ {
+  "url": "https://topedgeai.com/blog/whatsapp-shared-inbox-shopify-order-context",
+  "http": 200,
+  "verdict": "PASS",
+  "coverage": "Submitted and indexed",
+  "robots": "ALLOWED",
+  "indexing": "INDEXING_ALLOWED",
+  "lastCrawl": "2026-10-25T21:05:41Z",
+  "fetch": "SUCCESSFUL",
+  "googleCanonical": "https://topedgeai.com/blog/whatsapp-shared-inbox-shopify-order-context",
+  "userCanonical": "https://topedgeai.com/blog/whatsapp-shared-inbox-shopify-order-context",
+  "crawledAs": "MOBILE",
+  "sitemap": [
+   "https://topedgeai.com/sitemap.xml"
+  ],
+  "referring": [
+   "https://topedgeai.com/whatsapp-journey-examples/order-status-updates",
+   "https://topedgeai.com/sitemap.xml"
+  ]
+ },
+ {
+  "url": "https://topedgeai.com/blog/shopify-automation-checklist-whatsapp-cart-recovery",
+  "http": 200,
+  "verdict": "PASS",
+  "coverage": "Submitted and indexed",
+  "robots": "ALLOWED",
+  "indexing": "INDEXING_ALLOWED",
+  "lastCrawl": "2026-10-06T04:02:31Z",
+  "fetch": "SUCCESSFUL",
+  "googleCanonical": "https://topedgeai.com/blog/shopify-automation-checklist-whatsapp-cart-recovery",
+  "userCanonical": "https://topedgeai.com/blog/shopify-automation-checklist-whatsapp-cart-recovery",
+  "crawledAs": "MOBILE",
+  "referring": [
+   "https://topedgeai.com/blog/meta-whatsapp-cloud-api-shopify-templates"
+  ]
+ },
+ {
+  "url": "https://topedgeai.com/blog/how-to-reduce-rto-with-whatsapp-cod-confirmation",
+  "http": 200,
+  "verdict": "PASS",
+  "coverage": "Submitted and indexed",
+  "robots": "ALLOWED",
+  "indexing": "INDEXING_ALLOWED",
+  "lastCrawl": "2026-11-03T05:51:08Z",
+  "fetch": "SUCCESSFUL",
+  "googleCanonical": "https://topedgeai.com/blog/how-to-reduce-rto-with-whatsapp-cod-confirmation",
+  "userCanonical": "https://topedgeai.com/blog/how-to-reduce-rto-with-whatsapp-cod-confirmation",
+  "crawledAs": "MOBILE",
+  "sitemap": [
+   "https://topedgeai.com/sitemap.xml"
+  ],
+  "referring": [
+   "https://topedgeai.hashnode.dev/how-to-build-a-whatsapp-cod-order-confirmation-workflow-for-shopify",
+   "https://topedgeai.com/sitemap.xml"
+  ]
+ },
+ {
+  "url": "https://topedgeai.com/blog/best-whatsapp-automation-tools-shopify-india",
+  "http": 200,
+  "verdict": "PASS",
+  "coverage": "Submitted and indexed",
+  "robots": "ALLOWED",
+  "indexing": "INDEXING_ALLOWED",
+  "lastCrawl": "2026-11-03T05:47:49Z",
+  "fetch": "SUCCESSFUL",
+  "googleCanonical": "https://topedgeai.com/blog/best-whatsapp-automation-tools-shopify-india",
+  "userCanonical": "https://topedgeai.com/blog/best-whatsapp-automation-tools-shopify-india",
+  "crawledAs": "MOBILE",
+  "sitemap": [
+   "https://topedgeai.com/sitemap.xml"
+  ],
+  "referring": [
+   "https://topedgeai.com/sitemap.xml"
+  ]
+ },
+ {
+  "url": "https://topedgeai.com/blog/what-is-ecommerce-automation-shopify-whatsapp",
+  "http": 200,
+  "verdict": "PASS",
+  "coverage": "Submitted and indexed",
+  "robots": "ALLOWED",
+  "indexing": "INDEXING_ALLOWED",
+  "lastCrawl": "2026-10-26T04:36:04Z",
+  "fetch": "SUCCESSFUL",
+  "googleCanonical": "https://topedgeai.com/blog/what-is-ecommerce-automation-shopify-whatsapp",
+  "userCanonical": "https://topedgeai.com/blog/what-is-ecommerce-automation-shopify-whatsapp",
+  "crawledAs": "MOBILE",
+  "sitemap": [
+   "https://topedgeai.com/sitemap.xml"
+  ],
+  "referring": [
+   "https://topedgeai.com/blog/category/automation"
+  ]
+ },
+ {
+  "url": "https://topedgeai.com/blog/ai-whatsapp-chatbot-for-shopify-india",
+  "http": 200,
+  "verdict": "PASS",
+  "coverage": "Submitted and indexed",
+  "robots": "ALLOWED",
+  "indexing": "INDEXING_ALLOWED",
+  "lastCrawl": "2026-11-03T05:37:52Z",
+  "fetch": "SUCCESSFUL",
+  "googleCanonical": "https://topedgeai.com/blog/ai-whatsapp-chatbot-for-shopify-india",
+  "userCanonical": "https://topedgeai.com/blog/ai-whatsapp-chatbot-for-shopify-india",
+  "crawledAs": "MOBILE",
+  "sitemap": [
+   "https://topedgeai.com/sitemap.xml"
+  ],
+  "referring": [
+   "https://topedgeai.com/sitemap.xml"
+  ]
+ },
+ {
+  "url": "https://topedgeai.com/blog/zoko-alternative-shopify-india",
+  "http": 200,
+  "verdict": "PASS",
+  "coverage": "Submitted and indexed",
+  "robots": "ALLOWED",
+  "indexing": "INDEXING_ALLOWED",
+  "lastCrawl": "2026-10-30T17:41:49Z",
+  "fetch": "SUCCESSFUL",
+  "googleCanonical": "https://topedgeai.com/blog/zoko-alternative-shopify-india",
+  "userCanonical": "https://topedgeai.com/blog/zoko-alternative-shopify-india",
+  "crawledAs": "MOBILE",
+  "sitemap": [
+   "https://topedgeai.com/sitemap.xml"
+  ],
+  "referring": [
+   "https://topedgeai.com/sitemap.xml"
+  ]
+ },
+ {
+  "url": "https://topedgeai.com/blog/getgabs-alternative-shopify-whatsapp",
+  "http": 200,
+  "verdict": "PASS",
+  "coverage": "Submitted and indexed",
+  "robots": "ALLOWED",
+  "indexing": "INDEXING_ALLOWED",
+  "lastCrawl": "2026-11-03T05:47:17Z",
+  "fetch": "SUCCESSFUL",
+  "googleCanonical": "https://topedgeai.com/blog/getgabs-alternative-shopify-whatsapp",
+  "userCanonical": "https://topedgeai.com/blog/getgabs-alternative-shopify-whatsapp",
+  "crawledAs": "MOBILE",
+  "sitemap": [
+   "https://topedgeai.com/sitemap.xml"
+  ],
+  "referring": [
+   "https://topedgeai.com/blog/aisensy-alternative-shopify-india"
+  ]
+ },
+ {
+  "url": "https://topedgeai.com/blog/kanal-whatsapp-alternative-shopify",
+  "http": 200,
+  "verdict": "PASS",
+  "coverage": "Submitted and indexed",
+  "robots": "ALLOWED",
+  "indexing": "INDEXING_ALLOWED",
+  "lastCrawl": "2026-11-03T05:47:17Z",
+  "fetch": "SUCCESSFUL",
+  "googleCanonical": "https://topedgeai.com/blog/kanal-whatsapp-alternative-shopify",
+  "userCanonical": "https://topedgeai.com/blog/kanal-whatsapp-alternative-shopify",
+  "crawledAs": "MOBILE",
+  "sitemap": [
+   "https://topedgeai.com/sitemap.xml"
+  ],
+  "referring": [
+   "https://topedgeai.com/sitemap.xml"
+  ]
+ },
+ {
+  "url": "https://topedgeai.com/blog/how-to-choose-whatsapp-app-shopify-app-store",
+  "http": 200,
+  "verdict": "PASS",
+  "coverage": "Submitted and indexed",
+  "robots": "ALLOWED",
+  "indexing": "INDEXING_ALLOWED",
+  "lastCrawl": "2026-11-03T05:47:39Z",
+  "fetch": "SUCCESSFUL",
+  "googleCanonical": "https://topedgeai.com/blog/how-to-choose-whatsapp-app-shopify-app-store",
+  "userCanonical": "https://topedgeai.com/blog/how-to-choose-whatsapp-app-shopify-app-store",
+  "crawledAs": "MOBILE",
+  "referring": [
+   "https://topedgeai.com/sitemap.xml"
+  ]
+ },
+ {
+  "url": "https://topedgeai.com/blog/whatsapp-business-api-pricing-india",
+  "http": 200,
+  "verdict": "PASS",
+  "coverage": "Submitted and indexed",
+  "robots": "ALLOWED",
+  "indexing": "INDEXING_ALLOWED",
+  "lastCrawl": "2026-10-06T04:07:36Z",
+  "fetch": "SUCCESSFUL",
+  "googleCanonical": "https://topedgeai.com/blog/whatsapp-business-api-pricing-india",
+  "userCanonical": "https://topedgeai.com/blog/whatsapp-business-api-pricing-india",
+  "crawledAs": "MOBILE",
+  "referring": [
+   "https://topedgeai.com/compare/gupshup",
+   "https://topedgeai.com/blog/how-to-choose-whatsapp-app-shopify-app-store"
+  ]
+ },
+ {
+  "url": "https://topedgeai.com/blog/dondy-alternative-shopify-india",
+  "http": 200,
+  "verdict": "PASS",
+  "coverage": "Submitted and indexed",
+  "robots": "ALLOWED",
+  "indexing": "INDEXING_ALLOWED",
+  "lastCrawl": "2026-11-03T05:48:24Z",
+  "fetch": "SUCCESSFUL",
+  "googleCanonical": "https://topedgeai.com/blog/dondy-alternative-shopify-india",
+  "userCanonical": "https://topedgeai.com/blog/dondy-alternative-shopify-india",
+  "crawledAs": "MOBILE",
+  "sitemap": [
+   "https://topedgeai.com/sitemap.xml"
+  ],
+  "referring": [
+   "https://topedgeai.com/sitemap.xml"
+  ]
+ },
+ {
+  "url": "https://topedgeai.com/blog/organic-vs-paid-ecommerce-marketing-2026",
+  "http": 200,
+  "verdict": "PASS",
+  "coverage": "Submitted and indexed",
+  "robots": "ALLOWED",
+  "indexing": "INDEXING_ALLOWED",
+  "lastCrawl": "2026-10-08T04:11:16Z",
+  "fetch": "SUCCESSFUL",
+  "googleCanonical": "https://topedgeai.com/blog/organic-vs-paid-ecommerce-marketing-2026",
+  "userCanonical": "https://topedgeai.com/blog/organic-vs-paid-ecommerce-marketing-2026",
+  "crawledAs": "MOBILE",
+  "sitemap": [
+   "https://topedgeai.com/sitemap.xml"
+  ],
+  "referring": [
+   "https://topedgeai.com/blog/shopify-automation-checklist-whatsapp-cart-recovery"
+  ]
+ },
+ {
+  "url": "https://topedgeai.com/blog/cod-rto-benchmark-india-2026",
+  "http": 200,
+  "verdict": "PASS",
+  "coverage": "Submitted and indexed",
+  "robots": "ALLOWED",
+  "indexing": "INDEXING_ALLOWED",
+  "lastCrawl": "2026-10-25T23:30:58Z",
+  "fetch": "SUCCESSFUL",
+  "googleCanonical": "https://topedgeai.com/blog/cod-rto-benchmark-india-2026",
+  "userCanonical": "https://topedgeai.com/blog/cod-rto-benchmark-india-2026",
+  "crawledAs": "MOBILE",
+  "sitemap": [
+   "https://topedgeai.com/sitemap.xml"
+  ],
+  "referring": [
+   "https://topedgeai.com/blog/category/cod-rto",
+   "https://topedgeai.com/whatsapp-journey-examples/cod-to-prepaid"
+  ]
+ },
+ {
+  "url": "https://topedgeai.com/blog/profitable-ecommerce-business-india",
+  "http": 200,
+  "verdict": "PASS",
+  "coverage": "Submitted and indexed",
+  "robots": "ALLOWED",
+  "indexing": "INDEXING_ALLOWED",
+  "lastCrawl": "2026-10-24T10:13:01Z",
+  "fetch": "SUCCESSFUL",
+  "googleCanonical": "https://topedgeai.com/blog/profitable-ecommerce-business-india",
+  "userCanonical": "https://topedgeai.com/blog/profitable-ecommerce-business-india",
+  "crawledAs": "MOBILE",
+  "sitemap": [
+   "https://topedgeai.com/sitemap.xml"
+  ],
+  "referring": [
+   "https://topedgeai.com/blog/cod-rto-benchmark-india-2026"
+  ]
+ },
+ {
+  "url": "https://topedgeai.com/blog/how-to-automate-ecommerce-store-india",
+  "http": 200,
+  "verdict": "PASS",
+  "coverage": "Submitted and indexed",
+  "robots": "ALLOWED",
+  "indexing": "INDEXING_ALLOWED",
+  "lastCrawl": "2026-10-24T10:09:42Z",
+  "fetch": "SUCCESSFUL",
+  "googleCanonical": "https://topedgeai.com/blog/how-to-automate-ecommerce-store-india",
+  "userCanonical": "https://topedgeai.com/blog/how-to-automate-ecommerce-store-india",
+  "crawledAs": "MOBILE",
+  "sitemap": [
+   "https://topedgeai.com/sitemap.xml"
+  ],
+  "referring": [
+   "https://topedgeai.com/blog/shopify-whatsapp-automation-what-to-automate-first",
+   "https://topedgeai.com/blog/shopify-automation-checklist-whatsapp-cart-recovery"
+  ]
+ },
+ {
+  "url": "https://topedgeai.com/blog/organic-ecommerce-leads-short-form-video",
+  "http": 200,
+  "verdict": "NEUTRAL",
+  "coverage": "Discovered - currently not indexed",
+  "robots": "ROBOTS_TXT_STATE_UNSPECIFIED",
+  "indexing": "INDEXING_STATE_UNSPECIFIED",
+  "fetch": "PAGE_FETCH_STATE_UNSPECIFIED",
+  "crawledAs": "CRAWLING_USER_AGENT_UNSPECIFIED",
+  "sitemap": [
+   "https://topedgeai.com/sitemap.xml"
+  ],
+  "referring": [
+   "https://topedgeai.com/blog/profitable-ecommerce-business-india"
+  ]
+ },
+ {
+  "url": "https://topedgeai.com/blog/trending-products-to-sell-online-india-2026",
+  "http": 200,
+  "verdict": "PASS",
+  "coverage": "Submitted and indexed",
+  "robots": "ALLOWED",
+  "indexing": "INDEXING_ALLOWED",
+  "lastCrawl": "2026-10-26T02:18:30Z",
+  "fetch": "SUCCESSFUL",
+  "googleCanonical": "https://topedgeai.com/blog/trending-products-to-sell-online-india-2026",
+  "userCanonical": "https://topedgeai.com/blog/trending-products-to-sell-online-india-2026",
+  "crawledAs": "MOBILE",
+  "sitemap": [
+   "https://topedgeai.com/sitemap.xml"
+  ],
+  "referring": [
+   "https://topedgeai.com/blog/shopify-whatsapp-automation-what-to-automate-first"
+  ]
+ },
+ {
+  "url": "https://topedgeai.com/blog/wati-alternative-shopify-india",
+  "http": 200,
+  "verdict": "PASS",
+  "coverage": "Submitted and indexed",
+  "robots": "ALLOWED",
+  "indexing": "INDEXING_ALLOWED",
+  "lastCrawl": "2026-10-30T17:41:12Z",
+  "fetch": "SUCCESSFUL",
+  "googleCanonical": "https://topedgeai.com/blog/wati-alternative-shopify-india",
+  "userCanonical": "https://topedgeai.com/blog/wati-alternative-shopify-india",
+  "crawledAs": "MOBILE",
+  "sitemap": [
+   "https://topedgeai.com/sitemap.xml"
+  ],
+  "referring": [
+   "https://topedgeai.com/blog/aisensy-alternative-shopify-india"
+  ]
+ },
+ {
+  "url": "https://topedgeai.com/blog/aisensy-alternative-shopify-india",
+  "http": 200,
+  "verdict": "PASS",
+  "coverage": "Submitted and indexed",
+  "robots": "ALLOWED",
+  "indexing": "INDEXING_ALLOWED",
+  "lastCrawl": "2026-10-26T01:10:51Z",
+  "fetch": "SUCCESSFUL",
+  "googleCanonical": "https://topedgeai.com/blog/aisensy-alternative-shopify-india",
+  "userCanonical": "https://topedgeai.com/blog/aisensy-alternative-shopify-india",
+  "crawledAs": "MOBILE",
+  "sitemap": [
+   "https://topedgeai.com/sitemap.xml"
+  ],
+  "referring": [
+   "https://topedgeai.com/compare/aisensy"
+  ]
+ },
+ {
+  "url": "https://topedgeai.com/blog/interakt-alternative-shopify-india",
+  "http": 200,
+  "verdict": "PASS",
+  "coverage": "Submitted and indexed",
+  "robots": "ALLOWED",
+  "indexing": "INDEXING_ALLOWED",
+  "lastCrawl": "2026-10-30T17:34:01Z",
+  "fetch": "SUCCESSFUL",
+  "googleCanonical": "https://topedgeai.com/blog/interakt-alternative-shopify-india",
+  "userCanonical": "https://topedgeai.com/blog/interakt-alternative-shopify-india",
+  "crawledAs": "MOBILE",
+  "sitemap": [
+   "https://topedgeai.com/sitemap.xml"
+  ],
+  "referring": [
+   "https://topedgeai.com/compare/interakt"
+  ]
+ },
+ {
+  "url": "https://topedgeai.com/blog/bitespeed-alternative-shopify-india",
+  "http": 200,
+  "verdict": "PASS",
+  "coverage": "Submitted and indexed",
+  "robots": "ALLOWED",
+  "indexing": "INDEXING_ALLOWED",
+  "lastCrawl": "2026-10-30T17:41:11Z",
+  "fetch": "SUCCESSFUL",
+  "googleCanonical": "https://topedgeai.com/blog/bitespeed-alternative-shopify-india",
+  "userCanonical": "https://topedgeai.com/blog/bitespeed-alternative-shopify-india",
+  "crawledAs": "MOBILE",
+  "sitemap": [
+   "https://topedgeai.com/sitemap.xml"
+  ],
+  "referring": [
+   "https://topedgeai.com/blog/aisensy-alternative-shopify-india"
+  ]
+ },
+ {
+  "url": "https://topedgeai.com/blog/whatsapp-template-rejected-meta-shopify-fix",
+  "http": 200,
+  "verdict": "PASS",
+  "coverage": "Submitted and indexed",
+  "robots": "ALLOWED",
+  "indexing": "INDEXING_ALLOWED",
+  "lastCrawl": "2026-10-26T07:10:07Z",
+  "fetch": "SUCCESSFUL",
+  "googleCanonical": "https://topedgeai.com/blog/whatsapp-template-rejected-meta-shopify-fix",
+  "userCanonical": "https://topedgeai.com/blog/whatsapp-template-rejected-meta-shopify-fix",
+  "crawledAs": "MOBILE",
+  "sitemap": [
+   "https://topedgeai.com/sitemap.xml"
+  ],
+  "referring": [
+   "https://topedgeai.com/blog/meta-whatsapp-cloud-api-shopify-templates"
+  ]
+ },
+ {
+  "url": "https://topedgeai.com/blog/whatsapp-opt-in-shopify-india",
+  "http": 200,
+  "verdict": "PASS",
+  "coverage": "Submitted and indexed",
+  "robots": "ALLOWED",
+  "indexing": "INDEXING_ALLOWED",
+  "lastCrawl": "2026-10-26T19:21:29Z",
+  "fetch": "SUCCESSFUL",
+  "googleCanonical": "https://topedgeai.com/blog/whatsapp-opt-in-shopify-india",
+  "crawledAs": "MOBILE",
+  "sitemap": [
+   "https://topedgeai.com/sitemap.xml"
+  ],
+  "referring": [
+   "https://topedgeai.com/blog/meta-whatsapp-cloud-api-shopify-templates"
+  ]
+ },
+ {
+  "url": "https://topedgeai.com/blog/updatrr-alternative-shopify-india",
+  "http": 200,
+  "verdict": "PASS",
+  "coverage": "Submitted and indexed",
+  "robots": "ALLOWED",
+  "indexing": "INDEXING_ALLOWED",
+  "lastCrawl": "2026-10-22T00:06:25Z",
+  "fetch": "SUCCESSFUL",
+  "googleCanonical": "https://topedgeai.com/blog/updatrr-alternative-shopify-india",
+  "crawledAs": "MOBILE",
+  "sitemap": [
+   "https://topedgeai.com/sitemap.xml"
+  ],
+  "referring": [
+   "https://topedgeai.com/compare/updatrr"
+  ]
+ },
+ {
+  "url": "https://topedgeai.com/blog/cod-to-prepaid-whatsapp-shopify-india",
+  "http": 200,
+  "verdict": "PASS",
+  "coverage": "Submitted and indexed",
+  "robots": "ALLOWED",
+  "indexing": "INDEXING_ALLOWED",
+  "lastCrawl": "2026-10-22T16:32:54Z",
+  "fetch": "SUCCESSFUL",
+  "googleCanonical": "https://topedgeai.com/blog/cod-to-prepaid-whatsapp-shopify-india",
+  "userCanonical": "https://topedgeai.com/blog/cod-to-prepaid-whatsapp-shopify-india",
+  "crawledAs": "MOBILE",
+  "sitemap": [
+   "https://topedgeai.com/sitemap.xml"
+  ],
+  "referring": [
+   "https://topedgeai.com/whatsapp-journey-examples/cod-to-prepaid"
+  ]
+ },
+ {
+  "url": "https://topedgeai.com/blog/best-shopify-upsell-apps",
+  "http": 200,
+  "verdict": "PASS",
+  "coverage": "Submitted and indexed",
+  "robots": "ALLOWED",
+  "indexing": "INDEXING_ALLOWED",
+  "lastCrawl": "2026-11-04T11:08:29Z",
+  "fetch": "SUCCESSFUL",
+  "googleCanonical": "https://topedgeai.com/blog/best-shopify-upsell-apps",
+  "userCanonical": "https://topedgeai.com/blog/best-shopify-upsell-apps",
+  "crawledAs": "MOBILE",
+  "referring": [
+   "https://topedgeai.com/blog/shopify-seo-experts"
+  ]
+ },
+ {
+  "url": "https://topedgeai.com/blog/shopify-seo-experts",
+  "http": 200,
+  "verdict": "PASS",
+  "coverage": "Submitted and indexed",
+  "robots": "ALLOWED",
+  "indexing": "INDEXING_ALLOWED",
+  "lastCrawl": "2026-11-03T12:32:26Z",
+  "fetch": "SUCCESSFUL",
+  "googleCanonical": "https://topedgeai.com/blog/shopify-seo-experts",
+  "userCanonical": "https://topedgeai.com/blog/shopify-seo-experts",
+  "crawledAs": "MOBILE"
+ },
+ {
+  "url": "https://topedgeai.com/docs",
+  "http": 200,
+  "verdict": "PASS",
+  "coverage": "Submitted and indexed",
+  "robots": "ALLOWED",
+  "indexing": "INDEXING_ALLOWED",
+  "lastCrawl": "2026-10-31T04:55:24Z",
+  "fetch": "SUCCESSFUL",
+  "googleCanonical": "https://topedgeai.com/docs",
+  "userCanonical": "https://topedgeai.com/docs",
+  "crawledAs": "MOBILE",
+  "sitemap": [
+   "https://topedgeai.com/sitemap.xml"
+  ],
+  "referring": [
+   "https://dash.topedgeai.com/docs",
+   "https://topedgeai.com/docs/reference/ai-brain",
+   "https://topedgeai.com/docs/reference/commerce"
+  ]
+ },
+ {
+  "url": "https://topedgeai.com/docs/quickstart",
+  "http": 200,
+  "verdict": "PASS",
+  "coverage": "Submitted and indexed",
+  "robots": "ALLOWED",
+  "indexing": "INDEXING_ALLOWED",
+  "lastCrawl": "2026-10-31T18:17:16Z",
+  "fetch": "SUCCESSFUL",
+  "googleCanonical": "https://topedgeai.com/docs/quickstart",
+  "userCanonical": "https://topedgeai.com/docs/quickstart",
+  "crawledAs": "MOBILE",
+  "sitemap": [
+   "https://topedgeai.com/sitemap.xml"
+  ],
+  "referring": [
+   "https://dash.topedgeai.com/docs",
+   "https://topedgeai.com/docs/reference/ai-brain",
+   "https://topedgeai.com/docs/reference/commerce"
+  ]
+ },
+ {
+  "url": "https://topedgeai.com/docs/connect-shopify",
+  "http": 200,
+  "verdict": "PASS",
+  "coverage": "Submitted and indexed",
+  "robots": "ALLOWED",
+  "indexing": "INDEXING_ALLOWED",
+  "lastCrawl": "2026-10-31T18:17:16Z",
+  "fetch": "SUCCESSFUL",
+  "googleCanonical": "https://topedgeai.com/docs/connect-shopify",
+  "userCanonical": "https://topedgeai.com/docs/connect-shopify",
+  "crawledAs": "MOBILE",
+  "sitemap": [
+   "https://topedgeai.com/sitemap.xml"
+  ],
+  "referring": [
+   "https://dash.topedgeai.com/docs",
+   "https://topedgeai.com/docs/reference/commerce"
+  ]
+ },
+ {
+  "url": "https://topedgeai.com/docs/connect-whatsapp",
+  "http": 200,
+  "verdict": "PASS",
+  "coverage": "Submitted and indexed",
+  "robots": "ALLOWED",
+  "indexing": "INDEXING_ALLOWED",
+  "lastCrawl": "2026-10-31T18:15:21Z",
+  "fetch": "SUCCESSFUL",
+  "googleCanonical": "https://topedgeai.com/docs/connect-whatsapp",
+  "userCanonical": "https://topedgeai.com/docs/connect-whatsapp",
+  "crawledAs": "MOBILE",
+  "sitemap": [
+   "https://topedgeai.com/sitemap.xml"
+  ],
+  "referring": [
+   "https://dash.topedgeai.com/docs",
+   "https://topedgeai.com/docs/platform/message-templates",
+   "https://topedgeai.com/docs/reference/commerce"
+  ]
+ },
+ {
+  "url": "https://topedgeai.com/docs/go-live-checklist",
+  "http": 200,
+  "verdict": "NEUTRAL",
+  "coverage": "Discovered - currently not indexed",
+  "robots": "ROBOTS_TXT_STATE_UNSPECIFIED",
+  "indexing": "INDEXING_STATE_UNSPECIFIED",
+  "fetch": "PAGE_FETCH_STATE_UNSPECIFIED",
+  "crawledAs": "CRAWLING_USER_AGENT_UNSPECIFIED",
+  "sitemap": [
+   "https://topedgeai.com/sitemap.xml"
+  ],
+  "referring": [
+   "https://dash.topedgeai.com/docs",
+   "https://topedgeai.com/docs/reference/commerce"
+  ]
+ },
+ {
+  "url": "https://topedgeai.com/docs/guides/abandoned-cart-recovery",
+  "http": 200,
+  "verdict": "PASS",
+  "coverage": "Submitted and indexed",
+  "robots": "ALLOWED",
+  "indexing": "INDEXING_ALLOWED",
+  "lastCrawl": "2026-10-31T18:15:21Z",
+  "fetch": "SUCCESSFUL",
+  "googleCanonical": "https://topedgeai.com/docs/guides/abandoned-cart-recovery",
+  "userCanonical": "https://topedgeai.com/docs/guides/abandoned-cart-recovery",
+  "crawledAs": "MOBILE",
+  "sitemap": [
+   "https://topedgeai.com/sitemap.xml"
+  ],
+  "referring": [
+   "https://dash.topedgeai.com/docs",
+   "https://topedgeai.com/docs/reference/warranty-hub",
+   "https://topedgeai.com/docs/reference/commerce"
+  ]
+ },
+ {
+  "url": "https://topedgeai.com/docs/guides/cod-confirmation",
+  "http": 200,
+  "verdict": "PASS",
+  "coverage": "Submitted and indexed",
+  "robots": "ALLOWED",
+  "indexing": "INDEXING_ALLOWED",
+  "lastCrawl": "2026-10-31T18:17:16Z",
+  "fetch": "SUCCESSFUL",
+  "googleCanonical": "https://topedgeai.com/docs/guides/cod-confirmation",
+  "userCanonical": "https://topedgeai.com/docs/guides/cod-confirmation",
+  "crawledAs": "MOBILE",
+  "referring": [
+   "https://dash.topedgeai.com/docs",
+   "https://topedgeai.com/sitemap.xml"
+  ]
+ },
+ {
+  "url": "https://topedgeai.com/docs/guides/order-status-updates",
+  "http": 200,
+  "verdict": "NEUTRAL",
+  "coverage": "Discovered - currently not indexed",
+  "robots": "ROBOTS_TXT_STATE_UNSPECIFIED",
+  "indexing": "INDEXING_STATE_UNSPECIFIED",
+  "fetch": "PAGE_FETCH_STATE_UNSPECIFIED",
+  "crawledAs": "CRAWLING_USER_AGENT_UNSPECIFIED",
+  "sitemap": [
+   "https://topedgeai.com/sitemap.xml"
+  ],
+  "referring": [
+   "https://dash.topedgeai.com/docs",
+   "https://topedgeai.com/docs/reference/ai-brain",
+   "https://topedgeai.com/docs/reference/commerce"
+  ]
+ },
+ {
+  "url": "https://topedgeai.com/docs/guides/build-your-first-flow",
+  "http": 200,
+  "verdict": "PASS",
+  "coverage": "Submitted and indexed",
+  "robots": "ALLOWED",
+  "indexing": "INDEXING_ALLOWED",
+  "lastCrawl": "2026-10-31T18:16:32Z",
+  "fetch": "SUCCESSFUL",
+  "googleCanonical": "https://topedgeai.com/docs/guides/build-your-first-flow",
+  "crawledAs": "MOBILE",
+  "referring": [
+   "https://dash.topedgeai.com/docs",
+   "https://topedgeai.com/docs/reference/ai-brain",
+   "https://topedgeai.com/sitemap.xml"
+  ]
+ },
+ {
+  "url": "https://topedgeai.com/docs/guides/whatsapp-broadcast",
+  "http": 200,
+  "verdict": "NEUTRAL",
+  "coverage": "Soft 404",
+  "robots": "ALLOWED",
+  "indexing": "INDEXING_ALLOWED",
+  "lastCrawl": "2026-10-31T18:14:07Z",
+  "fetch": "SUCCESSFUL",
+  "crawledAs": "MOBILE",
+  "sitemap": [
+   "https://topedgeai.com/sitemap.xml"
+  ],
+  "referring": [
+   "https://dash.topedgeai.com/docs",
+   "https://topedgeai.com/docs/reference/warranty-hub",
+   "https://topedgeai.com/sitemap.xml"
+  ]
+ },
+ {
+  "url": "https://topedgeai.com/docs/guides/shared-inbox-handover",
+  "http": 200,
+  "verdict": "PASS",
+  "coverage": "Submitted and indexed",
+  "robots": "ALLOWED",
+  "indexing": "INDEXING_ALLOWED",
+  "lastCrawl": "2026-10-05T06:24:07Z",
+  "fetch": "SUCCESSFUL",
+  "googleCanonical": "https://topedgeai.com/docs/guides/shared-inbox-handover",
+  "userCanonical": "https://topedgeai.com/docs/guides/shared-inbox-handover",
+  "crawledAs": "MOBILE",
+  "sitemap": [
+   "https://topedgeai.com/sitemap.xml"
+  ],
+  "referring": [
+   "https://dash.topedgeai.com/docs",
+   "https://topedgeai.com/docs/reference/ai-brain",
+   "https://topedgeai.com/docs/reference/commerce"
+  ]
+ },
+ {
+  "url": "https://topedgeai.com/docs/guides/website-opt-in",
+  "http": 200,
+  "verdict": "PASS",
+  "coverage": "Submitted and indexed",
+  "robots": "ALLOWED",
+  "indexing": "INDEXING_ALLOWED",
+  "lastCrawl": "2026-11-01T12:29:29Z",
+  "fetch": "SUCCESSFUL",
+  "googleCanonical": "https://topedgeai.com/docs/guides/website-opt-in",
+  "userCanonical": "https://topedgeai.com/docs/guides/website-opt-in",
+  "crawledAs": "MOBILE",
+  "referring": [
+   "https://dash.topedgeai.com/docs",
+   "https://topedgeai.com/docs/reference/warranty-hub",
+   "https://topedgeai.com/sitemap.xml"
+  ]
+ },
+ {
+  "url": "https://topedgeai.com/docs/guides/train-your-ai-brain",
+  "http": 200,
+  "verdict": "NEUTRAL",
+  "coverage": "URL is unknown to Google",
+  "robots": "ROBOTS_TXT_STATE_UNSPECIFIED",
+  "indexing": "INDEXING_STATE_UNSPECIFIED",
+  "fetch": "PAGE_FETCH_STATE_UNSPECIFIED"
+ },
+ {
+  "url": "https://topedgeai.com/docs/guides/warranty-registration",
+  "http": 200,
+  "verdict": "PASS",
+  "coverage": "Submitted and indexed",
+  "robots": "ALLOWED",
+  "indexing": "INDEXING_ALLOWED",
+  "lastCrawl": "2026-10-07T01:25:21Z",
+  "fetch": "SUCCESSFUL",
+  "googleCanonical": "https://topedgeai.com/docs/guides/warranty-registration",
+  "userCanonical": "https://topedgeai.com/docs/guides/warranty-registration",
+  "crawledAs": "MOBILE",
+  "referring": [
+   "https://dash.topedgeai.com/docs",
+   "https://topedgeai.com/docs/reference/commerce"
+  ]
+ },
+ {
+  "url": "https://topedgeai.com/docs/guides/segment-your-customers",
+  "http": 200,
+  "verdict": "NEUTRAL",
+  "coverage": "Discovered - currently not indexed",
+  "robots": "ROBOTS_TXT_STATE_UNSPECIFIED",
+  "indexing": "INDEXING_STATE_UNSPECIFIED",
+  "fetch": "PAGE_FETCH_STATE_UNSPECIFIED",
+  "crawledAs": "CRAWLING_USER_AGENT_UNSPECIFIED",
+  "sitemap": [
+   "https://topedgeai.com/sitemap.xml"
+  ],
+  "referring": [
+   "https://dash.topedgeai.com/docs",
+   "https://topedgeai.com/docs/reference/warranty-hub",
+   "https://topedgeai.com/docs/reference/commerce"
+  ]
+ },
+ {
+  "url": "https://topedgeai.com/docs/reference/journeys",
+  "http": 200,
+  "verdict": "PASS",
+  "coverage": "Submitted and indexed",
+  "robots": "ALLOWED",
+  "indexing": "INDEXING_ALLOWED",
+  "lastCrawl": "2026-10-05T09:19:43Z",
+  "fetch": "SUCCESSFUL",
+  "googleCanonical": "https://topedgeai.com/docs/reference/journeys",
+  "userCanonical": "https://topedgeai.com/docs/reference/journeys",
+  "crawledAs": "MOBILE",
+  "sitemap": [
+   "https://topedgeai.com/sitemap.xml"
+  ],
+  "referring": [
+   "https://dash.topedgeai.com/docs",
+   "https://topedgeai.com/docs/reference/commerce",
+   "https://topedgeai.com/sitemap.xml"
+  ]
+ },
+ {
+  "url": "https://topedgeai.com/docs/reference/flow-builder",
+  "http": 200,
+  "verdict": "NEUTRAL",
+  "coverage": "Discovered - currently not indexed",
+  "robots": "ROBOTS_TXT_STATE_UNSPECIFIED",
+  "indexing": "INDEXING_STATE_UNSPECIFIED",
+  "fetch": "PAGE_FETCH_STATE_UNSPECIFIED",
+  "crawledAs": "CRAWLING_USER_AGENT_UNSPECIFIED",
+  "sitemap": [
+   "https://topedgeai.com/sitemap.xml"
+  ],
+  "referring": [
+   "https://dash.topedgeai.com/docs",
+   "https://topedgeai.com/docs/reference/commerce"
+  ]
+ },
+ {
+  "url": "https://topedgeai.com/docs/reference/live-chat",
+  "http": 200,
+  "verdict": "PASS",
+  "coverage": "Submitted and indexed",
+  "robots": "ALLOWED",
+  "indexing": "INDEXING_ALLOWED",
+  "lastCrawl": "2026-10-05T12:48:01Z",
+  "fetch": "SUCCESSFUL",
+  "googleCanonical": "https://topedgeai.com/docs/reference/live-chat",
+  "userCanonical": "https://topedgeai.com/docs/reference/live-chat",
+  "crawledAs": "MOBILE",
+  "sitemap": [
+   "https://topedgeai.com/sitemap.xml"
+  ],
+  "referring": [
+   "https://dash.topedgeai.com/docs",
+   "https://topedgeai.com/docs/reference/warranty-hub",
+   "https://topedgeai.com/docs/reference/commerce"
+  ]
+ },
+ {
+  "url": "https://topedgeai.com/docs/reference/orders",
+  "http": 200,
+  "verdict": "NEUTRAL",
+  "coverage": "Discovered - currently not indexed",
+  "robots": "ROBOTS_TXT_STATE_UNSPECIFIED",
+  "indexing": "INDEXING_STATE_UNSPECIFIED",
+  "fetch": "PAGE_FETCH_STATE_UNSPECIFIED",
+  "crawledAs": "CRAWLING_USER_AGENT_UNSPECIFIED",
+  "sitemap": [
+   "https://topedgeai.com/sitemap.xml"
+  ],
+  "referring": [
+   "https://dash.topedgeai.com/docs",
+   "https://topedgeai.com/docs/guides/abandoned-cart-recovery",
+   "https://topedgeai.com/docs/reference/commerce"
+  ]
+ },
+ {
+  "url": "https://topedgeai.com/docs/reference/audience-crm",
+  "http": 200,
+  "verdict": "NEUTRAL",
+  "coverage": "Discovered - currently not indexed",
+  "robots": "ROBOTS_TXT_STATE_UNSPECIFIED",
+  "indexing": "INDEXING_STATE_UNSPECIFIED",
+  "fetch": "PAGE_FETCH_STATE_UNSPECIFIED",
+  "crawledAs": "CRAWLING_USER_AGENT_UNSPECIFIED",
+  "sitemap": [
+   "https://topedgeai.com/sitemap.xml"
+  ],
+  "referring": [
+   "https://dash.topedgeai.com/docs",
+   "https://topedgeai.com/docs/reference/ai-brain",
+   "https://topedgeai.com/docs/reference/commerce"
+  ]
+ },
+ {
+  "url": "https://topedgeai.com/docs/reference/campaigns",
+  "http": 200,
+  "verdict": "PASS",
+  "coverage": "Submitted and indexed",
+  "robots": "ALLOWED",
+  "indexing": "INDEXING_ALLOWED",
+  "lastCrawl": "2026-10-05T09:48:11Z",
+  "fetch": "SUCCESSFUL",
+  "googleCanonical": "https://topedgeai.com/docs/reference/campaigns",
+  "userCanonical": "https://topedgeai.com/docs/reference/campaigns",
+  "crawledAs": "MOBILE",
+  "sitemap": [
+   "https://topedgeai.com/sitemap.xml"
+  ],
+  "referring": [
+   "https://dash.topedgeai.com/docs",
+   "https://topedgeai.com/docs/reference/commerce"
+  ]
+ },
+ {
+  "url": "https://topedgeai.com/docs/reference/email",
+  "http": 200,
+  "verdict": "PASS",
+  "coverage": "Submitted and indexed",
+  "robots": "ALLOWED",
+  "indexing": "INDEXING_ALLOWED",
+  "lastCrawl": "2026-10-05T13:25:23Z",
+  "fetch": "SUCCESSFUL",
+  "googleCanonical": "https://topedgeai.com/docs/reference/email",
+  "userCanonical": "https://topedgeai.com/docs/reference/email",
+  "crawledAs": "MOBILE",
+  "sitemap": [
+   "https://topedgeai.com/sitemap.xml"
+  ],
+  "referring": [
+   "https://dash.topedgeai.com/docs",
+   "https://topedgeai.com/docs/reference/journeys",
+   "https://topedgeai.com/docs/reference/commerce"
+  ]
+ },
+ {
+  "url": "https://topedgeai.com/docs/reference/meta-manager",
+  "http": 200,
+  "verdict": "PASS",
+  "coverage": "Submitted and indexed",
+  "robots": "ALLOWED",
+  "indexing": "INDEXING_ALLOWED",
+  "lastCrawl": "2026-10-05T21:17:35Z",
+  "fetch": "SUCCESSFUL",
+  "googleCanonical": "https://topedgeai.com/docs/reference/meta-manager",
+  "userCanonical": "https://topedgeai.com/docs/reference/meta-manager",
+  "crawledAs": "MOBILE",
+  "sitemap": [
+   "https://topedgeai.com/sitemap.xml"
+  ],
+  "referring": [
+   "https://dash.topedgeai.com/docs",
+   "https://topedgeai.com/docs/reference/email",
+   "https://topedgeai.com/docs/guides/whatsapp-broadcast"
+  ]
+ },
+ {
+  "url": "https://topedgeai.com/docs/reference/opt-in-tools",
+  "http": 200,
+  "verdict": "PASS",
+  "coverage": "Submitted and indexed",
+  "robots": "ALLOWED",
+  "indexing": "INDEXING_ALLOWED",
+  "lastCrawl": "2026-10-05T11:29:07Z",
+  "fetch": "SUCCESSFUL",
+  "googleCanonical": "https://topedgeai.com/docs/reference/opt-in-tools",
+  "userCanonical": "https://topedgeai.com/docs/reference/opt-in-tools",
+  "crawledAs": "MOBILE",
+  "referring": [
+   "https://dash.topedgeai.com/docs",
+   "https://topedgeai.com/docs/reference/commerce",
+   "https://topedgeai.com/sitemap.xml"
+  ]
+ },
+ {
+  "url": "https://topedgeai.com/docs/reference/ai-brain",
+  "http": 200,
+  "verdict": "NEUTRAL",
+  "coverage": "Discovered - currently not indexed",
+  "robots": "ROBOTS_TXT_STATE_UNSPECIFIED",
+  "indexing": "INDEXING_STATE_UNSPECIFIED",
+  "fetch": "PAGE_FETCH_STATE_UNSPECIFIED",
+  "crawledAs": "CRAWLING_USER_AGENT_UNSPECIFIED",
+  "sitemap": [
+   "https://topedgeai.com/sitemap.xml"
+  ],
+  "referring": [
+   "https://dash.topedgeai.com/docs",
+   "https://topedgeai.com/docs/reference/analytics",
+   "https://topedgeai.com/sitemap.xml"
+  ]
+ },
+ {
+  "url": "https://topedgeai.com/docs/reference/analytics",
+  "http": 200,
+  "verdict": "NEUTRAL",
+  "coverage": "Discovered - currently not indexed",
+  "robots": "ROBOTS_TXT_STATE_UNSPECIFIED",
+  "indexing": "INDEXING_STATE_UNSPECIFIED",
+  "fetch": "PAGE_FETCH_STATE_UNSPECIFIED",
+  "crawledAs": "CRAWLING_USER_AGENT_UNSPECIFIED",
+  "sitemap": [
+   "https://topedgeai.com/sitemap.xml"
+  ],
+  "referring": [
+   "https://dash.topedgeai.com/docs",
+   "https://topedgeai.com/docs/guides/website-opt-in",
+   "https://topedgeai.com/docs/reference/commerce"
+  ]
+ },
+ {
+  "url": "https://topedgeai.com/docs/reference/chat-rules",
+  "http": 200,
+  "verdict": "NEUTRAL",
+  "coverage": "Discovered - currently not indexed",
+  "robots": "ROBOTS_TXT_STATE_UNSPECIFIED",
+  "indexing": "INDEXING_STATE_UNSPECIFIED",
+  "fetch": "PAGE_FETCH_STATE_UNSPECIFIED",
+  "crawledAs": "CRAWLING_USER_AGENT_UNSPECIFIED",
+  "sitemap": [
+   "https://topedgeai.com/sitemap.xml"
+  ],
+  "referring": [
+   "https://dash.topedgeai.com/docs",
+   "https://topedgeai.com/docs/reference/commerce"
+  ]
+ },
+ {
+  "url": "https://topedgeai.com/docs/reference/store-growth",
+  "http": 200,
+  "verdict": "PASS",
+  "coverage": "Submitted and indexed",
+  "robots": "ALLOWED",
+  "indexing": "INDEXING_ALLOWED",
+  "lastCrawl": "2026-10-06T11:43:59Z",
+  "fetch": "SUCCESSFUL",
+  "googleCanonical": "https://topedgeai.com/docs/reference/store-growth",
+  "userCanonical": "https://topedgeai.com/docs/reference/store-growth",
+  "crawledAs": "MOBILE",
+  "sitemap": [
+   "https://topedgeai.com/sitemap.xml"
+  ],
+  "referring": [
+   "https://dash.topedgeai.com/docs",
+   "https://topedgeai.com/docs/reference/commerce",
+   "https://topedgeai.com/sitemap.xml"
+  ]
+ },
+ {
+  "url": "https://topedgeai.com/docs/reference/commerce",
+  "http": 200,
+  "verdict": "NEUTRAL",
+  "coverage": "Discovered - currently not indexed",
+  "robots": "ROBOTS_TXT_STATE_UNSPECIFIED",
+  "indexing": "INDEXING_STATE_UNSPECIFIED",
+  "fetch": "PAGE_FETCH_STATE_UNSPECIFIED",
+  "crawledAs": "CRAWLING_USER_AGENT_UNSPECIFIED",
+  "sitemap": [
+   "https://topedgeai.com/sitemap.xml"
+  ],
+  "referring": [
+   "https://dash.topedgeai.com/docs",
+   "https://topedgeai.com/docs/reference/warranty-hub",
+   "https://topedgeai.com/sitemap.xml"
+  ]
+ },
+ {
+  "url": "https://topedgeai.com/docs/reference/warranty-hub",
+  "http": 200,
+  "verdict": "PASS",
+  "coverage": "Submitted and indexed",
+  "robots": "ALLOWED",
+  "indexing": "INDEXING_ALLOWED",
+  "lastCrawl": "2026-10-05T06:32:58Z",
+  "fetch": "SUCCESSFUL",
+  "googleCanonical": "https://topedgeai.com/docs/reference/warranty-hub",
+  "userCanonical": "https://topedgeai.com/docs/reference/warranty-hub",
+  "crawledAs": "MOBILE",
+  "sitemap": [
+   "https://topedgeai.com/sitemap.xml"
+  ],
+  "referring": [
+   "https://dash.topedgeai.com/docs",
+   "https://topedgeai.com/sitemap.xml"
+  ]
+ },
+ {
+  "url": "https://topedgeai.com/docs/reference/settings-billing",
+  "http": 200,
+  "verdict": "NEUTRAL",
+  "coverage": "Discovered - currently not indexed",
+  "robots": "ROBOTS_TXT_STATE_UNSPECIFIED",
+  "indexing": "INDEXING_STATE_UNSPECIFIED",
+  "fetch": "PAGE_FETCH_STATE_UNSPECIFIED",
+  "crawledAs": "CRAWLING_USER_AGENT_UNSPECIFIED",
+  "sitemap": [
+   "https://topedgeai.com/sitemap.xml"
+  ],
+  "referring": [
+   "https://dash.topedgeai.com/docs",
+   "https://topedgeai.com/docs/reference/commerce"
+  ]
+ },
+ {
+  "url": "https://topedgeai.com/docs/platform/whatsapp-service-window",
+  "http": 200,
+  "verdict": "NEUTRAL",
+  "coverage": "Discovered - currently not indexed",
+  "robots": "ROBOTS_TXT_STATE_UNSPECIFIED",
+  "indexing": "INDEXING_STATE_UNSPECIFIED",
+  "fetch": "PAGE_FETCH_STATE_UNSPECIFIED",
+  "crawledAs": "CRAWLING_USER_AGENT_UNSPECIFIED",
+  "sitemap": [
+   "https://topedgeai.com/sitemap.xml"
+  ],
+  "referring": [
+   "https://dash.topedgeai.com/docs",
+   "https://topedgeai.com/docs/reference/ai-brain",
+   "https://topedgeai.com/docs/reference/commerce"
+  ]
+ },
+ {
+  "url": "https://topedgeai.com/docs/platform/message-templates",
+  "http": 200,
+  "verdict": "NEUTRAL",
+  "coverage": "Discovered - currently not indexed",
+  "robots": "ROBOTS_TXT_STATE_UNSPECIFIED",
+  "indexing": "INDEXING_STATE_UNSPECIFIED",
+  "fetch": "PAGE_FETCH_STATE_UNSPECIFIED",
+  "crawledAs": "CRAWLING_USER_AGENT_UNSPECIFIED",
+  "sitemap": [
+   "https://topedgeai.com/sitemap.xml"
+  ],
+  "referring": [
+   "https://dash.topedgeai.com/docs",
+   "https://topedgeai.com/docs/reference/ai-brain",
+   "https://topedgeai.com/sitemap.xml"
+  ]
+ },
+ {
+  "url": "https://topedgeai.com/docs/platform/conversation-pricing",
+  "http": 200,
+  "verdict": "NEUTRAL",
+  "coverage": "Excluded by ‘noindex’ tag",
+  "robots": "ALLOWED",
+  "indexing": "BLOCKED_BY_META_TAG",
+  "lastCrawl": "2026-10-10T08:02:39Z",
+  "fetch": "SUCCESSFUL",
+  "googleCanonical": "https://dash.topedgeai.com/docs",
+  "crawledAs": "MOBILE",
+  "sitemap": [
+   "https://topedgeai.com/sitemap.xml"
+  ],
+  "referring": [
+   "https://dash.topedgeai.com/docs",
+   "https://topedgeai.com/docs/reference/ai-brain",
+   "https://topedgeai.com/sitemap.xml"
+  ]
+ },
+ {
+  "url": "https://topedgeai.com/docs/platform/limits-and-quotas",
+  "http": 200,
+  "verdict": "PASS",
+  "coverage": "Submitted and indexed",
+  "robots": "ALLOWED",
+  "indexing": "INDEXING_ALLOWED",
+  "lastCrawl": "2026-10-05T16:56:46Z",
+  "fetch": "SUCCESSFUL",
+  "googleCanonical": "https://topedgeai.com/docs/platform/limits-and-quotas",
+  "userCanonical": "https://topedgeai.com/docs/platform/limits-and-quotas",
+  "crawledAs": "MOBILE",
+  "sitemap": [
+   "https://topedgeai.com/sitemap.xml"
+  ],
+  "referring": [
+   "https://dash.topedgeai.com/docs",
+   "https://topedgeai.com/docs/reference/commerce",
+   "https://topedgeai.com/sitemap.xml"
+  ]
+ },
+ {
+  "url": "https://topedgeai.com/docs/troubleshooting",
+  "http": 200,
+  "verdict": "PASS",
+  "coverage": "Submitted and indexed",
+  "robots": "ALLOWED",
+  "indexing": "INDEXING_ALLOWED",
+  "lastCrawl": "2026-10-05T11:09:52Z",
+  "fetch": "SUCCESSFUL",
+  "googleCanonical": "https://topedgeai.com/docs/troubleshooting",
+  "userCanonical": "https://topedgeai.com/docs/troubleshooting",
+  "crawledAs": "MOBILE",
+  "sitemap": [
+   "https://topedgeai.com/sitemap.xml"
+  ],
+  "referring": [
+   "https://dash.topedgeai.com/docs",
+   "https://topedgeai.com/docs/reference/commerce"
+  ]
+ },
+ {
+  "url": "https://topedgeai.com/privacy",
+  "http": 200,
+  "verdict": "PASS",
+  "coverage": "Submitted and indexed",
+  "robots": "ALLOWED",
+  "indexing": "INDEXING_ALLOWED",
+  "lastCrawl": "2026-10-31T14:17:54Z",
+  "fetch": "SUCCESSFUL",
+  "googleCanonical": "https://topedgeai.com/privacy",
+  "userCanonical": "https://topedgeai.com/privacy",
+  "crawledAs": "MOBILE",
+  "referring": [
+   "https://dash.topedgeai.com/docs",
+   "https://topedgeai.com/features/ai-brain",
+   "https://topedgeai.com/"
+  ]
+ },
+ {
+  "url": "https://topedgeai.com/terms",
+  "http": 200,
+  "verdict": "PASS",
+  "coverage": "Submitted and indexed",
+  "robots": "ALLOWED",
+  "indexing": "INDEXING_ALLOWED",
+  "lastCrawl": "2026-10-28T00:15:57Z",
+  "fetch": "SUCCESSFUL",
+  "googleCanonical": "https://topedgeai.com/terms",
+  "userCanonical": "https://topedgeai.com/terms",
+  "crawledAs": "MOBILE",
+  "sitemap": [
+   "https://topedgeai.com/sitemap.xml"
+  ],
+  "referring": [
+   "https://dash.topedgeai.com/docs",
+   "https://topedgeai.com/docs/reference/ai-brain",
+   "https://topedgeai.com/"
+  ]
+ }
+]

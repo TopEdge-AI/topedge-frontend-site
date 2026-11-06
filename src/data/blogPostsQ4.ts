@@ -69,9 +69,9 @@ const AISENSY_FAQS: Faq[] = [
       'Free plans exist, but none of them make WhatsApp free. Meta charges your own WhatsApp Business Account for every template you send, at ₹0.8631 per marketing message and ₹0.1150 per utility or service message in India, whichever platform sends it. So a free plan only removes the software fee, usually in exchange for a contact cap, a single agent seat, no chatbot builder and no automation. AiSensy itself does not publish a permanently free tier for Indian businesses, it publishes 1,000 free service messages a month per number. The honest version of free is a free trial: AiSensy, Interakt and TopEdge AI all run one, and 14 days is enough to send real messages before you pay anything.',
   },
   {
-    question: 'What do people on Reddit say about AiSensy alternatives?',
+    question: 'What do Indian store owners ask before leaving AiSensy?',
     answer:
-      'We do not quote threads we have not read, so treat this as our own summary of the questions Indian store owners keep asking us, which are the same ones that come up in founder groups and on r/IndianStartups and r/shopify. Four recur: does the platform add its own charge on top of Meta rates, is the chatbot builder usable without a developer, can I move my WhatsApp number without losing approved templates, and does anyone do COD to prepaid properly. Those four are checkable before you buy, which is more useful than any opinion. The service message rate is published, template ownership sits with your WhatsApp Business Account rather than the vendor, and COD to prepaid can be run end to end on a trial.',
+      'These are the questions Indian store owners ask us before they switch. Four recur: does the platform add its own charge on top of Meta rates, is the chatbot builder usable without a developer, can I move my WhatsApp number without losing approved templates, and does anyone do COD to prepaid properly. Those four are checkable before you buy, which is more useful than any opinion. The service message rate is published, template ownership sits with your WhatsApp Business Account rather than the vendor, and COD to prepaid can be run end to end on a trial.',
   },
   {
     question: 'Does AiSensy mark up Meta’s WhatsApp rates in India?',
@@ -515,7 +515,7 @@ ${faqHtml(WATI_FAQS)}
 </ul>
 
 <h2>AiSensy alternative comparison: six WhatsApp platforms side by side</h2>
-<p>Every platform below is an official WhatsApp Business Solution Provider, so the Meta message rate is identical on all six. What differs is the software fee, whether the vendor adds its own charge on top, and how much of a Shopify store it can actually reach.</p>
+<p>Meta charges the same India rate whichever software sends the message, so the Meta side of the bill is identical on all six. What differs is the software fee, whether the vendor adds its own charge on top, and how much of a Shopify store it can actually reach.</p>
 <div class="mkt-blog-table-wrap">
 <table>
 <thead><tr><th>Platform</th><th>Built around</th><th>Markup on Meta rates</th><th>Shopify depth</th><th>Best for</th></tr></thead>
@@ -574,7 +574,7 @@ ${faqHtml(WATI_FAQS)}
 <p>One genuinely free thing worth knowing: Shopify’s own abandoned checkout email is already included in your Shopify plan. If budget is the whole constraint, turn that on first and add WhatsApp when the order volume justifies it.</p>
 
 <h2>What people actually ask before choosing an AiSensy alternative</h2>
-<p>We will not quote Reddit threads we have not read, so treat this as our own summary of what Indian store owners ask us, which lines up with what comes up in founder groups and on r/shopify and r/IndianStartups. Four questions repeat, and all four are checkable before you pay.</p>
+<p>These are the questions Indian store owners ask us before they switch. Four repeat, and all four are checkable before you pay.</p>
 <ol>
 <li><strong>"Does the platform charge on top of Meta?"</strong> Ask for the per-message rate in writing, by category, for India. Compare it against Meta’s published rate card. A vendor that will not put the number on a page is telling you something.</li>
 <li><strong>"Can I build a chatbot without a developer?"</strong> Open the flow builder during the trial and build the real flow, not the demo. Branching, API calls and handoff to a human are where free-looking builders stop.</li>
@@ -623,7 +623,7 @@ ${faqHtml(WATI_FAQS)}
 <h2>Features to check before you pick an AiSensy alternative</h2>
 <p>Price is the easy comparison and usually the wrong one. These are the lines that decide whether the tool works in month three.</p>
 <ul>
-<li><strong>Official WhatsApp Business API access.</strong> Confirm the vendor is a Meta Business Solution Provider and that the number sits on <em>your</em> WhatsApp Business Account, not the vendor’s. That is what makes leaving possible later.</li>
+<li><strong>Official WhatsApp Business API access.</strong> Confirm the number sits on <em>your</em> own WhatsApp Business Account and that Meta bills that account, not the vendor’s. That is what makes leaving possible later.</li>
 <li><strong>Chatbot builder on your plan.</strong> Build the real branching flow during the trial, with an API call and a human handoff in it.</li>
 <li><strong>Shared team inbox.</strong> How many agent seats are included, and what does the next seat cost.</li>
 <li><strong>WhatsApp broadcasts and segments.</strong> Can you send to a Shopify segment such as "bought twice, not in 90 days", or only to an uploaded CSV.</li>

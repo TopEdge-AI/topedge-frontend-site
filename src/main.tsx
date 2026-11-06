@@ -4,6 +4,7 @@ import App from './App.tsx'
 import './index.css'
 import './marketing/styles/marketing.css'
 import { captureAttribution } from './marketing/lib/attribution'
+import { capturePrerenderSnapshot } from './marketing/lib/prerenderSnapshot'
 
 // Marketing site defaults to light, never flash OS dark / body #000 on refresh
 const initializeTheme = () => {
@@ -16,7 +17,11 @@ const initializeTheme = () => {
 initializeTheme()
 captureAttribution()
 
-ReactDOM.createRoot(document.getElementById('root')!).render(
+const rootEl = document.getElementById('root')!
+// Before createRoot wipes it: AppErrorBoundary restores this if a lazy chunk fails.
+capturePrerenderSnapshot(rootEl)
+
+ReactDOM.createRoot(rootEl).render(
   <React.StrictMode>
     <App />
   </React.StrictMode>,

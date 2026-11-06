@@ -416,8 +416,8 @@ export const COMPARE_COMPETITORS: Record<string, CompareCompetitor> = {
       competitor,
     })),
     matrixNote:
-      'Read off updatrr.com/pricing on 21 Oct 2026: Growth $29.99/mo, Pro $49.99/mo, Pro AI $99.99/mo, 7-day no-card trial, and Updatrr states it adds no markup on Meta conversation fees (so the Meta line matches ours). Capability rows reflect its publicly described Shopify-app surface on that date, not its roadmap. Confirm live plan limits, AI fees and Meta billing on updatrr.com and apps.shopify.com/prizma-updatrr before purchase.',
-    researchAsOf: 'Oct 2026',
+      'Read off updatrr.com/pricing on 6 Nov 2026: Growth $29.99/mo, Pro $49.99/mo, Pro AI $99.99/mo, 7-day no-card trial, country-wise prices inside its dashboard, and Updatrr states it adds no markup on Meta conversation fees (so the Meta line matches ours). Capability rows reflect its publicly described Shopify-app surface on that date, not its roadmap. Confirm live plan limits, AI fees and Meta billing on updatrr.com and apps.shopify.com/prizma-updatrr before purchase.',
+    researchAsOf: 'Nov 2026',
     related: [
       { label: 'All comparisons', href: '/compare' },
       { label: 'Alternatives index', href: '/compare/alternatives' },

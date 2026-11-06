@@ -996,7 +996,7 @@ export const blogPosts: BlogPost[] = [
       'Direct answer plus a comparison table of WhatsApp automation tools for Shopify India: WATI, AiSensy, Interakt, Bitespeed, Zoko, Getgabs, Kanal, Dondy, TopEdge.',
     summary: [
       'Score vendors on four things only: Meta markup, COD handling, whether pricing is conversation-metered or flat, and what stays gated after “free to install”.',
-      'The comparison table prices every shortlisted tool at 500 orders and 10,000 marketing messages a month, so you see the total bill rather than the plan fee.',
+      'The cost table prices TopEdge, Interakt, AiSensy, Zoko and Dondy at 500 orders and 10,000 marketing messages a month, so you see the total bill rather than the plan fee. Bitespeed publishes no price.',
       'Ask for a live demo of a COD confirmation firing on a real order. A vendor who can only show slides cannot show you the part that actually breaks.',
     ],
     slug: 'best-whatsapp-automation-tools-shopify-india',
@@ -1046,7 +1046,7 @@ export const blogPosts: BlogPost[] = [
     content: `
 <details class="mkt-blog-verdict" open>
 <summary>Quick verdict</summary>
-<p><strong>Best WhatsApp automation tool for Shopify India (2026):</strong> TopEdge AI when you need cart recovery, COD → prepaid, Meta-gated journeys, and flat INR plans in one Shopify-native stack. Choose Zoko for India commerce with conversation metering, Getgabs for the cheapest entry, Kanal when Klaviyo-first global WhatsApp matters, Dondy when a broad widget outweighs a published Meta rate-card markup, and Bitespeed when you want omnichannel AI above a USD floor.</p>
+<p><strong>Best WhatsApp automation tool for Shopify India (2026):</strong> TopEdge AI when you need cart recovery, COD → prepaid, Meta-gated journeys, and flat INR plans in one Shopify-native stack. Choose Zoko for India commerce with conversation metering, Getgabs for the cheapest entry, Kanal when Klaviyo-first global WhatsApp matters, Dondy when a broad widget outweighs a published Meta rate-card markup, and Bitespeed when you want omnichannel AI and are happy to get a price on a demo call, because it publishes none.</p>
 </details>
 
 <p>This guide ranks WhatsApp automation tools for Shopify India D2C by cart recovery, COD/RTO depth, Meta template control, and pricing honesty, not generic chatbot demos. Use the table, scorecard, and pairwise boards; re-verify every price live before you buy.</p>
@@ -1096,7 +1096,7 @@ export const blogPosts: BlogPost[] = [
 <tr>
 <td>Bitespeed</td>
 <td>Omnichannel AI OS</td>
-<td>USD floor (~$250+) + AI add-ons</td>
+<td>Publishes no prices; its pricing page redirects to a demo form (checked 6 Nov 2026)</td>
 <td>Cart + COD; not INR-first</td>
 <td><a href="/compare/bitespeed">vs Bitespeed</a></td>
 </tr>
@@ -1143,7 +1143,7 @@ export const blogPosts: BlogPost[] = [
 <tr><td>Interakt Growth + AI add-on</td><td>₹2,799 + ₹3,000, then ₹0.50 per AI message after 100 free</td><td>Not published on template rates</td><td><strong>From about ₹14,833</strong></td></tr>
 <tr><td>AiSensy</td><td>Plan dependent</td><td>₹0.145 per service message against Meta's ₹0.1150 (+26.1%)</td><td><strong>₹9,093 of Meta-side cost, +₹60 on this volume</strong></td></tr>
 <tr><td>Zoko Plus</td><td>$79.99 (about ₹6,800) + $15 per agent above 5</td><td>5,000 conversations included, then metered</td><td><strong>From about ₹15,800</strong></td></tr>
-<tr><td>Bitespeed</td><td>About ₹15,000 baseline</td><td>Platform usage applies</td><td><strong>From about ₹24,000</strong></td></tr>
+<tr><td>Bitespeed</td><td>Not published</td><td>Not published</td><td><strong>Ask for a written quote</strong></td></tr>
 <tr><td>Dondy Power</td><td>$79.99 (about ₹6,800)</td><td>$0.01888 per India message against Meta's $0.0118 (+60%)</td><td><strong>From about ₹21,000</strong></td></tr>
 </tbody>
 </table>
@@ -1196,7 +1196,7 @@ export const blogPosts: BlogPost[] = [
 <li>Inbox that still depends on WhatsApp Web on a laptop</li>
 <li>Roundup articles that rank a vendor #1 while being published on that vendor’s own blog</li>
 </ul>
-<p>That last one applies to this page too, and the right response is not to trust us, it is to check the claims. Every price in this article is on a vendor’s own published page and linked where we state it. Where a vendor publishes nothing, we say so rather than estimating.</p>
+<p>That last one applies to this page too, and the right response is not to trust us, it is to check the claims. Prices are read off vendor pages and dated. Bitespeed publishes none, so its rows say so instead of guessing a number.</p>
 <p><strong>Two more worth adding to the list.</strong></p>
 <p><strong>A price you cannot read before a call.</strong> Not a dealbreaker by itself, but it has consequences: an unpublished price is negotiated per account, so the figure you are quoted is not the figure your competitor got, and you have no reference point for whether it is fair. BiteSpeed’s pricing page redirecting to a demo form is the clearest current example.</p>
 <p><strong>A trial too short for the thing you are buying.</strong> Seven days tests cart recovery fine, because carts abandon continuously and you will see twenty in a week. It cannot test COD confirmation, because RTO only resolves after a delivery cycle of seven to ten days. If COD is why you are buying, plan to evaluate it on a paid month and budget for that.</p>
@@ -2159,7 +2159,7 @@ export const blogPosts: BlogPost[] = [
 <li><strong>COD</strong>: confirm and COD → prepaid before warehouse release, not only “order updates”</li>
 <li><strong>AI unlock</strong>: check which tier includes the AI agent (on getkanal.com, Scale+ is where AI is listed; confirm live)</li>
 </ul>
-<p>That India/INR angle is the same one that holds on our Bitespeed compare; it does <em>not</em> hold against India-native tools like Zoko. Do not reuse angles that fail a sanity check.</p>
+<p>That India/INR angle is the same one that holds on our Bitespeed compare; it does <em>not</em> hold against India-native tools like Zoko.</p>
 
 <h2>What does Kanal cost once it is in rupees?</h2>
 <p>Re-checked on <a href="https://getkanal.com/pricing" rel="noopener noreferrer" target="_blank">getkanal.com/pricing</a> on 2 November 2026: Pro 89&euro; a month with 1 user account, Scale 149&euro; with 5, Business 350&euro; and Agency 1,900&euro; with unlimited users. The same page adds a line that matters more to an India buyer than the headline tier: <strong>from Scale, each extra market costs 50&euro; a month.</strong> If India is a market you are adding rather than the market you sell in, that is a recurring line item on top.</p>

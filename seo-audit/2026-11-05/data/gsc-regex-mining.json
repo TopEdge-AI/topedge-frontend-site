@@ -1,0 +1,4579 @@
+{
+ "junkExclude": "salon|saloon|spa|parlou?r|nikol|bopal|ahmedabad|haircut|hair|chili|chilli|chillies|massage|adorn|adron|adon|thai|health mantra|burger|mexican|cafe|restaurant|bucky|diner|grill|odhav|near me|xceptive|beauty|unisex|nail|facial|mall|waxing|keratin",
+ "res": {
+  "all category": {
+   "regex": "whatsapp|shopify|wati|interakt|aisensy|zoko|bitespeed|kanal|gupshup|updatrr|getgabs|dondy|gallabox|delightchat|\\bcod\\b|\\brto\\b|\\bndr\\b|abandon|cart|d2c|e-?commerce|template|broadcast|chatbot|wa\\.me|profit",
+   "queries": 136,
+   "impr": 1514,
+   "clicks": 10,
+   "list": [
+    {
+     "q": "zoko alternative",
+     "impr": 470,
+     "clicks": 0,
+     "pos": 10.2,
+     "pages": [
+      "/blog/zoko-alternative-shopify-india",
+      "/",
+      "/compare"
+     ]
+    },
+    {
+     "q": "getkanal alternatives",
+     "impr": 278,
+     "clicks": 1,
+     "pos": 2.1,
+     "pages": [
+      "/blog/kanal-whatsapp-alternative-shopify",
+      "/compare/kanal",
+      "/blog"
+     ]
+    },
+    {
+     "q": "whatsapp flow template",
+     "impr": 106,
+     "clicks": 0,
+     "pos": 10.9,
+     "pages": [
+      "/features/meta-manager"
+     ]
+    },
+    {
+     "q": "best whatsapp commerce tools for shopify stores",
+     "impr": 44,
+     "clicks": 0,
+     "pos": 39.7,
+     "pages": [
+      "/blog/best-whatsapp-apps-for-shopify",
+      "/blog/whatsapp-automation-for-shopify"
+     ]
+    },
+    {
+     "q": "best whatsapp app for shopify",
+     "impr": 43,
+     "clicks": 7,
+     "pos": 19.7,
+     "pages": [
+      "/blog/best-whatsapp-apps-for-shopify",
+      "/blog/whatsapp-automation-for-shopify"
+     ]
+    },
+    {
+     "q": "bitespeed alternative",
+     "impr": 43,
+     "clicks": 0,
+     "pos": 17.9,
+     "pages": [
+      "/blog/bitespeed-alternative-shopify-india",
+      "/compare/alternatives"
+     ]
+    },
+    {
+     "q": "best zoko alternative for shopify",
+     "impr": 42,
+     "clicks": 0,
+     "pos": 9.1,
+     "pages": [
+      "/blog/zoko-alternative-shopify-india"
+     ]
+    },
+    {
+     "q": "interakt alternative",
+     "impr": 36,
+     "clicks": 0,
+     "pos": 25,
+     "pages": [
+      "/blog/interakt-alternative-shopify-india"
+     ]
+    },
+    {
+     "q": "shopify whatsapp automation",
+     "impr": 25,
+     "clicks": 0,
+     "pos": 24.9,
+     "pages": [
+      "/blog/whatsapp-automation-for-shopify",
+      "/blog/shopify-automation-checklist-whatsapp-cart-recovery",
+      "/blog/whatsapp-automation-for-shopify#how-shopify-whatsapp-automation-works"
+     ]
+    },
+    {
+     "q": "zoko alternative free",
+     "impr": 21,
+     "clicks": 0,
+     "pos": 8.7,
+     "pages": [
+      "/blog/zoko-alternative-shopify-india"
+     ]
+    },
+    {
+     "q": "whatsapp flows shopify",
+     "impr": 19,
+     "clicks": 0,
+     "pos": 21.4,
+     "pages": [
+      "/blog/whatsapp-automation-for-shopify"
+     ]
+    },
+    {
+     "q": "whatsapp automation for shopify",
+     "impr": 13,
+     "clicks": 0,
+     "pos": 15.3,
+     "pages": [
+      "/blog/whatsapp-automation-for-shopify",
+      "/blog/whatsapp-automation-for-shopify#how-shopify-whatsapp-automation-works",
+      "/blog/whatsapp-automation-for-shopify#what-can-shopify-stores-automate-with-whatsapp"
+     ]
+    },
+    {
+     "q": "how to automate whatsapp abandoned cart reminders on shopify without getting banned.",
+     "impr": 12,
+     "clicks": 0,
+     "pos": 15,
+     "pages": [
+      "/blog/whatsapp-abandoned-cart-recovery-shopify"
+     ]
+    },
+    {
+     "q": "top shopify support apps with whatsapp",
+     "impr": 11,
+     "clicks": 0,
+     "pos": 9,
+     "pages": [
+      "/blog/best-whatsapp-apps-for-shopify"
+     ]
+    },
+    {
+     "q": "shopify seo experts",
+     "impr": 10,
+     "clicks": 0,
+     "pos": 86.1,
+     "pages": [
+      "/blog/shopify-seo-experts"
+     ]
+    },
+    {
+     "q": "whatsapp abandoned cart recovery shopify india",
+     "impr": 10,
+     "clicks": 0,
+     "pos": 14.1,
+     "pages": [
+      "/blog/whatsapp-abandoned-cart-recovery-shopify",
+      "/blog/whatsapp-abandoned-cart-recovery-shopify/",
+      "/blog/best-shopify-app-for-abandoned-cart-recovery-india"
+     ]
+    },
+    {
+     "q": "whatsapp cart recovery",
+     "impr": 10,
+     "clicks": 0,
+     "pos": 67.7,
+     "pages": [
+      "/blog/whatsapp-abandoned-cart-recovery-shopify"
+     ]
+    },
+    {
+     "q": "rto rate by product category india d2c 2026",
+     "impr": 9,
+     "clicks": 0,
+     "pos": 6.7,
+     "pages": [
+      "/blog/cod-rto-benchmark-india-2026"
+     ]
+    },
+    {
+     "q": "ecommerce whatsapp automation",
+     "impr": 8,
+     "clicks": 0,
+     "pos": 25.5,
+     "pages": [
+      "/blog/what-is-ecommerce-automation-shopify-whatsapp",
+      "/blog/whatsapp-automation-for-shopify"
+     ]
+    },
+    {
+     "q": "whatsapp shopify",
+     "impr": 8,
+     "clicks": 0,
+     "pos": 44.6,
+     "pages": [
+      "/blog/whatsapp-automation-for-shopify",
+      "/blog/best-whatsapp-apps-for-shopify"
+     ]
+    },
+    {
+     "q": "\"gupshup\" -site:gupshup.io -site:facebook.com -site:instagram.com -site:threads.com -site:threads.net -site:linkedin.com -site:x.com -site:twitter.com -site:tiktok.com -site:youtube.com -site:youtu.be -site:reddit.com -site:t.me -site:telegram.me -site:telegram.org -site:pinterest.com -site:vimeo.com",
+     "impr": 7,
+     "clicks": 0,
+     "pos": 6.9,
+     "pages": [
+      "/compare/gupshup",
+      "/",
+      "/compare/getgabs"
+     ]
+    },
+    {
+     "q": "abandoned cart recovery shopify",
+     "impr": 7,
+     "clicks": 0,
+     "pos": 26,
+     "pages": [
+      "/blog/whatsapp-abandoned-cart-recovery-shopify"
+     ]
+    },
+    {
+     "q": "cart recovery shopify",
+     "impr": 7,
+     "clicks": 0,
+     "pos": 40,
+     "pages": [
+      "/blog/whatsapp-abandoned-cart-recovery-shopify"
+     ]
+    },
+    {
+     "q": "cod return rates by category in india 2026",
+     "impr": 7,
+     "clicks": 0,
+     "pos": 10.7,
+     "pages": [
+      "/blog/cod-rto-benchmark-india-2026"
+     ]
+    },
+    {
+     "q": "getkanal",
+     "impr": 7,
+     "clicks": 0,
+     "pos": 11.3,
+     "pages": [
+      "/blog/kanal-whatsapp-alternative-shopify"
+     ]
+    },
+    {
+     "q": "shopify seo expert",
+     "impr": 7,
+     "clicks": 0,
+     "pos": 90.4,
+     "pages": [
+      "/blog/shopify-seo-experts"
+     ]
+    },
+    {
+     "q": "whatsapp abandoned cart recovery",
+     "impr": 7,
+     "clicks": 0,
+     "pos": 62.6,
+     "pages": [
+      "/blog/whatsapp-abandoned-cart-recovery-shopify",
+      "https://dash.topedgeai.com/docs/guides/abandoned-cart-recovery/",
+      "/blog/whatsapp-abandoned-cart-recovery-shopify/"
+     ]
+    },
+    {
+     "q": "whatsapp marketing shopify",
+     "impr": 7,
+     "clicks": 0,
+     "pos": 30.7,
+     "pages": [
+      "/blog/whatsapp-automation-for-shopify"
+     ]
+    },
+    {
+     "q": "whatsapp automation shopify",
+     "impr": 6,
+     "clicks": 1,
+     "pos": 9.3,
+     "pages": [
+      "/blog/whatsapp-automation-for-shopify"
+     ]
+    },
+    {
+     "q": "best tools for whatsapp abandoned cart messages",
+     "impr": 6,
+     "clicks": 0,
+     "pos": 18.2,
+     "pages": [
+      "/blog/whatsapp-abandoned-cart-recovery-shopify"
+     ]
+    },
+    {
+     "q": "whatsapp abandoned cart shopify",
+     "impr": 6,
+     "clicks": 0,
+     "pos": 19.5,
+     "pages": [
+      "/blog/whatsapp-abandoned-cart-recovery-shopify",
+      "/blog/whatsapp-abandoned-cart-recovery-shopify/"
+     ]
+    },
+    {
+     "q": "whatsapp automation for ecommerce",
+     "impr": 6,
+     "clicks": 0,
+     "pos": 55.3,
+     "pages": [
+      "/blog/what-is-ecommerce-automation-shopify-whatsapp",
+      "/blog/whatsapp-automation-for-shopify"
+     ]
+    },
+    {
+     "q": "whatsapp team inbox",
+     "impr": 6,
+     "clicks": 0,
+     "pos": 70.5,
+     "pages": [
+      "/docs/guides/shared-inbox-handover"
+     ]
+    },
+    {
+     "q": "zoko-alternative",
+     "impr": 6,
+     "clicks": 0,
+     "pos": 7.7,
+     "pages": [
+      "/blog/zoko-alternative-shopify-india"
+     ]
+    },
+    {
+     "q": "abandoned cart whatsapp message",
+     "impr": 5,
+     "clicks": 0,
+     "pos": 44.2,
+     "pages": [
+      "/blog/whatsapp-abandoned-cart-recovery-shopify"
+     ]
+    },
+    {
+     "q": "shopify whatsapp",
+     "impr": 5,
+     "clicks": 0,
+     "pos": 50.6,
+     "pages": [
+      "/blog/whatsapp-automation-for-shopify",
+      "/blog/best-whatsapp-apps-for-shopify"
+     ]
+    },
+    {
+     "q": "wappify whatsapp automation",
+     "impr": 5,
+     "clicks": 0,
+     "pos": 23.4,
+     "pages": [
+      "/blog/whatsapp-automation-for-shopify"
+     ]
+    },
+    {
+     "q": "whatsapp marketing for shopify",
+     "impr": 5,
+     "clicks": 0,
+     "pos": 18.6,
+     "pages": [
+      "/blog/whatsapp-automation-for-shopify"
+     ]
+    },
+    {
+     "q": "abandoned cart recovery shopify app",
+     "impr": 4,
+     "clicks": 0,
+     "pos": 64.8,
+     "pages": [
+      "/blog/whatsapp-abandoned-cart-recovery-shopify"
+     ]
+    },
+    {
+     "q": "abandoned cart recovery whatsapp",
+     "impr": 4,
+     "clicks": 0,
+     "pos": 55,
+     "pages": [
+      "/blog/whatsapp-abandoned-cart-recovery-shopify",
+      "https://dash.topedgeai.com/docs/guides/abandoned-cart-recovery/",
+      "/blog/whatsapp-abandoned-cart-recovery-shopify/"
+     ]
+    },
+    {
+     "q": "getgabs pricing",
+     "impr": 4,
+     "clicks": 0,
+     "pos": 7.5,
+     "pages": [
+      "/compare/getgabs",
+      "/blog/getgabs-alternative-shopify-whatsapp"
+     ]
+    },
+    {
+     "q": "intitle:\"gupshup\" -site:gupshup.io -site:facebook.com -site:instagram.com -site:threads.com -site:threads.net -site:linkedin.com -site:x.com -site:twitter.com -site:tiktok.com -site:youtube.com -site:youtu.be -site:reddit.com -site:t.me -site:telegram.me -site:telegram.org -site:pinterest.com -site:vimeo.com",
+     "impr": 4,
+     "clicks": 0,
+     "pos": 1.3,
+     "pages": [
+      "/compare/gupshup"
+     ]
+    },
+    {
+     "q": "site:linkedin.com/posts \"whatsapp integration\"",
+     "impr": 4,
+     "clicks": 0,
+     "pos": 29.5,
+     "pages": [
+      "/shopify-whatsapp-integration"
+     ]
+    },
+    {
+     "q": "whatsapp abandoned cart automation",
+     "impr": 4,
+     "clicks": 0,
+     "pos": 14.3,
+     "pages": [
+      "/blog/whatsapp-abandoned-cart-recovery-shopify"
+     ]
+    },
+    {
+     "q": "whatsapp app shopify",
+     "impr": 4,
+     "clicks": 0,
+     "pos": 64.5,
+     "pages": [
+      "/blog/best-whatsapp-apps-for-shopify"
+     ]
+    },
+    {
+     "q": "whatsapp ecommerce automation",
+     "impr": 4,
+     "clicks": 0,
+     "pos": 23.5,
+     "pages": [
+      "/blog/what-is-ecommerce-automation-shopify-whatsapp",
+      "/blog/whatsapp-automation-for-shopify"
+     ]
+    },
+    {
+     "q": "whatsapp for shopify",
+     "impr": 4,
+     "clicks": 0,
+     "pos": 28,
+     "pages": [
+      "/blog/whatsapp-automation-for-shopify"
+     ]
+    },
+    {
+     "q": "whatsapp vs email marketing for d2c india",
+     "impr": 4,
+     "clicks": 0,
+     "pos": 21.8,
+     "pages": [
+      "/blog/ecommerce-automation-whatsapp-vs-email-india"
+     ]
+    },
+    {
+     "q": "\"gupshup\"",
+     "impr": 3,
+     "clicks": 0,
+     "pos": 46,
+     "pages": [
+      "/",
+      "/compare/gupshup",
+      "/docs"
+     ]
+    },
+    {
+     "q": "\"gupshup.ai\" -site:gupshup.ai -site:gupshup.io -site:facebook.com -site:instagram.com -site:threads.com -site:threads.net -site:linkedin.com -site:x.com -site:twitter.com -site:tiktok.com -site:youtube.com -site:youtu.be -site:reddit.com -site:t.me -site:telegram.me -site:telegram.org -site:pinterest.com -site:vimeo.com",
+     "impr": 3,
+     "clicks": 0,
+     "pos": 4,
+     "pages": [
+      "/compare/gupshup",
+      "/"
+     ]
+    },
+    {
+     "q": "\"gupshup.io\" -site:gupshup.io -site:facebook.com -site:instagram.com -site:threads.com -site:threads.net -site:linkedin.com -site:x.com -site:twitter.com -site:tiktok.com -site:youtube.com -site:youtu.be -site:reddit.com -site:t.me -site:telegram.me -site:telegram.org -site:pinterest.com -site:vimeo.com",
+     "impr": 3,
+     "clicks": 0,
+     "pos": 1.3,
+     "pages": [
+      "/compare/gupshup"
+     ]
+    },
+    {
+     "q": "alternativa a zoko",
+     "impr": 3,
+     "clicks": 0,
+     "pos": 8,
+     "pages": [
+      "/blog/zoko-alternative-shopify-india"
+     ]
+    },
+    {
+     "q": "bitespeed pricing",
+     "impr": 3,
+     "clicks": 0,
+     "pos": 15.7,
+     "pages": [
+      "/blog/bitespeed-alternative-shopify-india",
+      "/compare/bitespeed/"
+     ]
+    },
+    {
+     "q": "dondy pricing",
+     "impr": 3,
+     "clicks": 0,
+     "pos": 6.3,
+     "pages": [
+      "/compare/dondy"
+     ]
+    },
+    {
+     "q": "how to recover abandoned carts on whatsapp d2c",
+     "impr": 3,
+     "clicks": 0,
+     "pos": 17.3,
+     "pages": [
+      "/blog/whatsapp-abandoned-cart-recovery-shopify",
+      "/blog/whatsapp-abandoned-cart-recovery-shopify/"
+     ]
+    },
+    {
+     "q": "interakt alternatives",
+     "impr": 3,
+     "clicks": 0,
+     "pos": 38.3,
+     "pages": [
+      "/blog/interakt-alternative-shopify-india"
+     ]
+    },
+    {
+     "q": "interakt alternatives for shopify",
+     "impr": 3,
+     "clicks": 0,
+     "pos": 6.3,
+     "pages": [
+      "/blog/interakt-alternative-shopify-india"
+     ]
+    },
+    {
+     "q": "is e commerce business profitable in india",
+     "impr": 3,
+     "clicks": 0,
+     "pos": 10.3,
+     "pages": [
+      "/blog/profitable-ecommerce-business-india"
+     ]
+    },
+    {
+     "q": "is ecommerce business profitable in india",
+     "impr": 3,
+     "clicks": 0,
+     "pos": 6.7,
+     "pages": [
+      "/blog/profitable-ecommerce-business-india"
+     ]
+    },
+    {
+     "q": "recommend a whatsapp messaging platform that integrates with shopify",
+     "impr": 3,
+     "clicks": 0,
+     "pos": 4.7,
+     "pages": [
+      "/blog/best-whatsapp-apps-for-shopify"
+     ]
+    },
+    {
+     "q": "wavecarts",
+     "impr": 3,
+     "clicks": 0,
+     "pos": 48,
+     "pages": [
+      "/blog/whatsapp-abandoned-cart-recovery-shopify"
+     ]
+    },
+    {
+     "q": "whatsapp 2.0 shopify",
+     "impr": 3,
+     "clicks": 0,
+     "pos": 35,
+     "pages": [
+      "/blog/best-whatsapp-apps-for-shopify",
+      "/blog/whatsapp-automation-for-shopify"
+     ]
+    },
+    {
+     "q": "whatsapp abandoned cart",
+     "impr": 3,
+     "clicks": 0,
+     "pos": 48.7,
+     "pages": [
+      "/blog/whatsapp-abandoned-cart-recovery-shopify",
+      "https://dash.topedgeai.com/docs/guides/abandoned-cart-recovery/"
+     ]
+    },
+    {
+     "q": "updatrr",
+     "impr": 2,
+     "clicks": 1,
+     "pos": 23.5,
+     "pages": [
+      "/compare/updatrr",
+      "/blog/category/automation"
+     ]
+    },
+    {
+     "q": "\"shopify.com\"",
+     "impr": 2,
+     "clicks": 0,
+     "pos": 9.5,
+     "pages": [
+      "/compare/updatrr"
+     ]
+    },
+    {
+     "q": "\"whatsapp pay\" and (brazil or india)",
+     "impr": 2,
+     "clicks": 0,
+     "pos": 9.5,
+     "pages": [
+      "/compare/interakt/"
+     ]
+    },
+    {
+     "q": "abandoned cart whatsapp",
+     "impr": 2,
+     "clicks": 0,
+     "pos": 15,
+     "pages": [
+      "/blog/whatsapp-abandoned-cart-recovery-shopify"
+     ]
+    },
+    {
+     "q": "are ecommerce sites profitable in india",
+     "impr": 2,
+     "clicks": 0,
+     "pos": 12.5,
+     "pages": [
+      "/blog/profitable-ecommerce-business-india"
+     ]
+    },
+    {
+     "q": "best shopify abandoned cart app",
+     "impr": 2,
+     "clicks": 0,
+     "pos": 51.5,
+     "pages": [
+      "/blog/best-shopify-app-for-abandoned-cart-recovery-india"
+     ]
+    },
+    {
+     "q": "dondy shopify",
+     "impr": 2,
+     "clicks": 0,
+     "pos": 22,
+     "pages": [
+      "/blog/dondy-alternative-shopify-india"
+     ]
+    },
+    {
+     "q": "ecommerce conversion funnel benchmarks",
+     "impr": 2,
+     "clicks": 0,
+     "pos": 36.5,
+     "pages": [
+      "/blog/ecommerce-funnel-drop-off-benchmarks-visitor-identity-resolution"
+     ]
+    },
+    {
+     "q": "email vs sms vs whatsapp for d2c retention",
+     "impr": 2,
+     "clicks": 0,
+     "pos": 65,
+     "pages": [
+      "/blog/ecommerce-automation-whatsapp-vs-email-india"
+     ]
+    },
+    {
+     "q": "expert seo shopify",
+     "impr": 2,
+     "clicks": 0,
+     "pos": 95.5,
+     "pages": [
+      "/blog/shopify-seo-experts"
+     ]
+    },
+    {
+     "q": "gupshup mobile apps",
+     "impr": 2,
+     "clicks": 0,
+     "pos": 78,
+     "pages": [
+      "/blog/cod-to-prepaid-whatsapp-shopify-india",
+      "/features/ai-brain"
+     ]
+    },
+    {
+     "q": "interakt competitor",
+     "impr": 2,
+     "clicks": 0,
+     "pos": 13.5,
+     "pages": [
+      "/blog/interakt-alternative-shopify-india"
+     ]
+    },
+    {
+     "q": "kanal-ai",
+     "impr": 2,
+     "clicks": 0,
+     "pos": 17.5,
+     "pages": [
+      "/compare/kanal"
+     ]
+    },
+    {
+     "q": "organic vs paid acquisition mix ecommerce",
+     "impr": 2,
+     "clicks": 0,
+     "pos": 69.5,
+     "pages": [
+      "/blog/organic-vs-paid-ecommerce-marketing-2026"
+     ]
+    },
+    {
+     "q": "shopify abandoned cart recovery",
+     "impr": 2,
+     "clicks": 0,
+     "pos": 25.5,
+     "pages": [
+      "/blog/whatsapp-abandoned-cart-recovery-shopify"
+     ]
+    },
+    {
+     "q": "shopify cart recovery",
+     "impr": 2,
+     "clicks": 0,
+     "pos": 30.5,
+     "pages": [
+      "/blog/whatsapp-abandoned-cart-recovery-shopify"
+     ]
+    },
+    {
+     "q": "shopify whatsapp app",
+     "impr": 2,
+     "clicks": 0,
+     "pos": 59,
+     "pages": [
+      "/blog/best-whatsapp-apps-for-shopify"
+     ]
+    },
+    {
+     "q": "shopify whatsapp integration",
+     "impr": 2,
+     "clicks": 0,
+     "pos": 53,
+     "pages": [
+      "/blog/whatsapp-automation-for-shopify"
+     ]
+    },
+    {
+     "q": "was ist das beste whatsapp tool für shopify",
+     "impr": 2,
+     "clicks": 0,
+     "pos": 37,
+     "pages": [
+      "/blog/best-whatsapp-apps-for-shopify"
+     ]
+    },
+    {
+     "q": "was ist das beste whatsapp tool für shopify?",
+     "impr": 2,
+     "clicks": 0,
+     "pos": 11,
+     "pages": [
+      "/blog/best-whatsapp-apps-for-shopify"
+     ]
+    },
+    {
+     "q": "wati alternative india",
+     "impr": 2,
+     "clicks": 0,
+     "pos": 38.5,
+     "pages": [
+      "/blog/wati-alternative-shopify-india"
+     ]
+    },
+    {
+     "q": "whatsapp app alternative",
+     "impr": 2,
+     "clicks": 0,
+     "pos": 24,
+     "pages": [
+      "/blog/getgabs-alternative-shopify-whatsapp",
+      "/blog/kanal-whatsapp-alternative-shopify"
+     ]
+    },
+    {
+     "q": "whatsapp chatbot shopify",
+     "impr": 2,
+     "clicks": 0,
+     "pos": 22.5,
+     "pages": [
+      "/blog/ai-whatsapp-chatbot-for-shopify-india/"
+     ]
+    },
+    {
+     "q": "whatsapp shared inbox for ecommerce",
+     "impr": 2,
+     "clicks": 0,
+     "pos": 37.5,
+     "pages": [
+      "/blog/whatsapp-shared-inbox-shopify-order-context"
+     ]
+    },
+    {
+     "q": "which whatsapp business api provider works best with shopify order notifications for indian stores",
+     "impr": 2,
+     "clicks": 0,
+     "pos": 6,
+     "pages": [
+      "/blog/best-whatsapp-apps-for-shopify",
+      "/blog/best-whatsapp-automation-tools-shopify-india"
+     ]
+    },
+    {
+     "q": "zoko alternatives",
+     "impr": 2,
+     "clicks": 0,
+     "pos": 4.5,
+     "pages": [
+      "/blog/zoko-alternative-shopify-india"
+     ]
+    },
+    {
+     "q": "aisensy alternative in india",
+     "impr": 1,
+     "clicks": 0,
+     "pos": 8,
+     "pages": [
+      "/blog/aisensy-alternative-shopify-india"
+     ]
+    },
+    {
+     "q": "alternativa zoko",
+     "impr": 1,
+     "clicks": 0,
+     "pos": 14,
+     "pages": [
+      "/blog/zoko-alternative-shopify-india"
+     ]
+    },
+    {
+     "q": "automate ecommerce",
+     "impr": 1,
+     "clicks": 0,
+     "pos": 36,
+     "pages": [
+      "/blog/how-to-automate-ecommerce-store-india"
+     ]
+    },
+    {
+     "q": "best shopify abandoned cart recovery apps",
+     "impr": 1,
+     "clicks": 0,
+     "pos": 43,
+     "pages": [
+      "/blog/best-shopify-app-for-abandoned-cart-recovery-india"
+     ]
+    },
+    {
+     "q": "best shopify whatsapp app",
+     "impr": 1,
+     "clicks": 0,
+     "pos": 7,
+     "pages": [
+      "/blog/best-whatsapp-apps-for-shopify"
+     ]
+    },
+    {
+     "q": "best upsell app for shopify 2024",
+     "impr": 1,
+     "clicks": 0,
+     "pos": 48,
+     "pages": [
+      "/blog/best-shopify-upsell-apps"
+     ]
+    },
+    {
+     "q": "best whatsapp marketing tools for e-commerce and direct-to-consumer brands",
+     "impr": 1,
+     "clicks": 0,
+     "pos": 10,
+     "pages": [
+      "/blog/best-whatsapp-apps-for-shopify"
+     ]
+    },
+    {
+     "q": "bitespeed logo",
+     "impr": 1,
+     "clicks": 0,
+     "pos": 1,
+     "pages": [
+      "/compare/bitespeed"
+     ]
+    },
+    {
+     "q": "chatcart.app",
+     "impr": 1,
+     "clicks": 0,
+     "pos": 81,
+     "pages": [
+      "/blog/best-whatsapp-apps-for-shopify"
+     ]
+    },
+    {
+     "q": "cos abandonat whatsapp",
+     "impr": 1,
+     "clicks": 0,
+     "pos": 62,
+     "pages": [
+      "/blog/whatsapp-abandoned-cart-recovery-shopify"
+     ]
+    },
+    {
+     "q": "dondy whatsapp",
+     "impr": 1,
+     "clicks": 0,
+     "pos": 15,
+     "pages": [
+      "/blog/dondy-alternative-shopify-india"
+     ]
+    },
+    {
+     "q": "ecommerce abandoned cart calculator",
+     "impr": 1,
+     "clicks": 0,
+     "pos": 71,
+     "pages": [
+      "/tools/cart-recovery-calculator"
+     ]
+    },
+    {
+     "q": "facebook messenger abandoned cart shopify",
+     "impr": 1,
+     "clicks": 0,
+     "pos": 25,
+     "pages": [
+      "/blog/whatsapp-abandoned-cart-recovery-shopify"
+     ]
+    },
+    {
+     "q": "gupshup",
+     "impr": 1,
+     "clicks": 0,
+     "pos": 3,
+     "pages": [
+      "/compare/gupshup"
+     ]
+    },
+    {
+     "q": "is ecommerce advertising profitable in india",
+     "impr": 1,
+     "clicks": 0,
+     "pos": 20,
+     "pages": [
+      "/blog/profitable-ecommerce-business-india"
+     ]
+    },
+    {
+     "q": "kanal shopify",
+     "impr": 1,
+     "clicks": 0,
+     "pos": 10,
+     "pages": [
+      "/blog/kanal-whatsapp-alternative-shopify"
+     ]
+    },
+    {
+     "q": "kanal whatsapp",
+     "impr": 1,
+     "clicks": 0,
+     "pos": 7,
+     "pages": [
+      "/blog/kanal-whatsapp-alternative-shopify"
+     ]
+    },
+    {
+     "q": "low email open rates switch to whatsapp d2c",
+     "impr": 1,
+     "clicks": 0,
+     "pos": 76,
+     "pages": [
+      "/blog/ecommerce-automation-whatsapp-vs-email-india"
+     ]
+    },
+    {
+     "q": "rto performance",
+     "impr": 1,
+     "clicks": 0,
+     "pos": 6,
+     "pages": [
+      "/blog/cod-rto-benchmark-india-2026"
+     ]
+    },
+    {
+     "q": "rto rate india ecommerce 2025",
+     "impr": 1,
+     "clicks": 0,
+     "pos": 1,
+     "pages": [
+      "/blog/cod-rto-benchmark-india-2026"
+     ]
+    },
+    {
+     "q": "seo experts shopify",
+     "impr": 1,
+     "clicks": 0,
+     "pos": 100,
+     "pages": [
+      "/blog/shopify-seo-experts"
+     ]
+    },
+    {
+     "q": "shared inbox for a shopify store support team",
+     "impr": 1,
+     "clicks": 0,
+     "pos": 5,
+     "pages": [
+      "/blog/whatsapp-shared-inbox-shopify-order-context"
+     ]
+    },
+    {
+     "q": "shopify abandonment protector plus",
+     "impr": 1,
+     "clicks": 0,
+     "pos": 71,
+     "pages": [
+      "/blog/whatsapp-abandoned-cart-recovery-shopify"
+     ]
+    },
+    {
+     "q": "shopify expert seo",
+     "impr": 1,
+     "clicks": 0,
+     "pos": 97,
+     "pages": [
+      "/blog/shopify-seo-experts"
+     ]
+    },
+    {
+     "q": "shopify ranking experts",
+     "impr": 1,
+     "clicks": 0,
+     "pos": 48,
+     "pages": [
+      "/blog/shopify-seo-experts"
+     ]
+    },
+    {
+     "q": "shopify seo expert coalition",
+     "impr": 1,
+     "clicks": 0,
+     "pos": 95,
+     "pages": [
+      "/blog/shopify-seo-experts"
+     ]
+    },
+    {
+     "q": "shopify seo specialist",
+     "impr": 1,
+     "clicks": 0,
+     "pos": 40,
+     "pages": [
+      "/blog/shopify-seo-experts"
+     ]
+    },
+    {
+     "q": "shopify whatsapp order",
+     "impr": 1,
+     "clicks": 0,
+     "pos": 27,
+     "pages": [
+      "/blog/whatsapp-automation-for-shopify"
+     ]
+    },
+    {
+     "q": "site:apps.shopify.com shopify app whatsapp \"+91\"",
+     "impr": 1,
+     "clicks": 0,
+     "pos": 3,
+     "pages": [
+      "/blog/best-whatsapp-apps-for-shopify"
+     ]
+    },
+    {
+     "q": "top organic marketing for e-commerce",
+     "impr": 1,
+     "clicks": 0,
+     "pos": 10,
+     "pages": [
+      "/blog/organic-vs-paid-ecommerce-marketing-2026"
+     ]
+    },
+    {
+     "q": "wati vs aisensy",
+     "impr": 1,
+     "clicks": 0,
+     "pos": 40,
+     "pages": [
+      "/compare/topedge-vs-wati-vs-aisensy"
+     ]
+    },
+    {
+     "q": "we need whatsapp ai to answer product questions, check stock, and identify vip buyers for human follow-up. can one platform do all this?",
+     "impr": 1,
+     "clicks": 0,
+     "pos": 10,
+     "pages": [
+      "/blog/shopify-automation-checklist-whatsapp-cart-recovery"
+     ]
+    },
+    {
+     "q": "what is the best app for abandoned cart flow marketing automation?",
+     "impr": 1,
+     "clicks": 0,
+     "pos": 10,
+     "pages": [
+      "/blog/best-shopify-app-for-abandoned-cart-recovery-india"
+     ]
+    },
+    {
+     "q": "what kinds of platforms let ecommerce stores automate whatsapp cart recovery, order updates, and two-way messaging?",
+     "impr": 1,
+     "clicks": 0,
+     "pos": 13,
+     "pages": [
+      "/blog/whatsapp-abandoned-cart-recovery-shopify"
+     ]
+    },
+    {
+     "q": "whatsapp abandoned cart recovery d2c",
+     "impr": 1,
+     "clicks": 0,
+     "pos": 18,
+     "pages": [
+      "/blog/whatsapp-abandoned-cart-recovery-shopify"
+     ]
+    },
+    {
+     "q": "whatsapp business api pricing india",
+     "impr": 1,
+     "clicks": 0,
+     "pos": 68,
+     "pages": [
+      "/blog/whatsapp-business-api-pricing-india"
+     ]
+    },
+    {
+     "q": "whatsapp cod",
+     "impr": 1,
+     "clicks": 0,
+     "pos": 7,
+     "pages": [
+      "/"
+     ]
+    },
+    {
+     "q": "whatsapp d2c automation",
+     "impr": 1,
+     "clicks": 0,
+     "pos": 38,
+     "pages": [
+      "/blog/ecommerce-automation-whatsapp-vs-email-india"
+     ]
+    },
+    {
+     "q": "whatsapp down today india",
+     "impr": 1,
+     "clicks": 0,
+     "pos": 9,
+     "pages": [
+      "/blog/best-whatsapp-apps-for-shopify"
+     ]
+    },
+    {
+     "q": "whatsapp flow builder",
+     "impr": 1,
+     "clicks": 0,
+     "pos": 35,
+     "pages": [
+      "/features/flow-builder"
+     ]
+    },
+    {
+     "q": "whatsapp shopify app",
+     "impr": 1,
+     "clicks": 0,
+     "pos": 70,
+     "pages": [
+      "/blog/best-whatsapp-apps-for-shopify"
+     ]
+    },
+    {
+     "q": "whatsapp template rejected",
+     "impr": 1,
+     "clicks": 0,
+     "pos": 7,
+     "pages": [
+      "/blog/whatsapp-template-rejected-meta-shopify-fix"
+     ]
+    },
+    {
+     "q": "whatsapp thread builder",
+     "impr": 1,
+     "clicks": 0,
+     "pos": 2,
+     "pages": [
+      "/features/flow-builder"
+     ]
+    },
+    {
+     "q": "which checkout app can help reduce abandoned carts for indian customers?",
+     "impr": 1,
+     "clicks": 0,
+     "pos": 1,
+     "pages": [
+      "/blog/whatsapp-abandoned-cart-recovery-shopify/"
+     ]
+    },
+    {
+     "q": "which companies help reduce cart abandonment for shopify stores in india?",
+     "impr": 1,
+     "clicks": 0,
+     "pos": 1,
+     "pages": [
+      "/blog/whatsapp-abandoned-cart-recovery-shopify/"
+     ]
+    },
+    {
+     "q": "which whatsapp automation platform handles high message volume for growing businesses",
+     "impr": 1,
+     "clicks": 0,
+     "pos": 9,
+     "pages": [
+      "/compare/topedge-vs-wati-vs-interakt-vs-aisensy"
+     ]
+    },
+    {
+     "q": "zoko addons",
+     "impr": 1,
+     "clicks": 0,
+     "pos": 21,
+     "pages": [
+      "/blog/zoko-alternative-shopify-india"
+     ]
+    }
+   ]
+  },
+  "questions": {
+   "regex": "^(who|what|why|when|where|how|which|is|are|can|do|does|should|will)\\b",
+   "queries": 25,
+   "impr": 45,
+   "clicks": 0,
+   "list": [
+    {
+     "q": "how to automate whatsapp abandoned cart reminders on shopify without getting banned.",
+     "impr": 12,
+     "clicks": 0,
+     "pos": 15,
+     "pages": [
+      "/blog/whatsapp-abandoned-cart-recovery-shopify"
+     ]
+    },
+    {
+     "q": "how to recover abandoned carts on whatsapp d2c",
+     "impr": 3,
+     "clicks": 0,
+     "pos": 17.3,
+     "pages": [
+      "/blog/whatsapp-abandoned-cart-recovery-shopify",
+      "/blog/whatsapp-abandoned-cart-recovery-shopify/"
+     ]
+    },
+    {
+     "q": "is e commerce business profitable in india",
+     "impr": 3,
+     "clicks": 0,
+     "pos": 10.3,
+     "pages": [
+      "/blog/profitable-ecommerce-business-india"
+     ]
+    },
+    {
+     "q": "is ecommerce business profitable in india",
+     "impr": 3,
+     "clicks": 0,
+     "pos": 6.7,
+     "pages": [
+      "/blog/profitable-ecommerce-business-india"
+     ]
+    },
+    {
+     "q": "are ecommerce sites profitable in india",
+     "impr": 2,
+     "clicks": 0,
+     "pos": 12.5,
+     "pages": [
+      "/blog/profitable-ecommerce-business-india"
+     ]
+    },
+    {
+     "q": "how to order food in cinepolis",
+     "impr": 2,
+     "clicks": 0,
+     "pos": 8.5,
+     "pages": [
+      "/"
+     ]
+    },
+    {
+     "q": "which whatsapp business api provider works best with shopify order notifications for indian stores",
+     "impr": 2,
+     "clicks": 0,
+     "pos": 6,
+     "pages": [
+      "/blog/best-whatsapp-apps-for-shopify",
+      "/blog/best-whatsapp-automation-tools-shopify-india"
+     ]
+    },
+    {
+     "q": "can you show me picture",
+     "impr": 1,
+     "clicks": 0,
+     "pos": 1,
+     "pages": [
+      "/"
+     ]
+    },
+    {
+     "q": "do they have fries?",
+     "impr": 1,
+     "clicks": 0,
+     "pos": 1,
+     "pages": [
+      "/"
+     ]
+    },
+    {
+     "q": "how to order food at cinépolis",
+     "impr": 1,
+     "clicks": 0,
+     "pos": 11,
+     "pages": [
+      "/"
+     ]
+    },
+    {
+     "q": "is ecommerce advertising profitable in india",
+     "impr": 1,
+     "clicks": 0,
+     "pos": 20,
+     "pages": [
+      "/blog/profitable-ecommerce-business-india"
+     ]
+    },
+    {
+     "q": "is there a chipotle in india",
+     "impr": 1,
+     "clicks": 0,
+     "pos": 2,
+     "pages": [
+      "/"
+     ]
+    },
+    {
+     "q": "what about india",
+     "impr": 1,
+     "clicks": 0,
+     "pos": 3,
+     "pages": [
+      "/"
+     ]
+    },
+    {
+     "q": "what is steak",
+     "impr": 1,
+     "clicks": 0,
+     "pos": 1,
+     "pages": [
+      "/"
+     ]
+    },
+    {
+     "q": "what is the best app for abandoned cart flow marketing automation?",
+     "impr": 1,
+     "clicks": 0,
+     "pos": 10,
+     "pages": [
+      "/blog/best-shopify-app-for-abandoned-cart-recovery-india"
+     ]
+    },
+    {
+     "q": "what is the best?",
+     "impr": 1,
+     "clicks": 0,
+     "pos": 1,
+     "pages": [
+      "/blog/organic-vs-paid-ecommerce-marketing-2026"
+     ]
+    },
+    {
+     "q": "what kinds of platforms let ecommerce stores automate whatsapp cart recovery, order updates, and two-way messaging?",
+     "impr": 1,
+     "clicks": 0,
+     "pos": 13,
+     "pages": [
+      "/blog/whatsapp-abandoned-cart-recovery-shopify"
+     ]
+    },
+    {
+     "q": "what to eat on weekends",
+     "impr": 1,
+     "clicks": 0,
+     "pos": 2,
+     "pages": [
+      "/"
+     ]
+    },
+    {
+     "q": "what's there to eat",
+     "impr": 1,
+     "clicks": 0,
+     "pos": 3,
+     "pages": [
+      "/"
+     ]
+    },
+    {
+     "q": "where can i get free cake on my birthday",
+     "impr": 1,
+     "clicks": 0,
+     "pos": 4,
+     "pages": [
+      "/"
+     ]
+    },
+    {
+     "q": "where to buy",
+     "impr": 1,
+     "clicks": 0,
+     "pos": 5,
+     "pages": [
+      "/"
+     ]
+    },
+    {
+     "q": "which checkout app can help reduce abandoned carts for indian customers?",
+     "impr": 1,
+     "clicks": 0,
+     "pos": 1,
+     "pages": [
+      "/blog/whatsapp-abandoned-cart-recovery-shopify/"
+     ]
+    },
+    {
+     "q": "which companies help reduce cart abandonment for shopify stores in india?",
+     "impr": 1,
+     "clicks": 0,
+     "pos": 1,
+     "pages": [
+      "/blog/whatsapp-abandoned-cart-recovery-shopify/"
+     ]
+    },
+    {
+     "q": "which location",
+     "impr": 1,
+     "clicks": 0,
+     "pos": 1,
+     "pages": [
+      "/"
+     ]
+    },
+    {
+     "q": "which whatsapp automation platform handles high message volume for growing businesses",
+     "impr": 1,
+     "clicks": 0,
+     "pos": 9,
+     "pages": [
+      "/compare/topedge-vs-wati-vs-interakt-vs-aisensy"
+     ]
+    }
+   ]
+  },
+  "long conversational 7+ words": {
+   "regex": "^(\\S+\\s+){6,}\\S+$",
+   "queries": 31,
+   "impr": 132,
+   "clicks": 0,
+   "list": [
+    {
+     "q": "best whatsapp commerce tools for shopify stores",
+     "impr": 44,
+     "clicks": 0,
+     "pos": 39.7,
+     "pages": [
+      "/blog/best-whatsapp-apps-for-shopify",
+      "/blog/whatsapp-automation-for-shopify"
+     ]
+    },
+    {
+     "q": "how to automate whatsapp abandoned cart reminders on shopify without getting banned.",
+     "impr": 12,
+     "clicks": 0,
+     "pos": 15,
+     "pages": [
+      "/blog/whatsapp-abandoned-cart-recovery-shopify"
+     ]
+    },
+    {
+     "q": "rto rate by product category india d2c 2026",
+     "impr": 9,
+     "clicks": 0,
+     "pos": 6.7,
+     "pages": [
+      "/blog/cod-rto-benchmark-india-2026"
+     ]
+    },
+    {
+     "q": "\"gupshup\" -site:gupshup.io -site:facebook.com -site:instagram.com -site:threads.com -site:threads.net -site:linkedin.com -site:x.com -site:twitter.com -site:tiktok.com -site:youtube.com -site:youtu.be -site:reddit.com -site:t.me -site:telegram.me -site:telegram.org -site:pinterest.com -site:vimeo.com",
+     "impr": 7,
+     "clicks": 0,
+     "pos": 6.9,
+     "pages": [
+      "/compare/gupshup",
+      "/",
+      "/compare/getgabs"
+     ]
+    },
+    {
+     "q": "cod return rates by category in india 2026",
+     "impr": 7,
+     "clicks": 0,
+     "pos": 10.7,
+     "pages": [
+      "/blog/cod-rto-benchmark-india-2026"
+     ]
+    },
+    {
+     "q": "best tools for whatsapp abandoned cart messages",
+     "impr": 6,
+     "clicks": 0,
+     "pos": 18.2,
+     "pages": [
+      "/blog/whatsapp-abandoned-cart-recovery-shopify"
+     ]
+    },
+    {
+     "q": "intitle:\"gupshup\" -site:gupshup.io -site:facebook.com -site:instagram.com -site:threads.com -site:threads.net -site:linkedin.com -site:x.com -site:twitter.com -site:tiktok.com -site:youtube.com -site:youtu.be -site:reddit.com -site:t.me -site:telegram.me -site:telegram.org -site:pinterest.com -site:vimeo.com",
+     "impr": 4,
+     "clicks": 0,
+     "pos": 1.3,
+     "pages": [
+      "/compare/gupshup"
+     ]
+    },
+    {
+     "q": "whatsapp vs email marketing for d2c india",
+     "impr": 4,
+     "clicks": 0,
+     "pos": 21.8,
+     "pages": [
+      "/blog/ecommerce-automation-whatsapp-vs-email-india"
+     ]
+    },
+    {
+     "q": "\"gupshup.ai\" -site:gupshup.ai -site:gupshup.io -site:facebook.com -site:instagram.com -site:threads.com -site:threads.net -site:linkedin.com -site:x.com -site:twitter.com -site:tiktok.com -site:youtube.com -site:youtu.be -site:reddit.com -site:t.me -site:telegram.me -site:telegram.org -site:pinterest.com -site:vimeo.com",
+     "impr": 3,
+     "clicks": 0,
+     "pos": 4,
+     "pages": [
+      "/compare/gupshup",
+      "/"
+     ]
+    },
+    {
+     "q": "\"gupshup.io\" -site:gupshup.io -site:facebook.com -site:instagram.com -site:threads.com -site:threads.net -site:linkedin.com -site:x.com -site:twitter.com -site:tiktok.com -site:youtube.com -site:youtu.be -site:reddit.com -site:t.me -site:telegram.me -site:telegram.org -site:pinterest.com -site:vimeo.com",
+     "impr": 3,
+     "clicks": 0,
+     "pos": 1.3,
+     "pages": [
+      "/compare/gupshup"
+     ]
+    },
+    {
+     "q": "how to recover abandoned carts on whatsapp d2c",
+     "impr": 3,
+     "clicks": 0,
+     "pos": 17.3,
+     "pages": [
+      "/blog/whatsapp-abandoned-cart-recovery-shopify",
+      "/blog/whatsapp-abandoned-cart-recovery-shopify/"
+     ]
+    },
+    {
+     "q": "is e commerce business profitable in india",
+     "impr": 3,
+     "clicks": 0,
+     "pos": 10.3,
+     "pages": [
+      "/blog/profitable-ecommerce-business-india"
+     ]
+    },
+    {
+     "q": "recommend a whatsapp messaging platform that integrates with shopify",
+     "impr": 3,
+     "clicks": 0,
+     "pos": 4.7,
+     "pages": [
+      "/blog/best-whatsapp-apps-for-shopify"
+     ]
+    },
+    {
+     "q": "\"beatchat.ai\" -site:beatchat.ai -site:fpt.com -site:facebook.com -site:instagram.com -site:threads.com -site:threads.net -site:linkedin.com -site:x.com -site:twitter.com -site:tiktok.com -site:youtube.com -site:youtu.be -site:reddit.com -site:t.me -site:telegram.me -site:telegram.org -site:pinterest.com -site:vimeo.com",
+     "impr": 2,
+     "clicks": 0,
+     "pos": 1,
+     "pages": [
+      "/blog/best-whatsapp-apps-for-shopify"
+     ]
+    },
+    {
+     "q": "\"beatchat.vn\" -site:beatchat.vn -site:fpt.com -site:facebook.com -site:instagram.com -site:threads.com -site:threads.net -site:linkedin.com -site:x.com -site:twitter.com -site:tiktok.com -site:youtube.com -site:youtu.be -site:reddit.com -site:t.me -site:telegram.me -site:telegram.org -site:pinterest.com -site:vimeo.com",
+     "impr": 2,
+     "clicks": 0,
+     "pos": 3,
+     "pages": [
+      "/blog/best-whatsapp-apps-for-shopify"
+     ]
+    },
+    {
+     "q": "email vs sms vs whatsapp for d2c retention",
+     "impr": 2,
+     "clicks": 0,
+     "pos": 65,
+     "pages": [
+      "/blog/ecommerce-automation-whatsapp-vs-email-india"
+     ]
+    },
+    {
+     "q": "was ist das beste whatsapp tool für shopify",
+     "impr": 2,
+     "clicks": 0,
+     "pos": 37,
+     "pages": [
+      "/blog/best-whatsapp-apps-for-shopify"
+     ]
+    },
+    {
+     "q": "was ist das beste whatsapp tool für shopify?",
+     "impr": 2,
+     "clicks": 0,
+     "pos": 11,
+     "pages": [
+      "/blog/best-whatsapp-apps-for-shopify"
+     ]
+    },
+    {
+     "q": "which whatsapp business api provider works best with shopify order notifications for indian stores",
+     "impr": 2,
+     "clicks": 0,
+     "pos": 6,
+     "pages": [
+      "/blog/best-whatsapp-apps-for-shopify",
+      "/blog/best-whatsapp-automation-tools-shopify-india"
+     ]
+    },
+    {
+     "q": "best whatsapp marketing tools for e-commerce and direct-to-consumer brands",
+     "impr": 1,
+     "clicks": 0,
+     "pos": 10,
+     "pages": [
+      "/blog/best-whatsapp-apps-for-shopify"
+     ]
+    },
+    {
+     "q": "low email open rates switch to whatsapp d2c",
+     "impr": 1,
+     "clicks": 0,
+     "pos": 76,
+     "pages": [
+      "/blog/ecommerce-automation-whatsapp-vs-email-india"
+     ]
+    },
+    {
+     "q": "shared inbox for a shopify store support team",
+     "impr": 1,
+     "clicks": 0,
+     "pos": 5,
+     "pages": [
+      "/blog/whatsapp-shared-inbox-shopify-order-context"
+     ]
+    },
+    {
+     "q": "textured french crop + low taper fade",
+     "impr": 1,
+     "clicks": 0,
+     "pos": 2,
+     "pages": [
+      "http://topedgeai.com/"
+     ]
+    },
+    {
+     "q": "we need whatsapp ai to answer product questions, check stock, and identify vip buyers for human follow-up. can one platform do all this?",
+     "impr": 1,
+     "clicks": 0,
+     "pos": 10,
+     "pages": [
+      "/blog/shopify-automation-checklist-whatsapp-cart-recovery"
+     ]
+    },
+    {
+     "q": "website visitor drop-off on checkout for trade accounts.",
+     "impr": 1,
+     "clicks": 0,
+     "pos": 2,
+     "pages": [
+      "/blog/ecommerce-funnel-drop-off-benchmarks-visitor-identity-resolution"
+     ]
+    },
+    {
+     "q": "what is the best app for abandoned cart flow marketing automation?",
+     "impr": 1,
+     "clicks": 0,
+     "pos": 10,
+     "pages": [
+      "/blog/best-shopify-app-for-abandoned-cart-recovery-india"
+     ]
+    },
+    {
+     "q": "what kinds of platforms let ecommerce stores automate whatsapp cart recovery, order updates, and two-way messaging?",
+     "impr": 1,
+     "clicks": 0,
+     "pos": 13,
+     "pages": [
+      "/blog/whatsapp-abandoned-cart-recovery-shopify"
+     ]
+    },
+    {
+     "q": "where can i get free cake on my birthday",
+     "impr": 1,
+     "clicks": 0,
+     "pos": 4,
+     "pages": [
+      "/"
+     ]
+    },
+    {
+     "q": "which checkout app can help reduce abandoned carts for indian customers?",
+     "impr": 1,
+     "clicks": 0,
+     "pos": 1,
+     "pages": [
+      "/blog/whatsapp-abandoned-cart-recovery-shopify/"
+     ]
+    },
+    {
+     "q": "which companies help reduce cart abandonment for shopify stores in india?",
+     "impr": 1,
+     "clicks": 0,
+     "pos": 1,
+     "pages": [
+      "/blog/whatsapp-abandoned-cart-recovery-shopify/"
+     ]
+    },
+    {
+     "q": "which whatsapp automation platform handles high message volume for growing businesses",
+     "impr": 1,
+     "clicks": 0,
+     "pos": 9,
+     "pages": [
+      "/compare/topedge-vs-wati-vs-interakt-vs-aisensy"
+     ]
+    }
+   ]
+  },
+  "comparison": {
+   "regex": "alternative|alternatives|\\bvs\\b|versus|competitor|compare|comparison|\\bor\\b|replace|switch",
+   "queries": 21,
+   "impr": 926,
+   "clicks": 1,
+   "list": [
+    {
+     "q": "zoko alternative",
+     "impr": 470,
+     "clicks": 0,
+     "pos": 10.2,
+     "pages": [
+      "/blog/zoko-alternative-shopify-india",
+      "/",
+      "/compare"
+     ]
+    },
+    {
+     "q": "getkanal alternatives",
+     "impr": 278,
+     "clicks": 1,
+     "pos": 2.1,
+     "pages": [
+      "/blog/kanal-whatsapp-alternative-shopify",
+      "/compare/kanal",
+      "/blog"
+     ]
+    },
+    {
+     "q": "bitespeed alternative",
+     "impr": 43,
+     "clicks": 0,
+     "pos": 17.9,
+     "pages": [
+      "/blog/bitespeed-alternative-shopify-india",
+      "/compare/alternatives"
+     ]
+    },
+    {
+     "q": "best zoko alternative for shopify",
+     "impr": 42,
+     "clicks": 0,
+     "pos": 9.1,
+     "pages": [
+      "/blog/zoko-alternative-shopify-india"
+     ]
+    },
+    {
+     "q": "interakt alternative",
+     "impr": 36,
+     "clicks": 0,
+     "pos": 25,
+     "pages": [
+      "/blog/interakt-alternative-shopify-india"
+     ]
+    },
+    {
+     "q": "zoko alternative free",
+     "impr": 21,
+     "clicks": 0,
+     "pos": 8.7,
+     "pages": [
+      "/blog/zoko-alternative-shopify-india"
+     ]
+    },
+    {
+     "q": "zoko-alternative",
+     "impr": 6,
+     "clicks": 0,
+     "pos": 7.7,
+     "pages": [
+      "/blog/zoko-alternative-shopify-india"
+     ]
+    },
+    {
+     "q": "whatsapp vs email marketing for d2c india",
+     "impr": 4,
+     "clicks": 0,
+     "pos": 21.8,
+     "pages": [
+      "/blog/ecommerce-automation-whatsapp-vs-email-india"
+     ]
+    },
+    {
+     "q": "interakt alternatives",
+     "impr": 3,
+     "clicks": 0,
+     "pos": 38.3,
+     "pages": [
+      "/blog/interakt-alternative-shopify-india"
+     ]
+    },
+    {
+     "q": "interakt alternatives for shopify",
+     "impr": 3,
+     "clicks": 0,
+     "pos": 6.3,
+     "pages": [
+      "/blog/interakt-alternative-shopify-india"
+     ]
+    },
+    {
+     "q": "kaspianfuad.com alternatives",
+     "impr": 3,
+     "clicks": 0,
+     "pos": 4,
+     "pages": [
+      "/blog/shopify-seo-experts"
+     ]
+    },
+    {
+     "q": "\"whatsapp pay\" and (brazil or india)",
+     "impr": 2,
+     "clicks": 0,
+     "pos": 9.5,
+     "pages": [
+      "/compare/interakt/"
+     ]
+    },
+    {
+     "q": "email vs sms vs whatsapp for d2c retention",
+     "impr": 2,
+     "clicks": 0,
+     "pos": 65,
+     "pages": [
+      "/blog/ecommerce-automation-whatsapp-vs-email-india"
+     ]
+    },
+    {
+     "q": "interakt competitor",
+     "impr": 2,
+     "clicks": 0,
+     "pos": 13.5,
+     "pages": [
+      "/blog/interakt-alternative-shopify-india"
+     ]
+    },
+    {
+     "q": "organic vs paid acquisition mix ecommerce",
+     "impr": 2,
+     "clicks": 0,
+     "pos": 69.5,
+     "pages": [
+      "/blog/organic-vs-paid-ecommerce-marketing-2026"
+     ]
+    },
+    {
+     "q": "wati alternative india",
+     "impr": 2,
+     "clicks": 0,
+     "pos": 38.5,
+     "pages": [
+      "/blog/wati-alternative-shopify-india"
+     ]
+    },
+    {
+     "q": "whatsapp app alternative",
+     "impr": 2,
+     "clicks": 0,
+     "pos": 24,
+     "pages": [
+      "/blog/getgabs-alternative-shopify-whatsapp",
+      "/blog/kanal-whatsapp-alternative-shopify"
+     ]
+    },
+    {
+     "q": "zoko alternatives",
+     "impr": 2,
+     "clicks": 0,
+     "pos": 4.5,
+     "pages": [
+      "/blog/zoko-alternative-shopify-india"
+     ]
+    },
+    {
+     "q": "aisensy alternative in india",
+     "impr": 1,
+     "clicks": 0,
+     "pos": 8,
+     "pages": [
+      "/blog/aisensy-alternative-shopify-india"
+     ]
+    },
+    {
+     "q": "low email open rates switch to whatsapp d2c",
+     "impr": 1,
+     "clicks": 0,
+     "pos": 76,
+     "pages": [
+      "/blog/ecommerce-automation-whatsapp-vs-email-india"
+     ]
+    },
+    {
+     "q": "wati vs aisensy",
+     "impr": 1,
+     "clicks": 0,
+     "pos": 40,
+     "pages": [
+      "/compare/topedge-vs-wati-vs-aisensy"
+     ]
+    }
+   ]
+  },
+  "pricing": {
+   "regex": "pric|cost|charge|fee|free|cheap|per message|markup|rate",
+   "queries": 18,
+   "impr": 62,
+   "clicks": 0,
+   "list": [
+    {
+     "q": "zoko alternative free",
+     "impr": 21,
+     "clicks": 0,
+     "pos": 8.7,
+     "pages": [
+      "/blog/zoko-alternative-shopify-india"
+     ]
+    },
+    {
+     "q": "rto rate by product category india d2c 2026",
+     "impr": 9,
+     "clicks": 0,
+     "pos": 6.7,
+     "pages": [
+      "/blog/cod-rto-benchmark-india-2026"
+     ]
+    },
+    {
+     "q": "cod return rates by category in india 2026",
+     "impr": 7,
+     "clicks": 0,
+     "pos": 10.7,
+     "pages": [
+      "/blog/cod-rto-benchmark-india-2026"
+     ]
+    },
+    {
+     "q": "getgabs pricing",
+     "impr": 4,
+     "clicks": 0,
+     "pos": 7.5,
+     "pages": [
+      "/compare/getgabs",
+      "/blog/getgabs-alternative-shopify-whatsapp"
+     ]
+    },
+    {
+     "q": "bitespeed pricing",
+     "impr": 3,
+     "clicks": 0,
+     "pos": 15.7,
+     "pages": [
+      "/blog/bitespeed-alternative-shopify-india",
+      "/compare/bitespeed/"
+     ]
+    },
+    {
+     "q": "dondy pricing",
+     "impr": 3,
+     "clicks": 0,
+     "pos": 6.3,
+     "pages": [
+      "/compare/dondy"
+     ]
+    },
+    {
+     "q": "recommend a whatsapp messaging platform that integrates with shopify",
+     "impr": 3,
+     "clicks": 0,
+     "pos": 4.7,
+     "pages": [
+      "/blog/best-whatsapp-apps-for-shopify"
+     ]
+    },
+    {
+     "q": "warm water therapy for feet",
+     "impr": 2,
+     "clicks": 0,
+     "pos": 6,
+     "pages": [
+      "/"
+     ]
+    },
+    {
+     "q": "brazilian blowout plastia treatment price",
+     "impr": 1,
+     "clicks": 0,
+     "pos": 5,
+     "pages": [
+      "http://topedgeai.com/"
+     ]
+    },
+    {
+     "q": "cheapest",
+     "impr": 1,
+     "clicks": 0,
+     "pos": 1,
+     "pages": [
+      "/"
+     ]
+    },
+    {
+     "q": "low email open rates switch to whatsapp d2c",
+     "impr": 1,
+     "clicks": 0,
+     "pos": 76,
+     "pages": [
+      "/blog/ecommerce-automation-whatsapp-vs-email-india"
+     ]
+    },
+    {
+     "q": "perm treatment price",
+     "impr": 1,
+     "clicks": 0,
+     "pos": 5,
+     "pages": [
+      "http://topedgeai.com/"
+     ]
+    },
+    {
+     "q": "rto rate india ecommerce 2025",
+     "impr": 1,
+     "clicks": 0,
+     "pos": 1,
+     "pages": [
+      "/blog/cod-rto-benchmark-india-2026"
+     ]
+    },
+    {
+     "q": "same price point",
+     "impr": 1,
+     "clicks": 0,
+     "pos": 3,
+     "pages": [
+      "/"
+     ]
+    },
+    {
+     "q": "shirodhara treatment price",
+     "impr": 1,
+     "clicks": 0,
+     "pos": 4,
+     "pages": [
+      "/"
+     ]
+    },
+    {
+     "q": "sol eur live price",
+     "impr": 1,
+     "clicks": 0,
+     "pos": 8,
+     "pages": [
+      "/blog/best-whatsapp-apps-for-shopify"
+     ]
+    },
+    {
+     "q": "whatsapp business api pricing india",
+     "impr": 1,
+     "clicks": 0,
+     "pos": 68,
+     "pages": [
+      "/blog/whatsapp-business-api-pricing-india"
+     ]
+    },
+    {
+     "q": "where can i get free cake on my birthday",
+     "impr": 1,
+     "clicks": 0,
+     "pos": 4,
+     "pages": [
+      "/"
+     ]
+    }
+   ]
+  },
+  "best/list": {
+   "regex": "\\b(best|top|leading|recommended?)\\b|\\btools?\\b|\\bapps?\\b|software|platform|provider",
+   "queries": 46,
+   "impr": 259,
+   "clicks": 8,
+   "list": [
+    {
+     "q": "best whatsapp commerce tools for shopify stores",
+     "impr": 44,
+     "clicks": 0,
+     "pos": 39.7,
+     "pages": [
+      "/blog/best-whatsapp-apps-for-shopify",
+      "/blog/whatsapp-automation-for-shopify"
+     ]
+    },
+    {
+     "q": "best whatsapp app for shopify",
+     "impr": 43,
+     "clicks": 7,
+     "pos": 19.7,
+     "pages": [
+      "/blog/best-whatsapp-apps-for-shopify",
+      "/blog/whatsapp-automation-for-shopify"
+     ]
+    },
+    {
+     "q": "best zoko alternative for shopify",
+     "impr": 42,
+     "clicks": 0,
+     "pos": 9.1,
+     "pages": [
+      "/blog/zoko-alternative-shopify-india"
+     ]
+    },
+    {
+     "q": "top edge",
+     "impr": 35,
+     "clicks": 1,
+     "pos": 13.5,
+     "pages": [
+      "/about",
+      "/features",
+      "https://dash.topedgeai.com/"
+     ]
+    },
+    {
+     "q": "best food in vastrapur",
+     "impr": 13,
+     "clicks": 0,
+     "pos": 18.2,
+     "pages": [
+      "/"
+     ]
+    },
+    {
+     "q": "top shopify support apps with whatsapp",
+     "impr": 11,
+     "clicks": 0,
+     "pos": 9,
+     "pages": [
+      "/blog/best-whatsapp-apps-for-shopify"
+     ]
+    },
+    {
+     "q": "top edge channel",
+     "impr": 9,
+     "clicks": 0,
+     "pos": 8.8,
+     "pages": [
+      "/about"
+     ]
+    },
+    {
+     "q": "best tools for whatsapp abandoned cart messages",
+     "impr": 6,
+     "clicks": 0,
+     "pos": 18.2,
+     "pages": [
+      "/blog/whatsapp-abandoned-cart-recovery-shopify"
+     ]
+    },
+    {
+     "q": "abandoned cart recovery shopify app",
+     "impr": 4,
+     "clicks": 0,
+     "pos": 64.8,
+     "pages": [
+      "/blog/whatsapp-abandoned-cart-recovery-shopify"
+     ]
+    },
+    {
+     "q": "whatsapp app shopify",
+     "impr": 4,
+     "clicks": 0,
+     "pos": 64.5,
+     "pages": [
+      "/blog/best-whatsapp-apps-for-shopify"
+     ]
+    },
+    {
+     "q": "recommend a whatsapp messaging platform that integrates with shopify",
+     "impr": 3,
+     "clicks": 0,
+     "pos": 4.7,
+     "pages": [
+      "/blog/best-whatsapp-apps-for-shopify"
+     ]
+    },
+    {
+     "q": "top edge technologies",
+     "impr": 3,
+     "clicks": 0,
+     "pos": 53.3,
+     "pages": [
+      "/about"
+     ]
+    },
+    {
+     "q": "best pizza in vastrapur",
+     "impr": 2,
+     "clicks": 0,
+     "pos": 30,
+     "pages": [
+      "/"
+     ]
+    },
+    {
+     "q": "best shopify abandoned cart app",
+     "impr": 2,
+     "clicks": 0,
+     "pos": 51.5,
+     "pages": [
+      "/blog/best-shopify-app-for-abandoned-cart-recovery-india"
+     ]
+    },
+    {
+     "q": "gupshup mobile apps",
+     "impr": 2,
+     "clicks": 0,
+     "pos": 78,
+     "pages": [
+      "/blog/cod-to-prepaid-whatsapp-shopify-india",
+      "/features/ai-brain"
+     ]
+    },
+    {
+     "q": "shopify whatsapp app",
+     "impr": 2,
+     "clicks": 0,
+     "pos": 59,
+     "pages": [
+      "/blog/best-whatsapp-apps-for-shopify"
+     ]
+    },
+    {
+     "q": "was ist das beste whatsapp tool für shopify",
+     "impr": 2,
+     "clicks": 0,
+     "pos": 37,
+     "pages": [
+      "/blog/best-whatsapp-apps-for-shopify"
+     ]
+    },
+    {
+     "q": "was ist das beste whatsapp tool für shopify?",
+     "impr": 2,
+     "clicks": 0,
+     "pos": 11,
+     "pages": [
+      "/blog/best-whatsapp-apps-for-shopify"
+     ]
+    },
+    {
+     "q": "whatsapp app alternative",
+     "impr": 2,
+     "clicks": 0,
+     "pos": 24,
+     "pages": [
+      "/blog/getgabs-alternative-shopify-whatsapp",
+      "/blog/kanal-whatsapp-alternative-shopify"
+     ]
+    },
+    {
+     "q": "which whatsapp business api provider works best with shopify order notifications for indian stores",
+     "impr": 2,
+     "clicks": 0,
+     "pos": 6,
+     "pages": [
+      "/blog/best-whatsapp-apps-for-shopify",
+      "/blog/best-whatsapp-automation-tools-shopify-india"
+     ]
+    },
+    {
+     "q": "best american food",
+     "impr": 1,
+     "clicks": 0,
+     "pos": 14,
+     "pages": [
+      "/"
+     ]
+    },
+    {
+     "q": "best chicken steak",
+     "impr": 1,
+     "clicks": 0,
+     "pos": 52,
+     "pages": [
+      "/"
+     ]
+    },
+    {
+     "q": "best dinner today",
+     "impr": 1,
+     "clicks": 0,
+     "pos": 7,
+     "pages": [
+      "/"
+     ]
+    },
+    {
+     "q": "best malish oil",
+     "impr": 1,
+     "clicks": 0,
+     "pos": 6,
+     "pages": [
+      "/"
+     ]
+    },
+    {
+     "q": "best place lunch",
+     "impr": 1,
+     "clicks": 0,
+     "pos": 8,
+     "pages": [
+      "/"
+     ]
+    },
+    {
+     "q": "best shopify abandoned cart recovery apps",
+     "impr": 1,
+     "clicks": 0,
+     "pos": 43,
+     "pages": [
+      "/blog/best-shopify-app-for-abandoned-cart-recovery-india"
+     ]
+    },
+    {
+     "q": "best shopify whatsapp app",
+     "impr": 1,
+     "clicks": 0,
+     "pos": 7,
+     "pages": [
+      "/blog/best-whatsapp-apps-for-shopify"
+     ]
+    },
+    {
+     "q": "best upsell app for shopify 2024",
+     "impr": 1,
+     "clicks": 0,
+     "pos": 48,
+     "pages": [
+      "/blog/best-shopify-upsell-apps"
+     ]
+    },
+    {
+     "q": "best wellness centres in india",
+     "impr": 1,
+     "clicks": 0,
+     "pos": 21,
+     "pages": [
+      "/"
+     ]
+    },
+    {
+     "q": "best whatsapp marketing tools for e-commerce and direct-to-consumer brands",
+     "impr": 1,
+     "clicks": 0,
+     "pos": 10,
+     "pages": [
+      "/blog/best-whatsapp-apps-for-shopify"
+     ]
+    },
+    {
+     "q": "chatcart.app",
+     "impr": 1,
+     "clicks": 0,
+     "pos": 81,
+     "pages": [
+      "/blog/best-whatsapp-apps-for-shopify"
+     ]
+    },
+    {
+     "q": "nearby best dinner places",
+     "impr": 1,
+     "clicks": 0,
+     "pos": 5,
+     "pages": [
+      "/"
+     ]
+    },
+    {
+     "q": "nearby best food",
+     "impr": 1,
+     "clicks": 0,
+     "pos": 7,
+     "pages": [
+      "/"
+     ]
+    },
+    {
+     "q": "site:apps.shopify.com shopify app whatsapp \"+91\"",
+     "impr": 1,
+     "clicks": 0,
+     "pos": 3,
+     "pages": [
+      "/blog/best-whatsapp-apps-for-shopify"
+     ]
+    },
+    {
+     "q": "the top edge",
+     "impr": 1,
+     "clicks": 0,
+     "pos": 16,
+     "pages": [
+      "/about"
+     ]
+    },
+    {
+     "q": "top edge ai development services",
+     "impr": 1,
+     "clicks": 0,
+     "pos": 97,
+     "pages": [
+      "/blog"
+     ]
+    },
+    {
+     "q": "top edge technology",
+     "impr": 1,
+     "clicks": 0,
+     "pos": 46,
+     "pages": [
+      "/about"
+     ]
+    },
+    {
+     "q": "top ge",
+     "impr": 1,
+     "clicks": 0,
+     "pos": 16,
+     "pages": [
+      "/about"
+     ]
+    },
+    {
+     "q": "top organic marketing for e-commerce",
+     "impr": 1,
+     "clicks": 0,
+     "pos": 10,
+     "pages": [
+      "/blog/organic-vs-paid-ecommerce-marketing-2026"
+     ]
+    },
+    {
+     "q": "we need whatsapp ai to answer product questions, check stock, and identify vip buyers for human follow-up. can one platform do all this?",
+     "impr": 1,
+     "clicks": 0,
+     "pos": 10,
+     "pages": [
+      "/blog/shopify-automation-checklist-whatsapp-cart-recovery"
+     ]
+    },
+    {
+     "q": "what is the best app for abandoned cart flow marketing automation?",
+     "impr": 1,
+     "clicks": 0,
+     "pos": 10,
+     "pages": [
+      "/blog/best-shopify-app-for-abandoned-cart-recovery-india"
+     ]
+    },
+    {
+     "q": "what is the best?",
+     "impr": 1,
+     "clicks": 0,
+     "pos": 1,
+     "pages": [
+      "/blog/organic-vs-paid-ecommerce-marketing-2026"
+     ]
+    },
+    {
+     "q": "what kinds of platforms let ecommerce stores automate whatsapp cart recovery, order updates, and two-way messaging?",
+     "impr": 1,
+     "clicks": 0,
+     "pos": 13,
+     "pages": [
+      "/blog/whatsapp-abandoned-cart-recovery-shopify"
+     ]
+    },
+    {
+     "q": "whatsapp shopify app",
+     "impr": 1,
+     "clicks": 0,
+     "pos": 70,
+     "pages": [
+      "/blog/best-whatsapp-apps-for-shopify"
+     ]
+    },
+    {
+     "q": "which checkout app can help reduce abandoned carts for indian customers?",
+     "impr": 1,
+     "clicks": 0,
+     "pos": 1,
+     "pages": [
+      "/blog/whatsapp-abandoned-cart-recovery-shopify/"
+     ]
+    },
+    {
+     "q": "which whatsapp automation platform handles high message volume for growing businesses",
+     "impr": 1,
+     "clicks": 0,
+     "pos": 9,
+     "pages": [
+      "/compare/topedge-vs-wati-vs-interakt-vs-aisensy"
+     ]
+    }
+   ]
+  },
+  "india": {
+   "regex": "india|indian|\\binr\\b|rupee|₹|d2c",
+   "queries": 35,
+   "impr": 73,
+   "clicks": 0,
+   "list": [
+    {
+     "q": "whatsapp abandoned cart recovery shopify india",
+     "impr": 10,
+     "clicks": 0,
+     "pos": 14.1,
+     "pages": [
+      "/blog/whatsapp-abandoned-cart-recovery-shopify",
+      "/blog/whatsapp-abandoned-cart-recovery-shopify/",
+      "/blog/best-shopify-app-for-abandoned-cart-recovery-india"
+     ]
+    },
+    {
+     "q": "rto rate by product category india d2c 2026",
+     "impr": 9,
+     "clicks": 0,
+     "pos": 6.7,
+     "pages": [
+      "/blog/cod-rto-benchmark-india-2026"
+     ]
+    },
+    {
+     "q": "cod return rates by category in india 2026",
+     "impr": 7,
+     "clicks": 0,
+     "pos": 10.7,
+     "pages": [
+      "/blog/cod-rto-benchmark-india-2026"
+     ]
+    },
+    {
+     "q": "whatsapp vs email marketing for d2c india",
+     "impr": 4,
+     "clicks": 0,
+     "pos": 21.8,
+     "pages": [
+      "/blog/ecommerce-automation-whatsapp-vs-email-india"
+     ]
+    },
+    {
+     "q": "how to recover abandoned carts on whatsapp d2c",
+     "impr": 3,
+     "clicks": 0,
+     "pos": 17.3,
+     "pages": [
+      "/blog/whatsapp-abandoned-cart-recovery-shopify",
+      "/blog/whatsapp-abandoned-cart-recovery-shopify/"
+     ]
+    },
+    {
+     "q": "is e commerce business profitable in india",
+     "impr": 3,
+     "clicks": 0,
+     "pos": 10.3,
+     "pages": [
+      "/blog/profitable-ecommerce-business-india"
+     ]
+    },
+    {
+     "q": "is ecommerce business profitable in india",
+     "impr": 3,
+     "clicks": 0,
+     "pos": 6.7,
+     "pages": [
+      "/blog/profitable-ecommerce-business-india"
+     ]
+    },
+    {
+     "q": "\"whatsapp pay\" and (brazil or india)",
+     "impr": 2,
+     "clicks": 0,
+     "pos": 9.5,
+     "pages": [
+      "/compare/interakt/"
+     ]
+    },
+    {
+     "q": "are ecommerce sites profitable in india",
+     "impr": 2,
+     "clicks": 0,
+     "pos": 12.5,
+     "pages": [
+      "/blog/profitable-ecommerce-business-india"
+     ]
+    },
+    {
+     "q": "chillys india",
+     "impr": 2,
+     "clicks": 0,
+     "pos": 4.5,
+     "pages": [
+      "/"
+     ]
+    },
+    {
+     "q": "email vs sms vs whatsapp for d2c retention",
+     "impr": 2,
+     "clicks": 0,
+     "pos": 65,
+     "pages": [
+      "/blog/ecommerce-automation-whatsapp-vs-email-india"
+     ]
+    },
+    {
+     "q": "wati alternative india",
+     "impr": 2,
+     "clicks": 0,
+     "pos": 38.5,
+     "pages": [
+      "/blog/wati-alternative-shopify-india"
+     ]
+    },
+    {
+     "q": "which whatsapp business api provider works best with shopify order notifications for indian stores",
+     "impr": 2,
+     "clicks": 0,
+     "pos": 6,
+     "pages": [
+      "/blog/best-whatsapp-apps-for-shopify",
+      "/blog/best-whatsapp-automation-tools-shopify-india"
+     ]
+    },
+    {
+     "q": "2799 usd to inr",
+     "impr": 1,
+     "clicks": 0,
+     "pos": 6,
+     "pages": [
+      "/blog/best-whatsapp-apps-for-shopify"
+     ]
+    },
+    {
+     "q": "aisensy alternative in india",
+     "impr": 1,
+     "clicks": 0,
+     "pos": 8,
+     "pages": [
+      "/blog/aisensy-alternative-shopify-india"
+     ]
+    },
+    {
+     "q": "american food chains in india",
+     "impr": 1,
+     "clicks": 0,
+     "pos": 3,
+     "pages": [
+      "/"
+     ]
+    },
+    {
+     "q": "best wellness centres in india",
+     "impr": 1,
+     "clicks": 0,
+     "pos": 21,
+     "pages": [
+      "/"
+     ]
+    },
+    {
+     "q": "chills india",
+     "impr": 1,
+     "clicks": 0,
+     "pos": 9,
+     "pages": [
+      "/"
+     ]
+    },
+    {
+     "q": "in india",
+     "impr": 1,
+     "clicks": 0,
+     "pos": 3,
+     "pages": [
+      "/"
+     ]
+    },
+    {
+     "q": "india meta",
+     "impr": 1,
+     "clicks": 0,
+     "pos": 18,
+     "pages": [
+      "/pricing/meta-rates"
+     ]
+    },
+    {
+     "q": "indian",
+     "impr": 1,
+     "clicks": 0,
+     "pos": 1,
+     "pages": [
+      "/"
+     ]
+    },
+    {
+     "q": "is ecommerce advertising profitable in india",
+     "impr": 1,
+     "clicks": 0,
+     "pos": 20,
+     "pages": [
+      "/blog/profitable-ecommerce-business-india"
+     ]
+    },
+    {
+     "q": "is there a chipotle in india",
+     "impr": 1,
+     "clicks": 0,
+     "pos": 2,
+     "pages": [
+      "/"
+     ]
+    },
+    {
+     "q": "low email open rates switch to whatsapp d2c",
+     "impr": 1,
+     "clicks": 0,
+     "pos": 76,
+     "pages": [
+      "/blog/ecommerce-automation-whatsapp-vs-email-india"
+     ]
+    },
+    {
+     "q": "not indian",
+     "impr": 1,
+     "clicks": 0,
+     "pos": 3,
+     "pages": [
+      "/"
+     ]
+    },
+    {
+     "q": "rto rate india ecommerce 2025",
+     "impr": 1,
+     "clicks": 0,
+     "pos": 1,
+     "pages": [
+      "/blog/cod-rto-benchmark-india-2026"
+     ]
+    },
+    {
+     "q": "steak in india",
+     "impr": 1,
+     "clicks": 0,
+     "pos": 2,
+     "pages": [
+      "/"
+     ]
+    },
+    {
+     "q": "what about india",
+     "impr": 1,
+     "clicks": 0,
+     "pos": 3,
+     "pages": [
+      "/"
+     ]
+    },
+    {
+     "q": "whatsapp abandoned cart recovery d2c",
+     "impr": 1,
+     "clicks": 0,
+     "pos": 18,
+     "pages": [
+      "/blog/whatsapp-abandoned-cart-recovery-shopify"
+     ]
+    },
+    {
+     "q": "whatsapp business api pricing india",
+     "impr": 1,
+     "clicks": 0,
+     "pos": 68,
+     "pages": [
+      "/blog/whatsapp-business-api-pricing-india"
+     ]
+    },
+    {
+     "q": "whatsapp d2c automation",
+     "impr": 1,
+     "clicks": 0,
+     "pos": 38,
+     "pages": [
+      "/blog/ecommerce-automation-whatsapp-vs-email-india"
+     ]
+    },
+    {
+     "q": "whatsapp down today india",
+     "impr": 1,
+     "clicks": 0,
+     "pos": 9,
+     "pages": [
+      "/blog/best-whatsapp-apps-for-shopify"
+     ]
+    },
+    {
+     "q": "which checkout app can help reduce abandoned carts for indian customers?",
+     "impr": 1,
+     "clicks": 0,
+     "pos": 1,
+     "pages": [
+      "/blog/whatsapp-abandoned-cart-recovery-shopify/"
+     ]
+    },
+    {
+     "q": "which companies help reduce cart abandonment for shopify stores in india?",
+     "impr": 1,
+     "clicks": 0,
+     "pos": 1,
+     "pages": [
+      "/blog/whatsapp-abandoned-cart-recovery-shopify/"
+     ]
+    },
+    {
+     "q": "₹ 1,999 / month",
+     "impr": 1,
+     "clicks": 0,
+     "pos": 9,
+     "pages": [
+      "/pricing"
+     ]
+    }
+   ]
+  },
+  "cod and rto": {
+   "regex": "\\bcod\\b|cash on delivery|\\brto\\b|return to origin|\\bndr\\b|prepaid|fake order|delivery fail",
+   "queries": 5,
+   "impr": 19,
+   "clicks": 0,
+   "list": [
+    {
+     "q": "rto rate by product category india d2c 2026",
+     "impr": 9,
+     "clicks": 0,
+     "pos": 6.7,
+     "pages": [
+      "/blog/cod-rto-benchmark-india-2026"
+     ]
+    },
+    {
+     "q": "cod return rates by category in india 2026",
+     "impr": 7,
+     "clicks": 0,
+     "pos": 10.7,
+     "pages": [
+      "/blog/cod-rto-benchmark-india-2026"
+     ]
+    },
+    {
+     "q": "rto performance",
+     "impr": 1,
+     "clicks": 0,
+     "pos": 6,
+     "pages": [
+      "/blog/cod-rto-benchmark-india-2026"
+     ]
+    },
+    {
+     "q": "rto rate india ecommerce 2025",
+     "impr": 1,
+     "clicks": 0,
+     "pos": 1,
+     "pages": [
+      "/blog/cod-rto-benchmark-india-2026"
+     ]
+    },
+    {
+     "q": "whatsapp cod",
+     "impr": 1,
+     "clicks": 0,
+     "pos": 7,
+     "pages": [
+      "/"
+     ]
+    }
+   ]
+  },
+  "cart recovery": {
+   "regex": "abandon|cart|checkout|recover",
+   "queries": 31,
+   "impr": 111,
+   "clicks": 0,
+   "list": [
+    {
+     "q": "how to automate whatsapp abandoned cart reminders on shopify without getting banned.",
+     "impr": 12,
+     "clicks": 0,
+     "pos": 15,
+     "pages": [
+      "/blog/whatsapp-abandoned-cart-recovery-shopify"
+     ]
+    },
+    {
+     "q": "whatsapp abandoned cart recovery shopify india",
+     "impr": 10,
+     "clicks": 0,
+     "pos": 14.1,
+     "pages": [
+      "/blog/whatsapp-abandoned-cart-recovery-shopify",
+      "/blog/whatsapp-abandoned-cart-recovery-shopify/",
+      "/blog/best-shopify-app-for-abandoned-cart-recovery-india"
+     ]
+    },
+    {
+     "q": "whatsapp cart recovery",
+     "impr": 10,
+     "clicks": 0,
+     "pos": 67.7,
+     "pages": [
+      "/blog/whatsapp-abandoned-cart-recovery-shopify"
+     ]
+    },
+    {
+     "q": "abandoned cart recovery shopify",
+     "impr": 7,
+     "clicks": 0,
+     "pos": 26,
+     "pages": [
+      "/blog/whatsapp-abandoned-cart-recovery-shopify"
+     ]
+    },
+    {
+     "q": "cart recovery shopify",
+     "impr": 7,
+     "clicks": 0,
+     "pos": 40,
+     "pages": [
+      "/blog/whatsapp-abandoned-cart-recovery-shopify"
+     ]
+    },
+    {
+     "q": "whatsapp abandoned cart recovery",
+     "impr": 7,
+     "clicks": 0,
+     "pos": 62.6,
+     "pages": [
+      "/blog/whatsapp-abandoned-cart-recovery-shopify",
+      "https://dash.topedgeai.com/docs/guides/abandoned-cart-recovery/",
+      "/blog/whatsapp-abandoned-cart-recovery-shopify/"
+     ]
+    },
+    {
+     "q": "best tools for whatsapp abandoned cart messages",
+     "impr": 6,
+     "clicks": 0,
+     "pos": 18.2,
+     "pages": [
+      "/blog/whatsapp-abandoned-cart-recovery-shopify"
+     ]
+    },
+    {
+     "q": "whatsapp abandoned cart shopify",
+     "impr": 6,
+     "clicks": 0,
+     "pos": 19.5,
+     "pages": [
+      "/blog/whatsapp-abandoned-cart-recovery-shopify",
+      "/blog/whatsapp-abandoned-cart-recovery-shopify/"
+     ]
+    },
+    {
+     "q": "abandoned cart whatsapp message",
+     "impr": 5,
+     "clicks": 0,
+     "pos": 44.2,
+     "pages": [
+      "/blog/whatsapp-abandoned-cart-recovery-shopify"
+     ]
+    },
+    {
+     "q": "abandoned cart recovery shopify app",
+     "impr": 4,
+     "clicks": 0,
+     "pos": 64.8,
+     "pages": [
+      "/blog/whatsapp-abandoned-cart-recovery-shopify"
+     ]
+    },
+    {
+     "q": "abandoned cart recovery whatsapp",
+     "impr": 4,
+     "clicks": 0,
+     "pos": 55,
+     "pages": [
+      "/blog/whatsapp-abandoned-cart-recovery-shopify",
+      "https://dash.topedgeai.com/docs/guides/abandoned-cart-recovery/",
+      "/blog/whatsapp-abandoned-cart-recovery-shopify/"
+     ]
+    },
+    {
+     "q": "whatsapp abandoned cart automation",
+     "impr": 4,
+     "clicks": 0,
+     "pos": 14.3,
+     "pages": [
+      "/blog/whatsapp-abandoned-cart-recovery-shopify"
+     ]
+    },
+    {
+     "q": "how to recover abandoned carts on whatsapp d2c",
+     "impr": 3,
+     "clicks": 0,
+     "pos": 17.3,
+     "pages": [
+      "/blog/whatsapp-abandoned-cart-recovery-shopify",
+      "/blog/whatsapp-abandoned-cart-recovery-shopify/"
+     ]
+    },
+    {
+     "q": "wavecarts",
+     "impr": 3,
+     "clicks": 0,
+     "pos": 48,
+     "pages": [
+      "/blog/whatsapp-abandoned-cart-recovery-shopify"
+     ]
+    },
+    {
+     "q": "whatsapp abandoned cart",
+     "impr": 3,
+     "clicks": 0,
+     "pos": 48.7,
+     "pages": [
+      "/blog/whatsapp-abandoned-cart-recovery-shopify",
+      "https://dash.topedgeai.com/docs/guides/abandoned-cart-recovery/"
+     ]
+    },
+    {
+     "q": "abandoned cart whatsapp",
+     "impr": 2,
+     "clicks": 0,
+     "pos": 15,
+     "pages": [
+      "/blog/whatsapp-abandoned-cart-recovery-shopify"
+     ]
+    },
+    {
+     "q": "best shopify abandoned cart app",
+     "impr": 2,
+     "clicks": 0,
+     "pos": 51.5,
+     "pages": [
+      "/blog/best-shopify-app-for-abandoned-cart-recovery-india"
+     ]
+    },
+    {
+     "q": "shopify abandoned cart recovery",
+     "impr": 2,
+     "clicks": 0,
+     "pos": 25.5,
+     "pages": [
+      "/blog/whatsapp-abandoned-cart-recovery-shopify"
+     ]
+    },
+    {
+     "q": "shopify cart recovery",
+     "impr": 2,
+     "clicks": 0,
+     "pos": 30.5,
+     "pages": [
+      "/blog/whatsapp-abandoned-cart-recovery-shopify"
+     ]
+    },
+    {
+     "q": "best shopify abandoned cart recovery apps",
+     "impr": 1,
+     "clicks": 0,
+     "pos": 43,
+     "pages": [
+      "/blog/best-shopify-app-for-abandoned-cart-recovery-india"
+     ]
+    },
+    {
+     "q": "chatcart.app",
+     "impr": 1,
+     "clicks": 0,
+     "pos": 81,
+     "pages": [
+      "/blog/best-whatsapp-apps-for-shopify"
+     ]
+    },
+    {
+     "q": "cos abandonat whatsapp",
+     "impr": 1,
+     "clicks": 0,
+     "pos": 62,
+     "pages": [
+      "/blog/whatsapp-abandoned-cart-recovery-shopify"
+     ]
+    },
+    {
+     "q": "ecommerce abandoned cart calculator",
+     "impr": 1,
+     "clicks": 0,
+     "pos": 71,
+     "pages": [
+      "/tools/cart-recovery-calculator"
+     ]
+    },
+    {
+     "q": "facebook messenger abandoned cart shopify",
+     "impr": 1,
+     "clicks": 0,
+     "pos": 25,
+     "pages": [
+      "/blog/whatsapp-abandoned-cart-recovery-shopify"
+     ]
+    },
+    {
+     "q": "shopify abandonment protector plus",
+     "impr": 1,
+     "clicks": 0,
+     "pos": 71,
+     "pages": [
+      "/blog/whatsapp-abandoned-cart-recovery-shopify"
+     ]
+    },
+    {
+     "q": "website visitor drop-off on checkout for trade accounts.",
+     "impr": 1,
+     "clicks": 0,
+     "pos": 2,
+     "pages": [
+      "/blog/ecommerce-funnel-drop-off-benchmarks-visitor-identity-resolution"
+     ]
+    },
+    {
+     "q": "what is the best app for abandoned cart flow marketing automation?",
+     "impr": 1,
+     "clicks": 0,
+     "pos": 10,
+     "pages": [
+      "/blog/best-shopify-app-for-abandoned-cart-recovery-india"
+     ]
+    },
+    {
+     "q": "what kinds of platforms let ecommerce stores automate whatsapp cart recovery, order updates, and two-way messaging?",
+     "impr": 1,
+     "clicks": 0,
+     "pos": 13,
+     "pages": [
+      "/blog/whatsapp-abandoned-cart-recovery-shopify"
+     ]
+    },
+    {
+     "q": "whatsapp abandoned cart recovery d2c",
+     "impr": 1,
+     "clicks": 0,
+     "pos": 18,
+     "pages": [
+      "/blog/whatsapp-abandoned-cart-recovery-shopify"
+     ]
+    },
+    {
+     "q": "which checkout app can help reduce abandoned carts for indian customers?",
+     "impr": 1,
+     "clicks": 0,
+     "pos": 1,
+     "pages": [
+      "/blog/whatsapp-abandoned-cart-recovery-shopify/"
+     ]
+    },
+    {
+     "q": "which companies help reduce cart abandonment for shopify stores in india?",
+     "impr": 1,
+     "clicks": 0,
+     "pos": 1,
+     "pages": [
+      "/blog/whatsapp-abandoned-cart-recovery-shopify/"
+     ]
+    }
+   ]
+  },
+  "shopify-led": {
+   "regex": "^shopify|shopify (app|whatsapp|automation|india|cod|order)",
+   "queries": 20,
+   "impr": 80,
+   "clicks": 0,
+   "list": [
+    {
+     "q": "shopify whatsapp automation",
+     "impr": 25,
+     "clicks": 0,
+     "pos": 24.9,
+     "pages": [
+      "/blog/whatsapp-automation-for-shopify",
+      "/blog/shopify-automation-checklist-whatsapp-cart-recovery",
+      "/blog/whatsapp-automation-for-shopify#how-shopify-whatsapp-automation-works"
+     ]
+    },
+    {
+     "q": "shopify seo experts",
+     "impr": 10,
+     "clicks": 0,
+     "pos": 86.1,
+     "pages": [
+      "/blog/shopify-seo-experts"
+     ]
+    },
+    {
+     "q": "whatsapp abandoned cart recovery shopify india",
+     "impr": 10,
+     "clicks": 0,
+     "pos": 14.1,
+     "pages": [
+      "/blog/whatsapp-abandoned-cart-recovery-shopify",
+      "/blog/whatsapp-abandoned-cart-recovery-shopify/",
+      "/blog/best-shopify-app-for-abandoned-cart-recovery-india"
+     ]
+    },
+    {
+     "q": "shopify seo expert",
+     "impr": 7,
+     "clicks": 0,
+     "pos": 90.4,
+     "pages": [
+      "/blog/shopify-seo-experts"
+     ]
+    },
+    {
+     "q": "shopify whatsapp",
+     "impr": 5,
+     "clicks": 0,
+     "pos": 50.6,
+     "pages": [
+      "/blog/whatsapp-automation-for-shopify",
+      "/blog/best-whatsapp-apps-for-shopify"
+     ]
+    },
+    {
+     "q": "abandoned cart recovery shopify app",
+     "impr": 4,
+     "clicks": 0,
+     "pos": 64.8,
+     "pages": [
+      "/blog/whatsapp-abandoned-cart-recovery-shopify"
+     ]
+    },
+    {
+     "q": "shopify abandoned cart recovery",
+     "impr": 2,
+     "clicks": 0,
+     "pos": 25.5,
+     "pages": [
+      "/blog/whatsapp-abandoned-cart-recovery-shopify"
+     ]
+    },
+    {
+     "q": "shopify cart recovery",
+     "impr": 2,
+     "clicks": 0,
+     "pos": 30.5,
+     "pages": [
+      "/blog/whatsapp-abandoned-cart-recovery-shopify"
+     ]
+    },
+    {
+     "q": "shopify whatsapp app",
+     "impr": 2,
+     "clicks": 0,
+     "pos": 59,
+     "pages": [
+      "/blog/best-whatsapp-apps-for-shopify"
+     ]
+    },
+    {
+     "q": "shopify whatsapp integration",
+     "impr": 2,
+     "clicks": 0,
+     "pos": 53,
+     "pages": [
+      "/blog/whatsapp-automation-for-shopify"
+     ]
+    },
+    {
+     "q": "which whatsapp business api provider works best with shopify order notifications for indian stores",
+     "impr": 2,
+     "clicks": 0,
+     "pos": 6,
+     "pages": [
+      "/blog/best-whatsapp-apps-for-shopify",
+      "/blog/best-whatsapp-automation-tools-shopify-india"
+     ]
+    },
+    {
+     "q": "best shopify whatsapp app",
+     "impr": 1,
+     "clicks": 0,
+     "pos": 7,
+     "pages": [
+      "/blog/best-whatsapp-apps-for-shopify"
+     ]
+    },
+    {
+     "q": "shopify abandonment protector plus",
+     "impr": 1,
+     "clicks": 0,
+     "pos": 71,
+     "pages": [
+      "/blog/whatsapp-abandoned-cart-recovery-shopify"
+     ]
+    },
+    {
+     "q": "shopify expert seo",
+     "impr": 1,
+     "clicks": 0,
+     "pos": 97,
+     "pages": [
+      "/blog/shopify-seo-experts"
+     ]
+    },
+    {
+     "q": "shopify ranking experts",
+     "impr": 1,
+     "clicks": 0,
+     "pos": 48,
+     "pages": [
+      "/blog/shopify-seo-experts"
+     ]
+    },
+    {
+     "q": "shopify seo expert coalition",
+     "impr": 1,
+     "clicks": 0,
+     "pos": 95,
+     "pages": [
+      "/blog/shopify-seo-experts"
+     ]
+    },
+    {
+     "q": "shopify seo specialist",
+     "impr": 1,
+     "clicks": 0,
+     "pos": 40,
+     "pages": [
+      "/blog/shopify-seo-experts"
+     ]
+    },
+    {
+     "q": "shopify whatsapp order",
+     "impr": 1,
+     "clicks": 0,
+     "pos": 27,
+     "pages": [
+      "/blog/whatsapp-automation-for-shopify"
+     ]
+    },
+    {
+     "q": "site:apps.shopify.com shopify app whatsapp \"+91\"",
+     "impr": 1,
+     "clicks": 0,
+     "pos": 3,
+     "pages": [
+      "/blog/best-whatsapp-apps-for-shopify"
+     ]
+    },
+    {
+     "q": "whatsapp shopify app",
+     "impr": 1,
+     "clicks": 0,
+     "pos": 70,
+     "pages": [
+      "/blog/best-whatsapp-apps-for-shopify"
+     ]
+    }
+   ]
+  },
+  "whatsapp-led": {
+   "regex": "^whatsapp",
+   "queries": 32,
+   "impr": 250,
+   "clicks": 1,
+   "list": [
+    {
+     "q": "whatsapp flow template",
+     "impr": 106,
+     "clicks": 0,
+     "pos": 10.9,
+     "pages": [
+      "/features/meta-manager"
+     ]
+    },
+    {
+     "q": "whatsapp flows shopify",
+     "impr": 19,
+     "clicks": 0,
+     "pos": 21.4,
+     "pages": [
+      "/blog/whatsapp-automation-for-shopify"
+     ]
+    },
+    {
+     "q": "whatsapp automation for shopify",
+     "impr": 13,
+     "clicks": 0,
+     "pos": 15.3,
+     "pages": [
+      "/blog/whatsapp-automation-for-shopify",
+      "/blog/whatsapp-automation-for-shopify#how-shopify-whatsapp-automation-works",
+      "/blog/whatsapp-automation-for-shopify#what-can-shopify-stores-automate-with-whatsapp"
+     ]
+    },
+    {
+     "q": "whatsapp abandoned cart recovery shopify india",
+     "impr": 10,
+     "clicks": 0,
+     "pos": 14.1,
+     "pages": [
+      "/blog/whatsapp-abandoned-cart-recovery-shopify",
+      "/blog/whatsapp-abandoned-cart-recovery-shopify/",
+      "/blog/best-shopify-app-for-abandoned-cart-recovery-india"
+     ]
+    },
+    {
+     "q": "whatsapp cart recovery",
+     "impr": 10,
+     "clicks": 0,
+     "pos": 67.7,
+     "pages": [
+      "/blog/whatsapp-abandoned-cart-recovery-shopify"
+     ]
+    },
+    {
+     "q": "whatsapp shopify",
+     "impr": 8,
+     "clicks": 0,
+     "pos": 44.6,
+     "pages": [
+      "/blog/whatsapp-automation-for-shopify",
+      "/blog/best-whatsapp-apps-for-shopify"
+     ]
+    },
+    {
+     "q": "whatsapp abandoned cart recovery",
+     "impr": 7,
+     "clicks": 0,
+     "pos": 62.6,
+     "pages": [
+      "/blog/whatsapp-abandoned-cart-recovery-shopify",
+      "https://dash.topedgeai.com/docs/guides/abandoned-cart-recovery/",
+      "/blog/whatsapp-abandoned-cart-recovery-shopify/"
+     ]
+    },
+    {
+     "q": "whatsapp marketing shopify",
+     "impr": 7,
+     "clicks": 0,
+     "pos": 30.7,
+     "pages": [
+      "/blog/whatsapp-automation-for-shopify"
+     ]
+    },
+    {
+     "q": "whatsapp automation shopify",
+     "impr": 6,
+     "clicks": 1,
+     "pos": 9.3,
+     "pages": [
+      "/blog/whatsapp-automation-for-shopify"
+     ]
+    },
+    {
+     "q": "whatsapp abandoned cart shopify",
+     "impr": 6,
+     "clicks": 0,
+     "pos": 19.5,
+     "pages": [
+      "/blog/whatsapp-abandoned-cart-recovery-shopify",
+      "/blog/whatsapp-abandoned-cart-recovery-shopify/"
+     ]
+    },
+    {
+     "q": "whatsapp automation for ecommerce",
+     "impr": 6,
+     "clicks": 0,
+     "pos": 55.3,
+     "pages": [
+      "/blog/what-is-ecommerce-automation-shopify-whatsapp",
+      "/blog/whatsapp-automation-for-shopify"
+     ]
+    },
+    {
+     "q": "whatsapp team inbox",
+     "impr": 6,
+     "clicks": 0,
+     "pos": 70.5,
+     "pages": [
+      "/docs/guides/shared-inbox-handover"
+     ]
+    },
+    {
+     "q": "whatsapp marketing for shopify",
+     "impr": 5,
+     "clicks": 0,
+     "pos": 18.6,
+     "pages": [
+      "/blog/whatsapp-automation-for-shopify"
+     ]
+    },
+    {
+     "q": "whatsapp abandoned cart automation",
+     "impr": 4,
+     "clicks": 0,
+     "pos": 14.3,
+     "pages": [
+      "/blog/whatsapp-abandoned-cart-recovery-shopify"
+     ]
+    },
+    {
+     "q": "whatsapp app shopify",
+     "impr": 4,
+     "clicks": 0,
+     "pos": 64.5,
+     "pages": [
+      "/blog/best-whatsapp-apps-for-shopify"
+     ]
+    },
+    {
+     "q": "whatsapp ecommerce automation",
+     "impr": 4,
+     "clicks": 0,
+     "pos": 23.5,
+     "pages": [
+      "/blog/what-is-ecommerce-automation-shopify-whatsapp",
+      "/blog/whatsapp-automation-for-shopify"
+     ]
+    },
+    {
+     "q": "whatsapp for shopify",
+     "impr": 4,
+     "clicks": 0,
+     "pos": 28,
+     "pages": [
+      "/blog/whatsapp-automation-for-shopify"
+     ]
+    },
+    {
+     "q": "whatsapp vs email marketing for d2c india",
+     "impr": 4,
+     "clicks": 0,
+     "pos": 21.8,
+     "pages": [
+      "/blog/ecommerce-automation-whatsapp-vs-email-india"
+     ]
+    },
+    {
+     "q": "whatsapp 2.0 shopify",
+     "impr": 3,
+     "clicks": 0,
+     "pos": 35,
+     "pages": [
+      "/blog/best-whatsapp-apps-for-shopify",
+      "/blog/whatsapp-automation-for-shopify"
+     ]
+    },
+    {
+     "q": "whatsapp abandoned cart",
+     "impr": 3,
+     "clicks": 0,
+     "pos": 48.7,
+     "pages": [
+      "/blog/whatsapp-abandoned-cart-recovery-shopify",
+      "https://dash.topedgeai.com/docs/guides/abandoned-cart-recovery/"
+     ]
+    },
+    {
+     "q": "whatsapp app alternative",
+     "impr": 2,
+     "clicks": 0,
+     "pos": 24,
+     "pages": [
+      "/blog/getgabs-alternative-shopify-whatsapp",
+      "/blog/kanal-whatsapp-alternative-shopify"
+     ]
+    },
+    {
+     "q": "whatsapp chatbot shopify",
+     "impr": 2,
+     "clicks": 0,
+     "pos": 22.5,
+     "pages": [
+      "/blog/ai-whatsapp-chatbot-for-shopify-india/"
+     ]
+    },
+    {
+     "q": "whatsapp shared inbox for ecommerce",
+     "impr": 2,
+     "clicks": 0,
+     "pos": 37.5,
+     "pages": [
+      "/blog/whatsapp-shared-inbox-shopify-order-context"
+     ]
+    },
+    {
+     "q": "whatsapp abandoned cart recovery d2c",
+     "impr": 1,
+     "clicks": 0,
+     "pos": 18,
+     "pages": [
+      "/blog/whatsapp-abandoned-cart-recovery-shopify"
+     ]
+    },
+    {
+     "q": "whatsapp business api pricing india",
+     "impr": 1,
+     "clicks": 0,
+     "pos": 68,
+     "pages": [
+      "/blog/whatsapp-business-api-pricing-india"
+     ]
+    },
+    {
+     "q": "whatsapp cod",
+     "impr": 1,
+     "clicks": 0,
+     "pos": 7,
+     "pages": [
+      "/"
+     ]
+    },
+    {
+     "q": "whatsapp d2c automation",
+     "impr": 1,
+     "clicks": 0,
+     "pos": 38,
+     "pages": [
+      "/blog/ecommerce-automation-whatsapp-vs-email-india"
+     ]
+    },
+    {
+     "q": "whatsapp down today india",
+     "impr": 1,
+     "clicks": 0,
+     "pos": 9,
+     "pages": [
+      "/blog/best-whatsapp-apps-for-shopify"
+     ]
+    },
+    {
+     "q": "whatsapp flow builder",
+     "impr": 1,
+     "clicks": 0,
+     "pos": 35,
+     "pages": [
+      "/features/flow-builder"
+     ]
+    },
+    {
+     "q": "whatsapp shopify app",
+     "impr": 1,
+     "clicks": 0,
+     "pos": 70,
+     "pages": [
+      "/blog/best-whatsapp-apps-for-shopify"
+     ]
+    },
+    {
+     "q": "whatsapp template rejected",
+     "impr": 1,
+     "clicks": 0,
+     "pos": 7,
+     "pages": [
+      "/blog/whatsapp-template-rejected-meta-shopify-fix"
+     ]
+    },
+    {
+     "q": "whatsapp thread builder",
+     "impr": 1,
+     "clicks": 0,
+     "pos": 2,
+     "pages": [
+      "/features/flow-builder"
+     ]
+    }
+   ]
+  },
+  "templates": {
+   "regex": "template|flow|broadcast|opt.?in|meta",
+   "queries": 7,
+   "impr": 130,
+   "clicks": 0,
+   "list": [
+    {
+     "q": "whatsapp flow template",
+     "impr": 106,
+     "clicks": 0,
+     "pos": 10.9,
+     "pages": [
+      "/features/meta-manager"
+     ]
+    },
+    {
+     "q": "whatsapp flows shopify",
+     "impr": 19,
+     "clicks": 0,
+     "pos": 21.4,
+     "pages": [
+      "/blog/whatsapp-automation-for-shopify"
+     ]
+    },
+    {
+     "q": "india meta",
+     "impr": 1,
+     "clicks": 0,
+     "pos": 18,
+     "pages": [
+      "/pricing/meta-rates"
+     ]
+    },
+    {
+     "q": "topflow maker",
+     "impr": 1,
+     "clicks": 0,
+     "pos": 5,
+     "pages": [
+      "/features/flow-builder"
+     ]
+    },
+    {
+     "q": "what is the best app for abandoned cart flow marketing automation?",
+     "impr": 1,
+     "clicks": 0,
+     "pos": 10,
+     "pages": [
+      "/blog/best-shopify-app-for-abandoned-cart-recovery-india"
+     ]
+    },
+    {
+     "q": "whatsapp flow builder",
+     "impr": 1,
+     "clicks": 0,
+     "pos": 35,
+     "pages": [
+      "/features/flow-builder"
+     ]
+    },
+    {
+     "q": "whatsapp template rejected",
+     "impr": 1,
+     "clicks": 0,
+     "pos": 7,
+     "pages": [
+      "/blog/whatsapp-template-rejected-meta-shopify-fix"
+     ]
+    }
+   ]
+  },
+  "order updates": {
+   "regex": "order (update|status|confirm|track|notif)|tracking|shipping",
+   "queries": 2,
+   "impr": 3,
+   "clicks": 0,
+   "list": [
+    {
+     "q": "which whatsapp business api provider works best with shopify order notifications for indian stores",
+     "impr": 2,
+     "clicks": 0,
+     "pos": 6,
+     "pages": [
+      "/blog/best-whatsapp-apps-for-shopify",
+      "/blog/best-whatsapp-automation-tools-shopify-india"
+     ]
+    },
+    {
+     "q": "what kinds of platforms let ecommerce stores automate whatsapp cart recovery, order updates, and two-way messaging?",
+     "impr": 1,
+     "clicks": 0,
+     "pos": 13,
+     "pages": [
+      "/blog/whatsapp-abandoned-cart-recovery-shopify"
+     ]
+    }
+   ]
+  },
+  "profit": {
+   "regex": "profit|p&l|margin|cogs|roas",
+   "queries": 5,
+   "impr": 10,
+   "clicks": 0,
+   "list": [
+    {
+     "q": "is e commerce business profitable in india",
+     "impr": 3,
+     "clicks": 0,
+     "pos": 10.3,
+     "pages": [
+      "/blog/profitable-ecommerce-business-india"
+     ]
+    },
+    {
+     "q": "is ecommerce business profitable in india",
+     "impr": 3,
+     "clicks": 0,
+     "pos": 6.7,
+     "pages": [
+      "/blog/profitable-ecommerce-business-india"
+     ]
+    },
+    {
+     "q": "are ecommerce sites profitable in india",
+     "impr": 2,
+     "clicks": 0,
+     "pos": 12.5,
+     "pages": [
+      "/blog/profitable-ecommerce-business-india"
+     ]
+    },
+    {
+     "q": "is ecommerce advertising profitable in india",
+     "impr": 1,
+     "clicks": 0,
+     "pos": 20,
+     "pages": [
+      "/blog/profitable-ecommerce-business-india"
+     ]
+    },
+    {
+     "q": "roasted wings",
+     "impr": 1,
+     "clicks": 0,
+     "pos": 5,
+     "pages": [
+      "/"
+     ]
+    }
+   ]
+  },
+  "tools and links": {
+   "regex": "wa\\.me|link gen|qr|click to chat|calculator|generator",
+   "queries": 1,
+   "impr": 1,
+   "clicks": 0,
+   "list": [
+    {
+     "q": "ecommerce abandoned cart calculator",
+     "impr": 1,
+     "clicks": 0,
+     "pos": 71,
+     "pages": [
+      "/tools/cart-recovery-calculator"
+     ]
+    }
+   ]
+  },
+  "competitor brands": {
+   "regex": "wati|interakt|aisensy|zoko|bitespeed|kanal|gupshup|updatrr|getgabs|dondy|gallabox|delightchat|quickreply|doubletick|wappbiz|manifest|omnichannel",
+   "queries": 35,
+   "impr": 965,
+   "clicks": 2,
+   "list": [
+    {
+     "q": "zoko alternative",
+     "impr": 470,
+     "clicks": 0,
+     "pos": 10.2,
+     "pages": [
+      "/blog/zoko-alternative-shopify-india",
+      "/",
+      "/compare"
+     ]
+    },
+    {
+     "q": "getkanal alternatives",
+     "impr": 278,
+     "clicks": 1,
+     "pos": 2.1,
+     "pages": [
+      "/blog/kanal-whatsapp-alternative-shopify",
+      "/compare/kanal",
+      "/blog"
+     ]
+    },
+    {
+     "q": "bitespeed alternative",
+     "impr": 43,
+     "clicks": 0,
+     "pos": 17.9,
+     "pages": [
+      "/blog/bitespeed-alternative-shopify-india",
+      "/compare/alternatives"
+     ]
+    },
+    {
+     "q": "best zoko alternative for shopify",
+     "impr": 42,
+     "clicks": 0,
+     "pos": 9.1,
+     "pages": [
+      "/blog/zoko-alternative-shopify-india"
+     ]
+    },
+    {
+     "q": "interakt alternative",
+     "impr": 36,
+     "clicks": 0,
+     "pos": 25,
+     "pages": [
+      "/blog/interakt-alternative-shopify-india"
+     ]
+    },
+    {
+     "q": "zoko alternative free",
+     "impr": 21,
+     "clicks": 0,
+     "pos": 8.7,
+     "pages": [
+      "/blog/zoko-alternative-shopify-india"
+     ]
+    },
+    {
+     "q": "\"gupshup\" -site:gupshup.io -site:facebook.com -site:instagram.com -site:threads.com -site:threads.net -site:linkedin.com -site:x.com -site:twitter.com -site:tiktok.com -site:youtube.com -site:youtu.be -site:reddit.com -site:t.me -site:telegram.me -site:telegram.org -site:pinterest.com -site:vimeo.com",
+     "impr": 7,
+     "clicks": 0,
+     "pos": 6.9,
+     "pages": [
+      "/compare/gupshup",
+      "/",
+      "/compare/getgabs"
+     ]
+    },
+    {
+     "q": "getkanal",
+     "impr": 7,
+     "clicks": 0,
+     "pos": 11.3,
+     "pages": [
+      "/blog/kanal-whatsapp-alternative-shopify"
+     ]
+    },
+    {
+     "q": "zoko-alternative",
+     "impr": 6,
+     "clicks": 0,
+     "pos": 7.7,
+     "pages": [
+      "/blog/zoko-alternative-shopify-india"
+     ]
+    },
+    {
+     "q": "getgabs pricing",
+     "impr": 4,
+     "clicks": 0,
+     "pos": 7.5,
+     "pages": [
+      "/compare/getgabs",
+      "/blog/getgabs-alternative-shopify-whatsapp"
+     ]
+    },
+    {
+     "q": "intitle:\"gupshup\" -site:gupshup.io -site:facebook.com -site:instagram.com -site:threads.com -site:threads.net -site:linkedin.com -site:x.com -site:twitter.com -site:tiktok.com -site:youtube.com -site:youtu.be -site:reddit.com -site:t.me -site:telegram.me -site:telegram.org -site:pinterest.com -site:vimeo.com",
+     "impr": 4,
+     "clicks": 0,
+     "pos": 1.3,
+     "pages": [
+      "/compare/gupshup"
+     ]
+    },
+    {
+     "q": "\"gupshup\"",
+     "impr": 3,
+     "clicks": 0,
+     "pos": 46,
+     "pages": [
+      "/",
+      "/compare/gupshup",
+      "/docs"
+     ]
+    },
+    {
+     "q": "\"gupshup.ai\" -site:gupshup.ai -site:gupshup.io -site:facebook.com -site:instagram.com -site:threads.com -site:threads.net -site:linkedin.com -site:x.com -site:twitter.com -site:tiktok.com -site:youtube.com -site:youtu.be -site:reddit.com -site:t.me -site:telegram.me -site:telegram.org -site:pinterest.com -site:vimeo.com",
+     "impr": 3,
+     "clicks": 0,
+     "pos": 4,
+     "pages": [
+      "/compare/gupshup",
+      "/"
+     ]
+    },
+    {
+     "q": "\"gupshup.io\" -site:gupshup.io -site:facebook.com -site:instagram.com -site:threads.com -site:threads.net -site:linkedin.com -site:x.com -site:twitter.com -site:tiktok.com -site:youtube.com -site:youtu.be -site:reddit.com -site:t.me -site:telegram.me -site:telegram.org -site:pinterest.com -site:vimeo.com",
+     "impr": 3,
+     "clicks": 0,
+     "pos": 1.3,
+     "pages": [
+      "/compare/gupshup"
+     ]
+    },
+    {
+     "q": "alternativa a zoko",
+     "impr": 3,
+     "clicks": 0,
+     "pos": 8,
+     "pages": [
+      "/blog/zoko-alternative-shopify-india"
+     ]
+    },
+    {
+     "q": "bitespeed pricing",
+     "impr": 3,
+     "clicks": 0,
+     "pos": 15.7,
+     "pages": [
+      "/blog/bitespeed-alternative-shopify-india",
+      "/compare/bitespeed/"
+     ]
+    },
+    {
+     "q": "dondy pricing",
+     "impr": 3,
+     "clicks": 0,
+     "pos": 6.3,
+     "pages": [
+      "/compare/dondy"
+     ]
+    },
+    {
+     "q": "interakt alternatives",
+     "impr": 3,
+     "clicks": 0,
+     "pos": 38.3,
+     "pages": [
+      "/blog/interakt-alternative-shopify-india"
+     ]
+    },
+    {
+     "q": "interakt alternatives for shopify",
+     "impr": 3,
+     "clicks": 0,
+     "pos": 6.3,
+     "pages": [
+      "/blog/interakt-alternative-shopify-india"
+     ]
+    },
+    {
+     "q": "updatrr",
+     "impr": 2,
+     "clicks": 1,
+     "pos": 23.5,
+     "pages": [
+      "/compare/updatrr",
+      "/blog/category/automation"
+     ]
+    },
+    {
+     "q": "dondy shopify",
+     "impr": 2,
+     "clicks": 0,
+     "pos": 22,
+     "pages": [
+      "/blog/dondy-alternative-shopify-india"
+     ]
+    },
+    {
+     "q": "gupshup mobile apps",
+     "impr": 2,
+     "clicks": 0,
+     "pos": 78,
+     "pages": [
+      "/blog/cod-to-prepaid-whatsapp-shopify-india",
+      "/features/ai-brain"
+     ]
+    },
+    {
+     "q": "interakt competitor",
+     "impr": 2,
+     "clicks": 0,
+     "pos": 13.5,
+     "pages": [
+      "/blog/interakt-alternative-shopify-india"
+     ]
+    },
+    {
+     "q": "kanal-ai",
+     "impr": 2,
+     "clicks": 0,
+     "pos": 17.5,
+     "pages": [
+      "/compare/kanal"
+     ]
+    },
+    {
+     "q": "wati alternative india",
+     "impr": 2,
+     "clicks": 0,
+     "pos": 38.5,
+     "pages": [
+      "/blog/wati-alternative-shopify-india"
+     ]
+    },
+    {
+     "q": "zoko alternatives",
+     "impr": 2,
+     "clicks": 0,
+     "pos": 4.5,
+     "pages": [
+      "/blog/zoko-alternative-shopify-india"
+     ]
+    },
+    {
+     "q": "aisensy alternative in india",
+     "impr": 1,
+     "clicks": 0,
+     "pos": 8,
+     "pages": [
+      "/blog/aisensy-alternative-shopify-india"
+     ]
+    },
+    {
+     "q": "alternativa zoko",
+     "impr": 1,
+     "clicks": 0,
+     "pos": 14,
+     "pages": [
+      "/blog/zoko-alternative-shopify-india"
+     ]
+    },
+    {
+     "q": "bitespeed logo",
+     "impr": 1,
+     "clicks": 0,
+     "pos": 1,
+     "pages": [
+      "/compare/bitespeed"
+     ]
+    },
+    {
+     "q": "dondy whatsapp",
+     "impr": 1,
+     "clicks": 0,
+     "pos": 15,
+     "pages": [
+      "/blog/dondy-alternative-shopify-india"
+     ]
+    },
+    {
+     "q": "gupshup",
+     "impr": 1,
+     "clicks": 0,
+     "pos": 3,
+     "pages": [
+      "/compare/gupshup"
+     ]
+    },
+    {
+     "q": "kanal shopify",
+     "impr": 1,
+     "clicks": 0,
+     "pos": 10,
+     "pages": [
+      "/blog/kanal-whatsapp-alternative-shopify"
+     ]
+    },
+    {
+     "q": "kanal whatsapp",
+     "impr": 1,
+     "clicks": 0,
+     "pos": 7,
+     "pages": [
+      "/blog/kanal-whatsapp-alternative-shopify"
+     ]
+    },
+    {
+     "q": "wati vs aisensy",
+     "impr": 1,
+     "clicks": 0,
+     "pos": 40,
+     "pages": [
+      "/compare/topedge-vs-wati-vs-aisensy"
+     ]
+    },
+    {
+     "q": "zoko addons",
+     "impr": 1,
+     "clicks": 0,
+     "pos": 21,
+     "pages": [
+      "/blog/zoko-alternative-shopify-india"
+     ]
+    }
+   ]
+  },
+  "advanced operators (rank trackers, scrapers)": {
+   "regex": "site:|intitle:|inurl:|\"",
+   "queries": 12,
+   "impr": 35,
+   "clicks": 0,
+   "list": [
+    {
+     "q": "\"gupshup\" -site:gupshup.io -site:facebook.com -site:instagram.com -site:threads.com -site:threads.net -site:linkedin.com -site:x.com -site:twitter.com -site:tiktok.com -site:youtube.com -site:youtu.be -site:reddit.com -site:t.me -site:telegram.me -site:telegram.org -site:pinterest.com -site:vimeo.com",
+     "impr": 7,
+     "clicks": 0,
+     "pos": 6.9,
+     "pages": [
+      "/compare/gupshup",
+      "/",
+      "/compare/getgabs"
+     ]
+    },
+    {
+     "q": "intitle:\"gupshup\" -site:gupshup.io -site:facebook.com -site:instagram.com -site:threads.com -site:threads.net -site:linkedin.com -site:x.com -site:twitter.com -site:tiktok.com -site:youtube.com -site:youtu.be -site:reddit.com -site:t.me -site:telegram.me -site:telegram.org -site:pinterest.com -site:vimeo.com",
+     "impr": 4,
+     "clicks": 0,
+     "pos": 1.3,
+     "pages": [
+      "/compare/gupshup"
+     ]
+    },
+    {
+     "q": "site:linkedin.com/posts \"whatsapp integration\"",
+     "impr": 4,
+     "clicks": 0,
+     "pos": 29.5,
+     "pages": [
+      "/shopify-whatsapp-integration"
+     ]
+    },
+    {
+     "q": "\"gupshup\"",
+     "impr": 3,
+     "clicks": 0,
+     "pos": 46,
+     "pages": [
+      "/",
+      "/compare/gupshup",
+      "/docs"
+     ]
+    },
+    {
+     "q": "\"gupshup.ai\" -site:gupshup.ai -site:gupshup.io -site:facebook.com -site:instagram.com -site:threads.com -site:threads.net -site:linkedin.com -site:x.com -site:twitter.com -site:tiktok.com -site:youtube.com -site:youtu.be -site:reddit.com -site:t.me -site:telegram.me -site:telegram.org -site:pinterest.com -site:vimeo.com",
+     "impr": 3,
+     "clicks": 0,
+     "pos": 4,
+     "pages": [
+      "/compare/gupshup",
+      "/"
+     ]
+    },
+    {
+     "q": "\"gupshup.io\" -site:gupshup.io -site:facebook.com -site:instagram.com -site:threads.com -site:threads.net -site:linkedin.com -site:x.com -site:twitter.com -site:tiktok.com -site:youtube.com -site:youtu.be -site:reddit.com -site:t.me -site:telegram.me -site:telegram.org -site:pinterest.com -site:vimeo.com",
+     "impr": 3,
+     "clicks": 0,
+     "pos": 1.3,
+     "pages": [
+      "/compare/gupshup"
+     ]
+    },
+    {
+     "q": "\"beatchat.ai\" -site:beatchat.ai -site:fpt.com -site:facebook.com -site:instagram.com -site:threads.com -site:threads.net -site:linkedin.com -site:x.com -site:twitter.com -site:tiktok.com -site:youtube.com -site:youtu.be -site:reddit.com -site:t.me -site:telegram.me -site:telegram.org -site:pinterest.com -site:vimeo.com",
+     "impr": 2,
+     "clicks": 0,
+     "pos": 1,
+     "pages": [
+      "/blog/best-whatsapp-apps-for-shopify"
+     ]
+    },
+    {
+     "q": "\"beatchat.vn\" -site:beatchat.vn -site:fpt.com -site:facebook.com -site:instagram.com -site:threads.com -site:threads.net -site:linkedin.com -site:x.com -site:twitter.com -site:tiktok.com -site:youtube.com -site:youtu.be -site:reddit.com -site:t.me -site:telegram.me -site:telegram.org -site:pinterest.com -site:vimeo.com",
+     "impr": 2,
+     "clicks": 0,
+     "pos": 3,
+     "pages": [
+      "/blog/best-whatsapp-apps-for-shopify"
+     ]
+    },
+    {
+     "q": "\"shopify.com\"",
+     "impr": 2,
+     "clicks": 0,
+     "pos": 9.5,
+     "pages": [
+      "/compare/updatrr"
+     ]
+    },
+    {
+     "q": "\"whatsapp pay\" and (brazil or india)",
+     "impr": 2,
+     "clicks": 0,
+     "pos": 9.5,
+     "pages": [
+      "/compare/interakt/"
+     ]
+    },
+    {
+     "q": "chill\"s",
+     "impr": 2,
+     "clicks": 0,
+     "pos": 1,
+     "pages": [
+      "/"
+     ]
+    },
+    {
+     "q": "site:apps.shopify.com shopify app whatsapp \"+91\"",
+     "impr": 1,
+     "clicks": 0,
+     "pos": 3,
+     "pages": [
+      "/blog/best-whatsapp-apps-for-shopify"
+     ]
+    }
+   ]
+  },
+  "non-English": {
+   "regex": "[^\\x00-\\x7F]",
+   "queries": 17,
+   "impr": 24,
+   "clicks": 0,
+   "list": [
+    {
+     "q": "chill’s",
+     "impr": 3,
+     "clicks": 0,
+     "pos": 1,
+     "pages": [
+      "/"
+     ]
+    },
+    {
+     "q": "the gallery café",
+     "impr": 3,
+     "clicks": 0,
+     "pos": 4.7,
+     "pages": [
+      "/"
+     ]
+    },
+    {
+     "q": "chilly’s",
+     "impr": 2,
+     "clicks": 0,
+     "pos": 1,
+     "pages": [
+      "/"
+     ]
+    },
+    {
+     "q": "was ist das beste whatsapp tool für shopify",
+     "impr": 2,
+     "clicks": 0,
+     "pos": 37,
+     "pages": [
+      "/blog/best-whatsapp-apps-for-shopify"
+     ]
+    },
+    {
+     "q": "was ist das beste whatsapp tool für shopify?",
+     "impr": 2,
+     "clicks": 0,
+     "pos": 11,
+     "pages": [
+      "/blog/best-whatsapp-apps-for-shopify"
+     ]
+    },
+    {
+     "q": "how to order food at cinépolis",
+     "impr": 1,
+     "clicks": 0,
+     "pos": 11,
+     "pages": [
+      "/"
+     ]
+    },
+    {
+     "q": "où manger proche",
+     "impr": 1,
+     "clicks": 0,
+     "pos": 1,
+     "pages": [
+      "/"
+     ]
+    },
+    {
+     "q": "ресторан американской кухни",
+     "impr": 1,
+     "clicks": 0,
+     "pos": 5,
+     "pages": [
+      "/"
+     ]
+    },
+    {
+     "q": "الموقع بتاعهم",
+     "impr": 1,
+     "clicks": 0,
+     "pos": 7,
+     "pages": [
+      "/booking"
+     ]
+    },
+    {
+     "q": "बॉडी हेल्थ",
+     "impr": 1,
+     "clicks": 0,
+     "pos": 4,
+     "pages": [
+      "/"
+     ]
+    },
+    {
+     "q": "स्पा सेंटर",
+     "impr": 1,
+     "clicks": 0,
+     "pos": 9,
+     "pages": [
+      "/"
+     ]
+    },
+    {
+     "q": "ચીલી",
+     "impr": 1,
+     "clicks": 0,
+     "pos": 3,
+     "pages": [
+      "/"
+     ]
+    },
+    {
+     "q": "રેસ્ટોરન્ટ",
+     "impr": 1,
+     "clicks": 0,
+     "pos": 4,
+     "pages": [
+      "/"
+     ]
+    },
+    {
+     "q": "હેર કલર",
+     "impr": 1,
+     "clicks": 0,
+     "pos": 8,
+     "pages": [
+      "http://topedgeai.com/"
+     ]
+    },
+    {
+     "q": "₹ 1,999 / month",
+     "impr": 1,
+     "clicks": 0,
+     "pos": 9,
+     "pages": [
+      "/pricing"
+     ]
+    },
+    {
+     "q": "チリーズ レストラン",
+     "impr": 1,
+     "clicks": 0,
+     "pos": 2,
+     "pages": [
+      "/"
+     ]
+    },
+    {
+     "q": "🥩 steak",
+     "impr": 1,
+     "clicks": 0,
+     "pos": 1,
+     "pages": [
+      "/"
+     ]
+    }
+   ]
+  },
+  "typos of whatsapp/shopify": {
+   "regex": "whats ?up|watsapp|whatapp|shopfy|shopif\\b|sopify",
+   "queries": 0,
+   "impr": 0,
+   "clicks": 0,
+   "list": []
+  }
+ }
+}

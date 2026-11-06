@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
-import { initAnalytics, trackPageView } from '../lib/analytics';
+import { initAnalytics, initClickTracking, trackPageView } from '../lib/analytics';
 import { initPostHog, phPageView } from '../lib/posthog';
 
 /**
@@ -16,6 +16,7 @@ export default function Analytics() {
   useEffect(() => {
     initAnalytics();
     initPostHog();
+    initClickTracking();
   }, []);
 
   useEffect(() => {
