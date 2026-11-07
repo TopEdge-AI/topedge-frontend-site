@@ -6,11 +6,10 @@
 # (avoids re-downloading ~260MB Chromium every deploy).
 [build.environment]
   PLAYWRIGHT_BROWSERS_PATH = "0"
-  # Trailing-slash 301s, approved by the owner on 5 Nov 2026. Turned on 7 Nov
-  # after scripts/check-trailing-slash.mjs returned GO against production.
-  # Re-run that script straight after every deploy. If any URL loops, delete
-  # this line and redeploy: the 8 Oct 2026 outage was this rule plus Pretty URLs.
-  ENABLE_SLASH_301 = "1"
+  # Do NOT set ENABLE_SLASH_301 here. Turned on 7 Nov 2026 and it took the
+  # whole site down again: Netlify matches redirect `from` paths ignoring the
+  # trailing slash, so `/x/ /x 301!` also fires on `/x` and loops, even with
+  # Pretty URLs off. scripts/check-trailing-slash.mjs cannot detect this.
 
 # Path redirects live in public/_redirects (copied to dist) so they cannot drift
 # from prerender output. Keep host-level apex rule here.
