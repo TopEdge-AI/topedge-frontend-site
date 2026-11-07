@@ -4,11 +4,11 @@
  */
 export const CONTENT_DATES = {
   /** Last edit of compare competitor data (+ feature matrix). */
-  compareTwoWay: '2026-11-06',
+  compareTwoWay: '2026-11-07',
   /** Last edit of 3-way compare page (+ feature matrix). */
-  compareThreeWay: '2026-11-06',
+  compareThreeWay: '2026-11-07',
   /** Last edit of blogPosts.ts (used as Article dateModified fallback). */
-  blogPosts: '2026-11-06',
+  blogPosts: '2026-11-07',
   /** Last edit of feature / product page content. */
   featurePages: '2026-11-02',
   /** Last edit of published plan catalog (pricing Offers). */
@@ -22,33 +22,33 @@ export const BLOG_DATES_BY_SLUG = {
   "meta-whatsapp-cloud-api-shopify-templates": "2026-10-21",
   "whatsapp-shared-inbox-shopify-order-context": "2026-10-21",
   "shopify-automation-checklist-whatsapp-cart-recovery": "2026-10-21",
-  "best-whatsapp-automation-tools-shopify-india": "2026-10-21",
+  "best-whatsapp-automation-tools-shopify-india": "2026-11-07",
   "how-to-reduce-rto-with-whatsapp-cod-confirmation": "2026-10-21",
   "what-is-ecommerce-automation-shopify-whatsapp": "2026-10-21",
   "ai-whatsapp-chatbot-for-shopify-india": "2026-10-21",
   "zoko-alternative-shopify-india": "2026-11-02",
   "getgabs-alternative-shopify-whatsapp": "2026-10-21",
   "kanal-whatsapp-alternative-shopify": "2026-11-02",
-  "how-to-choose-whatsapp-app-shopify-app-store": "2026-10-21",
+  "how-to-choose-whatsapp-app-shopify-app-store": "2026-11-07",
   "whatsapp-business-api-pricing-india": "2026-10-21",
   "dondy-alternative-shopify-india": "2026-10-21",
   "whatsapp-automation-for-shopify": "2026-10-21",
-  "best-whatsapp-apps-for-shopify": "2026-10-21",
+  "best-whatsapp-apps-for-shopify": "2026-11-07",
   "organic-vs-paid-ecommerce-marketing-2026": "2026-10-21",
   "cod-rto-benchmark-india-2026": "2026-10-21",
   "profitable-ecommerce-business-india": "2026-10-21",
   "how-to-automate-ecommerce-store-india": "2026-10-21",
   "organic-ecommerce-leads-short-form-video": "2026-10-21",
   "trending-products-to-sell-online-india-2026": "2026-10-21",
-  "wati-alternative-shopify-india": "2026-10-21",
-  "aisensy-alternative-shopify-india": "2026-10-21",
-  "interakt-alternative-shopify-india": "2026-10-21",
+  "wati-alternative-shopify-india": "2026-11-07",
+  "aisensy-alternative-shopify-india": "2026-11-07",
+  "interakt-alternative-shopify-india": "2026-11-07",
   "bitespeed-alternative-shopify-india": "2026-10-21",
   "whatsapp-template-rejected-meta-shopify-fix": "2026-10-21",
   "whatsapp-opt-in-shopify-india": "2026-10-21",
   "updatrr-alternative-shopify-india": "2026-10-21",
   "cod-to-prepaid-whatsapp-shopify-india": "2026-10-22",
-  "best-shopify-app-for-abandoned-cart-recovery-india": "2026-10-30",
+  "best-shopify-app-for-abandoned-cart-recovery-india": "2026-11-07",
   "ecommerce-funnel-drop-off-benchmarks-visitor-identity-resolution": "2026-11-01"
 } as const;
 

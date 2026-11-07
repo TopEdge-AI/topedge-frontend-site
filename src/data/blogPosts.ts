@@ -1001,7 +1001,7 @@ export const blogPosts: BlogPost[] = [
     ],
     slug: 'best-whatsapp-automation-tools-shopify-india',
     date: '2026-09-08',
-    updated: '2026-10-21',
+    updated: '2026-11-07',
     readTime: '16 min',
     category: 'Comparisons',
     author: 'Moksh Patel',
@@ -1161,7 +1161,7 @@ export const blogPosts: BlogPost[] = [
 </ul>
 <p>Those four questions are deliberately answerable in a demo, which is their point. “Is it good for Indian D2C” is not a question a vendor can fail. “Show me a cart reminder with the real line items from the cart I just abandoned, then place the order and show me the next two messages cancelling” is.</p>
 <p><strong>Add a fifth that costs more than the other four combined:</strong> what does this add to Meta’s own rates? The India reference points are ₹0.8631 per delivered marketing template and ₹0.1150 per utility or service message, with the first 1,000 service messages a month per number free since 1 October 2026. Ask for the figure in rupees on the plan you are being quoted, not a yes or no on whether there is a markup.</p>
-<p>The published answers already differ sharply. AiSensy lists Indian service messages at ₹0.145, about 26% over Meta’s rate. WATI lists conversations at standard rates, meaning pass-through. Updatrr states in writing that it adds nothing. BiteSpeed publishes no prices at all, because its pricing page redirects to a demo form. A vendor’s willingness to put this in writing tells you most of what you need before the call.</p>
+<p>The published answers already differ sharply. Read on 7 November 2026, AiSensy lists Indian marketing messages at ₹1.09 and utility at ₹0.145, about 26% over Meta’s ₹0.8631 and ₹0.1150. <a href="https://cdn.clare.ai/pricing/Wati-Pricing-Rate-Card-Growth-Plan-INR-I.pdf" target="_blank" rel="noopener noreferrer">WATI’s Growth rate card</a> lists ₹1.0357 and ₹0.1495, 20% and 30% over. Interakt Growth lists ₹0.958 and ₹0.150. Updatrr states in writing that it adds nothing. BiteSpeed publishes no prices at all, because its pricing page redirects to a demo form. A vendor’s willingness to put this in writing tells you most of what you need before the call.</p>
 
 <h2>How should you score each WhatsApp vendor?</h2>
 <ol>
@@ -2255,7 +2255,7 @@ export const blogPosts: BlogPost[] = [
     ],
     slug: 'how-to-choose-whatsapp-app-shopify-app-store',
     date: '2026-09-20',
-    updated: '2026-10-21',
+    updated: '2026-11-07',
     readTime: '12 min',
     category: 'Guides',
     author: 'Smit Tilva',
@@ -2308,7 +2308,7 @@ export const blogPosts: BlogPost[] = [
 <p>Almost everyone claims official WhatsApp or Cloud API. That claim is nearly meaningless, because it describes the pipe, not the price. The question that separates vendors is narrower: do you pay Meta’s rate card only, or Meta plus a platform margin on every conversation?</p>
 <p><strong>Know the reference numbers before you ask.</strong> In India, Meta charges ₹0.8631 per delivered marketing template and ₹0.1150 per utility or service message, and since 1 October 2026 every business number gets its first 1,000 service messages each month free. Those figures do not change by vendor. Anything above them is margin.</p>
 <p><strong>Ask it as a number, not a yes or no.</strong> “Do you mark up Meta rates?” invites a comfortable answer. “What do I pay per delivered India marketing template, in rupees, on this plan?” does not. A vendor who passes through will say ₹0.8631 without pausing. One who does not will reach for conversation credits, bundles or a rate card on another page, and that hesitation is the answer.</p>
-<p>It is checkable on published pages, too. AiSensy lists Indian service messages at ₹0.145 against Meta’s ₹0.1150, about 26% on top. WATI lists conversations at standard rates, meaning pass-through. Updatrr states in writing that it adds no markup. BiteSpeed publishes nothing at all, because its pricing page redirects to a demo form.</p>
+<p>It is checkable on published pages, too. Read on 7 November 2026, AiSensy lists Indian utility messages at ₹0.145 against Meta’s ₹0.1150, about 26% on top. <a href="https://cdn.clare.ai/pricing/Wati-Pricing-Rate-Card-Growth-Plan-INR-I.pdf" target="_blank" rel="noopener noreferrer">WATI’s Growth rate card</a> lists ₹0.1495, 30% on top, and Interakt Growth ₹0.150. Updatrr states in writing that it adds no markup. BiteSpeed publishes nothing at all, because its pricing page redirects to a demo form.</p>
 <p><strong>Markup is not automatically disqualifying.</strong> A vendor can add margin and still be the right buy if the product saves you more than it costs. What is disqualifying is not knowing, because the number compounds: ₹0.03 per service message is ₹1,500 a month at 50,000 messages, and that bill arrives in the month you grew. Model it at peak week, not at today’s average. Full rate card: <a href="/blog/whatsapp-business-api-pricing-india">WhatsApp Business API pricing in India</a>.</p>
 
 <h2>Does the app handle COD confirm vs COD → prepaid?</h2>
@@ -2325,7 +2325,7 @@ export const blogPosts: BlogPost[] = [
 <li><strong>Revenue share.</strong> Rarer, and worth isolating because it behaves unlike the other two. Zoko publishes an add-on at $24.99 a month plus 3% of order value. On ₹10 lakh of attributed monthly orders that is ₹30,000, and unlike a subscription it has no ceiling.</li>
 </ul>
 <p>Neither of the first two is morally better. The wrong one for your traffic shape is expensive, and the shape that decides it is your ratio of messages to orders. A store sending 40 messages per order because it runs support on WhatsApp should avoid metering. A store sending four should avoid paying for seats it does not fill.</p>
-<p><strong>Watch the seat line specifically,</strong> because it is where flat pricing stops being flat. WATI charges ₹1,299 per extra user per month on Pro and ₹2,199 on Business, so a four-person desk on Pro is ₹9,696 rather than the ₹5,799 headline. DelightChat meters support instead, at $10 per extra 100 tickets. Both are reasonable ways to price a helpdesk and both punish the Indian D2C shape, which is usually one or two people answering a lot of automated sending.</p>
+<p><strong>Watch the seat line specifically,</strong> because it is where flat pricing stops being flat. WATI Growth stops at 3 users, and Pro and Business include 5 users, then charge ₹1,299 and ₹2,199 per extra user a month, so a seven-person desk on Pro is ₹8,397 rather than the ₹5,799 headline (read 7 November 2026). DelightChat meters support instead, at $10 per extra 100 tickets. Both are reasonable ways to price a helpdesk and both punish the Indian D2C shape, which is usually one or two people answering a lot of automated sending.</p>
 <p><strong>Do the arithmetic once, at peak.</strong> Take your worst week of last year, multiply out messages by category at Meta’s rates, add the plan, add seats or credits, and compare that single number across the shortlist. The cheapest plan at average volume is frequently not the cheapest in October.</p>
 
 <h2>What stays gated after “free to install”?</h2>
@@ -3136,7 +3136,7 @@ export const blogPosts: BlogPost[] = [
     ],
     slug: 'best-whatsapp-apps-for-shopify',
     date: '2026-09-22',
-    updated: '2026-10-21',
+    updated: '2026-11-07',
     readTime: '17 min',
     category: 'Comparisons',
     author: 'Smit Tilva',
@@ -3472,8 +3472,8 @@ export const blogPosts: BlogPost[] = [
 
 <h3>6. WATI</h3>
 <p><strong>Best for:</strong> teams whose genuine first problem is several agents sharing one WhatsApp number.</p>
-<p><a href="https://www.wati.io/pricing/" target="_blank" rel="noopener noreferrer">WATI's India pricing</a> is Growth ₹2,699 a month, Pro ₹5,799 and Business ₹16,799. Credit where it is due on the cost question: conversations are listed as standard rates on every tier, meaning Meta's own pricing passed through rather than resold.</p>
-<p><strong>Watch-outs:</strong> the seat line, not the plan line, decides the bill. Additional users are ₹1,299 a month each on Pro and ₹2,199 each on Business, so a four-person desk on Pro is ₹9,696 a month before a message is sent. Facebook Business verification help is offered only to Business annual customers. Advanced ecommerce identity and COD paths usually need more API mapping than a Shopify-native app. <a href="/compare/wati">TopEdge vs WATI</a>.</p>
+<p><a href="https://www.wati.io/pricing/" target="_blank" rel="noopener noreferrer">WATI's India pricing</a> is Growth ₹2,699 a month, Pro ₹5,799 and Business ₹16,799, billed quarterly (read 7 November 2026). On the cost question, <a href="https://cdn.clare.ai/pricing/Wati-Pricing-Rate-Card-Growth-Plan-INR-I.pdf" target="_blank" rel="noopener noreferrer">WATI’s Growth rate card</a> lists ₹1.0357 per India marketing message and ₹0.1495 per utility message, 20% and 30% above Meta. It does publish those numbers, and its Business card is cheaper at 12% over Meta on marketing.</p>
+<p><strong>Watch-outs:</strong> the seat line, not the plan line, decides the bill. Growth stops at 3 users; Pro and Business include 5, then charge ₹1,299 and ₹2,199 a month per extra user, so a seven-person desk on Pro is ₹8,397 a month before a message is sent. Facebook Business verification help is offered only to Business annual customers. Advanced ecommerce identity and COD paths usually need more API mapping than a Shopify-native app. <a href="/compare/wati">TopEdge vs WATI</a>.</p>
 
 <h3>7. Bitespeed</h3>
 <p><strong>Best for:</strong> omnichannel AI marketing and support, if you are willing to buy before you can compare.</p>
@@ -3507,7 +3507,7 @@ export const blogPosts: BlogPost[] = [
 <p>Ask for a screen recording on a real COD order, and insist on seeing the Shopify order screen afterwards with the tag on it. Demos that cut away before that step do so because the write-back does not exist.</p>
 <h3>Best for marketing</h3>
 <p>TopEdge AI comes first on economics: 0% markup Meta pass-through broadcasts combined with Audience CRM and behavioural segmentation, so the list you send to is built from real store behaviour rather than a flat export. Broadcast tools like <a href="https://apps.shopify.com/getgabs-whatsapp-chatbot-api">Getgabs</a>, AiSensy, Interakt and WATI all play here with different packaging.</p>
-<p><strong>Marketing is the category where per-message margin decides the bill,</strong> because volume is the entire point of the exercise. Meta charges ₹0.8631 per delivered India marketing template. AiSensy publishes ₹0.145 for Indian service messages against Meta’s ₹0.1150, about 26% on top; WATI lists conversations at standard rates, meaning pass-through; BiteSpeed publishes nothing. On a 50,000-send festive week a 26% spread is over ₹11,000, in the week you were trying to grow.</p>
+<p><strong>Marketing is the category where per-message margin decides the bill,</strong> because volume is the entire point of the exercise. Meta charges ₹0.8631 per delivered India marketing template. Read on 7 November 2026, AiSensy publishes ₹1.09, about 26% on top; WATI’s Growth rate card ₹1.0357, 20% on top; Interakt Growth ₹0.958, 11% on top; BiteSpeed publishes nothing. On a 50,000-send festive week, AiSensy’s spread is ₹11,345 and WATI Growth’s ₹8,630, in the week you were trying to grow.</p>
 <p><strong>Segmentation quality is the other half, and it is worth more than it sounds.</strong> A broadcast to everyone at ₹0.8631 a head is expensive and trains people to mute you. A broadcast to the 15% who bought this category before costs a seventh as much and converts several times better. The question for a vendor is where the segment comes from: a CSV you maintain by hand, or live Shopify behaviour.</p>
 <p>Check frequency caps and opt-out handling in every one. Blocks and reports feed the Meta quality rating that governs your order confirmations, not just your campaigns.</p>
 <h3>Best for AI automation</h3>
@@ -3516,7 +3516,7 @@ export const blogPosts: BlogPost[] = [
 <p><strong>Grounding matters more than the model.</strong> An assistant reading live catalogue and order data can say whether the medium is in stock and where order 4192 is. One that is not will answer both anyway, fluently and wrongly, and you will either honour the invention or argue with a customer holding a screenshot. When a vendor demos AI, ask to see the data source rather than the chat window.</p>
 <h3>Best for shared inbox / support</h3>
 <p>TopEdge AI includes a native multi-agent shared inbox with full Shopify order context, customer timeline and automated routing inside the same suite, so support does not sit in a second tool with a second bill. DelightChat-class tools and other full platforms also claim assignment and takeover, and for a support-first team they may well be the better product.</p>
-<p><strong>Where they diverge is cost shape, not features.</strong> Dedicated helpdesks bill by what support consumes: WATI charges ₹1,299 per extra user per month on Pro and ₹2,199 on Business, so a four-person desk on Pro is ₹9,696 before a message is sent. DelightChat meters at $10 per extra 100 tickets and $10 per extra 1,000 contacts, plus $25 a month for each additional WhatsApp number. Both are normal helpdesk pricing. Both mean your bill rises as your recovery journeys succeed, because successful recovery deliberately produces replies and replies are tickets.</p>
+<p><strong>Where they diverge is cost shape, not features.</strong> Dedicated helpdesks bill by what support consumes: WATI Pro includes 5 users, then charges ₹1,299 per extra user a month (₹2,199 on Business), so a seven-person desk on Pro is ₹8,397 before a message is sent. DelightChat meters at $10 per extra 100 tickets and $10 per extra 1,000 contacts, plus $25 a month for each additional WhatsApp number. Both are normal helpdesk pricing. Both mean your bill rises as your recovery journeys succeed, because successful recovery deliberately produces replies and replies are tickets.</p>
 <p><strong>Demo the order panel specifically.</strong> Confirm the live order sits beside the thread with its status, line items and payment method, not just a customer name. Payment method is the one people forget to check and the one that changes the answer, because a COD buyer asking “when will it arrive” may also be deciding whether to accept the parcel.</p>
 <h3>Best for D2C brands</h3>
 <p>Especially India D2C: COD, Meta hygiene, INR forecasting, and identity across phones. That is where full automation platforms usually beat chat-only apps.</p>

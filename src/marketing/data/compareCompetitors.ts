@@ -127,8 +127,8 @@ export const COMPARE_COMPETITORS: Record<string, CompareCompetitor> = {
       competitor,
     })),
     matrixNote:
-      'Capability claims reflect TopEdge product positioning vs publicly described WATI platform patterns. Confirm live plan limits and fees on wati.io before purchase.',
-    researchAsOf: 'Sep 2026',
+      'Prices and per-message rates read off wati.io/pricing and WATI’s INR rate cards (dated 1 Oct 2026) on 7 Nov 2026. Meta’s India card is ₹0.8631 per marketing and ₹0.1150 per utility message. Where WATI is better: a wider inbox (WhatsApp, calling, Instagram, Facebook, TikTok, webchat and RCS) with 5 users on Pro, which suits a multi-agent support desk; TopEdge is a Shopify app for WhatsApp and email only. Other capability rows reflect TopEdge product positioning. Confirm live plan limits and fees on wati.io before purchase.',
+    researchAsOf: 'Nov 2026',
     related: [
       { label: 'WATI alternative guide', href: '/blog/wati-alternative-shopify-india' },
       { label: 'All comparisons', href: '/compare' },
@@ -199,8 +199,8 @@ export const COMPARE_COMPETITORS: Record<string, CompareCompetitor> = {
       competitor,
     })),
     matrixNote:
-      'Read off interakt.shop/pricing on 21 Oct 2026: Starter ₹999/mo (Instagram only), Growth ₹2,799/mo and Advanced ₹3,799/mo for WhatsApp plus Instagram, Sales CRM ₹2,499/mo for 5 agents then ₹499 per extra agent. WhatsApp AI Agents is a ₹3,000 add-on on Growth and Advanced with 100 free AI messages a month, then ₹0.50 per AI message. Remaining capability rows reflect TopEdge product positioning vs publicly described Interakt plan patterns. Confirm live App vs India website tiers and Meta fees on interakt.shop before purchase.',
-    researchAsOf: 'Oct 2026',
+      'Read off interakt.shop/pricing on 7 Nov 2026, monthly billing plus taxes: Starter ₹999 (Instagram only), Growth ₹2,799 and Advanced ₹3,799 for WhatsApp plus Instagram. Growth lists ₹0.958 per India marketing and ₹0.150 per utility message, against Meta’s ₹0.8631 and ₹0.1150; only Enterprise is listed with no markup. WhatsApp AI Agents is a ₹3,000 add-on on Growth and Advanced. Where Interakt is better: Instagram DM and comment automation, unlimited agent logins on every plan, and the backing of Jio Haptik Technologies, named in its site footer. Remaining capability rows reflect TopEdge product positioning. Confirm live App vs India website tiers on interakt.shop before purchase.',
+    researchAsOf: 'Nov 2026',
     related: [
       { label: 'Interakt alternative guide', href: '/blog/interakt-alternative-shopify-india' },
       { label: 'WATI vs Interakt vs AiSensy', href: '/compare/topedge-vs-wati-vs-interakt-vs-aisensy' },

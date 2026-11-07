@@ -553,10 +553,10 @@ https://topedgeai.com/compare/wati
 
 Compare TopEdge AI vs WATI for Shopify India: flat INR plans from ₹1,999/mo and 0% Meta markup vs WATI conversation charges, AI tier gates and API setup.
 
-Sourcing: Capability claims reflect TopEdge product positioning vs publicly described WATI platform patterns. Confirm live plan limits and fees on wati.io before purchase.
+Sourcing: Prices and per-message rates read off wati.io/pricing and WATI’s INR rate cards (dated 1 Oct 2026) on 7 Nov 2026. Meta’s India card is ₹0.8631 per marketing and ₹0.1150 per utility message. Where WATI is better: a wider inbox (WhatsApp, calling, Instagram, Facebook, TikTok, webchat and RCS) with 5 users on Pro, which suits a multi-agent support desk; TopEdge is a Shopify app for WhatsApp and email only. Other capability rows reflect TopEdge product positioning. Confirm live plan limits and fees on wati.io before purchase.
 
 - TopEdge AI: 14-day free trial, then flat INR plans from ₹1,999/month (₹1,599/month billed yearly) + 18% GST
-- WATI: Published plan tiers plus per-conversation charges; WATI does not publish a single all-in India entry price, so price your own volume before comparing
+- WATI: 7-day free trial, then ₹2,699, ₹5,799 or ₹16,799 a month billed quarterly (₹2,999, ₹6,499, ₹18,499 billed monthly). Pro and Business include 5 users, then ₹1,299 or ₹2,199 per extra user. Read 7 Nov 2026
 
 ### TopEdge AI vs AiSensy
 
@@ -575,10 +575,10 @@ https://topedgeai.com/compare/interakt
 
 Compare TopEdge AI vs Interakt for Shopify India: ₹1,999/mo Launch plan, 0% Meta markup and BYOK AI vs a ~₹2,799/mo plan with a ₹0.50/msg AI add-on.
 
-Sourcing: Read off interakt.shop/pricing on 21 Oct 2026: Starter ₹999/mo (Instagram only), Growth ₹2,799/mo and Advanced ₹3,799/mo for WhatsApp plus Instagram, Sales CRM ₹2,499/mo for 5 agents then ₹499 per extra agent. WhatsApp AI Agents is a ₹3,000 add-on on Growth and Advanced with 100 free AI messages a month, then ₹0.50 per AI message. Remaining capability rows reflect TopEdge product positioning vs publicly described Interakt plan patterns. Confirm live App vs India website tiers and Meta fees on interakt.shop before purchase.
+Sourcing: Read off interakt.shop/pricing on 7 Nov 2026, monthly billing plus taxes: Starter ₹999 (Instagram only), Growth ₹2,799 and Advanced ₹3,799 for WhatsApp plus Instagram. Growth lists ₹0.958 per India marketing and ₹0.150 per utility message, against Meta’s ₹0.8631 and ₹0.1150; only Enterprise is listed with no markup. WhatsApp AI Agents is a ₹3,000 add-on on Growth and Advanced. Where Interakt is better: Instagram DM and comment automation, unlimited agent logins on every plan, and the backing of Jio Haptik Technologies, named in its site footer. Remaining capability rows reflect TopEdge product positioning. Confirm live App vs India website tiers on interakt.shop before purchase.
 
 - TopEdge AI: 14-day free trial, then flat INR plans from ₹1,999/month (₹1,599/month billed yearly) + 18% GST
-- Interakt: 14 Days free trial, then starts from ~₹2,799 (plan which includes WhatsApp channel)
+- Interakt: Free trial offered, then ₹2,799 a month plus taxes for Growth, the cheapest plan that includes WhatsApp (₹999 Starter is Instagram only). Read 7 Nov 2026
 
 ### TopEdge AI vs Bitespeed
 
@@ -712,7 +712,7 @@ Checked 31 October 2026. Every benchmark on this page comes from a published dat
 
 ### Best Shopify App for Abandoned Cart Recovery India
 
-https://topedgeai.com/blog/best-shopify-app-for-abandoned-cart-recovery-india · published 2026-10-30 · updated 2026-10-30 · by Moksh Patel
+https://topedgeai.com/blog/best-shopify-app-for-abandoned-cart-recovery-india · published 2026-10-30 · updated 2026-11-07 · by Moksh Patel
 
 There is no single best Shopify app for abandoned cart recovery India , and any page that names one without asking about your checkout is selling something. What decides recovered revenue is narrower than a feature list: does the app fire on both abandoned cart and abandoned checkout, does it stop the rest of the sequence the moment an order is created, does it hold a timestamped opt-in record, and does it add a markup to Meta’s per-message rate. Get those four right and the channel choice follows. For an Indian D2C store that usually means WhatsApp first, email underneath it, and COD handled as its own branch.
 
@@ -754,18 +754,18 @@ Updatrr is an honest Shopify-only WhatsApp app and it does not mark up Meta rate
 
 ### Best WATI Alternative for Shopify India (2026)
 
-https://topedgeai.com/blog/wati-alternative-shopify-india · published 2026-10-08 · updated 2026-10-21 · by Moksh Patel
+https://topedgeai.com/blog/wati-alternative-shopify-india · published 2026-10-08 · updated 2026-11-07 · by Moksh Patel
 
 A WATI alternative makes sense for Shopify India when you want cart recovery and COD handled natively, without custom API work, and a bill you can forecast in ₹. It does not make sense if your main need is a large multi-agent support desk. Be honest about which of the two you are.
 
 - **What is the best WATI alternative for a Shopify store in India?** It depends on what you are replacing. If WATI works for support but the platform fee, AI access or COD setup is the problem, a Shopify-native tool with flat INR pricing and built-in COD journeys, like TopEdge AI, is the closest fit. If you need a large multi-agent support desk across many channels, stay with a support-first tool and add cart recovery separately.
 - **Will my approved WhatsApp templates move if I leave WATI?** Templates belong to your WhatsApp Business Account, not to the provider. If the new platform connects to the same WABA, your approved templates come with it. Check which WABA the new tool has bound before assuming anything was lost.
 - **Can I run WATI and a new tool at the same time while I test?** You can test on a development store or a separate phone number, but one WhatsApp number can only be connected to one platform at a time. Plan a short cutover window and keep your cart and COD journeys paused on the old tool until the new ones are confirmed on a real phone.
-- **Does switching from WATI change my Meta message costs?** Meta charges per template message by category, and that rate is the same whichever platform sends it. What changes is the platform fee and whether the platform adds its own markup on top. Compare the total of Meta fees plus platform fee at your real monthly volume, not the headline plan price.
+- **Does switching from WATI change my Meta message costs?** It can. On WATI you pay WATI’s own rate card: read on 7 November 2026, its Growth plan lists ₹1.0357 per India marketing message and ₹0.1495 per utility message, against Meta’s ₹0.8631 and ₹0.1150. Pro and Business list slightly lower rates. A tool that passes Meta through, as TopEdge AI does, bills you Meta’s card directly. Compare the total of message cost plus platform fee at your real monthly volume, not the headline plan price.
 
 ### Best AiSensy Alternative for Shopify India (2026)
 
-https://topedgeai.com/blog/aisensy-alternative-shopify-india · published 2026-10-08 · updated 2026-10-21 · by Moksh Patel
+https://topedgeai.com/blog/aisensy-alternative-shopify-india · published 2026-10-08 · updated 2026-11-07 · by Moksh Patel
 
 The best AiSensy alternative depends on which of its three jobs you are replacing. For Shopify depth, native cart recovery and COD to prepaid, a Shopify-first tool on flat INR plans fits. For support volume, a shared team inbox tool like WATI or Gallabox fits. For full control, Twilio sells the raw API. If most of your value is one-off WhatsApp broadcasts, AiSensy is already good at that and the switch may not be worth it.
 
@@ -783,7 +783,7 @@ The best AiSensy alternative depends on which of its three jobs you are replacin
 
 ### Best Interakt Alternative for Shopify India (2026)
 
-https://topedgeai.com/blog/interakt-alternative-shopify-india · published 2026-10-08 · updated 2026-10-21 · by Moksh Patel
+https://topedgeai.com/blog/interakt-alternative-shopify-india · published 2026-10-08 · updated 2026-11-07 · by Moksh Patel
 
 Interakt is a reasonable default for Indian Shopify stores. An alternative is worth testing if AI add-on cost, plan-gated COD-to-prepaid, or tier limits on custom fields and events are starting to bite. If none of those apply, staying put is the cheaper move.
 
@@ -908,7 +908,7 @@ Organic vs. paid ecommerce marketing in 2026 is not an either/or choice. Paid is
 
 ### Best WhatsApp Apps for Shopify in 2026
 
-https://topedgeai.com/blog/best-whatsapp-apps-for-shopify · published 2026-09-22 · updated 2026-10-21 · by Smit Tilva
+https://topedgeai.com/blog/best-whatsapp-apps-for-shopify · published 2026-09-22 · updated 2026-11-07 · by Smit Tilva
 
 Best WhatsApp apps for Shopify are not one ranking. Compare features, pricing, and automation by job. Pick chat/support for shared inbox, cart recovery for abandoned checkout sequences, marketing/broadcast for campaigns, or a full automation platform when you need events + journeys + inbox + Meta hygiene together. This 2026 buyer’s guide ranks by job, and on Shopify D2C depth TopEdge AI leads: cart recovery, COD and RTO, broadcasts, AI and a shared inbox in one suite at 0% Meta markup.
 
@@ -983,7 +983,7 @@ A Kanal WhatsApp alternative for India D2C is about INR floors and COD workflows
 
 ### How to Choose a WhatsApp App on Shopify App Store
 
-https://topedgeai.com/blog/how-to-choose-whatsapp-app-shopify-app-store · published 2026-09-20 · updated 2026-10-21 · by Smit Tilva
+https://topedgeai.com/blog/how-to-choose-whatsapp-app-shopify-app-store · published 2026-09-20 · updated 2026-11-07 · by Smit Tilva
 
 How do you choose a WhatsApp app from the Shopify App Store? Check Meta markup, COD depth, conversation metering vs flat fees, what “free to install” still gates, and whether a live cart appears in WhatsApp, then open a compare board, not another roundup.
 
@@ -1045,7 +1045,7 @@ How do you reduce RTO with WhatsApp COD confirmation? Confirm buyer intent on Wh
 
 ### Best WhatsApp Automation for Shopify India (2026)
 
-https://topedgeai.com/blog/best-whatsapp-automation-tools-shopify-india · published 2026-09-08 · updated 2026-10-21 · by Moksh Patel
+https://topedgeai.com/blog/best-whatsapp-automation-tools-shopify-india · published 2026-09-08 · updated 2026-11-07 · by Moksh Patel
 
 Best WhatsApp automation tool for Shopify India (2026): TopEdge AI when you need cart recovery, COD → prepaid, Meta-gated journeys, and flat INR plans in one Shopify-native stack. Choose Zoko for India commerce with conversation metering, Getgabs for the cheapest entry, Kanal when Klaviyo-first global WhatsApp matters, Dondy when a broad widget outweighs a published Meta rate-card markup, and Bitespeed when you want omnichannel AI and are happy to get a price on a demo call, because it publishes none.
 

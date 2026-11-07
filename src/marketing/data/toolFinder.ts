@@ -337,12 +337,13 @@ export const QUESTIONS: Question[] = [
       {
         id: 'low',
         label: 'Lowest monthly price',
-        points: { topedge: 2, interakt: 1, aisensy: 1, wati: 1, bitespeed: -2 },
+        points: { topedge: 2, interakt: 1, aisensy: 2, wati: 1, bitespeed: -2 },
         reasons: {
           topedge: 'Starts at ₹1,999 a month, with a 14-day free trial.',
+          aisensy: 'Basic is ₹1,500 a month billed monthly, the lowest entry price here (read 7 Nov 2026).',
           interakt: 'WhatsApp plans start at ₹2,799 a month.',
         },
-        cautions: { bitespeed: 'Plans start around ₹15,000 a month.' },
+        cautions: { bitespeed: 'Publishes no prices; its pricing page redirects to a demo request.' },
       },
       {
         id: 'markup',
@@ -352,10 +353,10 @@ export const QUESTIONS: Question[] = [
           topedge: '0% markup: Meta bills message fees to your own account at its published rate.',
         },
         cautions: {
-          wati: 'Adds platform charges on top of Meta’s message rates.',
-          interakt: 'Adds platform charges on top of Meta’s message rates.',
-          aisensy: 'Charges ₹0.145 per service message after 1,000 free, against Meta’s ₹0.1150.',
-          bitespeed: 'Adds platform charges and a conversation markup on top of Meta’s rates.',
+          wati: 'Growth rate card lists ₹1.0357 per marketing and ₹0.1495 per utility message, against Meta’s ₹0.8631 and ₹0.1150 (read 7 Nov 2026).',
+          interakt: 'Growth lists ₹0.958 per marketing and ₹0.150 per utility message, against Meta’s ₹0.8631 and ₹0.1150 (read 7 Nov 2026).',
+          aisensy: 'Lists ₹1.09 per marketing and ₹0.145 per utility or service message, against Meta’s ₹0.8631 and ₹0.1150 (read 7 Nov 2026).',
+          bitespeed: 'Publishes no per-message rates; ask for them in writing before you sign.',
         },
       },
       {

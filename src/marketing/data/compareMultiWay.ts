@@ -15,12 +15,12 @@ const THREE_WAY_FAQS = [
   {
     question: 'How does TopEdge differ from WATI and AiSensy on Meta markup?',
     answer:
-      'TopEdge publishes 0% platform markup on Meta pass-through, billed by Meta to your own Business Account, so you pay ₹0.8631 per marketing template and ₹0.1150 per utility template at Meta’s India card. AiSensy publishes ₹0.145 per service message after 1,000 free a month, which is 26.1% above Meta’s ₹0.1150. WATI and AiSensy are compared on the same board for template markup, AI cost and plan limits. Open the pairwise pages for the sourced numbers.',
+      'TopEdge publishes 0% platform markup: Meta bills your own Business Account, so you pay ₹0.8631 per marketing template and ₹0.1150 per utility template at Meta’s India card. WATI’s own Growth-plan rate card, dated 1 October 2026, lists ₹1.0357 and ₹0.1495 for the same two messages, which is 20% and 30% above Meta. AiSensy lists ₹1.09 and ₹0.145, about 26% above on both. Both vendors’ figures were read off their own pricing pages on 7 November 2026. Open the pairwise pages for the full rows.',
   },
   {
     question: 'Who should pick TopEdge in this three-way shortlist?',
     answer:
-      'Shopify India teams that want flat INR plans, native COD to prepaid, unified identity and unlimited flows without a Meta markup layer.',
+      'Shopify India teams that want flat INR plans, native COD to prepaid on Growth and Scale, unified identity and unlimited flows without a Meta markup layer.',
   },
   {
     question: 'When do WATI or AiSensy still fit?',
@@ -38,7 +38,7 @@ const FOUR_WAY_FAQS = [
   {
     question: 'Which of WATI, Interakt and AiSensy charges a markup over Meta?',
     answer:
-      'All three apply platform charges on top of Meta conversation rates on the plans compared here, which is the row at the top of the board. Two publish an exact figure. AiSensy charges ₹0.145 per service message after 1,000 free a month, against Meta’s own published India rate of ₹0.1150, a 26.1% markup on that line. Interakt sells WhatsApp AI Agents as a ₹3,000 add-on with 100 free AI messages, then ₹0.50 per AI message. TopEdge passes Meta through at 0% and bills the platform separately in INR. Both competitor figures were read off their own pricing pages on 21 October 2026; read your own rate card in Meta Business Manager before you take any vendor number, including ours.',
+      'All three publish India per-message rates above Meta’s own card on the plans compared here. On a marketing template, where Meta charges ₹0.8631: WATI Growth ₹1.0357 (20% more), Interakt Growth ₹0.958 (11% more), AiSensy ₹1.09 (26% more). On a utility template, where Meta charges ₹0.1150: WATI Growth ₹0.1495, Interakt Growth ₹0.150 and AiSensy ₹0.145, all 26% to 30% more. WATI’s Pro and Business cards and Interakt’s Advanced plan are a little cheaper, and Interakt lists no markup only on Enterprise. TopEdge passes Meta through at 0% and bills the platform separately in INR. All three were read off their own pricing pages on 7 November 2026; read your own rate card in Meta Business Manager before you take any vendor number, including ours.',
   },
   {
     question: 'What does Meta itself charge in India in 2026?',

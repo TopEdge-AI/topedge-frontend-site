@@ -139,8 +139,8 @@ export const SOURCES = {
     label: 'AiSensy’s published pricing page',
     publisher: 'AiSensy',
     claim:
-      'From 1 October 2026 every WhatsApp Business number gets 1,000 free service messages a month, after which AiSensy charges service messages at ₹0.145 each for Indian users. That sits above Meta’s own ₹0.1150 India service and utility rate.',
-    verified: '2026-10-21',
+      'Per-message rates for Indian users, read 7 November 2026: marketing ₹1.09, utility ₹0.145, authentication ₹0.145, service ₹0.145 after 1,000 free service messages a month (from 1 October 2026). Against Meta’s India card of ₹0.8631 marketing and ₹0.1150 utility, that is about 26% above Meta on both lines. Plans billed monthly: Basic ₹1,500, Pro ₹3,200, Premium ₹9,100, Unlimited ₹45,000. Extra agents ₹750 each a month; AI Agent ₹1,350 a month for 1,000 AI messages; Chatbot Flows ₹2,500 a month.',
+    verified: '2026-11-07',
   },
   interaktPricing: {
     id: 'interaktPricing',
@@ -148,8 +148,8 @@ export const SOURCES = {
     label: 'Interakt’s published pricing page',
     publisher: 'Interakt',
     claim:
-      'Starter ₹999/month (Instagram only), Growth ₹2,799/month and Advanced ₹3,799/month for WhatsApp plus Instagram, Enterprise on request. Sales CRM ₹2,499/month for 5 agents then ₹499 per extra agent. WhatsApp AI Agents sold as a ₹3,000 add-on on Growth and Advanced, with 100 free AI messages a month and ₹0.50 per AI message beyond 100.',
-    verified: '2026-10-21',
+      'Read 7 November 2026, monthly billing, plus taxes: Starter ₹999 (Instagram only), Growth ₹2,799 and Advanced ₹3,799 for WhatsApp plus Instagram, Enterprise on request. Per-message rates for Indian numbers on Growth: marketing ₹0.958, authentication ₹0.128, utility ₹0.150, service ₹0.128 after 1,000 free service messages. On Advanced: ₹0.949, ₹0.127, ₹0.140, ₹0.127. Only Enterprise is listed with “No Markup Charges”. Against Meta’s ₹0.8631 marketing and ₹0.1150 utility, Growth is about 11% above Meta on marketing and 30% on utility. WhatsApp AI Agents are a ₹3,000 add-on on Growth and Advanced; read 21 October 2026, that add-on included 100 free AI messages a month and ₹0.50 per AI message beyond. Sales CRM ₹2,499/month for 5 agents then ₹499 per extra agent, read 21 October 2026.',
+    verified: '2026-11-07',
   },
   updatrrPricing: {
     id: 'updatrrPricing',
@@ -265,8 +265,17 @@ export const SOURCES = {
     label: 'WATI’s published pricing page',
     publisher: 'WATI',
     claim:
-      'India plans: Growth ₹2,699/month, Pro ₹5,799/month with additional users at ₹1,299/user/month, Business ₹16,799/month with additional users at ₹2,199/user/month. Conversation charges are listed as “Standard rates”, that is Meta’s own rate passed through, on every tier. Astra AI agents and advanced inbox features are gated to the upper tiers. Facebook Business verification is offered only to Business annual plan customers.',
-    verified: '2026-11-02',
+      'Read 7 November 2026. India plans billed quarterly: Growth ₹2,699/month (3 users, no additional users), Pro ₹5,799/month (5 users included, additional users ₹1,299/user/month), Business ₹16,799/month (5 users included, additional users ₹2,199/user/month). Billed monthly: ₹2,999, ₹6,499 and ₹18,499. Every plan card says “Additional charges apply for template messages”. Broadcasts are listed at “Standard rates” on Growth and Pro, and volume discounts on Business, but the per-message prices are on WATI’s own rate cards (see watiRateCard), which sit above Meta. A Shopify Integration add-on is listed at USD 4.99/month. Growth includes 1 Astra AI agent, 2,000 Wati AI credits and 1,000 free automation triggers a month; Pro 2 agents, 5,000 credits and 2,000 triggers; Business unlimited agents, 20,000 credits and 5,000 triggers. Advanced inbox features (teams, intelligent routing) start on Pro. Correction: an earlier reading of this entry (2 Nov 2026) took “Standard rates” to mean Meta’s rate passed through; WATI’s rate cards show that is wrong.',
+    verified: '2026-11-07',
+  },
+  watiRateCard: {
+    id: 'watiRateCard',
+    url: 'https://cdn.clare.ai/pricing/Wati-Pricing-Rate-Card-Growth-Plan-INR-I.pdf',
+    label: 'WATI’s INR rate card for the Growth plan',
+    publisher: 'WATI',
+    claim:
+      'Rate card dated 1 October 2026, linked from wati.io/pricing as “View Rate Card”, read 7 November 2026. India (+91) per message: Growth plan marketing ₹1.0357, utility ₹0.1495, authentication ₹0.1495, service ₹0.1380. The Pro plan card lists ₹0.9926, ₹0.1495, ₹0.1495, ₹0.1380 and the Business plan card ₹0.9667, ₹0.1380, ₹0.1380, ₹0.1231. Against Meta’s ₹0.8631 marketing and ₹0.1150 utility, Growth is 20% above Meta on marketing and 30% on utility; Pro 15% and 30%; Business 12% and 20%. States that every business gets 1,000 free service messages a month.',
+    verified: '2026-11-07',
   },
   zokoPricing: {
     id: 'zokoPricing',

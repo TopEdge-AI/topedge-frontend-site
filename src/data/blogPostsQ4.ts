@@ -25,7 +25,7 @@ const WATI_FAQS: Faq[] = [
   {
     question: 'Does switching from WATI change my Meta message costs?',
     answer:
-      'Meta charges per template message by category, and that rate is the same whichever platform sends it. What changes is the platform fee and whether the platform adds its own markup on top. Compare the total of Meta fees plus platform fee at your real monthly volume, not the headline plan price.',
+      'It can. On WATI you pay WATI’s own rate card: read on 7 November 2026, its Growth plan lists ₹1.0357 per India marketing message and ₹0.1495 per utility message, against Meta’s ₹0.8631 and ₹0.1150. Pro and Business list slightly lower rates. A tool that passes Meta through, as TopEdge AI does, bills you Meta’s card directly. Compare the total of message cost plus platform fee at your real monthly volume, not the headline plan price.',
   },
 ];
 
@@ -329,12 +329,12 @@ export const blogPostsQ4: BlogPost[] = [
       'Looking for a WATI alternative for Shopify India? What to keep, what to fix (markup, AI access, COD), and how to test a switch in one afternoon.',
     summary: [
       'Compare a worked month, 500 Shopify orders and 10,000 marketing messages, rather than the plan price.',
-      'WATI applies platform usage charges above Meta’s base rates and publishes no single all-in India entry price.',
+      'WATI’s own Growth rate card, dated 1 October 2026, lists India messages 20% (marketing) to 30% (utility) above Meta’s rates. At 10,000 marketing messages that is ₹1,726 a month on top of Meta.',
       'Keep what works, the broadcasts and templates, and fix the three things that usually bite: markup, AI access and COD branching.',
     ],
     slug: 'wati-alternative-shopify-india',
     date: '2026-10-08',
-    updated: '2026-10-21',
+    updated: '2026-11-07',
     readTime: '9 min',
     category: 'Comparisons',
     author: 'Moksh Patel',
@@ -370,13 +370,13 @@ export const blogPostsQ4: BlogPost[] = [
     content: `
 ${verdict(`<p><strong>A WATI alternative makes sense for Shopify India when</strong> you want cart recovery and COD handled natively, without custom API work, and a bill you can forecast in ₹. It does not make sense if your main need is a large multi-agent support desk. Be honest about which of the two you are.</p>`)}
 
-<p>WATI is a well-known WhatsApp platform with a strong shared inbox. Many Shopify brands start there. This guide is for the point where support is fine but commerce automation feels bolted on.</p>
+<p>WATI is a well-known WhatsApp platform with a strong shared inbox. Many Shopify brands start there. This guide is for the point where support is fine but commerce automation feels bolted on. For WATI beside nine other platforms on one table, see <a href="/compare/alternatives">entry price and Meta markup for 10 tools</a>.</p>
 
 <h2>Why do Shopify India teams look for a WATI alternative?</h2>
 <p>The reasons we hear are practical, not ideological.</p>
 <ul>
-<li><strong>Platform charges above Meta rates.</strong> Meta bills template messages by category. A platform can add its own charge on top.</li>
-<li><strong>AI access on higher plans.</strong> Our September 2026 research found AI capabilities tied to a higher tier.</li>
+<li><strong>Per-message rates above Meta.</strong> <a href="https://cdn.clare.ai/pricing/Wati-Pricing-Rate-Card-Growth-Plan-INR-I.pdf" target="_blank" rel="noopener noreferrer">WATI’s Growth-plan rate card</a> lists ₹1.0357 per India marketing message against Meta’s ₹0.8631, and ₹0.1495 per utility message against ₹0.1150. Read on 7 November 2026, that is 20% and 30% on top.</li>
+<li><strong>AI is metered in credits.</strong> Read on 7 November 2026, WATI Growth includes 1 Astra AI agent and 2,000 Wati AI credits a month, and Pro 2 agents and 5,000 credits. More credits are a paid add-on, so a busy catalogue bot can outgrow the plan.</li>
 <li><strong>COD to prepaid needs developer work.</strong> Mapping payment links to templates through webhooks is a project, not a setting.</li>
 <li><strong>One phone number, one profile.</strong> The same buyer with two numbers appears as two contacts.</li>
 </ul>
@@ -394,8 +394,8 @@ ${verdict(`<p><strong>A WATI alternative makes sense for Shopify India when</str
 </tbody>
 </table>
 <p>Add one more requirement that the table cannot express, because it is about cost shape rather than capability: <strong>a pricing model that does not charge you per person.</strong></p>
-<p>This is the specific reason WATI stops fitting an Indian D2C store as it grows. <a href="https://www.wati.io/pricing/" target="_blank" rel="noopener noreferrer">WATI’s India pricing</a> runs Growth at ₹2,699, Pro at ₹5,799 and Business at ₹16,799, with additional users at ₹1,299 each on Pro and ₹2,199 each on Business. A four-person desk on Pro is ₹9,696 a month before a single message is sent. That is a perfectly normal helpdesk price and a poor match for a store whose shape is one or two people answering alongside a lot of automated sending.</p>
-<p><strong>Be fair about what WATI gets right, though.</strong> It lists conversations at standard rates on every tier, meaning Meta’s own pricing passed through rather than resold. On the markup question, which is the one that compounds, WATI is clean. The reason to leave is seat economics and Shopify depth, not the per-message line, and a replacement that marks up Meta rates would be a step backwards even at a lower subscription.</p>
+<p>This is one reason WATI stops fitting an Indian D2C store as it grows. <a href="https://www.wati.io/pricing/" target="_blank" rel="noopener noreferrer">WATI’s India pricing</a>, read on 7 November 2026, runs Growth at ₹2,699, Pro at ₹5,799 and Business at ₹16,799 a month billed quarterly (₹2,999, ₹6,499 and ₹18,499 billed monthly). Growth includes 3 users and cannot add more, so a fourth person forces Pro. Pro and Business include 5 users, then charge ₹1,299 and ₹2,199 per extra user, so a seven-person desk on Pro is ₹8,397 a month before a single message is sent. That is a normal helpdesk price and a poor match for a store whose shape is one or two people answering alongside a lot of automated sending.</p>
+<p><strong>Be fair about what WATI gets right, though.</strong> It publishes its per-message rate card for every plan, which plenty of vendors do not, and the bigger plans are cheaper per message: Business lists ₹0.9667 per marketing message, 12% over Meta rather than 20%. Its inbox also covers more channels than ours, including calling, Instagram, Facebook, TikTok and webchat. An earlier version of this guide said WATI passes Meta’s rates through at no markup. WATI’s pricing page says “Standard rates”, but its own rate cards show the rates above, so that line was wrong and we have corrected it.</p>
 
 <h2>A worked month: 500 Shopify orders and 10,000 messages</h2>
 <p>"Platform charges above Meta rates" means nothing until you put volume behind it. Here is one realistic month on Meta's October 2026 India rate card, priced at 0% markup so you can see which half of the bill is actually yours to negotiate.</p>
@@ -415,9 +415,25 @@ ${verdict(`<p><strong>A WATI alternative makes sense for Shopify India when</str
 <p>Two conclusions fall out of that table, and both should change how you shop.</p>
 <ul>
 <li><strong>Meta is 69% of the bill.</strong> A subscription difference of a thousand rupees is noise next to it. A percentage markup on the Meta line is not, because it scales with your best month rather than your worst.</li>
-<li><strong>Your marketing sends are 96% of the Meta side.</strong> Order updates and COD confirmations together cost ₹402.50. The discipline that saves real money is list hygiene and frequency capping, not switching vendors over the utility rate.</li>
+<li><strong>Your marketing sends are 96% of the Meta side.</strong> Order and COD confirmations cost ₹172.50, and service replies add ₹230. The discipline that saves real money is list hygiene and frequency capping, not switching vendors over the utility rate.</li>
 </ul>
-<p>So the question to put to WATI, or to us, is narrow: what do you add per message on top of Meta, and what do you charge per service reply past Meta's free thousand. Everything else is a subscription you can compare on a page. Full rate card in the <a href="/blog/whatsapp-business-api-pricing-india">India WhatsApp API pricing guide</a>.</p>
+<h3>The same month on WATI Growth</h3>
+<p>Now price the identical volume on <a href="https://cdn.clare.ai/pricing/Wati-Pricing-Rate-Card-Growth-Plan-INR-I.pdf" target="_blank" rel="noopener noreferrer">WATI’s Growth-plan rate card</a>, read on 7 November 2026. WATI Growth mostly fits this store: 15,000 broadcasts a month and 3 users. It includes 1,000 free automation triggers a month, which cart and COD flows on 500 orders may outgrow, and extra triggers are a paid add-on.</p>
+<div class="mkt-blog-table-wrap">
+<table>
+<thead><tr><th>Line</th><th>Volume</th><th>WATI Growth rate</th><th>Cost</th></tr></thead>
+<tbody>
+<tr><td>Marketing templates</td><td>10,000</td><td>₹1.0357</td><td>₹10,357</td></tr>
+<tr><td>Utility templates</td><td>1,500</td><td>₹0.1495</td><td>₹224.25</td></tr>
+<tr><td>Service replies past the free 1,000</td><td>2,000</td><td>₹0.1380</td><td>₹276</td></tr>
+<tr><td><strong>Message total</strong></td><td></td><td></td><td><strong>₹10,857.25</strong></td></tr>
+<tr><td>WATI Growth subscription, billed monthly</td><td></td><td></td><td>₹2,999</td></tr>
+<tr><td><strong>All in</strong></td><td></td><td></td><td><strong>₹13,856.25</strong></td></tr>
+</tbody>
+</table>
+</div>
+<p>That is ₹1,823.75 more on messages than Meta’s own card, and ₹823.75 more all in than TopEdge Growth in the table above, before WATI’s Shopify Integration add-on, listed at USD 4.99 a month. Billed quarterly, WATI Growth drops to ₹2,699 and the all-in gap narrows to ₹523.75. So the gap is real but modest at this volume, and it grows with every marketing send. WATI’s page does not say whether its prices include GST, so check that before you compare like for like.</p>
+<p>The question to put to WATI, or to us, stays narrow: what do you charge per message by category, and what per service reply past Meta's free thousand. Everything else is a subscription you can compare on a page. Full rate card in the <a href="/blog/whatsapp-business-api-pricing-india">India WhatsApp API pricing guide</a>.</p>
 
 <h2>Where does TopEdge AI fit?</h2>
 <p>TopEdge AI is built around Shopify D2C in India: flat INR plans from ₹1,999 a month plus GST (₹1,599 billed yearly), Meta messages billed at Meta rates with no TopEdge markup, <a href="/features/journeys">cart recovery and COD journeys</a>, <a href="/features">Live Chat with order context</a> and unified customer identity across numbers. We are not trying to out-support a dedicated helpdesk product.</p>
@@ -439,7 +455,7 @@ ${faqHtml(WATI_FAQS)}
 <p>Also compare: <a href="/blog/aisensy-alternative-shopify-india">AiSensy alternative</a>, <a href="/blog/interakt-alternative-shopify-india">Interakt alternative</a>, <a href="/blog/bitespeed-alternative-shopify-india">Bitespeed alternative</a>, <a href="/blog/zoko-alternative-shopify-india">Zoko alternative</a>, <a href="/blog/getgabs-alternative-shopify-whatsapp">Getgabs alternative</a>, <a href="/blog/kanal-whatsapp-alternative-shopify">Kanal alternative</a> and <a href="/blog/dondy-alternative-shopify-india">Dondy alternative</a> and <a href="/blog/updatrr-alternative-shopify-india">Updatrr alternative</a>.</p>
 
 <p>Related: <a href="/blog/best-whatsapp-automation-tools-shopify-india">best WhatsApp automation tools for Shopify India</a>, <a href="/blog/how-to-choose-whatsapp-app-shopify-app-store">how to choose a WhatsApp app</a>, <a href="/compare/alternatives">all alternatives</a>.</p>
-<p class="mkt-blog-footnote">WATI plan and feature statements reflect public listings and our September 2026 research. Confirm on wati.io before you buy. Per-message rates, categories and volume tiers: <a href="https://developers.facebook.com/docs/whatsapp/pricing/" target="_blank" rel="noopener noreferrer">Meta’s WhatsApp Business Platform pricing documentation</a>. Template categories, review and the reasons templates get rejected: <a href="https://developers.facebook.com/docs/whatsapp/message-templates/guidelines/" target="_blank" rel="noopener noreferrer">Meta’s message template guidelines</a>.</p>
+<p class="mkt-blog-footnote">WATI prices, user limits and per-message rates were read off wati.io/pricing and WATI’s INR rate cards (dated 1 October 2026) on 7 November 2026. Other WATI feature statements reflect public listings and our September 2026 research. Confirm on wati.io before you buy. Per-message rates, categories and volume tiers: <a href="https://developers.facebook.com/docs/whatsapp/pricing/" target="_blank" rel="noopener noreferrer">Meta’s WhatsApp Business Platform pricing documentation</a>. Template categories, review and the reasons templates get rejected: <a href="https://developers.facebook.com/docs/whatsapp/message-templates/guidelines/" target="_blank" rel="noopener noreferrer">Meta’s message template guidelines</a>.</p>
 `,
   },
   {
@@ -455,7 +471,7 @@ ${faqHtml(WATI_FAQS)}
     ],
     slug: 'aisensy-alternative-shopify-india',
     date: '2026-10-08',
-    updated: '2026-10-21',
+    updated: '2026-11-07',
     readTime: '14 min',
     category: 'Comparisons',
     author: 'Moksh Patel',
@@ -520,9 +536,9 @@ ${faqHtml(WATI_FAQS)}
 <table>
 <thead><tr><th>Platform</th><th>Built around</th><th>Markup on Meta rates</th><th>Shopify depth</th><th>Best for</th></tr></thead>
 <tbody>
-<tr><td><strong>AiSensy</strong></td><td>WhatsApp broadcasts and chatbot flows</td><td>Yes, on the service line: <strong>₹0.145</strong> vs Meta’s <strong>₹0.1150</strong> (published)</td><td>App plus API work for order-aware journeys</td><td>Campaign-led businesses with a big list</td></tr>
-<tr><td><strong>Interakt</strong></td><td>WhatsApp plus a sales CRM</td><td>No published per-message markup; AI billed separately at <strong>₹0.50</strong> per AI message after 100 free (published)</td><td>Shopify templates, COD to prepaid on higher tiers</td><td>Stores that want CRM and WhatsApp in one place</td></tr>
-<tr><td><strong>WATI</strong></td><td>Shared team inbox and agents</td><td>Check the live pricing page; conversation based historically</td><td>Shopify app, support-first rather than journey-first</td><td>Support desks with several agents</td></tr>
+<tr><td><strong>AiSensy</strong></td><td>WhatsApp broadcasts and chatbot flows</td><td>Yes: <strong>₹1.09</strong> marketing and <strong>₹0.145</strong> utility vs Meta’s <strong>₹0.8631</strong> and <strong>₹0.1150</strong>, about 26% (published, read 7 Nov 2026)</td><td>App plus API work for order-aware journeys</td><td>Campaign-led businesses with a big list</td></tr>
+<tr><td><strong>Interakt</strong></td><td>WhatsApp plus a sales CRM</td><td>Yes on Growth: <strong>₹0.958</strong> marketing and <strong>₹0.150</strong> utility (published, read 7 Nov 2026). AI billed separately at <strong>₹0.50</strong> per AI message after 100 free</td><td>Shopify templates, COD to prepaid on higher tiers</td><td>Stores that want CRM and WhatsApp in one place</td></tr>
+<tr><td><strong>WATI</strong></td><td>Shared team inbox and agents</td><td>Yes: <a href="https://cdn.clare.ai/pricing/Wati-Pricing-Rate-Card-Growth-Plan-INR-I.pdf" target="_blank" rel="noopener noreferrer">its Growth rate card</a> lists <strong>₹1.0357</strong> marketing and <strong>₹0.1495</strong> utility on Growth (read 7 Nov 2026)</td><td>Shopify app, support-first rather than journey-first</td><td>Support desks with several agents</td></tr>
 <tr><td><strong>Gallabox</strong></td><td>WhatsApp CRM, drag and drop chatbot builder</td><td>Check the live pricing page</td><td>Integrations and lead routing, not cart journeys</td><td>Sales teams that qualify leads over WhatsApp</td></tr>
 <tr><td><strong>Twilio</strong></td><td>The raw API, billed per message in USD</td><td>Platform fee per message on top of Meta charges</td><td>None out of the box; you build it</td><td>Teams with developers who want full control</td></tr>
 <tr><td><strong>TopEdge AI</strong></td><td>Shopify order lifecycle on WhatsApp</td><td>None. Meta rates passed through at <strong>₹0.1150</strong> and <strong>₹0.8631</strong></td><td>Native cart recovery, COD confirmation, COD to prepaid, warranty</td><td>Indian D2C stores on Shopify</td></tr>
@@ -692,7 +708,7 @@ ${faqHtml(AISENSY_FAQS)}
     ],
     slug: 'interakt-alternative-shopify-india',
     date: '2026-10-08',
-    updated: '2026-10-21',
+    updated: '2026-11-07',
     readTime: '8 min',
     category: 'Comparisons',
     author: 'Moksh Patel',
@@ -754,7 +770,7 @@ ${verdict(`<p><strong>Interakt is a reasonable default for Indian Shopify stores
 </tbody>
 </table>
 </div>
-<p>Meta’s own fees are identical on both sides, because Meta charges the same ₹0.8631 marketing and ₹0.1150 utility rate whichever platform sends the message. Since 1 October 2026 add ₹0.1150 per service reply past the first 1,000 a month on either platform, which the <a href="/blog/whatsapp-business-api-pricing-india">India pricing guide</a> breaks down.</p>
+<p>The message line is not identical either. Meta’s India card is ₹0.8631 per marketing and ₹0.1150 per utility message, and TopEdge bills you at that card. <a href="https://www.interakt.shop/pricing/" target="_blank" rel="noopener noreferrer">Interakt’s pricing page</a>, read on 7 November 2026, lists its own India rates: ₹0.958 and ₹0.150 on Growth, ₹0.949 and ₹0.140 on Advanced, with only Enterprise listed as having no markup. Service replies past the first 1,000 a month cost ₹0.1150 on Meta’s card and ₹0.128 on Interakt Growth. The <a href="/blog/whatsapp-business-api-pricing-india">India pricing guide</a> breaks the Meta side down.</p>
 <p>Two honest caveats on the right-hand column. Bring-your-own-key means you hold an OpenAI or Gemini account and watch that bill yourself, which is one more thing to set up and one more thing that can surprise you. And the ₹0.10 to ₹0.30 range is an estimate of model token cost per reply, not a published price: short catalogue answers land near the bottom, long multi-turn conversations near the top. What is not an estimate is the ₹0.50 and the ₹3,000, both of which Interakt publishes.</p>
 
 <h2>Side by side</h2>
@@ -1370,7 +1386,7 @@ ${faqHtml(COD_PREPAID_FAQS)}
     ],
     slug: 'best-shopify-app-for-abandoned-cart-recovery-india',
     date: '2026-10-30',
-    updated: '2026-10-30',
+    updated: '2026-11-07',
     readTime: '18 min',
     category: 'Comparisons',
     author: 'Moksh Patel',
@@ -1561,11 +1577,11 @@ ${faqHtml(COD_PREPAID_FAQS)}
 <thead><tr><th>App</th><th>Entry plan with WhatsApp</th><th>Currency</th><th>Markup on Meta rates</th></tr></thead>
 <tbody>
 <tr><td><strong>TopEdge AI</strong></td><td>₹1,999/mo</td><td>INR</td><td>None stated, 0%</td></tr>
-<tr><td><strong>WATI</strong></td><td>₹2,699/mo</td><td>INR</td><td>Standard rates, passed through</td></tr>
-<tr><td><strong>Interakt</strong></td><td>₹2,799/mo (₹999 plan is Instagram only)</td><td>INR</td><td>Not stated on the plan table</td></tr>
+<tr><td><strong>WATI</strong></td><td>₹2,699/mo billed quarterly, ₹2,999 monthly</td><td>INR</td><td>Own rate card: ₹1.0357 marketing, ₹0.1495 utility, 20% and 30% above Meta</td></tr>
+<tr><td><strong>Interakt</strong></td><td>₹2,799/mo (₹999 plan is Instagram only)</td><td>INR</td><td>Growth: ₹0.958 marketing, ₹0.150 utility, 11% and 30% above Meta; none on Enterprise</td></tr>
 <tr><td><strong>Updatrr</strong></td><td>$29.99/mo</td><td>USD</td><td>States no markup</td></tr>
 <tr><td><strong>Zoko</strong></td><td>$49.99/mo</td><td>USD</td><td>Not stated; add-ons metered per resolution or at 3% of order value</td></tr>
-<tr><td><strong>AiSensy</strong></td><td>Published per-message</td><td>INR</td><td><strong>₹0.145</strong> per India service message against Meta’s ₹0.1150, about 26% above</td></tr>
+<tr><td><strong>AiSensy</strong></td><td>₹1,500/mo billed monthly</td><td>INR</td><td><strong>₹1.09</strong> marketing and <strong>₹0.145</strong> utility or service, about 26% above Meta</td></tr>
 <tr><td><strong>BiteSpeed</strong></td><td>Not published</td><td>Not published</td><td>Not published</td></tr>
 </tbody>
 </table>
@@ -1672,8 +1688,8 @@ ${faqHtml(COD_PREPAID_FAQS)}
 <h2>7. WATI</h2>
 <p><strong>Best for:</strong> stores whose real pain is support volume, with recovery as a genuine second priority.</p>
 <p>WATI is a shared-inbox product first and an automation product second, and it is honest about that. If your problem is that four people need to answer the same WhatsApp number without colliding, WATI is a better answer than a recovery tool with a chat tab bolted on. If your problem is that carts are leaking, you are buying a helpdesk to solve a journeys problem.</p>
-<p><strong>What it costs, and where the cost actually lands.</strong> <a href="https://www.wati.io/pricing/" target="_blank" rel="noopener noreferrer">WATI's India pricing</a> runs Growth at ₹2,699 a month, Pro at ₹5,799 and Business at ₹16,799. The number that catches people is the per-seat line on top: additional users are ₹1,299 a month each on Pro and ₹2,199 a month each on Business. A four-person support desk on Pro is ₹5,799 plus three extra seats at ₹1,299, so ₹9,696 a month before a single message is sent. That is not a criticism, it is what a seat-priced helpdesk costs, but it is the right number to compare against a flat plan rather than the ₹5,799 headline.</p>
-<p><strong>Credit where it is due on the Meta line.</strong> WATI lists conversation charges as standard rates on every tier, meaning Meta's own pricing passed through rather than marked up. On the fourth test in this guide, WATI passes. Note separately that Facebook Business verification support is offered only to Business annual plan customers, which is worth knowing if you are not yet verified and were counting on help with it.</p>
+<p><strong>What it costs, and where the cost actually lands.</strong> <a href="https://www.wati.io/pricing/" target="_blank" rel="noopener noreferrer">WATI's India pricing</a>, read on 7 November 2026, runs Growth at ₹2,699 a month, Pro at ₹5,799 and Business at ₹16,799, billed quarterly. Growth stops at 3 users, so a fourth person forces Pro. Pro and Business include 5 users, then charge ₹1,299 and ₹2,199 a month per extra user, so a seven-person desk on Pro is ₹8,397 a month before a single message is sent. That is not a criticism, it is what a seat-priced helpdesk costs, but it is the right number to compare against a flat plan.</p>
+<p><strong>The Meta line, checked.</strong> WATI's pricing page says "Standard rates", but <a href="https://cdn.clare.ai/pricing/Wati-Pricing-Rate-Card-Growth-Plan-INR-I.pdf" target="_blank" rel="noopener noreferrer">WATI’s Growth rate card</a>, dated 1 October 2026, lists ₹1.0357 per India marketing message and ₹0.1495 per utility message, 20% and 30% above Meta's ₹0.8631 and ₹0.1150. On the fourth test in this guide, WATI does not pass, though it does publish the numbers, and its Business card is cheaper at 12% over Meta on marketing. An earlier version of this guide said WATI passed this test; its rate cards show otherwise. Note separately that Facebook Business verification support is offered only to Business annual plan customers, which is worth knowing if you are not yet verified and were counting on help with it.</p>
 <p><strong>Where it is not the answer:</strong> seat pricing punishes the Indian D2C shape, which is usually one or two people answering and a lot of automated sending. Detail: <a href="/blog/wati-alternative-shopify-india">WATI alternatives for Shopify India</a>.</p>
 
 <h2>8. Zoko</h2>

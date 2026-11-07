@@ -50,9 +50,9 @@ export const LEGACY_COMPARE_FEATURE_MATRIX: CompareFeatureRow[] = [
     name: 'WhatsApp Template Message Markup %',
     description: 'What you pay above Meta’s base WhatsApp conversation rates.',
     topedge: '0% markup, billing direct on Meta',
-    wati: 'Platform usage charges applied above Meta base rates',
-    aisensy: 'Platform usage charges applied above Meta base rates',
-    interakt: 'Shopify App sub + Meta conversation charges (FB actuals)',
+    wati: 'Own India rate card, dated 1 Oct 2026: Growth ₹1.0357 per marketing and ₹0.1495 per utility message, 20% and 30% above Meta’s ₹0.8631 and ₹0.1150. Pro and Business cards are lower. Read 7 Nov 2026',
+    aisensy: 'Published India rates: ₹1.09 marketing, ₹0.145 utility, authentication and service (after 1,000 free service), about 26% above Meta’s ₹0.8631 and ₹0.1150. Read 7 Nov 2026',
+    interakt: 'Published India rates on Growth: ₹0.958 marketing, ₹0.150 utility, about 11% and 30% above Meta’s ₹0.8631 and ₹0.1150. Advanced ₹0.949 and ₹0.140. Only Enterprise lists no markup. Read 7 Nov 2026',
     bitespeed: 'Meta conversation fees on top of USD plan, verify live',
   },
   {
@@ -61,7 +61,7 @@ export const LEGACY_COMPARE_FEATURE_MATRIX: CompareFeatureRow[] = [
     description: 'How AI replies are powered and what they cost per conversation.',
     topedge:
       'BYOK & built-in RAG pipeline, optimised token usage est. ~₹0.10-₹0.30 per AI message',
-    wati: 'Requires Astra / higher-tier plan',
+    wati: '1 Astra AI agent and 2,000 Wati AI credits a month on Growth, 2 agents and 5,000 credits on Pro; more credits are a paid add-on. Read 7 Nov 2026',
     aisensy: 'Per-message AI add-on fee structure',
     interakt: 'AI Agents on Enterprise App (~$99) or ~$74.99 add-on on Growth/Advanced',
     bitespeed: 'AI chatbot & AI marketing agent ~$100/mo add-ons each (1k then ~$0.05)',
@@ -178,7 +178,7 @@ export const LEGACY_COMPARE_FEATURE_MATRIX: CompareFeatureRow[] = [
     name: 'Chatflow Execution Cap',
     description: 'How many chatbot / flow runs you get before hitting plan limits.',
     topedge: 'Unlimited flow execution on all plans',
-    wati: 'Capped by monthly plan trigger limits',
+    wati: '1,000, 2,000 or 5,000 free automation triggers a month on Growth, Pro and Business, then a paid add-on. Read 7 Nov 2026',
     aisensy: 'Capped by purchased credit / subscription tiers',
     interakt: 'Plan / API rate limits (e.g. ~600 msg/min on Advanced App)',
     bitespeed: 'Conversation & AI conversation meters on plans / add-ons',
@@ -194,15 +194,15 @@ export const THREE_WAY_FEATURE_MATRIX: ThreeWayFeatureRow[] = [
     id: 'template-markup',
     name: 'WhatsApp API Template Message Markup %',
     topedge: '0% WhatsApp markup (Direct Meta API Billing)',
-    wati: 'Platform usage charges applied above Meta base rates',
-    aisensy: 'Platform usage charges applied above Meta base rates',
+    wati: 'Own India rate card, dated 1 Oct 2026: Growth ₹1.0357 per marketing and ₹0.1495 per utility message, 20% and 30% above Meta’s ₹0.8631 and ₹0.1150. Pro and Business cards are lower. Read 7 Nov 2026',
+    aisensy: 'Published India rates: ₹1.09 marketing, ₹0.145 utility, authentication and service (after 1,000 free service), about 26% above Meta’s ₹0.8631 and ₹0.1150. Read 7 Nov 2026',
   },
   {
     id: 'ai-llm',
     name: 'Generative AI Chat messages',
     topedge:
       'Bring Your Own Key (BYOK) & Built-in RAG Pipeline (Optimized token usage est. ~₹0.10-₹0.30 per AI response, depends on selected AI Model)',
-    wati: 'Requires Astra / Higher Tier Plan for AI capabilities',
+    wati: '1 Astra AI agent and 2,000 Wati AI credits a month on Growth, 2 agents and 5,000 credits on Pro; more credits are a paid add-on. Read 7 Nov 2026',
     aisensy: 'Per-message AI add-on fee structure',
   },
   {
@@ -297,7 +297,7 @@ export const THREE_WAY_FEATURE_MATRIX: ThreeWayFeatureRow[] = [
     id: 'flow-cap',
     name: 'Chatbot Session / Flow Execution Cap',
     topedge: 'Unlimited flow execution on all plans',
-    wati: 'Capped by monthly plan trigger limits',
+    wati: '1,000, 2,000 or 5,000 free automation triggers a month on Growth, Pro and Business, then a paid add-on. Read 7 Nov 2026',
     aisensy: 'Capped by purchased credit / subscription tiers',
   },
 ];
@@ -312,20 +312,20 @@ export const WATI_PAIRWISE_MATRIX: PairwiseFeatureRow[] = [
     topedge:
       '14-day free trial, then flat INR plans from ₹1,999/month (₹1,599/month billed yearly) + 18% GST',
     competitor:
-      'Published plan tiers plus per-conversation charges; WATI does not publish a single all-in India entry price, so price your own volume before comparing',
+      '7-day free trial, then ₹2,699, ₹5,799 or ₹16,799 a month billed quarterly (₹2,999, ₹6,499, ₹18,499 billed monthly). Pro and Business include 5 users, then ₹1,299 or ₹2,199 per extra user. Read 7 Nov 2026',
   },
   {
     id: 'template-markup',
     label: 'WhatsApp API Template Message Markup %',
     topedge: '0% WhatsApp API markup (Direct Meta API Billing on your own Meta Business Account)',
-    competitor: 'Platform usage charges applied above Meta base rates',
+    competitor: 'Own India rate card, dated 1 Oct 2026: Growth ₹1.0357 per marketing and ₹0.1495 per utility message, 20% and 30% above Meta’s ₹0.8631 and ₹0.1150. Pro and Business cards are lower. Read 7 Nov 2026',
   },
   {
     id: 'ai-llm',
     label: 'AI messages cost',
     topedge:
       'Bring Your Own Key (BYOK) with native RAG pipeline (Lower token cost est.~₹0.10-₹0.30 per AI message, depends on AI model)',
-    competitor: 'Requires Astra / Higher Tier Plan for AI capabilities',
+    competitor: '1 Astra AI agent and 2,000 Wati AI credits a month on Growth, 2 agents and 5,000 credits on Pro; more credits are a paid add-on. Read 7 Nov 2026',
   },
   {
     id: 'store-pixel',
@@ -408,7 +408,7 @@ export const WATI_PAIRWISE_MATRIX: PairwiseFeatureRow[] = [
     id: 'flow-cap',
     label: 'Automation Session Execution Limits',
     topedge: 'Unlimited workflow execution across all plans',
-    competitor: 'Capped by monthly trigger.',
+    competitor: '1,000, 2,000 or 5,000 free automation triggers a month on Growth, Pro and Business, then a paid add-on. Read 7 Nov 2026',
   },
 ];
 
@@ -431,7 +431,7 @@ export const AISENSY_PAIRWISE_MATRIX: PairwiseFeatureRow[] = [
       'Direct Meta conversation rate card vs. platform per-message delivery markups for WhatsApp marketing campaigns.',
     topedge:
       '0% WhatsApp API platform markup (Direct Meta API Billing on your Meta Business Account)',
-    competitor: 'Platform usage charges applied on top of base Meta conversation rates',
+    competitor: 'Published India rates: ₹1.09 marketing, ₹0.145 utility, authentication and service (after 1,000 free service), about 26% above Meta’s ₹0.8631 and ₹0.1150. Read 7 Nov 2026',
   },
   {
     id: 'ai-llm',
@@ -1214,7 +1214,7 @@ export const INTERAKT_PAIRWISE_MATRIX: PairwiseFeatureRow[] = [
     topedge:
       '14-day free trial, then flat INR plans from ₹1,999/month (₹1,599/month billed yearly) + 18% GST',
     competitor:
-      '14 Days free trial, then starts from ~₹2,799 (plan which includes WhatsApp channel)',
+      'Free trial offered, then ₹2,799 a month plus taxes for Growth, the cheapest plan that includes WhatsApp (₹999 Starter is Instagram only). Read 7 Nov 2026',
   },
   {
     id: 'template-markup',
@@ -1223,7 +1223,7 @@ export const INTERAKT_PAIRWISE_MATRIX: PairwiseFeatureRow[] = [
       'Direct Meta conversation rate card vs. platform per-message delivery markups for WhatsApp marketing campaigns.',
     topedge:
       '0% WhatsApp API platform markup (Direct Meta API Billing on your Meta Business Account)',
-    competitor: 'Platform usage charges applied on top of base Meta conversation rates',
+    competitor: 'Published India rates on Growth: ₹0.958 marketing, ₹0.150 utility, about 11% and 30% above Meta’s ₹0.8631 and ₹0.1150. Advanced ₹0.949 and ₹0.140. Only Enterprise lists no markup. Read 7 Nov 2026',
   },
   {
     id: 'ai-llm',
@@ -1231,7 +1231,7 @@ export const INTERAKT_PAIRWISE_MATRIX: PairwiseFeatureRow[] = [
     topedge:
       'Bring Your Own Key (BYOK) architecture with built-in RAG pipeline (est. ~₹0.10-₹0.30 per AI response, depending on selected AI model)',
     competitor:
-      'Paid add-on module for WhatsApp AI Agents , per-message AI usage cost ₹0.50/ message applied after a small allowance of 100 free messages',
+      'WhatsApp AI Agents is a ₹3,000 a month add-on on Growth and Advanced (read 7 Nov 2026), with 100 free AI messages, then ₹0.50 per AI message (read 21 Oct 2026)',
   },
   {
     id: 'store-pixel',

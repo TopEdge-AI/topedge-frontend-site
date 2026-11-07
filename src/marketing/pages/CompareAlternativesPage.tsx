@@ -88,7 +88,7 @@ export default function CompareAlternativesPage() {
           per-competitor research already in compareFeatureMatrix.ts, so the
           table adds no claim the child page does not already carry and date.
 
-          The currency column earns its place: four of these ten bill an Indian
+          The currency column earns its place: five of these ten bill an Indian
           merchant in USD or EUR, so the real monthly cost moves with the
           exchange rate. That is a cost nobody puts in a pricing table.
         */}
@@ -237,10 +237,12 @@ export default function CompareAlternativesPage() {
                 <p className="mkt-steps__body">
                   Meta charges every platform the same India rates: ₹0.8631 per delivered
                   marketing message, ₹0.1150 per utility or authentication message. Some platforms
-                  pass those straight through, some add a per-conversation or per-template fee on
-                  top. At 20,000 utility messages a month, a markup of ₹0.05 a message is ₹1,000,
-                  which can exceed the difference between two plan tiers. Ask for the all-in cost
-                  at your real volume, not the plan price.
+                  pass those straight through, some publish their own higher rate card. Read on
+                  7 November 2026, WATI Growth lists ₹0.1495 per India utility message, Interakt
+                  Growth ₹0.150 and AiSensy ₹0.145. At 20,000 utility messages a month that is
+                  ₹600 to ₹700 more than Meta&rsquo;s own ₹2,300, which can exceed the difference
+                  between two plan tiers. Ask for the all-in cost at your real volume, not the
+                  plan price.
                 </p>
               </div>
             </li>
@@ -251,10 +253,10 @@ export default function CompareAlternativesPage() {
               <div>
                 <h3 className="mkt-steps__title">What currency are you actually billed in?</h3>
                 <p className="mkt-steps__body">
-                  Four of the ten platforms above bill in USD or EUR. A $49.99 plan is not a fixed
-                  Indian cost: it moves with the exchange rate, your card may add a foreign
-                  transaction fee, and you cannot claim input credit the way you can on a rupee
-                  invoice with GST on it. If you budget in rupees, price the plan in rupees.
+                  Five of the ten platforms above bill in USD or EUR: Zoko, Getgabs, Kanal, Dondy
+                  and Updatrr. A $49.99 plan is not a fixed Indian cost: it moves with the
+                  exchange rate, and your card may add a foreign transaction fee. If you budget
+                  in rupees, price the plan in rupees.
                 </p>
               </div>
             </li>
