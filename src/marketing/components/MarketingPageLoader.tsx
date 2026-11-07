@@ -1,7 +1,17 @@
+import { getPrerenderMainSnapshot } from '../lib/prerenderSnapshot';
+
 /**
- * Route/Suspense fallback — full-viewport brand loader only (no footer).
+ * Route/Suspense fallback.
+ *
+ * On the first load of a prerendered URL it shows that URL's own prerendered
+ * body (see getPrerenderMainSnapshot), so the page does not blank out and redraw
+ * while the route chunk loads. Everywhere else, the full-viewport brand loader.
  */
 export default function MarketingPageLoader() {
+  const snapshot = getPrerenderMainSnapshot();
+  if (snapshot) {
+    return <div style={{ display: 'contents' }} dangerouslySetInnerHTML={{ __html: snapshot }} />;
+  }
   return (
     <div
       className="mkt-page-loader flex w-full items-center justify-center bg-white"

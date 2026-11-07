@@ -22,11 +22,22 @@ import { fileURLToPath } from 'node:url';
 import { getSitemapPaths } from './marketing-urls.mjs';
 
 /**
- * Opt-in, off by default. See the long note above buildGeneratedBlock().
- * Set ENABLE_SLASH_301=1 only after `node scripts/check-trailing-slash.mjs`
- * exits 0 against the environment you are about to deploy to.
+ * DISABLED for good on 7 Nov 2026. With ENABLE_SLASH_301=1 the explicit
+ * `/<path>/  /<path>  301!` rules took the whole site down a second time:
+ * Netlify's redirect engine matches `from` paths with or without the trailing
+ * slash, so each rule also fired on `/<path>` and redirected it to itself.
+ * scripts/check-trailing-slash.mjs returned GO beforehand because it only
+ * tests Pretty URLs, so it cannot clear this rule shape. Any slash fix must be
+ * done another way (for example an edge function that 301s only when the
+ * request path really ends in `/`), tested on a deploy preview first.
  */
-const SLASH_301 = process.env.ENABLE_SLASH_301 === '1';
+if (process.env.ENABLE_SLASH_301 === '1') {
+  throw new Error(
+    'ENABLE_SLASH_301 is refused: `/x/ /x 301!` loops on Netlify because redirect ' +
+      'matching ignores the trailing slash. It took production down on 7 Nov 2026.',
+  );
+}
+const SLASH_301 = false;
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const redirectsPath = path.resolve(__dirname, '../public/_redirects');

@@ -1,3 +1,5 @@
+import { afterLoadIdle } from './afterLoadIdle';
+
 /**
  * PostHog for the marketing site: per-person journeys and automatic click capture.
  *
@@ -7,7 +9,7 @@
  * every one of them is worth looking at individually.
  *
  * Inert unless VITE_POSTHOG_KEY is set at build time, so nothing loads and nothing is
- * sent until the owner supplies one. Loaded after the window `load` event, never on
+ * sent until the owner supplies one. Loaded when the browser is idle after `load`, never on
  * the critical path, and skipped during prerender.
  *
  * THE CROSS-SUBDOMAIN BIT IS THE POINT
@@ -87,8 +89,7 @@ function load(): void {
 export function initPostHog(): void {
   if (!live() || started) return;
   started = true;
-  if (document.readyState === 'complete') load();
-  else window.addEventListener('load', load, { once: true });
+  afterLoadIdle(load);
 }
 
 /** A named event, for the handful of moments worth more than an autocaptured click. */
@@ -105,7 +106,7 @@ export function phCapture(event: string, props: Record<string, unknown> = {}): v
  * A named event fired on a click that navigates away (signup, App Store). PostHog
  * batches events and flushes every few seconds, so a normal capture would usually
  * die with the page; sendBeacon outlives it. Lost only if the visitor clicks
- * before PostHog has loaded (it loads after the window `load` event).
+ * before PostHog has loaded (it loads when idle after `load`, at most ~4 s).
  */
 export function phCaptureBeforeUnload(event: string, props: Record<string, unknown> = {}): void {
   if (!live()) return;

@@ -200,11 +200,9 @@ export default function About() {
         */}
         <section className="mkt-about__entity" aria-label="About TopEdge AI">
           <p className="mkt-about__entity-para">
-            TopEdge AI is a WhatsApp automation platform for Shopify D2C brands in India, based in
-            Ahmedabad, Gujarat. It helps Indian ecommerce stores automate abandoned cart recovery,
-            COD confirmations, Live Chat, and Meta WhatsApp campaigns through a native Shopify and
-            Meta WhatsApp Cloud API integration. TopEdge AI is not related to edge-AI hardware or
-            other products with a similar name.
+            TopEdge AI is a Shopify app for Indian D2C brands that automates abandoned cart recovery, COD confirmation and order updates over WhatsApp and email. It is built in Ahmedabad, Gujarat, and connects to Shopify and to
+            Meta&rsquo;s WhatsApp Cloud API on your own Business Account. TopEdge AI is not related
+            to edge-AI hardware or other products with a similar name.
           </p>
         </section>
 

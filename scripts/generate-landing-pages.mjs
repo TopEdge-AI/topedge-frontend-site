@@ -233,7 +233,7 @@ const PROOF_VARIANTS = {
     p: 'Email gets opened tomorrow, if at all. A WhatsApp reminder while the cart is still warm reaches the buyer in the thread they already have open.',
     stat: '70.22%',
     statLabel: 'average online cart abandonment',
-    src: 'Baymard Institute, average across 50 published studies, baymard.com/lists/cart-abandonment-rate, updated September 2025.',
+    src: 'Baymard Institute, average across 50 published studies, baymard.com/blog/cart-abandonment-rate, updated September 2025.',
   },
   switch: {
     h: 'You are paying a markup on messages Meta already bills you for',

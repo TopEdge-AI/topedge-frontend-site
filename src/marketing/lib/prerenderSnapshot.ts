@@ -18,6 +18,8 @@
 
 let snapshotHtml = '';
 let snapshotPath = '';
+/** Just the page body inside Layout's role="main" wrapper (no navbar). */
+let mainSnapshotHtml = '';
 
 const normalise = (p: string): string => (p.length > 1 ? p.replace(/\/+$/, '') : p);
 
@@ -30,6 +32,32 @@ export function capturePrerenderSnapshot(root: HTMLElement | null): void {
   if (!/<h1[\s>]/i.test(html)) return;
   snapshotHtml = html;
   snapshotPath = normalise(window.location.pathname);
+  const main = root.querySelector('[role="main"]');
+  if (main) {
+    const copy = main.cloneNode(true) as HTMLElement;
+    // react-hot-toast's container is rendered by React next to the fallback;
+    // drop the prerendered copy so the page never holds two.
+    copy.querySelectorAll('[style*="z-index: 9999"]').forEach((n) => n.remove());
+    mainSnapshotHtml = copy.innerHTML;
+  }
+}
+
+/**
+ * The prerendered body of the page now on screen, for the Suspense fallback on
+ * the first render.
+ *
+ * Why. createRoot clears the prerendered DOM, the route is a React.lazy chunk,
+ * so the first render suspends and used to show a 150 KB loader GIF until the
+ * chunk arrived, then drew the page a second time. Measured 7 Nov 2026 with
+ * Playwright: the page painted at ~0.3 s from HTML, was removed, and the redraw
+ * cost CLS 0.158 on /features/cod-confirmation (Lighthouse, production). Showing
+ * the same markup as the fallback keeps the layout still while JS loads. After a
+ * client-side navigation the path differs, so this returns '' and the normal
+ * loader shows.
+ */
+export function getPrerenderMainSnapshot(): string {
+  if (!mainSnapshotHtml) return '';
+  return normalise(window.location.pathname) === snapshotPath ? mainSnapshotHtml : '';
 }
 
 /**

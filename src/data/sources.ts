@@ -81,7 +81,7 @@ export const SOURCES = {
   },
   baymardCart: {
     id: 'baymardCart',
-    url: 'https://baymard.com/lists/cart-abandonment-rate',
+    url: 'https://baymard.com/blog/cart-abandonment-rate',
     label: 'Baymard Institute’s cart abandonment list',
     publisher: 'Baymard Institute',
     claim:
@@ -564,7 +564,7 @@ export const SOURCES = {
   },
   shopifyPostPurchase: {
     id: 'shopifyPostPurchase',
-    url: 'https://shopify.dev/docs/apps/build/checkout/product-offers/post-purchase',
+    url: 'https://shopify.dev/docs/apps/build/checkout/product-offers',
     label: 'Shopify’s post-purchase product offers documentation',
     publisher: 'Shopify',
     claim:
@@ -600,7 +600,7 @@ export const SOURCES = {
   },
   shopifyCheckoutExtensions: {
     id: 'shopifyCheckoutExtensions',
-    url: 'https://shopify.dev/docs/api/checkout-extensions/index',
+    url: 'https://shopify.dev/docs/api/checkout-extensions',
     label: 'Shopify’s checkout extensions overview',
     publisher: 'Shopify',
     claim:
@@ -618,12 +618,12 @@ export const SOURCES = {
   },
   littledataAov: {
     id: 'littledataAov',
-    url: 'https://www.littledata.io/average/average-order-value-(all-stores)',
+    url: 'https://www.littledata.io/average-website-performance',
     label: 'Littledata’s Shopify average order value benchmark',
     publisher: 'Littledata',
     claim:
-      'Median average order value $110, "From 436 Shopify stores that use Littledata to send their data to Google Analytics 4", covering the 90 days from 27 July to 24 October 2026, figures generated 28 October 2026. Regenerated on a rolling 90-day window, so the figure moves.',
-    verified: '2026-11-03',
+      'Median average order value $110, "From 436 Shopify stores that use Littledata to send their data to Google Analytics 4", covering the 90 days from 27 July to 24 October 2026, figures generated 28 October 2026. Regenerated on a rolling 90-day window, so the figure moves: re-read 7 November 2026 at its new URL, the 4 November refresh shows a $111 median from 438 stores for 3 August to 31 October 2026.',
+    verified: '2026-11-07',
   },
   shopifySeoOverview: {
     id: 'shopifySeoOverview',
@@ -690,7 +690,7 @@ export const SOURCES = {
   },
   googleFacetedNav: {
     id: 'googleFacetedNav',
-    url: 'https://developers.google.com/search/docs/crawling-indexing/crawling-managing-faceted-navigation',
+    url: 'https://developers.google.com/crawling/docs/faceted-navigation',
     label: 'Google Search Central on faceted navigation',
     publisher: 'Google',
     claim:
@@ -726,7 +726,7 @@ export const SOURCES = {
   },
   applePodcastsUnofficialShopify: {
     id: 'applePodcastsUnofficialShopify',
-    url: 'https://podcasts.apple.com/podcast/id918602360',
+    url: 'https://podcasts.apple.com/us/podcast/the-unofficial-shopify-podcast/id918602360',
     label: 'the Unofficial Shopify Podcast on Apple Podcasts',
     publisher: 'Apple',
     claim:
@@ -735,7 +735,7 @@ export const SOURCES = {
   },
   kaiDavisSite: {
     id: 'kaiDavisSite',
-    url: 'https://kaidavis.com/',
+    url: 'https://www.kaidavis.com/',
     label: 'Kai Davis',
     publisher: 'Kai Davis',
     claim:
@@ -744,7 +744,7 @@ export const SOURCES = {
   },
   kaiDavisCollections: {
     id: 'kaiDavisCollections',
-    url: 'https://badasscreatives.com/blog/shopify-seo-collections',
+    url: 'https://mallorywhitfield.com/blog/shopify-seo-collections',
     label: 'Kai Davis on Shopify collection pages',
     publisher: 'Badass Creatives',
     claim:
@@ -798,7 +798,7 @@ export const SOURCES = {
   },
   honestEcommerce: {
     id: 'honestEcommerce',
-    url: 'https://honestecommerce.co/podcast',
+    url: 'https://honestecommerce.com/blogs/episodes',
     label: 'the Honest Ecommerce podcast',
     publisher: 'Electric Eye',
     claim:

@@ -398,11 +398,13 @@ export function organizationJsonLd() {
       height: 1024,
     },
     image: ORG_LOGO_URL,
+    // The canonical brand sentence, word for word. Keep it identical everywhere
+    // (listings, About, llms.txt) so third parties and AI engines repeat one fact.
     description:
-      'WhatsApp automation and cart recovery platform for Shopify ecommerce brands in India.',
+      'TopEdge AI is a Shopify app for Indian D2C brands that automates abandoned cart recovery, COD confirmation and order updates over WhatsApp and email.',
     // Separates this entity from the edge-AI hardware companies that share the name.
     disambiguatingDescription:
-      'TopEdge AI is a WhatsApp automation platform for Shopify D2C brands in India, based in Ahmedabad, Gujarat. It is not related to edge-AI hardware or other products with a similar name.',
+      'TopEdge AI is a Shopify app for Indian D2C brands, built in Ahmedabad, Gujarat. It is not related to edge-AI hardware or other products with a similar name.',
     foundingDate: '2024',
     founder: [authorJsonLd('Moksh Patel'), authorJsonLd('Smit Tilva')],
     address: {

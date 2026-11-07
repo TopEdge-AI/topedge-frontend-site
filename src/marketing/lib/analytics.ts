@@ -40,6 +40,7 @@ declare global {
 }
 
 import { phCaptureBeforeUnload } from './posthog';
+import { afterLoadIdle } from './afterLoadIdle';
 
 const env = (k: string): string => String(import.meta.env[k] ?? '').trim();
 
@@ -215,6 +216,6 @@ export function initAnalytics(): void {
   if (GA_ID) window.gtag!('config', GA_ID, { send_page_view: false });
   // Builds the remarketing audience. Without this config there is no list to retarget.
   if (ADS_ID) window.gtag!('config', ADS_ID);
-  if (document.readyState === 'complete') loadScript();
-  else window.addEventListener('load', loadScript, { once: true });
+  // Calls above are queued in dataLayer; the library itself loads when idle.
+  afterLoadIdle(loadScript);
 }
