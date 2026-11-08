@@ -310,7 +310,7 @@ export const COMPARE_COMPETITORS: Record<string, CompareCompetitor> = {
       competitor,
     })),
     matrixNote:
-      'Getgabs pricing as of September 2026: getgabs.com lists Basic $15 · Plus $21 · Pro $59 (0% Meta markup claimed). Shopify App Store (apps.shopify.com/getgabs-whatsapp-chatbot-api) shows free to install, Plus $11/mo, Pro $59/mo, ~15 reviews. Figures disagree across surfaces, so confirm live before purchase.',
+      'Getgabs pricing read 8 November 2026 from India: getgabs.com lists Basic ₹699 · Plus ₹1,499 · Pro ₹4,499 a month, each labelled 0% Meta markup. Shopify App Store (apps.shopify.com/getgabs-whatsapp-chatbot-api) shows free to install, Plus ₹1,033.72/mo, Pro ₹5,544.49/mo, 15 reviews. Figures disagree across surfaces, so confirm live before purchase.',
     related: [
       { label: 'Getgabs alternatives guide', href: '/blog/getgabs-alternative-shopify-whatsapp' },
       { label: 'Alternatives index', href: '/compare/alternatives' },
@@ -382,7 +382,7 @@ export const COMPARE_COMPETITORS: Record<string, CompareCompetitor> = {
       competitor,
     })),
     matrixNote:
-      'Checked 21 Sep 2026: Shopify listing apps.shopify.com/dondy-marketing-ai shows 4.9★ / 821 reviews, Free widget, Pro $6.99, Power Automation $79.99, Elite $159.99. dondy.net/dondy-pricing also lists an Advanced $14.99 tier and the per-market rate table (India $0.01888). Surfaces disagree on agent seats (listing: 5 on Elite; site: unlimited) and on the US floor (“from $0.0158” on the listing vs North America $0.04 on the table). In rupees, that India row works out near ₹1.38 a message against Meta’s published ₹0.8631 India marketing rate (read 21 Oct 2026), so about ₹0.52 extra per send, or ₹5,179 on 10,000 marketing messages. Verify both before purchase.',
+      'Checked 8 Nov 2026: Shopify listing apps.shopify.com/dondy-marketing-ai shows Built for Shopify, 4.9★ / 835 reviews, Free widget, Pro $6.99, Power Automation $79.99 (₹7,517.01 a month to an Indian store), Elite $159.99. dondy.net/dondy-pricing also lists Advanced $14.99 and Ultimate $299 tiers and the per-market rate table (India $0.01888, 1.6× the $0.0118 on Meta’s USD rate card effective 1 Oct 2026). Surfaces disagree on agent seats (listing: 5 on Elite; site: unlimited) and on the US floor (“from $0.0158” on the listing vs North America $0.04 on the table). Dondy bills in dollars: at ₹93.92 to the dollar (ECB reference rate, 6 Nov 2026) that India row is about ₹1.77 a message against Meta’s ₹0.8631 INR rate, about ₹0.91 extra per send, or about ₹9,100 on 10,000 marketing messages. Verify both before purchase.',
     related: [
       { label: 'Dondy alternative (markup)', href: '/blog/dondy-alternative-shopify-india' },
       { label: 'Best WhatsApp tools India', href: '/blog/best-whatsapp-automation-tools-shopify-india' },

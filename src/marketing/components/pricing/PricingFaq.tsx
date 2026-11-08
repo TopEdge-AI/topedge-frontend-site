@@ -23,7 +23,7 @@ export const PRICING_FAQS = [
   },
   {
     q: 'What does 0% markup save me in rupees?',
-    a: 'It depends on your send volume, which is the point. On 10,000 marketing messages a month, Meta’s card is ₹8,631. A platform charging Dondy’s published $0.01888 India rate bills about ₹13,810 for the same sends, so ₹5,179 more. On service replies, AiSensy publishes ₹0.145 against Meta’s ₹0.1150, which is ₹3,000 extra on 100,000 replies. Our margin is in the subscription instead, so your message bill does not grow when a campaign works.',
+    a: 'It depends on your send volume, which is the point. On 10,000 marketing messages a month, Meta’s card is ₹8,631. A platform charging Dondy’s published $0.01888 India rate, billed in dollars, comes to about ₹17,733 for the same sends at the ECB’s ₹93.92 to the dollar on 6 November 2026, so about ₹9,100 more. On service replies, AiSensy publishes ₹0.145 against Meta’s ₹0.1150, which is ₹3,000 extra on 100,000 replies. Our margin is in the subscription instead, so your message bill does not grow when a campaign works.',
   },
   {
     q: 'Do I need to migrate my WhatsApp account to INR billing?',

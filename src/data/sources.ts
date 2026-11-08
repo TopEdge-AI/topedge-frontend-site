@@ -157,8 +157,8 @@ export const SOURCES = {
     label: 'Updatrr’s published pricing page',
     publisher: 'Updatrr',
     claim:
-      'Growth $29.99/month, Pro $49.99/month, Pro AI $99.99/month, all with a 7-day free trial and no card required. Updatrr states it does not add a markup on Meta’s conversation fees and that Meta bills WhatsApp conversations separately. The page publishes no per-conversation AI fee, and AI sits on the $99.99 Pro AI tier. It also says country-wise pricing is available inside the dashboard.',
-    verified: '2026-11-06',
+      'Growth $29.99/month, Pro $49.99/month, Pro AI $99.99/month, all with a 7-day free trial and no card required. Updatrr states it does not add a markup on Meta’s conversation fees and that Meta bills WhatsApp conversations separately. Pro lists a “Custom No-code Chatbot”, shown as “No-code AI Chatbot” in the plan comparison table. “AI Chatbot with Smart Human Handover”, AI voice calling and the unified WhatsApp, Instagram and Facebook inbox are on Pro AI only. Team members: 1 on Growth, 3 on Pro, 10 on Pro AI. No order limit is published on any plan, and the page publishes no per-message AI fee. It says country-wise pricing is available inside the dashboard and annual pricing is on request.',
+    verified: '2026-11-08',
   },
   littledataConversion: {
     id: 'littledataConversion',
@@ -301,8 +301,53 @@ export const SOURCES = {
     label: 'Dondy’s Shopify App Store listing',
     publisher: 'Shopify',
     claim:
-      'Dondy lists a free plan and a free trial, is rated 4.9 from 835 reviews, and the listing states the developer is based in India. Listed categories are Abandoned cart and Chat, with COD verification named among the chat features. Interface languages are English, Spanish, Italian, Portuguese (Brazil) and French.',
-    verified: '2026-11-02',
+      'Dondy carries the Built for Shopify badge, lists a free plan and a free trial, is rated 4.9 from 835 reviews, and the listing states the developer is based in India. Served to an Indian store in rupees: Pro ₹656.88, Power Automation ₹7,517.01 and Elite ₹15,034.96 a month, against $6.99, $79.99 and $159.99 list prices, which is about ₹93.97 to the dollar; Shopify bills in the store’s currency at the exchange rate on the day of each charge. Power says WhatsApp automation rates start from $0.0158 (US), Elite from $0.0126 (US), and both include 1,000 one-click messages every 30 days. COD verification is named among the chat features. Interface languages are English, Spanish, Italian, Portuguese (Brazil) and French.',
+    verified: '2026-11-08',
+  },
+  dondyPricing: {
+    id: 'dondyPricing',
+    url: 'https://www.dondy.net/dondy-pricing',
+    label: 'Dondy’s pricing page and per-market rate table',
+    publisher: 'Dondy',
+    claim:
+      'Plans in US dollars, each with a 7-day free trial: Free $0, Pro $6.99, Advanced $14.99, Power Automation $79.99, Elite $159.99 and Ultimate $299 a month, with 25% off yearly. Power says automation rates start from $0.0158 (US) and include 1,000 one-click messages every 30 days. A “WhatsApp API Pricing, Market Rate Per Message (US$)” table lists India at $0.01888, North America $0.04, Colombia $0.02, Turkey $0.01744 and Rest of Central & Eastern Europe $0.1376. The table does not split marketing from utility messages.',
+    verified: '2026-11-08',
+  },
+  metaUsdRateCard: {
+    id: 'metaUsdRateCard',
+    url: 'https://developers.facebook.com/docs/whatsapp/pricing/',
+    label: 'Meta’s USD rate card for the WhatsApp Business Platform',
+    publisher: 'Meta',
+    claim:
+      'The “USD list rates” sheet linked from Meta’s pricing documentation, titled “Cost per message in USD on the WhatsApp Business Platform, effective October 1, 2026”, lists India at $0.0118 marketing, $0.0014 utility, $0.0014 authentication, $0.0304 authentication-international and $0.0014 service. Marketing rows for comparison: North America $0.025, Colombia $0.0125, Turkey $0.0109, Rest of Central & Eastern Europe $0.086.',
+    verified: '2026-11-08',
+  },
+  ecbUsdInr: {
+    id: 'ecbUsdInr',
+    url: 'https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/index.en.html',
+    label: 'the European Central Bank’s euro reference exchange rates',
+    publisher: 'European Central Bank',
+    claim:
+      'Reference rates for 6 November 2026, quoted against the euro: US dollar 1.1165, Indian rupee 104.8645, which implies ₹93.92 per US dollar. The ECB states the rates are published for information purposes only and not for transactions.',
+    verified: '2026-11-08',
+  },
+  getgabsPricing: {
+    id: 'getgabsPricing',
+    url: 'https://getgabs.com/pricing/',
+    label: 'Getgabs’s published pricing page',
+    publisher: 'Getgabs',
+    claim:
+      'Read from India: Basic ₹699, Plus ₹1,499 and Pro ₹4,499 a month, or ₹6,990, ₹14,990 and ₹44,990 a year, each plan labelled “0% Markup”, with free onboarding and setup. Broadcast limits are 30,000, 500,000 and unlimited a month. Lists Meta messaging cost as marketing ₹0.8631, authentication ₹0.115, utility ₹0.115 and service ₹0.115 after 1,000 messages a month.',
+    verified: '2026-11-08',
+  },
+  getgabsListing: {
+    id: 'getgabsListing',
+    url: 'https://apps.shopify.com/getgabs-whatsapp-chatbot-api',
+    label: 'Getgabs’s Shopify App Store listing',
+    publisher: 'Shopify',
+    claim:
+      'Getgabs: WhatsApp Chat Widget, by GETGABS LLP, rated 4.4 from 15 reviews. Free to install, with the note that a Getgabs subscription is required to unlock all features. Served to an Indian store: Plus ₹1,033.72 a month (₹10,243.21 a year) with 500,000 broadcasts and 3 inbox agents, Pro ₹5,544.49 a month (₹55,350.90 a year) with unlimited broadcasts and 10 agents. External charges may be billed by GETGABS LLP separately from the Shopify invoice.',
+    verified: '2026-11-08',
   },
   delightchatPricing: {
     id: 'delightchatPricing',

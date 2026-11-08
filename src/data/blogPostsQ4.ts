@@ -33,7 +33,7 @@ const UPDATRR_FAQS: Faq[] = [
   {
     question: 'What is the best Updatrr alternative for Shopify stores in India?',
     answer:
-      'It depends on what is not working. Updatrr is a capable Shopify-only WhatsApp app that publishes plans at $29.99, $49.99 and $99.99 a month and states it adds no markup on Meta conversation fees, which is the right thing to do. Switch to TopEdge AI when you want to pay in rupees rather than dollars, want AI on your entry plan instead of the $99.99 tier, or need pre-checkout visitor identity, unified multi-number profiles and warranty management that a Shopify-only app does not reach.',
+      'It depends on what is not working. Updatrr is a capable Shopify-only WhatsApp app that publishes plans at $29.99, $49.99 and $99.99 a month and states it adds no markup on Meta conversation fees, which is the right thing to do. Switch to TopEdge AI when you want to pay in rupees rather than dollars, want AI with human handover on your entry plan instead of the $99.99 tier, or need pre-checkout visitor identity, unified multi-number profiles and warranty management that a Shopify-only app does not reach.',
   },
   {
     question: 'Does Updatrr mark up Meta WhatsApp rates?',
@@ -43,7 +43,7 @@ const UPDATRR_FAQS: Faq[] = [
   {
     question: 'How much does AI cost on Updatrr compared with TopEdge AI?',
     answer:
-      'Updatrr publishes three plans and the AI one is Pro AI at $99.99 a month, so AI sits behind its highest published tier. TopEdge AI includes bring-your-own-key AI on every plan from \u20b91,999 a month, where you pay model tokens directly to OpenAI or Gemini at roughly \u20b90.10 to \u20b90.30 per reply. Since 1 October 2026 Meta also charges \u20b90.1150 per service reply past 1,000 a month per number, on either platform.',
+      'Updatrr puts its AI chatbot with human handover on Pro AI at $99.99 a month, its highest published tier, about ₹9,390 a month at the 6 November 2026 exchange rate. Pro at $49.99 has a no-code chatbot that its comparison table labels AI. TopEdge AI includes bring-your-own-key AI on every plan from \u20b91,999 a month, where you pay model tokens directly to OpenAI or Gemini at roughly \u20b90.10 to \u20b90.30 per reply. Since 1 October 2026 Meta also charges \u20b90.1150 per service reply past 1,000 a month per number, on either platform.',
   },
   {
     question: 'What does Updatrr not do that matters for Indian D2C?',
@@ -1121,15 +1121,15 @@ ${faqHtml(OPTIN_FAQS)}
     id: 33,
     title: 'Best Updatrr Alternative for Shopify India (2026)',
     description:
-      'An Updatrr alternative for Shopify India: flat INR plans from ₹1,999/mo, a 14-day trial and BYOK AI on every plan, against USD tiers that gate AI at $99.99.',
+      'An Updatrr alternative for Shopify India: flat INR plans from ₹1,999/mo, a 14-day trial and BYOK AI on every plan, against USD tiers with AI handover at $99.99.',
     summary: [
-      'Updatrr publishes USD tiers from $29.99 to $99.99 with a 7-day trial, and states it adds no markup on Meta’s fees.',
-      'AI sits on the $99.99 Pro AI tier, so the AI you came for may not be on the plan you priced.',
-      'Against a flat INR plan from ₹1,999 a month with a 14-day trial, the real difference is currency exposure and where AI lives.',
+      'Updatrr publishes USD tiers from $29.99 to $99.99 with a 7-day trial and no order limits, and states it adds no markup on Meta’s fees.',
+      'Its AI chatbot with human handover sits on the $99.99 Pro AI tier, about ₹1,12,700 a year at the 6 November 2026 exchange rate.',
+      'Updatrr Growth is the cheaper bill at 500 and 1,500 orders a month. TopEdge is cheaper at 100 orders, and whenever AI is the reason you are buying.',
     ],
     slug: 'updatrr-alternative-shopify-india',
     date: '2026-10-21',
-    updated: '2026-10-21',
+    updated: '2026-11-08',
     readTime: '9 min',
     category: 'Comparisons',
     author: 'Moksh Patel',
@@ -1163,19 +1163,20 @@ ${faqHtml(OPTIN_FAQS)}
       },
     ],
     content: `
-${verdict(`<p><strong>Updatrr is an honest Shopify-only WhatsApp app and it does not mark up Meta rates.</strong> Switch to TopEdge AI when you want to be billed in rupees rather than dollars, want AI included on the entry plan instead of behind the $99.99 tier, or need pre-checkout visitor identity, unified multi-number profiles and warranty management. Stay on Updatrr if its three plans already cover what you run.</p>`)}
+${verdict(`<p><strong>Updatrr is an honest Shopify-only WhatsApp app and it does not mark up Meta rates.</strong> Switch to TopEdge AI when you want to be billed in rupees rather than dollars, want AI included on the entry plan instead of behind the $99.99 tier, or need pre-checkout visitor identity, unified multi-number profiles and warranty management. Stay on Updatrr if its three plans already cover what you run and you do not need AI: from 500 orders a month, its Growth plan is the cheaper bill.</p>`)}
 
 <p>Most "alternative" posts open by finding something dishonest about the incumbent. This one cannot, so it will not try. <a href="https://www.updatrr.com/pricing" target="_blank" rel="noopener noreferrer">Updatrr's pricing page</a> states plainly that it <em>does not add a markup on Meta's conversation fees</em> and that Meta bills WhatsApp conversations separately by recipient country and conversation type. That is the correct answer to the single most important pricing question in this category, and it is the same position we take.</p>
 <p>So this comparison is not about markup. It is about currency, what each plan includes, and how far into your store each product reaches. Those turn out to be the three things that actually decide it.</p>
 
 <h2>What Updatrr publishes</h2>
-<p>Read from its own pricing page on 21 October 2026:</p>
+<p>Read from its own pricing page on 8 November 2026:</p>
 <ul>
-<li><strong>Growth: $29.99 a month.</strong></li>
-<li><strong>Pro: $49.99 a month.</strong></li>
-<li><strong>Pro AI: $99.99 a month.</strong> AI sits on this, the highest published tier.</li>
+<li><strong>Growth: $29.99 a month.</strong> Cart and COD confirmation reminders, order and shipment updates, broadcasts. One team member.</li>
+<li><strong>Pro: $49.99 a month.</strong> Adds a no-code chatbot, which Updatrr's own comparison table labels "No-code AI Chatbot". Three team members.</li>
+<li><strong>Pro AI: $99.99 a month.</strong> The AI chatbot with human handover, AI voice calling and a unified WhatsApp, Instagram and Facebook inbox sit here. Ten team members.</li>
 <li><strong>7-day free trial</strong> on all plans, full plan features, no credit card required.</li>
 <li><strong>No markup on Meta conversation fees.</strong> Meta bills you directly.</li>
+<li><strong>No order limit</strong> is published on any plan.</li>
 </ul>
 <p>One note on figures you may see elsewhere: several roundups still quote Updatrr "from $19.99". That is not what the live page says today. Prices move, so check it yourself rather than trusting either us or them.</p>
 
@@ -1186,22 +1187,29 @@ ${verdict(`<p><strong>Updatrr is an honest Shopify-only WhatsApp app and it does
 
 <h3>1. Currency and the shape of the bill</h3>
 <p>Updatrr bills in USD. For an Indian brand that means a plan cost that moves with the exchange rate, GST handling on a foreign invoice, and a number your finance team has to re-translate every month. Not fatal, just friction, and it is the friction that compounds when you are forecasting a festive quarter.</p>
+<p>Order volume matters as much as currency, because the two price ladders climb on different things. Updatrr publishes no order limit, so its price stays flat as you grow. TopEdge plans cap orders: Launch at 100 a month, Growth at 800, Scale at 1,500. So the fair comparison is the TopEdge plan your volume actually needs.</p>
 <div class="mkt-blog-table-wrap">
 <table>
-<thead><tr><th>Twelve-month platform cost</th><th>Monthly</th><th>Per year</th></tr></thead>
+<thead><tr><th>Orders a month</th><th>TopEdge plan that fits, per year</th><th>Updatrr Growth, per year</th><th>Updatrr Pro AI, per year</th></tr></thead>
 <tbody>
-<tr><td>Updatrr Growth</td><td>$29.99 (about ₹2,550)</td><td>About ₹30,600</td></tr>
-<tr><td>Updatrr Pro AI (AI included)</td><td>$99.99 (about ₹8,500)</td><td>About ₹1,02,000</td></tr>
-<tr><td><strong>TopEdge AI Launch, billed yearly</strong></td><td>₹1,599</td><td><strong>₹19,188</strong></td></tr>
-<tr><td><strong>TopEdge AI Growth, billed yearly</strong></td><td>₹3,199</td><td><strong>₹38,388</strong></td></tr>
+<tr><td>100</td><td>Launch: ₹19,188 billed yearly, ₹23,988 paid monthly</td><td>About ₹33,800</td><td>About ₹1,12,700</td></tr>
+<tr><td>500</td><td>Growth: ₹38,388 billed yearly, ₹47,988 paid monthly</td><td>About ₹33,800</td><td>About ₹1,12,700</td></tr>
+<tr><td>1,500</td><td>Scale: ₹62,388 billed yearly, ₹77,988 paid monthly</td><td>About ₹33,800</td><td>About ₹1,12,700</td></tr>
 </tbody>
 </table>
 </div>
-<p>The row that matters is the third against the second. Both give you AI. One is about ₹1,02,000 a year, the other ₹19,188, because on TopEdge the AI is bring-your-own-key rather than a tier you buy.</p>
+<p>Updatrr's dollar prices are converted at ₹93.92, the <a href="https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/index.en.html" target="_blank" rel="noopener noreferrer">European Central Bank reference rate</a> for 6 November 2026, and charged monthly, since Updatrr quotes annual pricing on request. TopEdge prices are before GST.</p>
+<p><strong>Read it by row.</strong> At 100 orders, TopEdge Launch is cheaper than any Updatrr plan. At 500 and 1,500 orders, Updatrr Growth is the cheaper bill: about ₹4,600 a year less than TopEdge Growth billed yearly, and about ₹28,600 less than Scale. Paid monthly, those gaps grow to about ₹14,200 and ₹44,200. If cart and COD reminders are all you run, that saving is real and Updatrr wins it.</p>
+<p><strong>It flips when AI is the reason you are shopping.</strong> Updatrr's AI chatbot with human handover is on Pro AI, about ₹1,12,700 a year. TopEdge runs bring-your-own-key AI on every plan, so add model tokens: our estimate is ₹6,000 to ₹18,000 a year per 5,000 AI replies a month. Even Scale plus the top of that range, about ₹80,400, comes in under Pro AI.</p>
 
 <h3>2. AI on the entry plan against AI at the top tier</h3>
-<p>This is the biggest practical gap. On Updatrr, AI means moving to Pro AI at $99.99 a month. On TopEdge AI, bring-your-own-key AI is on every plan from ₹1,999 a month and you pay model tokens straight to OpenAI or Gemini.</p>
-<p>At roughly ₹0.10 to ₹0.30 per AI reply, 5,000 replies a month costs ₹500 to ₹1,500 in model tokens. Add Meta's service fee, which since <strong>1 October 2026</strong> is ₹0.1150 per reply past the first 1,000 per number per month, so ₹460 on 4,000 billable replies. That is ₹960 to ₹1,960 of AI cost a month on either platform's Meta line, except that on TopEdge you are not also paying a $70 tier jump for the privilege.</p>
+<p>This is the biggest practical gap. On Updatrr, the AI chatbot with human handover means Pro AI at $99.99 a month. Pro at $49.99 has a no-code chatbot that Updatrr's own table calls AI, so check whether that is enough for you. On TopEdge AI, bring-your-own-key AI is on every plan from ₹1,999 a month and you pay model tokens straight to OpenAI or Gemini.</p>
+<p>Two cost lines follow from AI replies, and only one of them differs between the two products:</p>
+<ul>
+<li><strong>Model tokens.</strong> At roughly ₹0.10 to ₹0.30 per AI reply, our estimate, 5,000 replies a month cost ₹500 to ₹1,500 on TopEdge. Updatrr publishes no per-reply AI fee, so as published, the $99.99 is its whole AI bill.</li>
+<li><strong>Meta's service fee.</strong> The same on both. Since <strong>1 October 2026</strong> Meta charges ₹0.1150 per service reply past the first 1,000 per number per month, so ₹460 on 5,000 replies.</li>
+</ul>
+<p>The jump from Updatrr Growth to Pro AI is $70 a month, about ₹6,600 at the same exchange rate.</p>
 <p>The honest trade: bring-your-own-key means you hold the model account and watch that bill yourself. It is cheaper at volume and it is one more thing to own. If you would rather a vendor absorb that entirely, Pro AI is a reasonable thing to buy. The full arithmetic is in <a href="/blog/ai-whatsapp-chatbot-for-shopify-india">AI WhatsApp chatbots for Shopify India</a>.</p>
 
 <h3>3. Where each product starts watching the customer</h3>
@@ -1221,7 +1229,8 @@ ${verdict(`<p><strong>Updatrr is an honest Shopify-only WhatsApp app and it does
 <tr><td>Entry price</td><td>$29.99/mo Growth</td><td>₹1,999/mo + GST, or ₹1,599 billed yearly</td></tr>
 <tr><td>Billing currency</td><td>USD</td><td>INR</td></tr>
 <tr><td>Meta message markup</td><td><strong>None</strong>, stated on its pricing page</td><td><strong>None</strong>, Meta bills your own account</td></tr>
-<tr><td>AI</td><td>Pro AI tier at $99.99/mo</td><td>Bring your own key, on every plan</td></tr>
+<tr><td>AI</td><td>No-code chatbot on Pro at $49.99/mo; AI with human handover on Pro AI at $99.99/mo</td><td>Bring your own key, on every plan</td></tr>
+<tr><td>Order limit</td><td>None published</td><td>100, 800 or 1,500 a month by plan</td></tr>
 <tr><td>Free trial</td><td>7 days, no card</td><td>14 days</td></tr>
 <tr><td>Pre-checkout visitor pixel</td><td>Not on the public product surface</td><td>1-click pixel</td></tr>
 <tr><td>Multi-number customer identity</td><td>Contact per phone number</td><td>Unified across numbers and orders</td></tr>
@@ -1248,7 +1257,7 @@ ${faqHtml(UPDATRR_FAQS)}
 <p>Also compare: <a href="/blog/wati-alternative-shopify-india">WATI alternative</a>, <a href="/blog/aisensy-alternative-shopify-india">AiSensy alternative</a>, <a href="/blog/interakt-alternative-shopify-india">Interakt alternative</a>, <a href="/blog/bitespeed-alternative-shopify-india">Bitespeed alternative</a>, <a href="/blog/zoko-alternative-shopify-india">Zoko alternative</a> and <a href="/blog/dondy-alternative-shopify-india">Dondy alternative</a>.</p>
 
 <p>Related: <a href="/blog/best-whatsapp-apps-for-shopify">best WhatsApp apps for Shopify</a>, <a href="/blog/how-to-reduce-rto-with-whatsapp-cod-confirmation">COD confirmation on WhatsApp</a>, <a href="/features/analytics">analytics and the visitor pixel</a>, <a href="/compare/alternatives">all alternatives</a>.</p>
-<p class="mkt-blog-footnote">Updatrr plan prices ($29.99 Growth, $49.99 Pro, $99.99 Pro AI), the 7-day no-card trial and the statement that Updatrr does not add a markup on Meta's conversation fees were read off <a href="https://www.updatrr.com/pricing" target="_blank" rel="noopener noreferrer">Updatrr's own pricing page</a> on 21 October 2026. Feature gaps reflect our reading of its public product surface on that date and are not a claim about its roadmap: confirm on updatrr.com before purchase. Meta's India rates, the 1,000 free service messages a month effective 1 October 2026 and the 31 December 2026 INR billing deadline: <a href="https://developers.facebook.com/docs/whatsapp/pricing/" target="_blank" rel="noopener noreferrer">Meta's WhatsApp Business Platform pricing documentation</a>. Rupee conversions of USD prices are indicative and move with the exchange rate. The ₹0.10 to ₹0.30 per AI reply range is our own estimate of model token cost, not a published price.</p>
+<p class="mkt-blog-footnote">Updatrr plan prices ($29.99 Growth, $49.99 Pro, $99.99 Pro AI), what each plan includes, the absence of a published order limit, the 7-day no-card trial and the statement that Updatrr does not add a markup on Meta's conversation fees were read off <a href="https://www.updatrr.com/pricing" target="_blank" rel="noopener noreferrer">Updatrr's own pricing page</a> on 8 November 2026. Rupee figures use ₹93.92 to the dollar, the <a href="https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/index.en.html" target="_blank" rel="noopener noreferrer">ECB reference rate</a> for 6 November 2026. Feature gaps reflect our reading of its public product surface on 21 October 2026 and are not a claim about its roadmap: confirm on updatrr.com before purchase. Meta's India rates, the 1,000 free service messages a month effective 1 October 2026 and the 31 December 2026 INR billing deadline: <a href="https://developers.facebook.com/docs/whatsapp/pricing/" target="_blank" rel="noopener noreferrer">Meta's WhatsApp Business Platform pricing documentation</a>. Rupee conversions of USD prices are indicative and move with the exchange rate. The ₹0.10 to ₹0.30 per AI reply range is our own estimate of model token cost, not a published price.</p>
 `,
   },
   {
@@ -1695,15 +1704,15 @@ ${faqHtml(COD_PREPAID_FAQS)}
 <h2>8. Zoko</h2>
 <p><strong>Best for:</strong> catalogue-led selling where the WhatsApp thread genuinely is the storefront.</p>
 <p><a href="https://www.zoko.io/pricing" target="_blank" rel="noopener noreferrer">Zoko</a> leans harder than anything else on this list into selling inside the conversation rather than driving back to the website, and it publishes COD flows alongside recovery. For a brand that sells by sending a catalogue and taking the order in the thread, that is a real architectural difference and not a marketing line.</p>
-<p><strong>Priced in dollars, and metered in an unusual way.</strong> Zoko publishes Starter at $49.99 a month, Plus at $79.99 with extra agents at $15 each, and a $139.99 tier with extra agents at $12 each. There is no rupee plan, so your platform cost moves with the exchange rate while your revenue does not. At roughly ₹88 to the dollar, Plus is about ₹7,040 a month before agents.</p>
+<p><strong>Priced in dollars, and metered in an unusual way.</strong> Zoko publishes Starter at $49.99 a month, Plus at $79.99 with extra agents at $15 each, and a $139.99 tier with extra agents at $12 each. There is no rupee plan, so your platform cost moves with the exchange rate while your revenue does not. At about ₹94 to the dollar (the ECB reference rate on 6 November 2026), Plus is about ₹7,500 a month before agents.</p>
 <p>More interesting is the add-on model: Zoko sells metered extras at $24.99 a month plus $0.09 per resolution, and another at $24.99 a month plus <strong>3% of order value</strong>. A revenue share is a different kind of cost from a subscription. On ₹10 lakh of attributed monthly order value, 3% is ₹30,000. Model that against a flat plan at your real volume before you agree to it, because it is the one pricing shape on this page that grows faster than you do.</p>
 <p><strong>Where it is not the answer:</strong> if customers check out on your Shopify storefront rather than in the thread, you are paying for the catalogue-commerce half of the product and using the recovery half. Detail: <a href="/blog/zoko-alternative-shopify-india">Zoko alternatives for Shopify India</a>.</p>
 
 <h2>9. Updatrr</h2>
 <p><strong>Best for:</strong> stores comfortable with USD billing that want voice follow-up alongside WhatsApp.</p>
 <p>Updatrr is the closest thing on this list to a straight Shopify-native competitor, and it does the two things that matter most on this page correctly: it is built around Shopify events rather than a generic API, and <a href="https://www.updatrr.com/pricing" target="_blank" rel="noopener noreferrer">it states plainly on its pricing page</a> that it does not add a markup on Meta's conversation fees. On the fourth test it passes, and it says so without being asked, which is more than most.</p>
-<p><strong>What it costs.</strong> Growth at $29.99 a month, Pro at $49.99, Pro AI at $99.99, with a 7-day free trial and no card required. Two things follow from that shape. The first is currency: at roughly ₹88 to the dollar, Growth is about ₹2,640 and Pro AI about ₹8,800, and the rupee figure moves every month regardless of what your store did. The second is where AI sits. AI is on the $99.99 top tier only, so an assistant answering recovery replies costs about ₹8,800 a month in platform fees before Meta's charges.</p>
-<p><strong>Seven days is the real constraint.</strong> A trial is long enough to test a cart sequence, because carts abandon continuously and you will see twenty of them in a week. It is not long enough to test a COD programme. COD confirmation only proves itself when you can compare the RTO rate on confirmed orders against unconfirmed ones, and that needs a delivery cycle, which in India is seven to ten days by itself. Plan to evaluate the recovery flow inside the trial and the COD economics on a paid month.</p>
+<p><strong>What it costs.</strong> Growth at $29.99 a month, Pro at $49.99, Pro AI at $99.99, with a 7-day free trial and no card required. Two things follow from that shape. The first is currency: at about ₹94 to the dollar (6 November 2026), Growth is about ₹2,800 and Pro AI about ₹9,400, and the rupee figure moves every month regardless of what your store did. The second is where AI sits. The AI chatbot with human handover is on the $99.99 top tier only, so an assistant answering recovery replies costs about ₹9,400 a month in platform fees before Meta's charges.</p>
+<p><strong>Seven days is the real constraint.</strong> A trial is long enough to test a cart sequence, because carts abandon continuously and you will see twenty of them in a week. It is not long enough to test a COD programme. COD confirmation only proves itself when you can compare the RTO rate on confirmed orders against unconfirmed ones, and that needs a full delivery cycle, including re-attempts and the return trip. Plan to evaluate the recovery flow inside the trial and the COD economics on a paid month.</p>
 <p><strong>Where it is not the answer:</strong> a Shopify-only app does not reach pre-checkout visitor identity, unified profiles across several phone numbers, or warranty and post-purchase workflows. Detail: <a href="/blog/updatrr-alternative-shopify-india">Updatrr alternatives for Shopify India</a>.</p>
 
 <h2>10. Dondy</h2>

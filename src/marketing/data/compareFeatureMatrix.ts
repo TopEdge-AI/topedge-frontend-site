@@ -749,14 +749,14 @@ export const GETGABS_PAIRWISE_MATRIX: PairwiseFeatureRow[] = [
     topedge:
       '14-day free trial, then flat INR plans from ₹1,999/month (₹1,599/month billed yearly) + 18% GST',
     competitor:
-      'Free to install, then Plus $11/mo and Pro $59/mo on the Shopify listing, or Basic $15 · Plus $21 · Pro $59 on getgabs.com (Sep 2026); surfaces disagree',
+      'Free to install, then Plus ₹1,033.72/mo and Pro ₹5,544.49/mo on the Shopify listing, or Basic ₹699 · Plus ₹1,499 · Pro ₹4,499 on getgabs.com (8 Nov 2026); surfaces disagree',
   },
   {
     id: 'template-markup',
     label: 'Meta markup',
     description: 'Platform fee above Meta conversation rates.',
     topedge: '0% markup; Meta pass-through',
-    competitor: 'Claims 0% Meta markup on getgabs.com; platform subscription billed separately (USD)',
+    competitor: '0% Meta markup on every plan, with Meta’s ₹0.8631 / ₹0.115 India rates listed on getgabs.com (8 Nov 2026); subscription billed separately',
   },
   {
     id: 'ai-llm',
@@ -812,7 +812,7 @@ export const GETGABS_PAIRWISE_MATRIX: PairwiseFeatureRow[] = [
     label: 'Entry pricing',
     description: 'Cost to start.',
     topedge: 'Launch ₹1,999/mo (published INR)',
-    competitor: 'Free to install on Shopify; paid from ~$11–$15/mo (App Store / getgabs.com; verify live)',
+    competitor: 'Free to install on Shopify; paid from ₹699/mo on getgabs.com or ₹1,033.72/mo on the App Store (8 Nov 2026)',
   },
 ];
 
@@ -911,7 +911,7 @@ export const DONDYY_PAIRWISE_MATRIX: PairwiseFeatureRow[] = [
     description: 'What you pay versus Meta’s own marketing rate.',
     topedge: '0% markup; Meta pass-through on flat INR plans',
     competitor:
-      'Published rate table is ~60% above Meta marketing rates (India $0.01888/msg on dondy.net; verify Meta’s card live)',
+      'Published rate table is 60% above Meta marketing rates (India $0.01888/msg on dondy.net against $0.0118 on Meta’s USD card, both read 8 Nov 2026)',
   },
   {
     id: 'ai-llm',

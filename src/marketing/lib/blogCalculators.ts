@@ -34,15 +34,23 @@ export const META_INDIA = {
   gst: 0.18,
 } as const;
 
-/** Competitor rates each vendor publishes itself, read 2026-10-21. */
+/**
+ * Rupees per US dollar: the ECB reference rates for 6 Nov 2026 (USD 1.1165,
+ * INR 104.8645 per euro), read 2026-11-08. Source: ecbUsdInr in sources.ts.
+ */
+const USD_INR = 104.8645 / 1.1165;
+
+/** Competitor rates each vendor publishes itself. */
 const VENDOR = {
-  /** AiSensy, per service message after the same 1,000 free. */
+  /** AiSensy, per service message after the same 1,000 free. Read 2026-10-21. */
   aisensyService: 0.145,
   /**
-   * Dondy's published India per-message rate, $0.01888, at the INR equivalent
-   * /pricing and the pricing post already print. Keep the three in step.
+   * Dondy's published India per-message rate, $0.01888, read 2026-11-08 and
+   * billed in dollars, so converted at USD_INR (about ₹1.77). Until 8 Nov this
+   * was 1.381, the 60% applied to Meta's INR card, which understated the real
+   * charge. /pricing, /pricing/meta-rates and the Dondy post print the same.
    */
-  dondyMarketingInr: 1.381,
+  dondyMarketingInr: 0.01888 * USD_INR,
 } as const;
 
 /** Amazon Shipping India and ClickPost cost bands per returned COD parcel. */
@@ -204,7 +212,7 @@ const WHATSAPP_BILL: Calculator = {
         },
         {
           label: 'Add a published marketing markup',
-          detail: `Dondy's India rate of $0.01888 is about ₹1.38 a message against Meta's ${inrRate.format(META_INDIA.marketing)}, about 60% above the card`,
+          detail: `Dondy's India rate of $0.01888, billed in dollars, is about ${inrRate.format(VENDOR.dondyMarketingInr)} a message at ₹93.92 to the dollar, against Meta's ${inrRate.format(META_INDIA.marketing)} INR rate. In dollars it is 60% above Meta's own $0.0118`,
           value: `+${money(marketingMarkup)}`,
         },
       ],
@@ -212,7 +220,7 @@ const WHATSAPP_BILL: Calculator = {
     };
   },
   footnote:
-    'Meta India rates read off Meta’s WhatsApp Business Platform pricing documentation on 21 October 2026, competitor rates off each vendor’s own published pricing page on the same day. Rupee conversions of USD rates are indicative. Volume tiers are ignored here because utility tiers start at 25,000,000 messages a month. Your own rate card in Meta Business Manager is the only number that will match your invoice.',
+    'Meta India rates read off Meta’s WhatsApp Business Platform pricing documentation on 21 October 2026, AiSensy’s rate off its own pricing page the same day, Dondy’s off dondy.net on 8 November 2026. Dondy’s dollar rate is converted at ₹93.92, the ECB reference rate for 6 November 2026, and the rupee figure moves with it. Volume tiers are ignored here because utility tiers start at 25,000,000 messages a month. Your own rate card in Meta Business Manager is the only number that will match your invoice.',
 };
 
 const RTO_COST: Calculator = {

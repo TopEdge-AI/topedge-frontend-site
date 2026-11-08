@@ -314,7 +314,11 @@ export default function MetaRatesPage() {
                   Meta’s WhatsApp pricing documentation
                 </a>{' '}
                 on 21 October 2026, before 18% GST. Competitor figures come from each vendor’s own
-                published pricing page on the same date. Meta can revise rates up to four times a
+                published pricing page on the same date; Dondy’s was re-read on 8 November 2026. The
+                Dondy row compares dollars with dollars: $0.01888 against the $0.0118 on Meta’s USD
+                rate card, effective 1 October 2026. Dondy bills in dollars, so in rupees, at the
+                ECB’s ₹93.92 to the dollar on 6 November 2026, that is about ₹1.77 a message
+                against ₹0.8631 on Meta’s INR card. Meta can revise rates up to four times a
                 year, and the card inside your own Business Manager is the number that will match
                 your invoice. Separately, every eligible Indian WhatsApp Business Account must be on
                 INR billing by 31 December 2026 or Meta stops delivery on 1 January 2027.
