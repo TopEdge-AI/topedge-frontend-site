@@ -179,7 +179,7 @@ export const blogPostsRoundups: BlogPost[] = [
     image: '/blog/best-shopify-upsell-apps.jpg',
     imageWebp: '/blog/best-shopify-upsell-apps.webp',
     imageAlt:
-      'Best Shopify upsell apps for 2027: an upsell funnel running from product page to upsell offer to checkout to purchase, beside a pre-purchase bundle offer adding earbuds for \u20b9499 instead of \u20b9799',
+      'Best Shopify upsell apps: an upsell funnel from product page to checkout, beside a \u20b9499 earbuds bundle offer',
     keywords: [
       'best shopify upsell apps',
       'best upsell app for shopify',
@@ -693,7 +693,7 @@ ${faqHtml(UPSELL_FAQS)}
     image: '/blog/shopify-seo-experts.jpg',
     imageWebp: '/blog/shopify-seo-experts.webp',
     imageAlt:
-      'Top 10 Shopify SEO experts and resources for 2027: a search crawler flow from crawl and index to higher rankings, beside a Shopify technical audit panel checking index coverage, Core Web Vitals and site performance',
+      'Shopify SEO experts: a crawl, index and rank flow beside a technical audit panel for index coverage and Core Web Vitals',
     keywords: [
       'shopify seo experts',
       'best shopify seo expert',

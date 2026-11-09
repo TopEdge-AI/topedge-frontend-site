@@ -3870,6 +3870,7 @@ export const blogPosts: BlogPost[] = [
       "India's RTO rate peaked at 39.2% in November 2025. By March 2026 it was 21.0% among brands that verify orders before dispatch (Unicommerce, 410M+ shipments). Near 21% puts you ahead of most of the market.",
       'COD carries most of the risk: in the festive quarter 58% of COD orders came back against under 15% of prepaid, and GoKwik puts COD RTO near 26% against prepaid under 2%.',
       'One returned order costs ₹450 to ₹900 fully loaded (ClickPost). A WhatsApp utility confirmation that prevents it costs ₹0.1150.',
+      'By category, ClickPost’s RTO bands run from 25% to 40% in fashion, 18% to 25% in beauty and 10% to 15% in electronics, down to 8% to 12% in FMCG. These cover all orders; nobody publishes COD-only rates by category.',
     ],
     slug: 'cod-rto-benchmark-india-2026',
     date: '2026-09-25',

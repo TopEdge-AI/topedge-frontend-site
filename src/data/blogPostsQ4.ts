@@ -844,7 +844,7 @@ ${faqHtml(INTERAKT_FAQS)}
     author: 'Moksh Patel',
     image: '/blog/bitespeed-alternative-shopify-india.jpg',
     imageWebp: '/blog/bitespeed-alternative-shopify-india.webp',
-    imageAlt: 'Best Bitespeed alternative for Shopify India: WhatsApp automation connected to Shopify at zero Meta markup, with the Meta Business Partner mark',
+    imageAlt: 'Bitespeed alternative for Shopify India: WhatsApp automation linked to a Shopify store at zero Meta markup',
     keywords: [
       'Bitespeed alternative',
       'Bitespeed alternative Shopify',
@@ -1058,7 +1058,7 @@ ${faqHtml(TEMPLATE_FAQS)}
       {
         afterHeading: 'Where to collect opt-in on a Shopify store',
         src: '/marketing/features/optin-popup.jpg',
-        alt: 'An opt-in popup builder set to an exit-intent trigger with a discount code, previewing a WhatsApp subscribe form on a storefront.',
+        alt: 'Opt-in popup builder on an exit-intent trigger with a discount code, previewing a WhatsApp subscribe form',
         caption: 'Sample preview. The trigger and the wording decide whether the consent you collect is worth anything.',
       },
     ],
@@ -1076,7 +1076,7 @@ ${faqHtml(TEMPLATE_FAQS)}
     image: '/blog/whatsapp-opt-in-shopify-india.jpg',
     imageWebp: '/blog/whatsapp-opt-in-shopify-india.webp',
     imageAlt:
-      'WhatsApp opt-in and DPDP compliance for Shopify India, with a Get updates on WhatsApp consent checkbox and a high quality rating',
+      'WhatsApp opt-in for Shopify India: a Get updates on WhatsApp consent checkbox and a high quality rating',
     keywords: [
       'WhatsApp opt-in Shopify',
       'WhatsApp opt-in India',
@@ -1425,7 +1425,7 @@ ${faqHtml(COD_PREPAID_FAQS)}
     image: '/blog/best-shopify-app-for-abandoned-cart-recovery-india.jpg',
     imageWebp: '/blog/best-shopify-app-for-abandoned-cart-recovery-india.webp',
     imageAlt:
-      'Best Shopify app for abandoned cart recovery India, comparing WhatsApp, email and SMS recovery apps on cart and checkout events, purchase suppression and markup on Meta rates',
+      'Best Shopify app for abandoned cart recovery in India: WhatsApp, email and SMS recovery apps compared',
     keywords: [
       'best shopify app for abandoned cart recovery india',
       'best shopify app for abandoned cart recovery india free',
@@ -1863,7 +1863,7 @@ ${faqHtml(BEST_CART_APP_FAQS)}
     image: '/blog/ecommerce-funnel-drop-off-benchmarks-visitor-identity-resolution.jpg',
     imageWebp: '/blog/ecommerce-funnel-drop-off-benchmarks-visitor-identity-resolution.webp',
     imageAlt:
-      'Ecommerce funnel drop-off benchmarks 2026: Shopify add to cart rate 6.8%, about 43% of carts starting checkout, 49% checkout completion and 1.4% conversion',
+      'Shopify funnel benchmarks 2026: 6.8% add to cart, 43% of carts reach checkout, 49% complete, 1.4% convert',
     keywords: [
       'ecommerce funnel drop-off benchmarks 2026',
       'ecommerce funnel benchmarks',
@@ -2090,7 +2090,7 @@ ${faqHtml(FUNNEL_FAQS)}
     image: '/blog/interakt-pricing-india.jpg',
     imageWebp: '/blog/interakt-pricing-india.webp',
     imageAlt:
-      'Interakt pricing in India for 2026: web Growth ₹2,799, Shopify app Starter ₹1,973, Growth ₹3,853 and Premier ₹9,304 a month, and ₹0.958 per marketing message against Meta’s ₹0.8631',
+      'Interakt pricing in India 2026: plan cards with Growth marked most popular and a real monthly cost badge',
     keywords: [
       'interakt pricing',
       'interakt pricing india',

@@ -74,10 +74,10 @@ export const JOURNEY_EXAMPLES: JourneyExample[] = [
     cardMetric: 'Recovered revenue',
     image: '/marketing/solutions/sol-fashion-cart-saas.jpg',
     imageAlt:
-      'An abandoned cart card showing a linen shirt at \u20b92,499 in size M, beside the WhatsApp recovery message naming the same product, size and price.',
+      'Abandoned cart card for a \u20b92,499 linen shirt in size M, beside the WhatsApp reminder naming the same item.',
     hero: '/marketing/journeys/hero-abandoned-cart-recovery.webp',
     heroAlt:
-      'An isometric scene: a phone showing chat bubbles, a shop checkout counter to one side, and a shopping cart stopped on a winding path that curves back toward the counter.',
+      'Illustration: a phone with chat bubbles and a stalled shopping cart on a path curving back to a checkout counter.',
     art: '/marketing/journeys/jx-abandoned-cart-recovery.webp',
     artAlt:
       'An isometric illustration of a shop checkout counter with a path leading away to a stalled shopping cart, and message markers along the path pointing it back.',
@@ -268,10 +268,10 @@ export const JOURNEY_EXAMPLES: JourneyExample[] = [
     cardMetric: 'RTO rate',
     image: '/marketing/solutions/sol-cod-rto-saas.jpg',
     imageAlt:
-      'An RTO risk panel showing confirmed, prepaid-flip and at-risk COD counts, beside a WhatsApp thread asking a buyer to confirm their shipping address.',
+      'RTO risk panel with confirmed, prepaid and at-risk COD counts, beside a WhatsApp address confirmation thread.',
     hero: '/marketing/journeys/hero-cod-confirmation.webp',
     heroAlt:
-      'An isometric scene: a phone showing a chat bubble with a tick and a cross beside it, a warehouse on one side and a house with a parcel at the door on the other.',
+      'Illustration: a phone with a confirm or cancel chat between a warehouse and a house with a parcel at the door.',
     art: '/marketing/journeys/jx-cod-confirmation.webp',
     artAlt:
       'An isometric illustration of a parcel at a house door with a confirm and a cancel marker beside it, and a path leading back to a warehouse.',
@@ -464,7 +464,7 @@ export const JOURNEY_EXAMPLES: JourneyExample[] = [
       'A confirm, prepaid offer and paid sequence beside a WhatsApp message offering shipping savings with a secure pay link.',
     hero: '/marketing/journeys/hero-cod-to-prepaid.webp',
     heroAlt:
-      'An isometric scene: a phone showing a chat bubble with a tick, a stack of cash on one side and a card payment terminal on the other, joined by a curved arrow.',
+      'Illustration: a phone with a confirmed chat, linking a stack of cash to a card terminal, for COD to prepaid.',
     art: '/marketing/journeys/jx-cod-to-prepaid.webp',
     artAlt:
       'An isometric illustration of a stack of cash with a curved arrow sweeping across to a card payment terminal under a confirmation tick.',
@@ -632,7 +632,7 @@ export const JOURNEY_EXAMPLES: JourneyExample[] = [
       'A support thread beside an order card showing the order number, its status and the courier tracking number.',
     hero: '/marketing/journeys/hero-order-status-updates.webp',
     heroAlt:
-      'An isometric scene: a phone showing a chat bubble, with a winding path behind it running from a warehouse to a house, a parcel partway along and marker posts beside it.',
+      'Illustration: a phone with a chat bubble and a parcel on its way from a warehouse to a house, for order updates.',
     art: '/marketing/journeys/jx-order-status-updates.webp',
     artAlt:
       'An isometric illustration of a parcel travelling a winding path from a warehouse to a house, with three status markers standing along the route.',

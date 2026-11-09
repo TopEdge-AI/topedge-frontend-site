@@ -4,11 +4,13 @@ import ProofBadges from '../ProofBadges';
 import '../../styles/journey-flow.css';
 
 const LOGOS = [
-  { name: 'Delitech Smart Home', src: '/trust/delitech-white.png' },
-  { name: 'Apex Light', src: '/trust/apex-white.png' },
-  { name: 'ajeeb', src: '/trust/ajeeb-black.png' },
-  { name: 'Ecom', src: '/trust/ecom-black.png' },
-  { name: 'Oleez Online', src: '/trust/oleez-black.png' },
+  // w/h are the files' pixel sizes: they only set the aspect ratio (CSS fixes the
+  // height at 22px), so the strip reserves its space before the logos load.
+  { name: 'Delitech Smart Home', src: '/trust/delitech-white.png', w: 530, h: 131 },
+  { name: 'Apex Light', src: '/trust/apex-white.png', w: 444, h: 184 },
+  { name: 'ajeeb', src: '/trust/ajeeb-black.png', w: 177, h: 96 },
+  { name: 'Ecom', src: '/trust/ecom-black.png', w: 100, h: 96 },
+  { name: 'Oleez Online', src: '/trust/oleez-black.png', w: 291, h: 96 },
 ];
 
 /**
@@ -33,7 +35,7 @@ export default function TrustBand({
       <ul className="mkt-trust__logos" aria-label="Brands using TopEdge">
         {LOGOS.map((l) => (
           <li key={l.name}>
-            <img src={l.src} alt={l.name} loading="lazy" decoding="async" />
+            <img src={l.src} alt={`${l.name} logo`} width={l.w} height={l.h} loading="lazy" decoding="async" />
           </li>
         ))}
       </ul>
