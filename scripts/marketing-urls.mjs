@@ -111,6 +111,7 @@ export const BLOG_SLUGS = [
   'wati-alternative-shopify-india',
   'aisensy-alternative-shopify-india',
   'interakt-alternative-shopify-india',
+  'interakt-pricing-india',
   'bitespeed-alternative-shopify-india',
   'whatsapp-template-rejected-meta-shopify-fix',
   'whatsapp-opt-in-shopify-india',

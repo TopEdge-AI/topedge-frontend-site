@@ -223,7 +223,7 @@ export default function FeaturesPage() {
 
         <MarketingCtaBand
           title="See it live on your store"
-          subtitle="Start free, connect Shopify and WhatsApp in about fifteen minutes."
+          subtitle="Start free. About 30 minutes of setup. Meta verification and template review are the wait."
           primaryLabel="Start free"
           secondaryLabel="See pricing"
           secondaryTo="/pricing"

@@ -116,11 +116,19 @@ export default function TrustpilotProof({
   eyebrow = 'TRUSTPILOT',
   heading = 'What merchants say',
   intro,
+  omitAuthors = [],
 }: {
   eyebrow?: string;
   heading?: string;
   intro?: string;
+  /**
+   * Reviews to leave out on a given page. /pricing drops Robin's, because its
+   * "mostly every feature is unlocked on every plan" reads as a plan claim next
+   * to a grid where COD-to-prepaid and Journey Branch are not on Launch.
+   */
+  omitAuthors?: string[];
 }) {
+  const quotes = TRUSTPILOT_QUOTES.filter((q) => !omitAuthors.includes(q.author));
   return (
     <section className="mkt-tp" aria-labelledby="mkt-tp-head">
       <header className="mkt-tp__head">
@@ -135,7 +143,7 @@ export default function TrustpilotProof({
       </header>
 
       <ul className="mkt-tp__list">
-        {TRUSTPILOT_QUOTES.map((q) => (
+        {quotes.map((q) => (
           <li className="mkt-tp__item" key={q.author}>
             <span className="mkt-tp__mark" aria-hidden>
               <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">

@@ -166,7 +166,7 @@ export default function FeatureDetailPage() {
 
         <MarketingCtaBand
           title={`Put ${feature.title} to work on your store`}
-          subtitle="Connect Shopify, approve templates, and go live, usually in about fifteen minutes plus Meta review."
+          subtitle="Connect Shopify, approve templates and go live. About 30 minutes of setup. Meta verification and template review are the wait."
           primaryLabel="Start free"
           secondaryLabel="Talk to us"
           secondaryTo="/contact"

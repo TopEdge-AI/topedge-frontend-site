@@ -66,7 +66,7 @@ const ROLLOUT = [
     step: 'Approve',
     title: 'Meta templates, cleared before anything sends',
     detail:
-      'Templates go to Meta for review and nothing reaches a buyer until they come back APPROVED. Most brands clear review in 24 to 48 hours.',
+      'Templates go to Meta for review and nothing reaches a buyer until they come back APPROVED. Many templates clear in minutes and most within a day. Meta guarantees no time.',
     to: '/features/journeys',
     linkLabel: 'See the journey builder',
   },

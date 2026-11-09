@@ -124,6 +124,7 @@ Setup guides and screen-by-screen reference, written for the person running the 
 
 ## Playbooks
 
+- [Interakt Pricing in India (2026): Real Monthly Cost](https://topedgeai.com/blog/interakt-pricing-india): Interakt pricing read 9 Nov 2026: web plans, the separate Shopify app plans, message rates above Meta, and the real bill at 100, 500 and 1,500 orders.
 - [Top 10 Best Shopify Upsell Apps for 2027](https://topedgeai.com/blog/best-shopify-upsell-apps): The 10 best Shopify upsell apps for 2027, ranked by where the offer appears, with App Store ratings, launch dates and rupee pricing read on 3 November 2026.
 - [Top 10 Shopify SEO Experts and Resources for 2027](https://topedgeai.com/blog/shopify-seo-experts): The 10 Shopify SEO experts and resources worth your time, plus five Shopify-specific questions that tell you in a minute whether a consultant is real.
 - [Ecommerce Funnel Drop-Off Benchmarks (2026) & Identity Guide](https://topedgeai.com/blog/ecommerce-funnel-drop-off-benchmarks-visitor-identity-resolution): Ecommerce funnel benchmarks from 436 Shopify stores: add to cart, checkout and conversion by industry, and how visitor identity resolution works.
@@ -132,7 +133,7 @@ Setup guides and screen-by-screen reference, written for the person running the 
 - [Best Updatrr Alternative for Shopify India (2026)](https://topedgeai.com/blog/updatrr-alternative-shopify-india): An Updatrr alternative for Shopify India: flat INR plans from ₹1,999/mo, a 14-day trial and BYOK AI on every plan, against USD tiers with AI handover at $99.99.
 - [Best WATI Alternative for Shopify India (2026)](https://topedgeai.com/blog/wati-alternative-shopify-india): Looking for a WATI alternative for Shopify India? What to keep, what to fix (markup, AI access, COD), and how to test a switch in one afternoon.
 - [Best AiSensy Alternative for Shopify India (2026)](https://topedgeai.com/blog/aisensy-alternative-shopify-india): AiSensy alternative for Shopify India: AiSensy vs Interakt, WATI, Gallabox and Twilio on price, AI cost and COD to prepaid.
-- [Best Interakt Alternative for Shopify India (2026)](https://topedgeai.com/blog/interakt-alternative-shopify-india): An Interakt alternative for Shopify India: pricing from about ₹2,799, AI add-on cost, COD-to-prepaid on higher tiers, and a one-day switch test.
+- [Best Interakt Alternative for Shopify India (2026)](https://topedgeai.com/blog/interakt-alternative-shopify-india): An Interakt alternative for Shopify India: Shopify plans from about ₹1,973, AI add-on cost, COD-to-prepaid on higher tiers, and a one-day switch test.
 - [Best Bitespeed Alternative for Shopify India (2026)](https://topedgeai.com/blog/bitespeed-alternative-shopify-india): A Bitespeed alternative for Shopify India: revenue minimums, USD-style pricing and AI add-ons, versus a flat INR plan sized to your order volume.
 - [WhatsApp Template Rejected? Fix It for Shopify](https://topedgeai.com/blog/whatsapp-template-rejected-meta-shopify-fix): Why Meta rejects WhatsApp templates for Shopify stores (category, variables, samples) and how to rewrite order, cart and COD templates for approval.
 - [WhatsApp Opt-In for Shopify India: Checkout, Popups & DPDP](https://topedgeai.com/blog/whatsapp-opt-in-shopify-india): How to collect WhatsApp opt-in on Shopify in India: checkout, popups, QR and chat, what to record, and how to keep your quality rating healthy.
@@ -163,7 +164,7 @@ Setup guides and screen-by-screen reference, written for the person running the 
 
 ## Canonical URL directory
 
-All 157 indexable URLs on this domain, no trailing slash except the root.
+All 159 indexable URLs on this domain, no trailing slash except the root.
 
 - https://topedgeai.com/
 - https://topedgeai.com/pricing
@@ -180,6 +181,7 @@ All 157 indexable URLs on this domain, no trailing slash except the root.
 - https://topedgeai.com/blog
 - https://topedgeai.com/blog/page/2
 - https://topedgeai.com/blog/page/3
+- https://topedgeai.com/blog/page/4
 - https://topedgeai.com/blog/category/comparisons
 - https://topedgeai.com/blog/category/automation
 - https://topedgeai.com/blog/category/cod-rto
@@ -277,6 +279,7 @@ All 157 indexable URLs on this domain, no trailing slash except the root.
 - https://topedgeai.com/blog/wati-alternative-shopify-india
 - https://topedgeai.com/blog/aisensy-alternative-shopify-india
 - https://topedgeai.com/blog/interakt-alternative-shopify-india
+- https://topedgeai.com/blog/interakt-pricing-india
 - https://topedgeai.com/blog/bitespeed-alternative-shopify-india
 - https://topedgeai.com/blog/whatsapp-template-rejected-meta-shopify-fix
 - https://topedgeai.com/blog/whatsapp-opt-in-shopify-india

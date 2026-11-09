@@ -751,12 +751,12 @@ export const PRODUCT_PAGES: Record<ProductPageId, ProductPage> = {
       {
         question: 'How does TopEdge recover abandoned carts on WhatsApp?',
         answer:
-          'Checkout-abandoned events start a Meta-gated sequence (typically 2–3 steps) with live line items and a checkout link. You can prioritize high-AOV carts and measure recovered ₹ per journey, not only sends.',
+          'Checkout-abandoned events start a Meta-gated sequence (a 3-step journey comes pre-built) with live line items and a checkout link. Each reminder is a marketing template at ₹0.8631 per delivered message in India, so a shopper who gets all three steps costs ₹2.59 in Meta fees. You can prioritize high-AOV carts and measure recovered ₹ per journey, not only sends.',
       },
       {
         question: 'Can Journeys run COD confirmation before warehouse release?',
         answer:
-          'Yes. Condition on payment method = COD, send a confirm / reschedule / cancel utility template, and only release pick/pack after a clear confirm, or follow your hold/cancel SOP on silence.',
+          'Yes. Condition on payment method = COD, send a confirm / reschedule / cancel utility template, and only release pick/pack after a clear confirm, or follow your hold/cancel SOP on silence. Splitting COD and prepaid inside one journey uses Journey Branch, which is on Growth and Scale. On Launch, start a linear journey on the COD pending trigger instead. Each COD confirmation costs ₹0.1150 in Meta utility fees in India.',
       },
       {
         question: 'Do journeys send before Meta templates are approved?',
@@ -839,7 +839,7 @@ export const PRODUCT_PAGES: Record<ProductPageId, ProductPage> = {
         anchor: 'conditional-routes',
         title: 'Conditional',
         titleAccent: 'routes',
-        body: 'One trigger, multiple paths. Branch when payment method, order state, or shopper response differs, so COD, prepaid, and quiet leads each get a different next step.',
+        body: 'One trigger, multiple paths. Branch when payment method, order state, or shopper response differs, so COD, prepaid, and quiet leads each get a different next step. Journey Branch is on Growth and Scale. Launch runs linear journeys.',
         image: '/journey-sub-feature/11.webp',
         imageLabel: 'Conditional WhatsApp journey routes for COD vs prepaid on Shopify',
       },
@@ -1045,7 +1045,7 @@ export const PRODUCT_PAGES: Record<ProductPageId, ProductPage> = {
     title: 'Your keys.',
     titleAccent: 'Your catalog.',
     subtitle:
-      'Bring your own OpenAI or Claude key. Answers grounded in your catalog, and the bot steps back the moment an agent joins.',
+      'Bring your own OpenAI, Claude or Gemini key. Answers grounded in your catalog, and the bot steps back the moment an agent joins.',
     answerFirst:
       'TopEdge AI Brain is bring-your-own-key WhatsApp AI for Shopify India. Connect OpenAI, Claude, or Gemini, ground replies in store knowledge and policies, route with Intent Detect, and pause AI instantly when Live Chat takes over, so spend stays on your provider bill.',
     faqs: [
@@ -1141,7 +1141,7 @@ export const PRODUCT_PAGES: Record<ProductPageId, ProductPage> = {
     steps: [
       {
         title: 'Add your key',
-        body: 'Intelligence → AI, bring OpenAI or Claude (Gemini supported too). Keyword FAQs still work without a key.',
+        body: 'Intelligence → AI, bring OpenAI, Claude or Gemini. Keyword FAQs still work without a key.',
       },
       {
         title: 'Load knowledge + persona',
@@ -1166,7 +1166,7 @@ export const PRODUCT_PAGES: Record<ProductPageId, ProductPage> = {
       { label: 'Flow Builder', href: '/features/flow-builder' },
     ],
     ctaTitle: 'Run WhatsApp AI on your own keys',
-    ctaSub: 'OpenAI or Claude, catalog + policies + persona, your model, your spend ceiling.',
+    ctaSub: 'OpenAI, Claude or Gemini, catalog + policies + persona, your model, your spend ceiling.',
   },
 
   'meta-manager': {
@@ -1189,7 +1189,7 @@ export const PRODUCT_PAGES: Record<ProductPageId, ProductPage> = {
       {
         question: 'What template categories matter for Shopify India?',
         answer:
-          'Utility covers transactional COD, order, and shipping messages. Marketing covers promos and cart recovery offers. Keep categories honest. Meta reviews content against the chosen category.',
+          'Utility covers transactional COD, order, and shipping messages, at ₹0.1150 per delivered message in India. Marketing covers promos and cart recovery offers, at ₹0.8631. Keep categories honest. Meta reviews content against the chosen category, and a utility template rejected as marketing costs 7.5 times as much per send.',
       },
       {
         question: 'Where do approved templates get used?',
@@ -1200,6 +1200,11 @@ export const PRODUCT_PAGES: Record<ProductPageId, ProductPage> = {
         question: 'Do my approved templates survive a platform change?',
         answer:
           'Yes. Templates belong to your WhatsApp Business Account, not to the platform that submitted them. Keep the Meta Business Account in your own name and the library follows you.',
+      },
+      {
+        question: 'Does TopEdge build Meta WhatsApp Flows?',
+        answer:
+          'No. TopEdge does not build Meta WhatsApp Flows, the in-chat form screens Meta offers. Flow Builder makes button and list conversations, and Journeys send approved templates on Shopify events.',
       },
     ],
     seoTitle: 'Shopify WhatsApp Template Approvals | Meta Manager',
@@ -1247,7 +1252,7 @@ export const PRODUCT_PAGES: Record<ProductPageId, ProductPage> = {
       {
         titleLead: 'Blueprints',
         titleAccent: 'for Journeys',
-        body: 'Cart recovery (3 WA + email), COD → prepaid, and order confirmed, create rows with live product headers prefilled for India D2C.',
+        body: 'Cart recovery (3 WA + email), COD to prepaid (Growth and Scale) and order confirmed, create rows with live product headers prefilled for India D2C.',
         image: '/campaignn.webp',
         imageAlt: 'WhatsApp Journey blueprints for cart recovery and COD confirmation templates',
         span: 'third',
@@ -1282,7 +1287,7 @@ export const PRODUCT_PAGES: Record<ProductPageId, ProductPage> = {
       {
         title: 'Catalog',
         titleAccent: '& QR codes',
-        body: 'Product catalog for WhatsApp commerce cards; QR tab downloads PNG links that open a flow or catalog on scan.',
+        body: 'Product catalog for WhatsApp commerce cards; QR tab downloads PNG links that open a chat or catalog on scan.',
         image: '',
         imageLabel: 'WhatsApp catalog import and wa.me QR code download for Shopify',
       },

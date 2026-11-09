@@ -81,7 +81,7 @@ const AISENSY_FAQS: Faq[] = [
   {
     question: 'AiSensy vs Interakt: which is cheaper for a Shopify store?',
     answer:
-      'They lose money in different places, so the answer depends on your mix. AiSensy costs more on support volume, because of the ₹0.145 service message rate against Meta’s ₹0.1150. Interakt costs more on AI volume, because its WhatsApp AI Agents are a ₹3,000 add-on on Growth and Advanced with 100 free AI messages a month and ₹0.50 per AI message after that, on top of a ₹2,799 Growth plan. A support-heavy store pays AiSensy more. A store running an AI catalogue bot pays Interakt more. Work out your own number from your real monthly reply count rather than the headline plan price.',
+      'They lose money in different places, so the answer depends on your mix. AiSensy costs more on support volume, because of the ₹0.145 service message rate against Meta’s ₹0.1150. Interakt costs more on AI volume, because its WhatsApp AI Agents are a ₹3,000 add-on on Growth and Advanced with 100 free AI messages a month and ₹0.50 per AI message after that, on top of the ₹2,799 web Growth plan. A support-heavy store pays AiSensy more. A store running an AI catalogue bot pays Interakt more. Work out your own number from your real monthly reply count rather than the headline plan price.',
   },
   {
     question: 'AiSensy vs WATI vs Gallabox: what is the actual difference?',
@@ -115,6 +115,29 @@ const AISENSY_FAQS: Faq[] = [
   },
 ];
 
+const INTERAKT_PRICING_FAQS: Faq[] = [
+  {
+    question: 'Is Interakt free?',
+    answer:
+      'No. Interakt offers a 14-day free trial on its web plans and on every plan in its Shopify App Store listing, read 9 November 2026. The cheapest paid plan is Starter at ₹999 a month plus taxes, which is Instagram only on monthly billing. WhatsApp messages are billed on every plan, at Interakt’s own per-message rates.',
+  },
+  {
+    question: 'What does Interakt charge per WhatsApp message in India?',
+    answer:
+      'Read 9 November 2026, for Indian numbers: Starter ₹0.970 marketing, ₹0.160 utility and ₹0.129 authentication; Growth ₹0.958, ₹0.150 and ₹0.128; Advanced ₹0.949, ₹0.140 and ₹0.127. Service messages cost the same as authentication after 1,000 free a month. Meta’s own India rates are ₹0.8631 marketing and ₹0.1150 utility, so Interakt is about 10% to 12% above Meta on marketing and 22% to 39% above on utility. Enterprise is listed with no markup.',
+  },
+  {
+    question: 'How much does Interakt cost for a Shopify store?',
+    answer:
+      'Interakt’s pricing page says its Shopify integration is only included on its Shopify plan, sold through the Shopify App Store. On 9 November 2026 that listing showed Starter ₹1,973.48, Growth ₹3,852.99, Advanced ₹4,792.74 and Premier ₹9,303.55 a month, as Shopify’s rupee estimates, plus message charges. At 500 orders a month with timed cart recovery on Growth, our worked bill comes to about ₹13,914 a month before GST.',
+  },
+  {
+    question: 'Does Interakt add a markup to Meta’s WhatsApp rates?',
+    answer:
+      'Yes, on Starter, Growth and Advanced. Interakt publishes its own per-message rates for each plan, and all of them sit above Meta’s India card. On Growth, every 1,000 marketing messages cost ₹94.90 more than Meta’s rate and every 1,000 utility messages ₹35 more. Only the Enterprise plan is listed with “No Markup Charges”.',
+  },
+];
+
 const INTERAKT_FAQS: Faq[] = [
   {
     question: 'What is the best Interakt alternative for Shopify India?',
@@ -124,7 +147,7 @@ const INTERAKT_FAQS: Faq[] = [
   {
     question: 'How much does Interakt cost in India?',
     answer:
-      'As of our September 2026 research the plan that includes the WhatsApp channel starts from about ₹2,799 a month after the 14-day trial, and AI agent usage is an add-on. Plans change often, so confirm on interakt.shop before you decide.',
+      'Read 9 November 2026: Interakt’s Shopify integration is only on its Shopify App Store plans, listed from ₹1,973.48 a month as Shopify’s rupee estimate. On its web plans Growth is ₹2,799 a month, and the ₹999 Starter carries WhatsApp only on quarterly (₹3,499) or yearly (₹11,999) billing. Every plan adds Interakt’s own per-message rates, and AI agents are an add-on or the Premier tier. Plans change often, so confirm on interakt.shop before you decide.',
   },
   {
     question: 'Is the COD to prepaid feature locked on Interakt?',
@@ -601,7 +624,7 @@ ${faqHtml(WATI_FAQS)}
 
 <h2>AiSensy vs Interakt</h2>
 <p>The closest like-for-like swap, and the one most Indian stores look at first. Both are Indian, both are official Meta partners, both have a Shopify app.</p>
-<p>They lose money in different places. AiSensy costs more on <strong>support volume</strong>, because of the ₹0.145 service rate. Interakt costs more on <strong>AI volume</strong>: <a href="https://www.interakt.shop/pricing/" target="_blank" rel="noopener noreferrer">its pricing page</a> lists Growth at ₹2,799 a month as the cheapest plan that includes WhatsApp, with WhatsApp AI Agents sold as a ₹3,000 add-on that includes 100 AI messages a month and charges ₹0.50 per AI message after that.</p>
+<p>They lose money in different places. AiSensy costs more on <strong>support volume</strong>, because of the ₹0.145 service rate. Interakt costs more on <strong>AI volume</strong>: <a href="https://www.interakt.shop/pricing/" target="_blank" rel="noopener noreferrer">its pricing page</a> lists web Growth at ₹2,799 a month, with WhatsApp AI Agents sold as a ₹3,000 add-on that includes 100 AI messages a month and charges ₹0.50 per AI message after that.</p>
 <p>So: a store answering thousands of support replies pays AiSensy more. A store running an AI catalogue bot pays Interakt more. Work it out from your own reply count. Full breakdown on the <a href="/blog/interakt-alternative-shopify-india">Interakt alternative</a> page.</p>
 
 <h2>AiSensy vs WATI</h2>
@@ -700,9 +723,9 @@ ${faqHtml(AISENSY_FAQS)}
     id: 29,
     title: 'Best Interakt Alternative for Shopify India (2026)',
     description:
-      'An Interakt alternative for Shopify India: pricing from about ₹2,799, AI add-on cost, COD-to-prepaid on higher tiers, and a one-day switch test.',
+      'An Interakt alternative for Shopify India: Shopify plans from about ₹1,973, AI add-on cost, COD-to-prepaid on higher tiers, and a one-day switch test.',
     summary: [
-      'Interakt starts at about ₹2,799 a month for a plan that includes the WhatsApp channel.',
+      'Interakt’s Shopify integration is on its Shopify App Store plans, from ₹1,973.48 a month as Shopify’s rupee estimate (read 9 November 2026), plus its own per-message rates.',
       'AI is a ₹3,000 add-on with 100 free messages a month, then ₹0.50 each, which at 5,000 replies is the larger line.',
       'COD to prepaid sits on the higher tiers, so check which plan actually carries the flow you came for.',
     ],
@@ -748,7 +771,7 @@ ${verdict(`<p><strong>Interakt is a reasonable default for Indian Shopify stores
 
 <h2>What usually triggers an Interakt comparison?</h2>
 <ul>
-<li><strong>Entry price.</strong> <a href="https://www.interakt.shop/pricing/" target="_blank" rel="noopener noreferrer">Interakt’s pricing page</a> lists Starter at ₹999/mo for Instagram only, so the cheapest plan that includes WhatsApp is Growth at <strong>₹2,799/mo</strong>, with Advanced at ₹3,799/mo.</li>
+<li><strong>Entry price.</strong> <a href="https://www.interakt.shop/pricing/" target="_blank" rel="noopener noreferrer">Interakt’s pricing page</a> says its Shopify integration is only on its Shopify plan, which the Shopify App Store lists from <strong>₹1,973.48/mo</strong> (Shopify’s rupee estimate, read 9 November 2026). On the web plans, ₹999 Starter is Instagram only when billed monthly, and Growth is ₹2,799/mo. Our <a href="/blog/interakt-pricing-india">Interakt pricing breakdown</a> prices every tier at 100, 500 and 1,500 orders.</li>
 <li><strong>AI agents are an add-on.</strong> WhatsApp AI Agents are sold at <strong>₹3,000</strong> on Growth and Advanced, and include 100 free AI messages a month. Beyond 100, the published rate is <strong>₹0.50 per AI message</strong>.</li>
 <li><strong>COD to prepaid</strong> is supported natively but sits behind the Advanced Shopify integration on higher tiers.</li>
 <li><strong>Chatbot depth.</strong> Branched chatbots need the higher plan, and limits on custom fields, events and tags follow the tier.</li>
@@ -777,7 +800,7 @@ ${verdict(`<p><strong>Interakt is a reasonable default for Indian Shopify stores
 <table>
 <thead><tr><th>Area</th><th>Interakt (public patterns)</th><th>TopEdge AI</th></tr></thead>
 <tbody>
-<tr><td>Starting price after trial</td><td>₹2,799/mo (Growth, cheapest with WhatsApp)</td><td>₹1,999/mo + GST (Launch)</td></tr>
+<tr><td>Starting price after trial</td><td>₹1,973.48/mo on its Shopify App Store plan (Shopify’s estimate); web Growth ₹2,799/mo</td><td>₹1,999/mo + GST (Launch)</td></tr>
 <tr><td>AI</td><td>₹3,000 add-on, then ₹0.50/message after 100 free</td><td>Included, bring your own key (~₹0.10 to ₹0.30/reply)</td></tr>
 <tr><td>COD to prepaid</td><td>Higher-tier Shopify integration</td><td>Growth and Scale plans</td></tr>
 <tr><td>Contact model</td><td>One contact per phone number</td><td>Unified identity across numbers and orders</td></tr>
@@ -1450,7 +1473,7 @@ ${faqHtml(COD_PREPAID_FAQS)}
       {
         name: 'Interakt',
         description:
-          'WhatsApp Business API with Shopify recovery templates. Cheapest tier is Instagram only, so price the tier that actually carries WhatsApp.',
+          'WhatsApp Business API with Shopify recovery templates. Its Shopify integration sits on separate Shopify App Store plans from about ₹1,973 a month, so price that plan, not the ₹999 web Starter.',
       },
       {
         name: 'AiSensy',
@@ -1587,7 +1610,7 @@ ${faqHtml(COD_PREPAID_FAQS)}
 <tbody>
 <tr><td><strong>TopEdge AI</strong></td><td>₹1,999/mo</td><td>INR</td><td>None stated, 0%</td></tr>
 <tr><td><strong>WATI</strong></td><td>₹2,699/mo billed quarterly, ₹2,999 monthly</td><td>INR</td><td>Own rate card: ₹1.0357 marketing, ₹0.1495 utility, 20% and 30% above Meta</td></tr>
-<tr><td><strong>Interakt</strong></td><td>₹2,799/mo (₹999 plan is Instagram only)</td><td>INR</td><td>Growth: ₹0.958 marketing, ₹0.150 utility, 11% and 30% above Meta; none on Enterprise</td></tr>
+<tr><td><strong>Interakt</strong></td><td>₹1,973.48/mo on its Shopify App Store plan; web Growth ₹2,799/mo</td><td>INR</td><td>Growth: ₹0.958 marketing, ₹0.150 utility, 11% and 30% above Meta; none on Enterprise</td></tr>
 <tr><td><strong>Updatrr</strong></td><td>$29.99/mo</td><td>USD</td><td>States no markup</td></tr>
 <tr><td><strong>Zoko</strong></td><td>$49.99/mo</td><td>USD</td><td>Not stated; add-ons metered per resolution or at 3% of order value</td></tr>
 <tr><td><strong>AiSensy</strong></td><td>₹1,500/mo billed monthly</td><td>INR</td><td><strong>₹1.09</strong> marketing and <strong>₹0.145</strong> utility or service, about 26% above Meta</td></tr>
@@ -1675,15 +1698,15 @@ ${faqHtml(COD_PREPAID_FAQS)}
 <h2>4. BiteSpeed</h2>
 <p><strong>Best for:</strong> brands whose main job is WhatsApp broadcast and campaigns, with recovery attached.</p>
 <p>BiteSpeed is India-focused, widely installed and sold primarily as a marketing platform rather than a recovery tool. That framing matters more than it sounds: campaign products are built to send to a list on a schedule, and recovery is an event-driven job that fires per shopper. The two use different plumbing, and a product optimised for the first often treats the second as a template you can trigger rather than a journey that can branch.</p>
-<p><strong>The pricing problem is the first thing you will hit.</strong> BiteSpeed publishes no prices at all. <a href="https://www.bitespeed.co/pricing" target="_blank" rel="noopener noreferrer">Requesting their pricing page</a> returns a redirect straight to a demo request form, so there is no plan, tier or per-message rate you can read before you talk to sales. You cannot put BiteSpeed in a spreadsheet next to Interakt at ₹2,799 and WATI at ₹2,699 until someone quotes you, and a quote is negotiated per account, which means the number you get is not the number your neighbour got.</p>
+<p><strong>The pricing problem is the first thing you will hit.</strong> BiteSpeed publishes no prices at all. <a href="https://www.bitespeed.co/pricing" target="_blank" rel="noopener noreferrer">Requesting their pricing page</a> returns a redirect straight to a demo request form, so there is no plan, tier or per-message rate you can read before you talk to sales. You cannot put BiteSpeed in a spreadsheet next to Interakt from ₹1,973 and WATI at ₹2,699 until someone quotes you, and a quote is negotiated per account, which means the number you get is not the number your neighbour got.</p>
 <p><strong>On the four tests:</strong> ask all of them live. Specifically, ask whether recovery fires on abandoned cart as well as abandoned checkout, because the cart event is the one that needs a pre-checkout identity and the one campaign-led tools most often skip. Ask them to create a test order mid-sequence and show you the remaining two messages cancelling. And ask which tier carries recovery, because on a campaign-priced platform the automation you actually want is frequently a step above the plan you were quoted.</p>
 <p><strong>Where it is not the answer:</strong> if recovery is the reason you are buying, you are buying the secondary feature of a broadcast product and paying an unpublished price for it. Full comparison: <a href="/blog/bitespeed-alternative-shopify-india">BiteSpeed alternatives for Shopify India</a>.</p>
 
 <h2>5. Interakt</h2>
 <p><strong>Best for:</strong> stores already inside the Jio-backed ecosystem that want standard WhatsApp recovery templates on the official API.</p>
 <p>Interakt is a competent, well-distributed Business Solution Provider, and for a store that wants approved templates firing reliably it does the job. The reason it needs care is that its price list is shaped in a way that catches people who compare headline numbers.</p>
-<p><strong>Read the tiers properly.</strong> <a href="https://www.interakt.shop/pricing/" target="_blank" rel="noopener noreferrer">Interakt publishes</a> Starter at ₹999 a month, and that plan is <strong>Instagram only</strong>. It cannot send your WhatsApp cart reminders. The cheapest plan that includes WhatsApp is Growth at ₹2,799 a month, with Advanced at ₹3,799. So the honest comparison number for a WhatsApp recovery buyer is ₹2,799, not ₹999, and any shortlist that puts Interakt at the bottom on price has read the wrong row.</p>
-<p><strong>AI is an add-on, not a feature.</strong> WhatsApp AI Agents are sold as a ₹3,000 a month add-on on Growth and Advanced, with 100 free AI messages a month and ₹0.50 per AI message after that. If you want an assistant answering the "does this ship to Nagpur?" reply that a recovery message provokes, the real monthly cost is ₹2,799 plus ₹3,000 plus ₹0.50 per answered question past the first hundred, before Meta's own per-message charges. On 500 AI replies a month that is ₹5,999 in platform fees plus ₹200 in AI messages.</p>
+<p><strong>Read the tiers properly.</strong> <a href="https://www.interakt.shop/pricing/" target="_blank" rel="noopener noreferrer">Interakt publishes</a> Starter at ₹999 a month, and on monthly billing that plan is <strong>Instagram only</strong>, so it cannot send your WhatsApp cart reminders. Billed quarterly (₹3,499) or yearly (₹11,999), Starter can carry WhatsApp instead. More important for a Shopify store, Interakt says its Shopify integration is only on its Shopify plan, which the <a href="https://apps.shopify.com/interakt-marketing" target="_blank" rel="noopener noreferrer">Shopify App Store</a> lists from ₹1,973.48 a month, read 9 November 2026. So the honest comparison number for a Shopify recovery buyer is that plan, not ₹999. Our <a href="/blog/interakt-pricing-india">Interakt pricing breakdown</a> prices each tier at 100, 500 and 1,500 orders.</p>
+<p><strong>AI is an add-on, not a feature.</strong> WhatsApp AI Agents are sold as a ₹3,000 a month add-on on Growth and Advanced, with 100 free AI messages a month and ₹0.50 per AI message after that. If you want an assistant answering the "does this ship to Nagpur?" reply that a recovery message provokes, the real monthly cost is ₹2,799 plus ₹3,000 plus ₹0.50 per answered question past the first hundred, before Meta's own per-message charges. On 500 AI replies a month that is ₹5,999 in platform fees plus ₹200 in AI messages. On Interakt’s Shopify app plans, AI agents first appear on Premier at ₹9,303.55 a month.</p>
 <p><strong>Where it is not the answer:</strong> COD confirmation and COD-to-prepaid are the journeys that pay for themselves in India, and they want branching on payment method rather than a linear template sequence. Detail: <a href="/blog/interakt-alternative-shopify-india">Interakt alternatives for Shopify India</a>.</p>
 
 <h2>6. AiSensy</h2>
@@ -2045,6 +2068,163 @@ ${faqHtml(FUNNEL_FAQS)}
 <p>Related reading: <a href="/blog/best-shopify-app-for-abandoned-cart-recovery-india">the abandoned cart recovery shortlist</a>, <a href="/blog/whatsapp-opt-in-shopify-india">WhatsApp opt-in for Shopify India</a>, <a href="/blog/cod-to-prepaid-whatsapp-shopify-india">COD to prepaid on WhatsApp</a> and <a href="/blog/whatsapp-business-api-pricing-india">India WhatsApp API pricing</a>.</p>
 <p>Two levers sit either side of these benchmarks. To raise the value of the sessions that do convert, see <a href="/blog/best-shopify-upsell-apps">the best Shopify upsell apps</a> and the published 2.4% median lift behind them. To bring more qualified sessions in at the top, see <a href="/blog/shopify-seo-experts">the Shopify SEO experts and resources worth your time</a>.</p>
 <p class="mkt-blog-footnote">Sources, read 31 October 2026. Shopify funnel benchmarks, all from 436 Shopify stores sending data to GA4 over the 90 days to 24 October 2026: <a href="https://www.littledata.io/ecommerce-conversion-rate" target="_blank" rel="noopener noreferrer">conversion rate</a>, <a href="https://www.littledata.io/benchmarks/add-to-cart-rate" target="_blank" rel="noopener noreferrer">add to cart rate</a>, <a href="https://www.littledata.io/benchmarks/cart-abandonment-rate" target="_blank" rel="noopener noreferrer">cart abandonment rate</a>, <a href="https://www.littledata.io/benchmarks/checkout-completion-rate" target="_blank" rel="noopener noreferrer">checkout completion rate</a> and <a href="https://www.littledata.io/benchmarks/bounce-rate" target="_blank" rel="noopener noreferrer">bounce rate</a>, with the category pages for <a href="https://www.littledata.io/benchmarks/beauty" target="_blank" rel="noopener noreferrer">beauty</a>, <a href="https://www.littledata.io/benchmarks/supplements" target="_blank" rel="noopener noreferrer">supplements</a>, <a href="https://www.littledata.io/benchmarks/food-and-beverage" target="_blank" rel="noopener noreferrer">food and beverage</a>, <a href="https://www.littledata.io/benchmarks/fashion" target="_blank" rel="noopener noreferrer">fashion</a> and <a href="https://www.littledata.io/benchmarks/home" target="_blank" rel="noopener noreferrer">home</a>, all by Littledata. Marketing cost as a share of revenue by traffic source, September 2026: <a href="https://www.irpcommerce.com/en/gb/ecommercemarketdata.aspx" target="_blank" rel="noopener noreferrer">IRP Commerce</a>. Average cart abandonment of 70.22% across 50 studies: <a href="https://baymard.com/blog/cart-abandonment-rate" target="_blank" rel="noopener noreferrer">Baymard Institute</a>. India marketing message rate of ₹0.8631 per delivered message before GST: <a href="https://developers.facebook.com/docs/whatsapp/pricing/" target="_blank" rel="noopener noreferrer">Meta’s WhatsApp Business Platform pricing documentation</a>. Opt-in rule: <a href="https://whatsappbusiness.com/policy/" target="_blank" rel="noopener noreferrer">the WhatsApp Business Messaging Policy</a>. The Store A and Store B model and the deduplication example are our own arithmetic on those figures, with the assumptions stated beside them.</p>
+`,
+  },
+  {
+    id: 62,
+    title: 'Interakt Pricing in India (2026): Real Monthly Cost',
+    description:
+      'Interakt pricing read 9 Nov 2026: web plans, the separate Shopify app plans, message rates above Meta, and the real bill at 100, 500 and 1,500 orders.',
+    summary: [
+      'A Shopify store pays Interakt’s Shopify App Store prices, not its web plans. Interakt’s pricing page says the Shopify integration is only on its Shopify plan, listed from ₹1,973.48 a month on 9 November 2026.',
+      'On the web plans, ₹999 Starter is Instagram only when billed monthly. Billed quarterly (₹3,499) or yearly (₹11,999), Starter can carry WhatsApp instead. Growth is ₹2,799 a month.',
+      'Every WhatsApp message is billed at Interakt’s own rate: 10% to 12% above Meta on marketing and 22% to 39% above on utility. At 500 orders a month that is about ₹1,028 extra on the Shopify Growth plan.',
+      'At 500 orders a month with timed cart recovery, the bill is about ₹13,914 before GST on Interakt’s Shopify Growth plan, ₹13,033 on TopEdge Growth and ₹11,850 on Updatrr Growth.',
+    ],
+    slug: 'interakt-pricing-india',
+    date: '2026-11-09',
+    updated: '2026-11-09',
+    readTime: '9 min',
+    category: 'Comparisons',
+    author: 'Moksh Patel',
+    image: '/blog/interakt-pricing-india.jpg',
+    imageWebp: '/blog/interakt-pricing-india.webp',
+    imageAlt:
+      'Interakt pricing in India for 2026: web Growth ₹2,799, Shopify app Starter ₹1,973, Growth ₹3,853 and Premier ₹9,304 a month, and ₹0.958 per marketing message against Meta’s ₹0.8631',
+    keywords: [
+      'interakt pricing',
+      'interakt pricing india',
+      'interakt pricing plans',
+      'interakt pricing per month',
+      'interakt pricing per message',
+      'interakt shopify pricing',
+      'interakt per message cost',
+      'is interakt free',
+    ],
+    faqs: INTERAKT_PRICING_FAQS,
+    content: `
+<details class="mkt-blog-verdict" open>
+<summary>Direct answer</summary>
+<p>Interakt’s web plans cost <strong>₹999 to ₹3,799 a month</strong> plus taxes, read on 9 November 2026. A Shopify store needs Interakt’s separate Shopify plan, listed on the Shopify App Store from <strong>₹1,973.48 a month</strong> (Starter) to ₹9,303.55 (Premier). Every WhatsApp message is billed on top at Interakt’s own rate, about 10% to 39% above Meta’s, so a 500-order store running timed cart recovery pays about <strong>₹13,914 a month</strong> before GST.</p>
+</details>
+
+<p><strong>Checked 9 November 2026.</strong> We read <a href="https://www.interakt.shop/pricing/" target="_blank" rel="noopener noreferrer">Interakt’s pricing page</a> on monthly, quarterly and yearly billing, its <a href="https://www.interakt.shop/whatsapp-conversation-pricing/" target="_blank" rel="noopener noreferrer">per-country message rate table</a> and its <a href="https://apps.shopify.com/interakt-marketing" target="_blank" rel="noopener noreferrer">Shopify App Store listing</a> the same morning. Plans change often, so re-check before you pay.</p>
+
+<p>This page sits under our <a href="/compare/alternatives">comparison of WhatsApp tools for Shopify India</a>. If you have already decided to leave Interakt, the <a href="/blog/interakt-alternative-shopify-india">Interakt alternative guide</a> is the better read.</p>
+
+<p>A note on who wrote this: TopEdge AI sells a competing Shopify app. Where Interakt or another tool comes out cheaper below, we say so.</p>
+
+<h2>Interakt’s web plans, as published on 9 November 2026</h2>
+<p>Interakt sells four plans on its own site. The price changes with the billing cycle, and so does what Starter can do.</p>
+<div class="mkt-blog-table-wrap">
+<table>
+<thead><tr><th>Plan</th><th>Monthly</th><th>Quarterly</th><th>Yearly</th><th>Channels</th></tr></thead>
+<tbody>
+<tr><td><strong>Starter</strong></td><td>₹999</td><td>₹3,499</td><td>₹11,999</td><td>Monthly: Instagram only. Quarterly or yearly: WhatsApp or Instagram, pick one</td></tr>
+<tr><td><strong>Growth</strong></td><td>₹2,799</td><td>₹7,699</td><td>₹26,399</td><td>WhatsApp and Instagram</td></tr>
+<tr><td><strong>Advanced</strong></td><td>₹3,799</td><td>₹10,499</td><td>₹35,999</td><td>WhatsApp and Instagram</td></tr>
+<tr><td><strong>Enterprise</strong></td><td>On request</td><td>On request</td><td>On request</td><td>WhatsApp, Instagram and RCS</td></tr>
+</tbody>
+</table>
+</div>
+<p>All prices are plus taxes. As a monthly figure, quarterly billing works out to ₹1,166 for Starter, ₹2,566 for Growth and ₹3,500 for Advanced. Yearly works out to ₹1,000, ₹2,200 and ₹3,000.</p>
+<p>Every plan lists unlimited agents, with Starter limited to owner roles. Growth adds FAQ automations, linear chatbot flows, catalogs, native payments and public APIs. Advanced adds branching chatbot flows with API calls and conditions, chat auto-assignment and advanced webhooks.</p>
+<p>Many pages say WhatsApp on Interakt starts at ₹2,799, and ours did until this reading. That is only true on monthly billing.</p>
+
+<h2>The Shopify catch: Interakt sells Shopify stores a different set of plans</h2>
+<p>Interakt’s pricing page lists Shopify Integration with the note that it is “only included on Shopify plan”, and links to its Shopify App Store listing. That listing shows four plans of its own. Shopify bills them in your store’s billing currency, so the rupee figures below are Shopify’s estimates and move with the exchange rate.</p>
+<div class="mkt-blog-table-wrap">
+<table>
+<thead><tr><th>Shopify plan</th><th>Per month</th><th>Per year</th><th>What this tier adds, per the listing</th></tr></thead>
+<tbody>
+<tr><td><strong>Starter</strong></td><td>₹1,973.48</td><td>₹16,915.54</td><td>WhatsApp API approval and setup, automated notifications, shared team inbox, WhatsApp widget, Blue tick application</td></tr>
+<tr><td><strong>Growth</strong></td><td>₹3,852.99</td><td>₹27,816.67</td><td>Notifications with delay, analytics and reports, a basic chatbot, roles and permissions, Instagram automation</td></tr>
+<tr><td><strong>Advanced</strong></td><td>₹4,792.74</td><td>₹43,980.42</td><td>Advanced chatbot, an API rate limit of 600 messages a minute, agent stats, advanced chat auto-routing</td></tr>
+<tr><td><strong>Premier</strong></td><td>₹9,303.55</td><td>₹78,845.23</td><td>Three WhatsApp AI agents (sales, FAQ, lead qualification), a popup that collects WhatsApp numbers, cart reminders to those numbers, Shopify actions in the workflow builder</td></tr>
+</tbody>
+</table>
+</div>
+<p>Every tier carries a 14-day free trial and “additional WhatsApp conversation charges”. The listing showed a 4.3 rating from 233 reviews.</p>
+<p><strong>Which tier a cart-recovery store needs.</strong> The listing does not say which tier each automation sits on. A cart reminder is sent some time after the shopper leaves, not at once, and “notifications with delay” first appears on Growth. So we price Growth for a store that wants timed cart recovery, and Starter for a store that only needs instant order and COD messages. That is our reading of the listing, not Interakt’s statement, so ask them before you buy.</p>
+
+<h2>What Interakt charges per message, set against Meta’s rate</h2>
+<p>Interakt bills each WhatsApp message at its own rate, and the rate depends on your plan. <a href="https://developers.facebook.com/docs/whatsapp/pricing/" target="_blank" rel="noopener noreferrer">Meta’s India card</a> is ₹0.8631 for marketing and ₹0.1150 for utility, authentication and service.</p>
+<div class="mkt-blog-table-wrap">
+<table>
+<thead><tr><th>Message to an Indian number</th><th>Meta</th><th>Interakt Starter</th><th>Interakt Growth</th><th>Interakt Advanced</th></tr></thead>
+<tbody>
+<tr><td>Marketing</td><td>₹0.8631</td><td>₹0.970 (+12.4%)</td><td>₹0.958 (+11.0%)</td><td>₹0.949 (+10.0%)</td></tr>
+<tr><td>Utility</td><td>₹0.1150</td><td>₹0.160 (+39.1%)</td><td>₹0.150 (+30.4%)</td><td>₹0.140 (+21.7%)</td></tr>
+<tr><td>Authentication</td><td>₹0.1150</td><td>₹0.129 (+12.2%)</td><td>₹0.128 (+11.3%)</td><td>₹0.127 (+10.4%)</td></tr>
+<tr><td>Service, after 1,000 free a month</td><td>₹0.1150</td><td>₹0.129</td><td>₹0.128</td><td>₹0.127</td></tr>
+</tbody>
+</table>
+</div>
+<p>In rupees: on Growth, every 1,000 marketing messages cost <strong>₹94.90 more</strong> than at Meta’s rate, and every 1,000 utility messages ₹35 more. Order, shipping and COD updates are utility messages, which is where the percentage gap is widest. Enterprise is listed with “No Markup Charges”.</p>
+<p>The App Store listing prints no message rates. Its “See all pricing options” link opens the same rate table, so we matched each Shopify plan to the web column of the same name. Premier has no column, so we used the Advanced rate for it. For the full Meta card by category, see our <a href="/pricing/meta-rates">India rate card page</a>.</p>
+
+<h2>The real monthly bill at 100, 500 and 1,500 orders</h2>
+<p><strong>Assumptions, so you can redo this with your own numbers.</strong> Per order, we assume 20 marketing messages, 3 utility messages (order confirmed, shipped, delivered) and 6 customer-service replies, with the first 1,000 replies a month free. This is an estimate, not a benchmark. It is the same mix as the cost table in our <a href="/blog/best-whatsapp-automation-tools-shopify-india">Shopify WhatsApp automation tools guide</a>, so the 500-order row matches that table.</p>
+<p>At 100 orders that is 2,000 marketing, 300 utility and no billable service messages. At 500 orders it is 10,000, 1,500 and 2,000. At 1,500 orders it is 30,000, 4,500 and 8,000.</p>
+<div class="mkt-blog-table-wrap">
+<table>
+<thead><tr><th>Orders a month</th><th>Interakt Shopify Growth</th><th>Interakt Shopify Starter</th><th>TopEdge AI, on the plan that volume needs</th><th>Updatrr Growth</th></tr></thead>
+<tbody>
+<tr><td><strong>100</strong></td><td>₹5,814</td><td>₹3,961</td><td>₹3,760 (Launch)</td><td>₹4,577</td></tr>
+<tr><td><strong>500</strong></td><td>₹13,914</td><td>₹12,171</td><td>₹13,033 (Growth)</td><td>₹11,850</td></tr>
+<tr><td><strong>1,500</strong></td><td>₹34,292</td><td>₹32,825</td><td>₹33,830 (Scale)</td><td>₹30,147</td></tr>
+</tbody>
+</table>
+</div>
+<p>Monthly billing, before GST, subscription plus messages. TopEdge and Updatrr pass Meta’s rate through, so their message line is Meta’s: ₹1,760.70, ₹9,033.50 and ₹27,330.50. Interakt’s message line on Growth is ₹1,961, ₹10,061 and ₹30,439. <a href="https://www.updatrr.com/pricing" target="_blank" rel="noopener noreferrer">Updatrr’s $29.99 Growth plan</a>, read 9 November 2026, is converted at the <a href="https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/index.en.html" target="_blank" rel="noopener noreferrer">ECB reference rate</a> of ₹93.92 a dollar for 6 November 2026.</p>
+
+<h3>What the table says</h3>
+<ul>
+<li><strong>At 500 orders, timed cart recovery on Interakt costs ₹881 a month more than TopEdge Growth.</strong> Interakt’s Shopify Growth subscription is ₹146 lower, and its message rates add ₹1,028.</li>
+<li><strong>If instant order and COD messages are enough, Interakt’s Shopify Starter is cheaper than TopEdge.</strong> It comes in ₹862 below TopEdge Growth at 500 orders and ₹1,004 below TopEdge Scale at 1,500.</li>
+<li><strong>Updatrr Growth is the cheapest row at 500 and 1,500 orders.</strong> It states no markup on Meta’s fees and publishes no order limit. The plan includes one team member.</li>
+<li><strong>At 100 orders, TopEdge Launch is cheapest</strong>, but Launch does not include COD-to-prepaid conversion or Journey Branch. Those start on Growth.</li>
+<li><strong>The markup grows with your volume and the subscription does not.</strong> On Interakt Growth, the gap over Meta’s rate is ₹200 a month at 100 orders and ₹3,109 at 1,500.</li>
+</ul>
+<p><strong>Yearly billing narrows the gap.</strong> Interakt’s Shopify Growth is ₹27,816.67 a year, or ₹2,318 a month, and <a href="/pricing">TopEdge Growth</a> is ₹38,388 a year, or ₹3,199 a month. At 500 orders that puts Interakt at ₹12,379 and TopEdge at ₹12,233 a month, ₹146 apart.</p>
+
+<h2>What the plan price leaves out</h2>
+<ul>
+<li><strong>AI replies.</strong> On the web plans, WhatsApp AI Agents are a ₹3,000 a month add-on for Growth and Advanced, shown as ₹9,000 a quarter on the AI tab. That includes 100 free AI messages, then ₹0.50 per AI message. On the Shopify app, AI agents first appear on Premier at ₹9,303.55 a month. TopEdge charges nothing per AI message on any plan: you connect your own OpenAI, Claude or Gemini key and pay that provider. Updatrr puts its AI chatbot with human handover on Pro AI at $99.99.</li>
+<li><strong>GST.</strong> Every figure on this page is before GST.</li>
+<li><strong>Exchange rate.</strong> Shopify bills the app plans in your store’s billing currency at the day’s rate. The listing’s rupee figures were Shopify’s estimate at 1 INR = 0.0106 USD.</li>
+<li><strong>Sales CRM.</strong> Interakt sells its Sales CRM as a separate product with its own price. We have not priced it here.</li>
+</ul>
+
+<h2>Where Interakt is the better choice</h2>
+<ul>
+<li><strong>You want Instagram and WhatsApp in one inbox.</strong> Growth and above include both channels, and Instagram conversations are listed as free.</li>
+<li><strong>You have a large support team.</strong> Every plan lists unlimited agents, where many tools in this category cap seats by plan.</li>
+<li><strong>You want a track record.</strong> Interakt’s Shopify listing showed 233 reviews at 4.3 on 9 November 2026. TopEdge’s listing showed none yet.</li>
+<li><strong>You only need instant order and COD messages.</strong> On our assumptions the Shopify Starter plan is cheaper than TopEdge Growth from 500 orders up.</li>
+<li><strong>You send at enterprise volume.</strong> Enterprise is the one plan listed without template markups.</li>
+</ul>
+<p>It is a weaker fit when most of your volume is utility messages, where Growth runs 30% above Meta, or when you want AI replies without a ₹3,000 add-on or the ₹9,303.55 Premier plan.</p>
+
+<h2>Interakt, TopEdge AI and Updatrr, line by line</h2>
+<div class="mkt-blog-table-wrap">
+<table>
+<thead><tr><th>Line</th><th>Interakt, Shopify app</th><th>TopEdge AI</th><th>Updatrr</th></tr></thead>
+<tbody>
+<tr><td>Entry plan for a Shopify store</td><td>Starter, ₹1,973.48 a month</td><td>Launch, ₹1,999 a month for up to 100 orders</td><td>Growth, $29.99 a month</td></tr>
+<tr><td>Message rates</td><td>Own rates, 10% to 39% above Meta</td><td>Meta’s rate, 0% markup</td><td>Meta’s rate, no markup stated</td></tr>
+<tr><td>Order limits</td><td>None published</td><td>100, 800 and 1,500 a month by plan</td><td>None published</td></tr>
+<tr><td>AI replies</td><td>Premier at ₹9,303.55, or a ₹3,000 add-on on web plans</td><td>Your own AI key, no per-message fee from us</td><td>Pro AI at $99.99</td></tr>
+<tr><td>Billing currency</td><td>Through Shopify, in your store’s billing currency</td><td>INR</td><td>USD</td></tr>
+<tr><td>Free trial</td><td>14 days</td><td>14 days, 20 orders, 200 sends</td><td>7 days</td></tr>
+</tbody>
+</table>
+</div>
+<p>For a feature-by-feature board, see <a href="/compare/interakt">TopEdge vs Interakt</a>. For what the Meta line costs on any tool, see <a href="/blog/whatsapp-business-api-pricing-india">WhatsApp Business API pricing in India</a>. If Updatrr is on your list, our <a href="/blog/updatrr-alternative-shopify-india">Updatrr comparison</a> prices it at the same volumes.</p>
+
+${faqHtml(INTERAKT_PRICING_FAQS)}
+
+<p class="mkt-blog-footnote">Sources, read 9 November 2026: <a href="https://www.interakt.shop/pricing/" target="_blank" rel="noopener noreferrer">Interakt pricing page</a> (monthly, quarterly and yearly views, and the WhatsApp AI Agents tab), <a href="https://www.interakt.shop/whatsapp-conversation-pricing/" target="_blank" rel="noopener noreferrer">Interakt message rate table</a>, <a href="https://apps.shopify.com/interakt-marketing" target="_blank" rel="noopener noreferrer">Interakt on the Shopify App Store</a>, <a href="https://www.updatrr.com/pricing" target="_blank" rel="noopener noreferrer">Updatrr pricing</a>. Meta’s India rates from <a href="https://developers.facebook.com/docs/whatsapp/pricing/" target="_blank" rel="noopener noreferrer">Meta’s pricing documentation</a>, effective 1 October 2026. Exchange rate from the <a href="https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/index.en.html" target="_blank" rel="noopener noreferrer">ECB</a> for 6 November 2026. TopEdge prices from our <a href="/pricing">pricing page</a>.</p>
 `,
   },
 ];

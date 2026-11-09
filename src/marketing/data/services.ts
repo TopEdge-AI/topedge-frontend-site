@@ -194,6 +194,6 @@ export const SERVICE_FAQS = [
   {
     question: 'How long does it take to go live?',
     answer:
-      'Connecting Shopify and your WhatsApp Cloud API takes under an hour. The variable is Meta template approval, which is usually same-day for correctly categorised utility templates and can take longer for marketing templates.',
+      'About 30 minutes of setup. Meta verification and template review are the wait. Many templates clear in minutes and most within a day. Meta guarantees no time.',
   },
 ] as const;

@@ -240,7 +240,7 @@ export const SEO_TOPICS: Record<string, SeoTopic> = {
             title: 'Submit your message templates',
             body:
               'Cart recovery, order update and COD confirmation templates go to Meta for approval by category. TopEdge tracks approval state so a journey cannot send a template that is still a draft.',
-            meta: 'Meta review, usually hours',
+            meta: 'Many clear in minutes, most within a day',
           },
           {
             title: 'Publish the first journey',

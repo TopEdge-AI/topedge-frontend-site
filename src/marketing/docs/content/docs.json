@@ -107,7 +107,7 @@
         },
         {
           "question": "How long does setup take?",
-          "answer": "Connecting Shopify and WhatsApp takes about 30 minutes if you already have a WhatsApp Business Account on Meta. The variable is template approval — Meta usually reviews in minutes, but a first submission can take up to 24 hours."
+          "answer": "About 30 minutes of setup. Meta verification and template review are the wait. That assumes you already have a WhatsApp Business Account on Meta. Many templates clear in minutes and most within a day. Meta guarantees no time."
         }
       ],
       "blocks": [
@@ -188,7 +188,7 @@
             {
               "title": "Get your order templates approved",
               "body": "Meta reviews every template before it can send. Submit the order-status set first; see [Message templates](/docs/platform/message-templates).",
-              "note": "Approval is usually minutes, but budget up to 24 hours for your first submission."
+              "note": "Many templates clear in minutes and most within a day. Meta guarantees no time."
             },
             {
               "title": "Turn on order status updates",
@@ -225,7 +225,7 @@
             {
               "label": "Quickstart",
               "href": "/docs/quickstart",
-              "note": "Live in about 30 minutes."
+              "note": "About 30 minutes of setup."
             },
             {
               "label": "Go-live checklist",
@@ -5294,7 +5294,7 @@
           "kind": "diagram",
           "name": "template-approval",
           "title": "A template from draft to live send",
-          "caption": "Approval is usually minutes. Budget up to 24 hours for a first submission."
+          "caption": "Many templates clear in minutes and most within a day. Meta guarantees no time."
         },
         {
           "kind": "h3",
@@ -7753,7 +7753,7 @@
             {
               "symptom": "Template is stuck Pending",
               "fixes": [
-                "Approval is usually minutes but can take up to 24 hours on a first submission.",
+                "Many templates clear in minutes and most within a day. Meta guarantees no time.",
                 "Use **Sync from Meta** in Meta Manager if the status looks stale."
               ]
             },

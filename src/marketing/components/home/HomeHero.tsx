@@ -59,8 +59,9 @@ export default function HomeHero() {
                 </span>
               </h1>
               <p className="home-hero__sub">
-                Live Chat that already sees the order, journeys Meta has approved, and a 14-day
-                trial. Typically live in about fifteen minutes.
+                TopEdge AI is a Shopify app for Indian D2C brands that automates abandoned cart
+                recovery, COD confirmation and order updates over WhatsApp and email. 14-day trial.
+                About 30 minutes of setup. Meta verification and template review are the wait.
               </p>
               <div className="home-hero__actions">
                 <PrimaryButton to="/signup">

@@ -16,6 +16,12 @@ import PriceRoll from './PriceRoll';
 
 function planLimits(plan: CatalogPlan) {
   const f = plan.features;
+  // Locked rows carry the gate in text, not only in the lock icon, which is
+  // aria-hidden: crawlers and AI engines read the bare label as "included".
+  const gated = (label: string, on: boolean) => ({
+    text: on ? label : `${label}: not on ${plan.displayName}`,
+    locked: !on,
+  });
   return [
     {
       text: `${Number(plan.ordersPerCycle).toLocaleString('en-IN')} orders / month`,
@@ -25,8 +31,8 @@ function planLimits(plan: CatalogPlan) {
       text: `${Number(plan.campaignEmailSendsPerCycle).toLocaleString('en-IN')} campaign + email sends / month`,
       locked: false,
     },
-    { text: 'Journey Branch', locked: !f.journeyBranch },
-    { text: 'COD → prepaid', locked: !f.journeyCodPrepaid },
+    gated('Journey Branch', !!f.journeyBranch),
+    gated('COD to prepaid', !!f.journeyCodPrepaid),
     { text: dispatchLabel(f.dispatchPriority), locked: false },
   ];
 }

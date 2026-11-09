@@ -148,8 +148,26 @@ export const SOURCES = {
     label: 'Interakt’s published pricing page',
     publisher: 'Interakt',
     claim:
-      'Read 7 November 2026, monthly billing, plus taxes: Starter ₹999 (Instagram only), Growth ₹2,799 and Advanced ₹3,799 for WhatsApp plus Instagram, Enterprise on request. Per-message rates for Indian numbers on Growth: marketing ₹0.958, authentication ₹0.128, utility ₹0.150, service ₹0.128 after 1,000 free service messages. On Advanced: ₹0.949, ₹0.127, ₹0.140, ₹0.127. Only Enterprise is listed with “No Markup Charges”. Against Meta’s ₹0.8631 marketing and ₹0.1150 utility, Growth is about 11% above Meta on marketing and 30% on utility. WhatsApp AI Agents are a ₹3,000 add-on on Growth and Advanced; read 21 October 2026, that add-on included 100 free AI messages a month and ₹0.50 per AI message beyond. Sales CRM ₹2,499/month for 5 agents then ₹499 per extra agent, read 21 October 2026.',
-    verified: '2026-11-07',
+      'Read 9 November 2026 on all three billing views, plus taxes. Monthly: Starter ₹999 (Instagram only), Growth ₹2,799, Advanced ₹3,799. Quarterly: Starter ₹3,499, Growth ₹7,699, Advanced ₹10,499. Yearly: Starter ₹11,999, Growth ₹26,399, Advanced ₹35,999. On quarterly and yearly billing Starter is “Pick any one channel”, WhatsApp or Instagram; Growth and Advanced include both. Enterprise on request. Unlimited agents on every plan, owner roles only on Starter. Per-message rates for Indian numbers: Starter marketing ₹0.970, authentication ₹0.129, utility ₹0.160, service ₹0.129; Growth ₹0.958, ₹0.128, ₹0.150, ₹0.128; Advanced ₹0.949, ₹0.127, ₹0.140, ₹0.127; service charged after 1,000 free service messages. Only Enterprise is listed with “No Markup Charges”. Against Meta’s ₹0.8631 marketing and ₹0.1150 utility, Growth is about 11% above Meta on marketing and 30% on utility. The feature table lists “Shopify Integration (Only included on Shopify plan...)” linking to apps.shopify.com/interakt-marketing. WhatsApp AI Agents tab: ₹9,000 a quarter (+GST), shown as a ₹3,000 add-on for Growth and Advanced on the main table, 100 free AI messages, then ₹0.50 per AI message. Sales CRM is a separate product; its ₹2,499 for 5 agents was last read 21 October 2026. The 7 November reading recorded the monthly view only and so missed the quarterly Starter channel rule.',
+    verified: '2026-11-09',
+  },
+  interaktRateTable: {
+    id: 'interaktRateTable',
+    url: 'https://www.interakt.shop/whatsapp-conversation-pricing/',
+    label: 'Interakt’s country-wise WhatsApp message rate table',
+    publisher: 'Interakt',
+    claim:
+      'Read 9 November 2026. Per-message rates by country and plan column (Starter, Growth, Advanced). India: Starter ₹0.970 marketing, ₹0.160 utility, ₹0.129 authentication, ₹2.807 authentication-international, ₹0.129 service; Growth ₹0.958, ₹0.150, ₹0.128, ₹2.772, ₹0.128; Advanced ₹0.949, ₹0.140, ₹0.127, ₹2.747, ₹0.127. This is the page the Shopify App Store listing links to as “See all pricing options”.',
+    verified: '2026-11-09',
+  },
+  interaktShopifyListing: {
+    id: 'interaktShopifyListing',
+    url: 'https://apps.shopify.com/interakt-marketing',
+    label: 'Interakt on the Shopify App Store',
+    publisher: 'Shopify App Store',
+    claim:
+      'Read 9 November 2026 from India. Rating 4.3 from 233 reviews. Prices shown as Shopify’s INR estimates at 1 INR = 0.0106 USD, billed in the store’s billing currency: Starter ₹1,973.48 a month or ₹16,915.54 a year; Growth ₹3,852.99 or ₹27,816.67; Advanced ₹4,792.74 or ₹43,980.42; Premier ₹9,303.55 or ₹78,845.23; each plus additional WhatsApp conversation charges, each with a 14-day free trial. Starter: API approval and setup, automated notifications, shared team inbox, WhatsApp widget, Blue tick application. Growth adds notifications with delay, analytics and reports, basic WhatsApp chatbot, roles and permissions, Instagram automation. Advanced adds advanced chatbot, API rate limit 600 msg/min, agent stats, advanced chat auto-routing. Premier adds WhatsApp AI agents (sales, FAQ, lead qualification), a popup for collecting WhatsApp numbers, cart reminders to those numbers, and Shopify actions in the workflow builder.',
+    verified: '2026-11-09',
   },
   updatrrPricing: {
     id: 'updatrrPricing',
@@ -157,8 +175,8 @@ export const SOURCES = {
     label: 'Updatrr’s published pricing page',
     publisher: 'Updatrr',
     claim:
-      'Growth $29.99/month, Pro $49.99/month, Pro AI $99.99/month, all with a 7-day free trial and no card required. Updatrr states it does not add a markup on Meta’s conversation fees and that Meta bills WhatsApp conversations separately. Pro lists a “Custom No-code Chatbot”, shown as “No-code AI Chatbot” in the plan comparison table. “AI Chatbot with Smart Human Handover”, AI voice calling and the unified WhatsApp, Instagram and Facebook inbox are on Pro AI only. Team members: 1 on Growth, 3 on Pro, 10 on Pro AI. No order limit is published on any plan, and the page publishes no per-message AI fee. It says country-wise pricing is available inside the dashboard and annual pricing is on request.',
-    verified: '2026-11-08',
+      'Growth $29.99/month, Pro $49.99/month, Pro AI $99.99/month, all with a 7-day free trial and no card required. Updatrr states it does not add a markup on Meta’s conversation fees and that Meta bills WhatsApp conversations separately. Pro lists a “Custom No-code Chatbot”, shown as “No-code AI Chatbot” in the plan comparison table. “AI Chatbot with Smart Human Handover”, AI voice calling and the unified WhatsApp, Instagram and Facebook inbox are on Pro AI only. Team members: 1 on Growth, 3 on Pro, 10 on Pro AI. No order limit is published on any plan, and the page publishes no per-message AI fee. It says country-wise pricing is available inside the dashboard and annual pricing is on request. Re-read 9 November 2026, unchanged.',
+    verified: '2026-11-09',
   },
   littledataConversion: {
     id: 'littledataConversion',

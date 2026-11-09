@@ -114,8 +114,10 @@ export default function PricingPage() {
                 highlight="with 0% Meta markup."
                 sub={
                   <>
-                    Three plans built around how many orders you actually process:{' '}
-                    <span className="mkt-psec__keep">100 to 1,500 a month.</span>
+                    TopEdge costs ₹1,999 to ₹6,499 a month plus GST by order volume,{' '}
+                    <span className="mkt-psec__keep">100 to 1,500 orders a month,</span> with
+                    Meta billed separately at 0% markup. Basic COD confirmation is on every
+                    plan; COD-to-prepaid and Journey Branch start on Growth.
                   </>
                 }
               />
@@ -157,7 +159,10 @@ export default function PricingPage() {
 
             <IncludedFeatures items={catalog.universalFeatures} />
 
-            <TrustpilotProof intro="Published reviews from Shopify brands running TopEdge, quoted as written." />
+            <TrustpilotProof
+              intro="Published reviews from Shopify brands running TopEdge, quoted as written."
+              omitAuthors={['Robin']}
+            />
 
             <FeatureMatrix plans={catalog.plans} cycle={cycle} />
 

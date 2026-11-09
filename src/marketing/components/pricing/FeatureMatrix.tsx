@@ -22,13 +22,17 @@ function Cell({ value }: { value: CellValue }) {
   if (value.kind === 'text') {
     return <span className="mkt-compare__text">{value.text}</span>;
   }
+  // The visible mark is an icon; the word sits in a visually hidden span so
+  // text readers get "Included" / "Not included" instead of an empty cell.
   return value.on ? (
-    <span className="mkt-compare__icon mkt-compare__icon--yes" aria-label="Included">
+    <span className="mkt-compare__icon mkt-compare__icon--yes">
       <Check size={16} strokeWidth={2.25} aria-hidden />
+      <span className="mkt-sr-only">Included</span>
     </span>
   ) : (
-    <span className="mkt-compare__icon mkt-compare__icon--no" aria-label="Not included">
+    <span className="mkt-compare__icon mkt-compare__icon--no">
       <X size={16} strokeWidth={2.25} aria-hidden />
+      <span className="mkt-sr-only">Not included</span>
     </span>
   );
 }
@@ -54,7 +58,7 @@ function buildRows(plans: CatalogPlan[]): CompareRow[] {
       cells: plans.map((p) => ({ kind: 'bool' as const, on: !!p.features.journeyBranch })),
     },
     {
-      label: 'COD → prepaid',
+      label: 'COD to prepaid',
       cells: plans.map((p) => ({ kind: 'bool' as const, on: !!p.features.journeyCodPrepaid })),
     },
     {

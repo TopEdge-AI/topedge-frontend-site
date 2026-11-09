@@ -127,7 +127,7 @@ export const howItWorks = [
   {
     step: '01',
     title: 'Connect Shopify and WhatsApp',
-    desc: 'OAuth your store and add WhatsApp credentials. About fifteen minutes.',
+    desc: 'OAuth your store and add WhatsApp credentials. About 30 minutes of setup.',
   },
   {
     step: '02',

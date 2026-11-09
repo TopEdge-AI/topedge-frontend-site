@@ -55,7 +55,7 @@ export const COMPARE_ALTERNATIVES: AlternativeEntry[] = [
     logo: '/marketing/compare/compare-logo-interakt.png',
     logoAlt: 'Interakt logo',
     oneLiner: 'Shopify WhatsApp marketing with plan meters and optional AI add-ons.',
-    entryPrice: '₹2,799/mo plus taxes for the cheapest WhatsApp plan',
+    entryPrice: '₹1,973.48/mo on its Shopify App Store plan (Shopify’s INR estimate), plus messages',
     markup: 'Growth 11% above Meta on marketing, 30% on utility',
     currency: 'INR',
   },

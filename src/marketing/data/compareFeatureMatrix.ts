@@ -1214,7 +1214,7 @@ export const INTERAKT_PAIRWISE_MATRIX: PairwiseFeatureRow[] = [
     topedge:
       '14-day free trial, then flat INR plans from ₹1,999/month (₹1,599/month billed yearly) + 18% GST',
     competitor:
-      'Free trial offered, then ₹2,799 a month plus taxes for Growth, the cheapest plan that includes WhatsApp (₹999 Starter is Instagram only). Read 7 Nov 2026',
+      '14-day free trial. Its Shopify integration is only on its Shopify App Store plans, from ₹1,973.48 a month as Shopify’s INR estimate. Web plans: Growth ₹2,799 a month; ₹999 Starter is Instagram only on monthly billing, WhatsApp or Instagram on quarterly (₹3,499) or yearly (₹11,999) billing. Read 9 Nov 2026',
   },
   {
     id: 'template-markup',

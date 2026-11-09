@@ -143,7 +143,7 @@ const FAQS = [
   {
     question: 'How long does Shopify WhatsApp setup take?',
     answer:
-      'Most brands connect Shopify and WhatsApp in about 15 minutes. Nothing sends until you approve each Meta template.',
+      'About 30 minutes of setup. Meta verification and template review are the wait. Many templates clear in minutes and most within a day. Meta guarantees no time. Nothing sends until Meta approves each template.',
   },
   {
     question: 'Does TopEdge add a markup on Meta WhatsApp fees?',
@@ -272,7 +272,7 @@ export default function IntegrationsPage() {
             <h2 id="mkt-int-setup">
               How setup <span className="mkt-int__hl">works</span>
             </h2>
-            <p>About fifteen minutes from install to your first approved journey.</p>
+            <p>About 30 minutes of setup. Meta verification and template review are the wait.</p>
           </div>
           <ol className="mkt-int__steps">
             {STEPS.map((s, i) => (
@@ -320,8 +320,8 @@ export default function IntegrationsPage() {
         </section>
 
         <MarketingCtaBand
-          title="Connect your store in about fifteen minutes"
-          subtitle="Start free, Shopify OAuth and WhatsApp credentials are guided in onboarding."
+          title="Connect your store in about 30 minutes"
+          subtitle="Start free. Shopify OAuth and WhatsApp credentials are guided in onboarding, then Meta verification and template review are the wait."
           primaryLabel="Start free"
           secondaryLabel="See features"
           secondaryTo="/features"

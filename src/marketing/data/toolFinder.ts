@@ -69,8 +69,8 @@ export const VENDORS: Record<VendorId, Vendor> = {
     comparePath: '/compare/interakt',
     website: 'https://www.interakt.shop',
     pickIf: 'Instagram is as important to you as WhatsApp and you want both on one plan.',
-    price: 'WhatsApp plans from ₹2,799 a month',
-    caveat: 'The ₹999 Starter plan is Instagram only. WhatsApp starts on Growth at ₹2,799.',
+    price: 'Shopify app plans from ₹1,973 a month',
+    caveat: 'Its Shopify integration is only on its Shopify App Store plans. On the web plans, ₹999 Starter is Instagram only when billed monthly.',
   },
   aisensy: {
     id: 'aisensy',
@@ -337,11 +337,11 @@ export const QUESTIONS: Question[] = [
       {
         id: 'low',
         label: 'Lowest monthly price',
-        points: { topedge: 2, interakt: 1, aisensy: 2, wati: 1, bitespeed: -2 },
+        points: { topedge: 2, interakt: 2, aisensy: 2, wati: 1, bitespeed: -2 },
         reasons: {
           topedge: 'Starts at ₹1,999 a month, with a 14-day free trial.',
           aisensy: 'Basic is ₹1,500 a month billed monthly, the lowest entry price here (read 7 Nov 2026).',
-          interakt: 'WhatsApp plans start at ₹2,799 a month.',
+          interakt: 'Its Shopify App Store plans start at ₹1,973 a month, plus its own message rates (read 9 Nov 2026).',
         },
         cautions: { bitespeed: 'Publishes no prices; its pricing page redirects to a demo request.' },
       },

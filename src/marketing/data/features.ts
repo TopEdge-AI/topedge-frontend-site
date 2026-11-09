@@ -34,7 +34,7 @@ export const MARKETING_FEATURES: MarketingFeature[] = [
     slug: 'flow-builder',
     scene: 'flow-builder',
     title: 'Describe the bot, AI drafts the flow canvas',
-    body: 'Fill a short AI form (niche, tone, goals). TopEdge generates a WhatsApp flow you can edit node-by-node: menus, conditions, catalog sends, human handoff.',
+    body: 'Fill a short AI form (niche, tone, goals). TopEdge generates a button-and-list chat flow you can edit step by step: menus, conditions, catalog sends, human handoff.',
     bullets: [
       'AI form → editable flow',
       'Menus, conditions, handoff',
@@ -50,10 +50,10 @@ export const MARKETING_FEATURES: MarketingFeature[] = [
     slug: 'ai-brain',
     scene: 'ai-brain',
     title: 'WhatsApp AI on your own API keys',
-    body: 'Connect OpenAI or Claude. Ground replies in your catalog and policies, Intent Detect saves tokens for hard questions.',
+    body: 'Connect OpenAI, Claude or Gemini. Ground replies in your catalog and policies, Intent Detect saves tokens for hard questions.',
     bullets: [
       'Store knowledge + bot persona',
-      'Bring your own OpenAI or Claude key',
+      'Bring your own OpenAI, Claude or Gemini key',
       'Intent Detect without AI waste',
     ],
     outcomes: [

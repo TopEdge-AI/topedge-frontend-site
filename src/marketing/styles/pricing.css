@@ -2097,3 +2097,17 @@
     max-width: 68px;
   }
 }
+
+/* Visually hidden label for the plan matrix icons (FeatureMatrix.tsx), so the
+   prerendered HTML says "Included" / "Not included" in text. */
+.mkt-sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}

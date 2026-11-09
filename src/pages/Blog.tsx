@@ -349,7 +349,7 @@ export default function Blog({ page = 1, categorySlug }: Props) {
 
         <MarketingCtaBand
           title="Put these playbooks live on your store"
-          subtitle="Connect Shopify, approve Meta templates, and publish cart recovery, usually in about fifteen minutes plus Meta review."
+          subtitle="Connect Shopify, approve Meta templates and publish cart recovery. About 30 minutes of setup. Meta verification and template review are the wait."
           primaryLabel="Start free"
           secondaryLabel="See features"
           secondaryTo="/features"

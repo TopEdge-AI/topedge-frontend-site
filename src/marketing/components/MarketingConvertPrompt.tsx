@@ -222,7 +222,7 @@ export default function MarketingConvertPrompt() {
             cold
           </h2>
           <p className="mkt-convert__sub">
-            Live in about 15 minutes. 14-day trial, no card on this site.
+            About 30 minutes of setup. 14-day trial, no card on this site.
           </p>
 
           <ul className="mkt-convert__points">

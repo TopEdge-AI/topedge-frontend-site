@@ -58,7 +58,7 @@ const STORIES: Story[] = [
     id: 'cod-prepaid',
     titleLead: 'COD to Prepaid',
     titleAccent: 'Conversion',
-    body: 'Offer UPI before the parcel leaves the warehouse, so fewer COD orders come back.',
+    body: 'Offer UPI before the parcel leaves the warehouse, so fewer COD orders come back. A returned parcel costs ₹180 to ₹240 in logistics. On Growth and Scale.',
     href: '/features/journeys',
     cta: 'See journeys',
     glow: 'violet',
