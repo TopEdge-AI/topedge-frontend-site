@@ -138,7 +138,7 @@ export const SERVICE_GROUPS: readonly ServiceGroup[] = [
     deliverables: [
       'Your existing WhatsApp number and Meta assets kept, not re-provisioned',
       'Templates re-created and re-submitted in the right categories',
-      'Flat INR plans with 0% markup on Meta rates, billed in rupees',
+      'Flat plans with 0% markup on Meta rates, billed in rupees on topedgeai.com',
       'A side-by-side of what you pay now against what you would pay here',
     ],
     links: [
@@ -179,7 +179,7 @@ export const SERVICE_FAQS = [
   {
     question: 'What does WhatsApp automation cost in India?',
     answer:
-      'Plans are flat INR, starting at ₹1,999/mo plus GST, with 20% off annually and a 14-day free trial. Meta conversation charges are passed through at 0% markup on the published India rate card, so marketing and utility conversations cost what Meta charges.',
+      'Plans start at ₹1,999/mo plus GST on topedgeai.com, with 20% off annually and a 14-day free trial. Installed from the Shopify App Store, the same plans are $19, $39 and $65 a month, billed by Shopify. Meta conversation charges are passed through at 0% markup on the published India rate card, so marketing and utility conversations cost what Meta charges.',
   },
   {
     question: 'Do I need my own WhatsApp Business API account?',

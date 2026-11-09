@@ -10,7 +10,7 @@ const WATI_FAQS: Faq[] = [
   {
     question: 'What is the best WATI alternative for a Shopify store in India?',
     answer:
-      'It depends on what you are replacing. If WATI works for support but the platform fee, AI access or COD setup is the problem, a Shopify-native tool with flat INR pricing and built-in COD journeys, like TopEdge AI, is the closest fit. If you need a large multi-agent support desk across many channels, stay with a support-first tool and add cart recovery separately.',
+      'It depends on what you are replacing. If WATI works for support but the platform fee, AI access or COD setup is the problem, a Shopify-native tool with flat order-based pricing and built-in COD journeys, like TopEdge AI, is the closest fit. If you need a large multi-agent support desk across many channels, stay with a support-first tool and add cart recovery separately.',
   },
   {
     question: 'Will my approved WhatsApp templates move if I leave WATI?',
@@ -33,7 +33,7 @@ const UPDATRR_FAQS: Faq[] = [
   {
     question: 'What is the best Updatrr alternative for Shopify stores in India?',
     answer:
-      'It depends on what is not working. Updatrr is a capable Shopify-only WhatsApp app that publishes plans at $29.99, $49.99 and $99.99 a month and states it adds no markup on Meta conversation fees, which is the right thing to do. Switch to TopEdge AI when you want to pay in rupees rather than dollars, want AI with human handover on your entry plan instead of the $99.99 tier, or need pre-checkout visitor identity, unified multi-number profiles and warranty management that a Shopify-only app does not reach.',
+      'It depends on what is not working. Updatrr is a capable Shopify-only WhatsApp app that publishes plans at $29.99, $49.99 and $99.99 a month and states it adds no markup on Meta conversation fees, which is the right thing to do. Switch to TopEdge AI when you want to pay in rupees rather than dollars (sign up on topedgeai.com; App Store installs are billed by Shopify in USD), want AI with human handover on your entry plan instead of the $99.99 tier, or need pre-checkout visitor identity, unified multi-number profiles and warranty management that a Shopify-only app does not reach.',
   },
   {
     question: 'Does Updatrr mark up Meta WhatsApp rates?',
@@ -61,7 +61,7 @@ const AISENSY_FAQS: Faq[] = [
   {
     question: 'What is the best AiSensy alternative for WhatsApp in India?',
     answer:
-      'There is no single best one, because AiSensy is three products at once: a broadcast tool, a chatbot builder and a team inbox. If you left because of Shopify depth and the service message markup, a Shopify-native tool on flat INR plans like TopEdge AI is the closest fit. If you left because support is your bottleneck, WATI or Gallabox are shared-inbox tools first. If you left because you want to build your own messaging stack, Twilio sells the official WhatsApp Business API and nothing else. Pick by which of those three jobs you are actually replacing.',
+      'There is no single best one, because AiSensy is three products at once: a broadcast tool, a chatbot builder and a team inbox. If you left because of Shopify depth and the service message markup, a Shopify-native tool on flat order-based plans like TopEdge AI is the closest fit. If you left because support is your bottleneck, WATI or Gallabox are shared-inbox tools first. If you left because you want to build your own messaging stack, Twilio sells the official WhatsApp Business API and nothing else. Pick by which of those three jobs you are actually replacing.',
   },
   {
     question: 'Is there a free AiSensy alternative?',
@@ -142,7 +142,7 @@ const INTERAKT_FAQS: Faq[] = [
   {
     question: 'What is the best Interakt alternative for Shopify India?',
     answer:
-      'For a COD-heavy Shopify store that wants flat INR plans, 0% Meta markup and native cart recovery on every plan, TopEdge AI is a close fit. Automated COD-to-prepaid conversion sits on Growth and Scale, not on Launch, so check that against your order volume first. If you already rely on Interakt’s broader catalog and campaign tooling and only want cheaper AI, compare the add-on cost before moving anything.',
+      'For a COD-heavy Shopify store that wants flat order-based plans, 0% Meta markup and native cart recovery on every plan, TopEdge AI is a close fit. Automated COD-to-prepaid conversion sits on Growth and Scale, not on Launch, so check that against your order volume first. If you already rely on Interakt’s broader catalog and campaign tooling and only want cheaper AI, compare the add-on cost before moving anything.',
   },
   {
     question: 'How much does Interakt cost in India?',
@@ -165,12 +165,12 @@ const BITESPEED_FAQS: Faq[] = [
   {
     question: 'Is Bitespeed a good fit for small Indian Shopify stores?',
     answer:
-      'According to our September 2026 research Bitespeed asks stores to reach a minimum monthly revenue to qualify for onboarding, with baseline plans starting around ₹15,000 a month. That suits larger brands. Smaller D2C stores usually look for an INR plan sized to order volume instead.',
+      'According to our September 2026 research Bitespeed asks stores to reach a minimum monthly revenue to qualify for onboarding, with baseline plans starting around ₹15,000 a month. That suits larger brands. Smaller D2C stores usually look for a plan sized to order volume instead.',
   },
   {
     question: 'What is the best Bitespeed alternative for Shopify India?',
     answer:
-      'If you want WhatsApp cart recovery, COD confirmation and a shared inbox at a price a sub-₹5 lakh a month store can justify, a flat INR order-based plan like TopEdge AI is the practical alternative. If you want a full multi-channel AI agent stack and have the budget, Bitespeed stays relevant.',
+      'If you want WhatsApp cart recovery, COD confirmation and a shared inbox at a price a sub-₹5 lakh a month store can justify, a flat order-based plan like TopEdge AI is the practical alternative. If you want a full multi-channel AI agent stack and have the budget, Bitespeed stays relevant.',
   },
   {
     question: 'Does Bitespeed charge extra for AI?',
@@ -380,7 +380,7 @@ export const blogPostsQ4: BlogPost[] = [
         name: 'TopEdge AI',
         url: 'https://apps.shopify.com/topedge-ai',
         description:
-          'Shopify-native WhatsApp automation for Indian D2C on flat INR plans, with COD confirmation, cart recovery and warranty built in and 0% markup on Meta rates.',
+          'Shopify-native WhatsApp automation for Indian D2C on flat order-based plans, with COD confirmation, cart recovery and warranty built in and 0% markup on Meta rates.',
         software: { category: 'BusinessApplication', operatingSystem: 'Web', offerFrom: 1999, currency: 'INR' },
       },
       {
@@ -459,7 +459,7 @@ ${verdict(`<p><strong>A WATI alternative makes sense for Shopify India when</str
 <p>The question to put to WATI, or to us, stays narrow: what do you charge per message by category, and what per service reply past Meta's free thousand. Everything else is a subscription you can compare on a page. Full rate card in the <a href="/blog/whatsapp-business-api-pricing-india">India WhatsApp API pricing guide</a>.</p>
 
 <h2>Where does TopEdge AI fit?</h2>
-<p>TopEdge AI is built around Shopify D2C in India: flat INR plans from ₹1,999 a month plus GST (₹1,599 billed yearly), Meta messages billed at Meta rates with no TopEdge markup, <a href="/features/journeys">cart recovery and COD journeys</a>, <a href="/features">Live Chat with order context</a> and unified customer identity across numbers. We are not trying to out-support a dedicated helpdesk product.</p>
+<p>TopEdge AI is built around Shopify D2C in India: plans from ₹1,999 a month plus GST (₹1,599 billed yearly) on topedgeai.com, or $19 a month on the Shopify App Store, Meta messages billed at Meta rates with no TopEdge markup, <a href="/features/journeys">cart recovery and COD journeys</a>, <a href="/features">Live Chat with order context</a> and unified customer identity across numbers. We are not trying to out-support a dedicated helpdesk product.</p>
 <p>See the line-by-line board on <a href="/compare/wati">TopEdge vs WATI</a> and plan details on <a href="/pricing">pricing</a>.</p>
 
 <h2>How do you test a switch in one afternoon?</h2>
@@ -522,7 +522,7 @@ ${faqHtml(WATI_FAQS)}
         name: 'TopEdge AI',
         url: 'https://apps.shopify.com/topedge-ai',
         description:
-          'Shopify-native WhatsApp automation for Indian D2C on flat INR plans, with COD confirmation, cart recovery and warranty built in and 0% markup on Meta rates.',
+          'Shopify-native WhatsApp automation for Indian D2C on flat order-based plans, with COD confirmation, cart recovery and warranty built in and 0% markup on Meta rates.',
         software: { category: 'BusinessApplication', operatingSystem: 'Web', offerFrom: 1999, currency: 'INR' },
       },
       {
@@ -533,7 +533,7 @@ ${faqHtml(WATI_FAQS)}
         software: { category: 'BusinessApplication', operatingSystem: 'Web' },
       },
     ],
-    content: `${verdict(`<p><strong>The best AiSensy alternative depends on which of its three jobs you are replacing.</strong> For Shopify depth, native cart recovery and COD to prepaid, a Shopify-first tool on flat INR plans fits. For support volume, a shared team inbox tool like WATI or Gallabox fits. For full control, Twilio sells the raw API. If most of your value is one-off WhatsApp broadcasts, AiSensy is already good at that and the switch may not be worth it.</p>`)}
+    content: `${verdict(`<p><strong>The best AiSensy alternative depends on which of its three jobs you are replacing.</strong> For Shopify depth, native cart recovery and COD to prepaid, a Shopify-first tool on flat order-based plans fits. For support volume, a shared team inbox tool like WATI or Gallabox fits. For full control, Twilio sells the raw API. If most of your value is one-off WhatsApp broadcasts, AiSensy is already good at that and the switch may not be worth it.</p>`)}
 
 <p>Most people searching for an <strong>AiSensy alternative</strong> are not unhappy with AiSensy. They have outgrown the shape of it. AiSensy is one of the most visible WhatsApp Business API platforms in India, it is an official Meta Business Solution Provider, and it is genuinely good at broadcasting to a list. The friction starts when a Shopify store needs the message to know what the customer bought, and when the bill stops tracking the order count.</p>
 <p>This page compares AiSensy with the five platforms Indian D2C brands actually shortlist against it: Interakt, WATI, Gallabox, Twilio and TopEdge AI. It uses published prices where the vendor publishes them, and says so plainly where it cannot.</p>
@@ -652,7 +652,7 @@ ${faqHtml(WATI_FAQS)}
 <tr><td>COD to prepaid</td><td>API plus manual mapping</td><td>Built into journeys on Growth and Scale</td></tr>
 <tr><td>Chatbot builder limits</td><td>Capped by plan and credits</td><td>Flow builder on all plans</td></tr>
 <tr><td>Order context in the inbox</td><td>Integration work</td><td>Shopify order, COD status and warranty on the conversation</td></tr>
-<tr><td>Subscription</td><td>Plan based, per the live pricing page</td><td>Flat INR from ₹1,999 a month plus GST</td></tr>
+<tr><td>Subscription</td><td>Plan based, per the live pricing page</td><td>₹1,999 a month plus GST on topedgeai.com, or $19 on the Shopify App Store</td></tr>
 <tr><td>Best for</td><td>Broadcasts and campaigns</td><td>Shopify cart, COD and order lifecycle</td></tr>
 </tbody>
 </table>
@@ -753,7 +753,7 @@ ${faqHtml(AISENSY_FAQS)}
         name: 'TopEdge AI',
         url: 'https://apps.shopify.com/topedge-ai',
         description:
-          'Shopify-native WhatsApp automation for Indian D2C on flat INR plans, with COD confirmation, cart recovery and warranty built in and 0% markup on Meta rates.',
+          'Shopify-native WhatsApp automation for Indian D2C on flat order-based plans, with COD confirmation, cart recovery and warranty built in and 0% markup on Meta rates.',
         software: { category: 'BusinessApplication', operatingSystem: 'Web', offerFrom: 1999, currency: 'INR' },
       },
       {
@@ -778,7 +778,7 @@ ${verdict(`<p><strong>Interakt is a reasonable default for Indian Shopify stores
 </ul>
 
 <h2>AI cost at 5,000 monthly replies: ₹0.50 a message against bring-your-own-key</h2>
-<p>The subscription gap between Interakt and a flat INR plan is a few hundred rupees. The AI gap is not, and it is the line that grows with your order count.</p>
+<p>The subscription gap between Interakt and a flat order-based plan is a few hundred rupees. The AI gap is not, and it is the line that grows with your order count.</p>
 <p>Take a store handling <strong>5,000 AI-answered replies a month</strong>, which is normal once a catalogue bot is live on a store doing a few hundred orders a week.</p>
 <div class="mkt-blog-table-wrap">
 <table>
@@ -830,11 +830,11 @@ ${faqHtml(INTERAKT_FAQS)}
     id: 30,
     title: 'Best Bitespeed Alternative for Shopify India (2026)',
     description:
-      'A Bitespeed alternative for Shopify India: revenue minimums, USD-style pricing and AI add-ons, versus a flat INR plan sized to your order volume.',
+      'A Bitespeed alternative for Shopify India: revenue minimums, USD-style pricing and AI add-ons, versus a flat plan sized to your order volume.',
     summary: [
       'Bitespeed asks for about ₹5,00,000 monthly revenue before it will onboard you, with baseline plans from about ₹15,000 a month.',
       'Below that floor the comparison is not features, it is whether you are in the market at all.',
-      'Across twelve months, a flat INR plan from ₹19,188 a year is a different order of commitment.',
+      'Across twelve months, a flat plan from ₹19,188 a year on our site ($182 on the Shopify App Store) is a different order of commitment.',
     ],
     slug: 'bitespeed-alternative-shopify-india',
     date: '2026-10-08',
@@ -858,7 +858,7 @@ ${faqHtml(INTERAKT_FAQS)}
         name: 'TopEdge AI',
         url: 'https://apps.shopify.com/topedge-ai',
         description:
-          'Shopify-native WhatsApp automation for Indian D2C on flat INR plans, with COD confirmation, cart recovery and warranty built in and 0% markup on Meta rates.',
+          'Shopify-native WhatsApp automation for Indian D2C on flat order-based plans, with COD confirmation, cart recovery and warranty built in and 0% markup on Meta rates.',
         software: { category: 'BusinessApplication', operatingSystem: 'Web', offerFrom: 1999, currency: 'INR' },
       },
       {
@@ -869,7 +869,7 @@ ${faqHtml(INTERAKT_FAQS)}
       },
     ],
     content: `
-${verdict(`<p><strong>Bitespeed targets larger brands and global omnichannel stacks.</strong> If your Shopify store is below that scale, or you want to pay in rupees on a plan sized to orders, an INR-first alternative is the more practical choice. If you are a large brand that wants an AI-agent suite, Bitespeed stays in the running.</p>`)}
+${verdict(`<p><strong>Bitespeed targets larger brands and global omnichannel stacks.</strong> If your Shopify store is below that scale, or you want a plan sized to orders that you can pay in rupees, an India-first alternative is the more practical choice. If you are a large brand that wants an AI-agent suite, Bitespeed stays in the running.</p>`)}
 
 <p>Most people searching for a <strong>Bitespeed alternative</strong> are not unhappy with the product. They have read the pricing page, found a revenue floor they do not clear yet, and are looking for something that will take their money today. That is a sizing problem, not a features problem, and it changes which questions are worth asking.</p>
 <p>Bitespeed is often named in roundups for WhatsApp-heavy markets including India. The question for a small or mid-size D2C brand is not whether it is good, but whether its pricing model fits your size.</p>
@@ -893,7 +893,7 @@ ${verdict(`<p><strong>Bitespeed targets larger brands and global omnichannel sta
 </ul>
 <p>What Bitespeed does well: native COD to prepaid, broad omnichannel coverage and opt-in widgets such as spin-the-wheel pop-ups.</p>
 
-<h2>Compared with a flat INR plan</h2>
+<h2>Compared with a flat order-based plan</h2>
 <table>
 <thead><tr><th>Area</th><th>Bitespeed (public patterns)</th><th>TopEdge AI</th></tr></thead>
 <tbody>
@@ -1144,7 +1144,7 @@ ${faqHtml(OPTIN_FAQS)}
     id: 33,
     title: 'Best Updatrr Alternative for Shopify India (2026)',
     description:
-      'An Updatrr alternative for Shopify India: flat INR plans from ₹1,999/mo, a 14-day trial and BYOK AI on every plan, against USD tiers with AI handover at $99.99.',
+      'An Updatrr alternative for Shopify India: plans from ₹1,999/mo, a 14-day trial and BYOK AI on every plan, against USD tiers with AI handover at $99.99.',
     summary: [
       'Updatrr publishes USD tiers from $29.99 to $99.99 with a 7-day trial and no order limits, and states it adds no markup on Meta’s fees.',
       'Its AI chatbot with human handover sits on the $99.99 Pro AI tier, about ₹1,12,700 a year at the 6 November 2026 exchange rate.',
@@ -1174,7 +1174,7 @@ ${faqHtml(OPTIN_FAQS)}
         name: 'TopEdge AI',
         url: 'https://apps.shopify.com/topedge-ai',
         description:
-          'Shopify-native WhatsApp automation for Indian D2C on flat INR plans, with COD confirmation, cart recovery and warranty built in and 0% markup on Meta rates.',
+          'Shopify-native WhatsApp automation for Indian D2C on flat order-based plans, with COD confirmation, cart recovery and warranty built in and 0% markup on Meta rates.',
         software: { category: 'BusinessApplication', operatingSystem: 'Web', offerFrom: 1999, currency: 'INR' },
       },
       {
@@ -1186,7 +1186,7 @@ ${faqHtml(OPTIN_FAQS)}
       },
     ],
     content: `
-${verdict(`<p><strong>Updatrr is an honest Shopify-only WhatsApp app and it does not mark up Meta rates.</strong> Switch to TopEdge AI when you want to be billed in rupees rather than dollars, want AI included on the entry plan instead of behind the $99.99 tier, or need pre-checkout visitor identity, unified multi-number profiles and warranty management. Stay on Updatrr if its three plans already cover what you run and you do not need AI: from 500 orders a month, its Growth plan is the cheaper bill.</p>`)}
+${verdict(`<p><strong>Updatrr is an honest Shopify-only WhatsApp app and it does not mark up Meta rates.</strong> Switch to TopEdge AI when you want to be billed in rupees rather than dollars (by signing up on topedgeai.com; App Store installs are billed by Shopify in USD), want AI included on the entry plan instead of behind the $99.99 tier, or need pre-checkout visitor identity, unified multi-number profiles and warranty management. Stay on Updatrr if its three plans already cover what you run and you do not need AI: from 500 orders a month, its Growth plan is the cheaper bill.</p>`)}
 
 <p>Most "alternative" posts open by finding something dishonest about the incumbent. This one cannot, so it will not try. <a href="https://www.updatrr.com/pricing" target="_blank" rel="noopener noreferrer">Updatrr's pricing page</a> states plainly that it <em>does not add a markup on Meta's conversation fees</em> and that Meta bills WhatsApp conversations separately by recipient country and conversation type. That is the correct answer to the single most important pricing question in this category, and it is the same position we take.</p>
 <p>So this comparison is not about markup. It is about currency, what each plan includes, and how far into your store each product reaches. Those turn out to be the three things that actually decide it.</p>
@@ -1451,7 +1451,7 @@ ${faqHtml(COD_PREPAID_FAQS)}
         name: 'TopEdge AI',
         url: 'https://apps.shopify.com/topedge-ai',
         description:
-          'WhatsApp-first recovery built on Shopify cart and checkout events, with purchase suppression, COD and prepaid branching, logged opt-in and recovered-revenue reporting at 0% markup on Meta rates. Flat INR plans from ₹1,999 a month.',
+          'WhatsApp-first recovery built on Shopify cart and checkout events, with purchase suppression, COD and prepaid branching, logged opt-in and recovered-revenue reporting at 0% markup on Meta rates. Plans from ₹1,999 a month on our site, or $19 on the Shopify App Store.',
       },
       {
         name: 'Shopify’s built-in abandoned checkout automation',
@@ -1680,7 +1680,7 @@ ${faqHtml(COD_PREPAID_FAQS)}
 <h2>1. TopEdge AI</h2>
 <p><strong>Best for:</strong> Indian Shopify stores that want recovery, COD confirmation and replies on one canvas rather than three subscriptions.</p>
 <p>TopEdge AI treats recovery as a Shopify event problem first and a messaging problem second. <a href="/features/journeys">Journeys</a> fire on abandoned cart and abandoned checkout, send Meta-approved templates with live line items and a resume link, branch on payment method so COD and prepaid carts read differently, and suppress the remaining steps the moment an order is created. Replies land in <a href="/features">Live Chat</a> with the cart and order beside the thread, so the message can become a sale instead of an unanswered notification.</p>
-<p>On economics it is deliberately boring: flat INR plans from <strong>₹1,999 a month</strong> plus GST on Launch, with the deeper COD-to-prepaid journeys on Growth at ₹3,999 a month (₹3,199 billed yearly). Meta bills your own WhatsApp Business Account directly at its published rates and TopEdge adds <strong>0% markup</strong>, which is the line that matters at festive volume. There is a 14-day trial, and the listing is on the <a href="https://apps.shopify.com/topedge-ai" target="_blank" rel="noopener noreferrer">Shopify App Store</a>.</p>
+<p>On economics it is deliberately boring: plans from <strong>₹1,999 a month</strong> plus GST on Launch (or $19 a month on the Shopify App Store), with the deeper COD-to-prepaid journeys on Growth at ₹3,999 a month (₹3,199 billed yearly). Meta bills your own WhatsApp Business Account directly at its published rates and TopEdge adds <strong>0% markup</strong>, which is the line that matters at festive volume. There is a 14-day trial, and the listing is on the <a href="https://apps.shopify.com/topedge-ai" target="_blank" rel="noopener noreferrer">Shopify App Store</a>.</p>
 <p><strong>Where it is not the answer:</strong> if your buyers are not on WhatsApp, or nobody at your store will answer a reply, you are paying for the half of the product that does the work.</p>
 
 <h2>2. Shopify’s built-in abandoned checkout automation</h2>
@@ -1832,7 +1832,7 @@ ${faqHtml(COD_PREPAID_FAQS)}
 
 <h2>Where TopEdge AI fits</h2>
 <p>We build one of the apps on this list, so read this section as the vendor talking and judge it against the four tests like any other.</p>
-<p>TopEdge AI is ecommerce automation for Shopify stores in India: cart and checkout recovery on <a href="/features/journeys">Journeys</a>, COD confirmation and COD-to-prepaid branching, consent capture through <a href="/features/opt-in-tools">opt-in tools</a>, replies in <a href="/features">Live Chat</a> with Shopify context, and template approval state gated in <a href="/features/meta-manager">Meta Manager</a> so a draft template cannot fire mid-sale. Recovery reports as recovered revenue attributed to the journey, not as messages delivered. Plans are flat INR from ₹1,999 a month plus GST, Meta bills your own account at its published rates with 0% markup, and the trial is 14 days. Connecting the two sides is on <a href="/shopify-whatsapp-integration">Shopify WhatsApp integration</a>, and plan detail is on <a href="/pricing">pricing</a>.</p>
+<p>TopEdge AI is ecommerce automation for Shopify stores in India: cart and checkout recovery on <a href="/features/journeys">Journeys</a>, COD confirmation and COD-to-prepaid branching, consent capture through <a href="/features/opt-in-tools">opt-in tools</a>, replies in <a href="/features">Live Chat</a> with Shopify context, and template approval state gated in <a href="/features/meta-manager">Meta Manager</a> so a draft template cannot fire mid-sale. Recovery reports as recovered revenue attributed to the journey, not as messages delivered. Plans start at ₹1,999 a month plus GST on topedgeai.com, or $19 on the Shopify App Store, Meta bills your own account at its published rates with 0% markup, and the trial is 14 days. Connecting the two sides is on <a href="/shopify-whatsapp-integration">Shopify WhatsApp integration</a>, and plan detail is on <a href="/pricing">pricing</a>.</p>
 <p>It is software, not an agency. Recovery results still depend on your opt-in rate, your offer, how broken your checkout is, and whether anyone answers the replies.</p>
 
 ${faqHtml(BEST_CART_APP_FAQS)}
@@ -2079,7 +2079,7 @@ ${faqHtml(FUNNEL_FAQS)}
       'A Shopify store pays Interakt’s Shopify App Store prices, not its web plans. Interakt’s pricing page says the Shopify integration is only on its Shopify plan, listed from ₹1,973.48 a month on 9 November 2026.',
       'On the web plans, ₹999 Starter is Instagram only when billed monthly. Billed quarterly (₹3,499) or yearly (₹11,999), Starter can carry WhatsApp instead. Growth is ₹2,799 a month.',
       'Every WhatsApp message is billed at Interakt’s own rate: 10% to 12% above Meta on marketing and 22% to 39% above on utility. At 500 orders a month that is about ₹1,028 extra on the Shopify Growth plan.',
-      'At 500 orders a month with timed cart recovery, the bill is about ₹13,914 before GST on Interakt’s Shopify Growth plan, ₹13,033 on TopEdge Growth and ₹11,850 on Updatrr Growth.',
+      'At 500 orders a month with timed cart recovery, the bill is about ₹13,914 before GST on Interakt’s Shopify Growth plan, ₹12,699 on TopEdge Growth from the same App Store (₹13,033 if you sign up on our site) and ₹11,850 on Updatrr Growth.',
     ],
     slug: 'interakt-pricing-india',
     date: '2026-11-09',
@@ -2168,31 +2168,31 @@ ${faqHtml(FUNNEL_FAQS)}
 <p>At 100 orders that is 2,000 marketing, 300 utility and no billable service messages. At 500 orders it is 10,000, 1,500 and 2,000. At 1,500 orders it is 30,000, 4,500 and 8,000.</p>
 <div class="mkt-blog-table-wrap">
 <table>
-<thead><tr><th>Orders a month</th><th>Interakt Shopify Growth</th><th>Interakt Shopify Starter</th><th>TopEdge AI, on the plan that volume needs</th><th>Updatrr Growth</th></tr></thead>
+<thead><tr><th>Orders a month</th><th>Interakt Shopify Growth</th><th>Interakt Shopify Starter</th><th>TopEdge AI on the Shopify App Store</th><th>TopEdge AI on topedgeai.com</th><th>Updatrr Growth</th></tr></thead>
 <tbody>
-<tr><td><strong>100</strong></td><td>₹5,814</td><td>₹3,961</td><td>₹3,760 (Launch)</td><td>₹4,577</td></tr>
-<tr><td><strong>500</strong></td><td>₹13,914</td><td>₹12,171</td><td>₹13,033 (Growth)</td><td>₹11,850</td></tr>
-<tr><td><strong>1,500</strong></td><td>₹34,292</td><td>₹32,825</td><td>₹33,830 (Scale)</td><td>₹30,147</td></tr>
+<tr><td><strong>100</strong></td><td>₹5,814</td><td>₹3,961</td><td>₹3,546 (Launch)</td><td>₹3,760 (Launch)</td><td>₹4,577</td></tr>
+<tr><td><strong>500</strong></td><td>₹13,914</td><td>₹12,171</td><td>₹12,699 (Growth)</td><td>₹13,033 (Growth)</td><td>₹11,850</td></tr>
+<tr><td><strong>1,500</strong></td><td>₹34,292</td><td>₹32,825</td><td>₹33,439 (Scale)</td><td>₹33,830 (Scale)</td><td>₹30,147</td></tr>
 </tbody>
 </table>
 </div>
-<p>Monthly billing, before GST, subscription plus messages. TopEdge and Updatrr pass Meta’s rate through, so their message line is Meta’s: ₹1,760.70, ₹9,033.50 and ₹27,330.50. Interakt’s message line on Growth is ₹1,961, ₹10,061 and ₹30,439. <a href="https://www.updatrr.com/pricing" target="_blank" rel="noopener noreferrer">Updatrr’s $29.99 Growth plan</a>, read 9 November 2026, is converted at the <a href="https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/index.en.html" target="_blank" rel="noopener noreferrer">ECB reference rate</a> of ₹93.92 a dollar for 6 November 2026.</p>
+<p>Monthly billing, before GST, subscription plus messages, on the plan each volume needs. TopEdge, like Interakt, sells its Shopify App Store plans in US dollars ($19, $39 and $65 a month), so both App Store columns use Shopify’s own rupee estimates from 9 November 2026; Shopify adds a 1.5% currency fee to either when it converts. On topedgeai.com, TopEdge bills ₹1,999, ₹3,999 and ₹6,499 in rupees, plus GST. TopEdge and Updatrr pass Meta’s rate through, so their message line is Meta’s: ₹1,760.70, ₹9,033.50 and ₹27,330.50. Interakt’s message line on Growth is ₹1,961, ₹10,061 and ₹30,439. <a href="https://www.updatrr.com/pricing" target="_blank" rel="noopener noreferrer">Updatrr’s $29.99 Growth plan</a>, read 9 November 2026, is converted at the <a href="https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/index.en.html" target="_blank" rel="noopener noreferrer">ECB reference rate</a> of ₹93.92 a dollar for 6 November 2026.</p>
 
 <h3>What the table says</h3>
 <ul>
-<li><strong>At 500 orders, timed cart recovery on Interakt costs ₹881 a month more than TopEdge Growth.</strong> Interakt’s Shopify Growth subscription is ₹146 lower, and its message rates add ₹1,028.</li>
-<li><strong>If instant order and COD messages are enough, Interakt’s Shopify Starter is cheaper than TopEdge.</strong> It comes in ₹862 below TopEdge Growth at 500 orders and ₹1,004 below TopEdge Scale at 1,500.</li>
+<li><strong>App Store against App Store, at 500 orders, timed cart recovery on Interakt costs ₹1,215 a month more than TopEdge Growth.</strong> Interakt’s message rates add ₹1,028 and its Growth subscription is ₹188 higher.</li>
+<li><strong>If instant order and COD messages are enough, Interakt’s Shopify Starter is cheaper than TopEdge.</strong> It comes in ₹527 below TopEdge Growth at 500 orders and ₹613 below TopEdge Scale at 1,500, both on the App Store.</li>
 <li><strong>Updatrr Growth is the cheapest row at 500 and 1,500 orders.</strong> It states no markup on Meta’s fees and publishes no order limit. The plan includes one team member.</li>
 <li><strong>At 100 orders, TopEdge Launch is cheapest</strong>, but Launch does not include COD-to-prepaid conversion or Journey Branch. Those start on Growth.</li>
 <li><strong>The markup grows with your volume and the subscription does not.</strong> On Interakt Growth, the gap over Meta’s rate is ₹200 a month at 100 orders and ₹3,109 at 1,500.</li>
 </ul>
-<p><strong>Yearly billing narrows the gap.</strong> Interakt’s Shopify Growth is ₹27,816.67 a year, or ₹2,318 a month, and <a href="/pricing">TopEdge Growth</a> is ₹38,388 a year, or ₹3,199 a month. At 500 orders that puts Interakt at ₹12,379 and TopEdge at ₹12,233 a month, ₹146 apart.</p>
+<p><strong>Yearly billing narrows the gap.</strong> Interakt’s Shopify Growth is ₹27,816.67 a year, or ₹2,318 a month. <a href="/pricing">TopEdge Growth</a> is $374 a year on the App Store (₹35,146.74, or ₹2,929 a month, at Shopify’s estimate) and ₹38,388 a year on our site (₹3,199 a month). At 500 orders that puts Interakt at ₹12,379 a month, TopEdge at ₹11,962 from the App Store and ₹12,233 from our site.</p>
 
 <h2>What the plan price leaves out</h2>
 <ul>
 <li><strong>AI replies.</strong> On the web plans, WhatsApp AI Agents are a ₹3,000 a month add-on for Growth and Advanced, shown as ₹9,000 a quarter on the AI tab. That includes 100 free AI messages, then ₹0.50 per AI message. On the Shopify app, AI agents first appear on Premier at ₹9,303.55 a month. TopEdge charges nothing per AI message on any plan: you connect your own OpenAI, Claude or Gemini key and pay that provider. Updatrr puts its AI chatbot with human handover on Pro AI at $99.99.</li>
 <li><strong>GST.</strong> Every figure on this page is before GST.</li>
-<li><strong>Exchange rate.</strong> Shopify bills the app plans in your store’s billing currency at the day’s rate. The listing’s rupee figures were Shopify’s estimate at 1 INR = 0.0106 USD.</li>
+<li><strong>Exchange rate.</strong> Shopify bills App Store plans, Interakt’s and TopEdge’s alike, in your store’s billing currency at the day’s rate, and <a href="https://help.shopify.com/en/manual/your-account/manage-billing/paying-your-bills/managing-payments/local-currency" target="_blank" rel="noopener noreferrer">adds a 1.5% currency exchange fee</a> to converted app charges. The listings’ rupee figures were Shopify’s estimates at 1 INR = 0.0106 USD.</li>
 <li><strong>Sales CRM.</strong> Interakt sells its Sales CRM as a separate product with its own price. We have not priced it here.</li>
 </ul>
 
@@ -2211,11 +2211,11 @@ ${faqHtml(FUNNEL_FAQS)}
 <table>
 <thead><tr><th>Line</th><th>Interakt, Shopify app</th><th>TopEdge AI</th><th>Updatrr</th></tr></thead>
 <tbody>
-<tr><td>Entry plan for a Shopify store</td><td>Starter, ₹1,973.48 a month</td><td>Launch, ₹1,999 a month for up to 100 orders</td><td>Growth, $29.99 a month</td></tr>
+<tr><td>Entry plan for a Shopify store</td><td>Starter, ₹1,973.48 a month</td><td>Launch, up to 100 orders: $19 a month on the App Store (about ₹1,786), or ₹1,999 plus GST on topedgeai.com</td><td>Growth, $29.99 a month</td></tr>
 <tr><td>Message rates</td><td>Own rates, 10% to 39% above Meta</td><td>Meta’s rate, 0% markup</td><td>Meta’s rate, no markup stated</td></tr>
 <tr><td>Order limits</td><td>None published</td><td>100, 800 and 1,500 a month by plan</td><td>None published</td></tr>
 <tr><td>AI replies</td><td>Premier at ₹9,303.55, or a ₹3,000 add-on on web plans</td><td>Your own AI key, no per-message fee from us</td><td>Pro AI at $99.99</td></tr>
-<tr><td>Billing currency</td><td>Through Shopify, in your store’s billing currency</td><td>INR</td><td>USD</td></tr>
+<tr><td>Billing currency</td><td>Through Shopify, in your store’s billing currency</td><td>Through Shopify in USD from the App Store; INR through Razorpay on topedgeai.com</td><td>USD</td></tr>
 <tr><td>Free trial</td><td>14 days</td><td>14 days, 20 orders, 200 sends</td><td>7 days</td></tr>
 </tbody>
 </table>
@@ -2224,7 +2224,7 @@ ${faqHtml(FUNNEL_FAQS)}
 
 ${faqHtml(INTERAKT_PRICING_FAQS)}
 
-<p class="mkt-blog-footnote">Sources, read 9 November 2026: <a href="https://www.interakt.shop/pricing/" target="_blank" rel="noopener noreferrer">Interakt pricing page</a> (monthly, quarterly and yearly views, and the WhatsApp AI Agents tab), <a href="https://www.interakt.shop/whatsapp-conversation-pricing/" target="_blank" rel="noopener noreferrer">Interakt message rate table</a>, <a href="https://apps.shopify.com/interakt-marketing" target="_blank" rel="noopener noreferrer">Interakt on the Shopify App Store</a>, <a href="https://www.updatrr.com/pricing" target="_blank" rel="noopener noreferrer">Updatrr pricing</a>. Meta’s India rates from <a href="https://developers.facebook.com/docs/whatsapp/pricing/" target="_blank" rel="noopener noreferrer">Meta’s pricing documentation</a>, effective 1 October 2026. Exchange rate from the <a href="https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/index.en.html" target="_blank" rel="noopener noreferrer">ECB</a> for 6 November 2026. TopEdge prices from our <a href="/pricing">pricing page</a>.</p>
+<p class="mkt-blog-footnote">Sources, read 9 November 2026: <a href="https://www.interakt.shop/pricing/" target="_blank" rel="noopener noreferrer">Interakt pricing page</a> (monthly, quarterly and yearly views, and the WhatsApp AI Agents tab), <a href="https://www.interakt.shop/whatsapp-conversation-pricing/" target="_blank" rel="noopener noreferrer">Interakt message rate table</a>, <a href="https://apps.shopify.com/interakt-marketing" target="_blank" rel="noopener noreferrer">Interakt on the Shopify App Store</a>, <a href="https://www.updatrr.com/pricing" target="_blank" rel="noopener noreferrer">Updatrr pricing</a>, <a href="https://apps.shopify.com/topedge-ai" target="_blank" rel="noopener noreferrer">TopEdge AI on the Shopify App Store</a>. Meta’s India rates from <a href="https://developers.facebook.com/docs/whatsapp/pricing/" target="_blank" rel="noopener noreferrer">Meta’s pricing documentation</a>, effective 1 October 2026. Exchange rate from the <a href="https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/index.en.html" target="_blank" rel="noopener noreferrer">ECB</a> for 6 November 2026. TopEdge prices from our <a href="/pricing">pricing page</a>.</p>
 `,
   },
 ];

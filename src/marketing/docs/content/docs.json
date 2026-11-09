@@ -7236,7 +7236,7 @@
         },
         {
           "question": "Why am I getting two bills for WhatsApp automation?",
-          "answer": "Two companies are involved. TopEdge bills you for the platform in INR, with order and send allowances. Meta bills per message at its own published rates, separately."
+          "answer": "Two companies are involved. TopEdge bills you for the platform, with order and send allowances: in INR through Razorpay if you signed up on topedgeai.com, or through Shopify in USD if you installed from the Shopify App Store. Meta bills per message at its own published rates, separately."
         },
         {
           "question": "What is the cheapest way to reduce WhatsApp messaging costs?",
@@ -7246,7 +7246,7 @@
       "blocks": [
         {
           "kind": "answer",
-          "text": "You pay TopEdge a subscription in INR for the platform, with order and send allowances per billing cycle. Separately, Meta charges **per message** by template category: in India roughly ₹0.88 for Marketing, ₹0.125 for Utility, and nothing for service replies. TopEdge passes Meta’s charges through at 0% markup."
+          "text": "You pay TopEdge a subscription for the platform, with order and send allowances per billing cycle: in INR if you signed up on topedgeai.com, or in USD on your Shopify invoice if you installed from the Shopify App Store. Separately, Meta charges **per message** by template category: in India ₹0.8631 for Marketing and ₹0.1150 for Utility, and service replies are free for the first 1,000 a month per number. TopEdge passes Meta’s charges through at 0% markup."
         },
         {
           "kind": "h2",
@@ -7264,7 +7264,7 @@
             [
               "TopEdge",
               "The platform — journeys, inbox, CRM, templates, analytics — with order and send caps per cycle.",
-              "Your subscription in INR, exclusive of GST, on [the pricing page](/pricing)."
+              "Your subscription: in INR plus GST on [the pricing page](/pricing), or in USD on your Shopify invoice for App Store installs."
             ],
             [
               "Meta",

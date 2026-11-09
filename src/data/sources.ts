@@ -151,6 +151,33 @@ export const SOURCES = {
       'Read 9 November 2026 on all three billing views, plus taxes. Monthly: Starter ₹999 (Instagram only), Growth ₹2,799, Advanced ₹3,799. Quarterly: Starter ₹3,499, Growth ₹7,699, Advanced ₹10,499. Yearly: Starter ₹11,999, Growth ₹26,399, Advanced ₹35,999. On quarterly and yearly billing Starter is “Pick any one channel”, WhatsApp or Instagram; Growth and Advanced include both. Enterprise on request. Unlimited agents on every plan, owner roles only on Starter. Per-message rates for Indian numbers: Starter marketing ₹0.970, authentication ₹0.129, utility ₹0.160, service ₹0.129; Growth ₹0.958, ₹0.128, ₹0.150, ₹0.128; Advanced ₹0.949, ₹0.127, ₹0.140, ₹0.127; service charged after 1,000 free service messages. Only Enterprise is listed with “No Markup Charges”. Against Meta’s ₹0.8631 marketing and ₹0.1150 utility, Growth is about 11% above Meta on marketing and 30% on utility. The feature table lists “Shopify Integration (Only included on Shopify plan...)” linking to apps.shopify.com/interakt-marketing. WhatsApp AI Agents tab: ₹9,000 a quarter (+GST), shown as a ₹3,000 add-on for Growth and Advanced on the main table, 100 free AI messages, then ₹0.50 per AI message. Sales CRM is a separate product; its ₹2,499 for 5 agents was last read 21 October 2026. The 7 November reading recorded the monthly view only and so missed the quarterly Starter channel rule.',
     verified: '2026-11-09',
   },
+  topedgeShopifyListing: {
+    id: 'topedgeShopifyListing',
+    url: 'https://apps.shopify.com/topedge-ai',
+    label: 'TopEdge AI on the Shopify App Store',
+    publisher: 'Shopify App Store',
+    claim:
+      'Read 9 November 2026 from India: Launch ₹1,785.53 a month or ₹17,103.49 a year, Growth ₹3,665.03 or ₹35,146.74, Scale ₹6,108.39 or ₹58,640.55, as Shopify’s INR estimates at 1 INR = 0.0106 USD, billed in the store’s billing currency. The Partner Dashboard prices behind them are $19, $39 and $65 a month and $182, $374 and $624 a year. Limits match the website plans: 100, 800 and 1,500 orders and 3,000, 15,000 and 30,000 campaign plus email sends per cycle; Journey Branch and COD to prepaid on Growth and Scale; 14-day free trial. 0 reviews.',
+    verified: '2026-11-09',
+  },
+  shopifyAppPricingDocs: {
+    id: 'shopifyAppPricingDocs',
+    url: 'https://shopify.dev/docs/apps/launch/billing/shopify-app-pricing',
+    label: 'Shopify’s App Pricing documentation',
+    publisher: 'Shopify',
+    claim:
+      'Read 9 November 2026: “Plan prices are set in USD only.” Merchants billed in a supported local currency are charged the converted amount and see estimated prices on the plan page and the App Store listing. Setting prices directly in a local billing currency requires Manual Pricing with the Billing API.',
+    verified: '2026-11-09',
+  },
+  shopifyLocalCurrencyBilling: {
+    id: 'shopifyLocalCurrencyBilling',
+    url: 'https://help.shopify.com/en/manual/your-account/manage-billing/paying-your-bills/managing-payments/local-currency',
+    label: 'Shopify Help Center on local currency billing',
+    publisher: 'Shopify',
+    claim:
+      'Read 9 November 2026: India (INR) is a supported local billing currency on all plans. App charges (one-time, usage and subscription) are converted from USD, and converted charges include a 1.5% currency exchange fee, except third-party transaction fees.',
+    verified: '2026-11-09',
+  },
   interaktRateTable: {
     id: 'interaktRateTable',
     url: 'https://www.interakt.shop/whatsapp-conversation-pricing/',

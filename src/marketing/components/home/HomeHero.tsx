@@ -60,8 +60,7 @@ export default function HomeHero() {
               </h1>
               <p className="home-hero__sub">
                 TopEdge AI is a Shopify app for Indian D2C brands that automates abandoned cart
-                recovery, COD confirmation and order updates over WhatsApp and email. 14-day trial.
-                About 30 minutes of setup. Meta verification and template review are the wait.
+                recovery, COD confirmation and order updates over WhatsApp and email.
               </p>
               <div className="home-hero__actions">
                 <PrimaryButton to="/signup">

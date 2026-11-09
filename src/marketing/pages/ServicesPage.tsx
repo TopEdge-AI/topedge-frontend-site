@@ -172,7 +172,7 @@ export default function ServicesPage() {
         <MarketingCtaBand
           eyebrow="Start free"
           title="Connect Shopify and see what a month of carts is worth"
-          subtitle="14 days free, flat INR plans from ₹1,999/mo + GST, and 0% markup on Meta India rates."
+          subtitle="14 days free, plans from ₹1,999/mo + GST ($19 on the Shopify App Store), and 0% markup on Meta India rates."
           primaryLabel="Start free"
           secondaryLabel="See pricing"
           secondaryTo="/pricing"

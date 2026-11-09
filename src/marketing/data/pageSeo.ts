@@ -58,7 +58,7 @@ export const PAGE_SEO = {
     // title because it is the channel and a real qualifier, just not the noun.
     title: 'Shopify Cart Recovery & COD App for India | TopEdge AI',
     description:
-      'Automate Shopify WhatsApp cart recovery and COD confirmation to prepaid in India. 0% Meta markup, flat INR plans from ₹1,999/mo, 14-day free trial.',
+      'Automate Shopify WhatsApp cart recovery and COD confirmation to prepaid in India. 0% Meta markup, plans from ₹1,999/mo, 14-day free trial.',
     keywords:
       'whatsapp automation for shopify india, shopify whatsapp cod confirmation, cod to prepaid shopify, whatsapp abandoned cart recovery shopify india, whatsapp business api 0% markup india, shopify whatsapp app india',
     path: '/',
@@ -67,7 +67,7 @@ export const PAGE_SEO = {
   pricing: {
     title: 'Shopify WhatsApp Pricing India: ₹1,999/mo, 0% Markup',
     description:
-      'Flat INR Shopify WhatsApp plans from ₹1,999/mo + GST, yearly saves 20%. 0% markup on Meta India rates: ₹0.8631 marketing, ₹0.115 utility. 14-day free trial.',
+      'Shopify WhatsApp plans from ₹1,999/mo + GST, or $19 on the App Store. 0% markup on Meta India rates: ₹0.8631 marketing, ₹0.115 utility. 14-day free trial.',
     keywords:
       'shopify whatsapp pricing india, whatsapp automation price india, whatsapp business api 0% markup, whatsapp api rates india 2026, meta whatsapp india rate card inr, cod confirmation app pricing shopify, whatsapp cart recovery cost india, flat inr whatsapp plans',
     path: '/pricing',

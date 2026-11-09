@@ -64,7 +64,7 @@ function ownProductFaqs() {
     {
       question: 'What does TopEdge AI cost for a Shopify store in India?',
       answer:
-        `Flat INR plans: Launch ${price('launch')}/mo, Growth ${price('growth')}/mo and ` +
+        `On topedgeai.com, billed in INR: Launch ${price('launch')}/mo, Growth ${price('growth')}/mo and ` +
         `Scale ${price('scale')}/mo, ${GST_FOOTNOTE} Billed yearly it is ` +
         `${yearly('launch')}, ${yearly('growth')} and ${yearly('scale')} a month. ` +
         `The plan is sized by Shopify orders a month: ` +

@@ -20,7 +20,7 @@ const THREE_WAY_FAQS = [
   {
     question: 'Who should pick TopEdge in this three-way shortlist?',
     answer:
-      'Shopify India teams that want flat INR plans, native COD to prepaid on Growth and Scale, unified identity and unlimited flows without a Meta markup layer.',
+      'Shopify India teams that want flat order-based plans, native COD to prepaid on Growth and Scale, unified identity and unlimited flows without a Meta markup layer.',
   },
   {
     question: 'When do WATI or AiSensy still fit?',
@@ -38,7 +38,7 @@ const FOUR_WAY_FAQS = [
   {
     question: 'Which of WATI, Interakt and AiSensy charges a markup over Meta?',
     answer:
-      'All three publish India per-message rates above Meta’s own card on the plans compared here. On a marketing template, where Meta charges ₹0.8631: WATI Growth ₹1.0357 (20% more), Interakt Growth ₹0.958 (11% more), AiSensy ₹1.09 (26% more). On a utility template, where Meta charges ₹0.1150: WATI Growth ₹0.1495, Interakt Growth ₹0.150 and AiSensy ₹0.145, all 26% to 30% more. WATI’s Pro and Business cards and Interakt’s Advanced plan are a little cheaper, and Interakt lists no markup only on Enterprise. TopEdge passes Meta through at 0% and bills the platform separately in INR. All three were read off their own pricing pages on 7 November 2026; read your own rate card in Meta Business Manager before you take any vendor number, including ours.',
+      'All three publish India per-message rates above Meta’s own card on the plans compared here. On a marketing template, where Meta charges ₹0.8631: WATI Growth ₹1.0357 (20% more), Interakt Growth ₹0.958 (11% more), AiSensy ₹1.09 (26% more). On a utility template, where Meta charges ₹0.1150: WATI Growth ₹0.1495, Interakt Growth ₹0.150 and AiSensy ₹0.145, all 26% to 30% more. WATI’s Pro and Business cards and Interakt’s Advanced plan are a little cheaper, and Interakt lists no markup only on Enterprise. TopEdge passes Meta through at 0% and bills the platform separately: in INR on topedgeai.com, or in USD through the Shopify App Store. All three were read off their own pricing pages on 7 November 2026; read your own rate card in Meta Business Manager before you take any vendor number, including ours.',
   },
   {
     question: 'What does Meta itself charge in India in 2026?',

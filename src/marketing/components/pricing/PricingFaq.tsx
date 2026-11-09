@@ -1,9 +1,24 @@
 import FaqAccordion from '../topic/FaqAccordion';
+import { SHOPIFY_APP_PRICING } from '../../data/shopifyAppPricing';
+
+const [L, G, S] = SHOPIFY_APP_PRICING.plans;
+
+// Visible copy on /pricing stays short. The full price answer lives here: answers
+// render in the HTML even when collapsed and also feed FAQPage schema, so search
+// and AI engines read them without a paragraph in the hero.
 
 export const PRICING_FAQS = [
   {
+    q: 'How much does TopEdge cost?',
+    a: '₹1,999, ₹3,999 or ₹6,499 a month plus GST, sized by orders: 100, 800 or 1,500 a month. Meta bills your WhatsApp messages directly, at 0% markup from us. COD confirmation is on every plan; COD to prepaid and Journey Branch start on Growth.',
+  },
+  {
     q: 'Is GST included?',
-    a: 'No, prices are exclusive. +18% GST (SAC 998314). Invoices included on every plan.',
+    a: 'No. Add 18% GST (SAC 998314). You get a GST invoice on every plan.',
+  },
+  {
+    q: 'Is the price different on the Shopify App Store?',
+    a: `Only the currency. Shopify bills apps in US dollars, so the same plans are $${L.monthlyUsd}, $${G.monthlyUsd} and $${S.monthlyUsd} a month there, on your Shopify invoice. We add no GST to those charges.`,
   },
   {
     q: 'What’s in the free trial?',
@@ -11,7 +26,7 @@ export const PRICING_FAQS = [
   },
   {
     q: 'Why can’t I pay here?',
-    a: 'Checkout needs a dashboard account first. Start free → signup → confirm & pay in billing (Razorpay).',
+    a: 'Checkout needs a dashboard account first. Start free → signup → confirm & pay in billing (Razorpay). App Store installs pay inside Shopify.',
   },
   {
     q: 'Are Meta fees included?',
@@ -31,7 +46,7 @@ export const PRICING_FAQS = [
   },
   {
     q: 'Can I cancel anytime?',
-    a: 'Yes. Cancel in the dashboard at period end. Access continues until the cycle finishes.',
+    a: 'Yes. Cancel in the dashboard, or in Shopify if you installed from the App Store. Access runs to the end of the cycle.',
   },
   {
     q: 'Which plans include Journey Branch?',
