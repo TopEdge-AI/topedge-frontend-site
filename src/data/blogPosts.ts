@@ -2077,6 +2077,27 @@ export const blogPosts: BlogPost[] = [
 </div>
 <p class="mkt-blog-footnote">Getgabs figures as published on <a href="https://getgabs.com/pricing/" target="_blank" rel="noopener noreferrer">getgabs.com/pricing</a> and <a href="https://apps.shopify.com/getgabs-whatsapp-chatbot-api" target="_blank" rel="noopener noreferrer">its Shopify App Store listing</a>, both read from India on 8 November 2026. The two surfaces disagreed on that date, so confirm yours.</p>
 
+<h2>Other Getgabs alternatives, and who each suits</h2>
+<div class="mkt-blog-table-wrap">
+<table>
+<thead><tr><th>Tool</th><th>Price, as read</th><th>Suits</th></tr></thead>
+<tbody>
+<tr><td><strong>Updatrr</strong></td><td>Growth $29.99 a month, no markup stated (read 9 Nov 2026)</td><td>Shopify stores that want one simple app. <a href="/blog/updatrr-alternative-shopify-india">Updatrr comparison</a></td></tr>
+<tr><td><strong>Interakt</strong></td><td>Shopify plans from ₹1,973.48 a month, rates 10% to 39% above Meta (read 9 Nov 2026)</td><td>Teams that want Instagram in the same inbox. <a href="/blog/interakt-alternative-shopify-india">Interakt alternatives</a></td></tr>
+<tr><td><strong>Dondy</strong></td><td>Free widget, Pro $6.99 a month, about ₹1.77 a marketing message to India (read 8 Nov 2026)</td><td>Stores that mostly need a chat button. <a href="/blog/dondy-alternative-shopify-india">Dondy alternatives</a></td></tr>
+<tr><td><strong>TopEdge AI</strong></td><td>₹1,999, ₹3,999 and ₹6,499 a month plus GST, 0% on Meta’s rates</td><td>COD-heavy Indian Shopify stores up to 1,500 orders a month</td></tr>
+</tbody>
+</table>
+</div>
+
+<h2>When should you stay on Getgabs?</h2>
+<ul>
+<li>Price is the deciding line. Getgabs Basic at ₹699 a month is well under every TopEdge AI plan, and it lists 0% markup too.</li>
+<li>You only need order updates and a simple cart reminder.</li>
+<li>You are past 1,500 orders a month, where TopEdge AI’s public plans stop.</li>
+</ul>
+<p>Move when you need COD to prepaid, a P&amp;L view or warranty registration in the same app. Be aware that TopEdge AI has no Shopify App Store reviews yet.</p>
+
 <h2>How do you evaluate Getgabs vs TopEdge AI fairly?</h2>
 <ol>
 <li>Write the three workflows that cost you money this month (e.g. COD no-shows, warranty WhatsApps, duplicate profiles)</li>
@@ -2676,6 +2697,32 @@ export const blogPosts: BlogPost[] = [
 <p><strong>The free plan makes it the cheapest way to answer a question worth answering.</strong> Before committing to any paid WhatsApp stack, run a month on a free tier and count replies rather than recoveries. If your customers do not answer WhatsApp, nothing on this page fixes that, and you found out for nothing. If they do, you now know the channel works and can shop on depth.</p>
 <p><strong>Then check the two things free plans hide.</strong> They are bounded by message volume rather than features, so find the ceiling before you build journeys on top of it and ask what happens to queued messages when you hit it. And model the per-message cost separately from the plan, because that is where the difference between vendors actually lives.</p>
 <p>Scorecard, 1,000-message math, and footnotes: <a href="/compare/dondy">TopEdge AI vs Dondy</a>. Other tools: <a href="/compare/alternatives">alternatives</a>.</p>
+
+<h2>Dondy vs TopEdge AI, side by side</h2>
+<div class="mkt-blog-table-wrap">
+<table>
+<thead><tr><th>Line</th><th>Dondy (read 8 Nov 2026)</th><th>TopEdge AI</th></tr></thead>
+<tbody>
+<tr><td>Entry price</td><td>Free widget, Pro $6.99 a month</td><td>₹1,999 a month plus GST, or $19 on the App Store</td></tr>
+<tr><td>Automations</td><td>From Power Automation at $79.99 a month</td><td>On every plan</td></tr>
+<tr><td>Marketing message to India</td><td>About ₹1.77, 60% above Meta’s US dollar card</td><td>Meta’s ₹0.8631, 0% added</td></tr>
+<tr><td>COD</td><td>COD verification is listed. We found no COD to prepaid builder on its listing</td><td>COD confirmation on every plan, COD to prepaid on Growth and Scale</td></tr>
+<tr><td>Order limit</td><td>None published</td><td>100, 800 and 1,500 a month by plan</td></tr>
+<tr><td>Shopify reviews</td><td>4.9 from 835, Built for Shopify</td><td>None yet</td></tr>
+</tbody>
+</table>
+</div>
+<p>The pattern is simple. Dondy is cheaper to start and has the stronger track record. Once you send marketing messages to Indian numbers every month, the per-message gap is larger than the subscription gap.</p>
+
+<h2>Other Dondy alternatives</h2>
+<ul>
+<li><strong>Getgabs.</strong> Rupee plans from ₹699 a month with 0% markup listed (read 8 Nov 2026). Closest to Dondy on entry price. See <a href="/blog/getgabs-alternative-shopify-whatsapp">Getgabs alternatives</a>.</li>
+<li><strong>Updatrr.</strong> Growth $29.99 a month, no markup stated, no order limit (read 9 Nov 2026). See <a href="/blog/updatrr-alternative-shopify-india">our Updatrr comparison</a>.</li>
+<li><strong>Interakt.</strong> Shopify plans from ₹1,973.48 a month with Instagram included (read 9 Nov 2026). See <a href="/blog/interakt-pricing-india">Interakt pricing</a>.</li>
+</ul>
+
+<h2>When should you stay on Dondy?</h2>
+<p>Stay if you mostly use the free chat widget, if you sell outside India where the rate gap is different, or if you send few marketing messages. Stay also if a Built for Shopify badge and hundreds of reviews matter to your team more than the message rate.</p>
 
 <h2>What should you verify the day you buy?</h2>
 <ol>
