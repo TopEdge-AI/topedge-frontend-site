@@ -2208,8 +2208,8 @@ ${faqHtml(FUNNEL_FAQS)}
     readTime: '9 min',
     category: 'Comparisons',
     author: 'Moksh Patel',
-    image: '/blog/interakt-pricing-india.jpg',
-    imageWebp: '/blog/interakt-pricing-india.webp',
+    image: '/blog/interakt-pricing-india-v2.jpg',
+    imageWebp: '/blog/interakt-pricing-india-v2.webp',
     imageAlt:
       'Interakt pricing in India: plan cards, a real monthly cost badge and an audited markup badge, on a TopEdge AI cover',
     keywords: [
@@ -2365,8 +2365,8 @@ ${faqHtml(INTERAKT_PRICING_FAQS)}
     readTime: '8 min',
     category: 'Comparisons',
     author: 'Moksh Patel',
-    image: '/blog/wati-pricing-india.jpg',
-    imageWebp: '/blog/wati-pricing-india.webp',
+    image: '/blog/wati-pricing-india-v2.jpg',
+    imageWebp: '/blog/wati-pricing-india-v2.webp',
     imageAlt:
       'WATI pricing in India: plan cards, extra user at ₹1,299 a month and an audited message markup badge, with TopEdge AI founder Moksh Patel',
     keywords: [
