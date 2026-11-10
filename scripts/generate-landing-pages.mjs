@@ -106,7 +106,7 @@ const WHATSAPP_URL = `https://wa.me/${COMPANY_PHONE_E164}?text=${encodeURICompon
 // lives on WhatsApp. The thread opens prefilled so the merchant does not have to explain
 // where they came from, and so the reply can pick up the context.
 const HELP_MSG =
-  'Hi TopEdge, I have a question about WhatsApp COD confirmation for my Shopify store.';
+  'Hi TopEdge AI, I have a question about WhatsApp COD confirmation for my Shopify store.';
 const HELP_WHATSAPP_URL = `https://wa.me/${COMPANY_PHONE_E164}?text=${encodeURIComponent(HELP_MSG)}`;
 const ADDRESS_LINES = identityList('COMPANY_ADDRESS_LINES');
 const SOCIAL = identityMap('COMPANY_SOCIAL');
@@ -802,7 +802,7 @@ const FAQS = [
   },
   {
     q: 'What does Meta actually charge me?',
-    a: 'Meta bills your own Business account directly, at its own per-conversation rates, and TopEdge adds 0% on top. You pay us for the software and Meta for the messages, and you can see both bills separately.',
+    a: 'Meta bills your own Business account directly, at its own per-conversation rates, and TopEdge AI adds 0% on top. You pay us for the software and Meta for the messages, and you can see both bills separately.',
   },
   {
     q: 'Do I need my own Meta Business account, or do you give me a number?',
@@ -853,7 +853,7 @@ function navHtml(slug) {
           <span class="mkt-nav__brand-text">TopEdge <span>AI</span></span>
         </a>
         <nav class="mkt-nav__desktop" aria-label="Primary">
-          <a class="mkt-nav__link" href="#compare">Why TopEdge</a>
+          <a class="mkt-nav__link" href="#compare">Why TopEdge AI</a>
           <a class="mkt-nav__link" href="#platform">Platform</a>
           <a class="mkt-nav__link" href="#pricing">Pricing</a>
           <a class="mkt-nav__link" href="#faq">FAQ</a>
@@ -904,7 +904,7 @@ function footHtml() {
 ${cols}
     </div>
     <div class="mkt-foot__legal">
-      <p>&copy; 2026 ${esc(LEGAL_NAME)}. Meta&rsquo;s WhatsApp fees are billed by Meta on your own account. TopEdge adds 0% markup.</p>
+      <p>&copy; 2026 ${esc(LEGAL_NAME)}. Meta&rsquo;s WhatsApp fees are billed by Meta on your own account. TopEdge AI adds 0% markup.</p>
       <div class="mkt-foot__legal-links"><a href="/privacy">Privacy</a><a href="/terms">Terms</a></div>
     </div>
   </div>
@@ -998,7 +998,7 @@ function heroProof() {
     ? `<p class="hp-ph2"><span><b>${esc(PRODUCT_HUNT.rating)}</b> on ${PH_LOCKUP}<i class="vh"> from ${esc(PRODUCT_HUNT.reviews)} reviews</i></span></p>`
     : `<p class="hp-ph2">${PH_LOCKUP}</p>`;
   return `<div class="hp">
-        <div class="hp-faces" role="img" aria-label="Running on TopEdge: ${esc(who)}">${faces}</div>
+        <div class="hp-faces" role="img" aria-label="Running on TopEdge AI: ${esc(who)}">${faces}</div>
         <div class="hp-col">
           ${stars}
           ${ph}
@@ -1027,7 +1027,7 @@ const PILLARS = [
 // The .vh heading is there so the three claims, which are h3s, sit under an h2
 // rather than jumping a level straight from the page h1. Hidden because the
 // hero reads as one block and a visible title over the ticks would break it.
-const pillarsHtml = `<h2 class="vh">Why brands choose TopEdge</h2><ul class="pil">${PILLARS.map(
+const pillarsHtml = `<h2 class="vh">Why brands choose TopEdge AI</h2><ul class="pil">${PILLARS.map(
   (x) => `<li><i class="pil-t">${TICK}</i><h3>${esc(x)}</h3></li>`,
 ).join('')}</ul>`;
 

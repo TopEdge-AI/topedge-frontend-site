@@ -26,4 +26,4 @@ export const SHOPIFY_APP_PRICING = {
 
 /** One sentence used wherever the site states what TopEdge costs. */
 export const TWO_DOORS_LINE =
-  'On topedgeai.com you pay in INR through Razorpay, from ₹1,999 a month plus 18% GST. Install from the Shopify App Store instead and Shopify bills the same plans in USD, from $19 a month; TopEdge adds no GST to App Store charges.';
+  'On topedgeai.com you pay in INR through Razorpay, from ₹1,999 a month plus 18% GST. Install from the Shopify App Store instead and Shopify bills the same plans in USD, from $19 a month; TopEdge AI adds no GST to App Store charges.';

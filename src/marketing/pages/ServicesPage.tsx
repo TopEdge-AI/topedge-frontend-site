@@ -62,7 +62,7 @@ export default function ServicesPage() {
         <Section className="!pt-10 md:!pt-14">
           <div className="mx-auto max-w-5xl">
             <p className="text-[15px] leading-relaxed text-slate-600 md:text-base">
-              TopEdge is software you run yourself, with guided onboarding — not an agency
+              TopEdge AI is software you run yourself, with guided onboarding, not an agency
               retainer. You connect Shopify and your own Meta WhatsApp Cloud API credentials,
               so the number, the template library and the quality rating stay in your name.
               What follows is what the platform is responsible for once that is connected, and

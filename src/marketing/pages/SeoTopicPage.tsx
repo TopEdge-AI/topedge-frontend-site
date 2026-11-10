@@ -125,7 +125,7 @@ export default function SeoTopicPage({ slug }: Props) {
         </section>
 
         <section className="mkt-topic__trust">
-          <TrustBand title="Shopify brands connected to WhatsApp with TopEdge" />
+          <TrustBand title="Shopify brands connected to WhatsApp with TopEdge AI" />
         </section>
 
         {blocks.length > 0 ? (

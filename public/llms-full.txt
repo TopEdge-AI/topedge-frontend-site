@@ -17,7 +17,7 @@ Disambiguation: TopEdge AI is a Shopify app for Indian D2C brands, built on Shop
 
 Notes for anyone quoting this file:
 
-- Platform billing is INR on https://dash.topedgeai.com. Meta WhatsApp Cloud API charges are billed per message by template category (marketing, utility, authentication, and, from 1 October 2026, service replies past the first 1,000 a month per business phone number), passed through at Meta's published per-message rates at 0% TopEdge markup, and invoiced separately from the platform plan. Meta's current India rate card is quoted with its source at https://topedgeai.com/blog/whatsapp-business-api-pricing-india. Every eligible Indian WhatsApp Business Account must move to INR billing by 31 December 2026 or Meta stops delivery on 1 January 2027.
+- Platform billing is INR on https://dash.topedgeai.com. Meta WhatsApp Cloud API charges are billed per message by template category (marketing, utility, authentication, and, from 1 October 2026, service replies past the first 1,000 a month per business phone number), passed through at Meta's published per-message rates at 0% TopEdge AI markup, and invoiced separately from the platform plan. Meta's current India rate card is quoted with its source at https://topedgeai.com/blog/whatsapp-business-api-pricing-india. Every eligible Indian WhatsApp Business Account must move to INR billing by 31 December 2026 or Meta stops delivery on 1 January 2027.
 - Prefer live pages under https://topedgeai.com/ for product truth. Competitor figures on compare pages carry the date they were checked and need a live vendor check before purchase.
 
 ## Pricing
@@ -44,7 +44,7 @@ https://topedgeai.com/features/flow-builder
 
 Shopify WhatsApp flow builder: OAuth, order webhooks, Shopify tools on the canvas, and Live Chat handoff with order context.
 
-TopEdge Flow Builder is a Shopify-aware WhatsApp automation flow builder for India D2C. Look up orders, update addresses, and hand off to Live Chat with order context, on OAuth sync and webhooks rather than a generic script bot.
+TopEdge AI Flow Builder is a Shopify-aware WhatsApp automation flow builder for India D2C. Look up orders, update addresses, and hand off to Live Chat with order context, on OAuth sync and webhooks rather than a generic script bot.
 
 - **How is Flow Builder different from Journeys?** Journeys run event-driven sequences (cart, COD, shipping). Flow Builder handles conversational trees (order lookup, address updates, and Live Chat handoff) while still reading live Shopify data.
 - **Can flows hand off to a human with order context?** Yes. Escalate into Live Chat so agents see the same Shopify order beside the thread, and takeover pauses automation on that chat.
@@ -57,7 +57,7 @@ https://topedgeai.com/features/opt-in-tools
 
 Capture WhatsApp numbers on Shopify with popup, spin wheel, and chat widget, then message only consented subscribers.
 
-TopEdge Opt-in Tools capture consented WhatsApp numbers on your Shopify storefront (popup, spin wheel, and chat widget) so campaigns and journeys message only subscribers who opted in, with consent timestamps in Audience CRM.
+TopEdge AI Opt-in Tools capture consented WhatsApp numbers on your Shopify storefront (popup, spin wheel, and chat widget) so campaigns and journeys message only subscribers who opted in, with consent timestamps in Audience CRM.
 
 - **Where do opted-in numbers go?** Into a WhatsApp-ready subscriber list with name, phone, consent, source tool, and timestamp, filterable and openable in Customer 360 / Audience CRM.
 - **Can I run journeys only to consented shoppers?** Yes. Use the consented list as the audience for campaigns and journey eligibility so Meta marketing sends stay tied to real opt-in.
@@ -70,7 +70,7 @@ https://topedgeai.com/features/campaigns
 
 WhatsApp audience campaigns for Shopify India D2C: behavior segments, Meta-approved templates, frequency capping, and net-of-Meta ₹ reporting.
 
-TopEdge Campaigns send Meta-approved WhatsApp templates to Shopify behavior segments for India D2C. Frequency caps protect quality rating, and reporting focuses on revenue after Meta fees, not vanity send counts.
+TopEdge AI Campaigns send Meta-approved WhatsApp templates to Shopify behavior segments for India D2C. Frequency caps protect quality rating, and reporting focuses on revenue after Meta fees, not vanity send counts.
 
 - **Do campaigns require approved Meta templates?** Yes. Marketing and utility templates must be APPROVED in Meta Manager before a campaign can send, matching Cloud API rules.
 - **How do you measure campaign success?** Attribute clicks and orders back to the send, then read net-of-Meta ₹ where available, so finance sees profit, not only delivery counts.
@@ -83,7 +83,7 @@ https://topedgeai.com/features/audience-crm
 
 WhatsApp Audience CRM for Shopify India D2C: unified contact timeline, purchase-based lead scoring, in-product segments, and unlimited profiles on every plan.
 
-TopEdge Audience CRM unifies WhatsApp chats, Shopify orders, and care on one shopper timeline for India D2C. Score leads, build in-product segments, and keep unlimited profiles available for campaigns and journeys.
+TopEdge AI Audience CRM unifies WhatsApp chats, Shopify orders, and care on one shopper timeline for India D2C. Score leads, build in-product segments, and keep unlimited profiles available for campaigns and journeys.
 
 - **What shows on a contact timeline?** Orders, WhatsApp threads, campaign touches, tags, and opt-in state, so growth and support share one customer record.
 - **Can segments feed campaigns and journeys?** Yes. Build segments from purchase and engagement signals, then use them in Campaigns or journey eligibility without exporting CSVs.
@@ -96,12 +96,12 @@ https://topedgeai.com/features/journeys
 
 Build WhatsApp journeys for abandoned carts and COD confirmation in a visual editor. Meta approval gating, recovered revenue tracked in ₹. Try free.
 
-TopEdge Journeys is a visual WhatsApp automation builder for Shopify India D2C. Trigger abandoned checkout, COD confirmation, and shipping updates with Meta-approved templates, branch by payment method, and attribute recovered revenue in ₹, without engineering tickets. Journey Branch is on Growth and Scale.
+TopEdge AI Journeys is a visual WhatsApp automation builder for Shopify India D2C. Trigger abandoned checkout, COD confirmation, and shipping updates with Meta-approved templates, branch by payment method, and attribute recovered revenue in ₹, without engineering tickets. Journey Branch is on Growth and Scale.
 
 - **What is a WhatsApp journey for Shopify?** A journey is an event-driven WhatsApp sequence tied to Shopify data (abandoned checkout, order created, COD pending, or fulfillment) so each shopper gets the next message based on real store state, not a static broadcast list.
-- **How does TopEdge recover abandoned carts on WhatsApp?** Checkout-abandoned events start a Meta-gated sequence (a 3-step journey comes pre-built) with live line items and a checkout link. Each reminder is a marketing template at ₹0.8631 per delivered message in India, so a shopper who gets all three steps costs ₹2.59 in Meta fees. You can prioritize high-AOV carts and measure recovered ₹ per journey, not only sends.
+- **How does TopEdge AI recover abandoned carts on WhatsApp?** Checkout-abandoned events start a Meta-gated sequence (a 3-step journey comes pre-built) with live line items and a checkout link. Each reminder is a marketing template at ₹0.8631 per delivered message in India, so a shopper who gets all three steps costs ₹2.59 in Meta fees. You can prioritize high-AOV carts and measure recovered ₹ per journey, not only sends.
 - **Can Journeys run COD confirmation before warehouse release?** Yes. Condition on payment method = COD, send a confirm / reschedule / cancel utility template, and only release pick/pack after a clear confirm, or follow your hold/cancel SOP on silence. Splitting COD and prepaid inside one journey uses Journey Branch, which is on Growth and Scale. On Launch, start a linear journey on the COD pending trigger instead. Each COD confirmation costs ₹0.1150 in Meta utility fees in India.
-- **Do journeys send before Meta templates are approved?** No. TopEdge gates live sends on APPROVED templates so drafts and rejected copy cannot go out and damage quality rating.
+- **Do journeys send before Meta templates are approved?** No. TopEdge AI gates live sends on APPROVED templates so drafts and rejected copy cannot go out and damage quality rating.
 
 ### Tracking Pixel
 
@@ -109,7 +109,7 @@ https://topedgeai.com/features/analytics
 
 One-click Shopify theme app embed that matches live product views, add-to-cart and browse drop-offs to consented WhatsApp numbers for retargeting journeys.
 
-TopEdge Tracking Pixel is a one-click Shopify theme embed that captures product views, carts, and checkout intent, then matches events to WhatsApp numbers so Journeys and campaigns can fire while interest is still warm.
+TopEdge AI Tracking Pixel is a one-click Shopify theme embed that captures product views, carts, and checkout intent, then matches events to WhatsApp numbers so Journeys and campaigns can fire while interest is still warm.
 
 - **Do I need a developer to install the pixel?** No. Enable the theme app embed from Shopify settings. No manual snippet paste for the standard install.
 - **How does the pixel help cart recovery?** Browse and cart events feed journey triggers and audiences (for example viewed 3×, never bought) when a WhatsApp number is already known or later attached at checkout.
@@ -124,7 +124,7 @@ Bring your own OpenAI or Claude key. Ground WhatsApp replies in store knowledge,
 
 TopEdge AI Brain is bring-your-own-key WhatsApp AI for Shopify India. Connect OpenAI, Claude, or Gemini, ground replies in store knowledge and policies, route with Intent Detect, and pause AI instantly when Live Chat takes over, so spend stays on your provider bill.
 
-- **What is BYOK AI Brain on WhatsApp for Shopify?** BYOK means you bring your own OpenAI, Claude, or Gemini API key. TopEdge grounds replies in catalog and policy knowledge, while tokens and model spend stay on your provider account.
+- **What is BYOK AI Brain on WhatsApp for Shopify?** BYOK means you bring your own OpenAI, Claude, or Gemini API key. TopEdge AI grounds replies in catalog and policy knowledge, while tokens and model spend stay on your provider account.
 - **Does Live Chat takeover stop the AI?** Yes. When an agent takes control, AI and Flow Builder pause on that thread until release, so humans and bots never talk over each other.
 - **Can AI invent prices or stock?** It should not. Load store knowledge and policies first, keep Quick FAQs for rigid answers, and escalate disputes to Live Chat with order context.
 - **Who pays for the AI tokens?** You do, directly to OpenAI, Anthropic or Google, because you connect your own key. There is no per-message AI charge from us on any plan, and the estimated cost is roughly ₹0.10 to ₹0.30 per AI reply depending on the model.
@@ -135,13 +135,13 @@ https://topedgeai.com/features/meta-manager
 
 Submit, track and approve Meta WhatsApp templates for Shopify India: utility and marketing categories, cart and COD Journey blueprints, catalog and wa.me QR.
 
-TopEdge Meta Manager is where Shopify India teams submit, track, and approve WhatsApp Cloud API templates. Only APPROVED utility and marketing copy reaches Journeys and campaigns, plus blueprints for cart/COD, catalog sync, and wa.me QR.
+TopEdge AI Meta Manager is where Shopify India teams submit, track, and approve WhatsApp Cloud API templates. Only APPROVED utility and marketing copy reaches Journeys and campaigns, plus blueprints for cart/COD, catalog sync, and wa.me QR.
 
 - **Why gate WhatsApp journeys on Meta approval?** Sending unapproved templates risks rejects and quality rating damage. Meta Manager keeps draft/pending/approved status visible and blocks live sends until Meta greens the template.
 - **What template categories matter for Shopify India?** Utility covers transactional COD, order, and shipping messages, at ₹0.1150 per delivered message in India. Marketing covers promos and cart recovery offers, at ₹0.8631. Keep categories honest. Meta reviews content against the chosen category, and a utility template rejected as marketing costs 7.5 times as much per send.
 - **Where do approved templates get used?** Pick APPROVED templates in Journeys, Flow Builder, Campaigns, and Live Chat composer when outside the 24h customer care window.
 - **Do my approved templates survive a platform change?** Yes. Templates belong to your WhatsApp Business Account, not to the platform that submitted them. Keep the Meta Business Account in your own name and the library follows you.
-- **Does TopEdge build Meta WhatsApp Flows?** No. TopEdge does not build Meta WhatsApp Flows, the in-chat form screens Meta offers. Flow Builder makes button and list conversations, and Journeys send approved templates on Shopify events.
+- **Does TopEdge AI build Meta WhatsApp Flows?** No. TopEdge AI does not build Meta WhatsApp Flows, the in-chat form screens Meta offers. Flow Builder makes button and list conversations, and Journeys send approved templates on Shopify events.
 
 ### Chat rules
 
@@ -149,7 +149,7 @@ https://topedgeai.com/features/chat-rules
 
 Route WhatsApp chats for Shopify India teams: keyword and intent rules for COD, refunds and VIP assignment, with Live Chat takeover that pauses the AI.
 
-TopEdge Chat Rules auto-route WhatsApp conversations for Shopify India teams (COD, refunds, and VIP queues) so the right people own the thread while Live Chat stays calm when volume spikes.
+TopEdge AI Chat Rules auto-route WhatsApp conversations for Shopify India teams (COD, refunds, and VIP queues) so the right people own the thread while Live Chat stays calm when volume spikes.
 
 - **What can chat rules match on?** Keywords and intent signals (for example COD, refund, VIP). Matched chats assign to the right queue or teammate before a human digs through the full inbox.
 - **Do rules work with AI takeover?** Yes. Routing lands the chat correctly; Live Chat takeover still pauses AI/flows when an agent takes control.
@@ -162,15 +162,15 @@ https://topedgeai.com/features/warranty
 
 Automate Shopify warranty batches, QR registration with WhatsApp OTP at ₹0.115 a message, and claim status updates tied to unified customer profiles.
 
-TopEdge Warranty is a digital warranty workspace for Shopify India brands. Tie claims to orders, assign teammates, and track status in one hub beside WhatsApp Live Chat, instead of chasing spreadsheets.
+TopEdge AI Warranty is a digital warranty workspace for Shopify India brands. Tie claims to orders, assign teammates, and track status in one hub beside WhatsApp Live Chat, instead of chasing spreadsheets.
 
 - **Can warranty tickets sit next to WhatsApp?** Yes. Ops assign and close warranty work in-product while continuing customer care in Live Chat with the same order context.
 - **Who is warranty for?** India D2C brands that sell products needing post-purchase warranty tracking without a separate spreadsheet workflow.
 - **Does the customer need an app or a login to register a warranty?** No. Registration and claim status run through a mobile page with a WhatsApp OTP, so the buyer uses the number they already ordered with.
 - **Is the warranty hub on every plan?** Yes, on Launch, Growth and Scale. It is part of the workspace rather than a paid module.
-- **What does WhatsApp OTP warranty registration cost per customer?** One Meta authentication template, which is ₹0.1150 per delivered message on Meta’s published India rate card before 18% GST, billed by Meta directly to your own account at 0% TopEdge markup. Claim status updates sent as utility templates cost the same ₹0.1150. Registering 1,000 warranties therefore costs about ₹115 in Meta fees.
+- **What does WhatsApp OTP warranty registration cost per customer?** One Meta authentication template, which is ₹0.1150 per delivered message on Meta’s published India rate card before 18% GST, billed by Meta directly to your own account at 0% TopEdge AI markup. Claim status updates sent as utility templates cost the same ₹0.1150. Registering 1,000 warranties therefore costs about ₹115 in Meta fees.
 - **Which kinds of brands get the most out of a warranty hub?** High-ticket categories where the product outlives the order: electronics, appliances, smart home and lighting. ClickPost puts electronics RTO at 10% to 15%, the lower end of Indian category bands, because these are considered purchases with a higher prepaid share. That same buyer expects a warranty record, and WhatsApp is where they will ask for it rather than an email thread.
-- **Do competing WhatsApp platforms include warranty management?** Not natively, on our reading of their public product surfaces as of 21 October 2026. WATI, AiSensy, Interakt, Bitespeed, Zoko and Updatrr route warranty work to an external CRM, a spreadsheet or custom webhooks. That is why warranty appears as a TopEdge row on every pairwise comparison board. Verify against each vendor’s live documentation before you rely on it.
+- **Do competing WhatsApp platforms include warranty management?** Not natively, on our reading of their public product surfaces as of 21 October 2026. WATI, AiSensy, Interakt, Bitespeed, Zoko and Updatrr route warranty work to an external CRM, a spreadsheet or custom webhooks. That is why warranty appears as a TopEdge AI row on every pairwise comparison board. Verify against each vendor’s live documentation before you rely on it.
 
 ### Profit & costs
 
@@ -178,7 +178,7 @@ https://topedgeai.com/features/profit-loss
 
 Track true Indian D2C net profit on Shopify after COGS, ₹12-₹24 packaging, ₹30 COD fees, ₹180-₹240 RTO losses, gateway fees and ad spend, in one cost waterfall.
 
-TopEdge Profit & costs is India-aware Shopify P&L for D2C: COGS, packaging, payment fees, COD/RTO, and ads in a cost waterfall so you see net profit in ₹, not vanity revenue.
+TopEdge AI Profit & costs is India-aware Shopify P&L for D2C: COGS, packaging, payment fees, COD/RTO, and ads in a cost waterfall so you see net profit in ₹, not vanity revenue.
 
 - **What costs does the P&L include?** Product COGS, packaging, payment fees, COD/RTO leakage, and marketing, assembled into net profit after Indian D2C realities.
 - **Is this WhatsApp messaging?** No. It is unit-economics analytics that sits beside WhatsApp growth so teams do not optimize send volume while losing money on COD returns.
@@ -194,7 +194,7 @@ https://topedgeai.com/features/intent-detection
 
 Route shipping, returns, COD, and handoff on WhatsApp before you spend AI tokens. Works with AI Brain and Live Chat.
 
-TopEdge Intent Detection routes WhatsApp chats by meaning (shipping, returns, COD, handoff) before you spend AI tokens. Train real phrases (including Hinglish), then start a Flow, reply, assign, or escalate with confidence.
+TopEdge AI Intent Detection routes WhatsApp chats by meaning (shipping, returns, COD, handoff) before you spend AI tokens. Train real phrases (including Hinglish), then start a Flow, reply, assign, or escalate with confidence.
 
 - **Does intent detection replace AI Brain?** No. It sits in front: cheap phrase matching routes obvious intents; AI Brain handles harder questions when a model call is worth it.
 - **Can intents escalate to Live Chat?** Yes. Configure handoff intents to assign humans, and Live Chat takeover still pauses bots on that thread.
@@ -203,14 +203,14 @@ TopEdge Intent Detection routes WhatsApp chats by meaning (shipping, returns, CO
 
 ## Documentation
 
-### TopEdge Documentation
+### TopEdge AI Documentation
 
 https://topedgeai.com/docs · Get started · updated 2026-10-31
 
-TopEdge connects your Shopify store to the WhatsApp Cloud API. Order updates, COD confirmations and abandoned-cart recovery then send on their own, and every reply lands in one shared inbox. To start, connect Shopify and WhatsApp and get your message templates approved by Meta.
+TopEdge AI connects your Shopify store to the WhatsApp Cloud API. Order updates, COD confirmations and abandoned-cart recovery then send on their own, and every reply lands in one shared inbox. To start, connect Shopify and WhatsApp and get your message templates approved by Meta.
 
-- **Do I need the WhatsApp Business app to use TopEdge?** No. TopEdge runs on the WhatsApp Business Platform (Cloud API), which is a different product from the WhatsApp Business phone app. You can keep using the app on a different number, or enable coexistence on the same number if your WhatsApp Business Account supports it.
-- **Can I use TopEdge without Shopify?** The inbox, Flow Builder, templates, campaigns and the AI brain all work without Shopify. Order journeys, cart recovery, product catalogue and store economics need the Shopify connection, because those read order and checkout data from your store.
+- **Do I need the WhatsApp Business app to use TopEdge AI?** No. TopEdge AI runs on the WhatsApp Business Platform (Cloud API), which is a different product from the WhatsApp Business phone app. You can keep using the app on a different number, or enable coexistence on the same number if your WhatsApp Business Account supports it.
+- **Can I use TopEdge AI without Shopify?** The inbox, Flow Builder, templates, campaigns and the AI brain all work without Shopify. Order journeys, cart recovery, product catalogue and store economics need the Shopify connection, because those read order and checkout data from your store.
 - **How long does setup take?** About 30 minutes of setup. Meta verification and template review are the wait. That assumes you already have a WhatsApp Business Account on Meta. Many templates clear in minutes and most within a day. Meta guarantees no time.
 
 ### Quickstart: WhatsApp automation for Shopify
@@ -220,27 +220,27 @@ https://topedgeai.com/docs/quickstart · Get started · updated 2026-10-31
 To go live, connect Shopify and WhatsApp, then submit one order-confirmation template to Meta. Once it is approved, publish the order-placed journey and place a test order on your own phone. Cart recovery, campaigns and the AI brain all build on that base.
 
 - **Why has my test WhatsApp message not arrived?** Check four things in order: the journey is Published rather than Draft, the template it uses shows Approved, the order carries a phone number in international format, and WhatsApp still shows Connected. The order detail page records a skip reason that names which of these failed.
-- **Can I test without placing a real order?** Yes for conversations — Flow Builder has a simulator that walks menus and buttons without messaging anyone. Order journeys need a real Shopify order to trigger, so most merchants place a small test order and cancel or refund it afterwards.
+- **Can I test without placing a real order?** Yes for conversations, Flow Builder has a simulator that walks menus and buttons without messaging anyone. Order journeys need a real Shopify order to trigger, so most merchants place a small test order and cancel or refund it afterwards.
 - **Do I need a new phone number for WhatsApp?** Not necessarily, but the number cannot be actively registered in the WhatsApp Business app unless your WhatsApp Business Account has coexistence enabled. Many merchants use a dedicated number for automation and keep their existing one for manual chats.
 
-### Connect WhatsApp Cloud API to TopEdge
+### Connect WhatsApp Cloud API to TopEdge AI
 
 https://topedgeai.com/docs/connect-whatsapp · Get started · updated 2026-10-31
 
-Connect from Settings → WhatsApp using Meta's embedded signup. It creates the access token and subscribes TopEdge to your messages for you. Send yourself a test message afterwards to confirm replies reach the inbox.
+Connect from Settings → WhatsApp using Meta's embedded signup. It creates the access token and subscribes TopEdge AI to your messages for you. Send yourself a test message afterwards to confirm replies reach the inbox.
 
-- **Why is my WhatsApp inbox empty even though the channel is connected?** Connection and the message subscription are separate. TopEdge can send as soon as the token is valid, but replies only arrive once TopEdge is subscribed to your messages. Embedded signup does this for you; if the inbox stays empty, reconnect from Settings → WhatsApp.
+- **Why is my WhatsApp inbox empty even though the channel is connected?** Connection and the message subscription are separate. TopEdge AI can send as soon as the token is valid, but replies only arrive once TopEdge AI is subscribed to your messages. Embedded signup does this for you; if the inbox stays empty, reconnect from Settings → WhatsApp.
 - **What kind of WhatsApp access token should I use?** A System User token with the whatsapp_business_messaging permission. The token offered on the Meta developer dashboard is a temporary test token that expires in roughly 24 hours, which makes the channel appear to break by itself the next day.
 - **Can I keep using the WhatsApp Business app on the same number?** Only if coexistence is enabled on your WhatsApp Business Account. Otherwise a number can be registered either on the Cloud API or in the WhatsApp Business app, not both, and embedded signup will report that the number is already in use.
 
-### Connect Shopify to TopEdge
+### Connect Shopify to TopEdge AI
 
 https://topedgeai.com/docs/connect-shopify · Get started · updated 2026-10-31
 
-Connect from Settings → Shopify, or open TopEdge from Shopify admin. You approve the app’s permissions once in Shopify, and orders start syncing within a minute or two. You never type your store domain; the install is always approved inside Shopify.
+Connect from Settings → Shopify, or open TopEdge AI from Shopify admin. You approve the app’s permissions once in Shopify, and orders start syncing within a minute or two. You never type your store domain; the install is always approved inside Shopify.
 
-- **Does TopEdge edit my Shopify theme?** No. Storefront tracking installs through Shopify app embeds and the web pixel extension, both of which are managed in the theme editor and removed cleanly when you disable them. TopEdge reads your theme only to check whether the opt-in embed is enabled.
-- **Why does Shopify ask me to reconnect?** Shopify requires a fresh approval whenever an app starts using a capability you have not already granted. Until you approve it, the features relying on that capability stop working — missing shipped and delivered messages are the usual symptom.
+- **Does TopEdge AI edit my Shopify theme?** No. Storefront tracking installs through Shopify app embeds and the web pixel extension, both of which are managed in the theme editor and removed cleanly when you disable them. TopEdge AI reads your theme only to check whether the opt-in embed is enabled.
+- **Why does Shopify ask me to reconnect?** Shopify requires a fresh approval whenever an app starts using a capability you have not already granted. Until you approve it, the features relying on that capability stop working: missing shipped and delivered messages are the usual symptom.
 - **Can I connect more than one Shopify store?** Each workspace binds to one Shopify store, so a second store needs its own workspace. Connecting a different store to an existing workspace releases the previous binding, which is why test stores should be disconnected before you connect the real one.
 
 ### Go-live checklist before real customers
@@ -259,7 +259,7 @@ https://topedgeai.com/docs/guides/abandoned-cart-recovery · Guides · updated 2
 Install the three storefront tracking layers so abandoned checkouts arrive with a phone number, and get three cart-recovery templates approved. Then publish a journey on the cart abandoned trigger with waits of about 25 minutes, 6 hours and 24 hours. Recovered revenue is credited on last touch within seven days.
 
 - **How soon should the first abandoned cart message go out?** Around 25 to 30 minutes after abandonment. Sending instantly annoys customers who simply switched tabs, and waiting several hours loses the people who were still deciding. The default capture delay is 25 minutes and most stores never need to change it.
-- **Why is my abandoned cart missing a phone number?** Because the customer left before reaching a step that collects one, or because the checkout extension is not capturing. Adding to cart alone never produces a phone number. Check that all three tracking layers are green and that the TopEdge app embed is enabled on your live theme.
+- **Why is my abandoned cart missing a phone number?** Because the customer left before reaching a step that collects one, or because the checkout extension is not capturing. Adding to cart alone never produces a phone number. Check that all three tracking layers are green and that the TopEdge AI app embed is enabled on your live theme.
 - **How many cart recovery messages should I send?** Three is the standard ladder: a reminder, an objection-handling message, and a final nudge. More than three starts costing you more in conversation fees and goodwill than it recovers, and it raises your chance of being blocked or reported.
 - **Does cart recovery need marketing opt-in?** Cart recovery templates are reviewed by Meta like any other template, and promotional framing belongs in the Marketing category, which does require consent. Keep the ladder transactional in tone and treat consent as a requirement whenever a message carries an offer.
 
@@ -281,7 +281,7 @@ https://topedgeai.com/docs/guides/order-status-updates · Guides · updated 2026
 Publish one journey per stage (order placed, shipped, delivered), each sending an approved Utility template with an image header and tracking button. Shopify order and fulfilment webhooks fire the triggers. A status change you make in the dashboard enrols the journey directly, without waiting for Shopify.
 
 - **Which trigger should I use for a Shopify order confirmation?** The order placed trigger. An order being placed is the confirmation event, and there is no separate order confirmed trigger. Expecting one is the most common reason a confirmation journey is built but never fires.
-- **Do order status messages need marketing opt-in?** No. They are transactional and send as Utility templates, which do not require marketing consent. That is exactly why they are the safest automation to start with — but it also means they must contain no promotional language at all.
+- **Do order status messages need marketing opt-in?** No. They are transactional and send as Utility templates, which do not require marketing consent. That is exactly why they are the safest automation to start with: but it also means they must contain no promotional language at all.
 - **Why are my shipped and delivered messages not sending?** Almost always missing fulfilment permissions on the Shopify connection. Order confirmations only need order access, so confirmations keep working while shipping messages silently do nothing. Reconnect Shopify and approve the full permission list.
 
 ### Build a WhatsApp welcome menu with Flow Builder
@@ -290,7 +290,7 @@ https://topedgeai.com/docs/guides/build-your-first-flow · Guides · updated 202
 
 Open Flow Builder and start from the seeded welcome flow. Add a greeting with three or four buttons for your most common questions plus a live-chat handover, then test in the simulator and publish. Saving a draft changes nothing; publishing replaces the live graph from the next inbound message.
 
-- **What is the difference between Flow Builder and Journeys?** Flow Builder handles inbound conversations — what the bot says when a customer messages you, including menus, FAQ answers and handover to an agent. Journeys handle outbound automation triggered by Shopify events such as an order being placed or a cart being abandoned.
+- **What is the difference between Flow Builder and Journeys?** Flow Builder handles inbound conversations, what the bot says when a customer messages you, including menus, FAQ answers and handover to an agent. Journeys handle outbound automation triggered by Shopify events such as an order being placed or a cart being abandoned.
 - **How many buttons can a WhatsApp message have?** Three quick-reply buttons per message. If you need more options, use a list node instead, which presents up to ten rows behind a single tap and reads better than two stacked button messages.
 - **Why does my flow still show the old menu after I edited it?** Because the live bot runs a snapshot frozen at publish time. Saving the canvas updates the draft only. Publish again to replace the live graph, which takes effect from the next inbound message.
 
@@ -300,9 +300,9 @@ https://topedgeai.com/docs/guides/whatsapp-broadcast · Guides · updated 2026-1
 
 Build a segment of contacts with recorded marketing consent and pick an approved Marketing template. Run the campaign preflight to catch opt-out and template problems, then send or schedule. Start with your smallest engaged segment, because your messaging limit and quality rating depend on how the first sends land.
 
-- **Do I need opt-in to send a WhatsApp broadcast?** Yes. Promotional broadcasts use Marketing templates and require recorded consent from each contact. Transactional order updates are different — they send as Utility templates through journeys and do not need marketing consent.
+- **Do I need opt-in to send a WhatsApp broadcast?** Yes. Promotional broadcasts use Marketing templates and require recorded consent from each contact. Transactional order updates are different: they send as Utility templates through journeys and do not need marketing consent.
 - **Why was my broadcast blocked before sending?** Preflight blocks a launch when too large a share of the audience has no recorded consent or has opted out. Fix the audience rather than the check: narrow to a consented segment, and remove any list you cannot prove consent for.
-- **How many WhatsApp broadcasts can I send?** Two separate limits apply. Your TopEdge plan caps campaign and email sends per billing cycle, and Meta caps how many unique customers you can start conversations with in 24 hours based on your quality rating and business verification.
+- **How many WhatsApp broadcasts can I send?** Two separate limits apply. Your TopEdge AI plan caps campaign and email sends per billing cycle, and Meta caps how many unique customers you can start conversations with in 24 hours based on your quality rating and business verification.
 
 ### Run a shared WhatsApp inbox with your team
 
@@ -312,16 +312,16 @@ Open a conversation in Live Chat and press Reply myself; the bot pauses so only 
 
 - **Why can I not send a free-form WhatsApp reply?** The customer has not messaged you in the last 24 hours, so the service window has closed. WhatsApp only allows approved templates outside that window. Once the customer replies to your template, free text works again for another 24 hours.
 - **What happens to the bot when an agent takes over?** It pauses for that conversation only, and other conversations keep running their flows. It stays paused until someone presses Give back to bot or Mark as done, which is why a thread that seems permanently silent is usually still paused.
-- **Can several agents work the same WhatsApp number?** Yes. That is the point of a shared inbox — one business number, many agents, with assignment so two people do not answer the same customer. Each reply is attributed to the agent who sent it.
+- **Can several agents work the same WhatsApp number?** Yes. That is the point of a shared inbox: one business number, many agents, with assignment so two people do not answer the same customer. Each reply is attributed to the agent who sent it.
 
 ### Collect WhatsApp opt-in on your storefront
 
 https://topedgeai.com/docs/guides/website-opt-in · Guides · updated 2026-10-31
 
-Create a popup, spin wheel or WhatsApp widget in Opt-in tools, with consent wording that names WhatsApp marketing. Publish it, then enable the TopEdge opt-in app embed on your live Shopify theme. Each submission lands in Audience with its consent source recorded.
+Create a popup, spin wheel or WhatsApp widget in Opt-in tools, with consent wording that names WhatsApp marketing. Publish it, then enable the TopEdge AI opt-in app embed on your live Shopify theme. Each submission lands in Audience with its consent source recorded.
 
 - **What counts as valid WhatsApp marketing opt-in?** A clear, affirmative action by the customer, with wording beside it that names WhatsApp marketing from your store specifically. A pre-ticked box, a buried line in your terms, or a list you bought do not count, and relying on them puts your business number at risk.
-- **Why is my opt-in popup not showing on my Shopify store?** In order of likelihood: the tool is still a draft, the TopEdge app embed is not enabled on your live theme, an ad blocker is hiding it, or your display rules exclude the page you are testing on. Test in an incognito window with blockers off.
+- **Why is my opt-in popup not showing on my Shopify store?** In order of likelihood: the tool is still a draft, the TopEdge AI app embed is not enabled on your live theme, an ad blocker is hiding it, or your display rules exclude the page you are testing on. Test in an incognito window with blockers off.
 - **Do customers have to opt in again to receive order updates?** No. Order, shipping and delivery updates are transactional and send as Utility templates, which do not require marketing consent. Opt-in governs promotional broadcasts only, and opting out of marketing does not stop order updates.
 
 ### Train the AI to answer customer questions
@@ -330,8 +330,8 @@ https://topedgeai.com/docs/guides/train-your-ai-brain · Guides · updated 2026-
 
 Add your own Gemini or OpenAI key and fill in store knowledge: shipping, returns, sizing and payment. Then create intents with five to ten phrases each, written the way customers actually type. Test each intent's confidence and activate it, because an inactive intent never matches.
 
-- **Do I need my own OpenAI or Gemini key?** For AI-generated replies, yes. TopEdge uses your own key, so usage is billed to you by that provider and you keep control of which model answers your customers. Keyword-matched intents with fixed replies work without any key.
-- **How many example phrases does an intent need?** Five to ten, taken from real customer messages rather than written by you. Phrases in your own phrasing score poorly because customers do not write like the person who built the store — expect Hinglish, abbreviations and no punctuation.
+- **Do I need my own OpenAI or Gemini key?** For AI-generated replies, yes. TopEdge AI uses your own key, so usage is billed to you by that provider and you keep control of which model answers your customers. Keyword-matched intents with fixed replies work without any key.
+- **How many example phrases does an intent need?** Five to ten, taken from real customer messages rather than written by you. Phrases in your own phrasing score poorly because customers do not write like the person who built the store: expect Hinglish, abbreviations and no punctuation.
 - **Should the AI handle refunds and complaints?** No. Route anything involving money, a complaint or a legal question to a human. A confidently wrong answer about a refund costs far more than the time it saved, and customers escalate it publicly.
 
 ### Run digital warranty registration on WhatsApp
@@ -340,8 +340,8 @@ https://topedgeai.com/docs/guides/warranty-registration · Guides · updated 202
 
 Create a warranty batch linking Shopify products to coverage dates, then share the public registration portal, where customers verify by WhatsApp OTP. Work claims through pending, approved, shipped or rejected. Each status change sends the customer a WhatsApp update automatically.
 
-- **How do customers register a warranty?** They open your public registration portal — usually by scanning a QR on the packaging — select their product, enter their phone number and verify it with a WhatsApp OTP. The registration is then matched against the Shopify order where one exists.
-- **Do customers need an account to claim?** No. Registration and claims both work from a mobile web page with WhatsApp OTP verification, so there is no password and no app to install. That is deliberate — every extra step loses registrations.
+- **How do customers register a warranty?** They open your public registration portal, usually by scanning a QR on the packaging, select their product, enter their phone number and verify it with a WhatsApp OTP. The registration is then matched against the Shopify order where one exists.
+- **Do customers need an account to claim?** No. Registration and claims both work from a mobile web page with WhatsApp OTP verification, so there is no password and no app to install. That is deliberate: every extra step loses registrations.
 
 ### Segment Shopify customers for WhatsApp
 
@@ -349,8 +349,8 @@ https://topedgeai.com/docs/guides/segment-your-customers · Guides · updated 20
 
 Build a segment in Audience → Segments by stacking conditions on order count, spend, tags, consent and recency, and watch the live matching count. Save it, then press Launch campaign to open the broadcast builder with that audience selected.
 
-- **Are TopEdge segments dynamic or a fixed list?** Dynamic. A saved segment re-evaluates its conditions, so contacts move in and out as they order, lapse or change consent. You build a segment like "lapsed 90 days" once and it stays correct without any maintenance.
-- **Why does my segment match zero customers?** Conditions combine with AND, so every rule has to be true at once. Two reasonable-looking rules — say, more than three orders and ordered in the last seven days — can easily describe nobody. Add conditions one at a time and watch the live count.
+- **Are TopEdge AI segments dynamic or a fixed list?** Dynamic. A saved segment re-evaluates its conditions, so contacts move in and out as they order, lapse or change consent. You build a segment like "lapsed 90 days" once and it stays correct without any maintenance.
+- **Why does my segment match zero customers?** Conditions combine with AND, so every rule has to be true at once. Two reasonable-looking rules, say, more than three orders and ordered in the last seven days, can easily describe nobody. Add conditions one at a time and watch the live count.
 
 ### Journeys reference: triggers, nodes, publishing
 
@@ -359,8 +359,8 @@ https://topedgeai.com/docs/reference/journeys · Reference · updated 2026-10-31
 A journey has one trigger, optional filters and a graph of nodes. Publishing freezes the graph and trigger, so edits change nothing until you publish again. Each enrolled customer gets their own timeline of scheduled steps, and by default a reply cancels the rest.
 
 - **Why is my published journey not sending?** Check in this order: the journey is Published rather than Draft, the template it uses is Approved right now, trigger filters do not exclude the customer, and the customer has a phone number. The order detail page records a skip reason naming the exact cause.
-- **Do trigger filters combine with AND or OR?** Always AND. Every active rule must be true for a customer to enter. This is why two reasonable-looking filters can exclude everybody — a minimum order value plus a specific product is a much narrower audience than it appears.
-- **How is recovered revenue attributed to a journey?** Last touch within seven days. If a journey message was the most recent TopEdge touch before the order, that journey is credited. The customer does not have to click the link, which avoids under-counting people who get the reminder and then visit your site directly.
+- **Do trigger filters combine with AND or OR?** Always AND. Every active rule must be true for a customer to enter. This is why two reasonable-looking filters can exclude everybody: a minimum order value plus a specific product is a much narrower audience than it appears.
+- **How is recovered revenue attributed to a journey?** Last touch within seven days. If a journey message was the most recent TopEdge AI touch before the order, that journey is credited. The customer does not have to click the link, which avoids under-counting people who get the reminder and then visit your site directly.
 
 ### Flow Builder reference: nodes and publishing
 
@@ -368,7 +368,7 @@ https://topedgeai.com/docs/reference/flow-builder · Reference · updated 2026-1
 
 Flows are conversation graphs built on a canvas. The simulator walks them without messaging anyone, and publish validation blocks disconnected handles and unapproved templates. Publishing replaces the live graph from the next inbound message onward.
 
-- **How many flows can be live at once?** One flow handles inbound messages for your number, so that is the one customers meet first. Other flows can still be live as handoff targets — a journey or a live-chat node can route a customer into a specific flow by name.
+- **How many flows can be live at once?** One flow handles inbound messages for your number, so that is the one customers meet first. Other flows can still be live as handoff targets: a journey or a live-chat node can route a customer into a specific flow by name.
 - **Why does publish say my flow has disconnected nodes?** Every output handle has to lead somewhere. A buttons node with three buttons needs three edges, even if two of them go to the same reply. Leaving one unwired means a customer could tap it and receive nothing, so publish blocks it.
 
 ### Live Chat reference: inbox, takeover, filters
@@ -387,7 +387,7 @@ https://topedgeai.com/docs/reference/orders · Reference · updated 2026-10-31
 Orders mirrors your Shopify orders and logs every WhatsApp message sent for each one. Changing a status here starts the matching journey right away. Each order’s activity list shows what sent, what failed and why anything was skipped.
 
 - **Why does an order say the WhatsApp message was skipped?** The activity list names the reason. The usual causes are a template that is not approved at send time, an order with no phone number, trigger filters that excluded the order, or de-duplication because the message already went out on an earlier event.
-- **Does changing order status in TopEdge update Shopify?** Delivered and out-for-delivery are pushed back to Shopify as carrier events, and fulfilling an order creates a real Shopify fulfilment. If Shopify rejects an event, TopEdge keeps your local status rather than failing the change.
+- **Does changing order status in TopEdge AI update Shopify?** Delivered and out-for-delivery are pushed back to Shopify as carrier events, and fulfilling an order creates a real Shopify fulfilment. If Shopify rejects an event, TopEdge AI keeps your local status rather than failing the change.
 
 ### Audience reference: customers, segments, scores
 
@@ -395,8 +395,8 @@ https://topedgeai.com/docs/reference/audience-crm · Reference · updated 2026-1
 
 Audience has three screens: Customers (every contact, with consent and spend), Segments (dynamic lists built from stacked conditions) and Lead scores (engagement ranking from your own rules). Campaigns send to segments, so this is where your marketing quality is decided.
 
-- **Why is a contact missing from Audience after they opted in?** Search by the exact number both with and without the country code, and allow a minute or two for the write. If it still is not there, confirm the opt-in tool is Published rather than a draft — a draft can preview without recording anything.
-- **Can I import a customer list into Audience?** Yes, by CSV, and you attest that every row opted in. That attestation is recorded against the import. Never import a list you did not collect yourself — messaging it produces blocks and reports that damage your business number.
+- **Why is a contact missing from Audience after they opted in?** Search by the exact number both with and without the country code, and allow a minute or two for the write. If it still is not there, confirm the opt-in tool is Published rather than a draft: a draft can preview without recording anything.
+- **Can I import a customer list into Audience?** Yes, by CSV, and you attest that every row opted in. That attestation is recorded against the import. Never import a list you did not collect yourself: messaging it produces blocks and reports that damage your business number.
 
 ### Campaigns reference: broadcasts and preflight
 
@@ -413,7 +413,7 @@ https://topedgeai.com/docs/reference/email · Reference · updated 2026-10-31
 
 Connect Gmail through Google sign-in, and email sends from your own mailbox. Templates are edited in a studio with live merge previews. Journey steps can send a matching email alongside each WhatsApp message, which helps when a contact has no WhatsApp consent.
 
-- **Does TopEdge send email from its own servers?** No, it sends through your connected Gmail or Google Workspace mailbox, so the From address is your own and your existing domain reputation applies. That also means your mailbox provider’s sending limits apply to campaign volume.
+- **Does TopEdge AI send email from its own servers?** No, it sends through your connected Gmail or Google Workspace mailbox, so the From address is your own and your existing domain reputation applies. That also means your mailbox provider’s sending limits apply to campaign volume.
 - **Why will my journey not publish with an email step?** Gmail isn’t connected. A journey with an email step is blocked at publish instead of failing silently at send time. Connect Gmail in Settings, or remove the email step.
 
 ### Meta Manager reference: templates and catalog
@@ -423,14 +423,14 @@ https://topedgeai.com/docs/reference/meta-manager · Reference · updated 2026-1
 Meta Manager has two screens: the template Library (including Blueprints, pre-built template packs for journeys) and QR codes. Templates move draft → pending → approved or rejected. Only approved templates appear in journey and campaign pickers.
 
 - **How long does WhatsApp template approval take?** Usually minutes, but a first submission can take up to 24 hours. Plan around it: get your templates approved before you intend to launch, not on the morning you want the journey live.
-- **Why is my template library empty?** Templates belong to one WhatsApp Business Account (WABA). An empty library after Sync from Meta nearly always means TopEdge is connected to a different WABA than the one holding your templates. Check which account the connection names, then reconnect.
+- **Why is my template library empty?** Templates belong to one WhatsApp Business Account (WABA). An empty library after Sync from Meta nearly always means TopEdge AI is connected to a different WABA than the one holding your templates. Check which account the connection names, then reconnect.
 - **Why was my Utility template rejected?** Almost always promotional language. Words like sale, discount, offer, percent off or free gift move a template into the Marketing category in Meta’s eyes. Rewrite it to read as a pure order update, or resubmit it as Marketing.
 
 ### Opt-in tools reference: popups and widgets
 
 https://topedgeai.com/docs/reference/opt-in-tools · Reference · updated 2026-10-31
 
-Create a popup, spin wheel, mystery discount or WhatsApp widget, and set its design, consent wording and display rules. Publish it, then enable the TopEdge opt-in app embed on your live Shopify theme. Each tool has its own report of impressions and submissions.
+Create a popup, spin wheel, mystery discount or WhatsApp widget, and set its design, consent wording and display rules. Publish it, then enable the TopEdge AI opt-in app embed on your live Shopify theme. Each tool has its own report of impressions and submissions.
 
 - **Does the opt-in popup require editing my Shopify theme?** No. It installs through a Shopify app embed that you enable in the theme editor, so no theme file is modified and nothing is left behind if you disable it later. The embed has to be enabled on your live theme, not a preview.
 - **Which opt-in tool converts best?** Spin wheels usually capture the most contacts on consumer brands, but the WhatsApp widget captures the highest-intent ones because the customer starts the conversation. Each tool has its own report, so compare them on your own traffic rather than trusting averages.
@@ -450,7 +450,7 @@ https://topedgeai.com/docs/reference/chat-rules · Reference · updated 2026-10-
 
 Automation Hub holds Routing: which agent or queue a conversation goes to, and the conditions that escalate it out of the bot. A smart rules engine for broader condition-and-action automation is available on workspaces where it’s enabled.
 
-- **Why does my Automation Hub only show a Routing tab?** The smart rules engine is rolled out per workspace. If only Routing appears, the rules tab is not enabled for you yet — routing, assignment and escalation all still work, and anything more complex can be handled with a condition node in Flow Builder.
+- **Why does my Automation Hub only show a Routing tab?** The smart rules engine is rolled out per workspace. If only Routing appears, the rules tab is not enabled for you yet: routing, assignment and escalation all still work, and anything more complex can be handled with a condition node in Flow Builder.
 
 ### Analytics reference: revenue, team, delivery
 
@@ -458,8 +458,8 @@ https://topedgeai.com/docs/reference/analytics · Reference · updated 2026-10-3
 
 Insights has three screens: Analytics (revenue, recovery and campaigns), Team performance (agent response and resolution) and Delivery & RTO (fulfilment outcomes). Revenue uses last-touch attribution over a seven-day window, so it won’t match a click-only report.
 
-- **Why is recovered revenue different from what I expected?** Attribution is last touch within seven days, so a customer who received a reminder and then came back to your site directly still counts. That is deliberate — click-only attribution badly under-counts WhatsApp, where people often act without tapping the link.
-- **Why do TopEdge numbers not match Shopify analytics?** Different definitions. Shopify total sales includes shipping and tax, while store economics reports net of cost of goods, shipping and fees. Check you are comparing the same date range and the same measure before assuming a sync problem.
+- **Why is recovered revenue different from what I expected?** Attribution is last touch within seven days, so a customer who received a reminder and then came back to your site directly still counts. That is deliberate: click-only attribution badly under-counts WhatsApp, where people often act without tapping the link.
+- **Why do TopEdge AI numbers not match Shopify analytics?** Different definitions. Shopify total sales includes shipping and tax, while store economics reports net of cost of goods, shipping and fees. Check you are comparing the same date range and the same measure before assuming a sync problem.
 
 ### Store growth reference: tracking and carts
 
@@ -476,7 +476,7 @@ https://topedgeai.com/docs/reference/commerce · Reference · updated 2026-10-31
 
 Commerce has three screens: Products (your synced Shopify catalogue), Economics (net margin after cost of goods, shipping, RTO and payment fees) and Discounts (live Shopify codes). Economics needs a one-time cost setup before its numbers mean anything.
 
-- **Why does store economics show a lower margin than Shopify?** Because it subtracts costs Shopify does not know about — cost of goods, shipping, payment fees and your return-to-origin rate. Shopify reports revenue and gross sales; economics reports what is actually left after an order has been delivered or returned.
+- **Why does store economics show a lower margin than Shopify?** Because it subtracts costs Shopify does not know about, cost of goods, shipping, payment fees and your return-to-origin rate. Shopify reports revenue and gross sales; economics reports what is actually left after an order has been delivered or returned.
 - **Do I need exact costs to use economics?** No. Reasonable estimates are far better than leaving the fields empty, which silently treats every cost as zero. Start with approximate figures, especially for RTO, and refine them once you can see which products the report flags.
 
 ### Warranty hub reference: batches and claims
@@ -493,8 +493,8 @@ https://topedgeai.com/docs/reference/settings-billing · Reference · updated 20
 
 Settings has a tab for Workspace (brand identity, alert contacts, security), Billing (plan, cycle, invoices) and each connection: WhatsApp, Shopify, Gmail, WhatsApp shop, Meta Ads and Instagram. Brand identity supplies the store name and policy links customers see.
 
-- **Does cancelling an order give back my order allowance?** No. Orders are metered as they are ingested, and cancelling does not refund the count. A COD order that converts to prepaid is the exception worth knowing: TopEdge recognises the replacement, so one purchase is counted once rather than twice.
-- **Can I get GST invoices for TopEdge?** Yes, on every plan. Download them as PDFs from Settings → Billing. Plan prices exclude GST, which is added at the applicable rate.
+- **Does cancelling an order give back my order allowance?** No. Orders are metered as they are ingested, and cancelling does not refund the count. A COD order that converts to prepaid is the exception worth knowing: TopEdge AI recognises the replacement, so one purchase is counted once rather than twice.
+- **Can I get GST invoices for TopEdge AI?** Yes, on every plan. Download them as PDFs from Settings → Billing. Plan prices exclude GST, which is added at the applicable rate.
 
 ### The WhatsApp 24-hour service window
 
@@ -520,19 +520,19 @@ Utility templates are updates about something the customer did, and need no mark
 
 https://topedgeai.com/docs/platform/conversation-pricing · Platform & policy · updated 2026-10-31
 
-You pay TopEdge a subscription for the platform, with order and send allowances per billing cycle: in INR if you signed up on topedgeai.com, or in USD on your Shopify invoice if you installed from the Shopify App Store. Separately, Meta charges per message by template category: in India ₹0.8631 for Marketing and ₹0.1150 for Utility, and service replies are free for the first 1,000 a month per number. TopEdge passes Meta’s charges through at 0% markup.
+You pay TopEdge AI a subscription for the platform, with order and send allowances per billing cycle: in INR if you signed up on topedgeai.com, or in USD on your Shopify invoice if you installed from the Shopify App Store. Separately, Meta charges per message by template category: in India ₹0.8631 for Marketing and ₹0.1150 for Utility, and service replies are free for the first 1,000 a month per number. TopEdge AI passes Meta’s charges through at 0% markup.
 
-- **Does TopEdge mark up WhatsApp message fees?** No. Meta’s per-message charges are passed through at 0% markup, so that part of your cost is the same with any provider. What differs between providers is the platform subscription and what it includes.
-- **Why am I getting two bills for WhatsApp automation?** Two companies are involved. TopEdge bills you for the platform, with order and send allowances: in INR through Razorpay if you signed up on topedgeai.com, or through Shopify in USD if you installed from the Shopify App Store. Meta bills per message at its own published rates, separately.
+- **Does TopEdge AI mark up WhatsApp message fees?** No. Meta’s per-message charges are passed through at 0% markup, so that part of your cost is the same with any provider. What differs between providers is the platform subscription and what it includes.
+- **Why am I getting two bills for WhatsApp automation?** Two companies are involved. TopEdge AI bills you for the platform, with order and send allowances: in INR through Razorpay if you signed up on topedgeai.com, or through Shopify in USD if you installed from the Shopify App Store. Meta bills per message at its own published rates, separately.
 - **What is the cheapest way to reduce WhatsApp messaging costs?** Move anything that needn’t be promotional into Utility templates, which cost far less per message than Marketing (roughly ₹0.125 vs ₹0.88 in India). And segment every broadcast instead of sending to your whole list.
 
 ### Plan limits, send caps and messaging tiers
 
 https://topedgeai.com/docs/platform/limits-and-quotas · Platform & policy · updated 2026-10-31
 
-TopEdge caps orders ingested and campaign plus email sends per billing cycle, with a warning as you approach and a block at the limit. Meta separately caps how many unique customers you can send templates to per 24 hours, based on verification and quality rating. Hitting either looks like "messages stopped sending".
+TopEdge AI caps orders ingested and campaign plus email sends per billing cycle, with a warning as you approach and a block at the limit. Meta separately caps how many unique customers you can send templates to per 24 hours, based on verification and quality rating. Hitting either looks like "messages stopped sending".
 
-- **How many WhatsApp messages can I send per day?** Two limits apply. Meta caps how many unique customers you can send template messages to in a rolling 24 hours, based on your verification and quality rating. Your TopEdge plan separately caps campaign and email sends per billing cycle.
+- **How many WhatsApp messages can I send per day?** Two limits apply. Meta caps how many unique customers you can send template messages to in a rolling 24 hours, based on your verification and quality rating. Your TopEdge AI plan separately caps campaign and email sends per billing cycle.
 - **What happens when I hit my plan limit?** Sends stop rather than billing you an overage. You are warned as you approach the cap and blocked at it, with the warning going to your alert contacts in Settings. Caps reset at the start of each billing cycle.
 - **How do I increase my WhatsApp messaging limit?** Complete Meta business verification, send sustained good-quality volume, and keep customers replying rather than blocking. Limits rise over time on their own; a sudden spike from a cold list does the opposite and can restrict the number.
 
@@ -540,11 +540,11 @@ TopEdge caps orders ingested and campaign plus email sends per billing cycle, wi
 
 https://topedgeai.com/docs/troubleshooting · Help · updated 2026-10-31
 
-Most problems are one of four things: a journey left in Draft, a template not Approved at send time, TopEdge not receiving your messages, or storefront tracking not capturing a phone. Check those first, and read the skip reason on the affected order; it usually names the cause.
+Most problems are one of four things: a journey left in Draft, a template not Approved at send time, TopEdge AI not receiving your messages, or storefront tracking not capturing a phone. Check those first, and read the skip reason on the affected order; it usually names the cause.
 
 - **Why is my WhatsApp automation not sending messages?** In order of likelihood: the journey is still in Draft rather than Published, the template it uses is not Approved at send time, trigger filters are excluding the customer, or the order has no phone number. The activity list on the affected order records a skip reason naming the actual cause.
-- **Why is my WhatsApp inbox empty?** Almost always because TopEdge isn't subscribed to your messages. Reconnect from Settings → WhatsApp to fix it. Sending works without it but nothing inbound arrives. Check the Webhook tab in WhatsApp settings, and test by messaging your business number from a personal phone.
-- **Who do I contact for help with TopEdge?** Use the contact page on this site. Include your store domain, what you expected, what actually happened, a screenshot of any banner, and the order number if it’s about a specific order. That usually gets a fix in one reply.
+- **Why is my WhatsApp inbox empty?** Almost always because TopEdge AI isn't subscribed to your messages. Reconnect from Settings → WhatsApp to fix it. Sending works without it but nothing inbound arrives. Check the Webhook tab in WhatsApp settings, and test by messaging your business number from a personal phone.
+- **Who do I contact for help with TopEdge AI?** Use the contact page on this site. Include your store domain, what you expected, what actually happened, a screenshot of any banner, and the order number if it’s about a specific order. That usually gets a fix in one reply.
 
 ## Compare boards
 
@@ -554,7 +554,7 @@ https://topedgeai.com/compare/wati
 
 Compare TopEdge AI vs WATI for Shopify India: flat INR plans from ₹1,999/mo and 0% Meta markup vs WATI conversation charges, AI tier gates and API setup.
 
-Sourcing: Prices and per-message rates read off wati.io/pricing and WATI’s INR rate cards (dated 1 Oct 2026) on 7 Nov 2026. Meta’s India card is ₹0.8631 per marketing and ₹0.1150 per utility message. Where WATI is better: a wider inbox (WhatsApp, calling, Instagram, Facebook, TikTok, webchat and RCS) with 5 users on Pro, which suits a multi-agent support desk; TopEdge is a Shopify app for WhatsApp and email only. Other capability rows reflect TopEdge product positioning. Confirm live plan limits and fees on wati.io before purchase.
+Sourcing: Prices and per-message rates read off wati.io/pricing and WATI’s INR rate cards (dated 1 Oct 2026) on 7 Nov 2026. Meta’s India card is ₹0.8631 per marketing and ₹0.1150 per utility message. Where WATI is better: a wider inbox (WhatsApp, calling, Instagram, Facebook, TikTok, webchat and RCS) with 5 users on Pro, which suits a multi-agent support desk; TopEdge AI is a Shopify app for WhatsApp and email only. Other capability rows reflect TopEdge AI product positioning. Confirm live plan limits and fees on wati.io before purchase.
 
 - TopEdge AI: 14-day free trial, then ₹1,999/month (₹1,599/month billed yearly) + 18% GST on topedgeai.com, or $19/month billed by Shopify in USD from the Shopify App Store
 - WATI: 7-day free trial, then ₹2,699, ₹5,799 or ₹16,799 a month billed quarterly (₹2,999, ₹6,499, ₹18,499 billed monthly). Pro and Business include 5 users, then ₹1,299 or ₹2,199 per extra user. Read 7 Nov 2026
@@ -565,7 +565,7 @@ https://topedgeai.com/compare/aisensy
 
 Compare TopEdge AI vs AiSensy for Shopify India: 0% Meta markup, BYOK AI and native COD to prepaid journeys vs platform charges and credit-metered AI.
 
-Sourcing: Read off aisensy.com/pricing on 21 Oct 2026: from 1 Oct 2026 every WhatsApp Business number gets 1,000 free service messages a month, then AiSensy charges ₹0.145 per service message for Indian users. Meta’s own published India service and utility rate is ₹0.1150, so that is a 26.1% markup on every support or bot reply past the free thousand. Remaining capability claims reflect TopEdge product positioning vs publicly described AiSensy platform patterns. Confirm live plan limits, credits and fees on aisensy.com before purchase.
+Sourcing: Read off aisensy.com/pricing on 21 Oct 2026: from 1 Oct 2026 every WhatsApp Business number gets 1,000 free service messages a month, then AiSensy charges ₹0.145 per service message for Indian users. Meta’s own published India service and utility rate is ₹0.1150, so that is a 26.1% markup on every support or bot reply past the free thousand. Remaining capability claims reflect TopEdge AI product positioning vs publicly described AiSensy platform patterns. Confirm live plan limits, credits and fees on aisensy.com before purchase.
 
 - TopEdge AI: 14-day free trial, then ₹1,999/month (₹1,599/month billed yearly) + 18% GST on topedgeai.com, or $19/month billed by Shopify in USD from the Shopify App Store
 - AiSensy: Platform plan plus Meta conversation charges and metered AI credits; confirm the current India tier on aisensy.com, which is not fixed per order volume
@@ -576,7 +576,7 @@ https://topedgeai.com/compare/interakt
 
 Compare TopEdge AI vs Interakt for Shopify India: ₹1,999/mo Launch plan, 0% Meta markup and BYOK AI vs a ~₹2,799/mo plan with a ₹0.50/msg AI add-on.
 
-Sourcing: Read off interakt.shop/pricing and the Shopify App Store on 9 Nov 2026, plus taxes: web Starter ₹999 a month (Instagram only on monthly billing; WhatsApp or Instagram on quarterly ₹3,499 or yearly ₹11,999), Growth ₹2,799 and Advanced ₹3,799 for WhatsApp plus Instagram. Interakt’s Shopify integration is only on its Shopify App Store plans, listed from ₹1,973.48 to ₹9,303.55 a month as Shopify’s INR estimates. Growth lists ₹0.958 per India marketing and ₹0.150 per utility message, against Meta’s ₹0.8631 and ₹0.1150; only Enterprise is listed with no markup. WhatsApp AI Agents is a ₹3,000 add-on on Growth and Advanced. Where Interakt is better: Instagram DM and comment automation, unlimited agent logins on every plan, and the backing of Jio Haptik Technologies, named in its site footer. Remaining capability rows reflect TopEdge product positioning. Confirm live App vs India website tiers on interakt.shop before purchase.
+Sourcing: Read off interakt.shop/pricing and the Shopify App Store on 9 Nov 2026, plus taxes: web Starter ₹999 a month (Instagram only on monthly billing; WhatsApp or Instagram on quarterly ₹3,499 or yearly ₹11,999), Growth ₹2,799 and Advanced ₹3,799 for WhatsApp plus Instagram. Interakt’s Shopify integration is only on its Shopify App Store plans, listed from ₹1,973.48 to ₹9,303.55 a month as Shopify’s INR estimates. Growth lists ₹0.958 per India marketing and ₹0.150 per utility message, against Meta’s ₹0.8631 and ₹0.1150; only Enterprise is listed with no markup. WhatsApp AI Agents is a ₹3,000 add-on on Growth and Advanced. Where Interakt is better: Instagram DM and comment automation, unlimited agent logins on every plan, and the backing of Jio Haptik Technologies, named in its site footer. Remaining capability rows reflect TopEdge AI product positioning. Confirm live App vs India website tiers on interakt.shop before purchase.
 
 - TopEdge AI: 14-day free trial, then ₹1,999/month (₹1,599/month billed yearly) + 18% GST on topedgeai.com, or $19/month billed by Shopify in USD from the Shopify App Store
 - Interakt: 14-day free trial. Its Shopify integration is only on its Shopify App Store plans, from ₹1,973.48 a month as Shopify’s INR estimate. Web plans: Growth ₹2,799 a month; ₹999 Starter is Instagram only on monthly billing, WhatsApp or Instagram on quarterly (₹3,499) or yearly (₹11,999) billing. Read 9 Nov 2026
@@ -653,12 +653,24 @@ https://topedgeai.com/compare/gupshup
 
 Compare TopEdge AI vs Gupshup for Shopify India: self-serve ₹1,999/mo INR plans, 0% Meta markup and native COD journeys vs per-message enterprise CPaaS fees.
 
-Sourcing: Board compiled Sep 2026 from TopEdge product positioning vs publicly described Gupshup CPaaS / Conversation Studio / Auto Bot patterns. Gupshup enterprise quotes and fee cards move, so verify messaging fees, AI packaging, and module gates on gupshup.io (and any regional sales deck) before purchase.
+Sourcing: Board compiled Sep 2026 from TopEdge AI product positioning vs publicly described Gupshup CPaaS / Conversation Studio / Auto Bot patterns. Gupshup enterprise quotes and fee cards move, so verify messaging fees, AI packaging, and module gates on gupshup.io (and any regional sales deck) before purchase.
 
 - TopEdge AI: 14-day free trial, then ₹1,999/month (₹1,599/month billed yearly) + 18% GST on topedgeai.com, or $19/month billed by Shopify in USD from the Shopify App Store
 - Gupshup: Pay-as-you-go model with no fixed entry-level SaaS tiers or public free trial (verify live / sales quote)
 
 ## Playbooks
+
+### Wati Pricing in India (2026): Plans, Seats and Bill
+
+https://topedgeai.com/blog/wati-pricing-india · published 2026-11-10 · updated 2026-11-10 · by Moksh Patel
+
+Wati pricing in India is ₹2,999 (Growth), ₹6,499 (Pro) and ₹18,499 (Business) a month on monthly billing, read on 10 November 2026. Annual billing brings that to ₹2,199, ₹4,899 and ₹14,799. Two costs sit on top: WATI’s own message rates, 12% to 30% above Meta’s , and seats, because Growth stops at 3 users. A Shopify store with 500 orders a month pays about ₹14,325 a month before GST.
+
+- **Is WATI free?** No. WATI offers a 7-day free trial with no setup fee, read on 10 November 2026. The cheapest paid plan in India is Growth at ₹2,999 a month on monthly billing, or ₹2,199 a month billed annually. WhatsApp template messages are charged on top of every plan.
+- **What does WATI charge per WhatsApp message in India?** WATI’s INR rate cards, dated 1 October 2026, list Growth at ₹1.0357 for marketing, ₹0.1495 for utility and authentication, and ₹0.1380 for service messages to Indian numbers. Pro is ₹0.9926 for marketing and Business ₹0.9667. Meta’s own India rates are ₹0.8631 and ₹0.1150, so WATI is 12% to 20% above Meta on marketing and 20% to 30% above on utility.
+- **How much does an extra user cost on WATI?** Growth includes 3 users and cannot add more. Pro and Business include 5 users each. Extra users cost ₹1,299 a user a month on Pro and ₹2,199 on Business, read on 10 November 2026. A fourth team member therefore means moving from Growth to Pro, which is ₹3,500 a month more on monthly billing.
+- **How much does WATI cost for a Shopify store in India?** WATI lists its Shopify integration as an add-on at USD 4.99 a month on top of the plan. On our worked example, a store with 500 orders a month pays about ₹14,325 before GST on Growth: ₹2,999 for the plan, about ₹469 for the Shopify add-on and ₹10,857 in messages. Your own message mix will change the last figure.
+- **Is WATI cheaper on annual billing?** Yes. Read on 10 November 2026, Growth is ₹2,999 a month billed monthly, ₹2,699 billed quarterly and ₹2,199 billed annually. Pro is ₹6,499, ₹5,799 and ₹4,899. Business is ₹18,499, ₹16,799 and ₹14,799. Message rates and extra-user prices do not change with the billing cycle.
 
 ### Interakt Pricing in India (2026): Real Monthly Cost
 
@@ -744,13 +756,13 @@ There is no single best Shopify app for abandoned cart recovery India , and any 
 
 https://topedgeai.com/blog/cod-to-prepaid-whatsapp-shopify-india · published 2026-10-22 · updated 2026-10-22 · by Moksh Patel
 
-A Cash on Delivery order that becomes a prepaid order saves roughly ₹68 before it ships: about ₹30 of courier COD remittance fee and about ₹38 of amortised RTO cost. That is the budget for your incentive. Send the ₹0.1150 utility confirmation to every COD order first, then the ₹0.8631 marketing offer with a UPI link only to the segment worth converting, and hold dispatch until one of the two comes back.
+A Cash on Delivery order that becomes a prepaid order saves roughly ₹68 before it ships: about ₹30 of courier COD remittance fee and about ₹38 of amortised RTO cost. That is the budget for your incentive. Send the ₹0.1150 utility confirmation to every COD order first, then the ₹0.8631 marketing offer with a UPI link only to the segment worth converting, and hold dispatch until one of the two comes back. To see what a returned parcel costs your store first, use the RTO cost calculator , one of our free Shopify tools .
 
 - **How do you convert COD orders to prepaid on WhatsApp in Shopify India?** Send a plain utility confirmation the moment the Cash on Delivery order is placed, at ₹0.1150 on Meta’s India rate card. Branch on the reply, then send a separate marketing template with a UPI payment link and a small incentive only to the orders worth converting, at ₹0.8631. Hold dispatch until the payment clears or the buyer confirms COD, and sync the paid status back to the Shopify order.
 - **How big a prepaid discount can I offer without losing money?** Work from what a prepaid order saves you rather than from a round number. Amazon Shipping India puts the COD remittance fee at about ₹30 a parcel (or 1.5% of order value) and amortised RTO cost at about ₹38 per shipped COD order at a 30% RTO rate. That is roughly ₹68 of cost that disappears when the same order goes prepaid, so an incentive below ₹68 is already paid for before you count the parcels that no longer come back at ₹180 to ₹240 each.
 - **Why not just put the prepaid discount inside the COD confirmation?** Because it changes the Meta template category. A confirm-or-cancel message is a utility template at ₹0.1150. Add a discount to the same message and Meta reclassifies it as marketing at ₹0.8631, which is 7.5 times the cost on every COD order you ship, including the ones that were never going to convert. Two sends cost less than one when only part of your COD base is worth an offer.
 - **Does converting COD to prepaid actually reduce RTO?** The payment method gap is the largest published one in Indian D2C. Unicommerce reports festive-quarter COD returns around 58% against under 15% for prepaid, and GoKwik reports COD RTO near 26% against prepaid under 2% across its shopper network, with 60% to 70% of RTOs coming from low buying intent rather than logistics failure. What no one publishes is a verified conversion rate for WhatsApp prepaid offers, so model the saving per converted order and measure your own rate.
-- **Which TopEdge plan includes COD to prepaid?** COD confirmation runs on every plan, including Launch at ₹1,999 a month. The automated COD-to-prepaid journey sits on Growth (₹3,999 a month, or ₹3,199 billed yearly) and Scale. TopEdge is Shopify-native and compatible with third-party checkout stacks such as GoKwik and Razorpay, and Meta bills your own WhatsApp account directly at 0% markup either way.
+- **Which TopEdge AI plan includes COD to prepaid?** COD confirmation runs on every plan, including Launch at ₹1,999 a month. The automated COD-to-prepaid journey sits on Growth (₹3,999 a month, or ₹3,199 billed yearly) and Scale. TopEdge AI is Shopify-native and compatible with third-party checkout stacks such as GoKwik and Razorpay, and Meta bills your own WhatsApp account directly at 0% markup either way.
 
 ### Best Updatrr Alternative for Shopify India (2026)
 
@@ -819,7 +831,7 @@ Bitespeed targets larger brands and global omnichannel stacks. If your Shopify s
 
 https://topedgeai.com/blog/whatsapp-template-rejected-meta-shopify-fix · published 2026-10-08 · updated 2026-10-21 · by Moksh Patel
 
-Most rejections come from five fixable things: wrong category, badly placed variables, missing sample values, promotional wording in a utility template, and vague or misleading text. Fix the cause shown in Meta Business Manager and resubmit. Do not resubmit unchanged.
+Most rejections come from five fixable things: wrong category, badly placed variables, missing sample values, promotional wording in a utility template, and vague or misleading text. Fix the cause shown in Meta Business Manager and resubmit. Do not resubmit unchanged. For wording that already keeps utility and marketing apart, start from our copyable WhatsApp order and COD templates .
 
 - **Why was my WhatsApp template rejected?** The most common causes are a category that does not match the content (promotional text in a utility template), variables that are not in order or sit at the very start or end, missing sample values, and wording that Meta’s review flags as misleading or as asking for sensitive data. The rejection reason shown in Meta Business Manager tells you which one applies.
 - **Can I appeal a rejected WhatsApp template?** Yes. Fix the issue and resubmit, or use the review request option in Meta Business Manager when you believe the rejection was wrong. Appealing without changing anything rarely works, so change the wording, sample values or category first.
@@ -858,7 +870,7 @@ Ecommerce automation means setting up systems that handle repetitive work withou
 
 - **What is ecommerce automation?** Ecommerce automation means setting up systems that handle repetitive tasks without you. When an order is placed, automation confirms it to the customer, updates your order records, notifies the warehouse, assigns a courier and follows up after delivery, all without anyone touching a button.
 - **What should an Indian store owner automate first?** Order confirmations and shipping updates on WhatsApp, or abandoned cart recovery. Both are quick to set up and show measurable results fast. Order confirmation also doubles as RTO protection, because asking a COD customer to confirm before dispatch removes a large share of failed deliveries.
-- **Is ecommerce automation cheaper than hiring a virtual assistant?** For repetitive, rules-based work, usually yes. A VA is a monthly salary for about eight hours a day, and needs retraining if they leave. A TopEdge plan costs ₹1,999 to ₹6,499 a month plus GST, runs continuously and does not make copy-paste errors. Humans still win on judgment, so the right split is automation for everything that does not need judgment.
+- **Is ecommerce automation cheaper than hiring a virtual assistant?** For repetitive, rules-based work, usually yes. A VA is a monthly salary for about eight hours a day, and needs retraining if they leave. A TopEdge AI plan costs ₹1,999 to ₹6,499 a month plus GST, runs continuously and does not make copy-paste errors. Humans still win on judgment, so the right split is automation for everything that does not need judgment.
 - **How long does ecommerce automation take to pay for itself?** We do not have a measured payback period across stores yet. COD confirmation is the quickest one to check yourself: at ₹0.1150 per message, confirming 500 orders costs ₹57.50 a month, and each prevented return saves ₹180 to ₹240 in direct logistics. The main upfront cost is the time spent configuring workflows, not the subscription itself.
 - **Can automation reduce RTO on COD orders?** Yes, and it is one of the highest-return automations available in India. A returned COD parcel costs ₹180 to ₹240 in direct logistics, according to Amazon Shipping India. An automated WhatsApp confirmation sent right after a COD order is placed, asking for a one-tap reply before dispatch, typically removes a meaningful share of those failures. The maths works even at 50 orders a month.
 - **What are the most common ecommerce automation mistakes?** Automating a process you have not defined yet, over-automating customer communication so complaints get three bot replies before a human looks, choosing aggressive trigger timings, never testing the flow as a real customer, and never checking automations again after setup. Platform and API changes break working flows silently.
@@ -937,11 +949,11 @@ Best WhatsApp apps for Shopify are not one ranking. Compare features, pricing, a
 
 https://topedgeai.com/blog/dondy-alternative-shopify-india · published 2026-09-21 · updated 2026-11-08 · by Moksh Patel
 
-Dondy’s published rate table charges 60% more than Meta’s own rate. On dondy.net (checked 8 Nov 2026) India is $0.01888 per message, 1.6× the $0.0118 on Meta’s USD rate card. In rupees that is about ₹1.77 a message at ₹93.92 to the dollar, roughly twice Meta’s ₹0.8631 INR rate. Pick TopEdge if you want 0% markup, flat plans, and COD → prepaid. Full board: TopEdge vs Dondy .
+Dondy’s published rate table charges 60% more than Meta’s own rate. On dondy.net (checked 8 Nov 2026) India is $0.01888 per message, 1.6× the $0.0118 on Meta’s USD rate card. In rupees that is about ₹1.77 a message at ₹93.92 to the dollar, roughly twice Meta’s ₹0.8631 INR rate. Pick TopEdge AI if you want 0% markup, flat plans, and COD → prepaid. Full board: TopEdge AI vs Dondy .
 
 - **Does Dondy charge more than Meta’s own rate?** Yes. Its rate table at dondy.net/dondy-pricing lists India at $0.01888 per message, and Meta’s own USD rate card, effective 1 October 2026, lists India marketing at $0.0118: exactly 60% more. The same 1.6 multiple holds on the other rows we checked, such as Rest of Central & Eastern Europe at $0.1376 against Meta’s $0.086. Both read 8 November 2026. Note the Shopify listing’s “from $0.0158 (US)” does not match North America $0.04 on the website table.
 - **What do 1,000 India messages cost on Dondy’s card?** 1,000 × $0.01888 is $18.88, against $11.80 on Meta’s USD card, $7.08 more. In rupees at ₹93.92 to the dollar that is about ₹1,773, against ₹863 on Meta’s INR card, about ₹910 more, before the $79.99 Power Automation or $159.99 Elite subscription. Those plans include 1,000 one-click messages every 30 days; confirm whether that allowance replaces the rate-card charge.
-- **When is TopEdge the better Dondy alternative for Shopify India?** When you want 0% Meta markup, flat order-based plans, and native COD → prepaid. Keep Dondy if the free widget, Klaviyo, and Elite AI matter more than the rate-card markup.
+- **When is TopEdge AI the better Dondy alternative for Shopify India?** When you want 0% Meta markup, flat order-based plans, and native COD → prepaid. Keep Dondy if the free widget, Klaviyo, and Elite AI matter more than the rate-card markup.
 
 ### WhatsApp Automation for Shopify India: Complete Guide
 
@@ -960,14 +972,14 @@ WhatsApp automation for Shopify is the loop Shopify event → automation → Wha
 - **How can I send Shopify order updates on WhatsApp?** Map paid, fulfilled, and delivery-related events to utility templates with order number, items, and tracking. Route replies into an inbox that already shows the Shopify order.
 - **How can I recover Shopify abandoned carts through WhatsApp?** Use opted-in numbers, approved marketing templates, live line items, a resume-checkout link, purchase suppression, and reply handling. Timing and copy live in the Shopify abandoned cart recovery guide, not in this overview.
 - **WhatsApp Business API vs WhatsApp Business App for Shopify?** Event-driven ecommerce automation needs the WhatsApp Business Platform (Cloud API). The WhatsApp Business App is fine for tiny manual ops; it is not a multi-agent Shopify automation OS with reliable event triggers and templates at scale.
-- **How much does Shopify WhatsApp automation cost?** Budget three layers: platform/app subscription, Meta conversation fees by category (marketing/utility/authentication/service), and any vendor markup on Meta rates. India Meta rates change. Re-check Meta’s card. TopEdge publishes flat order-based plans and 0% Meta markup on its catalog.
+- **How much does Shopify WhatsApp automation cost?** Budget three layers: platform/app subscription, Meta conversation fees by category (marketing/utility/authentication/service), and any vendor markup on Meta rates. India Meta rates change. Re-check Meta’s card. TopEdge AI publishes flat order-based plans and 0% Meta markup on its catalog.
 - **Is WhatsApp automation worth it for a Shopify store?** Yes when customers already live in WhatsApp, you can collect opt-in, and you will staff replies. It is weaker if opt-in is thin, templates stay pending, or no one answers when buyers respond.
 
 ### Best Zoko Alternative for Shopify India (2026)
 
 https://topedgeai.com/blog/zoko-alternative-shopify-india · published 2026-09-20 · updated 2026-11-02 · by Moksh Patel
 
-A Zoko alternative for Shopify India is worth considering when conversation metering and festival bill spikes matter more than catalog-in-chat heritage. Keep COD flows and Shopify sync; switch the platform fee to something finance can forecast in ₹. Full scorecard: TopEdge vs Zoko .
+A Zoko alternative for Shopify India is worth considering when conversation metering and festival bill spikes matter more than catalog-in-chat heritage. Keep COD flows and Shopify sync; switch the platform fee to something finance can forecast in ₹. Full scorecard: TopEdge AI vs Zoko .
 
 - **What should a Zoko alternative include for a Shopify India brand?** At minimum: official Meta Cloud API access, Shopify order and checkout sync, multi-step cart recovery, COD confirmation with a prepaid path, a shared inbox with order context, and clear reporting on recovered revenue rather than messages sent. Anything missing from that list becomes manual work later.
 - **How do I evaluate a WhatsApp platform switch without disrupting live orders?** Keep your existing setup running while you connect the new platform to a test or development store, submit the templates you actually use, and run a real test order and a real abandoned checkout end to end. Only move live traffic once both produce the message you expect on a real phone.
@@ -977,7 +989,7 @@ A Zoko alternative for Shopify India is worth considering when conversation mete
 
 https://topedgeai.com/blog/getgabs-alternative-shopify-whatsapp · published 2026-09-20 · updated 2026-11-08 · by Moksh Patel
 
-A Getgabs alternative is for teams that outgrew free-to-install WhatsApp entry, not for winning a sticker-price fight. Getgabs stays cheaper to start; TopEdge fits when COD → prepaid, warranty, and unified identity need to ship natively. Details: TopEdge vs Getgabs .
+A Getgabs alternative is for teams that outgrew free-to-install WhatsApp entry, not for winning a sticker-price fight. Getgabs stays cheaper to start; TopEdge AI fits when COD → prepaid, warranty, and unified identity need to ship natively. Details: TopEdge AI vs Getgabs .
 
 - **Does a cheaper WhatsApp platform actually cost less to run?** Not always. Meta’s per-delivered-message charges are the same whichever provider you use, so the platform fee is only part of the bill. What varies is what the subscription includes. If cart recovery, COD conversion or a shared inbox sit behind a higher tier, the cheaper entry price can end up costing more for the same capability.
 - **What usually stays gated on a low-cost WhatsApp plan?** Commonly multi-step journeys with branching, COD to prepaid conversion, agent seats on the shared inbox, and revenue attribution. Check these specifically against your own use case rather than the plan name, and confirm current pricing with the vendor before you commit.
@@ -987,7 +999,7 @@ A Getgabs alternative is for teams that outgrew free-to-install WhatsApp entry, 
 
 https://topedgeai.com/blog/kanal-whatsapp-alternative-shopify · published 2026-09-20 · updated 2026-11-02 · by Moksh Patel
 
-A Kanal WhatsApp alternative for India D2C is about INR floors and COD workflows, not dismissing Klaviyo. Kanal fits global ESP-first stacks from €89/mo; TopEdge fits Shopify India recovery on flat order-based plans. Compare: TopEdge vs Kanal .
+A Kanal WhatsApp alternative for India D2C is about INR floors and COD workflows, not dismissing Klaviyo. Kanal fits global ESP-first stacks from €89/mo; TopEdge AI fits Shopify India recovery on flat order-based plans. Compare: TopEdge AI vs Kanal .
 
 - **What makes a WhatsApp platform India-specific?** COD handling, mainly. A platform built for prepaid-first markets treats cash on delivery as an edge case, when in India it is often the majority of orders and the main source of losses. India-shaped tooling treats COD confirmation, prepaid conversion and RTO reporting as core, not add-ons.
 - **Should I pick a global or India-focused WhatsApp platform?** Match the tool to where your revenue comes from. If most orders are Indian and a meaningful share are COD, the India-specific features save more than a broader global feature set does. If you sell mostly prepaid across several countries, that calculus changes.
@@ -1008,7 +1020,7 @@ How do you choose a WhatsApp app from the Shopify App Store? Check Meta markup, 
 
 https://topedgeai.com/blog/whatsapp-business-api-pricing-india · published 2026-09-20 · updated 2026-10-21 · by Moksh Patel
 
-In India, Meta charges per delivered message on its INR rate card: ₹0.8631 for marketing templates and ₹0.1150 for utility and authentication templates. Effective 1 October 2026 , customer service replies are also billed at ₹0.1150 once a phone number passes 1,000 free service messages in a month. Your software vendor's subscription, and any per-message markup it adds, sits on top of Meta's bill.
+In India, Meta charges per delivered message on its INR rate card: ₹0.8631 for marketing templates and ₹0.1150 for utility and authentication templates. Effective 1 October 2026 , customer service replies are also billed at ₹0.1150 once a phone number passes 1,000 free service messages in a month. Your software vendor's subscription, and any per-message markup it adds, sits on top of Meta's bill. The current card by category is on our Meta India rate card and cost calculator .
 
 - **How much does a WhatsApp message cost in India?** It depends on the category, not the message. On Meta India rate card the marketing rate is ₹0.8631 per delivered message and utility and authentication are ₹0.1150, all before 18 percent GST. Service replies are no longer unconditionally free: from 1 October 2026 each business phone number gets 1,000 free service messages a month and everything past that is charged at the ₹0.1150 utility rate. Read your own rate card in Meta Business Manager for the number you will actually be billed.
 - **Are WhatsApp service replies still free in India?** Only the first 1,000 a month per business phone number. Meta pricing documentation states that effective 1 October 2026, by messaging account timezone, every business phone number gets a free tier of 1,000 service messages per month and Meta charges from the 1,001st onward, which in India means ₹0.1150 per delivered reply with no volume tiers. Any article still telling you that replies inside the 24-hour window are unconditionally free is describing the pre-October rules.
@@ -1016,7 +1028,7 @@ In India, Meta charges per delivered message on its INR rate card: ₹0.8631 for
 - **Why does a prepaid discount make a COD confirmation cost 7.5x more?** Because it changes the template category. A plain COD confirmation asking the buyer to confirm or cancel is a utility template at ₹0.1150. Add a discount or an offer to that same message and Meta reclassifies it as marketing at ₹0.8631, which is 7.5 times the cost for one extra line of copy. Send the utility confirmation first, then make the prepaid offer as a separate, deliberate marketing send.
 - **Why does every article quote a different WhatsApp rate?** Because most of them are quoting a platform price, not Meta price. A BSP that adds its own margin per message will publish the marked-up figure, and that number gets repeated as if it were Meta rate card. The gap between the lowest and highest figures published in 2026 is wide enough to change a festival budget by six figures.
 - **What is 0 percent markup and how do I verify it?** It means the platform passes Meta charge through at cost and makes its money on the subscription instead. You verify it by comparing the per-conversation line on your platform invoice against the same line in Meta Business Manager for the same period. If the two match, there is no markup. If they do not, the difference is the markup.
-- **Do I pay Meta directly or through my WhatsApp app?** On TopEdge you connect your own Meta WhatsApp account, so Meta bills you directly on your own account and we never touch that line. Some platforms resell conversations as credits instead, which bundles the two bills together and makes the markup harder to see.
+- **Do I pay Meta directly or through my WhatsApp app?** On TopEdge AI you connect your own Meta WhatsApp account, so Meta bills you directly on your own account and we never touch that line. Some platforms resell conversations as credits instead, which bundles the two bills together and makes the markup harder to see.
 
 ### AI WhatsApp Chatbot for Shopify India
 
@@ -1063,8 +1075,8 @@ Best WhatsApp automation tool for Shopify India (2026): TopEdge AI when you need
 
 - **What is the best WhatsApp automation tool for Shopify India in 2026?** For Shopify India D2C that needs cart recovery, COD workflows, Meta template control, and INR forecasting, TopEdge AI is the strongest fit on this list. Pick Zoko for India commerce with conversation metering, Getgabs for the cheapest entry, Kanal or Bitespeed for global/omnichannel stacks, Dondy when widget breadth matters more than Meta rate-card markup, and WATI / AiSensy / Interakt when you already standardize on those BSPs.
 - **Should I choose on price alone?** No. Getgabs wins on entry sticker price. Zoko, Kanal, and Dondy can look mid-range until conversation meters, EUR floors, or published rate-card markups show up in festival weeks. Model Meta fees plus platform meters against your peak WhatsApp volume.
-- **Which tools are strongest for COD and RTO?** Prioritize vendors with explicit COD confirm and COD → prepaid journeys, not only order-update templates. TopEdge and Zoko both surface COD flows publicly; verify live on any other vendor before you buy.
-- **Where can I see full pairwise comparisons?** Use the TopEdge compare hub and alternatives index for one-line positioning, then open each vs page for scorecards, plan tables, and verify-live footnotes.
+- **Which tools are strongest for COD and RTO?** Prioritize vendors with explicit COD confirm and COD → prepaid journeys, not only order-update templates. TopEdge AI and Zoko both surface COD flows publicly; verify live on any other vendor before you buy.
+- **Where can I see full pairwise comparisons?** Use the TopEdge AI compare hub and alternatives index for one-line positioning, then open each vs page for scorecards, plan tables, and verify-live footnotes.
 
 ### Shopify WhatsApp Automation Go-Live Checklist (India)
 

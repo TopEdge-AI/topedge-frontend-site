@@ -29,12 +29,12 @@ export default function SignupRedirect() {
   return (
     <main className="mkt-auth-redirect" aria-busy="true" aria-live="polite">
       <Helmet>
-        <title>Opening signup | TopEdge</title>
+        <title>Opening signup | TopEdge AI</title>
         <meta name="robots" content="noindex, follow" />
       </Helmet>
       <img
         src="/topedge-loader.gif"
-        alt="Opening TopEdge signup"
+        alt="Opening TopEdge AI signup"
         width={96}
         height={96}
         className="mkt-auth-redirect__logo"

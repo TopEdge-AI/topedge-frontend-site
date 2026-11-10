@@ -98,7 +98,7 @@ export default function JourneyFlow({
 
       <p className="mkt-jf__foot">
         Rates are Meta&rsquo;s own India per-delivered-message prices, billed by Meta to your
-        account. TopEdge adds no markup on them.
+        account. TopEdge AI adds no markup on them.
       </p>
     </div>
   );

@@ -188,7 +188,7 @@ export default function FeaturesPage() {
         <section className="mkt-fx__section" aria-labelledby="mkt-fx-demo">
           <div className="mkt-fx__head">
             <h2 id="mkt-fx-demo">
-              See TopEdge in <span className="mkt-fx__hl">motion</span>
+              See TopEdge AI in <span className="mkt-fx__hl">motion</span>
             </h2>
             <p>
               Product demos for the hubs your team opens every day, cart recovery, journeys, inbox,
@@ -199,7 +199,7 @@ export default function FeaturesPage() {
             <ProductDemoVideo
               src={demoAssetFor('hero').src}
               poster={demoAssetFor('hero').poster}
-              label="TopEdge product demo"
+              label="TopEdge AI product demo"
             />
           </div>
         </section>

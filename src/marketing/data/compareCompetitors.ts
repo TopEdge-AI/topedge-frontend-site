@@ -33,7 +33,7 @@ export type CompareScoreRow = {
   area: string;
   topedge: string;
   competitor: string;
-  edge: 'TopEdge' | 'Competitor' | 'Even' | 'Trade-off';
+  edge: 'TopEdge AI' | 'Competitor' | 'Even' | 'Trade-off';
 };
 
 export type CompareCompetitor = {
@@ -117,8 +117,8 @@ export const COMPARE_COMPETITORS: Record<string, CompareCompetitor> = {
     description:
       'Compare TopEdge AI vs WATI for Shopify India: flat INR plans from ₹1,999/mo and 0% Meta markup vs WATI conversation charges, AI tier gates and API setup.',
     keywords:
-      'TopEdge vs WATI, WATI alternative India, WhatsApp template markup, COD to prepaid WhatsApp, unified customer identity WhatsApp, intent routing chatbot, WATI vs TopEdge Shopify',
-    h1: 'TopEdge vs WATI',
+      'TopEdge AI vs WATI, WATI alternative India, WhatsApp template markup, COD to prepaid WhatsApp, unified customer identity WhatsApp, intent routing chatbot, WATI vs TopEdge AI Shopify',
+    h1: 'TopEdge AI vs WATI',
     subtitle: 'TopEdge AI vs WATI for Shopify India D2C brands, checked for 2026.',
     matrix: WATI_PAIRWISE_MATRIX.map(({ label, description, topedge, competitor }) => ({
       label,
@@ -127,7 +127,7 @@ export const COMPARE_COMPETITORS: Record<string, CompareCompetitor> = {
       competitor,
     })),
     matrixNote:
-      'Prices and per-message rates read off wati.io/pricing and WATI’s INR rate cards (dated 1 Oct 2026) on 7 Nov 2026. Meta’s India card is ₹0.8631 per marketing and ₹0.1150 per utility message. Where WATI is better: a wider inbox (WhatsApp, calling, Instagram, Facebook, TikTok, webchat and RCS) with 5 users on Pro, which suits a multi-agent support desk; TopEdge is a Shopify app for WhatsApp and email only. Other capability rows reflect TopEdge product positioning. Confirm live plan limits and fees on wati.io before purchase.',
+      'Prices and per-message rates read off wati.io/pricing and WATI’s INR rate cards (dated 1 Oct 2026) on 7 Nov 2026. Meta’s India card is ₹0.8631 per marketing and ₹0.1150 per utility message. Where WATI is better: a wider inbox (WhatsApp, calling, Instagram, Facebook, TikTok, webchat and RCS) with 5 users on Pro, which suits a multi-agent support desk; TopEdge AI is a Shopify app for WhatsApp and email only. Other capability rows reflect TopEdge AI product positioning. Confirm live plan limits and fees on wati.io before purchase.',
     researchAsOf: 'Nov 2026',
     related: [
       { label: 'WATI alternative guide', href: '/blog/wati-alternative-shopify-india' },
@@ -136,7 +136,7 @@ export const COMPARE_COMPETITORS: Record<string, CompareCompetitor> = {
       { label: 'vs Bitespeed', href: '/compare/bitespeed' },
       { label: '3-way board', href: '/compare/topedge-vs-wati-vs-aisensy' },
       { label: '4-way board', href: '/compare/topedge-vs-wati-vs-interakt-vs-aisensy' },
-      { label: 'TopEdge pricing', href: '/pricing' },
+      { label: 'TopEdge AI pricing', href: '/pricing' },
     ],
   },
 
@@ -153,8 +153,8 @@ export const COMPARE_COMPETITORS: Record<string, CompareCompetitor> = {
     description:
       'Compare TopEdge AI vs AiSensy for Shopify India: 0% Meta markup, BYOK AI and native COD to prepaid journeys vs platform charges and credit-metered AI.',
     keywords:
-      'TopEdge vs AiSensy, AiSensy alternative India, AiSensy vs TopEdge, WhatsApp template markup, COD prepaid WhatsApp, unified customer profile WhatsApp, AiSensy pricing India',
-    h1: 'TopEdge vs AiSensy',
+      'TopEdge AI vs AiSensy, AiSensy alternative India, AiSensy vs TopEdge AI, WhatsApp template markup, COD prepaid WhatsApp, unified customer profile WhatsApp, AiSensy pricing India',
+    h1: 'TopEdge AI vs AiSensy',
     subtitle: 'TopEdge AI vs AiSensy for Shopify India D2C brands, checked for 2026.',
     matrix: AISENSY_PAIRWISE_MATRIX.map(({ label, description, topedge, competitor }) => ({
       label,
@@ -163,7 +163,7 @@ export const COMPARE_COMPETITORS: Record<string, CompareCompetitor> = {
       competitor,
     })),
     matrixNote:
-      'Read off aisensy.com/pricing on 21 Oct 2026: from 1 Oct 2026 every WhatsApp Business number gets 1,000 free service messages a month, then AiSensy charges ₹0.145 per service message for Indian users. Meta’s own published India service and utility rate is ₹0.1150, so that is a 26.1% markup on every support or bot reply past the free thousand. Remaining capability claims reflect TopEdge product positioning vs publicly described AiSensy platform patterns. Confirm live plan limits, credits and fees on aisensy.com before purchase.',
+      'Read off aisensy.com/pricing on 21 Oct 2026: from 1 Oct 2026 every WhatsApp Business number gets 1,000 free service messages a month, then AiSensy charges ₹0.145 per service message for Indian users. Meta’s own published India service and utility rate is ₹0.1150, so that is a 26.1% markup on every support or bot reply past the free thousand. Remaining capability claims reflect TopEdge AI product positioning vs publicly described AiSensy platform patterns. Confirm live plan limits, credits and fees on aisensy.com before purchase.',
     researchAsOf: 'Oct 2026',
     related: [
       { label: 'AiSensy alternative guide', href: '/blog/aisensy-alternative-shopify-india' },
@@ -172,7 +172,7 @@ export const COMPARE_COMPETITORS: Record<string, CompareCompetitor> = {
       { label: 'vs Bitespeed', href: '/compare/bitespeed' },
       { label: '3-way board', href: '/compare/topedge-vs-wati-vs-aisensy' },
       { label: '4-way board', href: '/compare/topedge-vs-wati-vs-interakt-vs-aisensy' },
-      { label: 'TopEdge pricing', href: '/pricing' },
+      { label: 'TopEdge AI pricing', href: '/pricing' },
     ],
   },
 
@@ -189,8 +189,8 @@ export const COMPARE_COMPETITORS: Record<string, CompareCompetitor> = {
     description:
       'Compare TopEdge AI vs Interakt for Shopify India: ₹1,999/mo Launch plan, 0% Meta markup and BYOK AI vs a ~₹2,799/mo plan with a ₹0.50/msg AI add-on.',
     keywords:
-      'TopEdge vs Interakt, Interakt alternative Shopify, Interakt vs TopEdge, WhatsApp marketing Shopify India, abandoned cart WhatsApp Interakt, COD confirmation WhatsApp, Interakt pricing',
-    h1: 'TopEdge vs Interakt',
+      'TopEdge AI vs Interakt, Interakt alternative Shopify, Interakt vs TopEdge AI, WhatsApp marketing Shopify India, abandoned cart WhatsApp Interakt, COD confirmation WhatsApp, Interakt pricing',
+    h1: 'TopEdge AI vs Interakt',
     subtitle: 'TopEdge AI vs Interakt for Shopify India D2C brands, checked for 2026.',
     matrix: INTERAKT_PAIRWISE_MATRIX.map(({ label, description, topedge, competitor }) => ({
       label,
@@ -199,7 +199,7 @@ export const COMPARE_COMPETITORS: Record<string, CompareCompetitor> = {
       competitor,
     })),
     matrixNote:
-      'Read off interakt.shop/pricing and the Shopify App Store on 9 Nov 2026, plus taxes: web Starter ₹999 a month (Instagram only on monthly billing; WhatsApp or Instagram on quarterly ₹3,499 or yearly ₹11,999), Growth ₹2,799 and Advanced ₹3,799 for WhatsApp plus Instagram. Interakt’s Shopify integration is only on its Shopify App Store plans, listed from ₹1,973.48 to ₹9,303.55 a month as Shopify’s INR estimates. Growth lists ₹0.958 per India marketing and ₹0.150 per utility message, against Meta’s ₹0.8631 and ₹0.1150; only Enterprise is listed with no markup. WhatsApp AI Agents is a ₹3,000 add-on on Growth and Advanced. Where Interakt is better: Instagram DM and comment automation, unlimited agent logins on every plan, and the backing of Jio Haptik Technologies, named in its site footer. Remaining capability rows reflect TopEdge product positioning. Confirm live App vs India website tiers on interakt.shop before purchase.',
+      'Read off interakt.shop/pricing and the Shopify App Store on 9 Nov 2026, plus taxes: web Starter ₹999 a month (Instagram only on monthly billing; WhatsApp or Instagram on quarterly ₹3,499 or yearly ₹11,999), Growth ₹2,799 and Advanced ₹3,799 for WhatsApp plus Instagram. Interakt’s Shopify integration is only on its Shopify App Store plans, listed from ₹1,973.48 to ₹9,303.55 a month as Shopify’s INR estimates. Growth lists ₹0.958 per India marketing and ₹0.150 per utility message, against Meta’s ₹0.8631 and ₹0.1150; only Enterprise is listed with no markup. WhatsApp AI Agents is a ₹3,000 add-on on Growth and Advanced. Where Interakt is better: Instagram DM and comment automation, unlimited agent logins on every plan, and the backing of Jio Haptik Technologies, named in its site footer. Remaining capability rows reflect TopEdge AI product positioning. Confirm live App vs India website tiers on interakt.shop before purchase.',
     researchAsOf: 'Nov 2026',
     related: [
       { label: 'Interakt alternative guide', href: '/blog/interakt-alternative-shopify-india' },
@@ -209,7 +209,7 @@ export const COMPARE_COMPETITORS: Record<string, CompareCompetitor> = {
       { label: 'vs AiSensy', href: '/compare/aisensy' },
       { label: 'vs Updatrr', href: '/compare/updatrr' },
       { label: 'vs Bitespeed', href: '/compare/bitespeed' },
-      { label: 'TopEdge pricing', href: '/pricing' },
+      { label: 'TopEdge AI pricing', href: '/pricing' },
     ],
   },
 
@@ -226,8 +226,8 @@ export const COMPARE_COMPETITORS: Record<string, CompareCompetitor> = {
     description:
       'Compare TopEdge AI vs Bitespeed for Shopify India: ₹1,999/mo flat INR plans, 0% Meta markup and built-in warranty vs ₹5L MRR floors and AI add-ons.',
     keywords:
-      'TopEdge vs Bitespeed, Bitespeed alternative Shopify, Bitespeed pricing India, Shopify WhatsApp app INR pricing, Bitespeed vs TopEdge, Bitespeed AI add-on',
-    h1: 'TopEdge vs Bitespeed',
+      'TopEdge AI vs Bitespeed, Bitespeed alternative Shopify, Bitespeed pricing India, Shopify WhatsApp app INR pricing, Bitespeed vs TopEdge AI, Bitespeed AI add-on',
+    h1: 'TopEdge AI vs Bitespeed',
     subtitle: 'TopEdge AI vs Bitespeed for Shopify India D2C brands, checked for 2026.',
     researchAsOf: 'Sep 2026',
     matrix: BITESPEED_PAIRWISE_MATRIX.map(({ label, description, topedge, competitor }) => ({
@@ -246,7 +246,7 @@ export const COMPARE_COMPETITORS: Record<string, CompareCompetitor> = {
       { label: 'vs AiSensy', href: '/compare/aisensy' },
       { label: 'vs Interakt', href: '/compare/interakt' },
       { label: 'vs Dondy', href: '/compare/dondy' },
-      { label: 'TopEdge pricing', href: '/pricing' },
+      { label: 'TopEdge AI pricing', href: '/pricing' },
     ],
   },
 
@@ -263,8 +263,8 @@ export const COMPARE_COMPETITORS: Record<string, CompareCompetitor> = {
     description:
       'Compare TopEdge AI vs Zoko for Shopify India: flat INR plans from ₹1,999/mo and 0% Meta markup vs Zoko’s $49.99+ USD base fees and per-conversation metering.',
     keywords:
-      'TopEdge vs Zoko, Zoko alternative Shopify, Zoko pricing conversations, Shopify WhatsApp India Zoko, Zoko vs TopEdge',
-    h1: 'TopEdge vs Zoko',
+      'TopEdge AI vs Zoko, Zoko alternative Shopify, Zoko pricing conversations, Shopify WhatsApp India Zoko, Zoko vs TopEdge AI',
+    h1: 'TopEdge AI vs Zoko',
     subtitle: 'TopEdge AI vs Zoko for Shopify India D2C brands, checked for 2026.',
     researchAsOf: 'Oct 2026',
     matrix: ZOKO_PAIRWISE_MATRIX.map(({ label, description, topedge, competitor }) => ({
@@ -282,7 +282,7 @@ export const COMPARE_COMPETITORS: Record<string, CompareCompetitor> = {
       { label: 'vs Getgabs', href: '/compare/getgabs' },
       { label: 'vs Kanal', href: '/compare/kanal' },
       { label: 'vs Dondy', href: '/compare/dondy' },
-      { label: 'TopEdge pricing', href: '/pricing' },
+      { label: 'TopEdge AI pricing', href: '/pricing' },
     ],
   },
 
@@ -299,8 +299,8 @@ export const COMPARE_COMPETITORS: Record<string, CompareCompetitor> = {
     description:
       'Compare TopEdge AI vs Getgabs for Shopify India: native COD to prepaid journeys, unified identity and a warranty hub vs $11 to $59/mo USD entry plans.',
     keywords:
-      'TopEdge vs Getgabs, Getgabs alternative Shopify, Getgabs pricing, cheap WhatsApp Shopify app, Getgabs vs TopEdge',
-    h1: 'TopEdge vs Getgabs',
+      'TopEdge AI vs Getgabs, Getgabs alternative Shopify, Getgabs pricing, cheap WhatsApp Shopify app, Getgabs vs TopEdge AI',
+    h1: 'TopEdge AI vs Getgabs',
     subtitle: 'TopEdge AI vs Getgabs for Shopify India D2C brands, checked for 2026.',
     researchAsOf: 'Sep 2026',
     matrix: GETGABS_PAIRWISE_MATRIX.map(({ label, description, topedge, competitor }) => ({
@@ -318,7 +318,7 @@ export const COMPARE_COMPETITORS: Record<string, CompareCompetitor> = {
       { label: 'vs Bitespeed', href: '/compare/bitespeed' },
       { label: 'vs Kanal', href: '/compare/kanal' },
       { label: 'vs Dondy', href: '/compare/dondy' },
-      { label: 'TopEdge pricing', href: '/pricing' },
+      { label: 'TopEdge AI pricing', href: '/pricing' },
     ],
   },
 
@@ -335,8 +335,8 @@ export const COMPARE_COMPETITORS: Record<string, CompareCompetitor> = {
     description:
       'Compare TopEdge AI vs Kanal for Shopify India: flat INR plans from ₹1,999/mo and native COD to prepaid vs Kanal’s €89 to €149/mo EUR plans and Klaviyo focus.',
     keywords:
-      'TopEdge vs Kanal, Kanal alternative Shopify, Kanal pricing, Kanal WhatsApp Klaviyo, Shopify WhatsApp India vs Kanal',
-    h1: 'TopEdge vs Kanal',
+      'TopEdge AI vs Kanal, Kanal alternative Shopify, Kanal pricing, Kanal WhatsApp Klaviyo, Shopify WhatsApp India vs Kanal',
+    h1: 'TopEdge AI vs Kanal',
     subtitle: 'TopEdge AI vs Kanal for Shopify India D2C brands, checked for 2026.',
     researchAsOf: 'Sep 2026',
     matrix: KANAL_PAIRWISE_MATRIX.map(({ label, description, topedge, competitor }) => ({
@@ -354,7 +354,7 @@ export const COMPARE_COMPETITORS: Record<string, CompareCompetitor> = {
       { label: 'vs Zoko', href: '/compare/zoko' },
       { label: 'vs Getgabs', href: '/compare/getgabs' },
       { label: 'vs Dondy', href: '/compare/dondy' },
-      { label: 'TopEdge pricing', href: '/pricing' },
+      { label: 'TopEdge AI pricing', href: '/pricing' },
     ],
   },
 
@@ -371,8 +371,8 @@ export const COMPARE_COMPETITORS: Record<string, CompareCompetitor> = {
     description:
       'Compare TopEdge AI vs Dondy for Shopify India: 0% Meta pass-through and ₹1,999/mo INR plans vs Dondy’s $0.01888/msg India rate and $79.99 to $159.99 USD tiers.',
     keywords:
-      'TopEdge vs Dondy, Dondy alternative Shopify, Dondy WhatsApp markup, Dondy pricing India, Dondy vs TopEdge',
-    h1: 'TopEdge vs Dondy',
+      'TopEdge AI vs Dondy, Dondy alternative Shopify, Dondy WhatsApp markup, Dondy pricing India, Dondy vs TopEdge AI',
+    h1: 'TopEdge AI vs Dondy',
     subtitle: 'TopEdge AI vs Dondy for Shopify India D2C brands, checked for 2026.',
     researchAsOf: 'Sep 2026',
     matrix: DONDYY_PAIRWISE_MATRIX.map(({ label, description, topedge, competitor }) => ({
@@ -389,7 +389,7 @@ export const COMPARE_COMPETITORS: Record<string, CompareCompetitor> = {
       { label: 'Alternatives index', href: '/compare/alternatives' },
       { label: 'vs Updatrr', href: '/compare/updatrr' },
       { label: 'API pricing India', href: '/blog/whatsapp-business-api-pricing-india' },
-      { label: 'TopEdge pricing', href: '/pricing' },
+      { label: 'TopEdge AI pricing', href: '/pricing' },
     ],
   },
 
@@ -406,8 +406,8 @@ export const COMPARE_COMPETITORS: Record<string, CompareCompetitor> = {
     description:
       'Compare TopEdge AI vs Updatrr for Shopify India: BYOK AI on every plan from ₹1,999/mo, a visitor pixel and a warranty hub vs USD tiers that gate AI at $99.99.',
     keywords:
-      'TopEdge vs Updatrr, Updatrr alternative India, Updatrr WhatsApp Shopify, Updatrr pricing, TopEdge vs Updatrr COD prepaid, Updatrr AI conversation cost',
-    h1: 'TopEdge vs Updatrr',
+      'TopEdge AI vs Updatrr, Updatrr alternative India, Updatrr WhatsApp Shopify, Updatrr pricing, TopEdge AI vs Updatrr COD prepaid, Updatrr AI conversation cost',
+    h1: 'TopEdge AI vs Updatrr',
     subtitle: 'TopEdge AI vs Updatrr for Shopify India D2C brands, checked for 2026.',
     matrix: UPDATRR_PAIRWISE_MATRIX.map(({ label, description, topedge, competitor }) => ({
       label,
@@ -425,7 +425,7 @@ export const COMPARE_COMPETITORS: Record<string, CompareCompetitor> = {
       { label: 'vs Dondy', href: '/compare/dondy' },
       { label: 'vs Bitespeed', href: '/compare/bitespeed' },
       { label: 'vs Zoko', href: '/compare/zoko' },
-      { label: 'TopEdge pricing', href: '/pricing' },
+      { label: 'TopEdge AI pricing', href: '/pricing' },
     ],
   },
 
@@ -442,8 +442,8 @@ export const COMPARE_COMPETITORS: Record<string, CompareCompetitor> = {
     description:
       'Compare TopEdge AI vs Gupshup for Shopify India: self-serve ₹1,999/mo INR plans, 0% Meta markup and native COD journeys vs per-message enterprise CPaaS fees.',
     keywords:
-      'TopEdge vs Gupshup, Gupshup alternative Shopify India, Gupshup WhatsApp markup, Gupshup vs TopEdge, Gupshup Conversation Studio, Gupshup COD prepaid',
-    h1: 'TopEdge vs Gupshup',
+      'TopEdge AI vs Gupshup, Gupshup alternative Shopify India, Gupshup WhatsApp markup, Gupshup vs TopEdge AI, Gupshup Conversation Studio, Gupshup COD prepaid',
+    h1: 'TopEdge AI vs Gupshup',
     subtitle: 'TopEdge AI vs Gupshup for Shopify India D2C brands, checked for 2026.',
     researchAsOf: 'Sep 2026',
     matrix: GUPSHUP_PAIRWISE_MATRIX.map(({ label, description, topedge, competitor }) => ({
@@ -453,7 +453,7 @@ export const COMPARE_COMPETITORS: Record<string, CompareCompetitor> = {
       competitor,
     })),
     matrixNote:
-      'Board compiled Sep 2026 from TopEdge product positioning vs publicly described Gupshup CPaaS / Conversation Studio / Auto Bot patterns. Gupshup enterprise quotes and fee cards move, so verify messaging fees, AI packaging, and module gates on gupshup.io (and any regional sales deck) before purchase.',
+      'Board compiled Sep 2026 from TopEdge AI product positioning vs publicly described Gupshup CPaaS / Conversation Studio / Auto Bot patterns. Gupshup enterprise quotes and fee cards move, so verify messaging fees, AI packaging, and module gates on gupshup.io (and any regional sales deck) before purchase.',
     related: [
       { label: 'All comparisons', href: '/compare' },
       { label: 'Alternatives index', href: '/compare/alternatives' },
@@ -461,7 +461,7 @@ export const COMPARE_COMPETITORS: Record<string, CompareCompetitor> = {
       { label: 'vs AiSensy', href: '/compare/aisensy' },
       { label: 'vs Dondy', href: '/compare/dondy' },
       { label: 'API pricing India', href: '/blog/whatsapp-business-api-pricing-india' },
-      { label: 'TopEdge pricing', href: '/pricing' },
+      { label: 'TopEdge AI pricing', href: '/pricing' },
     ],
   },
 };

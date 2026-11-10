@@ -7,8 +7,6 @@ import {
 } from '../legal/companyIdentity';
 import {
   catalogDefaultCycleOffersJsonLd,
-  OFFER_RETURN_POLICY,
-  OFFER_SHIPPING_DETAILS,
   offerPriceValidUntil,
   offerValidFrom,
   TRIAL,
@@ -75,7 +73,7 @@ export const PAGE_SEO = {
   metaRates: {
     title: 'Meta WhatsApp Rates India 2026: ₹0.8631 & ₹0.115',
     description:
-      'Meta’s published India WhatsApp rate card, what a platform markup adds to it, and a free calculator for your own monthly volume. TopEdge adds 0% to every line.',
+      'Meta’s published India WhatsApp rate card, what a platform markup adds to it, and a free calculator for your monthly volume. TopEdge AI adds 0% to every line.',
     keywords:
       'meta whatsapp rate card india, whatsapp api rates india 2026, whatsapp business api 0% markup india, whatsapp message cost calculator india, meta india inr rate card, whatsapp marketing template rate india',
     path: '/pricing/meta-rates',
@@ -83,7 +81,7 @@ export const PAGE_SEO = {
   features: {
     title: 'Shopify WhatsApp Features: Journeys, COD, AI & Pixel',
     description:
-      'Every Shopify WhatsApp workspace in TopEdge: visual cart and COD journeys, BYOK AI Brain, visitor pixel, shared order inbox, warranty hub and India P&L.',
+      'Every Shopify WhatsApp workspace in TopEdge AI: visual cart and COD journeys, BYOK AI Brain, visitor pixel, shared order inbox, warranty hub and India P&L.',
     keywords:
       'Shopify WhatsApp features, WhatsApp journeys India, AI Brain BYOK Shopify, tracking pixel WhatsApp, WhatsApp opt-in Shopify, Profit and costs ecommerce, Live Chat Shopify WhatsApp',
     path: '/features',
@@ -123,7 +121,7 @@ export const PAGE_SEO = {
     description:
       'Side-by-side Shopify India WhatsApp comparisons: TopEdge AI vs WATI, Interakt, AiSensy, Bitespeed, Zoko, Gupshup, Dondy, Kanal, Getgabs and Updatrr.',
     keywords:
-      'TopEdge vs WATI, TopEdge vs AiSensy, TopEdge vs Zoko, TopEdge vs Dondy, TopEdge vs Updatrr, TopEdge vs Gupshup, TopEdge vs Interakt, TopEdge vs Bitespeed, WhatsApp template markup, COD prepaid WhatsApp comparison, WATI alternative India',
+      'TopEdge AI vs WATI, TopEdge AI vs AiSensy, TopEdge AI vs Zoko, TopEdge AI vs Dondy, TopEdge AI vs Updatrr, TopEdge AI vs Gupshup, TopEdge AI vs Interakt, TopEdge AI vs Bitespeed, WhatsApp template markup, COD prepaid WhatsApp comparison, WATI alternative India',
     path: '/compare',
   },
   blog: {
@@ -139,7 +137,7 @@ export const PAGE_SEO = {
     description:
       'Founded in Ahmedabad by Moksh Patel and Smit Tilva, TopEdge AI runs WhatsApp automation and COD confirmation for Indian Shopify D2C brands. Carts to RTO.',
     keywords:
-      'About TopEdge AI, Moksh Patel TopEdge, Smit Tilva TopEdge, WhatsApp Shopify platform India, ecommerce automation company Ahmedabad, Delitech Smart Home WhatsApp, Apex Light Shopify WhatsApp',
+      'About TopEdge AI, Moksh Patel TopEdge AI, Smit Tilva TopEdge AI, WhatsApp Shopify platform India, ecommerce automation company Ahmedabad, Delitech Smart Home WhatsApp, Apex Light Shopify WhatsApp',
     path: '/about',
   },
   contact: {
@@ -207,7 +205,7 @@ export const FEATURE_SEO: Record<string, { title: string; description: string; k
   analytics: {
     title: 'Shopify WhatsApp Tracking Pixel | Website Intent',
     description:
-      'TopEdge Tracking Pixel: install via Shopify theme app embed, match product and cart intent to WhatsApp outreach, and monitor consent-aware pixel health.',
+      'TopEdge AI Tracking Pixel: install via Shopify theme app embed, match product and cart intent to WhatsApp outreach, and monitor consent-aware pixel health.',
     keywords:
       'Shopify tracking pixel WhatsApp, website intent WhatsApp automation India, theme app embed tracking pixel, product view cart intent WhatsApp',
   },
@@ -249,7 +247,7 @@ export const FEATURE_SEO: Record<string, { title: string; description: string; k
   'profit-loss': {
     title: 'Profit & Costs for Shopify India | COGS, COD & RTO',
     description:
-      'TopEdge Profit & costs: India-aware COGS, packaging, payment fees, COD, RTO, and ads, true net profit with a cost waterfall and product margins, not vanity revenue.',
+      'TopEdge AI Profit & costs: India-aware COGS, packaging, payment fees, COD, RTO, and ads, true net profit with a cost waterfall and product margins, not vanity revenue.',
     keywords:
       'Shopify Profit and costs India, ecommerce COGS RTO analytics, COD net profit Shopify, D2C true margin WhatsApp, Shopify cost waterfall',
   },
@@ -258,7 +256,7 @@ export const FEATURE_SEO: Record<string, { title: string; description: string; k
     description:
       'Bring-your-own-key WhatsApp AI in TopEdge AI Brain: connect OpenAI or Claude, ground replies in store knowledge, and pay your provider directly.',
     keywords:
-      'BYOK WhatsApp AI Shopify, bring your own OpenAI key ecommerce, AI Brain TopEdge, Gemini Claude WhatsApp chatbot India',
+      'BYOK WhatsApp AI Shopify, bring your own OpenAI key ecommerce, AI Brain TopEdge AI, Gemini Claude WhatsApp chatbot India',
   },
   'intent-detection': {
     title: 'Intent Detection for Shopify WhatsApp | Save AI Tokens',
@@ -276,7 +274,7 @@ export const SOLUTION_SEO: Record<
   fashion: {
     title: 'Fashion Shopify WhatsApp Automation | Cart & COD',
     description:
-      'TopEdge helps fashion brands on Shopify India recover abandoned carts with size context, confirm COD to cut RTO, and run Meta-safe drop campaigns on WhatsApp.',
+      'TopEdge AI helps fashion brands on Shopify India recover abandoned carts with size context, confirm COD to cut RTO, and run Meta-safe drop campaigns on WhatsApp.',
     keywords:
       'fashion WhatsApp automation Shopify, apparel cart recovery India, size exchange WhatsApp, COD confirmation fashion D2C',
     body: 'Size-aware cart recovery, COD confirmation, and order-aware support on WhatsApp for fashion Shopify brands.',
@@ -290,7 +288,7 @@ export const SOLUTION_SEO: Record<
   beauty: {
     title: 'Beauty & Skincare WhatsApp Automation | Shopify India',
     description:
-      'TopEdge helps beauty Shopify brands recover abandoned carts, answer with live catalog SKUs, capture opt-ins, and confirm COD on WhatsApp for India D2C.',
+      'TopEdge AI helps beauty Shopify brands recover abandoned carts, answer with live catalog SKUs, capture opt-ins, and confirm COD on WhatsApp for India D2C.',
     keywords:
       'beauty WhatsApp automation Shopify, skincare cart recovery India, WhatsApp for beauty D2C, serum abandoned cart WhatsApp',
     body: 'Product-card recovery, catalog-grounded answers, and clean WhatsApp opt-in for beauty D2C on Shopify.',
@@ -304,7 +302,7 @@ export const SOLUTION_SEO: Record<
   cod: {
     title: 'COD Confirmation on WhatsApp | Cut RTO for Shopify',
     description:
-      'TopEdge helps COD-first Shopify brands confirm orders on WhatsApp, convert COD to prepaid, and cut RTO with Meta utility templates and operator takeover.',
+      'TopEdge AI helps COD-first Shopify brands confirm orders on WhatsApp, convert COD to prepaid, and cut RTO with Meta utility templates and operator takeover.',
     keywords:
       'COD confirmation WhatsApp, reduce RTO Shopify India, COD to prepaid WhatsApp, cash on delivery automation',
     body: 'Confirm COD, nudge prepaid, and keep RTO risk out of the courier bag, with journeys and Live Chat.',
@@ -318,7 +316,7 @@ export const SOLUTION_SEO: Record<
   electronics: {
     title: 'WhatsApp for Electronics Shopify | Warranty & Support',
     description:
-      'TopEdge helps electronics Shopify brands in India assign warranties on WhatsApp, support with order and SKU context, and recover high-AOV abandoned carts.',
+      'TopEdge AI helps electronics Shopify brands in India assign warranties on WhatsApp, support with order and SKU context, and recover high-AOV abandoned carts.',
     keywords:
       'electronics WhatsApp automation Shopify, warranty assign WhatsApp, gadget cart recovery India, DOA support WhatsApp',
     body: 'Warranty assign, order-aware support, and high-AOV cart recovery on WhatsApp for electronics Shopify brands.',
@@ -475,8 +473,8 @@ export function organizationJsonLd() {
 
 /**
  * Shared commercial schema for home / pricing / SEO topic pages.
- * Google Merchant listings coerce SoftwareApplication+Offer → Product and
- * require a crawlable `image` URL (plain string is the most reliable shape).
+ * Typed as SoftwareApplication only, so Google files it under Software Apps
+ * and not under Merchant listings (verified in the Rich Results Test, 10 Nov 2026).
  *
  * No `review` nodes. Google's review-snippet policy makes a page ineligible for
  * the star feature when "the entity that's being reviewed controls the reviews
@@ -491,9 +489,13 @@ export function softwareApplicationJsonLd() {
   const pricingUrl = `${SITE_URL}/pricing`;
   return {
     '@context': 'https://schema.org',
-    // Dual type: keeps SoftwareApplication semantics while satisfying Product
-    // merchant-listing validators that require `image` on Product.
-    '@type': ['SoftwareApplication', 'Product'],
+    // SoftwareApplication only. Until 10 Nov 2026 this was dual-typed with
+    // Product, and that second type (not the offers) is what put every page
+    // carrying this node into GSC's Merchant listings and Product snippets
+    // reports with shipping, return-policy and review warnings. Checked in
+    // Google's Rich Results Test on 10 Nov 2026: a plain SoftwareApplication
+    // with a priced Offer is detected as "Software Apps" only.
+    '@type': 'SoftwareApplication',
     '@id': SOFTWARE_ID,
     name: 'TopEdge AI',
     alternateName: 'TopEdge',
@@ -504,10 +506,6 @@ export function softwareApplicationJsonLd() {
     screenshot: imageUrl,
     description:
       'WhatsApp automation for Shopify: abandoned cart recovery, COD confirmations, Live Chat, journeys, and Meta Cloud API campaigns for Indian ecommerce.',
-    brand: {
-      '@type': 'Brand',
-      name: 'TopEdge AI',
-    },
     publisher: ORG_REF,
     provider: ORG_REF,
     offers: [
@@ -521,8 +519,6 @@ export function softwareApplicationJsonLd() {
         description: `${TRIAL.days}-day free trial`,
         url: pricingUrl,
         availability: 'https://schema.org/InStock',
-        shippingDetails: OFFER_SHIPPING_DETAILS,
-        hasMerchantReturnPolicy: OFFER_RETURN_POLICY,
       },
       ...catalogDefaultCycleOffersJsonLd(undefined, { url: pricingUrl }),
     ],
@@ -535,14 +531,8 @@ export function softwareApplicationJsonLd() {
       'Meta WhatsApp Cloud API',
       'Ecommerce journey builder',
     ],
-    // No `audience` node. GSC's rich-results check reported
-    // `Invalid object type for field "audience"` on / and /pricing on
-    // 2026-11-02: the SoftwareApplication+Product+offers shape is coerced into
-    // Google's Merchant listings type, which expects a retail `PeopleAudience`,
-    // not the `Audience`/`BusinessAudience` that is correct for B2B SaaS.
-    // There is no shape that satisfies both, and who the product is for is
-    // already stated in Organization.description, disambiguatingDescription
-    // and knowsAbout, so the node was dropped rather than contorted.
+    // No `audience` node: who the product is for is stated in
+    // Organization.description, disambiguatingDescription and knowsAbout.
   };
 }
 
@@ -573,7 +563,9 @@ export function videoObjectJsonLd(demo: {
     '@type': 'VideoObject',
     name: demo.name,
     description: demo.description,
-    uploadDate: demo.uploadDate,
+    // Google's Video report rejects a bare date ("Invalid datetime value",
+    // "missing a timezone", GSC 10 Nov 2026), so emit midnight IST.
+    uploadDate: /T/.test(demo.uploadDate) ? demo.uploadDate : `${demo.uploadDate}T00:00:00+05:30`,
     thumbnailUrl: [abs(demo.poster)],
     contentUrl: abs(demo.src),
     // Google compares duration against the file it fetches; omitted rather

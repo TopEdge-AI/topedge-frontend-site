@@ -92,7 +92,7 @@ export const JOURNEY_EXAMPLES: JourneyExample[] = [
     keywords:
       'abandoned cart recovery WhatsApp, WhatsApp cart recovery journey, Shopify abandoned cart WhatsApp, cart recovery flow, abandoned cart automation India',
     answerFirst:
-      'A WhatsApp abandoned cart journey fires when Shopify marks a checkout abandoned, then sends up to three reminders carrying the product image, the ₹ total and a link back to the same checkout. In TopEdge it is three templates on one trigger, with the customer dropping out of the sequence the moment they pay or reply.',
+      'A WhatsApp abandoned cart journey fires when Shopify marks a checkout abandoned, then sends up to three reminders carrying the product image, the ₹ total and a link back to the same checkout. In TopEdge AI it is three templates on one trigger, with the customer dropping out of the sequence the moment they pay or reply.',
     trigger: 'abandoned_cart',
     triggerNote:
       'Shopify counts a checkout abandoned once it has been incomplete for more than ten minutes after the customer gave an email or phone number.',
@@ -230,7 +230,7 @@ export const JOURNEY_EXAMPLES: JourneyExample[] = [
       {
         question: 'What does a WhatsApp cart recovery sequence cost?',
         answer:
-          'Cart reminders are marketing-category templates, which Meta prices at ₹0.8631 per delivered message in India. Three sends is roughly ₹2.59 per abandoned cart, billed by Meta to your own account. TopEdge adds no markup on that.',
+          'Cart reminders are marketing-category templates, which Meta prices at ₹0.8631 per delivered message in India. Three sends is roughly ₹2.59 per abandoned cart, billed by Meta to your own account. TopEdge AI adds no markup on that.',
       },
       {
         question: 'Does the customer keep getting messages after they pay?',
@@ -402,7 +402,7 @@ export const JOURNEY_EXAMPLES: JourneyExample[] = [
           },
         ],
         footnote:
-          'Basic COD confirmation runs on every TopEdge plan. Converting a confirmed COD order to prepaid needs a branching journey and is a Growth and Scale feature.',
+          'Basic COD confirmation runs on every TopEdge AI plan. Converting a confirmed COD order to prepaid needs a branching journey and is a Growth and Scale feature.',
       },
       {
         kind: 'callout',
@@ -765,7 +765,7 @@ export const JOURNEY_EXAMPLES: JourneyExample[] = [
       {
         question: 'How much do WhatsApp order updates cost?',
         answer:
-          'Each is a utility message, priced by Meta at ₹0.1150 per delivered message in India. The full four-message sequence across an order is roughly ₹0.46, billed by Meta to your own account with no markup from TopEdge.',
+          'Each is a utility message, priced by Meta at ₹0.1150 per delivered message in India. The full four-message sequence across an order is roughly ₹0.46, billed by Meta to your own account with no markup from TopEdge AI.',
       },
       {
         question: 'Do order updates count as marketing messages?',

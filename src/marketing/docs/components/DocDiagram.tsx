@@ -518,7 +518,7 @@ function Versus({
 const DIAGRAMS: Partial<Record<string, () => JSX.Element>> = {
   'platform-map': () => (
     <Fan
-      source={{ label: 'TopEdge workspace', sub: 'one customer timeline', tone: 'core' }}
+      source={{ label: 'TopEdge AI workspace', sub: 'one customer timeline', tone: 'core' }}
       outputs={[
         { label: 'Shopify', sub: 'orders · products · checkouts', tone: 'source' },
         { label: 'WhatsApp Cloud API', sub: 'inbox · templates · journeys', tone: 'source' },
@@ -526,8 +526,8 @@ const DIAGRAMS: Partial<Record<string, () => JSX.Element>> = {
         { label: 'Storefront pixel', sub: 'carts · browse events', tone: 'source' },
       ]}
       reverse
-      title="How TopEdge connects Shopify, WhatsApp, Gmail and your storefront"
-      desc="Shopify, the WhatsApp Cloud API, Gmail and the storefront pixel all feed one TopEdge workspace, which keeps a single timeline per customer."
+      title="How TopEdge AI connects Shopify, WhatsApp, Gmail and your storefront"
+      desc="Shopify, the WhatsApp Cloud API, Gmail and the storefront pixel all feed one TopEdge AI workspace, which keeps a single timeline per customer."
     />
   ),
   'message-lifecycle': () => (
@@ -541,7 +541,7 @@ const DIAGRAMS: Partial<Record<string, () => JSX.Element>> = {
         { label: 'Click / reply', tone: 'out' },
       ]}
       title="Lifecycle of one WhatsApp message, from approved template to reply"
-      desc="A message moves from an approved template, through the dispatch queue, to Meta, then collects delivered, read and click or reply receipts that TopEdge writes back onto the customer."
+      desc="A message moves from an approved template, through the dispatch queue, to Meta, then collects delivered, read and click or reply receipts that TopEdge AI writes back onto the customer."
       boxW={116}
       gap={26}
     />
@@ -617,7 +617,7 @@ const DIAGRAMS: Partial<Record<string, () => JSX.Element>> = {
   'flow-vs-journey': () => (
     <Versus
       left={{
-        heading: 'Flow Builder — they message you',
+        heading: 'Flow Builder: they message you',
         items: [
           'Welcome menu and FAQ replies',
           'Buttons and list pickers',
@@ -627,7 +627,7 @@ const DIAGRAMS: Partial<Record<string, () => JSX.Element>> = {
         ],
       }}
       right={{
-        heading: 'Journeys — something happens in Shopify',
+        heading: 'Journeys: something happens in Shopify',
         items: [
           'Order placed, shipped, delivered',
           'Cart abandoned ladders',
@@ -637,7 +637,7 @@ const DIAGRAMS: Partial<Record<string, () => JSX.Element>> = {
         ],
       }}
       title="Flow Builder versus Journeys"
-      desc="Flow Builder handles inbound conversations — menus, replies and handover inside the 24-hour window. Journeys handle outbound automation on Shopify events, with waits and approved templates."
+      desc="Flow Builder handles inbound conversations: menus, replies and handover inside the 24-hour window. Journeys handle outbound automation on Shopify events, with waits and approved templates."
     />
   ),
   'opt-in-sources': () => (

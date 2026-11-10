@@ -32,7 +32,7 @@ export default function TrustBand({
         <ProofBadges compact />
       </div>
 
-      <ul className="mkt-trust__logos" aria-label="Brands using TopEdge">
+      <ul className="mkt-trust__logos" aria-label="Brands using TopEdge AI">
         {LOGOS.map((l) => (
           <li key={l.name}>
             <img src={l.src} alt={`${l.name} logo`} width={l.w} height={l.h} loading="lazy" decoding="async" />

@@ -23,12 +23,12 @@ export default function LoginRedirect() {
   return (
     <main className="mkt-auth-redirect" aria-busy="true" aria-live="polite">
       <Helmet>
-        <title>Signing in | TopEdge</title>
+        <title>Signing in | TopEdge AI</title>
         <meta name="robots" content="noindex, follow" />
       </Helmet>
       <img
         src="/topedge-loader.gif"
-        alt="Signing in to TopEdge"
+        alt="Signing in to TopEdge AI"
         width={96}
         height={96}
         className="mkt-auth-redirect__logo"

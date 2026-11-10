@@ -43,7 +43,7 @@ export default function PrivacyPolicy() {
       content: (
         <>
           <p>
-            This Privacy Policy explains how <strong>{COMPANY_LEGAL_NAME}</strong> (&quot;TopEdge,&quot; &quot;we,&quot; &quot;us&quot;),
+            This Privacy Policy explains how <strong>{COMPANY_LEGAL_NAME}</strong> (&quot;TopEdge AI,&quot; &quot;we,&quot; &quot;us&quot;),
             operating the brand <strong>{COMPANY_BRAND_NAME}</strong>, collects, uses, shares, and protects personal data
             when you use our dashboard (<strong>https://dash.topedgeai.com</strong>), APIs (<strong>https://api.topedgeai.com</strong>),
             Shopify app, webhooks, storefront scripts, and related services (the &quot;Service&quot;).
@@ -352,7 +352,7 @@ export default function PrivacyPolicy() {
             signups. They do not contain your name or contact details.
           </p>
           <p>
-            Storefront opt-in widgets and the TopEdge pixel set first-party identifiers (e.g. visitor id) on your domain
+            Storefront opt-in widgets and the TopEdge AI pixel set first-party identifiers (e.g. visitor id) on your domain
             as configured by you. You must disclose those technologies in your store privacy notice.
           </p>
         </>

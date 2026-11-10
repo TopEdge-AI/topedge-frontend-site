@@ -111,7 +111,7 @@ export default function DocsPage() {
         <aside className="docs-sidebar" aria-label="Documentation navigation">
           <div className="docs-sidebar__inner" data-lenis-prevent>
             <Link to="/docs" className="docs-sidebar__home">
-              TopEdge <span>Docs</span>
+              TopEdge AI <span>Docs</span>
             </Link>
             <DocsSidebar />
           </div>
@@ -231,7 +231,7 @@ export default function DocsPage() {
             <footer className="docs-foot">
               <p className="docs-foot__help">
                 Still stuck? <Link to="/contact">Contact support</Link> with your store domain and what you
-                expected to happen. New to TopEdge? See <Link to="/features">every feature</Link> or{' '}
+                expected to happen. New to TopEdge AI? See <Link to="/features">every feature</Link> or{' '}
                 <Link to="/pricing">compare plans</Link>.
               </p>
               <nav className="docs-pager" aria-label="Previous and next page">
@@ -293,7 +293,7 @@ export default function DocsPage() {
           <div className="docs-sheet__panel" data-lenis-prevent>
             <div className="docs-sheet__head">
               <Link to="/docs" className="docs-sidebar__home" onClick={() => setSheetOpen(false)}>
-                TopEdge <span>Docs</span>
+                TopEdge AI <span>Docs</span>
               </Link>
               <button type="button" className="docs-sheet__close" onClick={() => setSheetOpen(false)} aria-label="Close">
                 <X size={18} aria-hidden />

@@ -58,9 +58,9 @@ const CART: ProductDemoAsset = {
   src: '/marketing/demos/cart-recovery.mp4',
   poster: '/marketing/demos/cart-recovery-poster.jpg',
   mobileSrc: '/marketing/demos/cart-recovery-mobile.mp4',
-  name: 'WhatsApp abandoned cart recovery in TopEdge',
+  name: 'WhatsApp abandoned cart recovery in TopEdge AI',
   description:
-    'Screen recording of an abandoned Shopify cart triggering a WhatsApp recovery message in TopEdge, through to the recovered order.',
+    'Screen recording of an abandoned Shopify cart triggering a WhatsApp recovery message in TopEdge AI, through to the recovered order.',
   uploadDate: '2026-09-16',
   duration: 'PT53S',
 };
@@ -71,7 +71,7 @@ const COD: ProductDemoAsset = {
   mobileSrc: '/marketing/demos/cod-prepaid-mobile.mp4',
   name: 'COD confirmation and COD-to-prepaid on WhatsApp',
   description:
-    'Screen recording of a cash-on-delivery Shopify order being confirmed over WhatsApp and converted to a prepaid payment in TopEdge.',
+    'Screen recording of a cash-on-delivery Shopify order being confirmed over WhatsApp and converted to a prepaid payment in TopEdge AI.',
   uploadDate: '2026-09-18',
   duration: 'PT38S',
 };
@@ -80,9 +80,9 @@ const FLOW: ProductDemoAsset = {
   src: '/marketing/demos/flowwww1.mp4?v=20260918a',
   poster: '/marketing/demos/flow-builder-poster.jpg?v=20260918a',
   mobileSrc: '/marketing/demos/flow-builder-mobile.mp4',
-  name: 'Building a WhatsApp flow in the TopEdge Flow Builder',
+  name: 'Building a WhatsApp flow in the TopEdge AI Flow Builder',
   description:
-    'Screen recording of a WhatsApp automation being assembled step by step in the TopEdge Flow Builder for a Shopify store.',
+    'Screen recording of a WhatsApp automation being assembled step by step in the TopEdge AI Flow Builder for a Shopify store.',
   uploadDate: '2026-09-18',
   duration: 'PT45S',
 };
@@ -93,7 +93,7 @@ const OPTIN: ProductDemoAsset = {
   mobileSrc: '/marketing/demos/opt-in-mobile.mp4',
   name: 'WhatsApp opt-in popup on a Shopify storefront',
   description:
-    'Screen recording of a TopEdge website opt-in popup collecting WhatsApp consent on a Shopify storefront and adding the subscriber.',
+    'Screen recording of a TopEdge AI website opt-in popup collecting WhatsApp consent on a Shopify storefront and adding the subscriber.',
   uploadDate: '2026-09-18',
   duration: 'PT51S',
 };
@@ -104,7 +104,7 @@ const INTENT: ProductDemoAsset = {
   mobileSrc: '/marketing/demos/intent-mobile.mp4',
   name: 'Real-time intent detection on a WhatsApp conversation',
   description:
-    'Screen recording of TopEdge reading buying intent from an incoming WhatsApp message and routing the conversation accordingly.',
+    'Screen recording of TopEdge AI reading buying intent from an incoming WhatsApp message and routing the conversation accordingly.',
   uploadDate: '2026-09-18',
   duration: 'PT27S',
 };
@@ -115,7 +115,7 @@ const SEGMENT: ProductDemoAsset = {
   mobileSrc: '/marketing/demos/segment-mobile.mp4',
   name: 'Building a customer segment for a WhatsApp campaign',
   description:
-    'Screen recording of a Shopify customer segment being built in TopEdge and used as the audience for a WhatsApp campaign.',
+    'Screen recording of a Shopify customer segment being built in TopEdge AI and used as the audience for a WhatsApp campaign.',
   uploadDate: '2026-09-17',
   duration: 'PT37S',
 };

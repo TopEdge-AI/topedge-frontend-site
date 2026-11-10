@@ -171,7 +171,7 @@ export const testimonials = [
   },
   {
     quote:
-      'We were juggling WhatsApp Web and Shopify admin for every order question. TopEdge puts the SKU and COD status beside the chat. Recovery sequences finally feel like Apex, not a generic blast.',
+      'We were juggling WhatsApp Web and Shopify admin for every order question. TopEdge AI puts the SKU and COD status beside the chat. Recovery sequences finally feel like Apex, not a generic blast.',
     name: 'Shubham',
     role: 'Apex Light',
     company: 'Apex Light',

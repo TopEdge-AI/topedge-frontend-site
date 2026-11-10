@@ -83,7 +83,7 @@ export default function Contact() {
         jsonLd={[
           organizationJsonLd(),
           webPageJsonLd({
-            name: 'Contact TopEdge',
+            name: 'Contact TopEdge AI',
             description: PAGE_SEO.contact.description,
             path: PAGE_SEO.contact.path,
           }),
@@ -110,7 +110,7 @@ export default function Contact() {
           </div>
         </header>
 
-        <section className="mkt-contact__channels" aria-label="Ways to reach TopEdge">
+        <section className="mkt-contact__channels" aria-label="Ways to reach TopEdge AI">
           {CHANNELS.map(({ id, Glyph, label, lede, action, href, note }) => (
             <a
               key={id}

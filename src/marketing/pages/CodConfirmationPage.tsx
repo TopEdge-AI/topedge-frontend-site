@@ -19,17 +19,17 @@ import '../styles/cod-confirmation.css';
 
 const PATH = '/features/cod-confirmation';
 
-const SEO_TITLE = 'Shopify WhatsApp COD Confirmation to Cut RTO | TopEdge';
+const SEO_TITLE = 'Shopify WhatsApp COD Confirmation to Cut RTO | TopEdge AI';
 const SEO_DESCRIPTION =
   'Confirm every Shopify COD order on WhatsApp before dispatch at ₹0.115 a message, against ₹180-₹240 lost per RTO parcel. COD-to-prepaid on Growth. 14-day trial.';
 
 const STEPS = [
   {
     title: 'A COD order is placed on your store',
-    body: 'Shopify tells TopEdge as soon as a Cash on Delivery order is created.',
+    body: 'Shopify tells TopEdge AI as soon as a Cash on Delivery order is created.',
   },
   {
-    title: 'TopEdge asks the buyer to confirm',
+    title: 'TopEdge AI asks the buyer to confirm',
     body: 'A WhatsApp message goes out with Confirm and Cancel buttons, using a Meta-approved template.',
   },
   {
@@ -57,17 +57,17 @@ const FAQS = [
   {
     question: 'Can I convert COD orders to prepaid on WhatsApp?',
     answer:
-      'Yes, on the Growth and Scale plans. TopEdge can send a WhatsApp payment link, created from a Shopify draft invoice, so the buyer can pay instead of waiting for cash on delivery. Launch includes basic COD confirmation only.',
+      'Yes, on the Growth and Scale plans. TopEdge AI can send a WhatsApp payment link, created from a Shopify draft invoice, so the buyer can pay instead of waiting for cash on delivery. Launch includes basic COD confirmation only.',
   },
   {
     question: 'Do I need WhatsApp Business API approval?',
     answer:
-      'You connect your own WhatsApp Business account through Meta, and every message template must be approved by Meta before it can send. TopEdge blocks journeys from sending templates that are not yet approved.',
+      'You connect your own WhatsApp Business account through Meta, and every message template must be approved by Meta before it can send. TopEdge AI blocks journeys from sending templates that are not yet approved.',
   },
   {
     question: 'How much does COD confirmation cost?',
     answer:
-      `Basic COD confirmation is included on every plan, from ${FALLBACK_CATALOG.plans[0].monthlyPriceLabel} a month plus GST on monthly billing. Meta charges its own per-message WhatsApp fees directly on your Meta account, and TopEdge adds 0% markup to them. On Meta's India rate card a COD confirmation is a utility template at ₹0.1150 per delivered message before GST, so confirming 500 COD orders costs ₹57.50 against ₹180 to ₹240 of direct logistics loss on each returned parcel.`,
+      `Basic COD confirmation is included on every plan, from ${FALLBACK_CATALOG.plans[0].monthlyPriceLabel} a month plus GST on monthly billing. Meta charges its own per-message WhatsApp fees directly on your Meta account, and TopEdge AI adds 0% markup to them. On Meta's India rate card a COD confirmation is a utility template at ₹0.1150 per delivered message before GST, so confirming 500 COD orders costs ₹57.50 against ₹180 to ₹240 of direct logistics loss on each returned parcel.`,
   },
   {
     question: 'Why does adding a prepaid discount make the message cost 7.5x more?',
@@ -85,7 +85,7 @@ const LIMITS = [
   'It confirms intent. It does not predict which buyers are risky.',
   'Buyers who never reply need your follow-up rule. Decide it before you switch the journey on.',
   'WhatsApp templates must be approved by Meta before they send.',
-  "Meta's per-message fees are separate from your TopEdge plan.",
+  "Meta's per-message fees are separate from your TopEdge AI plan.",
 ];
 
 const READING = [
@@ -162,7 +162,7 @@ export default function CodConfirmationPage() {
               <span className="mkt-pf__title-accent">and convert COD to prepaid</span>
             </h1>
             <p className="mkt-pf__sub">
-              A returned COD parcel costs you shipping both ways and a lost sale. TopEdge messages
+              A returned COD parcel costs you shipping both ways and a lost sale. TopEdge AI messages
               the buyer on WhatsApp as soon as a COD order lands, asks them to confirm, and lets
               you ship only what they confirm.
             </p>
@@ -352,7 +352,7 @@ export default function CodConfirmationPage() {
           <p className="mkt-cod__foot">
             {GST_FOOTNOTE} GST invoices issued. Meta&rsquo;s per-message WhatsApp fees are not
             included in the plan price. Meta bills them directly on your own Meta account, and
-            TopEdge adds 0% markup.
+            TopEdge AI adds 0% markup.
           </p>
         </section>
 

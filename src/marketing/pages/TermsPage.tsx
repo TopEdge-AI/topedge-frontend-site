@@ -50,7 +50,7 @@ export default function TermsPage() {
           </p>
           <p>
             These Terms of Service (&quot;Terms&quot;) govern access to and use of {COMPANY_BRAND_NAME}, operated by{' '}
-            <strong>{COMPANY_LEGAL_NAME}</strong> (&quot;TopEdge,&quot; &quot;Company,&quot; &quot;we,&quot; &quot;us&quot;), including the dashboard at{' '}
+            <strong>{COMPANY_LEGAL_NAME}</strong> (&quot;TopEdge AI,&quot; &quot;Company,&quot; &quot;we,&quot; &quot;us&quot;), including the dashboard at{' '}
             <strong>https://dash.topedgeai.com</strong>, APIs at <strong>https://api.topedgeai.com</strong>, workers,
             webhooks, storefront scripts, Shopify app extensions, and related services (collectively, the &quot;Service&quot; / &quot;Platform&quot;).
           </p>
@@ -110,7 +110,7 @@ export default function TermsPage() {
       content: (
         <>
           <p>
-            TopEdge provides tools for conversational commerce and marketing for ecommerce brands, which may include
+            TopEdge AI provides tools for conversational commerce and marketing for ecommerce brands, which may include
             WhatsApp Cloud API messaging, templates, journeys/flows, live inbox, campaigns, cart recovery assistance,
             order notifications, analytics, opt-in widgets, pixel/insights, and Shopify integrations.
           </p>
@@ -164,7 +164,7 @@ export default function TermsPage() {
             and may change for new trials. Trials are provided AS IS with no warranty of results.
           </p>
           <p>
-            <strong>Subscription Fees</strong> for TopEdge platform plans on dash.topedgeai.com are billed via Razorpay,
+            <strong>Subscription Fees</strong> for TopEdge AI platform plans on dash.topedgeai.com are billed via Razorpay,
             offline confirmation, Shopify Billing (where that channel applies), or other methods we designate.
             Prices are typically listed exclusive or inclusive of GST as shown at checkout; GST invoices follow Indian tax rules
             when tax identity (state / GSTIN) is provided.
@@ -194,7 +194,7 @@ export default function TermsPage() {
         <>
           <p>
             The Shopify app connector may be <strong>free to install</strong> on the Shopify App Store. Shopify App Store
-            listing terms and Shopify&apos;s billing rules apply to charges processed by Shopify. Optional TopEdge platform
+            listing terms and Shopify&apos;s billing rules apply to charges processed by Shopify. Optional TopEdge AI platform
             fees on dash.topedgeai.com may be separate and are not always required solely to keep the Shopify connector installed.
           </p>
           <p>
@@ -217,7 +217,7 @@ export default function TermsPage() {
           <p>
             Meta WhatsApp Business Platform, SMS, email, voice, ads, and similar channels charge their own fees
             (conversation/message categories, marketing rates, etc.). Those <strong>Channel / Usage Fees</strong> are set
-            by third parties, may change without our control, and are generally <strong>in addition to</strong> TopEdge Subscription Fees.
+            by third parties, may change without our control, and are generally <strong>in addition to</strong> TopEdge AI Subscription Fees.
           </p>
           <p>
             You are responsible for Meta Business Manager, WABA, payment methods on Meta, template approvals, quality rating,
@@ -238,7 +238,7 @@ export default function TermsPage() {
       content: (
         <>
           <div className="legal-page__notice legal-page__notice--warn">
-            <strong>Read carefully.</strong> TopEdge provides software and related services. We do{' '}
+            <strong>Read carefully.</strong> TopEdge AI provides software and related services. We do{' '}
             <strong>not</strong> guarantee sales, revenue, ROI, conversion rates, cart recovery rates, open rates,
             delivery rates, read rates, attribution accuracy, or any business outcome. Marketing copy, case studies,
             dashboards, sample/preview data, and DFY recommendations are illustrative only — not promises.
@@ -310,7 +310,7 @@ export default function TermsPage() {
             <li>Probe, disrupt, overload, or bypass security, rate limits, or tenant isolation.</li>
             <li>Reverse engineer, resell, or create a competing service from the Platform except as permitted by law.</li>
             <li>Upload malware or infringing, defamatory, or illegal content.</li>
-            <li>Misrepresent affiliation with TopEdge or use our marks without permission (except factual statements).</li>
+            <li>Misrepresent affiliation with TopEdge AI or use our marks without permission (except factual statements).</li>
           </ul>
           <p>We may suspend or terminate for violations, abuse, non-payment, or risk to the platform or others.</p>
         </>
@@ -323,7 +323,7 @@ export default function TermsPage() {
       content: (
         <>
           <p>
-            The Platform, software, designs, documentation, and TopEdge brands are owned by us or our licensors.
+            The Platform, software, designs, documentation, and TopEdge AI brands are owned by us or our licensors.
             We grant you a limited, revocable, non-exclusive, non-transferable licence to use the Service for your internal
             business during a valid subscription or trial, subject to these Terms.
           </p>
@@ -376,7 +376,7 @@ export default function TermsPage() {
             (B) INR 8,000 (or equivalent) if you had no such payments.
           </p>
           <p>
-            Channel / Usage Fees paid to Meta or other third parties are not &quot;paid to TopEdge&quot; for this cap.
+            Channel / Usage Fees paid to Meta or other third parties are not &quot;paid to TopEdge AI&quot; for this cap.
             Some jurisdictions disallow certain limits; we limit liability to the fullest extent permitted.
           </p>
         </>

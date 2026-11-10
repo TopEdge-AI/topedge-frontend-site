@@ -31,7 +31,7 @@ export default function CompareAlternativesPage() {
       <MarketingSEO
         title={TITLE}
         description={DESCRIPTION}
-        keywords="WhatsApp automation alternatives, Bitespeed alternatives, WATI alternatives Shopify, Zoko alternative, Getgabs alternative, Kanal alternative, TopEdge compare"
+        keywords="WhatsApp automation alternatives, Bitespeed alternatives, WATI alternatives Shopify, Zoko alternative, Getgabs alternative, Kanal alternative, TopEdge AI compare"
         path={PATH}
         noSuffix
         jsonLd={[
@@ -300,7 +300,7 @@ export default function CompareAlternativesPage() {
             <Link to="/blog/best-whatsapp-automation-tools-shopify-india">
               Best tools pillar
             </Link>
-            <Link to="/pricing">TopEdge pricing</Link>
+            <Link to="/pricing">TopEdge AI pricing</Link>
           </nav>
         </section>
 

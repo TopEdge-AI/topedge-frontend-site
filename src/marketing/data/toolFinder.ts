@@ -239,7 +239,7 @@ export const QUESTIONS: Question[] = [
     fact: {
       text: 'COD orders come back far more often: about 26% return-to-origin for COD against under 2% for prepaid.',
       source: 'firstResortReturns',
-      compare: 'TopEdge and Bitespeed handle COD to prepaid out of the box. On WATI and AiSensy it needs developer work.',
+      compare: 'TopEdge AI and Bitespeed handle COD to prepaid out of the box. On WATI and AiSensy it needs developer work.',
     },
   },
   {

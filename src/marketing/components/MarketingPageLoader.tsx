@@ -21,7 +21,7 @@ export default function MarketingPageLoader() {
     >
       <img
         src="/topedge-loader.gif"
-        alt="Loading TopEdge"
+        alt="Loading TopEdge AI"
         width={88}
         height={88}
         className="h-[5.5rem] w-[5.5rem] object-contain"

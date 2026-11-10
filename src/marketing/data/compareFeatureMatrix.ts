@@ -728,7 +728,7 @@ export const ZOKO_PAIRWISE_MATRIX: PairwiseFeatureRow[] = [
     label: 'Ecommerce analytics',
     description: 'Recovery ₹ and store metrics operators actually use.',
     topedge: 'Native ecommerce / P&L style analytics',
-    competitor: 'Detailed analytics listed; depth vs TopEdge P&L verify live',
+    competitor: 'Detailed analytics listed; depth vs TopEdge AI P&L verify live',
   },
   {
     id: 'india-payments',

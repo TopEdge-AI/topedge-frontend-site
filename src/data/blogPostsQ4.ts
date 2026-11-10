@@ -138,6 +138,34 @@ const INTERAKT_PRICING_FAQS: Faq[] = [
   },
 ];
 
+const WATI_PRICING_FAQS: Faq[] = [
+  {
+    question: 'Is WATI free?',
+    answer:
+      'No. WATI offers a 7-day free trial with no setup fee, read on 10 November 2026. The cheapest paid plan in India is Growth at ₹2,999 a month on monthly billing, or ₹2,199 a month billed annually. WhatsApp template messages are charged on top of every plan.',
+  },
+  {
+    question: 'What does WATI charge per WhatsApp message in India?',
+    answer:
+      'WATI’s INR rate cards, dated 1 October 2026, list Growth at ₹1.0357 for marketing, ₹0.1495 for utility and authentication, and ₹0.1380 for service messages to Indian numbers. Pro is ₹0.9926 for marketing and Business ₹0.9667. Meta’s own India rates are ₹0.8631 and ₹0.1150, so WATI is 12% to 20% above Meta on marketing and 20% to 30% above on utility.',
+  },
+  {
+    question: 'How much does an extra user cost on WATI?',
+    answer:
+      'Growth includes 3 users and cannot add more. Pro and Business include 5 users each. Extra users cost ₹1,299 a user a month on Pro and ₹2,199 on Business, read on 10 November 2026. A fourth team member therefore means moving from Growth to Pro, which is ₹3,500 a month more on monthly billing.',
+  },
+  {
+    question: 'How much does WATI cost for a Shopify store in India?',
+    answer:
+      'WATI lists its Shopify integration as an add-on at USD 4.99 a month on top of the plan. On our worked example, a store with 500 orders a month pays about ₹14,325 before GST on Growth: ₹2,999 for the plan, about ₹469 for the Shopify add-on and ₹10,857 in messages. Your own message mix will change the last figure.',
+  },
+  {
+    question: 'Is WATI cheaper on annual billing?',
+    answer:
+      'Yes. Read on 10 November 2026, Growth is ₹2,999 a month billed monthly, ₹2,699 billed quarterly and ₹2,199 billed annually. Pro is ₹6,499, ₹5,799 and ₹4,899. Business is ₹18,499, ₹16,799 and ₹14,799. Message rates and extra-user prices do not change with the billing cycle.',
+  },
+];
+
 const INTERAKT_FAQS: Faq[] = [
   {
     question: 'What is the best Interakt alternative for Shopify India?',
@@ -252,9 +280,9 @@ const COD_PREPAID_FAQS: Faq[] = [
       'The payment method gap is the largest published one in Indian D2C. Unicommerce reports festive-quarter COD returns around 58% against under 15% for prepaid, and GoKwik reports COD RTO near 26% against prepaid under 2% across its shopper network, with 60% to 70% of RTOs coming from low buying intent rather than logistics failure. What no one publishes is a verified conversion rate for WhatsApp prepaid offers, so model the saving per converted order and measure your own rate.',
   },
   {
-    question: 'Which TopEdge plan includes COD to prepaid?',
+    question: 'Which TopEdge AI plan includes COD to prepaid?',
     answer:
-      'COD confirmation runs on every plan, including Launch at \u20b91,999 a month. The automated COD-to-prepaid journey sits on Growth (\u20b93,999 a month, or \u20b93,199 billed yearly) and Scale. TopEdge is Shopify-native and compatible with third-party checkout stacks such as GoKwik and Razorpay, and Meta bills your own WhatsApp account directly at 0% markup either way.',
+      'COD confirmation runs on every plan, including Launch at \u20b91,999 a month. The automated COD-to-prepaid journey sits on Growth (\u20b93,999 a month, or \u20b93,199 billed yearly) and Scale. TopEdge AI is Shopify-native and compatible with third-party checkout stacks such as GoKwik and Razorpay, and Meta bills your own WhatsApp account directly at 0% markup either way.',
   },
 ];
 
@@ -369,7 +397,7 @@ export const blogPostsQ4: BlogPost[] = [
       'WATI alternative',
       'WATI alternative India',
       'WATI alternative Shopify',
-      'WATI vs TopEdge',
+      'WATI vs TopEdge AI',
       'WATI competitors India',
       'WhatsApp automation Shopify India',
       'switch WhatsApp platform Shopify',
@@ -417,7 +445,7 @@ ${verdict(`<p><strong>A WATI alternative makes sense for Shopify India when</str
 </tbody>
 </table>
 <p>Add one more requirement that the table cannot express, because it is about cost shape rather than capability: <strong>a pricing model that does not charge you per person.</strong></p>
-<p>This is one reason WATI stops fitting an Indian D2C store as it grows. <a href="https://www.wati.io/pricing/" target="_blank" rel="noopener noreferrer">WATI’s India pricing</a>, read on 7 November 2026, runs Growth at ₹2,699, Pro at ₹5,799 and Business at ₹16,799 a month billed quarterly (₹2,999, ₹6,499 and ₹18,499 billed monthly). Growth includes 3 users and cannot add more, so a fourth person forces Pro. Pro and Business include 5 users, then charge ₹1,299 and ₹2,199 per extra user, so a seven-person desk on Pro is ₹8,397 a month before a single message is sent. That is a normal helpdesk price and a poor match for a store whose shape is one or two people answering alongside a lot of automated sending.</p>
+<p>This is one reason WATI stops fitting an Indian D2C store as it grows. <a href="https://www.wati.io/pricing/" target="_blank" rel="noopener noreferrer">WATI’s India pricing</a>, read on 7 November 2026, runs Growth at ₹2,699, Pro at ₹5,799 and Business at ₹16,799 a month billed quarterly (₹2,999, ₹6,499 and ₹18,499 billed monthly). Growth includes 3 users and cannot add more, so a fourth person forces Pro. Pro and Business include 5 users, then charge ₹1,299 and ₹2,199 per extra user, so a seven-person desk on Pro is ₹8,397 a month before a single message is sent. That is a normal helpdesk price and a poor match for a store whose shape is one or two people answering alongside a lot of automated sending. Our <a href="/blog/wati-pricing-india">WATI pricing breakdown</a> has all three billing cycles and a worked bill at 100, 500 and 1,500 orders.</p>
 <p><strong>Be fair about what WATI gets right, though.</strong> It publishes its per-message rate card for every plan, which plenty of vendors do not, and the bigger plans are cheaper per message: Business lists ₹0.9667 per marketing message, 12% over Meta rather than 20%. Its inbox also covers more channels than ours, including calling, Instagram, Facebook, TikTok and webchat. An earlier version of this guide said WATI passes Meta’s rates through at no markup. WATI’s pricing page says “Standard rates”, but its own rate cards show the rates above, so that line was wrong and we have corrected it.</p>
 
 <h2>A worked month: 500 Shopify orders and 10,000 messages</h2>
@@ -455,12 +483,12 @@ ${verdict(`<p><strong>A WATI alternative makes sense for Shopify India when</str
 </tbody>
 </table>
 </div>
-<p>That is ₹1,823.75 more on messages than Meta’s own card, and ₹823.75 more all in than TopEdge Growth in the table above, before WATI’s Shopify Integration add-on, listed at USD 4.99 a month. Billed quarterly, WATI Growth drops to ₹2,699 and the all-in gap narrows to ₹523.75. So the gap is real but modest at this volume, and it grows with every marketing send. WATI’s page does not say whether its prices include GST, so check that before you compare like for like.</p>
+<p>That is ₹1,823.75 more on messages than Meta’s own card, and ₹823.75 more all in than TopEdge AI Growth in the table above, before WATI’s Shopify Integration add-on, listed at USD 4.99 a month. Billed quarterly, WATI Growth drops to ₹2,699 and the all-in gap narrows to ₹523.75. So the gap is real but modest at this volume, and it grows with every marketing send. WATI’s page does not say whether its prices include GST, so check that before you compare like for like.</p>
 <p>The question to put to WATI, or to us, stays narrow: what do you charge per message by category, and what per service reply past Meta's free thousand. Everything else is a subscription you can compare on a page. Full rate card in the <a href="/blog/whatsapp-business-api-pricing-india">India WhatsApp API pricing guide</a>.</p>
 
 <h2>Where does TopEdge AI fit?</h2>
-<p>TopEdge AI is built around Shopify D2C in India: plans from ₹1,999 a month plus GST (₹1,599 billed yearly) on topedgeai.com, or $19 a month on the Shopify App Store, Meta messages billed at Meta rates with no TopEdge markup, <a href="/features/journeys">cart recovery and COD journeys</a>, <a href="/features">Live Chat with order context</a> and unified customer identity across numbers. We are not trying to out-support a dedicated helpdesk product.</p>
-<p>See the line-by-line board on <a href="/compare/wati">TopEdge vs WATI</a> and plan details on <a href="/pricing">pricing</a>.</p>
+<p>TopEdge AI is built around Shopify D2C in India: plans from ₹1,999 a month plus GST (₹1,599 billed yearly) on topedgeai.com, or $19 a month on the Shopify App Store, Meta messages billed at Meta rates with no TopEdge AI markup, <a href="/features/journeys">cart recovery and COD journeys</a>, <a href="/features">Live Chat with order context</a> and unified customer identity across numbers. We are not trying to out-support a dedicated helpdesk product.</p>
+<p>See the line-by-line board on <a href="/compare/wati">TopEdge AI vs WATI</a> and plan details on <a href="/pricing">pricing</a>.</p>
 
 <h2>How do you test a switch in one afternoon?</h2>
 <ol>
@@ -512,7 +540,7 @@ ${faqHtml(WATI_FAQS)}
       'AiSensy vs WATI',
       'AiSensy vs Gallabox',
       'AiSensy vs Twilio',
-      'AiSensy vs TopEdge',
+      'AiSensy vs TopEdge AI',
       'AiSensy pricing India',
       'WhatsApp marketing Shopify India',
     ],
@@ -629,7 +657,7 @@ ${faqHtml(WATI_FAQS)}
 
 <h2>AiSensy vs WATI</h2>
 <p>This is not a like-for-like comparison and treating it as one is the mistake. AiSensy is campaign-led. WATI is support-led: the product is built around a shared team inbox, with agents, assignment rules, canned replies and ticket-style handling of conversations.</p>
-<p>Move to WATI if your bottleneck is <strong>people answering customers</strong> and you need several agents working one WhatsApp number without stepping on each other. Do not move to WATI expecting better broadcasting or deeper Shopify automation; that is not the job it is built for. Our full read is on the <a href="/blog/wati-alternative-shopify-india">WATI alternative</a> page and the <a href="/compare/topedge-vs-wati-vs-aisensy">TopEdge vs WATI vs AiSensy</a> three-way board.</p>
+<p>Move to WATI if your bottleneck is <strong>people answering customers</strong> and you need several agents working one WhatsApp number without stepping on each other. Do not move to WATI expecting better broadcasting or deeper Shopify automation; that is not the job it is built for. Our full read is on the <a href="/blog/wati-alternative-shopify-india">WATI alternative</a> page and the <a href="/compare/topedge-vs-wati-vs-aisensy">TopEdge AI vs WATI vs AiSensy</a> three-way board.</p>
 
 <h2>AiSensy vs Gallabox</h2>
 <p>Gallabox sits between the two. It is an Indian WhatsApp CRM: shared inbox, a drag and drop chatbot builder, contact properties, and routing built for sales teams that <strong>qualify leads</strong> over chat rather than for stores that recover carts.</p>
@@ -692,7 +720,7 @@ ${faqHtml(WATI_FAQS)}
 <li>Send one broadcast to a 50 contact segment and read the delivery report.</li>
 <li>Compare Meta charges plus platform fees at your busiest month, not an average one.</li>
 </ol>
-<p>The three-way view is <a href="/compare/topedge-vs-wati-vs-aisensy">TopEdge vs WATI vs AiSensy</a>.</p>
+<p>The three-way view is <a href="/compare/topedge-vs-wati-vs-aisensy">TopEdge AI vs WATI vs AiSensy</a>.</p>
 
 <h2>Which AiSensy alternative fits which store</h2>
 <div class="mkt-blog-table-wrap">
@@ -715,7 +743,7 @@ ${faqHtml(AISENSY_FAQS)}
 
 <p>Also compare: <a href="/blog/wati-alternative-shopify-india">WATI alternative</a>, <a href="/blog/interakt-alternative-shopify-india">Interakt alternative</a>, <a href="/blog/bitespeed-alternative-shopify-india">Bitespeed alternative</a>, <a href="/blog/zoko-alternative-shopify-india">Zoko alternative</a>, <a href="/blog/getgabs-alternative-shopify-whatsapp">Getgabs alternative</a>, <a href="/blog/kanal-whatsapp-alternative-shopify">Kanal alternative</a> and <a href="/blog/dondy-alternative-shopify-india">Dondy alternative</a> and <a href="/blog/updatrr-alternative-shopify-india">Updatrr alternative</a>.</p>
 
-<p>Related: <a href="/blog/whatsapp-business-api-pricing-india">WhatsApp Business API pricing in India</a>, <a href="/pricing">TopEdge pricing</a>, <a href="/blog/how-to-reduce-rto-with-whatsapp-cod-confirmation">COD confirmation on WhatsApp</a>, <a href="/blog/cod-to-prepaid-whatsapp-shopify-india">COD to prepaid on WhatsApp</a>.</p>
+<p>Related: <a href="/blog/whatsapp-business-api-pricing-india">WhatsApp Business API pricing in India</a>, <a href="/pricing">TopEdge AI pricing</a>, <a href="/blog/how-to-reduce-rto-with-whatsapp-cod-confirmation">COD confirmation on WhatsApp</a>, <a href="/blog/cod-to-prepaid-whatsapp-shopify-india">COD to prepaid on WhatsApp</a>.</p>
 <p class="mkt-blog-footnote">The ₹0.145 service message rate and the 1,000 free allowance were read off <a href="https://aisensy.com/pricing" target="_blank" rel="noopener noreferrer">AiSensy’s own pricing page</a> on 21 October 2026. Interakt’s ₹2,799 Growth plan, ₹3,000 AI add-on, 100 free AI messages and ₹0.50 per AI message were read off <a href="https://www.interakt.shop/pricing/" target="_blank" rel="noopener noreferrer">Interakt’s pricing page</a> on the same date. WATI, Gallabox and Twilio are described from their public product pages and carry no price here on purpose: confirm their current plans on their own sites before you budget. Remaining statements reflect public listings and our own research. Per-message rates, categories and volume tiers: <a href="https://developers.facebook.com/docs/whatsapp/pricing/" target="_blank" rel="noopener noreferrer">Meta’s WhatsApp Business Platform pricing documentation</a>. Template categories, review and the reasons templates get rejected: <a href="https://developers.facebook.com/docs/whatsapp/message-templates/guidelines/" target="_blank" rel="noopener noreferrer">Meta’s message template guidelines</a>.</p>
 `,
   },
@@ -744,7 +772,7 @@ ${faqHtml(AISENSY_FAQS)}
       'Interakt alternative Shopify',
       'Interakt alternative India',
       'Interakt pricing India',
-      'Interakt vs TopEdge',
+      'Interakt vs TopEdge AI',
       'Shopify WhatsApp app India',
     ],
     faqs: INTERAKT_FAQS,
@@ -793,7 +821,7 @@ ${verdict(`<p><strong>Interakt is a reasonable default for Indian Shopify stores
 </tbody>
 </table>
 </div>
-<p>The message line is not identical either. Meta’s India card is ₹0.8631 per marketing and ₹0.1150 per utility message, and TopEdge bills you at that card. <a href="https://www.interakt.shop/pricing/" target="_blank" rel="noopener noreferrer">Interakt’s pricing page</a>, read on 7 November 2026, lists its own India rates: ₹0.958 and ₹0.150 on Growth, ₹0.949 and ₹0.140 on Advanced, with only Enterprise listed as having no markup. Service replies past the first 1,000 a month cost ₹0.1150 on Meta’s card and ₹0.128 on Interakt Growth. The <a href="/blog/whatsapp-business-api-pricing-india">India pricing guide</a> breaks the Meta side down.</p>
+<p>The message line is not identical either. Meta’s India card is ₹0.8631 per marketing and ₹0.1150 per utility message, and TopEdge AI bills you at that card. <a href="https://www.interakt.shop/pricing/" target="_blank" rel="noopener noreferrer">Interakt’s pricing page</a>, read on 7 November 2026, lists its own India rates: ₹0.958 and ₹0.150 on Growth, ₹0.949 and ₹0.140 on Advanced, with only Enterprise listed as having no markup. Service replies past the first 1,000 a month cost ₹0.1150 on Meta’s card and ₹0.128 on Interakt Growth. The <a href="/blog/whatsapp-business-api-pricing-india">India pricing guide</a> breaks the Meta side down.</p>
 <p>Two honest caveats on the right-hand column. Bring-your-own-key means you hold an OpenAI or Gemini account and watch that bill yourself, which is one more thing to set up and one more thing that can surprise you. And the ₹0.10 to ₹0.30 range is an estimate of model token cost per reply, not a published price: short catalogue answers land near the bottom, long multi-turn conversations near the top. What is not an estimate is the ₹0.50 and the ₹3,000, both of which Interakt publishes.</p>
 
 <h2>Side by side</h2>
@@ -807,7 +835,7 @@ ${verdict(`<p><strong>Interakt is a reasonable default for Indian Shopify stores
 <tr><td>Warranty workflows</td><td>External CRM or webhooks</td><td>Built in</td></tr>
 </tbody>
 </table>
-<p>Tradeoff: Interakt has a longer track record and a larger user base. If your team already knows it well, retraining has a real cost. See the full board on <a href="/compare/interakt">TopEdge vs Interakt</a>.</p>
+<p>Tradeoff: Interakt has a longer track record and a larger user base. If your team already knows it well, retraining has a real cost. See the full board on <a href="/compare/interakt">TopEdge AI vs Interakt</a>.</p>
 
 <h2>A one-day switch test</h2>
 <ol>
@@ -849,7 +877,7 @@ ${faqHtml(INTERAKT_FAQS)}
       'Bitespeed alternative',
       'Bitespeed alternative Shopify',
       'Bitespeed pricing India',
-      'Bitespeed vs TopEdge',
+      'Bitespeed vs TopEdge AI',
       'Shopify WhatsApp app INR pricing',
     ],
     faqs: BITESPEED_FAQS,
@@ -904,7 +932,7 @@ ${verdict(`<p><strong>Bitespeed targets larger brands and global omnichannel sta
 <tr><td>Warranty</td><td>Not native</td><td>Built in</td></tr>
 </tbody>
 </table>
-<p>Tradeoff: TopEdge AI is WhatsApp and Instagram first. If you need email, SMS and web chat in one suite, compare that scope honestly. Details are on <a href="/compare/bitespeed">TopEdge vs Bitespeed</a>.</p>
+<p>Tradeoff: TopEdge AI is WhatsApp and Instagram first. If you need email, SMS and web chat in one suite, compare that scope honestly. Details are on <a href="/compare/bitespeed">TopEdge AI vs Bitespeed</a>.</p>
 
 <h2>The twelve-month number</h2>
 <p>Monthly prices make a ₹13,000 gap look like a line item. Annualised, it is a hiring decision.</p>
@@ -958,14 +986,14 @@ ${verdict(`<p><strong>Bitespeed targets larger brands and global omnichannel sta
 </div>
 <p>If you want the same questions asked across the whole category rather than one rival, use <a href="/blog/how-to-choose-whatsapp-app-shopify-app-store">how to choose a WhatsApp app on the Shopify App Store</a>.</p>
 
-<p class="mkt-blog-footnote">TopEdge figures are our own published yearly plan prices. Bitespeed figures are indicative public patterns from our research converted at round rupee values, not a quote: Bitespeed prices on application and your number will differ. Confirm on bitespeed.co.</p>
+<p class="mkt-blog-footnote">TopEdge AI figures are our own published yearly plan prices. Bitespeed figures are indicative public patterns from our research converted at round rupee values, not a quote: Bitespeed prices on application and your number will differ. Confirm on bitespeed.co.</p>
 
 ${faqHtml(BITESPEED_FAQS)}
 
 
 <p>Also compare: <a href="/blog/wati-alternative-shopify-india">WATI alternative</a>, <a href="/blog/aisensy-alternative-shopify-india">AiSensy alternative</a>, <a href="/blog/interakt-alternative-shopify-india">Interakt alternative</a>, <a href="/blog/zoko-alternative-shopify-india">Zoko alternative</a>, <a href="/blog/getgabs-alternative-shopify-whatsapp">Getgabs alternative</a>, <a href="/blog/kanal-whatsapp-alternative-shopify">Kanal alternative</a> and <a href="/blog/dondy-alternative-shopify-india">Dondy alternative</a> and <a href="/blog/updatrr-alternative-shopify-india">Updatrr alternative</a>.</p>
 
-<p>Related: <a href="/blog/best-whatsapp-automation-tools-shopify-india">best WhatsApp automation tools for Shopify India</a>, <a href="/pricing">TopEdge pricing</a>, <a href="/features">Live Chat</a>.</p>
+<p>Related: <a href="/blog/best-whatsapp-automation-tools-shopify-india">best WhatsApp automation tools for Shopify India</a>, <a href="/pricing">TopEdge AI pricing</a>, <a href="/features">Live Chat</a>.</p>
 <p class="mkt-blog-footnote">Bitespeed statements reflect public listings and third-party summaries as of September 2026. Confirm on bitespeed.co and the Shopify App Store before purchase. Per-message rates, categories and volume tiers: <a href="https://developers.facebook.com/docs/whatsapp/pricing/" target="_blank" rel="noopener noreferrer">Meta’s WhatsApp Business Platform pricing documentation</a>. Opt-in requirements: <a href="https://whatsappbusiness.com/policy/" target="_blank" rel="noopener noreferrer">the WhatsApp Business Messaging Policy</a>.</p>
 `,
   },
@@ -998,7 +1026,7 @@ ${faqHtml(BITESPEED_FAQS)}
     ],
     faqs: TEMPLATE_FAQS,
     content: `
-${verdict(`<p><strong>Most rejections come from five fixable things:</strong> wrong category, badly placed variables, missing sample values, promotional wording in a utility template, and vague or misleading text. Fix the cause shown in Meta Business Manager and resubmit. Do not resubmit unchanged.</p>`)}
+${verdict(`<p><strong>Most rejections come from five fixable things:</strong> wrong category, badly placed variables, missing sample values, promotional wording in a utility template, and vague or misleading text. Fix the cause shown in Meta Business Manager and resubmit. Do not resubmit unchanged. For wording that already keeps utility and marketing apart, start from our <a href="/whatsapp-templates">copyable WhatsApp order and COD templates</a>.</p>`)}
 
 <p>A rejected template blocks a cart or COD journey completely, because a good platform will not send until the template is APPROVED. Knowing the common causes saves days. Always read the reason Meta shows first, and re-check Meta’s current template guidelines because rules change.</p>
 
@@ -1016,7 +1044,7 @@ ${verdict(`<p><strong>Most rejections come from five fixable things:</strong> wr
 
 <h2>Utility or marketing: the category that costs money</h2>
 <p>Meta bills marketing templates at a higher rate than utility ones, and can reclassify a utility template that reads as promotional. An order confirmed message should state the order, items and delivery date. Add a discount code and it can flip to marketing.</p>
-<p><strong>The gap is about seven to one.</strong> In India a delivered utility message is <strong>₹0.1150</strong> and a marketing one is <strong>₹0.8631</strong>. So a single promotional sentence added to a dispatch notification does not cost you a little extra, it multiplies the cost of every order you ship by roughly seven. On 800 orders a month that is the difference between about ₹92 and ₹690, for one line nobody asked for.</p>
+<p><strong>The gap is about seven to one.</strong> In India a delivered utility message is <strong>₹0.1150</strong> and a marketing one is <strong>₹0.8631</strong>. So a single promotional sentence added to a dispatch notification does not cost you a little extra, it multiplies the cost of every order you ship by roughly seven. On 800 orders a month that is the difference between about ₹92 and ₹690, for one line nobody asked for. Both rates are on the <a href="/pricing/meta-rates">Meta India rate card and cost calculator</a>.</p>
 <p><strong>The test Meta applies is purpose, not politeness.</strong> A message about an order that already exists is utility, however briskly worded. A message trying to cause an order is marketing, however gently worded. That is why every cart reminder is marketing: at the moment it sends, there is no order. Writing it in a transactional tone does not change the category, it just makes the template read oddly.</p>
 <p><strong>Reclassification happens after approval, too.</strong> A template can pass review and later be recategorised once Meta sees how it is used, so the bill moves without anything in your account changing. If your messaging cost jumps without a volume change, compare the category on your highest-volume templates first. See how rates work in <a href="/blog/whatsapp-business-api-pricing-india">WhatsApp Business API pricing in India</a>.</p>
 
@@ -1102,7 +1130,7 @@ ${verdict(`<p><strong>Collect opt-in at checkout and on your site, word it clear
 <tr><td>Instagram comment to DM</td><td>High intent</td><td>Ask again before offers</td></tr>
 </tbody>
 </table>
-<p>TopEdge’s <a href="/features/opt-in-tools">opt-in tools</a> cover website popups and capture, so consent starts inside the same system that runs your journeys.</p>
+<p>TopEdge AI’s <a href="/features/opt-in-tools">opt-in tools</a> cover website popups and capture, so consent starts inside the same system that runs your journeys. For a click-to-WhatsApp button or a packaging QR, our <a href="/tools/whatsapp-link-generator">free WhatsApp link generator</a> builds the link with a pre-filled message.</p>
 
 <h2>What good consent wording looks like</h2>
 <ul>
@@ -1148,7 +1176,7 @@ ${faqHtml(OPTIN_FAQS)}
     summary: [
       'Updatrr publishes USD tiers from $29.99 to $99.99 with a 7-day trial and no order limits, and states it adds no markup on Meta’s fees.',
       'Its AI chatbot with human handover sits on the $99.99 Pro AI tier, about ₹1,12,700 a year at the 6 November 2026 exchange rate.',
-      'Updatrr Growth is the cheaper bill at 500 and 1,500 orders a month. TopEdge is cheaper at 100 orders, and whenever AI is the reason you are buying.',
+      'Updatrr Growth is the cheaper bill at 500 and 1,500 orders a month. TopEdge AI is cheaper at 100 orders, and whenever AI is the reason you are buying.',
     ],
     slug: 'updatrr-alternative-shopify-india',
     date: '2026-10-21',
@@ -1165,7 +1193,7 @@ ${faqHtml(OPTIN_FAQS)}
       'Updatrr alternative Shopify',
       'Updatrr alternative India',
       'Updatrr pricing',
-      'Updatrr vs TopEdge',
+      'Updatrr vs TopEdge AI',
       'Shopify WhatsApp automation India',
     ],
     faqs: UPDATRR_FAQS,
@@ -1205,15 +1233,15 @@ ${verdict(`<p><strong>Updatrr is an honest Shopify-only WhatsApp app and it does
 
 <h2>Where the two products actually differ</h2>
 <p>Since the Meta line is identical on both sides, the comparison narrows to three real differences.</p>
-<p>That is worth pausing on, because it is unusual. <a href="https://www.updatrr.com/pricing" target="_blank" rel="noopener noreferrer">Updatrr states plainly on its pricing page</a> that it adds no markup on Meta’s conversation fees, and TopEdge takes the same position. So the cost that compounds with volume, and that separates most of the tools in this category, is the same whichever of the two you pick. Neither of us can win an argument about ₹0.8631 per marketing template or ₹0.1150 per service message, because both of us charge exactly that.</p>
+<p>That is worth pausing on, because it is unusual. <a href="https://www.updatrr.com/pricing" target="_blank" rel="noopener noreferrer">Updatrr states plainly on its pricing page</a> that it adds no markup on Meta’s conversation fees, and TopEdge AI takes the same position. So the cost that compounds with volume, and that separates most of the tools in this category, is the same whichever of the two you pick. Neither of us can win an argument about ₹0.8631 per marketing template or ₹0.1150 per service message, because both of us charge exactly that.</p>
 <p>What remains is currency, where AI sits in the plan ladder, and how deep each product reaches into the store. Those are the three below, and they are differences of shape rather than of honesty.</p>
 
 <h3>1. Currency and the shape of the bill</h3>
 <p>Updatrr bills in USD. For an Indian brand that means a plan cost that moves with the exchange rate, GST handling on a foreign invoice, and a number your finance team has to re-translate every month. Not fatal, just friction, and it is the friction that compounds when you are forecasting a festive quarter.</p>
-<p>Order volume matters as much as currency, because the two price ladders climb on different things. Updatrr publishes no order limit, so its price stays flat as you grow. TopEdge plans cap orders: Launch at 100 a month, Growth at 800, Scale at 1,500. So the fair comparison is the TopEdge plan your volume actually needs.</p>
+<p>Order volume matters as much as currency, because the two price ladders climb on different things. Updatrr publishes no order limit, so its price stays flat as you grow. TopEdge AI plans cap orders: Launch at 100 a month, Growth at 800, Scale at 1,500. So the fair comparison is the TopEdge AI plan your volume actually needs.</p>
 <div class="mkt-blog-table-wrap">
 <table>
-<thead><tr><th>Orders a month</th><th>TopEdge plan that fits, per year</th><th>Updatrr Growth, per year</th><th>Updatrr Pro AI, per year</th></tr></thead>
+<thead><tr><th>Orders a month</th><th>TopEdge AI plan that fits, per year</th><th>Updatrr Growth, per year</th><th>Updatrr Pro AI, per year</th></tr></thead>
 <tbody>
 <tr><td>100</td><td>Launch: ₹19,188 billed yearly, ₹23,988 paid monthly</td><td>About ₹33,800</td><td>About ₹1,12,700</td></tr>
 <tr><td>500</td><td>Growth: ₹38,388 billed yearly, ₹47,988 paid monthly</td><td>About ₹33,800</td><td>About ₹1,12,700</td></tr>
@@ -1221,15 +1249,15 @@ ${verdict(`<p><strong>Updatrr is an honest Shopify-only WhatsApp app and it does
 </tbody>
 </table>
 </div>
-<p>Updatrr's dollar prices are converted at ₹93.92, the <a href="https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/index.en.html" target="_blank" rel="noopener noreferrer">European Central Bank reference rate</a> for 6 November 2026, and charged monthly, since Updatrr quotes annual pricing on request. TopEdge prices are before GST.</p>
-<p><strong>Read it by row.</strong> At 100 orders, TopEdge Launch is cheaper than any Updatrr plan. At 500 and 1,500 orders, Updatrr Growth is the cheaper bill: about ₹4,600 a year less than TopEdge Growth billed yearly, and about ₹28,600 less than Scale. Paid monthly, those gaps grow to about ₹14,200 and ₹44,200. If cart and COD reminders are all you run, that saving is real and Updatrr wins it.</p>
-<p><strong>It flips when AI is the reason you are shopping.</strong> Updatrr's AI chatbot with human handover is on Pro AI, about ₹1,12,700 a year. TopEdge runs bring-your-own-key AI on every plan, so add model tokens: our estimate is ₹6,000 to ₹18,000 a year per 5,000 AI replies a month. Even Scale plus the top of that range, about ₹80,400, comes in under Pro AI.</p>
+<p>Updatrr's dollar prices are converted at ₹93.92, the <a href="https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/index.en.html" target="_blank" rel="noopener noreferrer">European Central Bank reference rate</a> for 6 November 2026, and charged monthly, since Updatrr quotes annual pricing on request. TopEdge AI prices are before GST.</p>
+<p><strong>Read it by row.</strong> At 100 orders, TopEdge AI Launch is cheaper than any Updatrr plan. At 500 and 1,500 orders, Updatrr Growth is the cheaper bill: about ₹4,600 a year less than TopEdge AI Growth billed yearly, and about ₹28,600 less than Scale. Paid monthly, those gaps grow to about ₹14,200 and ₹44,200. If cart and COD reminders are all you run, that saving is real and Updatrr wins it.</p>
+<p><strong>It flips when AI is the reason you are shopping.</strong> Updatrr's AI chatbot with human handover is on Pro AI, about ₹1,12,700 a year. TopEdge AI runs bring-your-own-key AI on every plan, so add model tokens: our estimate is ₹6,000 to ₹18,000 a year per 5,000 AI replies a month. Even Scale plus the top of that range, about ₹80,400, comes in under Pro AI.</p>
 
 <h3>2. AI on the entry plan against AI at the top tier</h3>
 <p>This is the biggest practical gap. On Updatrr, the AI chatbot with human handover means Pro AI at $99.99 a month. Pro at $49.99 has a no-code chatbot that Updatrr's own table calls AI, so check whether that is enough for you. On TopEdge AI, bring-your-own-key AI is on every plan from ₹1,999 a month and you pay model tokens straight to OpenAI or Gemini.</p>
 <p>Two cost lines follow from AI replies, and only one of them differs between the two products:</p>
 <ul>
-<li><strong>Model tokens.</strong> At roughly ₹0.10 to ₹0.30 per AI reply, our estimate, 5,000 replies a month cost ₹500 to ₹1,500 on TopEdge. Updatrr publishes no per-reply AI fee, so as published, the $99.99 is its whole AI bill.</li>
+<li><strong>Model tokens.</strong> At roughly ₹0.10 to ₹0.30 per AI reply, our estimate, 5,000 replies a month cost ₹500 to ₹1,500 on TopEdge AI. Updatrr publishes no per-reply AI fee, so as published, the $99.99 is its whole AI bill.</li>
 <li><strong>Meta's service fee.</strong> The same on both. Since <strong>1 October 2026</strong> Meta charges ₹0.1150 per service reply past the first 1,000 per number per month, so ₹460 on 5,000 replies.</li>
 </ul>
 <p>The jump from Updatrr Growth to Pro AI is $70 a month, about ₹6,600 at the same exchange rate.</p>
@@ -1240,7 +1268,7 @@ ${verdict(`<p><strong>Updatrr is an honest Shopify-only WhatsApp app and it does
 <ul>
 <li><strong>Pre-checkout visitor identity.</strong> A Shopify app sees the abandoned checkout. A 1-click visitor pixel sees the session before the checkout exists, which is where browse abandonment and most first-touch identity live.</li>
 <li><strong>Unified multi-number profiles.</strong> Indian buyers routinely order on one number and chat from another. Without deduplication the same customer is two contacts with two histories, and your agent sees half the story.</li>
-<li><strong>Warranty management.</strong> No native warranty hub. For electronics, appliance and smart-home brands, warranty registration and claim status are a real WhatsApp workload, and the usual answer is an external CRM.</li>
+<li><strong>Warranty management.</strong> No native warranty hub. For electronics, appliance and smart-home brands, warranty registration and claim status are a real WhatsApp workload, and the usual answer is an external CRM. TopEdge AI handles this with <a href="/features/warranty">WhatsApp warranty registration on Shopify</a>.</li>
 </ul>
 <p>Verify each of those on updatrr.com before you decide. Products change, and a feature gap found in October may be shipped by January.</p>
 
@@ -1262,7 +1290,7 @@ ${verdict(`<p><strong>Updatrr is an honest Shopify-only WhatsApp app and it does
 </tbody>
 </table>
 </div>
-<p>What Updatrr is genuinely good at: it is focused, it prices transparently, and a Shopify-only scope means fewer moving parts to misconfigure. If you run two flows and want them to work, that is a feature. The full board is on <a href="/compare/updatrr">TopEdge vs Updatrr</a>.</p>
+<p>What Updatrr is genuinely good at: it is focused, it prices transparently, and a Shopify-only scope means fewer moving parts to misconfigure. If you run two flows and want them to work, that is a feature. The full board is on <a href="/compare/updatrr">TopEdge AI vs Updatrr</a>.</p>
 
 <h2>A one-week switch test</h2>
 <p>Seven days is Updatrr's trial length and it is the right window to judge most of this, with one exception noted below.</p>
@@ -1321,7 +1349,7 @@ ${faqHtml(UPDATRR_FAQS)}
     ],
     faqs: COD_PREPAID_FAQS,
     content: `
-${verdict(`<p><strong>A Cash on Delivery order that becomes a prepaid order saves roughly ₹68 before it ships: about ₹30 of courier COD remittance fee and about ₹38 of amortised RTO cost.</strong> That is the budget for your incentive. Send the ₹0.1150 utility confirmation to every COD order first, then the ₹0.8631 marketing offer with a UPI link only to the segment worth converting, and hold dispatch until one of the two comes back.</p>`)}
+${verdict(`<p><strong>A Cash on Delivery order that becomes a prepaid order saves roughly ₹68 before it ships: about ₹30 of courier COD remittance fee and about ₹38 of amortised RTO cost.</strong> That is the budget for your incentive. Send the ₹0.1150 utility confirmation to every COD order first, then the ₹0.8631 marketing offer with a UPI link only to the segment worth converting, and hold dispatch until one of the two comes back. To see what a returned parcel costs your store first, use the <a href="/tools/rto-cost-calculator">RTO cost calculator</a>, one of our <a href="/tools">free Shopify tools</a>.</p>`)}
 
 <p>Every Indian D2C brand knows prepaid orders behave better. Almost none can say what one is worth in rupees, which is why the prepaid discount is usually picked by feel and then quietly abandoned when nobody can prove it paid.</p>
 <p>This is the arithmetic, the message sequence that does not cost 7.5 times more than it needs to, and the part we cannot source.</p>
@@ -1380,7 +1408,7 @@ ${verdict(`<p><strong>A Cash on Delivery order that becomes a prepaid order save
 <li><strong>Cancel the offer on payment.</strong> Suppression matters here as much as in cart recovery. A buyer who has paid should never receive the follow-up, and you should not pay ₹0.8631 to annoy them.</li>
 </ol>
 <div class="mkt-blog-callout">
-<p>One rule worth writing into the SOP: never promise a discount you cannot apply to an order that is already placed. If your stack cannot re-price a Shopify order cleanly, make the incentive a credit on the next order instead. A broken promise at the payment step costs more than the RTO would have.</p>
+<p>One rule worth writing into the SOP: never promise a discount you cannot apply to an order that is already placed. If your stack cannot re-price a Shopify order cleanly, make the incentive a credit on the next order instead. A broken promise at the payment step costs more than the RTO would have. The <a href="/whatsapp-journey-examples/cod-to-prepaid">COD to prepaid journey example</a> shows each message and what it costs.</p>
 </div>
 
 <h2>Price it against your own COD volume</h2>
@@ -1395,7 +1423,7 @@ ${verdict(`<p><strong>A Cash on Delivery order that becomes a prepaid order save
 <p>Measure three things and nothing else at the start: share of COD orders that take the prepaid offer, RTO rate on converted orders against unconverted ones, and net margin after the incentive. The third one is the only one that settles it, and it is the one most dashboards cannot show you. <a href="/features/profit-loss">Profit and costs</a> builds that waterfall from your own Shopify data, and <a href="/blog/profitable-ecommerce-business-india">the India net profit guide</a> walks through the rest of the cost lines.</p>
 
 <h2>Where this runs</h2>
-<p>COD confirmation is on every TopEdge plan, from Launch at ₹1,999 a month. The automated COD-to-prepaid journey, with the payment link and the suppression rules above, sits on <strong>Growth</strong> at ₹3,999 a month (₹3,199 billed yearly) and on Scale. TopEdge is Shopify-native and compatible with third-party checkout stacks such as GoKwik and Razorpay.</p>
+<p>COD confirmation is on every TopEdge AI plan, from Launch at ₹1,999 a month. The automated COD-to-prepaid journey, with the payment link and the suppression rules above, sits on <strong>Growth</strong> at ₹3,999 a month (₹3,199 billed yearly) and on Scale. TopEdge AI is Shopify-native and compatible with third-party checkout stacks such as GoKwik and Razorpay.</p>
 <p>On the Meta side there is nothing to add: you connect your own WhatsApp Business Account, Meta bills that account directly at its published rates, and we take 0% of it. Plans and limits are on <a href="/pricing">pricing</a>, the flow itself on <a href="/features/cod-confirmation">COD confirmation</a>, and the branching on <a href="/features/journeys">Journeys</a>.</p>
 <p>While you are costing this, check one thing that has a deadline attached. Every eligible Indian WhatsApp Business Account has to be on INR billing by <strong>31 December 2026</strong> or Meta stops delivery on 1 January 2027, and that migration needs a new WABA rather than a settings change.</p>
 
@@ -1680,7 +1708,7 @@ ${faqHtml(COD_PREPAID_FAQS)}
 <h2>1. TopEdge AI</h2>
 <p><strong>Best for:</strong> Indian Shopify stores that want recovery, COD confirmation and replies on one canvas rather than three subscriptions.</p>
 <p>TopEdge AI treats recovery as a Shopify event problem first and a messaging problem second. <a href="/features/journeys">Journeys</a> fire on abandoned cart and abandoned checkout, send Meta-approved templates with live line items and a resume link, branch on payment method so COD and prepaid carts read differently, and suppress the remaining steps the moment an order is created. Replies land in <a href="/features">Live Chat</a> with the cart and order beside the thread, so the message can become a sale instead of an unanswered notification.</p>
-<p>On economics it is deliberately boring: plans from <strong>₹1,999 a month</strong> plus GST on Launch (or $19 a month on the Shopify App Store), with the deeper COD-to-prepaid journeys on Growth at ₹3,999 a month (₹3,199 billed yearly). Meta bills your own WhatsApp Business Account directly at its published rates and TopEdge adds <strong>0% markup</strong>, which is the line that matters at festive volume. There is a 14-day trial, and the listing is on the <a href="https://apps.shopify.com/topedge-ai" target="_blank" rel="noopener noreferrer">Shopify App Store</a>.</p>
+<p>On economics it is deliberately boring: plans from <strong>₹1,999 a month</strong> plus GST on Launch (or $19 a month on the Shopify App Store), with the deeper COD-to-prepaid journeys on Growth at ₹3,999 a month (₹3,199 billed yearly). Meta bills your own WhatsApp Business Account directly at its published rates and TopEdge AI adds <strong>0% markup</strong>, which is the line that matters at festive volume. There is a 14-day trial, and the listing is on the <a href="https://apps.shopify.com/topedge-ai" target="_blank" rel="noopener noreferrer">Shopify App Store</a>.</p>
 <p><strong>Where it is not the answer:</strong> if your buyers are not on WhatsApp, or nobody at your store will answer a reply, you are paying for the half of the product that does the work.</p>
 
 <h2>2. Shopify’s built-in abandoned checkout automation</h2>
@@ -1720,7 +1748,7 @@ ${faqHtml(COD_PREPAID_FAQS)}
 <h2>7. WATI</h2>
 <p><strong>Best for:</strong> stores whose real pain is support volume, with recovery as a genuine second priority.</p>
 <p>WATI is a shared-inbox product first and an automation product second, and it is honest about that. If your problem is that four people need to answer the same WhatsApp number without colliding, WATI is a better answer than a recovery tool with a chat tab bolted on. If your problem is that carts are leaking, you are buying a helpdesk to solve a journeys problem.</p>
-<p><strong>What it costs, and where the cost actually lands.</strong> <a href="https://www.wati.io/pricing/" target="_blank" rel="noopener noreferrer">WATI's India pricing</a>, read on 7 November 2026, runs Growth at ₹2,699 a month, Pro at ₹5,799 and Business at ₹16,799, billed quarterly. Growth stops at 3 users, so a fourth person forces Pro. Pro and Business include 5 users, then charge ₹1,299 and ₹2,199 a month per extra user, so a seven-person desk on Pro is ₹8,397 a month before a single message is sent. That is not a criticism, it is what a seat-priced helpdesk costs, but it is the right number to compare against a flat plan.</p>
+<p><strong>What it costs, and where the cost actually lands.</strong> <a href="https://www.wati.io/pricing/" target="_blank" rel="noopener noreferrer">WATI's India pricing</a>, read on 7 November 2026, runs Growth at ₹2,699 a month, Pro at ₹5,799 and Business at ₹16,799, billed quarterly. Growth stops at 3 users, so a fourth person forces Pro. Pro and Business include 5 users, then charge ₹1,299 and ₹2,199 a month per extra user, so a seven-person desk on Pro is ₹8,397 a month before a single message is sent. That is not a criticism, it is what a seat-priced helpdesk costs, but it is the right number to compare against a flat plan. The <a href="/blog/wati-pricing-india">full WATI pricing page</a> covers seats, message rates and add-ons.</p>
 <p><strong>The Meta line, checked.</strong> WATI's pricing page says "Standard rates", but <a href="https://cdn.clare.ai/pricing/Wati-Pricing-Rate-Card-Growth-Plan-INR-I.pdf" target="_blank" rel="noopener noreferrer">WATI’s Growth rate card</a>, dated 1 October 2026, lists ₹1.0357 per India marketing message and ₹0.1495 per utility message, 20% and 30% above Meta's ₹0.8631 and ₹0.1150. On the fourth test in this guide, WATI does not pass, though it does publish the numbers, and its Business card is cheaper at 12% over Meta on marketing. An earlier version of this guide said WATI passed this test; its rate cards show otherwise. Note separately that Facebook Business verification support is offered only to Business annual plan customers, which is worth knowing if you are not yet verified and were counting on help with it.</p>
 <p><strong>Where it is not the answer:</strong> seat pricing punishes the Indian D2C shape, which is usually one or two people answering and a lot of automated sending. Detail: <a href="/blog/wati-alternative-shopify-india">WATI alternatives for Shopify India</a>.</p>
 
@@ -1978,7 +2006,7 @@ ${faqHtml(BEST_CART_APP_FAQS)}
 <p>We built TopEdge AI’s analytics and opt-in tools as one suite, not a set of separate widgets, so they share one session record:</p>
 <ul>
 <li><strong>No duplicate view inflation.</strong> A shopper who lands, opens an opt-in wheel, spins it and browses five products is one store visit. Interactions inside opt-in tools never add to your visitor count.</li>
-<li><strong>Product-level history.</strong> Instead of adding product views to a generic pageview counter, the <a href="/features/analytics">TopEdge tracking pixel</a> records which products, variants and categories that visitor viewed, in order, on their session timeline.</li>
+<li><strong>Product-level history.</strong> Instead of adding product views to a generic pageview counter, the <a href="/features/analytics">TopEdge AI tracking pixel</a> records which products, variants and categories that visitor viewed, in order, on their session timeline.</li>
 <li><strong>A funnel you can trust.</strong> You see how many real people landed, which products held their attention, and which opt-in tool converted them.</li>
 </ul>
 
@@ -2079,7 +2107,7 @@ ${faqHtml(FUNNEL_FAQS)}
       'A Shopify store pays Interakt’s Shopify App Store prices, not its web plans. Interakt’s pricing page says the Shopify integration is only on its Shopify plan, listed from ₹1,973.48 a month on 9 November 2026.',
       'On the web plans, ₹999 Starter is Instagram only when billed monthly. Billed quarterly (₹3,499) or yearly (₹11,999), Starter can carry WhatsApp instead. Growth is ₹2,799 a month.',
       'Every WhatsApp message is billed at Interakt’s own rate: 10% to 12% above Meta on marketing and 22% to 39% above on utility. At 500 orders a month that is about ₹1,028 extra on the Shopify Growth plan.',
-      'At 500 orders a month with timed cart recovery, the bill is about ₹13,914 before GST on Interakt’s Shopify Growth plan, ₹12,699 on TopEdge Growth from the same App Store (₹13,033 if you sign up on our site) and ₹11,850 on Updatrr Growth.',
+      'At 500 orders a month with timed cart recovery, the bill is about ₹13,914 before GST on Interakt’s Shopify Growth plan, ₹12,699 on TopEdge AI Growth from the same App Store (₹13,033 if you sign up on our site) and ₹11,850 on Updatrr Growth.',
     ],
     slug: 'interakt-pricing-india',
     date: '2026-11-09',
@@ -2112,7 +2140,7 @@ ${faqHtml(FUNNEL_FAQS)}
 
 <p>This page sits under our <a href="/compare/alternatives">comparison of WhatsApp tools for Shopify India</a>. If you have already decided to leave Interakt, the <a href="/blog/interakt-alternative-shopify-india">Interakt alternative guide</a> is the better read.</p>
 
-<p>A note on who wrote this: TopEdge AI sells a competing Shopify app. Where Interakt or another tool comes out cheaper below, we say so.</p>
+<p>A note on who wrote this: <a href="/about">TopEdge AI</a> sells a competing Shopify app. Where Interakt or another tool comes out cheaper below, we say so.</p>
 
 <h2>Interakt’s web plans, as published on 9 November 2026</h2>
 <p>Interakt sells four plans on its own site. The price changes with the billing cycle, and so does what Starter can do.</p>
@@ -2176,23 +2204,23 @@ ${faqHtml(FUNNEL_FAQS)}
 </tbody>
 </table>
 </div>
-<p>Monthly billing, before GST, subscription plus messages, on the plan each volume needs. TopEdge, like Interakt, sells its Shopify App Store plans in US dollars ($19, $39 and $65 a month), so both App Store columns use Shopify’s own rupee estimates from 9 November 2026; Shopify adds a 1.5% currency fee to either when it converts. On topedgeai.com, TopEdge bills ₹1,999, ₹3,999 and ₹6,499 in rupees, plus GST. TopEdge and Updatrr pass Meta’s rate through, so their message line is Meta’s: ₹1,760.70, ₹9,033.50 and ₹27,330.50. Interakt’s message line on Growth is ₹1,961, ₹10,061 and ₹30,439. <a href="https://www.updatrr.com/pricing" target="_blank" rel="noopener noreferrer">Updatrr’s $29.99 Growth plan</a>, read 9 November 2026, is converted at the <a href="https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/index.en.html" target="_blank" rel="noopener noreferrer">ECB reference rate</a> of ₹93.92 a dollar for 6 November 2026.</p>
+<p>Monthly billing, before GST, subscription plus messages, on the plan each volume needs. TopEdge AI, like Interakt, sells its Shopify App Store plans in US dollars ($19, $39 and $65 a month), so both App Store columns use Shopify’s own rupee estimates from 9 November 2026; Shopify adds a 1.5% currency fee to either when it converts. On topedgeai.com, TopEdge AI bills ₹1,999, ₹3,999 and ₹6,499 in rupees, plus GST. TopEdge AI and Updatrr pass Meta’s rate through, so their message line is Meta’s: ₹1,760.70, ₹9,033.50 and ₹27,330.50. Interakt’s message line on Growth is ₹1,961, ₹10,061 and ₹30,439. <a href="https://www.updatrr.com/pricing" target="_blank" rel="noopener noreferrer">Updatrr’s $29.99 Growth plan</a>, read 9 November 2026, is converted at the <a href="https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/index.en.html" target="_blank" rel="noopener noreferrer">ECB reference rate</a> of ₹93.92 a dollar for 6 November 2026.</p>
 
 <h3>What the table says</h3>
 <ul>
-<li><strong>App Store against App Store, at 500 orders, timed cart recovery on Interakt costs ₹1,215 a month more than TopEdge Growth.</strong> Interakt’s message rates add ₹1,028 and its Growth subscription is ₹188 higher.</li>
-<li><strong>If instant order and COD messages are enough, Interakt’s Shopify Starter is cheaper than TopEdge.</strong> It comes in ₹527 below TopEdge Growth at 500 orders and ₹613 below TopEdge Scale at 1,500, both on the App Store.</li>
+<li><strong>App Store against App Store, at 500 orders, timed cart recovery on Interakt costs ₹1,215 a month more than TopEdge AI Growth.</strong> Interakt’s message rates add ₹1,028 and its Growth subscription is ₹188 higher.</li>
+<li><strong>If instant order and COD messages are enough, Interakt’s Shopify Starter is cheaper than TopEdge AI.</strong> It comes in ₹527 below TopEdge AI Growth at 500 orders and ₹613 below TopEdge AI Scale at 1,500, both on the App Store.</li>
 <li><strong>Updatrr Growth is the cheapest row at 500 and 1,500 orders.</strong> It states no markup on Meta’s fees and publishes no order limit. The plan includes one team member.</li>
-<li><strong>At 100 orders, TopEdge Launch is cheapest</strong>, but Launch does not include COD-to-prepaid conversion or Journey Branch. Those start on Growth.</li>
+<li><strong>At 100 orders, TopEdge AI Launch is cheapest</strong>, but Launch does not include COD-to-prepaid conversion or Journey Branch. Those start on Growth.</li>
 <li><strong>The markup grows with your volume and the subscription does not.</strong> On Interakt Growth, the gap over Meta’s rate is ₹200 a month at 100 orders and ₹3,109 at 1,500.</li>
 </ul>
-<p><strong>Yearly billing narrows the gap.</strong> Interakt’s Shopify Growth is ₹27,816.67 a year, or ₹2,318 a month. <a href="/pricing">TopEdge Growth</a> is $374 a year on the App Store (₹35,146.74, or ₹2,929 a month, at Shopify’s estimate) and ₹38,388 a year on our site (₹3,199 a month). At 500 orders that puts Interakt at ₹12,379 a month, TopEdge at ₹11,962 from the App Store and ₹12,233 from our site.</p>
+<p><strong>Yearly billing narrows the gap.</strong> Interakt’s Shopify Growth is ₹27,816.67 a year, or ₹2,318 a month. <a href="/pricing">TopEdge AI Growth</a> is $374 a year on the App Store (₹35,146.74, or ₹2,929 a month, at Shopify’s estimate) and ₹38,388 a year on our site (₹3,199 a month). At 500 orders that puts Interakt at ₹12,379 a month, TopEdge AI at ₹11,962 from the App Store and ₹12,233 from our site.</p>
 
 <h2>What the plan price leaves out</h2>
 <ul>
-<li><strong>AI replies.</strong> On the web plans, WhatsApp AI Agents are a ₹3,000 a month add-on for Growth and Advanced, shown as ₹9,000 a quarter on the AI tab. That includes 100 free AI messages, then ₹0.50 per AI message. On the Shopify app, AI agents first appear on Premier at ₹9,303.55 a month. TopEdge charges nothing per AI message on any plan: you connect your own OpenAI, Claude or Gemini key and pay that provider. Updatrr puts its AI chatbot with human handover on Pro AI at $99.99.</li>
+<li><strong>AI replies.</strong> On the web plans, WhatsApp AI Agents are a ₹3,000 a month add-on for Growth and Advanced, shown as ₹9,000 a quarter on the AI tab. That includes 100 free AI messages, then ₹0.50 per AI message. On the Shopify app, AI agents first appear on Premier at ₹9,303.55 a month. TopEdge AI charges nothing per AI message on any plan: you connect your own OpenAI, Claude or Gemini key and pay that provider. Updatrr puts its AI chatbot with human handover on Pro AI at $99.99.</li>
 <li><strong>GST.</strong> Every figure on this page is before GST.</li>
-<li><strong>Exchange rate.</strong> Shopify bills App Store plans, Interakt’s and TopEdge’s alike, in your store’s billing currency at the day’s rate, and <a href="https://help.shopify.com/en/manual/your-account/manage-billing/paying-your-bills/managing-payments/local-currency" target="_blank" rel="noopener noreferrer">adds a 1.5% currency exchange fee</a> to converted app charges. The listings’ rupee figures were Shopify’s estimates at 1 INR = 0.0106 USD.</li>
+<li><strong>Exchange rate.</strong> Shopify bills App Store plans, Interakt’s and TopEdge AI’s alike, in your store’s billing currency at the day’s rate, and <a href="https://help.shopify.com/en/manual/your-account/manage-billing/paying-your-bills/managing-payments/local-currency" target="_blank" rel="noopener noreferrer">adds a 1.5% currency exchange fee</a> to converted app charges. The listings’ rupee figures were Shopify’s estimates at 1 INR = 0.0106 USD.</li>
 <li><strong>Sales CRM.</strong> Interakt sells its Sales CRM as a separate product with its own price. We have not priced it here.</li>
 </ul>
 
@@ -2200,8 +2228,8 @@ ${faqHtml(FUNNEL_FAQS)}
 <ul>
 <li><strong>You want Instagram and WhatsApp in one inbox.</strong> Growth and above include both channels, and Instagram conversations are listed as free.</li>
 <li><strong>You have a large support team.</strong> Every plan lists unlimited agents, where many tools in this category cap seats by plan.</li>
-<li><strong>You want a track record.</strong> Interakt’s Shopify listing showed 233 reviews at 4.3 on 9 November 2026. TopEdge’s listing showed none yet.</li>
-<li><strong>You only need instant order and COD messages.</strong> On our assumptions the Shopify Starter plan is cheaper than TopEdge Growth from 500 orders up.</li>
+<li><strong>You want a track record.</strong> Interakt’s Shopify listing showed 233 reviews at 4.3 on 9 November 2026. TopEdge AI’s listing showed none yet.</li>
+<li><strong>You only need instant order and COD messages.</strong> On our assumptions the Shopify Starter plan is cheaper than TopEdge AI Growth from 500 orders up.</li>
 <li><strong>You send at enterprise volume.</strong> Enterprise is the one plan listed without template markups.</li>
 </ul>
 <p>It is a weaker fit when most of your volume is utility messages, where Growth runs 30% above Meta, or when you want AI replies without a ₹3,000 add-on or the ₹9,303.55 Premier plan.</p>
@@ -2220,11 +2248,161 @@ ${faqHtml(FUNNEL_FAQS)}
 </tbody>
 </table>
 </div>
-<p>For a feature-by-feature board, see <a href="/compare/interakt">TopEdge vs Interakt</a>. For what the Meta line costs on any tool, see <a href="/blog/whatsapp-business-api-pricing-india">WhatsApp Business API pricing in India</a>. If Updatrr is on your list, our <a href="/blog/updatrr-alternative-shopify-india">Updatrr comparison</a> prices it at the same volumes.</p>
+<p>For a feature-by-feature board, see <a href="/compare/interakt">TopEdge AI vs Interakt</a>. For what the Meta line costs on any tool, see <a href="/blog/whatsapp-business-api-pricing-india">WhatsApp Business API pricing in India</a>. If Updatrr is on your list, our <a href="/blog/updatrr-alternative-shopify-india">Updatrr comparison</a> prices it at the same volumes, and <a href="/blog/wati-pricing-india">WATI pricing in India</a> uses the same message mix.</p>
 
 ${faqHtml(INTERAKT_PRICING_FAQS)}
 
-<p class="mkt-blog-footnote">Sources, read 9 November 2026: <a href="https://www.interakt.shop/pricing/" target="_blank" rel="noopener noreferrer">Interakt pricing page</a> (monthly, quarterly and yearly views, and the WhatsApp AI Agents tab), <a href="https://www.interakt.shop/whatsapp-conversation-pricing/" target="_blank" rel="noopener noreferrer">Interakt message rate table</a>, <a href="https://apps.shopify.com/interakt-marketing" target="_blank" rel="noopener noreferrer">Interakt on the Shopify App Store</a>, <a href="https://www.updatrr.com/pricing" target="_blank" rel="noopener noreferrer">Updatrr pricing</a>, <a href="https://apps.shopify.com/topedge-ai" target="_blank" rel="noopener noreferrer">TopEdge AI on the Shopify App Store</a>. Meta’s India rates from <a href="https://developers.facebook.com/docs/whatsapp/pricing/" target="_blank" rel="noopener noreferrer">Meta’s pricing documentation</a>, effective 1 October 2026. Exchange rate from the <a href="https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/index.en.html" target="_blank" rel="noopener noreferrer">ECB</a> for 6 November 2026. TopEdge prices from our <a href="/pricing">pricing page</a>.</p>
+<p class="mkt-blog-footnote">Sources, read 9 November 2026: <a href="https://www.interakt.shop/pricing/" target="_blank" rel="noopener noreferrer">Interakt pricing page</a> (monthly, quarterly and yearly views, and the WhatsApp AI Agents tab), <a href="https://www.interakt.shop/whatsapp-conversation-pricing/" target="_blank" rel="noopener noreferrer">Interakt message rate table</a>, <a href="https://apps.shopify.com/interakt-marketing" target="_blank" rel="noopener noreferrer">Interakt on the Shopify App Store</a>, <a href="https://www.updatrr.com/pricing" target="_blank" rel="noopener noreferrer">Updatrr pricing</a>, <a href="https://apps.shopify.com/topedge-ai" target="_blank" rel="noopener noreferrer">TopEdge AI on the Shopify App Store</a>. Meta’s India rates from <a href="https://developers.facebook.com/docs/whatsapp/pricing/" target="_blank" rel="noopener noreferrer">Meta’s pricing documentation</a>, effective 1 October 2026. Exchange rate from the <a href="https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/index.en.html" target="_blank" rel="noopener noreferrer">ECB</a> for 6 November 2026. TopEdge AI prices from our <a href="/pricing">pricing page</a>.</p>
+`,
+  },
+  {
+    id: 63,
+    title: 'Wati Pricing in India (2026): Plans, Seats and Bill',
+    description:
+      'Wati pricing read 10 Nov 2026: Growth, Pro and Business in rupees, the cost of extra users, message rates above Meta and the bill at 100, 500 and 1,500 orders.',
+    summary: [
+      'WATI’s India plans are Growth ₹2,999, Pro ₹6,499 and Business ₹18,499 a month on monthly billing, read 10 November 2026. Billed annually they are ₹2,199, ₹4,899 and ₹14,799 a month.',
+      'Growth stops at 3 users. A fourth person means Pro, which is ₹3,500 a month more. After 5 users, each extra one is ₹1,299 a month on Pro and ₹2,199 on Business.',
+      'Every message is billed at WATI’s own rate card, 12% to 20% above Meta on marketing and 20% to 30% above on utility. On Growth that is ₹172.60 extra per 1,000 marketing messages.',
+      'A Shopify store with 500 orders a month pays about ₹14,325 before GST on WATI Growth, against ₹12,699 on TopEdge AI Growth from the Shopify App Store and ₹11,850 on Updatrr Growth.',
+    ],
+    slug: 'wati-pricing-india',
+    date: '2026-11-10',
+    updated: '2026-11-10',
+    readTime: '8 min',
+    category: 'Comparisons',
+    author: 'Moksh Patel',
+    image: '/blog/wati-pricing-india.jpg',
+    imageWebp: '/blog/wati-pricing-india.webp',
+    imageAlt:
+      'Wati pricing in India 2026: Growth, Pro and Business plan prices in rupees with seats and message rates',
+    keywords: [
+      'wati pricing',
+      'wati pricing india',
+      'wati pricing plans',
+      'wati pricing per message',
+      'wati pricing per month',
+      'wati cost',
+      'wati additional user cost',
+      'wati shopify pricing',
+    ],
+    faqs: WATI_PRICING_FAQS,
+    content: `
+<details class="mkt-blog-verdict" open>
+<summary>Direct answer</summary>
+<p>Wati pricing in India is <strong>₹2,999 (Growth), ₹6,499 (Pro) and ₹18,499 (Business) a month</strong> on monthly billing, read on 10 November 2026. Annual billing brings that to ₹2,199, ₹4,899 and ₹14,799. Two costs sit on top: WATI’s own message rates, <strong>12% to 30% above Meta’s</strong>, and seats, because Growth stops at 3 users. A Shopify store with 500 orders a month pays about <strong>₹14,325 a month</strong> before GST.</p>
+</details>
+
+<p><strong>Checked 10 November 2026.</strong> We read <a href="https://www.wati.io/pricing/" target="_blank" rel="noopener noreferrer">WATI’s pricing page</a> on monthly, quarterly and annual billing, and the three INR rate cards it links as “View Rate Card”. The rate cards are dated 1 October 2026 and had not changed. Re-check before you pay.</p>
+
+<p>This page is part of our <a href="/compare/alternatives">comparison of WhatsApp tools for Shopify India</a>. If you have already decided to move, read the <a href="/blog/wati-alternative-shopify-india">WATI alternative guide</a> instead.</p>
+
+<p>A note on who wrote this: <a href="/about">TopEdge AI</a> sells a competing Shopify app. Where WATI or another tool is cheaper or better below, we say so.</p>
+
+<h2>WATI plan prices on monthly, quarterly and annual billing</h2>
+<p>WATI shows one price per plan and changes it with the billing toggle. Most pages quote only one of the three views, which is why you see different numbers for the same plan.</p>
+<div class="mkt-blog-table-wrap">
+<table>
+<thead><tr><th>Plan</th><th>Billed monthly</th><th>Billed quarterly</th><th>Billed annually</th><th>Users</th></tr></thead>
+<tbody>
+<tr><td><strong>Growth</strong></td><td>₹2,999</td><td>₹2,699</td><td>₹2,199</td><td>3 included, no additional users</td></tr>
+<tr><td><strong>Pro</strong></td><td>₹6,499</td><td>₹5,799</td><td>₹4,899</td><td>5 included, then ₹1,299 a user a month</td></tr>
+<tr><td><strong>Business</strong></td><td>₹18,499</td><td>₹16,799</td><td>₹14,799</td><td>5 included, then ₹2,199 a user a month</td></tr>
+</tbody>
+</table>
+</div>
+<p>All figures are per month. Every plan card carries the line “Additional charges apply for template messages”. The page offers a 7-day free trial and says there is no setup fee.</p>
+<p>What each plan includes, per the page:</p>
+<ul>
+<li><strong>Growth:</strong> 15,000 broadcasts a month, 1,000 free automation triggers, 1 Astra AI agent, 2,000 Wati AI credits, 2 commerce or CRM integrations, email support 24x5.</li>
+<li><strong>Pro:</strong> unlimited broadcasts, 2,000 automation triggers, 2 AI agents, 5,000 AI credits, teams and intelligent routing in the inbox, email and chat support 24x7.</li>
+<li><strong>Business:</strong> volume discounts on broadcasts, 5,000 automation triggers, unlimited AI agents, 20,000 AI credits, multiple numbers and a dedicated CSM.</li>
+</ul>
+
+<h2>How many people need a login? The seat walkthrough</h2>
+<p>On WATI the plan you need is often set by your team size, not your message volume. Growth cannot add users at any price.</p>
+<div class="mkt-blog-table-wrap">
+<table>
+<thead><tr><th>People who need a login</th><th>Plan you need</th><th>Subscription a month, billed monthly</th></tr></thead>
+<tbody>
+<tr><td>1 to 3</td><td>Growth</td><td>₹2,999</td></tr>
+<tr><td>4 or 5</td><td>Pro</td><td>₹6,499</td></tr>
+<tr><td>6</td><td>Pro plus 1 user</td><td>₹7,798</td></tr>
+<tr><td>8</td><td>Pro plus 3 users</td><td>₹10,396</td></tr>
+<tr><td>10</td><td>Pro plus 5 users</td><td>₹12,994</td></tr>
+</tbody>
+</table>
+</div>
+<p>So the fourth person costs ₹3,500 a month, because that hire moves you from Growth to Pro. After the fifth, each person adds ₹1,299. On Business each extra person adds ₹2,199.</p>
+<p>For a founder-led store with one or two people replying to customers, seats are not the problem. For a store with a support desk, they are the first thing to price.</p>
+
+<h2>The line most pricing pages skip: WATI’s own message rate card</h2>
+<p>The plan page says broadcasts go at “Standard rates”. The rates themselves are on WATI’s rate cards, and they are above what Meta charges. <a href="https://developers.facebook.com/docs/whatsapp/pricing/" target="_blank" rel="noopener noreferrer">Meta’s India card</a> is ₹0.8631 for marketing and ₹0.1150 for utility, authentication and service.</p>
+<div class="mkt-blog-table-wrap">
+<table>
+<thead><tr><th>Message to an Indian number</th><th>Meta</th><th>WATI Growth</th><th>WATI Pro</th><th>WATI Business</th></tr></thead>
+<tbody>
+<tr><td>Marketing</td><td>₹0.8631</td><td>₹1.0357 (+20%)</td><td>₹0.9926 (+15%)</td><td>₹0.9667 (+12%)</td></tr>
+<tr><td>Utility</td><td>₹0.1150</td><td>₹0.1495 (+30%)</td><td>₹0.1495 (+30%)</td><td>₹0.1380 (+20%)</td></tr>
+<tr><td>Authentication</td><td>₹0.1150</td><td>₹0.1495 (+30%)</td><td>₹0.1495 (+30%)</td><td>₹0.1380 (+20%)</td></tr>
+<tr><td>Service, after 1,000 free a month</td><td>₹0.1150</td><td>₹0.1380 (+20%)</td><td>₹0.1380 (+20%)</td><td>₹0.1231 (+7%)</td></tr>
+</tbody>
+</table>
+</div>
+<p>In rupees: on <a href="https://cdn.clare.ai/pricing/Wati-Pricing-Rate-Card-Growth-Plan-INR-I.pdf" target="_blank" rel="noopener noreferrer">the Growth rate card</a>, every 1,000 marketing messages cost <strong>₹172.60 more</strong> than at Meta’s rate, and every 1,000 utility messages ₹34.50 more. Order, shipping and COD updates are utility messages.</p>
+<p>We got this wrong ourselves. Until 7 November 2026 our own pages said WATI passed Meta’s rate through, because we read “Standard rates” that way. The rate cards say otherwise. For Meta’s full card by category, see our <a href="/pricing/meta-rates">India rate card page</a>.</p>
+
+<h2>A Shopify store’s bill at 100, 500 and 1,500 orders</h2>
+<p><strong>Assumptions, so you can redo this with your own numbers.</strong> Per order we assume 20 marketing messages, 3 utility messages (order confirmed, shipped, delivered) and 6 customer-service replies, with the first 1,000 replies a month free. This is an estimate, not a benchmark. It is the same mix we used on our <a href="/blog/interakt-pricing-india">Interakt pricing page</a>, so the two pages can be compared row by row.</p>
+<p>WATI lists its Shopify integration as an add-on at USD 4.99 a month, so we add it: about ₹469 at the <a href="https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/index.en.html" target="_blank" rel="noopener noreferrer">ECB reference rate</a> of ₹93.92 a dollar for 6 November 2026.</p>
+<div class="mkt-blog-table-wrap">
+<table>
+<thead><tr><th>Orders a month</th><th>WATI</th><th>TopEdge AI on the Shopify App Store</th><th>TopEdge AI on topedgeai.com</th><th>Updatrr Growth</th></tr></thead>
+<tbody>
+<tr><td><strong>100</strong></td><td>₹5,584 (Growth)</td><td>₹3,546 (Launch)</td><td>₹3,760 (Launch)</td><td>₹4,577</td></tr>
+<tr><td><strong>500</strong></td><td>₹14,325 (Growth)</td><td>₹12,699 (Growth)</td><td>₹13,033 (Growth)</td><td>₹11,850</td></tr>
+<tr><td><strong>1,500</strong></td><td>₹38,522 (Pro)</td><td>₹33,439 (Scale)</td><td>₹33,830 (Scale)</td><td>₹30,147</td></tr>
+</tbody>
+</table>
+</div>
+<p>Monthly billing, before GST, subscription plus messages. WATI’s message line is ₹2,116 at 100 orders, ₹10,857 at 500 and ₹31,555 at 1,500. At Meta’s rate the same messages cost ₹1,761, ₹9,034 and ₹27,331, which is what TopEdge AI and Updatrr pass through.</p>
+<p>We price 1,500 orders on Pro because that mix is 30,000 marketing messages a month and Growth lists 15,000 broadcasts. If your marketing volume stays under that cap, Growth at 1,500 orders works out to about ₹36,315.</p>
+<p>TopEdge AI’s App Store plans are billed by Shopify in US dollars ($19, $39 and $65 a month); the rupee figures are Shopify’s estimates from 9 November 2026. On topedgeai.com the plans are ₹1,999, ₹3,999 and ₹6,499 plus GST. <a href="https://www.updatrr.com/pricing" target="_blank" rel="noopener noreferrer">Updatrr’s $29.99 Growth plan</a>, read 9 November 2026, is converted at the same ECB rate.</p>
+
+<h3>What the numbers say</h3>
+<ul>
+<li><strong>WATI’s Growth subscription is cheaper than TopEdge AI Growth.</strong> ₹2,999 against about ₹3,665 on the App Store. The plan price is not where WATI costs more.</li>
+<li><strong>The message rates are.</strong> At 500 orders WATI’s rate card adds ₹1,824 a month over Meta’s rate, and the Shopify add-on adds ₹469. Net, WATI comes out ₹1,626 a month above TopEdge AI from the App Store.</li>
+<li><strong>Updatrr Growth is the cheapest row at 500 and 1,500 orders.</strong> It states no markup on Meta’s fees and publishes no order limit.</li>
+<li><strong>At 100 orders TopEdge AI Launch is cheapest</strong>, but Launch is capped at 100 orders a month and does not include COD-to-prepaid conversion or Journey Branch. Those start on Growth.</li>
+<li><strong>Annual billing helps WATI.</strong> At ₹2,199 a month, the 500-order bill falls to about ₹13,525.</li>
+</ul>
+
+<h2>Three limits to check before you pick Growth</h2>
+<ol>
+<li><strong>3 users, fixed.</strong> Covered above. A fourth login means Pro.</li>
+<li><strong>15,000 broadcasts a month.</strong> Pro and Business list unlimited broadcasts.</li>
+<li><strong>1,000 free automation triggers a month.</strong> WATI’s FAQ says a trigger is counted each time a chatbot, keyword or other rule you set up is invoked for a customer, and that beyond your allowance “you will have to respond to your customers manually”. The add-on panel shows 1,000 extra triggers at ₹1,000 a month.</li>
+</ol>
+<p>The page does not say whether a Shopify order update or cart reminder counts as an automation trigger. We have not tested it, so our bill above leaves triggers out. Ask WATI before you buy: at 500 orders the answer changes the bill.</p>
+<p>Other add-ons listed on the page: 2,000 extra Wati AI credits at ₹1,600 a month, and additional WhatsApp numbers at ₹2,499 a number a month.</p>
+
+<h2>When WATI is the right tool, and when a Shopify-only app is</h2>
+<p>WATI is the better choice when:</p>
+<ul>
+<li><strong>You are not on Shopify.</strong> TopEdge AI only works with Shopify stores. WATI works with any business that has a WhatsApp number.</li>
+<li><strong>You need one inbox for many channels.</strong> Growth lists WhatsApp, calling, Facebook, Instagram, TikTok, webchat and RCS.</li>
+<li><strong>You sell outside India.</strong> WATI publishes rate cards by country. TopEdge AI is built for Indian D2C brands.</li>
+<li><strong>You want AI agents included.</strong> Every plan carries at least one Astra AI agent and a monthly AI credit allowance.</li>
+<li><strong>You need a CRM link.</strong> Pro lists HubSpot and Business lists Salesforce.</li>
+<li><strong>Your order volume is high and your team is small.</strong> WATI publishes no order cap. TopEdge AI plans cap at 100, 800 and 1,500 orders a month.</li>
+</ul>
+<p>A Shopify-only app fits better when most of your sends are order, shipping and COD updates, where WATI runs 30% above Meta on Growth and Pro, or when you want <a href="/features/cod-confirmation">WhatsApp COD confirmation for Shopify</a> and cart recovery working without building chatbot rules. Our <a href="/compare/wati">TopEdge AI vs WATI board</a> lists the features side by side, and <a href="/pricing">TopEdge AI pricing</a> shows what each plan includes.</p>
+<p>If the Meta line is the part you want to understand first, start with <a href="/blog/whatsapp-business-api-pricing-india">WhatsApp Business API pricing in India</a>.</p>
+
+${faqHtml(WATI_PRICING_FAQS)}
+
+<p class="mkt-blog-footnote">Sources, read 10 November 2026: <a href="https://www.wati.io/pricing/" target="_blank" rel="noopener noreferrer">WATI pricing page</a> (monthly, quarterly and annual views, add-ons and FAQ) and WATI’s INR rate cards for Growth, Pro and Business, dated 1 October 2026. Meta’s India rates from <a href="https://developers.facebook.com/docs/whatsapp/pricing/" target="_blank" rel="noopener noreferrer">Meta’s pricing documentation</a>, effective 1 October 2026. <a href="https://www.updatrr.com/pricing" target="_blank" rel="noopener noreferrer">Updatrr pricing</a> and <a href="https://apps.shopify.com/topedge-ai" target="_blank" rel="noopener noreferrer">TopEdge AI on the Shopify App Store</a> read 9 November 2026. Exchange rate from the <a href="https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/index.en.html" target="_blank" rel="noopener noreferrer">ECB</a> for 6 November 2026. TopEdge AI prices from our <a href="/pricing">pricing page</a>.</p>
 `,
   },
 ];

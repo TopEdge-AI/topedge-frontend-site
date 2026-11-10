@@ -34,7 +34,7 @@ export const MARKETING_FEATURES: MarketingFeature[] = [
     slug: 'flow-builder',
     scene: 'flow-builder',
     title: 'Describe the bot, AI drafts the flow canvas',
-    body: 'Fill a short AI form (niche, tone, goals). TopEdge generates a button-and-list chat flow you can edit step by step: menus, conditions, catalog sends, human handoff.',
+    body: 'Fill a short AI form (niche, tone, goals). TopEdge AI generates a button-and-list chat flow you can edit step by step: menus, conditions, catalog sends, human handoff.',
     bullets: [
       'AI form → editable flow',
       'Menus, conditions, handoff',

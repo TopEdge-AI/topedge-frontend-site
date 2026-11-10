@@ -276,7 +276,7 @@ export default function MarketingConvertPrompt() {
 
 
           <div className="mkt-convert__brands">
-            <p className="mkt-convert__brands-label">Running on TopEdge</p>
+            <p className="mkt-convert__brands-label">Running on TopEdge AI</p>
             <div className="mkt-convert__brands-viewport">
               <div className="mkt-convert__brands-track">
                 {brandTrack.map((b, i) => (

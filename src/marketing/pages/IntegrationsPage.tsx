@@ -138,7 +138,7 @@ const FAQS = [
   {
     question: 'Do I need Zapier to connect Shopify and WhatsApp?',
     answer:
-      'No. TopEdge connects Shopify via OAuth and Meta WhatsApp Cloud API natively, so carts, orders, catalog, and COD fields sync without Zapier for standard ecommerce flows.',
+      'No. TopEdge AI connects Shopify via OAuth and Meta WhatsApp Cloud API natively, so carts, orders, catalog, and COD fields sync without Zapier for standard ecommerce flows.',
   },
   {
     question: 'How long does Shopify WhatsApp setup take?',
@@ -146,9 +146,9 @@ const FAQS = [
       'About 30 minutes of setup. Meta verification and template review are the wait. Many templates clear in minutes and most within a day. Meta guarantees no time. Nothing sends until Meta approves each template.',
   },
   {
-    question: 'Does TopEdge add a markup on Meta WhatsApp fees?',
+    question: 'Does TopEdge AI add a markup on Meta WhatsApp fees?',
     answer:
-      'No. Meta charges per message category, and TopEdge passes Cloud API costs through with no markup.',
+      'No. Meta charges per message category, and TopEdge AI passes Cloud API costs through with no markup.',
   },
 ];
 
@@ -219,7 +219,7 @@ export default function IntegrationsPage() {
             <span className="mkt-int__hl">one workspace</span>
           </h1>
           <p className="mkt-int__sub">
-            TopEdge sits on the tools you already trust. Connect once, sync continuously, operate
+            TopEdge AI sits on the tools you already trust. Connect once, sync continuously, operate
             from one workspace.
           </p>
           <div className="mkt-int__actions">

@@ -43,7 +43,7 @@ const FAQS = [
   {
     question: 'Do these journeys cost extra?',
     answer:
-      'The journeys are part of the platform. What costs money is the messages, which Meta bills to your own WhatsApp Business account at ₹0.1150 for a utility template and ₹0.8631 for a marketing one in India. TopEdge adds no markup on those fees.',
+      'The journeys are part of the platform. What costs money is the messages, which Meta bills to your own WhatsApp Business account at ₹0.1150 for a utility template and ₹0.8631 for a marketing one in India. TopEdge AI adds no markup on those fees.',
   },
   {
     question: 'Can I edit the steps, or are these fixed?',
@@ -83,7 +83,7 @@ const BLOCKS: TopicBlock[] = [
       },
     ],
     footnote:
-      'Rates are Meta’s own published India prices, billed by Meta to your WhatsApp Business account. TopEdge adds no markup on them.',
+      'Rates are Meta’s own published India prices, billed by Meta to your WhatsApp Business account. TopEdge AI adds no markup on them.',
   },
   {
     kind: 'callout',

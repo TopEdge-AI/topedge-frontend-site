@@ -27,7 +27,7 @@ import '../styles/journey-flow.css';
 const PATH = '/whatsapp-templates';
 const TITLE = 'WhatsApp Templates for Shopify India | TopEdge AI';
 const DESCRIPTION =
-  'The 11 WhatsApp templates TopEdge ships for Shopify India: order updates, COD confirmation, cart recovery and festive copy, with category and ₹ rate.';
+  'The 11 WhatsApp templates TopEdge AI ships for Shopify India: order updates, COD confirmation, cart recovery and festive copy, with category and ₹ rate.';
 
 /** The festive library lives on its own pages — see FestivalTemplatesPage. */
 const FESTIVAL_PATH = '/whatsapp-festival-templates';
@@ -69,7 +69,7 @@ const FAQS = [
   {
     question: 'Do you have Diwali and festival templates?',
     answer:
-      'A hundred of them: four messages each across twenty-five festivals, from Diwali and Dhanteras to Holi, Eid, Rakhi and Christmas, on the festival templates page. The three examples on this page are a different thing — they show what happens when you add festive wording to a template you already send, which turns a ₹0.1150 utility message into a ₹0.8631 marketing one.',
+      'A hundred of them: four messages each across twenty-five festivals, from Diwali and Dhanteras to Holi, Eid, Rakhi and Christmas, on the festival templates page. The three examples on this page are a different thing: they show what happens when you add festive wording to a template you already send, which turns a ₹0.1150 utility message into a ₹0.8631 marketing one.',
   },
   {
     question: 'How many templates do I need to start?',
@@ -119,7 +119,7 @@ const BLOCKS: TopicBlock[] = [
       },
     ],
     footnote:
-      'Rates are Meta’s own published India prices, billed by Meta to your WhatsApp Business account. TopEdge adds no markup on them.',
+      'Rates are Meta’s own published India prices, billed by Meta to your WhatsApp Business account. TopEdge AI adds no markup on them.',
   },
   {
     kind: 'callout',
@@ -307,7 +307,7 @@ export default function WhatsAppTemplatesPage() {
                 <span className="mkt-jx-note__title">Festival templates, 25 festivals</span>
                 <span className="mkt-jx-note__desc">
                   Four ready messages each for Diwali, Dhanteras, Holi, Eid, Rakhi, Navratri,
-                  Christmas and eighteen more — with the send dates and what each one costs.
+                  Christmas and eighteen more, with the send dates and what each one costs.
                 </span>
               </span>
               <span className="mkt-jx-note__cta">

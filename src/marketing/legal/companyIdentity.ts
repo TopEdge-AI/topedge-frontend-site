@@ -24,7 +24,7 @@ export const COMPANY_PHONE_E164 = '919429784875';
 
 export const COMPANY_WHATSAPP_URL =
   `https://wa.me/${COMPANY_PHONE_E164}?text=${encodeURIComponent(
-    'Hi TopEdge, I want to talk about WhatsApp automation for my Shopify store.',
+    'Hi TopEdge AI, I want to talk about WhatsApp automation for my Shopify store.',
   )}`;
 
 /** Live Shopify App Store listing for TopEdge Ai. */

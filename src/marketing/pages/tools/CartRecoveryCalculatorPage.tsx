@@ -11,7 +11,7 @@ const FAQS = [
   {
     question: 'What does a WhatsApp cart reminder cost?',
     answer:
-      'Cart reminders are marketing messages, which Meta charges at ₹0.8631 each in India. Three reminders to one cart cost at most about ₹2.59. On TopEdge, Meta bills that to your own account with no markup.',
+      'Cart reminders are marketing messages, which Meta charges at ₹0.8631 each in India. Three reminders to one cart cost at most about ₹2.59. On TopEdge AI, Meta bills that to your own account with no markup.',
   },
   {
     question: 'How many reminders should I send?',

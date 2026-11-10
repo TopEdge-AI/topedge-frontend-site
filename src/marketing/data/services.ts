@@ -143,8 +143,8 @@ export const SERVICE_GROUPS: readonly ServiceGroup[] = [
     ],
     links: [
       { label: 'All alternatives', href: '/compare/alternatives' },
-      { label: 'TopEdge vs WATI', href: '/compare/wati' },
-      { label: 'TopEdge vs AiSensy', href: '/compare/aisensy' },
+      { label: 'TopEdge AI vs WATI', href: '/compare/wati' },
+      { label: 'TopEdge AI vs AiSensy', href: '/compare/aisensy' },
       { label: 'Find the right tool', href: '/tools/best-whatsapp-tool-for-shopify' },
     ],
   },

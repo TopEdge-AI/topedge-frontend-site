@@ -21,7 +21,7 @@ const FAQS = [
   {
     question: 'What does a WhatsApp confirmation message cost?',
     answer:
-      'A COD confirmation is a utility message, which Meta charges at ₹0.1150 in India. On TopEdge that is billed by Meta to your own account with no markup.',
+      'A COD confirmation is a utility message, which Meta charges at ₹0.1150 in India. On TopEdge AI that is billed by Meta to your own account with no markup.',
   },
 ];
 

@@ -181,7 +181,7 @@ export const blogPosts: BlogPost[] = [
 <p><strong>The fifth condition, which nobody lists, is suppression.</strong> The sequence has to stop the moment an order is created. It is not a nicety: at ₹0.8631 per delivered marketing template, a three-step sequence that keeps running after payment charges you to annoy a customer who has already bought. Across 1,000 monthly abandoned checkouts with a 2% recovery rate, that is roughly 40 wasted sends a month, and a measurable number of people muting the number you later need for delivery updates.</p>
 <h3>Opt-in is the real gate</h3>
 <p>Entering a phone number at checkout is not the same as agreeing to WhatsApp marketing. Meta’s WhatsApp Business documentation requires businesses to obtain opt-in before messaging people, with the business name stated clearly and compliance with local law. For recovery programs, the practical standard is an explicit checkout checkbox (not pre-ticked) that says the customer agrees to receive messages from your store on WhatsApp, ideally covering order updates and relevant purchase reminders.</p>
-<p>You can also grow a consented audience on-site. TopEdge’s <a href="/features/opt-in-tools">WhatsApp opt-in tools</a> (popup, spin wheel, widget, and similar capture formats) are built to collect marketing consent with timestamps before journeys or campaigns message that list.</p>
+<p>You can also grow a consented audience on-site. TopEdge AI’s <a href="/features/opt-in-tools">WhatsApp opt-in tools</a> (popup, spin wheel, widget, and similar capture formats) are built to collect marketing consent with timestamps before journeys or campaigns message that list.</p>
 <p>Without clean consent, you risk blocks, quality-rating damage, and wasted template sends.</p>
 <h3>Why templates matter</h3>
 <p>On the WhatsApp Business Platform, template messages are how businesses initiate contact when no 24-hour customer service window is open. Meta’s pricing documentation explicitly lists <strong>cart abandonment reminders</strong> among marketing-template examples. In practice, most proactive recovery sends should be submitted and approved as <strong>Marketing</strong> templates, not disguised as utility order updates.</p>
@@ -313,7 +313,7 @@ export const blogPosts: BlogPost[] = [
 <p>If the only identifier you hold is an email from an earlier signup, use that channel first. It costs nothing per send and it is the proportionate response to a soft signal.</p>
 <h3>Workflow C: Recovery that becomes support</h3>
 <p>When a customer replies to a recovery template, open the conversation in a shared inbox with order/cart context. AI or automation can answer FAQs; size disputes, damaged-item claims, payment failures, and angry customers go to a human.</p>
-<p>On TopEdge, that reply path is designed to land in <a href="/features">Live Chat</a>, where agents see Shopify order and cart context beside the thread and can take over from automation when needed.</p>
+<p>On TopEdge AI, that reply path is designed to land in <a href="/features">Live Chat</a>, where agents see Shopify order and cart context beside the thread and can take over from automation when needed.</p>
 <p><strong>The reply is the part of the channel people underestimate.</strong> A recovery message that provokes a question has done its job even if the customer does not buy today, because the question is the objection, stated out loud, by someone who was about to spend money. Stores that log those replies for a month usually find the same three sentences repeating, and the honest fix is on the product page rather than in the sequence.</p>
 <p><strong>There is a window, and it is 24 hours.</strong> When a customer messages you, Meta opens a service window in which you can reply freely, and since 1 October 2026 the first 1,000 service messages a month per number cost nothing, then ₹0.1150 each. Answer inside it and the conversation is effectively free. Let it close and your next contact has to be a paid template, which cannot say the specific thing this customer asked.</p>
 <p><strong>Staffing is the hidden line in the ROI model.</strong> If nobody is going to answer within a few hours, WhatsApp recovery performs worse than email, because the customer asked a human being a question and got silence from a brand that just messaged them. Decide who covers replies before you publish the journey, not after the first angry one.</p>
@@ -355,7 +355,7 @@ export const blogPosts: BlogPost[] = [
 <p>For Shopify merchants who want WhatsApp inside the recovery loop (not only email), TopEdge AI approaches cart recovery as ecommerce automation tied to store events.</p>
 <p>Within TopEdge AI, this workflow is handled through <a href="/features/journeys">Journeys</a>: Shopify triggers such as checkout abandoned can start a multi-step WhatsApp sequence using Meta-approved templates. The <a href="/features/journeys#abandoned-cart">Abandoned Cart</a> section of Journeys describes a pre-built recovery sequence with live line items, checkout links, optional high-AOV prioritization, and recovered-revenue attribution rather than send volume alone. Journeys are gated so non-approved templates do not go live. Merchants can also branch by payment method when COD and prepaid need different copy.</p>
 <p>Connecting the store and messaging channel is covered on the <a href="/shopify-whatsapp-integration">Shopify WhatsApp integration</a> page (Shopify OAuth + Meta WhatsApp Cloud API in one workspace). When a customer replies to a recovery message, conversations continue in <a href="/features">Live Chat</a>. Related building blocks include <a href="/features/flow-builder">Flow Builder</a> for conversational trees and human handoff, and <a href="/features/campaigns">Campaigns</a> for broader Meta-safe outreach to consented audiences. Current plan details are on <a href="/pricing">Pricing</a>.</p>
-<p>TopEdge is ecommerce automation software for customer engagement on Shopify and WhatsApp. It is not a marketing agency, and cart recovery results always depend on opt-in rates, offer quality, checkout friction, and how well replies are handled.</p>
+<p>TopEdge AI is ecommerce automation software for customer engagement on Shopify and WhatsApp. It is not a marketing agency, and cart recovery results always depend on opt-in rates, offer quality, checkout friction, and how well replies are handled.</p>
 
 <h2>Common questions</h2>
 <div class="mkt-blog-faq">
@@ -496,7 +496,7 @@ export const blogPosts: BlogPost[] = [
 <li>Instagram campaigns before WhatsApp transactional paths are stable</li>
 </ul>
 <p>These share one failure mode: they all spend the asset you have not finished building, which is the standing of your WhatsApp number with both Meta and your customers.</p>
-<p>Meta scores every business number on recipient reaction, and blocks and reports pull that score down. The punishment is not aimed at the message that caused it. A throttled number restricts your order confirmations and COD checks too, which means a discount blast to a cold list can cost you the transactional messaging that was actually making money. Earn the number’s reputation on messages people want before you spend it on messages they did not ask for.</p>
+<p>Meta scores every business number on recipient reaction, and blocks and reports pull that score down. The punishment is not aimed at the message that caused it. A throttled number restricts your order confirmations and COD checks too, which means a discount blast to a cold list can cost you the transactional messaging that was actually making money. Earn the number’s reputation on messages people want before you spend it on messages they did not ask for. For a transactional flow to start with, see the <a href="/whatsapp-journey-examples/order-status-updates">order status updates journey example</a>.</p>
 <p>The complexity point is separate and just as practical. A twelve-node flow built in week one encodes guesses about customer behaviour you have not observed yet. Run the simple version, read the replies for a month, then build branches for the objections that actually showed up rather than the ones you imagined.</p>
 
 <h2>A 30-day operator plan</h2>
@@ -702,7 +702,7 @@ export const blogPosts: BlogPost[] = [
 <p>Beyond tone, most first-time rejections come from structure rather than content, and they are easy to avoid once you know them.</p>
 <ul>
 <li><strong>Never open or close the body with a variable.</strong> A template starting <code>{{1}}</code> is rejected on sight, because Meta cannot tell what the message says. Put a word before it: “Hi {{1}}” rather than “{{1}}”.</li>
-<li><strong>Fill the sample values with realistic data.</strong> Reviewers read the examples, and a template whose sample says “test test” or leaves placeholders in gets refused for reasons that look mysterious afterwards.</li>
+<li><strong>Fill the sample values with realistic data.</strong> Reviewers read the examples, and a template whose sample says “test test” or leaves placeholders in gets refused for reasons that look mysterious afterwards. Our <a href="/whatsapp-templates">copyable WhatsApp order and COD templates</a> show realistic sample values.</li>
 <li><strong>Keep variables adjacent to meaning.</strong> Two variables side by side, as in “{{1}} {{2}}”, reads as an unspecified blank to a reviewer and frequently fails.</li>
 <li><strong>Match the button to the body.</strong> A “Track order” button on a promotional body is a category mismatch and invites reclassification.</li>
 </ul>
@@ -859,7 +859,7 @@ export const blogPosts: BlogPost[] = [
 <p>Explore <a href="/features">Live Chat</a>, compare inbox-centric tools like <a href="/compare/wati">WATI</a> on our <a href="/compare">compare hub</a>, and get Shopify wiring right via <a href="/shopify-whatsapp-integration">Shopify WhatsApp integration</a>. Ready to talk setup? <a href="/contact">Contact</a>.</p>
 
 <p>Related: <a href="/blog/how-to-reduce-rto-with-whatsapp-cod-confirmation">COD confirmation on WhatsApp</a>, <a href="/blog/whatsapp-abandoned-cart-recovery-shopify">WhatsApp abandoned cart recovery for Shopify</a> and <a href="/blog/ai-whatsapp-chatbot-for-shopify-india">AI WhatsApp chatbots for Shopify India</a>.</p>
-<p class="mkt-blog-footnote">Sources and further reading, read 21 October 2026. The 1,000 free service messages a month per phone number, effective 1 October 2026, and the India ₹0.1150 service rate: <a href="https://developers.facebook.com/docs/whatsapp/pricing/" target="_blank" rel="noopener noreferrer">Meta’s WhatsApp Business Platform pricing documentation</a>. The ₹32 per support interaction figure (20 minutes at ₹96/hr) and the 40% WISMO touch rate: <a href="https://shipping.amazon.in/blog/true-cost-of-shipping-per-order-india" target="_blank" rel="noopener noreferrer">Amazon Shipping India’s true cost per order breakdown</a>. The 6-bubble and 4-bubble resolution paths are an illustrative model, not measured TopEdge data: run it on your own ticket volume and average reply count. Opt-in requirements: <a href="https://whatsappbusiness.com/policy/" target="_blank" rel="noopener noreferrer">the WhatsApp Business Messaging Policy</a>. How Shopify defines and recovers an abandoned checkout: <a href="https://help.shopify.com/manual/orders/abandoned-checkouts" target="_blank" rel="noopener noreferrer">Shopify’s abandoned checkout documentation</a>.</p>
+<p class="mkt-blog-footnote">Sources and further reading, read 21 October 2026. The 1,000 free service messages a month per phone number, effective 1 October 2026, and the India ₹0.1150 service rate: <a href="https://developers.facebook.com/docs/whatsapp/pricing/" target="_blank" rel="noopener noreferrer">Meta’s WhatsApp Business Platform pricing documentation</a>. The ₹32 per support interaction figure (20 minutes at ₹96/hr) and the 40% WISMO touch rate: <a href="https://shipping.amazon.in/blog/true-cost-of-shipping-per-order-india" target="_blank" rel="noopener noreferrer">Amazon Shipping India’s true cost per order breakdown</a>. The 6-bubble and 4-bubble resolution paths are an illustrative model, not measured TopEdge AI data: run it on your own ticket volume and average reply count. Opt-in requirements: <a href="https://whatsappbusiness.com/policy/" target="_blank" rel="noopener noreferrer">the WhatsApp Business Messaging Policy</a>. How Shopify defines and recovers an abandoned checkout: <a href="https://help.shopify.com/manual/orders/abandoned-checkouts" target="_blank" rel="noopener noreferrer">Shopify’s abandoned checkout documentation</a>.</p>
 `,
   },
   {
@@ -948,7 +948,7 @@ export const blogPosts: BlogPost[] = [
 <li>Order placed / shipped utility updates</li>
 </ul>
 <p>Track approval in <a href="/features/meta-manager">Meta Manager</a>. Do not publish live sends on PENDING templates.</p>
-<div class="mkt-blog-callout"><p><strong>Tip:</strong> Submit templates the same hour you connect Shopify. Parallelize review time with inbox training and journey drafts.</p></div>
+<div class="mkt-blog-callout"><p><strong>Tip:</strong> Submit templates the same hour you connect Shopify. Parallelize review time with inbox training and journey drafts. Our <a href="/whatsapp-templates">copyable WhatsApp order and COD templates</a> give you a first draft, and the <a href="/whatsapp-journey-examples">WhatsApp journey examples with costs</a> show each flow step by step.</p></div>
 <p><strong>Get the category right on submission, because it decides the price for the life of the template.</strong> Utility covers messages about an order that already exists: confirmations, COD checks, dispatch and delivery updates, billed at ₹0.1150 in India. Marketing covers anything that prompts a purchase, including every cart reminder, at ₹0.8631. That is a seven-fold difference on the same screen, and Meta will reclassify a utility template that reads like an advert, so a discount line inside an order update quietly makes it a marketing template.</p>
 <p><strong>Submit variants in the same batch.</strong> Two cart reminders, one for prepaid and one for COD, cost nothing extra to review and save you a second wait when you discover the single version reads wrong to half your buyers. The same goes for a reschedule option in the COD template: adding it later means resubmitting.</p>
 <p><strong>Expect rejections and budget for them.</strong> Most first-time rejections are the same handful of causes: a variable at the very start or end of the body, placeholder text left in an example, or promotional language in a utility submission. Fixes and rewrites are in <a href="/blog/whatsapp-template-rejected-meta-shopify-fix">why Meta rejected your WhatsApp template</a>.</p>
@@ -993,10 +993,10 @@ export const blogPosts: BlogPost[] = [
     id: 8,
     title: 'Best WhatsApp Automation for Shopify India (2026)',
     description:
-      'Direct answer plus a comparison table of WhatsApp automation tools for Shopify India: WATI, AiSensy, Interakt, Bitespeed, Zoko, Getgabs, Kanal, Dondy, TopEdge.',
+      'Direct answer and comparison table of WhatsApp automation tools for Shopify India: WATI, AiSensy, Interakt, Bitespeed, Zoko, Getgabs, Kanal, Dondy, TopEdge AI.',
     summary: [
       'Score vendors on four things only: Meta markup, COD handling, whether pricing is conversation-metered or flat, and what stays gated after “free to install”.',
-      'The cost table prices TopEdge, Interakt, AiSensy, Zoko and Dondy at 500 orders and 10,000 marketing messages a month, so you see the total bill rather than the plan fee. Bitespeed publishes no price.',
+      'The cost table prices TopEdge AI, Interakt, AiSensy, Zoko and Dondy at 500 orders and 10,000 marketing messages a month, so you see the total bill rather than the plan fee. Bitespeed publishes no price.',
       'Ask for a live demo of a COD confirmation firing on a real order. A vendor who can only show slides cannot show you the part that actually breaks.',
     ],
     slug: 'best-whatsapp-automation-tools-shopify-india',
@@ -1035,12 +1035,12 @@ export const blogPosts: BlogPost[] = [
       {
         question: 'Which tools are strongest for COD and RTO?',
         answer:
-          'Prioritize vendors with explicit COD confirm and COD → prepaid journeys, not only order-update templates. TopEdge and Zoko both surface COD flows publicly; verify live on any other vendor before you buy.',
+          'Prioritize vendors with explicit COD confirm and COD → prepaid journeys, not only order-update templates. TopEdge AI and Zoko both surface COD flows publicly; verify live on any other vendor before you buy.',
       },
       {
         question: 'Where can I see full pairwise comparisons?',
         answer:
-          'Use the TopEdge compare hub and alternatives index for one-line positioning, then open each vs page for scorecards, plan tables, and verify-live footnotes.',
+          'Use the TopEdge AI compare hub and alternatives index for one-line positioning, then open each vs page for scorecards, plan tables, and verify-live footnotes.',
       },
     ],
     content: `
@@ -1181,10 +1181,10 @@ export const blogPosts: BlogPost[] = [
 <p><strong>Make the first cut on published pricing, before any calls.</strong> It takes twenty minutes and removes most of the field: read each vendor’s own pricing page, note the cheapest tier that runs cart recovery and COD confirmation, and note what they say about Meta rates. You will immediately find things the roundups do not mention, like Interakt’s Shopify integration sitting on separate App Store plans from ₹1,973.48 a month rather than on its ₹999 web Starter, or WATI’s per-seat charges adding ₹1,299 to ₹2,199 per extra user.</p>
 <p><strong>Then take exactly one demo each,</strong> with the same five questions and, if possible, a recording. Different questions to different vendors produces a comparison you cannot defend to yourself a fortnight later.</p>
 
-<h2>Where does TopEdge fit on this shortlist?</h2>
-<p>TopEdge is built for Shopify stores in India: <a href="/features/journeys">Journeys</a>, <a href="/features">Live Chat</a>, <a href="/features/meta-manager">Meta Manager</a>, and recovery math in one workspace. Compare named alternatives on our <a href="/compare">compare hub</a>, including <a href="/compare/wati">vs WATI</a>, <a href="/compare/zoko">vs Zoko</a>, <a href="/compare/kanal">vs Kanal</a>, and <a href="/compare/dondy">vs Dondy</a> (narrative: <a href="/blog/dondy-alternative-shopify-india">Dondy alternative</a>).</p>
+<h2>Where does TopEdge AI fit on this shortlist?</h2>
+<p>TopEdge AI is built for Shopify stores in India: <a href="/features/journeys">Journeys</a>, <a href="/features">Live Chat</a>, <a href="/features/meta-manager">Meta Manager</a>, and recovery math in one workspace. Compare named alternatives on our <a href="/compare">compare hub</a>, including <a href="/compare/wati">vs WATI</a>, <a href="/compare/zoko">vs Zoko</a>, <a href="/compare/kanal">vs Kanal</a>, and <a href="/compare/dondy">vs Dondy</a> (narrative: <a href="/blog/dondy-alternative-shopify-india">Dondy alternative</a>).</p>
 <blockquote><p>If a demo cannot show a live Shopify cart inside a WhatsApp preview, you are buying a broadcast tool, not ecommerce automation.</p></blockquote>
-<p>Since this is our own page, here is the specific and falsifiable version rather than an adjective. TopEdge publishes plans from <strong>₹1,999</strong> a month on Launch on its own site ($19 on the Shopify App Store), with the deeper COD-to-prepaid journeys on Growth at ₹3,999, and adds <strong>0%</strong> to Meta’s rates, which bill your own WhatsApp Business Account directly. There is a 14-day trial, long enough to judge a cart sequence, though not long enough to judge a COD programme, which needs a full delivery cycle before RTO means anything.</p>
+<p>Since this is our own page, here is the specific and falsifiable version rather than an adjective. TopEdge AI publishes plans from <strong>₹1,999</strong> a month on Launch on its own site ($19 on the Shopify App Store), with the deeper COD-to-prepaid journeys on Growth at ₹3,999, and adds <strong>0%</strong> to Meta’s rates, which bill your own WhatsApp Business Account directly. There is a 14-day trial, long enough to judge a cart sequence, though not long enough to judge a COD programme, which needs a full delivery cycle before RTO means anything.</p>
 <p><strong>Where we are not the answer,</strong> stated plainly: if your buyers are not on WhatsApp, or nobody at your store will answer a reply, you are paying for the half of the product that does the work. If your main problem is several agents sharing an inbox across many channels, a support-first tool is a better fit. And if you sell mostly outside India with little COD exposure, the journeys this product is shaped around solve a problem you do not have.</p>
 
 <h2>What are red flags while buying a WhatsApp app?</h2>
@@ -1218,11 +1218,11 @@ export const blogPosts: BlogPost[] = [
 </details>
 <details>
 <summary>Which tools are strongest for COD and RTO?</summary>
-<p>Prioritize vendors with explicit COD confirm and COD → prepaid journeys, not only order-update templates. TopEdge and Zoko both surface COD flows publicly; verify live on any other vendor before you buy.</p>
+<p>Prioritize vendors with explicit COD confirm and COD → prepaid journeys, not only order-update templates. TopEdge AI and Zoko both surface COD flows publicly; verify live on any other vendor before you buy.</p>
 </details>
 <details>
 <summary>Where can I see full pairwise comparisons?</summary>
-<p>Use the TopEdge <a href="/compare">compare hub</a> and <a href="/compare/alternatives">alternatives index</a> for one-line positioning, then open each vs page for scorecards, plan tables, and verify-live footnotes.</p>
+<p>Use the TopEdge AI <a href="/compare">compare hub</a> and <a href="/compare/alternatives">alternatives index</a> for one-line positioning, then open each vs page for scorecards, plan tables, and verify-live footnotes.</p>
 </details>
 </div>
 
@@ -1406,7 +1406,7 @@ export const blogPosts: BlogPost[] = [
 </div>
 <p>The ratio is what makes this the easiest decision in Indian D2C. The confirmation pass costs roughly a five-hundredth of the direct logistics loss it is trying to reduce, so preventing a single returned parcel in the month pays for it three to four times over, at ₹180 to ₹240 a parcel. Preventing ten pays for it thirty to forty times. Very few operational spends have that shape.</p>
 <p><strong>Count the costs people leave out.</strong> A refused parcel bills forward freight and return freight, plus handling at both ends. The stock is gone from sellable inventory for one to three weeks and comes back needing inspection and repackaging. If it was bought through ads, the acquisition cost is spent and unrecovered. And on a fast-moving SKU during a sale period, the unit that went out on a doomed COD order was unavailable to a customer who would have paid.</p>
-<p><strong>Be conservative when you model the benefit.</strong> Confirmation does not remove RTO, it moves part of it earlier and cheaper, into a cancellation that costs you nothing but the message. Our own estimate, not measured data: a realistic first-quarter target is a few points off the RTO rate, not half of it. Put your own order count and RTO percentage into the calculator above rather than borrowing the illustration, because the honest version of this number is the one made from your data.</p>
+<p><strong>Be conservative when you model the benefit.</strong> Confirmation does not remove RTO, it moves part of it earlier and cheaper, into a cancellation that costs you nothing but the message. Our own estimate, not measured data: a realistic first-quarter target is a few points off the RTO rate, not half of it. Put your own order count and RTO percentage into the calculator above rather than borrowing the illustration, because the honest version of this number is the one made from your data. For the cost of each returned parcel, use the <a href="/tools/rto-cost-calculator">RTO cost calculator</a>.</p>
 
 <h2>When humans should take over</h2>
 <p>Automation pauses when an agent joins the thread. Escalate when the buyer disputes the amount, asks for a partial cancel, reports a wrong address, or sounds like a complaint rather than a question. Those threads belong in <a href="/features">Live Chat</a> with the order already loaded. An agent should never have to ask for an order number the system already knows.</p>
@@ -1779,7 +1779,7 @@ export const blogPosts: BlogPost[] = [
     keywords: [
       'Zoko alternative',
       'Zoko alternative Shopify',
-      'Zoko vs TopEdge',
+      'Zoko vs TopEdge AI',
       'WhatsApp automation India',
       'Shopify WhatsApp India',
       'switch WhatsApp provider Shopify',
@@ -1820,7 +1820,7 @@ export const blogPosts: BlogPost[] = [
       },
     ],
     content: `
-<p><strong>A Zoko alternative for Shopify India</strong> is worth considering when conversation metering and festival bill spikes matter more than catalog-in-chat heritage. Keep COD flows and Shopify sync; switch the platform fee to something finance can forecast in ₹. Full scorecard: <a href="/compare/zoko">TopEdge vs Zoko</a>.</p>
+<p><strong>A Zoko alternative for Shopify India</strong> is worth considering when conversation metering and festival bill spikes matter more than catalog-in-chat heritage. Keep COD flows and Shopify sync; switch the platform fee to something finance can forecast in ₹. Full scorecard: <a href="/compare/zoko">TopEdge AI vs Zoko</a>.</p>
 
 <h2>Why do Shopify India teams look for a Zoko alternative?</h2>
 <p>You planned recovery and support around order volume. Then Diwali week (or a viral drop) floods conversations. Meta fees rise (that part is unavoidable), but a platform fee that also meters conversations can surprise finance after the campaign works. That is a structural mismatch with “we price the store on orders,” not a feature complaint.</p>
@@ -1854,7 +1854,7 @@ export const blogPosts: BlogPost[] = [
 </div>
 <p class="mkt-blog-footnote">Arithmetic on the rates published on <a href="https://apps.shopify.com/whatsapp-button-chat" rel="noopener noreferrer" target="_blank">Zoko's Shopify App Store listing</a>, read on 21 October 2026. Platform fee only. It excludes Meta's own per-message charges, agent seats above the number your plan includes, and any AI or custom-flow add-ons. Re-check before you buy.</p>
 <p>Two things fall out of that table. The tier that is cheapest flips between 1,000 and 5,000 conversations, so the right plan depends on a number most teams only learn after a festival week. And the jump from 5,000 to 20,000 conversations, a 4x rise in customer contact, moves the platform fee by about 37%, which is the part that works in Zoko's favour once you are past the included bucket. The volatility is at the bottom of the range, not the top.</p>
-<p>For comparison, TopEdge charges by Shopify orders rather than conversations: Launch ₹1,999 a month for 100 orders, Growth ₹3,999 for 800, Scale ₹6,499 for 1,500, each about 20% less billed yearly, plus 18% GST. <strong>Those units are not interchangeable</strong>, and anyone who tells you one is simply cheaper than the other is comparing orders with conversations. The honest question is which number your finance team can predict a quarter out. See <a href="/pricing">TopEdge pricing</a> for the current table.</p>
+<p>For comparison, TopEdge AI charges by Shopify orders rather than conversations: Launch ₹1,999 a month for 100 orders, Growth ₹3,999 for 800, Scale ₹6,499 for 1,500, each about 20% less billed yearly, plus 18% GST. <strong>Those units are not interchangeable</strong>, and anyone who tells you one is simply cheaper than the other is comparing orders with conversations. The honest question is which number your finance team can predict a quarter out. See <a href="/pricing">TopEdge AI pricing</a> for the current table.</p>
 
 <h2>The shortlist: who else replaces Zoko, and who each one suits</h2>
 <p>Most "Zoko alternative" lists are vendor pages dressed as research. Here is the shortlist as we would give it to a merchant who called us, including the cases where the answer is not us. Prices carry the date they were read, because every one of these moves.</p>
@@ -1883,8 +1883,8 @@ export const blogPosts: BlogPost[] = [
 <p><strong>Keep what Zoko is actually good at in the criteria.</strong> Catalogue-in-chat selling is a real architectural strength, not marketing copy. If a meaningful share of your orders are placed inside the conversation rather than on your storefront, a replacement that only does recovery will feel like a downgrade however much cheaper it looks.</p>
 
 <h2>Where does TopEdge AI fit that gap?</h2>
-<p>TopEdge is built Shopify-native for India: flat plans by order volume, Meta pass-through without a Zoko-style conversation platform markup on the published catalog, plus COD journeys, warranty, and unified identity in the core stack. We do <em>not</em> claim to out-India Zoko on catalog-in-chat heritage. That is their strength. We compete on predictable platform cost and India ops depth.</p>
-<p>For the scorecard, plan table, and verify-live footnotes, open the full board: <a href="/compare/zoko">TopEdge vs Zoko</a>. For a fair one-liner index of other tools, see <a href="/compare/alternatives">alternatives</a>.</p>
+<p>TopEdge AI is built Shopify-native for India: flat plans by order volume, Meta pass-through without a Zoko-style conversation platform markup on the published catalog, plus COD journeys, warranty, and unified identity in the core stack. We do <em>not</em> claim to out-India Zoko on catalog-in-chat heritage. That is their strength. We compete on predictable platform cost and India ops depth.</p>
+<p>For the scorecard, plan table, and verify-live footnotes, open the full board: <a href="/compare/zoko">TopEdge AI vs Zoko</a>. For a fair one-liner index of other tools, see <a href="/compare/alternatives">alternatives</a>.</p>
 
 <h2>Zoko vs TopEdge AI, side by side</h2>
 <div class="mkt-blog-table-wrap">
@@ -1951,7 +1951,7 @@ export const blogPosts: BlogPost[] = [
 <blockquote><p>If the demo cannot show a live cart and a COD branch, you are shopping for a broadcast tool, not a Zoko-class commerce stack.</p></blockquote>
 
 
-<p>Related: <a href="/blog/best-whatsapp-automation-tools-shopify-india">best WhatsApp tools for Shopify India</a>, <a href="/pricing">TopEdge pricing</a>, <a href="/contact">contact</a>.</p>
+<p>Related: <a href="/blog/best-whatsapp-automation-tools-shopify-india">best WhatsApp tools for Shopify India</a>, <a href="/pricing">TopEdge AI pricing</a>, <a href="/contact">contact</a>.</p>
 <p>Also compare: <a href="/blog/wati-alternative-shopify-india">WATI alternative</a>, <a href="/blog/aisensy-alternative-shopify-india">AiSensy alternative</a>, <a href="/blog/interakt-alternative-shopify-india">Interakt alternative</a>, <a href="/blog/bitespeed-alternative-shopify-india">Bitespeed alternative</a>, <a href="/blog/getgabs-alternative-shopify-whatsapp">Getgabs alternative</a>, <a href="/blog/kanal-whatsapp-alternative-shopify">Kanal alternative</a> and <a href="/blog/dondy-alternative-shopify-india">Dondy alternative</a> and <a href="/blog/updatrr-alternative-shopify-india">Updatrr alternative</a>.</p>
 <p class="mkt-blog-footnote">Pricing and feature claims about Zoko should be re-checked on zoko.io and apps.shopify.com before purchase. Snapshot research for our compare page: Sep 2026.</p>
 `,
@@ -1963,8 +1963,8 @@ export const blogPosts: BlogPost[] = [
       'Getgabs wins on entry price. When Shopify India teams outgrow free-to-install WhatsApp apps: and how to judge depth without a price fight.',
     summary: [
       'Getgabs wins on entry price: ₹699 to ₹4,499 a month on getgabs.com, or about ₹1,034 to ₹5,544 on its Shopify listing, read 8 November 2026. The two still disagree.',
-      'Getgabs labels every plan 0% markup and lists Meta’s own ₹0.8631 and ₹0.115 India rates, so the message bill is the same as on TopEdge.',
-      'COD to prepaid needs TopEdge Growth at ₹3,999 a month, so price Growth, not Launch, if RTO is why you are switching.',
+      'Getgabs labels every plan 0% markup and lists Meta’s own ₹0.8631 and ₹0.115 India rates, so the message bill is the same as on TopEdge AI.',
+      'COD to prepaid needs TopEdge AI Growth at ₹3,999 a month, so price Growth, not Launch, if RTO is why you are switching.',
     ],
     slug: 'getgabs-alternative-shopify-whatsapp',
     date: '2026-09-20',
@@ -1978,7 +1978,7 @@ export const blogPosts: BlogPost[] = [
       'Getgabs alternative for Shopify India, with native COD-to-prepaid conversion and unified customer identity on WhatsApp',
     keywords: [
       'Getgabs alternative',
-      'Getgabs vs TopEdge',
+      'Getgabs vs TopEdge AI',
       'cheap WhatsApp Shopify app',
       'Shopify WhatsApp abandoned cart',
       'WhatsApp app free to install',
@@ -2020,15 +2020,15 @@ export const blogPosts: BlogPost[] = [
       },
     ],
     content: `
-<p><strong>A Getgabs alternative</strong> is for teams that outgrew free-to-install WhatsApp entry, not for winning a sticker-price fight. Getgabs stays cheaper to start; TopEdge fits when COD → prepaid, warranty, and unified identity need to ship natively. Details: <a href="/compare/getgabs">TopEdge vs Getgabs</a>.</p>
+<p><strong>A Getgabs alternative</strong> is for teams that outgrew free-to-install WhatsApp entry, not for winning a sticker-price fight. Getgabs stays cheaper to start; TopEdge AI fits when COD → prepaid, warranty, and unified identity need to ship natively. Details: <a href="/compare/getgabs">TopEdge AI vs Getgabs</a>.</p>
 
-<h2>Is Getgabs cheaper than TopEdge?</h2>
-<p>Getgabs is dramatically cheaper to start than TopEdge Launch. <a href="https://apps.shopify.com/getgabs-whatsapp-chatbot-api" target="_blank" rel="noopener noreferrer">Its Shopify listing</a> is free to install, with Plus at ₹1,033.72 and Pro at ₹5,544.49 a month for an Indian store. <a href="https://getgabs.com/pricing/" target="_blank" rel="noopener noreferrer">getgabs.com</a> publishes different rupee plans: Basic ₹699, Plus ₹1,499 and Pro ₹4,499 a month. Both read 8 November 2026, and those surfaces disagree. <strong>Verify live</strong> the day you buy. This post will not pretend TopEdge wins on sticker price. It will not.</p>
+<h2>Is Getgabs cheaper than TopEdge AI?</h2>
+<p>Getgabs is dramatically cheaper to start than TopEdge AI Launch. <a href="https://apps.shopify.com/getgabs-whatsapp-chatbot-api" target="_blank" rel="noopener noreferrer">Its Shopify listing</a> is free to install, with Plus at ₹1,033.72 and Pro at ₹5,544.49 a month for an Indian store. <a href="https://getgabs.com/pricing/" target="_blank" rel="noopener noreferrer">getgabs.com</a> publishes different rupee plans: Basic ₹699, Plus ₹1,499 and Pro ₹4,499 a month. Both read 8 November 2026, and those surfaces disagree. <strong>Verify live</strong> the day you buy. This post will not pretend TopEdge AI wins on sticker price. It will not.</p>
 <p><strong>Two disagreeing price pages is itself the finding.</strong> When a listing and a website publish different tiers, you do not know which one your card will be charged against, and neither surface is a commitment. Screenshot whichever one you are buying from, on the day, and keep it. That is not cynicism about this vendor specifically; it is what you should do with any app whose pricing lives in two places.</p>
-<p><strong>Price the gap honestly, in rupees, at your volume.</strong> Getgabs publishes no order limit, so its price does not climb with orders. TopEdge plans do: Launch covers 100 orders a month, Growth 800, Scale 1,500. And COD to prepaid is on Growth and Scale only, so if RTO is why you are looking, Launch is the wrong plan to price.</p>
+<p><strong>Price the gap honestly, in rupees, at your volume.</strong> Getgabs publishes no order limit, so its price does not climb with orders. TopEdge AI plans do: Launch covers 100 orders a month, Growth 800, Scale 1,500. And COD to prepaid is on Growth and Scale only, so if RTO is why you are looking, Launch is the wrong plan to price.</p>
 <div class="mkt-blog-table-wrap">
 <table>
-<thead><tr><th>Your store</th><th>TopEdge plan you need, per month</th><th>Getgabs plan compared</th><th>Getgabs per month, listing / website</th><th>TopEdge costs more by</th></tr></thead>
+<thead><tr><th>Your store</th><th>TopEdge AI plan you need, per month</th><th>Getgabs plan compared</th><th>Getgabs per month, listing / website</th><th>TopEdge AI costs more by</th></tr></thead>
 <tbody>
 <tr><td>100 orders, no COD to prepaid</td><td>Launch ₹1,999</td><td>Plus</td><td>₹1,034 / ₹1,499</td><td>₹965 / ₹500</td></tr>
 <tr><td>500 orders, with COD to prepaid</td><td>Growth ₹3,999</td><td>Plus</td><td>₹1,034 / ₹1,499</td><td>₹2,965 / ₹2,500</td></tr>
@@ -2037,7 +2037,7 @@ export const blogPosts: BlogPost[] = [
 </table>
 </div>
 <p>Monthly prices, before GST on both sides. The listing figures match the $11 and $59 we read there in September at about ₹94 to the dollar. Getgabs is cheaper at every volume we priced. The question is not which number is smaller, it is whether the gap buys anything you will use this quarter.</p>
-<p><strong>On the Meta line the two are level.</strong> getgabs.com labels every plan “0% Markup” and lists Meta’s own India rates: ₹0.8631 per delivered marketing message and ₹0.115 per utility, authentication or service message. That is the same card TopEdge customers pay Meta directly. So the per-message bill does not separate these two products; the subscription, and what it unlocks, does.</p>
+<p><strong>On the Meta line the two are level.</strong> getgabs.com labels every plan “0% Markup” and lists Meta’s own India rates: ₹0.8631 per delivered marketing message and ₹0.115 per utility, authentication or service message. That is the same card TopEdge AI customers pay Meta directly. So the per-message bill does not separate these two products; the subscription, and what it unlocks, does.</p>
 
 <h2>What does cheap WhatsApp entry usually still gate?</h2>
 <p>Before you blame the vendor, map what you need against what unlocks on which tier:</p>
@@ -2050,11 +2050,11 @@ export const blogPosts: BlogPost[] = [
 </ul>
 <p>If your pain is only “send a cart nudge and an order update,” staying on a low-cost app is rational. If your pain is RTO, claims, or identity sprawl, price shopping alone steers you wrong.</p>
 
-<h2>When is TopEdge the better next step?</h2>
-<p>Pick TopEdge when you want COD to prepaid, warranty, unified customer identity and visual journeys on published plans, with COD to prepaid from Growth at ₹3,999 a month, rather than as later add-ons. Pick Getgabs when budget is the binding constraint and depth can wait.</p>
+<h2>When is TopEdge AI the better next step?</h2>
+<p>Pick TopEdge AI when you want COD to prepaid, warranty, unified customer identity and visual journeys on published plans, with COD to prepaid from Growth at ₹3,999 a month, rather than as later add-ons. Pick Getgabs when budget is the binding constraint and depth can wait.</p>
 <p><strong>“Budget is the binding constraint” is a real and respectable position,</strong> and it describes a specific store: early, under roughly 100 orders a month, where ₹1,000 a month is a decision rather than a line item. At that size the honest advice is to start cheap, or start with Shopify’s own free abandoned checkout email, and prove the channel works before paying for depth you have no volume to use.</p>
 <p><strong>The point where that flips is COD share, not order count.</strong> Once cash on delivery is a large part of your book and RTO is a visible cost line, the missing feature stops being a nice-to-have. A COD-to-prepaid path that converts even a modest share of risky orders is worth multiples of any subscription gap on this page, because each conversion removes a full round trip of freight rather than adding a sale.</p>
-<p>Full board (plans, scorecard, footnotes): <a href="/compare/getgabs">TopEdge vs Getgabs</a>. Index of other options: <a href="/compare/alternatives">alternatives</a>.</p>
+<p>Full board (plans, scorecard, footnotes): <a href="/compare/getgabs">TopEdge AI vs Getgabs</a>. Index of other options: <a href="/compare/alternatives">alternatives</a>.</p>
 
 <h2>Getgabs vs TopEdge AI, side by side</h2>
 <div class="mkt-blog-table-wrap">
@@ -2077,7 +2077,7 @@ export const blogPosts: BlogPost[] = [
 </div>
 <p class="mkt-blog-footnote">Getgabs figures as published on <a href="https://getgabs.com/pricing/" target="_blank" rel="noopener noreferrer">getgabs.com/pricing</a> and <a href="https://apps.shopify.com/getgabs-whatsapp-chatbot-api" target="_blank" rel="noopener noreferrer">its Shopify App Store listing</a>, both read from India on 8 November 2026. The two surfaces disagreed on that date, so confirm yours.</p>
 
-<h2>How do you evaluate Getgabs vs TopEdge fairly?</h2>
+<h2>How do you evaluate Getgabs vs TopEdge AI fairly?</h2>
 <ol>
 <li>Write the three workflows that cost you money this month (e.g. COD no-shows, warranty WhatsApps, duplicate profiles)</li>
 <li>Ask Getgabs and any alternative to show those three on a live store</li>
@@ -2088,7 +2088,7 @@ export const blogPosts: BlogPost[] = [
 
 <p>Also read <a href="/blog/how-to-choose-whatsapp-app-shopify-app-store">how to choose a WhatsApp app from the Shopify App Store</a> and <a href="/blog/how-to-reduce-rto-with-whatsapp-cod-confirmation">COD confirmation for RTO</a>.</p>
 <p>Also compare: <a href="/blog/wati-alternative-shopify-india">WATI alternative</a>, <a href="/blog/aisensy-alternative-shopify-india">AiSensy alternative</a>, <a href="/blog/interakt-alternative-shopify-india">Interakt alternative</a>, <a href="/blog/bitespeed-alternative-shopify-india">Bitespeed alternative</a>, <a href="/blog/zoko-alternative-shopify-india">Zoko alternative</a>, <a href="/blog/kanal-whatsapp-alternative-shopify">Kanal alternative</a> and <a href="/blog/dondy-alternative-shopify-india">Dondy alternative</a> and <a href="/blog/updatrr-alternative-shopify-india">Updatrr alternative</a>.</p>
-<p class="mkt-blog-footnote">Getgabs pricing read 8 November 2026 on getgabs.com/pricing and apps.shopify.com/getgabs-whatsapp-chatbot-api. TopEdge plan limits and prices from our own pricing page. Per-message rates, categories and volume tiers: <a href="https://developers.facebook.com/docs/whatsapp/pricing/" target="_blank" rel="noopener noreferrer">Meta’s WhatsApp Business Platform pricing documentation</a>.</p>
+<p class="mkt-blog-footnote">Getgabs pricing read 8 November 2026 on getgabs.com/pricing and apps.shopify.com/getgabs-whatsapp-chatbot-api. TopEdge AI plan limits and prices from our own pricing page. Per-message rates, categories and volume tiers: <a href="https://developers.facebook.com/docs/whatsapp/pricing/" target="_blank" rel="noopener noreferrer">Meta’s WhatsApp Business Platform pricing documentation</a>.</p>
 `,
   },
   {
@@ -2114,7 +2114,7 @@ export const blogPosts: BlogPost[] = [
     keywords: [
       'Kanal alternative',
       'Kanal WhatsApp alternative',
-      'Kanal vs TopEdge',
+      'Kanal vs TopEdge AI',
       'Shopify WhatsApp Klaviyo',
       'WhatsApp marketing India',
       'India specific WhatsApp platform',
@@ -2155,7 +2155,7 @@ export const blogPosts: BlogPost[] = [
       },
     ],
     content: `
-<p><strong>A Kanal WhatsApp alternative</strong> for India D2C is about INR floors and COD workflows, not dismissing Klaviyo. Kanal fits global ESP-first stacks from €89/mo; TopEdge fits Shopify India recovery on flat order-based plans. Compare: <a href="/compare/kanal">TopEdge vs Kanal</a>.</p>
+<p><strong>A Kanal WhatsApp alternative</strong> for India D2C is about INR floors and COD workflows, not dismissing Klaviyo. Kanal fits global ESP-first stacks from €89/mo; TopEdge AI fits Shopify India recovery on flat order-based plans. Compare: <a href="/compare/kanal">TopEdge AI vs Kanal</a>.</p>
 
 <h2>What is Kanal genuinely good at?</h2>
 <p>Give credit where it is due: abandoned cart on WhatsApp, campaigns, official API positioning, and native Klaviyo (plus tools like Recharge / Gorgias) on published plans starting at Pro €89/mo on getkanal.com. Shopify’s listing may show USD. <strong>Verify live</strong> before you budget.</p>
@@ -2193,7 +2193,7 @@ export const blogPosts: BlogPost[] = [
 </table>
 </div>
 <p class="mkt-blog-footnote">The three rates are an illustrative band, not a forecast, and not today's rate. Use the rate your card or bank actually gives you on the day, which will also carry a conversion spread. The column that matters is the last one: it is the range the same unchanged plan can occupy across a year, before a single message is sent.</p>
-<p>That swing is the whole argument, and it is worth keeping in proportion. A few hundred rupees a month is not what kills a brand. It is that the number cannot be put in a budget and left alone, and that it moves in the direction of your costs exactly when the rupee is weak. For contrast, TopEdge publishes Launch ₹1,999, Growth ₹3,999 and Scale ₹6,499 a month by Shopify order volume, around 20% less billed yearly, plus 18% GST, with no per-seat charge. <strong>Read the inclusions before the totals</strong>: Kanal Pro includes one user account, so a three-person support team is already on Scale. See <a href="/pricing">TopEdge pricing</a>.</p>
+<p>That swing is the whole argument, and it is worth keeping in proportion. A few hundred rupees a month is not what kills a brand. It is that the number cannot be put in a budget and left alone, and that it moves in the direction of your costs exactly when the rupee is weak. For contrast, TopEdge AI publishes Launch ₹1,999, Growth ₹3,999 and Scale ₹6,499 a month by Shopify order volume, around 20% less billed yearly, plus 18% GST, with no per-seat charge. <strong>Read the inclusions before the totals</strong>: Kanal Pro includes one user account, so a three-person support team is already on Scale. See <a href="/pricing">TopEdge AI pricing</a>.</p>
 
 <h2>The shortlist: who else fits if Kanal does not?</h2>
 <p>Kanal sits on the global, euro-billed side of this market. The useful way to shortlist against it is to decide which side of that line you are on, because the India-native tools and the global ones fail in different directions.</p>
@@ -2207,12 +2207,12 @@ export const blogPosts: BlogPost[] = [
 </ul>
 <p class="mkt-blog-footnote">We sell one of the tools on this list. Prices carry the date someone last opened the page, because all of them move.</p>
 
-<h2>When is TopEdge the India-shaped Kanal alternative?</h2>
-<p>TopEdge publishes flat Launch, Growth and Scale tiers by Shopify order volume, ships COD-oriented journeys, and keeps Meta fees as pass-through. We do not try to replace Klaviyo. Keep your ESP if you have one.</p>
+<h2>When is TopEdge AI the India-shaped Kanal alternative?</h2>
+<p>TopEdge AI publishes flat Launch, Growth and Scale tiers by Shopify order volume, ships COD-oriented journeys, and keeps Meta fees as pass-through. We do not try to replace Klaviyo. Keep your ESP if you have one.</p>
 <p>The India-shaped case is narrow and worth stating narrowly. It applies when most of your orders ship inside India, a large share are cash on delivery, and RTO is a line your finance person can quote from memory. Those three conditions together make COD confirmation and prepaid conversion the highest-value automations available to you, and they are not what a Europe-first product is built around.</p>
 <p>If none of those three hold, this is the wrong comparison and Kanal may simply be the better fit. A multi-market brand with low COD exposure gains little from journeys designed around a problem it does not have, and loses the Klaviyo integration it already relies on.</p>
-<p>Scorecard and plan comparison: <a href="/compare/kanal">TopEdge vs Kanal</a>. Broader index: <a href="/compare/alternatives">alternatives</a>.</p>
-<p>Scorecard and plan comparison: <a href="/compare/kanal">TopEdge vs Kanal</a>. Broader index: <a href="/compare/alternatives">alternatives</a>.</p>
+<p>Scorecard and plan comparison: <a href="/compare/kanal">TopEdge AI vs Kanal</a>. Broader index: <a href="/compare/alternatives">alternatives</a>.</p>
+<p>Scorecard and plan comparison: <a href="/compare/kanal">TopEdge AI vs Kanal</a>. Broader index: <a href="/compare/alternatives">alternatives</a>.</p>
 
 <h2>Kanal vs TopEdge AI, side by side</h2>
 <div class="mkt-blog-table-wrap">
@@ -2244,11 +2244,11 @@ export const blogPosts: BlogPost[] = [
 </ul>
 <p>The honest summary is narrower than most comparison pages will give you. Kanal is a good product that bills in the wrong currency for an India-only P&amp;L, and the currency is the complaint. If euros are not a problem for you, most of this page is not about you.</p>
 
-<h2>How do you decide between Kanal and TopEdge?</h2>
-<p>Choose Kanal when Klaviyo-first global WhatsApp is the product you want. Choose TopEdge when Shopify India recovery, COD, and INR forecasting are the product you want.</p>
+<h2>How do you decide between Kanal and TopEdge AI?</h2>
+<p>Choose Kanal when Klaviyo-first global WhatsApp is the product you want. Choose TopEdge AI when Shopify India recovery, COD, and INR forecasting are the product you want.</p>
 
 
-<p>Related: <a href="/blog/whatsapp-business-api-pricing-india">Meta Cloud API pricing in India</a>, <a href="/pricing">TopEdge pricing</a>.</p>
+<p>Related: <a href="/blog/whatsapp-business-api-pricing-india">Meta Cloud API pricing in India</a>, <a href="/pricing">TopEdge AI pricing</a>.</p>
 <p>Also compare: <a href="/blog/wati-alternative-shopify-india">WATI alternative</a>, <a href="/blog/aisensy-alternative-shopify-india">AiSensy alternative</a>, <a href="/blog/interakt-alternative-shopify-india">Interakt alternative</a>, <a href="/blog/bitespeed-alternative-shopify-india">Bitespeed alternative</a>, <a href="/blog/zoko-alternative-shopify-india">Zoko alternative</a>, <a href="/blog/getgabs-alternative-shopify-whatsapp">Getgabs alternative</a> and <a href="/blog/dondy-alternative-shopify-india">Dondy alternative</a> and <a href="/blog/updatrr-alternative-shopify-india">Updatrr alternative</a>.</p>
 <p class="mkt-blog-footnote">Kanal plans: confirm on getkanal.com/pricing and apps.shopify.com/kanal-marketing-ai. Snapshot used on our compare page: Sep 2026. Per-message rates, categories and volume tiers: <a href="https://developers.facebook.com/docs/whatsapp/pricing/" target="_blank" rel="noopener noreferrer">Meta’s WhatsApp Business Platform pricing documentation</a>.</p>
 `,
@@ -2437,13 +2437,13 @@ export const blogPosts: BlogPost[] = [
       {
         question: 'Do I pay Meta directly or through my WhatsApp app?',
         answer:
-          'On TopEdge you connect your own Meta WhatsApp account, so Meta bills you directly on your own account and we never touch that line. Some platforms resell conversations as credits instead, which bundles the two bills together and makes the markup harder to see.',
+          'On TopEdge AI you connect your own Meta WhatsApp account, so Meta bills you directly on your own account and we never touch that line. Some platforms resell conversations as credits instead, which bundles the two bills together and makes the markup harder to see.',
       },
     ],
     content: `
 <details class="mkt-blog-verdict" open>
 <summary>Quick verdict</summary>
-<p>In India, Meta charges per delivered message on its INR rate card: <strong>₹0.8631</strong> for marketing templates and <strong>₹0.1150</strong> for utility and authentication templates. Effective <strong>1 October 2026</strong>, customer service replies are also billed at ₹0.1150 once a phone number passes 1,000 free service messages in a month. Your software vendor's subscription, and any per-message markup it adds, sits on top of Meta's bill.</p>
+<p>In India, Meta charges per delivered message on its INR rate card: <strong>₹0.8631</strong> for marketing templates and <strong>₹0.1150</strong> for utility and authentication templates. Effective <strong>1 October 2026</strong>, customer service replies are also billed at ₹0.1150 once a phone number passes 1,000 free service messages in a month. Your software vendor's subscription, and any per-message markup it adds, sits on top of Meta's bill. The current card by category is on our <a href="/pricing/meta-rates">Meta India rate card and cost calculator</a>.</p>
 </details>
 
 <h2>Meta's official India rate card (effective 1 October 2026)</h2>
@@ -2570,7 +2570,7 @@ export const blogPosts: BlogPost[] = [
 </ul>
 <p>None of these are dishonest by themselves. They are just hard to compare, which is the point of asking about them separately from the headline price.</p>
 
-<h2>What TopEdge charges</h2>
+<h2>What TopEdge AI charges</h2>
 <p>Our subscription starts at ₹1,999 a month plus GST on monthly billing, ₹1,599 a month if you pay yearly. Full plans and limits are on the <a href="/pricing">pricing page</a>.</p>
 <p>On the Meta side we add nothing. You connect your own Meta WhatsApp account, Meta bills you directly on that account, and we never sit in the middle of that transaction. That is what lets you run the Business Manager comparison above against us and get a clean match, which is the only version of a 0 percent markup claim that is worth anything.</p>
 <p>The honest limitations, since this is a pricing post and you are comparing: we are a young product with a small review base, and COD to prepaid conversion sits on Growth and above rather than on the entry plan. If you need that specific flow, price the Growth plan, not Launch.</p>
@@ -2626,7 +2626,7 @@ export const blogPosts: BlogPost[] = [
           '1,000 × $0.01888 is $18.88, against $11.80 on Meta’s USD card, $7.08 more. In rupees at ₹93.92 to the dollar that is about ₹1,773, against ₹863 on Meta’s INR card, about ₹910 more, before the $79.99 Power Automation or $159.99 Elite subscription. Those plans include 1,000 one-click messages every 30 days; confirm whether that allowance replaces the rate-card charge.',
       },
       {
-        question: 'When is TopEdge the better Dondy alternative for Shopify India?',
+        question: 'When is TopEdge AI the better Dondy alternative for Shopify India?',
         answer:
           'When you want 0% Meta markup, flat order-based plans, and native COD → prepaid. Keep Dondy if the free widget, Klaviyo, and Elite AI matter more than the rate-card markup.',
       },
@@ -2648,7 +2648,7 @@ export const blogPosts: BlogPost[] = [
       },
     ],
     content: `
-<p><strong>Dondy’s published rate table charges 60% more than Meta’s own rate.</strong> On dondy.net (checked 8 Nov 2026) India is $0.01888 per message, 1.6× the $0.0118 on Meta’s USD rate card. In rupees that is about ₹1.77 a message at ₹93.92 to the dollar, roughly twice Meta’s ₹0.8631 INR rate. Pick TopEdge if you want 0% markup, flat plans, and COD → prepaid. Full board: <a href="/compare/dondy">TopEdge vs Dondy</a>.</p>
+<p><strong>Dondy’s published rate table charges 60% more than Meta’s own rate.</strong> On dondy.net (checked 8 Nov 2026) India is $0.01888 per message, 1.6× the $0.0118 on Meta’s USD rate card. In rupees that is about ₹1.77 a message at ₹93.92 to the dollar, roughly twice Meta’s ₹0.8631 INR rate. Pick TopEdge AI if you want 0% markup, flat plans, and COD → prepaid. Full board: <a href="/compare/dondy">TopEdge AI vs Dondy</a>.</p>
 
 <h2>Why does the markup show up before the subscription?</h2>
 <p>Automations are not on the free widget. Shopify’s listing puts cart recovery and campaigns on Power Automation at $79.99/mo, and the AI sales/support agent on Elite at $159.99/mo. The country rate card is a second bill. At the India table rate, 1,000 messages are $18.88, versus $11.80 on Meta’s USD card, $7.08 extra on the message line, before that subscription. Power and Elite also include 1,000 one-click messages every 30 days; confirm whether that bucket is exempt from the rate card.</p>
@@ -2664,18 +2664,18 @@ export const blogPosts: BlogPost[] = [
 </tbody>
 </table>
 </div>
-<p>Compare that with the TopEdge plan each volume needs. Launch includes 3,000 campaign sends a month, so 10,000 sends means Growth (15,000 included, ₹3,999 a month): Dondy's extra message cost alone, about ₹9,100, is more than twice that plan. At 30,000, the most any TopEdge plan includes (Scale, ₹6,499), the gap is about ₹27,300 a month. Dondy's own subscription comes on top: its Shopify listing shows Power Automation at ₹7,517 a month to an Indian store. That is the shape of cost worth avoiding: it grows precisely when a campaign works. Meta's current rates are in the <a href="/blog/whatsapp-business-api-pricing-india">India WhatsApp API pricing guide</a>.</p>
+<p>Compare that with the TopEdge AI plan each volume needs. Launch includes 3,000 campaign sends a month, so 10,000 sends means Growth (15,000 included, ₹3,999 a month): Dondy's extra message cost alone, about ₹9,100, is more than twice that plan. At 30,000, the most any TopEdge AI plan includes (Scale, ₹6,499), the gap is about ₹27,300 a month. Dondy's own subscription comes on top: its Shopify listing shows Power Automation at ₹7,517 a month to an Indian store. That is the shape of cost worth avoiding: it grows precisely when a campaign works. Meta's current rates are in the <a href="/blog/whatsapp-business-api-pricing-india">India WhatsApp API pricing guide</a>.</p>
 <p>Two surfaces disagree, so do not freeze one number. The App Store says Power rates “start from $0.0158 (US).” The website table lists North America at $0.04. Use <a href="https://www.dondy.net/dondy-pricing" rel="noopener noreferrer" target="_blank">dondy.net/dondy-pricing</a> for country rows and the <a href="https://apps.shopify.com/dondy-marketing-ai" rel="noopener noreferrer" target="_blank">Shopify listing</a> for plan names. Meta’s own card changes. Re-check it before you budget. Dondy’s table does not split marketing vs utility.</p>
 
 <h2>What is Dondy genuinely good at?</h2>
 <p>Do not shop for a thinner clone. Dondy ships a free floating widget, Klaviyo in Works with, review-app hooks, campaigns, and a multi-agent inbox on Elite. The Shopify listing shows 4.9★ from 835 reviews and the Built for Shopify badge (8 Nov 2026). Public languages are English, Spanish, Italian, Portuguese (Brazil), and French. COD verification is listed; that is not the same as a native COD → prepaid journey.</p>
 
-<h2>When is TopEdge the India-shaped alternative?</h2>
+<h2>When is TopEdge AI the India-shaped alternative?</h2>
 <p>When finance needs Meta pass-through at 0% and a published plan (Launch ₹1,999, Growth ₹3,999, Scale ₹6,499 on our site; $19, $39, $65 on the Shopify App Store), and ops needs COD to prepaid, warranty and unified identity in the core stack. Keep Dondy if the widget, Klaviyo and Elite AI are the product you actually want and the rate card is acceptable.</p>
 <p><strong>Give Dondy its due first, because one assumption about it is wrong.</strong> <a href="https://apps.shopify.com/dondy-marketing-ai" target="_blank" rel="noopener noreferrer">Its Shopify listing</a> is rated 4.9 from 835 reviews, offers a free plan alongside a trial, names COD verification among its chat features, and states the developer is based in India. It is not a purely foreign tool that happens to serve the market, and any comparison framing it that way is wrong.</p>
 <p><strong>The free plan makes it the cheapest way to answer a question worth answering.</strong> Before committing to any paid WhatsApp stack, run a month on a free tier and count replies rather than recoveries. If your customers do not answer WhatsApp, nothing on this page fixes that, and you found out for nothing. If they do, you now know the channel works and can shop on depth.</p>
 <p><strong>Then check the two things free plans hide.</strong> They are bounded by message volume rather than features, so find the ceiling before you build journeys on top of it and ask what happens to queued messages when you hit it. And model the per-message cost separately from the plan, because that is where the difference between vendors actually lives.</p>
-<p>Scorecard, 1,000-message math, and footnotes: <a href="/compare/dondy">TopEdge vs Dondy</a>. Other tools: <a href="/compare/alternatives">alternatives</a>.</p>
+<p>Scorecard, 1,000-message math, and footnotes: <a href="/compare/dondy">TopEdge AI vs Dondy</a>. Other tools: <a href="/compare/alternatives">alternatives</a>.</p>
 
 <h2>What should you verify the day you buy?</h2>
 <ol>
@@ -2695,13 +2695,13 @@ export const blogPosts: BlogPost[] = [
 <p>1,000 × $0.01888 is $18.88, against $11.80 on Meta’s USD card, $7.08 more. In rupees at ₹93.92 to the dollar that is about ₹1,773, against ₹863 on Meta’s INR card, about ₹910 more, before the $79.99 Power Automation or $159.99 Elite subscription. Those plans include 1,000 one-click messages every 30 days; confirm whether that allowance replaces the rate-card charge.</p>
 </details>
 <details>
-<summary>When is TopEdge the better Dondy alternative for Shopify India?</summary>
+<summary>When is TopEdge AI the better Dondy alternative for Shopify India?</summary>
 <p>When you want 0% Meta markup, flat order-based plans, and native COD → prepaid. Keep Dondy if the free widget, Klaviyo, and Elite AI matter more than the rate-card markup.</p>
 </details>
 </div>
 
 
-<p>Related: <a href="/blog/whatsapp-business-api-pricing-india">WhatsApp API pricing in India</a>, <a href="/blog/best-whatsapp-automation-tools-shopify-india">best tools pillar</a>, <a href="/blog/how-to-choose-whatsapp-app-shopify-app-store">choose a Shopify WhatsApp app</a>, <a href="/pricing">TopEdge pricing</a>.</p>
+<p>Related: <a href="/blog/whatsapp-business-api-pricing-india">WhatsApp API pricing in India</a>, <a href="/blog/best-whatsapp-automation-tools-shopify-india">best tools pillar</a>, <a href="/blog/how-to-choose-whatsapp-app-shopify-app-store">choose a Shopify WhatsApp app</a>, <a href="/pricing">TopEdge AI pricing</a>.</p>
 <p>Also compare: <a href="/blog/wati-alternative-shopify-india">WATI alternative</a>, <a href="/blog/aisensy-alternative-shopify-india">AiSensy alternative</a>, <a href="/blog/interakt-alternative-shopify-india">Interakt alternative</a>, <a href="/blog/bitespeed-alternative-shopify-india">Bitespeed alternative</a>, <a href="/blog/zoko-alternative-shopify-india">Zoko alternative</a>, <a href="/blog/getgabs-alternative-shopify-whatsapp">Getgabs alternative</a> and <a href="/blog/kanal-whatsapp-alternative-shopify">Kanal alternative</a>.</p>
 <p class="mkt-blog-footnote">Dondy figures checked 8 Nov 2026 on <a href="https://www.dondy.net/dondy-pricing" target="_blank" rel="noopener noreferrer">dondy.net/dondy-pricing</a> and <a href="https://apps.shopify.com/dondy-marketing-ai" target="_blank" rel="noopener noreferrer">its Shopify listing</a>. Meta's dollar rates come from the USD list rate card, effective 1 October 2026, linked from <a href="https://developers.facebook.com/docs/whatsapp/pricing/" target="_blank" rel="noopener noreferrer">Meta's pricing documentation</a> and read the same day. Rupee conversions use the <a href="https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/index.en.html" target="_blank" rel="noopener noreferrer">ECB reference rate</a> for 6 November 2026, ₹93.92 to the dollar, and move with it. The website also lists Advanced $14.99 and Ultimate $299 tiers that the App Store listing does not. Re-check both before purchase.</p>
 `,
@@ -2812,7 +2812,7 @@ export const blogPosts: BlogPost[] = [
       {
         question: 'How much does Shopify WhatsApp automation cost?',
         answer:
-          'Budget three layers: platform/app subscription, Meta conversation fees by category (marketing/utility/authentication/service), and any vendor markup on Meta rates. India Meta rates change. Re-check Meta’s card. TopEdge publishes flat order-based plans and 0% Meta markup on its catalog.',
+          'Budget three layers: platform/app subscription, Meta conversation fees by category (marketing/utility/authentication/service), and any vendor markup on Meta rates. India Meta rates change. Re-check Meta’s card. TopEdge AI publishes flat order-based plans and 0% Meta markup on its catalog.',
       },
       {
         question: 'Is WhatsApp automation worth it for a Shopify store?',
@@ -2854,7 +2854,7 @@ export const blogPosts: BlogPost[] = [
 
 <h2>What Can Shopify Stores Automate With WhatsApp?</h2>
 <p>Think in lifecycle stages rather than features. Each item below is a workflow summary with the detail that decides whether it works, and links through where a topic has a deeper page.</p>
-<p>Two things determine the cost and the usefulness of every one of them. The first is Meta’s message category: utility covers messages about an order that already exists, at ₹0.1150 in India, while marketing covers anything trying to create an order, at ₹0.8631. That seven-to-one gap decides your running cost more than any platform subscription. The second is whether the automation can be stopped by something the customer does, which is what separates a journey from a broadcast on a timer.</p>
+<p>Two things determine the cost and the usefulness of every one of them. The first is Meta’s message category: utility covers messages about an order that already exists, at ₹0.1150 in India, while marketing covers anything trying to create an order, at ₹0.8631. That seven-to-one gap decides your running cost more than any platform subscription. The second is whether the automation can be stopped by something the customer does, which is what separates a journey from a broadcast on a timer. The <a href="/whatsapp-journey-examples">WhatsApp journey examples with costs</a> walk through four of them.</p>
 
 <h3>1. Abandoned Cart Recovery</h3>
 <p>Trigger on abandoned cart or abandoned checkout; send opted-in marketing templates with live line items and a resume link; suppress on purchase; answer replies.</p>
@@ -2945,7 +2945,7 @@ export const blogPosts: BlogPost[] = [
 </tbody>
 </table>
 </div>
-<p>Connection on TopEdge: <a href="/shopify-whatsapp-integration">Shopify WhatsApp integration</a>. Template hygiene: <a href="/blog/meta-whatsapp-cloud-api-shopify-templates">Meta WhatsApp Cloud API templates</a>. India rates: <a href="/blog/whatsapp-business-api-pricing-india">WhatsApp Business API pricing in India</a>.</p>
+<p>Connection on TopEdge AI: <a href="/shopify-whatsapp-integration">Shopify WhatsApp integration</a>. Template hygiene: <a href="/blog/meta-whatsapp-cloud-api-shopify-templates">Meta WhatsApp Cloud API templates</a>. India rates: <a href="/blog/whatsapp-business-api-pricing-india">WhatsApp Business API pricing in India</a>.</p>
 
 <h2>Shopify WhatsApp Automation vs Manual WhatsApp Messaging</h2>
 <div class="mkt-blog-table-wrap">
@@ -2998,7 +2998,7 @@ export const blogPosts: BlogPost[] = [
 <li><strong>Staff the inbox</strong>: Two agents who know takeover rules before campaigns go live.</li>
 <li><strong>Measure outcomes</strong>: Recovered revenue, confirmation rate, WISMO volume, not opens alone.</li>
 </ol>
-<p>Product surface for TopEdge: <a href="/features/journeys">Journeys</a>, <a href="/features/opt-in-tools">Opt-in tools</a>, <a href="/features">Live Chat</a>, <a href="/features/meta-manager">Meta Manager</a>.</p>
+<p>Product surface for TopEdge AI: <a href="/features/journeys">Journeys</a>, <a href="/features/opt-in-tools">Opt-in tools</a>, <a href="/features">Live Chat</a>, <a href="/features/meta-manager">Meta Manager</a>.</p>
 
 <h2>Important WhatsApp Opt-In &amp; Messaging Rules</h2>
 <ul>
@@ -3119,7 +3119,7 @@ export const blogPosts: BlogPost[] = [
 </details>
 <details>
 <summary>How much does Shopify WhatsApp automation cost?</summary>
-<p>Budget platform/app subscription, Meta conversation fees by category, and any vendor markup on Meta rates. India Meta rates change. Re-check Meta’s card. TopEdge publishes flat order-based plans and 0% Meta markup on its catalog.</p>
+<p>Budget platform/app subscription, Meta conversation fees by category, and any vendor markup on Meta rates. India Meta rates change. Re-check Meta’s card. TopEdge AI publishes flat order-based plans and 0% Meta markup on its catalog.</p>
 </details>
 <details>
 <summary>Is WhatsApp automation worth it for a Shopify store?</summary>
@@ -3131,7 +3131,7 @@ export const blogPosts: BlogPost[] = [
 <p>WhatsApp automation for Shopify rests on four things: store truth, approved messages, journeys, and humans for exceptions. Start with connection and one high-ROI journey, then widen the lifecycle.</p>
 <p>Next steps: <a href="/shopify-whatsapp-integration">Shopify WhatsApp integration</a>, <a href="/features/journeys">Journeys</a>, <a href="/pricing">pricing</a>, or <a href="/signup">start free</a>. Cluster: <a href="/blog/whatsapp-abandoned-cart-recovery-shopify">cart recovery</a>, <a href="/blog/best-whatsapp-apps-for-shopify">best WhatsApp apps for Shopify</a>, <a href="/blog/whatsapp-shared-inbox-shopify-order-context">shared inbox</a>.</p>
 <p>Two prerequisites most teams skip: <a href="/blog/whatsapp-opt-in-shopify-india">opt-in</a> and <a href="/blog/whatsapp-template-rejected-meta-shopify-fix">template approval</a>.</p>
-<p class="mkt-blog-footnote">Shopify Messaging capabilities referenced from <a href="https://help.shopify.com/manual/orders/abandoned-checkouts" target="_blank" rel="noopener noreferrer">Shopify Help Center</a> (campaigns for email/SMS/WhatsApp; automations documented for email and SMS). WhatsApp opt-in, customer service window, and template categories from Meta WhatsApp Business Platform documentation. TopEdge plan labels from the public pricing catalog (Launch ₹1,999 · Growth ₹3,999 · Scale ₹6,499 monthly; +GST). Re-check Meta, Shopify, and vendor pages before production launches. Surfaces change.</p>
+<p class="mkt-blog-footnote">Shopify Messaging capabilities referenced from <a href="https://help.shopify.com/manual/orders/abandoned-checkouts" target="_blank" rel="noopener noreferrer">Shopify Help Center</a> (campaigns for email/SMS/WhatsApp; automations documented for email and SMS). WhatsApp opt-in, customer service window, and template categories from Meta WhatsApp Business Platform documentation. TopEdge AI plan labels from the public pricing catalog (Launch ₹1,999 · Growth ₹3,999 · Scale ₹6,499 monthly; +GST). Re-check Meta, Shopify, and vendor pages before production launches. Surfaces change.</p>
 `,
   },
   {
@@ -3468,37 +3468,37 @@ export const blogPosts: BlogPost[] = [
 <h3>3. Zoko</h3>
 <p><strong>Best for:</strong> India commerce stacks with catalog-in-chat heritage, where the thread is the storefront.</p>
 <p><a href="https://www.zoko.io/pricing" target="_blank" rel="noopener noreferrer">Zoko publishes</a> Starter at $49.99 a month, Plus at $79.99 with extra agents at $15 each, and a $139.99 tier with extra agents at $12 each. There is no rupee plan, so at about ₹94 to the dollar (6 November 2026) Plus lands near ₹7,500 a month before you add a second agent.</p>
-<p><strong>Watch-outs:</strong> the add-on model is the thing to model, not the plan. Zoko sells metered extras at $24.99 a month plus $0.09 per resolution, and another at $24.99 a month plus <strong>3% of order value</strong>. A revenue share behaves differently from a subscription: on ₹10 lakh of attributed monthly order value, 3% is ₹30,000. Price it at festive volume, not at today's. <a href="/compare/zoko">TopEdge vs Zoko</a> · <a href="/blog/zoko-alternative-shopify-india">Zoko alternative</a>.</p>
+<p><strong>Watch-outs:</strong> the add-on model is the thing to model, not the plan. Zoko sells metered extras at $24.99 a month plus $0.09 per resolution, and another at $24.99 a month plus <strong>3% of order value</strong>. A revenue share behaves differently from a subscription: on ₹10 lakh of attributed monthly order value, 3% is ₹30,000. Price it at festive volume, not at today's. <a href="/compare/zoko">TopEdge AI vs Zoko</a> · <a href="/blog/zoko-alternative-shopify-india">Zoko alternative</a>.</p>
 
 <h3>4. AiSensy</h3>
 <p><strong>Best for:</strong> India-facing WhatsApp marketing at broadcast volume.</p>
 <p>Strong campaign tooling, and the clearest published example of per-message markup in this market. Since 1 October 2026 Meta gives every business number 1,000 free service messages a month and then charges ₹0.1150 each in India. <a href="https://aisensy.com/pricing" target="_blank" rel="noopener noreferrer">AiSensy's published pricing</a> charges Indian service messages at ₹0.145, which is ₹0.0300 above Meta's rate, about 26% on top.</p>
-<p><strong>Watch-outs:</strong> that margin scales with success. At 10,000 service messages past the free tier it is ₹300 a month, at 50,000 it is ₹1,500, on messages your customers started. Confirm Shopify event depth and COD journeys live rather than taking broadcast strength as proof of recovery strength. <a href="/compare/aisensy">TopEdge vs AiSensy</a>.</p>
+<p><strong>Watch-outs:</strong> that margin scales with success. At 10,000 service messages past the free tier it is ₹300 a month, at 50,000 it is ₹1,500, on messages your customers started. Confirm Shopify event depth and COD journeys live rather than taking broadcast strength as proof of recovery strength. <a href="/compare/aisensy">TopEdge AI vs AiSensy</a>.</p>
 
 <h3>5. Interakt</h3>
 <p><strong>Best for:</strong> Shopify merchants already inside the Jio-backed ecosystem.</p>
 <p>Read the tier table carefully, because the headline price is not the one that applies to you. <a href="https://www.interakt.shop/pricing/" target="_blank" rel="noopener noreferrer">Interakt publishes</a> Starter at ₹999 a month, and on monthly billing that plan is <strong>Instagram only</strong>. Growth is ₹2,799 and Advanced ₹3,799. For a Shopify store, the Shopify integration is only on Interakt’s Shopify App Store plans, from ₹1,973.48 a month, read 9 November 2026.</p>
-<p><strong>Watch-outs:</strong> AI Agents are a ₹3,000 a month add-on on Growth and Advanced, with 100 free AI messages a month and ₹0.50 per message after that. On the web Growth plan, an assistant handling 500 replies a month means ₹2,799 plus ₹3,000 plus ₹200, before Meta's own charges. On the Shopify app, AI agents come with Premier at ₹9,303.55 a month. <a href="/compare/interakt">TopEdge vs Interakt</a>.</p>
+<p><strong>Watch-outs:</strong> AI Agents are a ₹3,000 a month add-on on Growth and Advanced, with 100 free AI messages a month and ₹0.50 per message after that. On the web Growth plan, an assistant handling 500 replies a month means ₹2,799 plus ₹3,000 plus ₹200, before Meta's own charges. On the Shopify app, AI agents come with Premier at ₹9,303.55 a month. <a href="/compare/interakt">TopEdge AI vs Interakt</a>.</p>
 
 <h3>6. WATI</h3>
 <p><strong>Best for:</strong> teams whose genuine first problem is several agents sharing one WhatsApp number.</p>
-<p><a href="https://www.wati.io/pricing/" target="_blank" rel="noopener noreferrer">WATI's India pricing</a> is Growth ₹2,699 a month, Pro ₹5,799 and Business ₹16,799, billed quarterly (read 7 November 2026). On the cost question, <a href="https://cdn.clare.ai/pricing/Wati-Pricing-Rate-Card-Growth-Plan-INR-I.pdf" target="_blank" rel="noopener noreferrer">WATI’s Growth rate card</a> lists ₹1.0357 per India marketing message and ₹0.1495 per utility message, 20% and 30% above Meta. It does publish those numbers, and its Business card is cheaper at 12% over Meta on marketing.</p>
-<p><strong>Watch-outs:</strong> the seat line, not the plan line, decides the bill. Growth stops at 3 users; Pro and Business include 5, then charge ₹1,299 and ₹2,199 a month per extra user, so a seven-person desk on Pro is ₹8,397 a month before a message is sent. Facebook Business verification help is offered only to Business annual customers. Advanced ecommerce identity and COD paths usually need more API mapping than a Shopify-native app. <a href="/compare/wati">TopEdge vs WATI</a>.</p>
+<p><a href="https://www.wati.io/pricing/" target="_blank" rel="noopener noreferrer">WATI's India pricing</a> is Growth ₹2,699 a month, Pro ₹5,799 and Business ₹16,799, billed quarterly (read 7 November 2026). On the cost question, <a href="https://cdn.clare.ai/pricing/Wati-Pricing-Rate-Card-Growth-Plan-INR-I.pdf" target="_blank" rel="noopener noreferrer">WATI’s Growth rate card</a> lists ₹1.0357 per India marketing message and ₹0.1495 per utility message, 20% and 30% above Meta. It does publish those numbers, and its Business card is cheaper at 12% over Meta on marketing. See <a href="/blog/wati-pricing-india">WATI pricing in India</a> for the bill at three order volumes.</p>
+<p><strong>Watch-outs:</strong> the seat line, not the plan line, decides the bill. Growth stops at 3 users; Pro and Business include 5, then charge ₹1,299 and ₹2,199 a month per extra user, so a seven-person desk on Pro is ₹8,397 a month before a message is sent. Facebook Business verification help is offered only to Business annual customers. Advanced ecommerce identity and COD paths usually need more API mapping than a Shopify-native app. <a href="/compare/wati">TopEdge AI vs WATI</a>.</p>
 
 <h3>7. Bitespeed</h3>
 <p><strong>Best for:</strong> omnichannel AI marketing and support, if you are willing to buy before you can compare.</p>
 <p>The defining fact is that there is nothing published to compare. <a href="https://www.bitespeed.co/pricing" target="_blank" rel="noopener noreferrer">Requesting BiteSpeed's pricing page</a> returns a redirect straight to a demo request form. No plan, no tier, no per-message rate is readable before you speak to sales, which also means the figure you are quoted is negotiated per account rather than published.</p>
-<p><strong>Watch-outs:</strong> get the quote in writing with the recovery tier named, because on a campaign-priced platform the automation you want often sits above the plan you were shown. Ask what is added to Meta's rate as a number, not as a yes or no. <a href="/compare/bitespeed">TopEdge vs Bitespeed</a>.</p>
+<p><strong>Watch-outs:</strong> get the quote in writing with the recovery tier named, because on a campaign-priced platform the automation you want often sits above the plan you were shown. Ask what is added to Meta's rate as a number, not as a yes or no. <a href="/compare/bitespeed">TopEdge AI vs Bitespeed</a>.</p>
 
 <h3>8. Updatrr</h3>
 <p><strong>Best for:</strong> Shopify-only merchants wanting a lighter USD app with native abandoned-checkout and COD reminders.</p>
 <p><a href="https://www.updatrr.com/pricing" target="_blank" rel="noopener noreferrer">Updatrr publishes</a> Growth at $29.99, Pro at $49.99 and Pro AI at $99.99 a month, with a 7-day trial and no card required, and states plainly that it adds no markup on Meta's conversation fees. On the cost question it is among the most transparent here.</p>
-<p><strong>Watch-outs:</strong> the AI chatbot with human handover sits only on the $99.99 tier, roughly ₹9,400 a month at about ₹94 to the dollar, and the rupee cost moves with the exchange rate. Seven days is enough to judge a cart sequence and not enough to judge a COD programme, which needs a full delivery cycle before RTO tells you anything. Shopify-only means no pre-checkout visitor identity and no unified profile across several numbers. <a href="/compare/updatrr">TopEdge vs Updatrr</a>.</p>
+<p><strong>Watch-outs:</strong> the AI chatbot with human handover sits only on the $99.99 tier, roughly ₹9,400 a month at about ₹94 to the dollar, and the rupee cost moves with the exchange rate. Seven days is enough to judge a cart sequence and not enough to judge a COD programme, which needs a full delivery cycle before RTO tells you anything. Shopify-only means no pre-checkout visitor identity and no unified profile across several numbers. <a href="/compare/updatrr">TopEdge AI vs Updatrr</a>.</p>
 
 <h3>9. Dondy</h3>
 <p><strong>Best for:</strong> merchants who want to test whether WhatsApp works for their customers before paying anything.</p>
 <p><a href="https://apps.shopify.com/dondy-marketing-ai" target="_blank" rel="noopener noreferrer">Dondy's Shopify listing</a> offers a free plan alongside a free trial, is rated 4.9 from 835 reviews, lists COD verification among its chat features, and states the developer is based in India. The free tier is the useful part: run it for a month and count <em>replies</em>, not recoveries. If your customers do not answer WhatsApp, no app in this list fixes that, and you found out for nothing.</p>
-<p><strong>Watch-outs:</strong> free plans on messaging apps are bounded by volume rather than features, so find the ceiling before you build journeys on it and ask what happens to queued messages when you hit it. Model the per-message cost separately from the plan. <a href="/blog/dondy-alternative-shopify-india">Dondy alternative</a> · <a href="/compare/dondy">TopEdge vs Dondy</a>.</p>
+<p><strong>Watch-outs:</strong> free plans on messaging apps are bounded by volume rather than features, so find the ceiling before you build journeys on it and ask what happens to queued messages when you hit it. Model the per-message cost separately from the plan. <a href="/blog/dondy-alternative-shopify-india">Dondy alternative</a> · <a href="/compare/dondy">TopEdge AI vs Dondy</a>.</p>
 
 <h3>10. DelightChat (and similar inbox apps)</h3>
 <p><strong>Best for:</strong> support-first teams that primarily need a shared chat inbox across channels.</p>
@@ -3535,7 +3535,7 @@ export const blogPosts: BlogPost[] = [
 
 <h2>How Much Do Shopify WhatsApp Apps Cost?</h2>
 <ul>
-<li><strong>Subscription</strong>: Flat INR (e.g. TopEdge Launch ₹1,999+ on its own site), USD tiers (Getgabs/Updatrr/Bitespeed), or credits/conversations (AiSensy/Zoko-style meters). TopEdge AI publishes transparent flat order-based plans with 0% Meta message markup and 0% revenue commission, so the subscription is the whole app bill.</li>
+<li><strong>Subscription</strong>: Flat INR (e.g. TopEdge AI Launch ₹1,999+ on its own site), USD tiers (Getgabs/Updatrr/Bitespeed), or credits/conversations (AiSensy/Zoko-style meters). TopEdge AI publishes transparent flat order-based plans with 0% Meta message markup and 0% revenue commission, so the subscription is the whole app bill.</li>
 <li><strong>Meta fees</strong>: Always separate unless a vendor’s allowance explicitly covers them. Read the footnote.</li>
 <li><strong>AI add-ons</strong>: Per message, per conversation, or included BYOK.</li>
 </ul>
@@ -3614,9 +3614,9 @@ export const blogPosts: BlogPost[] = [
 
 
 <p>Choose the WhatsApp app that matches the job you hire it for, then verify Meta economics and reply handling before you scale sends.</p>
-<p>Next: <a href="/blog/whatsapp-automation-for-shopify">WhatsApp automation pillar</a>, <a href="/blog/whatsapp-abandoned-cart-recovery-shopify">cart recovery</a>, <a href="/compare/alternatives">alternatives index</a>, <a href="/pricing">TopEdge pricing</a>, or <a href="/signup">start free</a>.</p>
+<p>Next: <a href="/blog/whatsapp-automation-for-shopify">WhatsApp automation pillar</a>, <a href="/blog/whatsapp-abandoned-cart-recovery-shopify">cart recovery</a>, <a href="/compare/alternatives">alternatives index</a>, <a href="/pricing">TopEdge AI pricing</a>, or <a href="/signup">start free</a>.</p>
 <p>Also compare: <a href="/blog/wati-alternative-shopify-india">WATI alternative</a>, <a href="/blog/aisensy-alternative-shopify-india">AiSensy alternative</a>, <a href="/blog/interakt-alternative-shopify-india">Interakt alternative</a> and <a href="/blog/bitespeed-alternative-shopify-india">Bitespeed alternative</a>.</p>
-<p class="mkt-blog-footnote">Comparison snapshots compiled September 2026 from TopEdge public pricing/compare boards and publicly described vendor patterns (<a href="https://apps.shopify.com/getgabs-whatsapp-chatbot-api" target="_blank" rel="noopener noreferrer">Getgabs Shopify listing</a>, Dondy rate table, Interakt AI add-on notes, Updatrr App Store floors, Bitespeed USD listings). DelightChat and any App Store rating figures must be re-checked live. Listings move. Meta conversation rates change by country and category. This is not affiliate ranking advice; it is a buyer’s framework. Per-message rates, categories and volume tiers: <a href="https://developers.facebook.com/docs/whatsapp/pricing/" target="_blank" rel="noopener noreferrer">Meta’s WhatsApp Business Platform pricing documentation</a>. Template categories, review and the reasons templates get rejected: <a href="https://developers.facebook.com/docs/whatsapp/message-templates/guidelines/" target="_blank" rel="noopener noreferrer">Meta’s message template guidelines</a>.</p>
+<p class="mkt-blog-footnote">Comparison snapshots compiled September 2026 from TopEdge AI public pricing/compare boards and publicly described vendor patterns (<a href="https://apps.shopify.com/getgabs-whatsapp-chatbot-api" target="_blank" rel="noopener noreferrer">Getgabs Shopify listing</a>, Dondy rate table, Interakt AI add-on notes, Updatrr App Store floors, Bitespeed USD listings). DelightChat and any App Store rating figures must be re-checked live. Listings move. Meta conversation rates change by country and category. This is not affiliate ranking advice; it is a buyer’s framework. Per-message rates, categories and volume tiers: <a href="https://developers.facebook.com/docs/whatsapp/pricing/" target="_blank" rel="noopener noreferrer">Meta’s WhatsApp Business Platform pricing documentation</a>. Template categories, review and the reasons templates get rejected: <a href="https://developers.facebook.com/docs/whatsapp/message-templates/guidelines/" target="_blank" rel="noopener noreferrer">Meta’s message template guidelines</a>.</p>
 `,
   },
   {
@@ -3943,7 +3943,7 @@ export const blogPosts: BlogPost[] = [
 <li>Prepaid incentives</li>
 <li>Pincode-level courier selection</li>
 </ul>
-<p>None of that is a TopEdge claim. It's what the country's largest ecommerce operations platform reports about its own network.</p>
+<p>None of that is a TopEdge AI claim. It's what the country's largest ecommerce operations platform reports about its own network.</p>
 </details>
 
 <p>Most RTO rate figures quoted for India ecommerce are one brand's anecdote or a logistics pitch deck. This report is built on one large, attributable dataset and names the gaps where no credible number exists.</p>
@@ -4065,7 +4065,7 @@ export const blogPosts: BlogPost[] = [
 <p>Separately, once a delivery does fail, the clock is short. Amazon Shipping India's <a href="https://shipping.amazon.in/blog/what-is-ndr-in-shipping-india" target="_blank" rel="noopener noreferrer">NDR guide</a> states that nearly every failed delivery not resolved within <strong>36 hours</strong> of the NDR being raised ends in cancellation and RTO. Couriers typically allow 24 to 48 hours between attempts and make two to three attempts in total.</p>
 
 <h2 id="rto-cost">How much does one RTO order actually cost in rupees?</h2>
-<p>This is the number most brands never calculate, and it is why a ₹0.1150 confirmation message is close to free by comparison. Amazon Shipping India itemises the direct logistics loss on a single returned parcel.</p>
+<p>This is the number most brands never calculate, and it is why a ₹0.1150 confirmation message is close to free by comparison. Amazon Shipping India itemises the direct logistics loss on a single returned parcel. Our <a href="/tools/rto-cost-calculator">RTO cost calculator</a> works it out for your own order value and return rate, and the other <a href="/tools">free Shopify tools</a> cover cart recovery and WhatsApp links.</p>
 <div class="mkt-blog-table-wrap">
 <table>
 <thead><tr><th>Cost line</th><th>Range per RTO parcel</th></tr></thead>
@@ -4132,8 +4132,8 @@ export const blogPosts: BlogPost[] = [
 
 
 <p>RTO is one line in a bigger P&amp;L. To see where it sits against product cost, shipping, acquisition cost and platform fees, work through <a href="/blog/profitable-ecommerce-business-india">how to run a profitable ecommerce business in India</a>, which breaks down realistic net margins by category.</p>
-<p>Benchmark yourself, then act: <a href="/features/cod-confirmation">set up COD confirmation journeys</a>, <a href="/features/profit-loss">measure your own RTO % in Profit &amp; costs</a>, compare plans on <a href="/pricing">TopEdge pricing</a>, or <a href="/signup">start free on your Shopify store</a>.</p>
-<p class="mkt-blog-footnote">The 2026 India ecommerce RTO rate figures in this report come from <a href="https://unicommerce.com/india-d2c-report-2026-april/" target="_blank" rel="noopener noreferrer">Unicommerce's India D2C Report 2026</a> across 410M+ shipments and 6,000+ brands, published April 2026. Rupee cost lines, delivery-speed figures and NDR timing come from <a href="https://shipping.amazon.in/blog/what-is-rto-how-to-reduce-return-to-origin" target="_blank" rel="noopener noreferrer">Amazon Shipping India</a>. Category bands and the fully loaded ₹450 to ₹900 figure are ClickPost and GoKwik data as compiled by <a href="https://www.firstresort.in/blogs/research/fashion-ecommerce-returns-rto-india-2026" target="_blank" rel="noopener noreferrer">First Resort</a>, published 15 August 2026. Every page was read on 21 October 2026. None of it is TopEdge merchant data. The 39.2% figure is the November 2025 festive peak across the network and the 21.0% figure is verified-dispatch brands in March 2026: different months and different cohorts, so read the gap as directional, not as a controlled before-and-after. Neither is a forecast or guarantee for your store.</p>
+<p>Benchmark yourself, then act: <a href="/features/cod-confirmation">set up COD confirmation journeys</a>, <a href="/features/profit-loss">measure your own RTO % in Profit &amp; costs</a>, compare plans on <a href="/pricing">TopEdge AI pricing</a>, or <a href="/signup">start free on your Shopify store</a>.</p>
+<p class="mkt-blog-footnote">The 2026 India ecommerce RTO rate figures in this report come from <a href="https://unicommerce.com/india-d2c-report-2026-april/" target="_blank" rel="noopener noreferrer">Unicommerce's India D2C Report 2026</a> across 410M+ shipments and 6,000+ brands, published April 2026. Rupee cost lines, delivery-speed figures and NDR timing come from <a href="https://shipping.amazon.in/blog/what-is-rto-how-to-reduce-return-to-origin" target="_blank" rel="noopener noreferrer">Amazon Shipping India</a>. Category bands and the fully loaded ₹450 to ₹900 figure are ClickPost and GoKwik data as compiled by <a href="https://www.firstresort.in/blogs/research/fashion-ecommerce-returns-rto-india-2026" target="_blank" rel="noopener noreferrer">First Resort</a>, published 15 August 2026. Every page was read on 21 October 2026. None of it is TopEdge AI merchant data. The 39.2% figure is the November 2025 festive peak across the network and the 21.0% figure is verified-dispatch brands in March 2026: different months and different cohorts, so read the gap as directional, not as a controlled before-and-after. Neither is a forecast or guarantee for your store.</p>
 `,
   },
   {
@@ -4409,7 +4409,7 @@ export const blogPosts: BlogPost[] = [
 <li><strong>Negotiate courier rates</strong> once you are shipping 500+ parcels a month. Saving ₹15 to ₹20 per shipment at that scale is real money over a year.</li>
 <li><strong>Invest in repeat purchase.</strong> Your first order from a customer often just breaks even after ad spend. The second and third have no acquisition cost attached.</li>
 </ul>
-<p>If you want to see this per product rather than in aggregate, TopEdge's <a href="/features/profit-loss">profit and costs view</a> computes net margin after cost of goods, shipping, RTO and payment fees.</p>
+<p>If you want to see this per product rather than in aggregate, TopEdge AI's <a href="/features/profit-loss">profit and costs view</a> computes net margin after cost of goods, shipping, RTO and payment fees.</p>
 
 <h2>How to reduce RTO and COD losses</h2>
 <p>If you sell in India, RTO will be one of the first real problems you face. Return to Origin means an order went out, never got delivered and came back. You paid shipping both ways and got nothing.</p>
@@ -4609,7 +4609,7 @@ export const blogPosts: BlogPost[] = [
       {
         question: 'Is ecommerce automation cheaper than hiring a virtual assistant?',
         answer:
-          'For repetitive, rules-based work, usually yes. A VA is a monthly salary for about eight hours a day, and needs retraining if they leave. A TopEdge plan costs ₹1,999 to ₹6,499 a month plus GST, runs continuously and does not make copy-paste errors. Humans still win on judgment, so the right split is automation for everything that does not need judgment.',
+          'For repetitive, rules-based work, usually yes. A VA is a monthly salary for about eight hours a day, and needs retraining if they leave. A TopEdge AI plan costs ₹1,999 to ₹6,499 a month plus GST, runs continuously and does not make copy-paste errors. Humans still win on judgment, so the right split is automation for everything that does not need judgment.',
       },
       {
         question: 'How long does ecommerce automation take to pay for itself?',
@@ -4722,7 +4722,7 @@ export const blogPosts: BlogPost[] = [
 <tbody>
 <tr>
 <td><strong>WhatsApp automation</strong></td>
-<td>TopEdge, WATI, AiSensy, Interakt, Gallabox. All operate as Meta Business Solution Providers. Plans vary widely by message volume, so check current vendor pricing before you budget.</td>
+<td>TopEdge AI, WATI, AiSensy, Interakt, Gallabox. All operate as Meta Business Solution Providers. Plans vary widely by message volume, so check current vendor pricing before you budget.</td>
 </tr>
 <tr>
 <td><strong>Email marketing</strong></td>
@@ -4769,7 +4769,7 @@ export const blogPosts: BlogPost[] = [
 <tr>
 <td><strong>Monthly cost</strong></td>
 <td>A monthly salary, plus hiring and training time</td>
-<td>TopEdge: ₹1,999 to ₹6,499 a month plus GST, by order volume</td>
+<td>TopEdge AI: ₹1,999 to ₹6,499 a month plus GST, by order volume</td>
 </tr>
 <tr>
 <td><strong>Hours covered</strong></td>
@@ -4809,8 +4809,8 @@ export const blogPosts: BlogPost[] = [
 <li><strong>Ignoring maintenance.</strong> Platform updates, API changes and new Meta policies break working automations. Check them monthly. A cart sequence that has been silently failing for three months is money that walked out quietly.</li>
 </ol>
 
-<h2>Where TopEdge fits</h2>
-<p>TopEdge is a WhatsApp automation and ecommerce CRM platform built for Indian D2C brands. It connects directly to Shopify and handles the customer communication layer that generic tools cover poorly for this market.</p>
+<h2>Where TopEdge AI fits</h2>
+<p>TopEdge AI is a WhatsApp automation and ecommerce CRM platform built for Indian D2C brands. It connects directly to Shopify and handles the customer communication layer that generic tools cover poorly for this market.</p>
 <p>It automates <a href="/features/journeys">cart recovery and order lifecycle journeys</a>, sends order confirmations and shipping updates, runs COD to prepaid conversion nudges to reduce RTO, and provides a <a href="/features/flow-builder">visual flow builder</a> for designing multi-step sequences without code. <a href="/features/audience-crm">Audience CRM</a> adds lead scoring and segmentation, and the store engine dashboard puts customer relationships and store performance in one place.</p>
 <p>What makes it specific to India is that it is built around WhatsApp-first communication and COD order management rather than retrofitted onto them. Setup is documented end to end in the <a href="/docs/quickstart">quickstart</a>.</p>
 
@@ -4998,8 +4998,8 @@ export const blogPosts: BlogPost[] = [
 
 <h2>Closing the gap between views and revenue</h2>
 <p>Getting someone from a Reel into a conversation is a win. What happens next is where most brands lose the lead. A buyer messages, clicks a link, maybe adds to cart. Then something interrupts them. They close the app, or a call comes in. Without follow-up, the lead is gone.</p>
-<p>This is the part TopEdge handles. Once a conversation moves to WhatsApp, which is where most Indian buyers continue it, TopEdge's <a href="/features/journeys">automated journeys</a> keep it alive: <a href="/docs/guides/abandoned-cart-recovery">cart recovery</a> if they added to cart and left, post-visit follow-ups, and product messages based on what they asked about. The <a href="/features/analytics">Shopify integration and tracking pixel</a> mean the system knows when a visitor from your social funnel adds to cart, starts checkout or buys, so the right message fires without manual tracking.</p>
-<p>Automated Instagram comment-to-DM capture is on the TopEdge roadmap rather than live today, so for now the practical setup is to use Instagram and YouTube to start the conversation, then let WhatsApp automation carry the follow-up. If you are picking tools for that layer, compare them in <a href="/blog/best-whatsapp-automation-tools-shopify-india">the best WhatsApp automation tools for Shopify India</a>.</p>
+<p>This is the part TopEdge AI handles. Once a conversation moves to WhatsApp, which is where most Indian buyers continue it, TopEdge AI's <a href="/features/journeys">automated journeys</a> keep it alive: <a href="/docs/guides/abandoned-cart-recovery">cart recovery</a> if they added to cart and left, post-visit follow-ups, and product messages based on what they asked about. The <a href="/features/analytics">Shopify integration and tracking pixel</a> mean the system knows when a visitor from your social funnel adds to cart, starts checkout or buys, so the right message fires without manual tracking.</p>
+<p>Automated Instagram comment-to-DM capture is on the TopEdge AI roadmap rather than live today, so for now the practical setup is to use Instagram and YouTube to start the conversation, then let WhatsApp automation carry the follow-up. If you are picking tools for that layer, compare them in <a href="/blog/best-whatsapp-automation-tools-shopify-india">the best WhatsApp automation tools for Shopify India</a>.</p>
 
 <h2>Start with one video</h2>
 <p>Short-form video is one of the few organic channels left that can take a brand from no visibility to real buyer conversations without an ad budget. But only if the strategy is deliberate.</p>
@@ -5187,7 +5187,7 @@ export const blogPosts: BlogPost[] = [
 
 <h2>What happens after you pick the category</h2>
 <p>Picking the category and launching the store is the beginning. Once orders arrive, a different set of problems shows up: COD confirmations, order updates, abandoned carts, questions coming in across channels. For most sellers this is where it starts to feel like too much.</p>
-<p>TopEdge automates that layer for Indian D2C brands. It connects to Shopify and runs <a href="/features/journeys">cart recovery and order lifecycle journeys</a> on WhatsApp, sends <a href="/docs/guides/cod-confirmation">COD confirmation and prepaid conversion messages</a> before dispatch to reduce RTO exposure, and keeps order updates flowing automatically. <a href="/features/audience-crm">Audience CRM</a> adds lead scoring and segmentation, and <a href="/features/profit-loss">profit and costs</a> shows real net margin per product after cost of goods, shipping, RTO and fees, which is exactly the number this guide has been pointing at.</p>
+<p>TopEdge AI automates that layer for Indian D2C brands. It connects to Shopify and runs <a href="/features/journeys">cart recovery and order lifecycle journeys</a> on WhatsApp, sends <a href="/docs/guides/cod-confirmation">COD confirmation and prepaid conversion messages</a> before dispatch to reduce RTO exposure, and keeps order updates flowing automatically. <a href="/features/audience-crm">Audience CRM</a> adds lead scoring and segmentation, and <a href="/features/profit-loss">profit and costs</a> shows real net margin per product after cost of goods, shipping, RTO and fees, which is exactly the number this guide has been pointing at.</p>
 <p>If you are still deciding whether your unit economics work at all, start with <a href="/blog/profitable-ecommerce-business-india">how to run a profitable ecommerce business in India</a>, then <a href="/blog/how-to-automate-ecommerce-store-india">automate the operations</a> once orders are consistent.</p>
 
 <h2>Pick a category with momentum, then do the work</h2>

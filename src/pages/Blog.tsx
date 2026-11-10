@@ -248,7 +248,7 @@ export default function Blog({ page = 1, categorySlug }: Props) {
         jsonLd={[
           organizationJsonLd(),
           webPageJsonLd({
-            name: category ? `${category.label} playbooks` : 'TopEdge Blog, WhatsApp & Shopify Playbooks',
+            name: category ? `${category.label} playbooks` : 'TopEdge AI Blog, WhatsApp & Shopify Playbooks',
             description,
             path,
           }),

@@ -26,7 +26,7 @@ const FAQS = [
   {
     question: 'Can I reply to these chats from a shared inbox?',
     answer:
-      'Yes, if the number is connected to a WhatsApp Business Platform tool. On TopEdge the chat lands in a shared inbox with the customer’s Shopify order shown beside it.',
+      'Yes, if the number is connected to a WhatsApp Business Platform tool. On TopEdge AI the chat lands in a shared inbox with the customer’s Shopify order shown beside it.',
   },
 ];
 
@@ -49,7 +49,7 @@ const BLOCKS: TopicBlock[] = [
     id: 'automation',
     tone: 'note',
     title: 'Getting more chats than you can answer?',
-    body: 'Connect your number to TopEdge and every chat lands in one shared inbox with the customer’s Shopify order beside it, plus ready-made replies for order status.',
+    body: 'Connect your number to TopEdge AI and every chat lands in one shared inbox with the customer’s Shopify order beside it, plus ready-made replies for order status.',
     link: { label: 'See the Shopify WhatsApp integration', href: '/shopify-whatsapp-integration' },
   },
 ];

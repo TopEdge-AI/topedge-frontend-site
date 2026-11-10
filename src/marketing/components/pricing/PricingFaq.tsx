@@ -9,7 +9,7 @@ const [L, G, S] = SHOPIFY_APP_PRICING.plans;
 
 export const PRICING_FAQS = [
   {
-    q: 'How much does TopEdge cost?',
+    q: 'How much does TopEdge AI cost?',
     a: '₹1,999, ₹3,999 or ₹6,499 a month plus GST, sized by orders: 100, 800 or 1,500 a month. Meta bills your WhatsApp messages directly, at 0% markup from us. COD confirmation is on every plan; COD to prepaid and Journey Branch start on Growth.',
   },
   {

@@ -20,7 +20,7 @@ export const FREE_TOOLS: FreeTool[] = [
     href: '/tools/best-whatsapp-tool-for-shopify',
     title: 'Find the best WhatsApp tool for your store',
     short: 'WhatsApp tool finder',
-    body: 'Answer six questions and get an honest shortlist of TopEdge, WATI, Interakt, AiSensy and Bitespeed, with the reasons.',
+    body: 'Answer six questions and get an honest shortlist of TopEdge AI, WATI, Interakt, AiSensy and Bitespeed, with the reasons.',
     tag: '2-minute quiz',
     icon: 'compass',
     feature: true,

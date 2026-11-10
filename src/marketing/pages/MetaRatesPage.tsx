@@ -176,7 +176,7 @@ export default function MetaRatesPage() {
               </li>
               <li className="is-accent">
                 <b>₹0</b>
-                <span>What TopEdge adds on top of either</span>
+                <span>What TopEdge AI adds on top of either</span>
               </li>
             </motion.ul>
           </header>
@@ -205,7 +205,7 @@ export default function MetaRatesPage() {
                           <path d="M20 6 9 17l-5-5" />
                         </svg>
                       </span>
-                      TopEdge adds ₹0
+                      TopEdge AI adds ₹0
                     </p>
                   </li>
                 ))}
@@ -289,7 +289,7 @@ export default function MetaRatesPage() {
               <div className="mkt-rates__links">
                 <Link className="mkt-rates__link" to="/pricing">
                   <span className="mkt-rates__link-eyebrow">Plans</span>
-                  <span className="mkt-rates__link-title">TopEdge pricing, by order volume</span>
+                  <span className="mkt-rates__link-title">TopEdge AI pricing, by order volume</span>
                   <span className="mkt-rates__link-sub">
                     Three plans from ₹1,999 a month, and what each one includes.
                   </span>

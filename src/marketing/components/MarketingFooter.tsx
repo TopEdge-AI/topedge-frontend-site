@@ -89,25 +89,25 @@ const columns: { title: string; links: FootLink[] }[] = [
   {
     title: 'Compare',
     links: [
-      { label: 'TopEdge vs WATI', href: '/compare/wati' },
-      { label: 'TopEdge vs AiSensy', href: '/compare/aisensy' },
-      { label: 'TopEdge vs WATI vs AiSensy', href: '/compare/topedge-vs-wati-vs-aisensy' },
+      { label: 'TopEdge AI vs WATI', href: '/compare/wati' },
+      { label: 'TopEdge AI vs AiSensy', href: '/compare/aisensy' },
+      { label: 'TopEdge AI vs WATI vs AiSensy', href: '/compare/topedge-vs-wati-vs-aisensy' },
       {
         label: 'WATI vs Interakt vs AiSensy',
         href: '/compare/topedge-vs-wati-vs-interakt-vs-aisensy',
       },
-      { label: 'TopEdge vs Interakt', href: '/compare/interakt' },
-      { label: 'TopEdge vs Bitespeed', href: '/compare/bitespeed' },
+      { label: 'TopEdge AI vs Interakt', href: '/compare/interakt' },
+      { label: 'TopEdge AI vs Bitespeed', href: '/compare/bitespeed' },
       // Zoko, Gupshup, Kanal and Getgabs were "Discovered – currently not
       // indexed" in GSC: linked only from /compare, so Googlebot queued them
       // and never spent the crawl. A sitewide footer link is the cheapest way
       // to raise their crawl priority. Keep every /compare/* slug listed here.
-      { label: 'TopEdge vs Zoko', href: '/compare/zoko' },
-      { label: 'TopEdge vs Gupshup', href: '/compare/gupshup' },
-      { label: 'TopEdge vs Dondy', href: '/compare/dondy' },
-      { label: 'TopEdge vs Kanal', href: '/compare/kanal' },
-      { label: 'TopEdge vs Getgabs', href: '/compare/getgabs' },
-      { label: 'TopEdge vs Updatrr', href: '/compare/updatrr' },
+      { label: 'TopEdge AI vs Zoko', href: '/compare/zoko' },
+      { label: 'TopEdge AI vs Gupshup', href: '/compare/gupshup' },
+      { label: 'TopEdge AI vs Dondy', href: '/compare/dondy' },
+      { label: 'TopEdge AI vs Kanal', href: '/compare/kanal' },
+      { label: 'TopEdge AI vs Getgabs', href: '/compare/getgabs' },
+      { label: 'TopEdge AI vs Updatrr', href: '/compare/updatrr' },
       { label: 'All alternatives', href: '/compare/alternatives' },
     ],
   },

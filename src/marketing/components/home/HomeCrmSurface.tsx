@@ -17,7 +17,7 @@ function BentoTile({ tile }: { tile: Tile }) {
         <img
           className="home-crm__tile-img"
           src={tile.image}
-          alt={`TopEdge ${tile.titleLead} ${tile.titleAccent} product screenshot`}
+          alt={`TopEdge AI ${tile.titleLead} ${tile.titleAccent} product screenshot`}
           width={1400}
           height={1400}
           loading="lazy"

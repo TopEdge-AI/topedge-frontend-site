@@ -17,7 +17,7 @@ Disambiguation: TopEdge AI is a Shopify app for Indian D2C brands, built on Shop
 
 Notes for anyone quoting this file:
 
-- Platform billing is INR on https://dash.topedgeai.com. Meta WhatsApp Cloud API charges are billed per message by template category (marketing, utility, authentication, and, from 1 October 2026, service replies past the first 1,000 a month per business phone number), passed through at Meta's published per-message rates at 0% TopEdge markup, and invoiced separately from the platform plan. Meta's current India rate card is quoted with its source at https://topedgeai.com/blog/whatsapp-business-api-pricing-india. Every eligible Indian WhatsApp Business Account must move to INR billing by 31 December 2026 or Meta stops delivery on 1 January 2027.
+- Platform billing is INR on https://dash.topedgeai.com. Meta WhatsApp Cloud API charges are billed per message by template category (marketing, utility, authentication, and, from 1 October 2026, service replies past the first 1,000 a month per business phone number), passed through at Meta's published per-message rates at 0% TopEdge AI markup, and invoiced separately from the platform plan. Meta's current India rate card is quoted with its source at https://topedgeai.com/blog/whatsapp-business-api-pricing-india. Every eligible Indian WhatsApp Business Account must move to INR billing by 31 December 2026 or Meta stops delivery on 1 January 2027.
 - Prefer live pages under https://topedgeai.com/ for product truth. Competitor figures on compare pages carry the date they were checked and need a live vendor check before purchase.
 
 ## Pricing
@@ -57,11 +57,11 @@ Setup guides and screen-by-screen reference, written for the person running the 
 
 ### Get started
 
-- [TopEdge Documentation](https://topedgeai.com/docs): Guides and reference for running WhatsApp automation on Shopify with TopEdge — setup, journeys, cart recovery, COD confirmation, templates and billing.
-- [Quickstart: WhatsApp automation for Shopify](https://topedgeai.com/docs/quickstart): Go live with TopEdge in about 30 minutes: connect Shopify and WhatsApp, approve an order template, publish one journey and send yourself a test message.
-- [Connect WhatsApp Cloud API to TopEdge](https://topedgeai.com/docs/connect-whatsapp): Connect your WhatsApp Business Account to TopEdge: embedded Meta signup, the messages webhook, permanent access tokens, and how to fix a disconnected channel.
-- [Connect Shopify to TopEdge](https://topedgeai.com/docs/connect-shopify): Install the TopEdge Shopify app, understand the permissions it asks for, verify that orders sync, and fix a store stuck on Reconnect.
-- [Go-live checklist before real customers](https://topedgeai.com/docs/go-live-checklist): The checks to run before TopEdge messages real customers: connections, approved templates, published journeys, consent, tracking and a live end-to-end test.
+- [TopEdge AI Documentation](https://topedgeai.com/docs): Guides and reference for running WhatsApp automation on Shopify with TopEdge AI, setup, journeys, cart recovery, COD confirmation, templates and billing.
+- [Quickstart: WhatsApp automation for Shopify](https://topedgeai.com/docs/quickstart): Go live with TopEdge AI in about 30 minutes: connect Shopify and WhatsApp, approve an order template, publish one journey and send yourself a test message.
+- [Connect WhatsApp Cloud API to TopEdge AI](https://topedgeai.com/docs/connect-whatsapp): Connect your WhatsApp Business Account to TopEdge AI: embedded Meta signup, the messages webhook, permanent access tokens, and how to fix a disconnected channel.
+- [Connect Shopify to TopEdge AI](https://topedgeai.com/docs/connect-shopify): Install the TopEdge AI Shopify app, understand the permissions it asks for, verify that orders sync, and fix a store stuck on Reconnect.
+- [Go-live checklist before real customers](https://topedgeai.com/docs/go-live-checklist): The checks to run before TopEdge AI messages real customers: connections, approved templates, published journeys, consent, tracking and a live end-to-end test.
 
 ### Guides
 
@@ -78,52 +78,53 @@ Setup guides and screen-by-screen reference, written for the person running the 
 
 ### Reference
 
-- [Journeys reference: triggers, nodes, publishing](https://topedgeai.com/docs/reference/journeys): Complete reference for TopEdge Journeys — every trigger type, trigger filter, node type, wait behaviour, publishing rule and revenue attribution window.
-- [Flow Builder reference: nodes and publishing](https://topedgeai.com/docs/reference/flow-builder): Reference for Flow Builder — the canvas, every node type, the simulator, publish validation, and how a published flow handles inbound WhatsApp messages.
-- [Live Chat reference: inbox, takeover, filters](https://topedgeai.com/docs/reference/live-chat): Reference for the TopEdge shared WhatsApp inbox — conversation list, composer rules, agent takeover, assignment, customer context and inbox filters.
-- [Orders reference: status, activity, actions](https://topedgeai.com/docs/reference/orders): Reference for the Orders screen — syncing from Shopify, changing status, reading per-order WhatsApp activity, and understanding skip reasons.
-- [Audience reference: customers, segments, scores](https://topedgeai.com/docs/reference/audience-crm): Reference for Audience — the customer table, Customer 360, dynamic segment conditions, lead scoring, consent records and bulk actions.
-- [Campaigns reference: broadcasts and preflight](https://topedgeai.com/docs/reference/campaigns): Reference for Campaigns — audience sources, template selection, the preflight checks, batching and pacing, scheduling, and the delivery metrics per campaign.
-- [Email reference: Gmail sending and templates](https://topedgeai.com/docs/reference/email): Reference for the TopEdge email channel — connecting Gmail, the template studio, merge variables, and sending email alongside WhatsApp in journeys.
-- [Meta Manager reference: templates and catalog](https://topedgeai.com/docs/reference/meta-manager): Reference for Meta Manager — creating WhatsApp templates, blueprints for journeys, submitting for approval, syncing from Meta, the product catalog and QR codes.
-- [Opt-in tools reference: popups and widgets](https://topedgeai.com/docs/reference/opt-in-tools): Reference for opt-in tools — popup, spin wheel, mystery discount and WhatsApp widget, their display rules, publishing, app embed install and per-tool reports.
-- [AI brain reference: intents, knowledge, persona](https://topedgeai.com/docs/reference/ai-brain): Reference for the AI brain — bringing your own Gemini or OpenAI key, store knowledge, bot persona, intent training, intent actions and the confidence test tool.
-- [Chat rules reference: routing and escalation](https://topedgeai.com/docs/reference/chat-rules): Reference for Automation Hub — routing conversations to agents, escalation conditions, and the smart rules engine where it is enabled on your workspace.
-- [Analytics reference: revenue, team, delivery](https://topedgeai.com/docs/reference/analytics): Reference for Insights — revenue and recovery analytics, team performance, delivery and RTO reporting, and how attribution windows change the numbers.
-- [Store growth reference: tracking and carts](https://topedgeai.com/docs/reference/store-growth): Reference for Store growth — website tracking layers, abandoned cart columns, product and action insights, stock tracking, and third-party checkout webhooks.
-- [Commerce reference: products, margins, discounts](https://topedgeai.com/docs/reference/commerce): Reference for the commerce hub — product catalogue sync, store economics with cost of goods and RTO, and Shopify discount codes used in automations.
-- [Warranty hub reference: batches and claims](https://topedgeai.com/docs/reference/warranty-hub): Reference for the warranty hub — product batches and coverage rules, the public registration portal with WhatsApp OTP, and the claim status workflow.
-- [Settings reference: connections, team, billing](https://topedgeai.com/docs/reference/settings-billing): Reference for Settings — workspace and brand identity, channel connections, team access, account security, GST invoices and changing your plan or cycle.
+- [Journeys reference: triggers, nodes, publishing](https://topedgeai.com/docs/reference/journeys): Complete reference for TopEdge AI Journeys, every trigger type, trigger filter, node type, wait behaviour, publishing rule and revenue attribution window.
+- [Flow Builder reference: nodes and publishing](https://topedgeai.com/docs/reference/flow-builder): Reference for Flow Builder, the canvas, every node type, the simulator, publish validation, and how a published flow handles inbound WhatsApp messages.
+- [Live Chat reference: inbox, takeover, filters](https://topedgeai.com/docs/reference/live-chat): Reference for the TopEdge AI shared WhatsApp inbox, conversation list, composer rules, agent takeover, assignment, customer context and inbox filters.
+- [Orders reference: status, activity, actions](https://topedgeai.com/docs/reference/orders): Reference for the Orders screen, syncing from Shopify, changing status, reading per-order WhatsApp activity, and understanding skip reasons.
+- [Audience reference: customers, segments, scores](https://topedgeai.com/docs/reference/audience-crm): Reference for Audience, the customer table, Customer 360, dynamic segment conditions, lead scoring, consent records and bulk actions.
+- [Campaigns reference: broadcasts and preflight](https://topedgeai.com/docs/reference/campaigns): Reference for Campaigns, audience sources, template selection, the preflight checks, batching and pacing, scheduling, and the delivery metrics per campaign.
+- [Email reference: Gmail sending and templates](https://topedgeai.com/docs/reference/email): Reference for the TopEdge AI email channel, connecting Gmail, the template studio, merge variables, and sending email alongside WhatsApp in journeys.
+- [Meta Manager reference: templates and catalog](https://topedgeai.com/docs/reference/meta-manager): Reference for Meta Manager, creating WhatsApp templates, blueprints for journeys, submitting for approval, syncing from Meta, the product catalog and QR codes.
+- [Opt-in tools reference: popups and widgets](https://topedgeai.com/docs/reference/opt-in-tools): Reference for opt-in tools, popup, spin wheel, mystery discount and WhatsApp widget, their display rules, publishing, app embed install and per-tool reports.
+- [AI brain reference: intents, knowledge, persona](https://topedgeai.com/docs/reference/ai-brain): Reference for the AI brain, bringing your own Gemini or OpenAI key, store knowledge, bot persona, intent training, intent actions and the confidence test tool.
+- [Chat rules reference: routing and escalation](https://topedgeai.com/docs/reference/chat-rules): Reference for Automation Hub, routing conversations to agents, escalation conditions, and the smart rules engine where it is enabled on your workspace.
+- [Analytics reference: revenue, team, delivery](https://topedgeai.com/docs/reference/analytics): Reference for Insights, revenue and recovery analytics, team performance, delivery and RTO reporting, and how attribution windows change the numbers.
+- [Store growth reference: tracking and carts](https://topedgeai.com/docs/reference/store-growth): Reference for Store growth, website tracking layers, abandoned cart columns, product and action insights, stock tracking, and third-party checkout webhooks.
+- [Commerce reference: products, margins, discounts](https://topedgeai.com/docs/reference/commerce): Reference for the commerce hub, product catalogue sync, store economics with cost of goods and RTO, and Shopify discount codes used in automations.
+- [Warranty hub reference: batches and claims](https://topedgeai.com/docs/reference/warranty-hub): Reference for the warranty hub, product batches and coverage rules, the public registration portal with WhatsApp OTP, and the claim status workflow.
+- [Settings reference: connections, team, billing](https://topedgeai.com/docs/reference/settings-billing): Reference for Settings, workspace and brand identity, channel connections, team access, account security, GST invoices and changing your plan or cycle.
 
 ### Platform & policy
 
 - [The WhatsApp 24-hour service window](https://topedgeai.com/docs/platform/whatsapp-service-window): What the WhatsApp 24-hour customer service window is, when you can send free-form messages, when a template is required, and how the window reopens.
-- [WhatsApp message template categories and rules](https://topedgeai.com/docs/platform/message-templates): How WhatsApp message templates work — Utility, Marketing and Authentication categories, variables, buttons, approval, and the most common rejection reasons.
-- [What WhatsApp automation actually costs](https://topedgeai.com/docs/platform/conversation-pricing): The two bills behind WhatsApp automation — your TopEdge subscription and Meta’s per-message fees — plus what drives volume and how to keep messaging costs down.
-- [Plan limits, send caps and messaging tiers](https://topedgeai.com/docs/platform/limits-and-quotas): The limits that apply to WhatsApp automation — TopEdge order and send caps per cycle, plan-gated features, Meta messaging tiers and quality rating.
+- [WhatsApp message template categories and rules](https://topedgeai.com/docs/platform/message-templates): How WhatsApp message templates work, Utility, Marketing and Authentication categories, variables, buttons, approval, and the most common rejection reasons.
+- [What WhatsApp automation actually costs](https://topedgeai.com/docs/platform/conversation-pricing): The two bills behind WhatsApp automation, your TopEdge AI subscription and Meta’s per-message fees, plus what drives volume and how to keep messaging costs down.
+- [Plan limits, send caps and messaging tiers](https://topedgeai.com/docs/platform/limits-and-quotas): The limits that apply to WhatsApp automation, TopEdge AI order and send caps per cycle, plan-gated features, Meta messaging tiers and quality rating.
 
 ### Help
 
-- [Troubleshooting WhatsApp automation](https://topedgeai.com/docs/troubleshooting): Find your symptom and its fix — messages not sending, empty inbox, templates rejected, carts without phone numbers, broadcasts blocked and connection errors.
+- [Troubleshooting WhatsApp automation](https://topedgeai.com/docs/troubleshooting): Find your symptom and its fix, messages not sending, empty inbox, templates rejected, carts without phone numbers, broadcasts blocked and connection errors.
 
 ## Compare
 
 - [All 10 alternatives](https://topedgeai.com/compare/alternatives)
-- [TopEdge vs WATI vs AiSensy](https://topedgeai.com/compare/topedge-vs-wati-vs-aisensy): 3-way board
-- [WATI vs Interakt vs AiSensy vs TopEdge](https://topedgeai.com/compare/topedge-vs-wati-vs-interakt-vs-aisensy): 4-way board
-- [TopEdge vs WATI](https://topedgeai.com/compare/wati): Compare TopEdge AI vs WATI for Shopify India: flat INR plans from ₹1,999/mo and 0% Meta markup vs WATI conversation charges, AI tier gates and API setup.
-- [TopEdge vs AiSensy](https://topedgeai.com/compare/aisensy): Compare TopEdge AI vs AiSensy for Shopify India: 0% Meta markup, BYOK AI and native COD to prepaid journeys vs platform charges and credit-metered AI.
-- [TopEdge vs Interakt](https://topedgeai.com/compare/interakt): Compare TopEdge AI vs Interakt for Shopify India: ₹1,999/mo Launch plan, 0% Meta markup and BYOK AI vs a ~₹2,799/mo plan with a ₹0.50/msg AI add-on.
-- [TopEdge vs Bitespeed](https://topedgeai.com/compare/bitespeed): Compare TopEdge AI vs Bitespeed for Shopify India: ₹1,999/mo flat INR plans, 0% Meta markup and built-in warranty vs ₹5L MRR floors and AI add-ons.
-- [TopEdge vs Zoko](https://topedgeai.com/compare/zoko): Compare TopEdge AI vs Zoko for Shopify India: flat INR plans from ₹1,999/mo and 0% Meta markup vs Zoko’s $49.99+ USD base fees and per-conversation metering.
-- [TopEdge vs Getgabs](https://topedgeai.com/compare/getgabs): Compare TopEdge AI vs Getgabs for Shopify India: native COD to prepaid journeys, unified identity and a warranty hub vs $11 to $59/mo USD entry plans.
-- [TopEdge vs Kanal](https://topedgeai.com/compare/kanal): Compare TopEdge AI vs Kanal for Shopify India: flat INR plans from ₹1,999/mo and native COD to prepaid vs Kanal’s €89 to €149/mo EUR plans and Klaviyo focus.
-- [TopEdge vs Dondy](https://topedgeai.com/compare/dondy): Compare TopEdge AI vs Dondy for Shopify India: 0% Meta pass-through and ₹1,999/mo INR plans vs Dondy’s $0.01888/msg India rate and $79.99 to $159.99 USD tiers.
-- [TopEdge vs Updatrr](https://topedgeai.com/compare/updatrr): Compare TopEdge AI vs Updatrr for Shopify India: BYOK AI on every plan from ₹1,999/mo, a visitor pixel and a warranty hub vs USD tiers that gate AI at $99.99.
-- [TopEdge vs Gupshup](https://topedgeai.com/compare/gupshup): Compare TopEdge AI vs Gupshup for Shopify India: self-serve ₹1,999/mo INR plans, 0% Meta markup and native COD journeys vs per-message enterprise CPaaS fees.
+- [TopEdge AI vs WATI vs AiSensy](https://topedgeai.com/compare/topedge-vs-wati-vs-aisensy): 3-way board
+- [WATI vs Interakt vs AiSensy vs TopEdge AI](https://topedgeai.com/compare/topedge-vs-wati-vs-interakt-vs-aisensy): 4-way board
+- [TopEdge AI vs WATI](https://topedgeai.com/compare/wati): Compare TopEdge AI vs WATI for Shopify India: flat INR plans from ₹1,999/mo and 0% Meta markup vs WATI conversation charges, AI tier gates and API setup.
+- [TopEdge AI vs AiSensy](https://topedgeai.com/compare/aisensy): Compare TopEdge AI vs AiSensy for Shopify India: 0% Meta markup, BYOK AI and native COD to prepaid journeys vs platform charges and credit-metered AI.
+- [TopEdge AI vs Interakt](https://topedgeai.com/compare/interakt): Compare TopEdge AI vs Interakt for Shopify India: ₹1,999/mo Launch plan, 0% Meta markup and BYOK AI vs a ~₹2,799/mo plan with a ₹0.50/msg AI add-on.
+- [TopEdge AI vs Bitespeed](https://topedgeai.com/compare/bitespeed): Compare TopEdge AI vs Bitespeed for Shopify India: ₹1,999/mo flat INR plans, 0% Meta markup and built-in warranty vs ₹5L MRR floors and AI add-ons.
+- [TopEdge AI vs Zoko](https://topedgeai.com/compare/zoko): Compare TopEdge AI vs Zoko for Shopify India: flat INR plans from ₹1,999/mo and 0% Meta markup vs Zoko’s $49.99+ USD base fees and per-conversation metering.
+- [TopEdge AI vs Getgabs](https://topedgeai.com/compare/getgabs): Compare TopEdge AI vs Getgabs for Shopify India: native COD to prepaid journeys, unified identity and a warranty hub vs $11 to $59/mo USD entry plans.
+- [TopEdge AI vs Kanal](https://topedgeai.com/compare/kanal): Compare TopEdge AI vs Kanal for Shopify India: flat INR plans from ₹1,999/mo and native COD to prepaid vs Kanal’s €89 to €149/mo EUR plans and Klaviyo focus.
+- [TopEdge AI vs Dondy](https://topedgeai.com/compare/dondy): Compare TopEdge AI vs Dondy for Shopify India: 0% Meta pass-through and ₹1,999/mo INR plans vs Dondy’s $0.01888/msg India rate and $79.99 to $159.99 USD tiers.
+- [TopEdge AI vs Updatrr](https://topedgeai.com/compare/updatrr): Compare TopEdge AI vs Updatrr for Shopify India: BYOK AI on every plan from ₹1,999/mo, a visitor pixel and a warranty hub vs USD tiers that gate AI at $99.99.
+- [TopEdge AI vs Gupshup](https://topedgeai.com/compare/gupshup): Compare TopEdge AI vs Gupshup for Shopify India: self-serve ₹1,999/mo INR plans, 0% Meta markup and native COD journeys vs per-message enterprise CPaaS fees.
 
 ## Playbooks
 
+- [Wati Pricing in India (2026): Plans, Seats and Bill](https://topedgeai.com/blog/wati-pricing-india): Wati pricing read 10 Nov 2026: Growth, Pro and Business in rupees, the cost of extra users, message rates above Meta and the bill at 100, 500 and 1,500 orders.
 - [Interakt Pricing in India (2026): Real Monthly Cost](https://topedgeai.com/blog/interakt-pricing-india): Interakt pricing read 9 Nov 2026: web plans, the separate Shopify app plans, message rates above Meta, and the real bill at 100, 500 and 1,500 orders.
 - [Top 10 Best Shopify Upsell Apps for 2027](https://topedgeai.com/blog/best-shopify-upsell-apps): The 10 best Shopify upsell apps for 2027, ranked by where the offer appears, with App Store ratings, launch dates and rupee pricing read on 3 November 2026.
 - [Top 10 Shopify SEO Experts and Resources for 2027](https://topedgeai.com/blog/shopify-seo-experts): The 10 Shopify SEO experts and resources worth your time, plus five Shopify-specific questions that tell you in a minute whether a consultant is real.
@@ -154,7 +155,7 @@ Setup guides and screen-by-screen reference, written for the person running the 
 - [AI WhatsApp Chatbot for Shopify India](https://topedgeai.com/blog/ai-whatsapp-chatbot-for-shopify-india): What a good AI WhatsApp chatbot for Shopify looks like in India: live SKUs, ₹ prices, COD FAQs, Meta-safe behavior, and clean handoff to humans.
 - [What Is Ecommerce Automation on Shopify WhatsApp?](https://topedgeai.com/blog/what-is-ecommerce-automation-shopify-whatsapp): Plain definition of ecommerce automation on Shopify WhatsApp: carts, COD, order updates, campaigns, inbox, and what to automate first in India.
 - [How to Reduce COD RTO on Shopify India: WhatsApp SOP](https://topedgeai.com/blog/how-to-reduce-rto-with-whatsapp-cod-confirmation): A step-by-step SOP to cut Shopify India RTO: utility template timing, confirm, reschedule and cancel branches, warehouse hold rules and what finance measures.
-- [Best WhatsApp Automation for Shopify India (2026)](https://topedgeai.com/blog/best-whatsapp-automation-tools-shopify-india): Direct answer plus a comparison table of WhatsApp automation tools for Shopify India: WATI, AiSensy, Interakt, Bitespeed, Zoko, Getgabs, Kanal, Dondy, TopEdge.
+- [Best WhatsApp Automation for Shopify India (2026)](https://topedgeai.com/blog/best-whatsapp-automation-tools-shopify-india): Direct answer and comparison table of WhatsApp automation tools for Shopify India: WATI, AiSensy, Interakt, Bitespeed, Zoko, Getgabs, Kanal, Dondy, TopEdge AI.
 - [Shopify WhatsApp Automation Go-Live Checklist (India)](https://topedgeai.com/blog/shopify-automation-checklist-whatsapp-cart-recovery): A fast Shopify automation checklist to connect WhatsApp, approve Meta templates, publish cart recovery, turn on COD paths, and open a shared inbox.
 - [WhatsApp Shared Inbox with Shopify Orders](https://topedgeai.com/blog/whatsapp-shared-inbox-shopify-order-context): Why ecommerce teams need a WhatsApp shared inbox with Shopify order context: assignment, AI handoff, tags, and Instagram in one place.
 - [Meta WhatsApp Cloud API Templates for Shopify](https://topedgeai.com/blog/meta-whatsapp-cloud-api-shopify-templates): A plain-English guide to Meta WhatsApp Cloud API templates for Shopify ecommerce: categories, approval tips, journey gating, and transparent rates.
@@ -164,7 +165,7 @@ Setup guides and screen-by-screen reference, written for the person running the 
 
 ## Canonical URL directory
 
-All 159 indexable URLs on this domain, no trailing slash except the root.
+All 160 indexable URLs on this domain, no trailing slash except the root.
 
 - https://topedgeai.com/
 - https://topedgeai.com/pricing
@@ -280,6 +281,7 @@ All 159 indexable URLs on this domain, no trailing slash except the root.
 - https://topedgeai.com/blog/aisensy-alternative-shopify-india
 - https://topedgeai.com/blog/interakt-alternative-shopify-india
 - https://topedgeai.com/blog/interakt-pricing-india
+- https://topedgeai.com/blog/wati-pricing-india
 - https://topedgeai.com/blog/bitespeed-alternative-shopify-india
 - https://topedgeai.com/blog/whatsapp-template-rejected-meta-shopify-fix
 - https://topedgeai.com/blog/whatsapp-opt-in-shopify-india

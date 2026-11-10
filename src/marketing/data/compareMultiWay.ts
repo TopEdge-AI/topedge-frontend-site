@@ -13,12 +13,12 @@ export const FOUR_WAY_PATH = '/compare/topedge-vs-wati-vs-interakt-vs-aisensy';
 
 const THREE_WAY_FAQS = [
   {
-    question: 'How does TopEdge differ from WATI and AiSensy on Meta markup?',
+    question: 'How does TopEdge AI differ from WATI and AiSensy on Meta markup?',
     answer:
-      'TopEdge publishes 0% platform markup: Meta bills your own Business Account, so you pay ₹0.8631 per marketing template and ₹0.1150 per utility template at Meta’s India card. WATI’s own Growth-plan rate card, dated 1 October 2026, lists ₹1.0357 and ₹0.1495 for the same two messages, which is 20% and 30% above Meta. AiSensy lists ₹1.09 and ₹0.145, about 26% above on both. Both vendors’ figures were read off their own pricing pages on 7 November 2026. Open the pairwise pages for the full rows.',
+      'TopEdge AI publishes 0% platform markup: Meta bills your own Business Account, so you pay ₹0.8631 per marketing template and ₹0.1150 per utility template at Meta’s India card. WATI’s own Growth-plan rate card, dated 1 October 2026, lists ₹1.0357 and ₹0.1495 for the same two messages, which is 20% and 30% above Meta. AiSensy lists ₹1.09 and ₹0.145, about 26% above on both. Both vendors’ figures were read off their own pricing pages on 7 November 2026. Open the pairwise pages for the full rows.',
   },
   {
-    question: 'Who should pick TopEdge in this three-way shortlist?',
+    question: 'Who should pick TopEdge AI in this three-way shortlist?',
     answer:
       'Shopify India teams that want flat order-based plans, native COD to prepaid on Growth and Scale, unified identity and unlimited flows without a Meta markup layer.',
   },
@@ -38,7 +38,7 @@ const FOUR_WAY_FAQS = [
   {
     question: 'Which of WATI, Interakt and AiSensy charges a markup over Meta?',
     answer:
-      'All three publish India per-message rates above Meta’s own card on the plans compared here. On a marketing template, where Meta charges ₹0.8631: WATI Growth ₹1.0357 (20% more), Interakt Growth ₹0.958 (11% more), AiSensy ₹1.09 (26% more). On a utility template, where Meta charges ₹0.1150: WATI Growth ₹0.1495, Interakt Growth ₹0.150 and AiSensy ₹0.145, all 26% to 30% more. WATI’s Pro and Business cards and Interakt’s Advanced plan are a little cheaper, and Interakt lists no markup only on Enterprise. TopEdge passes Meta through at 0% and bills the platform separately: in INR on topedgeai.com, or in USD through the Shopify App Store. All three were read off their own pricing pages on 7 November 2026; read your own rate card in Meta Business Manager before you take any vendor number, including ours.',
+      'All three publish India per-message rates above Meta’s own card on the plans compared here. On a marketing template, where Meta charges ₹0.8631: WATI Growth ₹1.0357 (20% more), Interakt Growth ₹0.958 (11% more), AiSensy ₹1.09 (26% more). On a utility template, where Meta charges ₹0.1150: WATI Growth ₹0.1495, Interakt Growth ₹0.150 and AiSensy ₹0.145, all 26% to 30% more. WATI’s Pro and Business cards and Interakt’s Advanced plan are a little cheaper, and Interakt lists no markup only on Enterprise. TopEdge AI passes Meta through at 0% and bills the platform separately: in INR on topedgeai.com, or in USD through the Shopify App Store. All three were read off their own pricing pages on 7 November 2026; read your own rate card in Meta Business Manager before you take any vendor number, including ours.',
   },
   {
     question: 'What does Meta itself charge in India in 2026?',
@@ -58,7 +58,7 @@ const FOUR_WAY_FAQS = [
   {
     question: 'Which one is actually best for a COD-heavy store?',
     answer:
-      'Judge it on the COD rows rather than the feature count. A COD-heavy store needs confirmation before dispatch, a warehouse hold that operations will respect, and a prepaid conversion path. On TopEdge, COD confirmation is on every plan and automated COD to prepaid is on Growth and Scale.',
+      'Judge it on the COD rows rather than the feature count. A COD-heavy store needs confirmation before dispatch, a warehouse hold that operations will respect, and a prepaid conversion path. On TopEdge AI, COD confirmation is on every plan and automated COD to prepaid is on Growth and Scale.',
   },
   {
     question: 'Why does this board compare four platforms instead of two?',
@@ -74,9 +74,9 @@ export function threeWayConfig(modifiedIso: string): MultiWayConfig<'wati' | 'ai
     description:
       '3-way Shopify India WhatsApp comparison: TopEdge AI vs WATI vs AiSensy on Meta template markup, BYOK AI cost, COD to prepaid funnels and chatflow limits.',
     keywords:
-      'TopEdge vs WATI vs AiSensy, wati vs aisensy, WhatsApp automation comparison India, WhatsApp template markup, COD prepaid WhatsApp comparison',
+      'TopEdge AI vs WATI vs AiSensy, wati vs aisensy, WhatsApp automation comparison India, WhatsApp template markup, COD prepaid WhatsApp comparison',
     ways: '3-way',
-    shortName: 'TopEdge vs WATI vs AiSensy',
+    shortName: 'TopEdge AI vs WATI vs AiSensy',
     peers: [
       { key: 'wati', name: 'WATI', logo: LOGO_WATI, href: '/compare/wati' },
       { key: 'aisensy', name: 'AiSensy', logo: LOGO_AISENSY, href: '/compare/aisensy' },
@@ -99,7 +99,7 @@ export function fourWayConfig(
     keywords:
       'wati vs aisensy vs interakt, wati vs interakt, interakt vs aisensy, WhatsApp automation comparison Shopify India, WhatsApp API platform comparison India, best WhatsApp platform India',
     ways: '4-way',
-    shortName: 'TopEdge vs WATI vs Interakt vs AiSensy',
+    shortName: 'TopEdge AI vs WATI vs Interakt vs AiSensy',
     peers: [
       { key: 'wati', name: 'WATI', logo: LOGO_WATI, href: '/compare/wati' },
       { key: 'interakt', name: 'Interakt', logo: LOGO_INTERAKT, href: '/compare/interakt' },

@@ -61,8 +61,8 @@ export function docMetaDescription(article: DocArticle): string {
 
 /** `<title>`: "<title> | TopEdge Docs", inside the 65-character budget. */
 export function docPageTitle(article: DocArticle): string {
-  if (/TopEdge Doc/i.test(article.title)) return article.title;
-  const full = `${article.title} | TopEdge Docs`;
+  if (/TopEdge (AI )?Doc/i.test(article.title)) return article.title;
+  const full = `${article.title} | TopEdge AI Docs`;
   return [...full].length <= 65 ? full : article.title;
 }
 

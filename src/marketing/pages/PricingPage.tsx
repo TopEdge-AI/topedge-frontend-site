@@ -158,7 +158,7 @@ export default function PricingPage() {
             <IncludedFeatures items={catalog.universalFeatures} />
 
             <TrustpilotProof
-              intro="Published reviews from Shopify brands running TopEdge, quoted as written."
+              intro="Published reviews from Shopify brands running TopEdge AI, quoted as written."
               omitAuthors={['Robin']}
             />
 

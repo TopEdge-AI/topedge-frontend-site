@@ -60,7 +60,7 @@ function Intro({ onStart }: { onStart: () => void }) {
         <ArrowRight size={17} strokeWidth={2.2} aria-hidden />
       </button>
       <p className="mkt-finder__intro-note">
-        Built by TopEdge, scored in the open. If another tool suits your store better, the result
+        Built by TopEdge AI, scored in the open. If another tool suits your store better, the result
         says so.
       </p>
     </div>
@@ -220,7 +220,7 @@ function ResultCard({ r, top, answers }: { r: VendorResult; top?: boolean; answe
         {isTopEdge ? (
           r.blocked ? (
             <Link to="/integrations" className="mkt-finder__link">
-              See what TopEdge connects to
+              See what TopEdge AI connects to
             </Link>
           ) : (
             <>
@@ -245,7 +245,7 @@ function ResultCard({ r, top, answers }: { r: VendorResult; top?: boolean; answe
             </a>
             {v.comparePath && (
               <Link to={v.comparePath} className="mkt-finder__link">
-                {v.name} vs TopEdge, in detail
+                {v.name} vs TopEdge AI, in detail
               </Link>
             )}
           </>

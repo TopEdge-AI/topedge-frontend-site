@@ -164,7 +164,7 @@ Disambiguation: TopEdge AI is a Shopify app for Indian D2C brands, built on Shop
 
 Notes for anyone quoting this file:
 
-- Platform billing is INR on ${identity.COMPANY_DASHBOARD_URL}. Meta WhatsApp Cloud API charges are billed per message by template category (marketing, utility, authentication, and, from 1 October 2026, service replies past the first 1,000 a month per business phone number), passed through at Meta's published per-message rates at 0% TopEdge markup, and invoiced separately from the platform plan. Meta's current India rate card is quoted with its source at ${SITE}/blog/whatsapp-business-api-pricing-india. Every eligible Indian WhatsApp Business Account must move to INR billing by 31 December 2026 or Meta stops delivery on 1 January 2027.
+- Platform billing is INR on ${identity.COMPANY_DASHBOARD_URL}. Meta WhatsApp Cloud API charges are billed per message by template category (marketing, utility, authentication, and, from 1 October 2026, service replies past the first 1,000 a month per business phone number), passed through at Meta's published per-message rates at 0% TopEdge AI markup, and invoiced separately from the platform plan. Meta's current India rate card is quoted with its source at ${SITE}/blog/whatsapp-business-api-pricing-india. Every eligible Indian WhatsApp Business Account must move to INR billing by 31 December 2026 or Meta stops delivery on 1 January 2027.
 - Prefer live pages under ${SITE}/ for product truth. Competitor figures on compare pages carry the date they were checked and need a live vendor check before purchase.
 
 ## Pricing
@@ -209,11 +209,11 @@ const COMPARE_ORDER = [
 function compareLines() {
   return [
     `- [All 10 alternatives](${url('/compare/alternatives')})`,
-    `- [TopEdge vs WATI vs AiSensy](${url('/compare/topedge-vs-wati-vs-aisensy')}): 3-way board`,
-    `- [WATI vs Interakt vs AiSensy vs TopEdge](${url('/compare/topedge-vs-wati-vs-interakt-vs-aisensy')}): 4-way board`,
+    `- [TopEdge AI vs WATI vs AiSensy](${url('/compare/topedge-vs-wati-vs-aisensy')}): 3-way board`,
+    `- [WATI vs Interakt vs AiSensy vs TopEdge AI](${url('/compare/topedge-vs-wati-vs-interakt-vs-aisensy')}): 4-way board`,
     ...COMPARE_ORDER.map((slug) => {
       const c = COMPARE_COMPETITORS[slug];
-      return `- [TopEdge vs ${c.name}](${url(`/compare/${slug}`)}): ${c.description}`;
+      return `- [TopEdge AI vs ${c.name}](${url(`/compare/${slug}`)}): ${c.description}`;
     }),
   ];
 }

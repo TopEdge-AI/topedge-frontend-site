@@ -7,14 +7,14 @@ export default function NotFoundPage() {
     <MarketingPage className="flex min-h-[70vh] items-center justify-center px-5">
       <MarketingSEO
         title="Page not found"
-        description="This TopEdge page does not exist. Head home for WhatsApp automation for Shopify India."
+        description="This TopEdge AI page does not exist. Head home for WhatsApp automation for Shopify India."
         path="/404"
         noIndex
       />
       <div className="text-center">
         <p className="mkt-eyebrow">404</p>
         <h1 className="mkt-display mt-4 text-4xl font-medium text-[#0c1222]">Page not found</h1>
-        <p className="mt-4 text-[#5a6474]">Let’s get you back to the main TopEdge story.</p>
+        <p className="mt-4 text-[#5a6474]">Let’s get you back to the main TopEdge AI story.</p>
         <Link to="/" className="mkt-btn-primary mt-8">
           Go home
         </Link>

@@ -107,7 +107,7 @@ export default function CompareIndexPage() {
         jsonLd={[
           organizationJsonLd(),
           webPageJsonLd({
-            name: 'Compare TopEdge',
+            name: 'Compare TopEdge AI',
             description: PAGE_SEO.compare.description,
             path: PAGE_SEO.compare.path,
           }),

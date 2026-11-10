@@ -76,7 +76,7 @@ export default function ToolsIndexPage() {
         </Section>
 
         <Section wash="soft">
-          <TrustBand title="Made by the team behind TopEdge, used by Shopify brands" />
+          <TrustBand title="Made by the team behind TopEdge AI, used by Shopify brands" />
         </Section>
 
         <MarketingCtaBand

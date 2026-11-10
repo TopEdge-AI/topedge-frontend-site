@@ -76,7 +76,7 @@ function ownProductFaqs() {
       question: 'Does TopEdge AI add a markup on WhatsApp message rates?',
       answer:
         'No. Meta bills WhatsApp conversations to your own Meta Business Account at its ' +
-        'published India rate card, and TopEdge adds 0% on top. The platform plan and the ' +
+        'published India rate card, and TopEdge AI adds 0% on top. The platform plan and the ' +
         'messaging cost are two separate invoices, so you can read Meta\u2019s number yourself ' +
         'in Business Manager rather than taking ours.',
     },
@@ -118,9 +118,9 @@ function pickBestPlan<T extends { popular?: boolean; name: string; price: string
 }
 
 function ScoreEdge({ edge, competitorName }: { edge: CompareScoreRow['edge']; competitorName: string }) {
-  const label = edge === 'TopEdge' ? 'TopEdge AI' : edge === 'Competitor' ? competitorName : edge;
+  const label = edge === 'TopEdge AI' ? 'TopEdge AI' : edge === 'Competitor' ? competitorName : edge;
   const mod =
-    edge === 'TopEdge' ? 'is-te' : edge === 'Competitor' ? 'is-comp' : edge === 'Even' ? 'is-even' : 'is-trade';
+    edge === 'TopEdge AI' ? 'is-te' : edge === 'Competitor' ? 'is-comp' : edge === 'Even' ? 'is-even' : 'is-trade';
   return <span className={`mkt-cmp__edge ${mod}`}>{label}</span>;
 }
 

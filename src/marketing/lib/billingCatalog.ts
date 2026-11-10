@@ -340,39 +340,12 @@ export function offerPriceValidUntil(from = new Date()): string {
  * not a physical good.
  */
 /**
- * Merchant-listing fields Google asks for on every Offer, modelled honestly for
- * a software subscription.
- *
- * GSC flagged "Missing field 'hasMerchantReturnPolicy'", "'shippingDetails'" and
- * "'validFrom'" (non-critical) on 5 URLs from 2026-09-21. They are requested
- * because softwareApplicationJsonLd is dual-typed SoftwareApplication+Product,
- * which Google coerces into a merchant listing — and that dual type is load
- * bearing, so the answer is to fill the fields truthfully rather than drop
- * Product and lose the listing.
- *
- * Nothing here invents a commercial term:
- *   - doesNotShip: true. There is no shipment; this is a hosted subscription.
- *     Stating a shipping rate or delivery window would be false, and it is the
- *     same reasoning as the "No itemCondition" note below.
- *   - MerchantReturnNotPermitted. Terms section 6 ("Trials, fees, GST, no
- *     refunds") states all subscription fees are non-refundable once charged,
- *     including mid-cycle cancellation and unused quota. If that policy ever
- *     changes, this must change with it.
- *
- * MerchantReturnNotPermitted is an enumeration member, so it is a URL string
- * rather than a node with its own @type.
+ * No merchant-listing fields (shippingDetails, hasMerchantReturnPolicy) on these
+ * Offers. They were added in Sep 2026 to quiet GSC warnings that only existed
+ * because the parent node was dual-typed SoftwareApplication+Product. The
+ * Product type was dropped on 10 Nov 2026 (see softwareApplicationJsonLd), so a
+ * hosted subscription no longer has to pretend to have shipping or returns.
  */
-export const OFFER_SHIPPING_DETAILS = {
-  '@type': 'OfferShippingDetails' as const,
-  doesNotShip: true,
-};
-
-export const OFFER_RETURN_POLICY = {
-  '@type': 'MerchantReturnPolicy' as const,
-  applicableCountry: 'IN',
-  returnPolicyCategory: 'https://schema.org/MerchantReturnNotPermitted',
-  merchantReturnLink: 'https://topedgeai.com/terms',
-};
 
 /**
  * The date these prices went live, which is the build date: the catalog is read
@@ -428,8 +401,6 @@ export function catalogDefaultCycleOffersJsonLd(
         validFrom,
         url,
         availability: 'https://schema.org/InStock',
-        shippingDetails: OFFER_SHIPPING_DETAILS,
-        hasMerchantReturnPolicy: OFFER_RETURN_POLICY,
         priceSpecification: {
           '@type': 'UnitPriceSpecification' as const,
           price,

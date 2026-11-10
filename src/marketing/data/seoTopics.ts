@@ -72,9 +72,9 @@ export const SEO_TOPICS: Record<string, SeoTopic> = {
           'Most Indian D2C brands see strong results with two to three messages over 48-72 hours. More than that often hurts trust and risks template quality.',
       },
       {
-        question: 'Does TopEdge require Zapier for cart recovery?',
+        question: 'Does TopEdge AI require Zapier for cart recovery?',
         answer:
-          'No. TopEdge connects Shopify over OAuth and Meta WhatsApp Cloud API directly, then runs journeys and Live Chat in one workspace.',
+          'No. TopEdge AI connects Shopify over OAuth and Meta WhatsApp Cloud API directly, then runs journeys and Live Chat in one workspace.',
       },
     ],
     related: [
@@ -167,7 +167,7 @@ export const SEO_TOPICS: Record<string, SeoTopic> = {
         h2: 'What syncs from Shopify, and what each object drives',
         accent: 'each object drives',
         intro:
-          'After Shopify OAuth, these objects flow into TopEdge continuously. The right column is what they are actually used for, because a sync that powers nothing is just storage.',
+          'After Shopify OAuth, these objects flow into TopEdge AI continuously. The right column is what they are actually used for, because a sync that powers nothing is just storage.',
         columns: ['Shopify object', 'What comes across', 'What it powers on WhatsApp'],
         rows: [
           {
@@ -219,7 +219,7 @@ export const SEO_TOPICS: Record<string, SeoTopic> = {
           'The engineering is not the slow part. Meta business verification and first template approval are, and both are queues you wait in rather than work you do.',
         steps: [
           {
-            title: 'Install TopEdge and authorise Shopify',
+            title: 'Install TopEdge AI and authorise Shopify',
             body:
               'One-click Shopify OAuth from the app listing or the dashboard. No private app keys, no Zapier in the middle, no code on your theme for the core sync.',
             meta: 'about 2 minutes',
@@ -239,7 +239,7 @@ export const SEO_TOPICS: Record<string, SeoTopic> = {
           {
             title: 'Submit your message templates',
             body:
-              'Cart recovery, order update and COD confirmation templates go to Meta for approval by category. TopEdge tracks approval state so a journey cannot send a template that is still a draft.',
+              'Cart recovery, order update and COD confirmation templates go to Meta for approval by category. TopEdge AI tracks approval state so a journey cannot send a template that is still a draft.',
             meta: 'Many clear in minutes, most within a day',
           },
           {
@@ -256,7 +256,7 @@ export const SEO_TOPICS: Record<string, SeoTopic> = {
         h2: 'What Meta charges in India, and what we add',
         accent: 'what we add',
         intro:
-          'Meta bills per delivered message by category, directly to you. TopEdge adds no markup on those fees, so these are the rates you pay rather than a resold number.',
+          'Meta bills per delivered message by category, directly to you. TopEdge AI adds no markup on those fees, so these are the rates you pay rather than a resold number.',
         figures: [
           {
             value: '₹0.8631',
@@ -316,7 +316,7 @@ export const SEO_TOPICS: Record<string, SeoTopic> = {
         accent: 'COD stores',
         body: [
           'COD is why a Shopify WhatsApp integration pays for itself faster in India than almost anywhere else. An unconfirmed COD order is a parcel you pay to ship twice if the customer changes their mind at the door, and the published RTO figures above show how often that happens during a festive quarter.',
-          'A confirmation message before dispatch does two things at once. It filters out the orders that were never serious, which is the larger share of the problem, and it gives the serious ones a reason to switch to prepaid when you offer one. Confirmation runs on every TopEdge plan. The prepaid switch, which needs a branching journey, is a Growth and Scale feature.',
+          'A confirmation message before dispatch does two things at once. It filters out the orders that were never serious, which is the larger share of the problem, and it gives the serious ones a reason to switch to prepaid when you offer one. Confirmation runs on every TopEdge AI plan. The prepaid switch, which needs a branching journey, is a Growth and Scale feature.',
         ],
       },
       {
@@ -361,7 +361,7 @@ export const SEO_TOPICS: Record<string, SeoTopic> = {
         accent: 'glue code',
         intro:
           'Three ways Shopify stores connect WhatsApp, and what each one actually costs you in practice.',
-        columns: ['', 'Zapier or glue code', 'A general BSP panel', 'TopEdge'],
+        columns: ['', 'Zapier or glue code', 'A general BSP panel', 'TopEdge AI'],
         mineColumn: 3,
         rows: [
           {
@@ -403,22 +403,22 @@ export const SEO_TOPICS: Record<string, SeoTopic> = {
       {
         question: 'How do I connect Shopify to WhatsApp?',
         answer:
-          'Install a platform that supports Shopify OAuth and Meta’s WhatsApp Cloud API, then authorise your store, add your WhatsApp Business account credentials, clear Meta business verification, get your templates approved, and publish a journey. In TopEdge the connection steps take roughly half an hour of actual work; Meta’s verification and template reviews are the waiting.',
+          'Install a platform that supports Shopify OAuth and Meta’s WhatsApp Cloud API, then authorise your store, add your WhatsApp Business account credentials, clear Meta business verification, get your templates approved, and publish a journey. In TopEdge AI the connection steps take roughly half an hour of actual work; Meta’s verification and template reviews are the waiting.',
       },
       {
         question: 'Do I need Zapier for Shopify WhatsApp automation?',
         answer:
-          'No. TopEdge connects to Shopify over OAuth and to Meta’s WhatsApp Cloud API directly, so carts, orders, customers, catalog and the COD flag arrive natively. Glue code becomes a maintenance job the first time Shopify changes a webhook.',
+          'No. TopEdge AI connects to Shopify over OAuth and to Meta’s WhatsApp Cloud API directly, so carts, orders, customers, catalog and the COD flag arrive natively. Glue code becomes a maintenance job the first time Shopify changes a webhook.',
       },
       {
         question: 'How much does WhatsApp cost for a Shopify store in India?',
         answer:
-          'Meta bills you per delivered message by category. In India that is ₹0.8631 for a marketing message and ₹0.1150 for a utility or authentication message, and from 1 October 2026 each business phone number gets 1,000 free service messages a month. TopEdge adds no markup on those fees, so platform pricing and Meta pricing are separate lines. TopEdge plans start at ₹1,999 a month plus GST.',
+          'Meta bills you per delivered message by category. In India that is ₹0.8631 for a marketing message and ₹0.1150 for a utility or authentication message, and from 1 October 2026 each business phone number gets 1,000 free service messages a month. TopEdge AI adds no markup on those fees, so platform pricing and Meta pricing are separate lines. TopEdge AI plans start at ₹1,999 a month plus GST.',
       },
       {
         question: 'Can I confirm COD orders on WhatsApp before shipping?',
         answer:
-          'Yes. The COD flag comes across from Shopify on the order, so a journey can message the customer to confirm before the parcel is picked up. Basic COD confirmation is available on every TopEdge plan. Converting a confirmed COD order to prepaid needs a branching journey and is a Growth and Scale feature.',
+          'Yes. The COD flag comes across from Shopify on the order, so a journey can message the customer to confirm before the parcel is picked up. Basic COD confirmation is available on every TopEdge AI plan. Converting a confirmed COD order to prepaid needs a branching journey and is a Growth and Scale feature.',
       },
       {
         question: 'Is a WhatsApp integration better than Shopify abandoned cart emails?',

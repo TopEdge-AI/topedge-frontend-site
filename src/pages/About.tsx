@@ -54,7 +54,7 @@ const brands = [
     href: 'https://delitechsmarthome.in/',
     logo: '/trust/delitech-white.png',
     tag: 'Smart security · India',
-    copy: 'Video doorbells and home security for Indian families, with Amazon Choice traction and WhatsApp as a primary support channel. TopEdge keeps cart recovery, order updates, and help on the same thread.',
+    copy: 'Video doorbells and home security for Indian families, with Amazon Choice traction and WhatsApp as a primary support channel. TopEdge AI keeps cart recovery, order updates, and help on the same thread.',
     stats: ['2K+ customers', 'Amazon Choice', '24×7 support'],
   },
   {
@@ -62,7 +62,7 @@ const brands = [
     href: 'https://apexlight.in/',
     logo: '/trust/apex-white.png',
     tag: 'Smart lighting · India',
-    copy: 'Shopify-native smart lighting, RGBIC, floor lamps, TV sync, for buyers across India. TopEdge runs WhatsApp carts, prepaid nudges, and post-purchase support without rebuilding flows every drop.',
+    copy: 'Shopify-native smart lighting, RGBIC, floor lamps, TV sync, for buyers across India. TopEdge AI runs WhatsApp carts, prepaid nudges, and post-purchase support without rebuilding flows every drop.',
     stats: ['50K+ customers', 'RGBIC category', 'Ahmedabad D2C'],
   },
 ];
@@ -208,12 +208,12 @@ export default function About() {
 
         <section className="mkt-about__section" aria-labelledby="about-why">
           <Reveal>
-            <p className="mkt-about__eyebrow">Why TopEdge</p>
+            <p className="mkt-about__eyebrow">Why TopEdge AI</p>
             <h2 id="about-why" className="mkt-about__heading">
               Conversations that close revenue
             </h2>
             <p className="mkt-about__intro">
-              TopEdge sits between your store, Meta, and WhatsApp, not another chatbot. Carts, COD
+              TopEdge AI sits between your store, Meta, and WhatsApp, not another chatbot. Carts, COD
               status, and order context stay live, so journeys and Live Chat match your Shopify
               admin.
             </p>

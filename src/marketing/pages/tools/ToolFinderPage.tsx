@@ -20,13 +20,13 @@ import '../../styles/journey-flow.css';
 const PATH = '/tools/best-whatsapp-tool-for-shopify';
 const TITLE = 'Best WhatsApp Tool for Your Shopify Store? Take the 2-Minute Quiz';
 const DESCRIPTION =
-  'Answer six questions and get an honest shortlist of WhatsApp tools for your Shopify store in India: TopEdge, WATI, Interakt, AiSensy and Bitespeed compared.';
+  'Answer six questions and get an honest shortlist of WhatsApp tools for your Shopify store in India: TopEdge AI, WATI, Interakt, AiSensy and Bitespeed compared.';
 
 const FAQS = [
   {
     question: 'Is this tool finder neutral?',
     answer:
-      'TopEdge built it, so read it with that in mind. To keep it fair, the scoring is written out on this page, every competitor detail is taken from that vendor’s own published pages, and the finder recommends another tool when your answers point there, for example if you are not on Shopify or sell mainly through Instagram.',
+      'TopEdge AI built it, so read it with that in mind. To keep it fair, the scoring is written out on this page, every competitor detail is taken from that vendor’s own published pages, and the finder recommends another tool when your answers point there, for example if you are not on Shopify or sell mainly through Instagram.',
   },
   {
     question: 'Which is the best WhatsApp tool for a Shopify store in India?',
@@ -44,7 +44,7 @@ const FAQS = [
       'No. Approved templates belong to your WhatsApp Business Account, not to the tool that submitted them. As long as the new tool connects the same account, your templates come with you. Keep the Meta Business Account in your own name so this stays true.',
   },
   {
-    question: 'Can I try TopEdge before paying?',
+    question: 'Can I try TopEdge AI before paying?',
     answer:
       'Yes. Every plan starts with a 14-day free trial. Plans start at ₹1,999 a month after that, with Meta’s message fees billed to your own account at 0% markup.',
   },
@@ -60,7 +60,7 @@ const BLOCKS: TopicBlock[] = [
     steps: [
       {
         title: 'Your store platform comes first',
-        body: 'A tool that cannot connect to your store is ruled out, whatever else it does well. TopEdge and Bitespeed only work with Shopify, so they drop out for other stores.',
+        body: 'A tool that cannot connect to your store is ruled out, whatever else it does well. TopEdge AI and Bitespeed only work with Shopify, so they drop out for other stores.',
       },
       {
         title: 'Each answer scores the tools that handle it',
@@ -145,10 +145,10 @@ export default function ToolFinderPage() {
           </div>
           <ul className="mx-auto mt-10 flex max-w-3xl flex-wrap justify-center gap-3">
             {[
-              { label: 'TopEdge vs WATI', href: '/compare/wati' },
-              { label: 'TopEdge vs Interakt', href: '/compare/interakt' },
-              { label: 'TopEdge vs AiSensy', href: '/compare/aisensy' },
-              { label: 'TopEdge vs Bitespeed', href: '/compare/bitespeed' },
+              { label: 'TopEdge AI vs WATI', href: '/compare/wati' },
+              { label: 'TopEdge AI vs Interakt', href: '/compare/interakt' },
+              { label: 'TopEdge AI vs AiSensy', href: '/compare/aisensy' },
+              { label: 'TopEdge AI vs Bitespeed', href: '/compare/bitespeed' },
               { label: '4-way comparison', href: '/compare/topedge-vs-wati-vs-interakt-vs-aisensy' },
             ].map((r) => (
               <li key={r.href}>
@@ -171,7 +171,7 @@ export default function ToolFinderPage() {
         </Section>
 
         <MarketingCtaBand
-          title="Try TopEdge free for 14 days"
+          title="Try TopEdge AI free for 14 days"
           subtitle="Connect Shopify, switch on COD confirmation and cart recovery, and watch it run on your own orders."
           primaryLabel="Start free"
           secondaryLabel="See pricing"
