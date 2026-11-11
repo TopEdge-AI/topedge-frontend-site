@@ -13,7 +13,7 @@
   },
   "journeys-list": {
     "w": 1600,
-    "h": 1176
+    "h": 1000
   },
   "journey-cart-recovery": {
     "w": 1600,
@@ -28,16 +28,16 @@
     "h": 1176
   },
   "flow-builder-list": {
-    "w": 1600,
-    "h": 1176
+    "w": 1596,
+    "h": 541
   },
   "flow-builder-canvas": {
     "w": 1600,
     "h": 1000
   },
   "campaigns-list": {
-    "w": 1600,
-    "h": 1176
+    "w": 1596,
+    "h": 799
   },
   "campaign-create": {
     "w": 1600,
@@ -48,20 +48,20 @@
     "h": 1000
   },
   "opt-in-tools": {
-    "w": 1600,
-    "h": 1176
+    "w": 1596,
+    "h": 659
   },
   "ai-brain-intents": {
-    "w": 1600,
-    "h": 1176
+    "w": 1596,
+    "h": 819
   },
   "ai-brain-knowledge": {
     "w": 1600,
     "h": 1176
   },
   "warranty-hub": {
-    "w": 1600,
-    "h": 1176
+    "w": 1596,
+    "h": 778
   },
   "segments": {
     "w": 1600,
@@ -72,20 +72,20 @@
     "h": 1176
   },
   "orders-list": {
-    "w": 1600,
-    "h": 1176
+    "w": 1596,
+    "h": 988
   },
   "email-campaigns": {
     "w": 1600,
     "h": 1176
   },
   "meta-template-library": {
-    "w": 1600,
-    "h": 1176
+    "w": 1596,
+    "h": 639
   },
   "meta-qr": {
-    "w": 1600,
-    "h": 1176
+    "w": 1596,
+    "h": 581
   },
   "chat-rules": {
     "w": 1600,
@@ -96,8 +96,8 @@
     "h": 1176
   },
   "website-tracking": {
-    "w": 1600,
-    "h": 1176
+    "w": 1596,
+    "h": 939
   },
   "product-insights": {
     "w": 1600,
@@ -112,12 +112,12 @@
     "h": 1176
   },
   "discounts": {
-    "w": 1600,
-    "h": 1176
+    "w": 1596,
+    "h": 909
   },
   "stock": {
-    "w": 1600,
-    "h": 1176
+    "w": 1596,
+    "h": 1082
   },
   "settings-billing": {
     "w": 1600,
@@ -130,5 +130,33 @@
   "team-performance": {
     "w": 1600,
     "h": 1176
+  },
+  "journey-playbooks": {
+    "w": 1572,
+    "h": 1300
+  },
+  "journey-builder": {
+    "w": 1600,
+    "h": 900
+  },
+  "journey-trigger": {
+    "w": 752,
+    "h": 975
+  },
+  "journey-cart-step": {
+    "w": 1600,
+    "h": 912
+  },
+  "template-builder": {
+    "w": 1600,
+    "h": 1000
+  },
+  "journeys-turn-on": {
+    "w": 1300,
+    "h": 420
+  },
+  "journeys-create": {
+    "w": 1300,
+    "h": 530
   }
 }

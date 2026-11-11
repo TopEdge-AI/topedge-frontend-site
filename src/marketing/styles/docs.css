@@ -1051,14 +1051,24 @@
   margin: 1.6em 0 2em;
 }
 
+/* Inside a numbered step: sits under the step text, closer to it. */
+.docs-figure--step {
+  margin: 14px 0 6px;
+}
+
+/* A dialog capture keeps its own width instead of stretching to the column. */
+.docs-figure--narrow {
+  max-width: 440px;
+}
+
 .docs-figure__zoom {
+  position: relative;
   display: block;
   width: 100%;
   padding: 0;
   border: 1px solid var(--docs-line);
   border-radius: 12px;
   background: #fafafc;
-  overflow: hidden;
   cursor: zoom-in;
   box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04), 0 12px 32px -18px rgba(76, 29, 149, 0.22);
   transition: box-shadow 0.2s ease, border-color 0.2s ease;
@@ -1074,10 +1084,41 @@
   outline-offset: 3px;
 }
 
+/* The image and its highlights share this box, so percentages line up. */
+.docs-figure__stage {
+  position: relative;
+  display: block;
+  border-radius: 11px;
+  overflow: hidden;
+}
+
 .docs-figure__img {
   display: block;
   width: 100%;
   height: auto;
+}
+
+.docs-figure__hint {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 5px 10px;
+  border-radius: 999px;
+  background: rgba(15, 23, 42, 0.78);
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: #fff;
+  opacity: 0;
+  transition: opacity 0.15s ease;
+  pointer-events: none;
+}
+
+.docs-figure__zoom:hover .docs-figure__hint,
+.docs-figure__zoom:focus-visible .docs-figure__hint {
+  opacity: 1;
 }
 
 .docs-figure__caption {
@@ -1086,6 +1127,183 @@
   line-height: 1.5;
   color: var(--docs-faint);
   text-align: center;
+}
+
+/* The same numbers as on the image, with the words, for phones and screen readers. */
+.docs-figure__legend {
+  list-style: none;
+  display: grid;
+  gap: 6px;
+  margin: 12px 0 0;
+  padding: 0;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: #1e293b;
+}
+
+.docs-figure__legend li {
+  display: grid;
+  grid-template-columns: 22px minmax(0, 1fr);
+  gap: 10px;
+  align-items: start;
+}
+
+.docs-figure__legend-num {
+  display: grid;
+  place-items: center;
+  width: 22px;
+  height: 22px;
+  margin-top: 1px;
+  border-radius: 50%;
+  background: var(--docs-mark);
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+@media (min-width: 768px) {
+  .docs-figure__legend--tagged {
+    display: none;
+  }
+}
+
+/* ---------- highlights on a screenshot ---------- */
+
+.docs-shell,
+.docs-lightbox {
+  --docs-mark: #e11d74;
+}
+
+.docs-mark {
+  position: absolute;
+  pointer-events: none;
+}
+
+.docs-mark--box {
+  border: 2px solid var(--docs-mark);
+  border-radius: 8px;
+  box-shadow: 0 0 0 4px rgba(225, 29, 116, 0.16);
+}
+
+.docs-mark--pin {
+  width: 0;
+  height: 0;
+}
+
+.docs-mark__tag {
+  position: absolute;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  height: 24px;
+  padding: 0 9px 0 3px;
+  border-radius: 999px;
+  background: var(--docs-mark);
+  box-shadow: 0 4px 12px -4px rgba(15, 23, 42, 0.45);
+  font-family: var(--mkt-font);
+  font-size: 0.75rem;
+  font-weight: 600;
+  line-height: 1;
+  white-space: nowrap;
+  color: #fff;
+}
+
+.docs-mark__tag.is-num {
+  padding: 0 3px;
+}
+
+.docs-mark__num {
+  display: grid;
+  place-items: center;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #fff;
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: var(--docs-mark);
+}
+
+/* The little pointer joining the tag to its box. */
+.docs-mark__tag::after {
+  content: '';
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: var(--docs-mark);
+  transform: rotate(45deg);
+}
+
+.docs-mark.is-top .docs-mark__tag {
+  bottom: calc(100% + 8px);
+}
+
+.docs-mark.is-top .docs-mark__tag::after {
+  bottom: -3px;
+}
+
+.docs-mark.is-bottom .docs-mark__tag {
+  top: calc(100% + 8px);
+}
+
+.docs-mark.is-bottom .docs-mark__tag::after {
+  top: -3px;
+}
+
+.docs-mark.is-left .docs-mark__tag {
+  left: -2px;
+}
+
+.docs-mark.is-left .docs-mark__tag::after {
+  left: 10px;
+}
+
+.docs-mark.is-right .docs-mark__tag {
+  right: -2px;
+}
+
+.docs-mark.is-right .docs-mark__tag::after {
+  right: 10px;
+}
+
+/* Phones: number only. The list under the image carries the words. */
+@media (max-width: 767px) {
+  .docs-mark__text {
+    display: none;
+  }
+
+  .docs-mark__tag {
+    height: 20px;
+    padding: 0 1px;
+    gap: 0;
+  }
+
+  .docs-mark--box {
+    border-width: 1.5px;
+    border-radius: 5px;
+    box-shadow: 0 0 0 2px rgba(225, 29, 116, 0.16);
+  }
+
+  .docs-mark.is-top .docs-mark__tag {
+    bottom: calc(100% + 5px);
+  }
+
+  .docs-mark.is-bottom .docs-mark__tag {
+    top: calc(100% + 5px);
+  }
+
+  .docs-mark__tag::after {
+    width: 6px;
+    height: 6px;
+  }
+
+  .docs-mark.is-left .docs-mark__tag::after {
+    left: 7px;
+  }
+
+  .docs-mark.is-right .docs-mark__tag::after {
+    right: 7px;
+  }
 }
 
 .docs-lightbox {
@@ -1103,13 +1321,19 @@
   animation: docs-fade 0.18s ease-out;
 }
 
-.docs-lightbox__img {
-  max-width: min(100%, 1600px);
-  max-height: calc(100dvh - 120px);
-  width: auto;
-  height: auto;
+.docs-lightbox__stage {
+  position: relative;
+  display: block;
+  width: 100%;
   border-radius: 10px;
+  overflow: hidden;
   box-shadow: 0 30px 80px -20px rgba(0, 0, 0, 0.5);
+}
+
+.docs-lightbox__img {
+  display: block;
+  width: 100%;
+  height: 100%;
 }
 
 .docs-lightbox__caption {
@@ -1133,6 +1357,84 @@
   background: rgba(255, 255, 255, 0.14);
   color: #fff;
   cursor: pointer;
+}
+
+/* ---------- task cards (docs home) ---------- */
+
+.docs-tasks {
+  margin: 1.4em 0 2em;
+}
+
+.docs-tasks__title {
+  margin: 0 0 12px;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--docs-faint);
+}
+
+.docs-tasks__grid {
+  list-style: none;
+  display: grid;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+}
+
+@media (min-width: 640px) {
+  .docs-tasks__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.docs-tasks__card {
+  position: relative;
+  display: grid;
+  gap: 3px;
+  height: 100%;
+  padding: 14px 40px 14px 16px;
+  border: 1px solid var(--docs-line);
+  border-radius: 12px;
+  background: #fff;
+  text-decoration: none;
+  transition: border-color 0.15s ease, background-color 0.15s ease;
+}
+
+.docs-tasks__card:hover {
+  border-color: #c4b5fd;
+  background: #fdfcff;
+}
+
+.docs-tasks__card:focus-visible {
+  outline: 2px solid var(--docs-violet);
+  outline-offset: 2px;
+}
+
+.docs-tasks__q {
+  font-weight: 600;
+  line-height: 1.4;
+  color: var(--docs-ink);
+}
+
+.docs-tasks__note {
+  font-size: 0.875rem;
+  line-height: 1.45;
+  color: var(--docs-muted);
+}
+
+.docs-tasks__arrow {
+  position: absolute;
+  top: 50%;
+  right: 14px;
+  transform: translateY(-50%);
+  color: #a78bfa;
+  transition: transform 0.15s ease, color 0.15s ease;
+}
+
+.docs-tasks__card:hover .docs-tasks__arrow {
+  transform: translate(3px, -50%);
+  color: var(--docs-violet);
 }
 
 /* ---------- diagrams ---------- */
@@ -1340,25 +1642,55 @@
 
 .docs-faq__list {
   margin: 0;
+  border-top: 1px solid var(--docs-line-soft);
 }
 
 .docs-faq__row {
-  padding: 16px 0;
   border-bottom: 1px solid var(--docs-line-soft);
 }
 
-.docs-faq__row:first-child {
-  padding-top: 4px;
-}
-
-.docs-faq__row dt {
+.docs-faq__row summary {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 15px 2px;
   font-weight: 600;
   line-height: 1.45;
   color: var(--docs-ink);
+  cursor: pointer;
+  list-style: none;
 }
 
-.docs-faq__row dd {
-  margin: 6px 0 0;
+.docs-faq__row summary::-webkit-details-marker {
+  display: none;
+}
+
+.docs-faq__row summary:hover {
+  color: var(--docs-violet-ink);
+}
+
+.docs-faq__row summary:focus-visible {
+  outline: 2px solid var(--docs-violet);
+  outline-offset: 2px;
+  border-radius: 6px;
+}
+
+.docs-faq__chev {
+  flex: none;
+  margin-top: 3px;
+  color: var(--docs-faint);
+  transition: transform 0.18s ease;
+}
+
+.docs-faq__row[open] .docs-faq__chev {
+  transform: rotate(180deg);
+}
+
+.docs-faq__row p {
+  margin: 0;
+  padding: 0 2px 16px;
+  max-width: 62ch;
 }
 
 /* ---------- article foot ---------- */

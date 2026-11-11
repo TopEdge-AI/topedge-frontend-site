@@ -566,12 +566,12 @@ const DIAGRAMS: Partial<Record<string, () => JSX.Element>> = {
       beats={[
         { at: '0 min', label: 'Checkout abandoned', sub: 'phone captured', tone: 'source' },
         { at: '+25 min', label: 'Reminder 1', sub: 'cart contents', tone: 'core' },
-        { at: '+6 hr', label: 'Reminder 2', sub: 'objection handling' },
-        { at: '+24 hr', label: 'Reminder 3', sub: 'last nudge' },
+        { at: '+4 hr', label: 'Reminder 2', sub: 'answers doubts' },
+        { at: '+36 hr', label: 'Reminder 3', sub: 'last nudge' },
         { at: 'On order', label: 'Marked recovered', sub: 'revenue attributed', tone: 'out' },
       ]}
       title="A three-message cart recovery ladder on the default timings"
-      desc="The cart is captured at abandonment, reminders go out after about 25 minutes, 6 hours and 24 hours, and the cart is marked recovered with attributed revenue when the customer orders."
+      desc="The cart is captured at abandonment, reminders go out about 25 minutes later, then 4 hours and 36 hours after that, and the cart is marked recovered with attributed revenue when the customer orders."
     />
   ),
   'cod-prepaid-switch': () => (

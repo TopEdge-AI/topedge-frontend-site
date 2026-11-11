@@ -14,12 +14,37 @@ export type DocGroupId = 'start' | 'guides' | 'reference' | 'platform' | 'help';
 
 export type DocCalloutTone = 'info' | 'tip' | 'warning' | 'success';
 
+/**
+ * A highlight drawn over a screenshot. All four numbers are percentages of the
+ * image, so a mark stays on its target at every width. With `w` and `h` it is a
+ * box around a control; without them it is a pin at a point. Marks are numbered
+ * in order, and each `label` is repeated in the list under the image.
+ */
+export type DocMark = {
+  x: number;
+  y: number;
+  w?: number;
+  h?: number;
+  label: string;
+  /** Where the tag sits against the box. Default 'top'. */
+  place?: 'top' | 'bottom';
+  /** Which edge of the box the tag lines up with. Default 'left'. */
+  align?: 'left' | 'right';
+};
+
 export type DocStep = {
   title: string;
   body: string;
   /** Secondary line: a caveat or a "what you should see" note. */
   note?: string;
+  /** Screenshot for this step, shown under its text. Needs `alt`. */
+  shot?: string;
+  alt?: string;
+  marks?: DocMark[];
 };
+
+/** A question-style link on the docs home: "How do I ...?" */
+export type DocTask = { question: string; href: string; note?: string };
 
 export type DocTroubleshootCase = {
   /** What the merchant literally sees: a banner, a status, an empty table. */
@@ -59,7 +84,9 @@ export type DocBlock =
    * A dashboard screenshot. Served from /docs/img/<shot>.webp; its size comes from
    * public/docs/img/shots.json. An id missing from that manifest renders nothing.
    */
-  | { kind: 'image'; shot: string; alt: string; caption?: string };
+  | { kind: 'image'; shot: string; alt: string; caption?: string; marks?: DocMark[] }
+  /** Question-style links to the pages people look for first. */
+  | { kind: 'tasks'; title?: string; items: DocTask[] };
 
 export type DocArticle = {
   /** Path after `/docs`. Empty string is the docs home. No leading slash. */

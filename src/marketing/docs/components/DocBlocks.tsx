@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { AlertTriangle, ArrowRight, CheckCircle2, Info, Lightbulb, Wrench } from 'lucide-react';
+import { AlertTriangle, ArrowRight, CheckCircle2, ChevronRight, Info, Lightbulb, Wrench } from 'lucide-react';
 import type { DocBlock, DocCalloutTone } from '../types';
 import { FALLBACK_CATALOG, TRIAL } from '../../lib/billingCatalog';
 import { isExternalHref } from '../inline';
@@ -35,6 +35,7 @@ function AnchoredHeading({ level, id, text }: { level: 2 | 3; id: string; text: 
 }
 
 const fmt = (n: number) => Number(n).toLocaleString('en-IN');
+const plainTitle = (t: string) => t.replace(/\*\*|`/g, '');
 const priorityLabel = (p: string) => (p ? p.charAt(0).toUpperCase() + p.slice(1) : 'Standard');
 
 /**
@@ -95,7 +96,7 @@ export function DocBlockView({ block, stepIds = false }: { block: DocBlock; step
     case 'answer':
       return (
         <div className="docs-answer">
-          <p className="docs-answer__label">Short answer</p>
+          <p className="docs-answer__label">In short</p>
           <p className="docs-answer__body">
             <DocInline text={block.text} />
           </p>
@@ -164,6 +165,9 @@ export function DocBlockView({ block, stepIds = false }: { block: DocBlock; step
                     <p className="docs-steps__note">
                       <DocInline text={step.note} />
                     </p>
+                  ) : null}
+                  {step.shot ? (
+                    <DocImage shot={step.shot} alt={step.alt || plainTitle(step.title)} marks={step.marks} inStep />
                   ) : null}
                 </div>
               </li>
@@ -312,7 +316,25 @@ export function DocBlockView({ block, stepIds = false }: { block: DocBlock; step
       return <DocDiagram name={block.name} title={block.title} caption={block.caption} />;
 
     case 'image':
-      return <DocImage shot={block.shot} alt={block.alt} caption={block.caption} />;
+      return <DocImage shot={block.shot} alt={block.alt} caption={block.caption} marks={block.marks} />;
+
+    case 'tasks':
+      return (
+        <nav className="docs-tasks" aria-label={block.title || 'Popular tasks'}>
+          {block.title ? <p className="docs-tasks__title">{block.title}</p> : null}
+          <ul className="docs-tasks__grid">
+            {block.items.map((item, i) => (
+              <li key={i}>
+                <Link className="docs-tasks__card" to={item.href}>
+                  <span className="docs-tasks__q">{item.question}</span>
+                  {item.note ? <span className="docs-tasks__note">{item.note}</span> : null}
+                  <ChevronRight size={16} className="docs-tasks__arrow" aria-hidden />
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </nav>
+      );
 
     case 'related':
       return (

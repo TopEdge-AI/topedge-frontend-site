@@ -27,8 +27,13 @@ function screenshotUrls(article: DocArticle): string[] {
   const urls: string[] = [];
   for (const b of article.blocks) {
     if (b.kind === 'image' && shotFor(b.shot)) urls.push(`${SITE_URL}/docs/img/${b.shot}.webp`);
+    if (b.kind === 'steps') {
+      for (const step of b.steps) {
+        if (step.shot && shotFor(step.shot)) urls.push(`${SITE_URL}/docs/img/${step.shot}.webp`);
+      }
+    }
   }
-  return urls;
+  return [...new Set(urls)];
 }
 
 function techArticle(article: DocArticle): Record<string, unknown> {
@@ -97,6 +102,7 @@ function howTo(article: DocArticle): Record<string, unknown> | null {
       name: plainText(step.title),
       text: plainText(step.note ? `${step.body} ${step.note}` : step.body),
       url: `${url}#step-${i + 1}`,
+      ...(step.shot && shotFor(step.shot) ? { image: `${SITE_URL}/docs/img/${step.shot}.webp` } : {}),
     })),
   };
 }

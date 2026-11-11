@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { ArrowLeft, ArrowRight, ChevronRight, ExternalLink, Menu, X } from 'lucide-react';
+import { ArrowLeft, ArrowRight, ChevronDown, ChevronRight, ExternalLink, Menu, X } from 'lucide-react';
 import MarketingPage from '../components/MarketingPage';
 import MarketingSEO from '../components/MarketingSEO';
 import MarketingCtaBand from '../components/MarketingCtaBand';
@@ -73,7 +73,7 @@ export default function DocsPage() {
     if (!article) return [];
     const entries = article.blocks.flatMap((b) => (b.kind === 'h2' ? [{ id: b.id, text: b.text }] : []));
     if (!article.slug) entries.unshift({ id: 'browse', text: 'Browse the docs' });
-    if (article.faqs?.length) entries.push({ id: 'faq', text: 'Frequently asked questions' });
+    if (article.faqs?.length) entries.push({ id: 'faq', text: 'Common questions' });
     return entries;
   }, [article]);
 
@@ -87,8 +87,9 @@ export default function DocsPage() {
   const jsonLd = buildDocJsonLd(article, group, DOC_ARTICLES);
   const dashboardUrl = article.dashboard ? `${DASH_ORIGIN}${article.dashboard.route}` : null;
   const howToIndex = howToBlockIndex(article.blocks);
-  // Docs home: the short answer, then the map of every page, then the rest.
-  const introCount = isHome ? article.blocks.findIndex((b) => b.kind !== 'answer') : 0;
+  // Docs home: the short answer and the most-asked questions, then the map of
+  // every page, then the rest.
+  const introCount = isHome ? article.blocks.findIndex((b) => b.kind !== 'answer' && b.kind !== 'tasks') : 0;
   const introBlocks = introCount > 0 ? article.blocks.slice(0, introCount) : [];
   const bodyBlocks = introCount > 0 ? article.blocks.slice(introCount) : article.blocks;
 
@@ -210,20 +211,24 @@ export default function DocsPage() {
                 <section className="docs-faq" aria-labelledby="faq">
                   {/* Visible because FAQPage markup must match on-page content. */}
                   <h2 id="faq" className="docs-h2">
-                    Frequently asked questions
+                    Common questions
                   </h2>
-                  <dl className="docs-faq__list">
+                  <div className="docs-faq__list">
                     {article.faqs.map((faq, i) => (
-                      <div key={i} className="docs-faq__row">
-                        <dt>
-                          <DocInline text={faq.question} />
-                        </dt>
-                        <dd>
+                      // Native disclosure: every answer stays in the HTML, open or not.
+                      <details key={i} className="docs-faq__row" open={i === 0}>
+                        <summary>
+                          <span>
+                            <DocInline text={faq.question} />
+                          </span>
+                          <ChevronDown size={18} aria-hidden className="docs-faq__chev" />
+                        </summary>
+                        <p>
                           <DocInline text={faq.answer} />
-                        </dd>
-                      </div>
+                        </p>
+                      </details>
                     ))}
-                  </dl>
+                  </div>
                 </section>
               ) : null}
             </div>
