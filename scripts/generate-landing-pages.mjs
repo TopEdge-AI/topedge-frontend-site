@@ -1074,9 +1074,9 @@ const SHOPIFY_BUTTON = `<a class="btn btn-out" data-cta="shopify" href="${SHOPIF
 
 
 const VIDEO = {
-  lg: '/marketing/demos/topedge-launch.mp4',
-  sm: '/marketing/demos/topedge-launch-mobile.mp4',
-  poster: '/marketing/demos/topedge-launch-poster.webp',
+  lg: '/marketing/demos/topedge-launch-v2.mp4',
+  sm: '/marketing/demos/topedge-launch-v2-mobile.mp4',
+  poster: '/marketing/demos/topedge-launch-poster-v2.webp',
   label: 'TopEdge AI launch film: turning Shopify visitors into WhatsApp contacts, recovering abandoned carts, and confirming COD orders before dispatch.',
 };
 

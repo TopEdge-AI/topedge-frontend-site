@@ -2543,8 +2543,8 @@ ${faqHtml(WATI_PRICING_FAQS)}
     readTime: '8 min',
     category: 'Comparisons',
     author: 'Moksh Patel',
-    image: '/blog/aisensy-pricing-india.jpg',
-    imageWebp: '/blog/aisensy-pricing-india.webp',
+    image: '/blog/aisensy-pricing-india-v2.jpg',
+    imageWebp: '/blog/aisensy-pricing-india-v2.webp',
     imageAlt:
       'AiSensy pricing in India: ₹1.09 per marketing message and ₹0.145 per utility message against Meta’s rates, with plans from ₹1,500 a month',
     keywords: [

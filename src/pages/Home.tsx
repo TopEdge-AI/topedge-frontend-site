@@ -74,8 +74,8 @@ export default function Home() {
         // LCP element, not the old product still. Preloading the still here
         // would fetch 13-100 KB that nothing on the page renders.
         preloadLcpImage={{
-          href: '/marketing/demos/topedge-launch-poster.webp',
-          imagesrcset: '/marketing/demos/topedge-launch-poster.webp 1280w',
+          href: '/marketing/demos/topedge-launch-poster-v2.webp',
+          imagesrcset: '/marketing/demos/topedge-launch-poster-v2.webp 1280w',
           imagesizes: '(max-width: 960px) 92vw, min(1040px, 92vw)',
           type: 'image/webp',
         }}

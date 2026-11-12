@@ -1,10 +1,10 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
 
-const DESKTOP_SRC = '/marketing/demos/topedge-launch.mp4';
-const MOBILE_SRC = '/marketing/demos/topedge-launch-mobile.mp4';
-const POSTER = '/marketing/demos/topedge-launch-poster.webp';
+const DESKTOP_SRC = '/marketing/demos/topedge-launch-v2.mp4';
+const MOBILE_SRC = '/marketing/demos/topedge-launch-v2-mobile.mp4';
+const POSTER = '/marketing/demos/topedge-launch-poster-v2.webp';
 
-/** Small-screen cut is 1280x720 and ~9 MB against ~22 MB for the desktop file. */
+/** Small-screen cut is 1280x720 and ~7.6 MB against ~13.4 MB for the desktop file. */
 const MOBILE_QUERY = '(max-width: 960px)';
 
 /** Loud enough to hear, quiet enough not to make someone lunge for the tab. */
