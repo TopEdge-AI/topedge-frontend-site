@@ -139,8 +139,17 @@ export const SOURCES = {
     label: 'AiSensy’s published pricing page',
     publisher: 'AiSensy',
     claim:
-      'Per-message rates for Indian users, read 7 November 2026: marketing ₹1.09, utility ₹0.145, authentication ₹0.145, service ₹0.145 after 1,000 free service messages a month (from 1 October 2026). Against Meta’s India card of ₹0.8631 marketing and ₹0.1150 utility, that is about 26% above Meta on both lines. Plans billed monthly: Basic ₹1,500, Pro ₹3,200, Premium ₹9,100, Unlimited ₹45,000. Extra agents ₹750 each a month; AI Agent ₹1,350 a month for 1,000 AI messages; Chatbot Flows ₹2,500 a month.',
-    verified: '2026-11-07',
+      'Read 12 November 2026 on the monthly, quarterly and yearly views. Per-message rates for Indian users, effective 1 October 2026 and the same on every paid plan: marketing ₹1.09, utility ₹0.145, authentication ₹0.145, service ₹0.145 after 1,000 free service messages a month. Against Meta’s India card of ₹0.8631 marketing and ₹0.1150 utility, that is about 26% above Meta on both lines. Plans billed monthly: Free Forever ₹0 (no broadcasting), Basic ₹1,500, Pro ₹3,200, Premium ₹9,100, Unlimited ₹45,000. Billed quarterly (save 5%): ₹1,425, ₹3,040, ₹8,645 and ₹42,750 a month. Billed yearly (save 10%): ₹1,350, ₹2,880, ₹8,190 and ₹40,500 a month. Basic lists 1 owner plus 5 agents and Shopify and WooCommerce integrations; Premium 1 owner plus 9 agents; Unlimited up to 200 agents. Extra agents ₹750 each a month; AI Chat Agent ₹1,350 a month for 1,000 AI messages; Chatbot Flows ₹2,500 a month. All billing is prepaid through WhatsApp Conversation Credits. The 7 November 2026 reading recorded the monthly view only.',
+    verified: '2026-11-12',
+  },
+  aisensyShopifyListing: {
+    id: 'aisensyShopifyListing',
+    url: 'https://apps.shopify.com/aisensy-whatsapp-marketing',
+    label: 'AiSensy on the Shopify App Store',
+    publisher: 'Shopify App Store',
+    claim:
+      'Read 12 November 2026 from India: rated 4.1 from 57 reviews (31 five-star, 10 four-star, 3 three-star, 13 one-star), launched 23 July 2024, priced as a ₹93.77 one-time charge (Shopify’s estimate at 1 INR = 0.0107 USD). The listing names automated abandoned cart notifications, COD confirmation notifications, order and shipping notifications and broadcasts.',
+    verified: '2026-11-12',
   },
   interaktPricing: {
     id: 'interaktPricing',
@@ -328,8 +337,17 @@ export const SOURCES = {
     label: 'Zoko’s published pricing page',
     publisher: 'Zoko',
     claim:
-      'Starter $49.99/month, Plus $79.99/month with extra agents at $15/agent/month, and a $139.99/month tier with extra agents at $12/agent/month. Priced in US dollars with no rupee plan published. Add-ons are metered on outcomes rather than seats: one at $24.99/month plus $0.09 per resolution, another at $24.99/month plus 3% of order value.',
-    verified: '2026-11-02',
+      'Read 12 November 2026: Starter $49.99/month with a $0.015 markup on all conversations and unlimited agents; Plus $79.99/month with 5,000 conversations at no markup then $0.00199 each, 5 agents then $15 each; Elite $139.99/month with 100,000 conversations then $0.00099 each, 10 agents then $12 each. Priced in US dollars with no rupee plan and no billing toggle; every feature is on every plan; 7-day free trial. WhatsApp is charged at Meta’s rate card, paid directly to Meta; Instagram $9.99/month. Essential flows are free on every plan and include double-confirm COD orders and convert COD to prepaid; premium flows are $5.99 a month per flow, with 500K flow steps a month included then $0.0002 a step. AI agents are $24.99/month plus $0.09 per resolution, and an order-taking agent is $24.99/month plus 3% of order value. A conversation is a 24-hour session that starts with the first business message.',
+    verified: '2026-11-12',
+  },
+  zokoShopifyListing: {
+    id: 'zokoShopifyListing',
+    url: 'https://apps.shopify.com/whatsapp-button-chat',
+    label: 'Zoko on the Shopify App Store',
+    publisher: 'Shopify App Store',
+    claim:
+      'Read 12 November 2026 from India: Starter ₹4,687.47, Plus ₹7,500.52, Elite ₹13,126.61 and Max ₹46,883.15 a month, as Shopify’s INR estimates at 1 INR = 0.0107 USD (about ₹93.77 to the dollar). Max lists 5 million conversations then $0.00049 each and 30 agents then $9 each, and is not shown on zoko.io/pricing. Rated 4.9 from 475 reviews. 7-day free trial.',
+    verified: '2026-11-12',
   },
   bitespeedPricing: {
     id: 'bitespeedPricing',

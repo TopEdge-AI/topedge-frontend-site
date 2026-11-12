@@ -1760,15 +1760,16 @@ export const blogPosts: BlogPost[] = [
     id: 12,
     title: 'Best Zoko Alternative for Shopify India (2026)',
     description:
-      'Why Shopify India teams look for a Zoko alternative, what to require in a replacement (COD, templates, Meta billing) and how to test a switch in a day.',
+      'Zoko alternative for Shopify India: Zoko pricing read 12 Nov 2026, the bill at 5,000 conversations in rupees, who should switch and who should stay.',
     summary: [
-      'Zoko publishes USD plans from $49.99 to $499.99 a month with per-conversation metering on top, so the India cost moves with the exchange rate.',
-      'A replacement has to cover COD branching, Meta template approval state and direct Meta billing, not just broadcasts.',
-      'You can test a switch in an afternoon: connect the store, approve one template, and run one real order through it.',
+      'Zoko’s plans are $49.99, $79.99 and $139.99 a month, shown as about ₹4,687, ₹7,501 and ₹13,127 on its Shopify listing, read 12 November 2026.',
+      'At 5,000 conversations a month Zoko Plus is about ₹7,501 before Meta fees. Starter at the same volume is about ₹11,720, because it meters every conversation.',
+      'Zoko includes COD confirmation and COD to prepaid as free flows on every plan, so do not switch for those. Switch for a flat fee sized by orders.',
+      'Stay on Zoko if you sell from a catalog inside the chat, or ship more than 1,500 orders a month.',
     ],
     slug: 'zoko-alternative-shopify-india',
     date: '2026-09-20',
-    updated: '2026-11-02',
+    updated: '2026-11-12',
     readTime: '16 min',
     category: 'Comparisons',
     author: 'Moksh Patel',
@@ -1779,6 +1780,8 @@ export const blogPosts: BlogPost[] = [
     keywords: [
       'Zoko alternative',
       'Zoko alternative Shopify',
+      'Zoko pricing',
+      'Zoko pricing India',
       'Zoko vs TopEdge AI',
       'WhatsApp automation India',
       'Shopify WhatsApp India',
@@ -1787,6 +1790,16 @@ export const blogPosts: BlogPost[] = [
       'Shopify WhatsApp platform India',
     ],
     faqs: [
+      {
+        question: 'How much does Zoko cost in India?',
+        answer:
+          'Zoko bills in US dollars: Starter $49.99, Plus $79.99 and Elite $139.99 a month, read on 12 November 2026. Its Shopify App Store listing showed those as about ₹4,687, ₹7,501 and ₹13,127 that day. Starter also adds $0.015 for every conversation, and Meta’s message charges are paid to Meta on top.',
+      },
+      {
+        question: 'Is there a free Zoko alternative?',
+        answer:
+          'Not a fully free one that we have read. Zoko has a 7-day trial and TopEdge AI has a 14-day trial capped at 20 orders and 200 sends. Getgabs is free to install on Shopify, with paid plans from about ₹1,034 a month on its listing, read 8 November 2026. Meta charges for template messages on every tool.',
+      },
       {
         question: 'What should a Zoko alternative include for a Shopify India brand?',
         answer:
@@ -1815,25 +1828,55 @@ export const blogPosts: BlogPost[] = [
         name: 'Zoko',
         url: 'https://www.zoko.io/',
         description:
-          'WhatsApp commerce platform built around catalogue selling, COD flows and in-thread checkout.',
+          'WhatsApp commerce platform built around catalogue selling, with COD flows free on every plan and USD plans from $49.99 a month.',
         software: { category: 'BusinessApplication', operatingSystem: 'Web' },
       },
     ],
     content: `
+<details class="mkt-blog-verdict" open>
+<summary>Direct answer</summary>
+<p>The best Zoko alternative depends on why you are leaving. <strong>Switch</strong> if you earn in rupees, ship up to 1,500 orders a month and want a fee that does not move with conversations or the dollar. TopEdge AI is ₹1,999 to ₹6,499 a month plus GST on topedgeai.com, or $19 to $65 through the Shopify App Store. <strong>Stay</strong> if you sell from a catalog inside the chat. At 5,000 conversations, Zoko Plus costs about <strong>₹7,501 a month</strong> before Meta fees, read 12 November 2026.</p>
+</details>
+
+<p><strong>Checked 12 November 2026.</strong> We read <a href="https://www.zoko.io/pricing" rel="noopener noreferrer" target="_blank">zoko.io/pricing</a> and <a href="https://apps.shopify.com/whatsapp-button-chat" rel="noopener noreferrer" target="_blank">Zoko’s Shopify App Store listing</a> that day. This guide is part of our <a href="/compare/alternatives">comparison of WhatsApp tools for Shopify India</a>. TopEdge AI sells a competing app, so where Zoko is cheaper or better below, we say so.</p>
+
 <p><strong>A Zoko alternative for Shopify India</strong> is worth considering when conversation metering and festival bill spikes matter more than catalog-in-chat heritage. Keep COD flows and Shopify sync; switch the platform fee to something finance can forecast in ₹. Full scorecard: <a href="/compare/zoko">TopEdge AI vs Zoko</a>.</p>
 
 <h2>Why do Shopify India teams look for a Zoko alternative?</h2>
 <p>You planned recovery and support around order volume. Then Diwali week (or a viral drop) floods conversations. Meta fees rise (that part is unavoidable), but a platform fee that also meters conversations can surprise finance after the campaign works. That is a structural mismatch with “we price the store on orders,” not a feature complaint.</p>
 <ul>
 <li>Starter-style per-conversation platform markup on top of Meta, published at <strong>$0.015 per conversation</strong> with no monthly cap</li>
-<li>Higher tiers with included conversation buckets, then overage: Plus includes 5,000 conversations a month, Elite 100,000, Max 5 million</li>
+<li>Higher tiers with included conversation buckets, then overage: Plus includes 5,000 conversations a month and Elite 100,000. A Max plan with 5 million appears only on the App Store listing</li>
 <li>Per-seat charges above the plan's included agents: <strong>$15 per extra agent</strong> a month above the 5 included on Plus</li>
 <li>AI bots and custom flows billed as add-ons: AI from <strong>$24.99/mo</strong>, custom flows <strong>$5.99 per flow per month</strong></li>
 <li>AI billed per resolved conversation on the Guru and WISMO agents, published at about <strong>$0.09 a resolution</strong>, so the fee rises with ticket volume rather than with your plan</li>
 </ul>
-<p>Those are the figures on <a href="https://apps.shopify.com/whatsapp-button-chat" rel="noopener noreferrer" target="_blank">Zoko's Shopify App Store listing</a>, read on 21 October 2026. Worth doing the sum for a festive month: a 7-agent support team on Plus pays $79.99 plus $30 for the two seats above the five included, and adding an AI bot ($24.99) and three custom flows ($17.97) takes it to <strong>$152.95 a month</strong>, or roughly ₹13,000, before a single Meta message is sent. Confirm on <a href="https://www.zoko.io/pricing" rel="noopener noreferrer" target="_blank">zoko.io/pricing</a> and the App Store listing before you decide, because the tiers move.</p>
+<p>Those are the figures on <a href="https://apps.shopify.com/whatsapp-button-chat" rel="noopener noreferrer" target="_blank">Zoko's Shopify App Store listing</a>, read on 12 November 2026. Worth doing the sum for a festive month: a 7-agent support team on Plus pays $79.99 plus $30 for the two seats above the five included, and adding an AI bot ($24.99) and three custom flows ($17.97) takes it to <strong>$152.95 a month</strong>, or roughly ₹14,300, before a single Meta message is sent. Confirm on <a href="https://www.zoko.io/pricing" rel="noopener noreferrer" target="_blank">zoko.io/pricing</a> and the App Store listing before you decide, because the tiers move.</p>
 
-<h2>What does Zoko actually cost at your volume?</h2>
+<h2>Zoko pricing in rupees, read 12 November 2026</h2>
+<p>Zoko pricing is three plans in US dollars: <strong>Starter $49.99, Plus $79.99 and Elite $139.99 a month</strong>. Every plan has every feature, so the plans differ only in conversations and agents. There is no rupee plan. The rupee column is Shopify’s own estimate on Zoko’s listing, at about ₹93.77 to the dollar that day.</p>
+<div class="mkt-blog-table-wrap">
+<table>
+<thead>
+<tr>
+<th>Plan</th>
+<th>Price a month</th>
+<th>Shopify’s rupee estimate</th>
+<th>Zoko’s conversation fee</th>
+<th>Agents</th>
+</tr>
+</thead>
+<tbody>
+<tr><td><strong>Starter</strong></td><td>$49.99</td><td>₹4,687.47</td><td>$0.015 on every conversation</td><td>Unlimited</td></tr>
+<tr><td><strong>Plus</strong></td><td>$79.99</td><td>₹7,500.52</td><td>None up to 5,000, then $0.00199 each</td><td>5, then $15 each</td></tr>
+<tr><td><strong>Elite</strong></td><td>$139.99</td><td>₹13,126.61</td><td>None up to 100,000, then $0.00099 each</td><td>10, then $12 each</td></tr>
+<tr><td><strong>Max</strong></td><td>Not on zoko.io</td><td>₹46,883.15</td><td>None up to 5 million, then $0.00049 each</td><td>30, then $9 each</td></tr>
+</tbody>
+</table>
+</div>
+<p>On top of any plan: Instagram $9.99 a month, premium flows $5.99 a month each, and AI agents at $24.99 a month plus $0.09 a resolution. Meta’s message charges are paid to Meta at Meta’s rate card. Zoko counts a conversation as a 24-hour session that starts with your first message. The trial is 7 days.</p>
+
+<h3>What does Zoko actually cost at your volume?</h3>
 <p>The plan price is the part people quote. The metering is the part that decides the bill. Starter is $49.99 a month and meters every conversation at $0.015 with no cap. Plus is $79.99 and includes 5,000 conversations, then charges $0.00199 each. Using only those published figures, here is the platform fee at three volumes.</p>
 <div class="mkt-blog-table-wrap">
 <table>
@@ -1846,29 +1889,29 @@ export const blogPosts: BlogPost[] = [
 </tr>
 </thead>
 <tbody>
-<tr><td>1,000</td><td>$64.99</td><td>$79.99</td><td><strong>Starter, $64.99</strong></td></tr>
-<tr><td>5,000</td><td>$124.99</td><td>$79.99</td><td><strong>Plus, $79.99</strong></td></tr>
-<tr><td>20,000</td><td>$349.99</td><td>$109.84</td><td><strong>Plus, $109.84</strong></td></tr>
+<tr><td>1,000</td><td>$64.99</td><td>$79.99</td><td><strong>Starter, about ₹6,094</strong></td></tr>
+<tr><td>5,000</td><td>$124.99</td><td>$79.99</td><td><strong>Plus, about ₹7,501</strong></td></tr>
+<tr><td>20,000</td><td>$349.99</td><td>$109.84</td><td><strong>Plus, about ₹10,300</strong></td></tr>
 </tbody>
 </table>
 </div>
-<p class="mkt-blog-footnote">Arithmetic on the rates published on <a href="https://apps.shopify.com/whatsapp-button-chat" rel="noopener noreferrer" target="_blank">Zoko's Shopify App Store listing</a>, read on 21 October 2026. Platform fee only. It excludes Meta's own per-message charges, agent seats above the number your plan includes, and any AI or custom-flow add-ons. Re-check before you buy.</p>
+<p class="mkt-blog-footnote">Arithmetic on the rates published on <a href="https://apps.shopify.com/whatsapp-button-chat" rel="noopener noreferrer" target="_blank">Zoko's Shopify App Store listing</a>, read on 12 November 2026, with rupees at ₹93.77 to the dollar. Platform fee only. It excludes Meta's own per-message charges, agent seats above the number your plan includes, and any AI or custom-flow add-ons. Re-check before you buy.</p>
 <p>Two things fall out of that table. The tier that is cheapest flips between 1,000 and 5,000 conversations, so the right plan depends on a number most teams only learn after a festival week. And the jump from 5,000 to 20,000 conversations, a 4x rise in customer contact, moves the platform fee by about 37%, which is the part that works in Zoko's favour once you are past the included bucket. The volatility is at the bottom of the range, not the top.</p>
-<p>For comparison, TopEdge AI charges by Shopify orders rather than conversations: Launch ₹1,999 a month for 100 orders, Growth ₹3,999 for 800, Scale ₹6,499 for 1,500, each about 20% less billed yearly, plus 18% GST. <strong>Those units are not interchangeable</strong>, and anyone who tells you one is simply cheaper than the other is comparing orders with conversations. The honest question is which number your finance team can predict a quarter out. See <a href="/pricing">TopEdge AI pricing</a> for the current table.</p>
+<p>For comparison, TopEdge AI charges by Shopify orders rather than conversations: Launch ₹1,999 a month for 100 orders, Growth ₹3,999 for 800, Scale ₹6,499 for 1,500, each about 20% less billed yearly, plus 18% GST. From the Shopify App Store the same plans are $19, $39 and $65 a month, billed by Shopify in US dollars. <strong>Those units are not interchangeable</strong>, and anyone who tells you one is simply cheaper than the other is comparing orders with conversations. The honest question is which number your finance team can predict a quarter out. See <a href="/pricing">TopEdge AI pricing</a> for the current table.</p>
 
 <h2>The shortlist: who else replaces Zoko, and who each one suits</h2>
 <p>Most "Zoko alternative" lists are vendor pages dressed as research. Here is the shortlist as we would give it to a merchant who called us, including the cases where the answer is not us. Prices carry the date they were read, because every one of these moves.</p>
 <ul>
 <li><strong>Interakt</strong>, if you want a Shopify-first Indian tool with a conventional plan ladder. Read off <a href="https://www.interakt.shop/pricing/" rel="noopener noreferrer" target="_blank">interakt.shop/pricing</a> on 9 November 2026: web Starter ₹999 a month (Instagram only on monthly billing), Growth ₹2,799 and Advanced ₹3,799 for WhatsApp plus Instagram, with AI Agents a ₹3,000 add-on on the upper two. A Shopify store needs its separate Shopify App Store plans, from ₹1,973.48 a month; see our <a href="/blog/interakt-pricing-india">Interakt pricing breakdown</a>. Closest like-for-like swap for a Zoko user who wants to stay in rupees. See the <a href="/blog/interakt-alternative-shopify-india">Interakt alternative</a> write-up.</li>
-<li><strong>AiSensy</strong>, if broadcast marketing is the main job. Worth checking the message economics: on <a href="https://aisensy.com/pricing" rel="noopener noreferrer" target="_blank">aisensy.com/pricing</a>, read 21 October 2026, service messages past the first 1,000 a month are ₹0.145 against Meta's published India rate of ₹0.1150, so roughly a 26% markup on every support reply. Fine if volume is low, less so if your inbox is busy. More in the <a href="/blog/aisensy-alternative-shopify-india">AiSensy alternative</a> piece.</li>
-<li><strong>Getgabs</strong>, if entry price is the binding constraint. <a href="https://getgabs.com" rel="noopener noreferrer" target="_blank">getgabs.com</a> listed Basic $15, Plus $21 and Pro $59 in September 2026 with 0% Meta markup claimed, though the Shopify App Store showed different figures for the same plans, so confirm which surface you are buying from. Detail in <a href="/blog/getgabs-alternative-shopify-whatsapp">Getgabs alternative</a>.</li>
+<li><strong>AiSensy</strong>, if broadcast marketing is the main job. Plans start at ₹1,500 a month, but every message is billed at AiSensy’s own rate: ₹1.09 for marketing and ₹0.145 for utility and service on <a href="https://aisensy.com/pricing" rel="noopener noreferrer" target="_blank">aisensy.com/pricing</a>, read 12 November 2026. That is about 26% above Meta’s India rates. Our <a href="/blog/aisensy-pricing-india">AiSensy pricing breakdown</a> has the bill, and the <a href="/blog/aisensy-alternative-shopify-india">AiSensy alternative</a> piece has the switch.</li>
+<li><strong>Getgabs</strong>, if entry price is the binding constraint. <a href="https://getgabs.com" rel="noopener noreferrer" target="_blank">getgabs.com</a> listed Basic ₹699, Plus ₹1,499 and Pro ₹4,499 a month on 8 November 2026, with 0% Meta markup stated. Its Shopify App Store listing showed different figures for the same plans, so confirm which one you are buying from. Detail in <a href="/blog/getgabs-alternative-shopify-whatsapp">Getgabs alternative</a>.</li>
 <li><strong>Kanal</strong>, if you are global rather than India-first and already run Klaviyo. <a href="https://getkanal.com" rel="noopener noreferrer" target="_blank">getkanal.com</a> listed Pro €89, Scale €149 and Business €350 a month in September 2026. Billing in euros has the same forecasting problem as billing in dollars if your revenue is in rupees. See <a href="/blog/kanal-whatsapp-alternative-shopify">Kanal alternative</a>.</li>
-<li><strong>WATI</strong>, if you want the largest install base and the deepest partner network, and you are buying a WhatsApp business suite rather than a Shopify tool specifically. We have not verified its current plan limits, so confirm on wati.io.</li>
+<li><strong>WATI</strong>, if you want one inbox across many channels and you are buying a WhatsApp business suite rather than a Shopify tool. Growth ₹2,999, Pro ₹6,499 and Business ₹18,499 a month, read 10 November 2026, with message rates 12% to 30% above Meta. See <a href="/blog/wati-pricing-india">WATI pricing in India</a>.</li>
 <li><strong>Gupshup</strong>, if you are enterprise, need a CPaaS relationship and will negotiate a quote rather than pick a tier. Not the right shape for a store doing a few hundred orders a month.</li>
-<li><strong>DelightChat</strong>, if a shared support inbox across channels matters more than Shopify-specific automation. It is also the page currently ranking first for this very query, which tells you something about how it invests in content.</li>
+<li><strong>DelightChat</strong>, if a shared support inbox across channels matters more than Shopify-specific automation.</li>
 <li><strong>TopEdge AI</strong>, if your costs are in rupees, COD and RTO are what actually hurt, and you want the platform fee to track order volume instead of chatter. The next two sections are the honest version of that case, including when it does not apply.</li>
 </ul>
-<p class="mkt-blog-footnote">We sell one of the tools on this list, so read it with that in mind. Where we have not verified a price we have said so rather than repeating a number from someone else's listicle. Prices and plan limits change; the read date beside each one is when a person last opened the page.</p>
+<p class="mkt-blog-footnote">We sell one of the tools on this list (<a href="/about">who runs TopEdge AI</a>), so read it with that in mind. Where we have not verified a price we have said so rather than repeating a number from someone else's listicle. Prices and plan limits change; the read date beside each one is when a person last opened the page.</p>
 
 <h2>What should a Zoko alternative actually include?</h2>
 <p>Do not replace Zoko with a thinner inbox that only looks cheaper on day one. Keep the jobs Zoko already does well in your shortlist criteria:</p>
@@ -1883,7 +1926,7 @@ export const blogPosts: BlogPost[] = [
 <p><strong>Keep what Zoko is actually good at in the criteria.</strong> Catalogue-in-chat selling is a real architectural strength, not marketing copy. If a meaningful share of your orders are placed inside the conversation rather than on your storefront, a replacement that only does recovery will feel like a downgrade however much cheaper it looks.</p>
 
 <h2>Where does TopEdge AI fit that gap?</h2>
-<p>TopEdge AI is built Shopify-native for India: flat plans by order volume, Meta pass-through without a Zoko-style conversation platform markup on the published catalog, plus COD journeys, warranty, and unified identity in the core stack. We do <em>not</em> claim to out-India Zoko on catalog-in-chat heritage. That is their strength. We compete on predictable platform cost and India ops depth.</p>
+<p>TopEdge AI is built Shopify-native for India: flat plans by order volume, Meta pass-through without a Zoko-style conversation platform markup on the published catalog, plus COD journeys, warranty, and unified identity in the core stack. We do <em>not</em> claim to out-India Zoko on catalog-in-chat heritage. That is their strength. Zoko also includes COD confirmation and COD to prepaid as free flows, so that is not the gap either. We compete on a platform fee that follows orders, not conversations.</p>
 <p>For the scorecard, plan table, and verify-live footnotes, open the full board: <a href="/compare/zoko">TopEdge AI vs Zoko</a>. For a fair one-liner index of other tools, see <a href="/compare/alternatives">alternatives</a>.</p>
 
 <h2>Zoko vs TopEdge AI, side by side</h2>
@@ -1897,22 +1940,25 @@ export const blogPosts: BlogPost[] = [
 </tr>
 </thead>
 <tbody>
-<tr><td><strong>Entry price</strong></td><td>Starter $49.99/mo, then Plus $79.99, Elite $139.99, Max $499.99</td><td>Launch ₹1,999/mo, or ₹1,599/mo billed yearly, + 18% GST</td></tr>
-<tr><td><strong>Billing unit</strong></td><td>USD, plus per-conversation metering on top of the plan</td><td>INR, sized by Shopify orders a month (100, 800 or 1,500)</td></tr>
-<tr><td><strong>Agent seats</strong></td><td>5 on Plus, then <strong>$15 per extra agent</strong> a month (10 on Elite at $12, 30 on Max at $9)</td><td>No per-seat charge on any plan</td></tr>
+<tr><td><strong>Entry price</strong></td><td>Starter $49.99/mo, then Plus $79.99 and Elite $139.99 (about ₹4,687, ₹7,501 and ₹13,127 on its Shopify listing)</td><td>Launch ₹1,999/mo + 18% GST on topedgeai.com, or $19/mo billed by Shopify from the App Store</td></tr>
+<tr><td><strong>Billing unit</strong></td><td>USD, plus per-conversation metering on Starter and above each plan’s bucket</td><td>Sized by Shopify orders a month (100, 800 or 1,500). INR on topedgeai.com, USD through Shopify</td></tr>
+<tr><td><strong>Agent seats</strong></td><td>Unlimited on Starter. 5 on Plus, then <strong>$15 per extra agent</strong> a month. 10 on Elite, then $12</td><td>No per-seat charge on any plan</td></tr>
 <tr><td><strong>Conversation bucket</strong></td><td>Starter has none and meters <strong>$0.015 per conversation</strong>; Plus includes 5,000/mo then $0.00199 each</td><td>No conversation metering</td></tr>
-<tr><td><strong>AI and custom flows</strong></td><td>AI bot add-ons from <strong>$24.99/mo</strong>, plus about <strong>$0.09 per resolved conversation</strong> on the Guru agent; custom flows <strong>$5.99 per flow per month</strong>; Instagram $9.99/mo</td><td>BYOK AI at about ₹0.10 to ₹0.30 a reply and unlimited flows included; Instagram included</td></tr>
-<tr><td><strong>Meta message cost</strong></td><td>Platform markup on top of Meta’s published rate</td><td>0% markup, billed by Meta to your own Business Account</td></tr>
-<tr><td><strong>COD to prepaid</strong></td><td>Not a named native workflow on the published listing</td><td>Native journey on Growth and Scale; COD confirmation on every plan</td></tr>
+<tr><td><strong>AI and custom flows</strong></td><td>AI bot add-ons from <strong>$24.99/mo</strong>, plus about <strong>$0.09 per resolved conversation</strong> on the Guru agent; custom flows <strong>$5.99 per flow per month</strong>; Instagram $9.99/mo</td><td>BYOK AI at about ₹0.10 to ₹0.30 a reply and unlimited flows included</td></tr>
+<tr><td><strong>Meta message cost</strong></td><td>Meta’s rate card, paid directly to Meta. Starter adds $0.015 per conversation</td><td>0% markup, billed by Meta to your own Business Account</td></tr>
+<tr><td><strong>COD confirmation and COD to prepaid</strong></td><td>Both are free pre-built flows on every plan. Reconfirmation with auto-cancel is a $5.99 premium flow</td><td>COD confirmation on every plan. COD to prepaid journey on Growth and Scale only</td></tr>
+<tr><td><strong>Shopify App Store rating</strong></td><td>4.9 from 475 reviews</td><td>No reviews yet</td></tr>
 <tr><td><strong>What it is best at</strong></td><td>Catalog in chat and conversational selling, which it has done longest</td><td>Predictable INR cost and India COD and RTO operations</td></tr>
 </tbody>
 </table>
 </div>
-<p class="mkt-blog-footnote">Zoko plan prices, conversation buckets, per-conversation rates, agent seat charges and add-on prices read off <a href="https://apps.shopify.com/whatsapp-button-chat" target="_blank" rel="noopener noreferrer">Zoko's Shopify App Store listing</a> on 21 October 2026. Rupee conversions are indicative at round rates and will move with the exchange rate, which is itself part of the argument for INR billing. Re-check both pages before you buy, because the tiers move.</p>
+<p class="mkt-blog-footnote">Zoko plan prices, conversation buckets, per-conversation rates, agent seat charges, add-on prices, free flows and rating read off <a href="https://www.zoko.io/pricing" target="_blank" rel="noopener noreferrer">zoko.io/pricing</a> and <a href="https://apps.shopify.com/whatsapp-button-chat" target="_blank" rel="noopener noreferrer">Zoko's Shopify App Store listing</a> on 12 November 2026. Rupee figures are Shopify’s estimates that day and will move with the exchange rate. Re-check both pages before you buy, because the tiers move.</p>
 
 <h2>When should you stay on Zoko?</h2>
-<p>A comparison that never reaches this heading is an advertisement. Four cases where switching is the wrong call:</p>
+<p>A comparison that never reaches this heading is an advertisement. Six cases where switching is the wrong call:</p>
 <ul>
+<li><strong>You want COD to prepaid on the cheapest plan.</strong> Zoko lists it as a free flow on every plan, Starter included. On TopEdge AI it starts on Growth at ₹3,999 a month.</li>
+<li><strong>You ship more than 1,500 orders a month.</strong> TopEdge AI’s largest published plan stops at 1,500 orders. Zoko has no order cap.</li>
 <li><strong>Catalog-in-chat is your sales motion.</strong> Zoko has built conversational selling off a WhatsApp catalog for longer than most of this market has existed. If your team closes orders inside the thread rather than sending people back to the storefront, that is the thing you would be giving up, and it is their strongest card.</li>
 <li><strong>You are past the included bucket and stable.</strong> The table above shows the metering gets proportionally kinder at volume. A predictable 20,000 conversations a month on Plus is not an expensive place to be.</li>
 <li><strong>Your revenue is in dollars.</strong> Most of the argument here is that USD billing against INR revenue is hard to forecast. If you sell internationally and hold dollars, that argument does not apply to you.</li>
@@ -1948,19 +1994,20 @@ export const blogPosts: BlogPost[] = [
 <li>Ask any vendor to show those flows on a live Shopify store, not slides</li>
 <li>Model festival volume under their meters before you cancel anything</li>
 </ol>
+<p>Two shortcuts: our <a href="/tools">free Shopify tools</a> include a cart recovery calculator for step 4, and our <a href="/services">WhatsApp automation services</a> page lists what TopEdge AI takes on once your store is connected.</p>
 <blockquote><p>If the demo cannot show a live cart and a COD branch, you are shopping for a broadcast tool, not a Zoko-class commerce stack.</p></blockquote>
 
 
 <p>Related: <a href="/blog/best-whatsapp-automation-tools-shopify-india">best WhatsApp tools for Shopify India</a>, <a href="/pricing">TopEdge AI pricing</a>, <a href="/contact">contact</a>.</p>
 <p>Also compare: <a href="/blog/wati-alternative-shopify-india">WATI alternative</a>, <a href="/blog/aisensy-alternative-shopify-india">AiSensy alternative</a>, <a href="/blog/interakt-alternative-shopify-india">Interakt alternative</a>, <a href="/blog/bitespeed-alternative-shopify-india">Bitespeed alternative</a>, <a href="/blog/getgabs-alternative-shopify-whatsapp">Getgabs alternative</a>, <a href="/blog/kanal-whatsapp-alternative-shopify">Kanal alternative</a> and <a href="/blog/dondy-alternative-shopify-india">Dondy alternative</a> and <a href="/blog/updatrr-alternative-shopify-india">Updatrr alternative</a>.</p>
-<p class="mkt-blog-footnote">Pricing and feature claims about Zoko should be re-checked on zoko.io and apps.shopify.com before purchase. Snapshot research for our compare page: Sep 2026.</p>
+<p class="mkt-blog-footnote">Pricing and feature claims about Zoko were read on zoko.io and apps.shopify.com on 12 November 2026. Re-check both before purchase.</p>
 `,
   },
   {
     id: 13,
     title: 'Best Getgabs Alternative for Shopify India (2026)',
     description:
-      'Getgabs wins on entry price. When Shopify India teams outgrow free-to-install WhatsApp apps: and how to judge depth without a price fight.',
+      'A Getgabs alternative for Shopify India: Getgabs wins on entry price, so this is about when teams outgrow free-to-install WhatsApp apps, not a price fight.',
     summary: [
       'Getgabs wins on entry price: ₹699 to ₹4,499 a month on getgabs.com, or about ₹1,034 to ₹5,544 on its Shopify listing, read 8 November 2026. The two still disagree.',
       'Getgabs labels every plan 0% markup and lists Meta’s own ₹0.8631 and ₹0.115 India rates, so the message bill is the same as on TopEdge AI.',
@@ -2612,7 +2659,7 @@ export const blogPosts: BlogPost[] = [
     id: 17,
     title: 'Best Dondy Alternative for Shopify India (2026)',
     description:
-      'Dondy’s WhatsApp rate table sits ~60% above Meta marketing rates. When that math matters for Shopify India: and when Dondy’s toolkit still fits.',
+      'A Dondy alternative for Shopify India: Dondy’s rate table sits 60% above Meta’s marketing rate. When that math matters, and when Dondy’s toolkit still fits.',
     summary: [
       'Dondy bills $0.01888 per India message, 60% above the $0.0118 on Meta’s own USD rate card, both read 8 November 2026.',
       'In rupees that is about ₹1.77 a message at ₹93.92 to the dollar, against ₹0.8631 on Meta’s INR card: about ₹9,100 more per 10,000 sends.',
@@ -2669,7 +2716,7 @@ export const blogPosts: BlogPost[] = [
       },
     ],
     content: `
-<p><strong>Dondy’s published rate table charges 60% more than Meta’s own rate.</strong> On dondy.net (checked 8 Nov 2026) India is $0.01888 per message, 1.6× the $0.0118 on Meta’s USD rate card. In rupees that is about ₹1.77 a message at ₹93.92 to the dollar, roughly twice Meta’s ₹0.8631 INR rate. Pick TopEdge AI if you want 0% markup, flat plans, and COD → prepaid. Full board: <a href="/compare/dondy">TopEdge AI vs Dondy</a>.</p>
+<p><strong>The case for a Dondy alternative is the message rate: Dondy’s published rate table charges 60% more than Meta’s own.</strong> On dondy.net (checked 8 Nov 2026) India is $0.01888 per message, 1.6× the $0.0118 on Meta’s USD rate card. In rupees that is about ₹1.77 a message at ₹93.92 to the dollar, roughly twice Meta’s ₹0.8631 INR rate. Pick TopEdge AI if you want 0% markup, flat plans, and COD → prepaid. Full board: <a href="/compare/dondy">TopEdge AI vs Dondy</a>.</p>
 
 <h2>Why does the markup show up before the subscription?</h2>
 <p>Automations are not on the free widget. Shopify’s listing puts cart recovery and campaigns on Power Automation at $79.99/mo, and the AI sales/support agent on Elite at $159.99/mo. The country rate card is a second bill. At the India table rate, 1,000 messages are $18.88, versus $11.80 on Meta’s USD card, $7.08 extra on the message line, before that subscription. Power and Elite also include 1,000 one-click messages every 30 days; confirm whether that bucket is exempt from the rate card.</p>
@@ -4438,7 +4485,7 @@ export const blogPosts: BlogPost[] = [
 
 <h3>Net margin is what you actually take home</h3>
 <p>Gross margin is not profit. After shipping, customer acquisition cost, payment gateway fees, platform fees and returns, what is left is net margin. For a well-run D2C brand in India, <strong>15 to 25 percent net margin</strong> is a healthy place to be. Below 10 percent, something in your cost structure is not working. Below 5 percent, you are running a logistics operation for free.</p>
-<p><strong>Build the calculation per order, once, properly.</strong> Selling price, minus COGS, minus forward shipping, minus the gateway fee, minus acquisition cost, minus the expected cost of returns, minus GST where it applies. Most founders have the first three and stop, which is why the bank balance keeps disagreeing with the dashboard.</p>
+<p><strong>Build the calculation per order, once, properly.</strong> Selling price, minus COGS, minus forward shipping, minus the gateway fee, minus acquisition cost, minus the expected cost of returns, minus GST where it applies. Most founders have the first three and stop, which is why the bank balance keeps disagreeing with the dashboard. Our <a href="/tools">free Shopify tools</a> include an RTO cost calculator for the returns line.</p>
 <p><strong>The return line is the one that is almost always wrong,</strong> because it has to be averaged across all orders rather than charged to the ones that came back. If 15% of orders return and each costs you a full round trip of freight plus handling, that is a real per-order charge on every single order you accept, including the good ones.</p>
 <p><strong>This is also why RTO is a margin problem rather than a logistics problem.</strong> A refused COD parcel costs freight both ways, handling at both ends, and locks the stock out of sale for a fortnight, while the acquisition spend that produced it is gone. Pulling the RTO rate down a few points moves net margin further than almost any pricing change available to you, which is the entire reason COD confirmation before dispatch is worth the ₹0.1150 it costs to send.</p>
 
@@ -4800,7 +4847,7 @@ export const blogPosts: BlogPost[] = [
 <li><strong>Analytics.</strong> What is selling, which campaigns work, your return rate, where buyers drop off.</li>
 </ol>
 <p>Automation is the connective tissue between those layers, so data moves without manual export and import.</p>
-<p>One practical note for Indian founders on a budget: do not pay for six tools in month one. Start with your store platform and one communication tool. Add inventory management when SKU or channel count demands it. Add advanced analytics when you have enough data to decide from.</p>
+<p>One practical note for Indian founders on a budget: do not pay for six tools in month one. Start with your store platform and one communication tool. Add inventory management when SKU or channel count demands it. Add advanced analytics when you have enough data to decide from. For the WhatsApp side, our <a href="/services">WhatsApp automation services for Shopify</a> page lists what TopEdge AI takes care of once your store and Meta account are connected.</p>
 
 <h2>Automation versus hiring a virtual assistant</h2>
 <div class="mkt-blog-table-wrap">

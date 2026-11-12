@@ -228,6 +228,15 @@ export default function ComparePage({ competitor: competitorProp }: Props) {
           </div>
         </header>
 
+        {lean && data.answerFirst ? (
+          <section className="mkt-cmp__block" aria-label="Quick verdict">
+            <details className="mkt-cmp__verdict" open>
+              <summary>Quick verdict</summary>
+              <p>{data.answerFirst}</p>
+            </details>
+          </section>
+        ) : null}
+
         {!lean && data.whoForTopEdge && data.whoForCompetitor ? (
           <section className="mkt-cmp__block" aria-label="Who it's for">
             <div className="mkt-cmp__pick">

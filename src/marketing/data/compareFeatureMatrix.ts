@@ -663,7 +663,7 @@ export const ZOKO_PAIRWISE_MATRIX: PairwiseFeatureRow[] = [
     topedge:
       '14-day free trial, then ₹1,999/month (₹1,599/month billed yearly) + 18% GST on topedgeai.com, or $19/month billed by Shopify in USD from the Shopify App Store',
     competitor:
-      'Starter $49.99 · Plus $79.99 · Elite $139.99 · Max $499.99 per month (Sep 2026), in USD, plus per-conversation metering on top',
+      'Starter $49.99 · Plus $79.99 · Elite $139.99 a month in USD (zoko.io, 12 Nov 2026), shown as about ₹4,687 · ₹7,501 · ₹13,127 on its Shopify listing. 7-day trial',
   },
   {
     id: 'template-markup',
@@ -671,35 +671,35 @@ export const ZOKO_PAIRWISE_MATRIX: PairwiseFeatureRow[] = [
     description: 'How platform fees sit on top of Meta rates.',
     topedge: '0% markup; Meta pass-through; flat plan by Shopify orders',
     competitor:
-      'Starter: ~$0.015/conversation markup (zoko.io). Plus/Elite/Max: included conversation buckets then overage rates',
+      'Meta’s rate card, paid to Meta. Starter adds $0.015 per conversation; Plus includes 5,000 and Elite 100,000 conversations, then overage',
   },
   {
     id: 'ai-llm',
     label: 'AI / auto order agents',
     description: 'How AI replies and order collection are priced.',
     topedge: 'BYOK + RAG on core plans (est. ~₹0.10-₹0.30 per AI message)',
-    competitor: 'AI agents billed per resolution (e.g. ~$0.09/resolution on Guru/WISMO; Sello % of order value; verify live)',
+    competitor: 'AI agents are add-ons: $24.99/month plus $0.09 per resolution, or $24.99/month plus 3% of order value for the order-taking agent (12 Nov 2026)',
   },
   {
     id: 'intent-routing',
     label: 'Intent routing',
     description: 'Route chats without burning LLM tokens on every message.',
     topedge: 'Native algorithmic intent detection',
-    competitor: 'Flows + AI agents; intent engine depth verify live',
+    competitor: 'Flows and AI agents; no separate intent engine listed on zoko.io/pricing',
   },
   {
     id: 'unified-identity',
     label: 'Unified customer identity',
     description: 'Merge phones, emails, and orders into one profile.',
     topedge: 'Native built-in',
-    competitor: 'Shopify sync + inbox contacts; multi-number merge depth verify live',
+    competitor: 'Customer tags and segments on every plan; no identity merge listed on zoko.io/pricing',
   },
   {
     id: 'cod-prepaid',
     label: 'COD confirm & COD → prepaid',
     description: 'India COD risk tools on WhatsApp.',
     topedge: 'Native journeys + Shopify checkout partners. COD confirmation is on every plan; automated COD to prepaid is on Growth and Scale.',
-    competitor: 'Essential free flows include double-confirm COD and convert COD → prepaid (zoko.io)',
+    competitor: 'Free essential flows on every plan include double-confirm COD and convert COD to prepaid. Reconfirmation with auto-cancel is a $5.99 premium flow',
   },
   {
     id: 'warranty',
@@ -714,28 +714,28 @@ export const ZOKO_PAIRWISE_MATRIX: PairwiseFeatureRow[] = [
     description: 'Visual automation for recovery and support.',
     topedge: 'Visual journeys + Flow Builder, unlimited runs on all plans',
     competitor:
-      '11 essential ecommerce flows free; custom/premium flows ~$5.99/mo each + step fair-use overage',
+      '11 essential ecommerce flows free; premium and custom flows $5.99 a month each',
   },
   {
     id: 'flow-cap',
     label: 'Execution / conversation meters',
     description: 'What spikes during festival or sale traffic.',
     topedge: 'Plan priced on Shopify order volume; Meta fees separate',
-    competitor: 'Conversation buckets/markup + FlowHippo step fair use (500K steps then overage)',
+    competitor: 'Conversation fee on Starter, buckets on Plus and Elite; 500K flow steps a month included, then $0.0002 a step',
   },
   {
     id: 'ecommerce-analytics',
     label: 'Ecommerce analytics',
     description: 'Recovery ₹ and store metrics operators actually use.',
     topedge: 'Native ecommerce / P&L style analytics',
-    competitor: 'Detailed analytics listed; depth vs TopEdge AI P&L verify live',
+    competitor: 'Detailed analytics listed on every plan; no profit and loss view listed',
   },
   {
     id: 'india-payments',
     label: 'India payment / commerce hooks',
     description: 'UPI / Razorpay / in-chat commerce patterns.',
     topedge: 'Shopify checkout partners + WhatsApp journeys',
-    competitor: 'Strong India commerce positioning (UPI/Razorpay, catalog, CTWA; verify live)',
+    competitor: 'WhatsApp Catalog and Click-to-WhatsApp ads on every plan; an AI agent takes orders and collects payment in chat',
   },
 ];
 

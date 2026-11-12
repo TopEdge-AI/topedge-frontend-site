@@ -166,6 +166,34 @@ const WATI_PRICING_FAQS: Faq[] = [
   },
 ];
 
+const AISENSY_PRICING_FAQS: Faq[] = [
+  {
+    question: 'Is AiSensy free?',
+    answer:
+      'AiSensy has a Free Forever plan at ₹0, read on 12 November 2026. It gives you the WhatsApp Business API, a live chat inbox and template creation, but broadcasting is not available on it. To send campaigns you need a paid plan, from ₹1,500 a month, and every template message is charged on top.',
+  },
+  {
+    question: 'What does AiSensy charge per WhatsApp message in India?',
+    answer:
+      'For Indian numbers AiSensy lists ₹1.09 per marketing message and ₹0.145 per utility, authentication and service message, effective 1 October 2026. The first 1,000 service messages a month are free. Meta’s own India rates are ₹0.8631 and ₹0.1150, so AiSensy is about 26% above Meta on every paid category.',
+  },
+  {
+    question: 'Does AiSensy add a markup to Meta’s WhatsApp rates?',
+    answer:
+      'Yes. AiSensy’s published rates sit about 26% above Meta’s India card on marketing, utility, authentication and service messages, and they are the same on every paid plan. Every 1,000 marketing messages cost ₹226.90 more than at Meta’s rate, and every 1,000 utility messages ₹30 more.',
+  },
+  {
+    question: 'How much does an extra agent cost on AiSensy?',
+    answer:
+      'Extra agent seats are ₹750 a seat a month, read on 12 November 2026. Basic includes one owner and five agents, Premium includes one owner and nine agents, and Unlimited allows up to 200 agents.',
+  },
+  {
+    question: 'Is AiSensy cheaper on yearly billing?',
+    answer:
+      'Yes, by 10%. Read on 12 November 2026, Basic is ₹1,500 a month billed monthly, ₹1,425 billed quarterly and ₹1,350 billed yearly. Pro is ₹3,200, ₹3,040 and ₹2,880. Premium is ₹9,100, ₹8,645 and ₹8,190. Message rates and add-on prices do not change with the billing cycle.',
+  },
+];
+
 const INTERAKT_FAQS: Faq[] = [
   {
     question: 'What is the best Interakt alternative for Shopify India?',
@@ -642,7 +670,7 @@ ${faqHtml(WATI_FAQS)}
 
 <h2>The service message markup: ₹0.145 against Meta’s ₹0.115</h2>
 <p>Most "platform charges apply" claims are impossible to check. This one is not, because both numbers are published.</p>
-<p><a href="https://aisensy.com/pricing" target="_blank" rel="noopener noreferrer">AiSensy’s pricing page</a> states that from 1 October 2026 every WhatsApp Business number gets 1,000 free service messages a month, and that service messages are then charged at <strong>₹0.145 each</strong> for Indian users. Meta’s own India service and utility rate on the <a href="https://developers.facebook.com/docs/whatsapp/pricing/" target="_blank" rel="noopener noreferrer">published rate card</a> is <strong>₹0.1150</strong>.</p>
+<p><a href="https://aisensy.com/pricing" target="_blank" rel="noopener noreferrer">AiSensy’s pricing page</a> states that from 1 October 2026 every WhatsApp Business number gets 1,000 free service messages a month, and that service messages are then charged at <strong>₹0.145 each</strong> for Indian users. Meta’s own India service and utility rate on the <a href="https://developers.facebook.com/docs/whatsapp/pricing/" target="_blank" rel="noopener noreferrer">published rate card</a> is <strong>₹0.1150</strong>. The full plan and rate table is in our <a href="/blog/aisensy-pricing-india">AiSensy pricing breakdown</a>.</p>
 <p>That is ₹0.030 more on every support reply, bot reply and agent message past the first thousand in a month: a <strong>26.1% markup</strong> on that line.</p>
 <div class="mkt-blog-table-wrap">
 <table>
@@ -1070,7 +1098,7 @@ ${faqHtml(BITESPEED_FAQS)}
     id: 31,
     title: 'WhatsApp Template Rejected? Fix It for Shopify',
     description:
-      'Why Meta rejects WhatsApp templates for Shopify stores (category, variables, samples) and how to rewrite order, cart and COD templates for approval.',
+      'WhatsApp template rejected by Meta? The five causes for Shopify stores (category, variables, samples) and how to rewrite order, cart and COD templates.',
     summary: [
       'Five things get templates rejected, and missing sample values is the most common. The copy is rarely the problem.',
       'Category is the expensive mistake: a template approved as marketing costs roughly seven times the same message as utility.',
@@ -1095,7 +1123,7 @@ ${faqHtml(BITESPEED_FAQS)}
     ],
     faqs: TEMPLATE_FAQS,
     content: `
-${verdict(`<p><strong>Most rejections come from five fixable things:</strong> wrong category, badly placed variables, missing sample values, promotional wording in a utility template, and vague or misleading text. Fix the cause shown in Meta Business Manager and resubmit. Do not resubmit unchanged. For wording that already keeps utility and marketing apart, start from our <a href="/whatsapp-templates">copyable WhatsApp order and COD templates</a>.</p>`)}
+${verdict(`<p><strong>When a WhatsApp template is rejected, it is almost always one of five fixable things:</strong> wrong category, badly placed variables, missing sample values, promotional wording in a utility template, and vague or misleading text. Fix the cause shown in Meta Business Manager and resubmit. Do not resubmit unchanged. For wording that already keeps utility and marketing apart, start from our <a href="/whatsapp-templates">copyable WhatsApp order and COD templates</a>.</p>`)}
 
 <p>A rejected template blocks a cart or COD journey completely, because a good platform will not send until the template is APPROVED. Knowing the common causes saves days. Always read the reason Meta shows first, and re-check Meta’s current template guidelines because rules change.</p>
 
@@ -1283,7 +1311,7 @@ ${faqHtml(OPTIN_FAQS)}
       },
     ],
     content: `
-${verdict(`<p><strong>Updatrr is an honest Shopify-only WhatsApp app and it does not mark up Meta rates.</strong> Switch to TopEdge AI when you want to be billed in rupees rather than dollars (by signing up on topedgeai.com; App Store installs are billed by Shopify in USD), want AI included on the entry plan instead of behind the $99.99 tier, or need pre-checkout visitor identity, unified multi-number profiles and warranty management. Stay on Updatrr if its three plans already cover what you run and you do not need AI: from 500 orders a month, its Growth plan is the cheaper bill.</p>`)}
+${verdict(`<p><strong>The right Updatrr alternative depends on currency and AI, not markup. Updatrr is an honest Shopify-only WhatsApp app and it does not mark up Meta rates.</strong> Switch to TopEdge AI when you want to be billed in rupees rather than dollars (by signing up on topedgeai.com; App Store installs are billed by Shopify in USD), want AI included on the entry plan instead of behind the $99.99 tier, or need pre-checkout visitor identity, unified multi-number profiles and warranty management. Stay on Updatrr if its three plans already cover what you run and you do not need AI: from 500 orders a month, its Growth plan is the cheaper bill.</p>`)}
 
 <p>Most "alternative" posts open by finding something dishonest about the incumbent. This one cannot, so it will not try. <a href="https://www.updatrr.com/pricing" target="_blank" rel="noopener noreferrer">Updatrr's pricing page</a> states plainly that it <em>does not add a markup on Meta's conversation fees</em> and that Meta bills WhatsApp conversations separately by recipient country and conversation type. That is the correct answer to the single most important pricing question in this category, and it is the same position we take.</p>
 <p>So this comparison is not about markup. It is about currency, what each plan includes, and how far into your store each product reaches. Those turn out to be the three things that actually decide it.</p>
@@ -2341,7 +2369,7 @@ ${faqHtml(FUNNEL_FAQS)}
 </tbody>
 </table>
 </div>
-<p>For a feature-by-feature board, see <a href="/compare/interakt">TopEdge AI vs Interakt</a>. For what the Meta line costs on any tool, see <a href="/blog/whatsapp-business-api-pricing-india">WhatsApp Business API pricing in India</a>. If Updatrr is on your list, our <a href="/blog/updatrr-alternative-shopify-india">Updatrr comparison</a> prices it at the same volumes, and <a href="/blog/wati-pricing-india">WATI pricing in India</a> uses the same message mix.</p>
+<p>For a feature-by-feature board, see <a href="/compare/interakt">TopEdge AI vs Interakt</a>. For what the Meta line costs on any tool, see <a href="/blog/whatsapp-business-api-pricing-india">WhatsApp Business API pricing in India</a>. If Updatrr is on your list, our <a href="/blog/updatrr-alternative-shopify-india">Updatrr comparison</a> prices it at the same volumes, and <a href="/blog/wati-pricing-india">WATI pricing in India</a> and <a href="/blog/aisensy-pricing-india">AiSensy pricing in India</a> use the same message mix.</p>
 
 ${faqHtml(INTERAKT_PRICING_FAQS)}
 
@@ -2446,7 +2474,7 @@ ${faqHtml(INTERAKT_PRICING_FAQS)}
 <p>We got this wrong ourselves. Until 7 November 2026 our own pages said WATI passed Meta’s rate through, because we read “Standard rates” that way. The rate cards say otherwise. For Meta’s full card by category, see our <a href="/pricing/meta-rates">India rate card page</a>.</p>
 
 <h2>A Shopify store’s bill at 100, 500 and 1,500 orders</h2>
-<p><strong>Assumptions, so you can redo this with your own numbers.</strong> Per order we assume 20 marketing messages, 3 utility messages (order confirmed, shipped, delivered) and 6 customer-service replies, with the first 1,000 replies a month free. This is an estimate, not a benchmark. It is the same mix we used on our <a href="/blog/interakt-pricing-india">Interakt pricing page</a>, so the two pages can be compared row by row.</p>
+<p><strong>Assumptions, so you can redo this with your own numbers.</strong> Per order we assume 20 marketing messages, 3 utility messages (order confirmed, shipped, delivered) and 6 customer-service replies, with the first 1,000 replies a month free. This is an estimate, not a benchmark. It is the same mix we used on our <a href="/blog/interakt-pricing-india">Interakt pricing page</a> and our <a href="/blog/aisensy-pricing-india">AiSensy pricing page</a>, so the three can be compared row by row.</p>
 <p>WATI lists its Shopify integration as an add-on at USD 4.99 a month, so we add it: about ₹469 at the <a href="https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/index.en.html" target="_blank" rel="noopener noreferrer">ECB reference rate</a> of ₹93.92 a dollar for 6 November 2026.</p>
 <div class="mkt-blog-table-wrap">
 <table>
@@ -2496,6 +2524,153 @@ ${faqHtml(INTERAKT_PRICING_FAQS)}
 ${faqHtml(WATI_PRICING_FAQS)}
 
 <p class="mkt-blog-footnote">Sources, read 10 November 2026: <a href="https://www.wati.io/pricing/" target="_blank" rel="noopener noreferrer">WATI pricing page</a> (monthly, quarterly and annual views, add-ons and FAQ) and WATI’s INR rate cards for Growth, Pro and Business, dated 1 October 2026. Meta’s India rates from <a href="https://developers.facebook.com/docs/whatsapp/pricing/" target="_blank" rel="noopener noreferrer">Meta’s pricing documentation</a>, effective 1 October 2026. <a href="https://www.updatrr.com/pricing" target="_blank" rel="noopener noreferrer">Updatrr pricing</a> and <a href="https://apps.shopify.com/topedge-ai" target="_blank" rel="noopener noreferrer">TopEdge AI on the Shopify App Store</a> read 9 November 2026. Exchange rate from the <a href="https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/index.en.html" target="_blank" rel="noopener noreferrer">ECB</a> for 6 November 2026. TopEdge AI prices from our <a href="/pricing">pricing page</a>.</p>
+`,
+  },
+  {
+    id: 64,
+    title: 'AiSensy Pricing in India (2026): Rates and Bill',
+    description:
+      'AiSensy pricing read 12 Nov 2026: ₹1.09 per marketing message, plans from ₹1,500 a month, add-ons, and a Shopify store’s bill at 100, 500 and 1,500 orders.',
+    summary: [
+      'AiSensy charges ₹1.09 per marketing message and ₹0.145 per utility or service message to Indian numbers, read 12 November 2026. That is about 26% above Meta’s own rates, on every paid plan.',
+      'Plans are Basic ₹1,500, Pro ₹3,200, Premium ₹9,100 and Unlimited ₹45,000 a month on monthly billing. Quarterly billing saves 5% and yearly saves 10%.',
+      'Chatbot Flows (₹2,500 a month), the AI Chat Agent (₹1,350 a month) and extra agents (₹750 each) are sold separately on top of any plan.',
+      'A Shopify store with 500 orders a month pays about ₹12,908 before taxes on AiSensy Basic. At 1,500 orders it is about ₹36,013, and the message rate is most of the gap to other tools.',
+    ],
+    slug: 'aisensy-pricing-india',
+    date: '2026-11-12',
+    updated: '2026-11-12',
+    readTime: '8 min',
+    category: 'Comparisons',
+    author: 'Moksh Patel',
+    image: '/blog/aisensy-pricing-india.jpg',
+    imageWebp: '/blog/aisensy-pricing-india.webp',
+    imageAlt:
+      'AiSensy pricing in India: ₹1.09 per marketing message and ₹0.145 per utility message against Meta’s rates, with plans from ₹1,500 a month',
+    keywords: [
+      'aisensy pricing',
+      'aisensy pricing india',
+      'aisensy pricing plans',
+      'aisensy per message cost',
+      'aisensy charges',
+      'aisensy review',
+      'aisensy shopify pricing',
+      'aisensy markup',
+    ],
+    faqs: AISENSY_PRICING_FAQS,
+    content: `
+<details class="mkt-blog-verdict" open>
+<summary>Direct answer</summary>
+<p>AiSensy pricing in India has two parts. The message rate is <strong>₹1.09 per marketing message and ₹0.145 per utility, authentication or service message</strong>, about 26% above Meta’s own rates. The plan is <strong>₹1,500 (Basic), ₹3,200 (Pro), ₹9,100 (Premium) or ₹45,000 (Unlimited) a month</strong>. Both were read on 12 November 2026. A Shopify store with 500 orders a month pays about <strong>₹12,908 a month</strong> on Basic.</p>
+</details>
+
+<p><strong>Checked 12 November 2026.</strong> We read <a href="https://aisensy.com/pricing" target="_blank" rel="noopener noreferrer">AiSensy’s pricing page</a> on monthly, quarterly and yearly billing, and <a href="https://apps.shopify.com/aisensy-whatsapp-marketing" target="_blank" rel="noopener noreferrer">its Shopify App Store listing</a>. This page is part of our <a href="/compare/alternatives">comparison of WhatsApp tools for Shopify India</a>. <a href="/about">TopEdge AI</a> sells a competing Shopify app, so where AiSensy is cheaper or better below, we say so.</p>
+
+<h2>AiSensy’s per-message rates against Meta’s</h2>
+<p>Start here, because on AiSensy the messages cost more than the plan once you send at any volume. AiSensy prints one rate table on every paid plan card. <a href="https://developers.facebook.com/docs/whatsapp/pricing/" target="_blank" rel="noopener noreferrer">Meta’s India card</a>, effective 1 October 2026, is the second column.</p>
+<div class="mkt-blog-table-wrap">
+<table>
+<thead><tr><th>Message to an Indian number</th><th>Meta</th><th>AiSensy</th><th>Difference</th><th>Extra per 1,000 messages</th></tr></thead>
+<tbody>
+<tr><td>Marketing</td><td>₹0.8631</td><td>₹1.09</td><td>+26%</td><td>₹226.90</td></tr>
+<tr><td>Utility</td><td>₹0.1150</td><td>₹0.145</td><td>+26%</td><td>₹30.00</td></tr>
+<tr><td>Authentication</td><td>₹0.1150</td><td>₹0.145</td><td>+26%</td><td>₹30.00</td></tr>
+<tr><td>Service, after 1,000 free a month</td><td>₹0.1150</td><td>₹0.145</td><td>+26%</td><td>₹30.00</td></tr>
+</tbody>
+</table>
+</div>
+<p>Three details from the page that change a bill:</p>
+<ul>
+<li><strong>The rate does not fall on bigger plans.</strong> Basic, Pro, Premium and Unlimited all show the same four numbers. WATI and Interakt lower their rates as you move up. AiSensy does not.</li>
+<li><strong>Utility messages are charged inside the 24-hour window too.</strong> Order confirmed, shipped and delivered are utility messages.</li>
+<li><strong>Billing is prepaid.</strong> You recharge WhatsApp Conversation Credits and messages draw them down.</li>
+</ul>
+<p>For Meta’s full card by category, see our <a href="/pricing/meta-rates">India rate card page</a>.</p>
+
+<h2>AiSensy plans on monthly, quarterly and yearly billing</h2>
+<p>The toggle on the page changes every paid plan. Quarterly saves 5% and yearly saves 10%.</p>
+<div class="mkt-blog-table-wrap">
+<table>
+<thead><tr><th>Plan</th><th>Billed monthly</th><th>Billed quarterly</th><th>Billed yearly</th><th>Agents</th></tr></thead>
+<tbody>
+<tr><td><strong>Free Forever</strong></td><td>₹0</td><td>₹0</td><td>₹0</td><td>Live chat only, no broadcasting</td></tr>
+<tr><td><strong>Basic</strong></td><td>₹1,500</td><td>₹1,425</td><td>₹1,350</td><td>1 owner and 5 agents</td></tr>
+<tr><td><strong>Pro</strong></td><td>₹3,200</td><td>₹3,040</td><td>₹2,880</td><td>As Basic</td></tr>
+<tr><td><strong>Premium</strong></td><td>₹9,100</td><td>₹8,645</td><td>₹8,190</td><td>1 owner and 9 agents</td></tr>
+<tr><td><strong>Unlimited</strong></td><td>₹45,000</td><td>₹42,750</td><td>₹40,500</td><td>Up to 200</td></tr>
+</tbody>
+</table>
+</div>
+<p>All figures are per month. Quarterly is charged as ₹4,275, ₹9,120 and ₹25,935 a quarter. Yearly is charged as ₹16,200, ₹34,560 and ₹98,280 a year.</p>
+<p>What moves you up a plan, per the page:</p>
+<ul>
+<li><strong>Basic</strong> has broadcasting, retargeting, the shared inbox, Shopify and WooCommerce integrations, 2 audience segments and 40 messages a second.</li>
+<li><strong>Pro</strong> adds the campaign scheduler, click tracking, budget analytics, 10 segments and failed-message retry.</li>
+<li><strong>Premium</strong> adds 250 messages a second, number masking, downloadable reports, 50 segments and one webhook.</li>
+</ul>
+
+<h3>Three add-ons that are not in any plan</h3>
+<div class="mkt-blog-table-wrap">
+<table>
+<thead><tr><th>Add-on</th><th>Price a month</th><th>What the page says it is</th></tr></thead>
+<tbody>
+<tr><td>Chatbot Flows</td><td>₹2,500</td><td>Keyword and rule-based chatbot flows with a drag-and-drop builder</td></tr>
+<tr><td>AI Chat Agent</td><td>₹1,350</td><td>1,000 AI messages. More are charged separately</td></tr>
+<tr><td>Extra agent</td><td>₹750 a seat</td><td>Seats beyond the ones your plan includes</td></tr>
+</tbody>
+</table>
+</div>
+<p>Chatbot and AI replies are service messages, so they also cost ₹0.145 each after the 1,000 free ones. A store on Basic with Chatbot Flows pays ₹4,000 a month before a single message.</p>
+
+<h2>AiSensy review in five lines</h2>
+<ol>
+<li><strong>Rating:</strong> 4.1 out of 5 from 57 reviews on the Shopify App Store, read 12 November 2026. 31 are five-star and 13 are one-star.</li>
+<li><strong>Best at:</strong> broadcasts. Scheduling, retargeting, click tracking and segments are where the plans differ.</li>
+<li><strong>Cheapest part:</strong> the subscription. ₹1,500 a month with five agents is below most Indian rivals.</li>
+<li><strong>Costliest part:</strong> the message rate. 26% above Meta on every category, on every plan.</li>
+<li><strong>Check before you buy:</strong> whether your flows need the ₹2,500 Chatbot Flows add-on, and how many replies a month you send past the free 1,000.</li>
+</ol>
+<p>This is a reading of published pages, not a hands-on test. For the feature-by-feature view see <a href="/compare/aisensy">TopEdge AI vs AiSensy</a>. If you have already decided to move, read the <a href="/blog/aisensy-alternative-shopify-india">AiSensy alternative guide</a>.</p>
+
+<h2>What a Shopify store pays at 100, 500 and 1,500 orders</h2>
+<p><strong>Assumptions, so you can redo this with your own numbers.</strong> Per order we assume 20 marketing messages, 3 utility messages and 6 customer-service replies, with the first 1,000 replies a month free. This is an estimate, not a benchmark. It is the same mix as our <a href="/blog/wati-pricing-india">WATI pricing</a> and <a href="/blog/interakt-pricing-india">Interakt pricing</a> pages, so the three can be compared row by row.</p>
+<div class="mkt-blog-table-wrap">
+<table>
+<thead><tr><th>Orders a month</th><th>AiSensy Basic</th><th>TopEdge AI on the Shopify App Store</th><th>TopEdge AI on topedgeai.com</th><th>Updatrr Growth</th></tr></thead>
+<tbody>
+<tr><td><strong>100</strong></td><td>₹3,724</td><td>₹3,546 (Launch)</td><td>₹3,760 (Launch)</td><td>₹4,577</td></tr>
+<tr><td><strong>500</strong></td><td>₹12,908</td><td>₹12,699 (Growth)</td><td>₹13,033 (Growth)</td><td>₹11,850</td></tr>
+<tr><td><strong>1,500</strong></td><td>₹36,013</td><td>₹33,439 (Scale)</td><td>₹33,830 (Scale)</td><td>₹30,147</td></tr>
+</tbody>
+</table>
+</div>
+<p>Monthly billing, before taxes, subscription plus messages. AiSensy’s message line is ₹2,224 at 100 orders, ₹11,408 at 500 and ₹34,513 at 1,500. At Meta’s rate the same messages cost ₹1,761, ₹9,034 and ₹27,331, which is what TopEdge AI and Updatrr pass through.</p>
+<p>We price AiSensy on Basic with no add-ons, which is its cheapest workable case. On Pro add ₹1,700 a month. With Chatbot Flows add ₹2,500.</p>
+<p>TopEdge AI’s App Store plans are billed by Shopify in US dollars ($19, $39 and $65 a month); the rupee figures are Shopify’s estimates from 9 November 2026. On topedgeai.com the plans are ₹1,999, ₹3,999 and ₹6,499 plus GST. <a href="https://www.updatrr.com/pricing" target="_blank" rel="noopener noreferrer">Updatrr’s $29.99 Growth plan</a>, read 9 November 2026, is converted at the <a href="https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/index.en.html" target="_blank" rel="noopener noreferrer">ECB reference rate</a> of ₹93.92 a dollar for 6 November 2026.</p>
+
+<h3>What the numbers say</h3>
+<ul>
+<li><strong>At 100 and 500 orders AiSensy Basic is within about ₹200 of TopEdge AI.</strong> It is ₹36 cheaper than TopEdge AI on topedgeai.com at 100 orders and ₹125 cheaper at 500. The low subscription cancels the higher message rate.</li>
+<li><strong>At 1,500 orders the message rate wins.</strong> AiSensy’s rates add ₹7,182 a month over Meta’s. The bill is about ₹2,200 to ₹2,600 above TopEdge AI and about ₹5,900 above Updatrr.</li>
+<li><strong>Updatrr Growth is the cheapest row at 500 and 1,500 orders.</strong> It states no markup on Meta’s fees and publishes no order limit.</li>
+<li><strong>TopEdge AI Launch is capped at 100 orders</strong> and does not include COD-to-prepaid conversion or Journey Branch. Those start on Growth.</li>
+<li><strong>The crossover is your marketing volume.</strong> Every 1,000 marketing messages cost ₹226.90 more on AiSensy. A store that sends few campaigns keeps most of the subscription saving.</li>
+</ul>
+
+<h2>Where AiSensy is the better pick</h2>
+<ul>
+<li><strong>You are not on Shopify.</strong> TopEdge AI only works with Shopify stores. AiSensy works with any business that has a WhatsApp number.</li>
+<li><strong>You want to start at ₹0.</strong> The Free Forever plan gives you the API and a chat inbox. TopEdge AI has a 14-day trial, capped at 20 orders and 200 sends, and no free plan.</li>
+<li><strong>You send few messages.</strong> Under a few thousand marketing messages a month, a ₹1,500 plan beats a ₹3,999 one even with the markup.</li>
+<li><strong>Broadcasting is the whole job.</strong> Scheduling, retargeting and click tracking are AiSensy’s core, and it lists Click-to-WhatsApp ad tools on every plan.</li>
+<li><strong>You ship more than 1,500 orders a month.</strong> TopEdge AI’s largest published plan stops there. AiSensy publishes no order cap.</li>
+</ul>
+<p>A Shopify-only app fits better when most of your sends are order, shipping and COD updates at volume, or when you want <a href="/features/cod-confirmation">WhatsApp COD confirmation for Shopify</a> and cart recovery running without building chatbot rules. <a href="/pricing">TopEdge AI pricing</a> shows what each plan includes.</p>
+<p>If the Meta line is the part you want to understand first, start with <a href="/blog/whatsapp-business-api-pricing-india">WhatsApp Business API pricing in India</a>.</p>
+
+${faqHtml(AISENSY_PRICING_FAQS)}
+
+<p class="mkt-blog-footnote">Sources, read 12 November 2026: <a href="https://aisensy.com/pricing" target="_blank" rel="noopener noreferrer">AiSensy pricing page</a> (monthly, quarterly and yearly views, per-message rates and add-ons) and <a href="https://apps.shopify.com/aisensy-whatsapp-marketing" target="_blank" rel="noopener noreferrer">AiSensy on the Shopify App Store</a>. Meta’s India rates from <a href="https://developers.facebook.com/docs/whatsapp/pricing/" target="_blank" rel="noopener noreferrer">Meta’s pricing documentation</a>, effective 1 October 2026. <a href="https://www.updatrr.com/pricing" target="_blank" rel="noopener noreferrer">Updatrr pricing</a> and <a href="https://apps.shopify.com/topedge-ai" target="_blank" rel="noopener noreferrer">TopEdge AI on the Shopify App Store</a> read 9 November 2026. Exchange rate from the <a href="https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/index.en.html" target="_blank" rel="noopener noreferrer">ECB</a> for 6 November 2026. TopEdge AI prices from our <a href="/pricing">pricing page</a>.</p>
 `,
   },
 ];

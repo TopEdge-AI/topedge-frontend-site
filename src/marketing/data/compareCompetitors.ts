@@ -266,7 +266,9 @@ export const COMPARE_COMPETITORS: Record<string, CompareCompetitor> = {
       'TopEdge AI vs Zoko, Zoko alternative Shopify, Zoko pricing conversations, Shopify WhatsApp India Zoko, Zoko vs TopEdge AI',
     h1: 'TopEdge AI vs Zoko',
     subtitle: 'TopEdge AI vs Zoko for Shopify India D2C brands, checked for 2026.',
-    researchAsOf: 'Oct 2026',
+    answerFirst:
+      'TopEdge AI vs Zoko comes down to how you want to be billed. TopEdge AI charges a flat fee by Shopify orders: ₹1,999 to ₹6,499 a month plus GST on topedgeai.com, or $19 to $65 through Shopify, with no conversation fee. Zoko charges $49.99 to $139.99 a month in US dollars and meters conversations on Starter. Where Zoko is better: selling from a WhatsApp catalog inside the chat, COD to prepaid on every plan, and 4.9 from 475 App Store reviews against none yet for TopEdge AI. Read 12 November 2026.',
+    researchAsOf: 'Nov 2026',
     matrix: ZOKO_PAIRWISE_MATRIX.map(({ label, description, topedge, competitor }) => ({
       label,
       description,
@@ -274,7 +276,7 @@ export const COMPARE_COMPETITORS: Record<string, CompareCompetitor> = {
       competitor,
     })),
     matrixNote:
-      'Read off apps.shopify.com/whatsapp-button-chat on 21 Oct 2026. Starter $49.99/mo meters $0.015 per conversation with no cap. Plus $79.99/mo includes 5,000 conversations then $0.00199 each, with 5 agents and $15 per extra agent. Elite $139.99/mo includes 100,000 then $0.00099, 10 agents at $12 each. Max $499.99/mo includes 5M then $0.00049, 30 agents at $9 each. AI bot add-ons from $24.99/mo, custom flows $5.99 per flow per month, Instagram $9.99/mo. Confirm live on zoko.io/pricing before purchase; figures change.',
+      'Read off zoko.io/pricing and apps.shopify.com/whatsapp-button-chat on 12 Nov 2026. Starter $49.99/mo meters $0.015 per conversation with no cap and has unlimited agents. Plus $79.99/mo includes 5,000 conversations then $0.00199 each, with 5 agents and $15 per extra agent. Elite $139.99/mo includes 100,000 then $0.00099, 10 agents at $12 each. A Max plan (5M conversations, 30 agents) is shown only on the App Store listing, at about ₹46,883 a month. AI agents from $24.99/mo, premium flows $5.99 per flow per month, Instagram $9.99/mo. Confirm live before purchase; figures change.',
     related: [
       { label: 'Zoko alternatives guide', href: '/blog/zoko-alternative-shopify-india' },
       { label: 'Alternatives index', href: '/compare/alternatives' },

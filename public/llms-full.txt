@@ -481,7 +481,7 @@ The Reports menu has Analytics (revenue from your automations and campaigns), Pr
 - **Why is recovered revenue not what I expected?** An order counts if a reminder was the last message within 7 days, even if the customer came back without tapping. That is on purpose: on WhatsApp, many people act without tapping the link.
 - **Why do the numbers not match Shopify?** Different measures. Shopify’s total sales include shipping and tax, while Profit & loss takes off product cost, shipping and fees. Compare the same dates and the same measure.
 
-### Abandoned carts reference: tracking and carts
+### Abandoned carts and website tracking reference
 
 https://topedgeai.com/docs/reference/store-growth · Reference · updated 2026-11-11
 
@@ -618,10 +618,10 @@ https://topedgeai.com/compare/zoko
 
 Compare TopEdge AI vs Zoko for Shopify India: flat INR plans from ₹1,999/mo and 0% Meta markup vs Zoko’s $49.99+ USD base fees and per-conversation metering.
 
-Sourcing: Read off apps.shopify.com/whatsapp-button-chat on 21 Oct 2026. Starter $49.99/mo meters $0.015 per conversation with no cap. Plus $79.99/mo includes 5,000 conversations then $0.00199 each, with 5 agents and $15 per extra agent. Elite $139.99/mo includes 100,000 then $0.00099, 10 agents at $12 each. Max $499.99/mo includes 5M then $0.00049, 30 agents at $9 each. AI bot add-ons from $24.99/mo, custom flows $5.99 per flow per month, Instagram $9.99/mo. Confirm live on zoko.io/pricing before purchase; figures change.
+Sourcing: Read off zoko.io/pricing and apps.shopify.com/whatsapp-button-chat on 12 Nov 2026. Starter $49.99/mo meters $0.015 per conversation with no cap and has unlimited agents. Plus $79.99/mo includes 5,000 conversations then $0.00199 each, with 5 agents and $15 per extra agent. Elite $139.99/mo includes 100,000 then $0.00099, 10 agents at $12 each. A Max plan (5M conversations, 30 agents) is shown only on the App Store listing, at about ₹46,883 a month. AI agents from $24.99/mo, premium flows $5.99 per flow per month, Instagram $9.99/mo. Confirm live before purchase; figures change.
 
 - TopEdge AI: 14-day free trial, then ₹1,999/month (₹1,599/month billed yearly) + 18% GST on topedgeai.com, or $19/month billed by Shopify in USD from the Shopify App Store
-- Zoko: Starter $49.99 · Plus $79.99 · Elite $139.99 · Max $499.99 per month (Sep 2026), in USD, plus per-conversation metering on top
+- Zoko: Starter $49.99 · Plus $79.99 · Elite $139.99 a month in USD (zoko.io, 12 Nov 2026), shown as about ₹4,687 · ₹7,501 · ₹13,127 on its Shopify listing. 7-day trial
 
 ### TopEdge AI vs Getgabs
 
@@ -679,6 +679,18 @@ Sourcing: Board compiled Sep 2026 from TopEdge AI product positioning vs publicl
 - Gupshup: Pay-as-you-go model with no fixed entry-level SaaS tiers or public free trial (verify live / sales quote)
 
 ## Playbooks
+
+### AiSensy Pricing in India (2026): Rates and Bill
+
+https://topedgeai.com/blog/aisensy-pricing-india · published 2026-11-12 · updated 2026-11-12 · by Moksh Patel
+
+AiSensy pricing in India has two parts. The message rate is ₹1.09 per marketing message and ₹0.145 per utility, authentication or service message , about 26% above Meta’s own rates. The plan is ₹1,500 (Basic), ₹3,200 (Pro), ₹9,100 (Premium) or ₹45,000 (Unlimited) a month . Both were read on 12 November 2026. A Shopify store with 500 orders a month pays about ₹12,908 a month on Basic.
+
+- **Is AiSensy free?** AiSensy has a Free Forever plan at ₹0, read on 12 November 2026. It gives you the WhatsApp Business API, a live chat inbox and template creation, but broadcasting is not available on it. To send campaigns you need a paid plan, from ₹1,500 a month, and every template message is charged on top.
+- **What does AiSensy charge per WhatsApp message in India?** For Indian numbers AiSensy lists ₹1.09 per marketing message and ₹0.145 per utility, authentication and service message, effective 1 October 2026. The first 1,000 service messages a month are free. Meta’s own India rates are ₹0.8631 and ₹0.1150, so AiSensy is about 26% above Meta on every paid category.
+- **Does AiSensy add a markup to Meta’s WhatsApp rates?** Yes. AiSensy’s published rates sit about 26% above Meta’s India card on marketing, utility, authentication and service messages, and they are the same on every paid plan. Every 1,000 marketing messages cost ₹226.90 more than at Meta’s rate, and every 1,000 utility messages ₹30 more.
+- **How much does an extra agent cost on AiSensy?** Extra agent seats are ₹750 a seat a month, read on 12 November 2026. Basic includes one owner and five agents, Premium includes one owner and nine agents, and Unlimited allows up to 200 agents.
+- **Is AiSensy cheaper on yearly billing?** Yes, by 10%. Read on 12 November 2026, Basic is ₹1,500 a month billed monthly, ₹1,425 billed quarterly and ₹1,350 billed yearly. Pro is ₹3,200, ₹3,040 and ₹2,880. Premium is ₹9,100, ₹8,645 and ₹8,190. Message rates and add-on prices do not change with the billing cycle.
 
 ### Wati Pricing in India (2026): Plans, Seats and Bill
 
@@ -788,7 +800,7 @@ A Cash on Delivery order that becomes a prepaid order saves roughly ₹68 before
 
 https://topedgeai.com/blog/updatrr-alternative-shopify-india · published 2026-10-21 · updated 2026-11-08 · by Moksh Patel
 
-Updatrr is an honest Shopify-only WhatsApp app and it does not mark up Meta rates. Switch to TopEdge AI when you want to be billed in rupees rather than dollars (by signing up on topedgeai.com; App Store installs are billed by Shopify in USD), want AI included on the entry plan instead of behind the $99.99 tier, or need pre-checkout visitor identity, unified multi-number profiles and warranty management. Stay on Updatrr if its three plans already cover what you run and you do not need AI: from 500 orders a month, its Growth plan is the cheaper bill.
+The right Updatrr alternative depends on currency and AI, not markup. Updatrr is an honest Shopify-only WhatsApp app and it does not mark up Meta rates. Switch to TopEdge AI when you want to be billed in rupees rather than dollars (by signing up on topedgeai.com; App Store installs are billed by Shopify in USD), want AI included on the entry plan instead of behind the $99.99 tier, or need pre-checkout visitor identity, unified multi-number profiles and warranty management. Stay on Updatrr if its three plans already cover what you run and you do not need AI: from 500 orders a month, its Growth plan is the cheaper bill.
 
 - **What is the best Updatrr alternative for Shopify stores in India?** It depends on what is not working. Updatrr is a capable Shopify-only WhatsApp app that publishes plans at $29.99, $49.99 and $99.99 a month and states it adds no markup on Meta conversation fees, which is the right thing to do. Switch to TopEdge AI when you want to pay in rupees rather than dollars (sign up on topedgeai.com; App Store installs are billed by Shopify in USD), want AI with human handover on your entry plan instead of the $99.99 tier, or need pre-checkout visitor identity, unified multi-number profiles and warranty management that a Shopify-only app does not reach.
 - **Does Updatrr mark up Meta WhatsApp rates?** No, and it says so plainly. Updatrr’s pricing page states it does not add a markup on Meta’s conversation fees and that Meta bills WhatsApp conversations separately, by recipient country and conversation type. TopEdge AI takes the same position. On the Meta line the two are equivalent, so compare them on subscription currency, what each plan includes, and how deep each one reaches into your store.
@@ -851,7 +863,7 @@ Bitespeed targets larger brands and global omnichannel stacks. If your Shopify s
 
 https://topedgeai.com/blog/whatsapp-template-rejected-meta-shopify-fix · published 2026-10-08 · updated 2026-10-21 · by Moksh Patel
 
-Most rejections come from five fixable things: wrong category, badly placed variables, missing sample values, promotional wording in a utility template, and vague or misleading text. Fix the cause shown in Meta Business Manager and resubmit. Do not resubmit unchanged. For wording that already keeps utility and marketing apart, start from our copyable WhatsApp order and COD templates .
+When a WhatsApp template is rejected, it is almost always one of five fixable things: wrong category, badly placed variables, missing sample values, promotional wording in a utility template, and vague or misleading text. Fix the cause shown in Meta Business Manager and resubmit. Do not resubmit unchanged. For wording that already keeps utility and marketing apart, start from our copyable WhatsApp order and COD templates .
 
 - **Why was my WhatsApp template rejected?** The most common causes are a category that does not match the content (promotional text in a utility template), variables that are not in order or sit at the very start or end, missing sample values, and wording that Meta’s review flags as misleading or as asking for sensitive data. The rejection reason shown in Meta Business Manager tells you which one applies.
 - **Can I appeal a rejected WhatsApp template?** Yes. Fix the issue and resubmit, or use the review request option in Meta Business Manager when you believe the rejection was wrong. Appealing without changing anything rarely works, so change the wording, sample values or category first.
@@ -969,7 +981,7 @@ Best WhatsApp apps for Shopify are not one ranking. Compare features, pricing, a
 
 https://topedgeai.com/blog/dondy-alternative-shopify-india · published 2026-09-21 · updated 2026-11-08 · by Moksh Patel
 
-Dondy’s published rate table charges 60% more than Meta’s own rate. On dondy.net (checked 8 Nov 2026) India is $0.01888 per message, 1.6× the $0.0118 on Meta’s USD rate card. In rupees that is about ₹1.77 a message at ₹93.92 to the dollar, roughly twice Meta’s ₹0.8631 INR rate. Pick TopEdge AI if you want 0% markup, flat plans, and COD → prepaid. Full board: TopEdge AI vs Dondy .
+The case for a Dondy alternative is the message rate: Dondy’s published rate table charges 60% more than Meta’s own. On dondy.net (checked 8 Nov 2026) India is $0.01888 per message, 1.6× the $0.0118 on Meta’s USD rate card. In rupees that is about ₹1.77 a message at ₹93.92 to the dollar, roughly twice Meta’s ₹0.8631 INR rate. Pick TopEdge AI if you want 0% markup, flat plans, and COD → prepaid. Full board: TopEdge AI vs Dondy .
 
 - **Does Dondy charge more than Meta’s own rate?** Yes. Its rate table at dondy.net/dondy-pricing lists India at $0.01888 per message, and Meta’s own USD rate card, effective 1 October 2026, lists India marketing at $0.0118: exactly 60% more. The same 1.6 multiple holds on the other rows we checked, such as Rest of Central & Eastern Europe at $0.1376 against Meta’s $0.086. Both read 8 November 2026. Note the Shopify listing’s “from $0.0158 (US)” does not match North America $0.04 on the website table.
 - **What do 1,000 India messages cost on Dondy’s card?** 1,000 × $0.01888 is $18.88, against $11.80 on Meta’s USD card, $7.08 more. In rupees at ₹93.92 to the dollar that is about ₹1,773, against ₹863 on Meta’s INR card, about ₹910 more, before the $79.99 Power Automation or $159.99 Elite subscription. Those plans include 1,000 one-click messages every 30 days; confirm whether that allowance replaces the rate-card charge.
@@ -997,10 +1009,12 @@ WhatsApp automation for Shopify is the loop Shopify event → automation → Wha
 
 ### Best Zoko Alternative for Shopify India (2026)
 
-https://topedgeai.com/blog/zoko-alternative-shopify-india · published 2026-09-20 · updated 2026-11-02 · by Moksh Patel
+https://topedgeai.com/blog/zoko-alternative-shopify-india · published 2026-09-20 · updated 2026-11-12 · by Moksh Patel
 
-A Zoko alternative for Shopify India is worth considering when conversation metering and festival bill spikes matter more than catalog-in-chat heritage. Keep COD flows and Shopify sync; switch the platform fee to something finance can forecast in ₹. Full scorecard: TopEdge AI vs Zoko .
+The best Zoko alternative depends on why you are leaving. Switch if you earn in rupees, ship up to 1,500 orders a month and want a fee that does not move with conversations or the dollar. TopEdge AI is ₹1,999 to ₹6,499 a month plus GST on topedgeai.com, or $19 to $65 through the Shopify App Store. Stay if you sell from a catalog inside the chat. At 5,000 conversations, Zoko Plus costs about ₹7,501 a month before Meta fees, read 12 November 2026.
 
+- **How much does Zoko cost in India?** Zoko bills in US dollars: Starter $49.99, Plus $79.99 and Elite $139.99 a month, read on 12 November 2026. Its Shopify App Store listing showed those as about ₹4,687, ₹7,501 and ₹13,127 that day. Starter also adds $0.015 for every conversation, and Meta’s message charges are paid to Meta on top.
+- **Is there a free Zoko alternative?** Not a fully free one that we have read. Zoko has a 7-day trial and TopEdge AI has a 14-day trial capped at 20 orders and 200 sends. Getgabs is free to install on Shopify, with paid plans from about ₹1,034 a month on its listing, read 8 November 2026. Meta charges for template messages on every tool.
 - **What should a Zoko alternative include for a Shopify India brand?** At minimum: official Meta Cloud API access, Shopify order and checkout sync, multi-step cart recovery, COD confirmation with a prepaid path, a shared inbox with order context, and clear reporting on recovered revenue rather than messages sent. Anything missing from that list becomes manual work later.
 - **How do I evaluate a WhatsApp platform switch without disrupting live orders?** Keep your existing setup running while you connect the new platform to a test or development store, submit the templates you actually use, and run a real test order and a real abandoned checkout end to end. Only move live traffic once both produce the message you expect on a real phone.
 - **Will I lose my approved WhatsApp templates if I switch providers?** No. Templates belong to your WhatsApp Business Account, not to the provider, so they survive a switch as long as the new platform connects to the same WABA. This is also why connecting the wrong WABA makes a template library look empty. Check which account a platform has bound before assuming anything was lost.

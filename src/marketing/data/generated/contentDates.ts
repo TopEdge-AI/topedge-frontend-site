@@ -4,11 +4,11 @@
  */
 export const CONTENT_DATES = {
   /** Last edit of compare competitor data (+ feature matrix). */
-  compareTwoWay: '2026-11-10',
+  compareTwoWay: '2026-11-12',
   /** Last edit of 3-way compare page (+ feature matrix). */
-  compareThreeWay: '2026-11-10',
+  compareThreeWay: '2026-11-12',
   /** Last edit of blogPosts.ts (used as Article dateModified fallback). */
-  blogPosts: '2026-11-10',
+  blogPosts: '2026-11-12',
   /** Last edit of feature / product page content. */
   featurePages: '2026-11-10',
   /** Last edit of published plan catalog (pricing Offers). */
@@ -26,7 +26,7 @@ export const BLOG_DATES_BY_SLUG = {
   "how-to-reduce-rto-with-whatsapp-cod-confirmation": "2026-10-21",
   "what-is-ecommerce-automation-shopify-whatsapp": "2026-10-21",
   "ai-whatsapp-chatbot-for-shopify-india": "2026-10-21",
-  "zoko-alternative-shopify-india": "2026-11-02",
+  "zoko-alternative-shopify-india": "2026-11-12",
   "getgabs-alternative-shopify-whatsapp": "2026-11-08",
   "kanal-whatsapp-alternative-shopify": "2026-11-02",
   "how-to-choose-whatsapp-app-shopify-app-store": "2026-11-07",
@@ -51,7 +51,8 @@ export const BLOG_DATES_BY_SLUG = {
   "best-shopify-app-for-abandoned-cart-recovery-india": "2026-11-07",
   "ecommerce-funnel-drop-off-benchmarks-visitor-identity-resolution": "2026-11-01",
   "interakt-pricing-india": "2026-11-09",
-  "wati-pricing-india": "2026-11-10"
+  "wati-pricing-india": "2026-11-10",
+  "aisensy-pricing-india": "2026-11-12"
 } as const;
 
 export type ContentDateKey = keyof typeof CONTENT_DATES;
