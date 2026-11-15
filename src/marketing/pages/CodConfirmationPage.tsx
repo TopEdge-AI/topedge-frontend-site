@@ -19,9 +19,9 @@ import '../styles/cod-confirmation.css';
 
 const PATH = '/features/cod-confirmation';
 
-const SEO_TITLE = 'Shopify WhatsApp COD Confirmation to Cut RTO | TopEdge AI';
+const SEO_TITLE = 'Shopify COD Confirmation App on WhatsApp | TopEdge AI';
 const SEO_DESCRIPTION =
-  'Confirm every Shopify COD order on WhatsApp before dispatch at ₹0.115 a message, against ₹180-₹240 lost per RTO parcel. COD-to-prepaid on Growth. 14-day trial.';
+  'Confirm every Shopify COD order on WhatsApp before dispatch at ₹0.115 a message, against ₹180 to ₹240 lost per RTO parcel. On every plan, 14-day trial.';
 
 const STEPS = [
   {

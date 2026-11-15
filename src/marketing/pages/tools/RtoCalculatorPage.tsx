@@ -84,7 +84,7 @@ export default function RtoCalculatorPage() {
     <ToolPageLayout
       slug="rto-cost-calculator"
       path="/tools/rto-cost-calculator"
-      seoTitle="RTO Cost Calculator for Shopify India | Free Tool | TopEdge AI"
+      seoTitle="RTO Cost Calculator for Ecommerce and Shopify India"
       description="Free RTO cost calculator for Indian Shopify stores: see what returned COD parcels cost you each month, and what WhatsApp COD confirmation costs instead."
       keywords="RTO cost calculator, RTO calculator India, COD RTO cost, return to origin cost Shopify, reduce RTO India, COD confirmation cost"
       name="RTO cost calculator"

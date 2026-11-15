@@ -82,13 +82,13 @@ export const JOURNEY_EXAMPLES: JourneyExample[] = [
     artAlt:
       'An isometric illustration of a shop checkout counter with a path leading away to a stalled shopping cart, and message markers along the path pointing it back.',
     eyebrow: 'Journey example',
-    h1: 'Abandoned cart recovery journey on WhatsApp',
-    h1Accent: 'cart recovery',
+    h1: 'Abandoned cart WhatsApp message journey',
+    h1Accent: 'Abandoned cart',
     subtitle:
       'Three WhatsApp reminders that bring shoppers back to their cart, with the exact timing, messages and cost per cart.',
-    title: 'Abandoned Cart Recovery Journey on WhatsApp for Shopify',
+    title: 'Abandoned Cart WhatsApp Message: 3-Step Shopify Journey',
     description:
-      'The 3-step WhatsApp abandoned cart recovery journey for Shopify India: triggers, timing, Meta template categories and the ₹ cost per recovered cart.',
+      'Abandoned cart WhatsApp messages for Shopify India: the 3-step journey, its timing, Meta template categories and the ₹ cost per recovered cart.',
     keywords:
       'abandoned cart recovery WhatsApp, WhatsApp cart recovery journey, Shopify abandoned cart WhatsApp, cart recovery flow, abandoned cart automation India',
     answerFirst:
@@ -276,13 +276,13 @@ export const JOURNEY_EXAMPLES: JourneyExample[] = [
     artAlt:
       'An isometric illustration of a parcel at a house door with a confirm and a cancel marker beside it, and a path leading back to a warehouse.',
     eyebrow: 'Journey example',
-    h1: 'COD confirmation journey on WhatsApp',
+    h1: 'COD confirmation WhatsApp message journey',
     h1Accent: 'COD confirmation',
     subtitle:
       'Ask every COD customer to confirm on WhatsApp before you ship, and stop paying for parcels that come back.',
-    title: 'COD Confirmation Journey on WhatsApp for Shopify India',
+    title: 'COD Confirmation WhatsApp Message for Shopify India',
     description:
-      'The WhatsApp COD confirmation journey for Shopify India: trigger, utility template at ₹0.1150, confirm and cancel branches, and the warehouse hold rule.',
+      'COD confirmation WhatsApp message for Shopify India: the trigger, a utility template at ₹0.1150, confirm and cancel branches and the warehouse hold rule.',
     keywords:
       'COD confirmation WhatsApp, cash on delivery confirmation Shopify, reduce RTO India, COD order confirmation automation, WhatsApp COD journey',
     answerFirst:
@@ -469,13 +469,13 @@ export const JOURNEY_EXAMPLES: JourneyExample[] = [
     artAlt:
       'An isometric illustration of a stack of cash with a curved arrow sweeping across to a card payment terminal under a confirmation tick.',
     eyebrow: 'Journey example',
-    h1: 'COD to prepaid journey on WhatsApp',
+    h1: 'COD to prepaid WhatsApp message journey',
     h1Accent: 'COD to prepaid',
     subtitle:
       'Turn confirmed COD orders into prepaid ones with a simple WhatsApp offer to pay by UPI or card.',
-    title: 'COD to Prepaid Journey on WhatsApp for Shopify India',
+    title: 'COD to Prepaid WhatsApp Message for Shopify India',
     description:
-      'The WhatsApp COD to prepaid journey for Shopify India: when the UPI nudge fires, why it is a second message, and what a prepaid order is worth.',
+      'COD to prepaid WhatsApp message for Shopify India: when the UPI nudge fires, why it is a second message, and what a prepaid order is worth.',
     keywords:
       'COD to prepaid WhatsApp, convert COD to prepaid Shopify, UPI prepaid nudge India, prepaid conversion WhatsApp, reduce COD orders Shopify',
     answerFirst:
@@ -637,13 +637,13 @@ export const JOURNEY_EXAMPLES: JourneyExample[] = [
     artAlt:
       'An isometric illustration of a parcel travelling a winding path from a warehouse to a house, with three status markers standing along the route.',
     eyebrow: 'Journey example',
-    h1: 'WhatsApp order status updates for Shopify',
-    h1Accent: 'order status',
+    h1: 'WhatsApp order update messages for Shopify',
+    h1Accent: 'order update',
     subtitle:
       'Keep customers updated from checkout to doorstep, so “where is my order?” never reaches your inbox.',
-    title: 'WhatsApp Order Status Updates for Shopify India',
+    title: 'WhatsApp Order Update Messages for Shopify India',
     description:
-      'The WhatsApp order status journey for Shopify: confirmed, shipped with tracking, delivered and cancelled, on utility templates at ₹0.1150 each.',
+      'WhatsApp order update messages for Shopify: confirmed, shipped with tracking, delivered and cancelled, each a utility template at ₹0.1150 in India.',
     keywords:
       'WhatsApp order status updates, Shopify order notification WhatsApp, order tracking WhatsApp India, shipping update automation, WISMO reduction',
     answerFirst:

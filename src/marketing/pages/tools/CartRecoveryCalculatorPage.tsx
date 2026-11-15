@@ -84,8 +84,8 @@ export default function CartRecoveryCalculatorPage() {
     <ToolPageLayout
       slug="cart-recovery-calculator"
       path="/tools/cart-recovery-calculator"
-      seoTitle="Cart Recovery Calculator for Shopify | Free Tool | TopEdge AI"
-      description="Free cart recovery calculator for Shopify stores in India: estimate the revenue WhatsApp reminders win back from abandoned carts, and what the messages cost."
+      seoTitle="Abandoned Cart Recovery Calculator for Shopify India"
+      description="A free abandoned cart recovery calculator for Shopify India: estimate the revenue WhatsApp reminders win back and what the messages cost in Meta fees."
       keywords="cart recovery calculator, abandoned cart calculator, abandoned cart revenue Shopify, WhatsApp cart recovery cost, cart recovery ROI India"
       name="Cart recovery revenue calculator"
       h1="Cart recovery revenue calculator"

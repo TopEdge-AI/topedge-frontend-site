@@ -13,7 +13,6 @@ import {
   Inbox,
   KeyRound,
   Layers,
-  Moon,
   Package,
   Plus,
   Search,
@@ -148,7 +147,7 @@ function HubExpanded({ label }: SceneProps) {
 function HubList({ label }: SceneProps) {
   return (
     <Stage label={label} tone="emerald" shape="wide">
-      <Float x={4} y={13} w={58} delay={0} z={3}>
+      <Float x={4} y={11} w={58} delay={0} z={3}>
         <Panel
           title="Warranty hub"
           icon={ShieldCheck}
@@ -168,10 +167,13 @@ function HubList({ label }: SceneProps) {
             <Field label="Valid until" value="20/09/2028" />
           </div>
           <div style={{ marginTop: '0.6em' }}>
-            <Row lead={<IconTile icon={Droplet} tone="amber" size="sm" />} title="Vitamin C Serum" right={<Chip tone="violet">12 mo</Chip>} />
+            <Row lead={<IconTile icon={Droplet} tone="amber" size="sm" />} title="Vitamin C" right={<Chip tone="violet">12 mo</Chip>} />
             <Row lead={<IconTile icon={Sparkles} tone="sky" size="sm" />} title="Face Mist" right={<Chip tone="violet">18 mo</Chip>} />
           </div>
         </Panel>
+      </Float>
+      <Float x={8} y={84} delay={5}>
+        <Chip tone="emerald" icon={ShieldCheck}>Status on every record</Chip>
       </Float>
       <Float x={64} y={73} w={32} delay={4}>
         <Panel>
@@ -192,7 +194,7 @@ function Unassigned({ label }: SceneProps) {
   const assign = <Btn primary tone="violet">Assign</Btn>;
   return (
     <Stage label={label} tone="violet" shape="wide">
-      <Wires shape="wide" tone="violet" paths={['M 66 19 C 69 19, 68 37, 71 37']} />
+      <Wires shape="wide" tone="violet" paths={['M 66 21 C 69 21, 68 32.5, 71 32.5']} />
       <Float x={4} y={9} w={62} delay={0} z={3}>
         <Panel
           title="Warranty records"
@@ -218,7 +220,7 @@ function Unassigned({ label }: SceneProps) {
       <Float x={71} y={48} w={26} delay={4} drift>
         <Node icon={UserCheck} tone="emerald" title="Priya took #1040" sub="Assigned just now" active />
       </Float>
-      <Float x={68} y={80} delay={6}>
+      <Float x={8} y={85} delay={6}>
         <Chip tone="violet" icon={Inbox}>Stays here until owned</Chip>
       </Float>
       <Cursor x={60} y={36} delay={6} />
@@ -233,9 +235,9 @@ function ManualAssign({ label }: SceneProps) {
       <Wires
         shape="wide"
         tone="violet"
-        paths={['M 57 11 C 61 11, 60 8.4, 64 8.4', 'M 57 24 C 61 24, 60 30.5, 64 30.5']}
+        paths={['M 57 13 C 61 13, 60 9.5, 64 9.5', 'M 57 26 C 61 26, 60 27.5, 64 27.5']}
       />
-      <Float x={5} y={7} w={52} delay={0} z={3}>
+      <Float x={5} y={10} w={52} delay={0} z={3}>
         <Panel title="Assign warranty" icon={ShieldPlus} tone="violet">
           <div style={grid2}>
             <Field label="Customer" value="Moksh Patel" />
@@ -275,7 +277,7 @@ function ManualAssign({ label }: SceneProps) {
           </div>
         </Panel>
       </Float>
-      <Float x={64} y={7} w={31} delay={2}>
+      <Float x={64} y={9} w={31} delay={2}>
         <Node icon={ShoppingBag} tone="emerald" title="Shopify order #1066" sub="Paid · 1 item" />
       </Float>
       <Float x={64} y={38} w={31} delay={3} drift>
@@ -284,8 +286,8 @@ function ManualAssign({ label }: SceneProps) {
           <Row lead={<Avatar name="Karan Joshi" tone="sky" />} title="Karan Joshi" sub="Operations" />
         </Panel>
       </Float>
-      <Float x={62} y={85} delay={5}>
-        <Chip tone="violet" solid icon={Moon}>You pick, not the bot</Chip>
+      <Float x={66} y={81} delay={5}>
+        <Chip tone="violet" solid icon={UserCheck}>You pick, not the bot</Chip>
       </Float>
     </Stage>
   );

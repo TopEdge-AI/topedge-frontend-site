@@ -15,7 +15,7 @@ import {
 import '../../styles/tools.css';
 
 const DESCRIPTION =
-  'Free tools for Shopify stores in India: find the best WhatsApp tool for your store, calculate RTO and cart recovery, and create WhatsApp links and QR codes.';
+  'Free tools for Shopify stores in India: a WhatsApp tool quiz, RTO and cart recovery calculators, and a WhatsApp link and QR code generator.';
 
 export default function ToolsIndexPage() {
   const [feature, ...rest] = FREE_TOOLS;
@@ -52,7 +52,7 @@ export default function ToolsIndexPage() {
           eyebrow="Free tools"
           title="Free tools for Shopify stores"
           accent="Free tools"
-          subtitle="Calculators and generators for what Indian Shopify stores ask about most: RTO, abandoned carts and WhatsApp costs. No sign-up, nothing to install."
+          subtitle="Free calculators and generators for Indian Shopify stores, covering RTO cost, abandoned cart recovery and WhatsApp links, with no sign-up."
           trust
         />
 

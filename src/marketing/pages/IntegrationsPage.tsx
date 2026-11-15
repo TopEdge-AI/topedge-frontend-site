@@ -219,8 +219,8 @@ export default function IntegrationsPage() {
             <span className="mkt-int__hl">one workspace</span>
           </h1>
           <p className="mkt-int__sub">
-            TopEdge AI sits on the tools you already trust. Connect once, sync continuously, operate
-            from one workspace.
+            TopEdge AI integrations connect Shopify by OAuth and the Meta WhatsApp Cloud API on your
+            own Business Account, in about 30 minutes of setup.
           </p>
           <div className="mkt-int__actions">
             <Link to="/signup" className="mkt-btn-primary">

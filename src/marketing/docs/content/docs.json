@@ -535,7 +535,7 @@
       "group": "start",
       "navLabel": "Connect WhatsApp",
       "title": "Connect WhatsApp Cloud API to TopEdge AI",
-      "description": "Connect your WhatsApp Business Account to TopEdge AI: embedded Meta signup, the messages webhook, permanent access tokens, and how to fix a disconnected channel.",
+      "description": "Connect your WhatsApp Business Account to TopEdge AI: embedded Meta signup, the messages webhook, permanent access tokens and fixing a dropped channel.",
       "h1": "Connect WhatsApp",
       "lead": "Link your WhatsApp Business number so TopEdge AI can send messages and receive replies.",
       "keywords": [
@@ -1011,7 +1011,7 @@
       "group": "start",
       "navLabel": "Go-live checklist",
       "title": "Go-live checklist before real customers",
-      "description": "The checks to run before TopEdge AI messages real customers: connections, approved templates, published journeys, consent, tracking and a live end-to-end test.",
+      "description": "The checks to run before TopEdge AI messages real customers: connections, approved templates, live journeys, consent, tracking and an end-to-end test.",
       "h1": "Go-live checklist",
       "lead": "Run through this list once before real customers start getting messages.",
       "keywords": [
@@ -1795,7 +1795,7 @@
       "group": "guides",
       "navLabel": "Confirm COD orders",
       "title": "Confirm COD orders on WhatsApp to cut RTO",
-      "description": "Confirm cash-on-delivery orders over WhatsApp with button replies, cancel the ones nobody confirms, and offer a prepaid switch to reduce return-to-origin losses.",
+      "description": "Confirm cash-on-delivery orders on WhatsApp with button replies, cancel unconfirmed ones, and offer a prepaid switch to cut return-to-origin losses.",
       "h1": "How to confirm COD orders on WhatsApp",
       "lead": "Ask every cash-on-delivery customer to confirm with one tap before you ship, and cancel the orders nobody wants.",
       "keywords": [
@@ -3705,7 +3705,7 @@
       "group": "guides",
       "navLabel": "Set up warranty",
       "title": "Run digital warranty registration on WhatsApp",
-      "description": "Set up warranty batches, share a mobile registration portal with WhatsApp OTP, and move claims through approved, shipped or rejected with automatic updates.",
+      "description": "Set up warranty batches, share a mobile registration portal with WhatsApp OTP, and move claims through approved, shipped or rejected with auto updates.",
       "h1": "How to set up warranty registration",
       "lead": "Let customers register a product on WhatsApp by scanning a QR code on the box.",
       "keywords": [
@@ -5300,7 +5300,7 @@
       "group": "reference",
       "navLabel": "Campaigns",
       "title": "Campaigns reference: broadcasts and preflight",
-      "description": "Reference for Campaigns, audience sources, template selection, the preflight checks, batching and pacing, scheduling, and the delivery metrics per campaign.",
+      "description": "Reference for Campaigns: audience sources, template selection, preflight checks, batching and pacing, scheduling, and delivery metrics per campaign.",
       "h1": "Campaigns",
       "lead": "One-time broadcasts on WhatsApp or email. For messages that repeat on a trigger, use Journeys.",
       "keywords": [
@@ -5683,7 +5683,7 @@
       "group": "reference",
       "navLabel": "Meta Manager",
       "title": "Meta Manager reference: templates and catalog",
-      "description": "Reference for Meta Manager, creating WhatsApp templates, blueprints for journeys, submitting for approval, syncing from Meta, the product catalog and QR codes.",
+      "description": "Reference for Meta Manager: creating WhatsApp templates, journey blueprints, submitting for approval, syncing from Meta, the product catalog and QR codes.",
       "h1": "Meta Manager",
       "lead": "Create WhatsApp templates, send them to Meta for approval and manage your QR codes.",
       "keywords": [
@@ -5907,7 +5907,7 @@
       "group": "reference",
       "navLabel": "Opt-in tools",
       "title": "Opt-in tools reference: popups and widgets",
-      "description": "Reference for opt-in tools, popup, spin wheel, mystery discount and WhatsApp widget, their display rules, publishing, app embed install and per-tool reports.",
+      "description": "Reference for opt-in tools: popup, spin wheel, mystery discount and WhatsApp widget, their display rules, publishing, app embed install and reports.",
       "h1": "Opt-in tools",
       "lead": "Popups, spin wheels and chat widgets that collect phone numbers and consent on your storefront.",
       "keywords": [
@@ -6101,7 +6101,7 @@
       "group": "reference",
       "navLabel": "AI and intents",
       "title": "AI and intents reference: knowledge and persona",
-      "description": "Reference for the AI brain, bringing your own Gemini or OpenAI key, store knowledge, bot persona, intent training, intent actions and the confidence test tool.",
+      "description": "Reference for the AI brain: your own Gemini or OpenAI key, store knowledge, bot persona, intent training, intent actions and the confidence test tool.",
       "h1": "AI and intents",
       "lead": "Intents recognise what a customer is asking. Store knowledge gives the AI the facts to answer with.",
       "keywords": [
@@ -7620,7 +7620,7 @@
       "group": "platform",
       "navLabel": "What it costs",
       "title": "What WhatsApp automation actually costs",
-      "description": "The two bills behind WhatsApp automation, your TopEdge AI subscription and Meta’s per-message fees, plus what drives volume and how to keep messaging costs down.",
+      "description": "The two bills behind WhatsApp automation: your TopEdge AI subscription and Meta’s per-message fees, plus what drives volume and how to keep costs down.",
       "h1": "What it costs",
       "lead": "You pay two separate bills: your TopEdge AI plan, and Meta’s charge for each template message.",
       "keywords": [
@@ -8004,7 +8004,7 @@
       "group": "help",
       "navLabel": "Troubleshooting",
       "title": "Troubleshooting WhatsApp automation",
-      "description": "Find your symptom and its fix, messages not sending, empty inbox, templates rejected, carts without phone numbers, broadcasts blocked and connection errors.",
+      "description": "Find the symptom and fix: messages not sending, empty inbox, rejected templates, carts without phone numbers, blocked broadcasts and connection errors.",
       "h1": "Troubleshooting",
       "lead": "Find what you see on screen, then try the fixes in order. The most likely one comes first.",
       "keywords": [
@@ -8404,7 +8404,7 @@
       "group": "guides",
       "navLabel": "Turn a journey on or off",
       "title": "Turn a WhatsApp journey on or off",
-      "description": "How to publish a journey in TopEdge AI so it starts sending, check that it is live, stop it with the Live switch, and edit a journey that is already running.",
+      "description": "How to publish a journey in TopEdge AI so it starts sending, check that it is live, stop it with the Live switch, and edit a journey that is running.",
       "h1": "How to turn a journey on or off",
       "lead": "A journey only sends once it is published. Here is how to switch one on, check it is running and stop it.",
       "keywords": [

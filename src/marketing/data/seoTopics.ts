@@ -144,11 +144,11 @@ export const SEO_TOPICS: Record<string, SeoTopic> = {
       'Carts, orders, customers and the COD flag sync over Shopify OAuth into Meta WhatsApp Cloud API. Cart recovery, COD confirmation and support run on live store data, with no markup on Meta fees.',
     title: 'Shopify WhatsApp Integration India | Meta Cloud API',
     description:
-      'Connect WhatsApp to Shopify over OAuth and Meta Cloud API. Sync carts, orders and the COD flag, run cart recovery and COD confirmation. India rates, no markup.',
+      'A Shopify WhatsApp integration connects your store by OAuth and the Meta Cloud API, syncing carts, orders and the COD flag. India rates at 0% markup.',
     keywords:
       'Shopify WhatsApp integration, WhatsApp for Shopify, Meta Cloud API Shopify, ecommerce WhatsApp automation, connect WhatsApp to Shopify, Shopify WhatsApp API India, WhatsApp Business API Shopify app',
     answerFirst:
-      'A Shopify WhatsApp integration connects your store events (carts, orders, customers, catalog) to Meta’s WhatsApp Cloud API so you can automate cart recovery, COD confirmation, order updates, and support with live store data, not generic chatbot replies.',
+      'A Shopify WhatsApp integration connects your store’s carts, orders, customers and catalog to Meta’s WhatsApp Cloud API, so cart recovery, COD confirmation, order updates and support run on live store data. In TopEdge AI the connection takes about 30 minutes, and Meta rates pass through at 0% markup, from ₹0.115 per utility message.',
     sections: [],
     blocks: [
       {

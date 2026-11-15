@@ -58,7 +58,7 @@ export const PAGE_SEO = {
     description:
       'TopEdge AI is the WhatsApp app for Shopify brands in India: recover carts, confirm COD and see net profit. From ₹1,999/mo, 0% Meta markup, 14-day trial.',
     keywords:
-      'whatsapp app for shopify india, shopify whatsapp app, best whatsapp app for shopify, whatsapp for shopify, whatsapp marketing app shopify india, cod confirmation app shopify, abandoned cart recovery whatsapp shopify, cod to prepaid shopify',
+      'whatsapp app for shopify india, shopify whatsapp app, whatsapp for shopify, whatsapp marketing app shopify india, cod confirmation app shopify, abandoned cart recovery whatsapp shopify, cod to prepaid shopify',
     path: '/',
     noSuffix: true,
   },
@@ -117,9 +117,9 @@ export const PAGE_SEO = {
     path: '/customers',
   },
   compare: {
-    title: 'Compare TopEdge AI vs WATI, Interakt, AiSensy & Zoko',
+    title: 'WhatsApp Tools for Shopify Compared: WATI, AiSensy & More',
     description:
-      'Side-by-side Shopify India WhatsApp comparisons: TopEdge AI vs WATI, Interakt, AiSensy, Bitespeed, Zoko, Gupshup, Dondy, Kanal, Getgabs and Updatrr.',
+      'WhatsApp tools for Shopify compared for India: TopEdge AI vs WATI, Interakt, AiSensy, Bitespeed, Zoko, Gupshup, Dondy, Kanal, Getgabs and Updatrr.',
     keywords:
       'TopEdge AI vs WATI, TopEdge AI vs AiSensy, TopEdge AI vs Zoko, TopEdge AI vs Dondy, TopEdge AI vs Updatrr, TopEdge AI vs Gupshup, TopEdge AI vs Interakt, TopEdge AI vs Bitespeed, WhatsApp template markup, COD prepaid WhatsApp comparison, WATI alternative India',
     path: '/compare',

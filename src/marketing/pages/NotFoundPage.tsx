@@ -7,7 +7,7 @@ export default function NotFoundPage() {
     <MarketingPage className="flex min-h-[70vh] items-center justify-center px-5">
       <MarketingSEO
         title="Page not found"
-        description="This TopEdge AI page does not exist. Head home for WhatsApp automation for Shopify India."
+        description="This TopEdge AI page does not exist. Head to the home page for the WhatsApp app for Shopify India, or open pricing, features or the docs."
         path="/404"
         noIndex
       />

@@ -18,9 +18,9 @@ import {
 import '../../styles/journey-flow.css';
 
 const PATH = '/tools/best-whatsapp-tool-for-shopify';
-const TITLE = 'Best WhatsApp Tool for Your Shopify Store? Take the 2-Minute Quiz';
+const TITLE = 'Which WhatsApp Tool for Shopify? Free 2-Minute Quiz';
 const DESCRIPTION =
-  'Answer six questions and get an honest shortlist of WhatsApp tools for your Shopify store in India: TopEdge AI, WATI, Interakt, AiSensy and Bitespeed compared.';
+  'Answer six questions and get an honest shortlist of WhatsApp tools for your Shopify store: TopEdge AI, WATI, Interakt, AiSensy and Bitespeed.';
 
 const FAQS = [
   {

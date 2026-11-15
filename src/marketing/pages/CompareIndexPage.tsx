@@ -145,8 +145,8 @@ export default function CompareIndexPage() {
             <span className="mkt-cmp__h1-rest">WhatsApp tools for Shopify India</span>
           </h1>
           <p className="mkt-cmpx__sub">
-            Side-by-side boards on Meta markup, AI cost, COD → prepaid, and Shopify depth, built
-            for Indian D2C brands choosing a WhatsApp platform.
+            WhatsApp tools for Shopify compared for Indian D2C brands: TopEdge AI against 10
+            platforms on Meta markup, AI cost, COD to prepaid and Shopify depth.
           </p>
           <ul className="mkt-cmpx__chips" aria-label="How these boards are built">
             {researchAsOf ? <li>Checked {researchAsOf}</li> : null}

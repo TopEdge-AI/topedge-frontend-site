@@ -59,8 +59,8 @@ export default function WhatsAppLinkGeneratorPage() {
     <ToolPageLayout
       slug="whatsapp-link-generator"
       path="/tools/whatsapp-link-generator"
-      seoTitle="Free WhatsApp Link & QR Code Generator for Shopify | TopEdge AI"
-      description="Free WhatsApp link generator: create a wa.me click-to-chat link and QR code with a pre-filled message, and a chat button for your Shopify store. No sign-up."
+      seoTitle="WhatsApp Link Generator: Free wa.me Link & QR Code"
+      description="Free WhatsApp link generator: create a wa.me click-to-chat link and QR code with a pre-filled message, plus a Shopify chat button. No sign-up."
       keywords="WhatsApp link generator, wa.me link generator, WhatsApp QR code generator, click to chat link, WhatsApp button for Shopify, WhatsApp chat link India"
       name="WhatsApp link generator"
       h1="WhatsApp link and QR code generator"

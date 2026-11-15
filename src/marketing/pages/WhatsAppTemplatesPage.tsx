@@ -25,9 +25,9 @@ import {
 import '../styles/journey-flow.css';
 
 const PATH = '/whatsapp-templates';
-const TITLE = 'WhatsApp Templates for Shopify India | TopEdge AI';
+const TITLE = 'WhatsApp Order Confirmation Templates for Shopify India';
 const DESCRIPTION =
-  'The 11 WhatsApp templates TopEdge AI ships for Shopify India: order updates, COD confirmation, cart recovery and festive copy, with category and ₹ rate.';
+  'WhatsApp order confirmation message templates for Shopify India, plus COD, cart and shipping copy: the 11 TopEdge AI ships, with Meta category and ₹ rate.';
 
 /** The festive library lives on its own pages — see FestivalTemplatesPage. */
 const FESTIVAL_PATH = '/whatsapp-festival-templates';
@@ -266,10 +266,10 @@ export default function WhatsAppTemplatesPage() {
       <MarketingPage>
         <JourneyHero
           eyebrow="Template library"
-          title="WhatsApp templates for Shopify stores"
+          title="WhatsApp order confirmation templates and more for Shopify"
           trust
-          accent="WhatsApp templates"
-          subtitle="Ready-to-use WhatsApp templates for order updates, COD confirmation, cart recovery and festive sales. Pick one, get it approved by Meta, and start sending."
+          accent="order confirmation templates"
+          subtitle="Copy a WhatsApp order confirmation, COD, cart recovery or festive template, get it approved by Meta, and start sending."
           actions={
             <>
               <PrimaryButton to="/signup">Start free</PrimaryButton>

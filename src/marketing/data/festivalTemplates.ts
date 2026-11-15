@@ -556,7 +556,7 @@ export const FESTIVALS: Festival[] = [
     title:
       'Holi WhatsApp Marketing Templates: 4 Free Examples',
     description:
-      '4 free Holi WhatsApp message templates to copy, edit and send — early access, gift picks, flash sale and greeting, with send dates and cost.',
+      '4 free Holi WhatsApp message templates to copy, edit and send: early access, gift picks, flash sale and greeting, with send dates and cost.',
     keywords:
       'holi whatsapp template, holi sale message to customers, holi offer whatsapp message, free whatsapp marketing template download, happy holi message business',
     eyebrow:
@@ -1524,7 +1524,7 @@ export const FESTIVALS: Festival[] = [
     title:
       'Diwali WhatsApp Marketing Templates: 4 Free Examples',
     description:
-      '4 free Diwali WhatsApp message templates to copy, edit and send — early access, gift picks, flash sale and greeting, with send dates and cost.',
+      '4 free Diwali WhatsApp message templates to copy, edit and send: early access, gift picks, flash sale and greeting, with send dates and cost.',
     keywords:
       'diwali whatsapp template, diwali offer message to customers, diwali sale whatsapp message, free whatsapp marketing template download, happy diwali message for business',
     eyebrow:

@@ -95,7 +95,7 @@ export function fourWayConfig(
     path: FOUR_WAY_PATH,
     title: 'WATI vs Interakt vs AiSensy vs TopEdge AI (2026)',
     description:
-      'WATI vs Interakt vs AiSensy for Shopify India, with TopEdge AI on the same board: Meta template markup, AI message cost, COD to prepaid gating and flow limits.',
+      'WATI vs Interakt vs AiSensy for Shopify India, with TopEdge AI on one board: Meta template markup, AI message cost, COD to prepaid gating and flow limits.',
     keywords:
       'wati vs aisensy vs interakt, wati vs interakt, interakt vs aisensy, WhatsApp automation comparison Shopify India, WhatsApp API platform comparison India, best WhatsApp platform India',
     ways: '4-way',
