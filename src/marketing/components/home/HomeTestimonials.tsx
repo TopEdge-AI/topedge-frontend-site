@@ -285,8 +285,7 @@ export default function HomeTestimonials({ hideHeader = false }: { hideHeader?: 
               <span className="home-voices__hl">we work with</span>
             </h2>
             <p className="home-voices__sub">
-              Indian D2C operators on what changed after they switched, and the
-              reviews they published afterwards.
+              Indian D2C founders on what changed, and the reviews they published.
             </p>
             <div className="home-voices__proof">
               <ProofBadges compact />

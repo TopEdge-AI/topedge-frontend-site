@@ -36,24 +36,23 @@ export default function HomeHero() {
             <div className="home-hero__copy">
               {/*
                 Three short beats, no brand lockup: the logo sits in the navbar
-                two inches above, so repeating it here spent the largest type on
-                the page saying nothing. The highlighter moves to "On WhatsApp."
-                — the channel is the differentiator, and it is the last thing
-                read. Keeps the terms the page ranks on: COD, abandoned carts,
-                WhatsApp.
+                two inches above. Two outcomes first, then the category noun
+                people search ("WhatsApp app for Shopify") under the
+                highlighter. The home page owns that cluster; it must not lead
+                on "Shopify WhatsApp automation", which the blog pillar owns.
               */}
               <h1 className="home-hero__title home-hero__title--job">
                 <span className="home-hero__title-text home-hero__title-text--job">
-                  Confirm COD orders. Recover abandoned carts.{' '}
+                  Recover carts. Confirm COD orders.{' '}
                 </span>
                 <span className="home-hero__title-highlight">
-                  <BrandWord platform="whatsapp">On WhatsApp, for </BrandWord>
-                  <BrandWord platform="shopify">Shopify India.</BrandWord>
+                  <BrandWord platform="whatsapp">The WhatsApp app </BrandWord>
+                  <BrandWord platform="shopify">for Shopify India.</BrandWord>
                 </span>
               </h1>
               <p className="home-hero__sub">
-                TopEdge AI is a Shopify app for Indian D2C brands that automates abandoned cart
-                recovery, COD confirmation and order updates over WhatsApp and email.
+                TopEdge AI is the WhatsApp marketing and automation app for Shopify brands in
+                India, from ₹1,999/mo with 0% markup on Meta rates and a 14-day free trial.
               </p>
               <div className="home-hero__actions">
                 <PrimaryButton to="/signup">

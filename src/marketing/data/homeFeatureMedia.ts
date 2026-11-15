@@ -67,6 +67,10 @@ export const FEATURE_IMAGES = {
   pixel: {
     src: '/website-pixel.webp?v=20260921lcp',
   },
+  /** Same still as the /features/profit-loss hero. */
+  profit: {
+    src: '/pnl/39.webp',
+  },
 } as const;
 
 export const CRM_BENTO = {
@@ -74,21 +78,21 @@ export const CRM_BENTO = {
     id: 'orders',
     titleLead: 'Orders &',
     titleAccent: 'care',
-    body: 'Shipments, warranty, and supplier follow-ups, without leaving WhatsApp.',
+    body: 'Track shipments and warranty claims without leaving WhatsApp.',
     image: '/1.webp?v=20260921lcp',
   },
   profiles: {
     id: 'profiles',
     titleLead: 'Customer',
     titleAccent: 'profiles',
-    body: 'Live carts, values, and recovery status in one working table.',
+    body: 'Live carts, order value and recovery status in one table.',
     image: '/2.webp?v=20260921lcp',
   },
   stock: {
     id: 'stock',
     titleLead: 'Live',
     titleAccent: 'stock',
-    body: 'SKU availability and low-stock signals synced from Shopify.',
+    body: 'SKU availability and low-stock alerts, synced from Shopify.',
     image: '/3.webp?v=20260921lcp',
   },
 } as const;

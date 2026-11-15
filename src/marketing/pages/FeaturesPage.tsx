@@ -62,29 +62,71 @@ const CARD_META: Record<string, { label: string; icon: ReactNode }> = {
   'audience-crm': { label: 'Audience CRM', icon: <Users {...ICON_PROPS} /> },
   analytics: { label: 'Tracking Pixel', icon: <MousePointerClick {...ICON_PROPS} /> },
   'profit-loss': { label: 'Profit and costs', icon: <IndianRupee {...ICON_PROPS} /> },
+  'cod-confirmation': { label: 'COD confirmation', icon: <ShieldCheck {...ICON_PROPS} /> },
+  'cod-to-prepaid': { label: 'COD to prepaid', icon: <IndianRupee {...ICON_PROPS} /> },
+  'order-updates': { label: 'Order updates', icon: <RefreshCw {...ICON_PROPS} /> },
+};
+
+/*
+ * Four plain jobs, in the order a store meets them. The product is one
+ * WhatsApp app for Shopify, so the hub is organised by what it gets done,
+ * not by the name of each dashboard tab.
+ */
+type HubCard = { key: string; href: string; label?: string; title: string; body: string };
+
+/** Pages that are not in MARKETING_FEATURES but belong to a job. */
+const EXTRA_CARDS: Record<string, HubCard> = {
+  'cod-confirmation': {
+    key: 'cod-confirmation',
+    href: '/features/cod-confirmation',
+    label: 'COD confirmation',
+    title: 'Confirm every COD order before it ships',
+    body: 'A WhatsApp utility message at ₹0.115 asks the buyer to confirm. Ship only what they confirm. On every plan.',
+  },
+  'cod-to-prepaid': {
+    key: 'cod-to-prepaid',
+    href: '/whatsapp-journey-examples/cod-to-prepaid',
+    label: 'COD to prepaid',
+    title: 'Move COD orders to prepaid',
+    body: 'After the order is confirmed, a second message offers UPI or card before dispatch. On Growth and Scale.',
+  },
+  'order-updates': {
+    key: 'order-updates',
+    href: '/whatsapp-journey-examples/order-status-updates',
+    label: 'Order updates',
+    title: 'Order updates that stop the questions',
+    body: 'Confirmed, shipped with tracking, delivered and cancelled, each a utility template at ₹0.115.',
+  },
 };
 
 const GROUPS = [
   {
     id: 'sell',
-    lead: 'Sell and',
-    accent: 'recover',
-    sub: 'Turn carts, comments, and storefront visits into WhatsApp revenue.',
-    slugs: ['journeys', 'campaigns', 'flow-builder', 'opt-in-tools', 'instagram'],
+    lead: 'Recover',
+    accent: 'revenue',
+    sub: 'Win back abandoned carts and sell to a consented WhatsApp list.',
+    slugs: ['journeys', 'campaigns', 'opt-in-tools', 'audience-crm', 'meta-manager'],
+  },
+  {
+    id: 'cod',
+    lead: 'Protect',
+    accent: 'COD orders',
+    sub: 'Confirm before dispatch, move buyers to prepaid, keep them updated.',
+    slugs: ['cod-confirmation', 'cod-to-prepaid', 'order-updates'],
   },
   {
     id: 'support',
-    lead: 'Support at',
-    accent: 'scale',
-    sub: 'An inbox, routing, and AI that already know the order.',
-    slugs: ['live-chat', 'chat-rules', 'ai-brain', 'intent-detection', 'warranty'],
+    lead: 'Support',
+    accent: 'customers',
+    sub: 'AI replies, flows and routing that already know the order.',
+    slugs: ['ai-brain', 'flow-builder', 'intent-detection', 'chat-rules', 'warranty'],
   },
   {
     id: 'measure',
-    lead: 'Run and',
-    accent: 'measure',
-    sub: 'Templates, audiences, pixel data, and true profit in one place.',
-    slugs: ['meta-manager', 'audience-crm', 'analytics', 'profit-loss'],
+    lead: 'Know your',
+    accent: 'profit',
+    sub: 'Net profit after COD, RTO and ads, plus who is browsing right now.',
+    slugs: ['profit-loss', 'analytics'],
   },
 ] as const;
 
@@ -92,31 +134,39 @@ const PRINCIPLES = [
   {
     icon: <RefreshCw {...ICON_PROPS} />,
     title: 'Shopify is source of truth',
-    body: 'Connect once. Catalog, carts, and orders sync. Change products and settings in the dashboard.',
+    body: 'Connect once. Catalog, carts and orders sync from your store.',
   },
   {
     icon: <BadgeCheck {...ICON_PROPS} />,
     title: 'You approve Meta templates',
-    body: 'Nothing sends until templates are APPROVED. Utility and marketing rates stay transparent.',
+    body: 'Nothing sends until Meta approves the template. Meta rates pass through at 0% markup.',
   },
   {
     icon: <UserCheck {...ICON_PROPS} />,
     title: 'Operators stay in control',
-    body: 'Live Chat takeover pauses AI. Journeys and flows are visual, no developer required.',
+    body: 'An agent taking over a chat pauses the AI. Journeys and flows need no developer.',
   },
 ];
 
-function FeatureCard({ feature }: { feature: MarketingFeature }) {
-  const meta = CARD_META[feature.slug];
+function cardFor(slug: string, bySlug: Map<string, MarketingFeature>): HubCard | null {
+  const extra = EXTRA_CARDS[slug];
+  if (extra) return extra;
+  const feature = bySlug.get(slug);
+  if (!feature) return null;
+  return { key: slug, href: `/features/${slug}`, title: feature.title, body: feature.body };
+}
+
+function FeatureCard({ card }: { card: HubCard }) {
+  const meta = CARD_META[card.key];
   return (
-    <Link to={`/features/${feature.slug}`} className="mkt-fx-card">
+    <Link to={card.href} className="mkt-fx-card">
       <div className="mkt-fx-card__top">
         <span className="mkt-fx-card__icon">{meta?.icon}</span>
-        <span className="mkt-fx-card__label">{meta?.label ?? feature.slug}</span>
+        <span className="mkt-fx-card__label">{card.label ?? meta?.label ?? card.key}</span>
         <ArrowUpRight className="mkt-fx-card__arrow" size={18} aria-hidden />
       </div>
-      <h3>{feature.title}</h3>
-      <p>{feature.body}</p>
+      <h3>{card.title}</h3>
+      <p>{card.body}</p>
     </Link>
   );
 }
@@ -146,13 +196,13 @@ export default function FeaturesPage() {
         <header className="mkt-fx__hero">
           <p className="mkt-fx__eyebrow">Features</p>
           <h1 className="mkt-fx__h1">
-            <BrandWord platform="shopify">Shopify</BrandWord>{' '}
-            <BrandWord platform="whatsapp">WhatsApp</BrandWord> features: every hub your operators{' '}
-            <span className="mkt-fx__hl">actually open</span>
+            TopEdge AI features for <BrandWord platform="shopify">Shopify</BrandWord> brands on{' '}
+            <BrandWord platform="whatsapp">WhatsApp</BrandWord>,{' '}
+            <span className="mkt-fx__hl">by job</span>
           </h1>
           <p className="mkt-fx__sub">
-            Not a feature dump. Each capability maps to a workspace you run on dash.topedgeai.com.
-            Store data syncs from Shopify; you edit it in the dashboard.
+            TopEdge AI is the WhatsApp marketing and automation app for Shopify brands in India: it recovers abandoned carts, confirms COD orders, moves COD to prepaid, and shows net profit after RTO, with 0% markup on Meta rates. Every
+            plan starts with a 14-day free trial, from ₹1,999/mo.
           </p>
           <div className="mkt-fx__actions">
             <Link to="/signup" className="mkt-btn-primary">
@@ -178,8 +228,8 @@ export default function FeaturesPage() {
             </div>
             <div className={`mkt-fx__grid mkt-fx__grid--${g.slugs.length}`}>
               {g.slugs.map((slug) => {
-                const feature = bySlug.get(slug);
-                return feature ? <FeatureCard key={slug} feature={feature} /> : null;
+                const card = cardFor(slug, bySlug);
+                return card ? <FeatureCard key={slug} card={card} /> : null;
               })}
             </div>
           </section>
@@ -191,8 +241,7 @@ export default function FeaturesPage() {
               See TopEdge AI in <span className="mkt-fx__hl">motion</span>
             </h2>
             <p>
-              Product demos for the hubs your team opens every day, cart recovery, journeys, inbox,
-              and more.
+              A short demo of cart recovery, journeys and the shared inbox.
             </p>
           </div>
           <div className="mkt-fx__demo">

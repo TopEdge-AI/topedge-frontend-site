@@ -12,6 +12,8 @@ type Glow = 'violet' | 'emerald' | 'sky' | 'amber' | 'rose' | 'indigo';
 
 type Story = {
   id: string;
+  /** The plain job this feature does. Rendered as the eyebrow. */
+  job: 'Recover revenue' | 'Protect COD orders' | 'Support customers' | 'Know your profit';
   titleLead: string;
   titleAccent: string;
   /** One line. If it needs a colon and a list, it is two features. */
@@ -53,67 +55,19 @@ function splitBody(body: string) {
   );
 }
 
+/**
+ * Four plain jobs, not a flat feature list. `job` renders as the eyebrow over
+ * each moment, so a reader scanning the page sees what the product is for
+ * (recover revenue, protect COD orders, support customers, know your profit)
+ * before the feature name. Keep the stories sorted by job.
+ */
 const STORIES: Story[] = [
   {
-    id: 'cod-prepaid',
-    titleLead: 'COD to Prepaid',
-    titleAccent: 'Conversion',
-    body: 'Offer UPI before the parcel leaves the warehouse, so fewer COD orders come back. A returned parcel costs ₹180 to ₹240 in logistics. On Growth and Scale.',
-    href: '/features/journeys',
-    cta: 'See journeys',
-    glow: 'violet',
-    kind: 'video',
-    video: FEATURE_VIDEOS.cod,
-  },
-  {
-    id: 'shopify-tools',
-    titleLead: 'Flow Builder +',
-    titleAccent: 'Shopify Tools',
-    body: 'Fetch an order, fix an address, cancel a shipment. Without leaving the chat.',
-    href: '/features/flow-builder',
-    cta: 'See Flow Builder',
-    glow: 'sky',
-    kind: 'video',
-    video: FEATURE_VIDEOS.shopifyTools,
-  },
-  {
-    id: 'optin-popup',
-    titleLead: 'Website',
-    titleAccent: 'Opt-in Tools',
-    body: 'Popup, spin wheel and chat widget. Turn browsers into a consented WhatsApp list.',
-    href: '/features/opt-in-tools',
-    cta: 'See opt-in tools',
-    glow: 'indigo',
-    kind: 'video',
-    video: FEATURE_VIDEOS.optin,
-  },
-  {
-    id: 'intent-detection',
-    titleLead: 'Real-time',
-    titleAccent: 'Intent Detection',
-    body: 'Read buying, sizing and COD signals in the chat, then route the journey that fits.',
-    href: '/features/intent-detection',
-    cta: 'See intent routing',
-    glow: 'indigo',
-    kind: 'video',
-    video: FEATURE_VIDEOS.intent,
-  },
-  {
-    id: 'segmentation',
-    titleLead: 'Smart Audience',
-    titleAccent: 'Segmentation',
-    body: 'Cohorts from carts, COD risk and order history. Enroll them, then see what came back.',
-    href: '/features/audience-crm',
-    cta: 'See audiences',
-    glow: 'rose',
-    kind: 'video',
-    video: FEATURE_VIDEOS.segmentation,
-  },
-  {
     id: 'abandoned-cart',
+    job: 'Recover revenue',
     titleLead: 'Abandoned Cart',
     titleAccent: 'Recovery',
-    body: 'One nudge the moment a checkout is left behind. Two more only if it is still open.',
+    body: 'Three timed WhatsApp reminders bring shoppers back to the same checkout.',
     href: '/features/journeys',
     cta: 'See cart recovery',
     glow: 'emerald',
@@ -121,20 +75,11 @@ const STORIES: Story[] = [
     video: FEATURE_VIDEOS.cart,
   },
   {
-    id: 'website-pixel',
-    titleLead: 'Website',
-    titleAccent: 'Tracking Pixel',
-    body: 'See who is browsing right now, matched to a WhatsApp number you can message.',
-    href: '/features/analytics',
-    cta: 'See the pixel',
-    glow: 'violet',
-    kind: 'pixel',
-  },
-  {
     id: 'audience-campaigns',
-    titleLead: 'Custom Audience',
+    job: 'Recover revenue',
+    titleLead: 'Broadcast',
     titleAccent: 'Campaigns',
-    body: 'Pick the audience, lock a Meta-approved template, track the revenue it earns.',
+    body: 'Send a Meta-approved template to a segment and track the revenue it earns.',
     href: '/features/campaigns',
     cta: 'See campaigns',
     glow: 'rose',
@@ -142,15 +87,99 @@ const STORIES: Story[] = [
     image: FEATURE_IMAGES.campaigns,
   },
   {
+    id: 'optin-popup',
+    job: 'Recover revenue',
+    titleLead: 'Website',
+    titleAccent: 'Opt-in Tools',
+    body: 'Popup, spin wheel and chat widget turn visitors into a consented WhatsApp list.',
+    href: '/features/opt-in-tools',
+    cta: 'See opt-in tools',
+    glow: 'indigo',
+    kind: 'video',
+    video: FEATURE_VIDEOS.optin,
+  },
+  {
+    id: 'website-pixel',
+    job: 'Recover revenue',
+    titleLead: 'Website',
+    titleAccent: 'Tracking Pixel',
+    body: 'See who is browsing now, matched to a WhatsApp number you can message.',
+    href: '/features/analytics',
+    cta: 'See the pixel',
+    glow: 'violet',
+    kind: 'pixel',
+  },
+  {
+    id: 'cod-prepaid',
+    job: 'Protect COD orders',
+    titleLead: 'COD to Prepaid',
+    titleAccent: 'Conversion',
+    body: 'Offer UPI before dispatch, because a returned COD parcel costs ₹180 to ₹240. On Growth and Scale.',
+    href: '/features/cod-confirmation',
+    cta: 'See COD confirmation',
+    glow: 'violet',
+    kind: 'video',
+    video: FEATURE_VIDEOS.cod,
+  },
+  {
+    id: 'shopify-tools',
+    job: 'Support customers',
+    titleLead: 'Flow Builder +',
+    titleAccent: 'Shopify Tools',
+    body: 'Fetch an order, fix an address or cancel a shipment without leaving the chat.',
+    href: '/features/flow-builder',
+    cta: 'See Flow Builder',
+    glow: 'sky',
+    kind: 'video',
+    video: FEATURE_VIDEOS.shopifyTools,
+  },
+  {
+    id: 'intent-detection',
+    job: 'Support customers',
+    titleLead: 'Real-time',
+    titleAccent: 'Intent Detection',
+    body: 'Spot shipping, returns and COD questions in the chat and route each to the right flow.',
+    href: '/features/intent-detection',
+    cta: 'See intent routing',
+    glow: 'indigo',
+    kind: 'video',
+    video: FEATURE_VIDEOS.intent,
+  },
+  {
     id: 'unified-identity',
+    job: 'Support customers',
     titleLead: 'Unified Customer',
     titleAccent: 'Identity',
-    body: 'Two numbers, three emails, one shopper. Every chat carries the whole order history.',
+    body: 'Two numbers, three emails, one shopper. Every chat carries the full order history.',
     href: '/features/audience-crm',
     cta: 'See profiles',
     glow: 'violet',
     kind: 'image',
     image: FEATURE_IMAGES.unifiedIdentity,
+  },
+  {
+    id: 'segmentation',
+    job: 'Know your profit',
+    titleLead: 'Smart Audience',
+    titleAccent: 'Segmentation',
+    body: 'Group customers by carts, COD risk and order history, then see what each segment earned.',
+    href: '/features/audience-crm',
+    cta: 'See audiences',
+    glow: 'rose',
+    kind: 'video',
+    video: FEATURE_VIDEOS.segmentation,
+  },
+  {
+    id: 'net-profit',
+    job: 'Know your profit',
+    titleLead: 'Net Profit',
+    titleAccent: 'After RTO',
+    body: 'See what you kept after COGS, COD fees, RTO, gateway charges and ad spend.',
+    href: '/features/profit-loss',
+    cta: 'See profit and costs',
+    glow: 'amber',
+    kind: 'image',
+    image: FEATURE_IMAGES.profit,
   },
 ];
 
@@ -165,6 +194,7 @@ function FeatureMoment({ story }: { story: Story }) {
     >
       <div className="home-sticky__stage">
         <div className="home-sticky__static-copy home-sticky__copy-layer">
+          <p className="home-sticky__job">{story.job}</p>
           <h2 className="home-sticky__title">
             {story.titleLead}{' '}
             <span className="home-sticky__title-accent">{story.titleAccent}</span>

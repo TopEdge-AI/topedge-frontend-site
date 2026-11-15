@@ -29,79 +29,79 @@ import { faqHtml, type Faq } from './faqHtml';
 
 const UPSELL_FAQS: Faq[] = [
   {
-    question: 'What is the best Shopify upsell app in 2027?',
+    question: 'What is the best upsell app for Shopify in 2027?',
     answer:
-      'It depends on where you want the offer to appear, and that is the whole answer. If you want one app covering the product page, cart, checkout and post-purchase without paying more to unlock a stage, Candy Rack is the pick: its listing claims offers in 8 placements and its plans are banded by monthly order volume rather than by feature, so the cheapest tier reaches the same surfaces as the dearest one. If you only care about the page after payment, ReConvert and AfterSell are specialists with far more reviews. If you want the cheapest competent entry point, Selleasy starts at ₹854.28 a month. Decide the placement first and the shortlist writes itself.',
+      'It depends on where you want the offer to appear. For one app covering the product page, cart, checkout and post-purchase, Candy Rack is the pick: its listing claims offers in 8 placements and its plans are banded by monthly order volume rather than by feature. For the page after payment only, ReConvert and AfterSell are specialists with far more reviews, and the cheapest competent entry point is Selleasy from ₹854.28 a month.',
   },
   {
     question: 'Is there a free Shopify upsell app?',
     answer:
-      'Yes, several, and Shopify itself ships product recommendations in its themes at no cost. Every app in this guide publishes either a free plan or a free trial. What free usually means is a cap: a monthly order ceiling, a single offer type, or vendor branding on the widget. The honest comparison is not free against paid, it is what the free tier caps you at against what one extra accepted upsell a day is worth to you. Note also that Shopify Bundles, Shopify’s own first-party bundling app, is rated 2.9 from 571 reviews, so free and good are not the same thing here.',
+      'Yes, several: every app in this guide publishes either a free plan or a free trial, and Shopify itself ships product recommendations in its themes at no cost. Free usually means a cap, such as a monthly order ceiling, a single offer type or vendor branding on the widget. Free and good are not the same thing here: Shopify Bundles, Shopify’s own first-party bundling app, is rated 2.9 from 571 reviews.',
   },
   {
     question: 'What is the difference between an upsell and a cross-sell on Shopify?',
     answer:
-      'An upsell offers a better or larger version of what the shopper already chose, so a 500ml bottle instead of the 250ml. A cross-sell offers something that goes with it, so the aerator with the wine. Shopify’s own app category treats them as one thing called "Upsell and cross-sell", and in practice almost every app does both. The distinction that actually matters operationally is not upsell against cross-sell, it is pre-purchase against post-purchase, because a post-purchase offer cannot lose you the original order and a pre-purchase one can.',
+      'An upsell offers a better or larger version of what the shopper already chose, so a 500ml bottle instead of the 250ml, while a cross-sell offers something that goes with it. Shopify’s own app category treats them as one thing called "Upsell and cross-sell", and almost every app does both. The distinction that matters is pre-purchase against post-purchase, because a post-purchase offer cannot lose you the original order and a pre-purchase one can.',
   },
   {
     question: 'Does a post-purchase upsell need the customer to enter card details again?',
     answer:
-      'No, and that is the point of it. A post-purchase offer appears after payment is authorised and charges the payment method already on file, so the shopper accepts with one click. This is also why post-purchase is the safest place to start: the original order is already banked, so a declined offer costs you nothing. The trade-off is reach, because the offer only ever sees shoppers who already bought.',
+      'No. A post-purchase offer appears after payment is authorised and charges the payment method already on file, so the shopper accepts with one click. The original order is already banked, so a declined offer costs you nothing, but the offer only ever sees shoppers who already bought.',
   },
   {
     question: 'How much do Shopify upsell apps cost in India?',
     answer:
-      'Read on 3 November 2026 from an Indian IP, the App Store served these monthly rupee figures: Selleasy from ₹854.28, Frequently Bought Together and ReConvert from ₹948.25, Releasit from ₹1,090.63, Kaching Bundles from ₹1,422.85, Candy Rack from ₹2,846.65 and AfterSell from ₹3,321.25. Shopify states you are billed in your store own currency at the exchange rate on the day of each charge, so these are what an Indian store sees rather than a conversion we did ourselves. Re-check before you buy, because app pricing moves more often than these guides get updated.',
+      'From ₹854.28 to ₹3,321.25 a month at entry level, read on 3 November 2026 from an Indian IP. The App Store served Selleasy from ₹854.28, Frequently Bought Together and ReConvert from ₹948.25, Releasit from ₹1,090.63, Kaching Bundles from ₹1,422.85, Candy Rack from ₹2,846.65 and AfterSell from ₹3,321.25. Shopify states you are billed in your store’s own currency at the exchange rate on the day of each charge, so re-check before you buy.',
   },
   {
     question: 'Do post-purchase upsells work on cash on delivery orders?',
     answer:
-      'No, on our reading of Shopify’s own documentation, and this is the most important thing an Indian merchant can know about this category. Shopify states that a post-purchase offer requires the customer’s credit card to be vaulted, and that no offer appears where the initial purchase used a gift card or any payment method other than a credit card. Cash on delivery is neither a credit card nor vaultable, and Shopify developers have raised the same behaviour on Shopify’s own forum. So if most of your orders are COD, put your offers on the product page, in the cart drawer or inside the COD order form, where every buyer can see them, rather than buying a post-purchase specialist that reaches only your prepaid minority.',
+      'No, on our reading of Shopify’s own documentation. Shopify states that a post-purchase offer requires the customer’s credit card to be vaulted, and that no offer appears where the initial purchase used a gift card or any payment method other than a credit card. If most of your orders are COD, put your offers on the product page, in the cart drawer or inside the COD order form, where every buyer can see them.',
   },
   {
     question: 'What is a good upsell take rate on Shopify?',
     answer:
-      'Around 2.4% is the median, and roughly 10% puts you in the top tenth of stores. Those figures come from Digismoothie’s published benchmarks across 3,199 Shopify stores, 39,007 offers and 218.6 million offer views between 1 January and 31 August 2026. The same dataset puts median incremental revenue from upselling at 2.4%, with the top 10% near 9%, so the 20% and 30% lifts in vendor marketing describe the best stores rather than a typical one. Two free wins from that data: offers showing three or more products convert at 3.1% against 1.5% for a single product, and discounting barely helps, since no-discount offers convert about the same as offers at 1 to 20% off.',
+      'Around 2.4% is the median, and roughly 10% puts you in the top tenth of stores. Those figures come from Digismoothie’s published benchmarks across 3,199 Shopify stores, 39,007 offers and 218.6 million offer views between 1 January and 31 August 2026. In the same data, offers showing three or more products convert at 3.1% against 1.5% for a single product, and no-discount offers convert about the same as offers at 1 to 20% off.',
   },
   {
     question: 'Do I need Shopify Plus to run upsells at checkout?',
     answer:
-      'For offers inside checkout itself, yes. For offers after it, no. Shopify’s documentation states that extensions on the information, shipping and payment steps are available only to stores on a Shopify Plus plan, while extensions that appear after a purchase has been completed are available on all plans except Shopify Starter. So when an app puts checkout upsell behind its top tier, that is usually Shopify’s restriction showing through the pricing page rather than the vendor holding a feature back. Anyone telling you that a post-purchase or thank-you page upsell needs Plus is mistaken.',
+      'For offers inside checkout itself, yes; for offers after it, no. Shopify’s documentation states that extensions on the information, shipping and payment steps are available only to stores on a Shopify Plus plan, while extensions that appear after a purchase has been completed are available on all plans except Shopify Starter. So a post-purchase or thank-you page upsell does not need Plus.',
   },
   {
     question: 'Did the checkout.liquid deadline affect upsell apps?',
     answer:
-      'Yes, and it has already passed, which is why a 2027 shortlist should look different from a 2025 one. Shopify’s documentation states that checkout.liquid and additional scripts were sunset for the Thank you and Order status pages on 28 August 2025, that script tags were sunset on those pages on the same date for Plus stores, and that 26 August 2026 was the deadline for non-Plus stores to upgrade. Any thank-you page upsell that worked by injecting a script no longer works anywhere. The only question worth asking a vendor now is whether its offers render as checkout UI extensions.',
+      'Yes, and it has already passed. Shopify’s documentation states that checkout.liquid and additional scripts were sunset for the Thank you and Order status pages on 28 August 2025, and that 26 August 2026 was the deadline for non-Plus stores to upgrade. Any thank-you page upsell that worked by injecting a script no longer works, so ask a vendor whether its offers render as checkout UI extensions.',
   },
   {
     question: 'Will an upsell app slow my Shopify store down?',
     answer:
-      'It can, and this is the cost nobody puts on the pricing page. Most upsell widgets load JavaScript on the product page or in the cart drawer, which is exactly where you least want extra weight. The Built for Shopify badge is the nearest thing to an objective filter, because Shopify only grants it against published performance and app-design criteria. Test it properly: run Lighthouse on a product page before you install and again after, on the same template, and keep the app only if the offer earns more than the speed cost.',
+      'It can, because most upsell widgets load JavaScript on the product page or in the cart drawer. The Built for Shopify badge is the nearest thing to an objective filter, because Shopify only grants it against published performance and app-design criteria. Run Lighthouse on a product page before you install and again after, on the same template, and keep the app only if the offer earns more than the speed cost.',
   },
   {
     question: 'How many upsell offers should one store run at once?',
     answer:
-      'Start with one, in one place, and measure it for a fortnight before adding another. The common failure is stacking a product-page add-on, a cart drawer offer, a checkout offer and a post-purchase funnel at the same time, then finding average order value up and conversion rate down, with no way to tell which widget did which. One offer at a time is slower and it is the only way you learn anything.',
+      'Start with one, in one place, and measure it for a fortnight before adding another. Stacking a product-page add-on, a cart drawer offer, a checkout offer and a post-purchase funnel at the same time can leave average order value up and conversion rate down, with no way to tell which widget did which.',
   },
   {
     question: 'Does upselling a cash on delivery order carry extra risk?',
     answer:
-      'Yes, and for Indian stores this is the part that decides whether the app pays for itself. An upsell only earns you anything on a COD order if the parcel is accepted at the door. GoKwik figures published by First Resort put COD return to origin near 26% against under 2% for prepaid, so roughly a quarter of the extra revenue you just booked on COD orders never arrives. Worse, a second item can push the parcel into the next courier weight slab, and on a return you pay freight twice. Measure upsell lift separately for COD and prepaid, or you will be reading a number that is about a quarter too kind.',
+      'Yes, because an upsell only earns you anything on a COD order if the parcel is accepted at the door. GoKwik figures published by First Resort put COD return to origin near 26% against under 2% for prepaid, and a second item can push the parcel into the next courier weight slab, so on a return you pay freight twice. Measure upsell lift separately for COD and prepaid.',
   },
   {
     question: 'Can I run an upsell app alongside an abandoned cart recovery app?',
     answer:
-      'Yes, and most stores should, because they do opposite jobs: one raises the value of the orders you win, the other wins back the ones you lost. Make sure they do not both message the same shopper about the same cart. The thing to check is suppression: when an order is created, every pending recovery message should cancel, including any triggered after an upsell changed the cart contents.',
+      'Yes, and most stores should, because one raises the value of the orders you win and the other wins back the ones you lost. The thing to check is suppression: when an order is created, every pending recovery message should cancel, including any triggered after an upsell changed the cart contents.',
   },
   {
     question: 'How do I know the upsell actually increased revenue rather than moved it?',
     answer:
-      'Compare order value against a holdout rather than against last month. If the app can only show you total revenue through its own offers, it is reporting attributed revenue, not incremental revenue, and those differ whenever the shopper would have bought the second item anyway. The cleanest test most stores can run is a time-based one: alternate the offer on and off by week for six weeks and compare average order value and conversion rate across the on weeks and off weeks together, since conversion is the number an aggressive pre-purchase offer quietly costs you.',
+      'Compare order value against a holdout rather than against last month. An app that can only show you total revenue through its own offers is reporting attributed revenue, not incremental revenue. The cleanest test most stores can run is time-based: alternate the offer on and off by week for six weeks and compare average order value and conversion rate together.',
   },
   {
     question: 'Which upsell app does Shopify itself recommend?',
     answer:
-      'Shopify does not endorse a single app, but its own Upsell and bundles category page is worth reading as a signal. On 3 November 2026 it opened its recommended list with two cash on delivery upsell apps, Releasit COD Form & Upsells at 4.9 from 2,419 reviews and EasySell COD Form & Upsells at 4.9 from 987, ahead of the general upsell tools that dominate third-party listicles. If your order book is COD-heavy, that ordering is telling you something the listicles are not.',
+      'Shopify does not endorse a single app, but its own Upsell and bundles category page is a signal. On 3 November 2026 it opened its recommended list with two cash on delivery upsell apps, Releasit COD Form & Upsells at 4.9 from 2,419 reviews and EasySell COD Form & Upsells at 4.9 from 987, ahead of the general upsell tools. If your order book is COD-heavy, that ordering is telling you something the listicles are not.',
   },
 ];
 
@@ -109,52 +109,52 @@ const SEO_EXPERTS_FAQS: Faq[] = [
   {
     question: 'Who are the best Shopify SEO experts in 2027?',
     answer:
-      'The useful answer names people and what you can verify them by, not agencies with a testimonial carousel. The individuals worth knowing are the ones who publish their method where you can read it: Kurt Elster of Ethercycle through the Unofficial Shopify Podcast, Chase Clymer of Electric Eye through Honest Ecommerce, Aleyda Solis for the technical SEO fundamentals that sit underneath any platform, and Rahul D Sarker for the measurement layer, which is the half of Shopify SEO that decides whether anyone believes your reporting. Beyond people, Shopify’s own SEO documentation and Google Search Central are the two references every competent consultant will quote back to you.',
+      'The ones who publish their method where you can read it: Kurt Elster of Ethercycle through the Unofficial Shopify Podcast, Chase Clymer of Electric Eye through Honest Ecommerce, Aleyda Solis for the technical SEO fundamentals, and Rahul D Sarker for the measurement layer. Beyond people, Shopify’s own SEO documentation and Google Search Central are the two references every competent consultant will quote back to you.',
   },
   {
     question: 'How do I vet a Shopify SEO expert before hiring one?',
     answer:
-      'Ask five Shopify-specific questions and listen for hesitation. What do you do about /collections/all duplicating my collection pages? How do you handle ?variant= URLs? What are the limits of robots.txt.liquid? Can I change my URL structure away from /collections/ and /products/, and if not, what follows from that? How will you measure organic revenue when GA4 and Shopify reports disagree? Someone who does Shopify SEO daily answers all five without pausing. Someone who does general SEO and has read a Shopify blog post will answer the first and start generalising by the third.',
+      'Ask five Shopify-specific questions: what they do about /collections/all, how they handle ?variant= URLs, what the limits of robots.txt.liquid are, whether your URL structure can move away from /collections/ and /products/, and how they will measure organic revenue when GA4 and Shopify reports disagree. Someone who does Shopify SEO daily answers all five without pausing. A generalist who has read a Shopify blog post starts generalising by the third.',
   },
   {
     question: 'What does Shopify SEO cost?',
     answer:
-      'There is no single rate, and the honest signal is in how the work is scoped rather than the number. Specialists usually sell either a fixed-scope technical audit or a monthly retainer, and the retainer only makes sense once the audit findings have been implemented. Be sceptical of any proposal that promises rankings, since nobody controls them, and be more sceptical of one that cannot tell you what it will measure instead. The useful question to put to a candidate is not what it costs, it is what you will be able to see in 90 days that you cannot see now.',
+      'There is no single rate. Specialists usually sell either a fixed-scope technical audit or a monthly retainer, and the retainer only makes sense once the audit findings have been implemented. Be sceptical of any proposal that promises rankings, and ask what you will be able to see in 90 days that you cannot see now.',
   },
   {
     question: 'Can you change Shopify URL structure for SEO?',
     answer:
-      'Not the parts that matter. Shopify forces /collections/ for collection pages and /products/ for product pages, and you cannot flatten them. You can edit the handle at the end, and you can edit page titles and meta descriptions, where Shopify states you can enter up to 70 characters in the title and recommends 160 for the description. Shopify also says plainly that there is no FTP access and that your site is not made of static HTML pages you edit piece by piece. A consultant who proposes a flat URL architecture on Shopify is describing a different platform.',
+      'Not the parts that matter: Shopify forces /collections/ for collection pages and /products/ for product pages, and you cannot flatten them. You can edit the handle at the end, and page titles and meta descriptions, where Shopify states you can enter up to 70 characters in the title and recommends 160 for the description. A consultant who proposes a flat URL architecture on Shopify is describing a different platform.',
   },
   {
     question: 'Is Shopify good for SEO?',
     answer:
-      'It is good enough that the platform is rarely your constraint, and the things it takes away are mostly things you should not want. You get a preconfigured robots.txt.liquid that Shopify says most stores never need to change, canonical tags in the default themes, and automatic sitemaps. What you give up is control of URL structure, FTP access, and the ability to edit the title tag anywhere other than theme.liquid. In practice the stores that struggle on Shopify SEO struggle on thin collection pages, near-duplicate product descriptions across variants, and app-injected JavaScript, none of which are platform limits.',
+      'Yes, good enough that the platform is rarely your constraint. You get a preconfigured robots.txt.liquid that Shopify says most stores never need to change, canonical tags in the default themes and automatic sitemaps, and you give up control of URL structure and FTP access. Stores that struggle do so on thin collection pages, near-duplicate product descriptions across variants and app-injected JavaScript, none of which are platform limits.',
   },
   {
     question: 'Does Shopify handle duplicate content from product variants?',
     answer:
-      'Partly, and you should verify rather than assume. Shopify’s default themes emit canonical tags, which is the right mechanism, but Google documents rel="canonical" as "A strong signal that the specified URL should become canonical", not an instruction it obeys. Google also states it "will decide which pages (if any) are duplicates, based on similarity of content". So the practical job is to make variant and collection pages genuinely different rather than to trust a tag to collapse them. Check what your own theme emits on a filtered collection URL before deciding you have no problem.',
+      'Partly. Shopify’s default themes emit canonical tags, but Google documents rel="canonical" as "A strong signal that the specified URL should become canonical", not an instruction it obeys. So make variant and collection pages genuinely different, and check what your own theme emits on a filtered collection URL before deciding you have no problem.',
   },
   {
     question: 'Do I need a Shopify SEO app?',
     answer:
-      'Usually not for the technical basics, because the things SEO apps automate most loudly, bulk meta descriptions and alt text, are the things that benefit least from automation. The exception worth paying for is a crawler, since you cannot fix duplicate collection URLs or orphaned products you have not seen. Note that apps are also a cost on the other side of the ledger: every one that injects JavaScript into your product template is competing with your own page speed, which is why the Built for Shopify badge is worth checking.',
+      'Usually not for the technical basics, because the things SEO apps automate most loudly, bulk meta descriptions and alt text, benefit least from automation. The exception worth paying for is a crawler, since you cannot fix duplicate collection URLs or orphaned products you have not seen. Every app that injects JavaScript into your product template also competes with your page speed, so check the Built for Shopify badge.',
   },
   {
     question: 'How long does Shopify SEO take to show results?',
     answer:
-      'Technical fixes can show up in weeks, and content and authority take months. Shopify itself notes that changes to titles and descriptions can take a couple of weeks to appear in search results, and that is for a field you edited directly. Anyone quoting you a ranking date for a competitive term is guessing. A fair expectation to hold a consultant to is that within 90 days you can see which pages gained impressions, which queries moved, and what was shipped to cause it.',
+      'Technical fixes can show up in weeks, and content and authority take months. Shopify itself notes that changes to titles and descriptions can take a couple of weeks to appear in search results. A fair expectation is that within 90 days you can see which pages gained impressions, which queries moved, and what was shipped to cause it.',
   },
   {
     question: 'What is the difference between SEO, AEO and GEO for a Shopify store?',
     answer:
-      'SEO is earning the click from a results page. Answer engine optimisation and generative engine optimisation are about being the source an AI answer is built from, which does not require a click at all. For Shopify stores the mechanism is concrete rather than mystical: AI answers about which app or product to buy lean heavily on the Shopify App Store and on third-party roundups, so the work is being factually present and correct in those places. Our own measurement found apps.shopify.com cited in 31 of 80 AI answers in our category, more than any other source.',
+      'SEO is earning the click from a results page, while answer engine optimisation and generative engine optimisation are about being the source an AI answer is built from. For Shopify stores, AI answers about which app or product to buy lean heavily on the Shopify App Store and on third-party roundups, so the work is being factually present and correct in those places. Our own measurement found apps.shopify.com cited in 31 of 80 AI answers in our category, more than any other source.',
   },
   {
     question: 'Should I hire a Shopify SEO freelancer or an agency?',
     answer:
-      'Scope decides this, not size. A freelancer or independent consultant is usually better value for a technical audit and a fixed remediation plan, because you are buying one person judgement and you can read their published work before you hire. An agency earns its premium when the work needs several hands at once, typically content production at volume alongside link acquisition. The failure mode to avoid in both cases is paying monthly for activity reports rather than for shipped changes.',
+      'Scope decides this, not size. A freelancer or independent consultant is usually better value for a technical audit and a fixed remediation plan, while an agency earns its premium when the work needs several hands at once, typically content production at volume alongside link acquisition. In both cases, avoid paying monthly for activity reports rather than for shipped changes.',
   },
 ];
 
@@ -163,7 +163,7 @@ export const blogPostsRoundups: BlogPost[] = [
     id: 60,
     title: 'Top 10 Best Shopify Upsell Apps for 2027',
     description:
-      'The 10 best Shopify upsell apps for 2027, ranked by where the offer appears, with App Store ratings, launch dates and rupee pricing read on 3 November 2026.',
+      'The 10 best Shopify upsell apps for 2027, ranked by where the offer appears, with App Store ratings, launch dates and rupee prices read 3 November 2026.',
     summary: [
       'Placement decides everything. An upsell app is a pre-purchase tool, a cart tool, a checkout tool or a post-purchase tool, and almost none of them are genuinely all four, so pick the stage before you pick the app.',
       'Candy Rack takes first place on one stated criterion: its listing claims offers in 8 placements across all four stages, and its plans are banded by monthly order volume rather than by feature, so the ₹2,846.65 tier reaches the same surfaces as the ₹5,694.24 one. It also has the fewest reviews of the shortlist, 266, and the shortest free trial at 8 days.',
@@ -277,7 +277,7 @@ export const blogPostsRoundups: BlogPost[] = [
     content: `
 <details class="mkt-blog-verdict" open>
 <summary>Direct answer</summary>
-<p>There is no single <strong>best Shopify upsell app</strong>, because an upsell app is really four different products wearing one category name: a product-page tool, a cart tool, a checkout tool and a post-purchase tool. Decide which stage you want the offer at, then check two things on the pricing page: whether the stage you want is gated behind a higher tier, and whether the plan is banded by order volume or by feature. Our pick for one app covering all four stages without a paywall between them is <strong>Candy Rack</strong>. If you only want the page after payment, <strong>ReConvert</strong> and <strong>AfterSell</strong> have four to twelve times the reviews. If you want the cheapest competent start, <strong>Selleasy</strong> opens at ₹854.28 a month.</p>
+<p>There is no single <strong>best Shopify upsell app</strong>, because the category is four products: a product-page tool, a cart tool, a checkout tool and a post-purchase tool. For one app covering all four stages without a paywall between them, our pick is <strong>Candy Rack</strong>. For the page after payment only, <strong>ReConvert</strong> and <strong>AfterSell</strong> have four to twelve times the reviews. The cheapest competent start is <strong>Selleasy</strong> at ₹854.28 a month.</p>
 </details>
 
 <p><strong>Every rating, review count, launch date and price below was read off the app's own Shopify App Store listing on 3 November 2026.</strong> One thing to understand about the prices. Opened from India, the App Store shows rupees and labels them plainly: "Prices in INR are estimates for your location, based on the current exchange rate (1 INR = 0.0105 USD). You'll be billed in your store's billing currency, at the exchange rate on the day of each charge." So the rupee figures here are <em>Shopify's own estimates</em>, not native rupee list prices, and we give the dollar equivalent at Shopify's stated rate beside them. Re-check both before you buy.</p>
@@ -675,7 +675,7 @@ ${faqHtml(UPSELL_FAQS)}
   },
   {
     id: 61,
-    title: 'Top 10 Shopify SEO Experts and Resources for 2027',
+    title: 'Top 10 Shopify SEO Experts & Resources for 2027',
     description:
       'The 10 Shopify SEO experts and resources worth your time, plus five Shopify-specific questions that tell you in a minute whether a consultant is real.',
     summary: [
@@ -782,7 +782,7 @@ ${faqHtml(UPSELL_FAQS)}
     content: `
 <details class="mkt-blog-verdict" open>
 <summary>Direct answer</summary>
-<p>The fastest way to find a good <strong>Shopify SEO expert</strong> is not a list, it is five questions. Ask what happens to <code>/collections/all</code>, whether Shopify canonicalises <code>?variant=</code> URLs, what the default <code>robots.txt</code> leaves crawlable, what the limits of <code>robots.txt.liquid</code> are, and how they will measure organic revenue when GA4 and Shopify disagree. Someone who does this daily answers all five without pausing. The list below is ten people and resources who demonstrably can, ranked by how much verifiable Shopify-specific method you can read before you pay anyone anything.</p>
+<p>The fastest way to find a good <strong>Shopify SEO expert</strong> is five questions, not a list: what happens to <code>/collections/all</code>, whether Shopify canonicalises <code>?variant=</code> URLs, what the default <code>robots.txt</code> leaves crawlable, the limits of <code>robots.txt.liquid</code>, and how they measure organic revenue when GA4 and Shopify disagree. The ten people and resources below are ranked by how much verifiable Shopify-specific method you can read before you pay.</p>
 </details>
 
 <p><strong>Checked 3 November 2026.</strong> The technical facts in this guide come from Shopify's and Google's own documentation, and the canonical and robots.txt behaviour was verified by reading the raw HTML of live production Shopify stores on that date. Every claim about a person links to the page it came from.</p>

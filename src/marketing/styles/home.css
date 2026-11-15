@@ -4096,6 +4096,18 @@
   display: none;
 }
 
+/* Job eyebrow over each feature moment: Recover revenue, Protect COD orders,
+   Support customers, Know your profit. */
+.home-sticky__job {
+  margin: 0;
+  text-align: center;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--moment-highlight-fg, #7c3aed);
+}
+
 .home-sticky--static .home-sticky__body {
   max-width: 32rem;
   margin: 0.95rem auto 0;

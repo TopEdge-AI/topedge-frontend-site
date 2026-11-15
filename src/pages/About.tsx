@@ -131,15 +131,15 @@ export default function About() {
             </span>
           </p>
           <h1 className="mkt-about__h1">
-            <BrandWord platform="whatsapp">WhatsApp automation for </BrandWord>
+            <BrandWord platform="whatsapp">The WhatsApp app for </BrandWord>
             <span className="mkt-about__h1-accent">
               <BrandWord platform="shopify">Shopify India</BrandWord>
             </span>
             {', built in Ahmedabad'}
           </h1>
           <p className="mkt-about__lede">
-            Shopify data, Meta-approved templates, and AI in one workspace, so D2C teams sell and
-            support on WhatsApp.
+            Founded by Moksh Patel and Smit Tilva to help Shopify brands in India recover carts,
+            confirm COD orders and see net profit, from one WhatsApp app.
           </p>
           <div className="mkt-about__actions">
             <PrimaryButton to="/signup">
@@ -200,7 +200,7 @@ export default function About() {
         */}
         <section className="mkt-about__entity" aria-label="About TopEdge AI">
           <p className="mkt-about__entity-para">
-            TopEdge AI is a Shopify app for Indian D2C brands that automates abandoned cart recovery, COD confirmation and order updates over WhatsApp and email. It is built in Ahmedabad, Gujarat, and connects to Shopify and to
+            TopEdge AI is the WhatsApp marketing and automation app for Shopify brands in India: it recovers abandoned carts, confirms COD orders, moves COD to prepaid, and shows net profit after RTO, with 0% markup on Meta rates. It is built in Ahmedabad, Gujarat, and connects to Shopify and to
             Meta&rsquo;s WhatsApp Cloud API on your own Business Account. TopEdge AI is not related
             to edge-AI hardware or other products with a similar name.
           </p>

@@ -3,35 +3,35 @@ export const homeStories = [
   {
     id: 'cart-recovery' as const,
     title: 'WhatsApp Abandoned Cart Recovery',
-    body: 'Recover checkouts with timed WhatsApp nudges the moment a shopper leaves items behind.',
+    body: 'Three timed WhatsApp reminders bring shoppers back to the same checkout.',
     href: '/features/journeys',
     cta: 'Start free',
   },
   {
     id: 'journey' as const,
     title: 'Drag-and-Drop Journey Builder',
-    body: 'Map post-purchase flows on a visual canvas: wait, branch, and message from one place.',
+    body: 'Build cart, COD and order journeys on one visual canvas.',
     href: '/features/journeys',
     cta: 'Start free',
   },
   {
     id: 'inbox' as const,
     title: 'Shared Team Inbox for WhatsApp & IG',
-    body: 'One inbox for WhatsApp and Instagram. Assign chats, reply with order context, stay aligned.',
+    body: 'Assign chats and reply with the Shopify order beside the thread.',
     href: '/features',
     cta: 'Start free',
   },
   {
     id: 'ai-brain' as const,
-    title: 'AI Brain, WhatsApp AI on Your Keys',
-    body: 'Bring your own OpenAI or Claude key. Ground replies in catalog and policies, Intent Detect saves tokens.',
+    title: 'WhatsApp AI Replies on Your Own Key',
+    body: 'Bring your own OpenAI, Claude or Gemini key and answer from your catalog and policies.',
     href: '/features/ai-brain',
     cta: 'Start free',
   },
   {
     id: 'connect' as const,
     title: 'Automated Order & Shipping Alerts',
-    body: 'Send confirmations, tracking, and shipping updates on WhatsApp, cut WISMO tickets.',
+    body: 'Send order confirmations and tracking on WhatsApp to cut where-is-my-order chats.',
     href: '/integrations',
     cta: 'Start free',
   },
@@ -127,7 +127,7 @@ export const howItWorks = [
   {
     step: '01',
     title: 'Connect Shopify and WhatsApp',
-    desc: 'OAuth your store and add WhatsApp credentials. About 30 minutes of setup.',
+    desc: 'Authorise your store and add WhatsApp credentials. About 30 minutes.',
   },
   {
     step: '02',
@@ -137,12 +137,12 @@ export const howItWorks = [
   {
     step: '03',
     title: 'Build journeys and flows',
-    desc: 'Recovery on Journey canvas, or AI form into Flow Builder for chatbots.',
+    desc: 'Journeys for cart, COD and order messages. Flow Builder for chat menus.',
   },
   {
     step: '04',
     title: 'Sell and support',
-    desc: 'Recover carts, run campaigns, and reply from Live Chat with honest metrics.',
+    desc: 'Recover carts, confirm COD orders and reply from one shared inbox.',
   },
 ];
 

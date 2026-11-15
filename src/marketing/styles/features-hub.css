@@ -160,6 +160,7 @@
 
 /* ——— Feature groups: 5 = 2 wide + 3, 4 = 2 x 2 ——— */
 .mkt-fx-group--sell { --tint: #f6f2ff; --tint-line: #e9e0ff; --tint-ink: #6d28d9; }
+.mkt-fx-group--cod { --tint: #fff7ed; --tint-line: #fde3c4; --tint-ink: #c2410c; }
 .mkt-fx-group--support { --tint: #effbf3; --tint-line: #cdeedb; --tint-ink: #15803d; }
 .mkt-fx-group--measure { --tint: #eff7fd; --tint-line: #cfe6f7; --tint-ink: #0369a1; }
 
@@ -190,6 +191,7 @@
   }
 
   .mkt-fx__grid--5 > :nth-child(-n + 2),
+  .mkt-fx__grid--2 > *,
   .mkt-fx__grid--4 > * {
     grid-column: span 3;
   }

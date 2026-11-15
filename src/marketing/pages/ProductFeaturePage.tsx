@@ -25,6 +25,7 @@ import { featurePagesModifiedIso } from '../data/contentDates';
 import FeatureMeshStage from '../components/effects/FeatureMeshStage';
 import HomeTrust from '../components/home/HomeTrust';
 import { PrimaryButton, GhostButton } from '../components/ui';
+import { ScenesContext, ScenePlaceholder, usePageScenes, useScene } from '../components/visuals';
 import '../styles/product-feature.css';
 
 type Props = {
@@ -42,6 +43,16 @@ function ShotFrame({
 }) {
   const [failed, setFailed] = useState(false);
   const empty = failed || !src;
+  // A coded scene (components/visuals) replaces the screenshot where one exists.
+  const { Scene, pending } = useScene(src);
+
+  if (Scene || pending) {
+    return (
+      <div className={`mkt-pf__shot${wide ? ' is-wide' : ''} is-scene`}>
+        {Scene ? <Scene label={label} /> : <ScenePlaceholder label={label} wide={wide} />}
+      </div>
+    );
+  }
 
   // The empty frame deliberately carries no "add dashboard screenshot" note.
   // That was an instruction to us and it shipped into the crawlable text of
@@ -127,6 +138,9 @@ function ProductFeatureView({ page }: { page: ProductPage }) {
   const proof = page.proofTable;
   const modifiedIso = featurePagesModifiedIso();
   const heroDemo = page.hero.kind === 'video' ? demoAssetBySrc(page.hero.src) : undefined;
+  const scenes = usePageScenes(page.id);
+  const HeroScene =
+    page.hero.kind === 'image' ? scenes.map?.[page.hero.src.split('?')[0]] ?? null : null;
 
   useEffect(() => {
     const hash = location.hash.replace(/^#/, '');
@@ -138,7 +152,7 @@ function ProductFeatureView({ page }: { page: ProductPage }) {
   }, [location.hash, page.id]);
 
   return (
-    <>
+    <ScenesContext.Provider value={scenes}>
       <MarketingSEO
         title={page.seoTitle}
         description={page.seoDescription}
@@ -208,6 +222,12 @@ function ProductFeatureView({ page }: { page: ProductPage }) {
                 glow={page.hero.glow ?? 'violet'}
                 title={page.hero.label}
               />
+            ) : HeroScene ? (
+              <div className="demo-video-glow demo-video-glow--still" data-glow={page.hero.glow ?? 'violet'}>
+                <div className="demo-video-glow__frame is-ready is-scene">
+                  <HeroScene label={page.hero.alt} />
+                </div>
+              </div>
             ) : (
               <DemoProductImageFrame
                 src={page.hero.src}
@@ -374,7 +394,7 @@ function ProductFeatureView({ page }: { page: ProductPage }) {
           secondaryTo="/pricing"
         />
       </MarketingPage>
-    </>
+    </ScenesContext.Provider>
   );
 }
 

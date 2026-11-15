@@ -47,43 +47,43 @@ export type PageSeoEntry = {
  */
 export const PAGE_SEO = {
   home: {
-    // Re-led on the Shopify ecommerce job rather than the channel. GSC, 3 months:
-    // queries shaped "shopify <thing> app" sit at position 50-70 (abandoned cart
-    // recovery shopify app 64.8, best shopify abandoned cart app 62, shopify
-    // whatsapp app 70) while queries shaped "whatsapp <thing>" sit at 4-25.
-    // Sitewide the copy says WhatsApp 3,272 times against Shopify 2,415, so Google
-    // reads this as a messaging tool, not a Shopify app. WhatsApp stays in the
-    // title because it is the channel and a real qualifier, just not the noun.
-    title: 'Shopify Cart Recovery & COD App for India | TopEdge AI',
+    // 15 Nov 2026: the home page owns the commercial cluster "whatsapp app for
+    // shopify / shopify whatsapp app" (GSC: best whatsapp app for shopify 17,
+    // whatsapp for shopify 21, shopify whatsapp app 58). The previous title,
+    // "Shopify Cart Recovery & COD App for India", drew about 1 impression in
+    // 28 days. Do NOT put the exact phrase "shopify whatsapp automation" in this
+    // title: /blog/whatsapp-automation-for-shopify owns it (one keyword, one
+    // page; see seo-audit/2026-11-10).
+    title: 'WhatsApp App for Shopify India: Cart, COD & RTO | TopEdge AI',
     description:
-      'Automate Shopify WhatsApp cart recovery and COD confirmation to prepaid in India. 0% Meta markup, plans from ₹1,999/mo, 14-day free trial.',
+      'TopEdge AI is the WhatsApp app for Shopify brands in India: recover carts, confirm COD and see net profit. From ₹1,999/mo, 0% Meta markup, 14-day trial.',
     keywords:
-      'whatsapp automation for shopify india, shopify whatsapp cod confirmation, cod to prepaid shopify, whatsapp abandoned cart recovery shopify india, whatsapp business api 0% markup india, shopify whatsapp app india',
+      'whatsapp app for shopify india, shopify whatsapp app, best whatsapp app for shopify, whatsapp for shopify, whatsapp marketing app shopify india, cod confirmation app shopify, abandoned cart recovery whatsapp shopify, cod to prepaid shopify',
     path: '/',
     noSuffix: true,
   },
   pricing: {
-    title: 'Shopify WhatsApp Pricing India: ₹1,999/mo, 0% Markup',
+    title: 'TopEdge AI Pricing: Shopify WhatsApp from ₹1,999/mo',
     description:
-      'Shopify WhatsApp plans from ₹1,999/mo + GST, or $19 on the App Store. 0% markup on Meta India rates: ₹0.8631 marketing, ₹0.115 utility. 14-day free trial.',
+      'TopEdge AI pricing: ₹1,999 to ₹6,499/mo + GST by order volume, or from $19 on Shopify. 0% markup on Meta rates of ₹0.8631 and ₹0.115. 14-day free trial.',
     keywords:
-      'shopify whatsapp pricing india, whatsapp automation price india, whatsapp business api 0% markup, whatsapp api rates india 2026, meta whatsapp india rate card inr, cod confirmation app pricing shopify, whatsapp cart recovery cost india, flat inr whatsapp plans',
+      'topedge ai pricing, shopify whatsapp pricing india, whatsapp automation price india, whatsapp business api 0% markup, whatsapp api rates india 2026, meta whatsapp india rate card inr, cod confirmation app pricing shopify, whatsapp cart recovery cost india, flat inr whatsapp plans',
     path: '/pricing',
   },
   metaRates: {
     title: 'Meta WhatsApp Rates India 2026: ₹0.8631 & ₹0.115',
     description:
-      'Meta’s published India WhatsApp rate card, what a platform markup adds to it, and a free calculator for your monthly volume. TopEdge AI adds 0% to every line.',
+      'Meta India WhatsApp rates for 2026: ₹0.8631 per marketing and ₹0.115 per utility message. See what a platform markup adds, with a free cost calculator.',
     keywords:
       'meta whatsapp rate card india, whatsapp api rates india 2026, whatsapp business api 0% markup india, whatsapp message cost calculator india, meta india inr rate card, whatsapp marketing template rate india',
     path: '/pricing/meta-rates',
   },
   features: {
-    title: 'Shopify WhatsApp Features: Journeys, COD, AI & Pixel',
+    title: 'TopEdge AI Features: Carts, COD, Support & Profit',
     description:
-      'Every Shopify WhatsApp workspace in TopEdge AI: visual cart and COD journeys, BYOK AI Brain, visitor pixel, shared order inbox, warranty hub and India P&L.',
+      'TopEdge AI features for Shopify stores in India, grouped by job: recover carts, confirm COD orders, support customers and track net profit. From ₹1,999/mo.',
     keywords:
-      'Shopify WhatsApp features, WhatsApp journeys India, AI Brain BYOK Shopify, tracking pixel WhatsApp, WhatsApp opt-in Shopify, Profit and costs ecommerce, Live Chat Shopify WhatsApp',
+      'TopEdge AI features, Shopify WhatsApp features, WhatsApp journeys India, AI Brain BYOK Shopify, tracking pixel WhatsApp, WhatsApp opt-in Shopify, Profit and costs ecommerce, Live Chat Shopify WhatsApp',
     path: '/features',
   },
   /**
@@ -101,17 +101,17 @@ export const PAGE_SEO = {
     path: '/services',
   },
   integrations: {
-    title: 'Shopify & Meta WhatsApp Integrations | Store Sync',
+    title: 'TopEdge AI Integrations: Shopify & Meta WhatsApp API',
     description:
-      'Connect Shopify OAuth and Meta WhatsApp Cloud API in one workspace. Sync carts, orders, and catalogs for WhatsApp automation.',
+      'TopEdge AI integrations: Shopify by OAuth and the Meta WhatsApp Cloud API on your own account. Carts, orders and catalog sync in about 30 minutes of setup.',
     keywords:
-      'Shopify WhatsApp integration, Meta Cloud API Shopify, ecommerce automation integrations, WhatsApp Business API Shopify',
+      'TopEdge AI integrations, Meta Cloud API Shopify, ecommerce automation integrations, WhatsApp Business API Shopify',
     path: '/integrations',
   },
   customers: {
-    title: 'Shopify WhatsApp Case Studies & Reviews, India',
+    title: 'TopEdge AI Reviews & Shopify WhatsApp Case Studies',
     description:
-      'How Indian Shopify brands like Delitech and Apex Light run WhatsApp cart recovery, COD confirmation and one shared inbox. With their Trustpilot reviews.',
+      'TopEdge AI reviews and case studies: how Indian Shopify brands like Delitech and Apex Light run WhatsApp cart recovery, COD confirmation and one inbox.',
     keywords:
       'Shopify WhatsApp case study India, WhatsApp cart recovery results, D2C WhatsApp automation customers, TopEdge AI reviews, WhatsApp Business API reviews India, Shopify COD confirmation case study',
     path: '/customers',
@@ -125,17 +125,17 @@ export const PAGE_SEO = {
     path: '/compare',
   },
   blog: {
-    title: 'Shopify India WhatsApp Playbooks: Cart, COD & RTO',
+    title: 'TopEdge AI Blog: Shopify WhatsApp, COD & RTO Playbooks',
     description:
-      'Operator guides for Indian Shopify D2C brands: WhatsApp abandoned cart recovery, COD confirmation to cut RTO, Meta Cloud API templates, BYOK AI and P&L math.',
+      'The TopEdge AI blog: operator guides for Indian Shopify brands on WhatsApp cart recovery, COD confirmation to cut RTO, Meta templates and P&L math.',
     keywords:
       'WhatsApp Shopify playbooks, abandoned cart recovery WhatsApp India, COD confirmation WhatsApp, Meta WhatsApp templates Shopify, ecommerce automation blog India, WhatsApp shared inbox Shopify',
     path: '/blog',
   },
   about: {
-    title: 'About TopEdge AI: Shopify WhatsApp Platform, India',
+    title: 'About TopEdge AI: Founders Moksh Patel & Smit Tilva',
     description:
-      'Founded in Ahmedabad by Moksh Patel and Smit Tilva, TopEdge AI runs WhatsApp automation and COD confirmation for Indian Shopify D2C brands. Carts to RTO.',
+      'TopEdge AI founders Moksh Patel and Smit Tilva built the WhatsApp marketing and automation app for Shopify brands in India, in Ahmedabad, in 2024.',
     keywords:
       'About TopEdge AI, Moksh Patel TopEdge AI, Smit Tilva TopEdge AI, WhatsApp Shopify platform India, ecommerce automation company Ahmedabad, Delitech Smart Home WhatsApp, Apex Light Shopify WhatsApp',
     path: '/about',
@@ -399,10 +399,10 @@ export function organizationJsonLd() {
     // The canonical brand sentence, word for word. Keep it identical everywhere
     // (listings, About, llms.txt) so third parties and AI engines repeat one fact.
     description:
-      'TopEdge AI is a Shopify app for Indian D2C brands that automates abandoned cart recovery, COD confirmation and order updates over WhatsApp and email.',
+      'TopEdge AI is the WhatsApp marketing and automation app for Shopify brands in India: it recovers abandoned carts, confirms COD orders, moves COD to prepaid, and shows net profit after RTO, with 0% markup on Meta rates.',
     // Separates this entity from the edge-AI hardware companies that share the name.
     disambiguatingDescription:
-      'TopEdge AI is a Shopify app for Indian D2C brands, built in Ahmedabad, Gujarat. It is not related to edge-AI hardware or other products with a similar name.',
+      'TopEdge AI is a WhatsApp marketing and automation app for Shopify brands in India, built in Ahmedabad, Gujarat. It is not related to edge-AI hardware or other products with a similar name.',
     foundingDate: '2024',
     founder: [authorJsonLd('Moksh Patel'), authorJsonLd('Smit Tilva')],
     address: {
@@ -505,7 +505,7 @@ export function softwareApplicationJsonLd() {
     image: [imageUrl],
     screenshot: imageUrl,
     description:
-      'WhatsApp automation for Shopify: abandoned cart recovery, COD confirmations, Live Chat, journeys, and Meta Cloud API campaigns for Indian ecommerce.',
+      'TopEdge AI is the WhatsApp marketing and automation app for Shopify brands in India: it recovers abandoned carts, confirms COD orders, moves COD to prepaid, and shows net profit after RTO, with 0% markup on Meta rates.',
     publisher: ORG_REF,
     provider: ORG_REF,
     offers: [
@@ -608,7 +608,7 @@ export function websiteJsonLd() {
     alternateName: 'TopEdge',
     url: SITE_URL,
     inLanguage: 'en-IN',
-    description: 'WhatsApp automation and Shopify ecommerce growth platform for Indian D2C.',
+    description: 'The WhatsApp marketing and automation app for Shopify brands in India.',
     publisher: ORG_REF,
     potentialAction: {
       '@type': 'SearchAction',

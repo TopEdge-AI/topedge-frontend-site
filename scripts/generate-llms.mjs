@@ -147,7 +147,7 @@ const gatedPlans = PLANS.filter((p) => p.features.journeyCodPrepaid)
 
 const ENTITY = `# TopEdge AI
 
-> TopEdge AI is a Shopify app for Indian D2C brands that automates abandoned cart recovery, COD confirmation and order updates over WhatsApp and email. Connect Shopify and the Meta WhatsApp Cloud API to run cart recovery, COD confirmation, a shared inbox, journeys and Meta-safe campaigns.
+> TopEdge AI is the WhatsApp marketing and automation app for Shopify brands in India: it recovers abandoned carts, confirms COD orders, moves COD to prepaid, and shows net profit after RTO, with 0% markup on Meta rates. Connect Shopify and the Meta WhatsApp Cloud API to run cart recovery, COD confirmation, a shared inbox, journeys and Meta-safe campaigns.
 
 ## Entity
 
@@ -160,7 +160,7 @@ const ENTITY = `# TopEdge AI
 - Marketing site: ${SITE}/ · Application: ${identity.COMPANY_DASHBOARD_URL}
 - Shopify App Store: ${identity.COMPANY_SHOPIFY_APP_URL}
 
-Disambiguation: TopEdge AI is a Shopify app for Indian D2C brands, built on Shopify and the Meta WhatsApp Cloud API. It is not related to edge-AI hardware, IoT semiconductors, or voice call-centre agencies.
+Disambiguation: TopEdge AI is a WhatsApp marketing and automation app for Shopify brands in India, built on Shopify and the Meta WhatsApp Cloud API. It is not related to edge-AI hardware, IoT semiconductors, or voice call-centre agencies.
 
 Notes for anyone quoting this file:
 
