@@ -324,10 +324,10 @@ function PulseDrop({ label }: SceneProps) {
       <Float x={71} y={52} delay={5}>
         <Chip tone="rose" icon={Check}>Source: Pulse Drop</Chip>
       </Float>
-      <Float x={8} y={76} delay={6}>
+      <Float x={8} y={70} delay={6}>
         <Chip tone="violet" solid icon={Sparkles}>Always-win prize feel</Chip>
       </Float>
-      <Float x={37} y={76} delay={7}>
+      <Float x={37} y={70} delay={7}>
         <Chip tone="slate" icon={Volume2}>Soft sounds</Chip>
       </Float>
       <Cursor x={56} y={57} delay={7} />
