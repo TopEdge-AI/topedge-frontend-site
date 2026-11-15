@@ -4,13 +4,13 @@
  */
 export const CONTENT_DATES = {
   /** Last edit of compare competitor data (+ feature matrix). */
-  compareTwoWay: '2026-11-12',
+  compareTwoWay: '2026-11-15',
   /** Last edit of 3-way compare page (+ feature matrix). */
   compareThreeWay: '2026-11-12',
   /** Last edit of blogPosts.ts (used as Article dateModified fallback). */
-  blogPosts: '2026-11-12',
+  blogPosts: '2026-11-15',
   /** Last edit of feature / product page content. */
-  featurePages: '2026-11-10',
+  featurePages: '2026-11-15',
   /** Last edit of published plan catalog (pricing Offers). */
   pricing: '2026-11-10',
 } as const;
@@ -50,9 +50,11 @@ export const BLOG_DATES_BY_SLUG = {
   "cod-to-prepaid-whatsapp-shopify-india": "2026-10-22",
   "best-shopify-app-for-abandoned-cart-recovery-india": "2026-11-07",
   "ecommerce-funnel-drop-off-benchmarks-visitor-identity-resolution": "2026-11-01",
-  "interakt-pricing-india": "2026-11-09",
-  "wati-pricing-india": "2026-11-10",
-  "aisensy-pricing-india": "2026-11-12"
+  "interakt-pricing-india": "2026-11-15",
+  "wati-pricing-india": "2026-11-15",
+  "aisensy-pricing-india": "2026-11-15",
+  "rto-meaning-ecommerce": "2026-11-15",
+  "add-whatsapp-chat-button-shopify": "2026-11-15"
 } as const;
 
 export type ContentDateKey = keyof typeof CONTENT_DATES;

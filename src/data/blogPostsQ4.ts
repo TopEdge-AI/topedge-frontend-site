@@ -435,6 +435,62 @@ const FUNNEL_FAQS: Faq[] = [
   },
 ];
 
+const RTO_MEANING_FAQS: Faq[] = [
+  {
+    question: 'What is the full form of RTO in ecommerce?',
+    answer:
+      'RTO stands for Return to Origin. It is the courier status for a parcel that could not be delivered, or was refused, and is being sent back to the seller. It is not the Regional Transport Office, which is the same three letters in a different context.',
+  },
+  {
+    question: 'What is the difference between RTO and NDR?',
+    answer:
+      'An NDR (Non-Delivery Report) is raised when one delivery attempt fails, and the order can still be saved. An RTO is what an unresolved NDR becomes: the parcel is on its way back. Amazon Shipping India states that nearly every failed delivery not resolved within 36 hours of the NDR ends in cancellation and RTO.',
+  },
+  {
+    question: 'How much does one RTO cost a seller in India?',
+    answer:
+      '₹180 to ₹240 in direct logistics per parcel, per Amazon Shipping India: forward shipping, the return leg, repackaging and inventory held in transit. Counting the ad spend that won the order, ClickPost puts the fully loaded loss at ₹450 to ₹900 per RTO order, via First Resort. Both were read on 21 October 2026.',
+  },
+  {
+    question: 'What is a normal RTO rate in India?',
+    answer:
+      'It depends on payment mode and season. Unicommerce puts national RTO at 39.2% at the November 2025 festive peak and 21.0% by March 2026 among brands that verify orders before dispatch. GoKwik, via First Resort, reports COD RTO near 26% against under 2% for prepaid.',
+  },
+  {
+    question: 'Who pays for RTO, the seller or the courier?',
+    answer:
+      'The seller. Amazon Shipping India’s breakdown counts the non-refundable forward shipping and the reverse leg as the seller’s loss, along with repackaging and inventory held in transit. On a COD order the seller also collects nothing, because the buyer never paid.',
+  },
+];
+
+const WHATSAPP_BUTTON_FAQS: Faq[] = [
+  {
+    question: 'How do I add a WhatsApp button to my Shopify store for free?',
+    answer:
+      'Make a wa.me link with our free WhatsApp link generator, copy the button code it gives you, and paste it just before the closing </body> tag in your theme.liquid file. Save, and a green chat button sits in the bottom-right corner of every page. No app and no monthly fee.',
+  },
+  {
+    question: 'Can I use the same WhatsApp button on a website that is not on Shopify?',
+    answer:
+      'Yes. The button is a plain HTML link with an inline icon, so it works on any website whose template you can edit. Paste it before the closing </body> tag of your site’s main layout file.',
+  },
+  {
+    question: 'Will a WhatsApp chat button slow down my Shopify store?',
+    answer:
+      'The code button will not: it loads no script and no external file. An app widget does load a script, which is what lets it capture a number or run triggers. Shopify’s theme performance guidance advises finding and deferring app scripts that block the page, so check your speed after installing any widget.',
+  },
+  {
+    question: 'Does the WhatsApp chat button work on desktop?',
+    answer:
+      'Yes. WhatsApp’s help page states that click to chat works on both your phone and WhatsApp Web. On a computer the link opens WhatsApp Web or the desktop app, with your pre-filled message in the chat box.',
+  },
+  {
+    question: 'Where do chats from the button arrive?',
+    answer:
+      'On whichever number the link points to. If that number is on the WhatsApp Business app, chats arrive on that phone. If it is connected to a WhatsApp Business Platform tool such as TopEdge AI, they land in a shared inbox where several people can reply, with the Shopify order shown beside the chat.',
+  },
+];
+
 export const blogPostsQ4: BlogPost[] = [
   {
     id: 27,
@@ -1262,7 +1318,7 @@ ${verdict(`<p><strong>To collect WhatsApp opt-in on Shopify in India, ask in fou
 <tr><td>Instagram comment to DM</td><td>High intent</td><td>Ask again before offers</td></tr>
 </tbody>
 </table>
-<p>TopEdge AI’s <a href="/features/opt-in-tools">opt-in tools</a> cover website popups and capture, so consent starts inside the same system that runs your journeys. For a click-to-WhatsApp button or a packaging QR, our <a href="/tools/whatsapp-link-generator">free WhatsApp link generator</a> builds the link with a pre-filled message.</p>
+<p>TopEdge AI’s <a href="/features/opt-in-tools">opt-in tools</a> cover website popups and capture, so consent starts inside the same system that runs your journeys. For a click-to-WhatsApp button or a packaging QR, our <a href="/tools/whatsapp-link-generator">free WhatsApp link generator</a> builds the link with a pre-filled message, and <a href="/blog/add-whatsapp-chat-button-shopify">adding a WhatsApp chat button to Shopify</a> compares the free and app options.</p>
 
 <h2>What good consent wording looks like</h2>
 <ul>
@@ -1586,7 +1642,7 @@ ${verdict(`<p><strong>To convert COD to prepaid on WhatsApp for a Shopify India 
 
 ${faqHtml(COD_PREPAID_FAQS)}
 
-<p>Related: <a href="/blog/cod-rto-benchmark-india-2026">the 2026 India COD and RTO benchmark</a>, <a href="/blog/how-to-reduce-rto-with-whatsapp-cod-confirmation">the WhatsApp COD confirmation SOP</a>, <a href="/blog/whatsapp-business-api-pricing-india">India WhatsApp API pricing</a> and <a href="/blog/profitable-ecommerce-business-india">net profit after COD and RTO</a>.</p>
+<p>Related: <a href="/blog/rto-meaning-ecommerce">what RTO means in ecommerce</a>, <a href="/blog/cod-rto-benchmark-india-2026">the 2026 India COD and RTO benchmark</a>, <a href="/blog/how-to-reduce-rto-with-whatsapp-cod-confirmation">the WhatsApp COD confirmation SOP</a>, <a href="/blog/whatsapp-business-api-pricing-india">India WhatsApp API pricing</a> and <a href="/blog/profitable-ecommerce-business-india">net profit after COD and RTO</a>.</p>
 <p class="mkt-blog-footnote">Sources, all read 21 October 2026. COD remittance fee (₹30 or 1.5%), amortised RTO cost (₹38 per shipped order at 30% RTO) and the itemised ₹180 to ₹240 loss per returned parcel: <a href="https://shipping.amazon.in/blog/true-cost-of-shipping-per-order-india" target="_blank" rel="noopener noreferrer">Amazon Shipping India's true cost per order breakdown</a> and its <a href="https://shipping.amazon.in/blog/what-is-rto-how-to-reduce-return-to-origin" target="_blank" rel="noopener noreferrer">RTO guide</a>. Festive COD and prepaid return rates: <a href="https://unicommerce.com/india-d2c-report-2026-april/" target="_blank" rel="noopener noreferrer">Unicommerce's India D2C Report 2026</a>. GoKwik's COD and prepaid RTO figures and the intent split: ClickPost and GoKwik data compiled by <a href="https://www.firstresort.in/blogs/research/fashion-ecommerce-returns-rto-india-2026" target="_blank" rel="noopener noreferrer">First Resort</a>. Per-message rates, template categories and the 31 December 2026 INR billing deadline: <a href="https://developers.facebook.com/docs/whatsapp/pricing/" target="_blank" rel="noopener noreferrer">Meta's WhatsApp Business Platform pricing documentation</a>. Gateway fees vary by provider and order value. Cost bands are national indicative ranges, not your rate card.</p>
 `,
   },
@@ -2655,6 +2711,199 @@ ${faqHtml(WATI_PRICING_FAQS)}
 ${faqHtml(AISENSY_PRICING_FAQS)}
 
 <p class="mkt-blog-footnote">Sources, read 12 November 2026: <a href="https://aisensy.com/pricing" target="_blank" rel="noopener noreferrer">AiSensy pricing page</a> (monthly, quarterly and yearly views, per-message rates and add-ons) and <a href="https://apps.shopify.com/aisensy-whatsapp-marketing" target="_blank" rel="noopener noreferrer">AiSensy on the Shopify App Store</a>. Meta’s India rates from <a href="https://developers.facebook.com/docs/whatsapp/pricing/" target="_blank" rel="noopener noreferrer">Meta’s pricing documentation</a>, effective 1 October 2026. <a href="https://www.updatrr.com/pricing" target="_blank" rel="noopener noreferrer">Updatrr pricing</a> and <a href="https://apps.shopify.com/topedge-ai" target="_blank" rel="noopener noreferrer">TopEdge AI on the Shopify App Store</a> read 9 November 2026. Exchange rate from the <a href="https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/index.en.html" target="_blank" rel="noopener noreferrer">ECB</a> for 6 November 2026. TopEdge AI prices from our <a href="/pricing">pricing page</a>.</p>
+`,
+  },
+  {
+    id: 65,
+    title: 'RTO in Ecommerce: Meaning, Full Form and Cost',
+    description:
+      'RTO in ecommerce means Return to Origin: a parcel the buyer never accepts comes back to you. What one RTO costs, RTO vs NDR, and 5 ways to cut it.',
+    summary: [
+      'RTO in ecommerce means Return to Origin: an undelivered or refused parcel travels back to the seller. On a COD order you collect nothing and pay both shipping legs, ₹180 to ₹240 in direct logistics per parcel per Amazon Shipping India, or ₹450 to ₹900 once acquisition spend is counted.',
+      'An NDR (Non-Delivery Report) comes first and can still be saved. Nearly every NDR left unresolved for 36 hours becomes an RTO.',
+      'COD carries the risk: COD RTO runs near 26% against under 2% for prepaid, per GoKwik via First Resort.',
+      'The fixes act before dispatch or inside the NDR window: WhatsApp COD confirmation, an address check, a prepaid offer, fast NDR follow-up and rules for risky pincodes.',
+    ],
+    slug: 'rto-meaning-ecommerce',
+    date: '2026-11-15',
+    updated: '2026-11-15',
+    readTime: '6 min',
+    category: 'COD',
+    author: 'Moksh Patel',
+    image: '/marketing/solutions/sol-cod-rto-saas.jpg',
+    imageAlt:
+      'An RTO risk panel with confirmed, prepaid and at-risk COD counts, beside a WhatsApp thread confirming a buyer’s shipping address',
+    keywords: [
+      'rto in ecommerce',
+      'rto full form in ecommerce',
+      'rto meaning in ecommerce',
+      'return to origin',
+      'rto vs ndr',
+      'rto cost per order india',
+    ],
+    faqs: RTO_MEANING_FAQS,
+    content: `
+<details class="mkt-blog-verdict" open>
+<summary>Direct answer</summary>
+<p><strong>RTO in ecommerce means Return to Origin</strong>: an undelivered or refused parcel travels back to the seller. On a Cash on Delivery order you collect nothing and still pay both shipping legs: <strong>₹180 to ₹240</strong> in direct logistics per parcel, or <strong>₹450 to ₹900</strong> once the ad spend behind the order is counted.</p>
+</details>
+
+<h2>What RTO means in ecommerce</h2>
+<p>RTO is courier shorthand for <strong>Return to Origin</strong>. The courier could not deliver the parcel, so it is routed back to you, and on a COD order no money changes hands. The usual causes: the buyer refuses at the door, cannot be reached, gave an incomplete address, or changed their mind in transit. GoKwik’s data, compiled by <a href="https://www.firstresort.in/blogs/research/fashion-ecommerce-returns-rto-india-2026" target="_blank" rel="noopener noreferrer">First Resort</a>, puts <strong>60% to 70% of RTOs down to low buying intent</strong> rather than logistics, which is why most fixes happen before dispatch.</p>
+<p>COD is where the risk sits: COD RTO runs near <strong>26%</strong> against under 2% for prepaid, per the same source. <a href="https://unicommerce.com/india-d2c-report-2026-april/" target="_blank" rel="noopener noreferrer">Unicommerce’s India D2C Report 2026</a> puts national RTO at <strong>39.2%</strong> in November 2025, down to 21.0% by March 2026 among brands that verify orders before dispatch. Category bands are in our <a href="/blog/cod-rto-benchmark-india-2026">2026 COD and RTO benchmark</a>.</p>
+
+<h2>RTO vs NDR vs customer return</h2>
+<p>Three terms get mixed up on courier dashboards. They happen at different points, and only one of them still lets you save the order.</p>
+<div class="mkt-blog-table-wrap">
+<table>
+<thead><tr><th>Term</th><th>Full form</th><th>When it happens</th><th>Did the buyer accept the parcel?</th><th>What you can still do</th></tr></thead>
+<tbody>
+<tr><td><strong>NDR</strong></td><td>Non-Delivery Report</td><td>The courier logs a failed delivery attempt</td><td>Not yet</td><td>Reach the buyer, fix the address or reschedule before the next attempt</td></tr>
+<tr><td><strong>RTO</strong></td><td>Return to Origin</td><td>Attempts have failed, or the buyer refused at the door</td><td>No</td><td>Nothing for this order: the parcel is already coming back</td></tr>
+<tr><td><strong>Customer return</strong></td><td>Return or reverse pickup</td><td>After delivery, under your returns policy</td><td>Yes</td><td>Refund, exchange or store credit, as your policy says</td></tr>
+</tbody>
+</table>
+</div>
+<p>An NDR comes first, and an NDR left unresolved becomes an RTO. <a href="https://shipping.amazon.in/blog/what-is-ndr-in-shipping-india" target="_blank" rel="noopener noreferrer">Amazon Shipping India’s NDR guide</a> states that nearly every failed delivery not resolved within <strong>36 hours</strong> of the NDR being raised ends in cancellation and RTO.</p>
+
+<h3>From failed attempt to RTO</h3>
+<ol>
+<li><strong>The attempt fails.</strong> The courier raises an NDR with a reason.</li>
+<li><strong>Within 2 to 4 hours.</strong> The window the same guide recommends for reaching the buyer.</li>
+<li><strong>24 to 48 hours later.</strong> The next attempt. Most couriers make two to three in total.</li>
+<li><strong>36 hours unresolved.</strong> Nearly every such shipment is cancelled and starts back to you as an RTO.</li>
+</ol>
+
+<h2>What one RTO costs: a worked example</h2>
+<p>Take one COD order that the buyer refuses at the door. <a href="https://shipping.amazon.in/blog/what-is-rto-how-to-reduce-return-to-origin" target="_blank" rel="noopener noreferrer">Amazon Shipping India’s RTO guide</a> itemises the direct logistics loss on that parcel.</p>
+<div class="mkt-blog-table-wrap">
+<table>
+<thead><tr><th>Cost line</th><th>Per RTO parcel</th></tr></thead>
+<tbody>
+<tr><td>Forward shipping, not refunded</td><td>₹60 to ₹100</td></tr>
+<tr><td>Reverse logistics</td><td>₹50 to ₹80</td></tr>
+<tr><td>Repackaging and quality check</td><td>₹20 to ₹40</td></tr>
+<tr><td>Inventory holding in transit</td><td>₹10 to ₹20</td></tr>
+<tr><td><strong>Direct logistics loss</strong></td><td><strong>₹180 to ₹240</strong></td></tr>
+<tr><td>Ad spend that acquired the buyer</td><td>₹450 to ₹680</td></tr>
+<tr><td><strong>Total for one refused order</strong></td><td><strong>₹630 to ₹920</strong></td></tr>
+</tbody>
+</table>
+</div>
+<p>The acquisition line is also from Amazon Shipping India, which notes its logistics total leaves it out; adding the two is our arithmetic. ClickPost’s fully loaded figure, ₹450 to ₹900 via First Resort, lands in the same range.</p>
+<p>Now scale it. A store shipping <strong>500 COD orders a month at a 25% RTO rate</strong> gets 125 parcels back. At ₹200 direct each, that is <strong>₹25,000 a month</strong> before any ad spend is written off. Confirming all 500 orders with a WhatsApp utility message at <a href="https://developers.facebook.com/docs/whatsapp/pricing/" target="_blank" rel="noopener noreferrer">Meta’s India rate</a> of ₹0.1150 costs <strong>₹57.50</strong>. Put your own order count and COD share into the <a href="/tools/rto-cost-calculator">RTO cost calculator</a>.</p>
+
+<h2>5 ways to reduce RTO on COD orders</h2>
+<p>Each fix acts before the parcel ships or inside the NDR window. The full operating playbook, with message timings and warehouse hold rules, is <a href="/blog/how-to-reduce-rto-with-whatsapp-cod-confirmation">our WhatsApp COD confirmation SOP</a>.</p>
+<ol>
+<li><strong>Confirm every COD order on WhatsApp.</strong> Send an approved utility template within minutes of checkout with Confirm and Cancel buttons, and hold the parcel until a reply lands. At ₹0.1150 a message it is the cheapest line on this page. <a href="/features/cod-confirmation">TopEdge AI’s COD confirmation</a> is on every plan.</li>
+<li><strong>Check the address before dispatch.</strong> Ask for a landmark or a corrected address in the same thread, above all for buyers in pincodes that often return. The <a href="/whatsapp-journey-examples/cod-confirmation">COD confirmation journey</a> shows the message and each reply branch.</li>
+<li><strong>Move COD buyers to prepaid.</strong> A prepaid order is worth about ₹68 more than the same order on COD once the remittance fee and RTO risk are counted. Send the offer as a separate message after confirmation, because a discount inside the confirmation turns a ₹0.1150 utility message into a ₹0.8631 marketing one. See <a href="/blog/cod-to-prepaid-whatsapp-shopify-india">COD to prepaid on WhatsApp</a>; on TopEdge AI it starts on the Growth plan.</li>
+<li><strong>Follow up every NDR within hours.</strong> Message the buyer as soon as the NDR lands, offering a new slot or an address fix, and treat anything still silent at hour 24 as an escalation. Keeping buyers updated with tracking before the first attempt, as in the <a href="/whatsapp-journey-examples/order-status-updates">order status journey</a>, means fewer surprises at the door.</li>
+<li><strong>Set rules for risky pincodes.</strong> RTO varies widely by city: Amazon Shipping India recorded the lowest, 18%, in Vadodara, with Patna, Jaipur and Guwahati among the high end. Pull RTO by pincode from your courier reports and, for the worst ones, require a confirmation or prepaid payment before you ship. The <a href="/blog/cod-rto-benchmark-india-2026#rto-by-verification">benchmark</a> has the spread.</li>
+</ol>
+<p>Speed matters too: orders first attempted within one to two days had <strong>22%</strong> RTO in Amazon Shipping India’s data, against <strong>35%</strong> after five days or more. Message costs by category are in <a href="/blog/whatsapp-business-api-pricing-india">WhatsApp Business API pricing in India</a>.</p>
+
+${faqHtml(RTO_MEANING_FAQS)}
+
+<p class="mkt-blog-footnote">Sources, read 21 October 2026: Amazon Shipping India’s <a href="https://shipping.amazon.in/blog/what-is-rto-how-to-reduce-return-to-origin" target="_blank" rel="noopener noreferrer">RTO guide</a>, <a href="https://shipping.amazon.in/blog/what-is-ndr-in-shipping-india" target="_blank" rel="noopener noreferrer">NDR guide</a> and <a href="https://shipping.amazon.in/blog/true-cost-of-shipping-per-order-india" target="_blank" rel="noopener noreferrer">true cost per order breakdown</a> (behind the ₹68 prepaid figure), <a href="https://unicommerce.com/india-d2c-report-2026-april/" target="_blank" rel="noopener noreferrer">Unicommerce’s India D2C Report 2026</a>, <a href="https://www.firstresort.in/blogs/research/fashion-ecommerce-returns-rto-india-2026" target="_blank" rel="noopener noreferrer">First Resort</a> (ClickPost and GoKwik figures) and <a href="https://developers.facebook.com/docs/whatsapp/pricing/" target="_blank" rel="noopener noreferrer">Meta’s pricing documentation</a>. The ₹630 to ₹920 total and the 500-order month are our arithmetic.</p>
+`,
+  },
+  {
+    id: 66,
+    title: 'Add a WhatsApp Chat Button to Shopify (3 Ways)',
+    description:
+      'Add a WhatsApp chat button to your Shopify store three ways: a free wa.me link, a theme code snippet or an app widget. Steps, code and a comparison.',
+    summary: [
+      'There are three ways to add a WhatsApp chat button to Shopify: a free wa.me link placed in your menu or pages, a few lines of code pasted into theme.liquid, or an app widget.',
+      'The link and the code button are free and load no script. Make both in our free WhatsApp link generator, no sign-up.',
+      'An app widget costs money and adds a script, but it can capture the shopper’s number with consent and set rules for when it shows. TopEdge AI’s widget is on every plan, from ₹1,999 a month plus GST.',
+      'Whichever you pick, chats arrive on the number the link points to: a phone on the WhatsApp Business app, or a shared inbox if the number is on the WhatsApp Business Platform.',
+    ],
+    slug: 'add-whatsapp-chat-button-shopify',
+    date: '2026-11-15',
+    updated: '2026-11-15',
+    readTime: '5 min',
+    category: 'Guides',
+    author: 'Moksh Patel',
+    image: '/marketing/features/shopify-whatsapp.jpg',
+    imageWebp: '/marketing/features/shopify-whatsapp.webp',
+    imageAlt:
+      'A shared WhatsApp inbox where a shopper’s question about their order sits beside the Shopify order, a ₹1,359 Cash on Delivery order',
+    keywords: [
+      'whatsapp chat button shopify',
+      'add whatsapp to shopify',
+      'whatsapp button for website',
+      'whatsapp button shopify',
+      'shopify whatsapp chat button free',
+      'whatsapp widget shopify',
+    ],
+    faqs: WHATSAPP_BUTTON_FAQS,
+    content: `
+<details class="mkt-blog-verdict" open>
+<summary>Direct answer</summary>
+<p>To add a WhatsApp chat button to Shopify for free, make a wa.me link in our <a href="/tools/whatsapp-link-generator">WhatsApp link generator</a>, copy the button code, and paste it just before <code>&lt;/body&gt;</code> in your theme’s <code>theme.liquid</code> file. If you also want to capture the shopper’s number with consent, use an app widget instead.</p>
+</details>
+
+<p>A note on who wrote this: <a href="/about">TopEdge AI</a> sells one of the app options below. The first two methods are free and need nothing from us.</p>
+
+<h2>Before you start: the wa.me link</h2>
+<p>Every WhatsApp button is a link underneath. <a href="https://faq.whatsapp.com/5913398998672934" target="_blank" rel="noopener noreferrer">WhatsApp’s click to chat help page</a> gives the format: <code>https://wa.me/</code> followed by your full number in international format, with no plus sign, zeroes, brackets or dashes. Add <code>?text=</code> and a URL-encoded message to pre-fill the chat. An Indian number looks like this:</p>
+<p><code>https://wa.me/919876543210?text=Hi%21%20I%20have%20a%20question%20about%20my%20order.</code></p>
+<p>The <a href="/tools/whatsapp-link-generator">free link generator</a> builds and encodes it, and gives you a QR code and the button code too.</p>
+
+<h2>Method 1: a free link in your menu or pages</h2>
+<p>The fastest option, and it needs no code.</p>
+<ol>
+<li>Make your link in the <a href="/tools/whatsapp-link-generator">WhatsApp link generator</a> and copy it.</li>
+<li>In Shopify admin, open your menus (<strong>Content</strong>, then <strong>Menus</strong>, or <strong>Online Store</strong>, then <strong>Navigation</strong> in older admins), open your main or footer menu, and add an item called “Chat on WhatsApp” with your link as the destination.</li>
+<li>For product pages, if your theme’s product template has a text or button block, add the link there, near Add to cart.</li>
+</ol>
+<p>Use the same link in your Instagram bio and order emails. Our <a href="/blog/whatsapp-opt-in-shopify-india">WhatsApp opt-in guide</a> covers what you may send to people who message you this way.</p>
+
+<h2>Method 2: a floating chat button in theme code</h2>
+<p>This gives you the green round button in the corner of every page, still free.</p>
+<ol>
+<li>Enter your number and message in the <a href="/tools/whatsapp-link-generator">link generator</a> and click <strong>Copy code</strong> under “Add a WhatsApp chat button to your Shopify store”.</li>
+<li>In Shopify admin, go to <strong>Online Store</strong>, then <strong>Themes</strong>.</li>
+<li>Click the three dots next to your live theme and choose <strong>Edit code</strong>.</li>
+<li>Open <code>theme.liquid</code> and paste the code just before the closing <code>&lt;/body&gt;</code> tag.</li>
+<li>Save, then open your store on a phone and tap the button to test it.</li>
+</ol>
+<p>The generator’s code is a styled link with an inline WhatsApp icon. Stripped down, it is this:</p>
+<pre style="white-space:pre-wrap;overflow-wrap:anywhere"><code>&lt;a href=&quot;https://wa.me/919876543210?text=Hi&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;
+   aria-label=&quot;Chat with us on WhatsApp&quot;
+   style=&quot;position:fixed;right:20px;bottom:20px;z-index:9999&quot;&gt;Chat on WhatsApp&lt;/a&gt;</code></pre>
+<p>Duplicate your theme before editing so you can roll back, and paste the code again if you switch themes. It loads no script, so it adds none of the blocking app code <a href="https://shopify.dev/docs/storefronts/themes/best-practices/performance" target="_blank" rel="noopener noreferrer">Shopify’s performance guidance</a> tells you to defer. The same snippet works on any website whose layout file you can edit.</p>
+
+<h2>Method 3: an app widget</h2>
+<p>An app installs the button without code. Free chat-button apps exist on the Shopify App Store, and many WhatsApp marketing apps include a widget.</p>
+<p>The <a href="/features/opt-in-tools">TopEdge AI chat widget</a> is a floating chat button that can capture the shopper’s phone number before it opens WhatsApp, and saves that number with a consent timestamp to your subscriber list. You choose when it shows (delay, exit intent, scroll, add to cart) and on which pages. It is on every plan, including Launch, with one live widget per store.</p>
+<p>The honest trade-off: it is not free. TopEdge AI starts at ₹1,999 a month plus GST on our site, or $19 a month on the <a href="https://apps.shopify.com/topedge-ai" target="_blank" rel="noopener noreferrer">Shopify App Store</a>, with a 14-day trial capped at 20 orders and 200 sends. It pays only if you will message the numbers you capture. If you just want people to reach you, Method 2 does the job.</p>
+
+<h2>The three methods compared</h2>
+<div class="mkt-blog-table-wrap">
+<table>
+<thead><tr><th>Line</th><th>Free link</th><th>Theme code button</th><th>TopEdge AI widget</th></tr></thead>
+<tbody>
+<tr><td>Cost</td><td>Free</td><td>Free</td><td>From ₹1,999 a month plus GST, 14-day trial</td></tr>
+<tr><td>Code needed</td><td>None</td><td>Paste into theme.liquid</td><td>None, installed with the app</td></tr>
+<tr><td>Floating button on every page</td><td>No, a menu or page link</td><td>Yes</td><td>Yes</td></tr>
+<tr><td>Loads a script</td><td>No</td><td>No</td><td>Yes</td></tr>
+<tr><td>Captures the number with consent</td><td>No</td><td>No</td><td>Yes, with a timestamp</td></tr>
+<tr><td>Rules for when it shows</td><td>No</td><td>No, always on</td><td>Delay, exit intent, scroll, add to cart, page rules</td></tr>
+<tr><td>Survives a theme change</td><td>Yes</td><td>No, paste again</td><td>Yes</td></tr>
+<tr><td>Best for</td><td>Bio links, emails, packaging</td><td>Any store that wants a chat button today</td><td>Stores that will message the numbers they collect</td></tr>
+</tbody>
+</table>
+</div>
+
+<h2>Where the chats land</h2>
+<p>On the WhatsApp Business app, chats arrive on one phone. On a WhatsApp Business Platform number, as with TopEdge AI, they land in a <a href="/blog/whatsapp-shared-inbox-shopify-order-context">shared inbox with the Shopify order beside each chat</a>. Replies are service messages, and from 1 October 2026 the first 1,000 a month per number are free under <a href="/blog/whatsapp-business-api-pricing-india">Meta’s India pricing</a>. Comparing apps that bundle a widget? See <a href="/blog/best-whatsapp-apps-for-shopify">the best WhatsApp apps for Shopify</a>.</p>
+
+${faqHtml(WHATSAPP_BUTTON_FAQS)}
+
+<p class="mkt-blog-footnote">Sources: <a href="https://faq.whatsapp.com/5913398998672934" target="_blank" rel="noopener noreferrer">WhatsApp’s click to chat help page</a>, read 15 November 2026; <a href="https://shopify.dev/docs/storefronts/themes/best-practices/performance" target="_blank" rel="noopener noreferrer">Shopify’s theme performance best practices</a>; <a href="https://developers.facebook.com/docs/whatsapp/pricing/" target="_blank" rel="noopener noreferrer">Meta’s pricing documentation</a>, effective 1 October 2026. TopEdge AI prices from our <a href="/pricing">pricing page</a>.</p>
 `,
   },
 ];

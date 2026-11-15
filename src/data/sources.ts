@@ -61,6 +61,15 @@ export const SOURCES = {
       'Businesses may message a person only where that person gave their number and gave opt-in permission to receive messages. The business is responsible for the opt-in method. Last updated 23 September 2026.',
     verified: '2026-10-21',
   },
+  whatsappClickToChat: {
+    id: 'whatsappClickToChat',
+    url: 'https://faq.whatsapp.com/5913398998672934',
+    label: 'WhatsApp’s click to chat help page',
+    publisher: 'WhatsApp',
+    claim:
+      'Titled "How to use click to chat". States click to chat "allows you to begin a chat with someone without having their phone number saved". Format: "Use https://wa.me/<number> where the <number> is a full phone number in international format" and "Omit any zeroes, brackets, or dashes when adding the phone number in international format" (use https://wa.me/1XXXXXXXXXX, not https://wa.me/+001-(XXX)XXXXXXX). Pre-filled message: https://wa.me/whatsappphonenumber?text=urlencodedtext, and "To create a link with just a pre-filled message, use https://wa.me/?text=urlencodedtext". "Click to chat works on both your phone and WhatsApp Web."',
+    verified: '2026-11-15',
+  },
   shopifyAbandoned: {
     id: 'shopifyAbandoned',
     url: 'https://help.shopify.com/manual/orders/abandoned-checkouts',

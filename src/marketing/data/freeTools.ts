@@ -46,7 +46,7 @@ export const FREE_TOOLS: FreeTool[] = [
   {
     slug: 'whatsapp-link-generator',
     href: '/tools/whatsapp-link-generator',
-    title: 'WhatsApp link and QR code generator',
+    title: 'WhatsApp link generator with free QR code',
     short: 'WhatsApp link generator',
     body: 'Create a click-to-chat link and QR code with a pre-filled message, plus a chat button you can paste into your Shopify theme.',
     tag: 'Generator',

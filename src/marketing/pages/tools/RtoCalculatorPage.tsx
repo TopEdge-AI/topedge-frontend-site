@@ -77,6 +77,14 @@ const BLOCKS: TopicBlock[] = [
     body: 'Every message, the timing, what happens on each reply, and what it costs per order.',
     link: { label: 'Open the journey', href: '/whatsapp-journey-examples/cod-confirmation' },
   },
+  {
+    kind: 'callout',
+    id: 'rto-meaning',
+    tone: 'note',
+    title: 'New to RTO and NDR?',
+    body: 'RTO means Return to Origin: a parcel the buyer never accepted, coming back to you. Read how it differs from an NDR and a customer return, and what one refused COD order costs line by line.',
+    link: { label: 'What RTO means in ecommerce', href: '/blog/rto-meaning-ecommerce' },
+  },
 ];
 
 export default function RtoCalculatorPage() {

@@ -121,6 +121,8 @@ export const BLOG_SLUGS = [
   'cod-to-prepaid-whatsapp-shopify-india',
   'best-shopify-upsell-apps',
   'shopify-seo-experts',
+  'rto-meaning-ecommerce',
+  'add-whatsapp-chat-button-shopify',
 ];
 
 /** Soft-404 shell — prerendered to dist/404.html (Netlify 404 document). Not in sitemap. */

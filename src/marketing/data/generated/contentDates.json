@@ -1,15 +1,15 @@
 {
-  "compareTwoWay": "2026-11-12",
+  "compareTwoWay": "2026-11-15",
   "compareThreeWay": "2026-11-12",
-  "blogPosts": "2026-11-12",
-  "featurePages": "2026-11-10",
+  "blogPosts": "2026-11-15",
+  "featurePages": "2026-11-15",
   "pricing": "2026-11-10",
-  "home": "2026-11-12",
+  "home": "2026-11-15",
   "legal": "2026-11-10",
   "customers": "2026-11-09",
   "contact": "2026-11-10",
-  "about": "2026-11-10",
-  "integrations": "2026-11-10",
+  "about": "2026-11-15",
+  "integrations": "2026-11-15",
   "blogBySlug": {
     "whatsapp-abandoned-cart-recovery-shopify": "2026-10-30",
     "shopify-whatsapp-automation-what-to-automate-first": "2026-10-21",
@@ -45,8 +45,10 @@
     "cod-to-prepaid-whatsapp-shopify-india": "2026-10-22",
     "best-shopify-app-for-abandoned-cart-recovery-india": "2026-11-07",
     "ecommerce-funnel-drop-off-benchmarks-visitor-identity-resolution": "2026-11-01",
-    "interakt-pricing-india": "2026-11-09",
-    "wati-pricing-india": "2026-11-10",
-    "aisensy-pricing-india": "2026-11-12"
+    "interakt-pricing-india": "2026-11-15",
+    "wati-pricing-india": "2026-11-15",
+    "aisensy-pricing-india": "2026-11-15",
+    "rto-meaning-ecommerce": "2026-11-15",
+    "add-whatsapp-chat-button-shopify": "2026-11-15"
   }
 }
