@@ -277,7 +277,7 @@ export const blogPostsRoundups: BlogPost[] = [
     content: `
 <details class="mkt-blog-verdict" open>
 <summary>Direct answer</summary>
-<p>There is no single <strong>best Shopify upsell app</strong>, because the category is four products: a product-page tool, a cart tool, a checkout tool and a post-purchase tool. For one app covering all four stages without a paywall between them, our pick is <strong>Candy Rack</strong>. For the page after payment only, <strong>ReConvert</strong> and <strong>AfterSell</strong> have four to twelve times the reviews. The cheapest competent start is <strong>Selleasy</strong> at ₹854.28 a month.</p>
+<p>There is no single <strong>best Shopify upsell app</strong>: the category is four products, for the product page, cart, checkout and post-purchase. For all four stages without a paywall between them, our pick is <strong>Candy Rack</strong>. For post-purchase only, <strong>ReConvert</strong> and <strong>AfterSell</strong> have four to twelve times the reviews. The cheapest competent start is <strong>Selleasy</strong> at ₹854.28 a month.</p>
 </details>
 
 <p><strong>Every rating, review count, launch date and price below was read off the app's own Shopify App Store listing on 3 November 2026.</strong> One thing to understand about the prices. Opened from India, the App Store shows rupees and labels them plainly: "Prices in INR are estimates for your location, based on the current exchange rate (1 INR = 0.0105 USD). You'll be billed in your store's billing currency, at the exchange rate on the day of each charge." So the rupee figures here are <em>Shopify's own estimates</em>, not native rupee list prices, and we give the dollar equivalent at Shopify's stated rate beside them. Re-check both before you buy.</p>
@@ -782,7 +782,7 @@ ${faqHtml(UPSELL_FAQS)}
     content: `
 <details class="mkt-blog-verdict" open>
 <summary>Direct answer</summary>
-<p>The fastest way to find a good <strong>Shopify SEO expert</strong> is five questions, not a list: what happens to <code>/collections/all</code>, whether Shopify canonicalises <code>?variant=</code> URLs, what the default <code>robots.txt</code> leaves crawlable, the limits of <code>robots.txt.liquid</code>, and how they measure organic revenue when GA4 and Shopify disagree. The ten people and resources below are ranked by how much verifiable Shopify-specific method you can read before you pay.</p>
+<p>The fastest way to find a good <strong>Shopify SEO expert</strong> is five questions: what happens to <code>/collections/all</code>, whether Shopify canonicalises <code>?variant=</code> URLs, what the default <code>robots.txt</code> leaves crawlable, the limits of <code>robots.txt.liquid</code>, and how they measure organic revenue when GA4 and Shopify disagree. The ten picks below rank by how much verifiable Shopify-specific method you can read before paying.</p>
 </details>
 
 <p><strong>Checked 3 November 2026.</strong> The technical facts in this guide come from Shopify's and Google's own documentation, and the canonical and robots.txt behaviour was verified by reading the raw HTML of live production Shopify stores on that date. Every claim about a person links to the page it came from.</p>

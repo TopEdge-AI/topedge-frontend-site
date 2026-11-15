@@ -5,6 +5,11 @@
 
 export const TITLE_MIN = 15;
 export const TITLE_MAX = 65;
+/**
+ * The brand suffix is appended only when the whole rendered title still fits
+ * in 60 characters (15 Nov 2026 rule: rendered titles stay at or under 60).
+ */
+export const TITLE_SUFFIX_MAX = 60;
 export const DESC_MIN = 110;
 export const DESC_MAX = 160;
 

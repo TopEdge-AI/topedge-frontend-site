@@ -5,7 +5,7 @@ import {
   OG_IMAGE_ALT_DEFAULT,
   OG_IMAGE_HEIGHT,
   OG_IMAGE_WIDTH,
-  TITLE_MAX,
+  TITLE_SUFFIX_MAX,
 } from '../data/seoContracts';
 
 const BRAND_SUFFIX = ' | TopEdge AI';
@@ -25,7 +25,7 @@ const BRAND_SUFFIX = ' | TopEdge AI';
 export function withBrandSuffix(title: string): string {
   if (title.includes('TopEdge')) return title;
   const full = `${title}${BRAND_SUFFIX}`;
-  return [...full].length <= TITLE_MAX ? full : title;
+  return [...full].length <= TITLE_SUFFIX_MAX ? full : title;
 }
 
 type FaqItem = { question: string; answer: string };

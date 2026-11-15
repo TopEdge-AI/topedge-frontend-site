@@ -5,6 +5,8 @@
 
 export const TITLE_MIN = 15;
 export const TITLE_MAX = 65;
+/** Brand suffix only when the rendered title stays at or under 60. */
+export const TITLE_SUFFIX_MAX = 60;
 export const DESC_MIN = 110;
 export const DESC_MAX = 160;
 
@@ -19,7 +21,7 @@ export function withBrandSuffix(title) {
   const t = String(title || '');
   if (t.includes('TopEdge')) return t;
   const full = `${t}${BRAND_SUFFIX}`;
-  return [...full].length <= TITLE_MAX ? full : t;
+  return [...full].length <= TITLE_SUFFIX_MAX ? full : t;
 }
 
 export function assertSnippetBudgets(title, description) {

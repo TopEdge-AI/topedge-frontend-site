@@ -9,11 +9,11 @@ import { blogPostsRoundups } from './blogPostsRoundups';
 export const blogPosts: BlogPost[] = [
   {
     id: 1,
-    title: 'Shopify WhatsApp Abandoned Cart Recovery India',
+    title: 'WhatsApp Abandoned Cart Recovery: Shopify India',
     description:
-      'WhatsApp abandoned cart Shopify recovery, step by step: cart vs checkout events, message timing, template rules, opt-in and what a sequence costs in India.',
+      'WhatsApp abandoned cart recovery for Shopify India: cart vs checkout events, timing, template rules, opt-in, and why a 3-step sequence costs ₹2.59 at most.',
     summary: [
-      'Cart abandonment runs around 70% (Baymard Institute, averaged over 50 studies), so recovery is not an edge case: it is most of your traffic.',
+      'WhatsApp abandoned cart recovery on Shopify is a two- or three-step sequence of Meta-approved templates, triggered by the abandoned checkout event and cancelled the moment the shopper buys. With cart abandonment around 70% (Baymard Institute), it covers most of your traffic. TopEdge AI runs it as a Journey on Shopify’s checkout abandoned trigger.',
       "A reminder is a marketing template at ₹0.8631 per delivered message on Meta's India card, so a full three-step sequence costs ₹2.59 at most.",
       'Purchase suppression is what makes the maths work: every shopper who buys after message 1 cancels messages 2 and 3, so you pay ₹0.8631 instead of ₹2.59.',
     ],
@@ -48,7 +48,7 @@ export const blogPosts: BlogPost[] = [
       {
         question: 'How do I recover abandoned carts on Shopify?',
         answer:
-          'Start with Shopify’s abandoned cart and abandoned checkout reporting and Messaging automations so eligible customers get a reminder with a resume link. Then add a multi-step sequence (email and/or WhatsApp) with suppression when an order is placed. Fix checkout friction in parallel. Recovery cannot outrun surprise fees or payment failures forever.',
+          'Turn on Shopify’s own abandoned checkout reminder, then add a two- or three-step WhatsApp or email sequence with a resume link that stops when an order is placed. Fix checkout friction in parallel, because recovery cannot outrun surprise fees or payment failures.',
       },
       {
         question: 'Can WhatsApp recover Shopify abandoned carts?',
@@ -61,9 +61,9 @@ export const blogPosts: BlogPost[] = [
           'Shopify records incomplete carts/checkouts. Your automation waits, then sends a message containing product context and a path back to checkout. The session is marked recovered when the customer completes the order, whether through your link or on their own.',
       },
       {
-        question: 'How can I automate abandoned cart recovery?',
+        question: 'How do I automate WhatsApp abandoned cart reminders on Shopify without getting banned?',
         answer:
-          'Connect Shopify events to a messaging workflow with waits, template sends, purchase suppression, and reply routing. Keep email and WhatsApp coordinated so customers are not hit twice with the same reminder.',
+          'Message only shoppers who opted in, use Meta-approved templates, and cap the sequence at two or three reminders that stop the moment an order is placed. Connect Shopify’s checkout event to a workflow with waits, purchase suppression and reply routing. Messaging people who never opted in is what drags down the quality rating that limits your sending.',
       },
       {
         question: 'Is WhatsApp better than email for abandoned cart recovery?',
@@ -71,14 +71,14 @@ export const blogPosts: BlogPost[] = [
           'It depends on opt-in coverage and reply handling. WhatsApp often wins on attention and conversation. Email still wins on rich layouts and reach when WhatsApp consent is missing. Most stores should use both with shared suppression.',
       },
       {
-        question: 'What should an abandoned cart recovery message contain?',
+        question: 'What should an abandoned cart WhatsApp message say?',
         answer:
-          'Product details, one clear checkout CTA, relevant reassurance (shipping/returns/payment), and an invitation to reply. Discounts are optional, not required.',
+          'The product the shopper left, one clear checkout button, a line of reassurance on shipping, returns or payment, and an invitation to reply. A discount is optional, not required.',
       },
       {
         question: 'How much does WhatsApp abandoned cart recovery cost in India?',
         answer:
-          'Cart reminders are marketing templates, which cost ₹0.8631 per delivered message on Meta’s India rate card before 18% GST. One reminder costs ₹0.8631 and a full three-step sequence costs ₹2.59, but only if the shopper ignores all three. When they complete checkout after the first nudge, purchase suppression cancels the remaining messages and you pay ₹0.8631. On a ₹1,000 average order value, the worst case is about a quarter of one percent of the cart being chased.',
+          '₹0.8631 per delivered reminder, the marketing template rate on Meta’s India card before 18% GST, so a full three-step sequence costs ₹2.59 at most. Purchase suppression cancels the remaining messages when a shopper buys after the first nudge, so most recovered carts cost ₹0.8631.',
       },
       {
         question: 'How many cart recovery messages should a Shopify store send?',
@@ -361,7 +361,7 @@ export const blogPosts: BlogPost[] = [
 <div class="mkt-blog-faq">
 <details open>
 <summary>How do I recover abandoned carts on Shopify?</summary>
-<p>Start with Shopify’s abandoned cart and abandoned checkout reporting and Messaging automations so eligible customers get a reminder with a resume link. Then add a multi-step sequence (email and/or WhatsApp) with suppression when an order is placed. Fix checkout friction in parallel. Recovery cannot outrun surprise fees or payment failures forever.</p>
+<p>Turn on Shopify’s own abandoned checkout reminder, then add a two- or three-step WhatsApp or email sequence with a resume link that stops when an order is placed. Fix checkout friction in parallel, because recovery cannot outrun surprise fees or payment failures.</p>
 </details>
 <details>
 <summary>Can WhatsApp recover Shopify abandoned carts?</summary>
@@ -372,16 +372,20 @@ export const blogPosts: BlogPost[] = [
 <p>Shopify records incomplete carts/checkouts. Your automation waits, then sends a message containing product context and a path back to checkout. The session is marked recovered when the customer completes the order, whether through your link or on their own.</p>
 </details>
 <details>
-<summary>How can I automate abandoned cart recovery?</summary>
-<p>Connect Shopify events to a messaging workflow with waits, template sends, purchase suppression, and reply routing. Keep email and WhatsApp coordinated so customers are not hit twice with the same reminder.</p>
+<summary>How do I automate WhatsApp abandoned cart reminders on Shopify without getting banned?</summary>
+<p>Message only shoppers who opted in, use Meta-approved templates, and cap the sequence at two or three reminders that stop the moment an order is placed. Connect Shopify’s checkout event to a workflow with waits, purchase suppression and reply routing. Messaging people who never opted in is what drags down the quality rating that limits your sending.</p>
 </details>
 <details>
 <summary>Is WhatsApp better than email for abandoned cart recovery?</summary>
 <p>It depends on opt-in coverage and reply handling. WhatsApp often wins on attention and conversation. Email still wins on rich layouts and reach when WhatsApp consent is missing. Most stores should use both with shared suppression.</p>
 </details>
 <details>
-<summary>What should an abandoned cart recovery message contain?</summary>
-<p>Product details, one clear checkout CTA, relevant reassurance (shipping/returns/payment), and an invitation to reply. Discounts are optional, not required.</p>
+<summary>What should an abandoned cart WhatsApp message say?</summary>
+<p>The product the shopper left, one clear checkout button, a line of reassurance on shipping, returns or payment, and an invitation to reply. A discount is optional, not required.</p>
+</details>
+<details>
+<summary>How much does WhatsApp abandoned cart recovery cost in India?</summary>
+<p>₹0.8631 per delivered reminder, the marketing template rate on Meta’s India card before 18% GST, so a full three-step sequence costs ₹2.59 at most. Purchase suppression cancels the remaining messages when a shopper buys after the first nudge, so most recovered carts cost ₹0.8631.</p>
 </details>
 <details>
 <summary>How many cart recovery messages should a Shopify store send?</summary>
@@ -1935,20 +1939,20 @@ export const blogPosts: BlogPost[] = [
 <thead>
 <tr>
 <th>What you are comparing</th>
-<th>Zoko</th>
 <th>TopEdge AI</th>
+<th>Zoko</th>
 </tr>
 </thead>
 <tbody>
-<tr><td><strong>Entry price</strong></td><td>Starter $49.99/mo, then Plus $79.99 and Elite $139.99 (about ₹4,687, ₹7,501 and ₹13,127 on its Shopify listing)</td><td>Launch ₹1,999/mo + 18% GST on topedgeai.com, or $19/mo billed by Shopify from the App Store</td></tr>
-<tr><td><strong>Billing unit</strong></td><td>USD, plus per-conversation metering on Starter and above each plan’s bucket</td><td>Sized by Shopify orders a month (100, 800 or 1,500). INR on topedgeai.com, USD through Shopify</td></tr>
-<tr><td><strong>Agent seats</strong></td><td>Unlimited on Starter. 5 on Plus, then <strong>$15 per extra agent</strong> a month. 10 on Elite, then $12</td><td>No per-seat charge on any plan</td></tr>
-<tr><td><strong>Conversation bucket</strong></td><td>Starter has none and meters <strong>$0.015 per conversation</strong>; Plus includes 5,000/mo then $0.00199 each</td><td>No conversation metering</td></tr>
-<tr><td><strong>AI and custom flows</strong></td><td>AI bot add-ons from <strong>$24.99/mo</strong>, plus about <strong>$0.09 per resolved conversation</strong> on the Guru agent; custom flows <strong>$5.99 per flow per month</strong>; Instagram $9.99/mo</td><td>BYOK AI at about ₹0.10 to ₹0.30 a reply and unlimited flows included</td></tr>
-<tr><td><strong>Meta message cost</strong></td><td>Meta’s rate card, paid directly to Meta. Starter adds $0.015 per conversation</td><td>0% markup, billed by Meta to your own Business Account</td></tr>
-<tr><td><strong>COD confirmation and COD to prepaid</strong></td><td>Both are free pre-built flows on every plan. Reconfirmation with auto-cancel is a $5.99 premium flow</td><td>COD confirmation on every plan. COD to prepaid journey on Growth and Scale only</td></tr>
-<tr><td><strong>Shopify App Store rating</strong></td><td>4.9 from 475 reviews</td><td>No reviews yet</td></tr>
-<tr><td><strong>What it is best at</strong></td><td>Catalog in chat and conversational selling, which it has done longest</td><td>Predictable INR cost and India COD and RTO operations</td></tr>
+<tr><td><strong>Entry price</strong></td><td>Launch ₹1,999/mo + 18% GST on topedgeai.com, or $19/mo billed by Shopify from the App Store</td><td>Starter $49.99/mo, then Plus $79.99 and Elite $139.99 (about ₹4,687, ₹7,501 and ₹13,127 on its Shopify listing)</td></tr>
+<tr><td><strong>Billing unit</strong></td><td>Sized by Shopify orders a month (100, 800 or 1,500). INR on topedgeai.com, USD through Shopify</td><td>USD, plus per-conversation metering on Starter and above each plan’s bucket</td></tr>
+<tr><td><strong>Agent seats</strong></td><td>No per-seat charge on any plan</td><td>Unlimited on Starter. 5 on Plus, then <strong>$15 per extra agent</strong> a month. 10 on Elite, then $12</td></tr>
+<tr><td><strong>Conversation bucket</strong></td><td>No conversation metering</td><td>Starter has none and meters <strong>$0.015 per conversation</strong>; Plus includes 5,000/mo then $0.00199 each</td></tr>
+<tr><td><strong>AI and custom flows</strong></td><td>BYOK AI at about ₹0.10 to ₹0.30 a reply and unlimited flows included</td><td>AI bot add-ons from <strong>$24.99/mo</strong>, plus about <strong>$0.09 per resolved conversation</strong> on the Guru agent; custom flows <strong>$5.99 per flow per month</strong>; Instagram $9.99/mo</td></tr>
+<tr><td><strong>Meta message cost</strong></td><td>0% markup, billed by Meta to your own Business Account</td><td>Meta’s rate card, paid directly to Meta. Starter adds $0.015 per conversation</td></tr>
+<tr><td><strong>COD confirmation and COD to prepaid</strong></td><td>COD confirmation on every plan. COD to prepaid journey on Growth and Scale only</td><td>Both are free pre-built flows on every plan. Reconfirmation with auto-cancel is a $5.99 premium flow</td></tr>
+<tr><td><strong>Shopify App Store rating</strong></td><td>No reviews yet</td><td>4.9 from 475 reviews</td></tr>
+<tr><td><strong>What it is best at</strong></td><td>Predictable INR cost and India COD and RTO operations</td><td>Catalog in chat and conversational selling, which it has done longest</td></tr>
 </tbody>
 </table>
 </div>
@@ -2109,16 +2113,16 @@ export const blogPosts: BlogPost[] = [
 <thead>
 <tr>
 <th>What you are comparing</th>
-<th>Getgabs</th>
 <th>TopEdge AI</th>
+<th>Getgabs</th>
 </tr>
 </thead>
 <tbody>
-<tr><td><strong>Entry price</strong></td><td>Free to install, then Plus ₹1,033.72/mo and Pro ₹5,544.49/mo on the Shopify listing, or Basic ₹699, Plus ₹1,499, Pro ₹4,499 on getgabs.com (8 Nov 2026)</td><td>Launch ₹1,999/mo, or ₹1,599/mo billed yearly, + 18% GST</td></tr>
-<tr><td><strong>Price consistency</strong></td><td>The two surfaces disagree, so confirm which one your account is on</td><td>One published catalog, the same on /pricing and in the dashboard</td></tr>
-<tr><td><strong>Meta message cost</strong></td><td>0% markup on every plan, with Meta’s ₹0.8631 and ₹0.115 India rates listed on getgabs.com</td><td>0% markup, billed by Meta to your own Business Account</td></tr>
-<tr><td><strong>COD to prepaid</strong></td><td>Not a named native workflow on the listing</td><td>Native journey on Growth and Scale; COD confirmation on every plan</td></tr>
-<tr><td><strong>Depth past messaging</strong></td><td>Chatbot and API messaging</td><td>Unified customer identity, warranty hub, visitor pixel and India P&L in the same workspace</td></tr>
+<tr><td><strong>Entry price</strong></td><td>Launch ₹1,999/mo, or ₹1,599/mo billed yearly, + 18% GST</td><td>Free to install, then Plus ₹1,033.72/mo and Pro ₹5,544.49/mo on the Shopify listing, or Basic ₹699, Plus ₹1,499, Pro ₹4,499 on getgabs.com (8 Nov 2026)</td></tr>
+<tr><td><strong>Price consistency</strong></td><td>One published catalog, the same on /pricing and in the dashboard</td><td>The two surfaces disagree, so confirm which one your account is on</td></tr>
+<tr><td><strong>Meta message cost</strong></td><td>0% markup, billed by Meta to your own Business Account</td><td>0% markup on every plan, with Meta’s ₹0.8631 and ₹0.115 India rates listed on getgabs.com</td></tr>
+<tr><td><strong>COD to prepaid</strong></td><td>Native journey on Growth and Scale; COD confirmation on every plan</td><td>Not a named native workflow on the listing</td></tr>
+<tr><td><strong>Depth past messaging</strong></td><td>Unified customer identity, warranty hub, visitor pixel and India P&L in the same workspace</td><td>Chatbot and API messaging</td></tr>
 </tbody>
 </table>
 </div>
@@ -2129,10 +2133,10 @@ export const blogPosts: BlogPost[] = [
 <table>
 <thead><tr><th>Tool</th><th>Price, as read</th><th>Suits</th></tr></thead>
 <tbody>
+<tr><td><strong>TopEdge AI</strong></td><td>₹1,999, ₹3,999 and ₹6,499 a month plus GST, 0% on Meta’s rates</td><td>COD-heavy Indian Shopify stores up to 1,500 orders a month</td></tr>
 <tr><td><strong>Updatrr</strong></td><td>Growth $29.99 a month, no markup stated (read 9 Nov 2026)</td><td>Shopify stores that want one simple app. <a href="/blog/updatrr-alternative-shopify-india">Updatrr comparison</a></td></tr>
 <tr><td><strong>Interakt</strong></td><td>Shopify plans from ₹1,973.48 a month, rates 10% to 39% above Meta (read 9 Nov 2026)</td><td>Teams that want Instagram in the same inbox. <a href="/blog/interakt-alternative-shopify-india">Interakt alternatives</a></td></tr>
 <tr><td><strong>Dondy</strong></td><td>Free widget, Pro $6.99 a month, about ₹1.77 a marketing message to India (read 8 Nov 2026)</td><td>Stores that mostly need a chat button. <a href="/blog/dondy-alternative-shopify-india">Dondy alternatives</a></td></tr>
-<tr><td><strong>TopEdge AI</strong></td><td>₹1,999, ₹3,999 and ₹6,499 a month plus GST, 0% on Meta’s rates</td><td>COD-heavy Indian Shopify stores up to 1,500 orders a month</td></tr>
 </tbody>
 </table>
 </div>
@@ -2288,16 +2292,16 @@ export const blogPosts: BlogPost[] = [
 <thead>
 <tr>
 <th>What you are comparing</th>
-<th>Kanal</th>
 <th>TopEdge AI</th>
+<th>Kanal</th>
 </tr>
 </thead>
 <tbody>
-<tr><td><strong>Entry price</strong></td><td>Pro €89/mo, Scale €149, Business €350, Agency €1,900 (Sep 2026)</td><td>Launch ₹1,999/mo, or ₹1,599/mo billed yearly, + 18% GST</td></tr>
-<tr><td><strong>Currency risk</strong></td><td>EUR, so your India cost moves with the exchange rate</td><td>INR, so the number on the invoice is the number you budgeted</td></tr>
-<tr><td><strong>Meta message cost</strong></td><td>Plan fee plus Meta conversation charges</td><td>0% markup, billed by Meta to your own Business Account</td></tr>
-<tr><td><strong>COD and RTO</strong></td><td>Built for global WhatsApp and Klaviyo, not for cash on delivery</td><td>COD confirmation on every plan, COD to prepaid on Growth and Scale</td></tr>
-<tr><td><strong>What it is best at</strong></td><td>Global brands running WhatsApp alongside Klaviyo email</td><td>India-only stores where COD is most of the order book</td></tr>
+<tr><td><strong>Entry price</strong></td><td>Launch ₹1,999/mo, or ₹1,599/mo billed yearly, + 18% GST</td><td>Pro €89/mo, Scale €149, Business €350, Agency €1,900 (Sep 2026)</td></tr>
+<tr><td><strong>Currency risk</strong></td><td>INR, so the number on the invoice is the number you budgeted</td><td>EUR, so your India cost moves with the exchange rate</td></tr>
+<tr><td><strong>Meta message cost</strong></td><td>0% markup, billed by Meta to your own Business Account</td><td>Plan fee plus Meta conversation charges</td></tr>
+<tr><td><strong>COD and RTO</strong></td><td>COD confirmation on every plan, COD to prepaid on Growth and Scale</td><td>Built for global WhatsApp and Klaviyo, not for cash on delivery</td></tr>
+<tr><td><strong>What it is best at</strong></td><td>India-only stores where COD is most of the order book</td><td>Global brands running WhatsApp alongside Klaviyo email</td></tr>
 </tbody>
 </table>
 </div>
@@ -2748,14 +2752,14 @@ export const blogPosts: BlogPost[] = [
 <h2>Dondy vs TopEdge AI, side by side</h2>
 <div class="mkt-blog-table-wrap">
 <table>
-<thead><tr><th>Line</th><th>Dondy (read 8 Nov 2026)</th><th>TopEdge AI</th></tr></thead>
+<thead><tr><th>Line</th><th>TopEdge AI</th><th>Dondy (read 8 Nov 2026)</th></tr></thead>
 <tbody>
-<tr><td>Entry price</td><td>Free widget, Pro $6.99 a month</td><td>₹1,999 a month plus GST, or $19 on the App Store</td></tr>
-<tr><td>Automations</td><td>From Power Automation at $79.99 a month</td><td>On every plan</td></tr>
-<tr><td>Marketing message to India</td><td>About ₹1.77, 60% above Meta’s US dollar card</td><td>Meta’s ₹0.8631, 0% added</td></tr>
-<tr><td>COD</td><td>COD verification is listed. We found no COD to prepaid builder on its listing</td><td>COD confirmation on every plan, COD to prepaid on Growth and Scale</td></tr>
-<tr><td>Order limit</td><td>None published</td><td>100, 800 and 1,500 a month by plan</td></tr>
-<tr><td>Shopify reviews</td><td>4.9 from 835, Built for Shopify</td><td>None yet</td></tr>
+<tr><td>Entry price</td><td>₹1,999 a month plus GST, or $19 on the App Store</td><td>Free widget, Pro $6.99 a month</td></tr>
+<tr><td>Automations</td><td>On every plan</td><td>From Power Automation at $79.99 a month</td></tr>
+<tr><td>Marketing message to India</td><td>Meta’s ₹0.8631, 0% added</td><td>About ₹1.77, 60% above Meta’s US dollar card</td></tr>
+<tr><td>COD</td><td>COD confirmation on every plan, COD to prepaid on Growth and Scale</td><td>COD verification is listed. We found no COD to prepaid builder on its listing</td></tr>
+<tr><td>Order limit</td><td>100, 800 and 1,500 a month by plan</td><td>None published</td></tr>
+<tr><td>Shopify reviews</td><td>None yet</td><td>4.9 from 835, Built for Shopify</td></tr>
 </tbody>
 </table>
 </div>

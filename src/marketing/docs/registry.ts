@@ -59,11 +59,11 @@ export function docMetaDescription(article: DocArticle): string {
   return `${cut.slice(0, cut.lastIndexOf(' ')).replace(/[\s,;:.]+$/, '')}…`;
 }
 
-/** `<title>`: "<title> | TopEdge Docs", inside the 65-character budget. */
+/** `<title>`: "<title> | TopEdge AI Docs", only when the whole title fits in 60 characters. */
 export function docPageTitle(article: DocArticle): string {
   if (/TopEdge (AI )?Doc/i.test(article.title)) return article.title;
   const full = `${article.title} | TopEdge AI Docs`;
-  return [...full].length <= 65 ? full : article.title;
+  return [...full].length <= 60 ? full : article.title;
 }
 
 type SearchHit = { article: DocArticle; score: number };
