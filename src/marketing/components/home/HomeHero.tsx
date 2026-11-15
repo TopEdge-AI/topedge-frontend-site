@@ -18,23 +18,16 @@ export default function HomeHero() {
       <div className="home-hero__inner">
         <div className="home-hero__board">
           <div className="home-hero__mesh-fill" aria-hidden>
-            <picture>
-              <source
-                type="image/webp"
-                srcSet="/hero-mesh-640.webp 640w, /hero-mesh-960.webp 960w, /hero-mesh-1280.webp 1280w"
-                sizes="100vw"
-              />
-              <img
-                className="home-hero__mesh-img"
-                src="/hero-mesh.png"
-                alt=""
-                width={1280}
-                height={720}
-                decoding="async"
-                fetchPriority="low"
-                aria-hidden
-              />
-            </picture>
+            <img
+              className="home-hero__mesh-img"
+              src="/hero-aurora-preview.jpg"
+              alt=""
+              width={1024}
+              height={576}
+              decoding="async"
+              fetchPriority="low"
+              aria-hidden
+            />
           </div>
           <HeroRippleBackground />
           <div className="home-hero__edge-glow" aria-hidden />

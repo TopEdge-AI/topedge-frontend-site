@@ -1,7 +1,7 @@
 import { useMemo } from 'react';
 import RippleDistortion, { type RippleQuality } from './RippleDistortion';
 
-const HERO_MESH = '/hero-mesh.png';
+const HERO_MESH = '/hero-aurora-preview.jpg';
 
 function pickDeviceProfile(): {
   quality: RippleQuality;
