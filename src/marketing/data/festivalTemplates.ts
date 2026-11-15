@@ -127,31 +127,31 @@ export type FestivalCluster = {
 export const FESTIVAL_CLUSTERS: FestivalCluster[] = [
   {
     id: 'january',
-    label: 'January — new year and harvest',
+    label: 'January: new year and harvest',
     blurb:
       'Three sends inside four weeks, into an audience that just spent through December. Lean on gifting and restocking rather than discount depth.',
   },
   {
     id: 'spring',
-    label: 'February to April — spring and the regional new years',
+    label: 'February to April: spring and the regional new years',
     blurb:
       'The second-biggest gifting run of the year, and the one most brands skip. Holi, Eid and four regional new years land inside seven weeks.',
   },
   {
     id: 'mid-year',
-    label: 'May to August — the quiet half, and Rakhi',
+    label: 'May to August: the quiet half, and Rakhi',
     blurb:
       'Thin on volume except for Raksha Bandhan, which is a gifting festival with a hard delivery deadline and almost no competition in the inbox.',
   },
   {
     id: 'festive-quarter',
-    label: 'September to November — the festive quarter',
+    label: 'September to November: the festive quarter',
     blurb:
       'Nine festivals in ten weeks and the bulk of the Indian D2C year. Plan the whole run before Ganesh Chaturthi, because there is no spare week inside it.',
   },
   {
     id: 'december',
-    label: 'December — year end',
+    label: 'December: year end',
     blurb:
       'One festival, a long lead time and shoppers already in buying mode. The easiest campaign of the year to get right and the easiest to leave too late.',
   },
@@ -341,16 +341,16 @@ export const FESTIVALS: Festival[] = [
     h1Accent:
       'New Year',
     subtitle:
-      'Four free New Year WhatsApp templates you can copy, edit and submit to Meta — early access, gift picks, the sale and the greeting.',
+      'Four free New Year WhatsApp templates you can copy, edit and submit to Meta: early access, gift picks, the sale and the greeting.',
     answerFirst:
-      'A New Year campaign is four messages across the last week of December, not one on 1 January. The money moves before midnight — the 1st only needs the greeting.',
+      'A New Year campaign is four messages across the last week of December, not one on 1 January. The money moves before midnight: the 1st only needs the greeting.',
     peak:
       '26 December to 31 December. Demand collapses on 1 January itself, which is why the day-of message is a greeting rather than an offer.',
     buyerIntent:
-      'Nobody is buying a New Year gift. They are finishing December — spending what is left of a bonus, replacing something they have been putting off, or buying the thing they mean to start the year with. That makes it the one festival in the calendar where a self-purchase message outperforms a gifting one, and where "new year, new X" is doing real work rather than decorating a discount.',
+      'Nobody is buying a New Year gift. They are finishing December: spending what is left of a bonus, replacing something they have been putting off, or buying the thing they mean to start the year with. That makes it the one festival in the calendar where a self-purchase message outperforms a gifting one, and where "new year, new X" is doing real work rather than decorating a discount.',
     sells: [
       'Fitness, wellness and self-improvement categories, which peak harder here than at any other point in the year',
-      'Planners, journals and anything dated — a hard expiry built into the product',
+      'Planners, journals and anything dated: a hard expiry built into the product',
       'Apparel and footwear, on party and travel demand across the last week of December',
       'Gift cards, for the shopper who left it to the 31st',
     ],
@@ -367,7 +367,7 @@ export const FESTIVALS: Festival[] = [
       {
         question: 'Is a "Happy New Year" message to customers a marketing template?',
         answer:
-          'Yes. Meta classifies any message that is not about an existing order as marketing, greetings included, so a New Year wish is billed at ₹0.8631 in India rather than ₹0.1150. It is still worth sending — it is the send that keeps the list opted in — but budget it as marketing.',
+          'Yes. Meta classifies any message that is not about an existing order as marketing, greetings included, so a New Year wish is billed at ₹0.8631 in India rather than ₹0.1150. It is still worth sending, it is the send that keeps the list opted in, but budget it as marketing.',
       },
       {
         question: 'Can I send a New Year message to customers who bought during Diwali?',
@@ -403,9 +403,9 @@ export const FESTIVALS: Festival[] = [
     peak:
       '5 January to 13 January. Pongal runs four days in Tamil Nadu, so a South-heavy list has a longer tail than a West-heavy one.',
     buyerIntent:
-      'This is a home-and-family festival, not a gifting one. People are cleaning, cooking, buying new clothes for the house and sending sweets to relatives. The purchase is practical and the basket is small, which makes it a volume play rather than an AOV play — and an unusually good week for first-time buyers, because the price point people are willing to risk on a new brand is low.',
+      'This is a home-and-family festival, not a gifting one. People are cleaning, cooking, buying new clothes for the house and sending sweets to relatives. The purchase is practical and the basket is small, which makes it a volume play rather than an AOV play, and an unusually good week for first-time buyers, because the price point people are willing to risk on a new brand is low.',
     sells: [
-      'Kitchenware, cookware and serveware — Pongal is cooked in a new vessel',
+      'Kitchenware, cookware and serveware: Pongal is cooked in a new vessel',
       'Sweets, dry fruit and gift hampers, mostly sent rather than kept',
       'Traditional and ethnic wear, with a strong South India skew',
       'Home decor, rangoli and cleaning categories on the pre-festival clean',
@@ -414,7 +414,7 @@ export const FESTIVALS: Festival[] = [
     targeting:
       'Split the send by state if you have it. A Tamil Nadu customer reading "Happy Makar Sankranti" knows the message was not written for them, and the fix costs one variable.',
     watchOut:
-      'Do not send one message to the whole list calling it Makar Sankranti. The name is the festival in this week — Pongal, Lohri and Bihu are not nicknames for it — and a merchant who gets that wrong has told their South Indian customers they are an afterthought.',
+      'Do not send one message to the whole list calling it Makar Sankranti. The name is the festival in this week, Pongal, Lohri and Bihu are not nicknames for it, and a merchant who gets that wrong has told their South Indian customers they are an afterthought.',
     faqs: [
       {
         question: 'Should Pongal and Makar Sankranti be separate WhatsApp campaigns?',
@@ -462,7 +462,7 @@ export const FESTIVALS: Festival[] = [
     buyerIntent:
       'Yellow is the whole festival. People are buying yellow clothing to wear on the day, flowers and puja items for Saraswati, and in Bengal and Bihar it is also a school and student occasion, which pulls in stationery, books and anything a parent buys for a child starting something new.',
     sells: [
-      'Yellow and spring-palette apparel — the single most reliable seller of the week',
+      'Yellow and spring-palette apparel: the single most reliable seller of the week',
       'Puja essentials, flowers and decor',
       'Stationery, books and student categories, strongest in Bengal and Bihar',
       'Jewellery at accessible price points, worn with the yellow',
@@ -475,12 +475,12 @@ export const FESTIVALS: Festival[] = [
       {
         question: 'Is Vasant Panchami worth a WhatsApp campaign for a D2C store?',
         answer:
-          'For apparel, jewellery, decor and stationery, yes — the colour is specific, the date is fixed and the inbox is empty because most brands skip it. For categories with no yellow or puja angle, a single day-of greeting is enough.',
+          'For apparel, jewellery, decor and stationery, yes: the colour is specific, the date is fixed and the inbox is empty because most brands skip it. For categories with no yellow or puja angle, a single day-of greeting is enough.',
       },
       {
         question: 'Should the campaign say Vasant Panchami or Saraswati Puja?',
         answer:
-          'Saraswati Puja for Bengal and Bihar, Vasant Panchami or Basant Panchami everywhere else. It is the same day and the same templates — only the name in the opening line changes, so keep it as a variable rather than submitting two templates.',
+          'Saraswati Puja for Bengal and Bihar, Vasant Panchami or Basant Panchami everywhere else. It is the same day and the same templates: only the name in the opening line changes, so keep it as a variable rather than submitting two templates.',
       },
       {
         question: 'How many messages should a small festival like this get?',
@@ -516,7 +516,7 @@ export const FESTIVALS: Festival[] = [
     peak:
       'Four to five days before. Observance starts the previous evening, so anything that has to arrive should be delivered two days ahead.',
     buyerIntent:
-      'Buying is devotional and preparatory: puja items, rudraksha and spiritual jewellery, white and simple clothing for the temple visit, and fasting foods — fruit, sabudana, and the specific flours people keep for vrat days. It is a narrow set of categories with very high intent inside them and essentially zero intent outside them.',
+      'Buying is devotional and preparatory: puja items, rudraksha and spiritual jewellery, white and simple clothing for the temple visit, and fasting foods: fruit, sabudana, and the specific flours people keep for vrat days. It is a narrow set of categories with very high intent inside them and essentially zero intent outside them.',
     sells: [
       'Puja items, rudraksha, bead malas and spiritual jewellery',
       'Fasting and vrat food categories, including sabudana and vrat flours',
@@ -566,24 +566,24 @@ export const FESTIVALS: Festival[] = [
     h1Accent:
       'Holi',
     subtitle:
-      'Four free Holi WhatsApp templates you can copy, edit and submit to Meta — the biggest spring week, and the one most brands under-plan.',
+      'Four free Holi WhatsApp templates you can copy, edit and submit to Meta: the biggest spring week, and the one most brands under-plan.',
     answerFirst:
-      'India\'s biggest spring retail week, with an absolute deadline — nobody wants white clothes the day after. Bundle rather than discount, and stop promising delivery three days out.',
+      'India\'s biggest spring retail week, with an absolute deadline: nobody wants white clothes the day after. Bundle rather than discount, and stop promising delivery three days out.',
     peak:
-      'The five days before, with a sharp cut-off. Holi demand does not tail off — it stops.',
+      'The five days before, with a sharp cut-off. Holi demand does not tail off: it stops.',
     buyerIntent:
       'Two purchases happen: white clothes that are expected to be ruined, and gifting between families, mostly sweets and dry fruit. The white-clothing purchase is price-led and nearly disposable, which makes it the best Holi week for entry-priced SKUs and bundles. The gifting purchase is the one with a deadline, and it is the one your shipping promise has to be honest about.',
     sells: [
       'White and light-coloured apparel, especially kurtas and co-ords, bundled rather than sold singly',
       'Sweets, gujiya, thandai and dry-fruit hampers',
-      'Skin and hair protection — pre-Holi oils, after-colour cleansers, SPF',
+      'Skin and hair protection: pre-Holi oils, after-colour cleansers, SPF',
       'Colours, pichkaris and party supplies',
       'Sunglasses, slippers and anything cheap enough to risk at a Holi party',
     ],
     targeting:
       'Your whole opted-in list for the apparel and sweets angle, then a tighter segment for premium gifting. North India buys earlier and for longer than the South.',
     watchOut:
-      'Holi is the festival where a delivery promise gets a brand into trouble. Stop promising pre-Holi delivery three days before the date, not one — and say so in the flash-sale message. A parcel that lands on the day after is a refund request, not a sale.',
+      'Holi is the festival where a delivery promise gets a brand into trouble. Stop promising pre-Holi delivery three days before the date, not one, and say so in the flash-sale message. A parcel that lands on the day after is a refund request, not a sale.',
     faqs: [
       {
         question: 'When should a Holi WhatsApp campaign be sent?',
@@ -629,7 +629,7 @@ export const FESTIVALS: Festival[] = [
     peak:
       'The week before, with a spike on the day itself because the purchase date is the point.',
     buyerIntent:
-      'Two distinct behaviours. Households buy new clothes, decor and festive food for the day. Separately, a real segment of buyers treats the date as the right day to make a purchase they have already decided on — gold, appliances, vehicles, a home upgrade. That is the only festival in spring where a high-ticket SKU should be in the gift-guide message.',
+      'Two distinct behaviours. Households buy new clothes, decor and festive food for the day. Separately, a real segment of buyers treats the date as the right day to make a purchase they have already decided on: gold, appliances, vehicles, a home upgrade. That is the only festival in spring where a high-ticket SKU should be in the gift-guide message.',
     sells: [
       'Gold, silver and fine jewellery, on the auspicious-purchase behaviour',
       'Ethnic wear for the whole family, strongest in Maharashtra and Karnataka',
@@ -645,7 +645,7 @@ export const FESTIVALS: Festival[] = [
       {
         question: 'Are Ugadi and Gudi Padwa the same festival?',
         answer:
-          'Same day, different regions and names — Ugadi in Karnataka, Andhra Pradesh and Telangana, Gudi Padwa in Maharashtra, Navreh in Kashmir. For a campaign, treat it as one set of templates with the festival name as a variable and segment the audience by state.',
+          'Same day, different regions and names: Ugadi in Karnataka, Andhra Pradesh and Telangana, Gudi Padwa in Maharashtra, Navreh in Kashmir. For a campaign, treat it as one set of templates with the festival name as a variable and segment the audience by state.',
       },
       {
         question: 'Why is Ugadi a good day for high-value products?',
@@ -682,11 +682,11 @@ export const FESTIVALS: Festival[] = [
     subtitle:
       'Four free Eid-ul-Fitr WhatsApp templates timed around Ramadan and Chand Raat, ready to copy, edit and submit to Meta.',
     answerFirst:
-      'Shopping builds through Ramadan and spikes on Chand Raat. Start early access in the last ten days, and never hard-code the date — it moves on moon sighting.',
+      'Shopping builds through Ramadan and spikes on Chand Raat. Start early access in the last ten days, and never hard-code the date: it moves on moon sighting.',
     peak:
       'The last ten days of Ramadan, with a second spike on Chand Raat for anything that can be delivered same-day or collected.',
     buyerIntent:
-      'New clothes for the whole family are near-obligatory, which makes this the most reliable apparel festival in the spring calendar. Beyond that: gifting to children and relatives in cash and kind, attar and fragrance, dates and sweets for the table, and a real jewellery segment. Because the date is confirmed only on moon sighting, buyers build in a day of slack — and so should your delivery promise.',
+      'New clothes for the whole family are near-obligatory, which makes this the most reliable apparel festival in the spring calendar. Beyond that: gifting to children and relatives in cash and kind, attar and fragrance, dates and sweets for the table, and a real jewellery segment. Because the date is confirmed only on moon sighting, buyers build in a day of slack, and so should your delivery promise.',
     sells: [
       'Ethnic and occasion wear for the whole family, kurta sets and abayas included',
       'Attar, perfume and grooming',
@@ -697,7 +697,7 @@ export const FESTIVALS: Festival[] = [
     targeting:
       'Anyone who engaged with your Eid or Ramadan content last year, plus your Hyderabad, Lucknow, Kolkata, Malappuram and Mumbai metro segments. A nationwide send is fine for the greeting.',
     watchOut:
-      'The date moves on moon sighting, which can shift Eid by a day at a few hours notice. Never hard-code the date into the template body — keep it as a variable, or write the copy so it reads correctly on either day.',
+      'The date moves on moon sighting, which can shift Eid by a day at a few hours notice. Never hard-code the date into the template body: keep it as a variable, or write the copy so it reads correctly on either day.',
     faqs: [
       {
         question: 'When should an Eid WhatsApp campaign start?',
@@ -707,7 +707,7 @@ export const FESTIVALS: Festival[] = [
       {
         question: 'How do I handle Eid moving by a day?',
         answer:
-          'Keep the date out of the template body. The festival is confirmed on moon sighting, so put the date in a variable you fill at send time, or write copy that works either way — "before Eid" rather than a hard date.',
+          'Keep the date out of the template body. The festival is confirmed on moon sighting, so put the date in a variable you fill at send time, or write copy that works either way: "before Eid" rather than a hard date.',
       },
       {
         question: 'Is "Eid Mubarak" to customers a marketing message?',
@@ -794,13 +794,13 @@ export const FESTIVALS: Festival[] = [
     h1Accent:
       'Good Friday',
     subtitle:
-      'Four free Good Friday WhatsApp templates written for a solemn day — the one date where the right campaign is almost no campaign.',
+      'Four free Good Friday WhatsApp templates written for a solemn day: the one date where the right campaign is almost no campaign.',
     answerFirst:
       'A day of mourning, not a shopping occasion. Send one quiet greeting, move the offer to the Thursday or Easter Saturday, and never discount on the day.',
     peak:
       'There is no buying peak on the day. Commercial intent sits on the Thursday before and resumes on Easter Saturday.',
     buyerIntent:
-      'Observance rather than purchase: church attendance, fasting and abstaining from meat, and family meals. Any commerce in the window is Easter preparation happening early — Sunday clothing, gifts for children, groceries for the Easter meal.',
+      'Observance rather than purchase: church attendance, fasting and abstaining from meat, and family meals. Any commerce in the window is Easter preparation happening early: Sunday clothing, gifts for children, groceries for the Easter meal.',
     sells: [
       'Nothing on the day itself, for most categories',
       'Easter preparation bought early: Sunday outfits, children’s gifts, bakery pre-orders',
@@ -872,7 +872,7 @@ export const FESTIVALS: Festival[] = [
       {
         question: 'When should an Easter WhatsApp campaign be sent in India?',
         answer:
-          'Early access the week before, gift picks on the Wednesday or Thursday, the offer on Easter Saturday, and the greeting on Sunday morning. Skip Good Friday entirely — the two days either side carry all of the commercial intent.',
+          'Early access the week before, gift picks on the Wednesday or Thursday, the offer on Easter Saturday, and the greeting on Sunday morning. Skip Good Friday entirely: the two days either side carry all of the commercial intent.',
       },
       {
         question: 'Is Easter worth a campaign for an Indian D2C brand?',
@@ -909,11 +909,11 @@ export const FESTIVALS: Festival[] = [
     subtitle:
       'Four free Akshaya Tritiya WhatsApp templates for the highest-intent buying day in spring, ready to copy, edit and submit to Meta.',
     answerFirst:
-      'Not a gifting festival — an auspicious buying day, where making the purchase is the point. Intent arrives already formed, so protect your price instead of cutting it.',
+      'Not a gifting festival: an auspicious buying day, where making the purchase is the point. Intent arrives already formed, so protect your price instead of cutting it.',
     peak:
       'The three days before and the day itself. Unlike most festivals, the day of is the strongest, not the weakest, because the purchase date carries the meaning.',
     buyerIntent:
-      'The customer has already decided to buy something of value and is waiting for the right day. Gold and silver lead by a wide distance, but the behaviour extends to anything that reads as an investment or a lasting purchase — fine jewellery, watches, appliances, property deposits, even high-ticket furniture. Intent is high and price sensitivity is unusually low.',
+      'The customer has already decided to buy something of value and is waiting for the right day. Gold and silver lead by a wide distance, but the behaviour extends to anything that reads as an investment or a lasting purchase: fine jewellery, watches, appliances, property deposits, even high-ticket furniture. Intent is high and price sensitivity is unusually low.',
     sells: [
       'Gold and silver coins, bars and fine jewellery',
       'Digital gold and investment products',
@@ -929,7 +929,7 @@ export const FESTIVALS: Festival[] = [
       {
         question: 'Why is Akshaya Tritiya a good day for high-value sales?',
         answer:
-          'Because buyers hold a purchase back for it. The date is considered auspicious for anything that should grow in value, so intent arrives already formed and price sensitivity is lower than on any other spring date — which is why gold is the headline category.',
+          'Because buyers hold a purchase back for it. The date is considered auspicious for anything that should grow in value, so intent arrives already formed and price sensitivity is lower than on any other spring date, which is why gold is the headline category.',
       },
       {
         question: 'Should the Akshaya Tritiya message include a discount?',
@@ -939,7 +939,7 @@ export const FESTIVALS: Festival[] = [
       {
         question: 'Does Akshaya Tritiya work for brands that do not sell gold?',
         answer:
-          'Yes, if the product can be framed as lasting rather than consumable — appliances, furniture, watches, premium tools. The behaviour is about making a purchase that endures, so position the product that way rather than borrowing the gold language.',
+          'Yes, if the product can be framed as lasting rather than consumable: appliances, furniture, watches, premium tools. The behaviour is about making a purchase that endures, so position the product that way rather than borrowing the gold language.',
       },
     ],
   },
@@ -970,7 +970,7 @@ export const FESTIVALS: Festival[] = [
     peak:
       'The four days before. Hosting purchases have to arrive before the day, so the delivery cut-off is harder than at Eid-ul-Fitr.',
     buyerIntent:
-      'People are preparing to cook for and feed a large number of guests, and to distribute meat to family and neighbours. That puts cookware, large serveware, storage, spices and bulk grocery in demand, with apparel as a secondary purchase. The gifting impulse that drives Eid-ul-Fitr is much weaker — the sharing happens in food, not in parcels.',
+      'People are preparing to cook for and feed a large number of guests, and to distribute meat to family and neighbours. That puts cookware, large serveware, storage, spices and bulk grocery in demand, with apparel as a secondary purchase. The gifting impulse that drives Eid-ul-Fitr is much weaker: the sharing happens in food, not in parcels.',
     sells: [
       'Cookware, large pots, serveware and dining sets',
       'Spices, bulk grocery and cooking essentials',
@@ -981,7 +981,7 @@ export const FESTIVALS: Festival[] = [
     targeting:
       'The same segments as Eid-ul-Fitr, but with home, kitchen and grocery products in front rather than apparel and gifting.',
     watchOut:
-      'Reusing your Eid-ul-Fitr creative and copy. The two festivals share a name and almost nothing else commercially — one is about new clothes and gifts, the other about cooking for a crowd. A gifting message on Bakri Eid converts noticeably worse than a hosting one.',
+      'Reusing your Eid-ul-Fitr creative and copy. The two festivals share a name and almost nothing else commercially: one is about new clothes and gifts, the other about cooking for a crowd. A gifting message on Bakri Eid converts noticeably worse than a hosting one.',
     faqs: [
       {
         question: 'How is an Eid-ul-Adha campaign different from Eid-ul-Fitr?',
@@ -1027,16 +1027,16 @@ export const FESTIVALS: Festival[] = [
     peak:
       'The four days before Thiruvonam, after a slow build through the earlier days of the ten.',
     buyerIntent:
-      'Households are buying the Onakkodi — new clothes for every family member — along with everything the Onam Sadya needs: cookware, banana-leaf serveware, groceries and sweets. Home cleaning and decor matter too, because the house is prepared for guests. It is a family-wide purchase pattern, so basket sizes run larger than most single-day festivals.',
+      'Households are buying the Onakkodi, new clothes for every family member, along with everything the Onam Sadya needs: cookware, banana-leaf serveware, groceries and sweets. Home cleaning and decor matter too, because the house is prepared for guests. It is a family-wide purchase pattern, so basket sizes run larger than most single-day festivals.',
     sells: [
-      'Onakkodi apparel — kasavu sarees, mundus and new clothes for the whole family',
+      'Onakkodi apparel: kasavu sarees, mundus and new clothes for the whole family',
       'Cookware, serveware and dining essentials for the Sadya',
       'Groceries, banana chips, payasam mixes and sweets',
       'Home decor, flowers for the pookalam and cleaning products',
       'Gold, which has a strong Kerala-specific Onam demand',
     ],
     targeting:
-      'Kerala first, then Malayali communities in Bengaluru, Chennai, Mumbai and the Gulf — the diaspora segment buys and ships home, so give it a longer delivery runway.',
+      'Kerala first, then Malayali communities in Bengaluru, Chennai, Mumbai and the Gulf: the diaspora segment buys and ships home, so give it a longer delivery runway.',
     watchOut:
       'Treating Thiruvonam as the start of the window instead of the end. Most of the spending happens in the four days before it, so a campaign that opens on Thiruvonam is selling into a day when people are eating, not shopping.',
     faqs: [
@@ -1078,7 +1078,7 @@ export const FESTIVALS: Festival[] = [
     h1Accent:
       'Milad-un-Nabi',
     subtitle:
-      'Four free Milad-un-Nabi WhatsApp templates for an observance with almost no retail intent — usually a greeting is the whole campaign.',
+      'Four free Milad-un-Nabi WhatsApp templates for an observance with almost no retail intent: usually a greeting is the whole campaign.',
     answerFirst:
       'An observance marked by processions, readings and charity, not shopping. For almost every store the right campaign is one respectful greeting and nothing else.',
     peak:
@@ -1140,7 +1140,7 @@ export const FESTIVALS: Festival[] = [
     peak:
       'Seven to three days before. Demand dies the moment your delivery promise can no longer reach the recipient.',
     buyerIntent:
-      'Someone is buying a gift for a sibling, often in another city, and the decision is genuinely difficult — which is why the gift-guide message outperforms every other send in this campaign. Rakhis themselves are a low-value add-on; the gift beside them is where the money is. A large share of orders ship to an address that is not the buyer’s own.',
+      'Someone is buying a gift for a sibling, often in another city, and the decision is genuinely difficult, which is why the gift-guide message outperforms every other send in this campaign. Rakhis themselves are a low-value add-on; the gift beside them is where the money is. A large share of orders ship to an address that is not the buyer’s own.',
     sells: [
       'Gift hampers and curated sets, the highest-converting format of the week',
       'Sweets, chocolate and dry fruit',
@@ -1161,7 +1161,7 @@ export const FESTIVALS: Festival[] = [
       {
         question: 'What converts best for Raksha Bandhan?',
         answer:
-          'Curated gift sets and hampers. The buyer knows who they are buying for and does not know what to buy, so a shortlist removes the actual obstacle — which is why the gift-guide message is the strongest of the four in this campaign.',
+          'Curated gift sets and hampers. The buyer knows who they are buying for and does not know what to buy, so a shortlist removes the actual obstacle, which is why the gift-guide message is the strongest of the four in this campaign.',
       },
       {
         question: 'Should the Rakhi campaign be segmented by gender?',
@@ -1197,7 +1197,7 @@ export const FESTIVALS: Festival[] = [
     peak:
       'The three days before. There is no long build-up, but there is a distinct evening spike on the day for anything deliverable locally.',
     buyerIntent:
-      'Devotional and household, with a strong children’s angle: Krishna and Radha costumes for toddlers, laddu gopal idols and their outfits, jhula swings, puja items, and sweets — particularly makhan mishri and panjiri. In Maharashtra the Dahi Handi event adds an event-and-apparel layer that other states do not have.',
+      'Devotional and household, with a strong children’s angle: Krishna and Radha costumes for toddlers, laddu gopal idols and their outfits, jhula swings, puja items, and sweets: particularly makhan mishri and panjiri. In Maharashtra the Dahi Handi event adds an event-and-apparel layer that other states do not have.',
     sells: [
       'Laddu Gopal idols, outfits and jhula swings',
       'Children’s Krishna and Radha costumes',
@@ -1208,7 +1208,7 @@ export const FESTIVALS: Festival[] = [
     targeting:
       'Uttar Pradesh, Maharashtra, Gujarat, Rajasthan and Odisha, plus past buyers in devotional and children’s categories.',
     watchOut:
-      'Sending the greeting in the morning. The birth is observed at midnight, so an evening send is both better timed and far more likely to be read — and it is the one festival where the late slot is the correct one.',
+      'Sending the greeting in the morning. The birth is observed at midnight, so an evening send is both better timed and far more likely to be read, and it is the one festival where the late slot is the correct one.',
     faqs: [
       {
         question: 'What time should a Janmashtami message be sent?',
@@ -1254,7 +1254,7 @@ export const FESTIVALS: Festival[] = [
     peak:
       'The five days before Chaturthi, then a sustained plateau across the eleven days for food, decor and gifting.',
     buyerIntent:
-      'Households are preparing to host — an idol, decoration for the mandap, puja items, modak and prasad, and new clothes for the first day. Housing societies and mandals buy at scale for public pandals, which is a genuinely different, higher-volume buyer that most D2C campaigns never address. Gifting between visiting families runs through all eleven days.',
+      'Households are preparing to host: an idol, decoration for the mandap, puja items, modak and prasad, and new clothes for the first day. Housing societies and mandals buy at scale for public pandals, which is a genuinely different, higher-volume buyer that most D2C campaigns never address. Gifting between visiting families runs through all eleven days.',
     sells: [
       'Eco-friendly idols, mandap decor, flowers and lighting',
       'Modak, sweets and prasad boxes',
@@ -1265,7 +1265,7 @@ export const FESTIVALS: Festival[] = [
     targeting:
       'Maharashtra first and by a wide margin, then Karnataka, Goa, Telangana and Andhra Pradesh. Mumbai and Pune alone will justify a dedicated segment for most brands.',
     watchOut:
-      'Stopping the campaign after day one. The festival runs eleven days and the visiting, gifting and food demand continues the whole way — a sequence that ends on Chaturthi morning leaves the longest tail in the calendar unworked.',
+      'Stopping the campaign after day one. The festival runs eleven days and the visiting, gifting and food demand continues the whole way: a sequence that ends on Chaturthi morning leaves the longest tail in the calendar unworked.',
     faqs: [
       {
         question: 'How long does Ganesh Chaturthi demand last?',
@@ -1307,11 +1307,11 @@ export const FESTIVALS: Festival[] = [
     subtitle:
       'Four free Navratri and Durga Puja WhatsApp templates across nine days of demand, ready to copy, edit and submit to Meta.',
     answerFirst:
-      'Nine days, nine colours, and the only festival where sending more than four times is defensible. Gujarat buys garba wear, Bengal buys for Durga Puja — do not merge them.',
+      'Nine days, nine colours, and the only festival where sending more than four times is defensible. Gujarat buys garba wear, Bengal buys for Durga Puja: do not merge them.',
     peak:
       'The seven days before day one, then a sustained plateau across all nine days with a second lift before Ashtami.',
     buyerIntent:
-      'In Gujarat and the West it is garba: chaniya cholis, jewellery, footwear you can dance in, and a new outfit for several of the nine nights — a genuinely repeat-purchase pattern inside one festival. In Bengal it is Durga Puja, the largest event of the year, built around new clothes for the whole family, pandal visiting and eating out. Both run alongside a large nine-day fasting segment buying vrat food.',
+      'In Gujarat and the West it is garba: chaniya cholis, jewellery, footwear you can dance in, and a new outfit for several of the nine nights: a genuinely repeat-purchase pattern inside one festival. In Bengal it is Durga Puja, the largest event of the year, built around new clothes for the whole family, pandal visiting and eating out. Both run alongside a large nine-day fasting segment buying vrat food.',
     sells: [
       'Chaniya cholis, lehengas and garba wear, often more than one per customer',
       'Oxidised and statement jewellery, bangles and footwear',
@@ -1322,7 +1322,7 @@ export const FESTIVALS: Festival[] = [
     targeting:
       'Gujarat and Maharashtra for the garba angle, West Bengal for Durga Puja, with separate copy for each. The fasting segment cuts across both and can be targeted on past vrat-category purchases.',
     watchOut:
-      'Sending one message that calls the festival Navratri to a Bengali audience. Durga Puja is not Navratri under another name — the rituals, the shopping list and the days that matter are different, and a merged send reads as a brand that did not bother to look.',
+      'Sending one message that calls the festival Navratri to a Bengali audience. Durga Puja is not Navratri under another name: the rituals, the shopping list and the days that matter are different, and a merged send reads as a brand that did not bother to look.',
     faqs: [
       {
         question: 'Can I send more than four messages during Navratri?',
@@ -1366,9 +1366,9 @@ export const FESTIVALS: Festival[] = [
     answerFirst:
       'An auspicious day to start something, so vehicles, electronics and appliances convert. Keep the discount small: Dhanteras and Diwali are barely two weeks away.',
     peak:
-      'The two days before and the day itself, which is unusual — the auspicious-purchase behaviour makes the date the destination.',
+      'The two days before and the day itself, which is unusual: the auspicious-purchase behaviour makes the date the destination.',
     buyerIntent:
-      'Two separate buyers. One is making an auspicious start: a vehicle, electronics, tools, a first instalment on something large. The other is buying for the day — new clothes, sweets, puja items, and Bijoya gifting in Bengal. The first is where the margin is, and it is the buyer most Dussehra campaigns talk straight past.',
+      'Two separate buyers. One is making an auspicious start: a vehicle, electronics, tools, a first instalment on something large. The other is buying for the day: new clothes, sweets, puja items, and Bijoya gifting in Bengal. The first is where the margin is, and it is the buyer most Dussehra campaigns talk straight past.',
     sells: [
       'Vehicles, electronics, appliances and tools, on the auspicious-start behaviour',
       'Gold and silver as a token purchase',
@@ -1425,9 +1425,9 @@ export const FESTIVALS: Festival[] = [
     peak:
       'The two days before, with a heavy last-48-hour spike from gift buyers and a same-day evening tail.',
     buyerIntent:
-      'The self-purchase is ritual-driven and planned: specific colours, specific items, bought with time to spare. The gift purchase is emotional, last-minute and unusually price-insensitive — jewellery, a watch, flowers, a bag. The gift-guide message is the highest-value send in this campaign, and it should be written for someone who has left it late and wants to be told what to buy.',
+      'The self-purchase is ritual-driven and planned: specific colours, specific items, bought with time to spare. The gift purchase is emotional, last-minute and unusually price-insensitive: jewellery, a watch, flowers, a bag. The gift-guide message is the highest-value send in this campaign, and it should be written for someone who has left it late and wants to be told what to buy.',
     sells: [
-      'Jewellery — the single strongest gifting category of the day',
+      'Jewellery: the single strongest gifting category of the day',
       'Red, maroon and festive ethnic wear, sarees and suits',
       'Bangles, bindis, sindoor and solah shringar sets',
       'Karwa Chauth thali kits, sieves and puja sets',
@@ -1437,7 +1437,7 @@ export const FESTIVALS: Festival[] = [
     targeting:
       'Punjab, Haryana, Delhi NCR, Uttar Pradesh, Rajasthan and Madhya Pradesh. Then split the gift-guide send toward male customers, because that is the buyer the generic festive message always loses.',
     watchOut:
-      'Timing the day-of send in the morning. The fast runs sunrise to moonrise and the gift is given in the evening, so a message that lands at 9am reaches someone who is fasting, not shopping — and a same-day gifting nudge sent at 4pm catches the buyer who has not bought yet.',
+      'Timing the day-of send in the morning. The fast runs sunrise to moonrise and the gift is given in the evening, so a message that lands at 9am reaches someone who is fasting, not shopping, and a same-day gifting nudge sent at 4pm catches the buyer who has not bought yet.',
     faqs: [
       {
         question: 'Who should a Karwa Chauth campaign target?',
@@ -1483,7 +1483,7 @@ export const FESTIVALS: Festival[] = [
     peak:
       'The day itself, with a heavy morning and a strong muhurat window in the evening.',
     buyerIntent:
-      'The purchase is the ritual. Buying metal on Dhanteras is believed to bring prosperity, so the customer is not weighing whether to buy — they are choosing where. That makes availability, trust and a credible delivery or collection promise far more decisive than discount depth, and it is the one day where a sold-out message costs you more than a full-price one.',
+      'The purchase is the ritual. Buying metal on Dhanteras is believed to bring prosperity, so the customer is not weighing whether to buy: they are choosing where. That makes availability, trust and a credible delivery or collection promise far more decisive than discount depth, and it is the one day where a sold-out message costs you more than a full-price one.',
     sells: [
       'Gold and silver coins, bars and jewellery',
       'Digital gold and investment products',
@@ -1494,7 +1494,7 @@ export const FESTIVALS: Festival[] = [
     targeting:
       'The entire opted-in list, led by your highest-AOV segment. This is the one send of the year where putting the most expensive product in the first line is simply correct.',
     watchOut:
-      'Discounting into demand that already exists. Dhanteras buyers convert at full price, so use the flash-sale message for a making-charge waiver, a rate lock, an EMI option or a guaranteed delivery date — and keep the percentage off for a day when you actually need it.',
+      'Discounting into demand that already exists. Dhanteras buyers convert at full price, so use the flash-sale message for a making-charge waiver, a rate lock, an EMI option or a guaranteed delivery date, and keep the percentage off for a day when you actually need it.',
     faqs: [
       {
         question: 'Why is Dhanteras the biggest sales day in India?',
@@ -1504,7 +1504,7 @@ export const FESTIVALS: Festival[] = [
       {
         question: 'Should I discount on Dhanteras?',
         answer:
-          'Not deeply. Demand is already there, so a making-charge waiver, a gold-rate lock, EMI or a guaranteed delivery slot moves more volume than a percentage off — and protects the margin on the highest-AOV day you get.',
+          'Not deeply. Demand is already there, so a making-charge waiver, a gold-rate lock, EMI or a guaranteed delivery slot moves more volume than a percentage off, and protects the margin on the highest-AOV day you get.',
       },
       {
         question: 'How do Dhanteras and Diwali campaigns fit together?',
@@ -1534,13 +1534,13 @@ export const FESTIVALS: Festival[] = [
     h1Accent:
       'Diwali',
     subtitle:
-      'Four free Diwali WhatsApp templates you can copy, edit and submit to Meta — the biggest week of the year, and the most crowded inbox.',
+      'Four free Diwali WhatsApp templates you can copy, edit and submit to Meta: the biggest week of the year, and the most crowded inbox.',
     answerFirst:
       'The largest commercial event in India and the hardest inbox of the year to be read in. Start ten to twelve days out, and stop promising delivery in the final three.',
     peak:
       'Ten to four days before. The last three days belong to local delivery and quick commerce, not to anyone shipping across the country.',
     buyerIntent:
-      'Three buyers at once, and they want different things. Corporate and bulk gifting is decided earliest and has the largest basket. Family gifting is the volume driver and stalls on indecision. Self-purchase — clothes, decor, electronics, the home upgrade — runs through the whole window. A campaign that writes one message for all three reaches none of them properly.',
+      'Three buyers at once, and they want different things. Corporate and bulk gifting is decided earliest and has the largest basket. Family gifting is the volume driver and stalls on indecision. Self-purchase, clothes, decor, electronics, the home upgrade, runs through the whole window. A campaign that writes one message for all three reaches none of them properly.',
     sells: [
       'Gift hampers and corporate gifting, booked earliest and at the highest value',
       'Diyas, lights, rangoli and home decor',
@@ -1562,12 +1562,12 @@ export const FESTIVALS: Festival[] = [
       {
         question: 'How many WhatsApp messages should a Diwali campaign send?',
         answer:
-          'Four is the right shape: early access, gift picks, a discount and a greeting. What matters more than the count is that they go to different segments in waves — the same four messages blasted to the entire list on the same days perform far worse.',
+          'Four is the right shape: early access, gift picks, a discount and a greeting. What matters more than the count is that they go to different segments in waves: the same four messages blasted to the entire list on the same days perform far worse.',
       },
       {
         question: 'What does a Diwali WhatsApp campaign cost?',
         answer:
-          'All four templates are marketing, billed by Meta at ₹0.8631 per delivered message in India, so about ₹3.45 to reach one customer across the full sequence — roughly ₹3,450 for a list of a thousand. TopEdge adds no markup on Meta’s rates.',
+          'All four templates are marketing, billed by Meta at ₹0.8631 per delivered message in India, so about ₹3.45 to reach one customer across the full sequence: roughly ₹3,450 for a list of a thousand. TopEdge adds no markup on Meta’s rates.',
       },
       {
         question: 'Can I add a Diwali greeting to my order confirmation instead?',
@@ -1603,7 +1603,7 @@ export const FESTIVALS: Festival[] = [
     peak:
       'The two days after Diwali. There is no run-up to speak of, because Diwali occupies it.',
     buyerIntent:
-      'A sister is buying for a brother or the reverse, often while already together for Diwali, which means same-city and same-day delivery matter more here than in any other festival on this list. Baskets are moderate, decisions are fast, and the buyer is frequently someone who bought from you four days earlier — so send them something different, not the same hamper.',
+      'A sister is buying for a brother or the reverse, often while already together for Diwali, which means same-city and same-day delivery matter more here than in any other festival on this list. Baskets are moderate, decisions are fast, and the buyer is frequently someone who bought from you four days earlier: so send them something different, not the same hamper.',
     sells: [
       'Gift sets and hampers aimed at siblings',
       'Sweets, chocolate and dry fruit',
@@ -1612,19 +1612,19 @@ export const FESTIVALS: Festival[] = [
       'Tilak thalis and pooja kits as add-ons',
     ],
     targeting:
-      'Your Diwali non-buyers first — they have intent left and no purchase — then Diwali buyers with a deliberately different product set. North India, Maharashtra and Bengal carry most of the volume.',
+      'Your Diwali non-buyers first, they have intent left and no purchase, then Diwali buyers with a deliberately different product set. North India, Maharashtra and Bengal carry most of the volume.',
     watchOut:
       'Sending the same offer your Diwali flash sale carried. A customer who ignored it three days ago will ignore it again, and a customer who took it has already bought. Change the product, the format or the price point, or do not send.',
     faqs: [
       {
         question: 'Is Bhai Dooj worth a campaign so soon after Diwali?',
         answer:
-          'Yes, but a shorter one. It is genuine sibling gifting with a named recipient, so the gift-picks message converts — but your list has just been through the Diwali sequence, so two or three sends beat four and the offer has to be different from the Diwali one.',
+          'Yes, but a shorter one. It is genuine sibling gifting with a named recipient, so the gift-picks message converts, but your list has just been through the Diwali sequence, so two or three sends beat four and the offer has to be different from the Diwali one.',
       },
       {
         question: 'What should go in a Bhai Dooj gift message?',
         answer:
-          'A shortlist split by recipient — a few picks for brothers, a few for sisters — plus a clear delivery promise. Buyers are often in the same city as the recipient, so same-day or next-day options convert better than any discount.',
+          'A shortlist split by recipient, a few picks for brothers, a few for sisters, plus a clear delivery promise. Buyers are often in the same city as the recipient, so same-day or next-day options convert better than any discount.',
       },
       {
         question: 'Who should the Bhai Dooj message go to first?',
@@ -1660,7 +1660,7 @@ export const FESTIVALS: Festival[] = [
     peak:
       'The four to six days before Nahay Khay, because the ingredients and vessels have to be in hand before the observance starts.',
     buyerIntent:
-      'This is procurement, not shopping. A household observing Chhath needs a defined list of items by a specific day, and substitutes are not acceptable — which makes availability and delivery certainty worth far more than price. Demand is deep inside Bihar, Jharkhand and eastern Uttar Pradesh, and strong among migrant communities in Delhi and Mumbai who cannot source locally.',
+      'This is procurement, not shopping. A household observing Chhath needs a defined list of items by a specific day, and substitutes are not acceptable, which makes availability and delivery certainty worth far more than price. Demand is deep inside Bihar, Jharkhand and eastern Uttar Pradesh, and strong among migrant communities in Delhi and Mumbai who cannot source locally.',
     sells: [
       'Bamboo soop, daura and dala baskets',
       'Sugarcane, thekua ingredients, jaggery and wheat flour',
@@ -1669,9 +1669,9 @@ export const FESTIVALS: Festival[] = [
       'Seasonal fruit sets for the offering',
     ],
     targeting:
-      'Bihar, Jharkhand and eastern Uttar Pradesh, plus Delhi NCR and Mumbai migrant communities — the second group is the more valuable audience because local sourcing is harder for them.',
+      'Bihar, Jharkhand and eastern Uttar Pradesh, plus Delhi NCR and Mumbai migrant communities: the second group is the more valuable audience because local sourcing is harder for them.',
     watchOut:
-      'Offering substitutes or a generic festive bundle. The items are prescribed by the ritual, so a near-equivalent is not a sale, it is a return — and a brand that gets this wrong publicly loses a regional audience that is otherwise unusually loyal.',
+      'Offering substitutes or a generic festive bundle. The items are prescribed by the ritual, so a near-equivalent is not a sale, it is a return, and a brand that gets this wrong publicly loses a regional audience that is otherwise unusually loyal.',
     faqs: [
       {
         question: 'What do customers actually buy for Chhath Puja?',
@@ -1686,7 +1686,7 @@ export const FESTIVALS: Festival[] = [
       {
         question: 'Who is the best audience for a Chhath campaign?',
         answer:
-          'Bihar, Jharkhand and eastern Uttar Pradesh for volume, and migrant communities in Delhi NCR and Mumbai for value — they face the hardest time sourcing the prescribed items locally and convert strongly on a reliable delivery promise.',
+          'Bihar, Jharkhand and eastern Uttar Pradesh for volume, and migrant communities in Delhi NCR and Mumbai for value: they face the hardest time sourcing the prescribed items locally and convert strongly on a reliable delivery promise.',
       },
     ],
   },
@@ -1713,7 +1713,7 @@ export const FESTIVALS: Festival[] = [
     subtitle:
       'Four free Christmas WhatsApp templates built around your shipping cut-off, ready to copy, edit and submit to Meta.',
     answerFirst:
-      'The longest lead time of any festival here, and the hardest deadline. Nationwide delivery stops being reliable around the 20th, so that is your last offer — not the 23rd.',
+      'The longest lead time of any festival here, and the hardest deadline. Nationwide delivery stops being reliable around the 20th, so that is your last offer: not the 23rd.',
     peak:
       '10 December to 20 December, ending at your shipping cut-off rather than at the date.',
     buyerIntent:
@@ -1734,7 +1734,7 @@ export const FESTIVALS: Festival[] = [
       {
         question: 'When should a Christmas WhatsApp campaign start in India?',
         answer:
-          'Around 8 to 10 December for early access, with gift picks about the 15th and the final offer on your shipping cut-off — usually the 19th or 20th for nationwide delivery. Corporate gifting should be approached in the first week of the month.',
+          'Around 8 to 10 December for early access, with gift picks about the 15th and the final offer on your shipping cut-off: usually the 19th or 20th for nationwide delivery. Corporate gifting should be approached in the first week of the month.',
       },
       {
         question: 'What should the last Christmas message say?',
@@ -1744,7 +1744,7 @@ export const FESTIVALS: Festival[] = [
       {
         question: 'Does Christmas work for brands outside the metros?',
         answer:
-          'The gifting and party side does, nationwide — Secret Santa, party wear, cake and hampers are not tied to observance. The decor and church-adjacent categories concentrate in Kerala, Goa, the North East and the metros, so segment those rather than sending them everywhere.',
+          'The gifting and party side does, nationwide: Secret Santa, party wear, cake and hampers are not tied to observance. The decor and church-adjacent categories concentrate in Kerala, Goa, the North East and the metros, so segment those rather than sending them everywhere.',
       },
     ],
   },

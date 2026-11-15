@@ -81,7 +81,7 @@ const EXTRA_CARDS: Record<string, HubCard> = {
     href: '/features/cod-confirmation',
     label: 'COD confirmation',
     title: 'Confirm every COD order before it ships',
-    body: 'A WhatsApp utility message at ₹0.115 asks the buyer to confirm. Ship only what they confirm. On every plan.',
+    body: 'A ₹0.115 WhatsApp utility message asks the buyer to confirm, so you ship only confirmed orders. On every plan.',
   },
   'cod-to-prepaid': {
     key: 'cod-to-prepaid',

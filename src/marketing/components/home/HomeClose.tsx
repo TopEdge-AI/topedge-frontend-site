@@ -14,7 +14,7 @@ export default function HomeClose() {
           on WhatsApp
         </>
       }
-      subtitle="Connect Shopify in about 30 minutes. Meta template review is the only wait. 14-day free trial."
+      subtitle="Start a 14-day free trial, connect Shopify in about 30 minutes, and send once Meta approves your templates."
       primaryLabel="Start free"
       secondaryLabel="See pricing"
       secondaryTo="/pricing"

@@ -16,8 +16,8 @@ export const MARKETING_FEATURES: MarketingFeature[] = [
   {
     slug: 'journeys',
     scene: 'journey',
-    title: 'Visual journeys that sell and support on WhatsApp',
-    body: 'Drag Shopify events onto a canvas, start from pre-built templates, and never send until Meta says APPROVED, then read recovered ₹, not vanity sends.',
+    title: 'Abandoned cart and COD journeys',
+    body: 'Pre-built WhatsApp journeys on Shopify events that send only Meta-approved templates and report recovered ₹.',
     bullets: [
       'Drag-and-drop builder, no code',
       'Pre-built cart, COD, and shipping templates',
@@ -33,8 +33,8 @@ export const MARKETING_FEATURES: MarketingFeature[] = [
   {
     slug: 'flow-builder',
     scene: 'flow-builder',
-    title: 'Describe the bot, AI drafts the flow canvas',
-    body: 'Fill a short AI form (niche, tone, goals). TopEdge AI generates a button-and-list chat flow you can edit step by step: menus, conditions, catalog sends, human handoff.',
+    title: 'WhatsApp chat flows, drafted by AI',
+    body: 'Describe the bot and TopEdge AI drafts a button-and-list flow that you edit step by step.',
     bullets: [
       'AI form → editable flow',
       'Menus, conditions, handoff',
@@ -50,7 +50,7 @@ export const MARKETING_FEATURES: MarketingFeature[] = [
     slug: 'ai-brain',
     scene: 'ai-brain',
     title: 'WhatsApp AI on your own API keys',
-    body: 'Connect OpenAI, Claude or Gemini. Ground replies in your catalog and policies, Intent Detect saves tokens for hard questions.',
+    body: 'Connect OpenAI, Claude or Gemini and answer from your catalog and policies.',
     bullets: [
       'Store knowledge + bot persona',
       'Bring your own OpenAI, Claude or Gemini key',
@@ -65,8 +65,8 @@ export const MARKETING_FEATURES: MarketingFeature[] = [
   {
     slug: 'campaigns',
     scene: 'campaigns',
-    title: 'Meta-safe broadcasts with honest ₹ costs',
-    body: 'Pick an audience, lock an approved marketing template, preview the bubble, then send. See category rates before you spend.',
+    title: 'Broadcasts to a segment, measured in ₹',
+    body: 'Send an approved marketing template to an audience and see the Meta rate before you spend.',
     bullets: [
       'Segmented audiences',
       'Approved templates only',
@@ -81,8 +81,8 @@ export const MARKETING_FEATURES: MarketingFeature[] = [
   {
     slug: 'analytics',
     scene: 'analytics',
-    title: 'Tracking Pixel, website intent → WhatsApp',
-    body: 'Install via Shopify theme app embed. Match product views and cart intent to WhatsApp outreach, fire consent-aware events, and monitor pixel health, not a vanity sent→read chart.',
+    title: 'Tracking Pixel: see who is browsing',
+    body: 'A Shopify theme embed that matches product views and carts to WhatsApp numbers you can message.',
     bullets: [
       'Theme app embed install',
       'Product & cart intent → WhatsApp',
@@ -98,7 +98,7 @@ export const MARKETING_FEATURES: MarketingFeature[] = [
     slug: 'meta-manager',
     scene: 'meta-manager',
     title: 'You approve every template before anything sends',
-    body: 'Create, sync, and track WhatsApp template status with Meta. Catalog and QR live here too. Nothing broadcasts until approval lands.',
+    body: 'Create, submit and track WhatsApp templates with Meta, with catalog and QR codes in the same place.',
     bullets: [
       'Library + status sync',
       'Catalog & QR tools',
@@ -114,7 +114,7 @@ export const MARKETING_FEATURES: MarketingFeature[] = [
     slug: 'audience-crm',
     scene: 'audience',
     title: 'Segments, scores, and cart leads in one CRM',
-    body: 'See who abandoned, who’s VIP, and who’s COD-risk. Build segments for campaigns and journeys from real Shopify + WhatsApp behavior.',
+    body: 'See who abandoned, who is VIP and who is a COD risk, then build segments from it.',
     bullets: [
       'Waterfall interest scores',
       'Abandoned cart leads',
@@ -131,7 +131,7 @@ export const MARKETING_FEATURES: MarketingFeature[] = [
     slug: 'chat-rules',
     scene: 'inbox',
     title: 'Route the right conversations to the right people',
-    body: 'Smart rules for assignment, COD keywords, and escalation, so Live Chat stays calm when volume spikes.',
+    body: 'Assign chats by keyword, COD intent or VIP status so the inbox stays calm when volume spikes.',
     bullets: [
       'Keyword and intent routing',
       'Assign to ops or sales',
@@ -147,8 +147,8 @@ export const MARKETING_FEATURES: MarketingFeature[] = [
   {
     slug: 'warranty',
     scene: 'audience',
-    title: 'Digital warranty workspace, hub, queue, assign',
-    body: 'One warranty hub with status badges, an unassigned queue that stays visible, and manual assign to the right Shopify order or teammate.',
+    title: 'Warranty registration and claims',
+    body: 'Buyers register with a WhatsApp OTP, and every claim is assigned against the Shopify order.',
     bullets: [
       'Warranty hub list with status badges',
       'Unassigned queue that doesn’t disappear',
@@ -164,7 +164,7 @@ export const MARKETING_FEATURES: MarketingFeature[] = [
     slug: 'opt-in-tools',
     scene: 'hero',
     title: 'WhatsApp opt-in tools for your Shopify storefront',
-    body: 'Pulse Drop, Popup, Spin wheel, Mystery discount, and WhatsApp widget. Capture consented numbers, then campaign and journey from one subscriber list.',
+    body: 'Popup, spin wheel, mystery discount, Pulse Drop and widget, all writing to one consented list.',
     bullets: [
       'Five storefront capture tools',
       'Subscriber list with marketing consent',
@@ -180,8 +180,8 @@ export const MARKETING_FEATURES: MarketingFeature[] = [
   {
     slug: 'profit-loss',
     scene: 'analytics',
-    title: 'After Indian D2C costs, what did I keep?',
-    body: 'India-aware Profit & costs, COGS, packaging, payment fees, COD, RTO, and ads, true net profit, not vanity revenue.',
+    title: 'Net profit after COD, RTO and ads',
+    body: 'See what you kept after COGS, packaging, gateway fees, COD, RTO and ad spend.',
     bullets: [
       '3-step setup: products, fees, COD & returns',
       'Cost waterfall to net profit ₹',
@@ -198,7 +198,7 @@ export const MARKETING_FEATURES: MarketingFeature[] = [
     slug: 'intent-detection',
     scene: 'ai-brain',  
     title: 'Route chats by what they mean',
-    body: 'Algorithmic intent matches shipping, returns, COD, and handoff, steer flows without burning AI on every message.',
+    body: 'Match shipping, returns, COD and handoff questions to a flow without calling the AI model.',
     bullets: [
       'Phrase matching you control',
       'Route without AI spend',
