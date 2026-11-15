@@ -9,6 +9,7 @@ import {
   Banknote,
   BarChart3,
   Calculator,
+  CalendarDays,
   CheckCircle2,
   Droplet,
   Droplets,
@@ -275,7 +276,7 @@ function Fees({ label }: SceneProps) {
           </div>
         </Panel>
       </Float>
-      <Float x={13} y={83} delay={5} drift>
+      <Float x={13} y={78} delay={5} drift>
         <Chip tone="amber" solid icon={Megaphone}>CAC: ₹10,000 ÷ 100 orders</Chip>
       </Float>
     </Stage>
@@ -322,7 +323,7 @@ function NetProfit({ label }: SceneProps) {
         <Panel title="True net profit" icon={IndianRupee} tone="emerald" right={<Chip tone="emerald" dot>Profitable · 30d</Chip>}>
           <Stat label="After COGS, COD, RTO and ads" value="₹3,562" delta="+8.7% vs prior period" />
           <div style={{ marginTop: '0.9em' }}>
-            <Spark points={[30, 38, 34, 46, 42, 55, 52, 63, 60, 72]} tone="emerald" height={9} />
+            <Spark points={[30, 38, 34, 46, 42, 55, 52, 63, 60, 72]} tone="emerald" height={11} />
           </div>
         </Panel>
       </Float>
@@ -342,7 +343,7 @@ function NetProfit({ label }: SceneProps) {
         </Panel>
       </Float>
       <Float x={58} y={78} w={36} delay={5} drift>
-        <Node icon={ShieldAlert} tone="amber" title="Or: Setup needed" sub="Until every cost is in" />
+        <Node icon={CalendarDays} tone="sky" title="vs prior 30 days" sub="Same length, in ₹" />
       </Float>
     </Stage>
   );

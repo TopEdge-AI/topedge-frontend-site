@@ -1,3 +1,4 @@
+/* eslint-disable react-refresh/only-export-components -- a scene module exports its SceneMap by design. */
 /**
  * Opt-in Tools scenes. Every capture path writes the same consented audience.
  * Keys are the image paths in productPages.ts.

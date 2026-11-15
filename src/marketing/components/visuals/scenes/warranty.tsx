@@ -158,6 +158,7 @@ function HubList({ label }: SceneProps) {
           <Row lead={<Avatar name="Rahul Mehta" tone="amber" />} title="Rahul Mehta" sub="Hydrating Moisturizer · #GS-1098" right={<Chip tone="amber" dot>Claim open</Chip>} active />
           <Row lead={<Avatar name="Arjun Kapoor" tone="sky" />} title="Arjun Kapoor" sub="Retinol Night Cream · #GS-1120" right={<Chip tone="sky" dot>Registered</Chip>} />
           <Row lead={<Avatar name="Ananya Rao" tone="slate" />} title="Ananya Rao" sub="Niacinamide Toner · #GS-0987" right={<Chip tone="slate">Expired</Chip>} />
+          <Row lead={<Avatar name="Kavya Iyer" tone="violet" />} title="Kavya Iyer" sub="SPF 50 Sunscreen · #GS-1150" right={<Chip tone="emerald" dot>Active</Chip>} />
         </Panel>
       </Float>
       <Float x={66} y={7} w={30} delay={2} rotate={2} drift>
@@ -169,13 +170,14 @@ function HubList({ label }: SceneProps) {
           <div style={{ marginTop: '0.6em' }}>
             <Row lead={<IconTile icon={Droplet} tone="amber" size="sm" />} title="Vitamin C" right={<Chip tone="violet">12 mo</Chip>} />
             <Row lead={<IconTile icon={Sparkles} tone="sky" size="sm" />} title="Face Mist" right={<Chip tone="violet">18 mo</Chip>} />
+            <Row lead={<IconTile icon={Droplets} tone="emerald" size="sm" />} title="Toner" right={<Chip tone="violet">12 mo</Chip>} />
           </div>
         </Panel>
       </Float>
       <Float x={8} y={84} delay={5}>
         <Chip tone="emerald" icon={ShieldCheck}>Status on every record</Chip>
       </Float>
-      <Float x={64} y={73} w={32} delay={4}>
+      <Float x={64} y={76} w={32} delay={4}>
         <Panel>
           <Row
             lead={<IconTile icon={Headphones} tone="sky" />}

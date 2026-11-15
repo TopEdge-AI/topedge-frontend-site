@@ -174,7 +174,7 @@ function LibraryTile({ label }: SceneProps) {
       </Float>
       <Float x={10} y={66} w={80} delay={3} rotate={-1} drift z={3}>
         <Panel>
-          <Row lead={<IconTile icon={AlertTriangle} tone="rose" />} title="Meta: reason on the row" sub="Fix copy, then resubmit" right={<Btn tone="rose" primary>Resubmit</Btn>} />
+          <Row lead={<IconTile icon={AlertTriangle} tone="rose" />} title="Rejected by Meta" sub="Reason shown on the row" right={<Btn tone="rose" primary>Resubmit</Btn>} />
         </Panel>
       </Float>
     </Stage>
@@ -191,7 +191,7 @@ function LibraryShowcase({ label }: SceneProps) {
   ];
   return (
     <Stage label={label} tone="emerald" shape="wide">
-      <Float x={4} y={9} w={60} delay={0}>
+      <Float x={4} y={13} w={60} delay={0}>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '0.8em' }}>
           {counts.map(([s, v]) => (
             <Panel key={s}>
@@ -204,14 +204,14 @@ function LibraryShowcase({ label }: SceneProps) {
           ))}
         </div>
       </Float>
-      <Float x={4} y={34} w={60} delay={2}>
+      <Float x={4} y={39} w={60} delay={2}>
         <Panel title="Library" icon={LayoutTemplate} tone="emerald" right={<Chip tone="emerald" dot>Synced from Meta</Chip>}>
           <Row lead={<IconTile icon={CreditCard} tone="sky" size="sm" />} title="cod_confirm" sub="Utility · en" right={<StatusChip s="Approved" />} />
           <Row lead={<IconTile icon={ShoppingCart} tone="amber" size="sm" />} title="cart_recovery_2" sub="Marketing · en" right={<StatusChip s="Pending" />} />
           <Row lead={<IconTile icon={Sparkles} tone="rose" size="sm" />} title="festive_sale_v2" sub="Marketing · hi" right={<StatusChip s="Rejected" />} active />
         </Panel>
       </Float>
-      <Float x={68} y={40} w={28} delay={4} rotate={2} drift z={3}>
+      <Float x={68} y={45} w={28} delay={4} rotate={2} drift z={3}>
         <Panel title="Rejected" icon={AlertTriangle} tone="rose">
           <p style={{ margin: 0, fontSize: '1em', color: 'var(--fv-muted)', lineHeight: 1.4 }}>Read Meta's reason on the row, edit the copy, submit again.</p>
           <div style={{ marginTop: '0.8em' }}>
@@ -219,7 +219,7 @@ function LibraryShowcase({ label }: SceneProps) {
           </div>
         </Panel>
       </Float>
-      <Float x={70} y={14} delay={5}>
+      <Float x={70} y={19} delay={5}>
         <Chip tone="slate" icon={RefreshCw}>Synced 2 min ago</Chip>
       </Float>
     </Stage>
@@ -239,8 +239,8 @@ function Blueprints({ label }: SceneProps) {
           <Row lead={<IconTile icon={Package} tone="sky" />} title="Order confirmed" sub="Utility template" right={<Chip tone="emerald" dot>Ready</Chip>} />
         </Panel>
       </Float>
-      <Float x={14} y={62} w={72} delay={3} rotate={-1} drift>
-        <Bubble from="biz" time="18:40" media={<Thumb tone="amber" icon={Shirt} h={6.5} />}>
+      <Float x={16} y={61} w={68} delay={3} rotate={-1} drift>
+        <Bubble from="biz" time="18:40" media={<Thumb tone="amber" icon={Shirt} h={4.6} />}>
           Your linen shirt is waiting, Riya.
         </Bubble>
       </Float>
@@ -255,14 +255,11 @@ function Blueprints({ label }: SceneProps) {
 function CatalogTile({ label }: SceneProps) {
   return (
     <Stage label={label} tone="sky">
-      <Float x={7} y={7} w={60} delay={0}>
-        <Panel title="Catalog" icon={Store} tone="sky">
+      <Float x={7} y={7} w={62} delay={0}>
+        <Panel title="Catalog" icon={Store} tone="sky" right={<Btn icon={RefreshCw}>Refresh</Btn>}>
           <Row lead={<ProductThumb tone="sky" icon={Shirt} />} title="Linen shirt" sub="₹1,299" />
           <Row lead={<ProductThumb tone="violet" icon={Watch} />} title="Smart watch" sub="₹4,999" />
         </Panel>
-      </Float>
-      <Float x={7} y={46} delay={2}>
-        <Btn tone="sky" icon={RefreshCw}>Refresh from Shopify</Btn>
       </Float>
       <Float x={50} y={52} w={43} delay={3} rotate={2} drift z={3}>
         <Panel>
@@ -272,11 +269,13 @@ function CatalogTile({ label }: SceneProps) {
           </div>
         </Panel>
       </Float>
-      <Float x={8} y={66} delay={5}>
-        <Chip tone="sky" icon={QrCode}>wa.me QR</Chip>
+      <Float x={5} y={57} w={42} delay={5}>
+        <Panel>
+          <Row lead={<IconTile icon={QrCode} tone="indigo" size="sm" />} title="wa.me QR" sub="Opens a chat" />
+        </Panel>
       </Float>
-      <Float x={8} y={74} delay={6}>
-        <Chip tone="slate">Opens a chat on scan</Chip>
+      <Float x={7} y={80} delay={6}>
+        <Chip tone="emerald" dot>Synced from Shopify</Chip>
       </Float>
     </Stage>
   );
@@ -288,6 +287,7 @@ function CatalogTile({ label }: SceneProps) {
 function Studio({ label }: SceneProps) {
   return (
     <Stage label={label} tone="violet" shape="wide">
+      <Wires shape="wide" tone="violet" paths={['M 62 35 L 62 41.25', 'M 77 44.4 L 81 44.4']} />
       <Float x={4} y={8} w={36} delay={0}>
         <Panel title="New template" icon={FileText} tone="violet">
           <div style={{ display: 'flex', flexDirection: 'column', gap: '0.8em' }}>
@@ -303,7 +303,7 @@ function Studio({ label }: SceneProps) {
         </Panel>
       </Float>
       <Float x={4} y={58} w={36} delay={2}>
-        <Panel title="Category" icon={ShieldCheck} tone="emerald">
+        <Panel title="Category" icon={ShieldCheck} tone="emerald" right={<Chip tone="slate">India, per msg</Chip>}>
           <Row title="Utility" sub="Order, COD, shipping" right={<Chip tone="emerald">₹0.115</Chip>} active />
           <Row title="Marketing" sub="Promos, cart offers" right={<Chip tone="slate">₹0.8631</Chip>} />
         </Panel>
@@ -315,14 +315,11 @@ function Studio({ label }: SceneProps) {
           </Bubble>
         </Phone>
       </Float>
-      <Float x={80} y={30} delay={5} drift>
-        <Chip tone="amber" dot>Submitted</Chip>
+      <Float x={47} y={66} w={30} delay={5}>
+        <Node icon={Send} tone="indigo" title="Submit to Meta" sub="Minutes to 24h" active />
       </Float>
-      <Float x={80} y={40} delay={6} drift>
-        <Chip tone="emerald" dot>Approved</Chip>
-      </Float>
-      <Float x={48} y={82} delay={7}>
-        <Chip tone="slate">Per delivered message, India</Chip>
+      <Float x={81} y={68.6} delay={7} drift>
+        <Chip tone="emerald" solid dot>Approved</Chip>
       </Float>
     </Stage>
   );
@@ -332,6 +329,7 @@ function Studio({ label }: SceneProps) {
 function CatalogShowcase({ label }: SceneProps) {
   return (
     <Stage label={label} tone="sky" shape="wide">
+      <Wires shape="wide" tone="sky" paths={['M 67 34 L 67 41']} />
       <Float x={4} y={10} w={46} delay={0}>
         <Panel title="WhatsApp catalog" icon={Store} tone="sky" right={<Btn icon={RefreshCw}>Refresh</Btn>}>
           <Row lead={<ProductThumb tone="sky" icon={Shirt} />} title="Linen shirt, sky blue" sub="In stock" right={<b>₹1,299</b>} />
@@ -339,7 +337,7 @@ function CatalogShowcase({ label }: SceneProps) {
           <Row lead={<ProductThumb tone="amber" icon={Package} />} title="Gift box" sub="2 left" right={<b>₹899</b>} />
         </Panel>
       </Float>
-      <Float x={7} y={68} delay={2}>
+      <Float x={6} y={64} delay={2}>
         <Chip tone="emerald" dot>Imported from Shopify</Chip>
       </Float>
       <Float x={56} y={8} w={22} delay={3} rotate={-2} drift>
@@ -351,7 +349,7 @@ function CatalogShowcase({ label }: SceneProps) {
         </Panel>
       </Float>
       <Float x={60} y={66} w={36} delay={5}>
-        <Bubble from="biz" time="09:12" read media={<Thumb tone="sky" icon={Shirt} h={5} />}>
+        <Bubble from="biz" time="09:12" read media={<Thumb tone="sky" icon={Shirt} h={3.6} />}>
           Linen shirt, sky blue · ₹1,299
         </Bubble>
       </Float>

@@ -169,7 +169,7 @@ function TestConfidence({ label }: SceneProps) {
           <Field label="Customer says" value="Speak to a human" />
         </Panel>
       </Float>
-      <Float x={70} y={6} delay={2} rotate={3} drift>
+      <Float x={68} y={7} delay={2} rotate={3} drift>
         <Panel>
           <Donut pct={96} tone="emerald" size={7.5}>96%</Donut>
         </Panel>
@@ -240,8 +240,8 @@ function IntentList({ label }: SceneProps) {
 function Editor({ label }: SceneProps) {
   return (
     <Stage label={label} tone="indigo" shape="wide" grid>
-      <Wires shape="wide" tone="indigo" paths={['M 50 15 C 53 15, 51 11, 55 11']} />
-      <Float x={4} y={9} w={46} delay={0} z={3}>
+      <Wires shape="wide" tone="indigo" paths={['M 50 12.5 C 53 12.5, 52 15, 55 15']} />
+      <Float x={4} y={12} w={46} delay={0} z={3}>
         <Panel title="Edit intent" icon={MessageCircle} tone="indigo" right={<><Chip tone="emerald" dot>Active</Chip><Toggle tone="indigo" /></>}>
           <Field label="Intent name" value="Talk to human" />
           <small style={{ display: 'block', margin: '0.9em 0 0.5em', fontSize: '0.9em', fontWeight: 500, color: muted }}>
@@ -263,7 +263,7 @@ function Editor({ label }: SceneProps) {
           </div>
         </Panel>
       </Float>
-      <Float x={55} y={9} w={41} delay={2} z={3}>
+      <Float x={55} y={16} w={41} delay={2} z={3}>
         <Panel title="Actions" icon={Zap} tone="sky" right={<Chip tone="slate">In order</Chip>}>
           <Row lead={<Num n={1} />} title="Tag chat" sub="requested-support" right={<IconTile icon={Tag} tone="violet" size="sm" />} />
           <Row lead={<Num n={2} />} title="Send reply" sub="Connecting you to our team" right={<IconTile icon={MessageCircle} tone="emerald" size="sm" />} />
@@ -271,10 +271,10 @@ function Editor({ label }: SceneProps) {
           <Row lead={<Num n={4} />} title="Notify team" sub="Support required" right={<IconTile icon={Bell} tone="amber" size="sm" />} />
         </Panel>
       </Float>
-      <Float x={58} y={80} delay={5} drift>
+      <Float x={57} y={86} delay={5} drift>
         <Chip tone="indigo" solid icon={Play}>Reply, flow, assign or escalate</Chip>
       </Float>
-      <Cursor x={84} y={47} delay={7} />
+      <Cursor x={84} y={54} delay={7} />
     </Stage>
   );
 }

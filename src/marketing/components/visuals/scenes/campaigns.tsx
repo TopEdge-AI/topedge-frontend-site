@@ -1,3 +1,4 @@
+/* eslint-disable react-refresh/only-export-components -- a scene module exports its SceneMap by design. */
 /**
  * Campaigns scenes: segment, lock an approved template, read net ₹ after Meta fees.
  * Keys are the image paths in productPages.ts.
@@ -40,7 +41,6 @@ import {
   Stage,
   Stat,
   Thumb,
-  Wires,
   type SceneMap,
   type SceneProps,
   type Tone,
@@ -194,12 +194,12 @@ function Segments({ label }: SceneProps) {
       <Float x={5} y={82} delay={4}>
         <Chip tone="sky" icon={Radar}>On-site intent</Chip>
       </Float>
-      <Float x={42} y={71} w={52} delay={5} rotate={2} drift z={3}>
+      <Float x={39} y={71} w={56} delay={5} rotate={2} drift z={3}>
         <Panel>
           <Row lead={<IconTile icon={Users} tone="emerald" />} title="356 contacts" sub="2 segments" right={<Chip tone="emerald" dot>Ready</Chip>} />
         </Panel>
       </Float>
-      <Cursor x={14} y={30} delay={6} />
+      <Cursor x={14.5} y={34} delay={6} />
     </Stage>
   );
 }
@@ -222,7 +222,7 @@ function LeadScoring({ label }: SceneProps) {
       <Float x={5} y={83} delay={4}>
         <Chip tone="slate" icon={Activity}>Browse signals</Chip>
       </Float>
-      <Float x={42} y={72} w={52} delay={5} rotate={-2} drift z={3}>
+      <Float x={39} y={72} w={56} delay={5} rotate={-2} drift z={3}>
         <Panel>
           <Row lead={<IconTile icon={Send} tone="violet" />} title="142 contacts" sub="From 3 stages" right={<Chip tone="emerald" dot>Ready</Chip>} />
         </Panel>
@@ -235,7 +235,7 @@ function LeadScoring({ label }: SceneProps) {
 function NetReport({ label }: SceneProps) {
   return (
     <Stage label={label} tone="emerald">
-      <Float x={6} y={6} w={56} delay={0}>
+      <Float x={6} y={6} w={51} delay={0}>
         <Panel title="Performance" icon={BarChart3} tone="emerald">
           <KV k="Delivered" v="1,218" />
           <KV k="Read" v="73.2%" />
@@ -243,7 +243,7 @@ function NetReport({ label }: SceneProps) {
           <KV k="Meta bill" v={<Chip tone="slate">−₹1,070</Chip>} />
         </Panel>
       </Float>
-      <Float x={58} y={14} w={37} delay={2} rotate={3} drift z={3}>
+      <Float x={60} y={13} w={35} delay={2} rotate={3} drift z={3}>
         <Panel>
           <Stat label="Net revenue" value="₹67,330" delta="After Meta fees" tone="emerald" />
         </Panel>
@@ -283,14 +283,21 @@ function AudienceBuilder({ label }: SceneProps) {
           <Row lead={<><Tick /><Avatar name="Harsh Vardhan" tone="slate" /></>} title="Harsh Vardhan" sub="+91 98012 34567" right={<><Chip tone="slate">Score 10</Chip><Chip tone="rose">Opt-out</Chip></>} />
         </Panel>
       </Float>
-      <Float x={5} y={76} delay={4}>
+      <Float x={5} y={74} delay={4}>
         <Chip tone="sky" icon={Radar}>Pixel cohorts</Chip>
       </Float>
-      <Float x={20} y={84} delay={5}>
+      <Float x={5} y={83} delay={5}>
         <Chip tone="violet" icon={Users}>CRM segments</Chip>
       </Float>
-      <Float x={40} y={79} delay={6}>
-        <Chip tone="violet" solid icon={Target}>Only people who earned a send</Chip>
+      <Float x={38} y={66} w={56} delay={6} rotate={-1} drift z={4}>
+        <Panel>
+          <Row
+            lead={<IconTile icon={Target} tone="violet" />}
+            title="18 contacts earned a send"
+            sub="Score 80 and above, opted in"
+            right={<Btn tone="violet" primary icon={Send}>Next</Btn>}
+          />
+        </Panel>
       </Float>
       <Cursor x={41} y={42} delay={7} />
     </Stage>

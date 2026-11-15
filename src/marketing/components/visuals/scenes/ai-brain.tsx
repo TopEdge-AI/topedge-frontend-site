@@ -18,6 +18,7 @@ import {
   Target,
   Truck,
   Wallet,
+  Workflow,
   Zap,
 } from 'lucide-react';
 import {
@@ -120,10 +121,13 @@ function Knowledge({ label }: SceneProps) {
           <Row lead={<IconTile icon={FileText} tone="slate" size="sm" />} title="Ingredient FAQ" sub="78 chars" right={<Chip tone="slate">Draft</Chip>} />
         </Panel>
       </Float>
-      <Float x={12} y={60} w={80} delay={3} rotate={-1} drift>
+      <Float x={12} y={57} w={80} delay={3} rotate={-1} drift>
         <Panel title="Store policies" icon={ShieldCheck} tone="emerald">
           <Field label="Returns policy" value="Unopened: return in 7 days" />
         </Panel>
+      </Float>
+      <Float x={26} y={88} delay={5}>
+        <Chip tone="indigo" icon={CheckCircle2}>Cited before AI answers</Chip>
       </Float>
     </Stage>
   );
@@ -143,7 +147,7 @@ function Keys({ label }: SceneProps) {
           </div>
         </Panel>
       </Float>
-      <Float x={12} y={73} w={76} delay={3} drift>
+      <Float x={12} y={70} w={76} delay={3} drift>
         <Panel>
           <Row lead={<IconTile icon={Wallet} tone="emerald" />} title="Tokens on your bill" sub="No per-message AI fee" right={<Chip tone="emerald">BYOK</Chip>} />
         </Panel>
@@ -200,8 +204,11 @@ function Settings({ label }: SceneProps) {
           </div>
         </Panel>
       </Float>
-      <Float x={66} y={70} delay={4} drift>
+      <Float x={68} y={56} delay={4}>
         <Chip tone="emerald" icon={Wallet}>Billed by your provider</Chip>
+      </Float>
+      <Float x={8} y={72} w={40} delay={5} drift>
+        <Node icon={Workflow} tone="sky" title="Flow first, AI fallback" sub="Off-script text goes to AI" active />
       </Float>
     </Stage>
   );
@@ -211,8 +218,8 @@ function Settings({ label }: SceneProps) {
 function KnowledgePersona({ label }: SceneProps) {
   return (
     <Stage label={label} tone="sky" shape="wide">
-      <Wires shape="wide" tone="sky" paths={['M 48 33 C 52 33, 50 37, 54 37']} />
-      <Float x={4} y={10} w={44} delay={0}>
+      <Wires shape="wide" tone="sky" paths={['M 48 27.5 L 54 27.5']} />
+      <Float x={4} y={14} w={44} delay={0}>
         <Panel title="Store knowledge" icon={BookOpen} tone="sky">
           <div style={{ display: 'flex', alignItems: 'flex-end', gap: '0.6em', marginBottom: '0.5em' }}>
             <div style={{ flex: 1, minWidth: 0 }}>
@@ -224,18 +231,18 @@ function KnowledgePersona({ label }: SceneProps) {
           <Row lead={<IconTile icon={Package} tone="violet" size="sm" />} title="Returns policy" sub="Store policy" right={<Chip tone="emerald">Active</Chip>} />
         </Panel>
       </Float>
-      <Float x={54} y={8} w={40} delay={2}>
+      <Float x={54} y={12} w={40} delay={2}>
         <Panel>
           <Row lead={<IconTile icon={Sparkles} tone="rose" />} title="Glow assistant" sub="Warm, clear, concise" right={<Chip tone="rose">Persona</Chip>} />
         </Panel>
       </Float>
-      <Float x={54} y={36} w={40} delay={3}>
+      <Float x={54} y={39.5} w={40} delay={3}>
         <Stack gap={0.7}>
           <Bubble from="user" time="16:20">Can I return an opened serum?</Bubble>
           <Bubble from="biz" time="16:20" read>Opened skincare is not eligible. Unopened items return within 7 days.</Bubble>
         </Stack>
       </Float>
-      <Float x={60} y={82} delay={5}>
+      <Float x={64} y={74} delay={5}>
         <Chip tone="sky" icon={CheckCircle2}>Cited: Returns policy</Chip>
       </Float>
     </Stage>
@@ -246,7 +253,7 @@ function KnowledgePersona({ label }: SceneProps) {
 function LiveRouting({ label }: SceneProps) {
   return (
     <Stage label={label} tone="indigo" shape="wide">
-      <Wires shape="wide" tone="indigo" paths={['M 38 25 C 41 25, 41 18, 44 18']} />
+      <Wires shape="wide" tone="indigo" paths={['M 38 25 C 41 25, 41 18, 44 18', 'M 20 36.5 L 20 46']} />
       <Float x={14} y={8} w={24} delay={0}>
         <Bubble from="user" time="2:14 pm">Order kab aayega?</Bubble>
       </Float>
@@ -268,7 +275,7 @@ function LiveRouting({ label }: SceneProps) {
       <Float x={8} y={74} w={30} delay={4}>
         <Bubble from="biz" time="2:15 pm" read>Order #1042 ships tomorrow.</Bubble>
       </Float>
-      <Float x={50} y={74} delay={5} drift>
+      <Float x={52} y={79} delay={5} drift>
         <Chip tone="rose" solid icon={Hand}>Live Chat takeover still wins</Chip>
       </Float>
     </Stage>

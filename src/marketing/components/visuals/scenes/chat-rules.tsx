@@ -132,11 +132,11 @@ function RoutingHero({ label }: SceneProps) {
 function KeywordRule({ label }: SceneProps) {
   return (
     <Stage label={label} tone="violet">
-      <Wires tone="violet" paths={['M 50 25 L 50 33']} />
-      <Float x={8} y={8} w={70} delay={0}>
+      <Wires tone="violet" paths={['M 50 29 L 50 40']} />
+      <Float x={8} y={12} w={70} delay={0}>
         <Bubble from="user" time="10:41">Is cash on delivery available?</Bubble>
       </Float>
-      <Float x={7} y={33} w={86} delay={2}>
+      <Float x={7} y={40} w={86} delay={2}>
         <Panel title="Rule: COD" icon={Tag} tone="violet" right={<Toggle tone="violet" />}>
           <Caption>IF MESSAGE CONTAINS</Caption>
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.4em', marginBottom: '0.9em' }}>
@@ -156,14 +156,14 @@ function KeywordRule({ label }: SceneProps) {
 function IntentHandoff({ label }: SceneProps) {
   return (
     <Stage label={label} tone="sky" grid>
-      <Wires tone="sky" paths={['M 50 23 L 50 31', 'M 50 44 L 50 53']} />
-      <Float x={18} y={8} w={70} delay={0}>
+      <Wires tone="sky" paths={['M 50 27 L 50 36', 'M 50 48 L 50 60']} />
+      <Float x={18} y={12} w={70} delay={0}>
         <Bubble from="user" time="15:08">Can I talk to a human please?</Bubble>
       </Float>
-      <Float x={18} y={31} w={64} delay={2}>
+      <Float x={18} y={36} w={64} delay={2}>
         <Node icon={Target} tone="sky" title="Handoff intent" sub="Confidence 94%" active />
       </Float>
-      <Float x={7} y={53} w={86} delay={4}>
+      <Float x={7} y={60} w={86} delay={4}>
         <Panel title="Support queue" icon={Headphones} tone="emerald" right={<Chip tone="emerald" dot>Opened</Chip>}>
           <Row lead={<Avatar name="Kabir Rao" tone="violet" />} title="Kabir Rao" sub="Thread history intact" right={<Chip tone="sky">Handoff</Chip>} />
         </Panel>
@@ -188,8 +188,10 @@ function AssignFilters({ label }: SceneProps) {
           <Row lead={<Avatar name="Megha Patel" tone="amber" />} title="Megha Patel" sub="Refund not received" right={<Chip tone="rose">Refund</Chip>} />
         </Panel>
       </Float>
-      <Float x={18} y={78} delay={4} drift>
-        <Chip tone="emerald" icon={UserCheck}>Same queues as your rules</Chip>
+      <Float x={10} y={72} w={80} delay={4} drift>
+        <Panel>
+          <Row lead={<IconTile icon={GitFork} tone="amber" />} title="Rule: COD to ops" sub="Same queue in Live Chat" right={<Toggle tone="emerald" />} />
+        </Panel>
       </Float>
     </Stage>
   );
@@ -201,28 +203,28 @@ function AssignFilters({ label }: SceneProps) {
 function RuleBuilder({ label }: SceneProps) {
   return (
     <Stage label={label} tone="indigo" shape="wide" grid>
-      <Wires shape="wide" tone="indigo" paths={['M 46 27 C 50 27, 50 27, 54 27']} />
-      <Float x={4} y={8} delay={0}>
+      <Wires shape="wide" tone="indigo" paths={['M 46 29.4 L 54 29.4']} />
+      <Float x={4} y={13} delay={0}>
         <Chip tone="indigo" icon={Workflow}>Rule: Refunds</Chip>
       </Float>
-      <Float x={77} y={7} delay={1}>
+      <Float x={77} y={11} delay={1}>
         <Btn tone="indigo" primary icon={Zap}>Publish rule</Btn>
       </Float>
-      <Float x={4} y={20} w={42} delay={2}>
+      <Float x={4} y={25} w={42} delay={2}>
         <Panel title="When" icon={Filter} tone="amber">
           <Row lead={<IconTile icon={MessageCircle} tone="amber" size="sm" />} title="Keyword" sub="refund, return, money back" />
           <Row lead={<IconTile icon={Target} tone="sky" size="sm" />} title="Intent" sub="Refund request" />
           <Row lead={<IconTile icon={Tag} tone="violet" size="sm" />} title="Tag" sub="VIP" right={<Chip tone="slate">OR</Chip>} />
         </Panel>
       </Float>
-      <Float x={54} y={20} w={42} delay={4}>
+      <Float x={54} y={25} w={42} delay={4}>
         <Panel title="Then" icon={Zap} tone="emerald">
           <Row lead={<IconTile icon={UserCheck} tone="emerald" size="sm" />} title="Assign" sub="Refunds queue" right={<Chip tone="emerald">Arjun</Chip>} active />
           <Row lead={<IconTile icon={Clock} tone="rose" size="sm" />} title="Escalate" sub="If no reply in 15 min" />
           <Row lead={<IconTile icon={PauseCircle} tone="slate" size="sm" />} title="Pause bot" sub="Agent replies only" right={<Toggle tone="emerald" />} />
         </Panel>
       </Float>
-      <Float x={36} y={80} delay={6}>
+      <Float x={40} y={78} delay={6}>
         <Chip tone="slate">No code, no redeploy</Chip>
       </Float>
     </Stage>
@@ -233,7 +235,7 @@ function RuleBuilder({ label }: SceneProps) {
 function QueueAssign({ label }: SceneProps) {
   return (
     <Stage label={label} tone="violet" shape="wide">
-      <Float x={4} y={12} w={26} delay={0} rotate={-1}>
+      <Float x={4} y={22} w={26} delay={0} rotate={-1}>
         <Panel title="Filters" icon={Filter} tone="violet">
           <Row title="Assigned to me" right={<Chip tone="violet">4</Chip>} active />
           <Row title="Needs help" right={<Chip tone="rose">2</Chip>} />
@@ -241,14 +243,14 @@ function QueueAssign({ label }: SceneProps) {
           <Row title="VIP" right={<Chip tone="amber">3</Chip>} />
         </Panel>
       </Float>
-      <Float x={33} y={9} w={63} delay={2} z={3}>
+      <Float x={33} y={16} w={63} delay={2} z={3}>
         <Panel title="Assigned to me" icon={Inbox} tone="emerald" right={<Chip tone="emerald" dot>Routed by rules</Chip>}>
           <Row lead={<Avatar name="Riya Sharma" tone="sky" />} title="Riya Sharma" sub="COD order #1043 · ₹1,359" right={<><Chip tone="sky">COD</Chip><Avatar name="Priya" tone="emerald" /></>} active />
           <Row lead={<Avatar name="Ankit Kumar" tone="amber" />} title="Ankit Kumar" sub="12 orders · VIP" right={<><Chip tone="amber" icon={Crown}>VIP</Chip><Avatar name="Neha" tone="violet" /></>} />
           <Row lead={<Avatar name="Pooja Sehgal" tone="rose" />} title="Pooja Sehgal" sub="Refund for #1038" right={<><Chip tone="rose">Refund</Chip><Avatar name="Arjun" tone="sky" /></>} />
         </Panel>
       </Float>
-      <Float x={40} y={70} delay={5} drift>
+      <Float x={44} y={72} delay={5} drift>
         <Chip tone="violet" solid icon={Zap}>COD confirms land with ops</Chip>
       </Float>
     </Stage>
@@ -259,19 +261,21 @@ function QueueAssign({ label }: SceneProps) {
 function Takeover({ label }: SceneProps) {
   return (
     <Stage label={label} tone="rose" shape="wide">
-      <Float x={5} y={8} w={44} delay={0}>
+      <Float x={5} y={13} w={44} delay={0}>
         <Stack gap={0.7}>
           <Bubble from="user" time="12:10">My parcel shows delivered but I did not get it.</Bubble>
           <Bubble from="biz" time="12:10" read>Sorry about that! Let me check order #1042.</Bubble>
         </Stack>
       </Float>
-      <Float x={12} y={45} delay={2}>
+      <Float x={15} y={50} delay={2}>
         <Chip tone="rose" solid icon={Hand}>Priya took control</Chip>
       </Float>
-      <Float x={5} y={56} w={44} delay={3}>
-        <Bubble from="biz" time="12:11" read>Hi, Priya here. I have raised it with the courier now.</Bubble>
+      <Float x={5} y={61} w={44} delay={3}>
+        <Stack>
+          <Bubble from="biz" time="12:11" read>Hi, Priya here. I have raised it with the courier now.</Bubble>
+        </Stack>
       </Float>
-      <Float x={56} y={14} w={40} delay={4} z={3}>
+      <Float x={56} y={18} w={40} delay={4} z={3}>
         <Panel title="Automation" icon={Bot} tone="rose" right={<Chip tone="amber" dot>Paused</Chip>}>
           <Row lead={<IconTile icon={Bot} tone="violet" size="sm" />} title="AI replies" sub="Paused on this thread" right={<Toggle on={false} />} />
           <Row lead={<IconTile icon={Workflow} tone="sky" size="sm" />} title="Flow Builder" sub="Paused on this thread" right={<Toggle on={false} />} />
