@@ -605,3 +605,169 @@
   inset: 0;
   transform-origin: 0 0;
 }
+
+/* ══ v3: Instantly-style rich panels and Graceview-style plain cards ═══════ */
+
+/* Plain: the scene IS the white card. No wash, no grain, a whisper of grey. */
+.fv--plain { background: #fff; }
+.fv--plain .fv__bg {
+  background: radial-gradient(80% 60% at 50% 0%, #f7f7fa 0%, rgba(247, 247, 250, 0) 70%), #fff;
+  box-shadow: none;
+}
+.fv--plain .fv__bg::after,
+.fv--plain .fv__aura,
+.fv--plain .fv__spot { display: none; }
+/* Plain scenes dissolve into the card body below them. */
+.fv--plain .fv__canvas {
+  -webkit-mask-image: linear-gradient(180deg, #000 78%, transparent 100%);
+  mask-image: linear-gradient(180deg, #000 78%, transparent 100%);
+}
+
+/* Rich: deep, soft gradient that reads as light through glass, drifting slowly. */
+.fv--rich { background: #3b2a8f; color: var(--fv-ink); }
+.fv--rich .fv__bg {
+  box-shadow: none;
+  background: var(--mood-bg);
+  background-size: 170% 170%;
+  animation: fv-mood 26s ease-in-out infinite alternate;
+}
+.fv--violet {
+  --mood-bg:
+    radial-gradient(48% 62% at 16% 20%, #c9b8ff 0%, rgba(201, 184, 255, 0) 62%),
+    radial-gradient(55% 70% at 90% 88%, #5b9dff 0%, rgba(91, 157, 255, 0) 62%),
+    radial-gradient(40% 50% at 72% 8%, #a78bfa 0%, rgba(167, 139, 250, 0) 60%),
+    radial-gradient(42% 52% at 6% 98%, #f3c6ff 0%, rgba(243, 198, 255, 0) 60%),
+    linear-gradient(135deg, #5b21b6 0%, #4338ca 48%, #1d4ed8 100%);
+}
+.fv--ocean {
+  --mood-bg:
+    radial-gradient(50% 64% at 14% 18%, #9ef0ff 0%, rgba(158, 240, 255, 0) 60%),
+    radial-gradient(55% 70% at 88% 86%, #7c83ff 0%, rgba(124, 131, 255, 0) 62%),
+    radial-gradient(40% 50% at 70% 6%, #67e8f9 0%, rgba(103, 232, 249, 0) 58%),
+    linear-gradient(140deg, #0f5e74 0%, #1d4ed8 55%, #4338ca 100%);
+}
+.fv--dusk {
+  --mood-bg:
+    radial-gradient(46% 60% at 12% 92%, #ffc8a8 0%, rgba(255, 200, 168, 0) 60%),
+    radial-gradient(50% 64% at 86% 14%, #d8b4fe 0%, rgba(216, 180, 254, 0) 60%),
+    radial-gradient(52% 66% at 80% 92%, #818cf8 0%, rgba(129, 140, 248, 0) 60%),
+    linear-gradient(150deg, #6d28d9 0%, #5b3bd6 45%, #3b3fb8 100%);
+}
+@keyframes fv-mood {
+  from { background-position: 0% 0%; }
+  to { background-position: 100% 100%; }
+}
+.fv--rich .fv__bg::after { opacity: 0.6; mix-blend-mode: soft-light; }
+.fv--rich .fv__aura {
+  left: 20%;
+  top: -20%;
+  width: 70%;
+  height: 70%;
+  background: radial-gradient(closest-side, rgba(255, 255, 255, 0.55), rgba(255, 255, 255, 0));
+  filter: blur(5cqw);
+  opacity: 0.5;
+  mix-blend-mode: soft-light;
+}
+.fv--rich .fv__aura--b {
+  left: -10%;
+  top: 55%;
+  width: 55%;
+  height: 60%;
+  background: radial-gradient(closest-side, rgba(255, 255, 255, 0.35), rgba(255, 255, 255, 0));
+  animation-duration: 23s;
+  animation-direction: alternate-reverse;
+}
+.fv--plain .fv__aura--b { display: none; }
+.fv--rich .fv__spot { background: radial-gradient(40cqw circle at var(--px) var(--py), rgba(255, 255, 255, 0.35), transparent 60%); mix-blend-mode: soft-light; }
+
+/* Cards on a rich panel: crisp white, larger radius, deep soft shadow. */
+.fv--rich .fv-panel {
+  border-radius: 1.25em;
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.55),
+    0 1px 2px rgba(17, 12, 60, 0.1),
+    0 1.6em 3.2em -1.2em rgba(17, 12, 60, 0.5);
+}
+.fv--rich.is-hover .fv-panel:hover {
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.8),
+    0 1px 2px rgba(17, 12, 60, 0.1),
+    0 2.2em 4em -1.4em rgba(17, 12, 60, 0.6);
+}
+.fv--rich .fv-node { box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.55), 0 1.2em 2.4em -1em rgba(17, 12, 60, 0.5); }
+
+/* Frosted glass card. */
+.fv-panel.fv-panel--glass,
+.fv--rich .fv-panel.fv-panel--glass {
+  color: #fff;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.24), rgba(255, 255, 255, 0.1));
+  -webkit-backdrop-filter: blur(1.4em) saturate(1.4);
+  backdrop-filter: blur(1.4em) saturate(1.4);
+  box-shadow:
+    inset 0 0 0 1px rgba(255, 255, 255, 0.38),
+    inset 0 1px 0 rgba(255, 255, 255, 0.5),
+    0 1.4em 2.8em -1.4em rgba(17, 12, 60, 0.45);
+}
+.fv-panel--glass .fv-panel__title,
+.fv-panel--glass .fv-row__text b,
+.fv-panel--glass .fv-stat b,
+.fv-panel--glass .fv-meter__row b { color: #fff; }
+.fv-panel--glass small,
+.fv-panel--glass .fv-row__text small,
+.fv-panel--glass .fv-stat small,
+.fv-panel--glass .fv-meter__row small { color: rgba(255, 255, 255, 0.78); }
+.fv-panel--glass .fv-row + .fv-row::before { background: rgba(255, 255, 255, 0.18); }
+.fv-panel--glass .fv-icon { color: #fff; background: rgba(255, 255, 255, 0.18); box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.35); }
+.fv-panel--glass .fv-chip { color: #fff; background: rgba(255, 255, 255, 0.16); box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.35); }
+.fv-panel--glass .fv-meter__track { background: rgba(255, 255, 255, 0.2); }
+.fv-panel--glass .fv-meter__track i { background: #fff; }
+
+/* Loose chips sitting straight on a rich panel turn to glass. */
+.fv--rich .fv-float__in > .fv-chip:not(.fv-chip--solid) {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.16);
+  -webkit-backdrop-filter: blur(0.8em);
+  backdrop-filter: blur(0.8em);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.4);
+}
+.fv--rich .fv-float__in > .fv-chip .fv-chip__dot,
+.fv--rich .fv-float__in > .fv-chip .fv-chip__dot::after { background: #fff; }
+.fv--rich .fv-float__in > .fv-chip--solid { background: #fff; color: var(--fv-ink); box-shadow: 0 0.8em 1.6em -0.6em rgba(17, 12, 60, 0.5); }
+.fv--rich .fv-float__in > .fv-chip--solid svg { color: var(--t-600); }
+
+/* Wires on rich panels: white hairline, white pulse. */
+.fv--rich .fv-wires__base { stroke: rgba(255, 255, 255, 0.45); }
+.fv--rich .fv-wires__dash { stroke: #fff; filter: drop-shadow(0 0 4px rgba(255, 255, 255, 0.9)); }
+
+/* Edge fades. */
+.fv-fade--bottom { -webkit-mask-image: linear-gradient(180deg, #000 50%, transparent 100%); mask-image: linear-gradient(180deg, #000 50%, transparent 100%); }
+.fv-fade--right { -webkit-mask-image: linear-gradient(90deg, #000 55%, transparent 100%); mask-image: linear-gradient(90deg, #000 55%, transparent 100%); }
+.fv-fade--left { -webkit-mask-image: linear-gradient(270deg, #000 55%, transparent 100%); mask-image: linear-gradient(270deg, #000 55%, transparent 100%); }
+.fv-fade--x { -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 22%, #000 78%, transparent 100%); mask-image: linear-gradient(90deg, transparent 0%, #000 22%, #000 78%, transparent 100%); }
+
+/* Rings and glow: quiet illustration. */
+.fv-rings { position: absolute; z-index: 0; width: 0; height: 0; pointer-events: none; }
+.fv-rings i {
+  position: absolute;
+  left: 0;
+  top: 0;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: inset 0 0 0 1px rgba(16, 24, 40, 0.07);
+  animation: fv-ring-breathe 6s ease-in-out infinite;
+}
+.fv--rich .fv-rings i { box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.2); }
+@keyframes fv-ring-breathe {
+  0%, 100% { transform: translate(-50%, -50%) scale(1); opacity: 1; }
+  50% { transform: translate(-50%, -50%) scale(1.03); opacity: 0.6; }
+}
+.fv-glow {
+  position: absolute;
+  z-index: 0;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background: radial-gradient(closest-side, color-mix(in srgb, var(--t-300) 60%, transparent), transparent);
+  filter: blur(1.6em);
+  pointer-events: none;
+}
+.fv--rich .fv-glow { background: radial-gradient(closest-side, rgba(255, 255, 255, 0.45), transparent); }

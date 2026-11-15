@@ -291,3 +291,122 @@
   .mkt-pf .mkt-pf__theme .mkt-pf__tile-visual { margin: 6px 6px 0; border-radius: 14px; }
   .mkt-pf .mkt-pf__theme .mkt-pf__media .demo-video-glow__frame.is-scene .fv { inset: 5px; }
 }
+
+/* ══ v3 (Instantly / Graceview direction) ═════════════════════════════════ */
+
+/* Headings are plain ink. Restraint reads as confidence. */
+.mkt-pf .mkt-pf__theme .mkt-pf__title-accent,
+.mkt-pf .mkt-pf__theme .mkt-pf__head-title span,
+.mkt-pf .mkt-pf__theme .mkt-pf__tile-accent {
+  background: none;
+  -webkit-background-clip: border-box;
+  background-clip: border-box;
+  color: inherit;
+}
+.mkt-pf .mkt-pf__theme .mkt-pf__title { font-weight: 600; letter-spacing: -0.045em; }
+.mkt-pf .mkt-pf__theme .mkt-pf__head-title { font-weight: 600; letter-spacing: -0.04em; }
+
+/* Hero visual: the rich scene is the panel, edge to edge in a rounded window. */
+.mkt-pf .mkt-pf__theme .mkt-pf__media .demo-video-glow__frame.is-scene {
+  background: transparent;
+  border-radius: 26px;
+  overflow: hidden;
+  box-shadow: 0 40px 80px -48px rgba(30, 20, 90, 0.55);
+}
+.mkt-pf .mkt-pf__theme .mkt-pf__media .demo-video-glow__frame.is-scene .fv { inset: 0; border-radius: 0; }
+
+/* Bento: Graceview cards. White card, the visual blends straight into it. */
+.mkt-pf .mkt-pf__theme .mkt-pf__tile {
+  border-radius: 22px;
+  box-shadow: 0 0 0 1px rgba(16, 24, 40, 0.08), 0 1px 2px rgba(16, 24, 40, 0.03);
+}
+@media (hover: hover) {
+  .mkt-pf .mkt-pf__theme .mkt-pf__tile:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 0 1px rgba(16, 24, 40, 0.1), 0 24px 48px -30px rgba(16, 24, 40, 0.25);
+  }
+}
+.mkt-pf .mkt-pf__theme .mkt-pf__tile-visual { margin: 0; border-radius: 0; aspect-ratio: 5 / 4; }
+.mkt-pf .mkt-pf__theme .mkt-pf__tile-visual .mkt-pf__shot,
+.mkt-pf .mkt-pf__theme .mkt-pf__tile-visual .fv { height: 100%; aspect-ratio: auto; }
+.mkt-pf .mkt-pf__theme .mkt-pf__tile-body { padding: 0.35rem 1.4rem 1.5rem; }
+.mkt-pf .mkt-pf__theme .mkt-pf__tile-title { font-size: 1.08rem; }
+
+/* ── Showcase tabs ─────────────────────────────────────────────────────── */
+.pfx-tabs { width: min(100%, 1120px); margin: 0 auto; }
+.pfx-tabs__stage {
+  position: relative;
+  border-radius: 26px;
+  overflow: hidden;
+  aspect-ratio: 16 / 10;
+  background: #3b2a8f;
+  box-shadow: 0 40px 80px -50px rgba(30, 20, 90, 0.55);
+}
+.pfx-tabs__panel { position: absolute; inset: 0; animation: pfx-in 0.7s cubic-bezier(0.16, 1, 0.3, 1) both; }
+.pfx-tabs__panel .mkt-pf__shot,
+.pfx-tabs__panel .mkt-pf__shot .fv { width: 100%; height: 100%; aspect-ratio: auto; border-radius: 0; }
+.pfx-tabs__panel .mkt-pf__shot-img { width: 100%; height: 100%; object-fit: cover; }
+@keyframes pfx-in { from { opacity: 0; transform: scale(1.015); } to { opacity: 1; transform: none; } }
+
+.pfx-tabs__list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
+  grid-auto-flow: column;
+  gap: 0;
+  margin-top: 1.75rem;
+}
+.pfx-tab {
+  position: relative;
+  padding: 1.35rem 1.5rem 0.5rem 0;
+  cursor: pointer;
+  outline: none;
+  text-align: left;
+}
+.pfx-tab + .pfx-tab { padding-left: 1.5rem; }
+.pfx-tab__rule {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 2px;
+  border-radius: 2px;
+  background: rgba(16, 24, 40, 0.1);
+  overflow: hidden;
+}
+.pfx-tab + .pfx-tab .pfx-tab__rule { left: 1.5rem; }
+.pfx-tab__rule i { position: absolute; inset: 0; transform-origin: left; transform: scaleX(0); background: #0b1220; }
+.pfx-tab.is-active .pfx-tab__rule i { transform: scaleX(1); }
+.pfx-tabs.is-running .pfx-tab.is-active .pfx-tab__rule i { animation: pfx-progress var(--pfx-tab-ms) linear both; }
+@keyframes pfx-progress { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+.pfx-tab__title {
+  margin: 0;
+  font-size: 1.02rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: #98a2b3;
+  transition: color 0.35s ease;
+}
+.pfx-tab__body {
+  margin: 0.45rem 0 0;
+  font-size: 0.9rem;
+  line-height: 1.55;
+  color: #98a2b3;
+  transition: color 0.35s ease;
+}
+.pfx-tab:hover .pfx-tab__title,
+.pfx-tab.is-active .pfx-tab__title { color: #0b1220; }
+.pfx-tab:hover .pfx-tab__body,
+.pfx-tab.is-active .pfx-tab__body { color: #5d6779; }
+.pfx-tab:focus-visible .pfx-tab__title { text-decoration: underline; text-underline-offset: 4px; }
+
+@media (max-width: 760px) {
+  .pfx-tabs__stage { border-radius: 18px; }
+  .pfx-tabs__list { grid-auto-flow: row; grid-template-columns: 1fr; margin-top: 1rem; }
+  .pfx-tab, .pfx-tab + .pfx-tab { padding: 1rem 0 0.9rem 1.1rem; }
+  .pfx-tab__rule, .pfx-tab + .pfx-tab .pfx-tab__rule { left: 0; right: auto; top: 0; bottom: 0; width: 2px; height: auto; }
+  .pfx-tab__rule i { transform-origin: top; transform: scaleY(0); }
+  .pfx-tab.is-active .pfx-tab__rule i { transform: scaleY(1); }
+  .pfx-tabs.is-running .pfx-tab.is-active .pfx-tab__rule i { animation-name: pfx-progress-y; }
+  @keyframes pfx-progress-y { from { transform: scaleY(0); } to { transform: scaleY(1); } }
+  .pfx-tab:not(.is-active) .pfx-tab__body { display: none; }
+}

@@ -71,12 +71,23 @@ type StageProps = SceneProps & {
   shape?: 'square' | 'wide';
   /** Kept for API compatibility; the dotted grid was retired. */
   grid?: boolean;
+  /**
+   * Backdrop. 'plain' is a white card surface (bento tiles, Graceview style);
+   * 'violet' | 'ocean' | 'dusk' are rich glass-gradient panels (Instantly
+   * style). Defaults: square stages are plain, wide stages pick a gradient
+   * from the label so neighbouring panels differ.
+   */
+  mood?: Mood;
   children: ReactNode;
 };
 
+export type Mood = 'plain' | 'violet' | 'ocean' | 'dusk';
+const MOODS: Mood[] = ['violet', 'ocean', 'dusk'];
+const hash = (t: string) => [...t].reduce((h, c) => (h * 31 + c.charCodeAt(0)) >>> 0, 7);
+
 /** Breathing room around auto-framed content, as a fraction of each side. */
-const FIT_PAD = { square: 0.07, wide: 0.065 } as const;
-const FIT_MAX = 1.3;
+const FIT_PAD = { square: 0.1, wide: 0.09 } as const;
+const FIT_MAX = 1.7;
 const useIsoLayoutEffect = typeof window === 'undefined' ? useEffect : useLayoutEffect;
 
 /**
@@ -132,7 +143,8 @@ function useAutoFit(
   }, [shape]);
 }
 
-export function Stage({ tone, shape = 'square', label, children }: StageProps) {
+export function Stage({ tone, shape = 'square', mood, label, children }: StageProps) {
+  const look: Mood = mood ?? (shape === 'square' ? 'plain' : MOODS[hash(label) % MOODS.length]);
   const accent = useContext(AccentContext) ?? tone ?? 'violet';
   const ref = useRef<HTMLDivElement>(null);
   const fitRef = useRef<HTMLDivElement>(null);
@@ -239,9 +251,16 @@ export function Stage({ tone, shape = 'square', label, children }: StageProps) {
   }, []);
 
   return (
-    <div ref={ref} className={cx('fv', `fv--${shape}`)} data-tone={accent} role="img" aria-label={label}>
+    <div
+      ref={ref}
+      className={cx('fv', `fv--${shape}`, `fv--${look}`, look !== 'plain' && 'fv--rich')}
+      data-tone={accent}
+      role="img"
+      aria-label={label}
+    >
       <div className="fv__bg" aria-hidden="true">
         <span className="fv__aura" />
+        <span className="fv__aura fv__aura--b" />
         <span className="fv__spot" />
       </div>
       <PlayContext.Provider value={play}>
@@ -272,12 +291,14 @@ type FloatProps = {
   drift?: boolean;
   /** Stacking order. Higher layers also move further on hover parallax. */
   z?: number;
+  /** Fade this element out toward an edge, so long lists dissolve instead of ending. */
+  fade?: 'bottom' | 'right' | 'left' | 'x';
   className?: string;
   children: ReactNode;
 };
 
 /** Absolutely placed, reveal-animated wrapper. Every scene element sits in one. */
-export function Float({ x, y, w, delay = 0, drift, z, className, children }: FloatProps) {
+export function Float({ x, y, w, delay = 0, drift, z, fade, className, children }: FloatProps) {
   const depth = z ? Math.min(z, 5) * 0.5 + 0.5 : 0.6 + (delay % 4) * 0.35;
   const style = {
     left: `${x}%`,
@@ -288,7 +309,7 @@ export function Float({ x, y, w, delay = 0, drift, z, className, children }: Flo
     '--fv-depth': depth.toFixed(2),
   } as CSSProperties;
   return (
-    <div className={cx('fv-float', drift && 'fv-float--drift', className)} style={style}>
+    <div className={cx('fv-float', drift && 'fv-float--drift', fade && `fv-fade--${fade}`, className)} style={style}>
       <div className="fv-float__px">
         <div className="fv-float__in">{children}</div>
       </div>
@@ -338,6 +359,7 @@ export function Panel({
   tone,
   right,
   pad = true,
+  glass,
   className,
   children,
 }: {
@@ -346,11 +368,13 @@ export function Panel({
   tone?: Tone;
   right?: ReactNode;
   pad?: boolean;
+  /** Frosted card for rich backdrops: translucent white, blurred, white text. */
+  glass?: boolean;
   className?: string;
   children?: ReactNode;
 }) {
   return (
-    <div className={cx('fv-panel', !pad && 'fv-panel--flush', className)}>
+    <div className={cx('fv-panel', !pad && 'fv-panel--flush', glass && 'fv-panel--glass', className)}>
       {title ? (
         <div className="fv-panel__head">
           {icon ? <IconTile icon={icon} tone={tone} size="sm" /> : null}
@@ -810,4 +834,25 @@ export function Thumb({ tone, icon: Icon, h = 6 }: { tone?: Tone; icon?: IconTyp
       {Icon ? <Icon strokeWidth={1.6} /> : null}
     </span>
   );
+}
+
+/* ── Quiet illustration helpers (Graceview-style bento visuals) ────────── */
+
+/**
+ * Concentric hairline rings centred on (x, y) percent of the stage. Sits behind
+ * a focal element to give it a sense of place without any pattern noise.
+ */
+export function Rings({ x = 50, y = 50, count = 4, gap = 8 }: { x?: number; y?: number; count?: number; gap?: number }) {
+  return (
+    <div className="fv-rings" style={{ left: `${x}%`, top: `${y}%` } as CSSProperties} aria-hidden="true">
+      {Array.from({ length: count }, (_, i) => (
+        <i key={i} style={{ width: `${(i + 1) * gap}em`, height: `${(i + 1) * gap}em`, animationDelay: `${i * 0.6}s` }} />
+      ))}
+    </div>
+  );
+}
+
+/** Soft accent glow puddle behind a focal element. */
+export function Glow({ x = 50, y = 50, size = 18 }: { x?: number; y?: number; size?: number }) {
+  return <div className="fv-glow" style={{ left: `${x}%`, top: `${y}%`, width: `${size}em`, height: `${size}em` }} aria-hidden="true" />;
 }
