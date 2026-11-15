@@ -471,7 +471,7 @@ export function Spark({
       style={{ height: `${height}em` }}
     >
       <path className="fv-spark__area" d={`${line} L 100 40 L 0 40 Z`} />
-      <path className="fv-spark__line" d={line} pathLength={1} />
+      <path className="fv-spark__line" d={line} />
     </svg>
   );
 }

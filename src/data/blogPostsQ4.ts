@@ -122,7 +122,7 @@ const INTERAKT_PRICING_FAQS: Faq[] = [
       'No. Interakt offers a 14-day free trial on its web plans and on every plan in its Shopify App Store listing, read 9 November 2026. The cheapest paid plan is Starter at ₹999 a month plus taxes, which is Instagram only on monthly billing, and WhatsApp messages are billed on every plan at Interakt’s own per-message rates.',
   },
   {
-    question: 'What does Interakt charge per WhatsApp message in India?',
+    question: 'What is Interakt pricing per message in India?',
     answer:
       'Interakt charges ₹0.949 to ₹0.970 per marketing message and ₹0.140 to ₹0.160 per utility message to Indian numbers, depending on plan, read 9 November 2026. Starter is ₹0.970 marketing, ₹0.160 utility and ₹0.129 authentication; Growth ₹0.958, ₹0.150 and ₹0.128; Advanced ₹0.949, ₹0.140 and ₹0.127, with service messages at the authentication rate after 1,000 free a month. Meta’s own India rates are ₹0.8631 and ₹0.1150, so Interakt is about 10% to 12% above Meta on marketing and 22% to 39% above on utility; Enterprise is listed with no markup.',
   },
@@ -136,6 +136,21 @@ const INTERAKT_PRICING_FAQS: Faq[] = [
     answer:
       'Yes, on Starter, Growth and Advanced: Interakt publishes its own per-message rates for each plan, and all of them sit above Meta’s India card. On Growth, every 1,000 marketing messages cost ₹94.90 more than Meta’s rate and every 1,000 utility messages ₹35 more. Only the Enterprise plan is listed with “No Markup Charges”.',
   },
+  {
+    question: 'What is Interakt pricing per month?',
+    answer:
+      'Interakt’s web plans cost ₹999 (Starter), ₹2,799 (Growth) and ₹3,799 (Advanced) a month plus taxes on monthly billing, read 9 November 2026, with Enterprise on request. A Shopify store pays Interakt’s separate Shopify App Store plans instead, from ₹1,973.48 to ₹9,303.55 a month as Shopify’s rupee estimates. WhatsApp messages are billed on top of either.',
+  },
+  {
+    question: 'Is Interakt cheaper on quarterly or yearly billing?',
+    answer:
+      'Yes. Read on 9 November 2026, quarterly billing works out to ₹1,166, ₹2,566 and ₹3,500 a month for Starter, Growth and Advanced, and yearly billing to ₹1,000, ₹2,200 and ₹3,000. On the Shopify app, Growth is ₹27,816.67 a year, or ₹2,318 a month, against ₹3,852.99 billed monthly.',
+  },
+  {
+    question: 'Does Interakt charge extra for AI replies?',
+    answer:
+      'Yes. On the web plans, WhatsApp AI Agents are a ₹3,000 a month add-on for Growth and Advanced, with 100 free AI messages and then ₹0.50 per AI message, read 9 November 2026. On the Shopify app, AI agents first appear on the Premier plan at ₹9,303.55 a month.',
+  },
 ];
 
 const WATI_PRICING_FAQS: Faq[] = [
@@ -145,7 +160,7 @@ const WATI_PRICING_FAQS: Faq[] = [
       'No. WATI offers a 7-day free trial with no setup fee, read on 10 November 2026, and the cheapest paid plan in India is Growth at ₹2,999 a month on monthly billing, or ₹2,199 a month billed annually. WhatsApp template messages are charged on top of every plan.',
   },
   {
-    question: 'What does WATI charge per WhatsApp message in India?',
+    question: 'What is WATI pricing per message in India?',
     answer:
       'WATI’s INR rate cards, dated 1 October 2026, list Growth at ₹1.0357 for marketing, ₹0.1495 for utility and authentication, and ₹0.1380 for service messages to Indian numbers. Pro is ₹0.9926 for marketing and Business ₹0.9667. Meta’s own India rates are ₹0.8631 and ₹0.1150, so WATI is 12% to 20% above Meta on marketing and 20% to 30% above on utility.',
   },
@@ -163,6 +178,16 @@ const WATI_PRICING_FAQS: Faq[] = [
     question: 'Is WATI cheaper on annual billing?',
     answer:
       'Yes. Read on 10 November 2026, Growth is ₹2,999 a month billed monthly, ₹2,699 billed quarterly and ₹2,199 billed annually; Pro is ₹6,499, ₹5,799 and ₹4,899; Business is ₹18,499, ₹16,799 and ₹14,799. Message rates and extra-user prices do not change with the billing cycle.',
+  },
+  {
+    question: 'Does WATI charge extra for AI credits and automation?',
+    answer:
+      'Only above the monthly allowance. Read on 10 November 2026, Growth includes 2,000 Wati AI credits and 1,000 automation triggers a month, Pro 5,000 credits and 2,000 triggers, and Business 20,000 credits and 5,000 triggers. Beyond that, 2,000 extra AI credits are ₹1,600 a month and 1,000 extra triggers ₹1,000 a month.',
+  },
+  {
+    question: 'Is WATI cheaper than Interakt or AiSensy for a Shopify store?',
+    answer:
+      'Not on our worked bill. At 500 orders a month with the same message mix, WATI Growth comes to about ₹14,325 before GST (read 10 November 2026), against about ₹13,914 on Interakt’s Shopify Growth plan (read 9 November) and ₹12,908 on AiSensy Basic (read 12 November). WATI’s plan price is not the reason; its message rates, 12% to 30% above Meta’s, are.',
   },
 ];
 
@@ -191,6 +216,16 @@ const AISENSY_PRICING_FAQS: Faq[] = [
     question: 'Is AiSensy cheaper on yearly billing?',
     answer:
       'Yes, by 10%. Read on 12 November 2026, Basic is ₹1,500 a month billed monthly, ₹1,425 billed quarterly and ₹1,350 billed yearly; Pro is ₹3,200, ₹3,040 and ₹2,880; Premium is ₹9,100, ₹8,645 and ₹8,190. Message rates and add-on prices do not change with the billing cycle.',
+  },
+  {
+    question: 'What are AiSensy’s pricing plans?',
+    answer:
+      'AiSensy has five plans, read 12 November 2026: Free Forever at ₹0, Basic ₹1,500, Pro ₹3,200, Premium ₹9,100 and Unlimited ₹45,000 a month on monthly billing. Basic includes broadcasting, the shared inbox and the Shopify integration; Pro adds the campaign scheduler and click tracking; Premium adds 250 messages a second and downloadable reports. Chatbot Flows (₹2,500 a month) and the AI Chat Agent (₹1,350 a month) are sold separately on any plan.',
+  },
+  {
+    question: 'Is AiSensy cheaper than WATI?',
+    answer:
+      'On the plan price and on our worked bill, yes; per marketing message, no. AiSensy Basic is ₹1,500 a month (read 12 November 2026) against ₹2,999 for WATI Growth (read 10 November 2026), and at 500 orders a month with the same message mix the bills come to about ₹12,908 and ₹14,325 before taxes. But AiSensy charges ₹1.09 per marketing message against ₹1.0357 on WATI Growth, so a store that sends mostly campaigns keeps less of the saving.',
   },
 ];
 

@@ -360,12 +360,11 @@
 .fv-spark { display: block; width: 100%; overflow: visible; }
 .fv-spark path { vector-effect: non-scaling-stroke; }
 .fv-spark__area { fill: color-mix(in srgb, var(--t-400) 22%, transparent); stroke: none; }
-.fv-spark__line { fill: none; stroke: var(--t-600); stroke-width: 2.2px; stroke-linecap: round; stroke-linejoin: round; stroke-dasharray: 1; stroke-dashoffset: 0; }
-.fv.is-armed .fv-spark__line { stroke-dashoffset: 1; }
-.fv.is-armed .fv-spark__area { opacity: 0; }
-.fv.is-armed.is-in .fv-spark__line { animation: fv-draw 1.4s ease-out calc(var(--fv-d, 0ms) + 0.3s) both; }
-.fv.is-armed.is-in .fv-spark__area { animation: fv-fade 0.9s ease-out calc(var(--fv-d, 0ms) + 1s) both; }
-@keyframes fv-draw { from { stroke-dashoffset: 1; } to { stroke-dashoffset: 0; } }
+.fv-spark__line { fill: none; stroke: var(--t-600); stroke-width: 2.2px; stroke-linecap: round; stroke-linejoin: round; }
+/* Reveal left to right with a clip: dash tricks break under non-scaling-stroke in Chrome. */
+.fv.is-armed .fv-spark { clip-path: inset(0 100% 0 0); }
+.fv.is-armed.is-in .fv-spark { animation: fv-wipe 1.4s ease-out calc(var(--fv-d, 0ms) + 0.3s) both; }
+@keyframes fv-wipe { from { clip-path: inset(0 100% 0 0); } to { clip-path: inset(0 -2% 0 0); } }
 @keyframes fv-fade { from { opacity: 0; } to { opacity: 1; } }
 
 .fv-donut { position: relative; display: grid; place-items: center; flex: none; }
@@ -461,3 +460,8 @@
 }
 /* Scene inside a showcase or bento frame. */
 .mkt-pf__shot.is-scene { background: transparent; }
+
+/* Phones: the hero frame turns 4:3 below 768px; let a scene keep its own 16:10. */
+@media (max-width: 767px) {
+  .demo-video-glow--still .demo-video-glow__frame.is-scene { aspect-ratio: 16 / 10; }
+}
