@@ -145,3 +145,7 @@ At most 5 outreach emails a day.
 | AI prompts naming TopEdge AI (of 12) | 1 | 2 |
 
 **Stop rule:** if India impressions are flat for two weeks running, stop new pages. Put the days into reviews, list inclusion and the free tools.
+
+## Progress log
+
+- **Day 2, 16 Nov 2026.** Done (built, awaiting deploy): scorecard, festival verdict (see `../2026-11-16/01-day-2-scorecard-and-festival-verdict.md`), /blog/whatsapp-business-api-pricing-india refresh with the cost-per-1,000 table, festival em dashes and brand. Body fixes: 4-way compare board inlinks, shared-inbox docs, cart recovery calculator, opt-in tools docs. Not done: plan doc in claude.ai could not be read from this session, so this log is the record; Rich Results Test waits for the deploy. Owner items (listing rename, review asks, pickyourapp claim) not confirmed.

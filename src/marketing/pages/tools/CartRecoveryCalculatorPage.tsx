@@ -90,7 +90,7 @@ export default function CartRecoveryCalculatorPage() {
       name="Cart recovery revenue calculator"
       h1="Cart recovery revenue calculator"
       accent="Cart recovery"
-      subtitle="See how much revenue WhatsApp reminders could win back, and what the messages would cost."
+      subtitle="This abandoned cart recovery calculator shows what WhatsApp reminders could win back, and what the messages cost."
       privacy="Runs in your browser. Nothing you type is saved or sent anywhere."
       blocks={BLOCKS}
       faqs={FAQS}

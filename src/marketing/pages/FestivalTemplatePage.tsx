@@ -121,7 +121,7 @@ export default function FestivalTemplatePage({ slug }: { slug: string }) {
       id: 'cost',
       tone: 'note',
       title: `What this campaign costs: ${FESTIVAL_SEQUENCE_COST} per customer`,
-      body: `All four ${festival.shortName} templates are marketing templates, which Meta bills at ${FESTIVAL_MARKETING_RATE} per delivered message in India — about ${FESTIVAL_SEQUENCE_COST} to reach one customer across the sequence, or roughly ₹3,450 for a list of a thousand. Meta bills your own WhatsApp Business account and TopEdge adds no markup.`,
+      body: `All four ${festival.shortName} templates are marketing templates, which Meta bills at ${FESTIVAL_MARKETING_RATE} per delivered message in India, about ${FESTIVAL_SEQUENCE_COST} to reach one customer across the sequence, or roughly ₹3,450 for a list of a thousand. Meta bills your own WhatsApp Business account and TopEdge AI adds no markup.`,
       link: { label: 'See the full India rate card', href: '/pricing/meta-rates' },
     },
   ];
@@ -165,7 +165,7 @@ export default function FestivalTemplatePage({ slug }: { slug: string }) {
             step: items.map((item, i) => ({
               '@type': 'HowToStep',
               position: i + 1,
-              name: `${item.stage.label} — ${stageSendWindow(festival, item.stage)}`,
+              name: `${item.stage.label}: ${stageSendWindow(festival, item.stage)}`,
               text: item.stage.purpose,
               url: `${SITE_URL}${path}#${item.row.metaName}`,
             })),
@@ -308,7 +308,7 @@ export default function FestivalTemplatePage({ slug }: { slug: string }) {
           <SectionHeading
             title="Festivals close to this one"
             accent="close to this one"
-            subtitle="Plan the run rather than the date — the campaign that follows is usually the one that pays for this one."
+            subtitle="Plan the run rather than the date. The campaign that follows is usually the one that pays for this one."
           />
           <ul className="mkt-fgroup__grid mx-auto max-w-5xl">
             {siblings.map((s) => (

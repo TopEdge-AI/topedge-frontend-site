@@ -1567,7 +1567,7 @@ export const FESTIVALS: Festival[] = [
       {
         question: 'What does a Diwali WhatsApp campaign cost?',
         answer:
-          'All four templates are marketing, billed by Meta at ₹0.8631 per delivered message in India, so about ₹3.45 to reach one customer across the full sequence: roughly ₹3,450 for a list of a thousand. TopEdge adds no markup on Meta’s rates.',
+          'All four templates are marketing, billed by Meta at ₹0.8631 per delivered message in India, so about ₹3.45 to reach one customer across the full sequence: roughly ₹3,450 for a list of a thousand. TopEdge AI adds no markup on Meta’s rates.',
       },
       {
         question: 'Can I add a Diwali greeting to my order confirmation instead?',

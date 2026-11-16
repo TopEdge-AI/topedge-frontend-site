@@ -1318,7 +1318,7 @@ ${verdict(`<p><strong>To collect WhatsApp opt-in on Shopify in India, ask in fou
 <tr><td>Instagram comment to DM</td><td>High intent</td><td>Ask again before offers</td></tr>
 </tbody>
 </table>
-<p>TopEdge AI’s <a href="/features/opt-in-tools">opt-in tools</a> cover website popups and capture, so consent starts inside the same system that runs your journeys. For a click-to-WhatsApp button or a packaging QR, our <a href="/tools/whatsapp-link-generator">free WhatsApp link generator</a> builds the link with a pre-filled message, and <a href="/blog/add-whatsapp-chat-button-shopify">adding a WhatsApp chat button to Shopify</a> compares the free and app options.</p>
+<p>TopEdge AI’s <a href="/features/opt-in-tools">opt-in tools</a> cover website popups and capture, so consent starts inside the same system that runs your journeys. Every setting is listed in the <a href="/docs/reference/opt-in-tools">opt-in tools reference</a>. For a click-to-WhatsApp button or a packaging QR, our <a href="/tools/whatsapp-link-generator">free WhatsApp link generator</a> builds the link with a pre-filled message, and <a href="/blog/add-whatsapp-chat-button-shopify">adding a WhatsApp chat button to Shopify</a> compares the free and app options.</p>
 
 <h2>What good consent wording looks like</h2>
 <ul>
@@ -2409,7 +2409,7 @@ ${faqHtml(FUNNEL_FAQS)}
 </tbody>
 </table>
 </div>
-<p>For a feature-by-feature board, see <a href="/compare/interakt">TopEdge AI vs Interakt</a>. For what the Meta line costs on any tool, see <a href="/blog/whatsapp-business-api-pricing-india">WhatsApp Business API pricing in India</a>. If Updatrr is on your list, our <a href="/blog/updatrr-alternative-shopify-india">Updatrr comparison</a> prices it at the same volumes, and <a href="/blog/wati-pricing-india">WATI pricing in India</a> and <a href="/blog/aisensy-pricing-india">AiSensy pricing in India</a> use the same message mix.</p>
+<p>For a feature-by-feature board, see <a href="/compare/interakt">TopEdge AI vs Interakt</a>, or <a href="/compare/topedge-vs-wati-vs-interakt-vs-aisensy">WATI vs Interakt vs AiSensy</a> side by side with TopEdge AI. For what the Meta line costs on any tool, see <a href="/blog/whatsapp-business-api-pricing-india">WhatsApp Business API pricing in India</a>. If Updatrr is on your list, our <a href="/blog/updatrr-alternative-shopify-india">Updatrr comparison</a> prices it at the same volumes, and <a href="/blog/wati-pricing-india">WATI pricing in India</a> and <a href="/blog/aisensy-pricing-india">AiSensy pricing in India</a> use the same message mix.</p>
 
 ${faqHtml(INTERAKT_PRICING_FAQS)}
 
@@ -2558,7 +2558,7 @@ ${faqHtml(INTERAKT_PRICING_FAQS)}
 <li><strong>You need a CRM link.</strong> Pro lists HubSpot and Business lists Salesforce.</li>
 <li><strong>Your order volume is high and your team is small.</strong> WATI publishes no order cap. TopEdge AI plans cap at 100, 800 and 1,500 orders a month.</li>
 </ul>
-<p>A Shopify-only app fits better when most of your sends are order, shipping and COD updates, where WATI runs 30% above Meta on Growth and Pro, or when you want <a href="/features/cod-confirmation">WhatsApp COD confirmation for Shopify</a> and cart recovery working without building chatbot rules. Our <a href="/compare/wati">TopEdge AI vs WATI board</a> lists the features side by side, and <a href="/pricing">TopEdge AI pricing</a> shows what each plan includes.</p>
+<p>A Shopify-only app fits better when most of your sends are order, shipping and COD updates, where WATI runs 30% above Meta on Growth and Pro, or when you want <a href="/features/cod-confirmation">WhatsApp COD confirmation for Shopify</a> and cart recovery working without building chatbot rules. Our <a href="/compare/wati">TopEdge AI vs WATI board</a> lists the features side by side, the four-way <a href="/compare/topedge-vs-wati-vs-interakt-vs-aisensy">WATI vs Interakt vs AiSensy</a> board adds the other two, and <a href="/pricing">TopEdge AI pricing</a> shows what each plan includes.</p>
 <p>If the Meta line is the part you want to understand first, start with <a href="/blog/whatsapp-business-api-pricing-india">WhatsApp Business API pricing in India</a>.</p>
 
 ${faqHtml(WATI_PRICING_FAQS)}
@@ -2670,7 +2670,7 @@ ${faqHtml(WATI_PRICING_FAQS)}
 <li><strong>Costliest part:</strong> the message rate. 26% above Meta on every category, on every plan.</li>
 <li><strong>Check before you buy:</strong> whether your flows need the ₹2,500 Chatbot Flows add-on, and how many replies a month you send past the free 1,000.</li>
 </ol>
-<p>This is a reading of published pages, not a hands-on test. For the feature-by-feature view see <a href="/compare/aisensy">TopEdge AI vs AiSensy</a>. If you have already decided to move, read the <a href="/blog/aisensy-alternative-shopify-india">AiSensy alternative guide</a>.</p>
+<p>This is a reading of published pages, not a hands-on test. For the feature-by-feature view see <a href="/compare/aisensy">TopEdge AI vs AiSensy</a>, or the four-way <a href="/compare/topedge-vs-wati-vs-interakt-vs-aisensy">WATI vs Interakt vs AiSensy</a> board. If you have already decided to move, read the <a href="/blog/aisensy-alternative-shopify-india">AiSensy alternative guide</a>.</p>
 
 <h2>What a Shopify store pays at 100, 500 and 1,500 orders</h2>
 <p><strong>Assumptions, so you can redo this with your own numbers.</strong> Per order we assume 20 marketing messages, 3 utility messages and 6 customer-service replies, with the first 1,000 replies a month free. This is an estimate, not a benchmark. It is the same mix as our <a href="/blog/wati-pricing-india">WATI pricing</a> and <a href="/blog/interakt-pricing-india">Interakt pricing</a> pages, so the three can be compared row by row.</p>
