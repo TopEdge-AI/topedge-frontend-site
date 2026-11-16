@@ -26,7 +26,7 @@ import FeatureMeshStage from '../components/effects/FeatureMeshStage';
 import HomeTrust from '../components/home/HomeTrust';
 import { PrimaryButton, GhostButton } from '../components/ui';
 import { ScenesContext, ScenePlaceholder, usePageScenes, useScene } from '../components/visuals';
-import { AccentContext } from '../components/visuals/kit';
+import { AccentContext, MeshContext } from '../components/visuals/kit';
 import '../styles/product-feature.css';
 import '../styles/feature-premium.css';
 
@@ -217,6 +217,7 @@ function ProductFeatureView({ page }: { page: ProductPage }) {
   return (
     <ScenesContext.Provider value={scenes}>
     <AccentContext.Provider value="violet">
+    <MeshContext.Provider value={`/meshes/${page.id}.png`}>
       <MarketingSEO
         title={page.seoTitle}
         description={page.seoDescription}
@@ -459,6 +460,7 @@ function ProductFeatureView({ page }: { page: ProductPage }) {
         />
         </div>
       </MarketingPage>
+    </MeshContext.Provider>
     </AccentContext.Provider>
     </ScenesContext.Provider>
   );

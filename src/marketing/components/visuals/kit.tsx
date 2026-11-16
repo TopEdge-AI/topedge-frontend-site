@@ -56,6 +56,13 @@ export type SceneMap = Record<string, Scene>;
 export const AccentContext = createContext<Tone | undefined>(undefined);
 /** Increments every time the stage plays its entrance (count-ups key off it). */
 const PlayContext = createContext(0);
+/** The enclosing Float's entrance time in ms, so timed children can wait for it. */
+const AtContext = createContext(0);
+/**
+ * Page-level backdrop image for rich (wide) stages: the page's own hero mesh,
+ * so every panel on a page shares the hero's colour mood.
+ */
+export const MeshContext = createContext<string | undefined>(undefined);
 
 const cx = (...parts: (string | false | null | undefined)[]) => parts.filter(Boolean).join(' ');
 
@@ -78,6 +85,11 @@ type StageProps = SceneProps & {
    * from the label so neighbouring panels differ.
    */
   mood?: Mood;
+  /**
+   * Seconds the scene plays before it settles out and replays (default 8.2).
+   * Set it to cover the last `at` / `until` in a storytelling scene plus ~2s.
+   */
+  duration?: number;
   children: ReactNode;
 };
 
@@ -143,7 +155,9 @@ function useAutoFit(
   }, [shape]);
 }
 
-export function Stage({ tone, shape = 'square', mood, label, children }: StageProps) {
+export function Stage({ tone, shape = 'square', mood, duration, label, children }: StageProps) {
+  const mesh = useContext(MeshContext);
+  const holdMs = Math.max(4000, (duration ?? HOLD_MS / 1000) * 1000);
   const look: Mood = mood ?? (shape === 'square' ? 'plain' : MOODS[hash(label) % MOODS.length]);
   const accent = useContext(AccentContext) ?? tone ?? 'violet';
   const ref = useRef<HTMLDivElement>(null);
@@ -173,7 +187,7 @@ export function Stage({ tone, shape = 'square', mood, label, children }: StagePr
     const schedule = () => {
       clear();
       if (!visible || hovering) return;
-      timer = window.setTimeout(exit, HOLD_MS);
+      timer = window.setTimeout(exit, holdMs);
     };
     const enter = () => {
       clear();
@@ -238,7 +252,8 @@ export function Stage({ tone, shape = 'square', mood, label, children }: StagePr
     };
     el.addEventListener('pointerenter', onEnter);
     el.addEventListener('pointerleave', onLeave);
-    el.addEventListener('pointermove', onMove);
+    // Hover parallax retired: the loop just pauses while someone is looking.
+    void onMove;
 
     return () => {
       io.disconnect();
@@ -246,9 +261,18 @@ export function Stage({ tone, shape = 'square', mood, label, children }: StagePr
       cancelAnimationFrame(raf);
       el.removeEventListener('pointerenter', onEnter);
       el.removeEventListener('pointerleave', onLeave);
-      el.removeEventListener('pointermove', onMove);
+
     };
-  }, []);
+  }, [holdMs]);
+
+  const meshStyle =
+    look !== 'plain' && mesh
+      ? ({
+          backgroundImage: `url('${mesh}')`,
+          // The meshes carry their colour toward the right; crop into it.
+          backgroundPosition: `${62 + (hash(label) % 38)}% ${25 + ((hash(label) >> 3) % 50)}%`,
+        } as CSSProperties)
+      : undefined;
 
   return (
     <div
@@ -258,7 +282,7 @@ export function Stage({ tone, shape = 'square', mood, label, children }: StagePr
       role="img"
       aria-label={label}
     >
-      <div className="fv__bg" aria-hidden="true">
+      <div className={cx('fv__bg', meshStyle && 'fv__bg--mesh')} style={meshStyle} aria-hidden="true">
         <span className="fv__aura" />
         <span className="fv__aura fv__aura--b" />
         <span className="fv__spot" />
@@ -293,25 +317,36 @@ type FloatProps = {
   z?: number;
   /** Fade this element out toward an edge, so long lists dissolve instead of ending. */
   fade?: 'bottom' | 'right' | 'left' | 'x';
+  /** Seconds from scene start when this enters (overrides `delay`). */
+  at?: number;
+  /** Seconds from scene start when this leaves. Pair with a second Float to swap states. */
+  until?: number;
   className?: string;
   children: ReactNode;
 };
 
 /** Absolutely placed, reveal-animated wrapper. Every scene element sits in one. */
-export function Float({ x, y, w, delay = 0, drift, z, fade, className, children }: FloatProps) {
+export function Float({ x, y, w, delay = 0, at, until, drift, z, fade, className, children }: FloatProps) {
+  const enterMs = at !== undefined ? at * 1000 : delay * 85;
   const depth = z ? Math.min(z, 5) * 0.5 + 0.5 : 0.6 + (delay % 4) * 0.35;
   const style = {
     left: `${x}%`,
     top: `${y}%`,
     width: w ? `${w}%` : undefined,
     zIndex: z,
-    '--fv-d': `${delay * 85}ms`,
+    '--fv-d': `${enterMs}ms`,
+    '--fv-until': until !== undefined ? `${until * 1000}ms` : undefined,
     '--fv-depth': depth.toFixed(2),
   } as CSSProperties;
   return (
-    <div className={cx('fv-float', drift && 'fv-float--drift', fade && `fv-fade--${fade}`, className)} style={style}>
+    <div
+      className={cx('fv-float', drift && 'fv-float--drift', until !== undefined && 'fv-float--until', fade && `fv-fade--${fade}`, className)}
+      style={style}
+    >
       <div className="fv-float__px">
-        <div className="fv-float__in">{children}</div>
+        <AtContext.Provider value={enterMs}>
+          <div className="fv-float__in">{children}</div>
+        </AtContext.Provider>
       </div>
     </div>
   );
@@ -588,6 +623,7 @@ const NUM_RE = /\d[\d,]*(?:\.\d+)?/;
  */
 function CountUp({ value }: { value: string }) {
   const play = useContext(PlayContext);
+  const wait = useContext(AtContext) + 250;
   const [text, setText] = useState(value);
 
   useEffect(() => {
@@ -606,18 +642,25 @@ function CountUp({ value }: { value: string }) {
         : n.toFixed(decimals);
     const before = value.slice(0, m.index);
     const after = value.slice((m.index ?? 0) + raw.length);
-    const start = performance.now();
+    let start = 0;
     const dur = 1300;
     let raf = 0;
+    setText(before + fmt(0) + after);
     const tick = (t: number) => {
       const k = Math.min(1, (t - start) / dur);
       const eased = 1 - Math.pow(1 - k, 4);
       setText(before + fmt(target * eased) + after);
       if (k < 1) raf = requestAnimationFrame(tick);
     };
-    raf = requestAnimationFrame(tick);
-    return () => cancelAnimationFrame(raf);
-  }, [play, value]);
+    const kick = window.setTimeout(() => {
+      start = performance.now();
+      raf = requestAnimationFrame(tick);
+    }, wait);
+    return () => {
+      window.clearTimeout(kick);
+      cancelAnimationFrame(raf);
+    };
+  }, [play, value, wait]);
 
   return <>{text}</>;
 }
@@ -787,16 +830,23 @@ export function Btn({
   tone,
   primary,
   icon: Icon,
+  pressAt,
   children,
 }: {
   tone?: Tone;
   primary?: boolean;
   icon?: IconType;
+  /** Seconds from scene start when the button is pressed (scale dip and ripple). */
+  pressAt?: number;
   children: ReactNode;
 }) {
   return (
     // A primary action is always the brand accent, whatever tone the scene asked for.
-    <span className={cx('fv-btn', primary && 'fv-btn--primary')} data-tone={primary ? undefined : tone}>
+    <span
+      className={cx('fv-btn', primary && 'fv-btn--primary', pressAt !== undefined && 'fv-btn--press')}
+      data-tone={primary ? undefined : tone}
+      style={pressAt !== undefined ? ({ '--fv-press': `${pressAt}s` } as CSSProperties) : undefined}
+    >
       {Icon ? <Icon strokeWidth={2.2} /> : null}
       {children}
     </span>
@@ -812,8 +862,90 @@ export function Field({ label, value, mono }: { label: string; value: string; mo
   );
 }
 
-/** Pointer that glides in and "clicks". Place it over the thing being pressed. */
-export function Cursor({ x, y, delay = 6 }: { x: number; y: number; delay?: number }) {
+/**
+ * Pointer. Two modes:
+ *   - `x`, `y` (+ `delay`): glides in to that spot and clicks, on a loop.
+ *   - `path`: [[x, y, t], ...] in stage percent and seconds from scene start,
+ *     with `clicks` (seconds) where it presses. Runs once per scene play, so it
+ *     can walk through a story: hover a button, click, move to the next thing.
+ */
+export function Cursor({
+  x = 50,
+  y = 50,
+  delay = 6,
+  path,
+  clicks = [],
+}: {
+  x?: number;
+  y?: number;
+  delay?: number;
+  path?: [number, number, number][];
+  clicks?: number[];
+}) {
+  const play = useContext(PlayContext);
+  const ref = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const el = ref.current;
+    if (!el || !path?.length || play === 0 || typeof el.animate !== 'function') return;
+    const end = path[path.length - 1][2] + 0.6;
+    const total = end * 1000;
+    const frames: Keyframe[] = [];
+    const first = path[0];
+    frames.push({ left: `${first[0]}%`, top: `${first[1]}%`, opacity: 0, offset: 0 });
+    path.forEach(([px, py, t]) => {
+      frames.push({
+        left: `${px}%`,
+        top: `${py}%`,
+        opacity: 1,
+        offset: Math.min(0.999, (t * 1000) / total),
+        easing: 'cubic-bezier(0.45, 0, 0.2, 1)',
+      });
+    });
+    const lastP = path[path.length - 1];
+    frames.push({ left: `${lastP[0]}%`, top: `${lastP[1]}%`, opacity: 0, offset: 1 });
+    frames.sort((a, b) => (a.offset as number) - (b.offset as number));
+    const anims: Animation[] = [el.animate(frames, { duration: total, fill: 'forwards' })];
+    const svg = el.querySelector('svg');
+    const ripple = el.querySelector<HTMLElement>('.fv-cursor__ripple');
+    clicks.forEach((c) => {
+      if (svg) {
+        anims.push(
+          svg.animate([{ transform: 'scale(1)' }, { transform: 'scale(0.82)' }, { transform: 'scale(1)' }], {
+            duration: 260,
+            delay: c * 1000,
+            easing: 'ease-out',
+          }),
+        );
+      }
+      if (ripple) {
+        anims.push(
+          ripple.animate(
+            [
+              { opacity: 0.9, transform: 'scale(0.4)' },
+              { opacity: 0, transform: 'scale(2.4)' },
+            ],
+            { duration: 650, delay: c * 1000, easing: 'ease-out' },
+          ),
+        );
+      }
+    });
+    return () => anims.forEach((a) => a.cancel());
+    // path and clicks are literals in each scene; replaying on `play` is the point.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [play]);
+
+  if (path?.length) {
+    return (
+      <div ref={ref} className="fv-cursor fv-cursor--path" style={{ left: `${path[0][0]}%`, top: `${path[0][1]}%`, opacity: 0 }}>
+        <svg viewBox="0 0 24 24">
+          <path d="M5.5 3.2 18.6 10c.6.3.5 1.2-.1 1.4l-5.3 1.6-2.4 5.1c-.3.6-1.2.6-1.4-.1L5 4.1c-.2-.6.4-1.2.9-.9Z" />
+        </svg>
+        <span className="fv-cursor__ripple" />
+      </div>
+    );
+  }
+
   return (
     <div
       className="fv-cursor"
@@ -855,4 +987,171 @@ export function Rings({ x = 50, y = 50, count = 4, gap = 8 }: { x?: number; y?: 
 /** Soft accent glow puddle behind a focal element. */
 export function Glow({ x = 50, y = 50, size = 18 }: { x?: number; y?: number; size?: number }) {
   return <div className="fv-glow" style={{ left: `${x}%`, top: `${y}%`, width: `${size}em`, height: `${size}em` }} aria-hidden="true" />;
+}
+
+/* ── Storytelling pieces ───────────────────────────────────────────────── */
+
+/**
+ * Text that types itself out, starting `at` seconds into the scene (or when its
+ * Float enters). Use inside a Bubble, Field value or anywhere inline.
+ */
+export function TypeText({ text, at, cps = 28 }: { text: string; at?: number; cps?: number }) {
+  const play = useContext(PlayContext);
+  const floatAt = useContext(AtContext);
+  const [n, setN] = useState(text.length);
+
+  useEffect(() => {
+    if (play === 0) return;
+    setN(0);
+    const startMs = at !== undefined ? at * 1000 : floatAt + 350;
+    let i = 0;
+    let iv = 0;
+    const kick = window.setTimeout(() => {
+      iv = window.setInterval(() => {
+        i += 1;
+        setN(i);
+        if (i >= text.length) window.clearInterval(iv);
+      }, 1000 / cps);
+    }, startMs);
+    return () => {
+      window.clearTimeout(kick);
+      window.clearInterval(iv);
+    };
+  }, [play, text, at, floatAt, cps]);
+
+  return (
+    <span className="fv-type">
+      {text.slice(0, n)}
+      {n < text.length ? <i className="fv-type__caret" /> : null}
+    </span>
+  );
+}
+
+/**
+ * Prize wheel that spins and lands on `land` (slice index), starting `at`
+ * seconds into the scene. Slices alternate brand shades; label text is short.
+ */
+export function SpinWheel({
+  slices,
+  land = 0,
+  at = 1.5,
+  spin = 3.4,
+  size = 18,
+}: {
+  slices: string[];
+  land?: number;
+  at?: number;
+  /** Seconds the spin takes to settle. */
+  spin?: number;
+  /** Diameter in em. */
+  size?: number;
+}) {
+  const n = slices.length;
+  const seg = 360 / n;
+  const shades = ['var(--t-600)', 'var(--t-100)', 'var(--t-400)', '#ffffff', 'var(--t-700)', 'var(--t-200)'];
+  const stops = slices
+    .map((_, i) => `${shades[i % shades.length]} ${i * seg}deg ${(i + 1) * seg}deg`)
+    .join(', ');
+  // Land the middle of slice `land` under the top pointer after 5 full turns.
+  const final = 360 * 5 + (360 - (land * seg + seg / 2));
+  return (
+    <div className="fv-wheel" style={{ width: `${size}em`, height: `${size}em` } as CSSProperties}>
+      <span className="fv-wheel__pointer" />
+      <div
+        className="fv-wheel__disc"
+        style={
+          {
+            background: `conic-gradient(${stops})`,
+            '--fv-spin-to': `${final}deg`,
+            '--fv-spin-at': `${at}s`,
+            '--fv-spin-dur': `${spin}s`,
+          } as CSSProperties
+        }
+      >
+        {slices.map((label, i) => (
+          <span
+            key={label + i}
+            className={cx('fv-wheel__label', [0, 2, 4].includes(i % shades.length) && 'is-dark')}
+            style={{ transform: `rotate(${i * seg + seg / 2}deg) translateY(-${size * 0.32}em)` }}
+          >
+            {label}
+          </span>
+        ))}
+      </div>
+      <span className="fv-wheel__hub" />
+    </div>
+  );
+}
+
+/** Discount coupon: ticket with notches, big value, code and a copy button. */
+export function Coupon({
+  value,
+  label,
+  code,
+  copyAt,
+}: {
+  value: string;
+  label?: string;
+  code: string;
+  /** Seconds from scene start when "Copy" is pressed. */
+  copyAt?: number;
+}) {
+  return (
+    <div className="fv-coupon">
+      <div className="fv-coupon__main">
+        <b>{value}</b>
+        {label ? <small>{label}</small> : null}
+      </div>
+      <div className="fv-coupon__stub">
+        <code>{code}</code>
+        <Btn primary pressAt={copyAt}>
+          Copy
+        </Btn>
+      </div>
+    </div>
+  );
+}
+
+/**
+ * Scratch card: a foil layer that wipes away at `at` seconds, revealing
+ * `children` (usually a value and a code).
+ */
+export function Scratch({ at = 1.6, children }: { at?: number; children: ReactNode }) {
+  return (
+    <div className="fv-scratch" style={{ '--fv-scratch-at': `${at}s` } as CSSProperties}>
+      <div className="fv-scratch__reveal">{children}</div>
+      <div className="fv-scratch__foil">
+        <span>Scratch to reveal</span>
+      </div>
+    </div>
+  );
+}
+
+/** A small celebratory burst at (x, y) percent, `at` seconds into the scene. */
+export function Burst({ x, y, at = 2 }: { x: number; y: number; at?: number }) {
+  return (
+    <div className="fv-burst" style={{ left: `${x}%`, top: `${y}%`, '--fv-burst-at': `${at}s` } as CSSProperties} aria-hidden="true">
+      {Array.from({ length: 14 }, (_, i) => (
+        <i key={i} style={{ '--a': `${(i * 360) / 14}deg`, '--r': `${5 + (i % 3) * 1.6}em` } as CSSProperties} />
+      ))}
+    </div>
+  );
+}
+
+/**
+ * Timed reveal for content INSIDE a card (chat bubbles in a Phone, rows filling
+ * a list). Same `at` / `until` model as Float, but stays in normal flow, so a
+ * list grows and a chat scrolls naturally. Collapses its height until it enters.
+ */
+export function Reveal({ at, until, children }: { at: number; until?: number; children: ReactNode }) {
+  return (
+    <AtContext.Provider value={at * 1000}>
+      <div
+        className={cx('fv-reveal', until !== undefined && 'fv-reveal--until')}
+        style={{ '--fv-r-at': `${at}s`, '--fv-r-until': until !== undefined ? `${until}s` : undefined } as CSSProperties}
+      >
+        {children}
+      </div>
+    </AtContext.Provider>
+  );
 }
