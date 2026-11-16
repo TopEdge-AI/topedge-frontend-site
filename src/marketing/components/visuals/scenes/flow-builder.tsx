@@ -144,8 +144,7 @@ function WebhookSync({ label }: SceneProps) {
 /** Folders and flows; a new flow is switched on and published. */
 function FlowList({ label }: SceneProps) {
   return (
-    <Stage label={label}
-      steps={[[0, 'Flows by folder'], [1.6, 'Switch a flow on'], [2.9, 'Publish'], [3.6, 'Live for the next message']]} shape="wide" duration={8}>
+    <Stage label={label} shape="wide" duration={8}>
       <Float x={10} y={6} w={80}>
         <Panel pad={false} className="ch-inbox fb-list">
           <div className="ch-list">
@@ -195,8 +194,7 @@ function FlowList({ label }: SceneProps) {
 /** The canvas: the welcome menu branches; a shopper taps Track order; the path lights. */
 function Canvas({ label }: SceneProps) {
   return (
-    <Stage label={label}
-      steps={[[0, 'Welcome menu branches'], [2.4, 'Shopper taps Track order'], [3.3, 'Order sent']]} shape="wide" duration={8.5}>
+    <Stage label={label} shape="wide" duration={8.5}>
       <Float x={4} y={4} w={92}>
         <div className="fb-canvas">
           <div className="fb-canvas__bar">
@@ -245,23 +243,9 @@ function Simulator({ label }: SceneProps) {
     </Reveal>
   );
   return (
-    <Stage label={label}
-      steps={[[0, 'Test the flow'], [2.6, 'Simulator taps a button'], [4.9, 'Answer arrives'], [5.9, 'All steps pass']]} shape="wide" duration={9}>
-      <Float x={8} y={16} w={40}>
-        <Panel title="Test Flow" icon={Play} right={<Chip>Simulator</Chip>}>
-          {step('Welcome', 'Menu with 3 buttons', 1.2)}
-          {step('Track order', 'Button tapped', 3.2)}
-          {step('Fetch order', 'Answered in 1.2 s', 5.2)}
-          <Reveal at={5.9}>
-            <div className="cp-send">
-              <Btn primary icon={Zap}>
-                Publish flow
-              </Btn>
-            </div>
-          </Reveal>
-        </Panel>
-      </Float>
-      <Float x={60} y={0}>
+    <Stage label={label} shape="wide" duration={11}>
+      {/* Act 1: the simulator plays the flow on a test phone */}
+      <Float x={34.1} y={4.6} until={6.2} act="out">
         <IPhone name="Your store" status="Test mode">
           <Reveal at={0.6}>
             <Bubble from="biz" time="11:06" buttons={[{ label: 'Track order', at: 2.6, cursor: 'track' }, 'Browse', 'Talk to us']}>
@@ -283,7 +267,20 @@ function Simulator({ label }: SceneProps) {
           </Reveal>
         </IPhone>
       </Float>
+
+      {/* Act 2: the report, then publish */}
+      <Float x={29} y={20} w={42} at={6.4} act="in">
+        <Panel title="Test Flow" icon={Play} right={<Chip>Simulator</Chip>}>
+          {step('Welcome', 'Menu with 3 buttons', 6.9)}
+          {step('Track order', 'Button tapped', 7.2)}
+          {step('Fetch order', 'Answered in 1.2 s', 7.5)}
+          <div className="cp-send" data-cursor="publish">
+            <Swap at={8.9} a={<Btn primary icon={Zap} pressAt={8.6}>Publish flow</Btn>} b={<Chip tone="emerald" icon={Check}>Live for the next message</Chip>} />
+          </div>
+        </Panel>
+      </Float>
       <Cursor touch path={[['track', 2.3], ['track', 2.9]]} clicks={[2.6]} />
+      <Cursor path={[[56, 98, 7.8], ['publish', 8.3], ['publish', 8.9], [62, 96, 9.8]]} clicks={[8.6]} />
     </Stage>
   );
 }

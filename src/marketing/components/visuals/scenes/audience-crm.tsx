@@ -77,8 +77,7 @@ function ProfileHead({ name, sub, chip }: { name: string; sub: string; chip?: st
 /** One shopper's record fills in: numbers, then every touchpoint in order. */
 function Hero({ label }: SceneProps) {
   return (
-    <Stage label={label}
-      steps={[[0, 'One shopper record'], [0.8, 'Every touchpoint in order'], [3.4, 'Numbers merged'], [4.4, 'Segments it belongs to']]} shape="wide" duration={9}>
+    <Stage label={label} shape="wide" duration={9}>
       <Float x={24} y={4} w={52}>
         <Panel pad>
           <ProfileHead name="Riya Sharma" sub="+91 98200 11223 · Mumbai" chip="VIP" />
@@ -178,8 +177,7 @@ function LeadScoring({ label }: SceneProps) {
 /** A chat from an unknown number merges into the shopper it belongs to. */
 function Identity({ label }: SceneProps) {
   return (
-    <Stage label={label}
-      steps={[[0, 'Known profile'], [0.6, 'Chat from an unknown number'], [2.6, 'Matched on an order'], [3.4, 'One profile, one thread']]} shape="wide" duration={8}>
+    <Stage label={label} shape="wide" duration={8}>
       <Float x={24} y={8} w={52}>
         <Panel>
           <ProfileHead name="Riya Sharma" sub="Customer since 2023 · 7 orders" />
@@ -209,8 +207,7 @@ function Identity({ label }: SceneProps) {
 /** One record, everything in it: numbers, orders, chats and campaigns. */
 function Customer360({ label }: SceneProps) {
   return (
-    <Stage label={label}
-      steps={[[0, 'Orders and spend'], [1.4, 'Latest chat'], [2, 'Campaign history']]} shape="wide" duration={8}>
+    <Stage label={label} shape="wide" duration={8}>
       <Float x={14} y={6} w={72}>
         <Panel>
           <ProfileHead name="Arjun Nair" sub="+91 99300 44112 · Bengaluru" chip="Score 86" />
@@ -248,8 +245,7 @@ function Customer360({ label }: SceneProps) {
 /** Rules stack up, the live count follows, save it as a segment. */
 function SegmentBuilder({ label }: SceneProps) {
   return (
-    <Stage label={label}
-      steps={[[0, 'Add rules'], [2, 'Live count'], [3.6, 'Save the segment'], [4.3, 'Ready for campaigns']]} shape="wide" duration={8}>
+    <Stage label={label} shape="wide" duration={8}>
       <Float x={20} y={6} w={60}>
         <Panel title="New segment" icon={Filter}>
           <Reveal at={0.6}>

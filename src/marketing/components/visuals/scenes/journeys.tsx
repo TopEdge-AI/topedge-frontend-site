@@ -38,7 +38,6 @@ import {
   ProductArt,
   Reveal,
   Row,
-  Skeleton,
   Stage,
   Swap,
   Toast,
@@ -179,34 +178,37 @@ function Gating({ label }: SceneProps) {
 /* ── Showcases ─────────────────────────────────────────────────────────── */
 
 /**
- * Cart recovery, end to end: the journey waits, sends, the shopper taps
- * Complete order, pays, and the cart is recovered.
+ * Cart recovery as three acts. 1: the journey runs on the dashboard.
+ * 2: the store slides away and the shopper's phone takes the stage: the
+ * reminder lands, they tap, pay. 3: back to the dashboard, cart recovered.
  */
 function AbandonedCart({ label }: SceneProps) {
+  const cartPanel = (done: number) => (
+    <Panel title="Cart recovery" icon={Workflow} right={<Chip tone="emerald" dot>Live</Chip>}>
+      <div className="jr-rail">
+        <Step icon={ShoppingCart} title="Cart abandoned" sub="Riya · ₹3,450 · 2 items" on={done ? done : 0.3} off={done ? done : 1} />
+        <Step icon={Clock} title="Wait 30 minutes" sub="No order yet" on={done ? done : 1} off={done ? done : 2.2} />
+        <Step icon={Send} title="Send reminder" sub="With 10% off for an hour" on={done ? done : 2.2} off={done ? done : 3.2} />
+        <Step icon={Wallet} title="Order placed" sub="Journey ends" on={done ? done + 0.3 : undefined} off={done ? done + 0.8 : undefined} />
+      </div>
+    </Panel>
+  );
   return (
-    <Stage label={label}
-      steps={[[0, 'Cart abandoned'], [1, 'Journey waits 30 min'], [2.2, 'Reminder sent'], [5.4, 'Shopper taps Complete order'], [7.6, 'Pays by UPI'], [9.4, 'Cart recovered']]} shape="wide" duration={12}>
-      <Float x={10} y={12} w={42}>
-        <Panel title="Cart recovery" icon={Workflow} right={<Chip tone="emerald" dot>Live</Chip>}>
-          <div className="jr-rail">
-            <Step icon={ShoppingCart} title="Cart abandoned" sub="Riya · ₹3,450 · 2 items" on={0.3} off={1} />
-            <Step icon={Clock} title="Wait 30 minutes" sub="No order yet" on={1} off={2.2} />
-            <Step icon={Send} title="Send reminder" sub="With 10% off for an hour" on={2.2} off={3.2} />
-            <Step icon={Wallet} title="Order placed" sub="Journey ends" on={9} off={9.4} />
-          </div>
-          <Attach place="br" at={9.6} dx={1.4} dy={-1}>
-            <Toast icon={Wallet} tone="emerald" title="Recovered ₹3,450" sub="Cart recovery · reminder 1" />
-          </Attach>
-        </Panel>
+    <Stage label={label} shape="wide" duration={14}>
+      {/* Act 1: the journey fires */}
+      <Float x={28} y={20} w={44} until={3.7} act="out">
+        {cartPanel(0)}
       </Float>
-      <Float x={58} y={0} at={0.1}>
+
+      {/* Act 2: the shopper's phone */}
+      <Float x={34.1} y={4.6} at={3.9} until={10.6} act="both">
         <IPhone
           name="Stride Shoes"
           status="Business account"
           overlay={
             <>
-              <PhoneBanner at={3} until={4.2} title="Stride Shoes" body="Riya, your cart is waiting. 10% off for the next hour" />
-              <PhoneSheet at={6} url="stride.in/checkout">
+              <PhoneBanner at={4.5} until={5.7} title="Stride Shoes" body="Riya, your cart is waiting. 10% off for the next hour" />
+              <PhoneSheet at={7.4} url="stride.in/checkout">
                 <ProductArt kind="sneaker" h={8.5} />
                 <h5 className="fv-shop__title">Cloudrun 2 · UK 6</h5>
                 <div className="fv-shop__price">
@@ -225,13 +227,13 @@ function AbandonedCart({ label }: SceneProps) {
                   <span>Card</span>
                   <span>COD</span>
                 </div>
-                <span className="fv-shop__cta is-press" data-cursor="pay" style={vars({ '--fv-press': '7.6s' })}>
+                <span className="fv-shop__cta is-press" data-cursor="pay" style={vars({ '--fv-press': '8.8s' })}>
                   Pay ₹3,105
                 </span>
               </PhoneSheet>
-              <PhoneSheet at={8.1}>
+              <PhoneSheet at={9.2}>
                 <div className="fv-shop__done">
-                  <span className="fv-shop__check" style={vars({ '--fv-check-at': '8.5s' })}>
+                  <span className="fv-shop__check" style={vars({ '--fv-check-at': '9.5s' })}>
                     <Check strokeWidth={3} />
                   </span>
                   <h5>Payment successful</h5>
@@ -242,20 +244,28 @@ function AbandonedCart({ label }: SceneProps) {
             </>
           }
         >
-          <Reveal at={3.6}>
+          <Reveal at={5.1}>
             <Bubble
               from="biz"
               time="4:12 pm"
               media={<ProductArt kind="sneaker" h={6.5} />}
               title="You left something behind"
-              buttons={[{ label: 'Complete order', icon: ExternalLink, at: 5.4, cursor: 'complete' }]}
+              buttons={[{ label: 'Complete order', icon: ExternalLink, at: 6.9, cursor: 'complete' }]}
             >
               Riya, your Cloudrun 2 is still in your cart. Here is 10% off for the next hour.
             </Bubble>
           </Reveal>
         </IPhone>
       </Float>
-      <Cursor touch path={[['complete', 5.1], ['complete', 5.7], ['pay', 7.3], ['pay', 7.9]]} clicks={[5.4, 7.6]} />
+
+      {/* Act 3: back on the dashboard, recovered */}
+      <Float x={28} y={20} w={44} at={10.8} act="in">
+        {cartPanel(10.9)}
+        <Attach place="br" at={11.8} dx={1.6} dy={-1}>
+          <Toast icon={Wallet} tone="emerald" title="Recovered ₹3,105" sub="Cart recovery · reminder 1" />
+        </Attach>
+      </Float>
+      <Cursor touch path={[['complete', 6.6], ['complete', 7.2], ['pay', 8.5], ['pay', 9.1]]} clicks={[6.9, 8.8]} />
     </Stage>
   );
 }
@@ -263,8 +273,7 @@ function AbandonedCart({ label }: SceneProps) {
 /** Branch on payment method: COD, prepaid and quiet buyers split. */
 function Routes({ label }: SceneProps) {
   return (
-    <Stage label={label}
-      steps={[[0, 'Order created'], [2, 'COD branch asks to confirm'], [3.4, 'Shopper confirms']]} shape="wide" duration={8}>
+    <Stage label={label} shape="wide" duration={8}>
       <Wires
         shape="wide"
         paths={['M 36 31 C 44 31, 43 13.5, 51 13.5', 'M 36 31 L 51 31', 'M 36 31 C 44 31, 43 48.5, 51 48.5']}
@@ -288,51 +297,67 @@ function Routes({ label }: SceneProps) {
   );
 }
 
-/** A known shopper comes back, leaves again, and the journey reaches out. */
+/**
+ * Return and retarget, in two acts. 1: a known shopper is back on the
+ * product page, finds their size sold out and leaves. 2: the store slides
+ * away and their phone takes the stage: the size is back, they order.
+ */
 function Retarget({ label }: SceneProps) {
   return (
-    <Stage label={label}
-      steps={[[0, 'Known shopper is back'], [3, 'Leaves without buying'], [4.8, 'Journey reaches out'], [7.4, 'Taps View shirt'], [8, 'Orders it']]} shape="wide" duration={10}>
-      <Float x={4} y={10} w={54}>
+    <Stage label={label} shape="wide" duration={12}>
+      {/* Act 1: the storefront */}
+      <Float x={14} y={26} w={72} until={5.2} act="out">
         <Browser url="miraethnic.in/linen-shirt">
-          <div className="oi-store">
-            <ProductArt src={SHIRT} alt="Linen shirt" h={9} />
+          <div className="oi-store jr-pdp">
+            <ProductArt src={SHIRT} alt="Linen shirt" h={11} />
             <div className="oi-store__info">
+              <small className="jr-pdp-brand">MIRA ETHNIC</small>
               <b className="jr-pdp-title">Linen shirt</b>
-              <Skeleton w={45} h={0.6} />
               <span className="jr-pdp-price">₹1,899</span>
-              <Skeleton w={70} h={1.8} tone />
+              <div className="jr-sizes">
+                <span>S</span>
+                <span className="is-out" data-cursor="size-m">M</span>
+                <span>L</span>
+                <span>XL</span>
+              </div>
+              <small className="jr-pdp-note">Size M is sold out</small>
+              <span className="jr-pdp-btn">Notify me</span>
             </div>
           </div>
         </Browser>
-        <Attach place="tr" at={1.6} dx={-2} dy={1}>
+        <Attach place="tr" at={1} dx={1.6} dy={1}>
           <Toast icon={Eye} title="Riya Sharma is back" sub="3rd view · intent high" />
         </Attach>
-        <Attach place="bl" at={3} dx={-2} dy={-1}>
+        <Attach place="bl" at={4} dx={1.6} dy={-1}>
           <Toast dark icon={MousePointer2} title="Left without buying" sub="Journey started · Wait 20 min" />
         </Attach>
       </Float>
-      <Float x={63} y={0} at={3.6}>
-        <IPhone name="Mira Ethnic" overlay={<PhoneBanner at={4.8} until={6} title="Mira Ethnic" body="Still thinking about the Linen shirt?" />}>
-          <Reveal at={5.4}>
+
+      {/* Act 2: WhatsApp on her phone */}
+      <Float x={34.1} y={4.6} at={5.4} act="in">
+        <IPhone name="Mira Ethnic" overlay={<PhoneBanner at={6} until={7.2} title="Mira Ethnic" body="Your size M is back in stock" />}>
+          <Reveal at={6.6}>
             <Bubble
               from="biz"
               time="6:40 pm"
               media={<ProductArt src={SHIRT} alt="Linen shirt" h={7} />}
-              buttons={[{ label: 'View shirt', icon: ExternalLink, at: 7.4, cursor: 'view' }]}
+              buttons={[{ label: 'View shirt', icon: ExternalLink, at: 8.4, cursor: 'view' }]}
             >
               Still thinking about the Linen shirt? Your size M is back in stock.
             </Bubble>
           </Reveal>
-          <Reveal at={8}>
+          <Reveal at={9.1}>
             <Bubble from="user" time="6:42 pm" read>
               Ordering it now!
             </Bubble>
           </Reveal>
         </IPhone>
+        <Attach place="r" at={9.8} dx={7.5} dy={6}>
+          <Toast icon={ShoppingCart} tone="emerald" title="Order ₹1,899" sub="From Return & retarget" />
+        </Attach>
       </Float>
-      <Cursor path={[[30, 70, 0.6], [36, 40, 1.6], [46, 6, 2.8]]} clicks={[]} />
-      <Cursor touch path={[['view', 7.1], ['view', 7.7]]} clicks={[7.4]} />
+      <Cursor path={[[36, 96, 0.4], [34, 50, 1.4], ['size-m', 2.2], ['size-m', 2.8], [60, 2, 3.8]]} clicks={[2.4]} />
+      <Cursor touch path={[['view', 8.1], ['view', 8.7]]} clicks={[8.4]} />
     </Stage>
   );
 }

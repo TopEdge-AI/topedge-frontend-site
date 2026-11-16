@@ -121,12 +121,6 @@ type StageProps = SceneProps & {
   fit?: boolean;
   /** Layer behind the cards that is not auto-framed (Fireworks, for one). */
   back?: ReactNode;
-  /**
-   * The journey, told in captions: [seconds, label] pairs. A caption bar at
-   * the bottom of the stage names the step on screen and fills a progress
-   * dot per step, so a viewer always knows where in the story they are.
-   */
-  steps?: [number, string][];
   children: ReactNode;
 };
 
@@ -224,7 +218,7 @@ function useAutoFit(
   }, [shape, enabled, bottom]);
 }
 
-export function Stage({ tone, shape = 'square', mood, duration, fit = true, back, steps, label, children }: StageProps) {
+export function Stage({ tone, shape = 'square', mood, duration, fit = true, back, label, children }: StageProps) {
   const mesh = useContext(MeshContext);
   const holdMs = Math.max(4000, (duration ?? HOLD_MS / 1000) * 1000);
   const look: Mood = mood ?? (shape === 'square' ? 'plain' : MOODS[hash(label) % MOODS.length]);
@@ -232,7 +226,7 @@ export function Stage({ tone, shape = 'square', mood, duration, fit = true, back
   const ref = useRef<HTMLDivElement>(null);
   const fitRef = useRef<HTMLDivElement>(null);
   const [play, setPlay] = useState(0);
-  useAutoFit(ref, fitRef, shape, fit, steps?.length ? 0.1 : 0);
+  useAutoFit(ref, fitRef, shape, fit);
 
   useEffect(() => {
     const el = ref.current;
@@ -349,7 +343,6 @@ export function Stage({ tone, shape = 'square', mood, duration, fit = true, back
           <div ref={fitRef} className="fv__fit">
             {children}
           </div>
-          {steps?.length ? <Steps steps={steps} /> : null}
         </div>
       </PlayContext.Provider>
     </div>
@@ -379,12 +372,18 @@ type FloatProps = {
   at?: number;
   /** Seconds from scene start when this leaves. Pair with a second Float to swap states. */
   until?: number;
+  /**
+   * Scene switch: this act slides in from the right (in), slides out to the
+   * left (out), or both. Use it to hand the stage from the store to the
+   * shopper's phone and back, so one thing is on screen at a time.
+   */
+  act?: 'in' | 'out' | 'both';
   className?: string;
   children: ReactNode;
 };
 
 /** Absolutely placed, reveal-animated wrapper. Every scene element sits in one. */
-export function Float({ x, y, w, delay = 0, at, until, drift, z, fade, className, children }: FloatProps) {
+export function Float({ x, y, w, delay = 0, at, until, act, drift, z, fade, className, children }: FloatProps) {
   const enterMs = at !== undefined ? at * 1000 : delay * 90;
   const style = {
     left: `${x}%`,
@@ -396,7 +395,15 @@ export function Float({ x, y, w, delay = 0, at, until, drift, z, fade, className
   } as CSSProperties;
   return (
     <div
-      className={cx('fv-float', drift && 'fv-float--drift', until !== undefined && 'fv-float--until', fade && `fv-fade--${fade}`, className)}
+      className={cx(
+        'fv-float',
+        drift && 'fv-float--drift',
+        until !== undefined && 'fv-float--until',
+        (act === 'in' || act === 'both') && 'fv-float--act-in',
+        (act === 'out' || act === 'both') && 'fv-float--act-out',
+        fade && `fv-fade--${fade}`,
+        className,
+      )}
       style={style}
     >
       <div className="fv-float__px">
@@ -1719,32 +1726,3 @@ export function QR({ seed = 'wa.me', size = 8 }: { seed?: string; size?: number 
   );
 }
 
-/* ── Journey captions ──────────────────────────────────────────────────── */
-
-/** Caption bar: one numbered label per step, cross-faded on the scene clock. */
-function Steps({ steps }: { steps: [number, string][] }) {
-  return (
-    <div className="fv-steps" aria-hidden="true">
-      <span className="fv-steps__dots">
-        {steps.map(([at], i) => (
-          <i key={i} style={{ '--s-at': `${at}s` } as CSSProperties} />
-        ))}
-      </span>
-      <span className="fv-steps__labels">
-        {steps.map(([at, text], i) => {
-          const next = steps[i + 1]?.[0];
-          return (
-            <span
-              key={i}
-              className={cx('fv-steps__label', next === undefined && 'is-last')}
-              style={{ '--s-at': `${at}s`, '--s-until': next !== undefined ? `${next}s` : undefined } as CSSProperties}
-            >
-              <b>{i + 1}</b>
-              {text}
-            </span>
-          );
-        })}
-      </span>
-    </div>
-  );
-}

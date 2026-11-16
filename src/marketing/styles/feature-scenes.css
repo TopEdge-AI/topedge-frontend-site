@@ -347,3 +347,14 @@
 .fb-pass { display: grid; place-items: center; width: 1.8em; height: 1.8em; border-radius: 50%; color: #fff; background: #10b981; }
 .fb-pass .fv-hi { width: 62%; height: 62%; }
 .px-drop { display: inline-block; margin-top: 0.45em; padding: 0.15em 0.55em; border-radius: 99em; font-size: 0.78em; font-weight: 650; color: #be123c; background: #fff1f2; }
+
+/* Retarget product page. */
+.jr-pdp { grid-template-columns: 1.05fr 1fr; min-height: 0; }
+.jr-pdp-brand { font-size: 0.7em; font-weight: 700; letter-spacing: 0.14em; color: #98a2b3; }
+.jr-sizes { display: flex; gap: 0.4em; margin-top: 0.3em; }
+.jr-sizes span { display: grid; place-items: center; min-width: 2.3em; height: 2.1em; padding: 0 0.5em; border-radius: 99em; font-size: 0.86em; font-weight: 600; color: #344054; box-shadow: inset 0 0 0 1px rgba(16, 24, 40, 0.16); }
+.jr-sizes span.is-out { color: #98a2b3; background: repeating-linear-gradient(135deg, transparent 0 0.45em, rgba(16, 24, 40, 0.06) 0.45em 0.55em); text-decoration: line-through; }
+.jr-pdp-note { font-size: 0.78em; font-weight: 550; color: #b42318; }
+.jr-pdp-btn { display: grid; place-items: center; margin-top: 0.3em; padding: 0.65em; border-radius: 99em; font-size: 0.88em; font-weight: 650; color: #344054; background: #fff; box-shadow: inset 0 0 0 1px rgba(16, 24, 40, 0.16); }
+.cp-earned--top { margin: 0 0 0.6em; padding: 0.2em 0.55em 0.8em; box-shadow: inset 0 -1px 0 var(--fv-line-2); }
+.cp-send .fv-chip { display: flex; justify-content: center; padding: 0.55em; font-size: 0.9em; }

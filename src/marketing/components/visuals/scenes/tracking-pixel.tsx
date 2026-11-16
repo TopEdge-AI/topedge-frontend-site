@@ -34,6 +34,7 @@ import {
   Meter,
   Panel,
   PhoneBanner,
+  PhoneSheet,
   ProductArt,
   Reveal,
   Row,
@@ -89,36 +90,68 @@ function SerumPage({ added }: { added: number }) {
 
 function Hero({ label }: SceneProps) {
   return (
-    <Stage label={label}
-      steps={[[0, 'Views the serum'], [2.4, 'Adds to cart'], [4.4, 'Leaves the store'], [6.4, 'Recovery on WhatsApp']]} shape="wide" duration={12}>
-      <Float x={6} y={10} w={50} until={5.6}>
+    <Stage label={label} shape="wide" duration={14}>
+      {/* Act 1: the visit, with the pixel reporting each step */}
+      <Float x={14} y={24} w={72} until={5} act="out">
         <Browser url="glowco.in/hydrating-gel">
           <SerumPage added={2.4} />
         </Browser>
+        <Attach place="tr" at={0.8} until={2.4} dx={1.6} dy={1}>
+          <Toast icon={Eye} title="Product view" sub="Pixel · Aarav Shah" />
+        </Attach>
+        <Attach place="tr" at={2.6} dx={1.6} dy={1}>
+          <Toast icon={ShoppingCart} tone="sky" title="Add to cart · ₹729" sub="Pixel · intent high" />
+        </Attach>
+        <Attach place="bl" at={4} dx={1.6} dy={-1}>
+          <Toast dark icon={LogOut} title="Left without checkout" sub="Cart recovery starts" />
+        </Attach>
       </Float>
-      <Float x={18} y={0} at={5.8}>
-        <IPhone name="Glow Co" overlay={<PhoneBanner at={6.4} until={7.6} title="Glow Co" body="Aarav, your hydrating gel is still in your cart" />}>
-          <Reveal at={7}>
+
+      {/* Act 2: the recovery reaches his phone */}
+      <Float x={34.1} y={4.6} at={5.2} until={10.2} act="both">
+        <IPhone
+          name="Glow Co"
+          overlay={
+            <>
+              <PhoneBanner at={5.8} until={7} title="Glow Co" body="Aarav, your hydrating gel is still in your cart" />
+              <PhoneSheet at={8.1}>
+                <div className="fv-shop__done">
+                  <span className="fv-shop__check" style={vars({ '--fv-check-at': '8.5s' })}>
+                    <Check strokeWidth={3} />
+                  </span>
+                  <h5>Order placed</h5>
+                  <p>Hydrating gel serum · ₹729</p>
+                  <span className="oi-order__wa">Updates on WhatsApp</span>
+                </div>
+              </PhoneSheet>
+            </>
+          }
+        >
+          <Reveal at={6.4}>
             <Bubble
               from="biz"
               time="12:31"
               media={<ProductArt kind="serum" h={6} />}
-              buttons={[{ label: 'Complete checkout', icon: ExternalLink }]}
+              buttons={[{ label: 'Complete checkout', icon: ExternalLink, at: 7.7, cursor: 'checkout' }]}
             >
               Hi Aarav, your hydrating gel is still in your cart. Free shipping if you check out today.
             </Bubble>
           </Reveal>
         </IPhone>
       </Float>
-      <Float x={62} y={8} w={33}>
+
+      {/* Act 3: the whole trail on one profile */}
+      <Float x={27} y={16} w={46} at={10.4} act="in">
         <Panel title="Aarav Shah" icon={Fingerprint} right={<Chip tone="emerald" dot>Pixel live</Chip>}>
-          <Ev icon={Eye} title="Product view" sub="Hydrating gel serum" when="12:20" at={0.8} />
-          <Ev icon={ShoppingCart} title="Add to cart" sub="₹729 · 1 item" when="12:21" at={2.6} tone="sky" />
-          <Ev icon={LogOut} title="Left the store" sub="No checkout" when="12:21" at={4.4} tone="amber" />
-          <Ev icon={Zap} title="Cart recovery sent" sub="WhatsApp · +91 98111 22233" when="12:31" at={6.8} tone="emerald" />
+          <Ev icon={Eye} title="Product view" sub="Hydrating gel serum" when="12:20" at={10.6} />
+          <Ev icon={ShoppingCart} title="Add to cart" sub="₹729 · 1 item" when="12:21" at={10.8} tone="sky" />
+          <Ev icon={LogOut} title="Left the store" sub="No checkout" when="12:21" at={11} tone="amber" />
+          <Ev icon={Zap} title="Cart recovery sent" sub="WhatsApp · +91 98111 22233" when="12:31" at={11.2} />
+          <Ev icon={Check} title="Order placed · ₹729" sub="Recovered from WhatsApp" when="12:34" at={11.4} tone="emerald" />
         </Panel>
       </Float>
-      <Cursor path={[[20, 80, 0.4], [30, 40, 1.2], ['add', 2], ['add', 2.5], [40, 20, 3.6], [48, 2, 4.3]]} clicks={[2.3]} />
+      <Cursor path={[[30, 96, 0.4], [36, 50, 1.3], ['add', 2], ['add', 2.5], [60, 30, 3.4], [64, 2, 4.1]]} clicks={[2.3]} />
+      <Cursor touch path={[['checkout', 7.4], ['checkout', 8]]} clicks={[7.7]} />
     </Stage>
   );
 }
@@ -195,8 +228,7 @@ function JourneyFunnel({ label }: SceneProps) {
 /** Intent arrives live; the hottest cart is queued for recovery while warm. */
 function IntentFeed({ label }: SceneProps) {
   return (
-    <Stage label={label}
-      steps={[[0, 'Intent arrives live'], [2.6, 'A hot cart'], [3.6, 'Recovery queued while warm']]} shape="wide" duration={8}>
+    <Stage label={label} shape="wide" duration={8}>
       <Float x={18} y={8} w={58}>
         <Panel title="Live intent feed" icon={Activity} right={<Chip tone="emerald" dot>Live</Chip>}>
           <Ev icon={ShoppingCart} title="+91 98765 43210" sub="Added to cart · Vitamin C serum · ₹729" when="now" at={2.6} tone="sky" />
@@ -214,8 +246,7 @@ function IntentFeed({ label }: SceneProps) {
 /** An anonymous visitor becomes a known shopper the moment checkout gives a number. */
 function NumberMatch({ label }: SceneProps) {
   return (
-    <Stage label={label}
-      steps={[[0, 'Anonymous visitor'], [1.6, 'Checkout gives a number'], [2.6, 'Matched to a profile'], [3.4, 'History attached']]} shape="wide" duration={8}>
+    <Stage label={label} shape="wide" duration={8}>
       <Float x={20} y={8} w={56}>
         <Panel>
           <Swap
@@ -260,8 +291,7 @@ function NumberMatch({ label }: SceneProps) {
 /** Is the pixel healthy? Events, checks and an audience it already built. */
 function PixelHealth({ label }: SceneProps) {
   return (
-    <Stage label={label}
-      steps={[[0, 'Events today'], [0.6, 'Health checks pass'], [2.8, 'An audience, ready']]} shape="wide" duration={8}>
+    <Stage label={label} shape="wide" duration={8}>
       <Float x={16} y={6} w={62}>
         <Panel title="Pixel health" icon={Activity} right={<Chip tone="emerald" dot>Healthy</Chip>}>
           <div className="cp-perf">

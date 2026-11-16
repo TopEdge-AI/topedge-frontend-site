@@ -152,8 +152,7 @@ function TestConfidence({ label }: SceneProps) {
 /** The intent list; a new one is added in place and switched on. */
 function IntentList({ label }: SceneProps) {
   return (
-    <Stage label={label}
-      steps={[[0, 'Your intents'], [1.2, 'Add one'], [4.2, 'Switched on']]} shape="wide" duration={8.5}>
+    <Stage label={label} shape="wide" duration={8.5}>
       <Float x={18} y={6} w={60}>
         <Panel
           title="Intents"
@@ -191,8 +190,7 @@ function IntentList({ label }: SceneProps) {
 /** Edit an intent: phrases in English and Hinglish, and what it does. */
 function Editor({ label }: SceneProps) {
   return (
-    <Stage label={label}
-      steps={[[0, 'Phrases in English and Hinglish'], [1, 'Add more'], [3.3, 'Save']]} shape="wide" duration={8.5}>
+    <Stage label={label} shape="wide" duration={8.5}>
       <Float x={16} y={4} w={64}>
         <Panel title="Edit intent · Shipping" icon={Truck} right={<Chip tone="emerald" dot>Live</Chip>}>
           <Label>Shopper phrases</Label>
@@ -223,8 +221,7 @@ function Editor({ label }: SceneProps) {
 /** Live: a Hinglish message on WhatsApp, matched instantly, the flow answers. */
 function LiveRouting({ label }: SceneProps) {
   return (
-    <Stage label={label}
-      steps={[[0, 'Shopper asks in Hinglish'], [2, 'Intent matched, no AI'], [3.3, 'Flow answers with tracking'], [5.6, 'Shopper taps Track order']]} shape="wide" duration={10}>
+    <Stage label={label} shape="wide" duration={10}>
       <Float x={38} y={0}>
         <IPhone name="Mira Ethnic">
           <Reveal at={0.4}>

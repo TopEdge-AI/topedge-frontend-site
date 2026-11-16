@@ -111,7 +111,6 @@ html .mkt-nav .mkt-nav__mobile-item-icon {
   background: none;
   box-shadow: none;
   filter: drop-shadow(0 1px 0 #ffffff) drop-shadow(0 2px 3px rgba(15, 23, 42, 0.12));
-  transition: color 0.2s ease, transform 0.3s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 html .mkt-nav .mkt-nav__mega-link-icon svg,
@@ -120,12 +119,6 @@ html .mkt-nav .mkt-nav__mobile-item-icon svg {
   height: 26px;
 }
 
-html .mkt-nav .mkt-nav__mega-link:hover .mkt-nav__mega-link-icon,
-html .mkt-nav .mkt-nav__mega-link:focus-visible .mkt-nav__mega-link-icon {
-  color: #7c3aed;
-  transform: translateY(-1px) scale(1.06);
-  filter: drop-shadow(0 1px 0 #ffffff) drop-shadow(0 3px 5px rgba(124, 58, 237, 0.28));
-}
 
 html .mkt-nav .mkt-nav__mega-link-text,
 html .mkt-nav .mkt-nav__mobile-item-text {
@@ -158,6 +151,7 @@ html .mkt-nav .mkt-nav__mobile-item-desc {
 /* ── Promo card ────────────────────────────────────────────────────────── */
 html .mkt-nav .mkt-nav__mega-promo {
   position: relative;
+  align-self: start;
   display: flex;
   flex-direction: column;
   gap: 0;
@@ -319,7 +313,7 @@ html .mkt-nav .mkt-nav__mega-promo-cta {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  margin: auto 10px 8px;
+  margin: 6px 10px 8px;
   padding-top: 12px;
   width: calc(100% - 20px);
   border-top: 1px solid rgba(255, 255, 255, 0.1);

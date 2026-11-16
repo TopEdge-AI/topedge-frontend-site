@@ -978,45 +978,6 @@
 /* Older messages dissolve at the top of a chat as new ones push them up. */
 .fv-wa__chat { -webkit-mask-image: linear-gradient(180deg, transparent 0, #000 2.6em); mask-image: linear-gradient(180deg, transparent 0, #000 2.6em); }
 
-/* ── Journey captions (Stage `steps`) ──────────────────────────────────── */
-.fv-steps {
-  position: absolute;
-  left: 50%;
-  bottom: 3.4%;
-  z-index: 10;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.9em;
-  max-width: 92%;
-  padding: 0.5em 1em 0.5em 0.8em;
-  border-radius: 99em;
-  transform: translateX(-50%);
-  font-size: clamp(10.5px, 1.7cqw, 14px);
-  font-weight: 550;
-  letter-spacing: -0.01em;
-  white-space: nowrap;
-  color: #0b1220;
-  background: rgba(255, 255, 255, 0.86);
-  -webkit-backdrop-filter: blur(12px) saturate(1.4);
-  backdrop-filter: blur(12px) saturate(1.4);
-  box-shadow: 0 0 0 1px rgba(16, 24, 40, 0.07), 0 0.8em 1.8em -0.9em rgba(30, 20, 80, 0.35);
-}
-.fv--night .fv-steps { color: #fff; background: rgba(20, 14, 48, 0.72); box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.14), 0 0.8em 1.8em -0.9em rgba(0, 0, 0, 0.6); }
-.fv-steps__dots { display: inline-flex; gap: 0.32em; }
-.fv-steps__dots i { width: 0.42em; height: 0.42em; border-radius: 99em; background: rgba(16, 24, 40, 0.18); }
-.fv--night .fv-steps__dots i { background: rgba(255, 255, 255, 0.25); }
-.fv.is-armed.is-in .fv-steps__dots i { animation: fv-step-dot 0.5s var(--fv-ease) var(--s-at) both; }
-.fv:not(.is-armed) .fv-steps__dots i { width: 1.1em; background: var(--t-500); }
-@keyframes fv-step-dot { to { width: 1.1em; background: var(--t-500); } }
-.fv-steps__labels { display: grid; }
-.fv-steps__label { grid-area: 1 / 1; display: inline-flex; align-items: center; gap: 0.5em; opacity: 0; }
-.fv-steps__label b { display: inline-grid; place-items: center; width: 1.45em; height: 1.45em; border-radius: 50%; font-size: 0.82em; font-weight: 700; color: #fff; background: var(--t-600); }
-.fv.is-armed.is-in .fv-steps__label { animation: fv-step-in 0.45s var(--fv-ease) var(--s-at) both, fv-step-out 0.3s ease var(--s-until) forwards; }
-.fv.is-armed.is-in .fv-steps__label.is-last { animation: fv-step-in 0.45s var(--fv-ease) var(--s-at) both; }
-.fv:not(.is-armed) .fv-steps__label.is-last { opacity: 1; }
-@keyframes fv-step-in { from { opacity: 0; transform: translateY(0.5em); } to { opacity: 1; transform: none; } }
-@keyframes fv-step-out { from { opacity: 1; } to { opacity: 0; transform: translateY(-0.4em); } }
-
 /* ── Stronger colour: less white, more of the page's light ─────────────── */
 .fv__bg .aurora::before { filter: blur(3cqw) saturate(1.2); }
 .fv__bg .aurora::after {
@@ -1078,3 +1039,32 @@
 }
 @keyframes fv-beams { from { transform: translateX(-3%); } to { transform: translateX(3%); } }
 @media (prefers-reduced-motion: reduce) { .fv__pattern[data-pattern='beams'] { animation: none; } }
+
+/* ── Scene switches (Float `act`) ──────────────────────────────────────────
+   One act on stage at a time: the outgoing UI eases out to the left and
+   shrinks a touch; the next one arrives from the right. Overlap them by
+   ~0.2s (next `at` = previous `until` + 0.2) for a continuous hand-off. */
+.fv.is-armed.is-in .fv-float.fv-float--act-in {
+  animation: fv-act-in 0.95s var(--fv-ease) var(--fv-d, 0ms) both;
+}
+.fv.is-armed.is-in .fv-float.fv-float--until.fv-float--act-out {
+  animation:
+    fv-in 0.95s var(--fv-ease) var(--fv-d, 0ms) both,
+    fv-unfold 1.05s cubic-bezier(0.4, 0, 0.2, 1) var(--fv-d, 0ms) backwards,
+    fv-act-out 0.7s cubic-bezier(0.65, 0, 0.35, 1) var(--fv-until) forwards;
+}
+.fv.is-armed.is-in .fv-float.fv-float--until.fv-float--act-in.fv-float--act-out {
+  animation:
+    fv-act-in 0.95s var(--fv-ease) var(--fv-d, 0ms) both,
+    fv-act-out 0.7s cubic-bezier(0.65, 0, 0.35, 1) var(--fv-until) forwards;
+}
+@keyframes fv-act-in {
+  from { opacity: 0; transform: translate3d(5em, 0, 0) scale(0.95); }
+  45% { opacity: 1; }
+  to { opacity: 1; transform: none; }
+}
+@keyframes fv-act-out {
+  from { opacity: 1; transform: none; }
+  to { opacity: 0; transform: translate3d(-5em, 0, 0) scale(0.95); visibility: hidden; }
+}
+.fv .fv-cursor--touch svg { display: none; }
