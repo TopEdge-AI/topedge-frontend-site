@@ -1,0 +1,122 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+  :root { --ink:#1D1D1F; --muted:#86868B; --violet:#7C3AED; --bg:#FBFBFD; }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  html, body { width:1920px; height:1080px; overflow:hidden; background:var(--bg);
+    font-family:'Inter', -apple-system, sans-serif; color:var(--ink);
+    -webkit-font-smoothing:antialiased; font-feature-settings:'cv11','ss03'; }
+  .aurora { position:absolute; inset:-20%; pointer-events:none;
+    background:
+      radial-gradient(38% 42% at var(--ax,30%) var(--ay,30%), var(--a1,rgba(139,92,246,.22)), transparent 70%),
+      radial-gradient(34% 40% at var(--bx,72%) var(--by,70%), var(--a2,rgba(56,189,248,.16)), transparent 70%);
+    filter:blur(30px); opacity:0; animation:bloom 1.2s cubic-bezier(.22,1,.36,1) both; }
+  @keyframes bloom { from { opacity:0; transform:scale(.96); } to { opacity:1; transform:scale(1); } }
+  .stage { position:absolute; inset:0; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; }
+  .push { animation:push 7.5s linear both; }
+  @keyframes push { from { transform:scale(1); } to { transform:scale(1.015); } }
+
+  .label { font-size:17px; font-weight:600; letter-spacing:.16em; text-transform:uppercase; color:var(--muted);
+    font-variant-numeric:tabular-nums; margin-bottom:26px; animation:rise .6s cubic-bezier(.22,1,.36,1) .05s both; }
+  .label b { color:var(--violet); font-weight:600; margin-right:.9em; }
+  .title { font-family:'Inter Display','Inter',sans-serif; font-size:84px; line-height:1.06; font-weight:600; letter-spacing:-.03em; max-width:1500px; }
+  .title .w { display:inline-block; animation:word .7s cubic-bezier(.22,1,.36,1) both; }
+  .title .hl { color:var(--violet); }
+  @keyframes word { from { opacity:0; transform:translateY(22px); filter:blur(10px); } to { opacity:1; transform:none; filter:none; } }
+  @keyframes rise { from { opacity:0; transform:translateY(14px); } to { opacity:1; transform:none; } }
+  .out { animation:fadeout .45s cubic-bezier(.4,0,1,1) both; }
+  @keyframes fadeout { from { opacity:1; transform:none; } to { opacity:0; transform:translateY(-10px); } }
+
+  .brand { display:flex; align-items:center; gap:18px; margin-bottom:44px; }
+  .mark { width:92px; height:92px; border-radius:50%; animation:snap .7s cubic-bezier(.34,1.56,.64,1) both;
+    box-shadow:0 18px 40px -18px rgba(124,58,237,.55); }
+  @keyframes snap { from { opacity:0; transform:scale(.2); } to { opacity:1; transform:scale(1); } }
+  .word { font-family:'Inter Display','Inter',sans-serif; font-size:46px; font-weight:600; letter-spacing:-.02em;
+    clip-path:inset(0 100% 0 0); animation:wipe .55s cubic-bezier(.22,1,.36,1) both; }
+  @keyframes wipe { from { clip-path:inset(0 100% 0 0); transform:translateX(-12px); } to { clip-path:inset(0 0 0 0); transform:none; } }
+  .sub { font-size:26px; color:var(--muted); margin-top:26px; letter-spacing:-.005em; animation:rise .7s cubic-bezier(.22,1,.36,1) both; }
+
+  .ctas { display:flex; gap:16px; margin-top:46px; animation:rise .7s cubic-bezier(.22,1,.36,1) both; }
+  .pill { height:60px; padding:0 34px; border-radius:999px; display:inline-flex; align-items:center; font-size:20px; font-weight:600; }
+  .pill--primary { color:#fff; background:linear-gradient(180deg,#8B5CF6,#7C3AED); box-shadow:0 0 0 1px #6D28D9, inset 0 1px 0 rgba(255,255,255,.35), 0 14px 30px -14px rgba(124,58,237,.7); }
+  .pill--ghost { color:var(--ink); background:#fff; box-shadow:0 0 0 1px rgba(29,29,31,.12), 0 6px 16px -10px rgba(16,24,40,.25); }
+  .meta { font-size:19px; color:var(--muted); margin-top:30px; animation:rise .7s cubic-bezier(.22,1,.36,1) both; }
+  .meta i { font-style:normal; margin:0 .55em; color:#C7C7CC; }
+</style>
+</head>
+<body>
+<div class="aurora" id="aurora"></div>
+<div class="stage" id="stage"></div>
+<script>
+const CHAPTERS = [
+  ['01','Flow Builder','Bots that ','read every order','.'],
+  ['02','Opt-in tools','Grow a list ','that said yes','.'],
+  ['03','Campaigns','Broadcasts, ','measured in ₹','.'],
+  ['04','Audience CRM','One shopper. ','Every order.',''],
+  ['05','Journeys','Follow-ups that ','run themselves','.'],
+  ['06','Website pixel','See who browses. ','Then message them.',''],
+  ['07','AI Brain','Answers from ','your',' policies.'],
+  ['08','Meta manager','Nothing sends ','until Meta approves','.'],
+  ['09','Chat rules','Every chat ','to the right person','.'],
+  ['10','Warranty','Warranties ','on WhatsApp','.'],
+  ['11','Profit & costs','What did you ','actually keep','?'],
+  ['12','Intent detection','Understands ','how India types','.'],
+];
+// Soft aurora pairs per chapter (violet-led, never saturated).
+const AURA = [
+  ['rgba(139,92,246,.22)','rgba(56,189,248,.15)'], ['rgba(16,185,129,.18)','rgba(139,92,246,.16)'],
+  ['rgba(244,114,182,.18)','rgba(139,92,246,.18)'], ['rgba(56,189,248,.18)','rgba(16,185,129,.14)'],
+  ['rgba(251,146,60,.16)','rgba(139,92,246,.18)'], ['rgba(16,185,129,.18)','rgba(56,189,248,.15)'],
+  ['rgba(99,102,241,.20)','rgba(244,114,182,.14)'], ['rgba(14,165,233,.18)','rgba(139,92,246,.16)'],
+  ['rgba(168,85,247,.20)','rgba(251,191,36,.12)'], ['rgba(20,184,166,.18)','rgba(99,102,241,.15)'],
+  ['rgba(251,113,133,.16)','rgba(56,189,248,.15)'], ['rgba(132,204,22,.15)','rgba(139,92,246,.18)'],
+];
+const q = new URLSearchParams(location.search);
+const kind = q.get('kind');
+const stage = document.getElementById('stage');
+const aur = document.getElementById('aurora');
+const words = (text, cls, start, step) => text.split(/(\s+)/).map((t) => {
+  if (!t.trim()) return t;
+  const d = (start + step * (words.i = (words.i || 0) + 1)).toFixed(3);
+  return `<span class="w ${cls}" style="animation-delay:${d}s">${t}</span>`;
+}).join('');
+
+if (kind === 'card') {
+  const [n, name, a, hl, z] = CHAPTERS[+q.get('n') - 1];
+  const [c1, c2] = AURA[+q.get('n') - 1];
+  aur.style.setProperty('--a1', c1); aur.style.setProperty('--a2', c2);
+  aur.style.setProperty('--ax', (20 + (+n * 17) % 50) + '%');
+  words.i = 0;
+  stage.innerHTML = `<div class="push" style="display:flex;flex-direction:column;align-items:center">
+    <div class="out" style="animation-delay:2.05s;display:flex;flex-direction:column;align-items:center">
+      <div class="label"><b>${n}</b>${name}</div>
+      <h1 class="title">${words(a, '', 0.12, 0.07)}${words(hl, 'hl', 0.12, 0.07)}${words(z, '', 0.12, 0.07)}</h1>
+    </div></div>`;
+} else if (kind === 'open') {
+  words.i = 0;
+  stage.innerHTML = `<div class="push" style="display:flex;flex-direction:column;align-items:center">
+    <div class="out" style="animation-delay:4.5s;display:flex;flex-direction:column;align-items:center">
+      <div class="brand"><img class="mark" src="../../../../../public/logo.png" style="animation-delay:1.5s"><span class="word" style="animation-delay:1.95s">TopEdge AI</span></div>
+      <h1 class="title">${words('Every feature, ', '', 2.85, 0.08)}${words('shown.', 'hl', 2.85, 0.08)}</h1>
+      <p class="sub" style="animation-delay:3.45s">On a real shopper's phone. In real rupees.</p>
+    </div></div>`;
+} else if (kind === 'end') {
+  words.i = 0;
+  stage.innerHTML = `<div class="push" style="display:flex;flex-direction:column;align-items:center">
+      <div class="brand"><img class="mark" src="../../../../../public/logo.png" style="animation-delay:.35s"><span class="word" style="animation-delay:.8s">TopEdge AI</span></div>
+      <h1 class="title" style="font-size:76px">${words('Turn every visitor ', '', 1.0, 0.07)}${words('into revenue.', 'hl', 1.0, 0.07)}</h1>
+      <div class="ctas" style="animation-delay:2.5s"><span class="pill pill--primary">Start free</span><span class="pill pill--ghost">See pricing</span></div>
+      <p class="meta" style="animation-delay:2.75s">14-day free trial, no card<i>·</i>from ₹1,999/month<i>·</i>0% markup on Meta fees<i>·</i>topedgeai.com</p>
+    </div>`;
+} else if (kind === 'blank') {
+  const n = +q.get('n') || 1;
+  const [c1, c2] = AURA[n - 1];
+  aur.style.setProperty('--a1', c1); aur.style.setProperty('--a2', c2);
+  aur.style.setProperty('--ax', (20 + (n * 17) % 50) + '%');
+  aur.style.animation = 'none'; aur.style.opacity = 0;
+}
+</script>
+</body>
+</html>
