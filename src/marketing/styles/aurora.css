@@ -71,8 +71,13 @@
 .aurora[data-palette='mint'] { --au-a: #6ee7b7; --au-b: #7dd3fc; --au-c: #c4b5fd; }
 .aurora[data-palette='dusk'] { --au-a: #818cf8; --au-b: #f9a8d4; --au-c: #c4b5fd; }
 .aurora[data-palette='sunrise'] { --au-a: #fcd34d; --au-b: #f472b6; --au-c: #a78bfa; }
+.aurora[data-palette='coral'] { --au-a: #fb923c; --au-b: #f472b6; --au-c: #fde68a; }
+.aurora[data-palette='ocean'] { --au-a: #38bdf8; --au-b: #818cf8; --au-c: #5eead4; }
+.aurora[data-palette='lime'] { --au-a: #a3e635; --au-b: #5eead4; --au-c: #93c5fd; }
+.aurora[data-palette='rose'] { --au-a: #fda4af; --au-b: #c4b5fd; --au-c: #fdba74; }
 
 /* ── Compositions: same palette, different light ───────────────────────── */
 .aurora[data-variant='1'] { --au-ax: 100%; --au-ay: 0%; --au-bx: 0%; --au-by: 86%; --au-cx: 100%; --au-cy: 100%; --au-band: 62deg; }
 .aurora[data-variant='2'] { --au-ax: 0%; --au-ay: 100%; --au-bx: 100%; --au-by: 6%; --au-cx: 60%; --au-cy: 0%; --au-band: 64deg; }
+.aurora[data-variant='4'] { --au-ax: 50%; --au-ay: -6%; --au-bx: 0%; --au-by: 30%; --au-cx: 100%; --au-cy: 26%; --au-band: 180deg; }
 .aurora[data-variant='3'] { --au-ax: 100%; --au-ay: 100%; --au-bx: 0%; --au-by: 8%; --au-cx: 40%; --au-cy: 0%; --au-band: 116deg; }

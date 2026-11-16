@@ -47,7 +47,7 @@ import {
   Phone as PhoneIcon,
   Plus,
   Video,
-} from 'lucide-react';
+} from './icons';
 import { SiWhatsapp } from 'react-icons/si';
 import '../../styles/aurora.css';
 import '../../styles/feature-visuals.css';
@@ -76,6 +76,17 @@ const AtContext = createContext(0);
  * so every panel on a page shares the hero's light but each composes it differently.
  */
 export const MeshContext = createContext<string | undefined>(undefined);
+/**
+ * Position of the card this stage sits in on the page (bento tiles first,
+ * then showcase rows). Each position gets its own palette and pattern, so
+ * neighbouring cards never share a background. Undefined for the hero.
+ */
+export const SceneSlotContext = createContext<number | undefined>(undefined);
+
+/** Aurora palettes (styles/aurora.css), ordered so a stride of 5 spreads hue. */
+const PALETTES = ['iris', 'bloom', 'dawn', 'lagoon', 'orchid', 'mint', 'dusk', 'sunrise', 'coral', 'ocean', 'lime', 'rose'];
+/** Background patterns (styles/feature-visuals.css), one per card in turn. */
+const PATTERNS = ['dots', 'beams', 'grid', 'rings', 'lines', 'mesh'];
 
 const cx = (...parts: (string | false | null | undefined)[]) => parts.filter(Boolean).join(' ');
 
@@ -110,6 +121,12 @@ type StageProps = SceneProps & {
   fit?: boolean;
   /** Layer behind the cards that is not auto-framed (Fireworks, for one). */
   back?: ReactNode;
+  /**
+   * The journey, told in captions: [seconds, label] pairs. A caption bar at
+   * the bottom of the stage names the step on screen and fills a progress
+   * dot per step, so a viewer always knows where in the story they are.
+   */
+  steps?: [number, string][];
   children: ReactNode;
 };
 
@@ -137,6 +154,8 @@ function useAutoFit(
   fitRef: RefObject<HTMLDivElement>,
   shape: 'square' | 'wide',
   enabled = true,
+  /** Extra room kept free at the bottom (fraction of height), e.g. for step captions. */
+  bottom = 0,
 ) {
   useIsoLayoutEffect(() => {
     const stage = stageRef.current;
@@ -151,12 +170,17 @@ function useAutoFit(
     const apply = (W: number, H: number) => {
       if (!frac) return;
       const [fx0, fy0, fw, fh] = frac;
-      const pad = FIT_PAD[shape];
+      // Phones: less margin and a higher zoom ceiling, so product UI reads
+      // instead of shrinking to a thumbnail.
+      const narrow = W < 560;
+      const pad = narrow ? 0.035 : FIT_PAD[shape];
+      const max = FIT_MAX[shape] * (narrow ? 1.4 : 1);
       const bw = fw * W;
       const bh = fh * H;
-      const s = Math.min((W * (1 - 2 * pad)) / bw, (H * (1 - 2 * pad)) / bh, FIT_MAX[shape]);
+      const availH = H * (1 - 2 * pad - bottom);
+      const s = Math.min((W * (1 - 2 * pad)) / bw, availH / bh, max);
       const tx = (W - bw * s) / 2 - fx0 * W * s;
-      const ty = (H - bh * s) / 2 - fy0 * H * s;
+      const ty = H * pad + (availH - bh * s) / 2 - fy0 * H * s;
       fit.style.transform = `translate3d(${tx.toFixed(2)}px, ${ty.toFixed(2)}px, 0) scale(${s.toFixed(4)})`;
     };
 
@@ -197,10 +221,10 @@ function useAutoFit(
     ro?.observe(stage);
     document.fonts?.ready.then(measure).catch(() => undefined);
     return () => ro?.disconnect();
-  }, [shape, enabled]);
+  }, [shape, enabled, bottom]);
 }
 
-export function Stage({ tone, shape = 'square', mood, duration, fit = true, back, label, children }: StageProps) {
+export function Stage({ tone, shape = 'square', mood, duration, fit = true, back, steps, label, children }: StageProps) {
   const mesh = useContext(MeshContext);
   const holdMs = Math.max(4000, (duration ?? HOLD_MS / 1000) * 1000);
   const look: Mood = mood ?? (shape === 'square' ? 'plain' : MOODS[hash(label) % MOODS.length]);
@@ -208,7 +232,7 @@ export function Stage({ tone, shape = 'square', mood, duration, fit = true, back
   const ref = useRef<HTMLDivElement>(null);
   const fitRef = useRef<HTMLDivElement>(null);
   const [play, setPlay] = useState(0);
-  useAutoFit(ref, fitRef, shape, fit);
+  useAutoFit(ref, fitRef, shape, fit, steps?.length ? 0.1 : 0);
 
   useEffect(() => {
     const el = ref.current;
@@ -293,8 +317,19 @@ export function Stage({ tone, shape = 'square', mood, duration, fit = true, back
 
   // Every stage takes the page aurora. Square tiles use a top-lit composition
   // (variants 0 and 1) because the CSS fades them into the card body below.
-  const aurora = look === 'night' ? undefined : mesh;
-  const variant = shape === 'square' ? hash(label) % 2 : hash(label) % 4;
+  const slot = useContext(SceneSlotContext);
+  const base = Math.max(0, PALETTES.indexOf(mesh ?? 'iris'));
+  const aurora =
+    look === 'night' ? undefined : slot === undefined ? mesh : PALETTES[(base + 1 + slot * 5) % PALETTES.length];
+  const variant =
+    slot === undefined
+      ? shape === 'square'
+        ? hash(label) % 2
+        : hash(label) % 4
+      : shape === 'square'
+        ? [0, 4, 1][slot % 3]
+        : slot % 4;
+  const pattern = look === 'night' ? undefined : PATTERNS[((slot ?? hash(label)) + base) % PATTERNS.length];
 
   return (
     <div
@@ -306,6 +341,7 @@ export function Stage({ tone, shape = 'square', mood, duration, fit = true, back
     >
       <div className="fv__bg" aria-hidden="true">
         {aurora ? <div className="aurora" data-palette={aurora} data-variant={variant} /> : null}
+        {pattern ? <div className="fv__pattern" data-pattern={pattern} data-corner={(slot ?? 0) % 4} /> : null}
       </div>
       <PlayContext.Provider value={play}>
         <div className="fv__canvas" aria-hidden="true">
@@ -313,6 +349,7 @@ export function Stage({ tone, shape = 'square', mood, duration, fit = true, back
           <div ref={fitRef} className="fv__fit">
             {children}
           </div>
+          {steps?.length ? <Steps steps={steps} /> : null}
         </div>
       </PlayContext.Provider>
     </div>
@@ -1027,7 +1064,7 @@ export function Cursor({
         style={{ left: '50%', top: '90%', opacity: 0 }}
       >
         <svg viewBox="0 0 24 24">
-          <path d="M5.5 3.2 18.6 10c.6.3.5 1.2-.1 1.4l-5.3 1.6-2.4 5.1c-.3.6-1.2.6-1.4-.1L5 4.1c-.2-.6.4-1.2.9-.9Z" />
+          <path d="M4.2 1.6v18.2l4.35-4.15 2.85 6.55 3.1-1.35-2.8-6.45h6.1Z" />
         </svg>
         <span className="fv-cursor__ripple" />
       </div>
@@ -1040,7 +1077,7 @@ export function Cursor({
       style={{ left: `${x}%`, top: `${y}%`, '--fv-d': `${delay * 85}ms` } as CSSProperties}
     >
       <svg viewBox="0 0 24 24">
-        <path d="M5.5 3.2 18.6 10c.6.3.5 1.2-.1 1.4l-5.3 1.6-2.4 5.1c-.3.6-1.2.6-1.4-.1L5 4.1c-.2-.6.4-1.2.9-.9Z" />
+        <path d="M4.2 1.6v18.2l4.35-4.15 2.85 6.55 3.1-1.35-2.8-6.45h6.1Z" />
       </svg>
       <span className="fv-cursor__ripple" />
     </div>
@@ -1679,5 +1716,35 @@ export function QR({ seed = 'wa.me', size = 8 }: { seed?: string; size?: number 
       <rect x={n / 2 - 2.5} y={n / 2 - 2.5} width="5" height="5" rx="1.2" fill="#fff" />
       <rect x={n / 2 - 1.8} y={n / 2 - 1.8} width="3.6" height="3.6" rx="0.9" fill="#25d366" />
     </svg>
+  );
+}
+
+/* ── Journey captions ──────────────────────────────────────────────────── */
+
+/** Caption bar: one numbered label per step, cross-faded on the scene clock. */
+function Steps({ steps }: { steps: [number, string][] }) {
+  return (
+    <div className="fv-steps" aria-hidden="true">
+      <span className="fv-steps__dots">
+        {steps.map(([at], i) => (
+          <i key={i} style={{ '--s-at': `${at}s` } as CSSProperties} />
+        ))}
+      </span>
+      <span className="fv-steps__labels">
+        {steps.map(([at, text], i) => {
+          const next = steps[i + 1]?.[0];
+          return (
+            <span
+              key={i}
+              className={cx('fv-steps__label', next === undefined && 'is-last')}
+              style={{ '--s-at': `${at}s`, '--s-until': next !== undefined ? `${next}s` : undefined } as CSSProperties}
+            >
+              <b>{i + 1}</b>
+              {text}
+            </span>
+          );
+        })}
+      </span>
+    </div>
   );
 }

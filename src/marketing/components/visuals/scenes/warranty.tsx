@@ -72,7 +72,8 @@ function Field({ label, children }: { label: string; children: ReactNode }) {
 
 function Register({ label }: SceneProps) {
   return (
-    <Stage label={label} shape="wide" duration={12}>
+    <Stage label={label}
+      steps={[[0, 'Scan the QR on the box'], [2.4, 'WhatsApp opens with the serial'], [3.6, 'Purchase found'], [5.6, 'Buyer confirms'], [7.6, 'Warranty card sent'], [9.4, 'Record created']]} shape="wide" duration={12}>
       <Float x={8} y={10} w={38}>
         <div className="wr-box">
           <div className="wr-box__top">
@@ -127,7 +128,8 @@ function Register({ label }: SceneProps) {
 /** The hub: every registration and claim, and a new record added by hand. */
 function HubList({ label }: SceneProps) {
   return (
-    <Stage label={label} shape="wide" duration={9}>
+    <Stage label={label}
+      steps={[[0, 'Every warranty in one hub'], [1.2, 'Add a record'], [4.2, 'Saved and active']]} shape="wide" duration={9}>
       <Float x={14} y={6} w={66}>
         <Panel
           title="Warranty hub"
@@ -172,7 +174,8 @@ function HubList({ label }: SceneProps) {
 /** Unassigned registrations wait in a queue until a teammate takes them. */
 function Unassigned({ label }: SceneProps) {
   return (
-    <Stage label={label} shape="wide" duration={8}>
+    <Stage label={label}
+      steps={[[0, 'Waiting registrations'], [1.6, 'Assign'], [2.3, 'Priya takes it']]} shape="wide" duration={8}>
       <Float x={16} y={6} w={64}>
         <Panel title="Unassigned" icon={Inbox} right={<Swap at={2.4} a={<Chip tone="amber" dot>3 waiting</Chip>} b={<Chip tone="amber" dot>2 waiting</Chip>} />}>
           <Row lead={<Avatar name="Moksh Patel" />} title="#1041 · Moksh Patel" sub="Water purifier · 13 Sept" right={<Btn>Assign</Btn>} />
@@ -217,7 +220,8 @@ function Unassigned({ label }: SceneProps) {
 /** A claim comes in on WhatsApp; the team links the order and assigns it. */
 function ManualAssign({ label }: SceneProps) {
   return (
-    <Stage label={label} shape="wide" duration={9}>
+    <Stage label={label}
+      steps={[[0, 'Claim arrives on WhatsApp'], [1.4, 'Link the order'], [3.9, 'Assign a teammate'], [4.6, 'Customer notified']]} shape="wide" duration={9}>
       <Float x={10} y={6} w={80}>
         <Panel title="New claim" icon={ShieldPlus} right={<Chip tone="amber" dot>Open</Chip>}>
           <div className="mm-studio">

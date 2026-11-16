@@ -77,7 +77,8 @@ function Doc({ title, sub, at }: { title: string; sub: string; at: number }) {
 /** A shopper asks a policy question; Maya reads the policy, answers, books it. */
 function Hero({ label }: SceneProps) {
   return (
-    <Stage label={label} shape="wide" duration={13}>
+    <Stage label={label}
+      steps={[[0, 'Shopper asks a policy question'], [2.4, 'AI reads your policies'], [4.1, 'Answers with a citation'], [7.6, 'Shopper says yes'], [9.7, 'Pickup booked']]} shape="wide" duration={13}>
       <Float x={38} y={0}>
         <IPhone name="Glow Co" logo={<GlowDp />} status="Typically replies instantly">
           <Reveal at={0.4}>
@@ -216,7 +217,8 @@ function Persona({ label }: SceneProps) {
 /** Key, model and reply length on one side; what it costs on the other. */
 function Settings({ label }: SceneProps) {
   return (
-    <Stage label={label} shape="wide" duration={8}>
+    <Stage label={label}
+      steps={[[0, 'Your key, your model'], [1.2, 'Cap reply length'], [2.6, 'Billed by your provider']]} shape="wide" duration={8}>
       <Float x={14} y={6} w={66}>
         <Panel title="AI settings" icon={Sparkles} right={<Chip tone="emerald" dot>Connected</Chip>}>
           <div className="cp-perf">
@@ -256,7 +258,8 @@ function Settings({ label }: SceneProps) {
 /** Knowledge on the left; a test chat on the right cites the row it used. */
 function KnowledgePersona({ label }: SceneProps) {
   return (
-    <Stage label={label} shape="wide" duration={8}>
+    <Stage label={label}
+      steps={[[0, 'Store knowledge'], [0.6, 'Shopper asks'], [3.2, 'Answer from Return policy'], [4.8, 'Source cited']]} shape="wide" duration={8}>
       <Float x={10} y={8} w={74}>
         <Panel>
           <div className="ai-split">
@@ -305,7 +308,8 @@ function KnowledgePersona({ label }: SceneProps) {
 /** Messages route before AI spends a token: intent first, flows next, humans always win. */
 function LiveRouting({ label }: SceneProps) {
   return (
-    <Stage label={label} shape="wide" duration={9}>
+    <Stage label={label}
+      steps={[[0, 'Intent matched, no AI call'], [1.4, 'Flow replies in 1.2 s'], [4.4, 'Shopper asks for a person'], [5.2, 'Live Chat takes over']]} shape="wide" duration={9}>
       <Float x={18} y={6} w={60}>
         <Panel title="Routing" icon={Target} right={<Chip>Inbound WhatsApp</Chip>}>
           <div className="ai-msg">

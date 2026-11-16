@@ -102,7 +102,8 @@ function TrueCost({ label }: SceneProps) {
     { name: 'True cost', amount: '₹179', h: 1, base: 0, at: 4.2, kind: 'total' },
   ];
   return (
-    <Stage label={label} shape="wide" duration={9}>
+    <Stage label={label}
+      steps={[[0, 'A ₹799 COD order'], [0.9, 'Every cost added'], [2.8, 'RTO and support'], [4.2, 'True cost ₹179']]} shape="wide" duration={9}>
       <Float x={14} y={4} w={72}>
         <Panel>
           <div className="pl-order">
@@ -201,7 +202,8 @@ function CodReturns({ label }: SceneProps) {
 /** Net profit for a period: switch to 30 days and the numbers follow. */
 function NetProfit({ label }: SceneProps) {
   return (
-    <Stage label={label} shape="wide" duration={8}>
+    <Stage label={label}
+      steps={[[0, 'Pick a period'], [1.1, 'Net profit, 30 days']]} shape="wide" duration={8}>
       <Float x={16} y={6} w={64}>
         <Panel
           title="Net profit"
@@ -248,7 +250,8 @@ function CostWaterfall({ label }: SceneProps) {
     { name: 'Net', amount: '₹3,562', h: 3562 * k, base: 0, at: 4, kind: 'net' },
   ];
   return (
-    <Stage label={label} shape="wide" duration={8.5}>
+    <Stage label={label}
+      steps={[[0, 'Revenue'], [1.5, 'Costs step down'], [4, 'Net ₹3,562']]} shape="wide" duration={8.5}>
       <Float x={14} y={4} w={72}>
         <Panel title="Cost waterfall" icon={Layers} right={<Chip>Last 30 days</Chip>}>
           <Waterfall bars={bars} />
@@ -267,7 +270,8 @@ function ProductTable({ label }: SceneProps) {
     <Row lead={<ProductArt kind={kind} h={2.6} />} title={title} sub={sub} right={<Chip tone={tone}>{m}</Chip>} active={active} />
   );
   return (
-    <Stage label={label} shape="wide" duration={8}>
+    <Stage label={label}
+      steps={[[0, 'Products by margin'], [1.2, 'Sort'], [1.5, 'Loss-maker on top'], [2.6, 'Missing COGS flagged']]} shape="wide" duration={8}>
       <Float x={16} y={6} w={64}>
         <Panel
           title="Products"

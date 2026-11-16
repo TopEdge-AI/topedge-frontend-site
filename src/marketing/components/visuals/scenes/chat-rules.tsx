@@ -77,7 +77,8 @@ function Convo({ name, last, when, unread, active, assignee }: { name: string; l
 
 function RoutingHero({ label }: SceneProps) {
   return (
-    <Stage label={label} shape="wide" duration={9}>
+    <Stage label={label}
+      steps={[[0, 'Message arrives'], [1.8, 'Rule matches'], [3.2, 'Assigned to Ops'], [5.7, 'Agent replies']]} shape="wide" duration={9}>
       <Float x={6} y={6} w={88}>
         <Panel pad={false} className="ch-inbox">
           <div className="ch-list">
@@ -220,7 +221,8 @@ function AssignFilters({ label }: SceneProps) {
 /** An agent takes control: AI and flows pause on this chat, rules keep routing. */
 function Takeover({ label }: SceneProps) {
   return (
-    <Stage label={label} shape="wide" duration={9.5}>
+    <Stage label={label}
+      steps={[[0, 'AI replies'], [2.2, 'Agent takes control'], [2.8, 'AI and flows pause'], [4.2, 'Agent replies']]} shape="wide" duration={9.5}>
       <Float x={14} y={6} w={72}>
         <Panel pad={false} className="ch-inbox ch-inbox--one">
           <div className="ch-thread">
@@ -277,7 +279,8 @@ function QueueAssign({ label }: SceneProps) {
     <Swap at={at} a={<Chip>Unassigned</Chip>} b={<span className="ch-who ch-who--named"><Avatar name={name} />{name.split(' ')[0]}</span>} />
   );
   return (
-    <Stage label={label} shape="wide" duration={8}>
+    <Stage label={label}
+      steps={[[0, 'Chats queue by team'], [1, 'Right agent, automatically'], [3, 'Escalations flagged']]} shape="wide" duration={8}>
       <Float x={16} y={6} w={64}>
         <Panel title="Queues" icon={Inbox} right={<Chip>3 agents online</Chip>}>
           <Label>Ops</Label>
@@ -298,7 +301,8 @@ function QueueAssign({ label }: SceneProps) {
 /** Build a rule: when the message has these words, assign and pause the bot. */
 function RuleBuilder({ label }: SceneProps) {
   return (
-    <Stage label={label} shape="wide" duration={8.5}>
+    <Stage label={label}
+      steps={[[0, 'Keywords'], [2, 'Actions'], [3.9, 'Publish']]} shape="wide" duration={8.5}>
       <Float x={18} y={6} w={60}>
         <Panel title="New rule" icon={Workflow}>
           <Label>When a message contains</Label>

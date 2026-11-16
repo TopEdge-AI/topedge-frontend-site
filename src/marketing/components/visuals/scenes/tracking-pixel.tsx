@@ -89,7 +89,8 @@ function SerumPage({ added }: { added: number }) {
 
 function Hero({ label }: SceneProps) {
   return (
-    <Stage label={label} shape="wide" duration={12}>
+    <Stage label={label}
+      steps={[[0, 'Views the serum'], [2.4, 'Adds to cart'], [4.4, 'Leaves the store'], [6.4, 'Recovery on WhatsApp']]} shape="wide" duration={12}>
       <Float x={6} y={10} w={50} until={5.6}>
         <Browser url="glowco.in/hydrating-gel">
           <SerumPage added={2.4} />
@@ -194,7 +195,8 @@ function JourneyFunnel({ label }: SceneProps) {
 /** Intent arrives live; the hottest cart is queued for recovery while warm. */
 function IntentFeed({ label }: SceneProps) {
   return (
-    <Stage label={label} shape="wide" duration={8}>
+    <Stage label={label}
+      steps={[[0, 'Intent arrives live'], [2.6, 'A hot cart'], [3.6, 'Recovery queued while warm']]} shape="wide" duration={8}>
       <Float x={18} y={8} w={58}>
         <Panel title="Live intent feed" icon={Activity} right={<Chip tone="emerald" dot>Live</Chip>}>
           <Ev icon={ShoppingCart} title="+91 98765 43210" sub="Added to cart · Vitamin C serum · ₹729" when="now" at={2.6} tone="sky" />
@@ -212,7 +214,8 @@ function IntentFeed({ label }: SceneProps) {
 /** An anonymous visitor becomes a known shopper the moment checkout gives a number. */
 function NumberMatch({ label }: SceneProps) {
   return (
-    <Stage label={label} shape="wide" duration={8}>
+    <Stage label={label}
+      steps={[[0, 'Anonymous visitor'], [1.6, 'Checkout gives a number'], [2.6, 'Matched to a profile'], [3.4, 'History attached']]} shape="wide" duration={8}>
       <Float x={20} y={8} w={56}>
         <Panel>
           <Swap
@@ -257,7 +260,8 @@ function NumberMatch({ label }: SceneProps) {
 /** Is the pixel healthy? Events, checks and an audience it already built. */
 function PixelHealth({ label }: SceneProps) {
   return (
-    <Stage label={label} shape="wide" duration={8}>
+    <Stage label={label}
+      steps={[[0, 'Events today'], [0.6, 'Health checks pass'], [2.8, 'An audience, ready']]} shape="wide" duration={8}>
       <Float x={16} y={6} w={62}>
         <Panel title="Pixel health" icon={Activity} right={<Chip tone="emerald" dot>Healthy</Chip>}>
           <div className="cp-perf">

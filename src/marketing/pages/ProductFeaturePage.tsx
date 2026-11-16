@@ -26,7 +26,7 @@ import FeatureMeshStage, { AURORA_PALETTE } from '../components/effects/FeatureM
 import HomeTrust from '../components/home/HomeTrust';
 import { PrimaryButton, GhostButton } from '../components/ui';
 import { ScenesContext, ScenePlaceholder, usePageScenes, useScene } from '../components/visuals';
-import { AccentContext, MeshContext } from '../components/visuals/kit';
+import { AccentContext, MeshContext, SceneSlotContext } from '../components/visuals/kit';
 import '../styles/product-feature.css';
 import '../styles/feature-premium.css';
 
@@ -83,14 +83,16 @@ function ShotFrame({
   );
 }
 
-function BentoTile({ tile }: { tile: ProductBento }) {
+function BentoTile({ tile, slot }: { tile: ProductBento; slot: number }) {
   const span = tile.span === 'half' ? 'half' : tile.span === 'full' ? 'full' : 'third';
   const label = tile.imageAlt || `${tile.titleLead} ${tile.titleAccent}`.trim();
 
   return (
     <article className={`mkt-pf__tile mkt-pf__tile--${span}`}>
       <div className="mkt-pf__tile-visual">
-        <ShotFrame src={tile.image} label={label} />
+        <SceneSlotContext.Provider value={slot}>
+          <ShotFrame src={tile.image} label={label} />
+        </SceneSlotContext.Provider>
       </div>
       <div className="mkt-pf__tile-body">
         <h3 className="mkt-pf__tile-title">
@@ -103,7 +105,7 @@ function BentoTile({ tile }: { tile: ProductBento }) {
   );
 }
 
-function ShowcaseRow({ item, index }: { item: ProductShowcase; index: number }) {
+function ShowcaseRow({ item, index, slot }: { item: ProductShowcase; index: number; slot: number }) {
   const reverse = item.reverse ?? index % 2 === 1;
   const label = item.imageLabel || `${item.title}${item.titleAccent ? ` ${item.titleAccent}` : ''}`;
 
@@ -113,7 +115,9 @@ function ShowcaseRow({ item, index }: { item: ProductShowcase; index: number }) 
       className={`mkt-pf__showcase${reverse ? ' is-reverse' : ''}${item.anchor ? ' has-anchor' : ''}`}
     >
       <div className="mkt-pf__showcase-media">
-        <ShotFrame src={item.image} label={label} wide />
+        <SceneSlotContext.Provider value={slot}>
+          <ShotFrame src={item.image} label={label} wide />
+        </SceneSlotContext.Provider>
       </div>
       <div className="mkt-pf__showcase-copy">
         <h2 className="mkt-pf__showcase-title">
@@ -253,8 +257,8 @@ function ProductFeatureView({ page }: { page: ProductPage }) {
               {page.bentoSub ? <p className="mkt-pf__head-sub">{page.bentoSub}</p> : null}
             </div>
             <div className={`mkt-pf__bento${page.bentos.length >= 5 ? ' mkt-pf__bento--five' : ''}`}>
-              {page.bentos.map((tile) => (
-                <BentoTile key={`${tile.titleLead}-${tile.titleAccent}`} tile={tile} />
+              {page.bentos.map((tile, i) => (
+                <BentoTile key={`${tile.titleLead}-${tile.titleAccent}`} tile={tile} slot={i} />
               ))}
             </div>
           </section>
@@ -267,7 +271,7 @@ function ProductFeatureView({ page }: { page: ProductPage }) {
           >
             <div className="mkt-pf__showcases">
               {page.showcases!.map((item, i) => (
-                <ShowcaseRow key={`${item.title}-${i}`} item={item} index={i} />
+                <ShowcaseRow key={`${item.title}-${i}`} item={item} index={i} slot={page.bentos.length + i} />
               ))}
             </div>
           </section>

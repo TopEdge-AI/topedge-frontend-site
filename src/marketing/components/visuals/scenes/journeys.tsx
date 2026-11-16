@@ -184,7 +184,8 @@ function Gating({ label }: SceneProps) {
  */
 function AbandonedCart({ label }: SceneProps) {
   return (
-    <Stage label={label} shape="wide" duration={12}>
+    <Stage label={label}
+      steps={[[0, 'Cart abandoned'], [1, 'Journey waits 30 min'], [2.2, 'Reminder sent'], [5.4, 'Shopper taps Complete order'], [7.6, 'Pays by UPI'], [9.4, 'Cart recovered']]} shape="wide" duration={12}>
       <Float x={10} y={12} w={42}>
         <Panel title="Cart recovery" icon={Workflow} right={<Chip tone="emerald" dot>Live</Chip>}>
           <div className="jr-rail">
@@ -262,7 +263,8 @@ function AbandonedCart({ label }: SceneProps) {
 /** Branch on payment method: COD, prepaid and quiet buyers split. */
 function Routes({ label }: SceneProps) {
   return (
-    <Stage label={label} shape="wide" duration={8}>
+    <Stage label={label}
+      steps={[[0, 'Order created'], [2, 'COD branch asks to confirm'], [3.4, 'Shopper confirms']]} shape="wide" duration={8}>
       <Wires
         shape="wide"
         paths={['M 36 31 C 44 31, 43 13.5, 51 13.5', 'M 36 31 L 51 31', 'M 36 31 C 44 31, 43 48.5, 51 48.5']}
@@ -289,7 +291,8 @@ function Routes({ label }: SceneProps) {
 /** A known shopper comes back, leaves again, and the journey reaches out. */
 function Retarget({ label }: SceneProps) {
   return (
-    <Stage label={label} shape="wide" duration={10}>
+    <Stage label={label}
+      steps={[[0, 'Known shopper is back'], [3, 'Leaves without buying'], [4.8, 'Journey reaches out'], [7.4, 'Taps View shirt'], [8, 'Orders it']]} shape="wide" duration={10}>
       <Float x={4} y={10} w={54}>
         <Browser url="miraethnic.in/linen-shirt">
           <div className="oi-store">

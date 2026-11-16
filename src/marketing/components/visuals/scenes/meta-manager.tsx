@@ -76,7 +76,8 @@ function TemplatePreview({ at }: { at?: number }) {
 /** Write, submit, Meta approves, and the message lands on a real phone. */
 function LibraryHero({ label }: SceneProps) {
   return (
-    <Stage label={label} shape="wide" duration={12}>
+    <Stage label={label}
+      steps={[[0, 'Write the template'], [2.3, 'Submit to Meta'], [5, 'Approved'], [6.6, 'Sent to shoppers'], [8.4, 'Shopper replies']]} shape="wide" duration={12}>
       <Float x={6} y={6} w={50}>
         <Panel title="cart_recovery_1" icon={FileText} right={<Chip>Marketing</Chip>}>
           <Lifecycle review={2.6} approved={5} />
@@ -185,7 +186,8 @@ function CatalogTile({ label }: SceneProps) {
 /** Sync from Meta: statuses arrive, a rejection explains itself. */
 function LibraryShowcase({ label }: SceneProps) {
   return (
-    <Stage label={label} shape="wide" duration={8}>
+    <Stage label={label}
+      steps={[[0, 'Template library'], [1, 'Sync from Meta'], [2.7, 'Rejection reason shown']]} shape="wide" duration={8}>
       <Float x={18} y={6} w={60}>
         <Panel
           title="Template library"
@@ -226,7 +228,8 @@ function LibraryShowcase({ label }: SceneProps) {
 /** Write a template with variables beside a live WhatsApp preview, then submit. */
 function Studio({ label }: SceneProps) {
   return (
-    <Stage label={label} shape="wide" duration={9}>
+    <Stage label={label}
+      steps={[[0, 'Write with variables'], [3, 'Live WhatsApp preview'], [4.3, 'Submit to Meta']]} shape="wide" duration={9}>
       <Float x={8} y={4} w={84}>
         <Panel title="Template studio" icon={FileText} right={<Chip>Utility</Chip>}>
           <div className="mm-studio">
@@ -270,7 +273,8 @@ function Studio({ label }: SceneProps) {
 /** Refresh the catalog from Shopify, then download a wa.me QR for the store. */
 function CatalogShowcase({ label }: SceneProps) {
   return (
-    <Stage label={label} shape="wide" duration={8.5}>
+    <Stage label={label}
+      steps={[[0, 'Refresh from Shopify'], [1.4, 'Catalog synced'], [4.4, 'Download the QR']]} shape="wide" duration={8.5}>
       <Float x={10} y={6} w={80}>
         <Panel
           title="Catalog"

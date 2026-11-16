@@ -144,7 +144,8 @@ function WebhookSync({ label }: SceneProps) {
 /** Folders and flows; a new flow is switched on and published. */
 function FlowList({ label }: SceneProps) {
   return (
-    <Stage label={label} shape="wide" duration={8}>
+    <Stage label={label}
+      steps={[[0, 'Flows by folder'], [1.6, 'Switch a flow on'], [2.9, 'Publish'], [3.6, 'Live for the next message']]} shape="wide" duration={8}>
       <Float x={10} y={6} w={80}>
         <Panel pad={false} className="ch-inbox fb-list">
           <div className="ch-list">
@@ -194,7 +195,8 @@ function FlowList({ label }: SceneProps) {
 /** The canvas: the welcome menu branches; a shopper taps Track order; the path lights. */
 function Canvas({ label }: SceneProps) {
   return (
-    <Stage label={label} shape="wide" duration={8.5}>
+    <Stage label={label}
+      steps={[[0, 'Welcome menu branches'], [2.4, 'Shopper taps Track order'], [3.3, 'Order sent']]} shape="wide" duration={8.5}>
       <Float x={4} y={4} w={92}>
         <div className="fb-canvas">
           <div className="fb-canvas__bar">
@@ -243,7 +245,8 @@ function Simulator({ label }: SceneProps) {
     </Reveal>
   );
   return (
-    <Stage label={label} shape="wide" duration={9}>
+    <Stage label={label}
+      steps={[[0, 'Test the flow'], [2.6, 'Simulator taps a button'], [4.9, 'Answer arrives'], [5.9, 'All steps pass']]} shape="wide" duration={9}>
       <Float x={8} y={16} w={40}>
         <Panel title="Test Flow" icon={Play} right={<Chip>Simulator</Chip>}>
           {step('Welcome', 'Menu with 3 buttons', 1.2)}

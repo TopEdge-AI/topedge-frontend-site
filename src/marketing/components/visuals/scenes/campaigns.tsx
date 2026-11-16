@@ -66,6 +66,7 @@ function Hero({ label }: SceneProps) {
   return (
     <Stage
       label={label}
+      steps={[[0, 'Pick audience and template'], [1.6, 'Send to 2,418 shoppers'], [2.8, 'Lands on WhatsApp'], [5.4, 'Shopper taps Shop the edit'], [7.6, 'Buys with the Diwali offer'], [9.6, 'Revenue after Meta fees']]}
       shape="wide"
       mood="night"
       duration={13}
@@ -259,7 +260,8 @@ function NetReport({ label }: SceneProps) {
 /** Pick a scored segment, press Send, delivery fills up. */
 function AudienceBuilder({ label }: SceneProps) {
   return (
-    <Stage label={label} shape="wide" duration={8}>
+    <Stage label={label}
+      steps={[[0, 'Scored segments'], [1.45, 'Pick cart abandoners'], [3, 'Send'], [3.4, 'Delivered to 1,240']]} shape="wide" duration={8}>
       <Float x={20} y={8} w={60}>
         <Panel
           title="Choose audience"
@@ -304,7 +306,8 @@ function AudienceBuilder({ label }: SceneProps) {
 /** Approved templates send; a draft is stopped at the gate. */
 function TemplateLock({ label }: SceneProps) {
   return (
-    <Stage label={label} shape="wide" duration={8}>
+    <Stage label={label}
+      steps={[[0, 'Approved templates send'], [1.9, 'A draft is tried'], [2.3, 'Blocked until Meta approves']]} shape="wide" duration={8}>
       <Float x={20} y={8} w={60}>
         <Panel title="Templates" icon={Megaphone}>
           <Row title="diwali_offer" sub="Marketing · ₹0.8631 per message" right={<Chip tone="emerald" icon={Check}>Approved</Chip>} />
@@ -338,6 +341,7 @@ function Performance({ label }: SceneProps) {
   return (
     <Stage
       label={label}
+      steps={[[0, 'Campaign sent'], [1, 'Net revenue counts in'], [2.4, 'Return on Meta fees']]}
       shape="wide"
       mood="night"
       duration={8}

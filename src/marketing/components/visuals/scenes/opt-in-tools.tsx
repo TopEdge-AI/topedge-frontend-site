@@ -239,7 +239,8 @@ function Widget({ label }: SceneProps) {
  */
 function WelcomePopup({ label }: SceneProps) {
   return (
-    <Stage label={label} shape="wide" duration={14}>
+    <Stage label={label}
+      steps={[[0, 'Shopper enters their WhatsApp number'], [2.7, 'Gives consent'], [3.5, 'Unlocks 10% off'], [5.6, 'Code arrives on WhatsApp'], [8.5, 'Taps Shop now'], [10.6, 'Buys with the code'], [11.5, 'Order placed']]} shape="wide" duration={14}>
       {/* Act 1: the popup on the storefront */}
       <Float x={29} y={0} w={42} until={4.9}>
         <div className="oi-pop oi-pop--banner">
@@ -361,7 +362,8 @@ function Spin({ label }: SceneProps) {
   // Each pill is ~2.9em tall with gap; land the 8th (index 7, "5% off") on the arrow.
   const step = 2.95;
   return (
-    <Stage label={label} shape="wide" duration={10}>
+    <Stage label={label}
+      steps={[[0, 'Shopper spins'], [1.3, 'Lands on 5% off'], [4.3, 'Consent and number'], [5.9, 'Code won'], [7.4, 'Copied, sent on WhatsApp']]} shape="wide" duration={10}>
       <Float x={18} y={6} w={64} until={5.4}>
         <div className="oi-pop oi-pop--row">
           <span className="oi-close">✕</span>
@@ -443,7 +445,8 @@ function Spin({ label }: SceneProps) {
 /** Scratch & Win: the foil scratches away, 5% off, number in, the code rises up. */
 function Mystery({ label }: SceneProps) {
   return (
-    <Stage label={label} shape="wide" duration={10}>
+    <Stage label={label}
+      steps={[[0, 'Scratch the foil'], [2.6, '5% off revealed'], [3.9, 'Consent and number'], [5.9, 'Code unlocked'], [8, 'Sent on WhatsApp']]} shape="wide" duration={10}>
       <Float x={32} y={2} w={36}>
         <div className="oi-pop">
           <span className="oi-close">✕</span>
@@ -510,7 +513,8 @@ function Mystery({ label }: SceneProps) {
 /** Pulse Drop: tap the glowing orb, the same card turns into the unlocked offer. */
 function PulseDrop({ label }: SceneProps) {
   return (
-    <Stage label={label} shape="wide" duration={9}>
+    <Stage label={label}
+      steps={[[0, 'Shopper sees the drop'], [1.5, 'Taps to reveal'], [2.4, 'Offer unlocked'], [4.4, 'Claimed on WhatsApp']]} shape="wide" duration={9}>
       <Float x={33} y={4} w={34}>
         <div className="oi-pop">
           <span className="oi-close">✕</span>
