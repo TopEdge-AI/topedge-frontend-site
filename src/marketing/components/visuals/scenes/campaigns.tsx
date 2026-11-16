@@ -1,30 +1,11 @@
-/* eslint-disable react-refresh/only-export-components -- a scene module exports its SceneMap by design. */
 /**
- * Campaigns scenes: segment, lock an approved template, read net ₹ after Meta fees.
+ * Campaigns scenes, v3 storytelling style (see flow-builder.tsx).
+ *
+ * Square tiles: plain white, one focal element, at most two small pieces.
+ * Wide panels: page mesh backdrop, one large white card, one or two satellites.
  * Keys are the image paths in productPages.ts.
  */
-import type { ReactNode } from 'react';
-import {
-  Activity,
-  BadgeCheck,
-  BarChart3,
-  Check,
-  FileCheck2,
-  Filter,
-  IndianRupee,
-  Lock,
-  Megaphone,
-  Package,
-  Radar,
-  Send,
-  ShieldCheck,
-  ShoppingCart,
-  Sparkles,
-  Target,
-  Upload,
-  Users,
-  Zap,
-} from 'lucide-react';
+import { Megaphone, Lock, Repeat, Send, ShoppingBag, ShoppingCart, Eye, TrendingUp, Users } from 'lucide-react';
 import {
   Avatar,
   Btn,
@@ -32,10 +13,12 @@ import {
   Chip,
   Cursor,
   Float,
+  Glow,
   IconTile,
-  Meter,
   Panel,
   Phone,
+  Reveal,
+  Rings,
   Row,
   Spark,
   Stage,
@@ -43,332 +26,201 @@ import {
   Thumb,
   type SceneMap,
   type SceneProps,
-  type Tone,
 } from '../kit';
 
-/* ── Local helpers ─────────────────────────────────────────────────────── */
+/* ── Hero ──────────────────────────────────────────────────────────────── */
 
-/** Checkbox used as a row lead. */
-function Tick({ on, tone = 'violet' }: { on?: boolean; tone?: Tone }) {
-  return (
-    <span
-      data-tone={tone}
-      style={{
-        flex: 'none',
-        display: 'grid',
-        placeItems: 'center',
-        width: '1.45em',
-        height: '1.45em',
-        borderRadius: '0.4em',
-        color: '#fff',
-        background: on ? 'linear-gradient(160deg, var(--t-400), var(--t-600))' : '#fff',
-        boxShadow: on ? '0 0.3em 0.6em -0.2em var(--t-600)' : '0 0 0 1.5px rgba(15,23,42,0.18) inset',
-      }}
-    >
-      {on ? <Check strokeWidth={3.2} style={{ width: '0.95em', height: '0.95em' }} /> : null}
-    </span>
-  );
-}
-
-/** Lead score tier badge. */
-function Score({ n, tone }: { n: number; tone: Tone }) {
-  return (
-    <span
-      data-tone={tone}
-      style={{
-        flex: 'none',
-        display: 'grid',
-        placeItems: 'center',
-        width: '2.6em',
-        height: '2.6em',
-        borderRadius: '50%',
-        fontSize: '0.95em',
-        fontWeight: 700,
-        color: 'var(--t-700)',
-        background: 'linear-gradient(160deg, var(--t-50), var(--t-100))',
-        boxShadow: '0 0 0 1.5px color-mix(in srgb, var(--t-500) 35%, transparent) inset',
-      }}
-    >
-      {n}
-    </span>
-  );
-}
-
-/** Key / value line. */
-function KV({ k, v, strong }: { k: string; v: ReactNode; strong?: boolean }) {
-  return (
-    <div
-      style={{
-        display: 'flex',
-        justifyContent: 'space-between',
-        alignItems: 'center',
-        padding: '0.45em 0.15em',
-        borderTop: strong ? '1px solid var(--fv-line)' : undefined,
-        marginTop: strong ? '0.3em' : undefined,
-        paddingTop: strong ? '0.7em' : undefined,
-      }}
-    >
-      <small style={{ fontSize: strong ? '1.05em' : '0.98em', color: strong ? 'var(--fv-ink)' : 'var(--fv-muted)', fontWeight: strong ? 600 : 400 }}>{k}</small>
-      <b style={{ fontWeight: 600, fontSize: strong ? '1.3em' : '1em', letterSpacing: '-0.02em' }}>{v}</b>
-    </div>
-  );
-}
-
-/** Small row of stats laid out evenly. */
-function StatRow({ children }: { children: ReactNode }) {
-  return (
-    <div
-      style={{
-        display: 'grid',
-        gridAutoFlow: 'column',
-        gridAutoColumns: '1fr',
-        gap: '0.8em',
-        padding: '0.8em 0.9em',
-        marginBottom: '0.6em',
-        borderRadius: '0.9em',
-        background: 'rgba(15,23,42,0.025)',
-        boxShadow: '0 0 0 1px var(--fv-line) inset',
-        fontSize: '0.82em',
-      }}
-    >
-      {children}
-    </div>
-  );
-}
-
-/* ── Hero (wide stage in a 16:9 frame, 64em x 36em) ────────────────────── */
-
-/** Campaign list with revenue, and the WhatsApp message it sent. */
+/** An approved template lands on the phone, then the revenue it earned. */
 function Hero({ label }: SceneProps) {
   return (
-    <Stage label={label} tone="rose" shape="wide">
-      <Float x={4} y={8} w={60} delay={0}>
-        <Panel title="Campaigns" icon={Megaphone} tone="rose" right={<Btn tone="rose" primary icon={Zap}>Create campaign</Btn>}>
-          <StatRow>
-            <Stat label="Messages sent" value="4,280" />
-            <Stat label="Read rate" value="67%" />
-            <Stat label="Attributed revenue" value="₹1,86,400" />
-          </StatRow>
-          <Row lead={<IconTile icon={Sparkles} tone="violet" size="sm" />} title="Weekend flash sale" sub="Completed · 5 days ago" right={<Chip tone="emerald">₹1,18,000</Chip>} />
-          <Row lead={<IconTile icon={ShoppingCart} tone="amber" size="sm" />} title="Restock cart nudge" sub="Completed · 2 days ago" right={<Chip tone="emerald">₹68,400</Chip>} active />
-          <Row lead={<IconTile icon={Send} tone="sky" size="sm" />} title="Night cream launch" sub="Sending now" right={<Chip tone="sky" dot>Live</Chip>} />
-        </Panel>
-      </Float>
-      <Float x={68} y={6} w={27} delay={2} rotate={2} drift z={3}>
+    <Stage label={label} shape="wide" duration={7.5}>
+      <Float x={52} y={4} w={32} at={0} z={3}>
         <Phone name="Your store">
-          <Bubble from="biz" time="9:41" read media={<Thumb tone="rose" icon={Sparkles} h={6.5} />} buttons={['Shop the drop']}>
-            New collection is live. Limited stock, shop before it goes.
-          </Bubble>
+          <Reveal at={0.8}>
+            <Bubble
+              from="biz"
+              time="7:30 pm"
+              read
+              media={<Thumb icon={ShoppingBag} h={7} />}
+              buttons={['Shop the edit']}
+            >
+              Riya, the Diwali edit is here. 20% off till Sunday.
+            </Bubble>
+          </Reveal>
+          <Reveal at={2.4}>
+            <Bubble from="user">Ordered the blue one!</Bubble>
+          </Reveal>
         </Phone>
       </Float>
-      <Float x={6} y={82} delay={4}>
-        <Chip tone="emerald" icon={ShieldCheck}>Approved templates only</Chip>
+      <Float x={14} y={18} at={0.4}>
+        <Chip tone="emerald" dot>Approved template</Chip>
       </Float>
-      <Float x={32} y={82} delay={5}>
-        <Chip tone="amber" icon={Filter}>Frequency capped</Chip>
-      </Float>
-      <Float x={68} y={84} delay={6}>
-        <Chip tone="rose" solid icon={IndianRupee}>Net of Meta fees</Chip>
+      <Float x={10} y={36} w={32} at={3.2}>
+        <Panel glass title="Diwali sale" icon={Megaphone}>
+          <Stat label="Revenue earned" value="₹1,84,200" delta="After Meta fees" />
+        </Panel>
       </Float>
     </Stage>
   );
 }
 
-/* ── Bento tiles (square, 36em x 36em) ─────────────────────────────────── */
+/* ── Bento tiles: plain, one focal element ─────────────────────────────── */
 
-/** Behavior segments from Shopify purchase history and on-site intent. */
+/** Two behaviour rules become one live segment. */
 function Segments({ label }: SceneProps) {
   return (
-    <Stage label={label} tone="violet">
-      <Float x={7} y={6} w={86} delay={0}>
-        <Panel title="Who receives it" icon={Users} tone="violet" right={<Chip tone="slate">Segment</Chip>}>
-          <Row lead={<Tick on />} title="Abandoned cart" sub="Open cart, not recovered" right={<Chip tone="violet">67</Chip>} active />
-          <Row lead={<Tick on />} title="Ordered in last 90 days" sub="Recent buyers" right={<Chip tone="violet">289</Chip>} />
-          <Row lead={<Tick />} title="Exactly 1 order" sub="One-time buyers" right={<Chip tone="slate">198</Chip>} />
-          <Row lead={<Tick />} title="Haven't purchased" sub="Never ordered" right={<Chip tone="slate">836</Chip>} />
+    <Stage label={label} duration={6}>
+      <Rings x={50} y={62} count={4} gap={9} />
+      <Float x={8} y={14} at={0.2}>
+        <Chip icon={Repeat}>Orders 2 or more</Chip>
+      </Float>
+      <Float x={54} y={14} at={0.8}>
+        <Chip icon={Eye}>Viewed 3+ items</Chip>
+      </Float>
+      <Float x={16} y={34} w={68} at={1.6} z={3}>
+        <Panel title="Repeat buyers" icon={Users}>
+          <Stat label="Shoppers in segment" value="2,418" />
         </Panel>
       </Float>
-      <Float x={5} y={73} delay={3}>
-        <Chip tone="violet" icon={Package}>Purchase history</Chip>
-      </Float>
-      <Float x={5} y={82} delay={4}>
-        <Chip tone="sky" icon={Radar}>On-site intent</Chip>
-      </Float>
-      <Float x={39} y={71} w={56} delay={5} rotate={2} drift z={3}>
-        <Panel>
-          <Row lead={<IconTile icon={Users} tone="emerald" />} title="356 contacts" sub="2 segments" right={<Chip tone="emerald" dot>Ready</Chip>} />
-        </Panel>
-      </Float>
-      <Cursor x={14.5} y={34} delay={6} />
     </Stage>
   );
 }
 
-/** Lead scoring: send to the score stages that earned it. */
+/** Shoppers rank themselves by intent, highest first. */
 function LeadScoring({ label }: SceneProps) {
   return (
-    <Stage label={label} tone="amber">
-      <Float x={7} y={6} w={86} delay={0}>
-        <Panel title="Score stages" icon={Target} tone="amber" right={<Chip tone="amber">3 of 3</Chip>}>
-          <Row lead={<Score n={100} tone="violet" />} title="VIP / Direct Buyer" sub="Placed 5+ orders" right={<Tick on tone="amber" />} active />
-          <Row lead={<Score n={90} tone="indigo" />} title="Loyal Customer" sub="Placed 3+ orders" right={<Tick on tone="amber" />} />
-          <Row lead={<Score n={80} tone="emerald" />} title="Repeat Buyer" sub="At least 1 order" right={<Tick on tone="amber" />} />
-          <Row lead={<Score n={50} tone="sky" />} title="Active Shopper" sub="10+ WhatsApp messages" right={<Tick />} />
+    <Stage label={label} duration={6}>
+      <Glow x={50} y={54} size={22} />
+      <Float x={12} y={20} w={76} at={0} z={3}>
+        <Panel title="Top intent" icon={TrendingUp}>
+          <Reveal at={0.7}>
+            <Row lead={<Avatar name="Ishaan Gupta" />} title="Ishaan Gupta" sub="Cart ₹3,450" right="92" active />
+          </Reveal>
+          <Reveal at={1.3}>
+            <Row lead={<Avatar name="Sneha Kulkarni" />} title="Sneha Kulkarni" sub="Viewed 6 items" right="81" />
+          </Reveal>
+          <Reveal at={1.9}>
+            <Row lead={<Avatar name="Vikram Joshi" />} title="Vikram Joshi" sub="2 past orders" right="64" />
+          </Reveal>
         </Panel>
       </Float>
-      <Float x={5} y={74} delay={3}>
-        <Chip tone="amber" icon={ShoppingCart}>Cart + purchase</Chip>
-      </Float>
-      <Float x={5} y={83} delay={4}>
-        <Chip tone="slate" icon={Activity}>Browse signals</Chip>
-      </Float>
-      <Float x={39} y={72} w={56} delay={5} rotate={-2} drift z={3}>
-        <Panel>
-          <Row lead={<IconTile icon={Send} tone="violet" />} title="142 contacts" sub="From 3 stages" right={<Chip tone="emerald" dot>Ready</Chip>} />
-        </Panel>
+      <Float x={32} y={80} at={2.8}>
+        <Chip dot>Sorted by score</Chip>
       </Float>
     </Stage>
   );
 }
 
-/** Net-of-Meta reporting: revenue minus the messaging bill. */
+/** The ₹ number that is left after Meta fees. */
 function NetReport({ label }: SceneProps) {
   return (
-    <Stage label={label} tone="emerald">
-      <Float x={6} y={6} w={51} delay={0}>
-        <Panel title="Performance" icon={BarChart3} tone="emerald">
-          <KV k="Delivered" v="1,218" />
-          <KV k="Read" v="73.2%" />
-          <KV k="Revenue" v={<Chip tone="emerald">₹68,400</Chip>} />
-          <KV k="Meta bill" v={<Chip tone="slate">−₹1,070</Chip>} />
+    <Stage label={label} duration={6}>
+      <Rings x={50} y={48} count={4} gap={9} />
+      <Float x={14} y={26} w={72} at={0.2} z={3}>
+        <Panel title="Diwali sale" icon={Megaphone}>
+          <Stat label="Net revenue" value="₹1,42,560" delta="After Meta fees" />
         </Panel>
       </Float>
-      <Float x={60} y={13} w={35} delay={2} rotate={3} drift z={3}>
-        <Panel>
-          <Stat label="Net revenue" value="₹67,330" delta="After Meta fees" tone="emerald" />
-        </Panel>
-      </Float>
-      <Float x={63} y={45} delay={3}>
-        <Chip tone="slate">₹0.8631 per message</Chip>
-      </Float>
-      <Float x={10} y={56} w={84} delay={4}>
-        <Panel title="Attributed orders" icon={IndianRupee} tone="emerald" right={<Chip tone="slate">14-day window</Chip>}>
-          <Row lead={<IconTile icon={Package} tone="emerald" size="sm" />} title="#1088" sub="19 Sep, 12:18 pm" right={<Chip tone="emerald">₹2,499</Chip>} />
-          <Row lead={<IconTile icon={Package} tone="emerald" size="sm" />} title="#1087" sub="19 Sep, 12:24 pm" right={<Chip tone="emerald">₹1,899</Chip>} />
-        </Panel>
+      <Float x={28} y={64} at={2.2}>
+        <Chip>Meta fees ₹2,158</Chip>
       </Float>
     </Stage>
   );
 }
 
-/* ── Showcases (wide, 64em x 40em) ─────────────────────────────────────── */
+/* ── Wide panels: one large card, a story ──────────────────────────────── */
 
-/** Audience builder: source picker plus the contacts who earned a send. */
+/** Pick a scored segment, press Send, the sent counter climbs. */
 function AudienceBuilder({ label }: SceneProps) {
   return (
-    <Stage label={label} tone="violet" shape="wide">
-      <Float x={4} y={9} w={30} delay={0} rotate={-1.5}>
-        <Panel title="Audience source" icon={Filter} tone="violet">
-          <Row lead={<IconTile icon={Users} tone="slate" size="sm" />} title="Segment" sub="Behavior cohorts" />
-          <Row lead={<IconTile icon={Check} tone="slate" size="sm" />} title="Opt-in" sub="Consented list" />
-          <Row lead={<IconTile icon={Target} tone="amber" size="sm" />} title="Score stage" sub="Lead score tiers" right={<Chip tone="violet" icon={Check}>On</Chip>} active />
-          <Row lead={<IconTile icon={Upload} tone="slate" size="sm" />} title="CSV upload" sub="Your own list" />
+    <Stage label={label} shape="wide" duration={7.5}>
+      <Float x={30} y={12} w={56} at={0} z={3}>
+        <Panel
+          title="Choose audience"
+          icon={Users}
+          right={
+            <Btn primary icon={Send} pressAt={3}>
+              Send
+            </Btn>
+          }
+        >
+          <Row lead={<IconTile icon={Eye} />} title="Browsed, no order" sub="5,906 shoppers · score 40+" />
+          <Row lead={<IconTile icon={Repeat} />} title="Repeat buyers" sub="2,418 shoppers · score 60+" />
+          <Reveal at={1.6}>
+            <Row
+              lead={<IconTile icon={ShoppingCart} />}
+              title="Cart abandoners"
+              sub="1,240 shoppers · score 70+"
+              right={<Chip dot>Selected</Chip>}
+              active
+            />
+          </Reveal>
         </Panel>
       </Float>
-      <Float x={37} y={7} w={59} delay={2} z={3}>
-        <Panel title="Contacts" icon={Users} tone="indigo" right={<Chip tone="violet">18 selected</Chip>}>
-          <Row lead={<><Tick on /><Avatar name="Rahul Mehta" tone="sky" /></>} title="Rahul Mehta" sub="+91 98111 22233" right={<><Chip tone="violet">Score 100</Chip><Chip tone="emerald" dot>Opt-in</Chip></>} />
-          <Row lead={<><Tick on /><Avatar name="Neha Gupta" tone="rose" /></>} title="Neha Gupta" sub="+91 99001 12233" right={<><Chip tone="indigo">Score 90</Chip><Chip tone="emerald" dot>Opt-in</Chip></>} active />
-          <Row lead={<><Tick on /><Avatar name="Arjun Kapoor" tone="amber" /></>} title="Arjun Kapoor" sub="+91 99556 67788" right={<><Chip tone="emerald">Score 80</Chip><Chip tone="emerald" dot>Opt-in</Chip></>} />
-          <Row lead={<><Tick /><Avatar name="Harsh Vardhan" tone="slate" /></>} title="Harsh Vardhan" sub="+91 98012 34567" right={<><Chip tone="slate">Score 10</Chip><Chip tone="rose">Opt-out</Chip></>} />
+      <Float x={6} y={36} w={22} at={3.5}>
+        <Panel glass title="Sending" icon={Send}>
+          <Stat label="Delivered" value="1,240" />
         </Panel>
       </Float>
-      <Float x={5} y={74} delay={4}>
-        <Chip tone="sky" icon={Radar}>Pixel cohorts</Chip>
-      </Float>
-      <Float x={5} y={83} delay={5}>
-        <Chip tone="violet" icon={Users}>CRM segments</Chip>
-      </Float>
-      <Float x={38} y={66} w={56} delay={6} rotate={-1} drift z={4}>
-        <Panel>
-          <Row
-            lead={<IconTile icon={Target} tone="violet" />}
-            title="18 contacts earned a send"
-            sub="Score 80 and above, opted in"
-            right={<Btn tone="violet" primary icon={Send}>Next</Btn>}
-          />
-        </Panel>
-      </Float>
-      <Cursor x={41} y={42} delay={7} />
+      <Cursor
+        path={[
+          [80, 92, 0.3],
+          [56, 60, 1.3],
+          [80, 22, 2.8],
+          [86, 70, 4.2],
+        ]}
+        clicks={[1.45, 3]}
+      />
     </Stage>
   );
 }
 
-/** Template lock: only APPROVED templates can go out. */
+/** Approved templates send; a draft is stopped at the gate. */
 function TemplateLock({ label }: SceneProps) {
   return (
-    <Stage label={label} tone="emerald" shape="wide">
-      <Float x={4} y={8} w={56} delay={0}>
-        <Panel title="WhatsApp template" icon={FileCheck2} tone="emerald" right={<Chip tone="slate">3 ready</Chip>}>
-          <Row lead={<IconTile icon={Check} tone="emerald" size="sm" />} title="cod_prepaid" sub="Utility · en" right={<Chip tone="emerald" dot>Approved</Chip>} active />
-          <Row lead={<IconTile icon={Check} tone="emerald" size="sm" />} title="restock_alert" sub="Marketing · en" right={<Chip tone="emerald" dot>Approved</Chip>} />
-          <Row lead={<IconTile icon={Lock} tone="amber" size="sm" />} title="festive_sale_v2" sub="Marketing · en" right={<Chip tone="amber" dot>In review</Chip>} />
-          <Row lead={<IconTile icon={Lock} tone="rose" size="sm" />} title="draft_offer" sub="Not submitted" right={<Chip tone="rose" dot>Blocked</Chip>} />
+    <Stage label={label} shape="wide" duration={7}>
+      <Float x={22} y={12} w={56} at={0} z={3}>
+        <Panel title="Templates" icon={Megaphone}>
+          <Row
+            title="diwali_offer"
+            sub="Marketing · ₹0.8631"
+            right={<Chip tone="emerald" dot>Approved</Chip>}
+          />
+          <Row title="order_update" sub="Utility · ₹0.115" right={<Chip tone="emerald" dot>Approved</Chip>} />
+          <Row title="flash_sale_draft" sub="Marketing · not reviewed" right={<Chip tone="amber" dot>Draft</Chip>} active />
         </Panel>
       </Float>
-      <Float x={8} y={74} w={44} delay={4} rotate={-1.5} drift>
-        <Panel>
-          <Row lead={<IconTile icon={ShieldCheck} tone="emerald" />} title="Quality rating safe" sub="Drafts never blast" right={<Chip tone="emerald" icon={Lock}>Locked</Chip>} />
-        </Panel>
+      <Float x={54} y={56} at={2.4} z={4}>
+        <Chip solid icon={Lock}>Drafts can't send</Chip>
       </Float>
-      <Float x={65} y={7} w={29} delay={2} rotate={2} z={3}>
-        <Phone name="Your store">
-          <Bubble from="biz" time="12:37" read buttons={['Pay now']}>
-            Thanks for your order! Pay online now and get an instant discount.
-          </Bubble>
-          <Bubble from="user">Paid, thanks!</Bubble>
-        </Phone>
-      </Float>
-      <Float x={67} y={76} delay={5} z={4}>
-        <Chip tone="emerald" solid icon={BadgeCheck}>Approved by Meta</Chip>
-      </Float>
+      <Cursor
+        path={[
+          [20, 88, 0.4],
+          [46, 60, 1.6],
+          [40, 86, 3.2],
+        ]}
+        clicks={[1.8]}
+      />
     </Stage>
   );
 }
 
-/** Performance card: attributed orders and cost after Meta fees. */
+/** One campaign: net revenue counts up, then where it came from. */
 function Performance({ label }: SceneProps) {
   return (
-    <Stage label={label} tone="sky" shape="wide">
-      <Float x={4} y={7} w={61} delay={0}>
-        <Panel title="Restock cart nudge" icon={Send} tone="sky" right={<Chip tone="emerald" dot>Completed</Chip>}>
-          <StatRow>
-            <Stat label="Sent" value="1,240" />
-            <Stat label="Delivered" value="1,218" />
-            <Stat label="Read" value="73.2%" />
-            <Stat label="Reply" value="25.6%" />
-          </StatRow>
-          <Meter pct={98} tone="sky" label="1,240 of 1,262 sent" value="22 failed" />
+    <Stage label={label} shape="wide" duration={7}>
+      <Float x={36} y={14} w={50} at={0} z={3}>
+        <Panel title="Diwali sale" icon={Megaphone} right={<Chip tone="emerald" dot>Sent</Chip>}>
+          <Stat label="Net revenue" value="₹3,92,400" delta="After Meta fees" />
+          <Spark points={[12, 18, 26, 30, 44, 52, 66, 78, 86]} height={6} />
         </Panel>
       </Float>
-      <Float x={4} y={50} w={61} delay={2}>
-        <Panel title="Recipients" icon={Users} tone="indigo">
-          <Row lead={<Avatar name="Ananya Rao" tone="rose" />} title="Ananya Rao" sub="Replied · 18 Sep" right={<Chip tone="emerald">₹2,499</Chip>} />
-          <Row lead={<Avatar name="Rahul Mehta" tone="sky" />} title="Rahul Mehta" sub="Read · 18 Sep" right={<Chip tone="emerald">₹1,899</Chip>} />
+      <Float x={8} y={30} w={24} at={2.6}>
+        <Panel glass title="Breakdown">
+          <Row title="Sent" right="4,000" />
+          <Row title="Orders" right="212" />
+          <Row title="Meta fees" right="₹3,452" />
         </Panel>
-      </Float>
-      <Float x={69} y={9} w={27} delay={3} rotate={2} drift z={3}>
-        <Panel title="Net of Meta" icon={IndianRupee} tone="emerald">
-          <KV k="Revenue" v="₹68,400" />
-          <KV k="Meta bill" v="−₹1,070" />
-          <KV k="Net" v="₹67,330" strong />
-          <div style={{ marginTop: '0.6em' }}>
-            <Spark points={[12, 20, 18, 34, 42, 40, 58, 66, 74, 88]} tone="emerald" height={4.5} />
-          </div>
-        </Panel>
-      </Float>
-      <Float x={71} y={73} delay={5}>
-        <Chip tone="sky" icon={Package}>Attributed Shopify orders</Chip>
       </Float>
     </Stage>
   );

@@ -1,27 +1,23 @@
 /**
- * Intent detection scenes: phrases, confidence and routing before any AI spend.
- * Keys are the image paths in productPages.ts (the hero is a video, so it has
- * no scene here).
+ * Intent detection scenes, v3 storytelling style (see flow-builder.tsx).
+ *
+ * Bento tiles are plain with one focal element; wide panels sit on the page
+ * mesh with one large card. Each scene tells one short story. The page hero
+ * is a video, so there is no hero scene here. Keys are the image paths in
+ * productPages.ts.
  */
-import type { CSSProperties, ReactNode } from 'react';
 import {
-  AlertTriangle,
-  Banknote,
-  Bell,
-  Brain,
-  CheckCircle2,
   FlaskConical,
+  GitBranch,
   Headphones,
-  Languages,
+  IndianRupee,
   MessageCircle,
-  Play,
   Plus,
-  Radar,
-  Tag,
+  ShoppingBag,
+  Sparkles,
   Truck,
-  Undo2,
   UserCheck,
-  Zap,
+  Workflow,
 } from 'lucide-react';
 import {
   Btn,
@@ -29,280 +25,264 @@ import {
   Chip,
   Cursor,
   Donut,
-  Field,
   Float,
+  Glow,
   IconTile,
   Node,
   Panel,
-  Phone,
+  Reveal,
+  Rings,
   Row,
+  Stack,
   Stage,
-  Stat,
   Toggle,
+  TypeText,
   Wires,
   type SceneMap,
   type SceneProps,
 } from '../kit';
 
-/* ── Local bits ────────────────────────────────────────────────────────── */
-
-const muted = '#5a6474';
-
-/** Training phrase pill. */
-function Phrase({ children, hi }: { children: ReactNode; hi?: boolean }) {
+/** An input field whose value types itself in. */
+function TypedField({ label, text, at }: { label: string; text: string; at: number }) {
   return (
-    <span
-      style={{
-        display: 'inline-flex',
-        alignItems: 'center',
-        padding: '0.4em 0.75em',
-        borderRadius: '0.7em',
-        fontSize: '0.98em',
-        fontWeight: 500,
-        whiteSpace: 'nowrap',
-        background: hi ? '#e0f2fe' : '#fff',
-        color: hi ? '#0369a1' : '#0c1222',
-        boxShadow: hi ? '0 0 0 1px rgba(14,165,233,0.35) inset' : '0 0 0 1px rgba(15,23,42,0.1) inset',
-      }}
-    >
-      {children}
-    </span>
+    // TypeText's own span is the input box, so the typed value sits flush in it.
+    <div className="fv-field">
+      <small>{label}</small>
+      <TypeText text={text} at={at} />
+    </div>
   );
 }
 
-const wrap: CSSProperties = { display: 'flex', flexWrap: 'wrap', gap: '0.45em' };
+/* ── Bento tiles ───────────────────────────────────────────────────────── */
 
-/** Numbered pipeline step badge. */
-function Num({ n }: { n: number }) {
-  return (
-    <span
-      style={{
-        flex: 'none',
-        display: 'inline-grid',
-        placeItems: 'center',
-        width: '1.7em',
-        height: '1.7em',
-        borderRadius: '50%',
-        fontSize: '0.85em',
-        fontWeight: 700,
-        color: '#fff',
-        background: 'linear-gradient(160deg, #38bdf8, #0369a1)',
-      }}
-    >
-      {n}
-    </span>
-  );
-}
-
-/* ── Bento tiles (square, 36em x 36em) ─────────────────────────────────── */
-
-/** Real phrases per intent, Hinglish welcome; inactive intents never match. */
+/** Three ways of asking, Hinglish included, all land on one intent. */
 function Phrases({ label }: SceneProps) {
   return (
-    <Stage label={label} tone="sky">
-      <Float x={14} y={5} w={78} delay={0} rotate={-2}>
-        <Panel title="Festive offers" icon={Tag} tone="slate" right={<><Chip tone="slate">Inactive</Chip><Toggle on={false} /></>} />
+    <Stage label={label} duration={7}>
+      <Rings x={50} y={56} count={4} gap={9} />
+      <Wires paths={['M 50 30 L 50 44']} />
+      <Float x={16} y={12} w={68} at={0.2} until={2.3}>
+        <Bubble from="user">
+          <TypeText text="parcel kab aayega?" at={0.4} />
+        </Bubble>
       </Float>
-      <Float x={5} y={22} w={90} delay={2} z={3}>
-        <Panel title="Shipping status" icon={Truck} tone="sky" right={<><Chip tone="emerald" dot>Active</Chip><Toggle tone="sky" /></>}>
-          <div style={wrap}>
-            <Phrase>where is my order</Phrase>
-            <Phrase hi>order kab aayega</Phrase>
-            <Phrase>parcel kidhar hai</Phrase>
-            <Phrase hi>tracking link bhejo</Phrase>
-            <Phrase>delivery kab hogi</Phrase>
-            <Phrase>still not received</Phrase>
-          </div>
-          <div style={{ marginTop: '0.8em' }}>
-            <Field label="Add a phrase" value="abhi tak nahi aaya" />
-          </div>
-          <div style={{ marginTop: '0.6em' }}>
-            <Row lead={<IconTile icon={Play} tone="emerald" size="sm" />} title="Then start flow" sub="Order status" right={<Chip tone="sky">Action</Chip>} />
-          </div>
-        </Panel>
+      <Float x={16} y={12} w={68} at={2.4} until={4.4}>
+        <Bubble from="user">
+          <TypeText text="order kidhar hai bhai" at={2.6} />
+        </Bubble>
       </Float>
-      <Float x={8} y={86} delay={5}>
-        <Chip tone="sky" solid icon={Languages}>Hinglish welcome</Chip>
+      <Float x={16} y={12} w={68} at={4.5}>
+        <Bubble from="user">
+          <TypeText text="where is my order" at={4.7} />
+        </Bubble>
       </Float>
-      <Float x={54} y={86} delay={6}>
-        <Chip tone="slate" icon={Plus}>6 phrases</Chip>
+      <Float x={18} y={44} w={64} at={1.2} z={3}>
+        <Node icon={Truck} title="Shipping" sub="Matched · 8 phrases" active />
+      </Float>
+      <Float x={32} y={74} at={1.8}>
+        <Chip icon={Sparkles}>Hinglish included</Chip>
       </Float>
     </Stage>
   );
 }
 
-/** Phrase match routes to a flow, the model is never called. */
+/** A matched intent starts its flow, and the model is never called. */
 function RouteNoAi({ label }: SceneProps) {
   return (
-    <Stage label={label} tone="sky" grid>
-      <Wires tone="sky" paths={['M 50 35 C 50 47, 26 45, 26 57', 'M 50 35 C 50 47, 74 45, 74 57']} />
-      <Float x={30} y={5} w={64} delay={0}>
-        <Bubble from="user" time="2:14 pm">Where is my order?</Bubble>
+    <Stage label={label} duration={6.5}>
+      <Rings x={50} y={48} count={4} gap={10} />
+      <Float x={39} y={34} at={0} z={3}>
+        <IconTile icon={GitBranch} size="xl" pulse />
       </Float>
-      <Float x={17} y={23} w={66} delay={2} z={3}>
-        <Node icon={Radar} tone="sky" title="Intent engine" sub="Shipping · 94% match" active />
+      <Float x={10} y={16} at={1} drift>
+        <Chip icon={Workflow}>Returns flow started</Chip>
       </Float>
-      <Float x={4} y={56} w={44} delay={3} rotate={-2} drift>
-        <Node icon={Play} tone="emerald" title="Start flow" sub="Order status" />
-      </Float>
-      <Float x={52} y={56} w={44} delay={4} rotate={2}>
-        <Panel>
-          <div style={{ display: 'flex', alignItems: 'center', gap: '0.7em' }}>
-            <IconTile icon={Brain} tone="slate" size="md" />
-            <Stat label="AI tokens" value="₹0" />
-          </div>
-        </Panel>
-      </Float>
-      <Float x={18} y={84} delay={6}>
-        <Chip tone="sky" solid icon={Zap}>Intent matched, AI skipped</Chip>
+      <Float x={40} y={72} at={2.2} drift>
+        <Chip tone="emerald" dot>
+          ₹0 AI tokens
+        </Chip>
       </Float>
     </Stage>
   );
 }
 
-/** Test modal: matched intent, score, and the weak phrase to fix. */
+/** Type a test phrase, press Test, read the matched intent and its score. */
 function TestConfidence({ label }: SceneProps) {
   return (
-    <Stage label={label} tone="indigo">
-      <Float x={5} y={7} w={62} delay={0} z={3}>
-        <Panel title="Test intent" icon={FlaskConical} tone="indigo">
-          <Field label="Customer says" value="Speak to a human" />
+    <Stage label={label} duration={7}>
+      <Glow x={50} y={60} size={20} />
+      <Float x={10} y={8} w={80} at={0.2} z={3}>
+        <Panel
+          title="Test intent"
+          icon={FlaskConical}
+          right={
+            <Btn primary pressAt={1.9}>
+              Test
+            </Btn>
+          }
+        >
+          <TypedField label="Phrase" text="kab tak aayega?" at={0.6} />
         </Panel>
       </Float>
-      <Float x={68} y={7} delay={2} rotate={3} drift>
-        <Panel>
-          <Donut pct={96} tone="emerald" size={7.5}>96%</Donut>
-        </Panel>
+      <Float x={35} y={40} at={2.2}>
+        <Donut pct={94} tone="emerald" size={11} />
       </Float>
-      <Float x={5} y={38} w={90} delay={3} z={4}>
-        <Panel>
-          <Row
-            lead={<IconTile icon={Headphones} tone="violet" />}
-            title="Asking for assistance"
-            sub="Tag chat · Notify team"
-            right={<Chip tone="emerald" icon={CheckCircle2}>Matched</Chip>}
-            active
-          />
-          <Row
-            lead={<IconTile icon={AlertTriangle} tone="amber" />}
-            title="“want to return”"
-            sub="Low confidence · add phrases"
-            right={<Chip tone="amber">Weak</Chip>}
-          />
-          <Row
-            lead={<IconTile icon={Truck} tone="sky" />}
-            title="“parcel kidhar hai”"
-            sub="Shipping status"
-            right={<Chip tone="emerald">94%</Chip>}
-          />
-        </Panel>
+      <Float x={31} y={84} at={3}>
+        <Chip tone="emerald" dot>
+          Matched: Shipping
+        </Chip>
       </Float>
-      <Float x={11} y={87} delay={6}>
-        <Chip tone="indigo" solid icon={FlaskConical}>Fix weak phrases before live</Chip>
-      </Float>
+      <Cursor
+        path={[
+          [86, 70, 0.6],
+          [81, 15, 1.6],
+          [81, 15, 2.2],
+          [90, 40, 3],
+        ]}
+        clicks={[1.9]}
+      />
     </Stage>
   );
 }
 
-/* ── Showcases (wide, 64em x 40em) ─────────────────────────────────────── */
+/* ── Wide panels ───────────────────────────────────────────────────────── */
 
-/** Intent list: phrases, action and the Active toggle. */
+/** Add a new intent with a Hinglish phrase; it joins the list, Active. */
 function IntentList({ label }: SceneProps) {
   return (
-    <Stage label={label} tone="sky" shape="wide">
-      <Float x={4} y={10} w={64} delay={0} z={3}>
-        <Panel title="Intent detect" icon={Radar} tone="sky" right={<Btn primary tone="sky" icon={Plus}>New intent</Btn>}>
-          <Row lead={<IconTile icon={Truck} tone="sky" />} title="Shipping status" sub="8 phrases · Start flow" right={<><Chip tone="emerald" dot>Active</Chip><Toggle tone="sky" /></>} active />
-          <Row lead={<IconTile icon={Undo2} tone="violet" />} title="Returns" sub="6 phrases · Send reply" right={<><Chip tone="emerald" dot>Active</Chip><Toggle tone="sky" /></>} />
-          <Row lead={<IconTile icon={Banknote} tone="amber" />} title="COD confirm" sub="5 phrases · Start flow" right={<><Chip tone="emerald" dot>Active</Chip><Toggle tone="sky" /></>} />
-          <Row lead={<IconTile icon={Headphones} tone="rose" />} title="Talk to human" sub="9 phrases · Assign agent" right={<><Chip tone="emerald" dot>Active</Chip><Toggle tone="sky" /></>} />
-          <Row lead={<IconTile icon={Tag} tone="slate" />} title="Festive offers" sub="4 phrases · Send reply" right={<><Chip tone="slate">Inactive</Chip><Toggle on={false} /></>} />
+    <Stage label={label} shape="wide" duration={8}>
+      <Float x={32} y={14} w={56} at={0.2} z={3}>
+        <Panel
+          title="Intents"
+          right={
+            <Btn primary icon={Plus} pressAt={1.4}>
+              New intent
+            </Btn>
+          }
+        >
+          <Row
+            lead={<IconTile icon={Truck} />}
+            title="Shipping"
+            sub="8 phrases · Start flow"
+            right={<Toggle />}
+          />
+          <Row
+            lead={<IconTile icon={IndianRupee} />}
+            title="COD confirm"
+            sub="5 phrases · Send reply"
+            right={<Toggle />}
+          />
+          <Reveal at={3.9}>
+            <Row
+              lead={<IconTile icon={Headphones} />}
+              title="Talk to human"
+              sub="4 phrases · Assign agent"
+              right={<Toggle />}
+              active
+            />
+          </Reveal>
         </Panel>
       </Float>
-      <Float x={72} y={14} w={24} delay={2}>
-        <Panel>
-          <Stat label="Active intents" value="4" delta="Live on WhatsApp" tone="sky" />
+      <Float x={3} y={28} w={27} at={1.7} until={3.7}>
+        <Panel glass title="New intent" icon={Plus}>
+          <Stack gap={0.7}>
+            <TypedField label="Name" text="Talk to human" at={2} />
+            <TypedField label="Phrase" text="agent se baat karni hai" at={2.6} />
+          </Stack>
         </Panel>
       </Float>
-      <Float x={72} y={50} w={24} delay={3} rotate={2} drift>
-        <Panel>
-          <Stat label="Training phrases" value="28" delta="Hinglish included" tone="violet" />
-        </Panel>
-      </Float>
-      <Float x={6} y={86} delay={5}>
-        <Chip tone="slate" icon={Tag}>Inactive intents never match</Chip>
-      </Float>
+      <Cursor
+        path={[
+          [92, 82, 0.3],
+          [81, 21, 1.2],
+          [81, 21, 1.8],
+          [64, 74, 3],
+        ]}
+        clicks={[1.4]}
+      />
     </Stage>
   );
 }
 
-/** Editor: phrases on the left, the action pipeline on the right. */
+/** Pick the action: start a flow, choose which one, and it is set. */
 function Editor({ label }: SceneProps) {
   return (
-    <Stage label={label} tone="indigo" shape="wide" grid>
-      <Wires shape="wide" tone="indigo" paths={['M 50 12.5 C 53 12.5, 52 15, 55 15']} />
-      <Float x={4} y={12} w={46} delay={0} z={3}>
-        <Panel title="Edit intent" icon={MessageCircle} tone="indigo" right={<><Chip tone="emerald" dot>Active</Chip><Toggle tone="indigo" /></>}>
-          <Field label="Intent name" value="Talk to human" />
-          <small style={{ display: 'block', margin: '0.9em 0 0.5em', fontSize: '0.9em', fontWeight: 500, color: muted }}>
-            Training phrases
-          </small>
-          <div style={wrap}>
-            <Phrase>speak to a human</Phrase>
-            <Phrase hi>agent se baat karao</Phrase>
-            <Phrase>real person please</Phrase>
-            <Phrase>call me back</Phrase>
-            <Phrase hi>insaan chahiye</Phrase>
-          </div>
-          <small style={{ display: 'block', margin: '0.9em 0 0.5em', fontSize: '0.9em', fontWeight: 500, color: '#be123c' }}>
-            Not this intent
-          </small>
-          <div style={wrap}>
-            <Phrase>your agent helped me</Phrase>
-            <Phrase>thanks for the support</Phrase>
-          </div>
+    <Stage label={label} shape="wide" duration={8}>
+      <Float x={32} y={12} w={54} at={0.2} z={3}>
+        <Panel
+          title="Shipping"
+          icon={Truck}
+          right={
+            <Chip tone="emerald" dot>
+              Active
+            </Chip>
+          }
+        >
+          <Row lead={<IconTile icon={MessageCircle} />} title="Reply text" sub="Send a saved answer" />
+          <Row lead={<IconTile icon={Workflow} />} title="Start a flow" sub="Hand over to a flow" active />
+          <Row lead={<IconTile icon={UserCheck} />} title="Assign agent" sub="Or escalate to a team" />
         </Panel>
       </Float>
-      <Float x={55} y={16} w={41} delay={2} z={3}>
-        <Panel title="Actions" icon={Zap} tone="sky" right={<Chip tone="slate">In order</Chip>}>
-          <Row lead={<Num n={1} />} title="Tag chat" sub="requested-support" right={<IconTile icon={Tag} tone="violet" size="sm" />} />
-          <Row lead={<Num n={2} />} title="Send reply" sub="Connecting you to our team" right={<IconTile icon={MessageCircle} tone="emerald" size="sm" />} />
-          <Row lead={<Num n={3} />} title="Assign agent" sub="Support team" right={<IconTile icon={UserCheck} tone="sky" size="sm" />} active />
-          <Row lead={<Num n={4} />} title="Notify team" sub="Support required" right={<IconTile icon={Bell} tone="amber" size="sm" />} />
+      <Float x={3} y={30} w={25} at={1.9} until={3.7}>
+        <Panel glass title="Pick a flow" icon={Workflow}>
+          <Row title="Order status bot" sub="Reads live from Shopify" />
+          <Row title="Returns flow" sub="Pickup and refund" />
         </Panel>
       </Float>
-      <Float x={57} y={86} delay={5} drift>
-        <Chip tone="indigo" solid icon={Play}>Reply, flow, assign or escalate</Chip>
+      <Float x={3} y={38} w={25} at={3.9}>
+        <Node icon={Workflow} tone="emerald" title="Order status bot" sub="Starts on every match" active />
       </Float>
-      <Cursor x={84} y={54} delay={7} />
+      <Cursor
+        path={[
+          [80, 92, 0.3],
+          [62, 46, 1.4],
+          [62, 46, 1.9],
+          [16, 50, 2.9],
+          [16, 50, 3.6],
+        ]}
+        clicks={[1.6, 3.1]}
+      />
     </Stage>
   );
 }
 
-/** Live routing: inbound chat, intent match, flow starts, before any AI. */
+/** A message types in, the intent matches, the flow runs, no AI is spent. */
 function LiveRouting({ label }: SceneProps) {
   return (
-    <Stage label={label} tone="sky" shape="wide">
-      <Wires shape="wide" tone="sky" paths={['M 38 14 C 42 14, 41 9.4, 45 9.4']} />
-      <Float x={5} y={7} w={33} delay={0} z={3}>
-        <Phone name="Your store">
-          <Bubble from="user" time="2:14 pm">Order kab aayega?</Bubble>
-          <Bubble from="biz" time="2:15 pm" read buttons={['Track order']}>Order #1042 ships tomorrow.</Bubble>
-        </Phone>
+    <Stage label={label} shape="wide" duration={8.5}>
+      <Wires shape="wide" paths={['M 30 21.5 C 33 21.5, 33 17, 36 17']} />
+      <Float x={4} y={30} w={26} at={0.2}>
+        <Bubble from="user" time="11:02">
+          <TypeText text="order kab aayega?" at={0.5} />
+        </Bubble>
       </Float>
-      <Float x={7} y={70} delay={5}>
-        <Chip tone="sky" solid icon={Zap}>Matched before any AI</Chip>
+      <Float x={6} y={52} at={1.8}>
+        <Chip solid icon={Sparkles}>
+          Shipping · 94%
+        </Chip>
       </Float>
-      <Float x={45} y={9} w={51} delay={2} z={3}>
-        <Panel title="Live routing" icon={Radar} tone="sky" right={<Chip tone="emerald" dot>Live</Chip>}>
-          <Row lead={<IconTile icon={MessageCircle} tone="emerald" size="sm" />} title="Inbound WhatsApp" sub="2:14 pm" right={<Chip tone="emerald" icon={CheckCircle2}>Done</Chip>} />
-          <Row lead={<IconTile icon={Radar} tone="sky" size="sm" />} title="Intent: Shipping" sub="96% confidence" right={<Chip tone="sky">Before AI</Chip>} active />
-          <Row lead={<IconTile icon={Play} tone="violet" size="sm" />} title="Start flow" sub="Order status" right={<Chip tone="sky">Before AI</Chip>} />
-          <Row lead={<IconTile icon={Brain} tone="slate" size="sm" />} title="AI Brain" sub="Not needed" right={<Chip tone="slate">Skipped</Chip>} />
+      <Float x={36} y={12} w={52} at={2.6} z={3}>
+        <Panel
+          title="Order status bot"
+          icon={Workflow}
+          right={
+            <Chip tone="emerald" dot>
+              Running
+            </Chip>
+          }
+        >
+          <Reveal at={3.2}>
+            <Row lead={<IconTile icon={ShoppingBag} />} title="Fetch order #1042" sub="Live from Shopify" />
+          </Reveal>
+          <Reveal at={3.8}>
+            <Row lead={<IconTile icon={Truck} />} title="Send tracking link" sub="Out for delivery today" />
+          </Reveal>
         </Panel>
       </Float>
-      <Float x={50} y={77} w={42} delay={4} drift>
-        <Node icon={Headphones} tone="rose" title="Live Chat takeover wins" sub="Pauses AI on that chat" />
+      <Float x={66} y={54} at={4.6}>
+        <Chip tone="emerald" dot>
+          ₹0 AI tokens
+        </Chip>
       </Float>
     </Stage>
   );

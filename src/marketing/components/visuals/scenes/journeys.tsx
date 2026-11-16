@@ -1,272 +1,244 @@
-/* eslint-disable react-refresh/only-export-components -- a scene module exports its SceneMap by design. */
 /**
- * Journeys scenes: cart, COD and shipping on one canvas, Meta-gated, measured in ₹.
- * Keys are the image paths in productPages.ts (the ?v= query is stripped).
+ * Journeys scenes, v3 storytelling style (see flow-builder.tsx).
+ *
+ * Square tiles: plain white, one focal element, at most two small pieces.
+ * Wide panels: page mesh backdrop, one large white card, one or two satellites.
+ * Keys are the image paths in productPages.ts.
  */
 import {
-  BadgeCheck,
-  Banknote,
-  Check,
-  CheckCircle2,
   Clock,
   CreditCard,
   Eye,
-  Fingerprint,
-  GitBranch,
-  Hourglass,
-  IndianRupee,
   Lock,
-  LogOut,
   MessageCircle,
-  MousePointer,
-  Radar,
-  ShoppingBag,
-  ShoppingCart,
-  Sparkles,
-  Truck,
+  Package,
   Workflow,
-  Zap,
+  Send,
+  ShoppingCart,
+  Truck,
+  Wallet,
 } from 'lucide-react';
 import {
+  Avatar,
   Btn,
   Bubble,
+  Burst,
   Chip,
   Cursor,
   Float,
+  Glow,
   IconTile,
   Node,
   Panel,
   Phone,
+  Reveal,
+  Rings,
   Row,
-  Spark,
   Stage,
-  Stat,
-  Thumb,
-  Toggle,
+  TypeText,
+  Typing,
   Wires,
   type SceneMap,
   type SceneProps,
-  type Tone,
 } from '../kit';
 
-/** Numbered step badge. */
-function Step({ n, tone = 'violet' }: { n: number; tone?: Tone }) {
-  return (
-    <span
-      data-tone={tone}
-      style={{
-        flex: 'none',
-        display: 'grid',
-        placeItems: 'center',
-        width: '2.4em',
-        height: '2.4em',
-        borderRadius: '0.75em',
-        fontSize: '1em',
-        fontWeight: 700,
-        color: 'var(--t-700)',
-        background: 'linear-gradient(160deg, var(--t-50), var(--t-100))',
-        boxShadow: '0 0 0 1px color-mix(in srgb, var(--t-500) 30%, transparent) inset',
-      }}
-    >
-      {n}
-    </span>
-  );
-}
+/* ── Bento tiles: plain, one focal element ─────────────────────────────── */
 
-/* ── Bento tiles (square, 36em x 36em) ─────────────────────────────────── */
-
-/** Drag-and-drop builder: trigger, wait, send on a canvas. */
+/** Drop a wait step between the trigger and the send. */
 function Builder({ label }: SceneProps) {
   return (
-    <Stage label={label} tone="violet" grid>
-      <Wires tone="violet" paths={['M 14 19.7 L 14 36', 'M 14 47.7 L 14 64']} />
-      <Float x={8} y={8} w={57} delay={0}>
-        <Node icon={ShoppingCart} tone="emerald" title="Checkout abandoned" sub="Shopify trigger" active />
+    <Stage label={label} duration={6.5}>
+      <Rings x={50} y={50} count={4} gap={9} />
+      <Wires paths={['M 50 29 L 50 41', 'M 50 59 L 50 71']} />
+      <Float x={22} y={12} w={56} at={0.2}>
+        <Node icon={ShoppingCart} title="Cart abandoned" sub="Shopify trigger" />
       </Float>
-      <Float x={69} y={11} delay={1}>
-        <Chip tone="violet">Trigger</Chip>
+      <Float x={18} y={41} w={64} at={1.2} z={3}>
+        <Node icon={Clock} title="Wait 30 min" sub="Dropped on canvas" active />
       </Float>
-      <Float x={8} y={36} w={57} delay={2}>
-        <Node icon={Clock} tone="amber" title="Wait 25 minutes" sub="Time to come back" />
+      <Float x={22} y={71} w={56} at={2.4}>
+        <Node icon={Send} title="Send reminder" sub="WhatsApp template" />
       </Float>
-      <Float x={69} y={39} delay={3}>
-        <Chip tone="amber">Wait</Chip>
-      </Float>
-      <Float x={8} y={64} w={57} delay={4}>
-        <Node icon={MessageCircle} tone="violet" title="Send cart reminder" sub="WhatsApp · checkout link" />
-      </Float>
-      <Float x={69} y={67} delay={5}>
-        <Chip tone="emerald" dot>Approved</Chip>
-      </Float>
-      <Float x={40} y={85} delay={6} rotate={-3} drift z={4}>
-        <Btn tone="violet" icon={GitBranch}>Add a condition</Btn>
-      </Float>
-      <Cursor x={66} y={89} delay={7} />
+      <Cursor
+        path={[
+          [88, 30, 0.5],
+          [70, 52, 1.4],
+          [86, 88, 2.8],
+        ]}
+        clicks={[1.5]}
+      />
     </Stage>
   );
 }
 
-/** Pre-built library: seeded journeys instead of a blank canvas. */
+/** Pre-built journeys, ready to use. */
 function Library({ label }: SceneProps) {
   return (
-    <Stage label={label} tone="emerald">
-      <Float x={6} y={6} w={88} delay={0}>
-        <Panel title="Start seeded" icon={Sparkles} tone="emerald" right={<Chip tone="emerald">4 ready</Chip>}>
-          <Row lead={<IconTile icon={ShoppingCart} tone="amber" />} title="Cart recovery" sub="3 WhatsApp steps" right={<Chip tone="violet">Seeded</Chip>} active />
-          <Row lead={<IconTile icon={Banknote} tone="emerald" />} title="COD confirm" sub="Confirm, reschedule, cancel" right={<Chip tone="violet">Seeded</Chip>} />
-          <Row lead={<IconTile icon={CheckCircle2} tone="sky" />} title="Order confirm" sub="Right after checkout" right={<Chip tone="violet">Seeded</Chip>} />
-          <Row lead={<IconTile icon={Truck} tone="violet" />} title="Shipping updates" sub="Packed, shipped, delivered" right={<Chip tone="violet">Seeded</Chip>} />
+    <Stage label={label} duration={6}>
+      <Glow x={50} y={52} size={22} />
+      <Float x={12} y={18} w={76} at={0} z={3} fade="bottom">
+        <Panel
+          title="Pre-built journeys"
+          icon={Workflow}
+          right={
+            <Btn primary pressAt={2}>
+              Use
+            </Btn>
+          }
+        >
+          <Row lead={<IconTile icon={ShoppingCart} />} title="Cart recovery" sub="3 steps" active />
+          <Row lead={<IconTile icon={Wallet} />} title="COD confirmation" sub="2 steps" />
+          <Row lead={<IconTile icon={Package} />} title="Order confirmed" sub="1 step" />
+          <Row lead={<IconTile icon={Truck} />} title="Shipping updates" sub="3 steps" />
         </Panel>
       </Float>
-      <Float x={18} y={75} w={76} delay={4} rotate={-1.5} drift z={3}>
-        <Panel>
-          <Row lead={<IconTile icon={Zap} tone="emerald" />} title="Cart recovery" sub="Templates attached" right={<Btn tone="emerald" primary>Use</Btn>} />
-        </Panel>
-      </Float>
-      <Cursor x={84} y={86} delay={6} />
+      <Cursor
+        path={[
+          [40, 90, 0.6],
+          [64, 14, 1.8],
+          [80, 40, 3],
+        ]}
+        clicks={[2]}
+      />
     </Stage>
   );
 }
 
-/** Meta gating: approved goes live, in review stays held. */
+/** Pending template blocks go-live; once approved, it publishes. */
 function Gating({ label }: SceneProps) {
   return (
-    <Stage label={label} tone="amber">
-      <Float x={6} y={7} w={88} delay={0}>
-        <Panel>
-          <Row lead={<IconTile icon={CheckCircle2} tone="emerald" />} title="cart_recovery_step_1" sub="Can go live" right={<Chip tone="emerald" dot>Approved</Chip>} />
-        </Panel>
+    <Stage label={label} duration={7}>
+      <Rings x={50} y={46} count={4} gap={9} />
+      <Float x={16} y={34} w={68} at={0.2} z={3}>
+        <Node icon={Send} title="Send reminder" sub="cart_reminder_v2" active />
       </Float>
-      <Float x={6} y={30} w={88} delay={2}>
-        <Panel>
-          <Row lead={<IconTile icon={Hourglass} tone="amber" />} title="cod_confirm_v2" sub="Held. Nothing sends." right={<Chip tone="amber" dot>In review</Chip>} active />
-        </Panel>
+      <Float x={28} y={14} at={0.8} until={2.6}>
+        <Chip tone="amber" dot>Pending approval</Chip>
       </Float>
-      <Float x={12} y={56} w={76} delay={4} rotate={-1.5} drift z={3}>
-        <Panel title="COD confirm" icon={Workflow} tone="slate" right={<Toggle on={false} />}>
-          <Row lead={<IconTile icon={Lock} tone="rose" size="sm" />} title="Publish blocked" sub="Template still in review" />
-        </Panel>
+      <Float x={34} y={14} at={2.8}>
+        <Chip tone="emerald" dot>Approved</Chip>
       </Float>
-      <Float x={6} y={88} delay={6}>
-        <Chip tone="amber" icon={BadgeCheck}>Status stays on the canvas</Chip>
+      <Float x={28} y={66} at={1.2} until={2.6}>
+        <Chip tone="rose" icon={Lock}>Can't go live yet</Chip>
       </Float>
+      <Float x={36} y={66} at={3}>
+        <Btn primary pressAt={3.9}>
+          Go live
+        </Btn>
+      </Float>
+      <Cursor
+        path={[
+          [80, 92, 2.6],
+          [50, 70, 3.7],
+          [76, 90, 4.8],
+        ]}
+        clicks={[3.9]}
+      />
     </Stage>
   );
 }
 
-/* ── Showcases (wide, 64em x 40em) ─────────────────────────────────────── */
+/* ── Wide panels: one large card, a story ──────────────────────────────── */
 
-/** Abandoned cart: three reminders, then stop, and the recovered ₹. */
+/** Cart abandoned, wait, the reminder types, the cart is recovered. */
 function AbandonedCart({ label }: SceneProps) {
   return (
-    <Stage label={label} tone="violet" shape="wide">
-      <Float x={4} y={7} w={44} delay={0}>
-        <Panel title="Abandoned cart" icon={ShoppingCart} tone="amber" right={<Chip tone="violet">3 steps</Chip>}>
-          <Row lead={<Step n={1} />} title="You left items" sub="After 25 min" right={<Chip tone="emerald" dot>Sent</Chip>} />
-          <Row lead={<Step n={2} />} title="Still in your cart" sub="After 4 hours" right={<Chip tone="emerald" dot>Sent</Chip>} active />
-          <Row lead={<Step n={3} />} title="Last reminder" sub="After 24 hours, then stop" right={<Chip tone="slate">Queued</Chip>} />
+    <Stage label={label} shape="wide" duration={8.5}>
+      <Float x={6} y={26} w={28} at={0}>
+        <Panel glass title="Cart recovery" icon={Workflow}>
+          <Reveal at={0.4}>
+            <Row title="Cart abandoned" sub="₹3,450 · 2 items" />
+          </Reveal>
+          <Reveal at={1.2}>
+            <Row title="Wait 30 min" sub="Then remind" />
+          </Reveal>
+          <Reveal at={2}>
+            <Row title="Reminder 1 of 3" sub="Approved template" />
+          </Reveal>
         </Panel>
       </Float>
-      <Float x={4} y={57} w={44} delay={2}>
-        <Panel title="This journey" icon={IndianRupee} tone="emerald">
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1em', alignItems: 'end' }}>
-            <Stat label="Recovered" value="₹48,240" delta="Paid checkouts" />
-            <Spark points={[8, 14, 12, 26, 30, 44, 40, 58, 70, 82]} tone="emerald" height={5} />
-          </div>
-        </Panel>
-      </Float>
-      <Float x={55} y={6} w={29} delay={3} rotate={2} z={3}>
+      <Float x={46} y={4} w={34} at={0.8} z={3}>
         <Phone name="Your store">
-          <Bubble from="biz" time="7:25" read media={<Thumb tone="amber" icon={ShoppingBag} h={6} />} buttons={['Complete checkout']}>
-            You left items in your cart. Your checkout is saved.
-          </Bubble>
-          <Bubble from="user">Paid, thanks!</Bubble>
+          <Reveal at={1.2} until={2.2}>
+            <Typing />
+          </Reveal>
+          <Reveal at={2.3}>
+            <Bubble from="biz" time="4:12 pm" read buttons={['Complete order']}>
+              <TypeText text="Riya, your cart is waiting. 10% off for the next hour." at={2.6} cps={34} />
+            </Bubble>
+          </Reveal>
+          <Reveal at={5}>
+            <Bubble from="user">Done, paid!</Bubble>
+          </Reveal>
         </Phone>
       </Float>
-      <Float x={55} y={80} delay={5} z={4}>
-        <Chip tone="emerald" solid icon={BadgeCheck}>Meta approved</Chip>
-      </Float>
-      <Float x={75} y={80} delay={6} z={4}>
-        <Chip tone="violet">High AOV first</Chip>
-      </Float>
-      <Float x={86} y={30} delay={7}>
-        <Chip tone="slate">₹0.8631 each</Chip>
+      <Burst x={86} y={74} at={5.8} />
+      <Float x={76} y={70} at={5.7}>
+        <Chip solid icon={Wallet}>Recovered ₹3,450</Chip>
       </Float>
     </Stage>
   );
 }
 
-/** Conditional routes: one trigger, a path per payment method or reply. */
+/** Branch on payment method: COD, prepaid and quiet buyers split. */
 function Routes({ label }: SceneProps) {
   return (
-    <Stage label={label} tone="indigo" shape="wide" grid>
+    <Stage label={label} shape="wide" duration={7}>
       <Wires
         shape="wide"
-        tone="indigo"
         paths={[
-          'M 26 28.3 C 30 28.3, 29 9.3, 33 9.3 L 60 9.3',
-          'M 26 28.3 L 60 28.3',
-          'M 26 28.3 C 30 28.3, 29 46.9, 33 46.9 L 60 46.9',
+          'M 34 31 C 42 31, 42 13.5, 50 13.5',
+          'M 34 31 L 50 31',
+          'M 34 31 C 42 31, 42 48.5, 50 48.5',
         ]}
       />
-      <Float x={3} y={40} w={23} delay={0}>
-        <Node icon={ShoppingBag} tone="emerald" title="Order created" sub="Shopify event" active />
+      <Float x={8} y={42} w={26} at={0} z={3}>
+        <Node icon={Package} title="Order created" sub="Branch on payment" />
       </Float>
-      <Float x={3} y={10} delay={7}>
-        <Chip tone="indigo" icon={GitBranch}>Branch on Growth & Scale</Chip>
+      <Float x={50} y={14} w={30} at={1} until={3.1}>
+        <Node icon={Wallet} title="COD" sub="Ask to confirm" />
       </Float>
-      <Float x={34} y={12.5} delay={1}>
-        <Chip tone="amber" icon={Banknote}>Payment is COD</Chip>
+      <Float x={50} y={14} w={30} at={3.1}>
+        <Node icon={Wallet} title="COD" sub="Confirm sent" active />
       </Float>
-      <Float x={34} y={42.5} delay={2}>
-        <Chip tone="sky" icon={CreditCard}>Payment is prepaid</Chip>
+      <Float x={50} y={42} w={30} at={1.4}>
+        <Node icon={CreditCard} title="Prepaid" sub="Send thank you" />
       </Float>
-      <Float x={34} y={72.5} delay={3}>
-        <Chip tone="slate" icon={Clock}>No reply</Chip>
-      </Float>
-      <Float x={60} y={9.7} w={36} delay={4}>
-        <Node icon={CheckCircle2} tone="amber" title="Confirm or cancel" sub="Utility · ₹0.1150" />
-      </Float>
-      <Float x={60} y={40.2} w={36} delay={5}>
-        <Node icon={Check} tone="sky" title="Order confirmed" sub="Receipt and next steps" />
-      </Float>
-      <Float x={60} y={70} w={36} delay={6}>
-        <Node icon={MessageCircle} tone="rose" title="Quiet lead step" sub="A different message" />
+      <Float x={50} y={70} w={30} at={1.8}>
+        <Node icon={MessageCircle} title="No reply" sub="Nudge in 4 hours" />
       </Float>
     </Stage>
   );
 }
 
-/** Return and retarget: pixel intent on a known number fires a journey. */
+/** A known shopper comes back, leaves again, and a journey starts. */
 function Retarget({ label }: SceneProps) {
   return (
-    <Stage label={label} tone="sky" shape="wide">
-      <Wires shape="wide" tone="sky" paths={['M 38 19 C 41 19, 39 28.3, 42 28.3', 'M 65 28.3 C 67 28.3, 65.5 21, 68 21']} />
-      <Float x={4} y={10} w={34} delay={0}>
-        <Panel title="On the site" icon={Radar} tone="sky" right={<Chip tone="emerald" dot>Known</Chip>}>
-          <Row lead={<IconTile icon={Eye} tone="sky" size="sm" />} title="Viewed linen set" sub="Twice in 2 days" />
-          <Row lead={<IconTile icon={MousePointer} tone="violet" size="sm" />} title="Scrolled 70%" sub="Product page" />
-          <Row lead={<IconTile icon={LogOut} tone="slate" size="sm" />} title="Left the site" sub="No checkout" />
+    <Stage label={label} shape="wide" duration={8}>
+      <Float x={8} y={14} w={50} at={0} z={3}>
+        <Panel title="Return visit" icon={Eye}>
+          <Row lead={<Avatar name="Riya Sharma" />} title="Riya Sharma" sub="Back on the site" />
+          <Reveal at={1}>
+            <Row lead={<IconTile icon={Eye} />} title="Linen kurta" sub="Viewed 3 times" />
+          </Reveal>
+          <Reveal at={1.8}>
+            <Row
+              lead={<IconTile icon={ShoppingCart} />}
+              title="Left again"
+              sub="Pixel intent: high"
+              right={<Chip tone="amber" dot>Exit</Chip>}
+              active
+            />
+          </Reveal>
         </Panel>
       </Float>
-      <Float x={42} y={40} w={23} delay={2} z={3}>
-        <Node icon={Fingerprint} tone="violet" title="Number matched" sub="Journey fired" active />
+      <Float x={64} y={18} at={2.8}>
+        <Chip tone="emerald" dot>Journey started</Chip>
       </Float>
-      <Float x={68} y={8} w={28} delay={3} rotate={2} z={3}>
-        <Phone name="Your store">
-          <Bubble from="biz" time="6:12" read media={<Thumb tone="sky" icon={ShoppingBag} h={5.5} />} buttons={['View my cart']}>
-            Still looking at the linen set? Your cart is saved.
-          </Bubble>
-        </Phone>
-      </Float>
-      <Float x={5} y={70} delay={5}>
-        <Chip tone="sky" icon={Radar}>Tracking Pixel intent</Chip>
-      </Float>
-      <Float x={5} y={79} delay={6}>
-        <Chip tone="violet" solid icon={Zap}>While interest is warm</Chip>
-      </Float>
-      <Float x={71} y={76} delay={7} z={4}>
-        <Chip tone="sky" icon={Check}>No new checkout needed</Chip>
+      <Float x={62} y={38} w={32} at={3.6}>
+        <Bubble from="biz" time="6:40 pm">
+          <TypeText text="Still thinking about the Linen kurta? Your size is back." at={3.9} cps={34} />
+        </Bubble>
       </Float>
     </Stage>
   );

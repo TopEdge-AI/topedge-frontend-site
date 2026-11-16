@@ -1,423 +1,320 @@
 /**
- * Profit & costs scenes: setup wizard, true cost per order and net profit after
- * COGS, COD, RTO and ads. Per-order figures are the ₹799 kurta worked example
- * from this page's proofTable; store-level figures are the product's sample
- * dataset. Keys are the image paths in productPages.ts.
+ * Profit & costs scenes, v3 storytelling style (see flow-builder.tsx).
+ *
+ * Per-order numbers come from the ₹799 kurta proof table on the page (₹13
+ * packing, ₹85 freight, ₹30 COD, ₹38 RTO, ₹13 support, ₹179 true cost).
+ * Store-level sample figures (₹16,349 revenue, 48 orders, ₹3,562 net) appear
+ * only where a store KPI is the point. Keys are the image paths in
+ * productPages.ts.
  */
-import type { CSSProperties, ReactNode } from 'react';
+import type { CSSProperties } from 'react';
+import { ArrowDownWideNarrow, Boxes, CalendarDays, Check, Layers, Percent, Shirt, Undo2, Wallet } from 'lucide-react';
 import {
-  Banknote,
-  BarChart3,
-  Calculator,
-  CalendarDays,
-  CheckCircle2,
-  Droplet,
-  Droplets,
-  IndianRupee,
-  Lightbulb,
-  Lock,
-  Megaphone,
-  Package,
-  Receipt,
-  ShieldAlert,
-  ShoppingBag,
-  Sparkles,
-  Sun,
-  Truck,
-  Undo2,
-  type LucideProps,
-} from 'lucide-react';
-import type { ComponentType } from 'react';
-import {
+  Bars,
   Btn,
   Chip,
+  Cursor,
   Donut,
-  Field,
   Float,
+  Glow,
   IconTile,
-  Meter,
-  Node,
   Panel,
+  Reveal,
+  Rings,
   Row,
   Spark,
+  Stack,
   Stage,
   Stat,
-  Toggle,
+  TypeText,
   type SceneMap,
   type SceneProps,
   type Tone,
 } from '../kit';
 
-/* ── Local bits ────────────────────────────────────────────────────────── */
+/* ── Shared pieces ─────────────────────────────────────────────────────── */
 
-const muted = '#5a6474';
-const grid2: CSSProperties = { display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0.7em' };
-
-const STEPS: { name: string; icon: ComponentType<LucideProps> }[] = [
-  { name: 'Products', icon: Package },
-  { name: 'Fees', icon: Receipt },
-  { name: 'COD & returns', icon: Truck },
-];
-
-/** Setup wizard progress: done steps green, current step solid. */
-function Steps({ at }: { at: 0 | 1 | 2 }) {
+/** An input field whose value types itself in. */
+function TypedField({ label, text, at }: { label: string; text: string; at: number }) {
   return (
-    <div
-      style={{
-        display: 'inline-flex',
-        alignItems: 'center',
-        gap: '0.45em',
-        padding: '0.45em',
-        borderRadius: '99em',
-        background: '#fff',
-        boxShadow: '0 0 0 1px rgba(15,23,42,0.07), 0 0.8em 1.6em -0.9em rgba(30,20,80,0.25)',
-      }}
-    >
-      {STEPS.map((s, i) => (
-        <span key={s.name} style={{ display: 'inline-flex', alignItems: 'center', gap: '0.45em' }}>
-          {i > 0 ? (
-            <i style={{ width: '0.9em', height: 2, borderRadius: 2, background: i <= at ? '#34d399' : '#e2e8f0' }} />
-          ) : null}
-          {i < at ? (
-            <Chip tone="emerald" icon={CheckCircle2}>{s.name}</Chip>
-          ) : i === at ? (
-            <Chip tone="violet" solid icon={s.icon}>{s.name}</Chip>
-          ) : (
-            <Chip tone="slate" icon={s.icon}>{s.name}</Chip>
-          )}
-        </span>
-      ))}
+    // TypeText's own span is the input box, so the typed value sits flush in it.
+    <div className="fv-field">
+      <small>{label}</small>
+      <TypeText text={text} at={at} />
     </div>
   );
 }
 
-/** Small ₹ input cell. */
-function Money({ v, unit = '₹', after }: { v: string; unit?: string; after?: boolean }) {
-  return (
-    <span
-      style={{
-        display: 'inline-flex',
-        alignItems: 'center',
-        gap: '0.3em',
-        minWidth: '4.4em',
-        padding: '0.35em 0.6em',
-        borderRadius: '0.6em',
-        fontSize: '0.95em',
-        background: '#fff',
-        boxShadow: '0 0 0 1px rgba(15,23,42,0.1) inset',
-      }}
-    >
-      {after ? null : <small style={{ color: muted, fontWeight: 500 }}>{unit}</small>}
-      {v}
-      {after ? <small style={{ color: muted, fontWeight: 500 }}>{unit}</small> : null}
-    </span>
-  );
-}
+type Step = {
+  /** Caption under the column. */
+  name: string;
+  /** Amount shown above the bar once it lands. */
+  amount: string;
+  /** Bar height and bottom offset, in em. */
+  h: number;
+  base: number;
+  /** Seconds into the scene when the bar drops in. */
+  at: number;
+  hi?: boolean;
+  tone?: Tone;
+};
 
-type Col = { label: string; value: number; base: number; text: string; tone: Tone };
-
-/** Waterfall chart. Bars grow in with the kit's bar animation. */
-function Waterfall({ cols, max, height = 12 }: { cols: Col[]; max: number; height?: number }) {
+/** Floating-bar waterfall: each step drops in on its own beat. */
+function Waterfall({ steps, height = 19 }: { steps: Step[]; height?: number }) {
+  const grid: CSSProperties = {
+    display: 'grid',
+    gridTemplateColumns: `repeat(${steps.length}, 1fr)`,
+    textAlign: 'center',
+  };
   return (
-    <div style={{ display: 'flex', gap: '0.55em', paddingTop: '1.6em' }}>
-      {cols.map((c, i) => (
-        <div key={c.label} style={{ flex: '1 1 0', minWidth: 0, display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-          <div className="fv-bars" data-tone={c.tone} style={{ position: 'relative', width: '100%', height: `${height}em` }}>
-            <i
-              className="is-hi"
-              style={{
-                position: 'absolute',
-                left: 0,
-                right: 0,
-                bottom: `${(c.base / max) * 100}%`,
-                height: `${(c.value / max) * 100}%`,
-                minHeight: '0.4em',
-                borderRadius: '0.35em',
-                animationDelay: `calc(var(--fv-d, 0ms) + ${250 + i * 90}ms)`,
-              }}
-            />
-            <b
-              style={{
-                position: 'absolute',
-                left: '50%',
-                bottom: `calc(${((c.base + c.value) / max) * 100}% + 0.35em)`,
-                transform: 'translateX(-50%)',
-                fontSize: '0.88em',
-                fontWeight: 600,
-                whiteSpace: 'nowrap',
-                color: 'var(--t-700)',
-              }}
-            >
-              {c.text}
-            </b>
+    <div>
+      <div style={{ ...grid, alignItems: 'stretch', height: `${height}em` }}>
+        {steps.map((s) => (
+          <div
+            key={s.name}
+            style={{ display: 'flex', flexDirection: 'column', justifyContent: 'flex-end', alignItems: 'center', gap: '0.35em' }}
+          >
+            <Reveal at={s.at + 0.35}>
+              <span className="fv-meter__row">
+                <b>{s.amount}</b>
+              </span>
+            </Reveal>
+            <div style={{ width: '62%', marginBottom: `${s.base}em`, '--fv-d': `${s.at * 1000}ms` } as CSSProperties}>
+              <Bars values={[100]} hi={s.hi ? 0 : undefined} tone={s.tone} height={s.h} />
+            </div>
           </div>
-          <small style={{ marginTop: '0.55em', fontSize: '0.82em', color: muted, whiteSpace: 'nowrap' }}>{c.label}</small>
-        </div>
-      ))}
+        ))}
+      </div>
+      <div className="fv-stat" style={{ ...grid, marginTop: '0.7em' }}>
+        {steps.map((s) => (
+          <small key={s.name}>{s.name}</small>
+        ))}
+      </div>
     </div>
   );
 }
 
-/** Period switcher. */
-function Periods({ on = '30d' }: { on?: string }) {
-  return (
-    <span style={{ display: 'inline-flex', gap: '0.2em', padding: '0.25em', borderRadius: '0.8em', background: '#f1f5f9' }}>
-      {['Today', '7d', '30d', '90d', 'All'].map((p) => (
-        <span
-          key={p}
-          style={{
-            padding: '0.25em 0.6em',
-            borderRadius: '0.6em',
-            fontSize: '0.88em',
-            fontWeight: 600,
-            color: p === on ? '#0c1222' : muted,
-            background: p === on ? '#fff' : 'transparent',
-            boxShadow: p === on ? '0 1px 2px rgba(15,23,42,0.12)' : 'none',
-          }}
-        >
-          {p}
-        </span>
-      ))}
-    </span>
-  );
-}
+/* ── Hero ──────────────────────────────────────────────────────────────── */
 
-function Pct({ children, tone = 'emerald' }: { children: ReactNode; tone?: Tone }) {
-  return <Chip tone={tone}>{children}</Chip>;
-}
-
-/* ── Hero (wide, 64em x 40em) ──────────────────────────────────────────── */
-
-/** True cost of one ₹799 order, built up line by line. */
+/** One ₹799 kurta: each cost drops in, then the true cost lands. */
 function TrueCost({ label }: SceneProps) {
-  const cols: Col[] = [
-    { label: 'Packing', value: 13, base: 0, text: '₹13', tone: 'amber' },
-    { label: 'Freight', value: 85, base: 13, text: '₹85', tone: 'amber' },
-    { label: 'COD fee', value: 30, base: 98, text: '₹30', tone: 'amber' },
-    { label: 'Visible', value: 128, base: 0, text: '₹128', tone: 'slate' },
-    { label: 'RTO', value: 38, base: 128, text: '₹38', tone: 'rose' },
-    { label: 'Support', value: 13, base: 166, text: '₹13', tone: 'rose' },
-    { label: 'True cost', value: 179, base: 0, text: '₹179', tone: 'rose' },
+  // 16em of bar per ₹179.
+  const k = 16 / 179;
+  const steps: Step[] = [
+    { name: 'Packing', amount: '₹13', h: 13 * k, base: 0, at: 0.8 },
+    { name: 'Freight', amount: '₹85', h: 85 * k, base: 13 * k, at: 1.4 },
+    { name: 'COD fee', amount: '₹30', h: 30 * k, base: 98 * k, at: 2 },
+    { name: 'RTO', amount: '₹38', h: 38 * k, base: 128 * k, at: 2.8, hi: true, tone: 'rose' },
+    { name: 'Support', amount: '₹13', h: 13 * k, base: 166 * k, at: 3.4, hi: true, tone: 'rose' },
+    { name: 'True cost', amount: '₹179', h: 16, base: 0, at: 4.2, hi: true },
   ];
   return (
-    <Stage label={label} tone="amber" shape="wide">
-      <Float x={4} y={9} w={60} delay={0} z={3}>
-        <Panel title="Where ₹799 went" icon={BarChart3} tone="amber" right={<Chip tone="amber" icon={ShoppingBag}>One kurta order</Chip>}>
-          <Waterfall cols={cols} max={179} height={16} />
+    <Stage label={label} shape="wide" duration={8.5}>
+      <Float x={32} y={8} w={56} at={0.2} z={3}>
+        <Panel title="₹799 kurta order" icon={Shirt} right={<Chip>Per order</Chip>}>
+          <Waterfall steps={steps} />
         </Panel>
       </Float>
-      <Float x={68} y={8} w={28} delay={2} rotate={2} drift>
-        <Panel>
-          <Stat label="True cost per order" value="₹179" delta="Over 2x the ₹85 freight" tone="rose" />
+      <Float x={3} y={36} w={26} at={4.8}>
+        <Panel glass>
+          <Stat label="True cost per order" value="₹179" delta="2.1x the ₹85 freight" tone="rose" />
         </Panel>
-      </Float>
-      <Float x={67} y={43} w={30} delay={4}>
-        <Panel title="Key findings" icon={Lightbulb} tone="violet">
-          <Row lead={<IconTile icon={Undo2} tone="rose" size="sm" />} title="RTO adds ₹38" sub="30% x ₹125 per return" />
-          <Row lead={<IconTile icon={Package} tone="amber" size="sm" />} title="300g billed at 1 kg" sub="Volumetric weight" />
-        </Panel>
-      </Float>
-      <Float x={8} y={86} delay={6}>
-        <Chip tone="amber" solid icon={Receipt}>Invoice shows ₹128, you pay ₹179</Chip>
       </Float>
     </Stage>
   );
 }
 
-/* ── Bento tiles (square, 36em x 36em) ─────────────────────────────────── */
+/* ── Bento tiles: setup wizard, one step each ──────────────────────────── */
 
-/** Step 1: Shopify products with COGS and packaging. */
+/** Type COGS and packing for a product; the unit cost is saved. */
 function ProductsCogs({ label }: SceneProps) {
-  const head: CSSProperties = { fontSize: '0.82em', fontWeight: 600, color: muted, minWidth: '5.3em', textAlign: 'left' };
   return (
-    <Stage label={label} tone="violet">
-      <Float x={6} y={6} delay={0}>
-        <Steps at={0} />
-      </Float>
-      <Float x={5} y={22} w={90} delay={2} z={3}>
-        <Panel title="Products" icon={Package} tone="violet" right={<><span style={head}>COGS</span><span style={head}>Packing</span></>}>
-          <Row lead={<IconTile icon={Droplet} tone="amber" size="sm" />} title="Vitamin C Serum" sub="₹1,499 · 68% margin" right={<><Money v="480" /><Money v="45" /></>} active />
-          <Row lead={<IconTile icon={Droplets} tone="sky" size="sm" />} title="Moisturizer" sub="₹899 · 69% margin" right={<><Money v="280" /><Money v="35" /></>} />
-          <Row lead={<IconTile icon={Sparkles} tone="violet" size="sm" />} title="Niacinamide Toner" sub="₹699 · 70% margin" right={<><Money v="210" /><Money v="30" /></>} />
-          <Row lead={<IconTile icon={Sun} tone="emerald" size="sm" />} title="SPF 50 Sunscreen" sub="₹799 · 69% margin" right={<><Money v="250" /><Money v="30" /></>} />
+    <Stage label={label} duration={6.5}>
+      <Rings x={50} y={48} count={4} gap={9} />
+      <Float x={15} y={20} w={70} at={0.2} z={3}>
+        <Panel title="Cotton kurta" icon={Shirt} right={<Chip>₹799</Chip>}>
+          <Stack gap={0.7}>
+            <TypedField label="COGS" text="₹310" at={0.9} />
+            <TypedField label="Packaging" text="₹13" at={1.6} />
+          </Stack>
         </Panel>
       </Float>
-      <Float x={6} y={86} delay={4}>
-        <Chip tone="slate" icon={Lock}>Prices locked from Shopify</Chip>
-      </Float>
-      <Float x={67} y={85} delay={5}>
-        <Btn primary tone="violet">Continue</Btn>
+      <Float x={30} y={76} at={2.4}>
+        <Chip tone="emerald" icon={Check}>
+          Unit cost ₹323
+        </Chip>
       </Float>
     </Stage>
   );
 }
 
-/** Step 2: fees and marketing. */
+/** Fees attach to the order one by one. */
 function Fees({ label }: SceneProps) {
   return (
-    <Stage label={label} tone="violet">
-      <Float x={6} y={6} delay={0}>
-        <Steps at={1} />
+    <Stage label={label} duration={6.5}>
+      <Rings x={50} y={48} count={4} gap={10} />
+      <Float x={39} y={34} at={0} z={3}>
+        <IconTile icon={Percent} size="xl" pulse />
       </Float>
-      <Float x={5} y={22} w={90} delay={2} z={3}>
-        <Panel title="Fees & marketing" icon={Receipt} tone="violet">
-          <div style={grid2}>
-            <Field label="Marketing (CAC)" value="₹100 per order" />
-            <Field label="Gateway fee" value="2%" />
-            <Field label="Shopify fee" value="0.5%" />
-            <Field label="Fixed per order" value="₹13" />
-          </div>
-          <div style={{ display: 'flex', alignItems: 'center', gap: '0.6em', marginTop: '0.9em', fontSize: '1em', fontWeight: 600 }}>
-            GST on charts
-            <Toggle tone="violet" />
-            <span style={{ marginLeft: 'auto' }}>
-              <Chip tone="violet">GST 18%</Chip>
-            </span>
-          </div>
-        </Panel>
+      <Float x={8} y={18} at={1} drift>
+        <Chip dot>Gateway 2%</Chip>
       </Float>
-      <Float x={13} y={78} delay={5} drift>
-        <Chip tone="amber" solid icon={Megaphone}>CAC: ₹10,000 ÷ 100 orders</Chip>
+      <Float x={46} y={72} at={2} drift>
+        <Chip dot>Ads ₹62 / order</Chip>
       </Float>
     </Stage>
   );
 }
 
-/** Step 3: COD and returns, the lines that eat D2C margin. */
+/** The RTO rate fills in, then the loss on each refused parcel. */
 function CodReturns({ label }: SceneProps) {
   return (
-    <Stage label={label} tone="rose">
-      <Float x={6} y={6} delay={0}>
-        <Steps at={2} />
+    <Stage label={label} duration={6.5}>
+      <Glow x={50} y={48} size={20} />
+      <Float x={37} y={10} at={0.2}>
+        <Chip>RTO on COD orders</Chip>
       </Float>
-      <Float x={5} y={21} w={90} delay={2} z={3}>
-        <Panel title="COD & returns" icon={Truck} tone="rose" right={<><Chip tone="emerald" dot>COD on</Chip><Toggle /></>}>
-          <div style={grid2}>
-            <Field label="COD RTO rate" value="30%" />
-            <Field label="Loss per return" value="₹125" />
-            <Field label="Delivery per order" value="₹85" />
-            <Field label="COD fee" value="₹30" />
-          </div>
-        </Panel>
+      <Float x={33} y={25} at={0.6} z={3}>
+        <Donut pct={30} tone="rose" size={12} />
       </Float>
-      <Float x={9} y={64} w={82} delay={4} drift>
-        <Node icon={Undo2} tone="rose" title="₹38 RTO on every order" sub="30% RTO x ₹125 per return" active />
-      </Float>
-      <Float x={25} y={85} delay={6}>
-        <Btn primary tone="violet" icon={Calculator}>Calculate my profits</Btn>
+      <Float x={36} y={74} at={2.2}>
+        <Chip tone="rose" icon={Undo2}>
+          ₹125 lost per RTO
+        </Chip>
       </Float>
     </Stage>
   );
 }
 
-/* ── Showcases (wide, 64em x 40em) ─────────────────────────────────────── */
+/* ── Wide panels ───────────────────────────────────────────────────────── */
 
-/** Net profit hero: status, true net vs prior period, supporting KPIs. */
+/** Pick a period; true net profit counts up with revenue and margin. */
 function NetProfit({ label }: SceneProps) {
   return (
-    <Stage label={label} tone="emerald" shape="wide">
-      <Float x={4} y={6} delay={0}>
-        <Periods on="30d" />
-      </Float>
-      <Float x={4} y={17} w={48} delay={1} z={3}>
-        <Panel title="True net profit" icon={IndianRupee} tone="emerald" right={<Chip tone="emerald" dot>Profitable · 30d</Chip>}>
-          <Stat label="After COGS, COD, RTO and ads" value="₹3,562" delta="+8.7% vs prior period" />
-          <div style={{ marginTop: '0.9em' }}>
-            <Spark points={[30, 38, 34, 46, 42, 55, 52, 63, 60, 72]} tone="emerald" height={11} />
-          </div>
+    <Stage label={label} shape="wide" duration={8}>
+      <Float x={3} y={32} w={24} at={0}>
+        <Panel glass title="Period" icon={CalendarDays}>
+          <Row title="Last 7 days" />
+          <Row title="Last 30 days" active />
         </Panel>
       </Float>
-      <Float x={56} y={17} w={40} delay={3} rotate={1}>
-        <Panel title="This period" icon={BarChart3} tone="sky">
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.1em 1em' }}>
-            <Stat label="Revenue" value="₹16,349" delta="+6.4%" />
-            <Stat label="Orders" value="48" />
-            <div>
-              <Stat label="Margin" value="21.8%" />
-              <div style={{ marginTop: '0.5em' }}>
-                <Meter pct={22} tone="emerald" />
-              </div>
-            </div>
-            <Stat label="AOV" value="₹341" />
-          </div>
+      <Float x={31} y={10} w={56} at={1.3} z={3}>
+        <Panel title="Net profit" icon={Wallet} right={<Chip>Last 30 days</Chip>}>
+          <Stat label="After COGS, COD, RTO, ads" value="₹3,562" delta="+8.7% vs prior" />
+          <Spark points={[30, 38, 34, 46, 42, 55, 52, 63, 60, 72]} height={6} />
+          <Reveal at={2.8}>
+            <Row title="Revenue" sub="48 orders · AOV ₹341" right="₹16,349" />
+          </Reveal>
+          <Reveal at={3.3}>
+            <Row title="Margin" sub="Net over revenue" right="21.8%" />
+          </Reveal>
         </Panel>
       </Float>
-      <Float x={58} y={78} w={36} delay={5} drift>
-        <Node icon={CalendarDays} tone="sky" title="vs prior 30 days" sub="Same length, in ₹" />
-      </Float>
+      <Cursor
+        path={[
+          [22, 92, 0.2],
+          [16, 60, 0.8],
+          [16, 60, 1.3],
+          [24, 80, 2.2],
+        ]}
+        clicks={[1]}
+      />
     </Stage>
   );
 }
 
-/** Store-level waterfall from revenue to net profit, with findings. */
+/** Store waterfall: revenue, each cost hangs down, net profit is what is left. */
 function CostWaterfall({ label }: SceneProps) {
-  const cols: Col[] = [
-    { label: 'Revenue', value: 16.3, base: 0, text: '₹16.3K', tone: 'indigo' },
-    { label: 'COGS', value: 8.7, base: 7.6, text: '-₹8.7K', tone: 'rose' },
-    { label: 'Delivery', value: 2.5, base: 5.1, text: '-₹2.5K', tone: 'rose' },
-    { label: 'Fees', value: 0.6, base: 4.5, text: '-₹572', tone: 'amber' },
-    { label: 'RTO', value: 0.3, base: 4.2, text: '-₹272', tone: 'amber' },
-    { label: 'Ads', value: 0.4, base: 3.8, text: '-₹400', tone: 'amber' },
-    { label: 'Other', value: 0.39, base: 3.41, text: '-₹390', tone: 'slate' },
-    { label: 'Net', value: 3.6, base: 0, text: '₹3.6K', tone: 'emerald' },
+  // 16em of bar per ₹16,349 of revenue.
+  const k = 16 / 16349;
+  const steps: Step[] = [
+    { name: 'Revenue', amount: '₹16,349', h: 16, base: 0, at: 0.8, hi: true },
+    { name: 'COGS', amount: '₹6,540', h: 6540 * k, base: 9809 * k, at: 1.5 },
+    { name: 'Shipping', amount: '₹2,410', h: 2410 * k, base: 7399 * k, at: 2.1 },
+    { name: 'COD, RTO', amount: '₹1,980', h: 1980 * k, base: 5419 * k, at: 2.7, hi: true, tone: 'rose' },
+    { name: 'Ads', amount: '₹1,857', h: 1857 * k, base: 3562 * k, at: 3.3 },
+    { name: 'Net', amount: '₹3,562', h: 3562 * k, base: 0, at: 4, hi: true, tone: 'emerald' },
   ];
   return (
-    <Stage label={label} tone="amber" shape="wide">
-      <Float x={4} y={10} w={57} delay={0} z={3}>
-        <Panel title="Where your money went" icon={BarChart3} tone="amber" right={<Periods on="30d" />}>
-          <Waterfall cols={cols} max={16.3} height={17} />
+    <Stage label={label} shape="wide" duration={8.5}>
+      <Float x={6} y={8} w={60} at={0.2} z={3}>
+        <Panel title="Cost waterfall" icon={Layers} right={<Chip>Last 30 days</Chip>}>
+          <Waterfall steps={steps} />
         </Panel>
       </Float>
-      <Float x={65} y={10} w={31} delay={2}>
-        <Panel title="Key findings" icon={Lightbulb} tone="violet">
-          <Row lead={<IconTile icon={ShoppingBag} tone="rose" size="sm" />} title="Top cost: COGS" sub="Over half of revenue" />
-          <Row lead={<IconTile icon={Undo2} tone="amber" size="sm" />} title="RTO cost ₹272" sub="This period, estimated" />
-          <Row lead={<IconTile icon={Banknote} tone="emerald" size="sm" />} title="COD share 64%" sub="Of orders this period" />
+      <Float x={69} y={32} w={26} at={4.6}>
+        <Panel glass title="Biggest cost" icon={Boxes}>
+          <Row title="COGS ₹6,540" sub="40% of revenue" />
         </Panel>
-      </Float>
-      <Float x={66} y={64} w={30} delay={4} drift>
-        <Node icon={IndianRupee} tone="emerald" title="Net profit ₹3,562" sub="21.8% of revenue" active />
       </Float>
     </Stage>
   );
 }
 
-/** Product table: profit and margin per SKU, missing COGS last. */
+/** Sort by margin: losses show in rose, a product missing COGS sinks last. */
 function ProductTable({ label }: SceneProps) {
-  const profit = (v: string, pct: number, label: string) => (
-    <span style={{ display: 'flex', alignItems: 'center', gap: '0.8em' }}>
-      <b style={{ color: '#047857', minWidth: '3.6em', textAlign: 'right' }}>{v}</b>
-      <span style={{ width: '6em' }}>
-        <Meter pct={pct} tone="violet" />
-      </span>
-      <small style={{ minWidth: '2.8em', color: muted, fontWeight: 600 }}>{label}</small>
-    </span>
-  );
   return (
-    <Stage label={label} tone="violet" shape="wide">
-      <Float x={4} y={10} w={64} delay={0} z={3}>
-        <Panel title="Products" icon={Package} tone="violet" right={<Chip tone="slate">Profit, high to low</Chip>}>
-          <Row lead={<IconTile icon={Droplet} tone="amber" size="sm" />} title="Vitamin C Serum" sub="₹6,200 revenue · 12 sold" right={profit('₹2,800', 90, '45.2%')} active />
-          <Row lead={<IconTile icon={Droplets} tone="sky" size="sm" />} title="Moisturizer" sub="₹4,100 revenue · 9 sold" right={profit('₹1,800', 87, '43.9%')} />
-          <Row lead={<IconTile icon={Sparkles} tone="violet" size="sm" />} title="Niacinamide Toner" sub="₹2,800 revenue · 7 sold" right={profit('₹1,200', 85, '42.9%')} />
-          <Row lead={<IconTile icon={Sun} tone="emerald" size="sm" />} title="SPF 50 Sunscreen" sub="₹2,100 revenue · 5 sold" right={profit('₹900', 85, '42.9%')} />
-          <Row lead={<IconTile icon={ShieldAlert} tone="slate" size="sm" />} title="Under Eye Gel" sub="No cost data yet" right={<Pct tone="amber">COGS missing</Pct>} />
+    <Stage label={label} shape="wide" duration={8}>
+      <Float x={20} y={8} w={60} at={0.2} z={3}>
+        <Panel
+          title="Products"
+          icon={Boxes}
+          right={
+            <Btn icon={ArrowDownWideNarrow} pressAt={1.2}>
+              Margin
+            </Btn>
+          }
+        >
+          <Reveal at={1.6}>
+            <Row
+              lead={<IconTile icon={Shirt} />}
+              title="Cotton kurta"
+              sub="24 sold · ₹6,520 profit"
+              right={<Chip tone="emerald">34%</Chip>}
+            />
+          </Reveal>
+          <Reveal at={2}>
+            <Row
+              lead={<IconTile icon={Shirt} />}
+              title="Linen dupatta"
+              sub="18 sold · ₹2,372 profit"
+              right={<Chip tone="emerald">22%</Chip>}
+            />
+          </Reveal>
+          <Reveal at={2.4}>
+            <Row
+              lead={<IconTile icon={Shirt} />}
+              title="Silk saree"
+              sub="6 sold · ₹1,349 loss"
+              right={<Chip tone="rose">-9%</Chip>}
+              active
+            />
+          </Reveal>
         </Panel>
       </Float>
-      <Float x={72} y={10} w={24} delay={2} rotate={2} drift>
+      <Float x={20} y={66} w={60} at={3.2} fade="bottom">
         <Panel>
-          <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.6em' }}>
-            <Donut pct={45} tone="violet" size={8}>45%</Donut>
-            <span style={{ fontSize: '0.95em', fontWeight: 600 }}>Best margin SKU</span>
-          </div>
+          <Row
+            lead={<IconTile icon={Shirt} />}
+            title="Block print top"
+            sub="No COGS yet"
+            right={
+              <Chip tone="amber" dot>
+                Add COGS
+              </Chip>
+            }
+          />
         </Panel>
       </Float>
-      <Float x={71} y={56} w={26} delay={4}>
-        <Node icon={ShieldAlert} tone="amber" title="1 SKU needs COGS" sub="Sinks to the bottom" />
-      </Float>
-      <Float x={6} y={85} delay={6}>
-        <Chip tone="violet" solid icon={IndianRupee}>Revenue, cost, profit per SKU</Chip>
-      </Float>
+      <Cursor
+        path={[
+          [92, 80, 0.3],
+          [74, 16, 1],
+          [74, 16, 1.6],
+          [88, 50, 2.6],
+        ]}
+        clicks={[1.2]}
+      />
     </Stage>
   );
 }
