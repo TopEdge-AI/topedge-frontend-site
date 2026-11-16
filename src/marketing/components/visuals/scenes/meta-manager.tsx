@@ -1,59 +1,57 @@
 /**
- * Meta Manager scenes. Keys are the image paths in productPages.ts.
+ * Meta Manager scenes. v3 storytelling style, see flow-builder.tsx.
  * WhatsApp template approval, Journey blueprints, catalog and wa.me QR.
- * Palette: indigo hero, then emerald, amber, violet, sky per scene.
  *
  * This page reuses one image path for the hero, a bento tile and a showcase,
  * and leaves two showcase images empty (''). A scene only receives its label,
- * so the shared keys pick a layout from the frame they are mounted in, and the
+ * so the shared key picks a layout from the frame it is mounted in, and the
  * '' key picks studio or catalog from the label.
  */
 import { useLayoutEffect, useRef, useState } from 'react';
 import {
-  AlertTriangle,
   Braces,
-  CreditCard,
   Download,
   FileText,
   LayoutTemplate,
-  Mail,
   Package,
   QrCode,
   RefreshCw,
   Send,
-  Shirt,
   ShieldCheck,
-  ShoppingCart,
-  Sparkles,
+  Shirt,
   Store,
   Watch,
-  Zap,
 } from 'lucide-react';
 import {
   Btn,
   Bubble,
+  Burst,
   Chip,
+  Cursor,
   Field,
   Float,
+  Glow,
   IconTile,
-  Node,
   Panel,
-  Phone,
+  Reveal,
+  Rings,
   Row,
+  Stack,
   Stage,
   Thumb,
-  Wires,
   type Scene,
   type SceneMap,
   type SceneProps,
-  type Tone,
 } from '../kit';
 
-/* ── Local pieces ──────────────────────────────────────────────────────── */
+/* ── Frame detection ───────────────────────────────────────────────────── */
 
 type Slot = 'hero' | 'bento' | 'showcase';
 
-/** Render one of three scenes depending on the frame this path is shown in. */
+/**
+ * Render one of three scenes depending on the frame this path is shown in:
+ * the hero glow frame, a bento tile visual, or the wide showcase tab panel.
+ */
 function bySlot(scenes: Record<Slot, Scene>): Scene {
   return function SlotScene({ label }: SceneProps) {
     const ref = useRef<HTMLSpanElement>(null);
@@ -62,8 +60,9 @@ function bySlot(scenes: Record<Slot, Scene>): Scene {
       const el = ref.current;
       if (!el) return;
       if (el.closest('.demo-video-glow__frame')) setSlot('hero');
-      else if (el.closest('.mkt-pf__shot') && !el.closest('.is-wide')) setSlot('bento');
-      else setSlot('showcase');
+      else if (el.closest('.mkt-pf__tile-visual')) setSlot('bento');
+      else if (el.closest('.pfx-tabs__panel, .mkt-pf__shot.is-wide')) setSlot('showcase');
+      else setSlot(el.closest('.mkt-pf__shot') ? 'bento' : 'showcase');
     }, []);
     if (!slot) return <span ref={ref} hidden />;
     const S = scenes[slot];
@@ -71,291 +70,229 @@ function bySlot(scenes: Record<Slot, Scene>): Scene {
   };
 }
 
-type Status = 'Approved' | 'Pending' | 'Rejected' | 'Draft';
-const STATUS_TONE: Record<Status, Tone> = {
-  Approved: 'emerald',
-  Pending: 'amber',
-  Rejected: 'rose',
-  Draft: 'slate',
-};
+/* ── Hero ──────────────────────────────────────────────────────────────── */
 
-function StatusChip({ s }: { s: Status }) {
-  return (
-    <Chip tone={STATUS_TONE[s]} dot>
-      {s}
-    </Chip>
-  );
-}
-
-/** Deterministic QR-style matrix: three finder squares plus seeded modules. */
-function Qr({ size = 11 }: { size?: number }) {
-  const n = 21;
-  const finder = (x: number, y: number) => {
-    const inBox = (ox: number, oy: number) => x >= ox && x < ox + 7 && y >= oy && y < oy + 7;
-    for (const [ox, oy] of [[0, 0], [14, 0], [0, 14]]) {
-      if (inBox(ox, oy)) {
-        const dx = x - ox;
-        const dy = y - oy;
-        const ring = dx === 0 || dx === 6 || dy === 0 || dy === 6;
-        const core = dx >= 2 && dx <= 4 && dy >= 2 && dy <= 4;
-        return ring || core ? 1 : 0;
-      }
-      if (x >= ox - 1 && x <= ox + 7 && y >= oy - 1 && y <= oy + 7) return 0;
-    }
-    return -1;
-  };
-  const cells: [number, number][] = [];
-  for (let y = 0; y < n; y++) {
-    for (let x = 0; x < n; x++) {
-      const f = finder(x, y);
-      const on = f === -1 ? ((x * 7 + y * 13 + ((x * y) % 5)) * 2654435761) % 7 < 3 : f === 1;
-      if (on) cells.push([x, y]);
-    }
-  }
-  return (
-    <svg viewBox={`-1 -1 ${n + 2} ${n + 2}`} style={{ width: `${size}em`, height: `${size}em`, display: 'block', borderRadius: '0.6em', background: '#fff' }}>
-      {cells.map(([x, y]) => (
-        <rect key={`${x}-${y}`} x={x} y={y} width={1.02} height={1.02} rx={0.18} fill="#0c1222" />
-      ))}
-    </svg>
-  );
-}
-
-/** Product row lead: a small gradient thumbnail. */
-function ProductThumb({ tone, icon }: { tone: Tone; icon: typeof Shirt }) {
-  return (
-    <span style={{ width: '3em', flex: 'none' }}>
-      <Thumb tone={tone} icon={icon} h={3} />
-    </span>
-  );
-}
-
-/* ── Template library (hero, bento, showcase) ──────────────────────────── */
-
-/** Hero: library with statuses and an approved template on a phone. */
+/** A template goes Draft, In review, Approved, then it sends. */
 function LibraryHero({ label }: SceneProps) {
   return (
-    <Stage label={label} tone="indigo" shape="wide">
-      <Wires shape="wide" tone="indigo" paths={['M 60 15.5 C 62 15.5, 62 15.5, 64.5 15.5']} />
-      <Float x={4} y={9} w={56} delay={0}>
-        <Panel title="Template library" icon={LayoutTemplate} tone="indigo" right={<Btn icon={RefreshCw}>Sync from Meta</Btn>}>
-          <Row lead={<IconTile icon={ShoppingCart} tone="amber" size="sm" />} title="cart_recovery_1" sub="Marketing" right={<StatusChip s="Approved" />} active />
-          <Row lead={<IconTile icon={CreditCard} tone="sky" size="sm" />} title="cod_confirm" sub="Utility" right={<StatusChip s="Approved" />} />
-          <Row lead={<IconTile icon={Package} tone="violet" size="sm" />} title="order_shipped" sub="Utility" right={<StatusChip s="Pending" />} />
-          <Row lead={<IconTile icon={Sparkles} tone="rose" size="sm" />} title="festive_sale_v2" sub="Marketing" right={<StatusChip s="Rejected" />} />
+    <Stage label={label} shape="wide" duration={9}>
+      <Float x={4} y={30} w={23} at={0}>
+        <Panel glass title="Meta rates" icon={ShieldCheck}>
+          <Row title="Marketing" sub="₹0.8631 per message" />
+          <Row title="Utility" sub="₹0.115 per message" />
         </Panel>
       </Float>
-      <Float x={64.5} y={7} w={31} delay={2} z={3} drift>
-        <Phone name="Your store">
-          <Bubble from="biz" time="11:02" read buttons={['Complete order']}>
-            Hi Riya, your cart is saved. Your linen shirt is still in stock.
-          </Bubble>
-          <Bubble from="user">Complete order</Bubble>
-        </Phone>
+      <Float x={30} y={16} w={44} at={0.3} z={3}>
+        <Panel title="cart_recovery_1" icon={FileText} right={<Chip>Marketing</Chip>}>
+          <Row lead={<IconTile icon={Braces} />} title="Body" sub="Hi {{first_name}}, still keen?" />
+          <Reveal at={0.9} until={2.1}>
+            <Row lead={<IconTile icon={FileText} />} title="Draft" sub="Saved, not submitted" right={<Chip>Draft</Chip>} />
+          </Reveal>
+          <Reveal at={2.5} until={3.9}>
+            <Row
+              lead={<IconTile icon={Send} tone="amber" />}
+              title="Submitted"
+              sub="Meta is reviewing"
+              right={<Chip tone="amber" dot>In review</Chip>}
+            />
+          </Reveal>
+          <Reveal at={4.3}>
+            <Row
+              lead={<IconTile icon={ShieldCheck} tone="emerald" />}
+              title="Approved"
+              sub="Ready for journeys"
+              right={<Chip tone="emerald" dot>Approved</Chip>}
+              active
+            />
+          </Reveal>
+        </Panel>
       </Float>
-      <Float x={8} y={76} delay={4}>
-        <Chip tone="emerald" solid icon={ShieldCheck}>Only APPROVED copy sends</Chip>
+      <Burst x={68} y={38} at={4.5} />
+      <Float x={77} y={40} w={22} at={5.6} z={4}>
+        <Bubble from="biz" time="18:20" read>
+          Hi Aarav, your serum is still in your cart.
+        </Bubble>
       </Float>
     </Stage>
   );
 }
 
-/** Bento: one list, four statuses, the rejection reason on the row. */
+/* ── Bento tiles: plain, one focal element ─────────────────────────────── */
+
+/** Draft, pending, approved and rejected in one list, with the reason. */
 function LibraryTile({ label }: SceneProps) {
   return (
-    <Stage label={label} tone="indigo">
-      <Float x={7} y={7} w={86} delay={0}>
-        <Panel title="Templates" icon={LayoutTemplate} tone="indigo" right={<Chip tone="slate">4</Chip>}>
-          <Row title="cart_recovery_1" sub="Marketing" right={<StatusChip s="Approved" />} />
-          <Row title="order_shipped" sub="Utility" right={<StatusChip s="Pending" />} />
-          <Row title="welcome_optin" sub="Marketing" right={<StatusChip s="Draft" />} />
-          <Row title="festive_sale_v2" sub="Marketing" right={<StatusChip s="Rejected" />} active />
-        </Panel>
-      </Float>
-      <Float x={10} y={66} w={80} delay={3} rotate={-1} drift z={3}>
-        <Panel>
-          <Row lead={<IconTile icon={AlertTriangle} tone="rose" />} title="Rejected by Meta" sub="Reason shown on the row" right={<Btn tone="rose" primary>Resubmit</Btn>} />
+    <Stage label={label} duration={6}>
+      <Glow x={50} y={50} size={22} />
+      <Float x={8} y={20} w={84} at={0.2} z={3}>
+        <Panel title="Templates" icon={LayoutTemplate}>
+          <Reveal at={0.6}>
+            <Row title="order_confirm" sub="Utility" right={<Chip tone="emerald">Approved</Chip>} />
+          </Reveal>
+          <Reveal at={1.3}>
+            <Row title="cart_recovery_1" sub="Marketing" right={<Chip tone="amber">Pending</Chip>} />
+          </Reveal>
+          <Reveal at={2}>
+            <Row title="diwali_offer" sub="Promo text in Utility" right={<Chip tone="rose">Rejected</Chip>} active />
+          </Reveal>
         </Panel>
       </Float>
     </Stage>
   );
 }
 
-/** Showcase: status counts, a synced list and a row being fixed. */
-function LibraryShowcase({ label }: SceneProps) {
-  const counts: [Status, string][] = [
-    ['Draft', '2'],
-    ['Pending', '1'],
-    ['Approved', '12'],
-    ['Rejected', '1'],
-  ];
-  return (
-    <Stage label={label} tone="emerald" shape="wide">
-      <Float x={4} y={13} w={60} delay={0}>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '0.8em' }}>
-          {counts.map(([s, v]) => (
-            <Panel key={s}>
-              <small style={{ fontSize: '0.95em', color: 'var(--fv-muted)', fontWeight: 500 }}>{s}</small>
-              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-                <b style={{ fontSize: '2em', fontWeight: 600, letterSpacing: '-0.04em' }}>{v}</b>
-                <span data-tone={STATUS_TONE[s]} style={{ width: '0.7em', height: '0.7em', borderRadius: '50%', background: 'var(--t-500)', boxShadow: '0 0 0 0.25em var(--t-100)' }} />
-              </div>
-            </Panel>
-          ))}
-        </div>
-      </Float>
-      <Float x={4} y={39} w={60} delay={2}>
-        <Panel title="Library" icon={LayoutTemplate} tone="emerald" right={<Chip tone="emerald" dot>Synced from Meta</Chip>}>
-          <Row lead={<IconTile icon={CreditCard} tone="sky" size="sm" />} title="cod_confirm" sub="Utility · en" right={<StatusChip s="Approved" />} />
-          <Row lead={<IconTile icon={ShoppingCart} tone="amber" size="sm" />} title="cart_recovery_2" sub="Marketing · en" right={<StatusChip s="Pending" />} />
-          <Row lead={<IconTile icon={Sparkles} tone="rose" size="sm" />} title="festive_sale_v2" sub="Marketing · hi" right={<StatusChip s="Rejected" />} active />
-        </Panel>
-      </Float>
-      <Float x={68} y={45} w={28} delay={4} rotate={2} drift z={3}>
-        <Panel title="Rejected" icon={AlertTriangle} tone="rose">
-          <p style={{ margin: 0, fontSize: '1em', color: 'var(--fv-muted)', lineHeight: 1.4 }}>Read Meta's reason on the row, edit the copy, submit again.</p>
-          <div style={{ marginTop: '0.8em' }}>
-            <Btn tone="emerald" primary icon={Send}>Fix and resubmit</Btn>
-          </div>
-        </Panel>
-      </Float>
-      <Float x={70} y={19} delay={5}>
-        <Chip tone="slate" icon={RefreshCw}>Synced 2 min ago</Chip>
-      </Float>
-    </Stage>
-  );
-}
-
-/* ── Other bento tiles (square) ────────────────────────────────────────── */
-
-/** Journey blueprints: cart, COD and order packs with live product headers. */
+/** A blueprint arrives prefilled with a live product header. */
 function Blueprints({ label }: SceneProps) {
   return (
-    <Stage label={label} tone="amber" grid>
-      <Float x={7} y={7} w={86} delay={0}>
-        <Panel title="Blueprints" icon={Zap} tone="amber" right={<Chip tone="slate">Journeys</Chip>}>
-          <Row lead={<IconTile icon={ShoppingCart} tone="amber" />} title="Cart recovery" sub="3 WhatsApp + email" right={<Chip tone="emerald" dot>Ready</Chip>} active />
-          <Row lead={<IconTile icon={CreditCard} tone="violet" />} title="COD to prepaid" sub="Growth and Scale" right={<Chip tone="violet">Plan</Chip>} />
-          <Row lead={<IconTile icon={Package} tone="sky" />} title="Order confirmed" sub="Utility template" right={<Chip tone="emerald" dot>Ready</Chip>} />
-        </Panel>
+    <Stage label={label} duration={6.5}>
+      <Rings x={50} y={54} count={4} gap={10} />
+      <Float x={32} y={8} at={0.2}>
+        <Chip icon={LayoutTemplate}>Cart recovery</Chip>
       </Float>
-      <Float x={16} y={61} w={68} delay={3} rotate={-1} drift>
-        <Bubble from="biz" time="18:40" media={<Thumb tone="amber" icon={Shirt} h={4.6} />}>
-          Your linen shirt is waiting, Riya.
+      <Float x={20} y={22} w={60} at={0.8} z={3}>
+        <Bubble from="biz" time="18:20" read media={<Thumb icon={Package} h={6} />} buttons={['Complete order']}>
+          Hi {'{{first_name}}'}, your serum is waiting.
         </Bubble>
       </Float>
-      <Float x={52} y={56} delay={5} z={3}>
-        <Chip tone="amber" solid icon={Mail}>Live product header</Chip>
+      <Float x={28} y={86} at={2.6}>
+        <Chip tone="emerald" dot>Live product header</Chip>
       </Float>
     </Stage>
   );
 }
 
-/** Catalog import plus a downloadable wa.me QR. */
+/** Catalog synced, then the wa.me QR downloads. */
 function CatalogTile({ label }: SceneProps) {
   return (
-    <Stage label={label} tone="sky">
-      <Float x={7} y={7} w={62} delay={0}>
-        <Panel title="Catalog" icon={Store} tone="sky" right={<Btn icon={RefreshCw}>Refresh</Btn>}>
-          <Row lead={<ProductThumb tone="sky" icon={Shirt} />} title="Linen shirt" sub="₹1,299" />
-          <Row lead={<ProductThumb tone="violet" icon={Watch} />} title="Smart watch" sub="₹4,999" />
-        </Panel>
+    <Stage label={label} duration={6}>
+      <Rings x={50} y={48} count={4} gap={10} />
+      <Float x={39} y={34} at={0} z={3}>
+        <IconTile icon={QrCode} size="xl" pulse />
       </Float>
-      <Float x={50} y={52} w={43} delay={3} rotate={2} drift z={3}>
-        <Panel>
-          <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.7em' }}>
-            <Qr size={10} />
-            <Btn tone="sky" primary icon={Download}>Download PNG</Btn>
-          </div>
-        </Panel>
+      <Float x={8} y={14} at={1.1} drift>
+        <Chip tone="emerald" dot>142 products synced</Chip>
       </Float>
-      <Float x={5} y={57} w={42} delay={5}>
-        <Panel>
-          <Row lead={<IconTile icon={QrCode} tone="indigo" size="sm" />} title="wa.me QR" sub="Opens a chat" />
-        </Panel>
-      </Float>
-      <Float x={7} y={80} delay={6}>
-        <Chip tone="emerald" dot>Synced from Shopify</Chip>
+      <Float x={44} y={74} at={2.2} drift>
+        <Chip icon={Download}>QR as PNG</Chip>
       </Float>
     </Stage>
   );
 }
 
-/* ── Showcases without screenshots (wide) ──────────────────────────────── */
+/* ── Wide panels: page mesh, one large card ────────────────────────────── */
 
-/** Template studio: named variables, category and rate, live preview. */
+/** Sync from Meta pulls templates made elsewhere, each with its status. */
+function LibraryShowcase({ label }: SceneProps) {
+  return (
+    <Stage label={label} shape="wide" duration={7.5}>
+      <Float x={18} y={10} w={56} at={0.2} z={3}>
+        <Panel
+          title="Template library"
+          icon={LayoutTemplate}
+          right={<Btn icon={RefreshCw} pressAt={1}>Sync from Meta</Btn>}
+        >
+          <Reveal at={1.5}>
+            <Row lead={<IconTile icon={FileText} />} title="order_confirm" sub="Utility · synced" right={<Chip tone="emerald">Approved</Chip>} />
+          </Reveal>
+          <Reveal at={2.1}>
+            <Row lead={<IconTile icon={FileText} />} title="cod_to_prepaid" sub="Utility · synced" right={<Chip tone="amber">Pending</Chip>} />
+          </Reveal>
+          <Reveal at={2.7}>
+            <Row
+              lead={<IconTile icon={FileText} />}
+              title="diwali_offer"
+              sub="Reason: promo in Utility"
+              right={<Chip tone="rose">Rejected</Chip>}
+              active
+            />
+          </Reveal>
+        </Panel>
+      </Float>
+      <Cursor
+        path={[
+          [86, 70, 0.3],
+          [64, 15, 0.9],
+          [64, 15, 1.4],
+          [80, 62, 2.6],
+        ]}
+        clicks={[1]}
+      />
+      <Float x={50} y={62} at={3.6}>
+        <Chip tone="emerald" dot>3 synced from Meta</Chip>
+      </Float>
+    </Stage>
+  );
+}
+
+/** Named variables map to Meta slots on submit; it goes to review. */
 function Studio({ label }: SceneProps) {
   return (
-    <Stage label={label} tone="violet" shape="wide">
-      <Wires shape="wide" tone="violet" paths={['M 62 35 L 62 41.25', 'M 77 44.4 L 81 44.4']} />
-      <Float x={4} y={8} w={36} delay={0}>
-        <Panel title="New template" icon={FileText} tone="violet">
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '0.8em' }}>
-            <Field label="Name" value="cod_confirm_v2" mono />
-            <div>
-              <small style={{ display: 'block', marginBottom: '0.4em', fontSize: '0.9em', fontWeight: 500, color: 'var(--fv-muted)' }}>Variables</small>
-              <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.4em' }}>
-                <Chip tone="violet" icon={Braces}>{'{{first_name}} → {{1}}'}</Chip>
-                <Chip tone="violet" icon={Braces}>{'{{order_id}} → {{2}}'}</Chip>
-              </div>
-            </div>
-          </div>
+    <Stage label={label} shape="wide" duration={8}>
+      <Float x={10} y={10} w={48} at={0.2} z={3}>
+        <Panel title="Template studio" icon={FileText} right={<Chip>Utility</Chip>}>
+          <Stack gap={0.8}>
+            <Field label="Name" value="order_shipped" mono />
+            <Field label="Body" value="Hi {{first_name}}, {{order_id}} shipped" />
+            <Btn primary icon={Send} pressAt={3.4}>Submit to Meta</Btn>
+          </Stack>
         </Panel>
       </Float>
-      <Float x={4} y={58} w={36} delay={2}>
-        <Panel title="Category" icon={ShieldCheck} tone="emerald" right={<Chip tone="slate">India, per msg</Chip>}>
-          <Row title="Utility" sub="Order, COD, shipping" right={<Chip tone="emerald">₹0.115</Chip>} active />
-          <Row title="Marketing" sub="Promos, cart offers" right={<Chip tone="slate">₹0.8631</Chip>} />
+      <Float x={64} y={18} w={28} at={1.4}>
+        <Panel glass title="Variables" icon={Braces}>
+          <Row title="first_name" sub="Maps to {{1}}" />
+          <Row title="order_id" sub="Maps to {{2}}" />
         </Panel>
       </Float>
-      <Float x={47} y={8} w={30} delay={3} z={3}>
-        <Phone name="Your store">
-          <Bubble from="biz" time="11:20" read buttons={['Confirm order', 'Cancel']}>
-            Hi Riya, please confirm your COD order #1042 for ₹1,299.
-          </Bubble>
-        </Phone>
-      </Float>
-      <Float x={47} y={66} w={30} delay={5}>
-        <Node icon={Send} tone="indigo" title="Submit to Meta" sub="Minutes to 24h" active />
-      </Float>
-      <Float x={81} y={68.6} delay={7} drift>
-        <Chip tone="emerald" solid dot>Approved</Chip>
+      <Cursor
+        path={[
+          [52, 82, 2.2],
+          [34, 45, 3.2],
+          [34, 45, 3.8],
+          [48, 72, 4.8],
+        ]}
+        clicks={[3.4]}
+      />
+      <Float x={66} y={54} at={4.2}>
+        <Chip tone="amber" dot>In review at Meta</Chip>
       </Float>
     </Stage>
   );
 }
 
-/** Catalog and QR codes. */
+/** Refresh the catalog, then download the wa.me QR for the storefront. */
 function CatalogShowcase({ label }: SceneProps) {
   return (
-    <Stage label={label} tone="sky" shape="wide">
-      <Wires shape="wide" tone="sky" paths={['M 67 34 L 67 41']} />
-      <Float x={4} y={10} w={46} delay={0}>
-        <Panel title="WhatsApp catalog" icon={Store} tone="sky" right={<Btn icon={RefreshCw}>Refresh</Btn>}>
-          <Row lead={<ProductThumb tone="sky" icon={Shirt} />} title="Linen shirt, sky blue" sub="In stock" right={<b>₹1,299</b>} />
-          <Row lead={<ProductThumb tone="violet" icon={Watch} />} title="Smart watch S7" sub="In stock" right={<b>₹4,999</b>} />
-          <Row lead={<ProductThumb tone="amber" icon={Package} />} title="Gift box" sub="2 left" right={<b>₹899</b>} />
+    <Stage label={label} shape="wide" duration={7.5}>
+      <Float x={8} y={12} w={52} at={0.2} z={3}>
+        <Panel title="Catalog" icon={Store} right={<Btn icon={RefreshCw} pressAt={1}>Refresh</Btn>}>
+          <Reveal at={1.5}>
+            <Row lead={<IconTile icon={Shirt} />} title="Linen kurta" sub="In stock" right="₹1,499" />
+          </Reveal>
+          <Reveal at={2}>
+            <Row lead={<IconTile icon={Watch} />} title="Analog watch" sub="In stock" right="₹2,299" />
+          </Reveal>
+          <Reveal at={2.5}>
+            <Row lead={<IconTile icon={Package} />} title="Gift box" sub="Low stock" right="₹799" />
+          </Reveal>
         </Panel>
       </Float>
-      <Float x={6} y={64} delay={2}>
-        <Chip tone="emerald" dot>Imported from Shopify</Chip>
-      </Float>
-      <Float x={56} y={8} w={22} delay={3} rotate={-2} drift>
-        <Panel title="QR codes" icon={QrCode} tone="indigo">
-          <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.8em' }}>
-            <Qr size={10} />
-            <Btn tone="indigo" primary icon={Download}>Download PNG</Btn>
-          </div>
+      <Float x={66} y={22} w={26} at={3.2}>
+        <Panel title="wa.me QR" icon={QrCode}>
+          <Stack gap={0.9}>
+            <Row title="Scan opens chat" sub="Storefront or ads" />
+            <Btn primary icon={Download} pressAt={4.6}>Download PNG</Btn>
+          </Stack>
         </Panel>
       </Float>
-      <Float x={60} y={66} w={36} delay={5}>
-        <Bubble from="biz" time="09:12" read media={<Thumb tone="sky" icon={Shirt} h={3.6} />}>
-          Linen shirt, sky blue · ₹1,299
-        </Bubble>
-      </Float>
-      <Float x={80} y={30} delay={6}>
-        <Node icon={Store} tone="sky" title="Scan opens" sub="Chat or catalog" />
-      </Float>
+      <Cursor
+        path={[
+          [92, 88, 3.6],
+          [79, 46, 4.4],
+          [79, 46, 5],
+          [90, 80, 6],
+        ]}
+        clicks={[4.6]}
+      />
     </Stage>
   );
 }

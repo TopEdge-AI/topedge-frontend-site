@@ -98,8 +98,8 @@ const MOODS: Mood[] = ['violet', 'ocean', 'dusk'];
 const hash = (t: string) => [...t].reduce((h, c) => (h * 31 + c.charCodeAt(0)) >>> 0, 7);
 
 /** Breathing room around auto-framed content, as a fraction of each side. */
-const FIT_PAD = { square: 0.1, wide: 0.09 } as const;
-const FIT_MAX = 1.7;
+const FIT_PAD = { square: 0.1, wide: 0.11 } as const;
+const FIT_MAX = { square: 1.6, wide: 2.1 } as const;
 const useIsoLayoutEffect = typeof window === 'undefined' ? useEffect : useLayoutEffect;
 
 /**
@@ -141,7 +141,7 @@ function useAutoFit(
       const pad = FIT_PAD[shape];
       const bw = x1 - x0;
       const bh = y1 - y0;
-      const s = Math.min((W * (1 - 2 * pad)) / bw, (H * (1 - 2 * pad)) / bh, FIT_MAX);
+      const s = Math.min((W * (1 - 2 * pad)) / bw, (H * (1 - 2 * pad)) / bh, FIT_MAX[shape]);
       const tx = (W - bw * s) / 2 - x0 * s;
       const ty = (H - bh * s) / 2 - y0 * s;
       fit.style.transform = `translate3d(${tx.toFixed(2)}px, ${ty.toFixed(2)}px, 0) scale(${s.toFixed(4)})`;
@@ -1002,6 +1002,10 @@ export function TypeText({ text, at, cps = 28 }: { text: string; at?: number; cp
 
   useEffect(() => {
     if (play === 0) return;
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      setN(text.length);
+      return;
+    }
     setN(0);
     const startMs = at !== undefined ? at * 1000 : floatAt + 350;
     let i = 0;

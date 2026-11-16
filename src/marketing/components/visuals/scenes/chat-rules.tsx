@@ -1,7 +1,6 @@
 /**
- * Chat rules scenes. Keys are the image paths in productPages.ts.
+ * Chat rules scenes. v3 storytelling style, see flow-builder.tsx.
  * Keyword, intent and tag rules that route, assign and escalate chats.
- * Palette: amber hero, then violet, sky, emerald, rose, indigo per scene.
  *
  * Two image paths are reused across a bento tile and a wide frame, and the
  * rule builder showcase has no image (''). A scene only receives its label,
@@ -9,12 +8,7 @@
  */
 import { useLayoutEffect, useRef, useState } from 'react';
 import {
-  Bot,
-  Clock,
-  CreditCard,
   Crown,
-  Filter,
-  GitFork,
   Hand,
   Headphones,
   Inbox,
@@ -22,7 +16,6 @@ import {
   PauseCircle,
   Tag,
   Target,
-  Undo2,
   UserCheck,
   Workflow,
   Zap,
@@ -32,25 +25,34 @@ import {
   Btn,
   Bubble,
   Chip,
+  Cursor,
+  Field,
   Float,
+  Glow,
   IconTile,
   Node,
   Panel,
+  Reveal,
+  Rings,
   Row,
   Stack,
   Stage,
   Toggle,
+  TypeText,
   Wires,
   type Scene,
   type SceneMap,
   type SceneProps,
 } from '../kit';
 
-/* ── Local pieces ──────────────────────────────────────────────────────── */
+/* ── Frame detection ───────────────────────────────────────────────────── */
 
 type Slot = 'hero' | 'bento' | 'showcase';
 
-/** Render one of the given scenes depending on the frame this path is shown in. */
+/**
+ * Render one of the given scenes depending on the frame this path is shown
+ * in: the hero glow frame, a bento tile visual, or the wide showcase tab panel.
+ */
 function bySlot(scenes: { hero?: Scene; bento: Scene; showcase: Scene }): Scene {
   return function SlotScene({ label }: SceneProps) {
     const ref = useRef<HTMLSpanElement>(null);
@@ -59,8 +61,9 @@ function bySlot(scenes: { hero?: Scene; bento: Scene; showcase: Scene }): Scene 
       const el = ref.current;
       if (!el) return;
       if (el.closest('.demo-video-glow__frame')) setSlot('hero');
-      else if (el.closest('.mkt-pf__shot') && !el.closest('.is-wide')) setSlot('bento');
-      else setSlot('showcase');
+      else if (el.closest('.mkt-pf__tile-visual')) setSlot('bento');
+      else if (el.closest('.pfx-tabs__panel, .mkt-pf__shot.is-wide')) setSlot('showcase');
+      else setSlot(el.closest('.mkt-pf__shot') ? 'bento' : 'showcase');
     }, []);
     if (!slot) return <span ref={ref} hidden />;
     const S = slot === 'hero' ? scenes.hero ?? scenes.showcase : scenes[slot];
@@ -68,222 +71,202 @@ function bySlot(scenes: { hero?: Scene; bento: Scene; showcase: Scene }): Scene 
   };
 }
 
-/** Small label above a group inside a panel. */
-function Caption({ children }: { children: string }) {
-  return (
-    <small style={{ display: 'block', margin: '0.1em 0 0.5em', fontSize: '0.9em', fontWeight: 600, letterSpacing: '0.02em', color: 'var(--fv-muted)' }}>
-      {children}
-    </small>
-  );
-}
+/* ── Hero ──────────────────────────────────────────────────────────────── */
 
-/* ── Hero (wide, kept inside the 16:9 crop) ────────────────────────────── */
-
-/** Incoming chats pass the rules and land in the right queue. */
+/** A message with "COD" arrives, the rule matches, the chat lands with Arjun. */
 function RoutingHero({ label }: SceneProps) {
   return (
-    <Stage label={label} tone="amber" shape="wide" grid>
-      <Wires
-        shape="wide"
-        tone="amber"
-        paths={[
-          'M 33 11 C 38 11, 38 25, 43.5 25',
-          'M 33 25 L 43.5 25',
-          'M 33 39 C 38 39, 38 25, 43.5 25',
-          'M 56.5 25 C 61 25, 61 10.5, 66 10.5',
-          'M 56.5 25 L 66 25',
-          'M 56.5 25 C 61 25, 61 39.5, 66 39.5',
-        ]}
-      />
-      <Float x={4} y={10} w={29} delay={0}>
-        <Bubble from="user" time="11:02">Is cash on delivery okay?</Bubble>
+    <Stage label={label} shape="wide" duration={8.5}>
+      <Float x={4} y={22} w={26} at={0.2}>
+        <Bubble from="user" time="12:08">
+          <TypeText text="Can I cancel my COD order?" at={0.5} />
+        </Bubble>
       </Float>
-      <Float x={4} y={33} w={29} delay={1}>
-        <Bubble from="user" time="11:03">I want a refund for #1042</Bubble>
+      <Float x={36} y={14} w={50} at={1.3} z={3}>
+        <Panel title="Chat rules" icon={Workflow}>
+          <Row lead={<IconTile icon={Tag} />} title="refund, return" sub="Assign to Support" right={<Toggle />} />
+          <Row
+            lead={<IconTile icon={Tag} />}
+            title="COD, cancel"
+            sub="Assign to Ops team"
+            right={<Chip tone="emerald" dot>Matched</Chip>}
+            active
+          />
+          <Row lead={<IconTile icon={Crown} />} title="Tag: VIP" sub="Assign to Priya" right={<Toggle />} />
+        </Panel>
       </Float>
-      <Float x={4} y={55} w={29} delay={2}>
-        <Bubble from="user" time="11:03">Ordering again, 5th time!</Bubble>
-      </Float>
-      <Float x={43.5} y={29} delay={3}>
-        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.6em', width: '8.3em' }}>
-          <IconTile icon={GitFork} tone="amber" size="xl" pulse />
-          <Chip tone="amber">Chat rules</Chip>
-        </div>
-      </Float>
-      <Float x={66} y={10} w={30} delay={4}>
-        <Node icon={CreditCard} tone="sky" title="COD ops" sub="Priya · 4 open" />
-      </Float>
-      <Float x={66} y={33} w={30} delay={5}>
-        <Node icon={Undo2} tone="rose" title="Refunds" sub="Arjun · 2 open" active />
-      </Float>
-      <Float x={66} y={56} w={30} delay={6}>
-        <Node icon={Crown} tone="violet" title="VIP" sub="Neha · skips the line" />
-      </Float>
-      <Float x={36} y={76} delay={7}>
-        <Chip tone="slate" icon={Inbox}>Live Chat stays calm at peak</Chip>
+      <Float x={44} y={62} w={34} at={3.8} z={4}>
+        <Node icon={UserCheck} tone="emerald" title="Assigned to Arjun" sub="Ops team · Live Chat" active />
       </Float>
     </Stage>
   );
 }
 
-/* ── Bento tiles (square, 36em x 36em) ─────────────────────────────────── */
+/* ── Bento tiles: plain, one focal element ─────────────────────────────── */
 
-/** Keyword rule: COD phrases go to the ops queue. */
+/** A COD phrase matches a keyword rule and goes to Ops. */
 function KeywordRule({ label }: SceneProps) {
   return (
-    <Stage label={label} tone="violet">
-      <Wires tone="violet" paths={['M 50 29 L 50 40']} />
-      <Float x={8} y={12} w={70} delay={0}>
-        <Bubble from="user" time="10:41">Is cash on delivery available?</Bubble>
+    <Stage label={label} duration={6.5}>
+      <Rings x={50} y={52} count={4} gap={9} />
+      <Wires paths={['M 50 32 L 50 42', 'M 50 63 L 50 72']} />
+      <Float x={22} y={12} w={60} at={0.2}>
+        <Bubble from="user" time="12:08">
+          <TypeText text="COD cancel karna hai" at={0.5} />
+        </Bubble>
       </Float>
-      <Float x={7} y={40} w={86} delay={2}>
-        <Panel title="Rule: COD" icon={Tag} tone="violet" right={<Toggle tone="violet" />}>
-          <Caption>IF MESSAGE CONTAINS</Caption>
-          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.4em', marginBottom: '0.9em' }}>
-            <Chip tone="violet">COD</Chip>
-            <Chip tone="violet">cash on delivery</Chip>
-            <Chip tone="violet">pay later</Chip>
-          </div>
-          <Caption>THEN ASSIGN TO</Caption>
-          <Row lead={<Avatar name="Priya Shah" tone="sky" />} title="COD ops queue" sub="Priya, Rahul" right={<Chip tone="emerald" dot>Live</Chip>} active />
-        </Panel>
+      <Float x={14} y={42} w={72} at={1.8} z={3}>
+        <Node icon={Tag} title="Keyword: COD" sub="Assign to Ops team" active />
+      </Float>
+      <Float x={30} y={72} at={3.2}>
+        <Chip tone="emerald" dot>Assigned to Ops</Chip>
       </Float>
     </Stage>
   );
 }
 
-/** Intent handoff: escalation opens the right agent queue with history. */
+/** An escalation intent opens the right queue with history intact. */
 function IntentHandoff({ label }: SceneProps) {
   return (
-    <Stage label={label} tone="sky" grid>
-      <Wires tone="sky" paths={['M 50 27 L 50 36', 'M 50 48 L 50 60']} />
-      <Float x={18} y={12} w={70} delay={0}>
-        <Bubble from="user" time="15:08">Can I talk to a human please?</Bubble>
+    <Stage label={label} duration={6}>
+      <Rings x={50} y={48} count={4} gap={10} />
+      <Float x={39} y={34} at={0} z={3}>
+        <IconTile icon={Headphones} size="xl" pulse />
       </Float>
-      <Float x={18} y={36} w={64} delay={2}>
-        <Node icon={Target} tone="sky" title="Handoff intent" sub="Confidence 94%" active />
+      <Float x={8} y={14} at={1} drift>
+        <Chip icon={Target}>Intent: human agent</Chip>
       </Float>
-      <Float x={7} y={60} w={86} delay={4}>
-        <Panel title="Support queue" icon={Headphones} tone="emerald" right={<Chip tone="emerald" dot>Opened</Chip>}>
-          <Row lead={<Avatar name="Kabir Rao" tone="violet" />} title="Kabir Rao" sub="Thread history intact" right={<Chip tone="sky">Handoff</Chip>} />
-        </Panel>
+      <Float x={36} y={74} at={2.2} drift>
+        <Chip tone="emerald" dot>Opened in Support</Chip>
       </Float>
     </Stage>
   );
 }
 
-/** Live Chat filters that match the published rules. */
+/** Live Chat filters fill up as rules assign threads. */
 function AssignFilters({ label }: SceneProps) {
   return (
-    <Stage label={label} tone="emerald">
-      <Float x={7} y={7} w={86} delay={0}>
-        <Panel title="Live Chat" icon={Inbox} tone="emerald" right={<Chip tone="slate" icon={Filter}>Filters</Chip>}>
-          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.4em', marginBottom: '0.7em' }}>
-            <Chip tone="emerald" solid>Assigned to me 4</Chip>
-            <Chip tone="slate">Open 12</Chip>
-            <Chip tone="rose">Needs help 2</Chip>
-          </div>
-          <Row lead={<Avatar name="Riya Sharma" tone="sky" />} title="Riya Sharma" sub="Will I pay on delivery?" right={<Chip tone="sky">COD</Chip>} active />
-          <Row lead={<Avatar name="Vikram Singh" tone="violet" />} title="Vikram Singh" sub="Size exchange please" right={<Chip tone="violet">VIP</Chip>} />
-          <Row lead={<Avatar name="Megha Patel" tone="amber" />} title="Megha Patel" sub="Refund not received" right={<Chip tone="rose">Refund</Chip>} />
-        </Panel>
-      </Float>
-      <Float x={10} y={72} w={80} delay={4} drift>
-        <Panel>
-          <Row lead={<IconTile icon={GitFork} tone="amber" />} title="Rule: COD to ops" sub="Same queue in Live Chat" right={<Toggle tone="emerald" />} />
+    <Stage label={label} duration={6}>
+      <Glow x={50} y={50} size={22} />
+      <Float x={10} y={20} w={80} at={0.2} z={3}>
+        <Panel title="Live Chat" icon={Inbox}>
+          <Reveal at={0.7}>
+            <Row lead={<Avatar name="Arjun Rao" />} title="Assigned to me" sub="COD confirms" right="4" active />
+          </Reveal>
+          <Reveal at={1.4}>
+            <Row lead={<IconTile icon={MessageCircle} />} title="Open" sub="All teams" right="12" />
+          </Reveal>
+          <Reveal at={2.1}>
+            <Row lead={<IconTile icon={Hand} tone="amber" />} title="Needs help" sub="Escalated by rules" right={<Chip tone="amber">2</Chip>} />
+          </Reveal>
         </Panel>
       </Float>
     </Stage>
   );
 }
 
-/* ── Showcases (wide, 64em x 40em) ─────────────────────────────────────── */
+/* ── Wide panels: page mesh, one large card ────────────────────────────── */
 
-/** Rule builder: triggers on the left, actions on the right. */
-function RuleBuilder({ label }: SceneProps) {
-  return (
-    <Stage label={label} tone="indigo" shape="wide" grid>
-      <Wires shape="wide" tone="indigo" paths={['M 46 29.4 L 54 29.4']} />
-      <Float x={4} y={13} delay={0}>
-        <Chip tone="indigo" icon={Workflow}>Rule: Refunds</Chip>
-      </Float>
-      <Float x={77} y={11} delay={1}>
-        <Btn tone="indigo" primary icon={Zap}>Publish rule</Btn>
-      </Float>
-      <Float x={4} y={25} w={42} delay={2}>
-        <Panel title="When" icon={Filter} tone="amber">
-          <Row lead={<IconTile icon={MessageCircle} tone="amber" size="sm" />} title="Keyword" sub="refund, return, money back" />
-          <Row lead={<IconTile icon={Target} tone="sky" size="sm" />} title="Intent" sub="Refund request" />
-          <Row lead={<IconTile icon={Tag} tone="violet" size="sm" />} title="Tag" sub="VIP" right={<Chip tone="slate">OR</Chip>} />
-        </Panel>
-      </Float>
-      <Float x={54} y={25} w={42} delay={4}>
-        <Panel title="Then" icon={Zap} tone="emerald">
-          <Row lead={<IconTile icon={UserCheck} tone="emerald" size="sm" />} title="Assign" sub="Refunds queue" right={<Chip tone="emerald">Arjun</Chip>} active />
-          <Row lead={<IconTile icon={Clock} tone="rose" size="sm" />} title="Escalate" sub="If no reply in 15 min" />
-          <Row lead={<IconTile icon={PauseCircle} tone="slate" size="sm" />} title="Pause bot" sub="Agent replies only" right={<Toggle tone="emerald" />} />
-        </Panel>
-      </Float>
-      <Float x={40} y={78} delay={6}>
-        <Chip tone="slate">No code, no redeploy</Chip>
-      </Float>
-    </Stage>
-  );
-}
-
-/** Queue assignment: inbox filters plus routed threads with owners. */
-function QueueAssign({ label }: SceneProps) {
-  return (
-    <Stage label={label} tone="violet" shape="wide">
-      <Float x={4} y={22} w={26} delay={0} rotate={-1}>
-        <Panel title="Filters" icon={Filter} tone="violet">
-          <Row title="Assigned to me" right={<Chip tone="violet">4</Chip>} active />
-          <Row title="Needs help" right={<Chip tone="rose">2</Chip>} />
-          <Row title="COD queue" right={<Chip tone="sky">6</Chip>} />
-          <Row title="VIP" right={<Chip tone="amber">3</Chip>} />
-        </Panel>
-      </Float>
-      <Float x={33} y={16} w={63} delay={2} z={3}>
-        <Panel title="Assigned to me" icon={Inbox} tone="emerald" right={<Chip tone="emerald" dot>Routed by rules</Chip>}>
-          <Row lead={<Avatar name="Riya Sharma" tone="sky" />} title="Riya Sharma" sub="COD order #1043 · ₹1,359" right={<><Chip tone="sky">COD</Chip><Avatar name="Priya" tone="emerald" /></>} active />
-          <Row lead={<Avatar name="Ankit Kumar" tone="amber" />} title="Ankit Kumar" sub="12 orders · VIP" right={<><Chip tone="amber" icon={Crown}>VIP</Chip><Avatar name="Neha" tone="violet" /></>} />
-          <Row lead={<Avatar name="Pooja Sehgal" tone="rose" />} title="Pooja Sehgal" sub="Refund for #1038" right={<><Chip tone="rose">Refund</Chip><Avatar name="Arjun" tone="sky" /></>} />
-        </Panel>
-      </Float>
-      <Float x={44} y={72} delay={5} drift>
-        <Chip tone="violet" solid icon={Zap}>COD confirms land with ops</Chip>
-      </Float>
-    </Stage>
-  );
-}
-
-/** Takeover: agent takes control, AI and flows pause until release. */
+/** Priya takes control: AI and flows pause, rules keep routing. */
 function Takeover({ label }: SceneProps) {
   return (
-    <Stage label={label} tone="rose" shape="wide">
-      <Float x={5} y={13} w={44} delay={0}>
-        <Stack gap={0.7}>
-          <Bubble from="user" time="12:10">My parcel shows delivered but I did not get it.</Bubble>
-          <Bubble from="biz" time="12:10" read>Sorry about that! Let me check order #1042.</Bubble>
-        </Stack>
+    <Stage label={label} shape="wide" duration={8.5}>
+      <Float x={4} y={20} w={26} at={0.2}>
+        <Bubble from="user" time="12:10">
+          <TypeText text="The courier never called me." at={0.5} />
+        </Bubble>
       </Float>
-      <Float x={15} y={50} delay={2}>
-        <Chip tone="rose" solid icon={Hand}>Priya took control</Chip>
-      </Float>
-      <Float x={5} y={61} w={44} delay={3}>
-        <Stack>
-          <Bubble from="biz" time="12:11" read>Hi, Priya here. I have raised it with the courier now.</Bubble>
-        </Stack>
-      </Float>
-      <Float x={56} y={18} w={40} delay={4} z={3}>
-        <Panel title="Automation" icon={Bot} tone="rose" right={<Chip tone="amber" dot>Paused</Chip>}>
-          <Row lead={<IconTile icon={Bot} tone="violet" size="sm" />} title="AI replies" sub="Paused on this thread" right={<Toggle on={false} />} />
-          <Row lead={<IconTile icon={Workflow} tone="sky" size="sm" />} title="Flow Builder" sub="Paused on this thread" right={<Toggle on={false} />} />
-          <Row lead={<IconTile icon={GitFork} tone="emerald" size="sm" />} title="Chat rules" sub="Still routing" right={<Toggle tone="emerald" />} />
-          <div style={{ marginTop: '0.7em' }}>
-            <Btn tone="rose" primary icon={Undo2}>Release to bot</Btn>
-          </div>
+      <Float x={34} y={12} w={50} at={0.9} z={3}>
+        <Panel title="Rahul Mehta" icon={MessageCircle} right={<Btn primary icon={Hand} pressAt={2.2}>Take control</Btn>}>
+          <Reveal at={2.8}>
+            <Row lead={<IconTile icon={PauseCircle} tone="amber" />} title="AI replies" sub="Paused on this chat" right={<Chip tone="amber">Paused</Chip>} />
+          </Reveal>
+          <Reveal at={3.3}>
+            <Row lead={<IconTile icon={PauseCircle} tone="amber" />} title="Flows" sub="Paused on this chat" right={<Chip tone="amber">Paused</Chip>} />
+          </Reveal>
+          <Reveal at={3.8}>
+            <Row lead={<IconTile icon={Workflow} tone="emerald" />} title="Chat rules" sub="Still routing" right={<Chip tone="emerald">On</Chip>} />
+          </Reveal>
         </Panel>
+      </Float>
+      <Cursor
+        path={[
+          [90, 80, 1.2],
+          [76, 17, 2],
+          [76, 17, 2.6],
+          [94, 50, 3.6],
+        ]}
+        clicks={[2.2]}
+      />
+      <Float x={56} y={62} w={30} at={5}>
+        <Bubble from="biz" time="12:11" read>
+          Hi, Priya here. Calling the courier now.
+        </Bubble>
+      </Float>
+    </Stage>
+  );
+}
+
+/** COD and VIP threads land with the right teammate. */
+function QueueAssign({ label }: SceneProps) {
+  return (
+    <Stage label={label} shape="wide" duration={7.5}>
+      <Float x={10} y={12} w={52} at={0.2} z={3}>
+        <Panel title="Queues" icon={Inbox}>
+          <Reveal at={0.8}>
+            <Row lead={<Avatar name="Arjun Rao" />} title="COD confirm" sub="Assigned to Arjun" right={<Chip tone="emerald">Assigned</Chip>} />
+          </Reveal>
+          <Reveal at={1.8}>
+            <Row lead={<Avatar name="Priya Nair" />} title="VIP · Ananya" sub="Assigned to Priya" right={<Chip tone="emerald">Assigned</Chip>} />
+          </Reveal>
+          <Reveal at={2.8}>
+            <Row lead={<IconTile icon={Hand} tone="amber" />} title="Damaged item" sub="Waiting for a teammate" right={<Chip tone="amber">Needs help</Chip>} />
+          </Reveal>
+        </Panel>
+      </Float>
+      <Float x={68} y={40} w={26} at={3.8}>
+        <Panel glass title="My filters" icon={UserCheck}>
+          <Row title="Assigned to me" sub="4 chats" />
+          <Row title="Needs help" sub="2 chats" />
+        </Panel>
+      </Float>
+    </Stage>
+  );
+}
+
+/** Pick a trigger, set the action, publish: the rule is live. */
+function RuleBuilder({ label }: SceneProps) {
+  return (
+    <Stage label={label} shape="wide" duration={8}>
+      <Float x={6} y={30} w={24} at={0}>
+        <Panel glass title="Triggers" icon={Zap}>
+          <Row title="Keyword" sub="refund, COD, human" />
+          <Row title="Intent" sub="From AI Brain" />
+          <Row title="Tag" sub="VIP, wholesale" />
+        </Panel>
+      </Float>
+      <Float x={36} y={12} w={48} at={0.4} z={3}>
+        <Panel title="New rule" icon={Workflow}>
+          <Stack gap={0.8}>
+            <Field label="When message has" value="refund, return" />
+            <Reveal at={1.4}>
+              <Field label="Then" value="Assign to Support, pause bot" />
+            </Reveal>
+            <Btn primary icon={Zap} pressAt={3}>Publish rule</Btn>
+          </Stack>
+        </Panel>
+      </Float>
+      <Cursor
+        path={[
+          [80, 82, 1.8],
+          [60, 48, 2.8],
+          [60, 48, 3.4],
+          [74, 66, 4.4],
+        ]}
+        clicks={[3]}
+      />
+      <Float x={54} y={58} at={3.6}>
+        <Chip tone="emerald" dot>Rule live</Chip>
       </Float>
     </Stage>
   );

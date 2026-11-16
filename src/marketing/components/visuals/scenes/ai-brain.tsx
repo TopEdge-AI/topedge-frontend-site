@@ -1,282 +1,245 @@
 /**
- * AI Brain scenes. Keys are the image paths in productPages.ts.
- * Bring-your-own-key AI grounded in the store's catalog and policies.
- * Palette: violet hero, then indigo, sky, rose, emerald per scene.
+ * AI Brain scenes. v3 storytelling style, see flow-builder.tsx.
+ *
+ * Square tiles are plain white with one focal element. Wide panels sit on the
+ * page mesh with one large white card or phone and at most two satellites.
+ * Each scene plays a short sequence instead of a static board.
+ * Keys are the image paths in productPages.ts.
  */
 import {
   BookOpen,
-  Brain,
-  CheckCircle2,
   FileText,
-  Globe,
-  Hand,
+  Gauge,
+  Headphones,
   KeyRound,
+  Link2,
   MessageCircle,
-  Package,
-  ShieldCheck,
+  Search,
   Sparkles,
   Target,
-  Truck,
-  Wallet,
+  Smile,
   Workflow,
-  Zap,
 } from 'lucide-react';
 import {
-  Bars,
-  Btn,
   Bubble,
+  Btn,
   Chip,
+  Cursor,
   Field,
   Float,
+  Glow,
   IconTile,
-  Node,
+  Meter,
   Panel,
+  Phone,
+  Reveal,
+  Rings,
   Row,
-  Stage,
   Stack,
-  Toggle,
-  Wires,
+  Stage,
+  Stat,
+  TypeText,
+  Typing,
   type SceneMap,
   type SceneProps,
 } from '../kit';
 
-/** Provider picker: the selected key gets the tone ring. */
-function Providers({ active }: { active: 'OpenAI' | 'Claude' | 'Gemini' }) {
-  return (
-    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '0.5em' }}>
-      {(['OpenAI', 'Claude', 'Gemini'] as const).map((p) => (
-        <Btn key={p} tone="violet" primary={p === active}>
-          {p}
-        </Btn>
-      ))}
-    </div>
-  );
-}
+/* ── Hero ──────────────────────────────────────────────────────────────── */
 
-/** Small label over a stack, used inside panels. */
-function Caption({ children }: { children: string }) {
-  return (
-    <small style={{ display: 'block', margin: '0.2em 0 0.45em', fontSize: '0.9em', fontWeight: 500, color: 'var(--fv-muted)' }}>
-      {children}
-    </small>
-  );
-}
-
-/* ── Hero (wide, kept inside the 16:9 crop) ────────────────────────────── */
-
-/** Two of your own keys feeding one brain that answers on WhatsApp. */
+/** A shopper asks, the AI reads store policies on your key, answers, cites. */
 function Hero({ label }: SceneProps) {
   return (
-    <Stage label={label} tone="violet" shape="wide" grid>
-      <Wires
-        shape="wide"
-        tone="violet"
-        paths={['M 30 17 C 35 17, 34 22, 39 22', 'M 70 32 C 65 32, 66 27, 61 27']}
-      />
-      <Float x={4} y={14} w={26} delay={1} rotate={-2} drift>
-        <Panel title="Your OpenAI key" icon={KeyRound} tone="emerald">
-          <Field label="API key" value="sk-••••••••9xK2" mono />
+    <Stage label={label} shape="wide" duration={9}>
+      <Float x={8} y={30} w={28} at={0}>
+        <Panel glass title="AI Brain" icon={KeyRound}>
+          <Row title="Your API key" sub="Connected" />
+          <Row title="Store knowledge" sub="12 pages, 3 policies" />
         </Panel>
       </Float>
-      <Float x={39} y={9} w={22} delay={0} z={3}>
-        <Panel>
-          <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.6em', padding: '0.9em 0 0.5em', textAlign: 'center' }}>
-            <IconTile icon={Brain} tone="violet" size="xl" pulse />
-            <b style={{ fontSize: '2em', fontWeight: 600, letterSpacing: '-0.04em', lineHeight: 1.1 }}>AI Brain</b>
-            <small style={{ fontSize: '1em', color: 'var(--fv-muted)' }}>Bring your own keys</small>
-            <Chip tone="emerald" dot>Active</Chip>
-          </div>
-        </Panel>
+      <Float x={44} y={4} w={34} at={0.2} z={3}>
+        <Phone name="Glow Co">
+          <Reveal at={0.7}>
+            <Bubble from="user" time="14:02">
+              <TypeText text="Can I return an opened serum?" at={0.9} />
+            </Bubble>
+          </Reveal>
+          <Reveal at={2.4} until={3.7}>
+            <Typing />
+          </Reveal>
+          <Reveal at={3.8}>
+            <Bubble from="biz" time="14:02" read>
+              <TypeText text="Opened items can be exchanged within 7 days. Want a pickup?" at={3.9} cps={36} />
+            </Bubble>
+          </Reveal>
+        </Phone>
       </Float>
-      <Float x={70} y={38} w={26} delay={2} rotate={2} drift>
-        <Panel title="Your Claude key" icon={KeyRound} tone="amber">
-          <Field label="API key" value="sk-ant-••••••7Qf1" mono />
-        </Panel>
+      <Float x={80} y={30} at={2.3} until={3.8}>
+        <Chip icon={Search}>Reading policies</Chip>
       </Float>
-      <Float x={6} y={58} w={30} delay={4}>
-        <Panel>
-          <Row lead={<IconTile icon={BookOpen} tone="sky" />} title="Catalog + policies" sub="Every reply grounded" />
-        </Panel>
-      </Float>
-      <Float x={39} y={66} w={26} delay={5}>
-        <Bubble from="biz" time="14:02" read>Yes, COD is available on your pin code.</Bubble>
-      </Float>
-      <Float x={70} y={74} delay={6}>
-        <Chip tone="violet" icon={Wallet}>Spend stays on your bill</Chip>
+      <Float x={80} y={30} at={6}>
+        <Chip icon={FileText} tone="emerald" dot>Cited: Return policy</Chip>
       </Float>
     </Stage>
   );
 }
 
-/* ── Bento tiles (square, 36em x 36em) ─────────────────────────────────── */
+/* ── Bento tiles: plain, one focal element ─────────────────────────────── */
 
-/** Knowledge documents and store policies the AI must cite. */
+/** Store pages and policies become the source for every answer. */
 function Knowledge({ label }: SceneProps) {
   return (
-    <Stage label={label} tone="indigo">
-      <Float x={7} y={7} w={86} delay={0}>
-        <Panel title="Knowledge documents" icon={FileText} tone="indigo" right={<Chip tone="slate">3 docs</Chip>}>
-          <Row lead={<IconTile icon={Truck} tone="sky" size="sm" />} title="Shipping & delivery" sub="220 chars" right={<Chip tone="emerald">Active</Chip>} />
-          <Row lead={<IconTile icon={Package} tone="violet" size="sm" />} title="Returns & exchanges" sub="240 chars" right={<Chip tone="emerald">Active</Chip>} />
-          <Row lead={<IconTile icon={FileText} tone="slate" size="sm" />} title="Ingredient FAQ" sub="78 chars" right={<Chip tone="slate">Draft</Chip>} />
-        </Panel>
+    <Stage label={label} duration={6}>
+      <Rings x={50} y={50} count={4} gap={10} />
+      <Float x={39} y={36} at={0} z={3}>
+        <IconTile icon={BookOpen} size="xl" pulse />
       </Float>
-      <Float x={12} y={57} w={80} delay={3} rotate={-1} drift>
-        <Panel title="Store policies" icon={ShieldCheck} tone="emerald">
-          <Field label="Returns policy" value="Unopened: return in 7 days" />
-        </Panel>
+      <Float x={8} y={16} at={1.1} drift>
+        <Chip icon={FileText}>Return policy</Chip>
       </Float>
-      <Float x={26} y={88} delay={5}>
-        <Chip tone="indigo" icon={CheckCircle2}>Cited before AI answers</Chip>
+      <Float x={46} y={74} at={2.1} drift>
+        <Chip icon={Link2}>12 store pages</Chip>
       </Float>
     </Stage>
   );
 }
 
-/** BYOK: provider, your key, reply cap; tokens bill to you. */
+/** Paste your own key, connect, and tokens bill to your provider. */
 function Keys({ label }: SceneProps) {
   return (
-    <Stage label={label} tone="violet">
-      <Float x={7} y={7} w={86} delay={0}>
-        <Panel title="AI keys" icon={KeyRound} tone="violet" right={<Chip tone="emerald" dot>Connected</Chip>}>
-          <Caption>Provider</Caption>
-          <Providers active="OpenAI" />
-          <div style={{ marginTop: '0.9em', display: 'flex', flexDirection: 'column', gap: '0.8em' }}>
-            <Field label="Your OpenAI key" value="sk-••••••••••••9xK2" mono />
-            <Field label="Max reply length" value="500 words" />
-          </div>
+    <Stage label={label} duration={6}>
+      <Glow x={50} y={48} size={22} />
+      <Float x={12} y={22} w={76} at={0.2} z={3}>
+        <Panel title="Your API key" icon={KeyRound}>
+          <Stack gap={0.9}>
+            <Field label="Key" value="sk-••••••••••••4f2a" mono />
+            <Btn primary pressAt={1.6}>Connect</Btn>
+          </Stack>
         </Panel>
       </Float>
-      <Float x={12} y={70} w={76} delay={3} drift>
-        <Panel>
-          <Row lead={<IconTile icon={Wallet} tone="emerald" />} title="Tokens on your bill" sub="No per-message AI fee" right={<Chip tone="emerald">BYOK</Chip>} />
-        </Panel>
+      <Cursor
+        path={[
+          [72, 86, 0.6],
+          [50, 55, 1.4],
+          [50, 55, 2],
+          [62, 80, 3],
+        ]}
+        clicks={[1.6]}
+      />
+      <Float x={30} y={78} at={2.3}>
+        <Chip tone="emerald" dot>Connected</Chip>
       </Float>
     </Stage>
   );
 }
 
-/** Persona: name, tone, and a Quick FAQ answered in that voice. */
+/** Name and tone set once; every greeting sounds like the brand. */
 function Persona({ label }: SceneProps) {
   return (
-    <Stage label={label} tone="rose">
-      <Float x={7} y={7} w={86} delay={0}>
-        <Panel title="Identity & tone" icon={Sparkles} tone="rose">
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '0.8em' }}>
-            <Field label="Assistant name" value="Glow assistant" />
-            <Field label="Tone" value="Warm, clear, concise" />
-          </div>
-        </Panel>
+    <Stage label={label} duration={6.5}>
+      <Rings x={50} y={56} count={4} gap={9} />
+      <Float x={30} y={16} at={0.2}>
+        <Chip icon={Smile}>Maya · warm, brief</Chip>
       </Float>
-      <Float x={8} y={51} delay={2}>
-        <Chip tone="rose" icon={MessageCircle}>Quick FAQ</Chip>
+      <Float x={14} y={38} w={72} at={0.9} z={3}>
+        <Bubble from="biz" time="10:15" read>
+          <TypeText text="Hi! I'm Maya from Glow Co. How can I help today?" at={1.2} cps={32} />
+        </Bubble>
       </Float>
-      <Float x={8} y={58} w={84} delay={3}>
-        <Stack gap={0.7}>
-          <Bubble from="user" time="10:14">Do you ship COD?</Bubble>
-          <Bubble from="biz" time="10:14" read>Yes, COD is available on most pin codes.</Bubble>
-        </Stack>
+      <Float x={34} y={72} at={3.4}>
+        <Chip icon={Sparkles}>Quick FAQs on</Chip>
       </Float>
     </Stage>
   );
 }
 
-/* ── Showcases (wide, 64em x 40em) ─────────────────────────────────────── */
+/* ── Wide panels: page mesh, one large card ────────────────────────────── */
 
-/** BYOK settings with usage on the provider bill. */
+/** Connect your key, choose the model, then watch tokens and cost. */
 function Settings({ label }: SceneProps) {
   return (
-    <Stage label={label} tone="violet" shape="wide">
-      <Float x={4} y={12} w={58} delay={0}>
-        <Panel title="AI settings" icon={Brain} tone="violet" right={<Chip tone="emerald" dot>Active</Chip>}>
-          <Row title="Activate AI for inquiries" sub="Master toggle for AI answers" right={<Toggle tone="violet" />} active />
-          <Row title="Model & API key" sub="Your key, your provider" right={<><Chip tone="slate">sk-…9xK2</Chip><Btn tone="violet" primary icon={KeyRound}>Manage</Btn></>} />
-          <Row title="Chat model" sub="Pick per budget" right={<Chip tone="violet">Suggested</Chip>} />
-          <Row title="Limit reply length" sub="Target words" right={<Chip tone="slate">500 words</Chip>} />
+    <Stage label={label} shape="wide" duration={7}>
+      <Float x={10} y={10} w={50} at={0.2} z={3}>
+        <Panel title="AI settings" icon={Sparkles} right={<Chip tone="emerald" dot>Connected</Chip>}>
+          <Stack gap={0.8}>
+            <Field label="API key" value="sk-••••••••••••4f2a" mono />
+            <Reveal at={1}>
+              <Field label="Model" value="Fast · low cost" />
+            </Reveal>
+            <Reveal at={1.8}>
+              <Meter label="Max reply length" value="300 tokens" pct={60} />
+            </Reveal>
+          </Stack>
         </Panel>
       </Float>
-      <Float x={66} y={16} w={30} delay={2} rotate={1}>
-        <Panel title="Usage" icon={Zap} tone="indigo">
-          <small style={{ fontSize: '0.95em', color: 'var(--fv-muted)' }}>Est. per AI reply</small>
-          <b style={{ display: 'block', fontSize: '1.9em', fontWeight: 600, letterSpacing: '-0.04em' }}>₹0.10 to ₹0.30</b>
-          <div style={{ marginTop: '0.8em' }}>
-            <Bars tone="indigo" height={4.5} hi={9} values={[30, 42, 36, 50, 46, 58, 52, 66, 60, 74]} />
-          </div>
+      <Float x={66} y={34} w={26} at={3}>
+        <Panel glass title="Usage" icon={Gauge}>
+          <Stat label="Tokens this week" value="48,210" />
+          <Row title="₹0.10 to ₹0.30" sub="Est. per AI reply" />
         </Panel>
-      </Float>
-      <Float x={68} y={56} delay={4}>
-        <Chip tone="emerald" icon={Wallet}>Billed by your provider</Chip>
-      </Float>
-      <Float x={8} y={72} w={40} delay={5} drift>
-        <Node icon={Workflow} tone="sky" title="Flow first, AI fallback" sub="Off-script text goes to AI" active />
       </Float>
     </Stage>
   );
 }
 
-/** Knowledge import plus persona, then a cited answer on WhatsApp. */
+/** Imported pages plus persona: the answer cites policy in the brand voice. */
 function KnowledgePersona({ label }: SceneProps) {
   return (
-    <Stage label={label} tone="sky" shape="wide">
-      <Wires shape="wide" tone="sky" paths={['M 48 27.5 L 54 27.5']} />
-      <Float x={4} y={14} w={44} delay={0}>
-        <Panel title="Store knowledge" icon={BookOpen} tone="sky">
-          <div style={{ display: 'flex', alignItems: 'flex-end', gap: '0.6em', marginBottom: '0.5em' }}>
-            <div style={{ flex: 1, minWidth: 0 }}>
-              <Field label="Import from website" value="yourstore.myshopify.com" />
-            </div>
-            <Btn tone="sky" primary icon={Globe}>Import</Btn>
-          </div>
-          <Row lead={<IconTile icon={Truck} tone="sky" size="sm" />} title="Shipping & delivery" sub="Imported page" right={<Chip tone="emerald">Active</Chip>} />
-          <Row lead={<IconTile icon={Package} tone="violet" size="sm" />} title="Returns policy" sub="Store policy" right={<Chip tone="emerald">Active</Chip>} />
+    <Stage label={label} shape="wide" duration={8}>
+      <Float x={8} y={12} w={50} at={0.2} z={3}>
+        <Panel title="Store knowledge" icon={BookOpen}>
+          <Reveal at={0.8}>
+            <Row lead={<IconTile icon={FileText} />} title="Return policy" sub="7-day exchange" right={<Chip tone="emerald">Synced</Chip>} />
+          </Reveal>
+          <Reveal at={1.4}>
+            <Row lead={<IconTile icon={FileText} />} title="Shipping policy" sub="2 to 5 days" right={<Chip tone="emerald">Synced</Chip>} />
+          </Reveal>
+          <Reveal at={2}>
+            <Row lead={<IconTile icon={Link2} />} title="Store pages" sub="12 imported" right={<Chip tone="emerald">Synced</Chip>} />
+          </Reveal>
         </Panel>
       </Float>
-      <Float x={54} y={12} w={40} delay={2}>
-        <Panel>
-          <Row lead={<IconTile icon={Sparkles} tone="rose" />} title="Glow assistant" sub="Warm, clear, concise" right={<Chip tone="rose">Persona</Chip>} />
-        </Panel>
+      <Float x={64} y={14} at={2.8}>
+        <Chip icon={Smile}>Maya · warm, brief</Chip>
       </Float>
-      <Float x={54} y={39.5} w={40} delay={3}>
-        <Stack gap={0.7}>
-          <Bubble from="user" time="16:20">Can I return an opened serum?</Bubble>
-          <Bubble from="biz" time="16:20" read>Opened skincare is not eligible. Unopened items return within 7 days.</Bubble>
-        </Stack>
-      </Float>
-      <Float x={64} y={74} delay={5}>
-        <Chip tone="sky" icon={CheckCircle2}>Cited: Returns policy</Chip>
+      <Float x={62} y={30} w={32} at={3.4} z={4}>
+        <Bubble from="biz" time="14:05" read>
+          <TypeText text="Sure! Exchanges are free within 7 days of delivery." at={3.7} cps={34} />
+        </Bubble>
       </Float>
     </Stage>
   );
 }
 
-/** Inbound message, Intent Detect, then a flow; takeover still wins. */
+/** Intent Detect routes first; a human takeover wins and pauses AI. */
 function LiveRouting({ label }: SceneProps) {
   return (
-    <Stage label={label} tone="indigo" shape="wide">
-      <Wires shape="wide" tone="indigo" paths={['M 38 25 C 41 25, 41 18, 44 18', 'M 20 36.5 L 20 46']} />
-      <Float x={14} y={8} w={24} delay={0}>
-        <Bubble from="user" time="2:14 pm">Order kab aayega?</Bubble>
+    <Stage label={label} shape="wide" duration={8}>
+      <Float x={4} y={20} w={26} at={0.2}>
+        <Bubble from="user" time="16:40">
+          <TypeText text="Where is my order?" at={0.4} />
+        </Bubble>
       </Float>
-      <Float x={4} y={26} w={34} delay={1}>
-        <Panel title="Confidence 96%" icon={Target} tone="violet">
-          <Node icon={Truck} tone="sky" title="Shipping" sub="Tag chat · Order status" active />
-          <div style={{ marginTop: '0.8em' }}>
-            <Btn tone="violet" icon={Zap}>Start Flow · Order status</Btn>
-          </div>
+      <Float x={36} y={12} w={52} at={1.2} z={3}>
+        <Panel title="Intent Detect" icon={Target}>
+          <Row
+            lead={<IconTile icon={MessageCircle} />}
+            title="Order status"
+            sub="Matched, no model call"
+            right={<Chip tone="emerald">96%</Chip>}
+            active
+          />
+          <Reveal at={2.4}>
+            <Row lead={<IconTile icon={Workflow} />} title="Flow Builder" sub="Runs the Track order flow" />
+          </Reveal>
+          <Reveal at={3.6}>
+            <Row
+              lead={<IconTile icon={Headphones} tone="amber" />}
+              title="Live Chat takeover"
+              sub="Always wins over AI"
+              right={<Chip tone="amber">AI paused</Chip>}
+            />
+          </Reveal>
         </Panel>
-      </Float>
-      <Float x={44} y={10} w={52} delay={2}>
-        <Panel title="Live routing" icon={Brain} tone="indigo" right={<Chip tone="emerald" dot>Live</Chip>}>
-          <Row lead={<IconTile icon={MessageCircle} tone="emerald" size="sm" />} title="Inbound WhatsApp" sub="Received · 2:14 pm" right={<Chip tone="emerald">Done</Chip>} />
-          <Row lead={<IconTile icon={Target} tone="violet" size="sm" />} title="Intent · Shipping 96%" sub="Before AI, no tokens" right={<Chip tone="violet">Before AI</Chip>} active />
-          <Row lead={<IconTile icon={Zap} tone="amber" size="sm" />} title="Start Flow" sub="Order status" right={<Chip tone="violet">Before AI</Chip>} />
-        </Panel>
-      </Float>
-      <Float x={8} y={74} w={30} delay={4}>
-        <Bubble from="biz" time="2:15 pm" read>Order #1042 ships tomorrow.</Bubble>
-      </Float>
-      <Float x={52} y={79} delay={5} drift>
-        <Chip tone="rose" solid icon={Hand}>Live Chat takeover still wins</Chip>
       </Float>
     </Stage>
   );

@@ -1037,7 +1037,7 @@
     fv-reveal 0.6s var(--fv-ease) var(--fv-r-at) both,
     fv-unreveal 0.45s ease var(--fv-r-until) forwards;
 }
-.fv-reveal > * { overflow: visible; }
+.fv-reveal > * { overflow: clip; overflow-clip-margin: 0.9em; }
 .fv-stack > .fv-reveal, .fv-phone__chat > .fv-reveal { display: grid; }
 .fv-phone__chat > .fv-reveal > .fv-bubble--biz, .fv-stack > .fv-reveal > .fv-bubble--biz { justify-self: end; }
 .fv-phone__chat > .fv-reveal > .fv-bubble--user, .fv-stack > .fv-reveal > .fv-bubble--user { justify-self: start; }
