@@ -1,88 +1,127 @@
 /**
- * Audience CRM scenes, v3 storytelling style (see flow-builder.tsx).
- *
- * Square tiles: plain white, one focal element, at most two small pieces.
- * Wide panels: page mesh backdrop, one large white card, one or two satellites.
- * Keys are the image paths in productPages.ts.
+ * Audience CRM scenes (v7). One shopper record or one segment per scene,
+ * filling in as the story plays. Keys are the image paths in productPages.ts.
  */
 import {
+  Check,
+  Eye,
   Filter,
+  Link2,
   Mail,
   Megaphone,
   MessageCircle,
   Package,
   Phone as PhoneIcon,
-  Workflow,
   ShoppingBag,
-  User,
+  ShoppingCart,
+  UserCheck,
   Users,
-} from 'lucide-react';
+  Workflow,
+} from '../icons';
 import {
+  Attach,
   Avatar,
   Btn,
   Chip,
   Cursor,
-  Meter,
+  Donut,
   Float,
-  Glow,
   IconTile,
-  Node,
+  KV,
+  Label,
+  Meter,
   Panel,
   Reveal,
-  Rings,
   Row,
   Stage,
   Stat,
-  Wires,
+  Swap,
+  Toast,
+  Toggle,
+  type IconType,
   type SceneMap,
   type SceneProps,
 } from '../kit';
 
+/** A vertical activity timeline: icon dots joined by a hairline. */
+function Event({ icon, title, sub, when, at, tone }: { icon: IconType; title: string; sub: string; when: string; at: number; tone?: 'emerald' | 'amber' | 'sky' }) {
+  return (
+    <Reveal at={at}>
+      <div className="cr-ev" data-tone={tone}>
+        <IconTile icon={icon} tone={tone} size="sm" tint />
+        <span className="cr-ev__text">
+          <b>{title}</b>
+          <small>{sub}</small>
+        </span>
+        <time>{when}</time>
+      </div>
+    </Reveal>
+  );
+}
+
+function ProfileHead({ name, sub, chip }: { name: string; sub: string; chip?: string }) {
+  return (
+    <div className="cr-head">
+      <Avatar name={name} />
+      <span className="cr-head__text">
+        <b>{name}</b>
+        <small>{sub}</small>
+      </span>
+      {chip ? <Chip dot>{chip}</Chip> : null}
+    </div>
+  );
+}
+
 /* ── Hero ──────────────────────────────────────────────────────────────── */
 
-/** One shopper's card fills with orders, chats and campaigns, row by row. */
+/** One shopper's record fills in: numbers, then every touchpoint in order. */
 function Hero({ label }: SceneProps) {
   return (
-    <Stage label={label} shape="wide" duration={7}>
-      <Float x={34} y={10} w={52} at={0} z={3}>
-        <Panel title="Riya Sharma" icon={User} right={<Chip dot>VIP</Chip>}>
-          <Reveal at={0.8}>
-            <Row lead={<IconTile icon={Package} />} title="Order #1187" sub="₹2,340 · Delivered" />
-          </Reveal>
-          <Reveal at={1.6}>
-            <Row lead={<IconTile icon={MessageCircle} />} title="WhatsApp chat" sub="Asked about sizing" />
-          </Reveal>
-          <Reveal at={2.4}>
-            <Row lead={<IconTile icon={Megaphone} />} title="Diwali sale" sub="Clicked, then ordered" active />
-          </Reveal>
-        </Panel>
-      </Float>
-      <Float x={6} y={34} w={24} at={3.3}>
-        <Panel glass title="Linked numbers" icon={PhoneIcon}>
-          <Row title="+91 98200 11223" sub="Primary" />
-          <Row title="+91 90040 55667" sub="Secondary" />
+    <Stage label={label} shape="wide" duration={9}>
+      <Float x={24} y={4} w={52}>
+        <Panel pad>
+          <ProfileHead name="Riya Sharma" sub="+91 98200 11223 · Mumbai" chip="VIP" />
+          <div className="cr-stats">
+            <Stat label="Orders" value="7" />
+            <Stat label="Lifetime spend" value="₹18,420" />
+            <div className="cr-stats__score">
+              <small>Lead score</small>
+              <Meter pct={86} value="86" />
+            </div>
+          </div>
+          <Label>Activity</Label>
+          <div className="cr-tl">
+            <Event icon={Megaphone} title="Diwali sale" sub="Clicked Shop the edit, then ordered" when="2d" at={0.8} />
+            <Event icon={MessageCircle} title="WhatsApp chat" sub="Asked about sizing, answered by AI" when="3d" at={1.5} tone="emerald" />
+            <Event icon={Package} title="Order #1187 · ₹2,340" sub="Delivered · Prepaid" when="12d" at={2.2} tone="sky" />
+          </div>
+          <Attach place="l" at={3.4} dx={1.8} dy={-4}>
+            <Toast icon={Link2} title="2 numbers, 1 profile" sub="+91 90040 55667 merged" />
+          </Attach>
+          <Attach place="r" at={4.4} dx={1.8} dy={5}>
+            <Toast icon={Users} tone="emerald" title="In 3 segments" sub="Repeat buyers · VIP · Ethnic wear" />
+          </Attach>
         </Panel>
       </Float>
     </Stage>
   );
 }
 
-/* ── Bento tiles: plain, one focal element ─────────────────────────────── */
+/* ── Bento tiles ───────────────────────────────────────────────────────── */
 
-/** Order, chat and campaign stack up on one contact. */
+/** Order, chat and campaign stack up on one contact, newest on top. */
 function Timeline({ label }: SceneProps) {
   return (
-    <Stage label={label} duration={6}>
-      <Glow x={50} y={50} size={20} />
-      <Wires paths={['M 50 31 L 50 42', 'M 50 59 L 50 70']} />
-      <Float x={22} y={14} w={56} at={0.2}>
-        <Node icon={Package} title="Order #1204" sub="₹1,890 · today" />
-      </Float>
-      <Float x={18} y={42} w={64} at={1.2} z={3}>
-        <Node icon={MessageCircle} title="Ananya Rao" sub="Replied on WhatsApp" active />
-      </Float>
-      <Float x={22} y={70} w={56} at={2.2}>
-        <Node icon={Megaphone} title="Diwali offer" sub="Opened · 3 days ago" />
+    <Stage label={label} duration={7}>
+      <Float x={10} y={12} w={80}>
+        <Panel>
+          <ProfileHead name="Ananya Rao" sub="Customer since 2024" />
+          <div className="cr-tl">
+            <Event icon={Package} title="Order #1204 · ₹1,890" sub="Paid with UPI" when="now" at={2.2} tone="sky" />
+            <Event icon={MessageCircle} title="Replied on WhatsApp" sub="“Is the blue one in M?”" when="1h" at={1.4} tone="emerald" />
+            <Event icon={Eye} title="Viewed Linen kurta" sub="3 times · website pixel" when="2h" at={0.6} />
+          </div>
+        </Panel>
       </Float>
     </Stage>
   );
@@ -91,17 +130,20 @@ function Timeline({ label }: SceneProps) {
 /** A segment built here feeds campaigns and journeys directly. */
 function Segments({ label }: SceneProps) {
   return (
-    <Stage label={label} duration={6}>
-      <Rings x={50} y={40} count={4} gap={9} />
-      <Wires paths={['M 50 45 C 50 60, 24 58, 24 71', 'M 50 45 C 50 60, 72 58, 72 71']} />
-      <Float x={18} y={30} w={64} at={0.2} z={3}>
-        <Node icon={Filter} title="High-intent carts" sub="1,240 shoppers" active />
-      </Float>
-      <Float x={12} y={72} at={1.4}>
-        <Chip icon={Megaphone}>Campaign</Chip>
-      </Float>
-      <Float x={60} y={72} at={2}>
-        <Chip icon={Workflow}>Journey</Chip>
+    <Stage label={label} duration={7}>
+      <Float x={10} y={16} w={80}>
+        <Panel title="High-intent carts" icon={Filter} right={<Chip tone="emerald" dot>1,240</Chip>}>
+          <Label>Used in</Label>
+          <Reveal at={0.8}>
+            <Row lead={<IconTile icon={Megaphone} />} title="Diwali sale" sub="Campaign · sends 7:30 pm" right={<Toggle />} />
+          </Reveal>
+          <Reveal at={1.6}>
+            <Row lead={<IconTile icon={Workflow} />} title="Cart recovery" sub="Journey · 3 steps" right={<Toggle />} />
+          </Reveal>
+          <Attach place="b" at={2.6} dy={0.4}>
+            <Chip icon={Check}>Updates live as shoppers qualify</Chip>
+          </Attach>
+        </Panel>
       </Float>
     </Stage>
   );
@@ -110,78 +152,90 @@ function Segments({ label }: SceneProps) {
 /** A score built from purchase and engagement signals. */
 function LeadScoring({ label }: SceneProps) {
   return (
-    <Stage label={label} duration={6}>
-      <Rings x={50} y={48} count={4} gap={9} />
-      <Float x={18} y={32} w={64} at={0.2} z={3}>
-        <Panel title="Ishaan Gupta" icon={User}>
-          <Stat label="Lead score" value="86" />
-          <Meter pct={86} />
+    <Stage label={label} duration={7}>
+      <Float x={10} y={14} w={80}>
+        <Panel>
+          <ProfileHead name="Ishaan Gupta" sub="Last seen 2 hours ago" />
+          <div className="cr-score">
+            <Donut pct={86} size={7.4} tone="emerald">
+              <Stat label="" value="86" />
+            </Donut>
+            <div className="cr-score__kv">
+              <KV k={<><ShoppingCart className="cr-i" /> Cart ₹3,450</>} v="+30" />
+              <KV k={<><Eye className="cr-i" /> Viewed 6 items</>} v="+24" />
+              <KV k={<><Package className="cr-i" /> 3 past orders</>} v="+32" />
+            </div>
+          </div>
         </Panel>
-      </Float>
-      <Float x={6} y={14} at={1.4} drift>
-        <Chip icon={ShoppingBag} dot>Cart ₹3,450</Chip>
-      </Float>
-      <Float x={58} y={74} at={2.2} drift>
-        <Chip icon={Package} dot>3 past orders</Chip>
       </Float>
     </Stage>
   );
 }
 
-/* ── Wide panels: one large card, a story ──────────────────────────────── */
+/* ── Showcases ─────────────────────────────────────────────────────────── */
 
 /** A chat from an unknown number merges into the shopper it belongs to. */
 function Identity({ label }: SceneProps) {
   return (
-    <Stage label={label} shape="wide" duration={7}>
-      <Wires shape="wide" paths={['M 30 31 C 34 31, 34 31, 38 31']} />
-      <Float x={4} y={38} w={26} at={0.2}>
-        <Panel glass title="New chat" icon={MessageCircle}>
-          <Row title="+91 90040 55667" sub="Unknown number" />
-        </Panel>
-      </Float>
-      <Float x={38} y={12} w={52} at={0.6} z={3}>
-        <Panel title="Riya Sharma" icon={User}>
-          <Row lead={<IconTile icon={PhoneIcon} />} title="+91 98200 11223" sub="Primary" />
-          <Row lead={<IconTile icon={Mail} />} title="riya.s@example.in" sub="Email" />
-          <Reveal at={2.2}>
+    <Stage label={label} shape="wide" duration={8}>
+      <Float x={24} y={8} w={52}>
+        <Panel>
+          <ProfileHead name="Riya Sharma" sub="Customer since 2023 · 7 orders" />
+          <Row lead={<IconTile icon={PhoneIcon} />} title="+91 98200 11223" sub="Primary · WhatsApp" />
+          <Row lead={<IconTile icon={Mail} />} title="riya.s@example.in" sub="Shopify email" />
+          <Reveal at={2.6}>
             <Row
-              lead={<IconTile icon={PhoneIcon} />}
+              lead={<IconTile icon={PhoneIcon} tone="emerald" />}
               title="+91 90040 55667"
-              sub="Secondary"
-              right={<Chip tone="emerald" dot>Merged</Chip>}
+              sub="Secondary · matched on order #1187"
+              right={<Chip tone="emerald" icon={Check}>Merged</Chip>}
               active
             />
           </Reveal>
+          <Attach place="l" at={0.6} until={2.4} dx={2} dy={4}>
+            <Toast icon={MessageCircle} tone="amber" title="New chat · +91 90040 55667" sub="Unknown number" />
+          </Attach>
+          <Attach place="br" at={3.4} dx={2} dy={-1}>
+            <Toast dark icon={UserCheck} title="1 profile, 1 thread" sub="Chat history moved to Riya" />
+          </Attach>
         </Panel>
-      </Float>
-      <Float x={56} y={58} at={3.2} z={4}>
-        <Chip solid icon={Users}>1 profile, 1 thread</Chip>
       </Float>
     </Stage>
   );
 }
 
-/** One record: the numbers count up, then the campaign history slides in. */
+/** One record, everything in it: numbers, orders, chats and campaigns. */
 function Customer360({ label }: SceneProps) {
   return (
-    <Stage label={label} shape="wide" duration={7}>
-      <Float x={36} y={12} w={52} at={0} z={3}>
-        <Panel title="Arjun Nair" icon={User} right={<Chip dot>Score 86</Chip>}>
-          <div style={{ display: 'flex', gap: '2.4em', padding: '0.2em 0.6em 0.9em' }}>
-            <Stat label="Orders" value="7" />
-            <Stat label="Spent" value="₹18,420" />
+    <Stage label={label} shape="wide" duration={8}>
+      <Float x={14} y={6} w={72}>
+        <Panel>
+          <ProfileHead name="Arjun Nair" sub="+91 99300 44112 · Bengaluru" chip="Score 86" />
+          <div className="cr-360">
+            <div>
+              <div className="cr-stats cr-stats--two">
+                <Stat label="Orders" value="7" />
+                <Stat label="Spent" value="₹18,420" />
+              </div>
+              <Label>Orders</Label>
+              <Row lead={<IconTile icon={ShoppingBag} />} title="#1218 · ₹2,190" sub="Delivered · 2 days ago" />
+              <Reveal at={1.4}>
+                <Row lead={<IconTile icon={MessageCircle} tone="emerald" />} title="Last chat" sub="Wants a size exchange" active />
+              </Reveal>
+            </div>
+            <div className="cr-360__side">
+              <Label>Campaigns</Label>
+              <Reveal at={2}>
+                <Row title="Diwali sale" sub="Clicked, ordered" right={<Chip tone="emerald">₹2,190</Chip>} />
+              </Reveal>
+              <Reveal at={2.5}>
+                <Row title="New arrivals" sub="Read" right={<Chip>Read</Chip>} />
+              </Reveal>
+              <Reveal at={3}>
+                <Row title="Cart recovery" sub="Journey · step 2" right={<Chip tone="amber" dot>Active</Chip>} />
+              </Reveal>
+            </div>
           </div>
-          <Row lead={<Avatar name="Arjun Nair" />} title="Order #1218" sub="Delivered · 2 days ago" />
-          <Reveal at={1.6}>
-            <Row lead={<IconTile icon={MessageCircle} />} title="Last chat" sub="Wants a size exchange" active />
-          </Reveal>
-        </Panel>
-      </Float>
-      <Float x={8} y={32} w={24} at={2.6}>
-        <Panel glass title="Campaigns" icon={Megaphone}>
-          <Row title="Diwali sale" sub="Clicked, ordered" />
-          <Row title="New arrivals" sub="Opened" />
         </Panel>
       </Float>
     </Stage>
@@ -191,17 +245,9 @@ function Customer360({ label }: SceneProps) {
 /** Rules stack up, the live count follows, save it as a segment. */
 function SegmentBuilder({ label }: SceneProps) {
   return (
-    <Stage label={label} shape="wide" duration={7.5}>
-      <Float x={32} y={12} w={54} at={0} z={3}>
-        <Panel
-          title="New segment"
-          icon={Filter}
-          right={
-            <Btn primary pressAt={3.8}>
-              Save
-            </Btn>
-          }
-        >
+    <Stage label={label} shape="wide" duration={8}>
+      <Float x={20} y={6} w={60}>
+        <Panel title="New segment" icon={Filter}>
           <Reveal at={0.6}>
             <Row lead={<IconTile icon={ShoppingBag} />} title="Orders 2 or more" sub="Shopify" />
           </Reveal>
@@ -209,23 +255,20 @@ function SegmentBuilder({ label }: SceneProps) {
             <Row lead={<IconTile icon={Package} />} title="Last order in 60 days" sub="Shopify" />
           </Reveal>
           <Reveal at={2}>
-            <Row lead={<IconTile icon={MessageCircle} />} title="Opted in" sub="WhatsApp consent" />
+            <Row lead={<IconTile icon={MessageCircle} />} title="Opted in on WhatsApp" sub="Consent recorded" />
           </Reveal>
+          <div className="cr-foot">
+            <Stat label="Matching shoppers" value="3,126" />
+            <span data-cursor="save">
+              <Swap at={3.9} a={<Btn primary pressAt={3.6}>Save segment</Btn>} b={<Chip tone="emerald" icon={Check}>Saved</Chip>} />
+            </span>
+          </div>
+          <Attach place="tr" at={4.3} dx={1.6} dy={-0.2}>
+            <Toast icon={Megaphone} tone="emerald" title="Ready to message" sub="Campaigns · Journeys" />
+          </Attach>
         </Panel>
       </Float>
-      <Float x={6} y={36} w={22} at={2.6}>
-        <Panel glass title="Matches" icon={Users}>
-          <Stat label="Shoppers" value="3,126" />
-        </Panel>
-      </Float>
-      <Cursor
-        path={[
-          [70, 92, 2],
-          [80, 22, 3.6],
-          [84, 66, 5],
-        ]}
-        clicks={[3.8]}
-      />
+      <Cursor path={[[70, 98, 2.4], ['save', 3.3], ['save', 3.9], [84, 94, 5]]} clicks={[3.6]} />
     </Stage>
   );
 }

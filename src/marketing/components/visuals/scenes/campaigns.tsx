@@ -1,85 +1,204 @@
 /**
- * Campaigns scenes, v3 storytelling style (see flow-builder.tsx).
- *
- * Square tiles: plain white, one focal element, at most two small pieces.
- * Wide panels: page mesh backdrop, one large white card, one or two satellites.
+ * Campaigns scenes (v7). One product card per scene, a story inside it.
+ * The hero follows a Diwali broadcast end to end: send, the shopper's
+ * WhatsApp, the tap, checkout, and the revenue it earned, under fireworks.
  * Keys are the image paths in productPages.ts.
  */
-import { Megaphone, Lock, Repeat, Send, ShoppingBag, ShoppingCart, Eye, TrendingUp, Users } from 'lucide-react';
+import type { CSSProperties } from 'react';
 import {
+  Check,
+  ExternalLink,
+  Eye,
+  Lock,
+  Megaphone,
+  Repeat,
+  Send,
+  ShoppingBag,
+  ShoppingCart,
+  Sparkles,
+  Tag,
+  TrendingUp,
+  Users,
+} from '../icons';
+import {
+  Attach,
   Avatar,
   Btn,
   Bubble,
   Chip,
   Cursor,
+  Fireworks,
   Float,
-  Glow,
   IconTile,
+  IPhone,
+  KV,
+  Label,
+  Meter,
   Panel,
-  Phone,
+  PhoneBanner,
+  PhoneSheet,
+  ProductArt,
   Reveal,
-  Rings,
   Row,
   Spark,
   Stage,
   Stat,
-  Thumb,
+  Swap,
+  Toast,
   type SceneMap,
   type SceneProps,
 } from '../kit';
+import '../../../styles/optin-scenes.css';
 
-/* ── Hero ──────────────────────────────────────────────────────────────── */
+const vars = (o: Record<string, string | number>) => o as unknown as CSSProperties;
 
-/** An approved template lands on the phone, then the revenue it earned. */
+function BrandDp() {
+  return (
+    <span className="oi-dp oi-dp--rose">
+      <Sparkles strokeWidth={2.4} />
+    </span>
+  );
+}
+
+/* ── Hero: the Diwali broadcast, end to end ────────────────────────────── */
+
 function Hero({ label }: SceneProps) {
   return (
-    <Stage label={label} shape="wide" duration={7.5}>
-      <Float x={52} y={4} w={32} at={0} z={3}>
-        <Phone name="Your store">
-          <Reveal at={0.8}>
+    <Stage
+      label={label}
+      shape="wide"
+      mood="night"
+      duration={13}
+      back={
+        <Fireworks
+          at={0.4}
+          every={3.2}
+          shells={[
+            [10, 26, 0],
+            [90, 20, 0.8],
+            [24, 70, 1.6],
+            [78, 72, 2.3],
+            [52, 12, 2.9],
+          ]}
+        />
+      }
+    >
+      <Float x={12} y={16} w={38}>
+        <Panel title="Diwali sale" icon={Megaphone} right={<Swap at={2} a={<Chip tone="amber" dot>Ready</Chip>} b={<Chip tone="emerald" dot>Sending</Chip>} />}>
+          <Row lead={<IconTile icon={Sparkles} />} title="diwali_offer" sub="Marketing template · Approved" right={<Chip tone="emerald" icon={Check}>Meta</Chip>} />
+          <Row lead={<IconTile icon={Users} />} title="Repeat buyers" sub="2,418 shoppers · score 60+" />
+          <div className="cp-send">
+            <Swap
+              at={1.9}
+              a={
+                <span data-cursor="send">
+                  <Btn primary icon={Send} pressAt={1.6}>
+                    Send to 2,418
+                  </Btn>
+                </span>
+              }
+              b={<Meter pct={100} label="Delivered" value="2,418 / 2,418" tone="emerald" />}
+            />
+          </div>
+          <Reveal at={9.6}>
+            <div className="cp-earned">
+              <Stat label="Revenue from this campaign" value="₹1,84,200" delta="+212 orders · after Meta fees" />
+            </div>
+          </Reveal>
+          <Attach place="tr" at={9} dx={1.6} dy={-0.6}>
+            <Toast icon={ShoppingBag} tone="emerald" title="New order · ₹2,499" sub="Riya S. · from Diwali sale" />
+          </Attach>
+        </Panel>
+      </Float>
+      <Float x={56} y={0} at={0.2}>
+        <IPhone
+          name="Mira Ethnic"
+          logo={<BrandDp />}
+          time="7:30"
+          overlay={
+            <>
+              <PhoneBanner at={2.8} until={4.2} title="Mira Ethnic" body="Riya, the Diwali edit is here. 20% off till Sunday" />
+              <PhoneSheet at={6} url="miraethnic.in">
+                <ProductArt kind="kurta" h={10} tag="−20%" />
+                <h5 className="fv-shop__title">Rani pink silk kurta</h5>
+                <div className="fv-shop__price">
+                  <b>₹2,499</b>
+                  <s>₹3,124</s>
+                  <em>DIWALI20</em>
+                </div>
+                <span className="fv-shop__applied">
+                  <Tag strokeWidth={2.4} /> Diwali offer applied
+                </span>
+                <span className="fv-shop__cta is-press" data-cursor="buy" style={vars({ '--fv-press': '7.6s' })}>
+                  <ShoppingBag strokeWidth={2.2} /> Buy now
+                </span>
+              </PhoneSheet>
+              <PhoneSheet at={8.1}>
+                <div className="fv-shop__done">
+                  <span className="fv-shop__check" style={vars({ '--fv-check-at': '8.5s' })}>
+                    <Check strokeWidth={3} />
+                  </span>
+                  <h5>Order placed</h5>
+                  <p>Happy Diwali, Riya! Order #2211</p>
+                  <div className="oi-order">
+                    <ProductArt kind="kurta" h={3.2} />
+                    <span>
+                      <b>Rani pink silk kurta</b>
+                      <small>Size M · Prepaid · Free shipping</small>
+                    </span>
+                    <b>₹2,499</b>
+                  </div>
+                  <span className="oi-order__wa">Tracking updates on WhatsApp</span>
+                </div>
+              </PhoneSheet>
+            </>
+          }
+        >
+          <Reveal at={3.4}>
             <Bubble
               from="biz"
               time="7:30 pm"
-              read
-              media={<Thumb icon={ShoppingBag} h={7} />}
-              buttons={['Shop the edit']}
+              media={<ProductArt kind="kurta" h={7} />}
+              title="The Diwali edit is here ✨"
+              buttons={[{ label: 'Shop the edit', icon: ExternalLink, at: 5.4, cursor: 'shop' }]}
             >
-              Riya, the Diwali edit is here. 20% off till Sunday.
+              Riya, 20% off festive wear till Sunday. Free shipping on prepaid orders.
             </Bubble>
           </Reveal>
-          <Reveal at={2.4}>
-            <Bubble from="user">Ordered the blue one!</Bubble>
-          </Reveal>
-        </Phone>
+        </IPhone>
       </Float>
-      <Float x={14} y={18} at={0.4}>
-        <Chip tone="emerald" dot>Approved template</Chip>
-      </Float>
-      <Float x={10} y={36} w={32} at={3.2}>
-        <Panel glass title="Diwali sale" icon={Megaphone}>
-          <Stat label="Revenue earned" value="₹1,84,200" delta="After Meta fees" />
-        </Panel>
-      </Float>
+      <Cursor path={[[30, 96, 0.3], ['send', 1.3], ['send', 1.9], [34, 96, 2.6]]} clicks={[1.6]} />
+      <Cursor touch path={[['shop', 5.1], ['shop', 5.7], ['buy', 7.3], ['buy', 7.9]]} clicks={[5.4, 7.6]} />
     </Stage>
   );
 }
 
-/* ── Bento tiles: plain, one focal element ─────────────────────────────── */
+/* ── Bento tiles ───────────────────────────────────────────────────────── */
 
-/** Two behaviour rules become one live segment. */
+/** Two behaviour rules become one live segment; the count lands. */
 function Segments({ label }: SceneProps) {
   return (
-    <Stage label={label} duration={6}>
-      <Rings x={50} y={62} count={4} gap={9} />
-      <Float x={8} y={14} at={0.2}>
-        <Chip icon={Repeat}>Orders 2 or more</Chip>
-      </Float>
-      <Float x={54} y={14} at={0.8}>
-        <Chip icon={Eye}>Viewed 3+ items</Chip>
-      </Float>
-      <Float x={16} y={34} w={68} at={1.6} z={3}>
-        <Panel title="Repeat buyers" icon={Users}>
-          <Stat label="Shoppers in segment" value="2,418" />
+    <Stage label={label} duration={7}>
+      <Float x={10} y={14} w={80}>
+        <Panel title="New segment" icon={Users}>
+          <Label>Shoppers who</Label>
+          <Reveal at={0.7}>
+            <Row lead={<IconTile icon={Repeat} />} title="Ordered 2 or more times" sub="Shopify orders" />
+          </Reveal>
+          <Reveal at={1.4}>
+            <div className="cp-and">
+              <span>AND</span>
+            </div>
+          </Reveal>
+          <Reveal at={1.8}>
+            <Row lead={<IconTile icon={Eye} />} title="Viewed 3+ products" sub="Last 30 days · pixel" />
+          </Reveal>
+          <Reveal at={2.6}>
+            <div className="cp-total">
+              <Stat label="Repeat buyers" value="2,418" />
+              <Chip tone="emerald" dot>Live</Chip>
+            </div>
+          </Reveal>
         </Panel>
       </Float>
     </Stage>
@@ -88,89 +207,96 @@ function Segments({ label }: SceneProps) {
 
 /** Shoppers rank themselves by intent, highest first. */
 function LeadScoring({ label }: SceneProps) {
+  const row = (name: string, sub: string, score: number, tone: 'emerald' | 'violet' | 'amber', at: number) => (
+    <Reveal at={at}>
+      <Row
+        lead={<Avatar name={name} tone={tone === 'violet' ? undefined : tone} />}
+        title={name}
+        sub={sub}
+        right={
+          <span className="cp-score" data-tone={tone}>
+            <i style={vars({ '--w': score / 100 })} />
+            <b>{score}</b>
+          </span>
+        }
+      />
+    </Reveal>
+  );
   return (
-    <Stage label={label} duration={6}>
-      <Glow x={50} y={54} size={22} />
-      <Float x={12} y={20} w={76} at={0} z={3}>
-        <Panel title="Top intent" icon={TrendingUp}>
-          <Reveal at={0.7}>
-            <Row lead={<Avatar name="Ishaan Gupta" />} title="Ishaan Gupta" sub="Cart ₹3,450" right="92" active />
-          </Reveal>
-          <Reveal at={1.3}>
-            <Row lead={<Avatar name="Sneha Kulkarni" />} title="Sneha Kulkarni" sub="Viewed 6 items" right="81" />
-          </Reveal>
-          <Reveal at={1.9}>
-            <Row lead={<Avatar name="Vikram Joshi" />} title="Vikram Joshi" sub="2 past orders" right="64" />
-          </Reveal>
+    <Stage label={label} duration={7}>
+      <Float x={10} y={16} w={80}>
+        <Panel title="Top intent" icon={TrendingUp} right={<Chip>Sorted by score</Chip>}>
+          {row('Ishaan Gupta', 'Cart ₹3,450 · 2h ago', 92, 'emerald', 0.6)}
+          {row('Sneha Kulkarni', 'Viewed 6 items', 81, 'violet', 1.1)}
+          {row('Vikram Joshi', '2 past orders', 64, 'amber', 1.6)}
         </Panel>
-      </Float>
-      <Float x={32} y={80} at={2.8}>
-        <Chip dot>Sorted by score</Chip>
       </Float>
     </Stage>
   );
 }
 
-/** The ₹ number that is left after Meta fees. */
+/** The ₹ number left after Meta fees, under a little Diwali sky. */
 function NetReport({ label }: SceneProps) {
   return (
-    <Stage label={label} duration={6}>
-      <Rings x={50} y={48} count={4} gap={9} />
-      <Float x={14} y={26} w={72} at={0.2} z={3}>
-        <Panel title="Diwali sale" icon={Megaphone}>
-          <Stat label="Net revenue" value="₹1,42,560" delta="After Meta fees" />
+    <Stage
+      label={label}
+      duration={7.5}
+      back={<Fireworks at={1.2} every={3} shells={[[14, 22, 0], [84, 16, 0.9], [50, 8, 1.8]]} />}
+    >
+      <Float x={12} y={24} w={76}>
+        <Panel title="Diwali sale" icon={Megaphone} right={<Chip tone="emerald" dot>Sent</Chip>}>
+          <KV k="Revenue" v="₹1,44,718" />
+          <KV k="Meta fees" v="− ₹2,158" />
+          <KV k="Net revenue" v="₹1,42,560" total />
         </Panel>
-      </Float>
-      <Float x={28} y={64} at={2.2}>
-        <Chip>Meta fees ₹2,158</Chip>
       </Float>
     </Stage>
   );
 }
 
-/* ── Wide panels: one large card, a story ──────────────────────────────── */
+/* ── Showcases ─────────────────────────────────────────────────────────── */
 
-/** Pick a scored segment, press Send, the sent counter climbs. */
+/** Pick a scored segment, press Send, delivery fills up. */
 function AudienceBuilder({ label }: SceneProps) {
   return (
-    <Stage label={label} shape="wide" duration={7.5}>
-      <Float x={30} y={12} w={56} at={0} z={3}>
+    <Stage label={label} shape="wide" duration={8}>
+      <Float x={20} y={8} w={60}>
         <Panel
           title="Choose audience"
           icon={Users}
           right={
-            <Btn primary icon={Send} pressAt={3}>
-              Send
-            </Btn>
+            <span data-cursor="send">
+              <Btn primary icon={Send} pressAt={3}>
+                Send
+              </Btn>
+            </span>
           }
         >
           <Row lead={<IconTile icon={Eye} />} title="Browsed, no order" sub="5,906 shoppers · score 40+" />
           <Row lead={<IconTile icon={Repeat} />} title="Repeat buyers" sub="2,418 shoppers · score 60+" />
-          <Reveal at={1.6}>
-            <Row
-              lead={<IconTile icon={ShoppingCart} />}
-              title="Cart abandoners"
-              sub="1,240 shoppers · score 70+"
-              right={<Chip dot>Selected</Chip>}
-              active
+          <div data-cursor="cart">
+            <Swap
+              at={1.5}
+              a={<Row lead={<IconTile icon={ShoppingCart} />} title="Cart abandoners" sub="1,240 shoppers · score 70+" />}
+              b={
+                <Row
+                  lead={<IconTile icon={ShoppingCart} />}
+                  title="Cart abandoners"
+                  sub="1,240 shoppers · score 70+"
+                  right={<Chip icon={Check}>Selected</Chip>}
+                  active
+                />
+              }
             />
-          </Reveal>
+          </div>
+          <Attach place="b" at={3.4} dy={0.6}>
+            <div className="cp-sending">
+              <Meter pct={100} label="Delivered" value="1,240 / 1,240" tone="emerald" />
+            </div>
+          </Attach>
         </Panel>
       </Float>
-      <Float x={6} y={36} w={22} at={3.5}>
-        <Panel glass title="Sending" icon={Send}>
-          <Stat label="Delivered" value="1,240" />
-        </Panel>
-      </Float>
-      <Cursor
-        path={[
-          [80, 92, 0.3],
-          [56, 60, 1.3],
-          [80, 22, 2.8],
-          [86, 70, 4.2],
-        ]}
-        clicks={[1.45, 3]}
-      />
+      <Cursor path={[[70, 98, 0.3], ['cart', 1.2], ['cart', 1.7], ['send', 2.7], ['send', 3.3], [80, 92, 4.4]]} clicks={[1.45, 3]} />
     </Stage>
   );
 }
@@ -178,48 +304,62 @@ function AudienceBuilder({ label }: SceneProps) {
 /** Approved templates send; a draft is stopped at the gate. */
 function TemplateLock({ label }: SceneProps) {
   return (
-    <Stage label={label} shape="wide" duration={7}>
-      <Float x={22} y={12} w={56} at={0} z={3}>
+    <Stage label={label} shape="wide" duration={8}>
+      <Float x={20} y={8} w={60}>
         <Panel title="Templates" icon={Megaphone}>
-          <Row
-            title="diwali_offer"
-            sub="Marketing · ₹0.8631"
-            right={<Chip tone="emerald" dot>Approved</Chip>}
-          />
-          <Row title="order_update" sub="Utility · ₹0.115" right={<Chip tone="emerald" dot>Approved</Chip>} />
-          <Row title="flash_sale_draft" sub="Marketing · not reviewed" right={<Chip tone="amber" dot>Draft</Chip>} active />
+          <Row title="diwali_offer" sub="Marketing · ₹0.8631 per message" right={<Chip tone="emerald" icon={Check}>Approved</Chip>} />
+          <Row title="order_update" sub="Utility · ₹0.115 per message" right={<Chip tone="emerald" icon={Check}>Approved</Chip>} />
+          <div className="fv-shake" style={vars({ '--fv-shake-at': '2.1s' })}>
+            <Row
+              title="flash_sale_draft"
+              sub="Marketing · not reviewed by Meta"
+              right={
+                <span data-cursor="draft">
+                  <Btn icon={Send} pressAt={1.9}>
+                    Send
+                  </Btn>
+                </span>
+              }
+              active
+            />
+          </div>
+          <Attach place="br" at={2.3} dx={1.6} dy={-0.4}>
+            <Toast dark icon={Lock} title="Drafts can't send" sub="Submit it to Meta for approval first" />
+          </Attach>
         </Panel>
       </Float>
-      <Float x={54} y={56} at={2.4} z={4}>
-        <Chip solid icon={Lock}>Drafts can't send</Chip>
-      </Float>
-      <Cursor
-        path={[
-          [20, 88, 0.4],
-          [46, 60, 1.6],
-          [40, 86, 3.2],
-        ]}
-        clicks={[1.8]}
-      />
+      <Cursor path={[[30, 98, 0.4], ['draft', 1.6], ['draft', 2.3], [70, 96, 3.6]]} clicks={[1.9]} />
     </Stage>
   );
 }
 
-/** One campaign: net revenue counts up, then where it came from. */
+/** One campaign: net revenue counts up and the curve draws, under fireworks. */
 function Performance({ label }: SceneProps) {
   return (
-    <Stage label={label} shape="wide" duration={7}>
-      <Float x={36} y={14} w={50} at={0} z={3}>
+    <Stage
+      label={label}
+      shape="wide"
+      mood="night"
+      duration={8}
+      back={<Fireworks at={0.6} every={3.4} shells={[[10, 24, 0], [88, 22, 1], [16, 74, 1.9], [84, 76, 2.6]]} />}
+    >
+      <Float x={22} y={8} w={56}>
         <Panel title="Diwali sale" icon={Megaphone} right={<Chip tone="emerald" dot>Sent</Chip>}>
-          <Stat label="Net revenue" value="₹3,92,400" delta="After Meta fees" />
-          <Spark points={[12, 18, 26, 30, 44, 52, 66, 78, 86]} height={6} />
-        </Panel>
-      </Float>
-      <Float x={8} y={30} w={24} at={2.6}>
-        <Panel glass title="Breakdown">
-          <Row title="Sent" right="4,000" />
-          <Row title="Orders" right="212" />
-          <Row title="Meta fees" right="₹3,452" />
+          <div className="cp-perf">
+            <div>
+              <Stat label="Net revenue" value="₹3,92,400" delta="After Meta fees" />
+              <Spark points={[10, 16, 22, 30, 42, 50, 64, 76, 88]} height={5.5} />
+            </div>
+            <div className="cp-perf__kv">
+              <KV k="Sent" v="4,000" />
+              <KV k="Read" v="3,412" />
+              <KV k="Orders" v="212" />
+              <KV k="Meta fees" v="₹3,452" />
+            </div>
+          </div>
+          <Attach place="tr" at={2.4} dx={1.4} dy={0.4}>
+            <Toast icon={TrendingUp} tone="emerald" title="Best campaign this month" sub="113× return on Meta fees" />
+          </Attach>
         </Panel>
       </Float>
     </Stage>

@@ -1,13 +1,13 @@
 /**
- * AI Brain scenes. v3 storytelling style, see flow-builder.tsx.
- *
- * Square tiles are plain white with one focal element. Wide panels sit on the
- * page mesh with one large white card or phone and at most two satellites.
- * Each scene plays a short sequence instead of a static board.
+ * AI Brain scenes (v7). A sample skincare store, Glow Co., with its bot
+ * persona Maya. The hero shows a real support exchange on the shopper's
+ * phone, with the policy the answer came from.
  * Keys are the image paths in productPages.ts.
  */
+import type { CSSProperties } from 'react';
 import {
   BookOpen,
+  Check,
   FileText,
   Gauge,
   Headphones,
@@ -17,227 +17,316 @@ import {
   Search,
   Sparkles,
   Target,
-  Smile,
+  Truck,
   Workflow,
-} from 'lucide-react';
+  AnthropicLogo,
+  GeminiLogo,
+  OpenAILogo,
+} from '../icons';
 import {
-  Bubble,
+  Attach,
   Btn,
+  Bubble,
   Chip,
   Cursor,
-  Field,
   Float,
-  Glow,
   IconTile,
+  IPhone,
+  KV,
+  Label,
   Meter,
   Panel,
-  Phone,
   Reveal,
-  Rings,
   Row,
   Stack,
   Stage,
-  Stat,
+  Swap,
+  Toast,
   TypeText,
   Typing,
   type SceneMap,
   type SceneProps,
 } from '../kit';
 
+const vars = (o: Record<string, string | number>) => o as unknown as CSSProperties;
+
+function GlowDp() {
+  return <span className="ai-dp">G</span>;
+}
+
+/** A policy document importing: progress, then Synced. */
+function Doc({ title, sub, at }: { title: string; sub: string; at: number }) {
+  return (
+    <Row
+      lead={<IconTile icon={FileText} />}
+      title={title}
+      sub={sub}
+      right={
+        <Swap
+          at={at}
+          a={<span className="ai-sync"><i style={vars({ '--d': `${at - 1.1}s` })} /></span>}
+          b={<Chip tone="emerald" icon={Check}>Synced</Chip>}
+        />
+      }
+    />
+  );
+}
+
 /* ── Hero ──────────────────────────────────────────────────────────────── */
 
-/** A shopper asks, the AI reads store policies on your key, answers, cites. */
+/** A shopper asks a policy question; Maya reads the policy, answers, books it. */
 function Hero({ label }: SceneProps) {
   return (
-    <Stage label={label} shape="wide" duration={9}>
-      <Float x={8} y={30} w={28} at={0}>
-        <Panel glass title="AI Brain" icon={KeyRound}>
-          <Row title="Your API key" sub="Connected" />
-          <Row title="Store knowledge" sub="12 pages, 3 policies" />
-        </Panel>
-      </Float>
-      <Float x={44} y={4} w={34} at={0.2} z={3}>
-        <Phone name="Glow Co">
-          <Reveal at={0.7}>
-            <Bubble from="user" time="14:02">
-              <TypeText text="Can I return an opened serum?" at={0.9} />
+    <Stage label={label} shape="wide" duration={13}>
+      <Float x={38} y={0}>
+        <IPhone name="Glow Co" logo={<GlowDp />} status="Typically replies instantly">
+          <Reveal at={0.4}>
+            <Bubble from="user" time="14:02" read>
+              <TypeText text="Can I return an opened serum?" at={0.6} cps={20} />
             </Bubble>
           </Reveal>
-          <Reveal at={2.4} until={3.7}>
+          <Reveal at={2.4} until={4}>
             <Typing />
           </Reveal>
-          <Reveal at={3.8}>
-            <Bubble from="biz" time="14:02" read>
-              <TypeText text="Opened items can be exchanged within 7 days. Want a pickup?" at={3.9} cps={36} />
+          <Reveal at={4.1}>
+            <Bubble from="biz" time="14:02">
+              <TypeText text="Opened items can't be returned, but you can exchange them within 7 days of delivery. Want me to book a free pickup?" at={4.2} cps={46} />
             </Bubble>
           </Reveal>
-        </Phone>
-      </Float>
-      <Float x={80} y={30} at={2.3} until={3.8}>
-        <Chip icon={Search}>Reading policies</Chip>
-      </Float>
-      <Float x={80} y={30} at={6}>
-        <Chip icon={FileText} tone="emerald" dot>Cited: Return policy</Chip>
+          <Reveal at={7.6}>
+            <Bubble from="user" time="14:03" read>
+              Yes please, tomorrow works
+            </Bubble>
+          </Reveal>
+          <Reveal at={8.6} until={9.6}>
+            <Typing />
+          </Reveal>
+          <Reveal at={9.7}>
+            <Bubble from="biz" time="14:03">
+              Done! Pickup booked for tomorrow, 10 am to 1 pm. 📦
+            </Bubble>
+          </Reveal>
+        </IPhone>
+        <Attach place="l" at={2.4} until={4} dx={7.5} dy={-2}>
+          <Toast icon={Search} title="Reading store knowledge" sub="Return policy · Exchange FAQ" />
+        </Attach>
+        <Attach place="l" at={4.3} dx={7.5} dy={-2}>
+          <Toast icon={FileText} tone="emerald" title="Answer cited" sub="Return policy · section 2" />
+        </Attach>
+        <Attach place="r" at={10} dx={7.5} dy={4}>
+          <Toast icon={Truck} tone="emerald" title="Pickup booked" sub="Order #2087 · via Shopify" />
+        </Attach>
       </Float>
     </Stage>
   );
 }
 
-/* ── Bento tiles: plain, one focal element ─────────────────────────────── */
+/* ── Bento tiles ───────────────────────────────────────────────────────── */
 
-/** Store pages and policies become the source for every answer. */
+/** Store pages and policies import and stay synced as the source of answers. */
 function Knowledge({ label }: SceneProps) {
   return (
-    <Stage label={label} duration={6}>
-      <Rings x={50} y={50} count={4} gap={10} />
-      <Float x={39} y={36} at={0} z={3}>
-        <IconTile icon={BookOpen} size="xl" pulse />
-      </Float>
-      <Float x={8} y={16} at={1.1} drift>
-        <Chip icon={FileText}>Return policy</Chip>
-      </Float>
-      <Float x={46} y={74} at={2.1} drift>
-        <Chip icon={Link2}>12 store pages</Chip>
+    <Stage label={label} duration={7}>
+      <Float x={10} y={14} w={80}>
+        <Panel title="Store knowledge" icon={BookOpen} right={<Chip>12 pages</Chip>}>
+          <Doc title="Return policy" sub="glowco.in/policies/refund" at={1.4} />
+          <Doc title="Shipping policy" sub="2 to 5 days, COD available" at={2} />
+          <Doc title="Ingredients FAQ" sub="Store page · 18 answers" at={2.6} />
+        </Panel>
       </Float>
     </Stage>
   );
 }
 
-/** Paste your own key, connect, and tokens bill to your provider. */
+/** Bring your own key: paste it, connect, tokens bill to your provider. */
 function Keys({ label }: SceneProps) {
   return (
-    <Stage label={label} duration={6}>
-      <Glow x={50} y={48} size={22} />
-      <Float x={12} y={22} w={76} at={0.2} z={3}>
-        <Panel title="Your API key" icon={KeyRound}>
-          <Stack gap={0.9}>
-            <Field label="Key" value="sk-••••••••••••4f2a" mono />
-            <Btn primary pressAt={1.6}>Connect</Btn>
+    <Stage label={label} duration={7}>
+      <Float x={10} y={14} w={80}>
+        <Panel title="Connect your AI" icon={KeyRound}>
+          <div className="ai-seg">
+            <span>
+              <OpenAILogo /> OpenAI
+            </span>
+            <span className="is-on">
+              <AnthropicLogo /> Claude
+            </span>
+            <span>
+              <GeminiLogo /> Gemini
+            </span>
+          </div>
+          <Stack gap={0.8}>
+            <div className="fv-field">
+              <small>API key</small>
+              <span className="is-mono">
+                <TypeText text="sk-••••••••••••••4f2a" at={0.6} cps={30} />
+              </span>
+            </div>
+            <span data-cursor="connect">
+              <Swap
+                at={2.2}
+                a={
+                  <Btn primary pressAt={1.9}>
+                    Connect
+                  </Btn>
+                }
+                b={<Chip tone="emerald" icon={Check}>Connected · tokens bill to your account</Chip>}
+              />
+            </span>
           </Stack>
         </Panel>
       </Float>
-      <Cursor
-        path={[
-          [72, 86, 0.6],
-          [50, 55, 1.4],
-          [50, 55, 2],
-          [62, 80, 3],
-        ]}
-        clicks={[1.6]}
-      />
-      <Float x={30} y={78} at={2.3}>
-        <Chip tone="emerald" dot>Connected</Chip>
-      </Float>
+      <Cursor path={[[70, 98, 1], ['connect', 1.7], ['connect', 2.2], [70, 96, 3.2]]} clicks={[1.9]} />
     </Stage>
   );
 }
 
-/** Name and tone set once; every greeting sounds like the brand. */
+/** Name, tone and a live preview of how the bot will sound. */
 function Persona({ label }: SceneProps) {
   return (
-    <Stage label={label} duration={6.5}>
-      <Rings x={50} y={56} count={4} gap={9} />
-      <Float x={30} y={16} at={0.2}>
-        <Chip icon={Smile}>Maya · warm, brief</Chip>
-      </Float>
-      <Float x={14} y={38} w={72} at={0.9} z={3}>
-        <Bubble from="biz" time="10:15" read>
-          <TypeText text="Hi! I'm Maya from Glow Co. How can I help today?" at={1.2} cps={32} />
-        </Bubble>
-      </Float>
-      <Float x={34} y={72} at={3.4}>
-        <Chip icon={Sparkles}>Quick FAQs on</Chip>
+    <Stage label={label} duration={7.5}>
+      <Float x={10} y={12} w={80}>
+        <Panel title="Bot persona" icon={Sparkles}>
+          <div className="ai-persona">
+            <div className="fv-field">
+              <small>Name</small>
+              <span>Maya</span>
+            </div>
+            <div className="ai-tones">
+              <span className="is-on">Warm</span>
+              <span className="is-on">Brief</span>
+              <span>Formal</span>
+            </div>
+          </div>
+          <div className="ai-preview">
+            <Reveal at={0.9}>
+              <Bubble from="biz" time="10:15">
+                <TypeText text="Hi! I'm Maya from Glow Co. How can I help today?" at={1.1} cps={32} />
+              </Bubble>
+            </Reveal>
+          </div>
+        </Panel>
       </Float>
     </Stage>
   );
 }
 
-/* ── Wide panels: page mesh, one large card ────────────────────────────── */
+/* ── Showcases ─────────────────────────────────────────────────────────── */
 
-/** Connect your key, choose the model, then watch tokens and cost. */
+/** Key, model and reply length on one side; what it costs on the other. */
 function Settings({ label }: SceneProps) {
   return (
-    <Stage label={label} shape="wide" duration={7}>
-      <Float x={10} y={10} w={50} at={0.2} z={3}>
+    <Stage label={label} shape="wide" duration={8}>
+      <Float x={14} y={6} w={66}>
         <Panel title="AI settings" icon={Sparkles} right={<Chip tone="emerald" dot>Connected</Chip>}>
-          <Stack gap={0.8}>
-            <Field label="API key" value="sk-••••••••••••4f2a" mono />
-            <Reveal at={1}>
-              <Field label="Model" value="Fast · low cost" />
-            </Reveal>
-            <Reveal at={1.8}>
-              <Meter label="Max reply length" value="300 tokens" pct={60} />
-            </Reveal>
-          </Stack>
-        </Panel>
-      </Float>
-      <Float x={66} y={34} w={26} at={3}>
-        <Panel glass title="Usage" icon={Gauge}>
-          <Stat label="Tokens this week" value="48,210" />
-          <Row title="₹0.10 to ₹0.30" sub="Est. per AI reply" />
+          <div className="cp-perf">
+            <Stack gap={0.85}>
+              <div className="fv-field">
+                <small>API key</small>
+                <span className="is-mono">sk-••••••••••••4f2a</span>
+              </div>
+              <div className="fv-field">
+                <small>Model</small>
+                <div className="ai-seg ai-seg--fill">
+                  <span className="ai-seg__slide">Fast · low cost</span>
+                  <span>Balanced</span>
+                  <span>Best quality</span>
+                </div>
+              </div>
+              <Reveal at={1.2}>
+                <Meter label="Max reply length" value="300 tokens" pct={60} />
+              </Reveal>
+            </Stack>
+            <div className="cp-perf__kv">
+              <Label>This week</Label>
+              <KV k="AI replies" v="1,612" />
+              <KV k="Tokens" v="48,210" />
+              <KV k="Per reply" v="₹0.10 to ₹0.30" />
+            </div>
+          </div>
+          <Attach place="br" at={2.6} dx={1.6} dy={-0.8}>
+            <Toast icon={Gauge} title="Billed by your provider" sub="No markup from TopEdge AI" />
+          </Attach>
         </Panel>
       </Float>
     </Stage>
   );
 }
 
-/** Imported pages plus persona: the answer cites policy in the brand voice. */
+/** Knowledge on the left; a test chat on the right cites the row it used. */
 function KnowledgePersona({ label }: SceneProps) {
   return (
     <Stage label={label} shape="wide" duration={8}>
-      <Float x={8} y={12} w={50} at={0.2} z={3}>
-        <Panel title="Store knowledge" icon={BookOpen}>
-          <Reveal at={0.8}>
-            <Row lead={<IconTile icon={FileText} />} title="Return policy" sub="7-day exchange" right={<Chip tone="emerald">Synced</Chip>} />
-          </Reveal>
-          <Reveal at={1.4}>
-            <Row lead={<IconTile icon={FileText} />} title="Shipping policy" sub="2 to 5 days" right={<Chip tone="emerald">Synced</Chip>} />
-          </Reveal>
-          <Reveal at={2}>
-            <Row lead={<IconTile icon={Link2} />} title="Store pages" sub="12 imported" right={<Chip tone="emerald">Synced</Chip>} />
-          </Reveal>
+      <Float x={10} y={8} w={74}>
+        <Panel>
+          <div className="ai-split">
+            <div>
+              <Label>Store knowledge</Label>
+              <Swap
+                at={3.2}
+                a={<Row lead={<IconTile icon={FileText} />} title="Return policy" sub="7-day exchange" />}
+                b={<Row lead={<IconTile icon={FileText} tone="emerald" />} title="Return policy" sub="7-day exchange · used now" active />}
+              />
+              <Row lead={<IconTile icon={FileText} />} title="Shipping policy" sub="2 to 5 days" />
+              <Row lead={<IconTile icon={Link2} />} title="Store pages" sub="12 imported" />
+            </div>
+            <div className="ai-chat">
+              <div className="ai-chat__head">
+                <GlowDp />
+                <b>Maya</b>
+                <small>Test chat</small>
+              </div>
+              <Stack gap={0.5}>
+                <Reveal at={0.6}>
+                  <Bubble from="user">Can I swap my serum for a bigger size?</Bubble>
+                </Reveal>
+                <Reveal at={1.8} until={3.1}>
+                  <Typing />
+                </Reveal>
+                <Reveal at={3.2}>
+                  <Bubble from="biz" time="14:05">
+                    <TypeText text="Sure! Exchanges are free within 7 days of delivery." at={3.3} cps={34} />
+                  </Bubble>
+                </Reveal>
+                <Reveal at={4.8}>
+                  <span className="ai-cite">
+                    <FileText strokeWidth={2.2} /> Source: Return policy
+                  </span>
+                </Reveal>
+              </Stack>
+            </div>
+          </div>
         </Panel>
-      </Float>
-      <Float x={64} y={14} at={2.8}>
-        <Chip icon={Smile}>Maya · warm, brief</Chip>
-      </Float>
-      <Float x={62} y={30} w={32} at={3.4} z={4}>
-        <Bubble from="biz" time="14:05" read>
-          <TypeText text="Sure! Exchanges are free within 7 days of delivery." at={3.7} cps={34} />
-        </Bubble>
       </Float>
     </Stage>
   );
 }
 
-/** Intent Detect routes first; a human takeover wins and pauses AI. */
+/** Messages route before AI spends a token: intent first, flows next, humans always win. */
 function LiveRouting({ label }: SceneProps) {
   return (
-    <Stage label={label} shape="wide" duration={8}>
-      <Float x={4} y={20} w={26} at={0.2}>
-        <Bubble from="user" time="16:40">
-          <TypeText text="Where is my order?" at={0.4} />
-        </Bubble>
-      </Float>
-      <Float x={36} y={12} w={52} at={1.2} z={3}>
-        <Panel title="Intent Detect" icon={Target}>
-          <Row
-            lead={<IconTile icon={MessageCircle} />}
-            title="Order status"
-            sub="Matched, no model call"
-            right={<Chip tone="emerald">96%</Chip>}
-            active
+    <Stage label={label} shape="wide" duration={9}>
+      <Float x={18} y={6} w={60}>
+        <Panel title="Routing" icon={Target} right={<Chip>Inbound WhatsApp</Chip>}>
+          <div className="ai-msg">
+            <Swap at={4.4} a={<Bubble from="user">Where is my order?</Bubble>} b={<Bubble from="user">Can I talk to a person?</Bubble>} />
+          </div>
+          <Swap
+            at={4.4}
+            a={<Row lead={<IconTile icon={Target} tone="emerald" />} title="Intent Detect · Order status" sub="96% match · no model call" right={<Chip tone="emerald">₹0</Chip>} active />}
+            b={<Row lead={<IconTile icon={Target} />} title="Intent Detect · Human request" sub="Matched" />}
           />
-          <Reveal at={2.4}>
-            <Row lead={<IconTile icon={Workflow} />} title="Flow Builder" sub="Runs the Track order flow" />
-          </Reveal>
-          <Reveal at={3.6}>
-            <Row
-              lead={<IconTile icon={Headphones} tone="amber" />}
-              title="Live Chat takeover"
-              sub="Always wins over AI"
-              right={<Chip tone="amber">AI paused</Chip>}
-            />
+          <Swap
+            at={4.4}
+            a={
+              <Reveal at={1.4}>
+                <Row lead={<IconTile icon={Workflow} />} title="Flow Builder" sub="Runs Track order, replies in 1.2s" right={<Chip tone="emerald" icon={Check}>Sent</Chip>} />
+              </Reveal>
+            }
+            b={<Row lead={<IconTile icon={MessageCircle} />} title="AI reply" sub="Skipped" />}
+          />
+          <Reveal at={5.2}>
+            <Row lead={<IconTile icon={Headphones} tone="amber" />} title="Live Chat takeover" sub="Priya joined · always wins over AI" right={<Chip tone="amber">AI paused</Chip>} active />
           </Reveal>
         </Panel>
       </Float>

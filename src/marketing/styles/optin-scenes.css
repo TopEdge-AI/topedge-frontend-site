@@ -272,3 +272,35 @@
 .oi-banner__device { position: absolute; right: 47%; top: 1.6em; width: 1.2em; height: 3.4em; border-radius: 0.4em; background: linear-gradient(180deg, #2b2b2b, #111); box-shadow: inset 0 0 0 2px #444; }
 .oi-banner__device::after { content: ''; position: absolute; left: 50%; top: 0.5em; width: 0.5em; height: 0.5em; margin-left: -0.25em; border-radius: 50%; background: #60a5fa; box-shadow: 0 0 0.4em #60a5fa; }
 .oi-pop--banner .oi-body { padding: 1.1em 1.5em 1.1em; }
+
+/* ── v7 additions ──────────────────────────────────────────────────────── */
+.oi-dp { display: grid; place-items: center; width: 100%; height: 100%; background: linear-gradient(160deg, #10b981, #047857); }
+.oi-dp svg { width: 55%; height: 55%; color: #fff; }
+.oi-kicker { margin: 0 0 0.2em; font-size: 0.82em; font-weight: 700; letter-spacing: 0.04em; color: #7c3aed; }
+.oi-cta--wa { background: linear-gradient(180deg, #2fdc6e, #1faa54); box-shadow: 0 0.6em 1.2em -0.6em rgba(31, 170, 84, 0.7); }
+.oi-cta--wa svg { width: 1.1em; height: 1.1em; }
+.oi-cta--done { background: #ecfdf5; color: #047857; box-shadow: inset 0 0 0 1px rgba(16, 185, 129, 0.3); }
+.oi-cta--done svg { width: 1em; height: 1em; }
+.oi-cta--muted { background: #e4e7ec; color: #475467; box-shadow: none; }
+.oi-coupon-v { margin-bottom: 0.2em; }
+/* A mini product page inside a browser window. */
+.oi-store { display: grid; grid-template-columns: 1fr 1fr; gap: 1em; padding: 1em; min-height: 15em; align-content: start; }
+.oi-store__info { display: flex; flex-direction: column; gap: 0.6em; padding-top: 0.4em; }
+.oi-fab { position: absolute; right: 1em; bottom: 1em; display: grid; place-items: center; width: 3em; height: 3em; border-radius: 50%; color: #fff; background: linear-gradient(180deg, #2fdc6e, #1faa54); box-shadow: 0 0.8em 1.6em -0.6em rgba(31, 170, 84, 0.7); }
+.oi-fab svg { width: 50%; height: 50%; }
+.oi-fab::after { content: ''; position: absolute; inset: 0; border-radius: 50%; box-shadow: 0 0 0 2px rgba(37, 211, 102, 0.5); animation: oi-pulse 2s ease-out infinite; }
+.oi-widget { display: flex; flex-direction: column; gap: 0.15em; width: 16em; padding: 1em; border-radius: 1em; background: #fff; text-align: left; box-shadow: 0 0 0 1px rgba(16, 24, 40, 0.07), 0 1.6em 3em -1.4em rgba(16, 24, 40, 0.4); }
+.oi-widget > b { font-size: 1em; font-weight: 700; letter-spacing: -0.015em; }
+.oi-widget > small { font-size: 0.8em; color: #667085; }
+.oi-widget .oi-phone { font-size: 0.9em; }
+.oi-widget .oi-cta { width: 100%; margin-top: 0.7em; padding: 0.6em 1em; font-size: 0.88em; }
+.oi-sys { align-self: center; max-width: 86%; margin-bottom: 0.3em; padding: 0.4em 0.7em; border-radius: 0.6em; font-size: 0.7em; line-height: 1.35; text-align: center; color: #54656f; background: #fff5c4; box-shadow: 0 1px 0.5px rgba(11, 20, 26, 0.1); }
+.oi-order { display: grid; grid-template-columns: 3.2em 1fr auto; align-items: center; gap: 0.7em; width: 100%; margin-top: 1em; padding: 0.6em; border-radius: 0.9em; text-align: left; background: #f7f8fa; box-shadow: inset 0 0 0 1px rgba(16, 24, 40, 0.06); }
+.oi-order .fv-art { width: 3.2em; border-radius: 0.5em; }
+.oi-order .fv-art__obj { transform: scale(0.38); }
+.oi-order span { display: flex; flex-direction: column; min-width: 0; }
+.oi-order span b { font-size: 0.86em; font-weight: 650; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.oi-order span small { font-size: 0.74em; color: #667085; }
+.oi-order > b { font-size: 0.9em; font-weight: 700; }
+.oi-order__wa { display: inline-flex; align-items: center; gap: 0.4em; margin-top: 0.8em; padding: 0.55em 0.9em; border-radius: 99em; font-size: 0.8em; font-weight: 650; color: #047857; background: #ecfdf5; }
+.oi-order__wa svg { width: 1.1em; height: 1.1em; }

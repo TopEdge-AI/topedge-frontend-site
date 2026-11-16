@@ -1,320 +1,311 @@
 /**
- * Profit & costs scenes, v3 storytelling style (see flow-builder.tsx).
- *
- * Per-order numbers come from the ₹799 kurta proof table on the page (₹13
- * packing, ₹85 freight, ₹30 COD, ₹38 RTO, ₹13 support, ₹179 true cost).
- * Store-level sample figures (₹16,349 revenue, 48 orders, ₹3,562 net) appear
- * only where a store KPI is the point. Keys are the image paths in
- * productPages.ts.
+ * Profit & loss scenes (v7). A sample fashion store, Mira Ethnic. Numbers
+ * are internally consistent: the ₹799 kurta's true cost is ₹179, and the
+ * 30-day waterfall nets ₹3,562 from ₹16,349.
+ * Keys are the image paths in productPages.ts.
  */
 import type { CSSProperties } from 'react';
-import { ArrowDownWideNarrow, Boxes, CalendarDays, Check, Layers, Percent, Shirt, Undo2, Wallet } from 'lucide-react';
 import {
-  Bars,
+  ArrowDownWideNarrow,
+  CalendarDays,
+  Layers,
+  MetaLogo,
+  Package,
+  Percent,
+  RazorpayLogo,
+  ShopifyLogo,
+  Undo2,
+  Wallet,
+} from '../icons';
+import {
+  Attach,
   Btn,
   Chip,
   Cursor,
   Donut,
   Float,
-  Glow,
-  IconTile,
+  KV,
   Panel,
+  ProductArt,
   Reveal,
-  Rings,
   Row,
   Spark,
-  Stack,
   Stage,
   Stat,
+  Swap,
+  Toast,
   TypeText,
   type SceneMap,
   type SceneProps,
-  type Tone,
 } from '../kit';
 
-/* ── Shared pieces ─────────────────────────────────────────────────────── */
+const vars = (o: Record<string, string | number>) => o as unknown as CSSProperties;
 
-/** An input field whose value types itself in. */
-function TypedField({ label, text, at }: { label: string; text: string; at: number }) {
-  return (
-    // TypeText's own span is the input box, so the typed value sits flush in it.
-    <div className="fv-field">
-      <small>{label}</small>
-      <TypeText text={text} at={at} />
-    </div>
-  );
-}
-
-type Step = {
-  /** Caption under the column. */
+type Bar = {
   name: string;
-  /** Amount shown above the bar once it lands. */
   amount: string;
-  /** Bar height and bottom offset, in em. */
+  /** Share of the chart height, 0..1, and where the bar starts from the bottom. */
   h: number;
   base: number;
-  /** Seconds into the scene when the bar drops in. */
   at: number;
-  hi?: boolean;
-  tone?: Tone;
+  kind?: 'total' | 'cost' | 'risk' | 'net';
 };
 
-/** Floating-bar waterfall: each step drops in on its own beat. */
-function Waterfall({ steps, height = 19 }: { steps: Step[]; height?: number }) {
-  const grid: CSSProperties = {
-    display: 'grid',
-    gridTemplateColumns: `repeat(${steps.length}, 1fr)`,
-    textAlign: 'center',
-  };
+/** A floating-bar waterfall. Bars drop in one by one at `at`. */
+function Waterfall({ bars, height = 15 }: { bars: Bar[]; height?: number }) {
   return (
-    <div>
-      <div style={{ ...grid, alignItems: 'stretch', height: `${height}em` }}>
-        {steps.map((s) => (
-          <div
-            key={s.name}
-            style={{ display: 'flex', flexDirection: 'column', justifyContent: 'flex-end', alignItems: 'center', gap: '0.35em' }}
-          >
-            <Reveal at={s.at + 0.35}>
-              <span className="fv-meter__row">
-                <b>{s.amount}</b>
-              </span>
-            </Reveal>
-            <div style={{ width: '62%', marginBottom: `${s.base}em`, '--fv-d': `${s.at * 1000}ms` } as CSSProperties}>
-              <Bars values={[100]} hi={s.hi ? 0 : undefined} tone={s.tone} height={s.h} />
-            </div>
+    <div className="pl-wf" style={vars({ '--h': `${height}em`, '--n': bars.length })}>
+      <div className="pl-wf__plot">
+        {bars.map((b) => (
+          <div key={b.name} className="pl-wf__col">
+            <span
+              className="pl-wf__bar"
+              data-kind={b.kind ?? 'cost'}
+              style={vars({ bottom: `${b.base * 100}%`, height: `${b.h * 100}%`, '--at': `${b.at}s` })}
+            >
+              <b>{b.amount}</b>
+            </span>
           </div>
         ))}
       </div>
-      <div className="fv-stat" style={{ ...grid, marginTop: '0.7em' }}>
-        {steps.map((s) => (
-          <small key={s.name}>{s.name}</small>
+      <div className="pl-wf__axis">
+        {bars.map((b) => (
+          <small key={b.name}>{b.name}</small>
         ))}
       </div>
     </div>
   );
 }
 
-/* ── Hero ──────────────────────────────────────────────────────────────── */
+function Field({ label, text, at, prefix }: { label: string; text: string; at: number; prefix?: string }) {
+  return (
+    <div className="fv-field">
+      <small>{label}</small>
+      <span>
+        {prefix ? <em className="pl-prefix">{prefix}</em> : null}
+        <TypeText text={text} at={at} />
+      </span>
+    </div>
+  );
+}
 
-/** One ₹799 kurta: each cost drops in, then the true cost lands. */
+/* ── Hero: what one ₹799 order really costs ────────────────────────────── */
+
 function TrueCost({ label }: SceneProps) {
-  // 16em of bar per ₹179.
-  const k = 16 / 179;
-  const steps: Step[] = [
-    { name: 'Packing', amount: '₹13', h: 13 * k, base: 0, at: 0.8 },
-    { name: 'Freight', amount: '₹85', h: 85 * k, base: 13 * k, at: 1.4 },
-    { name: 'COD fee', amount: '₹30', h: 30 * k, base: 98 * k, at: 2 },
-    { name: 'RTO', amount: '₹38', h: 38 * k, base: 128 * k, at: 2.8, hi: true, tone: 'rose' },
-    { name: 'Support', amount: '₹13', h: 13 * k, base: 166 * k, at: 3.4, hi: true, tone: 'rose' },
-    { name: 'True cost', amount: '₹179', h: 16, base: 0, at: 4.2, hi: true },
+  const k = 1 / 179;
+  const bars: Bar[] = [
+    { name: 'Packing', amount: '₹13', h: 13 * k, base: 0, at: 0.9 },
+    { name: 'Freight', amount: '₹85', h: 85 * k, base: 13 * k, at: 1.5 },
+    { name: 'COD fee', amount: '₹30', h: 30 * k, base: 98 * k, at: 2.1 },
+    { name: 'RTO share', amount: '₹38', h: 38 * k, base: 128 * k, at: 2.8, kind: 'risk' },
+    { name: 'Support', amount: '₹13', h: 13 * k, base: 166 * k, at: 3.4, kind: 'risk' },
+    { name: 'True cost', amount: '₹179', h: 1, base: 0, at: 4.2, kind: 'total' },
   ];
   return (
-    <Stage label={label} shape="wide" duration={8.5}>
-      <Float x={32} y={8} w={56} at={0.2} z={3}>
-        <Panel title="₹799 kurta order" icon={Shirt} right={<Chip>Per order</Chip>}>
-          <Waterfall steps={steps} />
-        </Panel>
-      </Float>
-      <Float x={3} y={36} w={26} at={4.8}>
-        <Panel glass>
-          <Stat label="True cost per order" value="₹179" delta="2.1x the ₹85 freight" tone="rose" />
+    <Stage label={label} shape="wide" duration={9}>
+      <Float x={14} y={4} w={72}>
+        <Panel>
+          <div className="pl-order">
+            <ProductArt kind="kurta" h={3.4} />
+            <span>
+              <b>Rani pink silk kurta</b>
+              <small>Order #2211 · ₹799 · Cash on delivery</small>
+            </span>
+            <Chip>Per order</Chip>
+          </div>
+          <Waterfall bars={bars} />
+          <Attach place="tl" at={4.8} dx={1.6} dy={8}>
+            <Toast dark icon={Wallet} title="True cost ₹179" sub="2.1× the ₹85 freight you see" />
+          </Attach>
         </Panel>
       </Float>
     </Stage>
   );
 }
 
-/* ── Bento tiles: setup wizard, one step each ──────────────────────────── */
+/* ── Bento tiles: the setup, one step each ─────────────────────────────── */
 
-/** Type COGS and packing for a product; the unit cost is saved. */
+/** Product costs: type the COGS and packing, the unit cost lands. */
 function ProductsCogs({ label }: SceneProps) {
   return (
-    <Stage label={label} duration={6.5}>
-      <Rings x={50} y={48} count={4} gap={9} />
-      <Float x={15} y={20} w={70} at={0.2} z={3}>
-        <Panel title="Cotton kurta" icon={Shirt} right={<Chip>₹799</Chip>}>
-          <Stack gap={0.7}>
-            <TypedField label="COGS" text="₹310" at={0.9} />
-            <TypedField label="Packaging" text="₹13" at={1.6} />
-          </Stack>
+    <Stage label={label} duration={7}>
+      <Float x={10} y={12} w={80}>
+        <Panel>
+          <div className="pl-order">
+            <ProductArt kind="kurta" h={3.2} />
+            <span>
+              <b>Cotton kurta</b>
+              <small>Sells at ₹799</small>
+            </span>
+            <span className="mm-synced"><ShopifyLogo /> Synced</span>
+          </div>
+          <div className="pl-two">
+            <Field label="COGS" prefix="₹" text="310" at={0.8} />
+            <Field label="Packaging" prefix="₹" text="13" at={1.5} />
+          </div>
+          <Reveal at={2.2}>
+            <KV k="Unit cost" v="₹323" total />
+          </Reveal>
         </Panel>
       </Float>
-      <Float x={36} y={76} at={2.4}>
-        <Chip tone="emerald" icon={Check}>
-          Unit cost ₹323
-        </Chip>
-      </Float>
     </Stage>
   );
 }
 
-/** Fees attach to the order one by one. */
+/** Fees: gateway, platform and ad spend per order, from the tools you use. */
 function Fees({ label }: SceneProps) {
   return (
-    <Stage label={label} duration={6.5}>
-      <Rings x={50} y={48} count={4} gap={10} />
-      <Float x={39} y={34} at={0} z={3}>
-        <IconTile icon={Percent} size="xl" pulse />
-      </Float>
-      <Float x={8} y={18} at={1} drift>
-        <Chip dot>Gateway 2%</Chip>
-      </Float>
-      <Float x={46} y={72} at={2} drift>
-        <Chip dot>Ads ₹62 / order</Chip>
+    <Stage label={label} duration={7}>
+      <Float x={10} y={14} w={80}>
+        <Panel title="Fees" icon={Percent}>
+          <Reveal at={0.5}>
+            <Row lead={<span className="pl-logo"><RazorpayLogo /></span>} title="Payment gateway" sub="Razorpay" right="2%" />
+          </Reveal>
+          <Reveal at={1.1}>
+            <Row lead={<span className="pl-logo"><ShopifyLogo /></span>} title="Platform fee" sub="Shopify Basic" right="₹0" />
+          </Reveal>
+          <Reveal at={1.7}>
+            <Row lead={<span className="pl-logo"><MetaLogo /></span>} title="Ads per order" sub="Meta, last 30 days" right="₹62" />
+          </Reveal>
+        </Panel>
       </Float>
     </Stage>
   );
 }
 
-/** The RTO rate fills in, then the loss on each refused parcel. */
+/** COD and returns: how often COD comes back, and what each return costs. */
 function CodReturns({ label }: SceneProps) {
   return (
-    <Stage label={label} duration={6.5}>
-      <Glow x={50} y={48} size={20} />
-      <Float x={37} y={10} at={0.2}>
-        <Chip>RTO on COD orders</Chip>
-      </Float>
-      <Float x={33} y={25} at={0.6} z={3}>
-        <Donut pct={30} tone="rose" size={12} />
-      </Float>
-      <Float x={36} y={74} at={2.2}>
-        <Chip tone="rose" icon={Undo2}>
-          ₹125 lost per RTO
-        </Chip>
+    <Stage label={label} duration={7}>
+      <Float x={10} y={14} w={80}>
+        <Panel title="COD and returns" icon={Undo2}>
+          <div className="cr-score">
+            <Donut pct={30} size={7.2} tone="rose">
+              <b className="pl-donut">30%</b>
+            </Donut>
+            <div className="cr-score__kv pl-rto">
+              <small>RTO rate on COD</small>
+              <KV k="Forward freight" v="₹85" />
+              <KV k="Return freight" v="₹40" />
+              <KV k="Lost per RTO" v="₹125" total />
+            </div>
+          </div>
+        </Panel>
       </Float>
     </Stage>
   );
 }
 
-/* ── Wide panels ───────────────────────────────────────────────────────── */
+/* ── Showcases ─────────────────────────────────────────────────────────── */
 
-/** Pick a period; true net profit counts up with revenue and margin. */
+/** Net profit for a period: switch to 30 days and the numbers follow. */
 function NetProfit({ label }: SceneProps) {
   return (
     <Stage label={label} shape="wide" duration={8}>
-      <Float x={3} y={32} w={24} at={0}>
-        <Panel glass title="Period" icon={CalendarDays}>
-          <Row title="Last 7 days" />
-          <Row title="Last 30 days" active />
+      <Float x={16} y={6} w={64}>
+        <Panel
+          title="Net profit"
+          icon={Wallet}
+          right={
+            <div className="ai-seg pl-seg" data-cursor="period">
+              <span>7 days</span>
+              <Swap at={1.1} a={<span>30 days</span>} b={<span className="is-on">30 days</span>} />
+              <span>90 days</span>
+            </div>
+          }
+        >
+          <div className="cp-perf">
+            <div>
+              <Swap at={1.1} a={<Stat label="After COGS, COD, RTO and ads" value="₹812" />} b={<Stat label="After COGS, COD, RTO and ads" value="₹3,562" delta="+8.7% vs prior 30 days" />} />
+              <Spark points={[30, 38, 34, 46, 42, 55, 52, 63, 60, 72]} height={5} tone="emerald" />
+            </div>
+            <div className="cp-perf__kv">
+              <KV k="Revenue" v="₹16,349" />
+              <KV k="Orders" v="48" />
+              <KV k="AOV" v="₹341" />
+              <KV k="Margin" v="21.8%" total />
+            </div>
+          </div>
+          <Attach place="bl" at={2.6} dx={-2} dy={-1}>
+            <Toast icon={CalendarDays} title="Every rupee in" sub="Shopify, courier, gateway and Meta" />
+          </Attach>
         </Panel>
       </Float>
-      <Float x={31} y={10} w={56} at={1.3} z={3}>
-        <Panel title="Net profit" icon={Wallet} right={<Chip>Last 30 days</Chip>}>
-          <Stat label="After COGS, COD, RTO, ads" value="₹3,562" delta="+8.7% vs prior" />
-          <Spark points={[30, 38, 34, 46, 42, 55, 52, 63, 60, 72]} height={6} />
-          <Reveal at={2.8}>
-            <Row title="Revenue" sub="48 orders · AOV ₹341" right="₹16,349" />
-          </Reveal>
-          <Reveal at={3.3}>
-            <Row title="Margin" sub="Net over revenue" right="21.8%" />
-          </Reveal>
-        </Panel>
-      </Float>
-      <Cursor
-        path={[
-          [22, 92, 0.2],
-          [14, 50, 0.8],
-          [14, 50, 1.3],
-          [24, 80, 2.2],
-        ]}
-        clicks={[1]}
-      />
+      <Cursor path={[[70, 98, 0.2], ['period', 0.8], ['period', 1.3], [74, 94, 2.4]]} clicks={[1.05]} />
     </Stage>
   );
 }
 
-/** Store waterfall: revenue, each cost hangs down, net profit is what is left. */
+/** Where ₹16,349 of revenue goes, bar by bar, down to ₹3,562 net. */
 function CostWaterfall({ label }: SceneProps) {
-  // 16em of bar per ₹16,349 of revenue.
-  const k = 16 / 16349;
-  const steps: Step[] = [
-    { name: 'Revenue', amount: '₹16,349', h: 16, base: 0, at: 0.8, hi: true },
+  const k = 1 / 16349;
+  const bars: Bar[] = [
+    { name: 'Revenue', amount: '₹16,349', h: 1, base: 0, at: 0.8, kind: 'total' },
     { name: 'COGS', amount: '₹6,540', h: 6540 * k, base: 9809 * k, at: 1.5 },
     { name: 'Shipping', amount: '₹2,410', h: 2410 * k, base: 7399 * k, at: 2.1 },
-    { name: 'COD, RTO', amount: '₹1,980', h: 1980 * k, base: 5419 * k, at: 2.7, hi: true, tone: 'rose' },
+    { name: 'COD, RTO', amount: '₹1,980', h: 1980 * k, base: 5419 * k, at: 2.7, kind: 'risk' },
     { name: 'Ads', amount: '₹1,857', h: 1857 * k, base: 3562 * k, at: 3.3 },
-    { name: 'Net', amount: '₹3,562', h: 3562 * k, base: 0, at: 4, hi: true, tone: 'emerald' },
+    { name: 'Net', amount: '₹3,562', h: 3562 * k, base: 0, at: 4, kind: 'net' },
   ];
   return (
     <Stage label={label} shape="wide" duration={8.5}>
-      <Float x={6} y={8} w={60} at={0.2} z={3}>
+      <Float x={14} y={4} w={72}>
         <Panel title="Cost waterfall" icon={Layers} right={<Chip>Last 30 days</Chip>}>
-          <Waterfall steps={steps} />
-        </Panel>
-      </Float>
-      <Float x={69} y={32} w={26} at={4.6}>
-        <Panel glass title="Biggest cost" icon={Boxes}>
-          <Row title="COGS ₹6,540" sub="40% of revenue" />
+          <Waterfall bars={bars} />
+          <Attach place="tr" at={4.6} dx={1.6} dy={5}>
+            <Toast icon={Package} title="Biggest cost: COGS" sub="40% of revenue" />
+          </Attach>
         </Panel>
       </Float>
     </Stage>
   );
 }
 
-/** Sort by margin: losses show in rose, a product missing COGS sinks last. */
+/** Products by margin: sort, and the loss-maker rises to the top. */
 function ProductTable({ label }: SceneProps) {
+  const row = (kind: 'kurta' | 'sneaker', title: string, sub: string, m: string, tone: 'emerald' | 'rose', active?: boolean) => (
+    <Row lead={<ProductArt kind={kind} h={2.6} />} title={title} sub={sub} right={<Chip tone={tone}>{m}</Chip>} active={active} />
+  );
   return (
     <Stage label={label} shape="wide" duration={8}>
-      <Float x={20} y={8} w={60} at={0.2} z={3}>
+      <Float x={16} y={6} w={64}>
         <Panel
           title="Products"
-          icon={Boxes}
+          icon={Package}
           right={
-            <Btn icon={ArrowDownWideNarrow} pressAt={1.2}>
-              Margin
-            </Btn>
+            <span data-cursor="sort">
+              <Btn icon={ArrowDownWideNarrow} pressAt={1.2}>
+                Margin
+              </Btn>
+            </span>
           }
         >
-          <Reveal at={1.6}>
-            <Row
-              lead={<IconTile icon={Shirt} />}
-              title="Cotton kurta"
-              sub="24 sold · ₹6,520 profit"
-              right={<Chip tone="emerald">34%</Chip>}
-            />
-          </Reveal>
-          <Reveal at={2}>
-            <Row
-              lead={<IconTile icon={Shirt} />}
-              title="Linen dupatta"
-              sub="18 sold · ₹2,372 profit"
-              right={<Chip tone="emerald">22%</Chip>}
-            />
-          </Reveal>
-          <Reveal at={2.4}>
-            <Row
-              lead={<IconTile icon={Shirt} />}
-              title="Silk saree"
-              sub="6 sold · ₹1,349 loss"
-              right={<Chip tone="rose">-9%</Chip>}
-              active
-            />
-          </Reveal>
-        </Panel>
-      </Float>
-      <Float x={20} y={49} w={60} at={3.2} fade="bottom">
-        <Panel>
-          <Row
-            lead={<IconTile icon={Shirt} />}
-            title="Block print top"
-            sub="No COGS yet"
-            right={
-              <Chip tone="amber" dot>
-                Add COGS
-              </Chip>
+          <Swap
+            at={1.5}
+            a={
+              <div>
+                {row('kurta', 'Cotton kurta', '24 sold · ₹6,520 profit', '34%', 'emerald')}
+                {row('sneaker', 'Block print juttis', '18 sold · ₹2,372 profit', '22%', 'emerald')}
+                {row('kurta', 'Silk saree', '6 sold · ₹1,349 loss', '−9%', 'rose')}
+              </div>
+            }
+            b={
+              <div>
+                {row('kurta', 'Silk saree', '6 sold · ₹1,349 loss', '−9%', 'rose', true)}
+                {row('sneaker', 'Block print juttis', '18 sold · ₹2,372 profit', '22%', 'emerald')}
+                {row('kurta', 'Cotton kurta', '24 sold · ₹6,520 profit', '34%', 'emerald')}
+              </div>
             }
           />
+          <Reveal at={2.6}>
+            <Row lead={<ProductArt kind="kurta" h={2.6} />} title="Block print top" sub="No COGS yet" right={<Chip tone="amber" dot>Add COGS</Chip>} />
+          </Reveal>
+          <Attach place="r" at={3.2} dx={3.4} dy={-1}>
+            <Toast dark icon={Wallet} title="Silk saree loses ₹225 an order" sub="RTO on COD is 42%" />
+          </Attach>
         </Panel>
       </Float>
-      <Cursor
-        path={[
-          [92, 80, 0.3],
-          [73, 13, 1],
-          [73, 13, 1.6],
-          [88, 50, 2.6],
-        ]}
-        clicks={[1.2]}
-      />
+      <Cursor path={[[80, 98, 0.2], ['sort', 0.9], ['sort', 1.4], [84, 92, 2.4]]} clicks={[1.2]} />
     </Stage>
   );
 }

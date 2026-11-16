@@ -1,69 +1,85 @@
 /**
- * Flow Builder scenes. REFERENCE FILE for the v3 style: copy this shape.
- *
- * Square tiles (bento) are plain white, Graceview style: ONE focal element,
- * at most two supporting pieces, rings or a glow for place, generous air.
- * Wide panels (showcases, hero) sit on a rich gradient, Instantly style: ONE
- * large white card, at most one or two satellites (glass or small white).
+ * Flow Builder scenes (v7). Flows shown working: a real canvas, live
+ * Shopify reads, a human taking over, and a simulator run on a phone.
  * Keys are the image paths in productPages.ts.
  */
+import type { CSSProperties, ReactNode } from 'react';
 import {
   Bot,
+  Check,
+  ExternalLink,
   Folder,
-  Headphones,
   List,
   MessageCircle,
   Package,
   Play,
-  ShoppingBag,
+  ShopifyLogo,
   User,
+  UserCheck,
   Webhook,
   Zap,
-} from 'lucide-react';
+} from '../icons';
 import {
-  Avatar,
+  Attach,
   Btn,
   Bubble,
   Chip,
   Cursor,
   Float,
-  Glow,
   IconTile,
-  Node,
+  IPhone,
   Panel,
-  Phone,
   Reveal,
-  Rings,
   Row,
+  Stack,
   Stage,
+  Swap,
+  Toast,
   Toggle,
   TypeText,
   Typing,
-  Wires,
+  type IconType,
   type SceneMap,
   type SceneProps,
 } from '../kit';
 
-/* ── Bento tiles: plain, one focal element, a short story each ─────────── */
+const vars = (o: Record<string, string | number>) => o as unknown as CSSProperties;
 
-/** A shopper asks; the bot calls Shopify live; the answer comes back. */
+function Sys({ icon: Icon, children, tone }: { icon: IconType; children: ReactNode; tone?: 'emerald' | 'amber' }) {
+  return (
+    <span className="ch-sys" data-tone={tone}>
+      <Icon />
+      {children}
+    </span>
+  );
+}
+
+/* ── Bento tiles ───────────────────────────────────────────────────────── */
+
+/** A shopper asks; the flow reads Shopify live; the answer comes back. */
 function ShopifyTools({ label }: SceneProps) {
   return (
-    <Stage label={label} duration={7}>
-      <Rings x={50} y={52} count={4} gap={9} />
-      <Wires paths={['M 50 33 L 50 44', 'M 50 63 L 50 72']} />
-      <Float x={20} y={12} w={60} at={0.2}>
-        <Bubble from="user" time="11:02">
-          <TypeText text="Where is my order?" at={0.5} />
-        </Bubble>
-      </Float>
-      <Float x={18} y={44} w={64} at={1.6} z={3}>
-        <Node icon={ShoppingBag} title="Fetch order" sub="Live from Shopify" active />
-      </Float>
-      <Float x={16} y={72} w={68} at={3}>
-        <Bubble from="biz" time="11:02" read>
-          #1042 is out for delivery today.
-        </Bubble>
+    <Stage label={label} duration={7.5}>
+      <Float x={10} y={10} w={80}>
+        <Panel title="Order status bot" icon={Zap} right={<Chip tone="emerald" dot>Live</Chip>}>
+          <div className="ch-msg fb-chat">
+            <Stack gap={0.5}>
+              <Bubble from="user" time="11:02">
+                <TypeText text="Where is my order?" at={0.3} cps={20} />
+              </Bubble>
+              <Reveal at={1.4}>
+                <Sys icon={ShopifyLogo}>
+                  Fetch order · <b>#1042 found</b>
+                </Sys>
+              </Reveal>
+              <Reveal at={2.4}>
+                <Bubble from="biz" time="11:02" read buttons={[{ label: 'Track parcel', icon: ExternalLink }]}>
+                  #1042 is out for delivery and arrives today by 6 pm.
+                </Bubble>
+              </Reveal>
+            </Stack>
+          </div>
+        </Panel>
       </Float>
     </Stage>
   );
@@ -72,166 +88,199 @@ function ShopifyTools({ label }: SceneProps) {
 /** The shopper asks for a human; the bot pauses; Priya picks it up with context. */
 function Handoff({ label }: SceneProps) {
   return (
-    <Stage label={label} duration={7.5}>
-      <Glow x={50} y={58} size={20} />
-      <Float x={14} y={12} w={66} at={0.2}>
-        <Bubble from="user" time="11:04">
-          <TypeText text="Can I talk to a person?" at={0.5} />
-        </Bubble>
-      </Float>
-      <Float x={36} y={36} at={1.8} until={3.4}>
-        <Chip icon={Bot} tone="amber" dot>Bot paused</Chip>
-      </Float>
-      <Float x={36} y={36} at={3.5}>
-        <Chip icon={Headphones} tone="emerald" dot>Priya joined</Chip>
-      </Float>
-      <Float x={12} y={52} w={76} at={2.6} z={3}>
-        <Panel title="Assigned to Priya" icon={Headphones}>
-          <Row lead={<Avatar name="Rahul Mehta" />} title="Rahul Mehta" sub="Order #1042 · ₹2,499 COD" />
+    <Stage label={label} duration={8}>
+      <Float x={10} y={10} w={80}>
+        <Panel title="Rahul Mehta" icon={MessageCircle} right={<Swap at={1.6} a={<Chip tone="emerald" dot>Bot</Chip>} b={<Chip tone="amber" dot>Live Chat</Chip>} />}>
+          <div className="ch-msg fb-chat">
+            <Stack gap={0.5}>
+              <Bubble from="user" time="11:04">
+                <TypeText text="Can I talk to a person?" at={0.3} cps={20} />
+              </Bubble>
+              <Reveal at={1.6}>
+                <Sys icon={Bot} tone="amber">
+                  Bot paused · opened in Live Chat
+                </Sys>
+              </Reveal>
+              <Reveal at={2.4}>
+                <Sys icon={UserCheck} tone="emerald">
+                  <b>Priya</b> joined · sees order #1042
+                </Sys>
+              </Reveal>
+              <Reveal at={3.3}>
+                <Bubble from="biz" time="11:05" read>
+                  Hi Rahul, Priya here. How can I help with #1042?
+                </Bubble>
+              </Reveal>
+            </Stack>
+          </div>
         </Panel>
       </Float>
     </Stage>
   );
 }
 
-/** Store events land one after another, in real time. */
+/** Store events land in real time, so answers use current data. */
 function WebhookSync({ label }: SceneProps) {
+  const ev = (topic: string, sub: string, at: number) => (
+    <Reveal at={at}>
+      <Row lead={<span className="pl-logo"><ShopifyLogo /></span>} title={topic} sub={sub} right={<span className="fb-ok">200</span>} />
+    </Reveal>
+  );
   return (
-    <Stage label={label} duration={7}>
-      <Rings x={50} y={48} count={4} gap={10} />
-      <Float x={39} y={34} at={0} z={3}>
-        <IconTile icon={Webhook} size="xl" pulse />
-      </Float>
-      <Float x={6} y={16} at={1.2} drift>
-        <Chip tone="amber" dot>Cart abandoned</Chip>
-      </Float>
-      <Float x={60} y={28} at={2.2} drift>
-        <Chip tone="emerald" dot>Order created</Chip>
-      </Float>
-      <Float x={20} y={72} at={3.2} drift>
-        <Chip tone="sky" dot>Fulfilment shipped</Chip>
+    <Stage label={label} duration={7.5}>
+      <Float x={10} y={12} w={80}>
+        <Panel title="Shopify webhooks" icon={Webhook} right={<Chip tone="emerald" dot>Listening</Chip>}>
+          {ev('fulfillments/create', '#1042 · Delhivery · just now', 2.2)}
+          {ev('orders/create', '#1043 · ₹1,890 · 4s ago', 1.3)}
+          {ev('checkouts/update', 'Cart ₹3,450 · 9s ago', 0.4)}
+        </Panel>
       </Float>
     </Stage>
   );
 }
 
-/* ── Wide panels: page mesh backdrop, one large card, a story ──────────── */
+/* ── Showcases ─────────────────────────────────────────────────────────── */
 
-/** Toggle a flow live, then publish confirms. */
+/** Folders and flows; a new flow is switched on and published. */
 function FlowList({ label }: SceneProps) {
   return (
     <Stage label={label} shape="wide" duration={8}>
-      <Float x={6} y={28} w={22} at={0}>
-        <Panel glass title="Folders" icon={Folder}>
-          <Row title="Support" sub="4 flows" active />
-          <Row title="Sales" sub="3 flows" />
+      <Float x={10} y={6} w={80}>
+        <Panel pad={false} className="ch-inbox fb-list">
+          <div className="ch-list">
+            <div className="ch-list__head">
+              <b>Folders</b>
+            </div>
+            <Row lead={<IconTile icon={Folder} size="sm" />} title="Support" sub="4 flows" active />
+            <Row lead={<IconTile icon={Folder} size="sm" />} title="Sales" sub="3 flows" />
+            <Row lead={<IconTile icon={Folder} size="sm" />} title="COD" sub="2 flows" />
+          </div>
+          <div className="fb-flows">
+            <div className="ch-thread__head">
+              <span>
+                <b>Support</b>
+                <small>Runs on inbound WhatsApp</small>
+              </span>
+              <span data-cursor="publish" className="ch-take">
+                <Swap at={3.2} a={<Btn primary icon={Zap} pressAt={2.9}>Publish</Btn>} b={<Chip tone="emerald" icon={Check}>Published</Chip>} />
+              </span>
+            </div>
+            <div className="fb-flows__body">
+              <Row lead={<IconTile icon={MessageCircle} />} title="Welcome menu" sub="First message of any chat" right={<Toggle />} />
+              <Row lead={<IconTile icon={Package} />} title="Order status bot" sub="Reads live from Shopify" right={<Toggle />} />
+              <Row
+                lead={<IconTile icon={List} />}
+                title="Returns and FAQ"
+                sub="New flow · 6 steps"
+                right={
+                  <span data-cursor="toggle" style={vars({ '--fv-toggle-at': '1.6s' })}>
+                    <Toggle />
+                  </span>
+                }
+                active
+              />
+            </div>
+          </div>
+          <Attach place="br" at={3.6} dx={1.6} dy={-1}>
+            <Toast dark icon={Zap} title="Live for the next message" sub="3 flows active in Support" />
+          </Attach>
         </Panel>
       </Float>
-      <Float x={32} y={14} w={56} at={0.4} z={3}>
-        <Panel title="Flows" right={<Btn primary icon={Zap} pressAt={2.6}>Publish</Btn>}>
-          <Row
-            lead={<IconTile icon={MessageCircle} tone="emerald" />}
-            title="Welcome menu"
-            sub="Runs on the first message"
-            right={<Toggle />}
-          />
-          <Row lead={<IconTile icon={Package} />} title="Order status bot" sub="Reads live from Shopify" right={<Toggle />} />
-          <Reveal at={1.2}>
-            <Row
-              lead={<IconTile icon={List} />}
-              title="Returns and FAQ"
-              sub="New flow · ready"
-              right={<Chip tone="amber" dot>Draft</Chip>}
-              active
-            />
-          </Reveal>
-        </Panel>
-      </Float>
-      <Float x={58} y={74} at={3.2}>
-        <Chip solid icon={Zap}>Live for the next message</Chip>
-      </Float>
-      <Cursor
-        path={[
-          [92, 82, 0.6],
-          [79, 24, 2.3],
-          [79, 24, 3],
-          [70, 60, 4.4],
-        ]}
-        clicks={[2.6]}
-      />
+      <Cursor path={[[70, 98, 0.4], ['toggle', 1.3], ['toggle', 1.8], ['publish', 2.6], ['publish', 3.2], [86, 94, 4.2]]} clicks={[1.6, 2.9]} />
     </Stage>
   );
 }
 
-/** The welcome menu branches; a shopper taps Track order; the path lights up. */
+/** The canvas: the welcome menu branches; a shopper taps Track order; the path lights. */
 function Canvas({ label }: SceneProps) {
   return (
-    <Stage label={label} shape="wide" duration={8}>
-      <Wires
-        shape="wide"
-        paths={[
-          'M 34 31 C 42 31, 42 13.5, 50 13.5',
-          'M 34 31 L 50 31',
-          'M 34 31 C 42 31, 42 48.5, 50 48.5',
-        ]}
-      />
-      <Float x={8} y={42} w={26} at={0} z={3}>
-        <Node icon={MessageCircle} tone="emerald" title="Welcome" sub="Any first message" />
+    <Stage label={label} shape="wide" duration={8.5}>
+      <Float x={4} y={4} w={92}>
+        <div className="fb-canvas">
+          <div className="fb-canvas__bar">
+            <b>Welcome menu</b>
+            <Chip tone="emerald" dot>Published</Chip>
+            <span className="fb-canvas__zoom">100%</span>
+          </div>
+          <div className="fb-canvas__plot">
+            <svg className="fb-links" viewBox="0 0 100 60" preserveAspectRatio="none">
+              <path d="M 34 30 C 42 30, 42 11, 52 11" />
+              <path d="M 34 30 L 52 30" />
+              <path d="M 34 30 C 42 30, 42 49, 52 49" />
+              <path className="fb-links__hot" d="M 34 30 C 42 30, 42 11, 52 11" />
+            </svg>
+            <div className="fb-node" style={vars({ left: '6%', top: '50%' })}>
+              <span className="fb-node__kind">Trigger</span>
+              <Row lead={<IconTile icon={MessageCircle} tone="emerald" />} title="Welcome" sub="Any first message" />
+            </div>
+            <div className="fb-node fb-node--hot" style={vars({ left: '52%', top: '18%', '--hot': '3s' })}>
+              <span className="fb-node__kind">Button · Track order</span>
+              <Row lead={<IconTile icon={Package} />} title="Fetch order" sub="Shopify · latest order" right={<ShopifyLogo />} />
+            </div>
+            <div className="fb-node" style={vars({ left: '52%', top: '50%' })}>
+              <span className="fb-node__kind">Button · Browse</span>
+              <Row lead={<IconTile icon={List} />} title="Send catalog" sub="5 collections" />
+            </div>
+            <div className="fb-node" style={vars({ left: '52%', top: '82%' })}>
+              <span className="fb-node__kind">Button · Talk to us</span>
+              <Row lead={<IconTile icon={User} />} title="Open Live Chat" sub="Support team" />
+            </div>
+          </div>
+          <Attach place="tr" at={3.3} dx={-1} dy={6}>
+            <Toast icon={Package} tone="emerald" title="Rahul tapped Track order" sub="#1042 sent in 1.2 s" />
+          </Attach>
+        </div>
       </Float>
-      <Float x={50} y={14} w={30} at={0.7} until={3.1}>
-        <Node icon={Package} title="Track order" sub="Fetches from Shopify" />
-      </Float>
-      <Float x={50} y={14} w={30} at={3.1}>
-        <Node icon={Package} title="Track order" sub="Shopper tapped" active />
-      </Float>
-      <Float x={50} y={42} w={30} at={1}>
-        <Node icon={List} title="Browse catalog" sub="5 collections" />
-      </Float>
-      <Float x={50} y={70} w={30} at={1.3}>
-        <Node icon={User} title="Talk to us" sub="Opens Live Chat" />
-      </Float>
-      <Cursor path={[[30, 90, 1.6], [66, 24, 2.8], [66, 24, 3.4], [88, 60, 4.6]]} clicks={[3]} />
     </Stage>
   );
 }
 
-/** Test the flow on a simulator: menu, tap, typing, answer, all checks pass. */
+/** Test Flow: the simulator taps through on a phone, and every step passes. */
 function Simulator({ label }: SceneProps) {
+  const step = (title: string, sub: string, at: number) => (
+    <Reveal at={at}>
+      <Row lead={<span className="fb-pass"><Check /></span>} title={title} sub={sub} right={<Chip tone="emerald">Pass</Chip>} />
+    </Reveal>
+  );
   return (
     <Stage label={label} shape="wide" duration={9}>
-      <Float x={8} y={30} w={30} at={0}>
-        <Panel glass title="Test Flow" icon={Play}>
-          <Reveal at={1}>
-            <Row title="Welcome" sub="Passed" right={<Chip tone="emerald">Pass</Chip>} />
-          </Reveal>
-          <Reveal at={3}>
-            <Row title="Track order" sub="Passed" right={<Chip tone="emerald">Pass</Chip>} />
-          </Reveal>
-          <Reveal at={5}>
-            <Row title="Fetch order" sub="Answered in 1.2s" right={<Chip tone="emerald">Pass</Chip>} />
+      <Float x={8} y={16} w={40}>
+        <Panel title="Test Flow" icon={Play} right={<Chip>Simulator</Chip>}>
+          {step('Welcome', 'Menu with 3 buttons', 1.2)}
+          {step('Track order', 'Button tapped', 3.2)}
+          {step('Fetch order', 'Answered in 1.2 s', 5.2)}
+          <Reveal at={5.9}>
+            <div className="cp-send">
+              <Btn primary icon={Zap}>
+                Publish flow
+              </Btn>
+            </div>
           </Reveal>
         </Panel>
       </Float>
-      <Float x={52} y={4} w={34} at={0.2} z={3}>
-        <Phone name="Your store">
-          <Reveal at={0.8}>
-            <Bubble from="biz" buttons={['Track order', 'Browse', 'Talk to us']}>
+      <Float x={60} y={0}>
+        <IPhone name="Your store" status="Test mode">
+          <Reveal at={0.6}>
+            <Bubble from="biz" time="11:06" buttons={[{ label: 'Track order', at: 2.6, cursor: 'track' }, 'Browse', 'Talk to us']}>
               Hi! How can we help today?
             </Bubble>
           </Reveal>
-          <Reveal at={2.6}>
-            <Bubble from="user">Track order</Bubble>
+          <Reveal at={2.9}>
+            <Bubble from="user" time="11:06" read>
+              Track order
+            </Bubble>
           </Reveal>
-          <Reveal at={3.2} until={4.6}>
+          <Reveal at={3.5} until={4.8}>
             <Typing />
           </Reveal>
-          <Reveal at={4.7}>
-            <Bubble from="biz" time="11:06" read>
+          <Reveal at={4.9}>
+            <Bubble from="biz" time="11:06">
               #1042 is out for delivery today.
             </Bubble>
           </Reveal>
-        </Phone>
+        </IPhone>
       </Float>
+      <Cursor touch path={[['track', 2.3], ['track', 2.9]]} clicks={[2.6]} />
     </Stage>
   );
 }

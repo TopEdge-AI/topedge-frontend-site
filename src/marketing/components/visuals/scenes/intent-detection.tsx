@@ -1,288 +1,251 @@
 /**
- * Intent detection scenes, v3 storytelling style (see flow-builder.tsx).
- *
- * Bento tiles are plain with one focal element; wide panels sit on the page
- * mesh with one large card. Each scene tells one short story. The page hero
- * is a video, so there is no hero scene here. Keys are the image paths in
- * productPages.ts.
+ * Intent detection scenes (v7). Real shopper phrasing, Hinglish included,
+ * matched to intents without spending AI tokens.
+ * Keys are the image paths in productPages.ts.
  */
+import type { CSSProperties } from 'react';
 import {
+  Check,
+  ExternalLink,
   FlaskConical,
   GitBranch,
   Headphones,
   IndianRupee,
-  MessageCircle,
   Plus,
-  ShoppingBag,
-  Sparkles,
+  Target,
   Truck,
-  UserCheck,
+  Undo2,
   Workflow,
-} from 'lucide-react';
+} from '../icons';
 import {
+  Attach,
   Btn,
   Bubble,
   Chip,
   Cursor,
-  Donut,
   Float,
-  Glow,
   IconTile,
-  Node,
+  IPhone,
+  KV,
+  Label,
+  Meter,
   Panel,
   Reveal,
-  Rings,
   Row,
   Stack,
   Stage,
+  Swap,
+  Toast,
   Toggle,
   TypeText,
-  Wires,
+  Typing,
   type SceneMap,
   type SceneProps,
 } from '../kit';
 
-/** An input field whose value types itself in. */
-function TypedField({ label, text, at }: { label: string; text: string; at: number }) {
+const vars = (o: Record<string, string | number>) => o as unknown as CSSProperties;
+
+function Field({ label, text, at, cps }: { label: string; text: string; at: number; cps?: number }) {
   return (
-    // TypeText's own span is the input box, so the typed value sits flush in it.
     <div className="fv-field">
       <small>{label}</small>
-      <TypeText text={text} at={at} />
+      <span>
+        <TypeText text={text} at={at} cps={cps} />
+      </span>
     </div>
   );
 }
 
 /* ── Bento tiles ───────────────────────────────────────────────────────── */
 
-/** Three ways of asking, Hinglish included, all land on one intent. */
+/** Three ways to ask the same thing; every one lands on Shipping. */
 function Phrases({ label }: SceneProps) {
+  const msg = (t: string, at: number) => (
+    <Bubble from="user">
+      <TypeText text={t} at={at} cps={20} />
+    </Bubble>
+  );
   return (
-    <Stage label={label} duration={7}>
-      <Rings x={50} y={56} count={4} gap={9} />
-      <Wires paths={['M 50 30 L 50 44']} />
-      <Float x={16} y={12} w={68} at={0.2} until={2.3}>
-        <Bubble from="user">
-          <TypeText text="parcel kab aayega?" at={0.4} />
-        </Bubble>
-      </Float>
-      <Float x={16} y={12} w={68} at={2.4} until={4.4}>
-        <Bubble from="user">
-          <TypeText text="order kidhar hai bhai" at={2.6} />
-        </Bubble>
-      </Float>
-      <Float x={16} y={12} w={68} at={4.5}>
-        <Bubble from="user">
-          <TypeText text="where is my order" at={4.7} />
-        </Bubble>
-      </Float>
-      <Float x={18} y={44} w={64} at={1.2} z={3}>
-        <Node icon={Truck} title="Shipping" sub="Matched · 8 phrases" active />
-      </Float>
-      <Float x={32} y={74} at={1.8}>
-        <Chip icon={Sparkles}>Hinglish included</Chip>
+    <Stage label={label} duration={8}>
+      <Float x={10} y={12} w={80}>
+        <Panel title="Intent · Shipping" icon={Truck} right={<Chip>8 phrases</Chip>}>
+          <div className="ch-msg in-msg">
+            <Swap at={2.6} a={msg('parcel kab aayega?', 0.3)} b={msg('order kidhar hai bhai', 2.8)} />
+          </div>
+          <div className="in-match">
+            <Swap
+              at={2.6}
+              a={
+                <Reveal at={1.4}>
+                  <Row lead={<IconTile icon={Target} tone="emerald" />} title="Matched: Shipping" sub="“kab aayega” ≈ “when will it arrive”" right={<Chip tone="emerald">96%</Chip>} />
+                </Reveal>
+              }
+              b={
+                <Reveal at={4.1}>
+                  <Row lead={<IconTile icon={Target} tone="emerald" />} title="Matched: Shipping" sub="“kidhar hai” ≈ “where is”" right={<Chip tone="emerald">93%</Chip>} />
+                </Reveal>
+              }
+            />
+          </div>
+        </Panel>
       </Float>
     </Stage>
   );
 }
 
-/** A matched intent starts its flow, and the model is never called. */
+/** A matched intent starts a flow directly: no model call, no token cost. */
 function RouteNoAi({ label }: SceneProps) {
   return (
-    <Stage label={label} duration={6.5}>
-      <Rings x={50} y={48} count={4} gap={10} />
-      <Float x={39} y={34} at={0} z={3}>
-        <IconTile icon={GitBranch} size="xl" pulse />
-      </Float>
-      <Float x={10} y={16} at={1} drift>
-        <Chip icon={Workflow}>Returns flow started</Chip>
-      </Float>
-      <Float x={40} y={72} at={2.2} drift>
-        <Chip tone="emerald" dot>
-          ₹0 AI tokens
-        </Chip>
+    <Stage label={label} duration={7}>
+      <Float x={10} y={12} w={80}>
+        <Panel title="Routing" icon={GitBranch}>
+          <div className="ch-msg in-msg">
+            <Bubble from="user">
+              <TypeText text="return karna hai" at={0.3} cps={20} />
+            </Bubble>
+          </div>
+          <Reveal at={1.3}>
+            <Row lead={<IconTile icon={Undo2} />} title="Intent: Returns" sub="Matched by phrase" right={<Chip tone="emerald">94%</Chip>} />
+          </Reveal>
+          <Reveal at={2}>
+            <Row lead={<IconTile icon={Workflow} />} title="Returns flow started" sub="Asks for order and reason" right={<Chip tone="emerald" icon={Check}>Sent</Chip>} />
+          </Reveal>
+          <Reveal at={2.7}>
+            <KV k="AI tokens used" v="₹0" total />
+          </Reveal>
+        </Panel>
       </Float>
     </Stage>
   );
 }
 
-/** Type a test phrase, press Test, read the matched intent and its score. */
+/** Type a phrase, press Test, see the confidence before it goes live. */
 function TestConfidence({ label }: SceneProps) {
   return (
     <Stage label={label} duration={7}>
-      <Glow x={50} y={60} size={20} />
-      <Float x={10} y={8} w={80} at={0.2} z={3}>
-        <Panel
-          title="Test intent"
-          icon={FlaskConical}
-          right={
-            <Btn primary pressAt={1.9}>
-              Test
-            </Btn>
-          }
-        >
-          <TypedField label="Phrase" text="kab tak aayega?" at={0.6} />
+      <Float x={10} y={14} w={80}>
+        <Panel title="Test an intent" icon={FlaskConical}>
+          <div className="in-test">
+            <Field label="Shopper says" text="kab tak aayega?" at={0.5} cps={18} />
+            <span data-cursor="test">
+              <Btn primary pressAt={1.7}>
+                Test
+              </Btn>
+            </span>
+          </div>
+          <Reveal at={2}>
+            <div className="in-result">
+              <Meter label="Shipping" value="94%" pct={94} tone="emerald" />
+              <Meter label="COD confirm" value="4%" pct={4} />
+              <Meter label="Returns" value="2%" pct={2} />
+            </div>
+          </Reveal>
         </Panel>
       </Float>
-      <Float x={35} y={45} at={2.2}>
-        <Donut pct={94} tone="emerald" size={11} />
-      </Float>
-      <Float x={32} y={88} at={3}>
-        <Chip tone="emerald" dot>
-          Matched: Shipping
-        </Chip>
-      </Float>
-      <Cursor
-        path={[
-          [86, 70, 0.6],
-          [81, 15, 1.6],
-          [81, 15, 2.2],
-          [90, 40, 3],
-        ]}
-        clicks={[1.9]}
-      />
+      <Cursor path={[[70, 98, 0.8], ['test', 1.4], ['test', 1.9], [76, 94, 2.8]]} clicks={[1.7]} />
     </Stage>
   );
 }
 
-/* ── Wide panels ───────────────────────────────────────────────────────── */
+/* ── Showcases ─────────────────────────────────────────────────────────── */
 
-/** Add a new intent with a Hinglish phrase; it joins the list, Active. */
+/** The intent list; a new one is added in place and switched on. */
 function IntentList({ label }: SceneProps) {
   return (
-    <Stage label={label} shape="wide" duration={8}>
-      <Float x={32} y={14} w={56} at={0.2} z={3}>
+    <Stage label={label} shape="wide" duration={8.5}>
+      <Float x={18} y={6} w={60}>
         <Panel
           title="Intents"
+          icon={Target}
           right={
-            <Btn primary icon={Plus} pressAt={1.4}>
-              New intent
-            </Btn>
+            <span data-cursor="new">
+              <Btn primary icon={Plus} pressAt={1.2}>
+                New intent
+              </Btn>
+            </span>
           }
         >
-          <Row
-            lead={<IconTile icon={Truck} />}
-            title="Shipping"
-            sub="8 phrases · Start flow"
-            right={<Toggle />}
-          />
-          <Row
-            lead={<IconTile icon={IndianRupee} />}
-            title="COD confirm"
-            sub="5 phrases · Send reply"
-            right={<Toggle />}
-          />
-          <Reveal at={3.9}>
-            <Row
-              lead={<IconTile icon={Headphones} />}
-              title="Talk to human"
-              sub="4 phrases · Assign agent"
-              right={<Toggle />}
-              active
-            />
+          <Row lead={<IconTile icon={Truck} />} title="Shipping" sub="8 phrases · Start flow: Track order" right={<Toggle />} />
+          <Row lead={<IconTile icon={IndianRupee} />} title="COD confirm" sub="5 phrases · Send reply" right={<Toggle />} />
+          <Row lead={<IconTile icon={Undo2} />} title="Returns" sub="6 phrases · Start flow: Returns" right={<Toggle />} />
+          <Reveal at={4.2}>
+            <Row lead={<IconTile icon={Headphones} />} title="Talk to human" sub="4 phrases · Assign to Support" right={<span style={vars({ '--fv-toggle-at': '4.8s' })}><Toggle /></span>} active />
           </Reveal>
+          <Attach place="tr" at={1.5} until={4} dx={1.2} dy={8}>
+            <div className="wr-new">
+              <b>New intent</b>
+              <Stack gap={0.6}>
+                <Field label="Name" text="Talk to human" at={1.9} />
+                <Field label="Phrase" text="agent se baat karni hai" at={2.6} cps={26} />
+              </Stack>
+            </div>
+          </Attach>
         </Panel>
       </Float>
-      <Float x={3} y={28} w={27} at={1.7} until={3.7}>
-        <Panel glass title="New intent" icon={Plus}>
-          <Stack gap={0.7}>
-            <TypedField label="Name" text="Talk to human" at={2} />
-            <TypedField label="Phrase" text="agent se baat karni hai" at={2.6} />
-          </Stack>
-        </Panel>
-      </Float>
-      <Cursor
-        path={[
-          [92, 82, 0.3],
-          [79, 19, 1.2],
-          [79, 19, 1.8],
-          [64, 74, 3],
-        ]}
-        clicks={[1.4]}
-      />
+      <Cursor path={[[80, 98, 0.2], ['new', 0.9], ['new', 1.4], [86, 90, 2.6]]} clicks={[1.2]} />
     </Stage>
   );
 }
 
-/** Pick the action: start a flow, choose which one, and it is set. */
+/** Edit an intent: phrases in English and Hinglish, and what it does. */
 function Editor({ label }: SceneProps) {
   return (
-    <Stage label={label} shape="wide" duration={8}>
-      <Float x={32} y={12} w={54} at={0.2} z={3}>
-        <Panel
-          title="Shipping"
-          icon={Truck}
-          right={
-            <Chip tone="emerald" dot>
-              Active
-            </Chip>
-          }
-        >
-          <Row lead={<IconTile icon={MessageCircle} />} title="Reply text" sub="Send a saved answer" />
-          <Row lead={<IconTile icon={Workflow} />} title="Start a flow" sub="Hand over to a flow" active />
-          <Row lead={<IconTile icon={UserCheck} />} title="Assign agent" sub="Or escalate to a team" />
+    <Stage label={label} shape="wide" duration={8.5}>
+      <Float x={16} y={4} w={64}>
+        <Panel title="Edit intent · Shipping" icon={Truck} right={<Chip tone="emerald" dot>Live</Chip>}>
+          <Label>Shopper phrases</Label>
+          <div className="ch-keys">
+            <span>where is my order</span>
+            <span>parcel kab aayega</span>
+            <span>tracking link</span>
+            <Reveal at={1}>
+              <span>order kidhar hai</span>
+            </Reveal>
+            <Reveal at={1.7}>
+              <span>delivery kab hogi</span>
+            </Reveal>
+          </div>
+          <Label>Then</Label>
+          <Row lead={<IconTile icon={Workflow} />} title="Start flow: Track order" sub="Reads the order from Shopify" />
+          <Row lead={<IconTile icon={Headphones} />} title="If no order found" sub="Assign to Support" />
+          <div className="ch-publish" data-cursor="save">
+            <Swap at={3.6} a={<Btn primary pressAt={3.3}>Save intent</Btn>} b={<Chip tone="emerald" icon={Check}>Saved · 10 phrases</Chip>} />
+          </div>
         </Panel>
       </Float>
-      <Float x={3} y={30} w={25} at={1.9} until={3.7}>
-        <Panel glass title="Pick a flow" icon={Workflow}>
-          <Row title="Order status bot" sub="Reads live from Shopify" />
-          <Row title="Returns flow" sub="Pickup and refund" />
-        </Panel>
-      </Float>
-      <Float x={3} y={38} w={25} at={3.9}>
-        <Node icon={Workflow} tone="emerald" title="Order status bot" sub="Starts on every match" active />
-      </Float>
-      <Cursor
-        path={[
-          [80, 92, 0.3],
-          [60, 35, 1.4],
-          [60, 35, 1.9],
-          [15, 43, 2.9],
-          [15, 43, 3.6],
-        ]}
-        clicks={[1.6, 3.1]}
-      />
+      <Cursor path={[[70, 98, 2.4], ['save', 3], ['save', 3.6], [74, 96, 4.6]]} clicks={[3.3]} />
     </Stage>
   );
 }
 
-/** A message types in, the intent matches, the flow runs, no AI is spent. */
+/** Live: a Hinglish message on WhatsApp, matched instantly, the flow answers. */
 function LiveRouting({ label }: SceneProps) {
   return (
-    <Stage label={label} shape="wide" duration={8.5}>
-      <Float x={4} y={22} w={26} at={0.2}>
-        <Bubble from="user" time="11:02">
-          <TypeText text="order kab aayega?" at={0.5} />
-        </Bubble>
-      </Float>
-      <Float x={6} y={40} at={1.8}>
-        <Chip solid icon={Sparkles}>
-          Shipping · 94%
-        </Chip>
-      </Float>
-      <Float x={36} y={12} w={52} at={2.6} z={3}>
-        <Panel
-          title="Order status bot"
-          icon={Workflow}
-          right={
-            <Chip tone="emerald" dot>
-              Running
-            </Chip>
-          }
-        >
-          <Reveal at={3.2}>
-            <Row lead={<IconTile icon={ShoppingBag} />} title="Fetch order #1042" sub="Live from Shopify" />
+    <Stage label={label} shape="wide" duration={10}>
+      <Float x={38} y={0}>
+        <IPhone name="Mira Ethnic">
+          <Reveal at={0.4}>
+            <Bubble from="user" time="16:40" read>
+              <TypeText text="order kidhar hai bhai?" at={0.6} cps={18} />
+            </Bubble>
           </Reveal>
-          <Reveal at={3.8}>
-            <Row lead={<IconTile icon={Truck} />} title="Send tracking link" sub="Out for delivery today" />
+          <Reveal at={2.4} until={3.2}>
+            <Typing />
           </Reveal>
-        </Panel>
+          <Reveal at={3.3}>
+            <Bubble from="biz" time="16:40" buttons={[{ label: 'Track order', icon: ExternalLink, at: 5.6, cursor: 'track' }]}>
+              Hi Riya! Order #2211 is out for delivery and will reach you by 6 pm today.
+            </Bubble>
+          </Reveal>
+        </IPhone>
+        <Attach place="l" at={2} dx={8} dy={-4}>
+          <Toast icon={Target} tone="emerald" title="Intent: Shipping · 93%" sub="Matched in 40 ms · no AI call" />
+        </Attach>
+        <Attach place="r" at={3.4} dx={8} dy={2}>
+          <Toast icon={Workflow} title="Track order flow" sub="Read #2211 live from Shopify" />
+        </Attach>
       </Float>
-      <Float x={66} y={50} at={4.6}>
-        <Chip tone="emerald" dot>
-          ₹0 AI tokens
-        </Chip>
-      </Float>
+      <Cursor touch path={[['track', 5.3], ['track', 5.9]]} clicks={[5.6]} />
     </Stage>
   );
 }

@@ -37,12 +37,24 @@ import {
   type RefObject,
   type ReactNode,
 } from 'react';
-import { Check, CheckCheck, type LucideProps } from 'lucide-react';
+import {
+  BadgeCheck,
+  Check,
+  CheckCheck,
+  ChevronLeft,
+  Lock,
+  Mic,
+  Phone as PhoneIcon,
+  Plus,
+  Video,
+} from 'lucide-react';
+import { SiWhatsapp } from 'react-icons/si';
 import '../../styles/aurora.css';
 import '../../styles/feature-visuals.css';
+import '../../styles/feature-scenes.css';
 
 export type Tone = 'violet' | 'emerald' | 'sky' | 'amber' | 'rose' | 'indigo' | 'slate';
-export type IconType = ComponentType<LucideProps>;
+export type IconType = ComponentType<{ strokeWidth?: number; className?: string }>;
 
 /** Props every scene receives from the page. */
 export type SceneProps = {
@@ -69,7 +81,7 @@ const cx = (...parts: (string | false | null | undefined)[]) => parts.filter(Boo
 
 /** How long a fully revealed scene holds before it replays, and the exit time. */
 const HOLD_MS = 8200;
-const EXIT_MS = 620;
+const EXIT_MS = 650;
 
 /* ── Stage ─────────────────────────────────────────────────────────────── */
 
@@ -91,39 +103,49 @@ type StageProps = SceneProps & {
    * Set it to cover the last `at` / `until` in a storytelling scene plus ~2s.
    */
   duration?: number;
+  /**
+   * Auto-framing (default true). Turn off for compositions that are meant to
+   * bleed off an edge, such as a phone rising from the bottom of a tile.
+   */
+  fit?: boolean;
+  /** Layer behind the cards that is not auto-framed (Fireworks, for one). */
+  back?: ReactNode;
   children: ReactNode;
 };
 
-export type Mood = 'plain' | 'violet' | 'ocean' | 'dusk';
+export type Mood = 'plain' | 'violet' | 'ocean' | 'dusk' | 'night';
 const MOODS: Mood[] = ['violet', 'ocean', 'dusk'];
 const hash = (t: string) => [...t].reduce((h, c) => (h * 31 + c.charCodeAt(0)) >>> 0, 7);
 
 /** Breathing room around auto-framed content, as a fraction of each side. */
-const FIT_PAD = { square: 0.075, wide: 0.075 } as const;
-const FIT_MAX = { square: 1.9, wide: 2.6 } as const;
+const FIT_PAD = { square: 0.08, wide: 0.07 } as const;
+/**
+ * Maximum zoom. Kept close to 1 so product UI reads at real size (about 12px
+ * body text) instead of being blown up into cartoon scale.
+ */
+const FIT_MAX = { square: 1.22, wide: 1.45 } as const;
 const useIsoLayoutEffect = typeof window === 'undefined' ? useEffect : useLayoutEffect;
 
 /**
- * Auto-framing. Scenes are placed by hand in percent, and many leave a band of
- * empty stage or sit off-centre. This measures the untransformed layout boxes
- * of the top-level floats, then centres and scales the whole layer so the
- * content fills the frame with even margins (zooming in up to FIT_MAX, or out
- * if something overflows). Wires live in the same layer, so they stay attached.
+ * Auto-framing. Measures every top-level Float and every attached satellite
+ * (in layer space, while the scene is fully laid out and before animations
+ * arm), then centres and scales the layer so the whole composition sits in
+ * the frame with even margins. Wires live in the same layer, so they stay put.
  */
 function useAutoFit(
   stageRef: RefObject<HTMLDivElement>,
   fitRef: RefObject<HTMLDivElement>,
   shape: 'square' | 'wide',
+  enabled = true,
 ) {
   useIsoLayoutEffect(() => {
     const stage = stageRef.current;
     const fit = fitRef.current;
-    if (!stage || !fit) return;
+    if (!stage || !fit || !enabled) return;
 
     // Proportions of the content box, measured while the scene is fully laid
-    // out (before the stage arms its animations). Once armed, Reveal rows are
-    // collapsed and typed text is empty, so re-measuring then would frame the
-    // scene too small; resizes reuse these proportions instead.
+    // out. Once armed, reveals are collapsed and typed text is empty, so
+    // resizes reuse these proportions instead of re-measuring.
     let frac: [number, number, number, number] | null = null;
 
     const apply = (W: number, H: number) => {
@@ -132,11 +154,9 @@ function useAutoFit(
       const pad = FIT_PAD[shape];
       const bw = fw * W;
       const bh = fh * H;
-      const x0 = fx0 * W;
-      const y0 = fy0 * H;
       const s = Math.min((W * (1 - 2 * pad)) / bw, (H * (1 - 2 * pad)) / bh, FIT_MAX[shape]);
-      const tx = (W - bw * s) / 2 - x0 * s;
-      const ty = (H - bh * s) / 2 - y0 * s;
+      const tx = (W - bw * s) / 2 - fx0 * W * s;
+      const ty = (H - bh * s) / 2 - fy0 * H * s;
       fit.style.transform = `translate3d(${tx.toFixed(2)}px, ${ty.toFixed(2)}px, 0) scale(${s.toFixed(4)})`;
     };
 
@@ -148,19 +168,24 @@ function useAutoFit(
         apply(W, H);
         return;
       }
+      const fr = fit.getBoundingClientRect();
+      const k = fr.width / W || 1;
       let x0 = Infinity;
       let y0 = Infinity;
       let x1 = -Infinity;
       let y1 = -Infinity;
-      fit.querySelectorAll<HTMLElement>('.fv-float').forEach((el) => {
+      const add = (el: Element) => {
+        const r = el.getBoundingClientRect();
+        if (!r.width || !r.height) return;
+        x0 = Math.min(x0, (r.left - fr.left) / k);
+        y0 = Math.min(y0, (r.top - fr.top) / k);
+        x1 = Math.max(x1, (r.right - fr.left) / k);
+        y1 = Math.max(y1, (r.bottom - fr.top) / k);
+      };
+      fit.querySelectorAll('.fv-float').forEach((el) => {
         if (el.parentElement?.closest('.fv-float')) return;
-        const inner = el.firstElementChild as HTMLElement | null;
-        const w = Math.max(el.offsetWidth, inner?.scrollWidth ?? 0);
-        const h = Math.max(el.offsetHeight, inner?.scrollHeight ?? 0);
-        x0 = Math.min(x0, el.offsetLeft);
-        y0 = Math.min(y0, el.offsetTop);
-        x1 = Math.max(x1, el.offsetLeft + w);
-        y1 = Math.max(y1, el.offsetTop + h);
+        add(el);
+        el.querySelectorAll('.fv-float__in > *, .fv-attach').forEach(add);
       });
       if (!Number.isFinite(x0)) return;
       frac = [x0 / W, y0 / H, (x1 - x0) / W, (y1 - y0) / H];
@@ -172,10 +197,10 @@ function useAutoFit(
     ro?.observe(stage);
     document.fonts?.ready.then(measure).catch(() => undefined);
     return () => ro?.disconnect();
-  }, [shape]);
+  }, [shape, enabled]);
 }
 
-export function Stage({ tone, shape = 'square', mood, duration, label, children }: StageProps) {
+export function Stage({ tone, shape = 'square', mood, duration, fit = true, back, label, children }: StageProps) {
   const mesh = useContext(MeshContext);
   const holdMs = Math.max(4000, (duration ?? HOLD_MS / 1000) * 1000);
   const look: Mood = mood ?? (shape === 'square' ? 'plain' : MOODS[hash(label) % MOODS.length]);
@@ -183,7 +208,7 @@ export function Stage({ tone, shape = 'square', mood, duration, label, children 
   const ref = useRef<HTMLDivElement>(null);
   const fitRef = useRef<HTMLDivElement>(null);
   const [play, setPlay] = useState(0);
-  useAutoFit(ref, fitRef, shape);
+  useAutoFit(ref, fitRef, shape, fit);
 
   useEffect(() => {
     const el = ref.current;
@@ -201,7 +226,6 @@ export function Stage({ tone, shape = 'square', mood, duration, label, children 
     let hovering = false;
     let phase: 'idle' | 'in' | 'out' = 'idle';
     let timer = 0;
-    let raf = 0;
 
     const clear = () => window.clearTimeout(timer);
     const schedule = () => {
@@ -253,56 +277,39 @@ export function Stage({ tone, shape = 'square', mood, duration, label, children 
     const onLeave = () => {
       hovering = false;
       el.classList.remove('is-hover');
-      el.style.setProperty('--mx', '0');
-      el.style.setProperty('--my', '0');
       schedule();
     };
-    const onMove = (ev: PointerEvent) => {
-      if (ev.pointerType !== 'mouse') return;
-      cancelAnimationFrame(raf);
-      raf = requestAnimationFrame(() => {
-        const r = el.getBoundingClientRect();
-        const px = (ev.clientX - r.left) / r.width;
-        const py = (ev.clientY - r.top) / r.height;
-        el.style.setProperty('--mx', (px * 2 - 1).toFixed(3));
-        el.style.setProperty('--my', (py * 2 - 1).toFixed(3));
-        el.style.setProperty('--px', `${(px * 100).toFixed(1)}%`);
-        el.style.setProperty('--py', `${(py * 100).toFixed(1)}%`);
-      });
-    };
+    // Hovering pauses the loop on the frame someone is reading.
     el.addEventListener('pointerenter', onEnter);
     el.addEventListener('pointerleave', onLeave);
-    // Hover parallax retired: the loop just pauses while someone is looking.
-    void onMove;
 
     return () => {
       io.disconnect();
       clear();
-      cancelAnimationFrame(raf);
       el.removeEventListener('pointerenter', onEnter);
       el.removeEventListener('pointerleave', onLeave);
-
     };
   }, [holdMs]);
 
-  const aurora = look !== 'plain' && mesh ? mesh : undefined;
+  // Every stage takes the page aurora. Square tiles use a top-lit composition
+  // (variants 0 and 1) because the CSS fades them into the card body below.
+  const aurora = look === 'night' ? undefined : mesh;
+  const variant = shape === 'square' ? hash(label) % 2 : hash(label) % 4;
 
   return (
     <div
       ref={ref}
-      className={cx('fv', `fv--${shape}`, `fv--${look}`, look !== 'plain' && 'fv--rich')}
+      className={cx('fv', `fv--${shape}`, `fv--${look}`)}
       data-tone={accent}
       role="img"
       aria-label={label}
     >
-      <div className={cx('fv__bg', aurora && 'fv__bg--aurora')} aria-hidden="true">
-        {aurora ? <div className="aurora" data-palette={aurora} data-variant={hash(label) % 4} /> : null}
-        <span className="fv__aura" />
-        <span className="fv__aura fv__aura--b" />
-        <span className="fv__spot" />
+      <div className="fv__bg" aria-hidden="true">
+        {aurora ? <div className="aurora" data-palette={aurora} data-variant={variant} /> : null}
       </div>
       <PlayContext.Provider value={play}>
         <div className="fv__canvas" aria-hidden="true">
+          {back}
           <div ref={fitRef} className="fv__fit">
             {children}
           </div>
@@ -341,8 +348,7 @@ type FloatProps = {
 
 /** Absolutely placed, reveal-animated wrapper. Every scene element sits in one. */
 export function Float({ x, y, w, delay = 0, at, until, drift, z, fade, className, children }: FloatProps) {
-  const enterMs = at !== undefined ? at * 1000 : delay * 85;
-  const depth = z ? Math.min(z, 5) * 0.5 + 0.5 : 0.6 + (delay % 4) * 0.35;
+  const enterMs = at !== undefined ? at * 1000 : delay * 90;
   const style = {
     left: `${x}%`,
     top: `${y}%`,
@@ -350,7 +356,6 @@ export function Float({ x, y, w, delay = 0, at, until, drift, z, fade, className
     zIndex: z,
     '--fv-d': `${enterMs}ms`,
     '--fv-until': until !== undefined ? `${until * 1000}ms` : undefined,
-    '--fv-depth': depth.toFixed(2),
   } as CSSProperties;
   return (
     <div
@@ -446,16 +451,19 @@ export function IconTile({
   tone,
   size = 'md',
   pulse,
+  tint,
 }: {
   icon: IconType;
   tone?: Tone;
   size?: 'sm' | 'md' | 'lg' | 'xl';
   pulse?: boolean;
+  /** Soft tinted tile (for toasts and status icons). */
+  tint?: boolean;
 }) {
-  const solid = pulse || size === 'lg' || size === 'xl';
+  const solid = !tint && (pulse || size === 'lg' || size === 'xl');
   return (
     <span
-      className={cx('fv-icon', `fv-icon--${size}`, solid && 'fv-icon--solid', pulse && 'fv-icon--pulse')}
+      className={cx('fv-icon', `fv-icon--${size}`, solid && 'fv-icon--solid', tint && 'fv-icon--tint', pulse && 'fv-icon--pulse')}
       data-tone={tone}
     >
       <Icon strokeWidth={solid ? 2 : 1.9} />
@@ -537,7 +545,9 @@ export function Row({
   );
 }
 
-/** Initials avatar. */
+const AVATAR_HUES = [12, 32, 152, 199, 222, 262, 330, 172];
+
+/** Initials avatar. Each name gets its own soft hue, like a real customer list. */
 export function Avatar({ name, tone }: { name: string; tone?: Tone }) {
   const initials = name
     .split(' ')
@@ -545,8 +555,14 @@ export function Avatar({ name, tone }: { name: string; tone?: Tone }) {
     .slice(0, 2)
     .join('')
     .toUpperCase();
+  const h = AVATAR_HUES[hash(name) % AVATAR_HUES.length];
   return (
-    <span className="fv-avatar" data-tone={tone}>
+    <span
+      className="fv-avatar"
+      data-tone={tone}
+      data-hue={tone ? undefined : ''}
+      style={tone ? undefined : ({ '--h': h } as CSSProperties)}
+    >
       {initials}
     </span>
   );
@@ -554,25 +570,36 @@ export function Avatar({ name, tone }: { name: string; tone?: Tone }) {
 
 /* ── WhatsApp ──────────────────────────────────────────────────────────── */
 
+/** A WhatsApp quick-reply or CTA button under a bubble. `at` presses it. */
+export type BubbleButton = string | { label: string; icon?: IconType; at?: number; cursor?: string };
+
 export function Bubble({
   from = 'biz',
   time,
   read,
   buttons,
   media,
+  title,
+  footer,
   children,
 }: {
   from?: 'biz' | 'user';
   time?: string;
   read?: boolean;
-  buttons?: string[];
+  buttons?: BubbleButton[];
   media?: ReactNode;
+  /** Bold first line, as WhatsApp template headers render. */
+  title?: string;
+  /** Small grey line under the body (template footer). */
+  footer?: string;
   children: ReactNode;
 }) {
   return (
-    <div className={cx('fv-bubble', `fv-bubble--${from}`)}>
+    <div className={cx('fv-bubble', `fv-bubble--${from}`, Boolean(media) && 'fv-bubble--media')}>
       {media ? <div className="fv-bubble__media">{media}</div> : null}
+      {title ? <b className="fv-bubble__title">{title}</b> : null}
       <p>{children}</p>
+      {footer ? <small className="fv-bubble__footer">{footer}</small> : null}
       {time ? (
         <span className="fv-bubble__meta">
           {time}
@@ -581,9 +608,21 @@ export function Bubble({
       ) : null}
       {buttons?.length ? (
         <div className="fv-bubble__btns">
-          {buttons.map((b) => (
-            <span key={b}>{b}</span>
-          ))}
+          {buttons.map((b) => {
+            const o = typeof b === 'string' ? { label: b } : b;
+            const Icon = o.icon;
+            return (
+              <span
+                key={o.label}
+                data-cursor={o.cursor}
+                className={o.at !== undefined ? 'is-press' : undefined}
+                style={o.at !== undefined ? ({ '--fv-press': `${o.at}s` } as CSSProperties) : undefined}
+              >
+                {Icon ? <Icon strokeWidth={2.2} /> : null}
+                {o.label}
+              </span>
+            );
+          })}
         </div>
       ) : null}
     </div>
@@ -889,6 +928,7 @@ export function Cursor({
   delay = 6,
   path,
   clicks = [],
+  touch,
 }: {
   x?: number;
   y?: number;
@@ -900,6 +940,8 @@ export function Cursor({
    */
   path?: ([number, number, number] | [string, number])[];
   clicks?: number[];
+  /** A fingertip instead of an arrow, for taps on a phone screen. */
+  touch?: boolean;
 }) {
   const play = useContext(PlayContext);
   const ref = useRef<HTMLDivElement>(null);
@@ -931,7 +973,10 @@ export function Cursor({
     const total = end * 1000;
     const frames: Keyframe[] = [];
     const first = pts[0];
+    // Hidden until just before the first waypoint, then fades in on the way.
     frames.push({ left: `${first[0]}%`, top: `${first[1]}%`, opacity: 0, offset: 0 });
+    const lead = Math.max(0, first[2] - 0.35) * 1000;
+    if (lead > 0) frames.push({ left: `${first[0]}%`, top: `${first[1]}%`, opacity: 0, offset: lead / total });
     pts.forEach(([px, py, t]) => {
       frames.push({
         left: `${px}%`,
@@ -976,7 +1021,11 @@ export function Cursor({
 
   if (path?.length) {
     return (
-      <div ref={ref} className="fv-cursor fv-cursor--path" style={{ left: '50%', top: '90%', opacity: 0 }}>
+      <div
+        ref={ref}
+        className={cx('fv-cursor fv-cursor--path', touch && 'fv-cursor--touch')}
+        style={{ left: '50%', top: '90%', opacity: 0 }}
+      >
         <svg viewBox="0 0 24 24">
           <path d="M5.5 3.2 18.6 10c.6.3.5 1.2-.1 1.4l-5.3 1.6-2.4 5.1c-.3.6-1.2.6-1.4-.1L5 4.1c-.2-.6.4-1.2.9-.9Z" />
         </svg>
@@ -1009,23 +1058,12 @@ export function Thumb({ tone, icon: Icon, h = 6 }: { tone?: Tone; icon?: IconTyp
 
 /* ── Quiet illustration helpers (Graceview-style bento visuals) ────────── */
 
-/**
- * Concentric hairline rings centred on (x, y) percent of the stage. Sits behind
- * a focal element to give it a sense of place without any pattern noise.
- */
-export function Rings({ x = 50, y = 50, count = 4, gap = 8 }: { x?: number; y?: number; count?: number; gap?: number }) {
-  return (
-    <div className="fv-rings" style={{ left: `${x}%`, top: `${y}%` } as CSSProperties} aria-hidden="true">
-      {Array.from({ length: count }, (_, i) => (
-        <i key={i} style={{ width: `${(i + 1) * gap}em`, height: `${(i + 1) * gap}em`, animationDelay: `${i * 0.6}s` }} />
-      ))}
-    </div>
-  );
+/** Retired (read as generic AI art). Kept as no-ops so old markup compiles. */
+export function Rings(_: { x?: number; y?: number; count?: number; gap?: number }) {
+  return null;
 }
-
-/** Soft accent glow puddle behind a focal element. */
-export function Glow({ x = 50, y = 50, size = 18 }: { x?: number; y?: number; size?: number }) {
-  return <div className="fv-glow" style={{ left: `${x}%`, top: `${y}%`, width: `${size}em`, height: `${size}em` }} aria-hidden="true" />;
+export function Glow(_: { x?: number; y?: number; size?: number }) {
+  return null;
 }
 
 /* ── Storytelling pieces ───────────────────────────────────────────────── */
@@ -1205,5 +1243,441 @@ export function Reveal({ at, until, children }: { at: number; until?: number; ch
         {children}
       </div>
     </AtContext.Provider>
+  );
+}
+
+/* ── v7 composition pieces ─────────────────────────────────────────────── */
+
+type Place = 'tr' | 'tl' | 'br' | 'bl' | 't' | 'b' | 'l' | 'r';
+
+/**
+ * A satellite pinned to the edge of the card it sits in (put it inside a
+ * Panel, IPhone or any positioned card). It pops from its anchor at `at`
+ * seconds and can leave at `until`. `dx` / `dy` (em) nudge it outward.
+ */
+export function Attach({
+  place = 'tr',
+  at = 0,
+  until,
+  dx,
+  dy,
+  children,
+}: {
+  place?: Place;
+  at?: number;
+  until?: number;
+  dx?: number;
+  dy?: number;
+  children: ReactNode;
+}) {
+  return (
+    <AtContext.Provider value={at * 1000}>
+      <div
+        className={cx('fv-attach', until !== undefined && 'fv-attach--until')}
+        data-place={place}
+        style={
+          {
+            '--fv-d': `${at * 1000}ms`,
+            '--fv-until': until !== undefined ? `${until * 1000}ms` : undefined,
+            '--fv-dx': dx !== undefined ? `${dx}em` : undefined,
+            '--fv-dy': dy !== undefined ? `${dy}em` : undefined,
+          } as CSSProperties
+        }
+      >
+        {children}
+      </div>
+    </AtContext.Provider>
+  );
+}
+
+/** Notification card: icon, title, one line. The standard satellite. */
+export function Toast({
+  icon,
+  tone,
+  title,
+  sub,
+  dark,
+  right,
+}: {
+  icon?: IconType;
+  tone?: Tone;
+  title: ReactNode;
+  sub?: ReactNode;
+  dark?: boolean;
+  right?: ReactNode;
+}) {
+  return (
+    <div className={cx('fv-toast', dark && 'fv-toast--dark')} data-tone={tone}>
+      {icon ? <IconTile icon={icon} tone={tone} size="sm" tint /> : null}
+      <span className="fv-toast__text">
+        <b>{title}</b>
+        {sub ? <small>{sub}</small> : null}
+      </span>
+      {right ? <span className="fv-toast__right">{right}</span> : null}
+    </div>
+  );
+}
+
+/** Two states of the same spot: `a` cross-fades to `b` at `at` seconds. */
+export function Swap({ at, a, b }: { at: number; a: ReactNode; b: ReactNode }) {
+  return (
+    <span className="fv-swap" style={{ '--fv-swap-at': `${at}s` } as CSSProperties}>
+      <span className="fv-swap__a">{a}</span>
+      <span className="fv-swap__b">{b}</span>
+    </span>
+  );
+}
+
+/** Small uppercase section label inside a card. */
+export function Label({ children }: { children: ReactNode }) {
+  return <span className="fv-label">{children}</span>;
+}
+
+/** Key / value line inside a card. `total` draws the summing rule above it. */
+export function KV({ k, v, total, tone }: { k: ReactNode; v: ReactNode; total?: boolean; tone?: Tone }) {
+  return (
+    <div className={cx('fv-kv', total && 'fv-kv--total')} data-tone={tone}>
+      <span>{k}</span>
+      <b>{typeof v === 'string' ? <CountUp value={v} /> : v}</b>
+    </div>
+  );
+}
+
+/* ── iPhone + WhatsApp ─────────────────────────────────────────────────── */
+
+/**
+ * iPhone with a WhatsApp Business chat open. Children are the conversation
+ * (Bubbles in Reveals); the chat is bottom-anchored, so new messages push the
+ * older ones up exactly like the app. Put PhoneBanner / PhoneSheet inside too.
+ */
+export function IPhone({
+  name = 'Nova Home',
+  logo,
+  status = 'Business account',
+  time = '9:41',
+  children,
+  overlay,
+}: {
+  name?: string;
+  /** Brand mark in the chat header. Defaults to the first letter. */
+  logo?: ReactNode;
+  status?: string;
+  time?: string;
+  children?: ReactNode;
+  /** Layers drawn above the chat (banners, sheets). */
+  overlay?: ReactNode;
+}) {
+  return (
+    <div className="fv-iphone">
+      <span className="fv-iphone__btn fv-iphone__btn--a" />
+      <span className="fv-iphone__btn fv-iphone__btn--b" />
+      <span className="fv-iphone__btn fv-iphone__btn--c" />
+      <div className="fv-iphone__screen">
+        <div className="fv-iphone__status">
+          <b>{time}</b>
+          <span className="fv-iphone__island" />
+          <span className="fv-iphone__sys">
+            <i className="fv-sig" />
+            <i className="fv-wifi" />
+            <i className="fv-bat" />
+          </span>
+        </div>
+        <div className="fv-wa__head">
+          <ChevronLeft className="fv-wa__back" strokeWidth={2.4} />
+          <span className="fv-wa__dp">{logo ?? name.slice(0, 1)}</span>
+          <span className="fv-wa__who">
+            <b>
+              {name}
+              <BadgeCheck className="fv-wa__tick" strokeWidth={2.2} />
+            </b>
+            <small>{status}</small>
+          </span>
+          <Video className="fv-wa__ic" strokeWidth={2} />
+          <PhoneIcon className="fv-wa__ic" strokeWidth={2} />
+        </div>
+        <div className="fv-wa__chat">
+          <div className="fv-wa__scroll">
+            <span className="fv-wa__day">Today</span>
+            {children}
+          </div>
+        </div>
+        <div className="fv-wa__input">
+          <Plus strokeWidth={2.2} />
+          <span>Message</span>
+          <Mic strokeWidth={2.2} />
+        </div>
+        <span className="fv-iphone__home" />
+        {overlay}
+      </div>
+    </div>
+  );
+}
+
+/** iOS notification banner that drops in at the top of an IPhone. */
+export function PhoneBanner({
+  at,
+  until,
+  app = 'WhatsApp',
+  title,
+  body,
+}: {
+  at: number;
+  until?: number;
+  app?: string;
+  title: string;
+  body: string;
+}) {
+  return (
+    <div
+      className={cx('fv-pbanner', until !== undefined && 'fv-pbanner--until')}
+      style={{ '--fv-b-at': `${at}s`, '--fv-b-until': until !== undefined ? `${until}s` : undefined } as CSSProperties}
+    >
+      <span className="fv-pbanner__app">
+        <SiWhatsapp />
+      </span>
+      <span className="fv-pbanner__text">
+        <small>
+          {app} <em>now</em>
+        </small>
+        <b>{title}</b>
+        <span>{body}</span>
+      </span>
+    </div>
+  );
+}
+
+/**
+ * A sheet that slides up over the phone screen at `at` (an in-app browser,
+ * checkout, order confirmation). `until` slides it away again.
+ */
+export function PhoneSheet({
+  at,
+  until,
+  url,
+  children,
+}: {
+  at: number;
+  until?: number;
+  /** Shows a Safari-style address bar, as when a WhatsApp link opens. */
+  url?: string;
+  children: ReactNode;
+}) {
+  return (
+    <AtContext.Provider value={at * 1000}>
+      <div
+        className={cx('fv-psheet', until !== undefined && 'fv-psheet--until', url && 'fv-psheet--web')}
+        style={{ '--fv-s-at': `${at}s`, '--fv-s-until': until !== undefined ? `${until}s` : undefined } as CSSProperties}
+      >
+        {url ? (
+          <div className="fv-psheet__url">
+            <span>Done</span>
+            <b>
+              <Lock strokeWidth={2.6} />
+              {url}
+            </b>
+            <i />
+          </div>
+        ) : (
+          <span className="fv-psheet__grab" />
+        )}
+        <div className="fv-psheet__body">{children}</div>
+      </div>
+    </AtContext.Provider>
+  );
+}
+
+/* ── Product art (CSS, no photos) ──────────────────────────────────────── */
+
+/**
+ * A product shot. Pass `src` for a real product photo (studio shot on a light
+ * background works best); otherwise a studio-lit CSS render is drawn:
+ * doorbell (Nova Home), serum (Glow Co.), kurta (Mira Ethnic), sneaker
+ * (Stride Shoes).
+ */
+export function ProductArt({
+  kind,
+  src,
+  alt = 'Product photo',
+  h = 9,
+  tag,
+}: {
+  kind?: 'doorbell' | 'serum' | 'kurta' | 'sneaker';
+  src?: string;
+  /** Alt text for a photo (what the product is). */
+  alt?: string;
+  h?: number;
+  /** Small pill in the corner, e.g. "−20%". */
+  tag?: string;
+}) {
+  return (
+    <span className={cx('fv-art', kind && `fv-art--${kind}`, src && 'fv-art--photo')} style={{ height: `${h}em` }}>
+      {src ? (
+        <img src={src} alt={alt} loading="lazy" decoding="async" draggable={false} />
+      ) : (
+        <i className="fv-art__obj">
+          <i />
+          <i />
+        </i>
+      )}
+      {tag ? <em className="fv-art__tag">{tag}</em> : null}
+    </span>
+  );
+}
+
+/* ── Fireworks ─────────────────────────────────────────────────────────── */
+
+const FW_COLORS = ['#fbbf24', '#f472b6', '#a78bfa', '#fb923c', '#fde68a', '#f87171'];
+
+/**
+ * Fireworks behind the cards: each shell rises on a thin trail, bursts into
+ * streaks that fall and fade, and repeats. `shells` are [x%, y%, delay s]
+ * in stage percent. Put it first in a Stage so cards sit in front.
+ */
+export function Fireworks({
+  shells,
+  every = 2.8,
+  at = 0,
+}: {
+  shells: [number, number, number][];
+  /** Seconds between repeats of each shell. */
+  every?: number;
+  /** Seconds from scene start when the show begins. */
+  at?: number;
+}) {
+  return (
+    <div className="fv-fw" aria-hidden="true">
+      {shells.map(([x, y, d], k) => {
+        const color = FW_COLORS[k % FW_COLORS.length];
+        const color2 = FW_COLORS[(k + 2) % FW_COLORS.length];
+        return (
+          <span
+            key={k}
+            className="fv-fw__shell"
+            style={
+              {
+                left: `${x}%`,
+                top: `${y}%`,
+                '--fw-d': `${at + d}s`,
+                '--fw-t': `${every}s`,
+                '--fw-c': color,
+                '--fw-c2': color2,
+                '--fw-rise': `${Math.max(6, (100 - y) * 0.3)}em`,
+              } as CSSProperties
+            }
+          >
+            <span className="fv-fw__trail" />
+            <span className="fv-fw__flash" />
+            <span className="fv-fw__burst">
+              {Array.from({ length: 18 }, (_, i) => (
+                <i
+                  key={i}
+                  style={{ '--a': `${(i * 360) / 18 + (k % 2) * 10}deg`, '--r': `${4.2 + (i % 3) * 1.1}em` } as CSSProperties}
+                />
+              ))}
+            </span>
+          </span>
+        );
+      })}
+    </div>
+  );
+}
+
+/**
+ * Browser window: traffic lights, an address bar and a page body. Use it for
+ * storefront moments (a product page, the theme editor, checkout).
+ */
+export function Browser({
+  url = 'novahome.in',
+  children,
+  className,
+}: {
+  url?: string;
+  children: ReactNode;
+  className?: string;
+}) {
+  return (
+    <div className={cx('fv-browser', className)}>
+      <div className="fv-browser__bar">
+        <span className="fv-browser__dots">
+          <i />
+          <i />
+          <i />
+        </span>
+        <span className="fv-browser__url">
+          <Lock strokeWidth={2.6} />
+          {url}
+        </span>
+      </div>
+      <div className="fv-browser__body">{children}</div>
+    </div>
+  );
+}
+
+/** Grey placeholder lines for page chrome that is not the point of a scene. */
+export function Skeleton({ w = 100, h = 0.7, tone }: { w?: number; h?: number; tone?: boolean }) {
+  return <i className={cx('fv-skel', tone && 'fv-skel--tone')} style={{ width: `${w}%`, height: `${h}em` }} />;
+}
+
+/* ── Slot-aware scenes ─────────────────────────────────────────────────── */
+
+export type Slot = 'hero' | 'bento' | 'showcase';
+
+/**
+ * Some pages reuse one image path in several places (hero, a bento tile, a
+ * showcase row). This draws the scene made for the frame it lands in.
+ */
+export function bySlot(scenes: { hero?: Scene; bento: Scene; showcase: Scene }): Scene {
+  return function SlotScene({ label }: SceneProps) {
+    const ref = useRef<HTMLSpanElement>(null);
+    const [slot, setSlot] = useState<Slot | null>(null);
+    useIsoLayoutEffect(() => {
+      const el = ref.current;
+      if (!el) return;
+      if (el.closest('.demo-video-glow__frame')) setSlot('hero');
+      else if (el.closest('.mkt-pf__tile-visual')) setSlot('bento');
+      else if (el.closest('.mkt-pf__shot.is-wide')) setSlot('showcase');
+      else setSlot(el.closest('.mkt-pf__shot') ? 'bento' : 'showcase');
+    }, []);
+    if (!slot) return <span ref={ref} hidden />;
+    const S = slot === 'hero' ? scenes.hero ?? scenes.showcase : scenes[slot];
+    return <S label={label} />;
+  };
+}
+
+/* ── QR code ───────────────────────────────────────────────────────────── */
+
+/**
+ * A QR code with real structure (three finder squares, timing rows, data
+ * modules from a seeded pattern). Decorative: it does not encode a URL.
+ */
+export function QR({ seed = 'wa.me', size = 8 }: { seed?: string; size?: number }) {
+  const n = 25;
+  let h = hash(seed) || 1;
+  const rnd = () => {
+    h ^= h << 13;
+    h ^= h >>> 17;
+    h ^= h << 5;
+    return ((h >>> 0) % 1000) / 1000;
+  };
+  const finder = (x: number, y: number) => x < 8 && y < 8;
+  const inFinder = (x: number, y: number) => finder(x, y) || finder(n - 1 - x, y) || finder(x, n - 1 - y);
+  const cells: string[] = [];
+  for (let y = 0; y < n; y++) {
+    for (let x = 0; x < n; x++) {
+      if (inFinder(x, y)) continue;
+      const timing = (x === 6 || y === 6) && (x + y) % 2 === 0;
+      if (timing || rnd() > 0.52) cells.push(`M${x} ${y}h1v1h-1z`);
+    }
+  }
+  const eye = (x: number, y: number) =>
+    `M${x} ${y}h7v7h-7zM${x + 1} ${y + 1}v5h5v-5zM${x + 2} ${y + 2}h3v3h-3z`;
+  return (
+    <svg className="fv-qr" viewBox={`-2 -2 ${n + 4} ${n + 4}`} style={{ width: `${size}em`, height: `${size}em` }}>
+      <rect x="-2" y="-2" width={n + 4} height={n + 4} rx="2" fill="#fff" />
+      <path d={cells.join('')} fill="#0b1220" />
+      <path d={eye(0, 0) + eye(n - 7, 0) + eye(0, n - 7)} fill="#0b1220" fillRule="evenodd" />
+      <rect x={n / 2 - 2.5} y={n / 2 - 2.5} width="5" height="5" rx="1.2" fill="#fff" />
+      <rect x={n / 2 - 1.8} y={n / 2 - 1.8} width="3.6" height="3.6" rx="0.9" fill="#25d366" />
+    </svg>
   );
 }
