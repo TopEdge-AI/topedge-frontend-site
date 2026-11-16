@@ -1,0 +1,78 @@
+/*
+ * Aurora: coded backgrounds in the style of the home hero
+ * (/hero-aurora-preview.jpg): a colour wash in one corner, a soft white band
+ * across the middle, a second colour in the opposite corner and a cool touch
+ * in the third. Pure CSS, no image weight, drifts slowly.
+ *
+ * Usage: <div class="aurora" data-palette="iris" data-variant="0"> as an
+ * absolutely positioned layer. Palettes keep the brand family (violet, lilac,
+ * aqua, sky, peach, rose) so every page differs but the site stays one site.
+ */
+
+.aurora {
+  /* colour A (main corner), B (opposite corner), C (third corner) */
+  --au-a: #8b5cf6;
+  --au-b: #5eead4;
+  --au-c: #93c5fd;
+  /* corner positions, swapped by variant */
+  --au-ax: 2%;
+  --au-ay: 0%;
+  --au-bx: 100%;
+  --au-by: 82%;
+  --au-cx: 0%;
+  --au-cy: 100%;
+  --au-band: 118deg;
+
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  background-color: #f8f8fc;
+  isolation: isolate;
+}
+
+.aurora::before {
+  content: '';
+  position: absolute;
+  inset: -12%;
+  background:
+    radial-gradient(52% 62% at var(--au-ax) var(--au-ay), color-mix(in srgb, var(--au-a) 82%, transparent) 0%, color-mix(in srgb, var(--au-a) 0%, transparent) 70%),
+    radial-gradient(48% 58% at var(--au-bx) var(--au-by), color-mix(in srgb, var(--au-b) 78%, transparent) 0%, color-mix(in srgb, var(--au-b) 0%, transparent) 70%),
+    radial-gradient(40% 46% at var(--au-cx) var(--au-cy), color-mix(in srgb, var(--au-c) 72%, transparent) 0%, color-mix(in srgb, var(--au-c) 0%, transparent) 70%),
+    radial-gradient(34% 40% at calc(var(--au-ax) + 18%) calc(var(--au-ay) + 22%), color-mix(in srgb, var(--au-a) 38%, white) 0%, transparent 70%);
+  filter: blur(2.2vw) saturate(1.08);
+  animation: au-drift 26s ease-in-out infinite alternate;
+}
+
+/* The soft white band that gives the home hero its light. */
+.aurora::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(var(--au-band), transparent 22%, rgba(255, 255, 255, 0.78) 48%, rgba(255, 255, 255, 0.62) 56%, transparent 80%),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .5 0 0 0 0 .5 0 0 0 0 .55 0 0 0 .05 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+@keyframes au-drift {
+  0% { transform: translate3d(-1.5%, -1%, 0) scale(1); }
+  100% { transform: translate3d(1.5%, 1.5%, 0) scale(1.06); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .aurora::before { animation: none; }
+}
+
+/* ── Palettes ──────────────────────────────────────────────────────────── */
+.aurora[data-palette='iris'] { --au-a: #8b5cf6; --au-b: #5eead4; --au-c: #93c5fd; }
+.aurora[data-palette='bloom'] { --au-a: #f0abfc; --au-b: #a78bfa; --au-c: #fdba74; }
+.aurora[data-palette='dawn'] { --au-a: #fdba74; --au-b: #8b5cf6; --au-c: #fda4af; }
+.aurora[data-palette='lagoon'] { --au-a: #67e8f9; --au-b: #818cf8; --au-c: #6ee7b7; }
+.aurora[data-palette='orchid'] { --au-a: #c084fc; --au-b: #7dd3fc; --au-c: #a78bfa; }
+.aurora[data-palette='mint'] { --au-a: #6ee7b7; --au-b: #7dd3fc; --au-c: #c4b5fd; }
+.aurora[data-palette='dusk'] { --au-a: #818cf8; --au-b: #f9a8d4; --au-c: #c4b5fd; }
+.aurora[data-palette='sunrise'] { --au-a: #fcd34d; --au-b: #f472b6; --au-c: #a78bfa; }
+
+/* ── Compositions: same palette, different light ───────────────────────── */
+.aurora[data-variant='1'] { --au-ax: 100%; --au-ay: 0%; --au-bx: 0%; --au-by: 86%; --au-cx: 100%; --au-cy: 100%; --au-band: 62deg; }
+.aurora[data-variant='2'] { --au-ax: 0%; --au-ay: 100%; --au-bx: 100%; --au-by: 6%; --au-cx: 60%; --au-cy: 0%; --au-band: 64deg; }
+.aurora[data-variant='3'] { --au-ax: 100%; --au-ay: 100%; --au-bx: 0%; --au-by: 8%; --au-cx: 40%; --au-cy: 0%; --au-band: 116deg; }

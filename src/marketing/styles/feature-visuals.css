@@ -1137,3 +1137,13 @@
 .fv-cursor { width: 2.5em; height: 2.5em; }
 .fv-cursor__ripple { width: 2.2em; height: 2.2em; margin: -1.1em 0 0 -1.1em; background: color-mix(in srgb, var(--t-500) 45%, transparent); }
 .fv-burst i { width: 0.8em; height: 0.8em; left: -0.4em; top: -0.4em; }
+
+/* ══ v6: coded aurora backdrops (styles/aurora.css) ══════════════════════ */
+.fv--rich .fv__bg.fv__bg--aurora { background: #f8f8fc; animation: none; }
+.fv--rich .fv__bg.fv__bg--aurora::after { display: none; }
+.fv--rich .fv__bg--aurora .aurora::before { filter: blur(3cqw) saturate(1.08); }
+.fv--rich:has(.fv__bg--aurora) { background: #f8f8fc; }
+.fv--rich .fv__bg--aurora ~ .fv__aura, .fv--rich .fv__bg--aurora .fv__aura { display: none; }
+/* Wires on a light aurora: graphite hairline, accent pulse. */
+.fv--rich:has(.fv__bg--aurora) .fv-wires__base { stroke: rgba(16, 24, 40, 0.18); }
+.fv--rich:has(.fv__bg--aurora) .fv-wires__dash { stroke: var(--t-500); filter: none; }

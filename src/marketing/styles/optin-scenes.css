@@ -1,0 +1,274 @@
+/*
+ * Opt-in tool scenes: faithful, animated recreations of the real TopEdge AI
+ * storefront popups (Scratch & Win, Spin reel, Pulse Drop, Welcome popup).
+ * Sized in em inside a kit Stage; timed with CSS variables (seconds from
+ * scene start) and triggered by the stage's .is-in class, so they replay
+ * with the scene loop. Without motion each shows its final state.
+ */
+
+/* ── Timed show/hide for any element: style="--show:2s; --hide:4s" ─────── */
+.fv.is-armed .oi-x { opacity: 0; }
+.fv.is-armed.is-in .oi-x { animation: oi-in 0.55s cubic-bezier(0.16, 1, 0.3, 1) var(--show, 0s) both; }
+.fv.is-armed.is-in .oi-x.oi-x--hide {
+  animation:
+    oi-in 0.55s cubic-bezier(0.16, 1, 0.3, 1) var(--show, 0s) both,
+    oi-out 0.35s ease var(--hide) forwards;
+}
+.fv:not(.is-armed) .oi-x--hide { visibility: hidden; }
+@keyframes oi-in { from { opacity: 0; transform: translateY(0.5em) scale(0.98); } to { opacity: 1; transform: none; } }
+@keyframes oi-out { to { opacity: 0; transform: translateY(-0.3em); visibility: hidden; } }
+/* Stack children in one cell so swaps cross-fade in place. */
+.oi-stack { display: grid; }
+.oi-stack > * { grid-area: 1 / 1; }
+
+/* ── Popup shell ───────────────────────────────────────────────────────── */
+.oi-pop {
+  position: relative;
+  padding: 1.5em 1.5em 1.1em;
+  border-radius: 1.4em;
+  background: #fff;
+  color: #0b1220;
+  text-align: center;
+  box-shadow: 0 0 0 1px rgba(16, 24, 40, 0.06), 0 1.6em 3.2em -1.6em rgba(40, 20, 90, 0.35);
+}
+.oi-pop--row { display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 1.2em; text-align: left; align-items: center; }
+.oi-close {
+  position: absolute;
+  top: 0.9em;
+  right: 0.9em;
+  width: 1.7em;
+  height: 1.7em;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  color: #475467;
+  font-size: 0.85em;
+  background: #f2f4f7;
+}
+.oi-logo { display: inline-flex; align-items: center; gap: 0.45em; margin-bottom: 0.7em; }
+.oi-logo__mark { width: 1.9em; height: 1.9em; display: grid; place-items: center; border-radius: 0.5em; color: #fff; background: linear-gradient(160deg, #10b981, #047857); }
+.oi-logo__mark svg { width: 60%; height: 60%; }
+.oi-logo__word { display: flex; flex-direction: column; line-height: 1; text-align: left; }
+.oi-logo__word b { font-size: 1.05em; font-weight: 700; letter-spacing: 0.04em; color: #065f46; }
+.oi-logo__word small { margin-top: 0.15em; font-size: 0.5em; letter-spacing: 0.42em; color: #059669; }
+.oi-title { margin: 0; font-size: 1.45em; font-weight: 700; letter-spacing: -0.025em; line-height: 1.2; }
+.oi-sub { margin: 0.35em 0 0; font-size: 0.95em; color: #667085; line-height: 1.4; }
+.oi-powered { display: inline-flex; align-items: center; gap: 0.35em; margin-top: 0.9em; font-size: 0.78em; color: #7c3aed; font-weight: 600; }
+.oi-powered i { width: 0.95em; height: 0.95em; border-radius: 50%; background: linear-gradient(135deg, #a78bfa, #6d28d9); }
+
+/* Consent checkbox that ticks at --tick. */
+.oi-consent { display: flex; align-items: flex-start; gap: 0.55em; margin-top: 0.9em; text-align: left; font-size: 0.78em; color: #667085; line-height: 1.35; }
+.oi-box { flex: none; position: relative; width: 1.25em; height: 1.25em; border-radius: 0.3em; box-shadow: inset 0 0 0 1.5px #c0c6d1; background: #fff; }
+.oi-box::after { content: ''; position: absolute; inset: 0; border-radius: inherit; background: #059669 url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12.5l4.5 4.5L19 7.5'/%3E%3C/svg%3E") center/80% no-repeat; }
+.fv.is-armed .oi-box::after { transform: scale(0); }
+.fv.is-armed.is-in .oi-box::after { animation: oi-tick 0.35s cubic-bezier(0.34, 1.56, 0.64, 1) var(--tick, 0s) both; }
+@keyframes oi-tick { from { transform: scale(0); } to { transform: scale(1); } }
+
+/* Phone field. */
+.oi-phone { display: flex; align-items: center; margin-top: 0.7em; border-radius: 0.75em; background: #f6f7f9; box-shadow: inset 0 0 0 1px rgba(16, 24, 40, 0.08); font-size: 1em; text-align: left; overflow: hidden; }
+.oi-phone > b { padding: 0.65em 0.75em; font-weight: 600; color: #344054; box-shadow: inset -1px 0 0 rgba(16, 24, 40, 0.08); background: #eef0f3; }
+.oi-phone > span { flex: 1; padding: 0.65em 0.75em; color: #0b1220; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.oi-phone > span .oi-ph { color: #98a2b3; }
+
+/* Dark green CTA used by the real popups. */
+.oi-cta { display: inline-flex; align-items: center; justify-content: center; gap: 0.45em; margin-top: 0.9em; padding: 0.7em 1.4em; border-radius: 99em; color: #fff; font-weight: 650; font-size: 1em; background: linear-gradient(180deg, #14532d, #0f3d22); box-shadow: 0 0.6em 1.2em -0.6em rgba(6, 78, 59, 0.7); }
+.oi-cta--violet { background: linear-gradient(180deg, #8b5cf6, #6d28d9); box-shadow: 0 0.6em 1.2em -0.6em rgba(109, 40, 217, 0.7); }
+.fv.is-in .oi-cta[style*='--press'] { animation: oi-press 0.4s ease var(--press) both; }
+@keyframes oi-press { 40% { transform: scale(0.93); filter: brightness(0.9); } }
+
+/* ── Scratch & Win ─────────────────────────────────────────────────────── */
+.oi-card {
+  position: relative;
+  width: 12.5em;
+  height: 16em;
+  margin: 1em auto 0;
+  border-radius: 1.1em;
+  overflow: hidden;
+  box-shadow: 0 1em 2em -1em rgba(60, 40, 10, 0.55);
+}
+/* The dark prize card under the foil: gold rays, sparkles, the value. */
+.oi-dark {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #f5d48a;
+  background:
+    repeating-conic-gradient(from 0deg at 50% 45%, rgba(245, 212, 138, 0.09) 0deg 4deg, transparent 4deg 13deg),
+    radial-gradient(circle at 50% 45%, #3a2a12 0%, #17110a 70%);
+  box-shadow: inset 0 0 0 2px #2a2116;
+}
+.oi-dark small { font-size: 1em; font-weight: 600; color: #f8e7bd; }
+.oi-dark b {
+  font-size: 4.2em;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  line-height: 1;
+  background: linear-gradient(180deg, #ffe7a3 10%, #e0a83c 60%, #b47a1c);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.oi-dark em { font-style: normal; font-size: 1em; letter-spacing: 0.3em; font-weight: 700; color: #f5d48a; }
+.oi-dark::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(0.18em 0.18em at 22% 20%, #fff7d6, transparent),
+    radial-gradient(0.15em 0.15em at 78% 28%, #fff7d6, transparent),
+    radial-gradient(0.2em 0.2em at 30% 78%, #fff7d6, transparent),
+    radial-gradient(0.16em 0.16em at 72% 74%, #fff7d6, transparent);
+  animation: oi-twinkle 2.4s ease-in-out infinite alternate;
+}
+@keyframes oi-twinkle { from { opacity: 0.4; } to { opacity: 1; } }
+
+/* Gold foil in strips: each strip scratches away left to right in turn. */
+.oi-foil { position: absolute; inset: 0; display: grid; grid-template-rows: repeat(6, 1fr); }
+.oi-foil > i {
+  display: block;
+  background:
+    repeating-linear-gradient(110deg, rgba(255, 255, 255, 0.12) 0 0.25em, transparent 0.25em 0.6em),
+    linear-gradient(135deg, #e8c46a, #c99a3d 40%, #f1d68b 60%, #b88a32);
+  background-size: 100% 600%;
+}
+.oi-foil > i:nth-child(1) { background-position: 0 0; }
+.oi-foil > i:nth-child(2) { background-position: 0 20%; }
+.oi-foil > i:nth-child(3) { background-position: 0 40%; }
+.oi-foil > i:nth-child(4) { background-position: 0 60%; }
+.oi-foil > i:nth-child(5) { background-position: 0 80%; }
+.oi-foil > i:nth-child(6) { background-position: 0 100%; }
+.fv.is-in .oi-foil > i { animation: oi-scratch 0.42s ease-in calc(var(--scratch) + var(--k) * 0.22s) both; }
+@keyframes oi-scratch { from { clip-path: inset(0 0 0 0); } to { clip-path: inset(0 0 0 100%); } }
+.fv:not(.is-armed) .oi-foil { display: none; }
+.oi-foil__label {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4em;
+  pointer-events: none;
+  color: rgba(255, 248, 225, 0.92);
+  text-shadow: 0 1px 0 rgba(120, 80, 10, 0.5);
+}
+.oi-foil__label b { font-size: 1.9em; font-weight: 800; letter-spacing: 0.06em; line-height: 1.05; }
+.oi-foil__label svg { width: 2.2em; height: 2.2em; }
+.oi-ribbon { position: absolute; top: 0; left: 0; right: 0; width: max-content; margin: 0 auto; padding: 0.25em 0.9em; border-radius: 0 0 0.6em 0.6em; font-size: 0.72em; font-weight: 700; color: #fff7d6; background: #7a5512; }
+.fv.is-in .oi-foil__label { animation: oi-out 0.3s ease var(--scratch) forwards; }
+
+/* Gold code ticket with a black Copy button. */
+.oi-ticket {
+  position: relative;
+  padding: 0.75em 1em 0.85em;
+  border-radius: 0.8em;
+  text-align: center;
+  color: #3b2a0b;
+  background: linear-gradient(135deg, #f7e2a3, #e8c46a 45%, #f9e7b5 70%, #d9ad4f);
+  box-shadow: 0 0 0 1px rgba(150, 110, 30, 0.35), 0 0.8em 1.6em -0.8em rgba(120, 80, 10, 0.6);
+}
+.oi-ticket::before, .oi-ticket::after { content: ''; position: absolute; top: 50%; width: 1em; height: 1em; margin-top: -0.5em; border-radius: 50%; background: #fff; }
+.oi-ticket::before { left: -0.5em; }
+.oi-ticket::after { right: -0.5em; }
+.oi-ticket small { display: block; font-size: 0.68em; letter-spacing: 0.32em; font-weight: 700; color: #7a5512; }
+.oi-ticket b { display: block; margin: 0.1em 0 0.45em; font-size: 1.9em; font-weight: 800; letter-spacing: 0.12em; }
+.oi-ticket .oi-copy { display: flex; align-items: center; justify-content: center; gap: 0.4em; padding: 0.6em; border-radius: 99em; font-size: 0.9em; font-weight: 650; color: #fff; background: #111; }
+.oi-ticket .oi-copy svg { width: 1em; height: 1em; }
+.fv.is-in .oi-copy[style*='--press'] { animation: oi-press 0.4s ease var(--press) both; }
+.oi-ticket--rise { position: absolute; left: 0.8em; right: 0.8em; bottom: 0.8em; }
+.fv.is-armed.is-in .oi-ticket--rise { animation: oi-rise 0.7s cubic-bezier(0.16, 1, 0.3, 1) var(--show) both; }
+.fv.is-armed .oi-ticket--rise { opacity: 0; }
+@keyframes oi-rise { from { opacity: 0; transform: translateY(2.5em); } to { opacity: 1; transform: none; } }
+
+/* ── Spin reel ─────────────────────────────────────────────────────────── */
+.oi-reel {
+  position: relative;
+  height: 15em;
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(180deg, transparent, #000 28%, #000 72%, transparent);
+  mask-image: linear-gradient(180deg, transparent, #000 28%, #000 72%, transparent);
+}
+.oi-reel__track { position: absolute; left: 1.8em; right: 0; top: 50%; display: flex; flex-direction: column; gap: 0.7em; }
+.fv.is-in .oi-reel__track { animation: oi-reel var(--spin-dur, 2.6s) cubic-bezier(0.15, 0.7, 0.12, 1) var(--spin, 1s) both; }
+.fv:not(.is-armed) .oi-reel__track,
+.fv.is-armed:not(.is-in) .oi-reel__track { transform: translateY(var(--land)); }
+@keyframes oi-reel { from { transform: translateY(var(--from)); } to { transform: translateY(var(--land)); } }
+.oi-prize { display: inline-flex; align-items: center; gap: 0.5em; align-self: flex-start; padding: 0.5em 0.95em 0.5em 0.55em; border-radius: 99em; font-size: 0.95em; font-weight: 600; color: #344054; background: #fff; box-shadow: 0 0 0 1px rgba(16, 24, 40, 0.07), 0 0.4em 0.9em -0.6em rgba(16, 24, 40, 0.25); white-space: nowrap; }
+.oi-prize i { width: 1.45em; height: 1.45em; display: grid; place-items: center; border-radius: 50%; color: #fff; font-style: normal; background: var(--c, #10b981); }
+.oi-prize i svg { width: 60%; height: 60%; }
+.oi-prize.is-win { box-shadow: 0 0 0 2px #14532d, 0 0.6em 1.2em -0.6em rgba(6, 78, 59, 0.5); color: #0b1220; }
+.oi-reel__arrow { position: absolute; left: 0; top: 50%; width: 1.3em; height: 0.12em; margin-top: -0.06em; background: #14532d; border-radius: 0.1em; }
+.oi-reel__arrow::after { content: ''; position: absolute; right: -0.2em; top: -0.32em; border: 0.38em solid transparent; border-left-color: #14532d; border-right: 0; }
+.oi-ticks { position: absolute; left: 0.55em; top: 0; bottom: 0; width: 0.35em; background: repeating-linear-gradient(180deg, #d0d5dd 0 1px, transparent 1px 0.6em); }
+
+/* Success state. */
+.oi-success { display: grid; place-items: center; width: 3.6em; height: 3.6em; margin: 0 auto 0.6em; border-radius: 50%; color: #059669; background: #ecfdf5; box-shadow: 0 0 0 0.45em #f0fdf4; }
+.oi-success svg { width: 50%; height: 50%; }
+.oi-won { color: #b7791f; font-weight: 700; }
+
+/* ── Pulse Drop ────────────────────────────────────────────────────────── */
+.oi-orb {
+  position: relative;
+  width: 9.5em;
+  height: 9.5em;
+  margin: 1.1em auto 0.4em;
+  border-radius: 50%;
+  background: radial-gradient(circle at 34% 28%, #d8c8ff 0%, #9b6bff 26%, #6d28d9 62%, #3b1287 100%);
+  box-shadow: inset -0.8em -1em 2em rgba(30, 5, 80, 0.45), 0 1.4em 2.6em -1em rgba(109, 40, 217, 0.65);
+}
+.oi-orb::before { content: ''; position: absolute; left: 22%; top: 14%; width: 30%; height: 18%; border-radius: 50%; background: rgba(255, 255, 255, 0.5); filter: blur(0.35em); }
+.oi-orb::after { content: ''; position: absolute; inset: -0.6em; border-radius: 50%; box-shadow: 0 0 0 2px rgba(139, 92, 246, 0.45); animation: oi-pulse 1.8s ease-out infinite; }
+@keyframes oi-pulse { from { transform: scale(0.95); opacity: 0.9; } to { transform: scale(1.3); opacity: 0; } }
+.fv.is-in .oi-orb { animation: oi-orb-tap 0.6s ease var(--tap) both; }
+@keyframes oi-orb-tap { 30% { transform: scale(0.9); } 70% { transform: scale(1.08); } 100% { transform: scale(1); } }
+.oi-tap { margin-top: 0.6em; font-size: 0.95em; font-weight: 600; color: #6d28d9; }
+.oi-coupon-v {
+  display: flex;
+  align-items: stretch;
+  margin-top: 1em;
+  border-radius: 0.85em;
+  overflow: hidden;
+  background: linear-gradient(90deg, #f5f3ff, #ede9fe);
+  box-shadow: 0 0 0 1px rgba(124, 58, 237, 0.18);
+  text-align: left;
+}
+.oi-coupon-v > i { display: grid; place-items: center; width: 2.4em; font-style: normal; font-size: 0.72em; font-weight: 800; letter-spacing: 0.2em; writing-mode: vertical-rl; transform: rotate(180deg); color: #fff; background: linear-gradient(180deg, #8b5cf6, #6d28d9); }
+.oi-coupon-v > div { flex: 1; padding: 0.7em 0.9em; }
+.oi-coupon-v small { display: block; font-size: 0.72em; font-weight: 700; letter-spacing: 0.12em; color: #6d28d9; }
+.oi-coupon-v b { display: block; font-size: 1.45em; font-weight: 800; letter-spacing: 0.08em; color: #2e1065; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
+.oi-coupon-v > span { align-self: center; margin-right: 0.8em; }
+
+/* ── Welcome popup ─────────────────────────────────────────────────────── */
+.oi-pop--banner { padding: 0; overflow: hidden; }
+.oi-banner {
+  position: relative;
+  height: 8em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 1.3em;
+  text-align: left;
+  color: #1f2937;
+  background:
+    linear-gradient(90deg, #f3eee6 0%, #f3eee6 46%, transparent 62%),
+    linear-gradient(90deg, #8a5a3b, #a36b45 30%, #7a4e33 60%, #a06a46);
+}
+.oi-banner::after {
+  /* a door's plank lines on the right half */
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 42%;
+  background: repeating-linear-gradient(90deg, transparent 0 1.6em, rgba(0, 0, 0, 0.18) 1.6em calc(1.6em + 1px));
+}
+.oi-banner small { align-self: flex-start; padding: 0.1em 0.5em; border-radius: 99em; font-size: 0.62em; font-weight: 700; color: #fff; background: #111; }
+.oi-banner b { margin-top: 0.35em; font-size: 1.05em; font-weight: 700; line-height: 1.2; max-width: 52%; }
+.oi-banner span { align-self: flex-start; margin-top: 0.5em; padding: 0.3em 0.7em; border-radius: 0.3em; font-size: 0.68em; font-weight: 700; color: #fff; background: #ea580c; }
+.oi-banner__device { position: absolute; right: 47%; top: 1.6em; width: 1.2em; height: 3.4em; border-radius: 0.4em; background: linear-gradient(180deg, #2b2b2b, #111); box-shadow: inset 0 0 0 2px #444; }
+.oi-banner__device::after { content: ''; position: absolute; left: 50%; top: 0.5em; width: 0.5em; height: 0.5em; margin-left: -0.25em; border-radius: 50%; background: #60a5fa; box-shadow: 0 0 0.4em #60a5fa; }
+.oi-pop--banner .oi-body { padding: 1.1em 1.5em 1.1em; }

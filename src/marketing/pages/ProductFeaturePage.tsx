@@ -22,7 +22,7 @@ import {
 } from '../data/pageSeo';
 import { demoAssetBySrc } from '../data/productDemoVideos';
 import { featurePagesModifiedIso } from '../data/contentDates';
-import FeatureMeshStage from '../components/effects/FeatureMeshStage';
+import FeatureMeshStage, { AURORA_PALETTE } from '../components/effects/FeatureMeshStage';
 import HomeTrust from '../components/home/HomeTrust';
 import { PrimaryButton, GhostButton } from '../components/ui';
 import { ScenesContext, ScenePlaceholder, usePageScenes, useScene } from '../components/visuals';
@@ -156,7 +156,7 @@ function ProductFeatureView({ page }: { page: ProductPage }) {
   return (
     <ScenesContext.Provider value={scenes}>
     <AccentContext.Provider value="violet">
-    <MeshContext.Provider value={`/meshes/${page.id}.png`}>
+    <MeshContext.Provider value={AURORA_PALETTE[page.id]}>
       <MarketingSEO
         title={page.seoTitle}
         description={page.seoDescription}

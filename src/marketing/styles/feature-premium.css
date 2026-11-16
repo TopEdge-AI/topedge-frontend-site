@@ -51,3 +51,6 @@
     border-radius: 16px;
   }
 }
+
+/* Hero: the coded aurora replaces the old generated mesh image. */
+.mkt-pf .mkt-pf__mesh.mkt-pf__mesh--aurora { background: none; transform: none; inset: 0; }

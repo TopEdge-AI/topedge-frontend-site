@@ -38,6 +38,7 @@ import {
   type ReactNode,
 } from 'react';
 import { Check, CheckCheck, type LucideProps } from 'lucide-react';
+import '../../styles/aurora.css';
 import '../../styles/feature-visuals.css';
 
 export type Tone = 'violet' | 'emerald' | 'sky' | 'amber' | 'rose' | 'indigo' | 'slate';
@@ -59,8 +60,8 @@ const PlayContext = createContext(0);
 /** The enclosing Float's entrance time in ms, so timed children can wait for it. */
 const AtContext = createContext(0);
 /**
- * Page-level backdrop image for rich (wide) stages: the page's own hero mesh,
- * so every panel on a page shares the hero's colour mood.
+ * Page-level aurora palette for rich (wide) stages (see styles/aurora.css),
+ * so every panel on a page shares the hero's light but each composes it differently.
  */
 export const MeshContext = createContext<string | undefined>(undefined);
 
@@ -284,14 +285,7 @@ export function Stage({ tone, shape = 'square', mood, duration, label, children 
     };
   }, [holdMs]);
 
-  const meshStyle =
-    look !== 'plain' && mesh
-      ? ({
-          backgroundImage: `url('${mesh}')`,
-          // The meshes carry their colour toward the right; crop into it.
-          backgroundPosition: `${62 + (hash(label) % 38)}% ${25 + ((hash(label) >> 3) % 50)}%`,
-        } as CSSProperties)
-      : undefined;
+  const aurora = look !== 'plain' && mesh ? mesh : undefined;
 
   return (
     <div
@@ -301,7 +295,8 @@ export function Stage({ tone, shape = 'square', mood, duration, label, children 
       role="img"
       aria-label={label}
     >
-      <div className={cx('fv__bg', meshStyle && 'fv__bg--mesh')} style={meshStyle} aria-hidden="true">
+      <div className={cx('fv__bg', aurora && 'fv__bg--aurora')} aria-hidden="true">
+        {aurora ? <div className="aurora" data-palette={aurora} data-variant={hash(label) % 4} /> : null}
         <span className="fv__aura" />
         <span className="fv__aura fv__aura--b" />
         <span className="fv__spot" />
@@ -898,7 +893,12 @@ export function Cursor({
   x?: number;
   y?: number;
   delay?: number;
-  path?: [number, number, number][];
+  /**
+   * Waypoints: [x, y, t] in stage percent, or [name, t] to aim at the element
+   * marked data-cursor="name" (resolved from the real layout at play time,
+   * so clicks land exactly whatever the auto-framing does).
+   */
+  path?: ([number, number, number] | [string, number])[];
   clicks?: number[];
 }) {
   const play = useContext(PlayContext);
@@ -907,12 +907,32 @@ export function Cursor({
   useEffect(() => {
     const el = ref.current;
     if (!el || !path?.length || play === 0 || typeof el.animate !== 'function') return;
-    const end = path[path.length - 1][2] + 0.6;
+    const layer = el.parentElement;
+    const resolve = (name: string): [number, number] => {
+      const target = layer?.querySelector<HTMLElement>(`[data-cursor="${name}"]`);
+      if (!layer || !target) return [50, 50];
+      let x = 0;
+      let y = 0;
+      let n: HTMLElement | null = target;
+      while (n && n !== layer) {
+        x += n.offsetLeft;
+        y += n.offsetTop;
+        n = n.offsetParent as HTMLElement | null;
+      }
+      return [
+        ((x + target.offsetWidth * 0.5) / layer.offsetWidth) * 100,
+        ((y + target.offsetHeight * 0.6) / layer.offsetHeight) * 100,
+      ];
+    };
+    const pts: [number, number, number][] = path.map((p) =>
+      typeof p[0] === 'string' ? [...resolve(p[0]), p[1] as number] : (p as [number, number, number]),
+    );
+    const end = pts[pts.length - 1][2] + 0.6;
     const total = end * 1000;
     const frames: Keyframe[] = [];
-    const first = path[0];
+    const first = pts[0];
     frames.push({ left: `${first[0]}%`, top: `${first[1]}%`, opacity: 0, offset: 0 });
-    path.forEach(([px, py, t]) => {
+    pts.forEach(([px, py, t]) => {
       frames.push({
         left: `${px}%`,
         top: `${py}%`,
@@ -921,7 +941,7 @@ export function Cursor({
         easing: 'cubic-bezier(0.45, 0, 0.2, 1)',
       });
     });
-    const lastP = path[path.length - 1];
+    const lastP = pts[pts.length - 1];
     frames.push({ left: `${lastP[0]}%`, top: `${lastP[1]}%`, opacity: 0, offset: 1 });
     frames.sort((a, b) => (a.offset as number) - (b.offset as number));
     const anims: Animation[] = [el.animate(frames, { duration: total, fill: 'forwards' })];
@@ -956,7 +976,7 @@ export function Cursor({
 
   if (path?.length) {
     return (
-      <div ref={ref} className="fv-cursor fv-cursor--path" style={{ left: `${path[0][0]}%`, top: `${path[0][1]}%`, opacity: 0 }}>
+      <div ref={ref} className="fv-cursor fv-cursor--path" style={{ left: '50%', top: '90%', opacity: 0 }}>
         <svg viewBox="0 0 24 24">
           <path d="M5.5 3.2 18.6 10c.6.3.5 1.2-.1 1.4l-5.3 1.6-2.4 5.1c-.3.6-1.2.6-1.4-.1L5 4.1c-.2-.6.4-1.2.9-.9Z" />
         </svg>
