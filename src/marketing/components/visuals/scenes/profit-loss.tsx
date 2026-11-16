@@ -139,7 +139,7 @@ function ProductsCogs({ label }: SceneProps) {
           </Stack>
         </Panel>
       </Float>
-      <Float x={30} y={76} at={2.4}>
+      <Float x={36} y={76} at={2.4}>
         <Chip tone="emerald" icon={Check}>
           Unit cost ₹323
         </Chip>
@@ -213,8 +213,8 @@ function NetProfit({ label }: SceneProps) {
       <Cursor
         path={[
           [22, 92, 0.2],
-          [16, 60, 0.8],
-          [16, 60, 1.3],
+          [14, 50, 0.8],
+          [14, 50, 1.3],
           [24, 80, 2.2],
         ]}
         clicks={[1]}
@@ -292,7 +292,7 @@ function ProductTable({ label }: SceneProps) {
           </Reveal>
         </Panel>
       </Float>
-      <Float x={20} y={66} w={60} at={3.2} fade="bottom">
+      <Float x={20} y={49} w={60} at={3.2} fade="bottom">
         <Panel>
           <Row
             lead={<IconTile icon={Shirt} />}
@@ -309,8 +309,8 @@ function ProductTable({ label }: SceneProps) {
       <Cursor
         path={[
           [92, 80, 0.3],
-          [74, 16, 1],
-          [74, 16, 1.6],
+          [73, 13, 1],
+          [73, 13, 1.6],
           [88, 50, 2.6],
         ]}
         clicks={[1.2]}

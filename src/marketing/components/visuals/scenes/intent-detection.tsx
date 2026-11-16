@@ -124,10 +124,10 @@ function TestConfidence({ label }: SceneProps) {
           <TypedField label="Phrase" text="kab tak aayega?" at={0.6} />
         </Panel>
       </Float>
-      <Float x={35} y={40} at={2.2}>
+      <Float x={35} y={45} at={2.2}>
         <Donut pct={94} tone="emerald" size={11} />
       </Float>
-      <Float x={31} y={84} at={3}>
+      <Float x={32} y={88} at={3}>
         <Chip tone="emerald" dot>
           Matched: Shipping
         </Chip>
@@ -194,8 +194,8 @@ function IntentList({ label }: SceneProps) {
       <Cursor
         path={[
           [92, 82, 0.3],
-          [81, 21, 1.2],
-          [81, 21, 1.8],
+          [79, 19, 1.2],
+          [79, 19, 1.8],
           [64, 74, 3],
         ]}
         clicks={[1.4]}
@@ -235,10 +235,10 @@ function Editor({ label }: SceneProps) {
       <Cursor
         path={[
           [80, 92, 0.3],
-          [62, 46, 1.4],
-          [62, 46, 1.9],
-          [16, 50, 2.9],
-          [16, 50, 3.6],
+          [60, 35, 1.4],
+          [60, 35, 1.9],
+          [15, 43, 2.9],
+          [15, 43, 3.6],
         ]}
         clicks={[1.6, 3.1]}
       />
@@ -250,13 +250,12 @@ function Editor({ label }: SceneProps) {
 function LiveRouting({ label }: SceneProps) {
   return (
     <Stage label={label} shape="wide" duration={8.5}>
-      <Wires shape="wide" paths={['M 30 21.5 C 33 21.5, 33 17, 36 17']} />
-      <Float x={4} y={30} w={26} at={0.2}>
+      <Float x={4} y={22} w={26} at={0.2}>
         <Bubble from="user" time="11:02">
           <TypeText text="order kab aayega?" at={0.5} />
         </Bubble>
       </Float>
-      <Float x={6} y={52} at={1.8}>
+      <Float x={6} y={40} at={1.8}>
         <Chip solid icon={Sparkles}>
           Shipping · 94%
         </Chip>
@@ -279,7 +278,7 @@ function LiveRouting({ label }: SceneProps) {
           </Reveal>
         </Panel>
       </Float>
-      <Float x={66} y={54} at={4.6}>
+      <Float x={66} y={50} at={4.6}>
         <Chip tone="emerald" dot>
           ₹0 AI tokens
         </Chip>

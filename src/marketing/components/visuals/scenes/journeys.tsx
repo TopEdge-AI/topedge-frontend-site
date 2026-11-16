@@ -143,37 +143,37 @@ function Gating({ label }: SceneProps) {
 /** Cart abandoned, wait, the reminder types, the cart is recovered. */
 function AbandonedCart({ label }: SceneProps) {
   return (
-    <Stage label={label} shape="wide" duration={8.5}>
+    <Stage label={label} shape="wide" duration={7}>
       <Float x={6} y={26} w={28} at={0}>
         <Panel glass title="Cart recovery" icon={Workflow}>
-          <Reveal at={0.4}>
+          <Reveal at={0.3}>
             <Row title="Cart abandoned" sub="₹3,450 · 2 items" />
           </Reveal>
-          <Reveal at={1.2}>
+          <Reveal at={0.9}>
             <Row title="Wait 30 min" sub="Then remind" />
           </Reveal>
-          <Reveal at={2}>
+          <Reveal at={1.5}>
             <Row title="Reminder 1 of 3" sub="Approved template" />
           </Reveal>
         </Panel>
       </Float>
-      <Float x={46} y={4} w={34} at={0.8} z={3}>
+      <Float x={46} y={4} w={34} at={0.5} z={3}>
         <Phone name="Your store">
-          <Reveal at={1.2} until={2.2}>
+          <Reveal at={0.9} until={1.7}>
             <Typing />
           </Reveal>
-          <Reveal at={2.3}>
+          <Reveal at={1.8}>
             <Bubble from="biz" time="4:12 pm" read buttons={['Complete order']}>
-              <TypeText text="Riya, your cart is waiting. 10% off for the next hour." at={2.6} cps={34} />
+              <TypeText text="Riya, your cart is waiting. 10% off for the next hour." at={2} cps={40} />
             </Bubble>
           </Reveal>
-          <Reveal at={5}>
+          <Reveal at={3.5}>
             <Bubble from="user">Done, paid!</Bubble>
           </Reveal>
         </Phone>
       </Float>
-      <Burst x={86} y={74} at={5.8} />
-      <Float x={76} y={70} at={5.7}>
+      <Burst x={86} y={74} at={4.2} />
+      <Float x={76} y={70} at={4.1}>
         <Chip solid icon={Wallet}>Recovered ₹3,450</Chip>
       </Float>
     </Stage>
@@ -214,14 +214,14 @@ function Routes({ label }: SceneProps) {
 /** A known shopper comes back, leaves again, and a journey starts. */
 function Retarget({ label }: SceneProps) {
   return (
-    <Stage label={label} shape="wide" duration={8}>
+    <Stage label={label} shape="wide" duration={7}>
       <Float x={8} y={14} w={50} at={0} z={3}>
         <Panel title="Return visit" icon={Eye}>
           <Row lead={<Avatar name="Riya Sharma" />} title="Riya Sharma" sub="Back on the site" />
-          <Reveal at={1}>
+          <Reveal at={0.8}>
             <Row lead={<IconTile icon={Eye} />} title="Linen kurta" sub="Viewed 3 times" />
           </Reveal>
-          <Reveal at={1.8}>
+          <Reveal at={1.4}>
             <Row
               lead={<IconTile icon={ShoppingCart} />}
               title="Left again"
@@ -232,12 +232,12 @@ function Retarget({ label }: SceneProps) {
           </Reveal>
         </Panel>
       </Float>
-      <Float x={64} y={18} at={2.8}>
+      <Float x={64} y={18} at={2}>
         <Chip tone="emerald" dot>Journey started</Chip>
       </Float>
-      <Float x={62} y={38} w={32} at={3.6}>
+      <Float x={62} y={38} w={32} at={2.6}>
         <Bubble from="biz" time="6:40 pm">
-          <TypeText text="Still thinking about the Linen kurta? Your size is back." at={3.9} cps={34} />
+          <TypeText text="Still thinking about the Linen kurta? Your size is back." at={2.8} cps={40} />
         </Bubble>
       </Float>
     </Stage>

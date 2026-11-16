@@ -119,10 +119,34 @@ function useAutoFit(
     const fit = fitRef.current;
     if (!stage || !fit) return;
 
+    // Proportions of the content box, measured while the scene is fully laid
+    // out (before the stage arms its animations). Once armed, Reveal rows are
+    // collapsed and typed text is empty, so re-measuring then would frame the
+    // scene too small; resizes reuse these proportions instead.
+    let frac: [number, number, number, number] | null = null;
+
+    const apply = (W: number, H: number) => {
+      if (!frac) return;
+      const [fx0, fy0, fw, fh] = frac;
+      const pad = FIT_PAD[shape];
+      const bw = fw * W;
+      const bh = fh * H;
+      const x0 = fx0 * W;
+      const y0 = fy0 * H;
+      const s = Math.min((W * (1 - 2 * pad)) / bw, (H * (1 - 2 * pad)) / bh, FIT_MAX[shape]);
+      const tx = (W - bw * s) / 2 - x0 * s;
+      const ty = (H - bh * s) / 2 - y0 * s;
+      fit.style.transform = `translate3d(${tx.toFixed(2)}px, ${ty.toFixed(2)}px, 0) scale(${s.toFixed(4)})`;
+    };
+
     const measure = () => {
       const W = fit.offsetWidth;
       const H = fit.offsetHeight;
       if (!W || !H) return;
+      if (frac && stage.classList.contains('is-armed')) {
+        apply(W, H);
+        return;
+      }
       let x0 = Infinity;
       let y0 = Infinity;
       let x1 = -Infinity;
@@ -138,13 +162,8 @@ function useAutoFit(
         y1 = Math.max(y1, el.offsetTop + h);
       });
       if (!Number.isFinite(x0)) return;
-      const pad = FIT_PAD[shape];
-      const bw = x1 - x0;
-      const bh = y1 - y0;
-      const s = Math.min((W * (1 - 2 * pad)) / bw, (H * (1 - 2 * pad)) / bh, FIT_MAX[shape]);
-      const tx = (W - bw * s) / 2 - x0 * s;
-      const ty = (H - bh * s) / 2 - y0 * s;
-      fit.style.transform = `translate3d(${tx.toFixed(2)}px, ${ty.toFixed(2)}px, 0) scale(${s.toFixed(4)})`;
+      frac = [x0 / W, y0 / H, (x1 - x0) / W, (y1 - y0) / H];
+      apply(W, H);
     };
 
     measure();
@@ -628,7 +647,7 @@ function CountUp({ value }: { value: string }) {
 
   useEffect(() => {
     const m = value.match(NUM_RE);
-    if (!m || play === 0) {
+    if (!m || play === 0 || window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
       setText(value);
       return;
     }
@@ -1025,8 +1044,13 @@ export function TypeText({ text, at, cps = 28 }: { text: string; at?: number; cp
 
   return (
     <span className="fv-type">
-      {text.slice(0, n)}
-      {n < text.length ? <i className="fv-type__caret" /> : null}
+      <span className="fv-type__ghost" aria-hidden="true">
+        {text}
+      </span>
+      <span className="fv-type__live">
+        {text.slice(0, n)}
+        {n < text.length ? <i className="fv-type__caret" /> : null}
+      </span>
     </span>
   );
 }
@@ -1076,7 +1100,11 @@ export function SpinWheel({
           <span
             key={label + i}
             className={cx('fv-wheel__label', [0, 2, 4].includes(i % shades.length) && 'is-dark')}
-            style={{ transform: `rotate(${i * seg + seg / 2}deg) translateY(-${size * 0.32}em)` }}
+            style={{
+              transform: `rotate(${i * seg + seg / 2}deg) translateY(-${size * 0.32}em)${
+                i * seg + seg / 2 > 90 && i * seg + seg / 2 < 270 ? ' rotate(180deg)' : ''
+              }`,
+            }}
           >
             {label}
           </span>

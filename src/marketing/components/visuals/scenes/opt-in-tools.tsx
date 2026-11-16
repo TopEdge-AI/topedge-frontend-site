@@ -189,7 +189,7 @@ function WelcomePopup({ label }: SceneProps) {
           </Stack>
         </Panel>
       </Float>
-      <Float x={40} y={58} at={3.4}>
+      <Float x={40} y={47} at={3.4}>
         <Chip tone="emerald" dot>Opted in</Chip>
       </Float>
       <Cursor
@@ -206,15 +206,15 @@ function WelcomePopup({ label }: SceneProps) {
 /** Spin to win: press Spin, the wheel lands, the coupon drops in. */
 function Spin({ label }: SceneProps) {
   return (
-    <Stage label={label} shape="wide" duration={8}>
+    <Stage label={label} shape="wide" duration={7}>
       <Float x={10} y={6} w={38} delay={0} z={3}>
         <Panel>
           <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '1.4em', paddingTop: '1em' }}>
             <SpinWheel
               slices={['10% off', 'Free ship', '₹200 off', 'Try again', '15% off', '5% off']}
               land={0}
-              at={1.2}
-              spin={3}
+              at={1.1}
+              spin={2.5}
               size={18}
             />
             <Btn primary pressAt={1}>
@@ -223,17 +223,17 @@ function Spin({ label }: SceneProps) {
           </div>
         </Panel>
       </Float>
-      <Burst x={29} y={36} at={4.2} />
-      <Float x={54} y={30} w={36} at={4.6}>
+      <Burst x={29} y={36} at={3.6} />
+      <Float x={54} y={30} w={36} at={3.8}>
         <Coupon value="10% off" label="+91 98765 43210" code="SPIN-7KQ2" />
       </Float>
-      <Float x={58} y={66} at={5.3}>
+      <Float x={58} y={66} at={4.4}>
         <Chip dot>Consent recorded</Chip>
       </Float>
       <Cursor
         path={[
           [44, 92, 0.2],
-          [30, 66, 0.85],
+          [30, 63, 0.85],
           [40, 90, 2],
         ]}
         clicks={[0.95]}
@@ -257,7 +257,7 @@ function Mystery({ label }: SceneProps) {
         </Panel>
       </Float>
       <Burst x={53} y={36} at={2.7} />
-      <Float x={56} y={58} at={3.3} z={4}>
+      <Float x={56} y={52} at={3.3} z={4}>
         <Chip tone="emerald" dot>Added with consent</Chip>
       </Float>
       <Cursor

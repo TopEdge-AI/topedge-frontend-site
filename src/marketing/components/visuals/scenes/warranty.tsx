@@ -95,8 +95,8 @@ function Register({ label }: SceneProps) {
       <Cursor
         path={[
           [70, 92, 0.9],
-          [76, 26, 2.9],
-          [77, 27, 3.6],
+          [78, 23, 2.9],
+          [78, 23, 3.6],
         ]}
         clicks={[3.2]}
       />
@@ -160,8 +160,8 @@ function HubList({ label }: SceneProps) {
       <Cursor
         path={[
           [92, 80, 0.4],
-          [81, 22, 1.3],
-          [81, 22, 1.9],
+          [79, 19, 1.3],
+          [79, 19, 1.9],
           [62, 70, 3.2],
         ]}
         clicks={[1.5]}
@@ -221,9 +221,9 @@ function Unassigned({ label }: SceneProps) {
       <Cursor
         path={[
           [80, 92, 0.4],
-          [54, 47, 1.4],
-          [76, 52, 2.8],
-          [77, 53, 3.6],
+          [53, 37, 1.4],
+          [76, 44, 2.8],
+          [76, 44, 3.6],
         ]}
         clicks={[1.6, 3]}
       />
@@ -265,8 +265,8 @@ function ManualAssign({ label }: SceneProps) {
       <Cursor
         path={[
           [72, 94, 0.8],
-          [79, 20, 3.3],
-          [80, 21, 4],
+          [78, 17, 3.3],
+          [78, 17, 4],
         ]}
         clicks={[3.6]}
       />

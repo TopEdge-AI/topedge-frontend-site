@@ -1053,3 +1053,15 @@
    state of a story: anything that leaves partway through stays hidden. */
 .fv:not(.is-armed) .fv-float--until,
 .fv:not(.is-armed) .fv-reveal--until { visibility: hidden; opacity: 0; }
+
+/* Typed text reserves its final size, so bubbles never resize while typing. */
+.fv-type { position: relative; display: inline-grid; }
+.fv-type__ghost, .fv-type__live { grid-area: 1 / 1; }
+.fv-type__ghost { visibility: hidden; }
+
+/* Final frame when the story does not play (reduced motion, pre-arm). */
+.fv:not(.is-armed) .fv-scratch__foil { display: none; }
+.fv:not(.is-armed) .fv-wheel__disc { transform: rotate(var(--fv-spin-to)); }
+.fv:not(.is-armed) .fv-cursor { display: none; }
+/* A row that leaves mid-story takes no space in the end-state frame. */
+.fv:not(.is-armed) .fv-reveal--until { display: none; }
