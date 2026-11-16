@@ -3001,7 +3001,7 @@
       "blocks": [
         {
           "kind": "answer",
-          "text": "Open a conversation in Chats and press **Reply myself**; the bot pauses so only your team replies. Within 24 hours of the customer’s last message you can send free text, and after that you must pick an approved template. Press **Mark as done** or **Give back to bot** when you finish, and automation resumes on the next inbound message."
+          "text": "Chats is your WhatsApp team inbox. Open a conversation there and press **Reply myself**; the bot pauses so only your team replies. Within 24 hours of the customer’s last message you can send free text, and after that you must pick an approved template. Press **Mark as done** or **Give back to bot** when you finish, and automation resumes on the next inbound message."
         },
         {
           "kind": "diagram",

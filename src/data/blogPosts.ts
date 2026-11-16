@@ -2467,15 +2467,15 @@ export const blogPosts: BlogPost[] = [
     id: 16,
     title: 'WhatsApp Business API Pricing India 2026: ₹ Rates & Fees',
     description:
-      'Meta WhatsApp API rates in India from 1 October 2026: ₹0.8631 marketing, ₹0.115 utility, and ₹0.115 service replies after 1,000 free, plus BSP markup math.',
+      'WhatsApp Business API pricing in India, checked 16 Nov 2026: ₹0.8631 per marketing and ₹0.115 per utility message, plus cost per 1,000 at five providers.',
     summary: [
-      'WhatsApp Business API pricing in India is set per delivered message by category: from 1 October 2026 Meta charges ₹0.8631 for marketing and ₹0.1150 for utility and authentication, before 18% GST, with 1,000 free service replies a month per number. Your real bill adds any platform markup. TopEdge AI passes Meta’s rates through at 0%.',
-      'Every WhatsApp account must move to INR billing by 31 December 2026, which is why older articles and your own invoices may not agree.',
-      'The number that decides your bill is the platform markup on top of Meta, not the plan fee. The worked 10,000-message month shows the gap in rupees.',
+      'WhatsApp Business API pricing in India is set per delivered message by category. Checked on 16 November 2026, Meta charges ₹0.8631 for marketing and ₹0.1150 for utility, authentication and service, before 18% GST, with 1,000 free service replies a month per number. That is ₹863 per 1,000 marketing messages and ₹115 per 1,000 utility messages.',
+      'Platforms that resell messages add 11% to 105% on the marketing line. The cost-per-1,000 table names each one and the date it was read.',
+      'Eligible Indian businesses must move every WhatsApp account to INR billing by 31 December 2026, which is why older articles and your own invoices may not agree.',
     ],
     slug: 'whatsapp-business-api-pricing-india',
     date: '2026-09-20',
-    updated: '2026-10-21',
+    updated: '2026-11-16',
     readTime: '9 min',
     category: 'Meta',
     author: 'Moksh Patel',
@@ -2496,6 +2496,16 @@ export const blogPosts: BlogPost[] = [
         question: 'How much does a WhatsApp message cost in India?',
         answer:
           '₹0.8631 per delivered marketing message and ₹0.1150 for utility and authentication on Meta’s India rate card, all before 18% GST. Since 1 October 2026 each business phone number gets 1,000 free service messages a month, and replies past that are charged at the ₹0.1150 utility rate.',
+      },
+      {
+        question: 'Is the WhatsApp Business API free in India?',
+        answer:
+          'No. Meta charges no access fee, but every delivered template message is billed: ₹0.8631 for marketing and ₹0.1150 for utility, plus 18% GST. Only the first 1,000 service replies a month per number and messages inside a free entry point window, such as after a click-to-WhatsApp ad, cost nothing.',
+      },
+      {
+        question: 'How much do 1,000 WhatsApp messages cost in India?',
+        answer:
+          'At Meta’s own rates, ₹863 for 1,000 marketing messages and ₹115 for 1,000 utility messages, before 18% GST. Through a platform that adds a markup, the same 1,000 marketing messages cost ₹958 to ₹1,773, depending on the provider.',
       },
       {
         question: 'Are WhatsApp service replies still free in India?',
@@ -2536,7 +2546,7 @@ export const blogPosts: BlogPost[] = [
     content: `
 <details class="mkt-blog-verdict" open>
 <summary>Quick verdict</summary>
-<p>In India, Meta charges per delivered message on its INR rate card: <strong>₹0.8631</strong> for marketing templates and <strong>₹0.1150</strong> for utility and authentication templates. Effective <strong>1 October 2026</strong>, customer service replies are also billed at ₹0.1150 once a phone number passes 1,000 free service messages in a month. Your software vendor's subscription, and any per-message markup it adds, sits on top of Meta's bill. The current card by category is on our <a href="/pricing/meta-rates">Meta India rate card and cost calculator</a>.</p>
+<p>WhatsApp Business API pricing in India, checked on <strong>16 November 2026</strong>: Meta charges <strong>₹0.8631</strong> per delivered marketing message and <strong>₹0.1150</strong> per utility or authentication message. That is ₹863 and ₹115 per 1,000, before 18% GST. Since 1 October 2026, service replies cost ₹0.1150 each after a number's first 1,000 free in a month. Any platform markup sits on top. Run your own volume in our <a href="/pricing/meta-rates">Meta India rate card and cost calculator</a>.</p>
 </details>
 
 <h2>Meta's official India rate card (effective 1 October 2026)</h2>
@@ -2555,7 +2565,25 @@ export const blogPosts: BlogPost[] = [
 <p>Read that table twice, because the ratio matters more than the absolute numbers. Marketing costs <strong>7.5 times</strong> what utility costs. A store that sends its order updates as marketing templates because nobody checked the category is paying 7.5x too much for the same message.</p>
 <p>Add 18 percent GST on top of all of it. A ₹0.8631 marketing message lands at about ₹1.02 on the invoice. Volume tiers exist but they start high: the utility rate only drops to <strong>₹0.1081</strong> above 25,000,000 messages a month, and authentication tiers begin at 750,000, so almost no Indian D2C brand will ever reach either.</p>
 <p>One row that is not in the table because it is not an India row: <strong>Authentication-International</strong>, the category Meta uses when you send an OTP to a number outside your own market, is <strong>₹2.4971</strong> per delivered message. That is 21 times the domestic authentication rate, and it is worth knowing before you switch on OTP login for a store that also ships abroad.</p>
-<p class="mkt-blog-footnote">Rates and effective dates read off <a href="https://developers.facebook.com/docs/whatsapp/pricing/" target="_blank" rel="noopener noreferrer">Meta's WhatsApp Business Platform pricing documentation</a> on 21 October 2026. Meta can revise rates up to four times a year, and the rate card inside your own Business Manager is the only number that will match your invoice.</p>
+<p class="mkt-blog-footnote">Rates read off the INR rate sheet linked from <a href="https://developers.facebook.com/docs/whatsapp/pricing/" target="_blank" rel="noopener noreferrer">Meta's WhatsApp Business Platform pricing documentation</a> on 16 November 2026 ("effective October 1, 2026"; the page itself was last updated 30 September 2026). Meta can revise rates up to four times a year, and the rate card inside your own Business Manager is the only number that will match your invoice.</p>
+
+<h2>Cost per 1,000 messages by provider (checked 16 November 2026)</h2>
+<p>Meta's rate is the floor. Platforms that resell messages publish their own per-message rates, and most sit above it. Here is what 1,000 delivered messages to Indian numbers cost on each published rate card, before 18% GST.</p>
+<div class="mkt-blog-table-wrap">
+<table>
+<thead><tr><th>Provider and plan</th><th>1,000 marketing</th><th>1,000 utility</th><th>1,000 service (after 1,000 free)</th><th>Marketing vs Meta</th></tr></thead>
+<tbody>
+<tr><td><strong>Meta direct</strong> (also TopEdge AI, which adds 0%)</td><td><strong>₹863</strong></td><td><strong>₹115</strong></td><td><strong>₹115</strong></td><td>Floor</td></tr>
+<tr><td>Interakt Growth</td><td>₹958</td><td>₹150</td><td>₹128</td><td>+11%</td></tr>
+<tr><td>WATI Business</td><td>₹967</td><td>₹138</td><td>₹123</td><td>+12%</td></tr>
+<tr><td>WATI Growth</td><td>₹1,036</td><td>₹150</td><td>₹138</td><td>+20%</td></tr>
+<tr><td>AiSensy (every plan)</td><td>₹1,090</td><td>₹145</td><td>₹145</td><td>+26%</td></tr>
+<tr><td>Dondy ($0.01888 a message, billed in USD)</td><td>about ₹1,773</td><td>Not split</td><td>Not split</td><td>+105% in rupees</td></tr>
+</tbody>
+</table>
+</div>
+<p>Two things stand out. Utility is where the percentage gap is widest: 20% to 30% on most resellers, on the order updates every store sends. And Dondy's rate looks close to Meta's in dollars (60% above Meta's $0.0118) but lands at about twice Meta's rupee card, because Meta's INR card is cheaper than its USD card converted.</p>
+<p class="mkt-blog-footnote">Read 16 November 2026: <a href="https://www.interakt.shop/whatsapp-conversation-pricing/" target="_blank" rel="noopener noreferrer">Interakt's rate table</a>, <a href="https://aisensy.com/pricing" target="_blank" rel="noopener noreferrer">AiSensy's pricing page</a> and <a href="https://www.dondy.net/dondy-pricing" target="_blank" rel="noopener noreferrer">Dondy's rate table</a>. <a href="https://cdn.clare.ai/pricing/Wati-Pricing-Rate-Card-Growth-Plan-INR-I.pdf" target="_blank" rel="noopener noreferrer">WATI's INR rate cards</a> are dated 1 October 2026 and were unchanged on 16 November. Dondy converted at ₹93.92 to the dollar (<a href="https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/index.en.html" target="_blank" rel="noopener noreferrer">ECB</a>, 6 November 2026; ₹94.24 on 13 November). Rates rounded to the nearest rupee per 1,000.</p>
 
 <h2>What changed on 1 October 2026 (the update most articles missed)</h2>
 <p>The 1 January 2026 marketing rise to ₹0.8631 got wide coverage. The October change did not, and it is the one that moves a support-heavy bill.</p>
@@ -2612,24 +2640,26 @@ export const blogPosts: BlogPost[] = [
 </tbody>
 </table>
 </div>
-<p>Now apply the two markups that are actually published, one line at a time.</p>
+<p>Now run the same month through each published rate card from the table above.</p>
 <div class="mkt-blog-table-wrap">
 <table>
-<thead><tr><th>Published vendor rate</th><th>Line it applies to</th><th>Meta's rate</th><th>Markup</th><th>Extra cost in this month</th></tr></thead>
+<thead><tr><th>Provider</th><th>Marketing line</th><th>Utility line</th><th>Service line</th><th>Extra over Meta this month</th></tr></thead>
 <tbody>
-<tr><td>AiSensy ₹0.145 per service message after 1,000 free</td><td>4,000 billable service replies</td><td>₹0.1150</td><td><strong>+26.1%</strong></td><td>+₹120</td></tr>
-<tr><td>Dondy $0.01888 per India message</td><td>10,000 marketing templates</td><td>$0.0118 (₹0.8631)</td><td><strong>+60%</strong></td><td>+₹5,179</td></tr>
-<tr><td>Pass-through at Meta's card</td><td>Every line</td><td>As published</td><td><strong>0%</strong></td><td>₹0</td></tr>
+<tr><td>Meta direct or TopEdge AI</td><td>₹8,631</td><td>₹1,150</td><td>₹460</td><td><strong>₹0</strong></td></tr>
+<tr><td>Interakt Growth</td><td>₹9,580</td><td>₹1,500</td><td>₹512</td><td><strong>+₹1,351</strong></td></tr>
+<tr><td>WATI Growth</td><td>₹10,357</td><td>₹1,495</td><td>₹552</td><td><strong>+₹2,163</strong></td></tr>
+<tr><td>AiSensy</td><td>₹10,900</td><td>₹1,450</td><td>₹580</td><td><strong>+₹2,689</strong></td></tr>
+<tr><td>Dondy (marketing line only)</td><td>about ₹17,733</td><td>Not split</td><td>Not split</td><td><strong>+₹9,102</strong> on marketing alone</td></tr>
 </tbody>
 </table>
 </div>
-<p><a href="https://aisensy.com/pricing" target="_blank" rel="noopener noreferrer">AiSensy's pricing page</a> states that from 1 October 2026 every WhatsApp Business number gets 1,000 free service messages a month, and that service messages are then charged at ₹0.145 each for Indian users. Meta's own India service rate is ₹0.1150. That is ₹0.030 more per reply, a <strong>26.1% markup</strong> on every support and bot reply past the free thousand. Dondy's published India rate of $0.01888 per message sits 60 percent above Meta's $0.0118 USD marketing rate. Dondy bills in dollars, so at ₹93.92 to the dollar (ECB, 6 November 2026) that is about ₹1.77 a message against ₹0.8631 on Meta's INR card; that one is broken down in <a href="/blog/dondy-alternative-shopify-india">the Dondy alternative post</a>, and the AiSensy gap in <a href="/blog/aisensy-alternative-shopify-india">the AiSensy alternative post</a>.</p>
-<p class="mkt-blog-footnote">Competitor rates read off each vendor's own published pricing page on 21 October 2026, and applied only to the line each vendor publishes a rate for. Subscription fees are excluded from these tables on purpose: they isolate the Meta line, which is the only line a markup can hide in. Verify both against the vendor's live page before you sign anything.</p>
+<p>AiSensy's ₹1.09 marketing and ₹0.145 utility and service rates are each about 26% above Meta's, so the gap grows with every line, not only support replies. Dondy bills $0.01888 a message in dollars, 60 percent above Meta's $0.0118 USD rate, which is about ₹1.77 at ₹93.92 to the dollar. The Dondy gap is broken down in <a href="/blog/dondy-alternative-shopify-india">the Dondy alternative post</a>, and AiSensy's plans in <a href="/blog/aisensy-pricing-india">AiSensy pricing in India</a>.</p>
+<p class="mkt-blog-footnote">Rates from the cost-per-1,000 table above, read 16 November 2026, and applied only to the lines each provider publishes a rate for. Dondy publishes one India rate and does not split utility from marketing, so only its marketing line is costed. Subscription fees are left out on purpose: these tables isolate the Meta line, the only line a markup can hide in. Check each live page before you sign.</p>
 
 <h2>Work it out on your own volume</h2>
 <p>The tables above are one month at one volume. Put your own numbers in and the same arithmetic runs on them, including what each published markup would add. Nothing is gated and nothing is sent anywhere: it is the same rate card doing the multiplication.</p>
 <div class="mkt-calc" data-calc="whatsapp-bill">
-<p><strong>At 10,000 marketing, 10,000 utility and 5,000 service replies a month, Meta's own bill is ₹10,241 before GST</strong>, or about ₹12,084 with 18% GST. A 26.1% markup on the service line adds ₹120 to that month and a 60% markup on the marketing line adds ₹5,179, before any software subscription.</p>
+<p><strong>At 10,000 marketing, 10,000 utility and 5,000 service replies a month, Meta's own bill is ₹10,241 before GST</strong>, or about ₹12,084 with 18% GST. AiSensy's ₹0.145 on the service line adds ₹120 to that month, and Dondy's dollar rate on the marketing line adds about ₹9,102, before any software subscription.</p>
 <div class="mkt-blog-table-wrap">
 <table>
 <thead><tr><th>Line</th><th>Volume</th><th>Meta India rate</th><th>Month at 0% markup</th></tr></thead>
@@ -2664,7 +2694,7 @@ export const blogPosts: BlogPost[] = [
 <p>None of these are dishonest by themselves. They are just hard to compare, which is the point of asking about them separately from the headline price.</p>
 
 <h2>What TopEdge AI charges</h2>
-<p>Our subscription starts at ₹1,999 a month plus GST on monthly billing, ₹1,599 a month if you pay yearly. Full plans and limits are on the <a href="/pricing">pricing page</a>.</p>
+<p>There are two ways to pay. On topedgeai.com plans start at ₹1,999 a month plus GST, or ₹1,599 a month billed yearly, charged in rupees. Install from the Shopify App Store and Shopify bills you $19, $39 or $65 a month in USD instead. Full plans and limits are on the <a href="/pricing">pricing page</a>.</p>
 <p>On the Meta side we add nothing. You connect your own Meta WhatsApp account, Meta bills you directly on that account, and we never sit in the middle of that transaction. That is what lets you run the Business Manager comparison above against us and get a clean match, which is the only version of a 0 percent markup claim that is worth anything.</p>
 <p>The honest limitations, since this is a pricing post and you are comparing: we are a young product with a small review base, and COD to prepaid conversion sits on Growth and above rather than on the entry plan. If you need that specific flow, price the Growth plan, not Launch.</p>
 

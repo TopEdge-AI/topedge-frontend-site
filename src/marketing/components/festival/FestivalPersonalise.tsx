@@ -20,7 +20,7 @@ const FIELDS: { label: string; detail: string }[] = [
   {
     label: 'Your store name and brand voice',
     detail:
-      'Every template carries a [Store Name] slot. Fill it once and the rest of the copy is yours to rewrite — the catalog copy is a starting draft, not a fixed script.',
+      'Every template carries a [Store Name] slot. Fill it once and the rest of the copy is yours to rewrite. The catalog copy is a starting draft, not a fixed script.',
   },
   {
     label: 'Your discount code and offer',
@@ -56,7 +56,7 @@ const STEPS: { title: string; body: string }[] = [
   },
   {
     title: 'Edit and use',
-    body: 'One click opens the template pre-filled — body, footer and button already in place — so you are editing a draft rather than writing from a blank form.',
+    body: 'One click opens the template pre-filled, with the body, footer and button already in place, so you are editing a draft rather than writing from a blank form.',
   },
   {
     title: 'Submit to Meta',

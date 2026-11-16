@@ -40,8 +40,8 @@ export const SOURCES = {
     label: 'Meta’s WhatsApp Business Platform pricing documentation',
     publisher: 'Meta',
     claim:
-      'Per-message pricing since 1 July 2025, charged on delivery, by message category (marketing, utility, authentication, service) and the recipient’s country calling code. Carries the live rate card and the volume tiers. Effective 1 October 2026 by messaging account timezone, every business phone number gets a free tier of 1,000 service messages a month and Meta charges from the 1,001st service message onward. Meta Business Agent moved to token billing on 1 August 2026 at $2.00 per million tokens. Utility and authentication volume tiers start at 25,000,000 and 750,000 messages a month, with the India utility rate falling to ₹0.1081 above the utility tier. India card: ₹0.8631 marketing, ₹0.1150 utility and authentication, ₹2.4971 authentication-international, all per delivered message.',
-    verified: '2026-10-21',
+      'Per-message pricing since 1 July 2025, charged on delivery, by message category (marketing, utility, authentication, service) and the recipient’s country calling code. Carries the live rate card and the volume tiers. Effective 1 October 2026 by messaging account timezone, every business phone number gets a free tier of 1,000 service messages a month and Meta charges from the 1,001st service message onward. Meta Business Agent moved to token billing on 1 August 2026 at $2.00 per million tokens. Utility and authentication volume tiers start at 25,000,000 and 750,000 messages a month, with the India utility rate falling to ₹0.1081 above the utility tier. India card: ₹0.8631 marketing, ₹0.1150 utility and authentication, ₹2.4971 authentication-international, all per delivered message. Re-read 16 November 2026: the page shows “Updated: Sep 30, 2026”, the free tier of 1,000 service messages and the INR deadline of 31 December 2026 for eligible customers, and the linked INR list-rates sheet (“effective October 1, 2026”) still lists India at ₹0.8631 marketing, ₹0.115 utility, authentication and service, ₹2.4971 authentication-international.',
+    verified: '2026-11-16',
   },
   metaTemplates: {
     id: 'metaTemplates',
@@ -148,7 +148,7 @@ export const SOURCES = {
     label: 'AiSensy’s published pricing page',
     publisher: 'AiSensy',
     claim:
-      'Read 12 November 2026 on the monthly, quarterly and yearly views. Per-message rates for Indian users, effective 1 October 2026 and the same on every paid plan: marketing ₹1.09, utility ₹0.145, authentication ₹0.145, service ₹0.145 after 1,000 free service messages a month. Against Meta’s India card of ₹0.8631 marketing and ₹0.1150 utility, that is about 26% above Meta on both lines. Plans billed monthly: Free Forever ₹0 (no broadcasting), Basic ₹1,500, Pro ₹3,200, Premium ₹9,100, Unlimited ₹45,000. Billed quarterly (save 5%): ₹1,425, ₹3,040, ₹8,645 and ₹42,750 a month. Billed yearly (save 10%): ₹1,350, ₹2,880, ₹8,190 and ₹40,500 a month. Basic lists 1 owner plus 5 agents and Shopify and WooCommerce integrations; Premium 1 owner plus 9 agents; Unlimited up to 200 agents. Extra agents ₹750 each a month; AI Chat Agent ₹1,350 a month for 1,000 AI messages; Chatbot Flows ₹2,500 a month. All billing is prepaid through WhatsApp Conversation Credits. The 7 November 2026 reading recorded the monthly view only.',
+      'Read 12 November 2026 on the monthly, quarterly and yearly views. Per-message rates for Indian users, effective 1 October 2026 and the same on every paid plan: marketing ₹1.09, utility ₹0.145, authentication ₹0.145, service ₹0.145 after 1,000 free service messages a month. Against Meta’s India card of ₹0.8631 marketing and ₹0.1150 utility, that is about 26% above Meta on both lines. Plans billed monthly: Free Forever ₹0 (no broadcasting), Basic ₹1,500, Pro ₹3,200, Premium ₹9,100, Unlimited ₹45,000. Billed quarterly (save 5%): ₹1,425, ₹3,040, ₹8,645 and ₹42,750 a month. Billed yearly (save 10%): ₹1,350, ₹2,880, ₹8,190 and ₹40,500 a month. Basic lists 1 owner plus 5 agents and Shopify and WooCommerce integrations; Premium 1 owner plus 9 agents; Unlimited up to 200 agents. Extra agents ₹750 each a month; AI Chat Agent ₹1,350 a month for 1,000 AI messages; Chatbot Flows ₹2,500 a month. All billing is prepaid through WhatsApp Conversation Credits. The 7 November 2026 reading recorded the monthly view only. Per-message rates re-read 16 November 2026 on the default view: unchanged.',
     verified: '2026-11-12',
   },
   aisensyShopifyListing: {
@@ -202,8 +202,8 @@ export const SOURCES = {
     label: 'Interakt’s country-wise WhatsApp message rate table',
     publisher: 'Interakt',
     claim:
-      'Read 9 November 2026. Per-message rates by country and plan column (Starter, Growth, Advanced). India: Starter ₹0.970 marketing, ₹0.160 utility, ₹0.129 authentication, ₹2.807 authentication-international, ₹0.129 service; Growth ₹0.958, ₹0.150, ₹0.128, ₹2.772, ₹0.128; Advanced ₹0.949, ₹0.140, ₹0.127, ₹2.747, ₹0.127. This is the page the Shopify App Store listing links to as “See all pricing options”.',
-    verified: '2026-11-09',
+      'Read 9 November 2026. Per-message rates by country and plan column (Starter, Growth, Advanced). India: Starter ₹0.970 marketing, ₹0.160 utility, ₹0.129 authentication, ₹2.807 authentication-international, ₹0.129 service; Growth ₹0.958, ₹0.150, ₹0.128, ₹2.772, ₹0.128; Advanced ₹0.949, ₹0.140, ₹0.127, ₹2.747, ₹0.127. This is the page the Shopify App Store listing links to as “See all pricing options”. Re-read 16 November 2026: the India row is unchanged.',
+    verified: '2026-11-16',
   },
   interaktShopifyListing: {
     id: 'interaktShopifyListing',
@@ -337,7 +337,7 @@ export const SOURCES = {
     label: 'WATI’s INR rate card for the Growth plan',
     publisher: 'WATI',
     claim:
-      'Rate card dated 1 October 2026, linked from wati.io/pricing as “View Rate Card”, read 7 November 2026; the three PDFs were still last modified 1 October 2026 when checked on 10 November 2026. India (+91) per message: Growth plan marketing ₹1.0357, utility ₹0.1495, authentication ₹0.1495, service ₹0.1380. The Pro plan card lists ₹0.9926, ₹0.1495, ₹0.1495, ₹0.1380 and the Business plan card ₹0.9667, ₹0.1380, ₹0.1380, ₹0.1231. Against Meta’s ₹0.8631 marketing and ₹0.1150 utility, Growth is 20% above Meta on marketing and 30% on utility; Pro 15% and 30%; Business 12% and 20%. States that every business gets 1,000 free service messages a month.',
+      'Rate card dated 1 October 2026, linked from wati.io/pricing as “View Rate Card”, read 7 November 2026; the three PDFs were still last modified 1 October 2026 when checked on 10 November 2026. India (+91) per message: Growth plan marketing ₹1.0357, utility ₹0.1495, authentication ₹0.1495, service ₹0.1380. The Pro plan card lists ₹0.9926, ₹0.1495, ₹0.1495, ₹0.1380 and the Business plan card ₹0.9667, ₹0.1380, ₹0.1380, ₹0.1231. Against Meta’s ₹0.8631 marketing and ₹0.1150 utility, Growth is 20% above Meta on marketing and 30% on utility; Pro 15% and 30%; Business 12% and 20%. States that every business gets 1,000 free service messages a month. On 16 November 2026 all three PDFs still showed Last-Modified 1 October 2026.',
     verified: '2026-11-07',
   },
   zokoPricing: {
@@ -382,7 +382,7 @@ export const SOURCES = {
     label: 'Dondy’s pricing page and per-market rate table',
     publisher: 'Dondy',
     claim:
-      'Plans in US dollars, each with a 7-day free trial: Free $0, Pro $6.99, Advanced $14.99, Power Automation $79.99, Elite $159.99 and Ultimate $299 a month, with 25% off yearly. Power says automation rates start from $0.0158 (US) and include 1,000 one-click messages every 30 days. A “WhatsApp API Pricing, Market Rate Per Message (US$)” table lists India at $0.01888, North America $0.04, Colombia $0.02, Turkey $0.01744 and Rest of Central & Eastern Europe $0.1376. The table does not split marketing from utility messages.',
+      'Plans in US dollars, each with a 7-day free trial: Free $0, Pro $6.99, Advanced $14.99, Power Automation $79.99, Elite $159.99 and Ultimate $299 a month, with 25% off yearly. Power says automation rates start from $0.0158 (US) and include 1,000 one-click messages every 30 days. A “WhatsApp API Pricing, Market Rate Per Message (US$)” table lists India at $0.01888, North America $0.04, Colombia $0.02, Turkey $0.01744 and Rest of Central & Eastern Europe $0.1376. The table does not split marketing from utility messages. India rate re-read 16 November 2026: still $0.01888.',
     verified: '2026-11-08',
   },
   metaUsdRateCard: {
@@ -400,7 +400,7 @@ export const SOURCES = {
     label: 'the European Central Bank’s euro reference exchange rates',
     publisher: 'European Central Bank',
     claim:
-      'Reference rates for 6 November 2026, quoted against the euro: US dollar 1.1165, Indian rupee 104.8645, which implies ₹93.92 per US dollar. The ECB states the rates are published for information purposes only and not for transactions.',
+      'Reference rates for 6 November 2026, quoted against the euro: US dollar 1.1165, Indian rupee 104.8645, which implies ₹93.92 per US dollar. The ECB states the rates are published for information purposes only and not for transactions. Read again 16 November 2026: the 13 November 2026 reference rates were USD 1.1052 and INR 104.1575, about ₹94.24 per US dollar; the site keeps the 6 November rate for consistency until the next sitewide pricing pass.',
     verified: '2026-11-08',
   },
   getgabsPricing: {

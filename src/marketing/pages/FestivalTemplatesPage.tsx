@@ -40,12 +40,12 @@ const FAQS = [
   {
     question: 'What is the best WhatsApp template for marketing?',
     answer:
-      'There is no single best one — the best marketing template is the one that matches where the customer already is. For a festival that means four: an early-access message for people who would buy at full price, a gift guide for the undecided, a discount for the price-sensitive, and an offer-free greeting that keeps the list subscribed. A single "best" template sent to everyone reaches only the people who were going to buy anyway.',
+      'There is no single best one. The best marketing template is the one that matches where the customer already is. For a festival that means four: an early-access message for people who would buy at full price, a gift guide for the undecided, a discount for the price-sensitive, and an offer-free greeting that keeps the list subscribed. A single "best" template sent to everyone reaches only the people who were going to buy anyway.',
   },
   {
     question: 'Can I download these WhatsApp templates for free?',
     answer:
-      'Yes. Every template on this page can be copied with the button on its card, and the Download as CSV button hands you the whole filtered set — all 100, or just the festival you selected — as a spreadsheet with the body, footer, button label, Meta template name and send window in separate columns. No sign-up, no email, nothing logged.',
+      'Yes. Every template on this page can be copied with the button on its card, and the Download as CSV button hands you the whole filtered set (all 100, or just the festival you selected) as a spreadsheet with the body, footer, button label, Meta template name and send window in separate columns. No sign-up, no email, nothing logged.',
   },
   {
     question: 'How do I create a WhatsApp message template?',
@@ -63,7 +63,7 @@ const FAQS = [
       'It is a message Meta has approved in advance for a festive campaign, so you can send it to customers outside the 24-hour reply window. You submit it from your own WhatsApp Business account, Meta reviews it, and only then can a campaign send it. Festive templates are always marketing templates, because they exist to make a sale.',
   },
   {
-    question: 'How many festival templates does TopEdge include?',
+    question: 'How many festival templates does TopEdge AI include?',
     answer:
       `One hundred: four per festival across twenty-five festivals, covering the Hindu, Islamic, Christian and secular calendars. The four are an early-access message, a gift guide, a flash sale and a day-of greeting, which together make one campaign rather than four separate blasts.`,
   },
@@ -75,7 +75,7 @@ const FAQS = [
   {
     question: 'What does a festival WhatsApp campaign cost in India?',
     answer:
-      `Every festive template is a marketing template, which Meta bills at ${FESTIVAL_MARKETING_RATE} per delivered message in India. The full four-message sequence is about ${FESTIVAL_SEQUENCE_COST} to reach one customer, so roughly ₹3,450 for a list of a thousand. Meta bills your own WhatsApp Business account directly and TopEdge adds no markup.`,
+      `Every festive template is a marketing template, which Meta bills at ${FESTIVAL_MARKETING_RATE} per delivered message in India. The full four-message sequence is about ${FESTIVAL_SEQUENCE_COST} to reach one customer, so roughly ₹3,450 for a list of a thousand. Meta bills your own WhatsApp Business account directly and TopEdge AI adds no markup.`,
   },
   {
     question: 'Can I send a festive greeting as a cheap utility message instead?',
@@ -85,12 +85,12 @@ const FAQS = [
   {
     question: 'Do I need opt-in to send a festival campaign?',
     answer:
-      'Yes, for every one of these. A WhatsApp marketing template can only go to customers who have given opt-in consent, and a past purchase is not consent on its own. Collect the opt-in at checkout or with an opt-in message first — sending without it damages your quality rating and can get your number restricted.',
+      'Yes, for every one of these. A WhatsApp marketing template can only go to customers who have given opt-in consent, and a past purchase is not consent on its own. Collect the opt-in at checkout or with an opt-in message first. Sending without it damages your quality rating and can get your number restricted.',
   },
   {
     question: 'How long does Meta take to approve a festive template?',
     answer:
-      'Usually hours rather than days once your business is verified, though Meta publishes no guarantee and festive marketing templates get a closer read than order updates. Submit a week before you plan to send, and leave the media header off unless you need it — it is the component most often responsible for a rejection.',
+      'Usually hours rather than days once your business is verified, though Meta publishes no guarantee and festive marketing templates get a closer read than order updates. Submit a week before you plan to send, and leave the media header off unless you need it: it is the component most often responsible for a rejection.',
   },
   {
     question: 'Which festival should a business start with?',
@@ -136,7 +136,7 @@ const BLOCKS: TopicBlock[] = [
       },
     ],
     footnote:
-      'Rates are Meta’s own published India prices, billed by Meta to your WhatsApp Business account. TopEdge adds no markup on them.',
+      'Rates are Meta’s own published India prices, billed by Meta to your WhatsApp Business account. TopEdge AI adds no markup on them.',
   },
   {
     kind: 'callout',
@@ -144,7 +144,7 @@ const BLOCKS: TopicBlock[] = [
     tone: 'warn',
     title: 'A festive greeting in an order update costs you seven times more',
     body:
-      'It is tempting to add “Happy Diwali” and an offer to the order confirmation you already send. Meta reclassifies that template as marketing, so a message that cost ₹0.1150 starts costing ₹0.8631 — on every order, not just the festive ones. Keep festive offers in their own template.',
+      'It is tempting to add “Happy Diwali” and an offer to the order confirmation you already send. Meta reclassifies that template as marketing, so a message that cost ₹0.1150 starts costing ₹0.8631 on every order, not just the festive ones. Keep festive offers in their own template.',
     link: { label: 'See the full India rate card', href: '/pricing/meta-rates' },
   },
   {
@@ -158,7 +158,7 @@ const BLOCKS: TopicBlock[] = [
     dontLabel: 'Not this',
     doItems: [
       'Submit the templates to Meta a week before you plan to send, so an approval queue is not the thing that decides your campaign',
-      'Send the four messages to narrowing audiences — everyone, then non-openers, then non-buyers — rather than the same list four times',
+      'Send the four messages to narrowing audiences (everyone, then non-openers, then non-buyers) rather than the same list four times',
       'Publish your delivery cut-off in the flash-sale message and hold to it, especially in the last week before Diwali',
       'Keep the day-of greeting free of any offer, so the list is still there for the next festival',
     ],
@@ -235,7 +235,7 @@ export default function FestivalTemplatesPage() {
           title="Free WhatsApp marketing templates for every festival"
           accent="Free WhatsApp marketing templates"
           trust
-          subtitle={`${FESTIVAL_TEMPLATE_COUNT} ready-written WhatsApp message templates across ${FESTIVALS.length} festivals — four per festival, written as a campaign rather than a blast. Copy the text, edit it to your brand, download the set, and submit it to Meta from your own WhatsApp Business account.`}
+          subtitle={`${FESTIVAL_TEMPLATE_COUNT} ready-written WhatsApp message templates across ${FESTIVALS.length} festivals, four per festival, written as a campaign rather than a blast. Copy the text, edit it to your brand, download the set, and submit it to Meta from your own WhatsApp Business account.`}
           image="/marketing/journeys/hero-festival-templates.webp"
           imageAlt="A festival campaign calendar running Dussehra to Bhai Dooj beside an approved Diwali WhatsApp template"
           imageWidth={1672}
@@ -274,7 +274,7 @@ export default function FestivalTemplatesPage() {
           <SectionHeading
             title="Browse festivals by when they land"
             accent="when they land"
-            subtitle="Grouped the way a merchant plans — the quarter the festival falls in, not the alphabet. Each card opens a page with the four templates, the demand window and what sells."
+            subtitle="Grouped the way a merchant plans: by the quarter the festival falls in, not the alphabet. Each card opens a page with the four templates, the demand window and what sells."
           />
           {groups.map(({ cluster, festivals }) => (
             <section key={cluster.id} className="mkt-fgroup" aria-labelledby={`cluster-${cluster.id}`}>
@@ -300,7 +300,7 @@ export default function FestivalTemplatesPage() {
           <SectionHeading
             title={`All ${FESTIVAL_TEMPLATE_COUNT} festive templates`}
             accent="festive templates"
-            subtitle="Filter by festival or by stage, or search the copy itself. Each preview is the template exactly as the dashboard hands it over — the real body, footer and button, with the blanks you fill marked in amber. Download the set from the button under the grid."
+            subtitle="Filter by festival or by stage, or search the copy itself. Each preview is the template exactly as the dashboard hands it over: the real body, footer and button, with the blanks you fill marked in amber. Download the set from the button under the grid."
           />
           <FestivalLibrary />
         </Section>
