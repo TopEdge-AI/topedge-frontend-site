@@ -98,8 +98,8 @@ const MOODS: Mood[] = ['violet', 'ocean', 'dusk'];
 const hash = (t: string) => [...t].reduce((h, c) => (h * 31 + c.charCodeAt(0)) >>> 0, 7);
 
 /** Breathing room around auto-framed content, as a fraction of each side. */
-const FIT_PAD = { square: 0.1, wide: 0.11 } as const;
-const FIT_MAX = { square: 1.6, wide: 2.1 } as const;
+const FIT_PAD = { square: 0.075, wide: 0.075 } as const;
+const FIT_MAX = { square: 1.9, wide: 2.6 } as const;
 const useIsoLayoutEffect = typeof window === 'undefined' ? useEffect : useLayoutEffect;
 
 /**
@@ -1014,7 +1014,7 @@ export function Glow({ x = 50, y = 50, size = 18 }: { x?: number; y?: number; si
  * Text that types itself out, starting `at` seconds into the scene (or when its
  * Float enters). Use inside a Bubble, Field value or anywhere inline.
  */
-export function TypeText({ text, at, cps = 28 }: { text: string; at?: number; cps?: number }) {
+export function TypeText({ text, at, cps = 22 }: { text: string; at?: number; cps?: number }) {
   const play = useContext(PlayContext);
   const floatAt = useContext(AtContext);
   const [n, setN] = useState(text.length);

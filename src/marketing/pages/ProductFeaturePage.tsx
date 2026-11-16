@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState, type CSSProperties } from 'react';
+import { useEffect, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import MarketingSEO from '../components/MarketingSEO';
 import MarketingPage from '../components/MarketingPage';
@@ -103,92 +103,31 @@ function BentoTile({ tile }: { tile: ProductBento }) {
   );
 }
 
-/** How long each showcase holds before the tabs advance on their own. */
-const TAB_MS = 7000;
-
-/**
- * Showcases as one large stage with tabs under it (auto-advancing, with a
- * progress rule). Every tab's title and copy stay in the DOM and visible, so
- * nothing is hidden from search; only the visual swaps. Hover or focus pauses
- * the rotation, and a #anchor in the URL opens its tab.
- */
-function ShowcaseTabs({ items }: { items: ProductShowcase[] }) {
-  const location = useLocation();
-  const [active, setActive] = useState(0);
-  const [paused, setPaused] = useState(false);
-  const [inView, setInView] = useState(false);
-  const rootRef = useRef<HTMLDivElement>(null);
-  const reduced =
-    typeof window !== 'undefined' && window.matchMedia?.('(prefers-reduced-motion: reduce)').matches;
-
-  useEffect(() => {
-    const hash = location.hash.replace(/^#/, '');
-    const i = items.findIndex((it) => it.anchor && it.anchor === hash);
-    if (i >= 0) setActive(i);
-  }, [location.hash, items]);
-
-  useEffect(() => {
-    const el = rootRef.current;
-    if (!el || typeof IntersectionObserver === 'undefined') return;
-    const io = new IntersectionObserver(([e]) => setInView(e.isIntersecting), { threshold: 0.35 });
-    io.observe(el);
-    return () => io.disconnect();
-  }, []);
-
-  const running = inView && !paused && !reduced && items.length > 1;
-  useEffect(() => {
-    if (!running) return;
-    const t = window.setTimeout(() => setActive((a) => (a + 1) % items.length), TAB_MS);
-    return () => window.clearTimeout(t);
-  }, [running, active, items.length]);
-
-  const item = items[active];
+function ShowcaseRow({ item, index }: { item: ProductShowcase; index: number }) {
+  const reverse = item.reverse ?? index % 2 === 1;
   const label = item.imageLabel || `${item.title}${item.titleAccent ? ` ${item.titleAccent}` : ''}`;
 
   return (
-    <div
-      ref={rootRef}
-      className={`pfx-tabs${running ? ' is-running' : ''}`}
-      style={{ '--pfx-tab-ms': `${TAB_MS}ms` } as CSSProperties}
-      onMouseEnter={() => setPaused(true)}
-      onMouseLeave={() => setPaused(false)}
-      onFocus={() => setPaused(true)}
-      onBlur={() => setPaused(false)}
+    <article
+      id={item.anchor}
+      className={`mkt-pf__showcase${reverse ? ' is-reverse' : ''}${item.anchor ? ' has-anchor' : ''}`}
     >
-      <div className="pfx-tabs__stage">
-        <div key={active} className="pfx-tabs__panel">
-          <ShotFrame src={item.image} label={label} wide />
-        </div>
+      <div className="mkt-pf__showcase-media">
+        <ShotFrame src={item.image} label={label} wide />
       </div>
-      <div className="pfx-tabs__list" role="tablist" aria-label="Feature views">
-        {items.map((it, i) => (
-          <div
-            key={`${it.title}-${i}`}
-            id={it.anchor}
-            role="tab"
-            tabIndex={0}
-            aria-selected={i === active}
-            className={`pfx-tab${i === active ? ' is-active' : ''}`}
-            onClick={() => setActive(i)}
-            onKeyDown={(e) => {
-              if (e.key === 'Enter' || e.key === ' ') {
-                e.preventDefault();
-                setActive(i);
-              }
-            }}
-          >
-            <span className="pfx-tab__rule" aria-hidden="true">
-              <i key={i === active ? `on-${active}` : 'off'} />
-            </span>
-            <h3 className="pfx-tab__title">
-              {it.title}
-              {it.titleAccent ? ` ${it.titleAccent}` : ''}
-            </h3>
-            <p className="pfx-tab__body">{it.body}</p>
-          </div>
-        ))}
+      <div className="mkt-pf__showcase-copy">
+        <h2 className="mkt-pf__showcase-title">
+          {item.title}
+          {item.titleAccent ? (
+            <>
+              {' '}
+              <span className="mkt-pf__tile-accent">{item.titleAccent}</span>
+            </>
+          ) : null}
+        </h2>
+        <p className="mkt-pf__showcase-body">{item.body}</p>
       </div>
-    </div>
+    </article>
   );
 }
 
@@ -322,14 +261,15 @@ function ProductFeatureView({ page }: { page: ProductPage }) {
         ) : null}
 
         {hasShowcases ? (
-          <section className="mkt-pf__section" aria-labelledby="mkt-pf-showcases">
-            <div className="mkt-pf__head">
-              <h2 id="mkt-pf-showcases" className="mkt-pf__head-title">
-                {page.showcasesTitle} <span>{page.showcasesAccent}</span>
-              </h2>
-              {page.showcasesSub ? <p className="mkt-pf__head-sub">{page.showcasesSub}</p> : null}
+          <section
+            className="mkt-pf__section"
+            aria-label={`${page.showcasesTitle} ${page.showcasesAccent}`.trim()}
+          >
+            <div className="mkt-pf__showcases">
+              {page.showcases!.map((item, i) => (
+                <ShowcaseRow key={`${item.title}-${i}`} item={item} index={i} />
+              ))}
             </div>
-            <ShowcaseTabs items={page.showcases!} />
           </section>
         ) : null}
 

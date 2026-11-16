@@ -1,400 +1,53 @@
 /*
- * Feature pages, premium layer (15 Nov 2026).
+ * Feature pages: frames for the coded scenes (16 Nov 2026).
  *
- * Sits on top of product-feature.css. Every rule is scoped to
- * `.mkt-pf .mkt-pf__theme` so it wins without !important and touches no other
- * page. The direction: calm neutral surfaces, one violet accent, hairline
- * borders, generous spacing, type that carries the hierarchy, and motion that
- * responds to the reader rather than decorating.
+ * Deliberately small. Typography, the violet highlight accents, section
+ * rhythm and the alternating showcase rows all come from product-feature.css
+ * unchanged; this file only shapes the windows the animated scenes sit in.
+ * Scoped to `.mkt-pf .mkt-pf__theme` so nothing leaks to other pages.
  */
 
 .mkt-pf__theme {
   display: contents;
-  --pfx-ink: #0b1220;
-  --pfx-ink-2: #344054;
-  --pfx-muted: #5d6779;
-  --pfx-line: rgba(16, 24, 40, 0.08);
-  --pfx-acc: #7c3aed;
-  --pfx-acc-ink: #5b21b6;
-  --pfx-acc-soft: #ede8ff;
-  --pfx-ease: cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-/* Headline: weight and colour carry the accent, no highlighter boxes. */
-.mkt-pf .mkt-pf__theme .mkt-pf__title {
-  font-weight: 500;
-  letter-spacing: -0.042em;
-  line-height: 1.08;
-  color: var(--pfx-ink);
-  font-size: clamp(1.9rem, 4.2vw, 3.25rem);
-}
-.mkt-pf .mkt-pf__theme .mkt-pf__title-accent,
-.mkt-pf .mkt-pf__theme .mkt-pf__head-title span,
-.mkt-pf .mkt-pf__theme .mkt-pf__tile-accent {
-  padding: 0;
-  border-radius: 0;
-  background: linear-gradient(92deg, #6d28d9 0%, #7c3aed 45%, #4f46e5 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-}
-.mkt-pf .mkt-pf__theme .mkt-pf__tile-accent {
-  font-weight: inherit;
-}
-.mkt-pf .mkt-pf__theme .mkt-pf__sub {
-  max-width: 34rem;
-  font-size: clamp(1rem, 1.5vw, 1.125rem);
-  line-height: 1.55;
-  color: var(--pfx-muted);
-}
-
-/* Hero media: a white "window" with a hairline, a lifted shadow and an inner radius. */
-.mkt-pf .mkt-pf__theme .mkt-pf__media .demo-video-glow__frame {
+/* Hero: an image hero that became a scene fills a rounded window. */
+.mkt-pf .mkt-pf__theme .mkt-pf__media .demo-video-glow__frame.is-scene {
   padding: 0;
   border: 0;
   border-radius: 22px;
-  background: #fff;
-  box-shadow:
-    0 0 0 1px var(--pfx-line),
-    0 1px 2px rgba(16, 24, 40, 0.04),
-    0 24px 48px -28px rgba(16, 24, 40, 0.28),
-    0 60px 90px -60px rgba(91, 33, 182, 0.35);
+  overflow: hidden;
+  background: #f6f4fb;
+  box-shadow: 0 0 0 1px rgba(16, 24, 40, 0.06), 0 24px 48px -36px rgba(40, 20, 90, 0.32);
 }
 .mkt-pf .mkt-pf__theme .mkt-pf__media .demo-video-glow__frame.is-scene .fv {
-  inset: 8px;
-  height: auto;
-  border-radius: 15px;
-}
-
-/* ── Section rhythm and headings ───────────────────────────────────────── */
-.mkt-pf .mkt-pf__theme .mkt-pf__section {
-  padding-top: clamp(3.5rem, 7vw, 6rem);
-}
-.mkt-pf .mkt-pf__theme .mkt-pf__head {
-  max-width: 40rem;
-  margin-bottom: clamp(1.75rem, 3.5vw, 2.75rem);
-}
-.mkt-pf .mkt-pf__theme .mkt-pf__head-title {
-  font-weight: 500;
-  font-size: clamp(1.6rem, 3.1vw, 2.4rem);
-  letter-spacing: -0.038em;
-  line-height: 1.12;
-  color: var(--pfx-ink);
-  text-wrap: balance;
-}
-.mkt-pf .mkt-pf__theme .mkt-pf__head-sub {
-  margin-top: 0.85rem;
-  font-size: clamp(0.95rem, 1.3vw, 1.05rem);
-  line-height: 1.6;
-  color: var(--pfx-muted);
-  text-wrap: balance;
-}
-
-/* ── Bento tiles: card-in-card, hover lift ─────────────────────────────── */
-.mkt-pf .mkt-pf__theme .mkt-pf__bento {
-  gap: clamp(0.9rem, 1.6vw, 1.35rem);
-}
-.mkt-pf .mkt-pf__theme .mkt-pf__tile {
-  border-radius: 24px;
-  background: #fff;
-  box-shadow:
-    0 0 0 1px var(--pfx-line),
-    0 1px 2px rgba(16, 24, 40, 0.04),
-    0 18px 40px -28px rgba(16, 24, 40, 0.22);
-  transition: transform 0.6s var(--pfx-ease), box-shadow 0.6s var(--pfx-ease);
-}
-@media (hover: hover) {
-  .mkt-pf .mkt-pf__theme .mkt-pf__tile:hover {
-    transform: translateY(-4px);
-    box-shadow:
-      0 0 0 1px rgba(124, 58, 237, 0.18),
-      0 1px 2px rgba(16, 24, 40, 0.04),
-      0 30px 60px -34px rgba(76, 29, 149, 0.4);
-  }
-}
-.mkt-pf .mkt-pf__theme .mkt-pf__tile-visual {
-  margin: 8px 8px 0;
-  border-radius: 17px;
-  background: transparent;
-  overflow: hidden;
-}
-.mkt-pf .mkt-pf__theme .mkt-pf__tile-body {
-  padding: 1.1rem 1.25rem 1.4rem;
-  border-top: 0;
-}
-.mkt-pf .mkt-pf__theme .mkt-pf__tile-title {
-  font-size: 1.05rem;
-  font-weight: 600;
-  letter-spacing: -0.022em;
-  color: var(--pfx-ink);
-}
-.mkt-pf .mkt-pf__theme .mkt-pf__tile-copy {
-  margin-top: 0.45rem;
-  font-size: 0.9rem;
-  line-height: 1.55;
-  color: var(--pfx-muted);
-}
-
-/* ── Showcases: framed window, numbered copy ───────────────────────────── */
-.mkt-pf .mkt-pf__theme .mkt-pf__showcases {
-  counter-reset: pfx-show;
-  gap: clamp(3rem, 7vw, 6.5rem);
-}
-.mkt-pf .mkt-pf__theme .mkt-pf__showcase-media .mkt-pf__shot {
-  border-radius: 24px;
-  padding: 8px;
-  background: #fff;
-  box-shadow:
-    0 0 0 1px var(--pfx-line),
-    0 1px 2px rgba(16, 24, 40, 0.04),
-    0 30px 60px -36px rgba(16, 24, 40, 0.3),
-    0 70px 100px -70px rgba(91, 33, 182, 0.3);
-}
-.mkt-pf .mkt-pf__theme .mkt-pf__showcase-media .mkt-pf__shot .fv,
-.mkt-pf .mkt-pf__theme .mkt-pf__showcase-media .mkt-pf__shot-img {
-  border-radius: 17px;
-}
-.mkt-pf .mkt-pf__theme .mkt-pf__showcase-copy::before {
-  counter-increment: pfx-show;
-  content: counter(pfx-show, decimal-leading-zero);
-  display: inline-grid;
-  place-items: center;
-  width: 2.1rem;
-  height: 2.1rem;
-  margin-bottom: 1rem;
-  border-radius: 10px;
-  font-size: 0.78rem;
-  font-weight: 600;
-  letter-spacing: 0;
-  font-variant-numeric: tabular-nums;
-  color: var(--pfx-acc-ink);
-  background: linear-gradient(180deg, #fff, #f7f5ff);
-  box-shadow: 0 0 0 1px rgba(124, 58, 237, 0.18), 0 1px 2px rgba(16, 24, 40, 0.05);
-}
-.mkt-pf .mkt-pf__theme .mkt-pf__showcase-title {
-  font-size: clamp(1.35rem, 2.2vw, 1.85rem);
-  font-weight: 500;
-  letter-spacing: -0.034em;
-  line-height: 1.15;
-  color: var(--pfx-ink);
-  text-wrap: balance;
-}
-.mkt-pf .mkt-pf__theme .mkt-pf__showcase-body {
-  margin-top: 0.8rem;
-  font-size: 1rem;
-  line-height: 1.62;
-  color: var(--pfx-muted);
-  max-width: 26rem;
-}
-@media (min-width: 860px) {
-  .mkt-pf .mkt-pf__theme .mkt-pf__showcase {
-    gap: clamp(2.5rem, 5vw, 4.5rem);
-  }
-}
-
-/* ── Proof table ───────────────────────────────────────────────────────── */
-.mkt-pf .mkt-pf__theme .mkt-pf__proof-scroll {
-  border-radius: 18px;
-  box-shadow: 0 0 0 1px var(--pfx-line), 0 18px 40px -30px rgba(16, 24, 40, 0.25);
-  background: #fff;
-}
-
-/* ── Steps ─────────────────────────────────────────────────────────────── */
-.mkt-pf .mkt-pf__theme .mkt-pf__step-num {
-  color: var(--pfx-acc-ink);
-  font-weight: 600;
-}
-.mkt-pf .mkt-pf__theme .mkt-pf__step-title {
-  font-weight: 600;
-  letter-spacing: -0.02em;
-  color: var(--pfx-ink);
-}
-.mkt-pf .mkt-pf__theme .mkt-pf__step-copy {
-  color: var(--pfx-muted);
-  line-height: 1.6;
-}
-
-/* ── FAQ: two-column editorial list, always open (answer engines read it) ── */
-.mkt-pf .mkt-pf__theme .mkt-pf__faq {
-  max-width: 64rem;
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 0;
-  border-top: 1px solid var(--pfx-line);
-}
-@media (min-width: 860px) {
-  .mkt-pf .mkt-pf__theme .mkt-pf__faq {
-    grid-template-columns: 1fr 1fr;
-    column-gap: 3rem;
-  }
-}
-.mkt-pf .mkt-pf__theme .mkt-pf__faq-item {
-  padding: 1.4rem 0 1.5rem;
-  border: 0;
-  border-bottom: 1px solid var(--pfx-line);
+  inset: 0;
+  height: 100%;
   border-radius: 0;
-  background: transparent;
-}
-.mkt-pf .mkt-pf__theme .mkt-pf__faq-item h3 {
-  font-size: 1rem;
-  font-weight: 600;
-  letter-spacing: -0.015em;
-  color: var(--pfx-ink);
-}
-.mkt-pf .mkt-pf__theme .mkt-pf__faq-item p {
-  margin-top: 0.55rem;
-  font-size: 0.925rem;
-  line-height: 1.62;
-  color: var(--pfx-muted);
 }
 
-/* ── Related links ─────────────────────────────────────────────────────── */
-.mkt-pf .mkt-pf__theme .mkt-pf__related-link {
-  border-radius: 999px;
+/* Bento tiles: the scene is the tile's visual, white, fading into the card. */
+.mkt-pf .mkt-pf__theme .mkt-pf__tile-visual {
   background: #fff;
-  box-shadow: 0 0 0 1px var(--pfx-line), 0 1px 2px rgba(16, 24, 40, 0.04);
-  transition: box-shadow 0.3s ease, transform 0.3s var(--pfx-ease), color 0.3s ease;
 }
-.mkt-pf .mkt-pf__theme .mkt-pf__related-link:hover {
-  color: var(--pfx-acc-ink);
-  transform: translateY(-1px);
-  box-shadow: 0 0 0 1px rgba(124, 58, 237, 0.3), 0 8px 18px -10px rgba(76, 29, 149, 0.35);
+.mkt-pf .mkt-pf__theme .mkt-pf__tile-visual .mkt-pf__shot.is-scene,
+.mkt-pf .mkt-pf__theme .mkt-pf__tile-visual .mkt-pf__shot.is-scene .fv {
+  height: 100%;
 }
 
-/* Phones: tighter frames so scenes get the width. */
-@media (max-width: 640px) {
-  .mkt-pf .mkt-pf__theme .mkt-pf__showcase-media .mkt-pf__shot { padding: 5px; border-radius: 18px; }
-  .mkt-pf .mkt-pf__theme .mkt-pf__tile-visual { margin: 6px 6px 0; border-radius: 14px; }
-  .mkt-pf .mkt-pf__theme .mkt-pf__media .demo-video-glow__frame.is-scene .fv { inset: 5px; }
-}
-
-/* ══ v3 (Instantly / Graceview direction) ═════════════════════════════════ */
-
-/* Headings are plain ink. Restraint reads as confidence. */
-.mkt-pf .mkt-pf__theme .mkt-pf__title-accent,
-.mkt-pf .mkt-pf__theme .mkt-pf__head-title span,
-.mkt-pf .mkt-pf__theme .mkt-pf__tile-accent {
-  background: none;
-  -webkit-background-clip: border-box;
-  background-clip: border-box;
-  color: inherit;
-}
-.mkt-pf .mkt-pf__theme .mkt-pf__title { font-weight: 600; letter-spacing: -0.045em; }
-.mkt-pf .mkt-pf__theme .mkt-pf__head-title { font-weight: 600; letter-spacing: -0.04em; }
-
-/* Hero visual: the rich scene is the panel, edge to edge in a rounded window. */
-.mkt-pf .mkt-pf__theme .mkt-pf__media .demo-video-glow__frame.is-scene {
-  background: transparent;
-  border-radius: 26px;
-  overflow: hidden;
-  box-shadow: 0 40px 80px -48px rgba(30, 20, 90, 0.55);
-}
-.mkt-pf .mkt-pf__theme .mkt-pf__media .demo-video-glow__frame.is-scene .fv { inset: 0; border-radius: 0; }
-
-/* Bento: Graceview cards. White card, the visual blends straight into it. */
-.mkt-pf .mkt-pf__theme .mkt-pf__tile {
+/* Showcase rows: the scene sits in a rounded window with a soft shadow. */
+.mkt-pf .mkt-pf__theme .mkt-pf__showcase-media .mkt-pf__shot.is-scene {
   border-radius: 22px;
-  box-shadow: 0 0 0 1px rgba(16, 24, 40, 0.08), 0 1px 2px rgba(16, 24, 40, 0.03);
+  overflow: hidden;
+  box-shadow: 0 0 0 1px rgba(16, 24, 40, 0.06), 0 24px 48px -36px rgba(40, 20, 90, 0.32);
 }
-@media (hover: hover) {
-  .mkt-pf .mkt-pf__theme .mkt-pf__tile:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 0 0 1px rgba(16, 24, 40, 0.1), 0 24px 48px -30px rgba(16, 24, 40, 0.25);
+.mkt-pf .mkt-pf__theme .mkt-pf__showcase-media .mkt-pf__shot.is-scene .fv {
+  border-radius: 0;
+}
+
+@media (max-width: 640px) {
+  .mkt-pf .mkt-pf__theme .mkt-pf__media .demo-video-glow__frame.is-scene,
+  .mkt-pf .mkt-pf__theme .mkt-pf__showcase-media .mkt-pf__shot.is-scene {
+    border-radius: 16px;
   }
 }
-.mkt-pf .mkt-pf__theme .mkt-pf__tile-visual { margin: 0; border-radius: 0; aspect-ratio: 5 / 4; }
-.mkt-pf .mkt-pf__theme .mkt-pf__tile-visual .mkt-pf__shot,
-.mkt-pf .mkt-pf__theme .mkt-pf__tile-visual .fv { height: 100%; aspect-ratio: auto; }
-.mkt-pf .mkt-pf__theme .mkt-pf__tile-body { padding: 0.35rem 1.4rem 1.5rem; }
-.mkt-pf .mkt-pf__theme .mkt-pf__tile-title { font-size: 1.08rem; }
-
-/* ── Showcase tabs ─────────────────────────────────────────────────────── */
-.pfx-tabs { width: min(100%, 1120px); margin: 0 auto; }
-.pfx-tabs__stage {
-  position: relative;
-  border-radius: 26px;
-  overflow: hidden;
-  aspect-ratio: 16 / 10;
-  background: #3b2a8f;
-  box-shadow: 0 40px 80px -50px rgba(30, 20, 90, 0.55);
-}
-.pfx-tabs__panel { position: absolute; inset: 0; animation: pfx-in 0.7s cubic-bezier(0.16, 1, 0.3, 1) both; }
-.pfx-tabs__panel .mkt-pf__shot,
-.pfx-tabs__panel .mkt-pf__shot .fv { width: 100%; height: 100%; aspect-ratio: auto; border-radius: 0; }
-.pfx-tabs__panel .mkt-pf__shot-img { width: 100%; height: 100%; object-fit: cover; }
-@keyframes pfx-in { from { opacity: 0; transform: scale(1.015); } to { opacity: 1; transform: none; } }
-
-.pfx-tabs__list {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
-  grid-auto-flow: column;
-  gap: 0;
-  margin-top: 1.75rem;
-}
-.pfx-tab {
-  position: relative;
-  padding: 1.35rem 1.5rem 0.5rem 0;
-  cursor: pointer;
-  outline: none;
-  text-align: left;
-}
-.pfx-tab + .pfx-tab { padding-left: 1.5rem; }
-.pfx-tab__rule {
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  height: 2px;
-  border-radius: 2px;
-  background: rgba(16, 24, 40, 0.1);
-  overflow: hidden;
-}
-.pfx-tab + .pfx-tab .pfx-tab__rule { left: 1.5rem; }
-.pfx-tab__rule i { position: absolute; inset: 0; transform-origin: left; transform: scaleX(0); background: #0b1220; }
-.pfx-tab.is-active .pfx-tab__rule i { transform: scaleX(1); }
-.pfx-tabs.is-running .pfx-tab.is-active .pfx-tab__rule i { animation: pfx-progress var(--pfx-tab-ms) linear both; }
-@keyframes pfx-progress { from { transform: scaleX(0); } to { transform: scaleX(1); } }
-.pfx-tab__title {
-  margin: 0;
-  font-size: 1.02rem;
-  font-weight: 600;
-  letter-spacing: -0.02em;
-  color: #98a2b3;
-  transition: color 0.35s ease;
-}
-.pfx-tab__body {
-  margin: 0.45rem 0 0;
-  font-size: 0.9rem;
-  line-height: 1.55;
-  color: #98a2b3;
-  transition: color 0.35s ease;
-}
-.pfx-tab:hover .pfx-tab__title,
-.pfx-tab.is-active .pfx-tab__title { color: #0b1220; }
-.pfx-tab:hover .pfx-tab__body,
-.pfx-tab.is-active .pfx-tab__body { color: #5d6779; }
-.pfx-tab:focus-visible .pfx-tab__title { text-decoration: underline; text-underline-offset: 4px; }
-
-@media (max-width: 760px) {
-  .pfx-tabs__stage { border-radius: 18px; }
-  .pfx-tabs__list { grid-auto-flow: row; grid-template-columns: 1fr; margin-top: 1rem; }
-  .pfx-tab, .pfx-tab + .pfx-tab { padding: 1rem 0 0.9rem 1.1rem; }
-  .pfx-tab__rule, .pfx-tab + .pfx-tab .pfx-tab__rule { left: 0; right: auto; top: 0; bottom: 0; width: 2px; height: auto; }
-  .pfx-tab__rule i { transform-origin: top; transform: scaleY(0); }
-  .pfx-tab.is-active .pfx-tab__rule i { transform: scaleY(1); }
-  .pfx-tabs.is-running .pfx-tab.is-active .pfx-tab__rule i { animation-name: pfx-progress-y; }
-  @keyframes pfx-progress-y { from { transform: scaleY(0); } to { transform: scaleY(1); } }
-  .pfx-tab:not(.is-active) .pfx-tab__body { display: none; }
-}
-
-/* ══ v4: hero mesh restored, no hover pop, lighter shadows ═══════════════ */
-@media (hover: hover) {
-  .mkt-pf .mkt-pf__theme .mkt-pf__tile:hover {
-    transform: none;
-    box-shadow: 0 0 0 1px rgba(16, 24, 40, 0.1), 0 1px 2px rgba(16, 24, 40, 0.03);
-  }
-}
-.mkt-pf .mkt-pf__theme .mkt-pf__media .demo-video-glow__frame.is-scene,
-.pfx-tabs__stage { box-shadow: 0 24px 48px -36px rgba(40, 20, 90, 0.35); }
-.mkt-pf .mkt-pf__theme .mkt-pf__media .demo-video-glow__frame { box-shadow: 0 0 0 1px rgba(16, 24, 40, 0.06), 0 24px 48px -36px rgba(40, 20, 90, 0.3); }
-.pfx-tabs__stage { background: #f6f4fb; }

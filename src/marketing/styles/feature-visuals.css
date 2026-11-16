@@ -1065,3 +1065,75 @@
 .fv:not(.is-armed) .fv-cursor { display: none; }
 /* A row that leaves mid-story takes no space in the end-state frame. */
 .fv:not(.is-armed) .fv-reveal--until { display: none; }
+
+/* ══ v5: make the motion readable at a glance ═════════════════════════════ */
+
+/* Entrances travel further and settle slower, so each step registers. */
+.fv.is-armed.is-in .fv-float {
+  animation: fv-rise-strong 1.15s cubic-bezier(0.16, 1, 0.3, 1) var(--fv-d, 0ms) both;
+}
+.fv.is-armed.is-in .fv-float--until {
+  animation:
+    fv-rise-strong 1.15s cubic-bezier(0.16, 1, 0.3, 1) var(--fv-d, 0ms) both,
+    fv-leave 0.5s cubic-bezier(0.5, 0, 0.75, 0) var(--fv-until) forwards;
+}
+.fv.is-armed.is-in.is-out .fv-float { animation: fv-exit 0.5s cubic-bezier(0.5, 0, 0.75, 0) calc(var(--fv-d, 0ms) * 0.3) both; }
+.fv.is-armed.is-in.is-out .fv-float--until { animation: none; opacity: 0; }
+@keyframes fv-rise-strong {
+  0% { opacity: 0; transform: translate3d(0, 2.2em, 0) scale(0.93); filter: blur(8px); }
+  55% { filter: blur(0); }
+  100% { opacity: 1; transform: none; filter: none; }
+}
+
+/* New rows and bubbles flash softly as they land. */
+.fv.is-armed.is-in .fv-reveal > * { animation: fv-land 1.6s ease-out var(--fv-r-at) both; border-radius: 0.75em; }
+@keyframes fv-land {
+  0% { background-color: color-mix(in srgb, var(--t-100) 90%, transparent); }
+  100% { background-color: transparent; }
+}
+.fv.is-armed.is-in .fv-reveal > .fv-bubble { animation: fv-pop 0.55s cubic-bezier(0.34, 1.56, 0.64, 1) var(--fv-r-at) both; }
+@keyframes fv-pop {
+  0% { transform: scale(0.85); }
+  100% { transform: none; }
+}
+
+/* Glass cards: solid enough to read on any mesh. */
+.fv--rich .fv-panel.fv-panel--glass,
+.fv--rich:has(.fv__bg--mesh) .fv-panel.fv-panel--glass {
+  color: var(--fv-ink);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.94), rgba(255, 255, 255, 0.86));
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.95), 0 1px 2px rgba(17, 12, 60, 0.06), 0 1em 2em -1.3em rgba(40, 20, 90, 0.3);
+}
+.fv--rich .fv-panel--glass .fv-panel__title,
+.fv--rich .fv-panel--glass .fv-row__text b,
+.fv--rich .fv-panel--glass .fv-stat b,
+.fv--rich .fv-panel--glass .fv-meter__row b { color: var(--fv-ink); }
+.fv--rich .fv-panel--glass small,
+.fv--rich .fv-panel--glass .fv-row__text small,
+.fv--rich .fv-panel--glass .fv-stat small { color: var(--fv-muted); }
+.fv--rich .fv-panel--glass .fv-icon { color: var(--t-600); background: linear-gradient(180deg, #fff, #f6f7f9); box-shadow: 0 0 0 1px var(--fv-line); }
+.fv--rich .fv-panel--glass .fv-chip { color: var(--t-700); background: color-mix(in srgb, var(--t-50) 85%, #fff); box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--t-500) 20%, transparent); }
+.fv--rich .fv-panel--glass .fv-row + .fv-row::before { background: var(--fv-line-2); }
+/* Loose chips on a mesh: solid white pills. */
+.fv--rich .fv-float__in > .fv-chip:not(.fv-chip--solid),
+.fv--rich:has(.fv__bg--mesh) .fv-float__in > .fv-chip:not(.fv-chip--solid) {
+  color: var(--t-700);
+  background: #fff;
+  box-shadow: 0 0 0 1px rgba(16, 24, 40, 0.06), 0 0.5em 1.2em -0.7em rgba(40, 20, 90, 0.35);
+}
+.fv--rich .fv-float__in > .fv-chip:not(.fv-chip--solid) .fv-chip__dot,
+.fv--rich .fv-float__in > .fv-chip:not(.fv-chip--solid) .fv-chip__dot::after { background: var(--t-500); }
+.fv--rich:has(.fv__bg--mesh) .fv-float__in > .fv-chip--solid { background: linear-gradient(180deg, #1f2937, #0b1220); color: #fff; }
+
+/* The active step glows clearly. */
+.fv-node--active {
+  box-shadow:
+    0 0 0 2px var(--t-500),
+    0 0 0 0.5em color-mix(in srgb, var(--t-500) 16%, transparent),
+    0 1em 2em -1em color-mix(in srgb, var(--t-700) 45%, transparent);
+}
+
+/* Bigger cursor and confetti. */
+.fv-cursor { width: 2.5em; height: 2.5em; }
+.fv-cursor__ripple { width: 2.2em; height: 2.2em; margin: -1.1em 0 0 -1.1em; background: color-mix(in srgb, var(--t-500) 45%, transparent); }
+.fv-burst i { width: 0.8em; height: 0.8em; left: -0.4em; top: -0.4em; }
