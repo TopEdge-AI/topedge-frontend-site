@@ -13,6 +13,8 @@ type Clip = {
   base: string;
   /** Showcases ship a 1:1 cut for phones (the slot turns square there). */
   square?: boolean;
+  /** 16:9 heroes ship a 4:3 cut for phones (the hero frame turns 4:3 there). */
+  hero?: boolean;
 };
 
 const DIR = '/marketing/feature-clips';
@@ -26,11 +28,33 @@ export const CLIPS: Record<string, Clip> = {
   '/journey-sub-feature/10.webp': { base: `${DIR}/journeys/s1`, square: true },
   '/journey-sub-feature/11.webp': { base: `${DIR}/journeys/s2`, square: true },
   '/journey-sub-feature/12.webp': { base: `${DIR}/journeys/s3`, square: true },
+  '/campaign-sub-feature/13.webp': { base: `${DIR}/campaigns/t1` },
+  '/campaign-sub-feature/14.webp': { base: `${DIR}/campaigns/t2` },
+  '/campaign-sub-feature/15.webp': { base: `${DIR}/campaigns/t3` },
+  '/campaign-sub-feature/21.webp': { base: `${DIR}/campaigns/s1`, square: true },
+  '/campaign-sub-feature/22.webp': { base: `${DIR}/campaigns/s2`, square: true },
+  '/campaign-sub-feature/20.webp': { base: `${DIR}/campaigns/s3`, square: true },
+  '/audience-crm-sub-feature/16.webp': { base: `${DIR}/crm/t1` },
+  '/audience-crm-sub-feature/18.webp': { base: `${DIR}/crm/t2` },
+  '/audience-crm-sub-feature/17.webp': { base: `${DIR}/crm/t3` },
+  '/leaadd.webp': { base: `${DIR}/crm/s1`, square: true },
+  '/audience-crm-sub-feature/360.webp': { base: `${DIR}/crm/s2`, square: true },
+  '/audience-crm-sub-feature/crm-segement.webp': { base: `${DIR}/crm/s3`, square: true },
 };
 
-export const clipFor = (src: string): Clip | null => CLIPS[src.split('?')[0]] ?? null;
+/** Page heroes, keyed by the hero image path. Kept apart from CLIPS because the
+ *  same image can also appear as a tile elsewhere, where the hero film is wrong. */
+export const HERO_CLIPS: Record<string, Clip> = {
+  '/campaignn.webp': { base: `${DIR}/campaigns/h`, hero: true },
+  '/audience-crm-hero.webp': { base: `${DIR}/crm/h`, hero: true },
+};
+
+const keyOf = (src: string) => src.split('?')[0];
+export const clipFor = (src: string): Clip | null => CLIPS[keyOf(src)] ?? null;
+export const heroClipFor = (src: string): Clip | null => HERO_CLIPS[keyOf(src)] ?? null;
 
 const PHONE = '(max-width: 640px)';
+const PHONE_HERO = '(max-width: 767px)';
 const REDUCED = '(prefers-reduced-motion: reduce)';
 
 function useMedia(q: string) {
@@ -49,11 +73,13 @@ export function FeatureClip({ clip, label, wide, fallback }: { clip: Clip; label
   const ref = useRef<HTMLVideoElement>(null);
   const box = useRef<HTMLDivElement>(null);
   const phone = useMedia(PHONE);
+  const phoneHero = useMedia(PHONE_HERO);
   const reduced = useMedia(REDUCED);
   const [near, setNear] = useState(false);
   const [failed, setFailed] = useState(false);
   const sq = wide && clip.square && phone;
-  const base = sq ? `${clip.base}-sq` : clip.base;
+  const m43 = clip.hero && phoneHero;
+  const base = sq ? `${clip.base}-sq` : m43 ? `${clip.base}-m` : clip.base;
 
   // Fetch once the slot comes within a screen of the viewport.
   useEffect(() => {
@@ -88,7 +114,7 @@ export function FeatureClip({ clip, label, wide, fallback }: { clip: Clip; label
   if (failed) return <>{fallback}</>;
 
   return (
-    <div ref={box} className={`fclip${wide ? ' fclip--wide' : ' fclip--square'}${sq ? ' is-sq' : ''}`} role="img" aria-label={label}>
+    <div ref={box} className={`fclip${clip.hero ? ' fclip--fill' : wide ? ' fclip--wide' : ' fclip--square'}${sq ? ' is-sq' : ''}`} role="img" aria-label={label}>
       {reduced ? (
         <img className="fclip__media" src={`${base}-result.jpg?v=${V}`} alt="" loading="lazy" decoding="async" />
       ) : (

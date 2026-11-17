@@ -27,7 +27,7 @@ import HomeTrust from '../components/home/HomeTrust';
 import { PrimaryButton, GhostButton } from '../components/ui';
 import { ScenesContext, ScenePlaceholder, usePageScenes, useScene } from '../components/visuals';
 import { AccentContext, MeshContext, SceneSlotContext } from '../components/visuals/kit';
-import { FeatureClip, clipFor } from '../components/visuals/clips';
+import { FeatureClip, clipFor, heroClipFor } from '../components/visuals/clips';
 import '../styles/product-feature.css';
 import '../styles/feature-premium.css';
 
@@ -159,6 +159,7 @@ function ProductFeatureView({ page }: { page: ProductPage }) {
   const scenes = usePageScenes(page.id);
   const HeroScene =
     page.hero.kind === 'image' ? scenes.map?.[page.hero.src.split('?')[0]] ?? null : null;
+  const heroClip = page.hero.kind === 'image' ? heroClipFor(page.hero.src) : null;
 
   useEffect(() => {
     const hash = location.hash.replace(/^#/, '');
@@ -243,6 +244,17 @@ function ProductFeatureView({ page }: { page: ProductPage }) {
                 glow={page.hero.glow ?? 'violet'}
                 title={page.hero.label}
               />
+            ) : heroClip ? (
+              <div className="demo-video-glow demo-video-glow--still" data-glow={page.hero.glow ?? 'violet'}>
+                <div className="demo-video-glow__frame is-ready is-scene">
+                  <FeatureClip
+                    clip={heroClip}
+                    label={page.hero.alt}
+                    wide
+                    fallback={HeroScene ? <HeroScene label={page.hero.alt} /> : <ScenePlaceholder label={page.hero.alt} wide />}
+                  />
+                </div>
+              </div>
             ) : HeroScene ? (
               <div className="demo-video-glow demo-video-glow--still" data-glow={page.hero.glow ?? 'violet'}>
                 <div className="demo-video-glow__frame is-ready is-scene">

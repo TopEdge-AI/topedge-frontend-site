@@ -95,7 +95,7 @@ export function CheckoutPage({ media, title, price, was, code, name, address, to
   );
 }
 
-export function SuccessPage({ t, at, order, chip }: { t: number; at: number; order: string; chip: string }) {
+export function SuccessPage({ t, at, order, chip, title = 'Payment successful', extra }: { t: number; at: number; order: string; chip: string; title?: string; extra?: ReactNode }) {
   const k = prog(t, at, at + 0.9, E.enter);
   return (
     <div style={{ position: 'absolute', inset: 0, background: '#fff', fontFamily: FONT, color: C.ink, textAlign: 'center' }}>
@@ -103,8 +103,9 @@ export function SuccessPage({ t, at, order, chip }: { t: number; at: number; ord
         <CheckCircle size={96} p={k} />
       </div>
       <div style={{ position: 'absolute', top: 268, left: 0, right: 0, opacity: prog(t, at + 0.25, at + 0.7), transform: `translateY(${lerp(10, 0, prog(t, at + 0.25, at + 0.8))}px)` }}>
-        <div style={{ fontSize: 25, fontWeight: 700, letterSpacing: '-0.015em' }}>Payment successful</div>
+        <div style={{ fontSize: 25, fontWeight: 700, letterSpacing: '-0.015em' }}>{title}</div>
         <div style={{ fontSize: 15, color: C.muted, marginTop: 6 }}>{order}</div>
+        {extra}
         <div style={{ marginTop: 16 }}>
           <Chip tone="emerald" size={14}>{chip}</Chip>
         </div>
@@ -115,3 +116,36 @@ export function SuccessPage({ t, at, order, chip }: { t: number; at: number; ord
 
 /** Slide-up for screens inside the phone (0 = hidden below, 1 = in place). */
 export const screenY = (k: number) => lerp(PHONE_H, 0, k);
+
+/** Fingertip over the phone: list of [appear, leave, lx, ly]; the tap lands 55% in. */
+export function phoneTouch(t: number, pts: [number, number, number, number][], offset: number) {
+  for (const [a, b, lx, ly] of pts) {
+    if (t >= a && t <= b) {
+      const [x, y] = phonePoint(lx, ly, offset);
+      const at = a + (b - a) * 0.55;
+      return { x, y, o: prog(t, a, a + 0.2) * (1 - prog(t, b - 0.2, b)), press: prog(t, at - 0.08, at) * (1 - prog(t, at + 0.12, at + 0.22)), ripple: prog(t, at, at + 0.5) };
+    }
+  }
+  return null;
+}
+
+/** Cursor macro: list of [time, x, y] waypoints, eased between; press windows as [time]. */
+export function cursorAt(t: number, way: [number, number, number][], presses: number[] = []) {
+  let x = way[0][1], y = way[0][2];
+  for (let i = 1; i < way.length; i++) {
+    const [t0, x0, y0] = way[i - 1];
+    const [t1, x1, y1] = way[i];
+    if (t >= t1) { x = x1; y = y1; continue; }
+    if (t > t0) {
+      const k = E.move(clamp((t - t0) / (t1 - t0)));
+      // gentle arc
+      const mx = (x0 + x1) / 2 + (y1 - y0) * 0.12, my = (y0 + y1) / 2 - (x1 - x0) * 0.08;
+      const a = (1 - k) * (1 - k), b = 2 * (1 - k) * k, c = k * k;
+      x = a * x0 + b * mx + c * x1; y = a * y0 + b * my + c * y1;
+    }
+    break;
+  }
+  let press = 0;
+  for (const p of presses) press = Math.max(press, prog(t, p - 0.08, p) * (1 - prog(t, p + 0.1, p + 0.2)));
+  return { x, y, press };
+}

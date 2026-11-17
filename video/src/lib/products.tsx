@@ -61,3 +61,32 @@ export function ShirtShot({ w = '100%', h = '100%' }: { w?: number | string; h?:
     </div>
   );
 }
+
+/** Glow Co hydrating gel serum on a blush backdrop (SVG render). */
+export function SerumShot({ w = '100%', h = '100%' }: { w?: number | string; h?: number | string }) {
+  return (
+    <div style={{ width: w, height: h, position: 'relative', overflow: 'hidden', background: 'radial-gradient(90% 80% at 50% 30%, #FFF4F1 0%, #F9DCD5 60%, #F0C3B8 100%)' }}>
+      <svg viewBox="0 0 200 240" preserveAspectRatio="xMidYMid meet" style={{ position: 'absolute', inset: '8% 10%', width: '80%', height: '84%' }}>
+        <defs>
+          <linearGradient id="glass" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0" stopColor="#E9A48F" />
+            <stop offset="0.35" stopColor="#F7C9B9" />
+            <stop offset="0.6" stopColor="#E7A08A" />
+            <stop offset="1" stopColor="#C8603F" />
+          </linearGradient>
+          <linearGradient id="cap" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stopColor="#2B2B2E" /><stop offset="0.4" stopColor="#5A5A60" /><stop offset="1" stopColor="#1C1C1E" /></linearGradient>
+          <filter id="sh" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="5" /></filter>
+        </defs>
+        <ellipse cx="100" cy="226" rx="52" ry="7" fill="#7A3A28" opacity="0.25" filter="url(#sh)" />
+        <rect x="80" y="20" width="40" height="44" rx="8" fill="url(#cap)" />
+        <rect x="88" y="6" width="24" height="20" rx="6" fill="#3A3A3E" />
+        <rect x="64" y="60" width="72" height="166" rx="20" fill="url(#glass)" />
+        <rect x="72" y="112" width="56" height="64" rx="6" fill="#FFF8F4" opacity="0.92" />
+        <text x="100" y="134" textAnchor="middle" fontFamily="Georgia, serif" fontSize="15" fill="#8A3B22">G</text>
+        <text x="100" y="152" textAnchor="middle" fontFamily="Inter, sans-serif" fontSize="7.5" letterSpacing="1.5" fill="#8A3B22">HYDRATING</text>
+        <text x="100" y="164" textAnchor="middle" fontFamily="Inter, sans-serif" fontSize="7.5" letterSpacing="1.5" fill="#8A3B22">GEL SERUM</text>
+        <rect x="70" y="66" width="9" height="150" rx="4.5" fill="#fff" opacity="0.35" />
+      </svg>
+    </div>
+  );
+}

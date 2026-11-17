@@ -60,4 +60,5 @@
 .fclip--square { aspect-ratio: 1 / 1; }
 .fclip--wide { aspect-ratio: 16 / 10; }
 .fclip--wide.is-sq { aspect-ratio: 1 / 1; }
+.fclip--fill { position: absolute; inset: 0; }
 .fclip__media { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; }

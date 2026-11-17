@@ -44,6 +44,12 @@ export const PALETTES: Record<string, [string, string, string]> = {
   coral: ['#FFD2C2', '#FFE6B8', '#F4DDFF'],
   bloom: ['#F8CFEA', '#E2D6FF', '#FFE2D2'],
   dusk: ['#D9CCFF', '#C6DCFF', '#FFD9EC'],
+  orchid: ['#EBC8FF', '#FFD0EA', '#D4E0FF'],
+  ocean: ['#BFE3FF', '#C9D1FF', '#D2F6EC'],
+  dawn: ['#FFD9C9', '#E5D3FF', '#FFF0C2'],
+  sunrise: ['#FFE0B0', '#FFC9C9', '#E8DBFF'],
+  iris: ['#CFC8FF', '#BFE0FF', '#F6D5FF'],
+  rose: ['#FFCFDB', '#F2D4FF', '#FFE6CF'],
 };
 
 /** Warm white canvas with slow-drifting soft light and a faint pattern. */

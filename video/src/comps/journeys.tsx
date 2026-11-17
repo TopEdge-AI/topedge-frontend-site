@@ -10,14 +10,14 @@ import {
   Route01Icon, UserCheck01Icon, ViewIcon, Wallet01Icon,
 } from '@hugeicons/core-free-icons';
 import { SiMeta } from 'react-icons/si';
-import { E, clamp, keys, lerp, pathPoint, prog, spring, typed } from '../lib/time';
+import { E, clamp, keys, lerp, pathPoint, prog, spring, typed, useSize } from '../lib/time';
 import {
   Backdrop, Bubble, C, Camera, Card, CardHeader, CheckCircle, Chip, Cursor, DISPLAY, DateChip, FONT, Icon, Layer, Pill,
   Rail, SHADOW_LIFT, Step, TemplateBubble, Toast, Touch, WaHeader, WaScreen, pop,
 } from '../lib/ui';
 import { ShirtShot, ShoeShot } from '../lib/products';
 import {
-  CheckoutPage, LockScreen, PhoneRig, SH, SW, SuccessPage, backdropState, phoneOffset, phonePoint, screenY,
+  CheckoutPage, LockScreen, PhoneRig, SW, SuccessPage, backdropState, phoneOffset, phonePoint, screenY,
 } from '../lib/rig';
 
 const T = 1080;
@@ -217,6 +217,8 @@ const fmtCountdown = (k: number) => {
 
 /** Cart recovery, end to end: journey runs → WhatsApp → UPI → recovered. */
 export function S1({ t }: { t: number }) {
+  const { h: SH } = useSize();
+  const CY = SH / 2;
   const S = 36;
   const bd = backdropState(t, 3.7, 10.6);
   const off = phoneOffset(t, 3.85, 10.55);
@@ -246,7 +248,7 @@ export function S1({ t }: { t: number }) {
     <div style={{ width: SW, height: SH, position: 'relative', fontFamily: FONT }}>
       <Backdrop t={t} palette="coral" pattern="beams" w={SW} h={SH} />
       <Camera z={keys(t, [[0, 1], [3.2, 1.025], [11.0, 1.0], [15.5, 1.0]], E.camera)}>
-        <Layer x={960} y={600} s={bd.s * 1.12} o={bd.o} blur={bd.blur}>
+        <Layer x={960} y={CY} s={bd.s * 1.12} o={bd.o} blur={bd.blur}>
           <div style={{ position: 'relative' }}>
             <Card w={1040} pad={40}>
               <CardHeader icon={FlowConnectionIcon} title="Cart recovery" size={S + 4} right={<Chip tone="emerald" dot size={25} pulse={(t * 0.8) % 1}>Live</Chip>} />
@@ -304,6 +306,8 @@ function FlowNode({ icon, title, sub, active = 0, done = 0, w = 380 }: NodeProps
 
 /** COD orders branch to a confirmation; Rahul taps Yes. */
 export function S2({ t }: { t: number }) {
+  const { h: SH } = useSize();
+  const CY = SH / 2;
   // Canvas card 1180x800 centred. Node anchors in canvas coords.
   const W = 1000, H = 780;
   const K = 1.2; // canvas scale in the world
@@ -319,7 +323,7 @@ export function S2({ t }: { t: number }) {
   const confirmed = prog(t, 4.45, 4.95);
   // Camera: push toward the COD node and the WhatsApp card, then pull back.
   const fx = keys(t, [[0, 960], [1.6, 960], [2.6, 1250], [5.6, 1250], [6.8, 960], [13, 960]], E.camera);
-  const fy = keys(t, [[0, 600], [1.6, 600], [2.6, 560], [5.6, 560], [6.8, 600], [13, 600]], E.camera);
+  const fy = keys(t, [[0, CY], [1.6, CY], [2.6, CY - 40], [5.6, CY - 40], [6.8, CY], [13, CY]], E.camera);
   const z = keys(t, [[0, 1], [1.6, 1], [2.6, 1.18], [5.6, 1.18], [6.8, 1], [13, 1]], E.camera);
   const wa = spring(t, 2.5, 0.65, 0.15);
   const wap = pop(wa);
@@ -328,15 +332,15 @@ export function S2({ t }: { t: number }) {
   const sat = spring(t, 4.8, 0.6, 0.18);
   const sp = pop(sat);
   // WhatsApp card lives in world coords right of the COD node.
-  const cardX = 1290, cardY = 640;
+  const cardX = 1290, cardY = CY + 40;
   const tapAt = 4.2;
   const tch = { x: cardX - 105, y: cardY + 118, o: prog(t, 3.5, 3.7) * (1 - prog(t, 4.6, 4.8)), press: prog(t, tapAt - 0.08, tapAt) * (1 - prog(t, tapAt + 0.12, tapAt + 0.22)), ripple: prog(t, tapAt, tapAt + 0.5) };
   const dotK = prog(t, 0.6, 1.5, E.move);
   return (
     <div style={{ width: SW, height: SH, position: 'relative', fontFamily: FONT }}>
       <Backdrop t={t} palette="bloom" pattern="grid" w={SW} h={SH} />
-      <Camera x={(960 - fx) * z} y={(600 - fy) * z} z={z}>
-        <Layer x={960} y={600} s={K}>
+      <Camera x={(960 - fx) * z} y={(CY - fy) * z} z={z}>
+        <Layer x={960} y={CY} s={K}>
           <div style={{ width: W, height: H, borderRadius: 34, background: '#FBFBFD', boxShadow: `0 1px 2px rgba(16,24,40,0.05), 0 30px 70px -40px rgba(40,24,96,0.4), inset 0 0 0 1.5px ${C.line}`, position: 'relative', overflow: 'hidden' }}>
             <div style={{ position: 'absolute', inset: 0, backgroundImage: 'radial-gradient(rgba(16,24,40,0.12) 1.5px, transparent 2px)', backgroundSize: '34px 34px' }} />
             <div style={{ position: 'absolute', left: 0, right: 0, top: 0, height: 86, background: 'rgba(255,255,255,0.92)', borderBottom: `1.5px solid ${C.line}`, display: 'flex', alignItems: 'center', gap: 16, padding: '0 34px' }}>
@@ -392,7 +396,7 @@ export function S2({ t }: { t: number }) {
           </div>
         </Layer>
         <Touch {...tch} />
-        <Layer x={1300} y={262} s={sp.s} o={sp.o}>
+        <Layer x={1300} y={CY - 338} s={sp.s} o={sp.o}>
           <Toast icon={UserCheck01Icon} title="Confirmed" sub="Rahul tapped Yes · ships today" size={30} />
         </Layer>
       </Camera>
@@ -403,6 +407,8 @@ export function S2({ t }: { t: number }) {
 /* =============================================================== 05-S3 */
 /** Riya leaves when size M is sold out; the journey brings her back when it's in. */
 export function S3({ t }: { t: number }) {
+  const { h: SH } = useSize();
+  const CY = SH / 2;
   const bd = backdropState(t, 5.2);
   const off = phoneOffset(t, 5.35);
   // cursor over the product page (browser-local coords)
@@ -432,7 +438,7 @@ export function S3({ t }: { t: number }) {
     <div style={{ width: SW, height: SH, position: 'relative', fontFamily: FONT }}>
       <Backdrop t={t} palette="dusk" pattern="rings" w={SW} h={SH} />
       <Camera z={keys(t, [[0, 1], [4.6, 1.03], [6, 1], [15.5, 1]], E.camera)}>
-        <Layer x={960} y={600} s={bd.s} o={bd.o} blur={bd.blur}>
+        <Layer x={960} y={CY} s={bd.s} o={bd.o} blur={bd.blur}>
           <div style={{ position: 'relative' }}>
             <div style={{ width: bw, height: bh, borderRadius: 26, overflow: 'hidden', background: '#fff', boxShadow: `${SHADOW_LIFT}, inset 0 0 0 1.5px ${C.line}`, position: 'relative' }}>
               <div style={{ height: 74, background: '#F6F6F8', borderBottom: `1.5px solid ${C.line}`, display: 'flex', alignItems: 'center', padding: '0 26px', gap: 12 }}>
@@ -490,7 +496,7 @@ export function S3({ t }: { t: number }) {
         </div>
       </PhoneRig>
       <Touch {...touch} />
-      <Layer x={960} y={1108} s={op.s} o={op.o} z={40}>
+      <Layer x={960} y={SH - 92} s={op.s} o={op.o} z={40}>
         <Toast icon={ShoppingCart01Icon} title="Order #2219 · ₹1,899" sub="Recovered by Return & retarget" size={34} />
       </Layer>
     </div>
@@ -501,7 +507,8 @@ export const journeys = {
   '05-T1': { w: T, h: T, duration: 7.5, Component: T1 },
   '05-T2': { w: T, h: T, duration: 7.5, Component: T2 },
   '05-T3': { w: T, h: T, duration: 7.5, Component: T3 },
-  '05-S1': { w: SW, h: SH, duration: 15, Component: S1 },
-  '05-S2': { w: SW, h: SH, duration: 12.5, Component: S2 },
-  '05-S3': { w: SW, h: SH, duration: 15, Component: S3 },
+  '05-S1': { w: SW, h: 1200, duration: 15, Component: S1 },
+  '05-S2': { w: SW, h: 1200, duration: 12.5, Component: S2 },
+  '05-S3': { w: SW, h: 1200, duration: 15, Component: S3 },
+  'home-cart': { w: SW, h: 1080, duration: 15, Component: S1 },
 };

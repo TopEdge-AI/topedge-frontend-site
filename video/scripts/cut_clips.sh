@@ -6,8 +6,10 @@
 #
 # Each render is the segment plus a 0.5 s tail. The tail is cross-faded into the
 # head so the clip loops with no visible restart. Then per clip:
-#   <name>.mp4 / .webm          1:1 tiles at 800x800; 16:10 showcases at 1280x800
+#   <name>.mp4 / .webm          1:1 tiles at 800x800; 16:10 showcases at 1280x800;
+#                               16:9 heroes / home films at 1600x900
 #   <name>-sq.mp4 / -sq.webm    showcases only: centred 1:1 cut at 720x720 for phones
+#   <name>-m.mp4 / -m.webm      16:9 films only: centred 4:3 cut at 960x720 for phones
 #   <name>-poster.jpg           first frame (shown before playback starts)
 #   <name>-result.jpg           the held result (shown for reduced motion)
 set -euo pipefail
@@ -32,6 +34,9 @@ for pair in "$@"; do
   }
   if [ "$w" = "$h" ]; then
     enc "scale=800:800:flags=lanczos" "$OUT/$name"
+  elif [ "$h" = "1080" ]; then
+    enc "scale=1600:900:flags=lanczos" "$OUT/$name"
+    enc "crop=ih*4/3:ih:(iw-ih*4/3)/2:0,scale=960:720:flags=lanczos" "$OUT/$name-m"
   else
     enc "scale=1280:800:flags=lanczos" "$OUT/$name"
     enc "crop=ih:ih:(iw-ih)/2:0,scale=720:720:flags=lanczos" "$OUT/$name-sq"

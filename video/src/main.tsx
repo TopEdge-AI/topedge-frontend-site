@@ -5,7 +5,7 @@
 import { createRoot } from 'react-dom/client';
 import { flushSync } from 'react-dom';
 import { useState } from 'react';
-import { FPS, TimeContext } from './lib/time';
+import { FPS, SizeContext, TimeContext } from './lib/time';
 import { COMPS } from './comps';
 
 declare global {
@@ -29,9 +29,11 @@ function App() {
   const Comp = comp.Component;
   return (
     <TimeContext.Provider value={t}>
-      <div style={{ position: 'relative', width: comp.w, height: comp.h, overflow: 'hidden' }}>
-        <Comp t={t} />
-      </div>
+      <SizeContext.Provider value={{ w: comp.w, h: comp.h }}>
+        <div style={{ position: 'relative', width: comp.w, height: comp.h, overflow: 'hidden' }}>
+          <Comp t={t} />
+        </div>
+      </SizeContext.Provider>
     </TimeContext.Provider>
   );
 }
