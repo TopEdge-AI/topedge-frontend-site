@@ -164,12 +164,14 @@ function ProductFeatureView({ page }: { page: ProductPage }) {
   const hasRelated = Boolean(page.related?.length);
   const proof = page.proofTable;
   const modifiedIso = featurePagesModifiedIso();
-  const heroDemo = page.hero.kind === 'video' ? demoAssetBySrc(page.hero.src) : undefined;
+  // Every feature hero now plays its launch film; the screen recording a page
+  // used to carry is no longer on the page, so it gets no VideoObject either.
+  const heroClip = clipFor(page.id, 'h');
+  const heroDemo = !heroClip && page.hero.kind === 'video' ? demoAssetBySrc(page.hero.src) : undefined;
   // Pages whose every slot plays a film skip the coded-scene chunk entirely.
   const scenes = usePageScenes(hasClips(page.id) ? '' : page.id);
   const HeroScene =
     page.hero.kind === 'image' ? scenes.map?.[page.hero.src.split('?')[0]] ?? null : null;
-  const heroClip = page.hero.kind === 'image' ? clipFor(page.id, 'h') : null;
 
   useEffect(() => {
     const hash = location.hash.replace(/^#/, '');
@@ -246,23 +248,17 @@ function ProductFeatureView({ page }: { page: ProductPage }) {
         </header>
 
           <section className="mkt-pf__media" aria-label="Product preview">
-            {page.hero.kind === 'video' ? (
-              <DemoProductVideoFrame
-                src={page.hero.src}
-                mobileSrc={page.hero.mobileSrc}
-                poster={page.hero.poster}
-                glow={page.hero.glow ?? 'violet'}
-                title={page.hero.label}
-              />
-            ) : heroClip ? (
+            {heroClip ? (
               <div className="demo-video-glow demo-video-glow--still" data-glow={page.hero.glow ?? 'violet'}>
-                <div className="demo-video-glow__frame is-ready is-scene">
+                <div className="demo-video-glow__frame is-ready is-scene is-film">
                   <FeatureClip
                     clip={heroClip}
-                    label={page.hero.alt}
+                    label={page.hero.kind === 'video' ? page.hero.label : page.hero.alt}
                     wide
                     fallback={
-                      HeroScene ? (
+                      page.hero.kind === 'video' ? (
+                        <img className="demo-video-glow__still" src={page.hero.poster} alt={page.hero.label} decoding="async" />
+                      ) : HeroScene ? (
                         <HeroScene label={page.hero.alt} />
                       ) : (
                         <img className="demo-video-glow__still" src={page.hero.src} alt={page.hero.alt} decoding="async" />
@@ -271,6 +267,14 @@ function ProductFeatureView({ page }: { page: ProductPage }) {
                   />
                 </div>
               </div>
+            ) : page.hero.kind === 'video' ? (
+              <DemoProductVideoFrame
+                src={page.hero.src}
+                mobileSrc={page.hero.mobileSrc}
+                poster={page.hero.poster}
+                glow={page.hero.glow ?? 'violet'}
+                title={page.hero.label}
+              />
             ) : HeroScene ? (
               <div className="demo-video-glow demo-video-glow--still" data-glow={page.hero.glow ?? 'violet'}>
                 <div className="demo-video-glow__frame is-ready is-scene">
