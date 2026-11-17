@@ -292,9 +292,9 @@ export const Ring = ({ rx: rx0, ry: ry0, o = 1, dark = true, k = 1 }: { rx: numb
 };
 
 /** Hand cursor like launch films use (pointer finger). */
-export function Hand({ x: x0, y: y0, press = 0, o = 1, s = 1.25 }: { x: number; y: number; press?: number; o?: number; s?: number }) {
+export function Hand({ x: x0, y: y0, press = 0, o = 1, s = 1.25, raw }: { x: number; y: number; press?: number; o?: number; s?: number; /** position is already local (inside a panel), skip canvas mapping */ raw?: boolean }) {
   const lay = useLayout();
-  const x = lay.x(x0), y = lay.y(y0);
+  const x = raw ? x0 : lay.x(x0), y = raw ? y0 : lay.y(y0);
   if (o <= 0) return null;
   return (
     <div style={{ position: 'absolute', left: x - 14 * s, top: y - 4 * s, opacity: o, transform: `scale(${s * (1 - press * 0.12)})`, transformOrigin: '14px 4px', zIndex: 4000, filter: 'drop-shadow(0 6px 10px rgba(30,10,80,0.35))' }}>
@@ -400,4 +400,22 @@ export function Parcel({ size = 280, rx = -18, ry = 35, stamp = 0, stampS = 1 }:
 export function TouchAt({ cx, cy, dx, dy, ...rest }: { cx: number; cy: number; dx: number; dy: number; o?: number; press?: number; ripple?: number; size?: number }) {
   const lay = useLayout();
   return <Touch x={lay.x(cx) + dx} y={lay.y(cy) + dy} {...rest} />;
+}
+
+/** Desktop browser window (light), content positioned by the caller. */
+export function BrowserWin({ w, h, url, children, style }: { w: number; h: number; url: string; children: ReactNode; style?: CSSProperties }) {
+  return (
+    <Panel w={w} h={h} r={26} style={{ overflow: 'hidden', ...style }}>
+      <div style={{ height: 54, display: 'flex', alignItems: 'center', gap: 10, padding: '0 20px', background: 'linear-gradient(180deg,#FBFAFF,#F3F0FA)', borderBottom: '1px solid rgba(20,15,46,0.07)' }}>
+        {['#FF5F57', '#FEBC2E', '#28C840'].map((c) => <span key={c} style={{ width: 13, height: 13, borderRadius: 9, background: c }} />)}
+        <div style={{ flex: 1, display: 'flex', justifyContent: 'center' }}>
+          <span style={{ minWidth: 340, height: 32, borderRadius: 10, background: '#fff', boxShadow: 'inset 0 0 0 1px rgba(20,15,46,0.08)', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 8, fontSize: 16, color: L.ink2, fontFamily: FONT }}>
+            <svg width="12" height="14" viewBox="0 0 12 14"><rect x="1" y="6" width="10" height="7" rx="2" fill="#8A84A6" /><path d="M3 6V4a3 3 0 016 0v2" fill="none" stroke="#8A84A6" strokeWidth="1.6" /></svg>{url}
+          </span>
+        </div>
+        <span style={{ width: 60 }} />
+      </div>
+      <div style={{ position: 'absolute', left: 0, right: 0, top: 54, bottom: 0, overflow: 'hidden' }}>{children}</div>
+    </Panel>
+  );
 }

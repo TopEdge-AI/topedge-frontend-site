@@ -1,16 +1,17 @@
 #!/usr/bin/env bash
 # Feature-page heroes from launch films.
-#   video/scripts/cut_heroes.sh <render-dir> <clips-dir>
+#   video/scripts/cut_heroes.sh <render-dir> <clips-dir> [dir ...]   (default: every page)
 # Every hero gets a 4:3 phone cut, <dir>/h-m.mp4 (960x720), from L-<film>-h43.
 # Pages that share a home film play public/.../home/<film>.mp4 on desktop, so
-# they keep no desktop copy; the four pages without one get <dir>/h.mp4
+# they keep no desktop copy; pages with a film of their own get <dir>/h.mp4
 # (1600x900) and <dir>/h-poster.jpg. Older hero files (WebM, result stills,
 # a separate phone poster) are removed so nothing stale is left behind.
 set -euo pipefail
-IN="$1"; OUT="$2"
+IN="$1"; OUT="$2"; shift 2
+ONLY=" $* "
 TAIL=0.5
 # dir:film:shared
-PAGES="flow:flow:1 optin:optin:1 campaigns:campaigns:1 crm:identity:1 journeys:cart:1 pixel:pixel:1 profit:profit:1 intent:intent:1 brain:brain:0 meta:meta:0 rules:rules:0 warranty:warranty:0"
+PAGES="flow:flow:1 optin:optin:1 campaigns:campaigns:1 crm:identity:1 journeys:journeys:0 pixel:pixel:1 profit:profit:1 intent:intent:1 brain:brain:0 meta:meta:0 rules:rules:0 warranty:warranty:0"
 fold() {
   local dur off
   dur=$(ffprobe -v error -show_entries format=duration -of csv=p=0 "$1")
@@ -19,6 +20,7 @@ fold() {
 }
 for p in $PAGES; do
   IFS=: read -r dir film shared <<<"$p"
+  if [ -n "${*:-}" ] && [[ "$ONLY" != *" $dir "* ]]; then continue; fi
   d="$OUT/$dir"
   rm -f "$d/h.webm" "$d/h-m.webm" "$d/h-result.jpg" "$d/h-m-result.jpg" "$d/h-m-poster.jpg"
   src="$IN/L-$film-h43.mp4"

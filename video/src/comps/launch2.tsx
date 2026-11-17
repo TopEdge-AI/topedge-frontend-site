@@ -317,69 +317,9 @@ export function LaunchSegments({ t }: { t: number }) {
   );
 }
 
-/* ================================================================ PROFIT */
-const COSTS: [string, number, string][] = [['Product cost', 320, '#A78BFA'], ['Ads', 140, '#818CF8'], ['Shipping', 85, '#38BDF8'], ['RTO share', 38, '#F472B6'], ['COD fee', 30, '#FBBF24']];
-export function LaunchProfit({ t }: { t: number }) {
-  const deep = track(t, [[0, 0], [7.0, 0], [7.6, 1], [11.0, 1], [11.6, 0]]);
-  const s1 = win(t, 0.1, 7.3, 0.5);
-  const coinIn = spring(t, 0.1, 1.2, 0.15);
-  const at = (i: number) => 2.4 + i * 0.7;
-  const left = 799 - COSTS.reduce((a, [, v], i) => a + v * prog(t, at(i), at(i) + 0.5, E.move), 0);
-  const s2 = win(t, 7.1, 11.5, 0.6);
-  const bar = prog(t, 7.6, 8.8, E.move);
-  return (
-    <div style={{ position: 'absolute', inset: 0, overflow: 'hidden', fontFamily: FONT }}>
-      <Stage t={t} w={W} h={H} deep={deep} />
-      <Space w={W} h={H}>
-        <Obj x={700} y={260} o={s1 * (1 - prog(t, 2.0, 2.5))}><Words t={t} at={0.5} parts={[['One'], ['order', 'a']]} size={70} /></Obj>
-        {/* the coin */}
-        <Obj x={lerp(960, 700, prog(t, 1.9, 2.6, E.move))} y={560} ms={0.85} z={lerp(-300, 0, coinIn) + prog(t, 6.8, 7.4, E.exit) * 700} o={s1} mb={prog(t, 6.8, 7.4) * 8}>
-          <div style={{ transform: `scaleX(${0.94 + Math.cos(t * 0.9) * 0.06})`, width: 420, height: 420, borderRadius: 999, background: 'radial-gradient(circle at 35% 28%, #EDE9FE 0%, #A78BFA 38%, #6D28D9 78%, #4C1D95 100%)', boxShadow: 'inset 0 0 0 10px rgba(255,255,255,0.18), inset 0 -18px 40px rgba(46,16,101,0.45), 0 40px 80px -24px rgba(76,29,149,0.6)', display: 'grid', placeItems: 'center' }}>
-            <div style={{ textAlign: 'center', color: '#fff' }}>
-              <div style={{ fontFamily: DISPLAY, fontSize: 120, fontWeight: 700, letterSpacing: '-0.05em', fontVariantNumeric: 'tabular-nums', textShadow: '0 6px 20px rgba(46,16,101,0.5)' }}>₹{Math.round(left)}</div>
-              <div style={{ fontSize: 26, fontWeight: 600, opacity: 0.85 }}>{t < at(0) ? 'order value' : 'left for you'}</div>
-            </div>
-          </div>
-        </Obj>
-        {/* slices fly off into a column */}
-        {COSTS.map(([label, v, col], i) => {
-          const k = prog(t, at(i) - 0.1, at(i) + 0.6, E.move);
-          const x = lerp(700, 1340, k), y = lerp(560, 300 + i * 118, k) - Math.sin(k * Math.PI) * 120;
-          return (
-            <Obj key={label} x={x} y={y} ms={0.8} z={Math.sin(k * Math.PI) * 300} rz={(1 - k) * 25} s={lerp(0.4, 1, k)} o={s1 * clamp(k * 4)} mb={Math.sin(k * Math.PI) * 6}>
-              <div style={{ width: 520, display: 'flex', alignItems: 'center', gap: 18, padding: '18px 24px', borderRadius: 22, background: '#fff', boxShadow: '0 0 0 1px rgba(124,58,237,0.1), 0 24px 50px -20px rgba(76,29,149,0.4)' }}>
-                <span style={{ width: 18, height: 52, borderRadius: 6, background: col }} />
-                <span style={{ flex: 1, fontSize: 28, fontWeight: 600, color: L.ink }}>{label}</span>
-                <span style={{ fontFamily: DISPLAY, fontSize: 34, fontWeight: 700, color: '#BE123C' }}>−₹{v}</span>
-              </div>
-            </Obj>
-          );
-        })}
-        {/* deep: what you kept */}
-        <Obj x={960} y={400} z={lerp(-400, 0, prog(t, 7.1, 8.0, E.enter))} o={s2}>
-          <div style={{ textAlign: 'center' }}><Figure value={`₹${Math.round(lerp(0, 186, bar))}`} size={200} dark /><Caption dark>kept from a ₹799 order, after every cost</Caption></div>
-        </Obj>
-        <Obj x={960} y={680} o={s2} ms={0.85}>
-          <div style={{ width: 1100, height: 56, borderRadius: 18, overflow: 'hidden', display: 'flex', boxShadow: 'inset 0 0 0 1.5px rgba(196,181,253,0.3)', background: 'rgba(255,255,255,0.06)' }}>
-            {COSTS.map(([label, v, col]) => <div key={label} style={{ width: `${(v / 799) * 100 * bar}%`, background: col, opacity: 0.85, borderRight: '2px solid rgba(11,8,32,0.5)' }} />)}
-            <div style={{ width: `${(186 / 799) * 100 * bar}%`, background: 'linear-gradient(90deg,#4ADE80,#22C55E)', boxShadow: `0 0 ${30 * bar}px rgba(34,197,94,0.6)` }} />
-          </div>
-        </Obj>
-        <Obj x={960} y={780} o={s2 * prog(t, 8.8, 9.3)} ms={0.82}>
-          <div style={{ display: 'flex', gap: 28 }}>
-            {COSTS.map(([label, , col]) => <span key={label} style={{ display: 'flex', alignItems: 'center', gap: 8, fontSize: 21, color: L.deepMute, whiteSpace: 'nowrap' }}><span style={{ width: 12, height: 12, borderRadius: 4, background: col }} />{label}</span>)}
-            <span style={{ display: 'flex', alignItems: 'center', gap: 8, fontSize: 21, color: '#BBF7D0', fontWeight: 600 }}><span style={{ width: 12, height: 12, borderRadius: 4, background: '#22C55E' }} />Kept</span>
-          </div>
-        </Obj>
-      </Space>
-    </div>
-  );
-}
-
 export const launch2 = {
   'L-flow': { w: W, h: H, duration: 12, Component: LaunchFlow },
   'L-intent': { w: W, h: H, duration: 12, Component: LaunchIntent },
   'L-identity': { w: W, h: H, duration: 12, Component: LaunchIdentity },
   'L-segments': { w: W, h: H, duration: 12, Component: LaunchSegments },
-  'L-profit': { w: W, h: H, duration: 12, Component: LaunchProfit },
 };

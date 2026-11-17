@@ -51,7 +51,7 @@ Render at output size with `--scale 0.8334`: 1920-wide compositions render at 16
 ## Built
 
 - All 12 chapters: heroes (where the page hero is an image), tiles and showcases.
-- Home films: the ten launch films `L-cart`, `L-campaigns`, `L-optin`, `L-pixel`, `L-cod`, `L-flow`, `L-intent`, `L-identity`, `L-segments`, `L-profit` (`src/comps/launch.tsx`, `launch2.tsx`), built on the launch kit (`src/lib/launch.tsx`).
+- Home films: the ten launch films `L-cart`, `L-campaigns`, `L-optin`, `L-pixel`, `L-cod`, `L-flow`, `L-intent`, `L-identity`, `L-segments`, `L-profit` (`src/comps/launch.tsx`, `launch2.tsx`, `launch4.tsx`; `launch3.tsx` and `L-journeys` are feature-page heroes), built on the launch kit (`src/lib/launch.tsx`).
 
 ### Launch kit (home films)
 
