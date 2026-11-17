@@ -12,14 +12,15 @@ export type DemoVideo = {
 };
 
 /**
- * Code-rendered feature films (video/, docs/video/feature-library): one per home
- * story, 1600x900 with a 960x540 phone encode. They replace the old dashboard
- * screen recordings and stills.
+ * Code-rendered launch films (video/, src/comps/launch*.tsx): one per home story,
+ * 1600x900 on desktop and a portrait 720x900 cut composed for phones.
  */
+const V = '20261119a';
 const film = (name: string): DemoVideo => ({
-  src: `/marketing/feature-clips/home/${name}.mp4?v=20261118a`,
-  mobileSrc: `/marketing/feature-clips/home/${name}-mobile.mp4?v=20261118a`,
-  poster: `/marketing/feature-clips/home/${name}-poster.jpg?v=20261118a`,
+  src: `/marketing/feature-clips/home/${name}.mp4?v=${V}`,
+  mobileSrc: `/marketing/feature-clips/home/${name}-mobile.mp4?v=${V}`,
+  poster: `/marketing/feature-clips/home/${name}-poster.jpg?v=${V}`,
+  mobilePoster: `/marketing/feature-clips/home/${name}-mobile-poster.jpg?v=${V}`,
 });
 
 export const HOME_FILMS = {
