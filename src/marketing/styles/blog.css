@@ -1994,3 +1994,238 @@
 .mkt-blog-card:hover .mkt-blog-card__more-arrow {
   transform: translateX(3px);
 }
+
+/* ---------- Section breaks (every post) ----------
+ * A hairline above each top-level H2 tells a scanning reader where a new
+ * section starts. Before it, long posts read as one unbroken column, which
+ * the owner called boring on 17 Nov 2026. The first heading under the summary
+ * card keeps no rule, since the card already closes the section above it.
+ */
+.mkt-blog-prose > h2 {
+  padding-top: calc(var(--mkt-blog-rhythm) * 1.6);
+  border-top: 1px solid #ece8f4;
+}
+
+.mkt-blog-prose > h2:first-child,
+.mkt-blog-prose > .mkt-blog-verdict + h2,
+.mkt-blog-prose > .mkt-blog-verdict + p + h2 {
+  padding-top: 0;
+  border-top: 0;
+}
+
+/* ---------- List-post entries (see upgradeListEntries in blogHtml.ts) ----------
+ * One card per ranked tool: heading, a spec sheet of key facts, pros and cons
+ * side by side, a verdict line and the link out. Modelled on Digismoothie's
+ * app lists, which the owner pointed at as the standard to match.
+ */
+.mkt-blog-prose .mkt-blog-pick {
+  position: relative;
+  margin: calc(var(--mkt-blog-rhythm) * 2.2) 0;
+  padding: 1.6rem 1.6rem 1.45rem;
+  border: 1px solid #e9e4f3;
+  border-radius: 18px;
+  background: #ffffff;
+  box-shadow: 0 1px 2px rgba(16, 24, 40, 0.04), 0 12px 32px -18px rgba(16, 24, 40, 0.14);
+}
+
+.mkt-blog-prose .mkt-blog-pick > h2:first-child,
+.mkt-blog-prose .mkt-blog-pick > h3:first-child {
+  margin-top: 0;
+  padding-top: 0;
+  border-top: 0;
+  padding-right: 3.25rem;
+}
+
+.mkt-blog-prose .mkt-blog-pick::before {
+  content: '#' attr(data-rank);
+  position: absolute;
+  top: 1.35rem;
+  right: 1.35rem;
+  min-width: 2.4rem;
+  padding: 0.2rem 0.6rem;
+  border-radius: 999px;
+  background: var(--mkt-violet-light);
+  color: var(--mkt-violet);
+  font-family: var(--mkt-font);
+  font-size: var(--mkt-blog-small);
+  font-weight: 700;
+  line-height: 1.5;
+  text-align: center;
+  font-variant-numeric: tabular-nums;
+}
+
+.mkt-blog-prose .mkt-blog-pick > *:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 639px) {
+  .mkt-blog-prose .mkt-blog-pick {
+    margin: calc(var(--mkt-blog-rhythm) * 1.8) 0;
+    padding: 1.2rem 1.05rem 1.1rem;
+    border-radius: 14px;
+  }
+
+  .mkt-blog-prose .mkt-blog-pick::before {
+    top: 1.05rem;
+    right: 1rem;
+  }
+}
+
+/* Spec sheet: Best for, Pricing, AI, Rating as label and value rows. */
+.mkt-blog-prose .mkt-blog-facts {
+  margin: 1.1rem 0 1.4rem;
+  border: 1px solid #ece8f4;
+  border-radius: 12px;
+  background: #fbfaff;
+  overflow: hidden;
+}
+
+.mkt-blog-prose .mkt-blog-facts__row {
+  display: grid;
+  grid-template-columns: 7.5rem minmax(0, 1fr);
+  gap: 1rem;
+  padding: 0.8rem 1.1rem;
+}
+
+.mkt-blog-prose .mkt-blog-facts__row + .mkt-blog-facts__row {
+  border-top: 1px solid #ece8f4;
+}
+
+.mkt-blog-prose .mkt-blog-facts dt {
+  font-family: var(--mkt-font);
+  font-size: var(--mkt-blog-small);
+  font-weight: 650;
+  letter-spacing: 0.06em;
+  line-height: 1.9;
+  text-transform: uppercase;
+  color: var(--mkt-faint);
+}
+
+.mkt-blog-prose .mkt-blog-facts dd {
+  margin: 0;
+  line-height: 1.7;
+}
+
+@media (max-width: 639px) {
+  .mkt-blog-prose .mkt-blog-facts__row {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0.15rem;
+  }
+}
+
+/* A single labelled line ("Best for: ...") outside a full spec sheet. */
+.mkt-blog-prose .mkt-blog-fact-line > strong:first-child {
+  display: inline-block;
+  margin-right: 0.45rem;
+  padding: 0.05rem 0.55rem;
+  border-radius: 6px;
+  background: var(--mkt-violet-light);
+  color: var(--mkt-violet);
+  font-size: var(--mkt-blog-small);
+  letter-spacing: 0.02em;
+}
+
+/* Pros and cons: two columns under a green and a red bar. */
+.mkt-blog-prose .mkt-blog-proscons {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.25rem 2.25rem;
+  margin: 1.4rem 0 1.5rem;
+}
+
+@media (max-width: 639px) {
+  .mkt-blog-prose .mkt-blog-proscons {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+.mkt-blog-prose .mkt-blog-proscons__label {
+  margin: 0 0 0.75rem;
+  font-family: var(--mkt-font);
+  font-size: var(--mkt-blog-small);
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+
+.mkt-blog-prose .mkt-blog-proscons__col--pros {
+  --mkt-proscons-tone: #12a15a;
+}
+
+.mkt-blog-prose .mkt-blog-proscons__col--cons {
+  --mkt-proscons-tone: #e5482d;
+}
+
+.mkt-blog-prose .mkt-blog-proscons__col--pros .mkt-blog-proscons__label,
+.mkt-blog-prose .mkt-blog-proscons__col--cons .mkt-blog-proscons__label {
+  color: var(--mkt-proscons-tone);
+}
+
+.mkt-blog-prose .mkt-blog-proscons__body {
+  padding-left: 1.1rem;
+  border-left: 4px solid var(--mkt-proscons-tone);
+  border-radius: 2px;
+}
+
+.mkt-blog-prose .mkt-blog-proscons__body ul,
+.mkt-blog-prose .mkt-blog-proscons__body ol {
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+.mkt-blog-prose .mkt-blog-proscons__body li {
+  margin: 0 0 0.85em;
+  padding-left: 0;
+}
+
+.mkt-blog-prose .mkt-blog-proscons__body > *:last-child,
+.mkt-blog-prose .mkt-blog-proscons__body li:last-child {
+  margin-bottom: 0;
+}
+
+/* Watch-outs on the older list posts are cautions, not faults: amber, not red. */
+.mkt-blog-prose .mkt-blog-proscons--fit .mkt-blog-proscons__col--cons {
+  --mkt-proscons-tone: #d97706;
+}
+
+/* The verdict closes the card: one tinted line, no rail. */
+.mkt-blog-prose .mkt-blog-pick-verdict {
+  margin-top: 1.2rem;
+  padding: 0.9rem 1.1rem;
+  border-radius: 12px;
+  background: #f6f4fb;
+}
+
+/* The link out, as a button rather than a buried inline link. */
+.mkt-blog-prose .mkt-blog-pick-cta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin: 1.1rem 0 0;
+}
+
+.mkt-blog-prose .mkt-blog-pick-cta a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.55rem 1rem;
+  border: 1px solid #ddd6ee;
+  border-radius: 999px;
+  background: #ffffff;
+  color: var(--mkt-ink);
+  font-size: var(--mkt-blog-small);
+  font-weight: 600;
+  line-height: 1.4;
+  text-decoration: none;
+  transition: border-color 0.15s ease, background-color 0.15s ease;
+}
+
+.mkt-blog-prose .mkt-blog-pick-cta a:hover,
+.mkt-blog-prose .mkt-blog-pick-cta a:focus-visible {
+  border-color: var(--mkt-violet);
+  background: var(--mkt-violet-light);
+  color: var(--mkt-violet);
+  text-decoration: none;
+}

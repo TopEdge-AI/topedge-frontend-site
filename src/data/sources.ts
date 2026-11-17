@@ -364,8 +364,8 @@ export const SOURCES = {
     label: 'BiteSpeed’s pricing page',
     publisher: 'BiteSpeed',
     claim:
-      'BiteSpeed publishes no prices. Requesting https://www.bitespeed.co/pricing returns a single redirect to https://www.bitespeed.co/request-demo, so there is no plan, tier or per-message rate a buyer can read before speaking to sales.',
-    verified: '2026-11-02',
+      'BiteSpeed publishes no prices. Requesting https://www.bitespeed.co/pricing returns a single redirect to https://www.bitespeed.co/request-demo, so there is no plan, tier or per-message rate a buyer can read before speaking to sales. Re-read 17 November 2026: still redirects (“Talk to us. Our sales team will get in touch with you.”). Home page: “Trusted by 5000+ brands”, WhatsApp, Voice, Email and SMS, AI voice agents. Shopify app (apps.shopify.com/bitespeed-fb-messenger-chatbot): “Free to install. Additional charges may apply”, rated 4.6 from 406 reviews, charges billed in USD/INR every 30 days.',
+    verified: '2026-11-17',
   },
   dondyListing: {
     id: 'dondyListing',
@@ -994,6 +994,132 @@ export const SOURCES = {
       'Describes himself as "A growth operator, not a marketer" building "revenue operating systems for growth-stage companies", and says "I speak in CAC, LTV, pipeline, and margin. Not likes, reach, or impressions." Based in Kolkata, working globally, contactable at hey@rahuldsarker.co. Targets companies between $1M and $15M ARR spending $4K to $25K a month on marketing. Work is organised in three layers: fractional CMO leadership, performance marketing across Meta, Google, LinkedIn and YouTube including Conversions API implementation, and RevOps covering HubSpot, Zoho and Salesforce, a GTM to GA4 to CRM attribution chain, Looker dashboards and WhatsApp automation. Engagements open with a two-week diagnostic to find the single revenue constraint.',
     verified: '2026-11-03',
   },
+  clickpostHome: {
+    id: 'clickpostHome',
+    url: 'https://www.clickpost.ai/',
+    label: 'ClickPost',
+    publisher: 'ClickPost',
+    claim:
+      'Read 17 November 2026: “700+ carriers across 30+ countries”, “700+ carriers pre-integrated with a single API”, AI carrier allocation (“200B+ data points evaluate the best carrier per order”), Parth AI voice agents for NDR calling, a G2 badge reading 4.8, and “Trusted by 600+ brands”. Products listed: multi-carrier shipping, branded tracking, returns and exchanges, failed delivery (NDR) management, delivery date estimates, notifications.',
+    verified: '2026-11-17',
+  },
+  clickpostPricing: {
+    id: 'clickpostPricing',
+    url: 'https://www.clickpost.ai/pricing',
+    label: 'ClickPost pricing',
+    publisher: 'ClickPost',
+    claim:
+      'Read 17 November 2026: every module ends in Contact Sales or Get Custom Quote. FAQ: “ClickPost typically provides custom pricing based on business needs, shipment volume, and the selected feature modules rather than fixed public tiers.” AI Voice Agents: “AI autonomously confirms orders before dispatch, resolves delivery exceptions.”',
+    verified: '2026-11-17',
+  },
+  clickpostSnitch: {
+    id: 'clickpostSnitch',
+    url: 'https://www.clickpost.ai/customers/snitch',
+    label: 'ClickPost’s Snitch case study',
+    publisher: 'ClickPost',
+    claim:
+      'Read 17 November 2026. Headline: “How Snitch runs a ₹1,000+ Cr Operation with a team of six”. Before ClickPost Snitch was “converting only 40%-45% of failed deliveries”; with it, “Multi channel NDR journeys recover 75% of failed deliveries successfully”. Also: 75% NDR to delivery conversion, 60% of shipments delivered in under 2 days, 5% RTO rate, 8 to 10 couriers on one platform.',
+    verified: '2026-11-17',
+  },
+  clickpostG2: {
+    id: 'clickpostG2',
+    url: 'https://www.g2.com/products/clickpost/reviews',
+    label: 'ClickPost on G2',
+    publisher: 'G2',
+    claim:
+      'ClickPost (seller: ClickPost) rated 4.8/5 from 148 reviews. Read by the owner in a browser on 17 November 2026, because G2 returns 403 to automated readers.',
+    verified: '2026-11-17',
+  },
+  shiprocketPricing: {
+    id: 'shiprocketPricing',
+    url: 'https://www.shiprocket.in/pricing/',
+    label: 'Shiprocket pricing',
+    publisher: 'Shiprocket',
+    claim:
+      'Read 17 November 2026, monthly view: Lite free (average shipment cost ₹45, up to 5 orders a month); Business ₹199 a month (₹41, 5 to 50 orders, plan fee refunded at 100 shipments in a month); Advanced ₹499 a month (₹39, 50 to 200 orders, refund at 500); Pro ₹799 a month (₹36, “3000-10,000 orders monthly”, refund at 1,000). FAQ: charges differ on monthly, quarterly, half-yearly and annual billing. Lists NDR automation, branded tracking (Post ship), early COD, multi user, postpaid and a courier recommendation engine. The essentials list says 25+ courier partners; the FAQ says 42+.',
+    verified: '2026-11-17',
+  },
+  shiprocketShopify: {
+    id: 'shiprocketShopify',
+    url: 'https://apps.shopify.com/shiprocket',
+    label: 'Shiprocket on the Shopify App Store',
+    publisher: 'Shopify App Store',
+    claim: 'Read 17 November 2026: rated 3.9 from 648 reviews, free plan available, 25+ courier partners, 24,000+ pincodes and 220+ countries.',
+    verified: '2026-11-17',
+  },
+  shipwayHome: {
+    id: 'shipwayHome',
+    url: 'https://www.shipway.com/',
+    label: 'Shipway',
+    publisher: 'Shipway',
+    claim:
+      'Read 17 November 2026: 20+ courier partners, 19K+ serviceable PIN codes, 50+ integrations, 60K+ Shopify app installs, ShipSense AI courier selection, NDR management, returns management, free signup, no public rate card. Customer quote: Shipway helped Debaans “achieve over 90% delivery success and reduce RTO to around 4%”. Unicommerce’s home page lists Shipway as its shipping product. Shopify app “Shipway: E-commerce Courier” (apps.shopify.com/ezyslips-order-processing-made-easy) rated 4.2 from 183 reviews, free to install, shipping charges as per usage.',
+    verified: '2026-11-17',
+  },
+  ithinkHome: {
+    id: 'ithinkHome',
+    url: 'https://www.ithinklogistics.com/',
+    label: 'iThink Logistics',
+    publisher: 'iThink Logistics',
+    claim:
+      'Read 17 November 2026: courier aggregator, 29,000+ serviceable pin codes, WhatsApp and SMS updates, weekly and next-day COD remittance, “AI-driven NDR shipping platform will also take care of every non-delivery and resolve issues within 24 hours”, wallet with “no upfront courier cost”, “Trusted by 37,000+”. No public rate card (the /pricing URL returned 404). Shopify app rated 4.2 from 81 reviews and names buyer intent and WhatsApp order confirmation.',
+    verified: '2026-11-17',
+  },
+  nimbuspostPricing: {
+    id: 'nimbuspostPricing',
+    url: 'https://nimbuspost.com/pricing',
+    label: 'NimbusPost pricing',
+    publisher: 'NimbusPost',
+    claim:
+      'Read 17 November 2026, B2C tab: Essential from ₹25.50/500g, up to 300 orders a month; Elevate from ₹24/500g, 300 to 1,000; Elite from ₹19/500g, 1,000+. NDR Automation and Early COD Payouts listed as add-ons. Home page: “Managing 25+ eCommerce Couriers”, AI courier allocation, RTO suite. Shopify app rated 2.4 from 51 reviews.',
+    verified: '2026-11-17',
+  },
+  shipmozoPricing: {
+    id: 'shipmozoPricing',
+    url: 'https://www.shipmozo.com/pricing',
+    label: 'Shipmozo pricing',
+    publisher: 'Shipmozo',
+    claim:
+      'Read 17 November 2026: Lite, free, rates from Rs. 26/500gms within city; Professional, rates from Rs. 20/500gms within city, with free NDR call center setup; Enterprise, custom. Home page: 27+ verified courier partners, 29,000+ pincodes. Shopify app rated 3.3 from 26 reviews; listing names free WhatsApp/SMS out-for-delivery alerts, free NDR calling and RTO revoke support.',
+    verified: '2026-11-17',
+  },
+  eshopboxPricing: {
+    id: 'eshopboxPricing',
+    url: 'https://www.eshopbox.com/pricing',
+    label: 'Eshopbox pricing',
+    publisher: 'Eshopbox',
+    claim:
+      'Read 17 November 2026: Eshopbox Ship, “Shipping starts at ₹21 / Order*”, with AI carrier selection, RTO reduction suite, NDR automation, weight protection, WhatsApp engagement suite, early COD remittance and a “95%+ on-time delivery guarantee”. Eshopbox Fulfill: warehousing on quote. Shopify app “Eshopbox Shipping” rated 4.6 from 9 reviews.',
+    verified: '2026-11-17',
+  },
+  unicommercePlans: {
+    id: 'unicommercePlans',
+    url: 'https://unicommerce.com/plan/',
+    label: 'Unicommerce plans',
+    publisher: 'Unicommerce',
+    claim:
+      'Read 17 November 2026: Standard (micro-businesses: 1 facility, 1 lakh SKUs, basic returns, payment reconciliation, 3 user roles) and Professional (2 facilities, 3 lakh SKUs, enhanced returns) and higher plans, every plan behind Request Demo, no public price. Home page lists Uniware (order and warehouse management) and Shipway (shipping) as products.',
+    verified: '2026-11-17',
+  },
+  easyecomPricing: {
+    id: 'easyecomPricing',
+    url: 'https://www.easyecom.io/pricing',
+    label: 'EasyEcom pricing',
+    publisher: 'EasyEcom',
+    claim:
+      'Read 17 November 2026: “Orders, SKUs, warehouses, and the modules you switch on. That’s what sets your price.” Starter (one warehouse, up to 3 users, up to ~100k SKUs, unlimited channels, unlimited rate-carded shipping carriers, real-time inventory sync, returns, Tally, QuickBooks and Xero sync), Growth and Enterprise, all behind Book a demo or Talk to sales. Monthly billing, cancel anytime, 455+ integrations. Home page: 1,800+ brands and 3PLs.',
+    verified: '2026-11-17',
+  },
+  returnPrimePricing: {
+    id: 'returnPrimePricing',
+    url: 'https://www.returnprime.com/pricing',
+    label: 'Return Prime pricing',
+    publisher: 'Return Prime',
+    claim:
+      'Read 17 November 2026: Free plan, 5 returns per month; paid plans (Grow, Thrive AI, Scale) priced on a returns-per-month slider, showing $100/month at 200 returns, $0.49 to $0.79 per extra request. Shopify app rated 4.8 from 780 reviews; branded returns portal, exchanges, store credit, fraud detection, 100+ WMS and logistics tools.',
+    verified: '2026-11-17',
+  },
+
 } as const satisfies Record<string, Source>;
 
 export type SourceId = keyof typeof SOURCES;

@@ -276,7 +276,8 @@ function startsSentence(after: string): boolean {
 
 function splitLongParagraphs(root: HTMLElement) {
   const doc = root.ownerDocument;
-  for (const p of [...root.children]) {
+  // Top-level paragraphs, plus those inside list-entry cards (upgradeListEntries).
+  for (const p of [...root.querySelectorAll(':scope > p, :scope > .mkt-blog-pick > p')]) {
     if (p.tagName !== 'P' || p.className) continue;
     const full = p.textContent ?? '';
     if (full.trim().length < PARA_SPLIT_MIN) continue;
@@ -338,6 +339,162 @@ function splitLongParagraphs(root: HTMLElement) {
   }
 }
 
+/*
+ * List-post entries ("2. ClickPost: Best for ..."), turned into scannable cards.
+ *
+ * The owner's 17 Nov 2026 brief: list posts read as one long column of
+ * same-weight paragraphs, and the reference he pointed at (Digismoothie's app
+ * lists) gives every tool a card with its key facts, then pros and cons side by
+ * side under a green and a red bar. Posts keep storing plain HTML in the
+ * patterns below, so a future post gets the layout by writing the same labels:
+ *
+ *   <p><strong>Best for:</strong> ...</p>      run of labelled facts → spec sheet
+ *   <p><strong>Pricing:</strong> ...</p>       (Best for, Pricing, Price, AI,
+ *   <p><strong>Rating:</strong> ...</p>         Rating, Trial, Type)
+ *   <p><strong>Pros:</strong></p><ul>…</ul>    pros and cons pair → two columns
+ *   <p><strong>Cons:</strong></p><ul>…</ul>
+ *   <p><strong>Best for:</strong> …</p>        best-for and watch-outs pair →
+ *   <p><strong>Watch-outs:</strong> …</p>       the same two columns
+ *   <p><strong>Verdict:</strong> …</p>         closing line, highlighted
+ *
+ * A numbered H2 or H3 whose section uses any of these becomes one card. The
+ * text and headings are untouched, so the contents rail, anchors and the
+ * ItemList schema read exactly as before.
+ */
+const FACT_LABEL = /^(best for|good for|pricing|price|price from|ai|rating|trial|free trial|type)$/i;
+
+/** The bold lead-in label of a plain paragraph ("Pricing" for <p><strong>Pricing:</strong> …</p>). */
+function leadLabel(el: Element | null): string | null {
+  if (!el || el.tagName !== 'P' || el.className) return null;
+  const first = [...el.childNodes].find((n) => !(n.nodeType === 3 && !(n.textContent ?? '').trim()));
+  if (!first || first.nodeName !== 'STRONG') return null;
+  const m = /^\s*([^:]{2,24}):\s*$/.exec(first.textContent ?? '');
+  return m ? m[1].trim() : null;
+}
+
+/** True when the paragraph holds only its label (<p><strong>Pros:</strong></p>). */
+function labelOnly(el: Element): boolean {
+  const label = el.querySelector('strong');
+  return (el.textContent ?? '').trim() === (label?.textContent ?? '').trim();
+}
+
+/** The paragraph's content after its bold label, as nodes. */
+function afterLabel(el: Element): Node[] {
+  const nodes = [...el.childNodes];
+  const i = nodes.findIndex((n) => n.nodeName === 'STRONG');
+  const rest = nodes.slice(i + 1);
+  if (rest[0]?.nodeType === 3) {
+    const t = rest[0] as Text;
+    t.data = t.data.replace(/^\s+/, '');
+  }
+  return rest;
+}
+
+function prosConsColumn(doc: Document, kind: 'pros' | 'cons', label: string, body: Node[]): HTMLElement {
+  const col = doc.createElement('div');
+  col.className = `mkt-blog-proscons__col mkt-blog-proscons__col--${kind}`;
+  const head = doc.createElement('p');
+  head.className = 'mkt-blog-proscons__label';
+  head.textContent = label;
+  const wrap = doc.createElement('div');
+  wrap.className = 'mkt-blog-proscons__body';
+  wrap.append(...body);
+  col.append(head, wrap);
+  return col;
+}
+
+function upgradeListEntries(root: HTMLElement) {
+  const doc = root.ownerDocument;
+  const isList = (el: Element | null) => !!el && (el.tagName === 'UL' || el.tagName === 'OL');
+
+  // Pros and cons, each a label paragraph followed by a list.
+  for (const p of [...root.children]) {
+    if (!p.isConnected || !/^pros$/i.test(leadLabel(p) ?? '') || !labelOnly(p)) continue;
+    const prosList = p.nextElementSibling;
+    const consHead = prosList?.nextElementSibling ?? null;
+    const consList = consHead?.nextElementSibling ?? null;
+    if (!isList(prosList) || !/^cons$/i.test(leadLabel(consHead) ?? '') || !labelOnly(consHead!) || !isList(consList)) {
+      continue;
+    }
+    const box = doc.createElement('div');
+    box.className = 'mkt-blog-proscons';
+    box.append(
+      prosConsColumn(doc, 'pros', 'Pros', [prosList!]),
+      prosConsColumn(doc, 'cons', 'Cons', [consList!]),
+    );
+    p.replaceWith(box);
+    consHead!.remove();
+  }
+
+  // "Best for" straight before "Watch-outs": the older list posts' version of pros and cons.
+  for (const p of [...root.children]) {
+    if (!p.isConnected || !/^best for$/i.test(leadLabel(p) ?? '')) continue;
+    const next = p.nextElementSibling;
+    if (!/^watch[- ]?outs?$/i.test(leadLabel(next) ?? '')) continue;
+    const fit = doc.createElement('p');
+    fit.append(...afterLabel(p));
+    const watch = doc.createElement('p');
+    watch.append(...afterLabel(next!));
+    const box = doc.createElement('div');
+    box.className = 'mkt-blog-proscons mkt-blog-proscons--fit';
+    box.append(prosConsColumn(doc, 'pros', 'Best for', [fit]), prosConsColumn(doc, 'cons', 'Watch-outs', [watch]));
+    p.replaceWith(box);
+    next!.remove();
+  }
+
+  // Runs of labelled facts become a spec sheet; a lone one becomes a labelled line.
+  const children = [...root.children];
+  for (let i = 0; i < children.length; i += 1) {
+    if (!FACT_LABEL.test(leadLabel(children[i]) ?? '')) continue;
+    let j = i;
+    while (j + 1 < children.length && FACT_LABEL.test(leadLabel(children[j + 1]) ?? '')) j += 1;
+    const run = children.slice(i, j + 1);
+    if (run.length === 1) {
+      run[0].className = 'mkt-blog-fact-line';
+    } else {
+      const dl = doc.createElement('dl');
+      dl.className = 'mkt-blog-facts';
+      for (const p of run) {
+        const row = doc.createElement('div');
+        row.className = 'mkt-blog-facts__row';
+        const dt = doc.createElement('dt');
+        dt.textContent = leadLabel(p) ?? '';
+        const dd = doc.createElement('dd');
+        dd.append(...afterLabel(p));
+        row.append(dt, dd);
+        dl.append(row);
+      }
+      run[0].replaceWith(dl);
+      run.slice(1).forEach((p) => p.remove());
+    }
+    i = j;
+  }
+
+  root.querySelectorAll(':scope > p').forEach((p) => {
+    if (/^verdict$/i.test(leadLabel(p) ?? '')) p.className = 'mkt-blog-pick-verdict';
+  });
+
+  // A numbered heading whose section carries any of the above becomes one card.
+  const isEntryPart = (el: Element) =>
+    el.matches('.mkt-blog-facts, .mkt-blog-proscons, .mkt-blog-fact-line, .mkt-blog-pick-verdict');
+  for (const h of [...root.querySelectorAll<HTMLElement>(':scope > h2, :scope > h3')]) {
+    const m = /^\s*(\d{1,2})\.\s+\S/.exec(h.textContent ?? '');
+    if (!m) continue;
+    const level = Number(h.tagName[1]);
+    const section: Element[] = [];
+    for (let el = h.nextElementSibling; el; el = el.nextElementSibling) {
+      if (/^H[1-6]$/.test(el.tagName) && Number(el.tagName[1]) <= level) break;
+      section.push(el);
+    }
+    if (!section.some(isEntryPart)) continue;
+    const card = doc.createElement('section');
+    card.className = 'mkt-blog-pick';
+    card.setAttribute('data-rank', m[1]);
+    h.replaceWith(card);
+    card.append(h, ...section);
+  }
+}
+
 /** Presentation-only rewrites of stored post HTML; falls back to the raw string without a DOM. */
 export function enhanceBlogHtml(html: string, inlineImages: InlineImage[] = []): string {
   if (!html || typeof DOMParser === 'undefined') return html;
@@ -348,6 +505,8 @@ export function enhanceBlogHtml(html: string, inlineImages: InlineImage[] = []):
   // The page renders its own contents rail from the headings, so a
   // hand-written contents list inside a post would only duplicate it.
   root.querySelectorAll('.mkt-blog-toc').forEach((el) => el.remove());
+  // Before the paragraph split, which only touches unclassed top-level <p>s.
+  upgradeListEntries(root);
   splitLongParagraphs(root);
   staticVerdicts(root);
   staticFaqs(root);
