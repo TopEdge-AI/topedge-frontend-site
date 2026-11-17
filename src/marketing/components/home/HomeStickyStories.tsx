@@ -3,8 +3,7 @@ import DemoProductVideoFrame from './demo/DemoProductVideoFrame';
 import DemoProductImageFrame from './demo/DemoProductImageFrame';
 import DemoPixelTrackingUi from './demo/DemoPixelTrackingUi';
 import {
-  FEATURE_VIDEOS,
-  FEATURE_IMAGES,
+  HOME_FILMS,
   type DemoVideo,
 } from '../../data/homeFeatureMedia';
 
@@ -72,7 +71,7 @@ const STORIES: Story[] = [
     cta: 'See cart recovery',
     glow: 'emerald',
     kind: 'video',
-    video: FEATURE_VIDEOS.cart,
+    video: HOME_FILMS.cart,
   },
   {
     id: 'audience-campaigns',
@@ -83,8 +82,8 @@ const STORIES: Story[] = [
     href: '/features/campaigns',
     cta: 'See campaigns',
     glow: 'rose',
-    kind: 'image',
-    image: FEATURE_IMAGES.campaigns,
+    kind: 'video',
+    video: HOME_FILMS.campaigns,
   },
   {
     id: 'optin-popup',
@@ -96,7 +95,7 @@ const STORIES: Story[] = [
     cta: 'See opt-in tools',
     glow: 'indigo',
     kind: 'video',
-    video: FEATURE_VIDEOS.optin,
+    video: HOME_FILMS.optin,
   },
   {
     id: 'website-pixel',
@@ -107,7 +106,8 @@ const STORIES: Story[] = [
     href: '/features/analytics',
     cta: 'See the pixel',
     glow: 'violet',
-    kind: 'pixel',
+    kind: 'video',
+    video: HOME_FILMS.pixel,
   },
   {
     id: 'cod-prepaid',
@@ -119,7 +119,7 @@ const STORIES: Story[] = [
     cta: 'See COD confirmation',
     glow: 'violet',
     kind: 'video',
-    video: FEATURE_VIDEOS.cod,
+    video: HOME_FILMS.cod,
   },
   {
     id: 'shopify-tools',
@@ -131,7 +131,7 @@ const STORIES: Story[] = [
     cta: 'See Flow Builder',
     glow: 'sky',
     kind: 'video',
-    video: FEATURE_VIDEOS.shopifyTools,
+    video: HOME_FILMS.flow,
   },
   {
     id: 'intent-detection',
@@ -143,7 +143,7 @@ const STORIES: Story[] = [
     cta: 'See intent routing',
     glow: 'indigo',
     kind: 'video',
-    video: FEATURE_VIDEOS.intent,
+    video: HOME_FILMS.intent,
   },
   {
     id: 'unified-identity',
@@ -154,8 +154,8 @@ const STORIES: Story[] = [
     href: '/features/audience-crm',
     cta: 'See profiles',
     glow: 'violet',
-    kind: 'image',
-    image: FEATURE_IMAGES.unifiedIdentity,
+    kind: 'video',
+    video: HOME_FILMS.identity,
   },
   {
     id: 'segmentation',
@@ -167,7 +167,7 @@ const STORIES: Story[] = [
     cta: 'See audiences',
     glow: 'rose',
     kind: 'video',
-    video: FEATURE_VIDEOS.segmentation,
+    video: HOME_FILMS.segments,
   },
   {
     id: 'net-profit',
@@ -178,8 +178,8 @@ const STORIES: Story[] = [
     href: '/features/profit-loss',
     cta: 'See profit and costs',
     glow: 'amber',
-    kind: 'image',
-    image: FEATURE_IMAGES.profit,
+    kind: 'video',
+    video: HOME_FILMS.profit,
   },
 ];
 

@@ -45,6 +45,49 @@ const SEGMENT: DemoVideo = {
   mobileSrc: '/marketing/demos/segment-mobile.mp4',
 };
 
+/**
+ * Code-rendered feature films (video/, docs/video/feature-library): one per home
+ * story, 1600x900 with a 960x540 phone encode. They replace the old dashboard
+ * screen recordings and stills.
+ */
+const film = (name: string): DemoVideo => ({
+  src: `/marketing/feature-clips/home/${name}.mp4?v=20261117a`,
+  mobileSrc: `/marketing/feature-clips/home/${name}-mobile.mp4?v=20261117a`,
+  poster: `/marketing/feature-clips/home/${name}-poster.jpg?v=20261117a`,
+});
+
+/** Flip once public/marketing/feature-clips/home/ holds every film. */
+const FILMS_READY = false;
+
+const HOME_FILMS_READY = {
+  cart: film('cart'),
+  campaigns: film('campaigns'),
+  optin: film('optin'),
+  pixel: film('pixel'),
+  cod: film('cod'),
+  flow: film('flow'),
+  intent: film('intent'),
+  identity: film('identity'),
+  segments: film('segments'),
+  profit: film('profit'),
+} as const;
+
+/** Until the films ship, each story keeps the media it had. */
+const LEGACY: Record<keyof typeof HOME_FILMS_READY, DemoVideo> = {
+  cart: CART,
+  campaigns: CART,
+  optin: OPTIN,
+  pixel: CART,
+  cod: COD,
+  flow: FLOW,
+  intent: INTENT,
+  identity: SEGMENT,
+  segments: SEGMENT,
+  profit: COD,
+};
+
+export const HOME_FILMS = FILMS_READY ? HOME_FILMS_READY : LEGACY;
+
 /** Feature moments, video demos. */
 export const FEATURE_VIDEOS = {
   cart: CART,

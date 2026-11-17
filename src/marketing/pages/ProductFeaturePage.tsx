@@ -27,7 +27,7 @@ import HomeTrust from '../components/home/HomeTrust';
 import { PrimaryButton, GhostButton } from '../components/ui';
 import { ScenesContext, ScenePlaceholder, usePageScenes, useScene } from '../components/visuals';
 import { AccentContext, MeshContext, SceneSlotContext } from '../components/visuals/kit';
-import { FeatureClip, clipFor, heroClipFor } from '../components/visuals/clips';
+import { FeatureClip, clipFor } from '../components/visuals/clips';
 import '../styles/product-feature.css';
 import '../styles/feature-premium.css';
 
@@ -39,17 +39,20 @@ function ShotFrame({
   src,
   label,
   wide,
+  clipKey,
 }: {
   src: string;
   label: string;
   wide?: boolean;
+  /** [pageId, slot] for a rendered film clip, e.g. ['campaigns', 't1']. */
+  clipKey?: [string, string];
 }) {
   const [failed, setFailed] = useState(false);
   const empty = failed || !src;
   // A coded scene (components/visuals) replaces the screenshot where one exists.
   const { Scene, pending } = useScene(src);
   // A rendered film clip, where one exists, plays in place of the coded scene.
-  const clip = clipFor(src);
+  const clip = clipKey ? clipFor(clipKey[0], clipKey[1]) : null;
 
   if (clip) {
     const fallback = Scene ? <Scene label={label} /> : <ScenePlaceholder label={label} wide={wide} />;
@@ -95,7 +98,7 @@ function ShotFrame({
   );
 }
 
-function BentoTile({ tile, slot }: { tile: ProductBento; slot: number }) {
+function BentoTile({ tile, slot, pageId }: { tile: ProductBento; slot: number; pageId: string }) {
   const span = tile.span === 'half' ? 'half' : tile.span === 'full' ? 'full' : 'third';
   const label = tile.imageAlt || `${tile.titleLead} ${tile.titleAccent}`.trim();
 
@@ -103,7 +106,7 @@ function BentoTile({ tile, slot }: { tile: ProductBento; slot: number }) {
     <article className={`mkt-pf__tile mkt-pf__tile--${span}`}>
       <div className="mkt-pf__tile-visual">
         <SceneSlotContext.Provider value={slot}>
-          <ShotFrame src={tile.image} label={label} />
+          <ShotFrame src={tile.image} label={label} clipKey={[pageId, `t${slot + 1}`]} />
         </SceneSlotContext.Provider>
       </div>
       <div className="mkt-pf__tile-body">
@@ -117,7 +120,7 @@ function BentoTile({ tile, slot }: { tile: ProductBento; slot: number }) {
   );
 }
 
-function ShowcaseRow({ item, index, slot }: { item: ProductShowcase; index: number; slot: number }) {
+function ShowcaseRow({ item, index, slot, pageId }: { item: ProductShowcase; index: number; slot: number; pageId: string }) {
   const reverse = item.reverse ?? index % 2 === 1;
   const label = item.imageLabel || `${item.title}${item.titleAccent ? ` ${item.titleAccent}` : ''}`;
 
@@ -128,7 +131,7 @@ function ShowcaseRow({ item, index, slot }: { item: ProductShowcase; index: numb
     >
       <div className="mkt-pf__showcase-media">
         <SceneSlotContext.Provider value={slot}>
-          <ShotFrame src={item.image} label={label} wide />
+          <ShotFrame src={item.image} label={label} wide clipKey={[pageId, `s${index + 1}`]} />
         </SceneSlotContext.Provider>
       </div>
       <div className="mkt-pf__showcase-copy">
@@ -159,7 +162,7 @@ function ProductFeatureView({ page }: { page: ProductPage }) {
   const scenes = usePageScenes(page.id);
   const HeroScene =
     page.hero.kind === 'image' ? scenes.map?.[page.hero.src.split('?')[0]] ?? null : null;
-  const heroClip = page.hero.kind === 'image' ? heroClipFor(page.hero.src) : null;
+  const heroClip = page.hero.kind === 'image' ? clipFor(page.id, 'h') : null;
 
   useEffect(() => {
     const hash = location.hash.replace(/^#/, '');
@@ -282,7 +285,7 @@ function ProductFeatureView({ page }: { page: ProductPage }) {
             </div>
             <div className={`mkt-pf__bento${page.bentos.length >= 5 ? ' mkt-pf__bento--five' : ''}`}>
               {page.bentos.map((tile, i) => (
-                <BentoTile key={`${tile.titleLead}-${tile.titleAccent}`} tile={tile} slot={i} />
+                <BentoTile key={`${tile.titleLead}-${tile.titleAccent}`} tile={tile} slot={i} pageId={page.id} />
               ))}
             </div>
           </section>
@@ -295,7 +298,7 @@ function ProductFeatureView({ page }: { page: ProductPage }) {
           >
             <div className="mkt-pf__showcases">
               {page.showcases!.map((item, i) => (
-                <ShowcaseRow key={`${item.title}-${i}`} item={item} index={i} slot={page.bentos.length + i} />
+                <ShowcaseRow key={`${item.title}-${i}`} item={item} index={i} slot={page.bentos.length + i} pageId={page.id} />
               ))}
             </div>
           </section>

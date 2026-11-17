@@ -20,38 +20,42 @@ type Clip = {
 const DIR = '/marketing/feature-clips';
 const V = '20261117a';
 
-/** Keyed by the slot's image path (without query), as productPages.ts carries it. */
-export const CLIPS: Record<string, Clip> = {
-  '/journey-sub-feature/4.webp': { base: `${DIR}/journeys/t1` },
-  '/journey-sub-feature/5.webp': { base: `${DIR}/journeys/t2` },
-  '/journey-sub-feature/6.webp': { base: `${DIR}/journeys/t3` },
-  '/journey-sub-feature/10.webp': { base: `${DIR}/journeys/s1`, square: true },
-  '/journey-sub-feature/11.webp': { base: `${DIR}/journeys/s2`, square: true },
-  '/journey-sub-feature/12.webp': { base: `${DIR}/journeys/s3`, square: true },
-  '/campaign-sub-feature/13.webp': { base: `${DIR}/campaigns/t1` },
-  '/campaign-sub-feature/14.webp': { base: `${DIR}/campaigns/t2` },
-  '/campaign-sub-feature/15.webp': { base: `${DIR}/campaigns/t3` },
-  '/campaign-sub-feature/21.webp': { base: `${DIR}/campaigns/s1`, square: true },
-  '/campaign-sub-feature/22.webp': { base: `${DIR}/campaigns/s2`, square: true },
-  '/campaign-sub-feature/20.webp': { base: `${DIR}/campaigns/s3`, square: true },
-  '/audience-crm-sub-feature/16.webp': { base: `${DIR}/crm/t1` },
-  '/audience-crm-sub-feature/18.webp': { base: `${DIR}/crm/t2` },
-  '/audience-crm-sub-feature/17.webp': { base: `${DIR}/crm/t3` },
-  '/leaadd.webp': { base: `${DIR}/crm/s1`, square: true },
-  '/audience-crm-sub-feature/360.webp': { base: `${DIR}/crm/s2`, square: true },
-  '/audience-crm-sub-feature/crm-segement.webp': { base: `${DIR}/crm/s3`, square: true },
+/**
+ * Clips by page slot: `${pageId}:h` (hero), `:t1..` (bento tiles), `:s1..` (showcase
+ * rows). Keyed by slot rather than image because some pages reuse one image in
+ * several slots, and some rows have no image at all.
+ */
+type PageClips = { dir: string; hero?: boolean; tiles: number; shows: number };
+const PAGES: Record<string, PageClips> = {
+  'flow-builder': { dir: 'flow', tiles: 3, shows: 3 },
+  'opt-in-tools': { dir: 'optin', tiles: 3, shows: 4 },
+  campaigns: { dir: 'campaigns', hero: true, tiles: 3, shows: 3 },
+  'audience-crm': { dir: 'crm', hero: true, tiles: 3, shows: 3 },
+  journeys: { dir: 'journeys', tiles: 3, shows: 3 },
+  'tracking-pixel': { dir: 'pixel', hero: true, tiles: 3, shows: 3 },
+  'ai-brain': { dir: 'brain', hero: true, tiles: 3, shows: 3 },
+  'meta-manager': { dir: 'meta', hero: true, tiles: 3, shows: 3 },
+  'chat-rules': { dir: 'rules', hero: true, tiles: 3, shows: 3 },
+  warranty: { dir: 'warranty', hero: true, tiles: 0, shows: 3 },
+  'profit-loss': { dir: 'profit', hero: true, tiles: 3, shows: 3 },
+  'intent-detection': { dir: 'intent', tiles: 3, shows: 3 },
 };
 
-/** Page heroes, keyed by the hero image path. Kept apart from CLIPS because the
- *  same image can also appear as a tile elsewhere, where the hero film is wrong. */
-export const HERO_CLIPS: Record<string, Clip> = {
-  '/campaignn.webp': { base: `${DIR}/campaigns/h`, hero: true },
-  '/audience-crm-hero.webp': { base: `${DIR}/crm/h`, hero: true },
-};
+/** Pages whose clip files are in public/ (others keep their coded scenes). */
+const LIVE = new Set(['journeys', 'campaigns', 'audience-crm']);
 
-const keyOf = (src: string) => src.split('?')[0];
-export const clipFor = (src: string): Clip | null => CLIPS[keyOf(src)] ?? null;
-export const heroClipFor = (src: string): Clip | null => HERO_CLIPS[keyOf(src)] ?? null;
+/** slot: 'h' | 't1'.. | 's1'.. */
+export function clipFor(pageId: string, slot: string): Clip | null {
+  if (!LIVE.has(pageId)) return null;
+  const p = PAGES[pageId];
+  if (!p) return null;
+  const base = `${DIR}/${p.dir}/${slot}`;
+  if (slot === 'h') return p.hero ? { base, hero: true } : null;
+  const n = Number(slot.slice(1));
+  if (slot[0] === 't') return n >= 1 && n <= p.tiles ? { base } : null;
+  if (slot[0] === 's') return n >= 1 && n <= p.shows ? { base, square: true } : null;
+  return null;
+}
 
 const PHONE = '(max-width: 640px)';
 const PHONE_HERO = '(max-width: 767px)';
