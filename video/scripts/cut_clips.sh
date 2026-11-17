@@ -32,9 +32,10 @@ for pair in "$@"; do
     ffmpeg -nostdin -v error -y -i "$2.mp4" -frames:v 1 -q:v 3 "$2-poster.jpg"
     ffmpeg -nostdin -v error -y -sseof -0.9 -i "$2.mp4" -frames:v 1 -q:v 3 "$2-result.jpg"
   }
-  if [ "$w" = "$h" ]; then
+  shape=$(python3 -c "r=$w/$h; print('tile' if abs(r-1)<0.02 else 'hero' if abs(r-16/9)<0.02 else 'show')")
+  if [ "$shape" = "tile" ]; then
     enc "scale=800:800:flags=lanczos" "$OUT/$name"
-  elif [ "$h" = "1080" ]; then
+  elif [ "$shape" = "hero" ]; then
     enc "scale=1600:900:flags=lanczos" "$OUT/$name"
     enc "crop=ih*4/3:ih:(iw-ih*4/3)/2:0,scale=960:720:flags=lanczos" "$OUT/$name-m"
   else

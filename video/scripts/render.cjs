@@ -1,7 +1,7 @@
 // Render film compositions frame by frame.
 //
 //   npx vite --config video/vite.config.ts              (serves the film app on :5190)
-//   node video/scripts/render.cjs <out-dir> 05-S1,05-T1 [--workers 3] [--tail 0.5]
+//   node video/scripts/render.cjs <out-dir> 05-S1,05-T1 [--workers 3] [--tail 0.5] [--scale 0.8334]
 //   node video/scripts/render.cjs <out-dir> 05-S1 --stills 1,4.5,8      (review frames as JPG)
 //
 // Each frame calls window.__render(frame) (React flushSync of a pure function of
@@ -22,6 +22,8 @@ const BASE = opt('--base', 'http://127.0.0.1:5190');
 const WORKERS = Number(opt('--workers', '3'));
 const TAIL = Number(opt('--tail', '0.5'));
 const STILLS = opt('--stills');
+// Device scale: 0.8334 renders 1920-wide compositions at 1600 px (the largest web output).
+const SCALE = Number(opt('--scale', '1'));
 const FPS = 30;
 fs.mkdirSync(OUT, { recursive: true });
 
@@ -33,7 +35,7 @@ async function open(browser, id) {
     await p.close();
     return m;
   })();
-  const ctx = await browser.newContext({ viewport: { width: meta.w, height: meta.h } });
+  const ctx = await browser.newContext({ viewport: { width: meta.w, height: meta.h }, deviceScaleFactor: SCALE });
   const page = await ctx.newPage();
   await page.goto(`${BASE}/?comp=${id}`, { waitUntil: 'load' });
   await page.evaluate(() => document.fonts.ready);

@@ -11,6 +11,8 @@ export const TimeContext = createContext(0);
 /** Composition frame size; the same composition can render at several sizes. */
 export const SizeContext = createContext({ w: 1920, h: 1200 });
 export const useSize = () => useContext(SizeContext);
+/** True when the harness supplies the stage and camera (cinematic mode). */
+export const CineContext = createContext(false);
 /** Current composition time in seconds. */
 export const useTime = () => useContext(TimeContext);
 

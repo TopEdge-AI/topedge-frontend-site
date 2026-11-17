@@ -4,10 +4,10 @@
  * with real depth for video. No CSS transitions or animations: everything is
  * positioned from the composition time by the caller.
  */
-import type { CSSProperties, ReactNode } from 'react';
+import { useContext, type CSSProperties, type ReactNode } from 'react';
 import { HugeiconsIcon, type IconSvgElement } from '@hugeicons/react';
 import { SiWhatsapp } from 'react-icons/si';
-import { clamp, lerp } from './time';
+import { CineContext, clamp, lerp } from './time';
 
 export const C = {
   ink: '#1D1D1F',
@@ -54,7 +54,9 @@ export const PALETTES: Record<string, [string, string, string]> = {
 
 /** Warm white canvas with slow-drifting soft light and a faint pattern. */
 export function Backdrop({ t, palette, pattern, w, h }: { t: number; palette: keyof typeof PALETTES; pattern: 'lines' | 'mesh' | 'dots' | 'beams' | 'grid' | 'rings'; w: number; h: number }) {
-  const [a, b, c] = PALETTES[palette];
+  const cine = useContext(CineContext);
+  if (cine) return null; // the harness draws the studio stage
+  const [a, b, c] = PALETTES[palette] ?? PALETTES.dawn;
   const dx = Math.sin(t * 0.35) * 3;
   const dy = Math.cos(t * 0.28) * 3;
   const pat: Record<string, string> = {

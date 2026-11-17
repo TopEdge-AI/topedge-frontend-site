@@ -90,3 +90,26 @@ export function SerumShot({ w = '100%', h = '100%' }: { w?: number | string; h?:
     </div>
   );
 }
+
+/** Nova Home Smart Doorbell Ultra on a warm wall (SVG render). */
+export function DoorbellShot({ w = '100%', h = '100%', tag }: { w?: number | string; h?: number | string; tag?: string }) {
+  return (
+    <div style={{ width: w, height: h, position: 'relative', overflow: 'hidden', background: 'linear-gradient(90deg,#EFE6DA 0%,#E8DCCB 58%,#B98A5E 58%,#A87A50 100%)' }}>
+      <div style={{ position: 'absolute', left: '58%', right: 0, top: 0, bottom: 0, backgroundImage: 'repeating-linear-gradient(90deg, rgba(0,0,0,0.10) 0 2px, transparent 2px 38px)' }} />
+      <svg viewBox="0 0 200 200" preserveAspectRatio="xMidYMid meet" style={{ position: 'absolute', left: '30%', top: '10%', width: '40%', height: '80%' }}>
+        <defs>
+          <linearGradient id="db" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stopColor="#2A2A2E" /><stop offset="0.45" stopColor="#4A4A50" /><stop offset="1" stopColor="#1A1A1D" /></linearGradient>
+          <radialGradient id="lens" cx="0.4" cy="0.35" r="0.7"><stop offset="0" stopColor="#5B6CFF" /><stop offset="0.4" stopColor="#1B1F3A" /><stop offset="1" stopColor="#05060C" /></radialGradient>
+          <filter id="dbs" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="6" /></filter>
+        </defs>
+        <rect x="70" y="26" width="64" height="156" rx="30" fill="#000" opacity="0.25" filter="url(#dbs)" transform="translate(6 6)" />
+        <rect x="68" y="20" width="64" height="156" rx="30" fill="url(#db)" />
+        <circle cx="100" cy="64" r="20" fill="url(#lens)" stroke="#111" strokeWidth="3" />
+        <circle cx="94" cy="58" r="5" fill="#fff" opacity="0.35" />
+        <circle cx="100" cy="136" r="17" fill="#2E2E33" stroke="#5DE0B1" strokeWidth="3" />
+        <rect x="76" y="27" width="6" height="140" rx="3" fill="#fff" opacity="0.12" />
+      </svg>
+      {tag ? <span style={{ position: 'absolute', left: 10, top: 10, background: '#111', color: '#fff', fontWeight: 700, fontSize: 13, borderRadius: 7, padding: '3px 7px' }}>{tag}</span> : null}
+    </div>
+  );
+}

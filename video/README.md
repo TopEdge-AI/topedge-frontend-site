@@ -42,6 +42,15 @@ Then map each slot's image key to its clip in `src/marketing/components/visuals/
 
 If Playwright has no browser of its own, set `CHROMIUM_PATH`.
 
-## Done
+## Cinematic mode
 
-- Chapter 05 Journeys: 05-T1, 05-T2, 05-T3, 05-S1, 05-S2, 05-S3.
+Every composition can run on a lit studio stage with a real camera (`src/lib/cine.tsx`). `src/comps/cine.ts` lists, per composition, the stage tone, the close-up it opens on, and the action beats the camera pushes in on. The harness draws the stage and runs the lens, so composition code stays a flat layout. `11-H` is written natively in this style (camera tracking along cost bars, a kinetic number reveal) as the reference for future heroes.
+
+Render at output size with `--scale 0.8334`: 1920-wide compositions render at 1600 px, which is about 3× faster.
+
+## Built
+
+- All 12 chapters: heroes (where the page hero is an image), tiles and showcases.
+- Home films: `home-cart`, `home-optin`, `home-cod`, `home-flow`, `home-intent`, `home-segments`. Plus `03-H`, `04-H`, `06-H` and `11-H`, which double as the campaigns, identity, pixel and profit home stories.
+
+`video/scripts/cut_all.sh <render-dir>` cuts everything rendered into `public/marketing/feature-clips/`.

@@ -5,7 +5,8 @@
 import { createRoot } from 'react-dom/client';
 import { flushSync } from 'react-dom';
 import { useState } from 'react';
-import { FPS, SizeContext, TimeContext } from './lib/time';
+import { CineContext, FPS, SizeContext, TimeContext } from './lib/time';
+import { Lens, Studio } from './lib/cine';
 import { COMPS } from './comps';
 
 declare global {
@@ -31,7 +32,16 @@ function App() {
     <TimeContext.Provider value={t}>
       <SizeContext.Provider value={{ w: comp.w, h: comp.h }}>
         <div style={{ position: 'relative', width: comp.w, height: comp.h, overflow: 'hidden' }}>
-          <Comp t={t} />
+          {comp.cine ? (
+            <CineContext.Provider value={Boolean(comp.cine.tone)}>
+              {comp.cine.tone ? <Studio t={t} tone={comp.cine.tone} w={comp.w} h={comp.h} /> : null}
+              <Lens t={t} w={comp.w} h={comp.h} keys={comp.cine.cam}>
+                <Comp t={t} />
+              </Lens>
+            </CineContext.Provider>
+          ) : (
+            <Comp t={t} />
+          )}
         </div>
       </SizeContext.Provider>
     </TimeContext.Provider>
