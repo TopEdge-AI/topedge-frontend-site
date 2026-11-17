@@ -646,6 +646,8 @@
 /* Phones: the hero frame turns 4:3 below 768px; let a scene keep its own 16:10. */
 @media (max-width: 767px) {
   .demo-video-glow--still .demo-video-glow__frame.is-scene { aspect-ratio: 16 / 10; }
+  /* Hero films ship a 4:3 phone cut (h-m.mp4) composed for this frame. */
+  .demo-video-glow--still .demo-video-glow__frame.is-scene.is-film { aspect-ratio: 4 / 3; }
 }
 
 /* ── WhatsApp template parts ───────────────────────────────────────────── */

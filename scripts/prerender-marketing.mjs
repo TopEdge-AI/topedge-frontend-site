@@ -231,6 +231,15 @@ function sanitizePrerenderHtml(html) {
   // markup Googlebot reads matches the VideoObject contentUrl.
   // scripts/check-video-markup.mjs fails the build if that stops being true.
 
+  // Feature-film slot clips (components/visuals/clips.tsx): below-the-fold tiles
+  // and showcases load their poster and sources only when scrolled near. The
+  // snapshot browser has already scrolled, so strip both from the markup, or
+  // every visitor fetches every poster on the page at load. The hero clip
+  // (preload="auto", autoplay) is left alone: it is meant to start from HTML.
+  out = out.replace(/<video\b([^>]*\bclass="fclip__media"[^>]*\bpreload="none"[^>]*)>([\s\S]*?)<\/video>/gi, (_m, attrs) =>
+    `<video${attrs.replace(/\sposter="[^"]*"/i, '')}></video>`,
+  );
+
   // Hoist LCP image preload to the top of <head> so it is not stuck behind
   // CSS/modulepreload discovered during the SPA render.
   let lcpPreload = '';

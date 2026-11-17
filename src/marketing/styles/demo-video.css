@@ -319,3 +319,23 @@
     object-position: center;
   }
 }
+
+/* ——— Portrait phone films ———
+   Home films ship a 4:5 phone encode composed for a tall screen (bigger
+   objects, readable type) instead of a shrunken 16:9. Below 900px — the same
+   breakpoint as the <source media> that picks it — the frame turns 4:5. */
+@media (max-width: 900px) {
+  .demo-video-glow--portrait-m {
+    max-width: min(100%, 520px);
+    margin-inline: auto;
+  }
+
+  .demo-video-glow--portrait-m .demo-video-glow__frame {
+    aspect-ratio: 4 / 5;
+  }
+
+  .demo-video-glow--portrait-m .demo-video-glow__poster,
+  .demo-video-glow--portrait-m .demo-video-glow__el {
+    object-position: center;
+  }
+}

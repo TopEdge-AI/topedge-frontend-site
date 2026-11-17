@@ -15,7 +15,7 @@ for f in "$IN"/[0-9][0-9]-*.mp4; do
   slot="$(echo "$part" | tr 'HTS' 'hts')"
   "$HERE/cut_clips.sh" "$IN" "$OUT/${DIRS[$ch]}" "$id=$slot"
 done
-declare -A HOME=([home-cart]=cart [03-H]=campaigns [home-optin]=optin [06-H]=pixel [home-cod]=cod [home-flow]=flow [home-intent]=intent [04-H]=identity [home-segments]=segments [11-H]=profit)
+declare -A HOME=([L-cart]=cart [L-campaigns]=campaigns [L-optin]=optin [L-pixel]=pixel [L-cod]=cod [L-flow]=flow [L-intent]=intent [L-identity]=identity [L-segments]=segments [L-profit]=profit)
 for id in "${!HOME[@]}"; do
   [ -e "$IN/$id.mp4" ] || continue
   "$HERE/cut_home.sh" "$IN" "$OUT/home" "$id=${HOME[$id]}"

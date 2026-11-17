@@ -51,6 +51,17 @@ Render at output size with `--scale 0.8334`: 1920-wide compositions render at 16
 ## Built
 
 - All 12 chapters: heroes (where the page hero is an image), tiles and showcases.
-- Home films: `home-cart`, `home-optin`, `home-cod`, `home-flow`, `home-intent`, `home-segments`. Plus `03-H`, `04-H`, `06-H` and `11-H`, which double as the campaigns, identity, pixel and profit home stories.
+- Home films: the ten launch films `L-cart`, `L-campaigns`, `L-optin`, `L-pixel`, `L-cod`, `L-flow`, `L-intent`, `L-identity`, `L-segments`, `L-profit` (`src/comps/launch.tsx`, `launch2.tsx`, `launch4.tsx`; `launch3.tsx` and `L-journeys` are feature-page heroes), built on the launch kit (`src/lib/launch.tsx`).
+
+### Launch kit (home films)
+
+The motion language of SaaS launch films, in TopEdge violet:
+
+- **Two stages.** Air (lavender white, soft horizon glow) and Deep (indigo night, radial bloom). Scenes alternate between them; Deep opens as an iris bloom from the centre rather than a crossfade.
+- **Very little text.** At most one short kinetic line per film (word-by-word blur-in), plus figures and real product UI.
+- **3D space.** `Space` + `Obj` give every element x/y/z and rotations; far objects defocus and fast ones get motion blur. Phones, panels and the parcel are real 3D objects.
+- **Glass objects.** `GlassIcon`, `GlassPill`, `Panel`, `Tag`.
+- **Payoff per film.** A counting figure with a ribbon bar, a Done tick with confetti, a stamp, or fan-in lines into one card.
+- **Loops.** Each film starts and ends on an empty stage of the same kind, so the 0.5 s tail fold is invisible.
 
 `video/scripts/cut_all.sh <render-dir>` cuts everything rendered into `public/marketing/feature-clips/`.

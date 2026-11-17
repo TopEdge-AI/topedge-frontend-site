@@ -449,7 +449,6 @@ export const optin = {
   '02-T3': { w: T, h: T, duration: 7.5, Component: T3 },
   '02-S1': { w: W, h: 1200, duration: 12.5, Component: S1 },
   '02-S2': { w: W, h: 1200, duration: 15, Component: S2 },
-  'home-optin': { w: W, h: 1080, duration: 15, Component: S2 },
   '02-S3': { w: W, h: 1200, duration: 12.5, Component: S3 },
   '02-S4': { w: W, h: 1200, duration: 12.5, Component: S4 },
 };
