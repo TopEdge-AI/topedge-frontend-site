@@ -21,9 +21,9 @@ export const L = {
   lav: '#E4D4FF',
   lav2: '#F3EDFF',
   air: '#F7F5FD',
-  ink: '#140F2E',
-  ink2: '#4A4468',
-  mute: '#8A84A6',
+  ink: '#0F172A',
+  ink2: '#475569',
+  mute: '#64748B',
   deep: '#0B0820',
   deepInk: '#F1ECFF',
   deepMute: 'rgba(225,214,255,0.62)',
@@ -166,7 +166,7 @@ export function GlassIcon({ icon, node, size = 150, tone = GRAD, shine = 0 }: { 
 export function Panel({ children, w, h, r = 28, dark, pad = 0, style, glow = 0 }: { children?: ReactNode; w?: number; h?: number; r?: number; dark?: boolean; pad?: number | string; style?: CSSProperties; glow?: number }) {
   const s: CSSProperties = dark
     ? { background: 'linear-gradient(160deg,rgba(76,52,170,0.55),rgba(30,18,84,0.72))', boxShadow: `inset 0 0 0 1.5px rgba(196,181,253,${0.28 + glow * 0.4}), inset 0 1.5px 0 rgba(255,255,255,0.18), 0 30px 80px -20px rgba(0,0,0,0.6), 0 0 ${60 * glow}px rgba(139,92,246,${0.6 * glow})`, color: L.deepInk }
-    : { background: 'linear-gradient(170deg,rgba(255,255,255,0.97),rgba(250,248,255,0.92))', boxShadow: `inset 0 0 0 1.5px rgba(255,255,255,0.9), 0 0 0 1px rgba(124,58,237,${0.10 + glow * 0.4}), 0 2px 4px rgba(40,20,90,0.05), 0 30px 70px -24px rgba(76,29,149,0.30), 0 0 ${60 * glow}px rgba(139,92,246,${0.45 * glow})`, color: L.ink };
+    : { background: '#FFFFFF', boxShadow: `0 0 0 1px rgba(226,232,240,${1 - glow * 0.5}), 0 0 0 ${glow * 3}px rgba(124,58,237,${0.25 * glow}), 0 1px 2px rgba(15,23,42,0.04), 0 12px 28px -10px rgba(15,23,42,0.10), 0 40px 80px -40px rgba(76,29,149,0.22)`, color: L.ink };
   return <div style={{ position: 'relative', width: w, height: h, borderRadius: r, padding: pad, fontFamily: FONT, boxSizing: 'border-box', ...s, ...style }}>{children}</div>;
 }
 
@@ -365,7 +365,7 @@ export const Caption = ({ children, dark, size = 30 }: { children: ReactNode; da
 /** Small glass label with an icon dot, for satellites around a hero. */
 export function Tag({ children, dark, tone = L.violet, size = 22, icon }: { children: ReactNode; dark?: boolean; tone?: string; size?: number; icon?: IconSvgElement }) {
   return (
-    <div style={{ display: 'inline-flex', alignItems: 'center', gap: size * 0.5, padding: `${size * 0.55}px ${size * 0.9}px`, borderRadius: size * 0.9, fontFamily: FONT, fontWeight: 600, fontSize: size, whiteSpace: 'nowrap', color: dark ? L.deepInk : L.ink, background: dark ? 'linear-gradient(180deg,rgba(255,255,255,0.14),rgba(255,255,255,0.05))' : 'rgba(255,255,255,0.96)', boxShadow: dark ? 'inset 0 0 0 1.5px rgba(196,181,253,0.35), 0 18px 40px -16px rgba(0,0,0,0.6)' : '0 0 0 1px rgba(124,58,237,0.10), 0 18px 40px -16px rgba(76,29,149,0.35)' }}>
+    <div style={{ display: 'inline-flex', alignItems: 'center', gap: size * 0.5, padding: `${size * 0.55}px ${size * 0.9}px`, borderRadius: size * 0.9, fontFamily: FONT, fontWeight: 600, fontSize: size, whiteSpace: 'nowrap', color: dark ? L.deepInk : L.ink, background: dark ? 'linear-gradient(180deg,rgba(255,255,255,0.14),rgba(255,255,255,0.05))' : '#FFFFFF', boxShadow: dark ? 'inset 0 0 0 1.5px rgba(196,181,253,0.35), 0 18px 40px -16px rgba(0,0,0,0.6)' : '0 0 0 1px #E2E8F0, 0 1px 2px rgba(15,23,42,0.04), 0 14px 30px -14px rgba(15,23,42,0.18)' }}>
       {icon ? <span style={{ width: size * 1.6, height: size * 1.6, borderRadius: size * 0.45, background: tone, display: 'grid', placeItems: 'center' }}><HugeiconsIcon icon={icon} size={size} color="#fff" strokeWidth={2} /></span> : <span style={{ width: size * 0.45, height: size * 0.45, borderRadius: 99, background: tone, boxShadow: `0 0 ${size * 0.6}px ${tone}` }} />}
       {children}
     </div>
@@ -420,3 +420,30 @@ export function BrowserWin({ w, h, url, children, style }: { w: number; h: numbe
     </Panel>
   );
 }
+
+/**
+ * Flow / journey node exactly as the dashboard draws it (.fb-node-shell):
+ * 296px white card, radius 20, accent-tinted header band, round accent icon
+ * badge, accent hairline, slate body text.
+ */
+export const NODE = { trigger: '#7C3AED', wait: '#F59E0B', whatsapp: '#10B981', branch: '#3B82F6', shopify: '#16A34A', ai: '#8B5CF6', cod: '#F97316', tag: '#EC4899' };
+export function RealNode({ accent, icon, title, sub, body, lit = 0, count, w = 296, scale = 1 }: { accent: string; icon: IconSvgElement; title: string; sub?: string; body?: ReactNode; lit?: number; count?: number; w?: number; scale?: number }) {
+  const mix = (a: number) => `color-mix(in srgb, ${accent} ${a}%, #ffffff)`;
+  return (
+    <div style={{ position: 'relative', width: w * scale, borderRadius: 20 * scale, background: '#fff', fontFamily: FONT, border: `${1}px solid color-mix(in srgb, ${accent} ${32 + lit * 40}%, #e2e8f0)`, boxShadow: `0 0 0 ${3 * lit}px color-mix(in srgb, ${accent} 22%, transparent), 0 1px 2px rgba(15,23,42,0.04), 0 8px 24px rgba(15,23,42,0.06), 0 0 ${36 * lit}px color-mix(in srgb, ${accent} ${30 * lit}%, transparent)` }}>
+      <div style={{ display: 'flex', alignItems: 'center', gap: 11 * scale, padding: `${12 * scale}px ${14 * scale}px`, borderRadius: `${19 * scale}px ${19 * scale}px 0 0`, background: `linear-gradient(165deg, rgba(255,255,255,0.72) 35%, #fff 100%), linear-gradient(135deg, ${mix(10)} 0%, ${mix(18)} 55%, ${mix(28)} 100%)` }}>
+        <span style={{ width: 38 * scale, height: 38 * scale, borderRadius: 99, flex: 'none', display: 'grid', placeItems: 'center', border: `1px solid ${mix(22)}`, background: `linear-gradient(165deg, rgba(255,255,255,0.85), rgba(255,255,255,0.35)), ${mix(14)}`, boxShadow: '0 1px 2px rgba(15,23,42,0.06), inset 0 1px 0 rgba(255,255,255,0.65)' }}>
+          <HugeiconsIcon icon={icon} size={20 * scale} color={accent} strokeWidth={2} />
+        </span>
+        <div style={{ minWidth: 0, flex: 1 }}>
+          <div style={{ fontSize: 17 * scale, fontWeight: 600, letterSpacing: '-0.01em', color: `color-mix(in srgb, ${accent} 55%, #0f172a)`, whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>{title}</div>
+          {sub ? <div style={{ fontSize: 13.5 * scale, color: '#64748B', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>{sub}</div> : null}
+        </div>
+      </div>
+      {body ? <div style={{ padding: `${10 * scale}px ${14 * scale}px ${12 * scale}px`, fontSize: 14 * scale, color: '#334155', lineHeight: 1.5, borderTop: '1px solid rgba(15,23,42,0.05)' }}>{body}</div> : null}
+      {count != null ? <span style={{ position: 'absolute', right: -10 * scale, top: -10 * scale, minWidth: 34 * scale, height: 28 * scale, padding: `0 ${9 * scale}px`, borderRadius: 16, background: '#0F172A', color: '#fff', fontSize: 14 * scale, fontWeight: 700, display: 'grid', placeItems: 'center', fontVariantNumeric: 'tabular-nums', boxShadow: '0 4px 10px rgba(15,23,42,0.25)' }}>{count}</span> : null}
+    </div>
+  );
+}
+/** The dashboard canvas: white with a faint dot grid. */
+export const CANVAS_BG: CSSProperties = { background: '#FFFFFF', backgroundImage: 'radial-gradient(rgba(148,163,184,0.35) 1.2px, transparent 1.4px)', backgroundSize: '22px 22px' };

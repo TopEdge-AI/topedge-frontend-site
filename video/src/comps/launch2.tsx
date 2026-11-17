@@ -12,7 +12,7 @@ import { Bubble, DISPLAY, DateChip, FONT, WaHeader, WaScreen } from '../lib/ui';
 import { inr } from '../lib/kit2';
 import {
   Caption, FanIn, Figure, GlassIcon, GlassPill, GRAD, Hand, L, Obj, Panel, Phone3D, Ping, Ring, Space, Stage, Tag, Words,
-  handAt, orbit, track, useLayout, win,
+  NODE, RealNode, handAt, orbit, track, useLayout, win,
 } from '../lib/launch';
 
 const W = 1920;
@@ -50,8 +50,8 @@ export function LaunchFlow({ t }: { t: number }) {
         {s1 > 0 ? <div style={{ position: 'absolute', left: 0, top: 0, opacity: s1 * prog(t, 2.0, 2.5) }}>
           <svg width={W} height={H} style={{ position: 'absolute', left: 0, top: 0, overflow: 'visible' }}>
             {[0, 1, 2].map((i) => {
-              const a: [number, number] = P ? [lay.x(960) - 200, lay.y(ny(i)) + 40] : [nx(i) + 170, 540];
-              const b: [number, number] = P ? [lay.x(960) - 200, lay.y(ny(i + 1)) - 40] : [nx(i + 1) - 170, 540];
+              const a: [number, number] = P ? [lay.x(960) - 200, lay.y(ny(i)) + 40] : [nx(i) + 160, 520];
+              const b: [number, number] = P ? [lay.x(960) - 200, lay.y(ny(i + 1)) - 40] : [nx(i + 1) - 160, 520];
               const pk = clamp(pulse * 3 - i);
               return (
                 <g key={i}>
@@ -67,12 +67,7 @@ export function LaunchFlow({ t }: { t: number }) {
           const lit = clamp(pulse * 3 - i + 1) * (i === 0 ? 1 : 1);
           return (
             <Obj key={title} x={lerp(sx, nx(i), asm)} y={lerp(sy, ny(i), asm)} z={lerp(sz, 0, asm) + prog(t, 3.9, 4.5, E.exit) * (i === 2 ? 900 : -300)} rx={lerp(rnd(i, 1) * 50 - 25, 0, asm)} ry={lerp(rnd(i, 2) * 70 - 35, 0, asm)} rz={lerp(rnd(i, 3) * 30 - 15, 0, asm)} o={s1 * prog(t, 0.1 + i * 0.1, 0.6 + i * 0.1) * (i === 2 ? 1 : 1 - prog(t, 3.9, 4.3))} dof={0.008}>
-              <Panel dark w={340} r={28} pad={26} glow={pulse > 0 ? clamp(pulse * 3 - i + 0.2) * (1 - clamp(pulse * 3 - i - 0.8)) + (i === 3 && pulse >= 1 ? 0.6 : 0) : 0}>
-                <div style={{ display: 'flex', alignItems: 'center', gap: 16 }}>
-                  <span style={{ width: 62, height: 62, borderRadius: 18, background: lit > 0 ? GRAD : 'rgba(167,139,250,0.2)', display: 'grid', placeItems: 'center', boxShadow: 'inset 0 1px 0 rgba(255,255,255,0.3)' }}><Ic icon={icon} size={32} /></span>
-                  <div><div style={{ fontSize: 28, fontWeight: 700 }}>{title}</div><div style={{ fontSize: 20, color: L.deepMute, whiteSpace: 'nowrap' }}>{sub}</div></div>
-                </div>
-              </Panel>
+              <RealNode accent={[NODE.trigger, NODE.ai, NODE.shopify, NODE.whatsapp][i]} icon={icon} title={title} sub={['Trigger', 'AI intent', 'Shopify action', 'WhatsApp reply'][i]} body={sub} w={320} scale={1.1} lit={pulse > 0 ? clamp(pulse * 3 - i + 0.2) * (1 - clamp(pulse * 3 - i - 0.8)) + (i === 3 && pulse >= 1 ? 0.6 : 0) : 0} />
             </Obj>
           );
         })}

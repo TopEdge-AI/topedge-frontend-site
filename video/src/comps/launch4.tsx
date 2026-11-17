@@ -19,7 +19,7 @@ import { KurtaShot, inr } from '../lib/kit2';
 import { ShirtShot } from '../lib/products';
 import { SuccessPage } from '../lib/rig';
 import {
-  BrowserWin, Caption, Confetti, DoneTick, FanIn, Figure, GlassIcon, GRAD, Hand, L, Obj, Panel, Phone3D, Space, Stage, Tag,
+  BrowserWin, CANVAS_BG, Caption, Confetti, DoneTick, FanIn, Figure, GlassIcon, GRAD, Hand, L, NODE, Obj, Panel, Phone3D, RealNode, Space, Stage, Tag,
   Words, track, useLayout, win,
 } from '../lib/launch';
 
@@ -50,33 +50,24 @@ const ButtonsBubble = ({ title, body, time, buttons, press = -1, k = 0 }: { titl
 );
 
 /* ============================================================== JOURNEYS */
-type Lane = { trig: string; trigSub: string; icon: IconSvgElement; steps: [string, string, IconSvgElement][]; end: string; col: string };
+type Lane = { trig: string; trigSub: string; icon: IconSvgElement; steps: [string, string, IconSvgElement, string][]; end: string; col: string };
+const BODY: string[][] = [
+  ['Checkout left with items', '30 minutes, then check', 'Your silk kurta is saved, 10% off for an hour', 'Paid → end · not paid → nudge'],
+  ['Cash on delivery orders', 'Confirm or pay ₹1,799 by UPI', 'Confirm · Pay now', 'Tag prepaid, release to courier'],
+  ['Spin, scratch or pop-up sign-up', 'WELCOME15 for 7 days', '72 hours, no order yet', 'Top 3 bestsellers for them'],
+];
 const LANES: Lane[] = [
-  { trig: 'Cart abandoned', trigSub: 'Shopify checkout', icon: ShoppingCart01Icon, steps: [['Wait 30 min', 'then check', Clock01Icon], ['Send reminder', 'kurta + 10% off', SiWhatsappIcon()], ['Paid?', 'yes → stop', CheckmarkCircle02Icon]], end: '₹3,105 recovered', col: '#F472B6' },
-  { trig: 'COD order placed', trigSub: 'order #2231 · ₹1,849', icon: PackageIcon, steps: [['Confirm order', 'or pay by UPI', SiWhatsappIcon()], ['Reply?', 'confirm / prepaid', BubbleChatIcon], ['Tag & ship', 'prepaid saves ₹50', DeliveryTruck01Icon]], end: 'Confirmed · prepaid', col: '#FBBF24' },
-  { trig: 'Opted in on website', trigSub: 'spin wheel · 15% off', icon: UserAdd01Icon, steps: [['Welcome', 'code WELCOME15', SiWhatsappIcon()], ['Wait 3 days', 'no order yet', Clock01Icon], ['Bestsellers', 'top 3 picks', GiftIcon]], end: 'First order ₹2,499', col: '#38BDF8' },
+  { trig: 'Cart abandoned', trigSub: 'Trigger · Shopify', icon: ShoppingCart01Icon, steps: [['Wait 30 min', 'Delay', Clock01Icon, NODE.wait], ['Cart reminder', 'WhatsApp template', SiWhatsappIcon(), NODE.whatsapp], ['Order paid?', 'Condition', CheckmarkCircle02Icon, NODE.branch]], end: '₹3,105 recovered', col: '#F472B6' },
+  { trig: 'COD order placed', trigSub: 'Trigger · Shopify', icon: PackageIcon, steps: [['COD confirmation', 'WhatsApp template', SiWhatsappIcon(), NODE.whatsapp], ['Reply received', 'Condition', BubbleChatIcon, NODE.branch], ['Tag & ship', 'Shopify action', DeliveryTruck01Icon, NODE.shopify]], end: 'Confirmed · prepaid', col: '#FBBF24' },
+  { trig: 'Opted in on website', trigSub: 'Trigger · opt-in tool', icon: UserAdd01Icon, steps: [['Welcome message', 'WhatsApp template', SiWhatsappIcon(), NODE.whatsapp], ['Wait 3 days', 'Delay', Clock01Icon, NODE.wait], ['Bestsellers', 'Catalog message', GiftIcon, NODE.ai]], end: 'First order ₹2,499', col: '#38BDF8' },
 ];
 function SiWhatsappIcon(): IconSvgElement { return SentIcon; }
-function Node({ title, sub, icon, lit, count, trigger, col }: { title: string; sub: string; icon: IconSvgElement; lit: number; count?: number; trigger?: boolean; col: string }) {
-  return (
-    <div style={{ position: 'relative', width: 270, padding: '18px 20px', borderRadius: 22, background: '#fff', fontFamily: FONT, boxShadow: `0 0 0 ${trigger ? 2 : 1}px ${trigger ? col : 'rgba(124,58,237,0.12)'}, 0 18px 36px -20px rgba(76,29,149,0.35), 0 0 ${40 * lit}px rgba(139,92,246,${0.55 * lit})` }}>
-      <div style={{ display: 'flex', alignItems: 'center', gap: 14 }}>
-        <span style={{ width: 52, height: 52, borderRadius: 15, background: trigger ? col : lit > 0.3 ? GRAD : '#F1EDFB', display: 'grid', placeItems: 'center', flex: 'none' }}><Ic icon={icon} size={27} color={trigger || lit > 0.3 ? '#fff' : '#8B5CF6'} /></span>
-        <div style={{ minWidth: 0 }}>
-          <div style={{ fontSize: 22, fontWeight: 700, color: L.ink, whiteSpace: 'nowrap' }}>{title}</div>
-          <div style={{ fontSize: 17, color: L.mute, whiteSpace: 'nowrap' }}>{sub}</div>
-        </div>
-      </div>
-      {count != null ? <span style={{ position: 'absolute', right: -12, top: -12, minWidth: 40, height: 34, padding: '0 10px', borderRadius: 18, background: L.ink, color: '#fff', fontSize: 17, fontWeight: 700, display: 'grid', placeItems: 'center', fontVariantNumeric: 'tabular-nums' }}>{count}</span> : null}
-    </div>
-  );
-}
 export function LaunchJourneys({ t }: { t: number }) {
   const lay = useLayout();
   const N = !lay.base;
   const deep = track(t, [[0, 0], [4.9, 0], [5.5, 1], [9.0, 1], [9.6, 0]]);
   const s1 = win(t, 0.1, 5.2, 0.5);
-  const NX = [30, 370, 710, 1050], LY = [70, 300, 530];
+  const NX = [24, 368, 712, 1056], LY = [50, 270, 490];
   const cw = 1380, ch = 680;
   const s2 = win(t, 5.0, 9.4, 0.6);
   const s3 = win(t, 9.3, 11.6, 0.5);
@@ -90,10 +81,10 @@ export function LaunchJourneys({ t }: { t: number }) {
       <Space cam={{ s: lerp(1.0, 1.06, prog(t, 0, 5, E.move)), ry: Math.sin(t * 0.3) * 1 }}>
         {/* shot 1: the journey canvas, three lanes running at once */}
         <Obj x={960} y={570} rx={lerp(22, 12, prog(t, 0, 5))} rz={lerp(-5, -2, prog(t, 0, 5))} z={lerp(-250, 0, spring(t, 0, 1.3, 0.05)) + prog(t, 4.6, 5.2, E.exit) * 900} o={s1} mb={prog(t, 4.6, 5.2) * 8} ms={N ? 0.76 : 1} flat>
-          <div style={{ position: 'relative', width: cw, height: ch, borderRadius: 34, background: 'rgba(255,255,255,0.72)', boxShadow: '0 0 0 1px rgba(124,58,237,0.12), 0 40px 90px -40px rgba(76,29,149,0.45)', backgroundImage: 'radial-gradient(rgba(124,58,237,0.13) 1.6px, transparent 1.8px)', backgroundSize: '28px 28px' }}>
+          <div style={{ position: 'relative', width: cw, height: ch, borderRadius: 30, ...CANVAS_BG, boxShadow: '0 0 0 1px #E2E8F0, 0 40px 90px -40px rgba(15,23,42,0.35)' }}>
             <svg width={cw} height={ch} style={{ position: 'absolute', inset: 0, overflow: 'visible' }}>
               {LANES.map((ln, li) => [0, 1, 2].map((si) => {
-                const x0 = NX[si] + 270, x1 = NX[si + 1], y = LY[li] + 45;
+                const x0 = NX[si] + 290, x1 = NX[si + 1], y = LY[li] + 32;
                 const k = prog(t, 0.6 + li * 0.25 + si * 0.15, 1.1 + li * 0.25 + si * 0.15);
                 return <line key={`${li}${si}`} x1={x0} y1={y} x2={lerp(x0, x1, k)} y2={y} stroke={ln.col} strokeWidth="3" strokeDasharray="7 7" strokeOpacity={0.8} />;
               }))}
@@ -101,8 +92,8 @@ export function LaunchJourneys({ t }: { t: number }) {
                 const pos = (t - st) / 0.5; // node index along the lane
                 if (pos < 0 || pos > 3) return null;
                 const si = Math.min(2, Math.floor(pos)), f = pos - si;
-                const x = lerp(NX[si] + 135, NX[si + 1] + 135, E.move(f));
-                return <g key={i} transform={`translate(${x} ${LY[li] + 45})`}><circle r="22" fill={LANES[li].col} opacity="0.25" /><circle r="13" fill="#fff" stroke={LANES[li].col} strokeWidth="4" /></g>;
+                const x = lerp(NX[si] + 290, NX[si + 1], E.move(f)) + (f < 0 ? 0 : 0);
+                return <g key={i} transform={`translate(${x} ${LY[li] + 32})`}><circle r="22" fill={LANES[li].col} opacity="0.25" /><circle r="13" fill="#fff" stroke={LANES[li].col} strokeWidth="4" /></g>;
               })}
             </svg>
             {LANES.map((ln, li) => (
@@ -112,7 +103,7 @@ export function LaunchJourneys({ t }: { t: number }) {
                   const st = si === 0 ? null : ln.steps[si - 1];
                   return (
                     <div key={si} style={{ position: 'absolute', left: NX[si], top: LY[li], opacity: clamp(appear * 1.5), transform: `translateY(${(1 - appear) * 30}px) scale(${lerp(0.9, 1, appear)})` }}>
-                      {si === 0 ? <Node trigger title={ln.trig} sub={ln.trigSub} icon={ln.icon} lit={nodeLit(li, 0)} col={ln.col} count={counts(li, 0)} /> : <Node title={st![0]} sub={st![1]} icon={st![2]} lit={nodeLit(li, si)} col={ln.col} count={counts(li, si)} />}
+                      {si === 0 ? <RealNode accent={NODE.trigger} icon={ln.icon} title={ln.trig} sub={ln.trigSub} body={BODY[li][0]} lit={nodeLit(li, 0)} count={counts(li, 0)} w={290} /> : <RealNode accent={st![3]} icon={st![2]} title={st![0]} sub={st![1]} body={BODY[li][si]} lit={nodeLit(li, si)} count={counts(li, si)} w={290} />}
                     </div>
                   );
                 })}
