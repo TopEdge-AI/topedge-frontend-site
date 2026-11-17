@@ -88,7 +88,8 @@ export function Stage({ t, deep, bloom = [0.5, 0.48] }: { t: number; w?: number;
       <div style={{ position: 'absolute', inset: 0, opacity: clamp(deep * 3), WebkitMaskImage: deep >= 0.999 ? undefined : `radial-gradient(circle at ${bloom[0] * 100}% ${bloom[1] * 100}%, #000 ${deep * 78}%, transparent ${deep * 78 + 22}%)`, maskImage: deep >= 0.999 ? undefined : `radial-gradient(circle at ${bloom[0] * 100}% ${bloom[1] * 100}%, #000 ${deep * 78}%, transparent ${deep * 78 + 22}%)` }}>
         <div style={{ position: 'absolute', inset: 0, background: `radial-gradient(70% 80% at ${bloom[0] * 100}% ${bloom[1] * 100}%, #3B1F93 0%, #1C1155 38%, ${L.deep} 78%)` }} />
         <div style={{ position: 'absolute', left: `${18 + d2}%`, top: `${8 + d1}%`, width: '64%', height: '84%', borderRadius: '50%', background: 'radial-gradient(closest-side, rgba(124,58,237,0.42), transparent)' }} />
-        <div style={{ position: 'absolute', left: '50%', top: '50%', width: h * 1.5, height: h * 1.5, marginLeft: -h * 0.75, marginTop: -h * 0.75, borderRadius: '50%', boxShadow: 'inset 0 0 0 1.5px rgba(196,181,253,0.10), 0 0 120px rgba(124,58,237,0.18)', transform: `rotate(${t * 6}deg)` }} />
+        {/* soft light sweep instead of a hard ring: reads as depth, never as a drawn edge */}
+        <div style={{ position: 'absolute', left: `${-30 + ((t * 4) % 160)}%`, top: '-20%', width: '40%', height: '140%', background: 'linear-gradient(100deg, transparent, rgba(196,181,253,0.06), transparent)', transform: 'rotate(12deg)' }} />
         <div style={{ position: 'absolute', inset: 0, background: 'radial-gradient(120% 90% at 50% 50%, transparent 55%, rgba(4,2,14,0.7) 100%)' }} />
       </div>
     </div>
