@@ -15,6 +15,6 @@ for pair in "$@"; do
   fold="[0:v]split[a][b];[b]trim=0:$TAIL,setpts=PTS-STARTPTS[h];[a]trim=$TAIL,setpts=PTS-STARTPTS[t];[t][h]xfade=transition=fade:duration=$TAIL:offset=$off,fps=30,format=yuv420p"
   ffmpeg -nostdin -v error -y -i "$src" -filter_complex "$fold,scale=1600:900:flags=lanczos" -an -c:v libx264 -profile:v high -preset slow -crf 23 -movflags +faststart "$OUT/$name.mp4"
   ffmpeg -nostdin -v error -y -i "$src" -filter_complex "$fold,scale=960:540:flags=lanczos" -an -c:v libx264 -profile:v high -preset slow -crf 25 -movflags +faststart "$OUT/$name-mobile.mp4"
-  ffmpeg -nostdin -v error -y -ss 1.6 -i "$OUT/$name.mp4" -frames:v 1 -vf scale=1280:720 -q:v 4 "$OUT/$name-poster.jpg"
+  ffmpeg -nostdin -v error -y -i "$OUT/$name.mp4" -frames:v 1 -vf scale=1280:720 -q:v 4 "$OUT/$name-poster.jpg"
   echo "$name: $(du -h "$OUT/$name.mp4" | cut -f1) / $(du -h "$OUT/$name-mobile.mp4" | cut -f1) mobile"
 done

@@ -41,6 +41,9 @@ const PAGES: Record<string, PageClips> = {
   'intent-detection': { dir: 'intent', tiles: 3, shows: 3 },
 };
 
+/** True when every slot on the page plays a film, so the coded scenes need not load. */
+export const hasClips = (pageId: string) => pageId in PAGES;
+
 /** slot: 'h' | 't1'.. | 's1'.. */
 export function clipFor(pageId: string, slot: string): Clip | null {
   const p = PAGES[pageId];
@@ -69,17 +72,66 @@ function useMedia(q: string) {
   return on;
 }
 
+/**
+ * Above-the-fold hero: the <video> is written straight into the HTML so the
+ * browser starts it before any JavaScript runs (autoplay needs the `muted`
+ * attribute, which React does not serialise, hence the raw markup). The browser
+ * picks the 4:3 phone cut itself via <source media>. The poster is the film's
+ * first frame, so poster → playback is seamless.
+ */
+function HeroClip({ clip, label, fallback }: { clip: Clip; label: string; fallback: ReactNode }) {
+  const box = useRef<HTMLDivElement>(null);
+  const [failed, setFailed] = useState(false);
+  const q = `?v=${V}`;
+  const b = clip.base;
+  const html =
+    `<video class="fclip__media" autoplay muted loop playsinline preload="auto" poster="${b}-poster.jpg${q}" aria-hidden="true">` +
+    `<source src="${b}-m.webm${q}" type="video/webm" media="${PHONE_HERO}">` +
+    `<source src="${b}-m.mp4${q}" type="video/mp4" media="${PHONE_HERO}">` +
+    `<source src="${b}.webm${q}" type="video/webm">` +
+    `<source src="${b}.mp4${q}" type="video/mp4"></video>`;
+
+  useEffect(() => {
+    const v = box.current?.querySelector('video');
+    if (!v) return;
+    if (window.matchMedia(REDUCED).matches) {
+      v.removeAttribute('autoplay');
+      v.pause();
+      return;
+    }
+    v.muted = true;
+    v.play().catch(() => {});
+    const last = v.querySelector('source:last-of-type');
+    const onError = () => setFailed(true);
+    last?.addEventListener('error', onError);
+    // Stop decoding once it scrolls away; resume on return.
+    const io = new IntersectionObserver(([e]) => (e.isIntersecting ? v.play().catch(() => {}) : v.pause()), { threshold: 0 });
+    io.observe(v);
+    return () => {
+      io.disconnect();
+      last?.removeEventListener('error', onError);
+    };
+  }, []);
+
+  if (failed) return <>{fallback}</>;
+  return <div ref={box} className="fclip fclip--fill" role="img" aria-label={label} dangerouslySetInnerHTML={{ __html: html }} />;
+}
+
 export function FeatureClip({ clip, label, wide, fallback }: { clip: Clip; label: string; wide?: boolean; fallback: ReactNode }) {
+  if (clip.hero) return <HeroClip clip={clip} label={label} fallback={fallback} />;
+  return <SlotClip clip={clip} label={label} wide={wide} fallback={fallback} />;
+}
+
+/** Below-the-fold tile or showcase: nothing (not even the poster) loads until one screen away. */
+function SlotClip({ clip, label, wide, fallback }: { clip: Clip; label: string; wide?: boolean; fallback: ReactNode }) {
   const ref = useRef<HTMLVideoElement>(null);
   const box = useRef<HTMLDivElement>(null);
   const phone = useMedia(PHONE);
-  const phoneHero = useMedia(PHONE_HERO);
   const reduced = useMedia(REDUCED);
   const [near, setNear] = useState(false);
   const [failed, setFailed] = useState(false);
   const sq = wide && clip.square && phone;
-  const m43 = clip.hero && phoneHero;
-  const base = sq ? `${clip.base}-sq` : m43 ? `${clip.base}-m` : clip.base;
+  const base = sq ? `${clip.base}-sq` : clip.base;
 
   // Fetch once the slot comes within a screen of the viewport.
   useEffect(() => {
@@ -114,9 +166,9 @@ export function FeatureClip({ clip, label, wide, fallback }: { clip: Clip; label
   if (failed) return <>{fallback}</>;
 
   return (
-    <div ref={box} className={`fclip${clip.hero ? ' fclip--fill' : wide ? ' fclip--wide' : ' fclip--square'}${sq ? ' is-sq' : ''}`} role="img" aria-label={label}>
+    <div ref={box} className={`fclip${wide ? ' fclip--wide' : ' fclip--square'}${sq ? ' is-sq' : ''}`} role="img" aria-label={label}>
       {reduced ? (
-        <img className="fclip__media" src={`${base}-result.jpg?v=${V}`} alt="" loading="lazy" decoding="async" />
+        near ? <img className="fclip__media" src={`${base}-result.jpg?v=${V}`} alt="" decoding="async" /> : null
       ) : (
         <video
           key={base}
@@ -126,7 +178,7 @@ export function FeatureClip({ clip, label, wide, fallback }: { clip: Clip; label
           loop
           playsInline
           preload="none"
-          poster={`${base}-poster.jpg?v=${V}`}
+          poster={near ? `${base}-poster.jpg?v=${V}` : undefined}
           aria-hidden="true"
           onError={() => setFailed(true)}
         >

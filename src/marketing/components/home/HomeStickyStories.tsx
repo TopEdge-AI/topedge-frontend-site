@@ -1,11 +1,7 @@
 import { Link } from 'react-router-dom';
 import DemoProductVideoFrame from './demo/DemoProductVideoFrame';
-import DemoProductImageFrame from './demo/DemoProductImageFrame';
-import DemoPixelTrackingUi from './demo/DemoPixelTrackingUi';
 import {
   HOME_FILMS,
-  FILMS_READY,
-  FEATURE_IMAGES,
   type DemoVideo,
 } from '../../data/homeFeatureMedia';
 
@@ -22,12 +18,9 @@ type Story = {
   href: string;
   cta: string;
   glow: Glow;
-} & (
-  | { kind: 'video'; video: DemoVideo }
-  | { kind: 'image'; image: { src: string } }
-  | { kind: 'pixel' }
-);
-
+  kind: 'video';
+  video: DemoVideo;
+};
 
 /**
  * One line on desktop; on a phone the line breaks once, at the clause or
@@ -185,16 +178,7 @@ const STORIES: Story[] = [
   },
 ];
 
-/** Until the films ship, stories that had a still or the pixel UI keep it. */
-const PRE_FILM: Record<string, Pick<Story, 'kind'> & Partial<{ image: { src: string } }>> = {
-  'audience-campaigns': { kind: 'image', image: FEATURE_IMAGES.campaigns },
-  'website-pixel': { kind: 'pixel' },
-  'unified-identity': { kind: 'image', image: FEATURE_IMAGES.unifiedIdentity },
-  'net-profit': { kind: 'image', image: FEATURE_IMAGES.profit },
-};
-
-function FeatureMoment({ story: given }: { story: Story }) {
-  const story = (!FILMS_READY && PRE_FILM[given.id] ? { ...given, ...PRE_FILM[given.id] } : given) as Story;
+function FeatureMoment({ story }: { story: Story }) {
   const title = `${story.titleLead} ${story.titleAccent}`;
 
   return (
@@ -222,23 +206,13 @@ function FeatureMoment({ story: given }: { story: Story }) {
             <span className="home-sticky__moment-glow__halo" />
             <span className="home-sticky__moment-glow__wash" />
           </div>
-          {story.kind === 'video' ? (
-            <DemoProductVideoFrame
-              src={story.video.src}
-              mobileSrc={story.video.mobileSrc}
-              poster={story.video.poster}
-              glow={story.glow}
-              title={`${title} preview`}
-            />
-          ) : story.kind === 'pixel' ? (
-            <DemoPixelTrackingUi />
-          ) : (
-            <DemoProductImageFrame
-              src={story.image.src}
-              alt={title}
-              glow={story.glow}
-            />
-          )}
+          <DemoProductVideoFrame
+            src={story.video.src}
+            mobileSrc={story.video.mobileSrc}
+            poster={story.video.poster}
+            glow={story.glow}
+            title={`${title} preview`}
+          />
         </div>
       </div>
     </article>

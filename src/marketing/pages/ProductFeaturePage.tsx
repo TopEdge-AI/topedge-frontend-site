@@ -27,7 +27,7 @@ import HomeTrust from '../components/home/HomeTrust';
 import { PrimaryButton, GhostButton } from '../components/ui';
 import { ScenesContext, ScenePlaceholder, usePageScenes, useScene } from '../components/visuals';
 import { AccentContext, MeshContext, SceneSlotContext } from '../components/visuals/kit';
-import { FeatureClip, clipFor } from '../components/visuals/clips';
+import { FeatureClip, clipFor, hasClips } from '../components/visuals/clips';
 import '../styles/product-feature.css';
 import '../styles/feature-premium.css';
 
@@ -55,7 +55,13 @@ function ShotFrame({
   const clip = clipKey ? clipFor(clipKey[0], clipKey[1]) : null;
 
   if (clip) {
-    const fallback = Scene ? <Scene label={label} /> : <ScenePlaceholder label={label} wide={wide} />;
+    const fallback = Scene ? (
+      <Scene label={label} />
+    ) : src ? (
+      <img className="mkt-pf__shot-img" src={src} alt={label} loading="lazy" decoding="async" />
+    ) : (
+      <ScenePlaceholder label={label} wide={wide} />
+    );
     return (
       <div className={`mkt-pf__shot${wide ? ' is-wide' : ''} is-scene is-clip`}>
         <FeatureClip clip={clip} label={label} wide={wide} fallback={fallback} />
@@ -159,7 +165,8 @@ function ProductFeatureView({ page }: { page: ProductPage }) {
   const proof = page.proofTable;
   const modifiedIso = featurePagesModifiedIso();
   const heroDemo = page.hero.kind === 'video' ? demoAssetBySrc(page.hero.src) : undefined;
-  const scenes = usePageScenes(page.id);
+  // Pages whose every slot plays a film skip the coded-scene chunk entirely.
+  const scenes = usePageScenes(hasClips(page.id) ? '' : page.id);
   const HeroScene =
     page.hero.kind === 'image' ? scenes.map?.[page.hero.src.split('?')[0]] ?? null : null;
   const heroClip = page.hero.kind === 'image' ? clipFor(page.id, 'h') : null;
@@ -254,7 +261,13 @@ function ProductFeatureView({ page }: { page: ProductPage }) {
                     clip={heroClip}
                     label={page.hero.alt}
                     wide
-                    fallback={HeroScene ? <HeroScene label={page.hero.alt} /> : <ScenePlaceholder label={page.hero.alt} wide />}
+                    fallback={
+                      HeroScene ? (
+                        <HeroScene label={page.hero.alt} />
+                      ) : (
+                        <img className="demo-video-glow__still" src={page.hero.src} alt={page.hero.alt} decoding="async" />
+                      )
+                    }
                   />
                 </div>
               </div>
