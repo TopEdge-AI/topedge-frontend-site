@@ -7,28 +7,39 @@ import type { CSSProperties, ReactNode } from 'react';
 import { E, clamp, lerp } from './time';
 import { DISPLAY, FONT } from './ui';
 
-export type StudioTone = 'midnight' | 'sand' | 'violet' | 'mint' | 'blush' | 'ink' | 'sky';
+export type StudioTone = 'midnight' | 'ink' | 'sand' | 'violet' | 'mint' | 'blush' | 'sky' | 'peach' | 'lilac' | 'aqua' | 'lemon' | 'rose';
 
-const STUDIO: Record<StudioTone, { base: string; light: string; floor: string; ink: string; sub: string }> = {
-  midnight: { base: 'linear-gradient(180deg,#0B0A1E 0%,#14112E 60%,#0A0918 100%)', light: 'rgba(139,92,246,0.42)', floor: 'rgba(0,0,0,0.55)', ink: '#FFFFFF', sub: 'rgba(255,255,255,0.62)' },
-  ink: { base: 'linear-gradient(180deg,#0E1116 0%,#171B22 60%,#0B0D11 100%)', light: 'rgba(56,189,248,0.30)', floor: 'rgba(0,0,0,0.6)', ink: '#FFFFFF', sub: 'rgba(255,255,255,0.6)' },
-  sand: { base: 'linear-gradient(180deg,#F6EEE3 0%,#EFE2D0 60%,#E6D4BD 100%)', light: 'rgba(255,255,255,0.85)', floor: 'rgba(120,80,30,0.22)', ink: '#2A1F14', sub: 'rgba(42,31,20,0.6)' },
-  violet: { base: 'linear-gradient(180deg,#EDE7FF 0%,#DDD2FF 60%,#CBBDFB 100%)', light: 'rgba(255,255,255,0.9)', floor: 'rgba(60,30,140,0.22)', ink: '#1B1238', sub: 'rgba(27,18,56,0.6)' },
-  mint: { base: 'linear-gradient(180deg,#E6F7F0 0%,#D2F0E4 60%,#BFE6D6 100%)', light: 'rgba(255,255,255,0.9)', floor: 'rgba(10,80,60,0.2)', ink: '#0D2A21', sub: 'rgba(13,42,33,0.6)' },
-  blush: { base: 'linear-gradient(180deg,#FCECEC 0%,#F8DCDD 60%,#F0C8CC 100%)', light: 'rgba(255,255,255,0.9)', floor: 'rgba(120,30,50,0.2)', ink: '#2E1418', sub: 'rgba(46,20,24,0.6)' },
-  sky: { base: 'linear-gradient(180deg,#E8F3FF 0%,#D4E8FF 60%,#BFD9F8 100%)', light: 'rgba(255,255,255,0.9)', floor: 'rgba(20,60,120,0.2)', ink: '#0E1E33', sub: 'rgba(14,30,51,0.6)' },
+type Mesh = { base: [string, string]; lights: [string, string, string]; ink: string; sub: string; dark?: boolean };
+/** Soft multi-light gradients, no patterns: base wash + three coloured lights. */
+const STUDIO: Record<StudioTone, Mesh> = {
+  midnight: { base: ['#0B0A1E', '#120F2A'], lights: ['rgba(139,92,246,0.55)', 'rgba(236,72,153,0.28)', 'rgba(56,189,248,0.22)'], ink: '#FFFFFF', sub: 'rgba(255,255,255,0.62)', dark: true },
+  ink: { base: ['#0E1116', '#151A22'], lights: ['rgba(56,189,248,0.40)', 'rgba(16,185,129,0.25)', 'rgba(139,92,246,0.25)'], ink: '#FFFFFF', sub: 'rgba(255,255,255,0.6)', dark: true },
+  sand: { base: ['#FBF6EE', '#F3E7D6'], lights: ['#FFD3A1', '#F9BFA8', '#FFEFC2'], ink: '#2A1F14', sub: 'rgba(42,31,20,0.6)' },
+  violet: { base: ['#F6F2FF', '#E9E1FF'], lights: ['#C7B2FF', '#F3BDEB', '#B9D3FF'], ink: '#1B1238', sub: 'rgba(27,18,56,0.6)' },
+  mint: { base: ['#F1FBF6', '#DEF4EA'], lights: ['#9EEDCB', '#B6E3FF', '#E1F5AE'], ink: '#0D2A21', sub: 'rgba(13,42,33,0.6)' },
+  blush: { base: ['#FFF4F4', '#FBE4EA'], lights: ['#FFB8CC', '#FFD3B0', '#E2CCFF'], ink: '#2E1418', sub: 'rgba(46,20,24,0.6)' },
+  sky: { base: ['#F1F7FF', '#DDEBFF'], lights: ['#A3CDFF', '#C3BDFF', '#AEEDEE'], ink: '#0E1E33', sub: 'rgba(14,30,51,0.6)' },
+  peach: { base: ['#FFF6EF', '#FFE6D6'], lights: ['#FFB98F', '#FFD7A0', '#FFC1C8'], ink: '#2E1A10', sub: 'rgba(46,26,16,0.6)' },
+  lilac: { base: ['#FBF4FF', '#F0E2FF'], lights: ['#E3B6FF', '#FFC6E6', '#C4C9FF'], ink: '#231238', sub: 'rgba(35,18,56,0.6)' },
+  aqua: { base: ['#F0FCFC', '#D9F3F4'], lights: ['#8FE3E6', '#A9D8FF', '#C8F5D4'], ink: '#0B2A2C', sub: 'rgba(11,42,44,0.6)' },
+  lemon: { base: ['#FFFDF0', '#FBF3CF'], lights: ['#FFE58A', '#C9F0A6', '#FFD3A8'], ink: '#2A2610', sub: 'rgba(42,38,16,0.6)' },
+  rose: { base: ['#FFF3F6', '#FDE0E8'], lights: ['#FF9FBC', '#FFC8A8', '#F7B8FF'], ink: '#33101C', sub: 'rgba(51,16,28,0.6)' },
 };
 export const studioInk = (tone: StudioTone) => STUDIO[tone];
 
-/** Lit studio: graded backdrop, a soft key light that drifts, a floor shadow and fine grain. */
-export function Studio({ t, tone, w, h, spot = [50, 42] }: { t: number; tone: StudioTone; w: number; h: number; spot?: [number, number] }) {
-  const s = STUDIO[tone];
-  const dx = Math.sin(t * 0.3) * 2.5;
+/** Lit stage: graded base, three soft coloured lights that drift slowly, a floor shadow. */
+export function Studio({ t, tone, w, h, seed = 0 }: { t: number; tone: StudioTone; w: number; h: number; spot?: [number, number]; seed?: number }) {
+  const m = STUDIO[tone];
+  const r = (i: number) => { const x = Math.sin((seed + 1) * 91.7 + i * 37.3) * 43758.5; return x - Math.floor(x); };
+  const pos = [0, 1, 2].map((i) => [10 + r(i) * 80, 8 + r(i + 7) * 80]);
+  const d = (i: number) => Math.sin(t * 0.25 + i * 2.1) * 3;
+  const blob = (i: number, size: number) => `radial-gradient(${size}% ${size * 1.1}% at ${pos[i][0] + d(i)}% ${pos[i][1] - d(i + 1)}%, ${m.lights[i]} 0%, transparent 70%)`;
   return (
-    <div style={{ position: 'absolute', inset: 0, background: s.base, overflow: 'hidden' }}>
-      <div style={{ position: 'absolute', inset: 0, background: `radial-gradient(42% 46% at ${spot[0] + dx}% ${spot[1]}%, ${s.light} 0%, transparent 70%)` }} />
-      <div style={{ position: 'absolute', left: '-10%', right: '-10%', bottom: '-6%', height: '34%', background: `radial-gradient(50% 60% at 50% 30%, ${s.floor} 0%, transparent 70%)`, filter: 'blur(10px)' }} />
-      <div style={{ position: 'absolute', inset: 0, width: w, height: h, opacity: 0.05, backgroundImage: 'radial-gradient(rgba(0,0,0,0.9) 0.6px, transparent 0.9px)', backgroundSize: '3px 3px' }} />
+    <div style={{ position: 'absolute', inset: 0, overflow: 'hidden', background: `linear-gradient(${160 + r(9) * 40}deg, ${m.base[0]} 0%, ${m.base[1]} 100%)` }}>
+      <div style={{ position: 'absolute', inset: 0, background: [blob(0, 58), blob(1, 50), blob(2, 44)].join(', '), opacity: m.dark ? 1 : 0.95 }} />
+      <div style={{ position: 'absolute', inset: 0, background: `radial-gradient(60% 50% at 50% 42%, ${m.dark ? 'rgba(255,255,255,0.05)' : 'rgba(255,255,255,0.55)'} 0%, transparent 70%)` }} />
+      <div style={{ position: 'absolute', left: '-10%', right: '-10%', bottom: '-8%', height: '30%', background: `radial-gradient(50% 60% at 50% 30%, ${m.dark ? 'rgba(0,0,0,0.5)' : 'rgba(40,30,60,0.10)'} 0%, transparent 70%)`, filter: 'blur(10px)', width: w, maxWidth: '120%' }} />
+      <div style={{ display: 'none', height: h }} />
     </div>
   );
 }
@@ -107,11 +118,14 @@ export function Glass({ children, dark, pad = '18px 26px', r = 24, style }: { ch
  * Standard camera track: macro open on `open`, settle wide, push in on each
  * action [x, y, t] (holding ~1.8 s), settle wide for the end and the loop.
  */
-export function cineCam(w: number, h: number, dur: number, open: [number, number], acts: [number, number, number][], push = 1.24): CamKey[] {
+export function cineCam(w: number, h: number, dur: number, open: [number, number], acts: [number, number, number][], pushIn?: number): CamKey[] {
   const cx = w / 2, cy = h / 2;
+  const square = Math.abs(w - h) < 2;
+  const push = pushIn ?? (square ? 1.1 : 1.24);
+  const openZ = square ? 1.32 : 1.55;
   // Aim partway from the centre toward each point so the subject stays in frame.
   const ox = lerp(cx, open[0], 0.6), oy = lerp(cy, open[1], 0.6);
-  const k: CamKey[] = [[0, ox, oy, 1.55, 7, -12, -1.5], [1.4, cx, cy, 1.0, 4, -7, 0]];
+  const k: CamKey[] = [[0, ox, oy, openZ, 7, -12, -1.5], [1.4, cx, cy, 1.0, 4, -7, 0]];
   let last = 1.4;
   for (const [ax, ay, ta] of acts) {
     const fx = lerp(cx, ax, 0.55), fy = lerp(cy, ay, 0.55);

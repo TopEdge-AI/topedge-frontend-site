@@ -1068,3 +1068,6 @@
   to { opacity: 0; transform: translate3d(-5em, 0, 0) scale(0.95); visibility: hidden; }
 }
 .fv .fv-cursor--touch svg { display: none; }
+
+/* Clean gradients only: no dot/grid/line patterns on any scene stage. */
+.fv .fv__pattern { display: none; }

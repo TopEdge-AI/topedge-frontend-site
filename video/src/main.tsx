@@ -34,7 +34,7 @@ function App() {
         <div style={{ position: 'relative', width: comp.w, height: comp.h, overflow: 'hidden' }}>
           {comp.cine ? (
             <CineContext.Provider value={Boolean(comp.cine.tone)}>
-              {comp.cine.tone ? <Studio t={t} tone={comp.cine.tone} w={comp.w} h={comp.h} /> : null}
+              {comp.cine.tone ? <Studio t={t} tone={comp.cine.tone} w={comp.w} h={comp.h} seed={comp.cine.seed} /> : null}
               <Lens t={t} w={comp.w} h={comp.h} keys={comp.cine.cam}>
                 <Comp t={t} />
               </Lens>

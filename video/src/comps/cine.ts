@@ -109,9 +109,22 @@ const S: Record<string, Spec> = {
   '11-S3': ['sky', [650, 330], [[960, 520, 1.4]]],
 };
 
-export const CINE: Record<string, (d: Dims) => { tone?: StudioTone; cam: CamKey[] }> = Object.fromEntries(
+/** Ten light palettes, rotated so neighbouring cards on a page never share one. */
+const ROTA: StudioTone[] = ['violet', 'peach', 'aqua', 'blush', 'lemon', 'sky', 'lilac', 'mint', 'rose', 'sand'];
+const SLOT = ['H', 'T1', 'T2', 'T3', 'S1', 'S2', 'S3', 'S4'];
+const HOME: Record<string, StudioTone> = { 'home-cart': 'blush', 'home-optin': 'mint', 'home-cod': 'peach', 'home-flow': 'violet', 'home-intent': 'aqua', 'home-segments': 'lilac', 'home-identity': 'sky', 'home-pixel': 'mint' };
+function toneFor(id: string, given: StudioTone | null): StudioTone | undefined {
+  if (given === null) return undefined; // night stage drawn by the composition
+  if (HOME[id]) return HOME[id];
+  const m = id.match(/^(\d\d)-(\w+)$/);
+  if (!m) return given;
+  return ROTA[(Number(m[1]) * 3 + SLOT.indexOf(m[2])) % ROTA.length];
+}
+const seedOf = (id: string) => [...id].reduce((a, c) => a + c.charCodeAt(0), 0);
+
+export const CINE: Record<string, (d: Dims) => { tone?: StudioTone; seed: number; cam: CamKey[] }> = Object.fromEntries(
   Object.entries(S).map(([id, [tone, open, acts, push]]) => [
     id,
-    (d: Dims) => ({ tone: tone ?? undefined, cam: cineCam(d.w, d.h, d.duration, open, acts, push) }),
+    (d: Dims) => ({ tone: toneFor(id, tone), seed: seedOf(id), cam: cineCam(d.w, d.h, d.duration, open, acts, push) }),
   ]),
 );

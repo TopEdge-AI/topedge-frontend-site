@@ -17,7 +17,7 @@ import { CINE } from './cine';
 export type Comp = {
   w: number; h: number; duration: number; Component: ComponentType<{ t: number }>;
   /** Cinematic mode: harness draws the studio (unless tone is omitted) and runs the camera. */
-  cine?: { tone?: StudioTone; cam: CamKey[] };
+  cine?: { tone?: StudioTone; seed?: number; cam: CamKey[] };
 };
 
 const ALL: Record<string, Comp> = { ...journeys, ...campaigns, ...crm, ...pixel, ...profit, ...optin, ...flow, ...intent, ...brain, ...rules, ...meta };
