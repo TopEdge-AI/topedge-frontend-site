@@ -15,7 +15,7 @@ export type DemoVideo = {
  * Code-rendered launch films (video/, src/comps/launch*.tsx): one per home story,
  * 1600x900 on desktop and a portrait 720x900 cut composed for phones.
  */
-const V = '20261119b';
+const V = '20261119c';
 const film = (name: string): DemoVideo => ({
   src: `/marketing/feature-clips/home/${name}.mp4?v=${V}`,
   mobileSrc: `/marketing/feature-clips/home/${name}-mobile.mp4?v=${V}`,

@@ -22,7 +22,7 @@ type Clip = {
 const DIR = '/marketing/feature-clips';
 const V = '20261118a';
 /** Hero films (launch films) version, separate so slot clips keep their cache. */
-const HV = '20261119b';
+const HV = '20261119c';
 
 /**
  * Clips by page slot: `${pageId}:h` (hero), `:t1..` (bento tiles), `:s1..` (showcase
@@ -40,7 +40,7 @@ const PAGES: Record<string, PageClips> = {
   'opt-in-tools': { dir: 'optin', film: 'optin', tiles: 3, shows: 4 },
   campaigns: { dir: 'campaigns', film: 'campaigns', tiles: 3, shows: 3 },
   'audience-crm': { dir: 'crm', film: 'identity', tiles: 3, shows: 3 },
-  journeys: { dir: 'journeys', film: 'cart', tiles: 3, shows: 3 },
+  journeys: { dir: 'journeys', tiles: 3, shows: 3 },
   'tracking-pixel': { dir: 'pixel', film: 'pixel', tiles: 3, shows: 3 },
   'ai-brain': { dir: 'brain', tiles: 3, shows: 3 },
   'meta-manager': { dir: 'meta', tiles: 3, shows: 3 },
