@@ -51,13 +51,13 @@ const SEGMENT: DemoVideo = {
  * screen recordings and stills.
  */
 const film = (name: string): DemoVideo => ({
-  src: `/marketing/feature-clips/home/${name}.mp4?v=20261117a`,
-  mobileSrc: `/marketing/feature-clips/home/${name}-mobile.mp4?v=20261117a`,
-  poster: `/marketing/feature-clips/home/${name}-poster.jpg?v=20261117a`,
+  src: `/marketing/feature-clips/home/${name}.mp4?v=20261117c`,
+  mobileSrc: `/marketing/feature-clips/home/${name}-mobile.mp4?v=20261117c`,
+  poster: `/marketing/feature-clips/home/${name}-poster.jpg?v=20261117c`,
 });
 
 /** Flip once public/marketing/feature-clips/home/ holds every film. */
-export const FILMS_READY = false;
+export const FILMS_READY = true;
 
 const HOME_FILMS_READY = {
   cart: film('cart'),

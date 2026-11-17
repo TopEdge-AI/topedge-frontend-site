@@ -18,7 +18,7 @@ type Clip = {
 };
 
 const DIR = '/marketing/feature-clips';
-const V = '20261117a';
+const V = '20261117c';
 
 /**
  * Clips by page slot: `${pageId}:h` (hero), `:t1..` (bento tiles), `:s1..` (showcase
@@ -41,12 +41,8 @@ const PAGES: Record<string, PageClips> = {
   'intent-detection': { dir: 'intent', tiles: 3, shows: 3 },
 };
 
-/** Pages whose clip files are in public/ (others keep their coded scenes). */
-const LIVE = new Set(['journeys', 'campaigns', 'audience-crm']);
-
 /** slot: 'h' | 't1'.. | 's1'.. */
 export function clipFor(pageId: string, slot: string): Clip | null {
-  if (!LIVE.has(pageId)) return null;
   const p = PAGES[pageId];
   if (!p) return null;
   const base = `${DIR}/${p.dir}/${slot}`;
