@@ -54,3 +54,10 @@
 
 /* Hero: the coded aurora replaces the old generated mesh image. */
 .mkt-pf .mkt-pf__mesh.mkt-pf__mesh--aurora { background: none; transform: none; inset: 0; }
+
+/* Rendered film clips (components/visuals/clips.tsx) */
+.fclip { position: relative; width: 100%; height: 100%; overflow: hidden; background: #f8f7fa; }
+.fclip--square { aspect-ratio: 1 / 1; }
+.fclip--wide { aspect-ratio: 16 / 10; }
+.fclip--wide.is-sq { aspect-ratio: 1 / 1; }
+.fclip__media { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; }

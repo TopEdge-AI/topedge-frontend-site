@@ -27,6 +27,7 @@ import HomeTrust from '../components/home/HomeTrust';
 import { PrimaryButton, GhostButton } from '../components/ui';
 import { ScenesContext, ScenePlaceholder, usePageScenes, useScene } from '../components/visuals';
 import { AccentContext, MeshContext, SceneSlotContext } from '../components/visuals/kit';
+import { FeatureClip, clipFor } from '../components/visuals/clips';
 import '../styles/product-feature.css';
 import '../styles/feature-premium.css';
 
@@ -47,6 +48,17 @@ function ShotFrame({
   const empty = failed || !src;
   // A coded scene (components/visuals) replaces the screenshot where one exists.
   const { Scene, pending } = useScene(src);
+  // A rendered film clip, where one exists, plays in place of the coded scene.
+  const clip = clipFor(src);
+
+  if (clip) {
+    const fallback = Scene ? <Scene label={label} /> : <ScenePlaceholder label={label} wide={wide} />;
+    return (
+      <div className={`mkt-pf__shot${wide ? ' is-wide' : ''} is-scene is-clip`}>
+        <FeatureClip clip={clip} label={label} wide={wide} fallback={fallback} />
+      </div>
+    );
+  }
 
   if (Scene || pending) {
     return (
