@@ -11,8 +11,8 @@
  */
 import type { CSSProperties, ReactNode } from 'react';
 import { HugeiconsIcon, type IconSvgElement } from '@hugeicons/react';
-import { E, clamp, lerp, prog, spring } from './time';
-import { DISPLAY, FONT, IPhone, PHONE_H, PHONE_W } from './ui';
+import { E, clamp, lerp, prog, spring, useSize } from './time';
+import { DISPLAY, FONT, IPhone, PHONE_H, PHONE_W, Touch } from './ui';
 
 export const L = {
   violet: '#7C3AED',
@@ -44,10 +44,38 @@ export function track(t: number, k: [number, number][], ease = ease3) {
 }
 const rnd = (i: number, s = 1) => { const v = Math.sin(i * 127.1 + s * 311.7) * 43758.5453; return v - Math.floor(v); };
 
+/* ---------------------------------------------------------------- layout */
+
+/**
+ * Films are authored on a 1920x1080 world. On other canvases (the 4:5 phone cut,
+ * the 4:3 hero cut) positions are re-mapped around the centre: horizontal
+ * offsets squeeze to fit the narrower frame, vertical ones spread, and objects
+ * keep their pixel size, so on a phone everything reads ~1.8x larger.
+ */
+export function layoutFor(w: number, h: number) {
+  const base = w === 1920 && h === 1080;
+  const kx = w / 1920;
+  const ky = h > w ? (h / 1080) * 0.92 : h / 1080;
+  const narrow = clamp((1920 - w) / 840);
+  return {
+    w, h, base, portrait: h > w, narrow,
+    x: (x: number) => (base ? x : w / 2 + (x - 960) * kx),
+    y: (y: number) => (base ? y : h / 2 + (y - 540) * ky),
+    rx: (r: number) => r * kx,
+    ry: (r: number) => r * ky,
+    /** per-object shrink for wide things on narrow canvases */
+    ms: (m: number) => lerp(1, m, narrow),
+  };
+}
+export const useLayout = () => { const { w, h } = useSize(); return layoutFor(w, h); };
+/** Pick a value by canvas: desktop value, portrait (phone) value. */
+export const usePortrait = () => useLayout().portrait;
+
 /* --------------------------------------------------------------- stages */
 
 /** deep 0 = Air (light), 1 = Deep (night). Cross-dissolve by animating `deep`. */
-export function Stage({ t, w, h, deep, bloom = [0.5, 0.48] }: { t: number; w: number; h: number; deep: number; bloom?: [number, number] }) {
+export function Stage({ t, deep, bloom = [0.5, 0.48] }: { t: number; w?: number; h?: number; deep: number; bloom?: [number, number] }) {
+  const { w, h } = useSize();
   const d1 = Math.sin(t * 0.31) * 4, d2 = Math.cos(t * 0.23) * 4;
   return (
     <div style={{ position: 'absolute', inset: 0, overflow: 'hidden' }}>
@@ -70,8 +98,9 @@ export function Stage({ t, w, h, deep, bloom = [0.5, 0.48] }: { t: number; w: nu
 /* ----------------------------------------------------------------- space */
 
 /** 3D world with perspective; camera pans/zooms/tilts the whole world. */
-export function Space({ w, h, cam = {}, children, persp = 1800 }: { w: number; h: number; cam?: { x?: number; y?: number; s?: number; rx?: number; ry?: number; rz?: number }; children: ReactNode; persp?: number }) {
+export function Space({ cam = {}, children, persp = 1800 }: { w?: number; h?: number; cam?: { x?: number; y?: number; s?: number; rx?: number; ry?: number; rz?: number }; children: ReactNode; persp?: number }) {
   const { x = 0, y = 0, s = 1, rx = 0, ry = 0, rz = 0 } = cam;
+  const { w, h } = useSize();
   return (
     <div style={{ position: 'absolute', inset: 0, perspective: persp, perspectiveOrigin: '50% 50%' }}>
       <div style={{ position: 'absolute', left: 0, top: 0, width: w, height: h, transformStyle: 'preserve-3d', transformOrigin: '50% 50%', transform: `translate(${-x}px,${-y}px) scale(${s}) rotateX(${rx}deg) rotateY(${ry}deg) rotateZ(${rz}deg)` }}>
@@ -82,8 +111,10 @@ export function Space({ w, h, cam = {}, children, persp = 1800 }: { w: number; h
 }
 
 /** A thing in the space, centred on (x, y). Depth blur grows with |z| (focus at z=0) and motion blur with `mb`. */
-export function Obj({ x, y, z = 0, rx = 0, ry = 0, rz = 0, s = 1, o = 1, blur, dof = 0.012, mb = 0, children, style, flat }: { x: number; y: number; z?: number; rx?: number; ry?: number; rz?: number; s?: number; o?: number; blur?: number; dof?: number; mb?: number; children: ReactNode; style?: CSSProperties; flat?: boolean }) {
+export function Obj({ x: x0, y: y0, z = 0, rx = 0, ry = 0, rz = 0, s: s0 = 1, o = 1, blur, dof = 0.012, mb = 0, ms = 1, children, style, flat }: { x: number; y: number; z?: number; rx?: number; ry?: number; rz?: number; s?: number; o?: number; blur?: number; dof?: number; mb?: number; ms?: number; children: ReactNode; style?: CSSProperties; flat?: boolean }) {
+  const lay = useLayout();
   if (o <= 0.002) return null;
+  const x = lay.x(x0), y = lay.y(y0), s = s0 * lay.ms(ms);
   const b = Math.min(18, (blur ?? Math.abs(z) * dof) + mb);
   return (
     <div style={{ position: 'absolute', left: x, top: y, width: 0, height: 0, transformStyle: flat ? 'flat' : 'preserve-3d', transform: `translateZ(${z}px) rotateX(${rx}deg) rotateY(${ry}deg) rotateZ(${rz}deg) scale(${s})`, zIndex: Math.round(1000 + z) }}>
@@ -174,7 +205,9 @@ export function DoneTick({ k, size = 150, dark, color = L.violet }: { k: number;
 }
 
 /** Confetti burst from a point; shards tumble in 3D and fall. */
-export function Confetti({ t, at, x, y, n = 46, spread = 900, colors = ['#8B5CF6', '#C4B5FD', '#4F46E5', '#F472B6', '#38BDF8', '#FBBF24'] }: { t: number; at: number; x: number; y: number; n?: number; spread?: number; colors?: string[] }) {
+export function Confetti({ t, at, x: x0, y: y0, n = 46, spread = 900, colors = ['#8B5CF6', '#C4B5FD', '#4F46E5', '#F472B6', '#38BDF8', '#FBBF24'] }: { t: number; at: number; x: number; y: number; n?: number; spread?: number; colors?: string[] }) {
+  const lay = useLayout();
+  const x = lay.x(x0), y = lay.y(y0);
   const dt = t - at;
   if (dt < 0 || dt > 3.2) return null;
   return (
@@ -215,7 +248,10 @@ export function SparkleWipe({ t, at, x, y, max = 2600 }: { t: number; at: number
 }
 
 /** Curved light lines from many sources into one target, drawn on then pulsing. */
-export function FanIn({ from, to, k, pulse = 0, dark = true, color }: { from: [number, number][]; to: [number, number]; k: number; pulse?: number; dark?: boolean; color?: string }) {
+export function FanIn({ from: from0, to: to0, k, pulse = 0, dark = true, color }: { from: [number, number][]; to: [number, number]; k: number; pulse?: number; dark?: boolean; color?: string }) {
+  const lay = useLayout();
+  const from = from0.map(([a, b]) => [lay.x(a), lay.y(b)] as [number, number]);
+  const to: [number, number] = [lay.x(to0[0]), lay.y(to0[1])];
   const col = color ?? (dark ? '#C4B5FD' : '#8B5CF6');
   return (
     <svg style={{ position: 'absolute', left: 0, top: 0, overflow: 'visible' }} width="1" height="1">
@@ -244,14 +280,20 @@ export function orbit(i: number, n: number, t: number, rx: number, ry: number, s
 }
 
 /** Thin glowing ring (for orbit hubs and the deep stage). */
-export const Ring = ({ rx, ry, o = 1, dark = true, k = 1 }: { rx: number; ry: number; o?: number; dark?: boolean; k?: number }) => (
+export const Ring = ({ rx: rx0, ry: ry0, o = 1, dark = true, k = 1 }: { rx: number; ry: number; o?: number; dark?: boolean; k?: number }) => {
+  const lay = useLayout();
+  const rx = lay.rx(rx0), ry = lay.ry(ry0);
+  return (
   <svg style={{ position: 'absolute', left: -rx - 4, top: -ry - 4, overflow: 'visible', opacity: o }} width={rx * 2 + 8} height={ry * 2 + 8}>
     <ellipse cx={rx + 4} cy={ry + 4} rx={rx} ry={ry} fill="none" stroke={dark ? 'rgba(196,181,253,0.38)' : 'rgba(124,58,237,0.22)'} strokeWidth="1.6" pathLength={1} strokeDasharray="1" strokeDashoffset={1 - k} />
   </svg>
-);
+  );
+};
 
 /** Hand cursor like launch films use (pointer finger). */
-export function Hand({ x, y, press = 0, o = 1, s = 1.25 }: { x: number; y: number; press?: number; o?: number; s?: number }) {
+export function Hand({ x: x0, y: y0, press = 0, o = 1, s = 1.25 }: { x: number; y: number; press?: number; o?: number; s?: number }) {
+  const lay = useLayout();
+  const x = lay.x(x0), y = lay.y(y0);
   if (o <= 0) return null;
   return (
     <div style={{ position: 'absolute', left: x - 14 * s, top: y - 4 * s, opacity: o, transform: `scale(${s * (1 - press * 0.12)})`, transformOrigin: '14px 4px', zIndex: 4000, filter: 'drop-shadow(0 6px 10px rgba(30,10,80,0.35))' }}>
@@ -264,7 +306,9 @@ export function Hand({ x, y, press = 0, o = 1, s = 1.25 }: { x: number; y: numbe
 }
 
 /** Press pulse ring at a click. */
-export function Ping({ t, at, x, y, dark }: { t: number; at: number; x: number; y: number; dark?: boolean }) {
+export function Ping({ t, at, x: x0, y: y0, dark }: { t: number; at: number; x: number; y: number; dark?: boolean }) {
+  const lay = useLayout();
+  const x = lay.x(x0), y = lay.y(y0);
   const k = prog(t, at, at + 0.7, E.enter);
   if (k <= 0 || k >= 1) return null;
   const s = lerp(20, 130, k);
@@ -304,7 +348,7 @@ export function Phone3D({ x, y, z = 0, rx = 0, ry = 0, rz = 0, s = 1, o = 1, mb 
   );
 }
 /** Screen point (lx, ly) of an upright phone centred at (x, y) with scale s → stage point. */
-export const onPhone = (x: number, y: number, s: number, lx: number, ly: number): [number, number] => [x + (lx - PHONE_W / 2) * s, y + (ly - PHONE_H / 2) * s];
+export const onPhone = (x: number, y: number, s: number, lx: number, ly: number) => ({ cx: x, cy: y, dx: (lx - PHONE_W / 2) * s, dy: (ly - PHONE_H / 2) * s });
 
 /** Big gradient figure (numbers). */
 export function Figure({ value, size = 170, dark }: { value: string; size?: number; dark?: boolean }) {
@@ -349,4 +393,10 @@ export function Parcel({ size = 280, rx = -18, ry = 35, stamp = 0, stampS = 1 }:
       </div>
     </div>
   );
+}
+
+/** Fingertip (ui Touch) at a world point. */
+export function TouchAt({ cx, cy, dx, dy, ...rest }: { cx: number; cy: number; dx: number; dy: number; o?: number; press?: number; ripple?: number; size?: number }) {
+  const lay = useLayout();
+  return <Touch x={lay.x(cx) + dx} y={lay.y(cy) + dy} {...rest} />;
 }

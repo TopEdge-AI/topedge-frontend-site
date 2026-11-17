@@ -7,6 +7,8 @@ export type DemoVideo = {
   poster: string;
   /** Smaller encode for phones; when set, mobile autoplays in-view (no Play tap). */
   mobileSrc?: string;
+  /** Poster for the phone encode; its presence marks the phone encode as portrait 4:5. */
+  mobilePoster?: string;
 };
 
 /**

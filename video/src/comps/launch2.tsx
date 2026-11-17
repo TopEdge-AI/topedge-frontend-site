@@ -12,7 +12,7 @@ import { Bubble, DISPLAY, DateChip, FONT, WaHeader, WaScreen } from '../lib/ui';
 import { inr } from '../lib/kit2';
 import {
   Caption, FanIn, Figure, GlassIcon, GlassPill, GRAD, Hand, L, Obj, Panel, Phone3D, Ping, Ring, Space, Stage, Tag, Words,
-  handAt, orbit, track, win,
+  handAt, orbit, track, useLayout, win,
 } from '../lib/launch';
 
 const W = 1920;
@@ -28,6 +28,8 @@ const NODES: [string, string, IconSvgElement][] = [
   ['Reply', 'Live tracking', SentIcon],
 ];
 export function LaunchFlow({ t }: { t: number }) {
+  const lay = useLayout();
+  const P = lay.portrait;
   const deep = track(t, [[0, 1], [4.0, 1], [4.6, 0], [7.8, 0], [8.4, 1]]);
   const s1 = win(t, 0.1, 4.4, 0.5);
   const asm = prog(t, 0.4, 2.4, E.move);
@@ -37,7 +39,8 @@ export function LaunchFlow({ t }: { t: number }) {
   const s3 = win(t, 8.0, 11.6, 0.6);
   const rise = spring(t, 8.0, 1.3, 0.08);
   const q = spring(t, 8.7, 0.6, 0.2), a = spring(t, 9.6, 0.7, 0.2);
-  const nx = (i: number) => 330 + i * 420;
+  const nx = (i: number) => (P ? 960 : 330 + i * 420);
+  const ny = (i: number) => (P ? 540 + (i - 1.5) * 150 : 540);
   return (
     <div style={{ position: 'absolute', inset: 0, overflow: 'hidden', fontFamily: FONT }}>
       <Stage t={t} w={W} h={H} deep={deep} />
@@ -46,12 +49,13 @@ export function LaunchFlow({ t }: { t: number }) {
         {s1 > 0 ? <div style={{ position: 'absolute', left: 0, top: 0, opacity: s1 * prog(t, 2.0, 2.5) }}>
           <svg width={W} height={H} style={{ position: 'absolute', left: 0, top: 0, overflow: 'visible' }}>
             {[0, 1, 2].map((i) => {
-              const x0 = nx(i) + 170, x1 = nx(i + 1) - 170;
+              const a: [number, number] = P ? [lay.x(960) - 200, lay.y(ny(i)) + 40] : [nx(i) + 170, 540];
+              const b: [number, number] = P ? [lay.x(960) - 200, lay.y(ny(i + 1)) - 40] : [nx(i + 1) - 170, 540];
               const pk = clamp(pulse * 3 - i);
               return (
                 <g key={i}>
-                  <line x1={x0} y1={540} x2={x1} y2={540} stroke="rgba(196,181,253,0.5)" strokeWidth="3" strokeDasharray="8 8" />
-                  {pk > 0 && pk < 1 ? <circle cx={lerp(x0, x1, pk)} cy={540} r="11" fill="#fff" style={{ filter: 'drop-shadow(0 0 10px #A78BFA)' }} /> : null}
+                  <line x1={a[0]} y1={a[1]} x2={b[0]} y2={b[1]} stroke="rgba(196,181,253,0.5)" strokeWidth="3" strokeDasharray="8 8" />
+                  {pk > 0 && pk < 1 ? <circle cx={lerp(a[0], b[0], pk)} cy={lerp(a[1], b[1], pk)} r="11" fill="#fff" style={{ filter: 'drop-shadow(0 0 10px #A78BFA)' }} /> : null}
                 </g>
               );
             })}
@@ -61,7 +65,7 @@ export function LaunchFlow({ t }: { t: number }) {
           const sx = 960 + (rnd(i, 7) - 0.5) * 1500, sy = 540 + (rnd(i, 8) - 0.5) * 760, sz = -600 + rnd(i, 9) * 900;
           const lit = clamp(pulse * 3 - i + 1) * (i === 0 ? 1 : 1);
           return (
-            <Obj key={title} x={lerp(sx, nx(i), asm)} y={lerp(sy, 540, asm)} z={lerp(sz, 0, asm) + prog(t, 3.9, 4.5, E.exit) * (i === 2 ? 900 : -300)} rx={lerp(rnd(i, 1) * 50 - 25, 0, asm)} ry={lerp(rnd(i, 2) * 70 - 35, 0, asm)} rz={lerp(rnd(i, 3) * 30 - 15, 0, asm)} o={s1 * prog(t, 0.1 + i * 0.1, 0.6 + i * 0.1) * (i === 2 ? 1 : 1 - prog(t, 3.9, 4.3))} dof={0.008}>
+            <Obj key={title} x={lerp(sx, nx(i), asm)} y={lerp(sy, ny(i), asm)} z={lerp(sz, 0, asm) + prog(t, 3.9, 4.5, E.exit) * (i === 2 ? 900 : -300)} rx={lerp(rnd(i, 1) * 50 - 25, 0, asm)} ry={lerp(rnd(i, 2) * 70 - 35, 0, asm)} rz={lerp(rnd(i, 3) * 30 - 15, 0, asm)} o={s1 * prog(t, 0.1 + i * 0.1, 0.6 + i * 0.1) * (i === 2 ? 1 : 1 - prog(t, 3.9, 4.3))} dof={0.008}>
               <Panel dark w={340} r={28} pad={26} glow={pulse > 0 ? clamp(pulse * 3 - i + 0.2) * (1 - clamp(pulse * 3 - i - 0.8)) + (i === 3 && pulse >= 1 ? 0.6 : 0) : 0}>
                 <div style={{ display: 'flex', alignItems: 'center', gap: 16 }}>
                   <span style={{ width: 62, height: 62, borderRadius: 18, background: lit > 0 ? GRAD : 'rgba(167,139,250,0.2)', display: 'grid', placeItems: 'center', boxShadow: 'inset 0 1px 0 rgba(255,255,255,0.3)' }}><Ic icon={icon} size={32} /></span>
@@ -72,7 +76,7 @@ export function LaunchFlow({ t }: { t: number }) {
           );
         })}
         {/* shot 2: the live Shopify order */}
-        <Obj x={960} y={540} rx={lerp(20, 12, prog(t, 4.2, 8))} ry={lerp(-18, -6, prog(t, 4.2, 8))} rz={1.5} z={lerp(-500, 0, prog(t, 4.2, 5.2, E.enter)) + prog(t, 7.6, 8.2, E.exit) * 600} o={s2} mb={prog(t, 7.6, 8.2) * 8}>
+        <Obj x={960} y={540} rx={lerp(20, 12, prog(t, 4.2, 8))} ry={lerp(-18, -6, prog(t, 4.2, 8))} rz={1.5} z={lerp(-500, 0, prog(t, 4.2, 5.2, E.enter)) + prog(t, 7.6, 8.2, E.exit) * 600} o={s2} mb={prog(t, 7.6, 8.2) * 8} ms={0.76}>
           <Panel w={1180} r={32} pad={44}>
             <div style={{ display: 'flex', alignItems: 'center', gap: 22 }}>
               <GlassIcon icon={ShoppingBag01Icon} size={84} tone="linear-gradient(140deg,#86EFAC,#16A34A)" />
@@ -100,7 +104,7 @@ export function LaunchFlow({ t }: { t: number }) {
             </div>
           </Panel>
         </Obj>
-        <Obj x={1440} y={250} z={200} o={s2 * prog(t, 6.6, 7.1)}><Tag tone="#16A34A" icon={ZapIcon}>Read live from Shopify</Tag></Obj>
+        <Obj x={P ? 960 : 1440} y={P ? 250 : 250} z={200} o={s2 * prog(t, 6.6, 7.1)}><Tag tone="#16A34A" icon={ZapIcon}>Read live from Shopify</Tag></Obj>
         {/* shot 3: the answer on WhatsApp */}
         <Phone3D x={960} y={lerp(1350, 545, rise)} rx={lerp(28, 5, rise)} ry={lerp(-32, -12, rise) + prog(t, 9, 11.5, E.move) * 18} rz={lerp(5, 0, rise)} s={1.06} o={s3}>
           <WaScreen>
@@ -118,8 +122,8 @@ export function LaunchFlow({ t }: { t: number }) {
             </div>
           </WaScreen>
         </Phone3D>
-        <Obj x={560} y={430} z={200} o={s3 * prog(t, 10.0, 10.5)}><Tag dark tone={L.wa} size={26}>Answered in 1.2 s</Tag></Obj>
-        <Obj x={1380} y={700} z={200} o={s3 * prog(t, 10.3, 10.8)}><Tag dark tone="#A78BFA" size={26}>No agent needed</Tag></Obj>
+        <Obj x={P ? 960 : 560} y={P ? 70 : 430} z={200} o={s3 * prog(t, 10.0, 10.5)}><Tag dark tone={L.wa} size={26}>Answered in 1.2 s</Tag></Obj>
+        <Obj x={P ? 960 : 1380} y={P ? 1015 : 700} z={200} o={s3 * prog(t, 10.3, 10.8)}><Tag dark tone="#A78BFA" size={26}>No agent needed</Tag></Obj>
       </Space>
     </div>
   );
@@ -208,7 +212,7 @@ export function LaunchIdentity({ t }: { t: number }) {
         <Obj x={960} y={760} z={60} o={s1 * prog(t, 4.9, 5.3)}><Caption dark size={34}>One shopper, not six</Caption></Obj>
 
         {/* profile */}
-        <Obj x={960} y={540} rx={lerp(16, 8, prog(t, 6.2, 11))} ry={lerp(-16, -4, prog(t, 6.2, 11))} rz={1} z={lerp(-500, 0, prog(t, 6.2, 7.2, E.enter))} o={s2}>
+        <Obj x={960} y={540} rx={lerp(16, 8, prog(t, 6.2, 11))} ry={lerp(-16, -4, prog(t, 6.2, 11))} rz={1} z={lerp(-500, 0, prog(t, 6.2, 7.2, E.enter))} o={s2} ms={0.82}>
           <Panel w={1240} r={34} pad={46}>
             <div style={{ display: 'flex', alignItems: 'center', gap: 26 }}>
               <div style={{ width: 120, height: 120, borderRadius: 99, background: GRAD, color: '#fff', display: 'grid', placeItems: 'center', fontFamily: DISPLAY, fontSize: 48, fontWeight: 700, boxShadow: '0 16px 30px -10px rgba(76,29,149,0.5)' }}>RS</div>
@@ -247,6 +251,7 @@ const FILTERS: [string, (p: (typeof PEOPLE)[number]) => boolean][] = [
   ['Ordered 2+ times', (p) => p[1] >= 2], ['Spent over ₹2,000', (p) => p[2] > 2000], ['Active in 60 days', (p) => p[0] !== 'Rohan Das'],
 ];
 export function LaunchSegments({ t }: { t: number }) {
+  const P = useLayout().portrait;
   const deep = track(t, [[0, 0], [6.7, 0], [7.3, 1], [10.9, 1], [11.5, 0]]);
   const s1 = win(t, 0.1, 7.0, 0.6);
   const fAt = [3.0, 4.0, 5.0];
@@ -261,7 +266,7 @@ export function LaunchSegments({ t }: { t: number }) {
     <div style={{ position: 'absolute', inset: 0, overflow: 'hidden', fontFamily: FONT }}>
       <Stage t={t} w={W} h={H} deep={deep} />
       <Space w={W} h={H}>
-        <Obj x={960} y={600} rx={16} ry={-9} rz={1.5} z={lerp(-200, 0, spring(t, 0.1, 1.2, 0.05)) + prog(t, 6.4, 7.0, E.exit) * 500} o={s1} mb={prog(t, 6.4, 7) * 6} flat>
+        <Obj x={960} y={P ? 640 : 600} ms={0.8} rx={16} ry={-9} rz={1.5} z={lerp(-200, 0, spring(t, 0.1, 1.2, 0.05)) + prog(t, 6.4, 7.0, E.exit) * 500} o={s1} mb={prog(t, 6.4, 7) * 6} flat>
           <Panel w={1300} r={32} pad={34}>
             <div style={{ display: 'flex', alignItems: 'baseline', gap: 16, padding: '0 10px 18px' }}>
               <span style={{ fontFamily: DISPLAY, fontSize: 64, fontWeight: 700, letterSpacing: '-0.04em', fontVariantNumeric: 'tabular-nums', color: L.violet }}>{inr(shown)}</span>
@@ -289,7 +294,7 @@ export function LaunchSegments({ t }: { t: number }) {
           </Panel>
         </Obj>
         {FILTERS.map(([label], i) => (
-          <Obj key={label} x={520 + i * 440} y={lerp(-60, 170, spring(t, fAt[i] - 0.4, 0.7, 0.25))} z={160} o={s1 * prog(t, fAt[i] - 0.4, fAt[i] - 0.1)}>
+          <Obj key={label} x={P ? 960 : 520 + i * 440} y={lerp(-60, P ? 40 + i * 70 : 170, spring(t, fAt[i] - 0.4, 0.7, 0.25))} z={160} o={s1 * prog(t, fAt[i] - 0.4, fAt[i] - 0.1)}>
             <GlassPill solid size={26} icon={<Ic icon={FilterHorizontalIcon} size={28} />}>{label}</GlassPill>
           </Obj>
         ))}
@@ -327,7 +332,7 @@ export function LaunchProfit({ t }: { t: number }) {
       <Space w={W} h={H}>
         <Obj x={700} y={260} o={s1 * (1 - prog(t, 2.0, 2.5))}><Words t={t} at={0.5} parts={[['One'], ['order', 'a']]} size={70} /></Obj>
         {/* the coin */}
-        <Obj x={lerp(960, 700, prog(t, 1.9, 2.6, E.move))} y={560} z={lerp(-300, 0, coinIn) + prog(t, 6.8, 7.4, E.exit) * 700} o={s1} mb={prog(t, 6.8, 7.4) * 8}>
+        <Obj x={lerp(960, 700, prog(t, 1.9, 2.6, E.move))} y={560} ms={0.85} z={lerp(-300, 0, coinIn) + prog(t, 6.8, 7.4, E.exit) * 700} o={s1} mb={prog(t, 6.8, 7.4) * 8}>
           <div style={{ transform: `scaleX(${0.94 + Math.cos(t * 0.9) * 0.06})`, width: 420, height: 420, borderRadius: 999, background: 'radial-gradient(circle at 35% 28%, #EDE9FE 0%, #A78BFA 38%, #6D28D9 78%, #4C1D95 100%)', boxShadow: 'inset 0 0 0 10px rgba(255,255,255,0.18), inset 0 -18px 40px rgba(46,16,101,0.45), 0 40px 80px -24px rgba(76,29,149,0.6)', display: 'grid', placeItems: 'center' }}>
             <div style={{ textAlign: 'center', color: '#fff' }}>
               <div style={{ fontFamily: DISPLAY, fontSize: 120, fontWeight: 700, letterSpacing: '-0.05em', fontVariantNumeric: 'tabular-nums', textShadow: '0 6px 20px rgba(46,16,101,0.5)' }}>₹{Math.round(left)}</div>
@@ -340,7 +345,7 @@ export function LaunchProfit({ t }: { t: number }) {
           const k = prog(t, at(i) - 0.1, at(i) + 0.6, E.move);
           const x = lerp(700, 1340, k), y = lerp(560, 300 + i * 118, k) - Math.sin(k * Math.PI) * 120;
           return (
-            <Obj key={label} x={x} y={y} z={Math.sin(k * Math.PI) * 300} rz={(1 - k) * 25} s={lerp(0.4, 1, k)} o={s1 * clamp(k * 4)} mb={Math.sin(k * Math.PI) * 6}>
+            <Obj key={label} x={x} y={y} ms={0.8} z={Math.sin(k * Math.PI) * 300} rz={(1 - k) * 25} s={lerp(0.4, 1, k)} o={s1 * clamp(k * 4)} mb={Math.sin(k * Math.PI) * 6}>
               <div style={{ width: 520, display: 'flex', alignItems: 'center', gap: 18, padding: '18px 24px', borderRadius: 22, background: '#fff', boxShadow: '0 0 0 1px rgba(124,58,237,0.1), 0 24px 50px -20px rgba(76,29,149,0.4)' }}>
                 <span style={{ width: 18, height: 52, borderRadius: 6, background: col }} />
                 <span style={{ flex: 1, fontSize: 28, fontWeight: 600, color: L.ink }}>{label}</span>
@@ -353,13 +358,13 @@ export function LaunchProfit({ t }: { t: number }) {
         <Obj x={960} y={400} z={lerp(-400, 0, prog(t, 7.1, 8.0, E.enter))} o={s2}>
           <div style={{ textAlign: 'center' }}><Figure value={`₹${Math.round(lerp(0, 186, bar))}`} size={200} dark /><Caption dark>kept from a ₹799 order, after every cost</Caption></div>
         </Obj>
-        <Obj x={960} y={680} o={s2}>
+        <Obj x={960} y={680} o={s2} ms={0.85}>
           <div style={{ width: 1100, height: 56, borderRadius: 18, overflow: 'hidden', display: 'flex', boxShadow: 'inset 0 0 0 1.5px rgba(196,181,253,0.3)', background: 'rgba(255,255,255,0.06)' }}>
             {COSTS.map(([label, v, col]) => <div key={label} style={{ width: `${(v / 799) * 100 * bar}%`, background: col, opacity: 0.85, borderRight: '2px solid rgba(11,8,32,0.5)' }} />)}
             <div style={{ width: `${(186 / 799) * 100 * bar}%`, background: 'linear-gradient(90deg,#4ADE80,#22C55E)', boxShadow: `0 0 ${30 * bar}px rgba(34,197,94,0.6)` }} />
           </div>
         </Obj>
-        <Obj x={960} y={780} o={s2 * prog(t, 8.8, 9.3)}>
+        <Obj x={960} y={780} o={s2 * prog(t, 8.8, 9.3)} ms={0.82}>
           <div style={{ display: 'flex', gap: 28 }}>
             {COSTS.map(([label, , col]) => <span key={label} style={{ display: 'flex', alignItems: 'center', gap: 8, fontSize: 21, color: L.deepMute, whiteSpace: 'nowrap' }}><span style={{ width: 12, height: 12, borderRadius: 4, background: col }} />{label}</span>)}
             <span style={{ display: 'flex', alignItems: 'center', gap: 8, fontSize: 21, color: '#BBF7D0', fontWeight: 600 }}><span style={{ width: 12, height: 12, borderRadius: 4, background: '#22C55E' }} />Kept</span>

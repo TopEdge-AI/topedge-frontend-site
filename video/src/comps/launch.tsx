@@ -10,13 +10,13 @@ import {
 import { HugeiconsIcon, type IconSvgElement } from '@hugeicons/react';
 import { SiWhatsapp } from 'react-icons/si';
 import { E, clamp, lerp, prog, spring, typed } from '../lib/time';
-import { Bubble, DISPLAY, DateChip, FONT, TemplateBubble, Touch, WaHeader, WaScreen } from '../lib/ui';
+import { Bubble, DISPLAY, DateChip, FONT, TemplateBubble, WaHeader, WaScreen } from '../lib/ui';
 import { KurtaShot, inr } from '../lib/kit2';
 import { ShirtShot } from '../lib/products';
 import { SuccessPage } from '../lib/rig';
 import {
   Caption, Confetti, DoneTick, FanIn, Figure, GlassIcon, GlassPill, GRAD, Hand, L, Obj, Panel, Parcel, Phone3D, Ping, Ring,
-  Ribbon, Space, Sparkle, Stage, Tag, Words, handAt, onPhone, orbit, track, win,
+  Ribbon, Space, Sparkle, Stage, Tag, TouchAt, Words, handAt, useLayout, onPhone, orbit, track, win,
 } from '../lib/launch';
 
 const W = 1920;
@@ -26,6 +26,7 @@ const tapK = (t: number, at: number) => prog(t, at - 0.1, at) * (1 - prog(t, at 
 
 /* ================================================================== CART */
 export function LaunchCart({ t }: { t: number }) {
+  const P = useLayout().portrait;
   const deep = track(t, [[0, 0], [2.7, 0], [3.3, 1], [7.0, 1], [7.6, 0]]);
   const s1 = win(t, 0.15, 3.0, 0.5);
   const cartIn = spring(t, 0.15, 0.9, 0.18);
@@ -67,10 +68,10 @@ export function LaunchCart({ t }: { t: number }) {
           </div>
         </Obj>
 
-        <Obj x={590} y={430} z={200} o={ph * prog(t, 4.5, 5.1)}>
+        <Obj x={P ? 960 : 590} y={P ? 70 : 430} z={200} o={ph * prog(t, 4.5, 5.1)}>
           <Tag dark tone={L.wa}>Sent 30 min after exit</Tag>
         </Obj>
-        <Obj x={1400} y={720} z={200} o={ph * prog(t, 4.8, 5.4)}>
+        <Obj x={P ? 960 : 1400} y={P ? 1015 : 720} z={200} o={ph * prog(t, 4.8, 5.4)}>
           <Tag dark tone="#F472B6">10% off for 1 hour</Tag>
         </Obj>
         <Phone3D x={phX} y={phY} z={phZ} rx={lerp(30, 6, rise)} ry={ry} rz={lerp(6, 0, rise)} s={phS} o={ph} mb={phZ * 0.01}>
@@ -88,7 +89,7 @@ export function LaunchCart({ t }: { t: number }) {
             <SuccessPage t={t} at={5.9} order="Order #2204 · ₹3,105" chip="Paid by UPI" />
           )}
         </Phone3D>
-        {t > 4.8 && t < 5.9 ? <Touch x={tp[0]} y={tp[1]} o={win(t, 4.8, 5.9, 0.2)} press={tapK(t, tapAt)} ripple={prog(t, tapAt, tapAt + 0.5)} size={60} /> : null}
+        {t > 4.8 && t < 5.9 ? <TouchAt {...tp} o={win(t, 4.8, 5.9, 0.2)} press={tapK(t, tapAt)} ripple={prog(t, tapAt, tapAt + 0.5)} size={60} /> : null}
 
         <Obj x={960} y={470} z={lerp(-300, 0, prog(t, 7.3, 8.2, E.enter))} o={s3}>
           <div style={{ display: 'flex', alignItems: 'center', gap: 34 * clamp(done * 3) }}>
@@ -96,7 +97,7 @@ export function LaunchCart({ t }: { t: number }) {
             <Figure value={`₹${inr(Math.round(3105 * fill))}`} size={190} />
           </div>
         </Obj>
-        <Obj x={960} y={650} o={s3}><Ribbon k={fill} w={980} h={40} appear={prog(t, 7.4, 8.1, E.enter)} /></Obj>
+        <Obj x={960} y={650} o={s3} ms={0.9}><Ribbon k={fill} w={980} h={40} appear={prog(t, 7.4, 8.1, E.enter)} /></Obj>
         <Obj x={960} y={735} o={s3 * prog(t, 8.0, 8.6)}><Caption>Recovered on WhatsApp</Caption></Obj>
       </Space>
       <Confetti t={t} at={9.25} x={960} y={470} />
@@ -233,7 +234,7 @@ export function LaunchOptin({ t }: { t: number }) {
       <Stage t={t} w={W} h={H} deep={deep} />
       <Space w={W} h={H} cam={{ s: lerp(1.0, 1.06, prog(t, 0.2, 4.2, E.move)) }}>
         {/* shot 1 */}
-        <Obj x={960} y={560} rx={lerp(24, 14, prog(t, 0, 4))} ry={lerp(-16, -8, prog(t, 0, 4))} rz={2} z={lerp(-200, 0, spring(t, 0, 1.2, 0.05)) + prog(t, 3.9, 4.6, E.exit) * 900} o={s1} mb={prog(t, 3.9, 4.6) * 8} flat>
+        <Obj x={960} y={560} rx={lerp(24, 14, prog(t, 0, 4))} ry={lerp(-16, -8, prog(t, 0, 4))} rz={2} z={lerp(-200, 0, spring(t, 0, 1.2, 0.05)) + prog(t, 3.9, 4.6, E.exit) * 900} o={s1} mb={prog(t, 3.9, 4.6) * 8} ms={0.82} flat>
           <Panel w={1240} h={720} r={30} style={{ overflow: 'hidden' }}>
             <div style={{ height: 64, display: 'flex', alignItems: 'center', gap: 34, padding: '0 34px', borderBottom: '1px solid rgba(20,15,46,0.07)', fontSize: 19, color: L.ink2, fontWeight: 500 }}>
               <span style={{ fontFamily: DISPLAY, fontWeight: 800, fontSize: 24, color: L.ink }}>Rangrez</span><span>New in</span><span>Kurtas</span><span>Sarees</span><span>Festive</span>
@@ -311,6 +312,7 @@ export function LaunchOptin({ t }: { t: number }) {
 /* ================================================================= PIXEL */
 const TILES = ['Silk kurta', 'Linen shirt', 'Block-print saree', 'Cotton dupatta', 'Festive set', 'Kolhapuri'];
 export function LaunchPixel({ t }: { t: number }) {
+  const P = useLayout().portrait;
   const deep = track(t, [[0, 0], [4.2, 0], [4.8, 1], [8.2, 1], [8.8, 0]]);
   const s1 = win(t, 0.1, 4.6, 0.6);
   const trail = prog(t, 0.8, 3.6, E.linear);
@@ -333,7 +335,7 @@ export function LaunchPixel({ t }: { t: number }) {
       <Stage t={t} w={W} h={H} deep={deep} />
       <Space w={W} h={H}>
         {/* shot 1: tilted shop floor with a glowing trail */}
-        <Obj x={960} y={560} rx={42} rz={lerp(-14, -6, prog(t, 0, 4.6))} z={lerp(-150, 0, spring(t, 0, 1.2, 0.05)) + prog(t, 3.9, 4.6, E.exit) * 700} o={s1} flat>
+        <Obj x={960} y={560} ms={0.7} rx={42} rz={lerp(-14, -6, prog(t, 0, 4.6))} z={lerp(-150, 0, spring(t, 0, 1.2, 0.05)) + prog(t, 3.9, 4.6, E.exit) * 700} o={s1} flat>
           <div style={{ position: 'relative', width: 1460, height: 1010 }}>
             {TILES.map((n, i) => {
               const hot = ev.some(([at, idx]) => idx === i && t > at);
@@ -361,15 +363,15 @@ export function LaunchPixel({ t }: { t: number }) {
         })}
         {/* shot 2: events converge into one profile */}
         {rows.map(([title, sub, icon], i) => (
-          <Obj key={title + sub} x={470} y={250 + i * 145} z={0} o={s2 * prog(t, 4.8 + i * 0.13, 5.2 + i * 0.13)} rx={0} ry={lerp(30, 12, prog(t, 4.8, 6))}>
+          <Obj key={title + sub} x={470} y={250 + i * 145} z={0} ms={0.8} o={s2 * prog(t, 4.8 + i * 0.13, 5.2 + i * 0.13)} rx={0} ry={lerp(30, 12, prog(t, 4.8, 6))}>
             <Panel dark w={500} h={112} r={24} style={{ display: 'flex', alignItems: 'center', gap: 20, padding: '0 24px' }}>
               <span style={{ width: 62, height: 62, borderRadius: 18, background: 'rgba(167,139,250,0.2)', boxShadow: 'inset 0 0 0 1.5px rgba(196,181,253,0.35)', display: 'grid', placeItems: 'center' }}><Hug icon={icon} /></span>
               <div><div style={{ fontSize: 27, fontWeight: 600 }}>{title}</div><div style={{ fontSize: 21, color: L.deepMute }}>{sub}</div></div>
             </Panel>
           </Obj>
         ))}
-        {s2 > 0 ? <div style={{ position: 'absolute', left: 0, top: 0, opacity: s2 }}><FanIn from={rows.map((_, i) => [720, 250 + i * 145] as [number, number])} to={[1170, 540]} k={fanK} pulse={t > 6.8 ? (t - 6.8) * 0.8 : 0} /></div> : null}
-        <Obj x={1420} y={540} z={lerp(-200, 0, prog(t, 6.4, 7.2, E.enter))} o={s2 * prog(t, 6.4, 6.9)} ry={-10}>
+        {s2 > 0 ? <div style={{ position: 'absolute', left: 0, top: 0, opacity: s2 }}><FanIn from={rows.map((_, i) => [P ? 820 : 720, 250 + i * 145] as [number, number])} to={[P ? 1100 : 1170, 540]} k={fanK} pulse={t > 6.8 ? (t - 6.8) * 0.8 : 0} /></div> : null}
+        <Obj x={1420} y={540} z={lerp(-200, 0, prog(t, 6.4, 7.2, E.enter))} o={s2 * prog(t, 6.4, 6.9)} ry={-10} ms={0.8}>
           <Panel dark w={500} r={30} pad={34} glow={prog(t, 6.8, 7.6) * 0.6}>
             <div style={{ display: 'flex', alignItems: 'center', gap: 20 }}>
               <div style={{ width: 84, height: 84, borderRadius: 99, background: GRAD, display: 'grid', placeItems: 'center', fontFamily: DISPLAY, fontSize: 34, fontWeight: 700 }}>AS</div>
@@ -405,6 +407,7 @@ const Hug = ({ icon }: { icon: IconSvgElement }) => <HugeiconsIcon icon={icon} s
 
 /* =================================================================== COD */
 export function LaunchCod({ t }: { t: number }) {
+  const P = useLayout().portrait;
   const deep = track(t, [[0, 0], [3.5, 0], [4.1, 1], [7.7, 1], [8.3, 0]]);
   const s1 = win(t, 0.1, 3.9, 0.5);
   const boxIn = spring(t, 0.1, 1.2, 0.15);
@@ -426,10 +429,10 @@ export function LaunchCod({ t }: { t: number }) {
         <Obj x={960} y={lerp(700, 620, boxIn)} z={lerp(-300, 0, boxIn) + prog(t, 3.2, 3.9, E.exit) * 600} o={s1} mb={prog(t, 3.2, 3.9) * 8}>
           <Parcel size={300} rx={-16} ry={28 + t * 12} />
         </Obj>
-        <Obj x={1430} y={800} z={120} o={s1 * prog(t, 1.4, 1.9)}><Tag tone="#F87171">1 in 4 COD orders comes back</Tag></Obj>
+        <Obj x={P ? 960 : 1430} y={P ? 900 : 800} z={120} o={s1 * prog(t, 1.4, 1.9)}><Tag tone="#F87171">1 in 4 COD orders comes back</Tag></Obj>
 
-        <Obj x={560} y={420} z={200} o={s2 * prog(t, 5.0, 5.5)}><Tag dark tone={L.wa}>Sent the moment the order lands</Tag></Obj>
-        <Obj x={1390} y={700} z={200} o={s2 * prog(t, 5.3, 5.8)}><Tag dark tone="#FBBF24">₹50 off for paying now</Tag></Obj>
+        <Obj x={P ? 960 : 560} y={P ? 70 : 420} z={200} o={s2 * prog(t, 5.0, 5.5)}><Tag dark tone={L.wa}>Sent the moment the order lands</Tag></Obj>
+        <Obj x={P ? 960 : 1390} y={P ? 1015 : 700} z={200} o={s2 * prog(t, 5.3, 5.8)}><Tag dark tone="#FBBF24">₹50 off for paying now</Tag></Obj>
         <Phone3D x={phX} y={phY} rx={lerp(30, 5, rise)} ry={lerp(-36, -14, rise) + prog(t, 5.0, 5.8, E.move) * 14 + prog(t, 6.6, 7.8, E.move) * 10} rz={lerp(6, 0, rise)} s={phS} o={s2} mb={prog(t, 7.4, 8.0) * 6}>
           {t < 6.5 ? (
             <WaScreen>
@@ -452,7 +455,7 @@ export function LaunchCod({ t }: { t: number }) {
             <SuccessPage t={t} at={6.55} order="₹1,799 paid · order #2231" chip="Prepaid, ₹50 saved" />
           )}
         </Phone3D>
-        {t > 5.4 && t < 6.5 ? <Touch x={tp[0]} y={tp[1]} o={win(t, 5.4, 6.5, 0.2)} press={tapK(t, tapAt)} ripple={prog(t, tapAt, tapAt + 0.5)} size={58} /> : null}
+        {t > 5.4 && t < 6.5 ? <TouchAt {...tp} o={win(t, 5.4, 6.5, 0.2)} press={tapK(t, tapAt)} ripple={prog(t, tapAt, tapAt + 0.5)} size={58} /> : null}
 
         <Obj x={960 + shake} y={500} z={lerp(-300, 0, prog(t, 7.8, 8.6, E.enter))} o={s3}>
           <Parcel size={300} rx={-14} ry={lerp(-30, -18, prog(t, 7.8, 11))} stamp={stamp} stampS={lerp(2.2, 1, prog(t, stampAt - 0.12, stampAt + 0.02, E.exit))} />

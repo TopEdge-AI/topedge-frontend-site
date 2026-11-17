@@ -210,6 +210,8 @@ function FeatureMoment({ story }: { story: Story }) {
             src={story.video.src}
             mobileSrc={story.video.mobileSrc}
             poster={story.video.poster}
+            mobilePoster={story.video.mobilePoster}
+            portraitMobile={Boolean(story.video.mobilePoster)}
             glow={story.glow}
             title={`${title} preview`}
           />
