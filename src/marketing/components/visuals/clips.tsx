@@ -22,7 +22,7 @@ type Clip = {
 const DIR = '/marketing/feature-clips';
 const V = '20261118a';
 /** Hero films (launch films) version, separate so slot clips keep their cache. */
-const HV = '20261119c';
+const HV = '20261119d';
 
 /**
  * Clips by page slot: `${pageId}:h` (hero), `:t1..` (bento tiles), `:s1..` (showcase
