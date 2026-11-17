@@ -5,7 +5,7 @@ Labels: Verified = read today from the live page, OpenSEO or URL Inspection. Est
 ## 1. ClickPost post (built, not deployed)
 
 - **URL after deploy:** https://topedgeai.com/blog/best-shipping-aggregators-logistics-tools-india
-- **Title (57 characters):** 10 Best Shipping Aggregators and Logistics Tools in India
+- **Title (60 characters):** 10 Best Shipping Aggregators & Logistics Tools in India 2027. Owner rule, 17 Nov: framing is 2027 and reading dates stay 17 November 2026.
 - **Primary keyword:** shipping aggregator india. Secondaries: courier aggregator in india, best courier aggregator in india, logistics software for d2c brands, ndr management software.
 - **India volumes (Verified, OpenSEO 17 Nov):**
 
@@ -33,7 +33,11 @@ Labels: Verified = read today from the live page, OpenSEO or URL Inspection. Est
   - **Not verified:** "148 reviews on G2". G2 blocks automated readers (403). ClickPost's home page shows 4.8, and its own 5 Aug post said 131 reviews. Please open https://www.g2.com/products/clickpost/reviews and tell me the count.
 - **Disclosure on the page:** "ClickPost and TopEdge AI have agreed to list each other's tools." I recommend keeping it. It is honest to readers, and it is the line that keeps this one exchange from reading as a hidden link swap.
 
-### Image (you make it)
+### Image (done 17 Nov)
+
+The owner's heroes are in place for this post, /blog/rto-meaning-ecommerce and /blog/add-whatsapp-chat-button-shopify. Each is 1200 x 675, as JPG and WebP, under 100 KB, with descriptive alt text.
+
+Original brief:
 
 - Save as `public/blog/best-shipping-aggregators-logistics-tools-india.jpg` and `.webp`.
 - 1200 x 675, each under 100 KB.

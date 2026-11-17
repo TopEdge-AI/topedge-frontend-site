@@ -167,4 +167,9 @@ At most 5 outreach emails a day.
     - Hairline section breaks before every H2, on all posts.
     - The upgrade runs in `src/marketing/lib/blogHtml.ts`, so the best-apps and abandoned-cart lists upgraded too. Authoring rules: `docs/seo/blog-list-post-format.md`.
     - ClickPost's G2 4.8/5 (148) confirmed by the owner in a browser and linked.
+  - **Year framing, owner rule 17 Nov:**
+    - 2027, not 2026, in titles, descriptions and headings of new and list posts. Applied to the shipping post (title now "10 Best Shipping Aggregators & Logistics Tools in India 2027") and to the Bitespeed pricing H2.
+    - Reading dates and dated source names stay as they are.
+    - 22 older posts still carry 2026 titles; switching them is an owner decision, because rule 10 protects comparison-page titles.
+  - **Hero images:** the owner's images went live on the shipping, RTO meaning and WhatsApp chat button posts.
   - **Day-number note:** the user calls today Day 7 (the 10 Nov plan's RTO hub). Under this 15 Nov plan it would be Day 3 (/whatsapp-templates), which moves to the next session.

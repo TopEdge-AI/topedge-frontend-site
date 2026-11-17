@@ -1120,7 +1120,7 @@ ${verdict(`<p><strong>Bitespeed publishes no price:</strong> its pricing page no
 </ol>
 <p>If none of those apply, stay. Switching platforms costs a fortnight of attention, and that is real money too.</p>
 
-<h2>Bitespeed pricing in 2026: what is published</h2>
+<h2>Bitespeed pricing for 2027: what is published</h2>
 <p>Nothing, on Bitespeed’s own site. <a href="https://www.bitespeed.co/pricing" target="_blank" rel="noopener noreferrer">bitespeed.co/pricing</a> now redirects to a demo request form that says its sales team will get in touch. We checked on 17 November 2026.</p>
 <p>The <a href="https://apps.shopify.com/bitespeed-fb-messenger-chatbot" target="_blank" rel="noopener noreferrer">Shopify App Store listing</a> says “Free to install. Additional charges may apply”, billed in USD or INR every 30 days. It is rated 4.6 from 406 reviews.</p>
 <p>Everything else is third-party, from September 2026, and not confirmed by Bitespeed:</p>
@@ -2771,9 +2771,10 @@ ${faqHtml(AISENSY_PRICING_FAQS)}
     readTime: '6 min',
     category: 'COD',
     author: 'Moksh Patel',
-    image: '/marketing/solutions/sol-cod-rto-saas.jpg',
+    image: '/blog/rto-meaning-ecommerce.jpg',
+    imageWebp: '/blog/rto-meaning-ecommerce.webp',
     imageAlt:
-      'An RTO risk panel with confirmed, prepaid and at-risk COD counts, beside a WhatsApp thread confirming a buyer’s shipping address',
+      'RTO in ecommerce: a parcel and a delivery van on a return loop, an RTO cost card reading ₹240 per parcel and a Status: NDR Raised badge',
     keywords: [
       'rto in ecommerce',
       'rto full form in ecommerce',
@@ -2874,10 +2875,10 @@ ${faqHtml(RTO_MEANING_FAQS)}
     readTime: '5 min',
     category: 'Guides',
     author: 'Moksh Patel',
-    image: '/marketing/features/shopify-whatsapp.jpg',
-    imageWebp: '/marketing/features/shopify-whatsapp.webp',
+    image: '/blog/add-whatsapp-chat-button-shopify.jpg',
+    imageWebp: '/blog/add-whatsapp-chat-button-shopify.webp',
     imageAlt:
-      'A shared WhatsApp inbox where a shopper’s question about their order sits beside the Shopify order, a ₹1,359 Cash on Delivery order',
+      'Add a WhatsApp chat button to Shopify: the wa.me link code for the button, the WhatsApp icon and an Opt-In Active status',
     keywords: [
       'whatsapp chat button shopify',
       'add whatsapp to shopify',
@@ -2956,11 +2957,11 @@ ${faqHtml(WHATSAPP_BUTTON_FAQS)}
   },
   {
     id: 67,
-    title: '10 Best Shipping Aggregators and Logistics Tools in India',
+    title: '10 Best Shipping Aggregators & Logistics Tools in India 2027',
     description:
-      'The 10 best shipping aggregators and logistics tools for Indian D2C brands in 2026: Shiprocket, ClickPost and 8 more, with prices read on 17 November.',
+      'The 10 best shipping aggregators and logistics tools for Indian D2C brands in 2027: Shiprocket, ClickPost and 8 more, with prices checked in November.',
     summary: [
-      'For most Indian Shopify brands shipping 100 to 1,500 orders a month, the best shipping aggregator is Shiprocket: free to start, paid plans from ₹199 a month, rated 3.9 from 648 App Store reviews (read 17 November 2026).',
+      'Going into 2027, the best shipping aggregator for most Indian Shopify brands shipping 100 to 1,500 orders a month is Shiprocket: free to start, paid plans from ₹199 a month, rated 3.9 from 648 App Store reviews (read 17 November 2026).',
       'ClickPost is the pick once you run your own courier contracts: 700+ carriers on one platform, NDR automation and a voice AI agent, priced on a custom quote.',
       'Shipway, iThink Logistics, Eshopbox, Shipmozo and NimbusPost are the other aggregators worth a trial. Unicommerce, EasyEcom and Return Prime cover orders, stock and returns.',
       'Judge tools on NDR and RTO handling, not the per-parcel rate: at 500 orders a month, returned parcels can cost ₹14,760 to ₹19,680, about as much as the shipping bill itself.',
@@ -2971,11 +2972,13 @@ ${faqHtml(WHATSAPP_BUTTON_FAQS)}
     readTime: '11 min',
     category: 'COD',
     author: 'Moksh Patel',
-    image: '/marketing/solutions/sol-cod-rto-saas.jpg',
+    image: '/blog/best-shipping-aggregators-logistics-tools-india.jpg',
+    imageWebp: '/blog/best-shipping-aggregators-logistics-tools-india.webp',
     imageAlt:
-      'An RTO risk panel with confirmed, prepaid and at-risk COD counts, the shipping-side numbers this list of logistics tools is judged on',
+      '10 best shipping aggregators in India: courier logos for Delhivery, Ekart, XpressBees and Ecom Express beside Courier Assigned and NDR Automated status cards',
     keywords: [
       'shipping aggregator india',
+      'best shipping aggregator in india 2027',
       'courier aggregator in india',
       'best courier aggregator in india',
       'logistics software for d2c brands',
@@ -2999,7 +3002,7 @@ ${faqHtml(WHATSAPP_BUTTON_FAQS)}
     content: `
 <details class="mkt-blog-verdict" open>
 <summary>Direct answer</summary>
-<p>The best shipping aggregator in India for most D2C brands is <strong>Shiprocket</strong>, free to start with paid plans from ₹199 a month. <strong>ClickPost</strong> is the strongest platform once you run your own courier contracts. Every price below was read on the vendor’s own site on <strong>17 November 2026</strong>.</p>
+<p>The best shipping aggregator in India for most D2C brands going into 2027 is <strong>Shiprocket</strong>, free to start with paid plans from ₹199 a month. <strong>ClickPost</strong> is the strongest platform once you run your own courier contracts. Every price below was read on the vendor’s own site on <strong>17 November 2026</strong>.</p>
 </details>
 
 <p>Who wrote this: TopEdge AI is a Shopify app for Indian D2C brands that automates abandoned cart recovery, COD confirmation and order updates over WhatsApp and email. We do not ship parcels, so we are not on this list. ClickPost and TopEdge AI have agreed to list each other’s tools; ClickPost’s entry uses copy ClickPost supplied, which we checked against its site.</p>

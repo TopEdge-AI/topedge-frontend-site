@@ -31,6 +31,7 @@ What each part becomes:
 | `<p class="mkt-blog-pick-cta">` | Pill buttons |
 
 Rules:
+- **Year framing is 2027 from 17 Nov 2026.** Titles, descriptions, headings and "best in" lines on new and list posts say 2027, never 2026. Reading dates stay real ("read 17 November 2026"), and so do the names of dated sources ("India D2C Report 2026"). Comparison-page titles change only with the owner's sign-off.
 - Two to four pros and two to four cons, one line each.
 - No em dashes.
 - Every price and rating needs a date, and its host must be in `src/data/sources.ts`.
