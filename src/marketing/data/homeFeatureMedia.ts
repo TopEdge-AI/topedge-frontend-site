@@ -57,7 +57,7 @@ const film = (name: string): DemoVideo => ({
 });
 
 /** Flip once public/marketing/feature-clips/home/ holds every film. */
-const FILMS_READY = false;
+export const FILMS_READY = false;
 
 const HOME_FILMS_READY = {
   cart: film('cart'),
