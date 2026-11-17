@@ -29,7 +29,8 @@ const NODES: [string, string, IconSvgElement][] = [
 ];
 export function LaunchFlow({ t }: { t: number }) {
   const lay = useLayout();
-  const P = lay.portrait;
+  // The four-node row only fits the full 16:9 frame; narrower cuts stack it.
+  const P = !lay.base;
   const deep = track(t, [[0, 1], [4.0, 1], [4.6, 0], [7.8, 0], [8.4, 1]]);
   const s1 = win(t, 0.1, 4.4, 0.5);
   const asm = prog(t, 0.4, 2.4, E.move);

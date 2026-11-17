@@ -59,7 +59,7 @@ export function LaunchBrain({ t }: { t: number }) {
         <Obj x={960} y={540} z={60} o={s1} s={lerp(0.6, 1, spring(t, 0.2, 1, 0.2))}>
           <div style={{ display: 'grid', justifyItems: 'center', gap: 18 }}>
             <GlassIcon icon={Key01Icon} size={180} shine={prog(t, 2.6, 3.4)} />
-            <div style={{ color: L.deepInk, fontSize: 30, fontWeight: 600, opacity: prog(t, 1.0, 1.5) }}>Your own key</div>
+            <div style={{ color: L.deepInk, fontSize: 30, fontWeight: 600, whiteSpace: 'nowrap', opacity: prog(t, 1.0, 1.5) }}>Your own key</div>
           </div>
         </Obj>
         <Obj x={960} y={800} o={s1 * prog(t, 3.0, 3.4)}><Caption dark>Model bills stay on your account</Caption></Obj>
@@ -136,7 +136,7 @@ export function LaunchMeta({ t }: { t: number }) {
             <div style={{ display: 'grid', justifyItems: 'center', gap: 16 }}>
               <GlassIcon icon={icon as IconSvgElement} size={130} />
               <div style={{ color: L.deepInk, fontSize: 30, fontWeight: 700 }}>{label as string}</div>
-              <div style={{ color: L.deepMute, fontSize: 23, opacity: prog(t, 9.0, 9.5) }}>{price as string} per {cat as string} message</div>
+              <div style={{ color: L.deepMute, fontSize: 23, whiteSpace: 'nowrap', opacity: prog(t, 9.0, 9.5) }}>{price as string} per {cat as string} message</div>
             </div>
           </Obj>
         ))}
@@ -147,7 +147,7 @@ export function LaunchMeta({ t }: { t: number }) {
 }
 
 /* ================================================================= RULES */
-const LANES: [string, string, string, string][] = [['COD', 'Ops', 'Rahul', '#FBBF24'], ['Refund', 'Support', 'Priya', '#F472B6'], ['VIP', 'Senior care', 'Anjali', '#A78BFA']];
+const LANES: [string, string, string, string][] = [['COD', 'Ops', 'Rahul', '#FBBF24'], ['Refund', 'Support', 'Priya', '#F472B6'], ['VIP', 'VIP desk', 'Anjali', '#A78BFA']];
 const INCOMING: [string, number][] = [['is COD available for pincode 411001?', 0], ['I want a refund for order #2190', 1], ['need help with my 6th order', 2], ['can I pay cash on delivery?', 0], ['refund still not received', 1], ['VIP early access link?', 2]];
 export function LaunchRules({ t }: { t: number }) {
   const P = useLayout().portrait;
@@ -183,7 +183,7 @@ export function LaunchRules({ t }: { t: number }) {
           const x = b > 0 ? lerp(hubX, P ? 960 : 1500, b) : lerp(sx - 200, hubX, a);
           const y = b > 0 ? lerp(540, laneY(lane), b) : lerp(sy + (k % 2 ? 60 : -60), 540, a);
           return (
-            <Obj key={k} x={x} y={y} z={b > 0 ? 100 : 40} s={b > 0 ? lerp(1, 0.4, b) : lerp(0.8, 0.9, a)} o={s1 * clamp(a * 3) * (1 - prog(t, at + 0.8, at + 1.0))} mb={Math.sin(Math.max(a < 1 ? a : b, 0) * Math.PI) * 3}>
+            <Obj key={k} x={x} y={y} z={b > 0 ? 100 : 40} s={b > 0 ? lerp(0.32, 0.4, b) : lerp(0.95, 0.32, a)} o={s1 * clamp(a * 3) * (1 - prog(t, at + 0.8, at + 1.0))} mb={Math.sin(Math.max(a < 1 ? a : b, 0) * Math.PI) * 3}>
               <div style={{ display: 'flex', alignItems: 'center', gap: 12, padding: '14px 20px', borderRadius: 20, borderTopLeftRadius: 6, background: '#fff', color: '#111B21', fontSize: 26, whiteSpace: 'nowrap', boxShadow: `0 0 0 3px ${LANES[lane][3]}, 0 20px 40px -14px rgba(0,0,0,0.55)` }}>{text}</div>
             </Obj>
           );
@@ -258,7 +258,7 @@ export function LaunchWarranty({ t }: { t: number }) {
             )}
           </div>
         </Phone3D>
-        <Obj x={P ? 960 : 1180} y={P ? 1015 : 120} z={200} o={s1 * prog(t, 4.6, 5.1)}><Tag tone={L.green} icon={Shield01Icon} size={24}>No app, no login, just a WhatsApp code</Tag></Obj>
+        <Obj x={P ? 960 : 1180} y={P ? 1015 : 130} z={60} o={s1 * prog(t, 4.6, 5.1)}><Tag tone={L.green} icon={Shield01Icon} size={24}>No app, no login, just a WhatsApp code</Tag></Obj>
 
         {/* deep: the claim moves through the hub */}
         <Obj x={960} y={480} z={lerp(-400, 0, prog(t, 6.9, 7.8, E.enter))} o={s2} ms={0.85}>

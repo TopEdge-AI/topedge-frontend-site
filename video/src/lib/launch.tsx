@@ -115,7 +115,8 @@ export function Obj({ x: x0, y: y0, z = 0, rx = 0, ry = 0, rz = 0, s: s0 = 1, o 
   const lay = useLayout();
   if (o <= 0.002) return null;
   const x = lay.x(x0), y = lay.y(y0), s = s0 * lay.ms(ms);
-  const b = Math.min(18, (blur ?? Math.abs(z) * dof) + mb);
+  // Focus sits at z=0; things behind defocus fully, labels in front only slightly so they stay readable.
+  const b = Math.min(18, (blur ?? (z < 0 ? -z * dof : z * dof * 0.25)) + mb);
   return (
     <div style={{ position: 'absolute', left: x, top: y, width: 0, height: 0, transformStyle: flat ? 'flat' : 'preserve-3d', transform: `translateZ(${z}px) rotateX(${rx}deg) rotateY(${ry}deg) rotateZ(${rz}deg) scale(${s})`, zIndex: Math.round(1000 + z) }}>
       <div style={{ position: 'absolute', left: 0, top: 0, transform: 'translate(-50%,-50%)', opacity: clamp(o), filter: b > 0.25 ? `blur(${b.toFixed(2)}px)` : undefined, ...style }}>{children}</div>
