@@ -11,6 +11,8 @@ import { brain } from './brain';
 import { rules } from './rules';
 import { meta } from './meta';
 import { home } from './home';
+import { launch } from './launch';
+import { launch2 } from './launch2';
 
 import type { CamKey, StudioTone } from '../lib/cine';
 import { CINE } from './cine';
@@ -21,6 +23,6 @@ export type Comp = {
   cine?: { tone?: StudioTone; seed?: number; cam: CamKey[] };
 };
 
-const ALL: Record<string, Comp> = { ...journeys, ...campaigns, ...crm, ...pixel, ...profit, ...optin, ...flow, ...intent, ...brain, ...rules, ...meta, ...home };
+const ALL: Record<string, Comp> = { ...journeys, ...campaigns, ...crm, ...pixel, ...profit, ...optin, ...flow, ...intent, ...brain, ...rules, ...meta, ...home, ...launch, ...launch2 };
 for (const [id, c] of Object.entries(CINE)) if (ALL[id]) ALL[id] = { ...ALL[id], cine: c(ALL[id]) };
 export const COMPS = ALL;
