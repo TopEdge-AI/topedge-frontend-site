@@ -18,7 +18,7 @@ type Clip = {
 };
 
 const DIR = '/marketing/feature-clips';
-const V = '20261117c';
+const V = '20261118a';
 
 /**
  * Clips by page slot: `${pageId}:h` (hero), `:t1..` (bento tiles), `:s1..` (showcase

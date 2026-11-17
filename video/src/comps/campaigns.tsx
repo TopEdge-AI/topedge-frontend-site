@@ -359,7 +359,6 @@ export function S3({ t }: { t: number }) {
 
 export const campaigns = {
   '03-H': { w: W, h: 1080, duration: 15, Component: H },
-  'home-campaigns': { w: W, h: 1080, duration: 15, Component: H },
   '03-T1': { w: T, h: T, duration: 7.5, Component: T1 },
   '03-T2': { w: T, h: T, duration: 7.5, Component: T2 },
   '03-T3': { w: T, h: T, duration: 7.5, Component: T3 },

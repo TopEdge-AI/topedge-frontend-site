@@ -15,9 +15,9 @@ export type DemoVideo = {
  * screen recordings and stills.
  */
 const film = (name: string): DemoVideo => ({
-  src: `/marketing/feature-clips/home/${name}.mp4?v=20261117c`,
-  mobileSrc: `/marketing/feature-clips/home/${name}-mobile.mp4?v=20261117c`,
-  poster: `/marketing/feature-clips/home/${name}-poster.jpg?v=20261117c`,
+  src: `/marketing/feature-clips/home/${name}.mp4?v=20261118a`,
+  mobileSrc: `/marketing/feature-clips/home/${name}-mobile.mp4?v=20261118a`,
+  poster: `/marketing/feature-clips/home/${name}-poster.jpg?v=20261118a`,
 });
 
 export const HOME_FILMS = {

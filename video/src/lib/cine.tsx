@@ -47,7 +47,8 @@ export function Studio({ t, tone, w, h, seed = 0 }: { t: number; tone: StudioTon
 /** Camera key: [time, focusX, focusY, zoom, rotX, rotY, rotZ]. */
 export type CamKey = [number, number, number, number, number?, number?, number?];
 
-export function camAt(t: number, keys: CamKey[], ease: (x: number) => number = E.camera) {
+const SMOOTH = (x: number) => (x < 0.5 ? 4 * x * x * x : 1 - Math.pow(-2 * x + 2, 3) / 2); // ease-in-out cubic
+export function camAt(t: number, keys: CamKey[], ease: (x: number) => number = SMOOTH) {
   const get = (k: CamKey) => [k[1], k[2], k[3], k[4] ?? 0, k[5] ?? 0, k[6] ?? 0];
   if (t <= keys[0][0]) return get(keys[0]);
   for (let i = 1; i < keys.length; i++) {
@@ -121,20 +122,21 @@ export function Glass({ children, dark, pad = '18px 26px', r = 24, style }: { ch
 export function cineCam(w: number, h: number, dur: number, open: [number, number], acts: [number, number, number][], pushIn?: number): CamKey[] {
   const cx = w / 2, cy = h / 2;
   const square = Math.abs(w - h) < 2;
-  const push = pushIn ?? (square ? 1.1 : 1.24);
-  const openZ = square ? 1.32 : 1.55;
-  // Aim partway from the centre toward each point so the subject stays in frame.
-  const ox = lerp(cx, open[0], 0.6), oy = lerp(cy, open[1], 0.6);
-  const k: CamKey[] = [[0, ox, oy, openZ, 7, -12, -1.5], [1.4, cx, cy, 1.0, 4, -7, 0]];
-  let last = 1.4;
+  // Gentle: small zooms, long moves that begin before the action, no roll, and the
+  // focus aimed only partway toward each point so the subject never leaves frame.
+  const push = Math.min(pushIn ?? (square ? 1.06 : 1.1), square ? 1.08 : 1.12);
+  const openZ = square ? 1.14 : 1.2;
+  const ox = lerp(cx, open[0], 0.45), oy = lerp(cy, open[1], 0.45);
+  const k: CamKey[] = [[0, ox, oy, openZ, 3, -5, 0], [1.9, cx, cy, 1.0, 2, -3, 0]];
+  let last = 1.9;
   for (const [ax, ay, ta] of acts) {
-    const fx = lerp(cx, ax, 0.55), fy = lerp(cy, ay, 0.55);
-    const a = Math.max(last + 0.3, ta - 0.45);
-    const b = Math.max(a + 0.6, ta + 1.8);
-    k.push([a, fx, fy, push, 3, -4, 0], [b, fx, fy, push, 2, -3, 0]);
+    const fx = lerp(cx, ax, 0.4), fy = lerp(cy, ay, 0.4);
+    const a = Math.max(last + 0.6, ta - 1.1);
+    const b = Math.max(a + 1.2, ta + 2.0);
+    k.push([a + 1.0, fx, fy, push, 1.5, -2, 0], [b, fx, fy, push, 1, -2, 0]);
     last = b;
   }
-  const end = Math.max(last + 0.8, dur - 1.4);
-  k.push([end, cx, cy, 1.02, 3, -5, 0], [dur + 0.6, cx, cy, 1.04, 3, -5, 0]);
+  const end = Math.max(last + 1.6, dur - 1.0);
+  k.push([end, cx, cy, 1.0, 2, -3, 0], [dur + 0.6, cx, cy, 1.01, 2, -3, 0]);
   return k;
 }
