@@ -126,6 +126,7 @@ Setup guides and screen-by-screen reference, written for the person running the 
 
 ## Playbooks
 
+- [10 Best Shipping Aggregators and Logistics Tools in India](https://topedgeai.com/blog/best-shipping-aggregators-logistics-tools-india): The 10 best shipping aggregators and logistics tools for Indian D2C brands in 2026: Shiprocket, ClickPost and 8 more, with prices read on 17 November.
 - [RTO in Ecommerce: Meaning, Full Form and Cost](https://topedgeai.com/blog/rto-meaning-ecommerce): RTO in ecommerce means Return to Origin: a parcel the buyer never accepts comes back to you. What one RTO costs, RTO vs NDR, and 5 ways to cut it.
 - [Add a WhatsApp Chat Button to Shopify (3 Ways)](https://topedgeai.com/blog/add-whatsapp-chat-button-shopify): Add a WhatsApp chat button to your Shopify store three ways: a free wa.me link, a theme code snippet or an app widget. Steps, code and a comparison.
 - [AiSensy Pricing in India (2026): Rates and Bill](https://topedgeai.com/blog/aisensy-pricing-india): AiSensy pricing read 12 Nov 2026: ₹1.09 per marketing message, plans from ₹1,500 a month, add-ons, and a Shopify store’s bill at 100, 500 and 1,500 orders.
@@ -159,7 +160,7 @@ Setup guides and screen-by-screen reference, written for the person running the 
 - [WhatsApp Business API Pricing India 2026: ₹ Rates & Fees](https://topedgeai.com/blog/whatsapp-business-api-pricing-india): WhatsApp Business API pricing in India, checked 16 Nov 2026: ₹0.8631 per marketing and ₹0.115 per utility message, plus cost per 1,000 at five providers.
 - [AI WhatsApp Chatbot for Shopify India](https://topedgeai.com/blog/ai-whatsapp-chatbot-for-shopify-india): What a good AI WhatsApp chatbot for Shopify looks like in India: live SKUs, ₹ prices, COD FAQs, Meta-safe behavior, and clean handoff to humans.
 - [What Is Ecommerce Automation on Shopify and WhatsApp?](https://topedgeai.com/blog/what-is-ecommerce-automation-shopify-whatsapp): Plain definition of ecommerce automation on Shopify WhatsApp: carts, COD, order updates, campaigns, inbox, and what to automate first in India.
-- [Reduce RTO with WhatsApp COD Confirmation (SOP)](https://topedgeai.com/blog/how-to-reduce-rto-with-whatsapp-cod-confirmation): How to reduce Shopify India RTO with WhatsApp COD confirmation: utility template timing, confirm, reschedule and cancel branches, and warehouse hold rules.
+- [Reduce RTO with WhatsApp COD Confirmation (SOP)](https://topedgeai.com/blog/how-to-reduce-rto-with-whatsapp-cod-confirmation): How to reduce RTO on Shopify India with WhatsApp COD confirmation: utility template timing, confirm, reschedule and cancel branches, and warehouse hold rules.
 - [Best WhatsApp Commerce Tools for Shopify (2026)](https://topedgeai.com/blog/best-whatsapp-automation-tools-shopify-india): Best WhatsApp commerce tools for Shopify India in 2026: TopEdge AI, WATI, AiSensy, Interakt, Bitespeed, Zoko, Getgabs, Kanal and Dondy on cost and COD.
 - [WhatsApp Cart Recovery Go-Live Checklist for Shopify India](https://topedgeai.com/blog/shopify-automation-checklist-whatsapp-cart-recovery): A fast Shopify automation checklist to connect WhatsApp, approve Meta templates, publish cart recovery, turn on COD paths, and open a shared inbox.
 - [WhatsApp Shared Inbox with Shopify Orders](https://topedgeai.com/blog/whatsapp-shared-inbox-shopify-order-context): Why ecommerce teams need a WhatsApp shared inbox with Shopify order context: assignment, AI handoff, tags, and Instagram in one place.
@@ -170,7 +171,7 @@ Setup guides and screen-by-screen reference, written for the person running the 
 
 ## Canonical URL directory
 
-All 165 indexable URLs on this domain, no trailing slash except the root.
+All 166 indexable URLs on this domain, no trailing slash except the root.
 
 - https://topedgeai.com/
 - https://topedgeai.com/pricing
@@ -297,6 +298,7 @@ All 165 indexable URLs on this domain, no trailing slash except the root.
 - https://topedgeai.com/blog/shopify-seo-experts
 - https://topedgeai.com/blog/rto-meaning-ecommerce
 - https://topedgeai.com/blog/add-whatsapp-chat-button-shopify
+- https://topedgeai.com/blog/best-shipping-aggregators-logistics-tools-india
 - https://topedgeai.com/docs
 - https://topedgeai.com/docs/quickstart
 - https://topedgeai.com/docs/connect-whatsapp
