@@ -172,4 +172,5 @@ At most 5 outreach emails a day.
     - Reading dates and dated source names stay as they are.
     - 22 older posts still carry 2026 titles; switching them is an owner decision, because rule 10 protects comparison-page titles.
   - **Hero images:** the owner's images went live on the shipping, RTO meaning and WhatsApp chat button posts.
+  - **Mistake fixed, 17 Nov.** The line "ClickPost and TopEdge AI have agreed to list each other" showed as Google's snippet. It is removed from the intro and the limits list. New permanent rule: no business arrangements in published copy.
   - **Day-number note:** the user calls today Day 7 (the 10 Nov plan's RTO hub). Under this 15 Nov plan it would be Day 3 (/whatsapp-templates), which moves to the next session.
