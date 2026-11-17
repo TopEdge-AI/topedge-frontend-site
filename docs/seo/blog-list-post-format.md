@@ -31,6 +31,7 @@ What each part becomes:
 | `<p class="mkt-blog-pick-cta">` | Pill buttons |
 
 Rules:
+- **NEVER put business arrangements in published copy.** No mention of link exchanges, "agreed to list each other", partnerships, deals, outreach, backlinks, who supplied the copy, or any internal process. Google shows any sentence as the search snippet; on 17 Nov 2026 it showed "ClickPost and TopEdge AI have agreed to list each other" for the shipping post. Owner's rule: never again. Facts about the products only.
 - **Year framing is 2027 from 17 Nov 2026.** Titles, descriptions, headings and "best in" lines on new and list posts say 2027, never 2026. Reading dates stay real ("read 17 November 2026"), and so do the names of dated sources ("India D2C Report 2026"). Comparison-page titles change only with the owner's sign-off.
 - Two to four pros and two to four cons, one line each.
 - No em dashes.

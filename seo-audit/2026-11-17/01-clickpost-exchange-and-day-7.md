@@ -31,7 +31,7 @@ Labels: Verified = read today from the live page, OpenSEO or URL Inspection. Est
   - House-style changes only: no em dashes; the bullets lose their full stops.
   - Facts checked on clickpost.ai on 17 Nov: 700+ carriers; Snitch's team of six and NDR conversion from 40-45% to 75%; quote-based pricing; Parth confirms orders and works NDRs.
   - **Not verified:** "148 reviews on G2". G2 blocks automated readers (403). ClickPost's home page shows 4.8, and its own 5 Aug post said 131 reviews. Please open https://www.g2.com/products/clickpost/reviews and tell me the count.
-- **Disclosure on the page:** "ClickPost and TopEdge AI have agreed to list each other's tools." I recommend keeping it. It is honest to readers, and it is the line that keeps this one exchange from reading as a hidden link swap.
+- **Partnership line REMOVED (owner's order, 17 Nov).** Google used it as the search snippet. Rule now in docs/seo/blog-list-post-format.md: never write deals, exchanges or partnerships into published copy.
 
 ### Image (done 17 Nov)
 
