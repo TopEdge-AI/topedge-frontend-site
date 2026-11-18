@@ -12,7 +12,7 @@ Move our ICP pages that already rank on Google pages 2 to 5 (average position 11
 
 ## 2. Every day, in this order
 
-1. **Read** this file (plan, last log row, open items), memory, `git status` and `git log`.
+1. **Read** this file (plan, last log row, open items), memory, then `git fetch`, `git status` and `git log` (other sessions push to the same branch).
 2. **Search Console (OpenSEO, free):** index state of yesterday's page (`inspect_urls`); its queries since the change; refresh the striking-distance list: `get_search_console_performance`, dimensions query + page, country = ind, last 28 days, minPosition 8, minImpressions 3, excluding "spa". Re-rank the remaining days if a page moved.
 3. **OpenSEO:** `whoami` credits. Mondays: rank tracker 6a2f82e0 results and `get_backlinks_overview` for topedgeai.com.
 4. **Ahrefs site audit** (built-in browser, app.ahrefs.com, project 10574646): health score, errors and warnings. Fix real errors on topedgeai.com; ignore dash.topedgeai.com rows. If it shows the login page, tell the owner and move on.
@@ -39,7 +39,7 @@ Baselines are India, Search Console, 21 Oct to 17 Nov 2026 (Verified 18 Nov). Re
 |---|---|---|---|---|---|
 | 1 | Wed 18 Nov | /blog/interakt-alternative-shopify-india | interakt alternative 62 @ 22.3; best interakt alternative 15 @ 25.5 | 3 list emails ready (martech.zone, thed2cpulse, lilachbullock) | Done |
 | 2 | Thu 19 Nov | /blog/whatsapp-automation-for-shopify (pillar) | shopify whatsapp automation 19 @ 10.7; whatsapp automation for shopify 13 @ 10.2; whatsapp marketing shopify 12 @ 30.8; whatsapp for shopify 9 @ 20.8. Do not chase "whatsapp flows shopify" | Bing Webmaster import (owner, 5 min) | Planned |
-| 3 | Fri 20 Nov | /blog/bitespeed-alternative-shopify-india | bitespeed alternative 44 @ 18.5; bitespeed pricing 8 @ 23.3. Fix the unsourced ₹15,000 FAQ | Submit SourceForge, productgrowth.in, costbench (owner) | Planned |
+| 3 | Fri 20 Nov | /blog/bitespeed-alternative-shopify-india | bitespeed alternative 44 @ 18.5; bitespeed pricing 8 @ 23.3. The 17 Nov session already added a "Bitespeed pricing" section and labelled the ₹15,000 figure as third-party; build on it | Submit SourceForge, productgrowth.in, costbench (owner) | Planned |
 | 4 | Sat 21 Nov | /blog/aisensy-alternative-shopify-india | aisensy vs gallabox 19 @ 17.6; best aisensy alternative 11 @ 17.4 | Review asks follow-up (owner) | Planned |
 | 5 | Sun 22 Nov | /blog/best-whatsapp-apps-for-shopify (body only, title locked) | best whatsapp app for shopify 39 @ 20.9 (7 clicks); shopify whatsapp app 4 @ 58 | YouTube demo 1: COD confirmation (owner) | Planned |
 | 6 | Mon 23 Nov | /compare/topedge-vs-wati-vs-interakt-vs-aisensy and /compare/topedge-vs-wati-vs-aisensy (body only) | wati vs aisensy 21 @ 39.8 and 9 @ 29.4 | 3 emails from `2026-11-15/04` (codingclave, echai.ventures, D2C Ignite) | Planned |
@@ -69,7 +69,7 @@ Stop rule (kept from 15 Nov): if India commercial impressions are flat two weeks
 
 | Day | Date | Page and what changed | Audit files | Off-page | Not done | Commit |
 |---|---|---|---|---|---|---|
-| 1 | Wed 18 Nov | /blog/interakt-alternative-shopify-india: title and H1 now "Interakt Alternative for Shopify India (2026)", new description, 5-row dated shortlist table, migration checklist (replaces switch test), AI cost table moved to the plan the scenario needs (Growth, 500 orders), side-by-side adds COD confirmation and reviews rows, COD-to-prepaid line corrected, AI FAQ added, every price re-read 18 Nov. Tool score before: 90 (us), 81 WatsBerry, 78 CampaignHQ, 39 softwares.com. Also shipped (old plan Day 3): /whatsapp-templates copy cards, utility vs marketing table, rupee bill, order confirmation table; cart post template table; cart timings fixed on 3 pages; /compare, RTO calculator, tool finder openings | `2026-11-18/page-audits/interakt-alternative/` (before/onpage-audit.pdf, analysis-report.pdf, gsc-export-3-months.csv) | Drafts: `2026-11-18/01-day-3-outreach-drafts.md` (3 ready, Growave and the4.co held: their lists already cover COD) | Ahrefs site audit: built-in browser signed out of Ahrefs. "After" tool run waits for the deploy | see git log |
+| 1 | Wed 18 Nov | /blog/interakt-alternative-shopify-india: title and H1 now "Interakt Alternative for Shopify India (2027)" (owner's 2027 rule), new description, 5-row dated shortlist table, migration checklist (replaces switch test), AI cost table moved to the plan the scenario needs (Growth, 500 orders), side-by-side adds COD confirmation and reviews rows, COD-to-prepaid line corrected, AI FAQ added, every price re-read 18 Nov. Tool score before: 90 (us), 81 WatsBerry, 78 CampaignHQ, 39 softwares.com. Also shipped (old plan Day 3): /whatsapp-templates copy cards, utility vs marketing table, rupee bill, order confirmation table; cart post template table; cart timings fixed on 3 pages; /compare, RTO calculator, tool finder openings | `2026-11-18/page-audits/interakt-alternative/` (before/onpage-audit.pdf, analysis-report.pdf, gsc-export-3-months.csv) | Drafts: `2026-11-18/01-day-3-outreach-drafts.md` (3 ready, Growave and the4.co held: their lists already cover COD) | Ahrefs site audit: built-in browser signed out of Ahrefs. "After" tool run waits for the deploy | see git log |
 
 ## 6. Open items for the owner
 
@@ -82,5 +82,8 @@ Stop rule (kept from 15 Nov): if India commercial impressions are flat two weeks
 
 ## 7. History
 
-- 15 to 17 Nov: the 15 Nov plan's Days 1 and 2 shipped (`2026-11-15/00-AUDIT-AND-14-DAY-PLAN.md`, Progress log). Nothing ran on 17 Nov.
+- 15 and 16 Nov: the 15 Nov plan's Days 1 and 2 shipped (`2026-11-15/00-AUDIT-AND-14-DAY-PLAN.md`, Progress log).
+- 17 Nov: a cloud session ran the 10 Nov plan's Day 7 (RTO hub): shipping aggregators post, NDR section, Bitespeed pricing section, blog list cards, plus many feature-page films. The owner numbers days by the 10 Nov plan (17 Nov = Day 7, 18 Nov = Day 8). This plan restarts the count at Day 1 = 18 Nov.
+- Owner rules from 17 Nov that still apply: use 2027 (not 2026) in new or rewritten titles, descriptions and headings, keep reading dates as they are; never mention business arrangements (link exchanges, agreed listings) in published copy.
+- **Always `git fetch` before reading the log.** On 18 Nov the local checkout was 30 commits behind GitHub, which hid the 17 Nov work until the push was rejected.
 - 18 Nov: owner replaced the remaining days with this page-2-to-page-1 plan.

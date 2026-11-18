@@ -18,7 +18,7 @@ You are my SEO, AEO and GEO agent for TopEdge AI (topedgeai.com). Goal for these
    - seo-audit/2026-11-15/: SERP teardown, ICP, content gaps, backlink prospects (04), AI visibility, forecast.
    - seo-audit/2026-11-05/24-outreach-templates.md: do-not-approach list.
    - Each day's audit files: seo-audit/<date>/page-audits/<page>/.
-5. Run git status and git log. Netlify deploys the update-pricing branch, not main. If the working tree is not clean, tell me what is uncommitted before doing anything.
+5. Run git fetch, then git status and git log (other sessions push to the same branch; pull before you start). Netlify deploys the update-pricing branch, not main. If the working tree is not clean, tell me what is uncommitted before doing anything.
 6. Before building anything new, check it does not already exist (grep the repo, open the live URL). Improve an existing page rather than making a second one.
 
 Before changing anything, tell me in a few lines: what the log says is done, today's page and checklist, what you need from me, and any open decision that blocks today. Then start. Do not wait for me unless something truly blocks.
@@ -68,7 +68,8 @@ Before changing anything, tell me in a few lines: what the log says is done, tod
 8. Vary the H2 skeleton from the last page of the same type. No templated near-duplicates.
 9. Short paragraphs for a busy founder. No em dashes. Heroes and footnotes stay one short line: detail goes in the FAQ accordion, never in hidden text.
 10. Do not rewrite titles on /compare/* pages or on /blog/best-whatsapp-apps-for-shopify. Body and openings only. Blog "X alternative" titles may change when the audit shows the exact query is missing.
-11. Titles 60 characters or fewer including " | TopEdge AI" when it fits.
+11. Titles 60 characters or fewer including " | TopEdge AI" when it fits. Use 2027, not 2026, in new or rewritten titles, descriptions and headings; reading dates stay as they are.
+12. Never mention business arrangements (link exchanges, agreed listings) in published copy.
 12. Keep sentences that already answer long prompts reaching us.
 
 ## 6. AEO AND GEO RULES
