@@ -52,6 +52,16 @@ const FAQS = [
       'Each flow sends one approved template at its trigger point. A cart recovery flow sends the cart template, a COD flow sends the COD confirmation, and order updates fire on Shopify fulfilment events. The flow owns the timing, the audience and the branching; the template is only the wording Meta has already signed off. That split is why you can rewrite the copy and resubmit it without rebuilding the automation around it.',
   },
   {
+    question: 'What is the difference between a utility and a marketing template?',
+    answer:
+      'A utility template is about an order that already exists, such as a confirmation, a COD check or a shipping update. A marketing template tries to make a sale, such as a cart reminder or an offer. In India Meta charges ₹0.1150 for a utility message and ₹0.8631 for a marketing one.',
+  },
+  {
+    question: 'What should a WhatsApp order confirmation message include?',
+    answer:
+      'The customer’s name, the order number, the items and the total, then what happens next. Leave offers out, or Meta charges it as a marketing message. For Cash on Delivery orders, ask the customer to confirm before you pack.',
+  },
+  {
     question: 'Why does the template category matter so much?',
     answer:
       'Because Meta prices the category, not the message. In India a utility template costs ₹0.1150 per delivered message and a marketing one ₹0.8631, roughly seven times more. The same sentence with an offer added becomes a marketing template, so category is the single biggest lever on your WhatsApp bill.',
@@ -64,7 +74,7 @@ const FAQS = [
   {
     question: 'How long does Meta take to approve a template?',
     answer:
-      'Usually hours rather than days once your business is verified, though it varies and Meta does not publish a guarantee. Most rejections come from missing sample values or vague variables rather than the copy itself, so fill the samples in properly the first time.',
+      'Many templates clear in minutes and most within a day. Meta guarantees no time. Most rejections come from missing sample values or vague variables rather than the copy itself, so fill the samples in properly the first time.',
   },
   {
     question: 'Do you have Diwali and festival templates?',
@@ -90,36 +100,68 @@ const BLOCKS: TopicBlock[] = [
   },
   {
     kind: 'specTable',
-    id: 'category-price',
-    h2: 'What each template costs',
+    id: 'utility-vs-marketing',
+    h2: 'Utility vs marketing templates',
+    accent: 'Utility vs marketing',
     intro:
-      'Meta charges by template type, not by length. A marketing message costs about seven times a utility one.',
-    columns: ['Category', 'What belongs in it', 'India, per delivered message'],
+      'Meta prices the category, not the length. A marketing message costs about seven times a utility one.',
+    columns: ['', 'Utility template', 'Marketing template'],
     rows: [
       {
-        label: 'Utility',
-        cells: [
-          'Messages about an order that already exists: confirmed, COD confirmation, shipped, delivered, cancelled, warranty',
-          '₹0.1150',
-        ],
-        note: 'Cost scales with orders, not audience size.',
+        label: 'What it is for',
+        cells: ['An order that already exists', 'A sale that has not happened yet'],
       },
       {
-        label: 'Marketing',
+        label: 'Examples in this library',
         cells: [
-          'Anything that exists to make a sale that has not happened: cart reminders, prepaid incentives, festive offers',
-          '₹0.8631',
+          'Order confirmed, COD confirmation, shipped, delivered, cancelled, warranty',
+          'Three cart reminders, COD to prepaid offer, festive offers',
         ],
-        note: 'Cost scales with audience, so it is the one to ration.',
       },
+      { label: 'India rate per delivered message', cells: ['₹0.1150', '₹0.8631'] },
+      { label: '1,000 delivered messages', cells: ['₹115', '₹863'] },
       {
-        label: 'Authentication',
-        cells: ['One-time passcodes and verification only', '₹0.1150'],
-        note: 'Not used by a standard Shopify store setup.',
+        label: 'Add a discount or offer',
+        cells: ['Charged as marketing from then on', 'No change'],
       },
     ],
     footnote:
-      'Rates are Meta’s own published India prices, billed by Meta to your WhatsApp Business account. TopEdge AI adds no markup on them.',
+      'Meta’s published India rates, read 16 November 2026, before 18% GST. Meta bills your WhatsApp Business account. TopEdge AI adds no markup.',
+  },
+  {
+    kind: 'specTable',
+    id: 'monthly-bill',
+    h2: 'What order messages cost at 100, 500 and 1,500 orders',
+    accent: 'order messages cost',
+    intro:
+      'Four utility messages per order: confirmation, COD check, shipped and delivered. The right column is the same four with an offer added to each.',
+    columns: ['Orders a month', '4 utility messages per order', 'Same 4 with an offer (marketing)'],
+    rows: [
+      { label: '100', cells: ['₹46', '₹345'] },
+      { label: '500', cells: ['₹230', '₹1,726'] },
+      { label: '1,500', cells: ['₹690', '₹5,179'] },
+    ],
+    footnote:
+      'Estimate: assumes every order gets all four messages. Meta India rates read 16 November 2026, before 18% GST.',
+  },
+  {
+    kind: 'specTable',
+    id: 'order-confirmation',
+    h2: 'WhatsApp order confirmation message template, part by part',
+    accent: 'order confirmation',
+    intro:
+      'Keep it to what the customer needs to check. Everything here is utility content, so the message stays at ₹0.1150.',
+    columns: ['Part', 'What goes in it', 'Example'],
+    rows: [
+      { label: 'Greeting', cells: ['First name, variable {{1}}', 'Hi Priya'] },
+      { label: 'Order number', cells: ['Variable {{2}}', '#1042'] },
+      { label: 'Items', cells: ['Variable {{3}}', 'Olive Linen Shirt, M'] },
+      { label: 'Total', cells: ['Variable {{4}}. For COD, the amount to pay on delivery', '₹2,499'] },
+      { label: 'Next step', cells: ['What happens now', 'We will message you here as soon as it ships'] },
+      { label: 'Header and buttons', cells: ['Optional', 'Product image, Track order'] },
+    ],
+    footnote:
+      'When you submit, give a realistic sample for every variable. Missing samples are the most common reason Meta rejects a template.',
   },
   {
     kind: 'callout',
@@ -130,7 +172,117 @@ const BLOCKS: TopicBlock[] = [
       'Add a discount or promotion to an order update and Meta charges it as marketing, ₹0.8631 instead of ₹0.1150, on every send. Keep offers in a separate message.',
     link: { label: 'See the full India rate card', href: '/pricing/meta-rates' },
   },
+  {
+    kind: 'callout',
+    id: 'limits',
+    tone: 'note',
+    title: 'Honest limits',
+    body:
+      'TopEdge AI ships 11 templates, not hundreds. The wording here is an example: you write your own, submit it from your account, and Meta decides. We do not build Meta’s separate WhatsApp Flows forms.',
+    link: { label: 'See what each plan includes', href: '/pricing' },
+  },
 ];
+
+/** Three templates to copy, in Meta's {{1}} variable format. Example wording:
+ *  the merchant submits it from their own account and Meta decides. */
+const QUICK_TEMPLATES: {
+  id: string;
+  title: string;
+  category: TemplateSlot['category'];
+  body: string;
+  buttons: string;
+  vars: string;
+}[] = [
+  {
+    id: 'copy-order-confirmation',
+    title: 'Order confirmation',
+    category: 'Utility',
+    body: 'Hi {{1}}, thank you for your order!\n\nOrder {{2}} is confirmed: {{3}}.\nTotal: {{4}}\n\nWe will message you here as soon as it ships.',
+    buttons: 'None, or Track order',
+    vars: '{{1}} first name, {{2}} order number, {{3}} items, {{4}} total',
+  },
+  {
+    id: 'copy-cod-confirmation',
+    title: 'COD confirmation',
+    category: 'Utility',
+    body: 'Hi {{1}}, please confirm your Cash on Delivery order {{2}}.\n\n{{3}}\nAmount to pay on delivery: {{4}}\n\nTap Confirm order and we will dispatch it.',
+    buttons: 'Confirm order, Cancel order',
+    vars: '{{1}} first name, {{2}} order number, {{3}} items, {{4}} amount',
+  },
+  {
+    id: 'copy-cart-reminder',
+    title: 'Abandoned cart reminder',
+    category: 'Marketing',
+    body: 'Hi {{1}}, you left {{2}} in your cart at {{3}}.\n\nTap below to finish your order, or reply here if you have a question.',
+    buttons: 'Complete my order',
+    vars: '{{1}} first name, {{2}} product, {{3}} cart total',
+  },
+];
+
+function CopyTemplates() {
+  const [copied, setCopied] = useState<string | null>(null);
+  const copy = async (id: string, text: string) => {
+    try {
+      await navigator.clipboard.writeText(text);
+      setCopied(id);
+      window.setTimeout(() => setCopied(null), 1800);
+    } catch {
+      setCopied(null);
+    }
+  };
+
+  return (
+    <div className="mx-auto max-w-5xl">
+      <h2 className="text-center text-2xl font-semibold tracking-tight text-[#1a1033] md:text-3xl">
+        Three templates to copy now
+      </h2>
+      <p className="mx-auto mt-3 max-w-2xl text-center text-[0.95rem] leading-relaxed text-[#5b5470]">
+        Example wording in Meta’s {'{{1}}'} format. Submit it from your own account in{' '}
+        <Link to="/features/meta-manager" className="font-medium text-[#7C3AED] hover:underline">
+          Meta Manager
+        </Link>
+        , and see{' '}
+        <Link
+          to="/blog/whatsapp-template-rejected-meta-shopify-fix"
+          className="font-medium text-[#7C3AED] hover:underline"
+        >
+          why templates get rejected
+        </Link>{' '}
+        before you do.
+      </p>
+      <ul className="mt-8 grid gap-5 md:grid-cols-3">
+        {QUICK_TEMPLATES.map((t) => (
+          <li
+            key={t.id}
+            className="flex flex-col rounded-2xl border border-[#efeaf8] bg-white p-5 shadow-[0_1px_2px_rgba(26,16,51,0.04)]"
+          >
+            <div className="flex items-center justify-between gap-3">
+              <h3 className="text-base font-semibold text-[#1a1033]">{t.title}</h3>
+              <span className={`mkt-jf__cat mkt-jf__cat--${t.category.toLowerCase()}`}>
+                {t.category} · {TEMPLATE_RATE[t.category]}
+              </span>
+            </div>
+            <pre className="mt-4 flex-1 whitespace-pre-wrap rounded-xl bg-[#f7f4fd] p-4 font-sans text-[0.9rem] leading-relaxed text-[#1a1033]">
+              {t.body}
+            </pre>
+            <p className="mt-3 text-[0.8rem] leading-relaxed text-[#5b5470]">
+              <strong className="font-medium text-[#1a1033]">Buttons:</strong> {t.buttons}
+              <br />
+              <strong className="font-medium text-[#1a1033]">Variables:</strong> {t.vars}
+            </p>
+            <button
+              type="button"
+              onClick={() => copy(t.id, t.body)}
+              className="mt-4 inline-flex items-center justify-center rounded-full border border-[#7C3AED] px-4 py-2 text-sm font-medium text-[#7C3AED] hover:bg-[#7C3AED] hover:text-white"
+            >
+              {copied === t.id ? 'Copied' : 'Copy text'}
+            </button>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
 
 type LibraryItem = {
   id: string;
@@ -283,7 +435,11 @@ export default function WhatsAppTemplatesPage() {
           }
         />
 
-        <Section className="!pt-12 md:!pt-16" id="library">
+        <Section className="!pt-10 md:!pt-14" id="copy">
+          <CopyTemplates />
+        </Section>
+
+        <Section className="!pt-4 md:!pt-6" id="library">
           <TemplateLibrary />
 
           {/*

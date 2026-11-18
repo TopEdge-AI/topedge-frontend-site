@@ -98,7 +98,7 @@ export default function RtoCalculatorPage() {
       name="RTO cost calculator"
       h1="RTO cost calculator for Shopify stores"
       accent="RTO cost calculator"
-      subtitle="See what returned COD parcels cost you each month, and what confirming them on WhatsApp would cost instead."
+      subtitle="A free RTO cost calculator for ecommerce: see what returned COD parcels cost you each month, and what WhatsApp confirmation costs instead."
       privacy="Runs in your browser. Nothing you type is saved or sent anywhere."
       blocks={BLOCKS}
       faqs={FAQS}

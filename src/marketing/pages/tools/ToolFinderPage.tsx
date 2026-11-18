@@ -122,7 +122,7 @@ export default function ToolFinderPage() {
           eyebrow="Free tool"
           title="Help me find the best WhatsApp tool for my Shopify store"
           accent="best WhatsApp tool"
-          subtitle="Six questions about your store. You get a ranked shortlist, the reasons behind it, and where each tool falls short."
+          subtitle="A six-question quiz on which WhatsApp tool fits your Shopify store. You get a ranked shortlist, the reasons, and where each tool falls short."
           trust
         />
 

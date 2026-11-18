@@ -189,7 +189,12 @@ export default function CompareIndexPage() {
             <h2 id="mkt-cmpx-pairs">
               Head-to-head <span className="mkt-cmp__hl">boards</span>
             </h2>
-            <p>Pick the tool you are evaluating. Each board compares it with TopEdge AI row by row.</p>
+            <p>
+              Pick the tool you are evaluating. Each board compares it with TopEdge AI row by row.
+              To choose, start with the job: COD confirmation and RTO need Shopify order triggers,
+              while large broadcasts need the lowest Meta markup. Then price the plan your order
+              volume needs, not the entry plan.
+            </p>
           </div>
           <div className="mkt-cmpx__grid">
             {competitors.map((c) => (

@@ -146,6 +146,15 @@ At most 5 outreach emails a day.
 
 **Stop rule:** if India impressions are flat for two weeks running, stop new pages. Put the days into reviews, list inclusion and the free tools.
 
+## 6. Changes, 18 Nov 2026 (the plan and log now live in a doc)
+
+The plan table and daily log moved to the doc "TopEdge AI SEO Plan and Daily Log, 15 to 30 Nov 2026": https://claude.ai/artifact/Rapg6dht2P14bug5nC7xH4. The doc wins over this file. Changes made on 18 Nov:
+- Day 3 slipped to Wed 18 Nov; every later date moves by one day (Day 14 stays Sun 29 Nov).
+- Day 3 emails: MageComp (do-not-approach list) and Meetanshi (ships its own WhatsApp app) removed; Growave and the4.co held on 18 Nov because both lists already cover COD.
+- Day 4: no new /tools/whatsapp-qr-code-generator URL. /tools/whatsapp-link-generator already makes the QR code; Day 4 strengthens QR there instead.
+- Day 3 email follow-ups move to Day 10 (25 Nov); the stop-rule check moves to Day 9 (24 Nov).
+
 ## Progress log
 
 - **Day 2, 16 Nov 2026.** Done (built, awaiting deploy): scorecard, festival verdict (see `../2026-11-16/01-day-2-scorecard-and-festival-verdict.md`), /blog/whatsapp-business-api-pricing-india refresh with the cost-per-1,000 table, festival em dashes and brand. Body fixes: 4-way compare board inlinks, shared-inbox docs, cart recovery calculator, opt-in tools docs. Not done: plan doc in claude.ai could not be read from this session, so this log is the record; Rich Results Test waits for the deploy. Owner items (listing rename, review asks, pickyourapp claim) not confirmed.
+- **Day 3, 18 Nov 2026.** Built, build:netlify exit 0, awaiting deploy go-ahead. /whatsapp-templates: 3 copyable templates, utility vs marketing table, rupee bill at 100/500/1,500 orders, order confirmation part-by-part table, honest limits, 2 FAQs, cart timings fixed (25 min, +4 h, +36 h). Cart post: copy-ready 3-step template table. Body fixes: /whatsapp-journey-examples/abandoned-cart-recovery (timings, keyword), /compare (how to choose), /tools/rto-cost-calculator and /tools/best-whatsapp-tool-for-shopify (keyword in opening line). Outreach drafts: `../2026-11-18/01-day-3-outreach-drafts.md` (3 ready, 2 held). QR page build reverted.

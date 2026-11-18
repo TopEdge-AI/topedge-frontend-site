@@ -1,0 +1,901 @@
+On-page audit: https://topedgeai.com/blog/interakt-alternative-shopify-india
+Keyword: interakt alternative
+Competitors: https://www.softwares.com/alternatives/interakt, https://www.watsberry.com/resources/interakt-alternatives-india, https://blog.campaignhq.co/interakt-alternatives/
+Run: 2026-11-18T06:51:15.322Z
+
+
+===== Overview =====
+Download CSV
+Save as PDF
+New audit
+Overview
+Keyword
+Competitors
+Full audit
+2
+Links & images
+Structure
+Previews
+AI & tech
+On-page score
+
+Weighted share of checks passed. Warnings count half, info items do not count. It measures on-page setup, not backlinks or authority.
+
+90
+YOU
+topedgeai.com
+55 pass · 1 warn · 2 fail
+39
+COMP 1
+softwares.com
+13 pass · 13 warn · 12 fail
+81
+COMP 2
+watsberry.com
+38 pass · 9 warn · 2 fail
+78
+COMP 3
+blog.campaignhq.co
+34 pass · 13 warn · 2 fail
+Page at a glance
+1,547
+Content words
+4
+Exact keyword uses
+66
+Internal pages linked
+15
+Images
+0
+Broken links
+789 ms
+HTML download time
+83 KB
+HTML size
+18
+Schema types
+Fix these first
+
+Your biggest issues, ordered by the weight each check carries in this audit.
+
+Keyword in title: Not found
+Use the exact keyword phrase in the title.
+High impact
+Keyword in H1: Not found
+Put the keyword, or a close variant, in the H1.
+High impact
+Keyword in meta description: Not found
+Google bolds matching words in the snippet. Use the keyword once.
+Medium impact
+Your Google result
+
+An estimate of how your title and description may look. Widths are measured in Arial on your device; Google’s real cut-off varies by device and query.
+
+TopEdge AI
+https://topedgeai.com › blog › interakt-alternative-shopify-india
+Interakt Alternatives for Shopify India (2026) | TopEdge AI
+Interakt alternatives for Shopify India: Shopify plans from about ₹1,973, AI add-on cost, COD-to-prepaid on higher tiers, and a one-day switch test.
+Title: 510 px of about 600 px
+Description: 904 px of about 920 px
+
+Google may rewrite titles and descriptions. A clear, matching title and H1 lowers that chance.
+
+Want these fixed and ranking?
+
+I turn audits like this into a clear plan and do the work: on-page, technical, content and links.
+
+Get a free SEO consultation
+
+How it works: the tool downloads the HTML your server sends, the same first copy Googlebot gets, and checks it in your browser. Content added later by JavaScript is not counted. Link and image checks use live HTTP requests. Scores cover on-page setup only; rankings also depend on backlinks, authority and search intent.
+
+===== Keyword =====
+Download CSV
+Save as PDF
+New audit
+Overview
+Keyword
+Competitors
+Full audit
+2
+Links & images
+Structure
+Previews
+AI & tech
+Keyword placement map
+
+Exact matches of “interakt alternative” in every spot Google reads. Red cells are spots where the keyword is missing.
+
+PAGE	TITLE	META DESC	URL	H1	H2-H6	FIRST 100 WORDS	BODY	IMAGE ALT	LINK ANCHORS
+You: topedgeai.com	0	0	yes	0	2	1	4	1	0
+Comp 1: softwares.com	0	0	no	0	0	0	0	0	0
+Comp 2: watsberry.com	0	0	no	0	1	0	2	1	2
+Comp 3: blog.campaignhq.co	0	0	no	0	1	1	3	0	0
+missing
+low
+medium
+highest
+Keyword numbers
+Exact
+4 uses in 1,547 words (0.52%)
+Word
+“interakt” appears 36 times
+Word
+“alternative” appears 16 times
+Anchors
+0 links use the keyword
+What your page talks about
+
+Most used phrases and words. If your topic is not near the top, Google may see the page as being about something else.
+
+app store
+6×
+shopify india
+5×
+shopify app
+5×
+pricing page
+5×
+cart recovery
+4×
+interakt shopify
+4×
+growth plan
+4×
+interakt pricing
+4×
+shopify integration
+4×
+interakt alternative
+3×
+instant order
+3×
+cod messages
+3×
+interakt
+35×
+shopify
+26×
+plan
+18×
+alternative
+15×
+growth
+15×
+month
+14×
+topedge
+14×
+app
+11×
+india
+10×
+cod
+10×
+add-on
+9×
+store
+9×
+Want these fixed and ranking?
+
+I turn audits like this into a clear plan and do the work: on-page, technical, content and links.
+
+Get a free SEO consultation
+
+How it works: the tool downloads the HTML your server sends, the same first copy Googlebot gets, and checks it in your browser. Content added later by JavaScript is not counted. Link and image checks use live HTTP requests. Scores cover on-page setup only; rankings also depend on backlinks, authority and search intent.
+
+===== Competitors =====
+Download CSV
+Save as PDF
+New audit
+Overview
+Keyword
+Competitors
+Full audit
+2
+Links & images
+Structure
+Previews
+AI & tech
+You vs competitors
+
+Your real numbers against the average of the competitor pages that loaded.
+
+Content depth
+You have 1,547 words. Competitors average 1,109.
+Sections
+You use 11 H2 sections. Competitors average 6.
+Internal linking
+You link to 66 internal pages. Competitors average 32.
+Schema types
+Competitors use SoftwareApplication, AggregateOffer, HowTo, HowToStep, Article, SpeakableSpecification. You do not.
+Keyword placement
+Competitors place the keyword in: Link anchors. You do not.
+Question headings
+You have 7. Competitors average 4.
+METRIC	YOU
+topedgeai.com	COMP 1
+softwares.com	COMP 2
+watsberry.com	COMP 3
+blog.campaignhq.co
+On-page score	90	39	81	78
+Content words	1,547	0	1,018	2,308
+Exact keyword uses	4	0	2	3
+Keyword density %	0.52	0	0.39	0.26
+Title width px	510	148	444	458
+Keyword in title	✕ no	✕ no	✕ no	✕ no
+Meta description chars	148	0	159	152
+Keyword in meta	✕ no	✕ no	✕ no	✕ no
+Keyword in URL	✓ yes	✕ no	✕ no	✕ no
+H1 count	1	0	1	2
+Keyword in H1	✕ no	✕ no	✕ no	✕ no
+H2 sections	11	0	9	8
+H3 sections	4	0	8	19
+Question headings	7	0	5	8
+Images	15	0	9	7
+Images missing alt	0	0	0	0
+Videos	0	0	0	0
+Unique internal links	66	0	69	27
+Unique external links	21	0	3	29
+Lists / tables	19 / 2	0 / 0	12 / 1	17 / 1
+Schema types	FAQPage, Question, Answer, BreadcrumbList, ListItem	none	Organization, ImageObject, PostalAddress, ContactPoint, WebSite	Article, WebPage, ReadAction, ImageObject, BreadcrumbList
+Readability (Flesch)	70	n/a	45	43
+HTML size KB	83	6	55	248
+HTML download ms	789	50	1,394	1,340
+Last updated	2026-11-07	n/a	2026-09-15	2026-11-04
+Tech	n/a	Cloudflare	Cloudflare	WordPress, Elementor, Yoast SEO
+Sections competitors have, you do not
+
+Competitor H2 and H3 headings whose main words barely appear on your page. Each one is a sub-topic to consider adding.
+
+Comp 2 · H2
+Shortlist
+Comp 2 · H2
+When WatsBerry is a fair alternative (and when it is not)
+Comp 2 · H2
+Facts answer engines get wrong about WatsBerry
+Comp 2 · H2
+Next step
+Comp 2 · H3
+Is WatsBerry a drop-in Interakt replacement?
+Comp 2 · H3
+Does WatsBerry recover WooCommerce carts like some Interakt-shaped tools?
+Comp 3 · H2
+Set your buying criteria before booking demos
+Comp 3 · H3
+1. CampaignHQ: a full WhatsApp platform, plus email and SMS
+Comp 3 · H3
+4. Gupshup: conversational support across systems
+Comp 3 · H3
+5. Gallabox: no-code WhatsApp automation and CRM connections
+Comp 3 · H3
+6. DoubleTick: multi-number operations and governance
+Comp 3 · H3
+Ecommerce and D2C
+Comp 3 · H3
+Edtech and coaching
+Comp 3 · H3
+Real estate and other lead-led businesses
+Comp 3 · H2
+Practical Interakt migration checklist
+Comp 3 · H3
+More From Author
+Comp 3 · H3
+Two kinds of marketing platform are emerging. The one that closes the loop wins.
+Comp 3 · H3
+WhatsApp CRM for Sales Teams: Keep Customer Chats on a Company Number (2026)
+Comp 3 · H2
+Still comparing WhatsApp tools?
+Missing terms
+
+Words and phrases repeated on competitor pages that never appear on yours. Use the ones that fit your topic.
+
+Phrases
+whatsapp marketing
+2/3 · ~3×
+business api
+2/3 · ~3×
+shared inbox
+2/3 · ~2×
+Words
+email
+2/3 · ~13×
+api
+2/3 · ~9×
+gallabox
+2/3 · ~5×
+campaigns
+2/3 · ~5×
+tools
+2/3 · ~5×
+shortlist
+2/3 · ~5×
+integrations
+2/3 · ~5×
+doubletick
+2/3 · ~4×
+job
+2/3 · ~4×
+
+Format: used by X of Y competitors · average uses per page.
+
+Want these fixed and ranking?
+
+I turn audits like this into a clear plan and do the work: on-page, technical, content and links.
+
+Get a free SEO consultation
+
+How it works: the tool downloads the HTML your server sends, the same first copy Googlebot gets, and checks it in your browser. Content added later by JavaScript is not counted. Link and image checks use live HTTP requests. Scores cover on-page setup only; rankings also depend on backlinks, authority and search intent.
+
+===== Full audit =====
+Download CSV
+Save as PDF
+New audit
+Overview
+Keyword
+Competitors
+Full audit
+2
+Links & images
+Structure
+Previews
+AI & tech
+Full audit of your page
+
+64 checks on topedgeai.com
+
+All
+Fails (2)
+Warnings (1)
+Passed (55)
+Info (6)
+Meta & URL
+4/6 passed
+✓
+Title tag
+"Interakt Alternatives for Shopify India (2026) | TopEdge AI" (59 chars, 510 px)
+Likely fits in Google results.
+✕
+Keyword in title
+Not found
+Use the exact keyword phrase in the title.
+✓
+Meta description
+"Interakt alternatives for Shopify India: Shopify plans from about ₹1,973, AI add-on cost, COD-to-prepaid on higher tiers, and a one-day switch test." (148 chars, 904 px)
+Good length.
+!
+Keyword in meta description
+Not found
+Google bolds matching words in the snippet. Use the keyword once.
+✓
+Keyword in URL
+Exact slug match
+Use short keyword slugs for new pages. Do not change live URLs without a 301 redirect.
+✓
+URL length
+61 chars
+Keep URLs short and readable.
+Headings
+4/5 passed
+✓
+H1 tag
+1 H1: "Interakt Alternatives for Shopify India (2026)"
+One clear H1.
+✕
+Keyword in H1
+Not found
+Put the keyword, or a close variant, in the H1.
+✓
+Subheadings (H2)
+11 H2, 4 H3, 0 H4-H6
+Split content into sections with H2s that match sub-topics people search.
+✓
+Keyword in an H2
+1 H2 contain it
+Use the keyword or a variant in at least one H2.
+✓
+Heading order
+No skipped levels
+Go H1 > H2 > H3 in order. Style with CSS, not heading tags.
+Content & keyword
+6/7 passed
+✓
+Content length
+1,547 words in main content (2,117 incl. header/footer), about 7 min read
+No magic number. Compare with pages that rank and cover every sub-topic they cover.
+✓
+Keyword in first 100 words
+Found
+Say what the page is about early.
+✓
+Keyword usage
+4 exact uses, 0.52% density
+Natural usage. Write for readers, not a density target.
+i
+Keyword words used separately
+"interakt" 36x, "alternative" 16x
+Shows partial matches and variations Google also understands.
+✓
+Readability (Flesch, English)
+70 / 100, average 19 words per sentence
+Short sentences and simple words help. Estimate for English text.
+✓
+Text to HTML ratio
+14.9% of the HTML is visible text
+Low ratio means heavy code. Page builders and inline scripts add bulk.
+✓
+Content freshness
+Last date found: 2026-11-07 (11 days ago)
+Review key pages at least once a year and update the modified date honestly.
+Links
+6/6 passed
+✓
+Internal links
+99 links, 66 unique pages
+Link to related service, case study and blog pages with descriptive anchors.
+✓
+External links
+23 links, 21 unique, 5 nofollow/sponsored/ugc
+Cite trusted sources where it helps the reader.
+✓
+Links without anchor text
+0 found
+Give every link visible text or an aria-label.
+✓
+Generic anchors
+0 like "click here" or "read more"
+Describe the destination: "see SEO case studies", not "click here".
+✓
+Broken links
+None in 40 checked links (of 87)
+Fix or remove broken links. They waste crawl budget and hurt users.
+✓
+Internal links that redirect
+None
+Point internal links straight to the final URL.
+Images
+5/6 passed
+✓
+Images missing alt
+0 of 15 have no alt (7 empty alt="")
+Describe meaningful images. Empty alt is fine only for decoration.
+✓
+Keyword in an image alt
+1 image(s)
+Describe one relevant image using the keyword naturally.
+✓
+Modern formats (WebP/AVIF)
+9 of 15
+WebP or AVIF files are smaller and load faster.
+✓
+Width and height set
+0 image(s) without both
+Set width and height to stop layout shift (CLS).
+i
+First image in HTML lazy loaded
+No
+If this is your main above-the-fold image, remove lazy loading. It delays LCP. If it is a logo or icon, ignore this.
+✓
+Heavy images (over 200 KB)
+None in 15 measured
+Compress and resize. Aim for under 200 KB for most content images.
+Technical & indexing
+15/15 passed
+✓
+HTTP status
+200
+Page loads.
+✓
+Indexable
+robots: index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1
+Search engines can index this page.
+✓
+robots.txt (Googlebot)
+Allowed, sitemap declared
+Good.
+✓
+Page in XML sitemap
+Listed in https://topedgeai.com/sitemap.xml
+Important pages belong in the sitemap you submit to Search Console.
+✓
+Canonical tag
+https://topedgeai.com/blog/interakt-alternative-shopify-india (self)
+Good.
+✓
+HTTPS
+Secure
+Serve every page on HTTPS.
+✓
+Mixed content
+None
+Load every file over https:// or browsers block it.
+✓
+Mobile viewport
+width=device-width, initial-scale=1.0
+Add <meta name="viewport" content="width=device-width, initial-scale=1">.
+✓
+Language attribute
+en-IN
+Set <html lang="en-IN"> or your language.
+✓
+Doctype and charset
+Doctype ok, charset ok
+Start with <!DOCTYPE html> and <meta charset="utf-8">.
+✓
+HTML size and DOM
+83 KB HTML, 851 elements
+Heavy HTML and big DOMs slow rendering. Page builders add extra wrappers.
+✓
+Page download time
+789 ms to download the full HTML from the audit server
+Includes connection and full HTML download, not just TTFB. Use page caching and good hosting.
+✓
+Render-blocking scripts in head
+0 blocking, 1 external scripts, 7 stylesheets
+Add defer or async to scripts that do not need to run first.
+✓
+Compression
+br
+Enable gzip or brotli on the server.
+✓
+HSTS security header
+Enabled
+Strict-Transport-Security forces HTTPS for returning visitors.
+AI search readiness
+5/6 passed
+✓
+AI search crawlers allowed
+ChatGPT search, Perplexity, Bing/Copilot and Claude search can crawl
+Blocking AI search bots removes you from their answers and citations.
+i
+AI training crawlers
+Not blocked (GPTBot, ClaudeBot, Google-Extended, CCBot)
+Your choice. Blocking training bots does not affect Google rankings.
+✓
+llms.txt file
+Found at /llms.txt (38 KB)
+An optional summary file for AI tools. Low effort, low impact today.
+✓
+Question-style headings
+7 found
+Headings phrased as real questions, answered right below, are easy for AI Overviews and ChatGPT to quote.
+✓
+Lists and tables
+19 lists, 2 tables
+Lists and tables are easy to scan and easy for AI answers to quote.
+✓
+FAQ structured data
+FAQPage found
+FAQ rich results are limited now, but the markup still helps machines read Q&A.
+Schema & trust
+4/4 passed
+✓
+Structured data
+FAQPage, Question, Answer, BreadcrumbList, ListItem, Organization, ImageObject, Person, PostalAddress, Country, Offer, PriceSpecification
+Add JSON-LD that matches the page: LocalBusiness, Service, Article, FAQPage, BreadcrumbList.
+✓
+Breadcrumbs markup
+BreadcrumbList found
+Breadcrumbs show your site path in Google results.
+✓
+Author and dates
+Author: Moksh Patel | Published: 2026-10-08 | Updated: 2026-11-07
+Show who wrote it and when it was updated. Supports E-E-A-T.
+✓
+Trust page links
+About yes, Contact yes, Privacy yes
+Link to About, Contact and Privacy pages from every page.
+Local SEO
+3/6 passed
+✓
+Click-to-call phone
++919429784875
+Local visitors call from mobile. Add a tel: link.
+i
+LocalBusiness schema
+Not found
+For local services add LocalBusiness with name, address, phone, hours and geo.
+✓
+Address on page
+Found (schema or <address>)
+Show the same name, address and phone as your Google Business Profile.
+i
+Map link or embed
+Not found
+Link or embed your Google Maps location.
+i
+Reviews markup
+Not found
+Only mark up genuine reviews shown on the page.
+✓
+WhatsApp contact
+Found
+Useful if customers contact you on WhatsApp.
+Social sharing
+3/3 passed
+✓
+Open Graph tags
+og:title yes, og:description yes, og:image yes
+Controls the preview on WhatsApp, LinkedIn and Facebook.
+✓
+Twitter/X card
+summary_large_image
+Add twitter:card = summary_large_image.
+✓
+Favicon
+Found
+Google shows your favicon next to your results.
+Want these fixed and ranking?
+
+I turn audits like this into a clear plan and do the work: on-page, technical, content and links.
+
+Get a free SEO consultation
+
+How it works: the tool downloads the HTML your server sends, the same first copy Googlebot gets, and checks it in your browser. Content added later by JavaScript is not counted. Link and image checks use live HTTP requests. Scores cover on-page setup only; rankings also depend on backlinks, authority and search intent.
+
+===== Links & images =====
+Download CSV
+Save as PDF
+New audit
+Overview
+Keyword
+Competitors
+Full audit
+2
+Links & images
+Structure
+Previews
+AI & tech
+Link health
+
+Live status of 40 unique links (first 40 of 87, internal first). 0 broken, 0 redirecting.
+
+STATUS	TYPE	ANCHOR	URL	NOTE
+200	internal	Signup 14-days trial	https://topedgeai.com/pricing	
+200	internal	TopEdge AI	https://topedgeai.com/	
+200	internal	JourneyAutomate WhatsApp from any Shopify event	https://topedgeai.com/features/journeys	
+200	internal	Flow + Shopify ToolsBots that read live orders	https://topedgeai.com/features/flow-builder	
+200	internal	Opt-in toolsSpin, scratch and popups that grow a list	https://topedgeai.com/features/opt-in-tools	
+200	internal	Audience CampaignsBroadcasts with net-of-Meta revenue	https://topedgeai.com/features/campaigns	
+200	internal	Audience CRMOne profile for every shopper	https://topedgeai.com/features/audience-crm	
+200	internal	WarrantyQR registration and claims on WhatsApp	https://topedgeai.com/features/warranty	
+200	internal	Tracking PixelLive shopper intent from your store	https://topedgeai.com/features/analytics	
+200	internal	Intent detectionRoute Hinglish without AI spend	https://topedgeai.com/features/intent-detection	
+200	internal	AI BrainAnswers grounded in your policies	https://topedgeai.com/features/ai-brain	
+200	internal	Profit & costsTrue profit on every order	https://topedgeai.com/features/profit-loss	
+200	internal	Best Shopify App for Abandoned CartThe 2026 India shortlist, comparedRead the co	https://topedgeai.com/blog/best-shopify-app-for-abandoned-cart-recovery-india	
+200	internal	Docs	https://topedgeai.com/docs	
+200	internal	Customers	https://topedgeai.com/customers	
+200	internal	Log in	https://topedgeai.com/login	
+200	internal	Start free	https://topedgeai.com/signup	
+200	internal	Blog	https://topedgeai.com/blog	
+200	internal	Comparisons	https://topedgeai.com/blog/category/comparisons	
+200	internal	Moksh Patel	https://topedgeai.com/about	
+200	internal	Automation	https://topedgeai.com/blog/category/automation	
+200	internal	COD & RTO	https://topedgeai.com/blog/category/cod-rto	
+200	internal	Meta & templates	https://topedgeai.com/blog/category/meta-templates	
+200	internal	AI & inbox	https://topedgeai.com/blog/category/ai-and-inbox	
+200	internal	Growth	https://topedgeai.com/blog/category/growth	
+200	internal	Interakt pricing breakdown	https://topedgeai.com/blog/interakt-pricing-india	
+200	internal	India pricing guide	https://topedgeai.com/blog/whatsapp-business-api-pricing-india	
+200	internal	TopEdge AI vs Interakt	https://topedgeai.com/compare/interakt	
+200	internal	our Updatrr comparison	https://topedgeai.com/blog/updatrr-alternative-shopify-india	
+200	internal	WATI alternatives	https://topedgeai.com/blog/wati-alternative-shopify-india	
+200	internal	AiSensy alternatives	https://topedgeai.com/blog/aisensy-alternative-shopify-india	
+200	internal	Bitespeed alternative	https://topedgeai.com/blog/bitespeed-alternative-shopify-india	
+200	internal	Zoko alternative	https://topedgeai.com/blog/zoko-alternative-shopify-india	
+200	internal	Getgabs alternative	https://topedgeai.com/blog/getgabs-alternative-shopify-whatsapp	
+200	internal	Kanal alternative	https://topedgeai.com/blog/kanal-whatsapp-alternative-shopify	
+200	internal	Dondy alternative	https://topedgeai.com/blog/dondy-alternative-shopify-india	
+200	internal	best WhatsApp apps for Shopify	https://topedgeai.com/blog/best-whatsapp-apps-for-shopify	
+200	internal	all alternatives	https://topedgeai.com/compare/alternatives	
+200	internal	Services	https://topedgeai.com/services	
+200	internal	Compare	https://topedgeai.com/compare	
+
+Some sites block automated checks (403/999). Open those links by hand before removing them.
+
+Image weight
+
+File size of the first 15 images. Over 200 KB is heavy for most web images.
+
+SIZE	STATUS	ALT	IMAGE
+73 KB	200	AiSensy alternative for Shopify India, with 0% Meta markup and native COD-to-prepaid conversion on WhatsApp	https://topedgeai.com/blog/aisensy-alternative-shopify-india.jpg
+66 KB	200	Updatrr alternative for Shopify India, comparing INR, USD, EUR and GBP plans from ₹1,999 a month with BYOK AI active	https://topedgeai.com/blog/updatrr-alternative-shopify-india.jpg
+66 KB	200	Bitespeed alternative for Shopify India: WhatsApp automation linked to a Shopify store at zero Meta markup	https://topedgeai.com/blog/bitespeed-alternative-shopify-india.jpg
+61 KB	200	Interakt alternative for Shopify India, comparing Starter and Growth plans from ₹1,999 a month with BYOK AI active	https://topedgeai.com/blog/interakt-alternative-shopify-india.jpg
+39 KB	200	Best Shopify app for abandoned cart recovery in India, the TopEdge AI 2026 shortlist	https://topedgeai.com/blog/best-shopify-app-for-abandoned-cart-recovery-india.webp
+15 KB	200	(empty)	https://topedgeai.com/logo.png
+12 KB	200	(empty)	https://topedgeai.com/brand-mark-56.png
+9 KB	200	Meta Business Partner	https://topedgeai.com/badges/meta-business-partner.webp?v=5
+9 KB	200	Shopify Available on App Store	https://topedgeai.com/badges/shopify-app-store.webp?v=5
+9 KB	200	(empty)	https://topedgeai.com/ai/chatgpt.webp
+9 KB	200	WhatsApp Business Partner	https://topedgeai.com/badges/whatsapp-cloud-api.webp?v=6
+7 KB	200	(empty)	https://topedgeai.com/ai/gemini.webp
+5 KB	200	(empty)	https://topedgeai.com/ai/claude.webp
+4 KB	200	(empty)	https://topedgeai.com/ai/grok.webp
+4 KB	200	(empty)	https://topedgeai.com/ai/perplexity.webp
+All links and images on the page
+Links124 total, 66 internal pages, 21 external
+Images15 total, 0 missing alt
+Want these fixed and ranking?
+
+I turn audits like this into a clear plan and do the work: on-page, technical, content and links.
+
+Get a free SEO consultation
+
+How it works: the tool downloads the HTML your server sends, the same first copy Googlebot gets, and checks it in your browser. Content added later by JavaScript is not counted. Link and image checks use live HTTP requests. Scores cover on-page setup only; rankings also depend on backlinks, authority and search intent.
+
+===== Structure =====
+Download CSV
+Save as PDF
+New audit
+Overview
+Keyword
+Competitors
+Full audit
+2
+Links & images
+Structure
+Previews
+AI & tech
+Heading outline
+
+The structure Google sees. Switch pages to compare how competitors split the topic.
+
+You: topedgeai.com (16)
+Comp 1: softwares.com (0)
+Comp 2: watsberry.com (24)
+Comp 3: blog.campaignhq.co (29)
+H1
+Interakt Alternatives for Shopify India (2026)
+H2
+Read this first
+H2
+What usually triggers an Interakt comparison?
+H2
+AI cost at 5,000 monthly replies: ₹0.50 a message against bring-your-own-key
+H2
+Side by side
+H2
+A one-day switch test
+H2
+Is TopEdge AI a better Interakt alternative? An honest answer
+H2
+Three other Interakt alternatives, and who each suits
+H2
+When to stay on Interakt
+H2
+Frequently asked questions
+H3
+What is the best Interakt alternative for Shopify India?
+H3
+How much does Interakt cost in India?
+H3
+Is the COD to prepaid feature locked on Interakt?
+H3
+How long does it take to move from Interakt to another WhatsApp platform?
+H2
+Run cart recovery on your Shopify store
+H2
+Related playbooks
+Want these fixed and ranking?
+
+I turn audits like this into a clear plan and do the work: on-page, technical, content and links.
+
+Get a free SEO consultation
+
+How it works: the tool downloads the HTML your server sends, the same first copy Googlebot gets, and checks it in your browser. Content added later by JavaScript is not counted. Link and image checks use live HTTP requests. Scores cover on-page setup only; rankings also depend on backlinks, authority and search intent.
+
+===== Previews =====
+Download CSV
+Save as PDF
+New audit
+Overview
+Keyword
+Competitors
+Full audit
+2
+Links & images
+Structure
+Previews
+AI & tech
+Google preview
+
+Desktop and mobile estimates, truncated by measured pixel width. Google may also rewrite titles and descriptions.
+
+Desktop
+
+TopEdge AI
+https://topedgeai.com › blog › interakt-alternative-shopify-india
+Interakt Alternatives for Shopify India (2026) | TopEdge AI
+Interakt alternatives for Shopify India: Shopify plans from about ₹1,973, AI add-on cost, COD-to-prepaid on higher tiers, and a one-day switch test.
+
+Mobile
+
+TopEdge AI
+https://topedgeai.com › blog › interakt-alternative-shopify-india
+Interakt Alternatives for Shopify India (2026) | TopEdge AI
+Interakt alternatives for Shopify India: Shopify plans from about ₹1,973, AI add-on cost, ...
+Social share preview
+
+How a shared link looks on WhatsApp, Facebook and LinkedIn, built from your Open Graph tags.
+
+TOPEDGEAI.COM
+Interakt Alternatives for Shopify India (2026) | TopEdge AI
+Interakt alternatives for Shopify India: Shopify plans from about ₹1,973, AI add-on cost, COD-to-prepaid on higher tiers, and a one-day switch test.
+og:title
+Interakt Alternatives for Shopify India (2026) | TopEdge AI
+og:description
+Interakt alternatives for Shopify India: Shopify plans from about ₹1,973, AI add-on cost, COD-to-prepaid on higher tiers, and a one-day switch test.
+og:image
+https://topedgeai.com/blog/interakt-alternative-shopify-india.jpg
+og:type
+article
+twitter:card
+summary_large_image
+Want these fixed and ranking?
+
+I turn audits like this into a clear plan and do the work: on-page, technical, content and links.
+
+Get a free SEO consultation
+
+How it works: the tool downloads the HTML your server sends, the same first copy Googlebot gets, and checks it in your browser. Content added later by JavaScript is not counted. Link and image checks use live HTTP requests. Scores cover on-page setup only; rankings also depend on backlinks, authority and search intent.
+
+===== AI & tech =====
+Download CSV
+Save as PDF
+New audit
+Overview
+Keyword
+Competitors
+Full audit
+2
+Links & images
+Structure
+Previews
+AI & tech
+AI crawler access
+
+What your robots.txt allows for this URL. Search bots decide if AI assistants can cite you. Training bots only collect data.
+
+BOT	USED FOR	TYPE	THIS PAGE	RULE
+OAI-SearchBot	ChatGPT search results	Search / answers	Allowed	Allow: /
+PerplexityBot	Perplexity answers	Search / answers	Allowed	Allow: /
+Bingbot	Bing and Copilot	Search / answers	Allowed	Allow: /
+Claude-SearchBot	Claude search	Search / answers	Allowed	Allow: /
+GPTBot	OpenAI model training	Training	Allowed	Allow: /
+ClaudeBot	Anthropic model training	Training	Allowed	Allow: /
+Google-Extended	Gemini training	Training	Allowed	Allow: /
+CCBot	Common Crawl dataset	Training	Allowed	Allow: /
+Applebot-Extended	Apple AI training	Training	Allowed	Allow: /
+Detected technology
+Nothing detected from the HTML.
+Head and server data
+Canonical
+https://topedgeai.com/blog/interakt-alternative-shopify-india
+Meta robots
+index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1
+X-Robots-Tag
+not found
+Lang
+en-IN
+hreflang
+en-IN, x-default
+AMP
+not found
+Cache-Control
+public,max-age=0,must-revalidate
+Compression
+br
+Preconnect / preload
+3 / 0
+Sitemaps
+https://topedgeai.com/sitemap.xml
+Social profiles linked
+developers.facebook.com, twitter.com, linkedin.com, facebook.com, instagram.com, youtube.com
+Want these fixed and ranking?
+
+I turn audits like this into a clear plan and do the work: on-page, technical, content and links.
+
+Get a free SEO consultation
+
+How it works: the tool downloads the HTML your server sends, the same first copy Googlebot gets, and checks it in your browser. Content added later by JavaScript is not counted. Link and image checks use live HTTP requests. Scores cover on-page setup only; rankings also depend on backlinks, authority and search intent.

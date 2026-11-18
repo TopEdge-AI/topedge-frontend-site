@@ -67,7 +67,7 @@ export const JOURNEY_EXAMPLES: JourneyExample[] = [
     slug: 'abandoned-cart-recovery',
     cardTitle: 'Abandoned cart recovery',
     cardBlurb:
-      'Three WhatsApp reminders over 72 hours, each with the product photo, price and a one-tap link back to checkout.',
+      'Three WhatsApp reminders over about 40 hours, each with the product photo, price and a one-tap link back to checkout.',
     cardTrigger: 'abandoned_cart',
     cardCategory: 'Marketing',
     cardGoal: 'Recover lost sales',
@@ -92,7 +92,7 @@ export const JOURNEY_EXAMPLES: JourneyExample[] = [
     keywords:
       'abandoned cart recovery WhatsApp, WhatsApp cart recovery journey, Shopify abandoned cart WhatsApp, cart recovery flow, abandoned cart automation India',
     answerFirst:
-      'A WhatsApp abandoned cart journey fires when Shopify marks a checkout abandoned, then sends up to three reminders carrying the product image, the ₹ total and a link back to the same checkout. In TopEdge AI it is three templates on one trigger, with the customer dropping out of the sequence the moment they pay or reply.',
+      'An abandoned cart WhatsApp message journey fires when Shopify marks a checkout abandoned, then sends up to three reminders carrying the product image, the ₹ total and a link back to the same checkout. In TopEdge AI it is three templates on one trigger, with the customer dropping out of the sequence the moment they pay or reply.',
     trigger: 'abandoned_cart',
     triggerNote:
       'Shopify counts a checkout abandoned once it has been incomplete for more than ten minutes after the customer gave an email or phone number.',
@@ -101,7 +101,7 @@ export const JOURNEY_EXAMPLES: JourneyExample[] = [
         title: 'Reminder 1: your cart is waiting',
         detail:
           'Shows the product photo, the price and a button straight back to checkout. Sent while the shopper is still interested.',
-        timing: 'within 30 to 60 minutes',
+        timing: '25 minutes after the cart is left',
         category: 'Marketing',
         templateName: 'cart_recovery_1',
         preview: {
@@ -120,7 +120,7 @@ export const JOURNEY_EXAMPLES: JourneyExample[] = [
         title: 'Reminder 2: offer help',
         detail:
           'Instead of repeating itself, this one offers help with whatever stopped them: size, delivery time or COD.',
-        timing: '+24 hours',
+        timing: '+4 hours',
         category: 'Marketing',
         templateName: 'cart_recovery_2',
         preview: {
@@ -135,7 +135,7 @@ export const JOURNEY_EXAMPLES: JourneyExample[] = [
         title: 'Reminder 3: last call',
         detail:
           'The final nudge. It has no discount code on purpose, so repeat buyers don’t learn to abandon carts to get one.',
-        timing: '+48 hours',
+        timing: '+36 hours',
         category: 'Marketing',
         templateName: 'cart_recovery_3',
         preview: {
@@ -225,7 +225,7 @@ export const JOURNEY_EXAMPLES: JourneyExample[] = [
       {
         question: 'How many WhatsApp cart recovery messages should I send?',
         answer:
-          'Three across about 72 hours is the shipped ladder and it is where most Indian D2C stores land. Beyond that the extra sends cost quality rating faster than they earn orders, and quality rating decides how many messages Meta lets you send at all.',
+          'Three across about 40 hours is the default ladder: 25 minutes, then 4 hours later, then 36 hours after that. Beyond that the extra sends cost quality rating faster than they earn orders, and quality rating decides how many messages Meta lets you send at all.',
       },
       {
         question: 'What does a WhatsApp cart recovery sequence cost?',

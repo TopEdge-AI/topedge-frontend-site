@@ -8,7 +8,7 @@ export const CONTENT_DATES = {
   /** Last edit of 3-way compare page (+ feature matrix). */
   compareThreeWay: '2026-11-12',
   /** Last edit of blogPosts.ts (used as Article dateModified fallback). */
-  blogPosts: '2026-11-16',
+  blogPosts: '2026-11-18',
   /** Last edit of feature / product page content. */
   featurePages: '2026-11-15',
   /** Last edit of published plan catalog (pricing Offers). */
@@ -16,7 +16,7 @@ export const CONTENT_DATES = {
 } as const;
 
 export const BLOG_DATES_BY_SLUG = {
-  "whatsapp-abandoned-cart-recovery-shopify": "2026-10-30",
+  "whatsapp-abandoned-cart-recovery-shopify": "2026-11-18",
   "shopify-whatsapp-automation-what-to-automate-first": "2026-10-21",
   "ecommerce-automation-whatsapp-vs-email-india": "2026-10-21",
   "meta-whatsapp-cloud-api-shopify-templates": "2026-10-21",
@@ -42,7 +42,7 @@ export const BLOG_DATES_BY_SLUG = {
   "trending-products-to-sell-online-india-2026": "2026-10-21",
   "wati-alternative-shopify-india": "2026-11-07",
   "aisensy-alternative-shopify-india": "2026-11-07",
-  "interakt-alternative-shopify-india": "2026-11-07",
+  "interakt-alternative-shopify-india": "2026-11-18",
   "bitespeed-alternative-shopify-india": "2026-10-21",
   "whatsapp-template-rejected-meta-shopify-fix": "2026-10-21",
   "whatsapp-opt-in-shopify-india": "2026-10-21",

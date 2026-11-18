@@ -134,13 +134,13 @@ export const TEMPLATE_GROUPS: TemplateGroup[] = [
     id: 'cart-recovery',
     label: 'Cart recovery',
     blurb:
-      'Three reminders over about 72 hours. These are marketing templates, because they ask for a sale that has not happened yet.',
+      'Three reminders over about 40 hours: 25 minutes after the cart is left, then 4 hours later, then 36 hours after that. These are marketing templates, because they ask for a sale that has not happened yet.',
     slots: [
       {
         id: 'cart_recovery_1',
         title: 'Cart reminder 1',
         purpose:
-          'Sent within the hour, with the product photo, price and a button straight back to checkout.',
+          'Sent 25 minutes after the cart is left, with the product photo, price and a button straight back to checkout.',
         metaName: 'cart_recovery_1',
         category: 'Marketing',
         trigger: 'abandoned_cart',
@@ -154,7 +154,7 @@ export const TEMPLATE_GROUPS: TemplateGroup[] = [
         id: 'cart_recovery_2',
         title: 'Cart reminder 2',
         purpose:
-          'Sent the next day. Instead of repeating itself, it offers help with sizing, delivery or COD.',
+          'Sent 4 hours later. Instead of repeating itself, it offers help with sizing, delivery or COD.',
         metaName: 'cart_recovery_2',
         category: 'Marketing',
         trigger: 'abandoned_cart',
@@ -168,7 +168,7 @@ export const TEMPLATE_GROUPS: TemplateGroup[] = [
         id: 'cart_recovery_3',
         title: 'Cart reminder 3',
         purpose:
-          'The last reminder. No discount code, on purpose.',
+          'Sent 36 hours after that, and the last one. No discount code, on purpose.',
         metaName: 'cart_recovery_3',
         category: 'Marketing',
         trigger: 'abandoned_cart',

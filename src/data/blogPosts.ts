@@ -19,7 +19,7 @@ export const blogPosts: BlogPost[] = [
     ],
     slug: 'whatsapp-abandoned-cart-recovery-shopify',
     date: '2026-09-01',
-    updated: '2026-10-30',
+    updated: '2026-11-18',
     readTime: '14 min',
     category: 'Cart recovery',
     author: 'Moksh Patel',
@@ -217,6 +217,7 @@ export const blogPosts: BlogPost[] = [
 </tbody>
 </table>
 </div>
+<p>TopEdge AI’s default sequence sends at 25 minutes, then 4 hours later, then 36 hours after that. The first wait can be set as low as 5 minutes.</p>
 <p>Stop the sequence immediately if the order is placed, the customer opts out, inventory disappears, or they ask to stop messaging.</p>
 <div class="mkt-blog-callout"><p><strong>Operator tip:</strong> Gate every step on template APPROVED status. A journey that fires draft templates is how brands get blocked mid-sale week. Manage approvals in <a href="/features/meta-manager">Meta Manager</a>.</p></div>
 
@@ -252,6 +253,19 @@ export const blogPosts: BlogPost[] = [
 <li>sending the same copy on email and WhatsApp minutes apart</li>
 <li>long brand stories that bury the checkout link</li>
 </ul>
+<h3>Copy-ready abandoned cart WhatsApp message templates</h3>
+<p>Three reminders in Meta’s {{1}} variable format, timed to TopEdge AI’s default sequence. All three are marketing templates at <strong>₹0.8631</strong> per delivered message. Edit the words, then submit them from your own WhatsApp Business account; Meta decides approval.</p>
+<div class="mkt-blog-table-wrap">
+<table>
+<thead><tr><th>Step</th><th>When</th><th>Template text</th><th>Button</th></tr></thead>
+<tbody>
+<tr><td><strong>1</strong></td><td>25 minutes after the cart is left</td><td>Hi {{1}}, you left {{2}} in your cart at {{3}}. Tap below to finish your order, or reply here if you have a question.</td><td>Complete my order</td></tr>
+<tr><td><strong>2</strong></td><td>4 hours later</td><td>Still deciding, {{1}}? Happy to help with size, delivery time or Cash on Delivery. Just reply here. Your cart is saved.</td><td>Complete my order, Ask a question</td></tr>
+<tr><td><strong>3</strong></td><td>36 hours after that</td><td>Last reminder, {{1}}: {{2}} is still in your cart at {{3}}. Tap below if you still want it.</td><td>Complete my order</td></tr>
+</tbody>
+</table>
+</div>
+<p>Variables: {{1}} first name, {{2}} product, {{3}} cart total. There is no discount in any step by default. The order and COD templates that follow a purchase are on the <a href="/whatsapp-templates">WhatsApp message templates</a> page.</p>
 <h3>Hypothetical example: beauty D2C</h3>
 <ol>
 <li><strong>Reminder:</strong> “Hi Priya, your Vitamin C Serum (30 ml) is still in your cart. Tap here to finish checkout. Reply if you want help choosing between 30 ml and 50 ml.”</li>

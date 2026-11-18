@@ -868,15 +868,16 @@ The best AiSensy alternative for Shopify India depends on which of its three job
 - **What should I test before switching from AiSensy?** Run one real abandoned checkout, one real COD order and one inbound customer chat on the new platform, using the templates you actually send today. If all three behave on a real phone, the migration risk is low. If you run broadcasts, also send one campaign to a 50 contact segment and check the delivery report.
 - **How long does it take to move from AiSensy to another platform?** The technical move usually takes an afternoon, because the number and templates stay on your WhatsApp Business Account. Rebuilding automation takes longer: budget a week for a store with a handful of journeys and two to three weeks for a large chatbot tree. Keep the old flows paused rather than deleted until the new ones have run on real orders.
 
-### Interakt Alternatives for Shopify India (2026)
+### Interakt Alternative for Shopify India (2026)
 
-https://topedgeai.com/blog/interakt-alternative-shopify-india · published 2026-10-08 · updated 2026-11-07 · by Moksh Patel
+https://topedgeai.com/blog/interakt-alternative-shopify-india · published 2026-10-08 · updated 2026-11-18 · by Moksh Patel
 
 The best Interakt alternative for Shopify India depends on what you send. For timed cart recovery at 500 orders a month, TopEdge AI (our own app) comes to about ₹12,699 against about ₹13,914 on Interakt’s Shopify Growth plan, with no ₹3,000 AI add-on. If instant order and COD messages are enough, Interakt’s Starter plan is cheaper, so stay.
 
 - **What is the best Interakt alternative for Shopify India?** TopEdge AI, our own app, is a close fit for a COD-heavy Shopify store that wants flat order-based plans, 0% Meta markup and native cart recovery on every plan. Automated COD-to-prepaid conversion sits on Growth and Scale, not on Launch, so check that against your order volume first. If you already rely on Interakt’s broader catalog and campaign tooling and only want cheaper AI, compare the add-on cost before moving anything.
-- **How much does Interakt cost in India?** Interakt’s Shopify App Store plans start at ₹1,973.48 a month as Shopify’s rupee estimate, and its web Growth plan is ₹2,799 a month, read 9 November 2026. The ₹999 web Starter carries WhatsApp only on quarterly (₹3,499) or yearly (₹11,999) billing. Every plan adds Interakt’s own per-message rates, and AI agents are an add-on or the Premier tier, so confirm on interakt.shop before you decide.
-- **Is the COD to prepaid feature locked on Interakt?** Partly. According to our September 2026 research it is supported natively but sits behind the Advanced Shopify integration on higher-tier plans. Check your current tier on the live pricing page.
+- **How much does Interakt cost in India?** Interakt’s Shopify App Store plans start at ₹1,972.79 a month as Shopify’s rupee estimate, and its web Growth plan is ₹2,799 a month, both read 18 November 2026. The ₹999 web Starter carries WhatsApp only on quarterly (₹3,499) or yearly billing. Every plan adds Interakt’s own per-message rates, and AI agents are an add-on or the Premier tier, so confirm on interakt.shop before you decide.
+- **Does Interakt do COD to prepaid?** Interakt’s Shopify listing, read 18 November 2026, names COD confirmation but does not name COD to prepaid on any plan. Ask Interakt which plan carries it before you buy. On TopEdge AI it is on Growth and Scale.
+- **Which Interakt alternative has proper AI replies for a Shopify store?** Most tools now offer AI replies; the difference is how you pay. Interakt sells AI as a ₹3,000 add-on on its web plans or with its ₹9,300.32 Shopify Premier plan. TopEdge AI uses your own OpenAI, Claude or Gemini key, so you pay the model provider per reply instead.
 - **How long does it take to move from Interakt to another WhatsApp platform?** About a day for most Shopify stores: connect the new platform, resubmit or reuse templates, and test one cart and one COD flow. Allow extra time if you have many custom chatbot branches to rebuild.
 
 ### Bitespeed Alternative for Shopify India (2026)
@@ -1206,7 +1207,7 @@ Shopify WhatsApp automation is not “send more broadcasts.” It is wiring stor
 
 ### WhatsApp Abandoned Cart Recovery: Shopify India
 
-https://topedgeai.com/blog/whatsapp-abandoned-cart-recovery-shopify · published 2026-09-01 · updated 2026-10-30 · by Moksh Patel
+https://topedgeai.com/blog/whatsapp-abandoned-cart-recovery-shopify · published 2026-09-01 · updated 2026-11-18 · by Moksh Patel
 
 A WhatsApp abandoned cart Shopify sequence re-engages shoppers who added products or started checkout but did not pay, using timed reminders that carry a resume-checkout link. It works when four things line up: you detect the right abandonment event, you hold a logged opt-in, you send an approved marketing template, and a completed order suppresses everything still queued. This page is the workflow. If you are still choosing software, start with the best Shopify app for abandoned cart recovery India shortlist.
 
