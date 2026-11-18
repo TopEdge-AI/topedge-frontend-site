@@ -855,7 +855,7 @@ export const blogPosts: BlogPost[] = [
 
 <h2>AI handoff without chaos</h2>
 <p>Catalog-grounded AI can deflect FAQs; it should never invent stock or argue refunds. When intent is complaint, payment risk, or emotional, hand off cleanly. Configure grounding and handoff in <a href="/features/ai-brain">AI Brain</a>, and keep branching for self-serve flows in <a href="/features/flow-builder">Flow Builder</a>.</p>
-<blockquote><p>Rule of thumb: if the wrong answer can create a chargeback or RTO, a human owns the thread.</p></blockquote>
+<blockquote><p>Rule of thumb: if the wrong answer can create a chargeback or RTO, a human owns the thread. In TopEdge AI that handover is set in <a href="/docs/reference/chat-rules">chat rules</a>.</p></blockquote>
 <p>That rule sorts intents cleanly if you apply it honestly. Sizes, materials, care instructions, store policies and “do you deliver to this pincode” are safe for an assistant: the answers are stable, published, and wrong answers are recoverable. Prices, live stock, delivery dates, refund eligibility and anything a customer might screenshot are not, because an invented answer becomes a commitment you either honour at a loss or dispute with someone holding evidence.</p>
 <p><strong>Grounding is what makes the first list possible at all.</strong> An assistant reading your live catalogue and order data can say whether the medium is in stock and where parcel 4192 is. One running on a general model will produce a confident, plausible, invented answer to the same question. When a vendor demonstrates AI, ask to see the data source rather than the chat window.</p>
 <p><strong>Watch how AI is billed, because the structures differ wildly.</strong> Interakt sells AI Agents as a ₹3,000 a month add-on with 100 free AI messages then ₹0.50 each. Updatrr puts its AI chatbot with human handover on its $99.99 top tier, around ₹9,400 a month at about ₹94 to the dollar. Bring-your-own-key approaches, where you pay OpenAI or Gemini directly, land nearer ₹0.10 to ₹0.30 per reply. At 500 replies a month those three come to roughly ₹3,200, ₹9,400 and ₹100.</p>
@@ -943,7 +943,7 @@ export const blogPosts: BlogPost[] = [
       },
     ],
     content: `
-<p>Use this checklist to stand up <strong>Shopify automation on WhatsApp</strong> without a three-month project. Most stores finish the technical connect quickly; Meta template review is the usual wait, so submit templates on day one. Context for the full stack: <a href="/blog/whatsapp-automation-for-shopify">WhatsApp automation for Shopify</a>.</p>
+<p>Use this checklist to stand up <strong>Shopify automation on WhatsApp</strong> without a three-month project. Most stores finish the technical connect quickly; Meta template review is the usual wait, so submit templates on day one. Context for the full stack: <a href="/blog/whatsapp-automation-for-shopify">WhatsApp automation for Shopify</a>. Before any message reaches a real customer, run the <a href="/docs/go-live-checklist">go-live checklist</a>.</p>
 
 <h2>Fifteen-minute technical connect</h2>
 <ol>
@@ -1255,7 +1255,7 @@ export const blogPosts: BlogPost[] = [
     id: 9,
     title: 'Reduce RTO with WhatsApp COD Confirmation (SOP)',
     description:
-      'How to reduce Shopify India RTO with WhatsApp COD confirmation: utility template timing, confirm, reschedule and cancel branches, and warehouse hold rules.',
+      'How to reduce RTO on Shopify India with WhatsApp COD confirmation: utility template timing, confirm, reschedule and cancel branches, and warehouse hold rules.',
     inlineImages: [
       {
         afterHeading: 'A practical COD confirmation flow',
@@ -1271,7 +1271,7 @@ export const blogPosts: BlogPost[] = [
     ],
     slug: 'how-to-reduce-rto-with-whatsapp-cod-confirmation',
     date: '2026-09-09',
-    updated: '2026-10-21',
+    updated: '2026-11-17',
     readTime: '16 min',
     category: 'COD',
     author: 'Moksh Patel',
@@ -1329,7 +1329,7 @@ export const blogPosts: BlogPost[] = [
       },
     ],
     content: `
-<p><strong>How do you reduce RTO with WhatsApp COD confirmation?</strong> Confirm buyer intent on WhatsApp before you pack Cash on Delivery orders. Show order number and ₹ amount from Shopify, offer YES / reschedule / cancel, and escalate silence or confusion to Live Chat. Confirmation is cheaper than shipping twice.</p>
+<p><strong>How to reduce RTO with WhatsApp COD confirmation:</strong> confirm buyer intent on WhatsApp before you pack Cash on Delivery orders. Show order number and ₹ amount from Shopify, offer YES / reschedule / cancel, and escalate silence or confusion to Live Chat. Confirmation is cheaper than shipping twice: ₹0.1150 a message against ₹180 to ₹240 for every <a href="/blog/rto-meaning-ecommerce">returned parcel (RTO)</a>.</p>
 
 <h2>The unit economics: ₹0.1150 to prevent a ₹180 to ₹240 loss</h2>
 <p>Before the SOP, get the arithmetic straight, because it decides how hard you are allowed to push on friction.</p>
@@ -1355,7 +1355,7 @@ export const blogPosts: BlogPost[] = [
 <li>Long ship times without updates</li>
 <li>Address errors caught only at doorstep</li>
 </ul>
-<p>The split matters for where you spend effort. GoKwik reports that <strong>60% to 70% of RTOs come from low buying intent rather than logistics failure</strong>, and that COD RTO runs near 26% against under 2% for prepaid (<a href="https://www.firstresort.in/blogs/research/fashion-ecommerce-returns-rto-india-2026" target="_blank" rel="noopener noreferrer">via First Resort</a>). If two thirds of your problem is intent, courier optimisation alone cannot fix it. Filtering intent before dispatch can.</p>
+<p>The split matters for where you spend effort. GoKwik reports that <strong>60% to 70% of RTOs come from low buying intent rather than logistics failure</strong>, and that COD RTO runs near 26% against under 2% for prepaid (<a href="https://www.firstresort.in/blogs/research/fashion-ecommerce-returns-rto-india-2026" target="_blank" rel="noopener noreferrer">via First Resort</a>). If two thirds of your problem is intent, courier optimisation alone cannot fix it. Filtering intent before dispatch can. For the other third, the courier side, see <a href="/blog/best-shipping-aggregators-logistics-tools-india">the 10 best shipping aggregators and logistics tools in India</a>.</p>
 
 <h3>You have 36 hours once a delivery fails</h3>
 <p>Confirmation is the first gate. The NDR is the second, and it is far tighter than most teams plan for. <a href="https://shipping.amazon.in/blog/what-is-ndr-in-shipping-india" target="_blank" rel="noopener noreferrer">Amazon Shipping India</a> states that nearly every failed delivery not resolved within <strong>36 hours</strong> of the NDR being raised ends in cancellation and RTO. Couriers typically allow 24 to 48 hours between attempts and make two to three attempts in total, and the guidance is to reach the buyer within <strong>2 to 4 hours</strong> of the NDR landing.</p>
@@ -1693,7 +1693,7 @@ export const blogPosts: BlogPost[] = [
 <li><strong>Helps:</strong> size charts, product diffs, order status lookups, store policy FAQs</li>
 <li><strong>Hurts:</strong> arguing RTO blame, custom pricing, medical claims, “guaranteed delivery tomorrow” without courier truth</li>
 </ul>
-<div class="mkt-blog-callout"><p><strong>Tip:</strong> Start AI on after-hours FAQs only. Expand intents after you review transcripts for a week.</p></div>
+<div class="mkt-blog-callout"><p><strong>Tip:</strong> Start AI on after-hours FAQs only. Expand intents after you review transcripts for a week. The setup steps are in <a href="/docs/guides/train-your-ai-brain">train the AI to answer customer questions</a>.</p></div>
 <p>The dividing line is simple once you say it out loud: <strong>if a wrong answer creates a liability, a human owns the thread.</strong> Sizes, materials, care instructions and published policies are safe, because the answers are stable, already written down somewhere, and a mistake is recoverable with an apology. Prices, live stock, delivery dates and refund eligibility are not, because a wrong answer becomes a commitment the customer can screenshot.</p>
 <p>The “guaranteed delivery tomorrow” example is worth dwelling on, because it is the one that recurs. No assistant can promise a delivery date unless it is reading courier data, and almost none are. What it can safely say is what your policy says: dispatch within 24 hours, typical delivery in three to five days for that pincode band. The difference between a promise and a stated norm is the difference between a complaint and an expectation.</p>
 <p><strong>Read the first week of transcripts yourself.</strong> Not a sample, all of them. It is a few hours of work that tells you which intents to open next and, more usefully, which three questions your product pages should have answered so the conversation never has to happen.</p>
@@ -4251,7 +4251,7 @@ export const blogPosts: BlogPost[] = [
 <p class="mkt-blog-footnote">Cost lines read off <a href="https://shipping.amazon.in/blog/true-cost-of-shipping-per-order-india" target="_blank" rel="noopener noreferrer">Amazon Shipping India's true cost per order breakdown</a> and its <a href="https://shipping.amazon.in/blog/what-is-rto-how-to-reduce-return-to-origin" target="_blank" rel="noopener noreferrer">RTO guide</a> on 21 October 2026, and ClickPost's figures as compiled by First Resort. They are national indicative ranges, not your rate card. Your own courier contract, category and average parcel weight will move every line.</p>
 
 <h2 id="what-drives-returns">What is actually driving returns</h2>
-<p>Most COD returns trace back to impulse or fake orders, unreachable buyers, bad addresses, and delivery slow enough for intent to cool. For the full picture, read our <a href="/blog/how-to-reduce-rto-with-whatsapp-cod-confirmation">breakdown of why RTO spikes on COD</a>. If the terms are new, <a href="/blog/rto-meaning-ecommerce">what RTO means in ecommerce, and how it differs from an NDR</a> explains them.</p>
+<p>Most COD returns trace back to impulse or fake orders, unreachable buyers, bad addresses, and delivery slow enough for intent to cool. For the full picture, read our <a href="/blog/how-to-reduce-rto-with-whatsapp-cod-confirmation">breakdown of why RTO spikes on COD</a>. If the terms are new, <a href="/blog/rto-meaning-ecommerce">what RTO means in ecommerce, and how it differs from an NDR</a> explains them. Late and failed deliveries are the courier’s side of the problem; we compare the tools for it in <a href="/blog/best-shipping-aggregators-logistics-tools-india">the best shipping aggregators in India</a>.</p>
 <h2 id="the-fix">The fix, in brief</h2>
 <p>Confirm intent before pick and pack. Send one approved WhatsApp utility template with the order number and ₹ total, branch on confirm / reschedule / cancel, send one reminder, then apply a written hold-or-cancel policy. The cost is friction: some genuine buyers will never reply, and your policy decides whether you lose them or ship the risk.</p>
 <p>The direct cost is Meta's per-message fee for each utility template, plus your WhatsApp platform's plan. In India that template is <strong>₹0.1150</strong> per delivered message against a <strong>₹180 to ₹240</strong> loss on every parcel it prevents, a ratio of more than 1,500 to 1 in your favour on each avoided RTO. One warning: adding a prepaid discount to that confirmation reclassifies it from utility to marketing and the price jumps to ₹0.8631, which is 7.5x. Full rate card in our <a href="/blog/whatsapp-business-api-pricing-india">WhatsApp Business API pricing guide for India</a>.</p>
@@ -4573,7 +4573,7 @@ export const blogPosts: BlogPost[] = [
 <li><strong>Negotiate courier rates</strong> once you are shipping 500+ parcels a month. Saving ₹15 to ₹20 per shipment at that scale is real money over a year.</li>
 <li><strong>Invest in repeat purchase.</strong> Your first order from a customer often just breaks even after ad spend. The second and third have no acquisition cost attached.</li>
 </ul>
-<p>If you want to see this per product rather than in aggregate, TopEdge AI's <a href="/features/profit-loss">profit and costs view</a> computes net margin after cost of goods, shipping, RTO and payment fees.</p>
+<p>If you want to see this per product rather than in aggregate, TopEdge AI's <a href="/features/profit-loss">profit and costs view</a> computes net margin after cost of goods, shipping, RTO and payment fees. Where each cost line comes from is in the <a href="/docs/reference/commerce">store economics reference</a>.</p>
 
 <h2>How to reduce RTO and COD losses</h2>
 <p>If you sell in India, RTO will be one of the first real problems you face. Return to Origin means an order went out, never got delivered and came back. You paid shipping both ways and got nothing.</p>

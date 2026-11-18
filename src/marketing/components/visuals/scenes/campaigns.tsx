@@ -68,7 +68,7 @@ function Hero({ label }: SceneProps) {
       label={label}
       shape="wide"
       mood="night"
-      duration={13}
+      duration={15}
       back={
         <Fireworks
           at={0.4}
@@ -83,7 +83,8 @@ function Hero({ label }: SceneProps) {
         />
       }
     >
-      <Float x={12} y={16} w={38}>
+      {/* Act 1: the broadcast goes out */}
+      <Float x={28} y={22} w={44} until={3.2} act="out">
         <Panel title="Diwali sale" icon={Megaphone} right={<Swap at={2} a={<Chip tone="amber" dot>Ready</Chip>} b={<Chip tone="emerald" dot>Sending</Chip>} />}>
           <Row lead={<IconTile icon={Sparkles} />} title="diwali_offer" sub="Marketing template · Approved" right={<Chip tone="emerald" icon={Check}>Meta</Chip>} />
           <Row lead={<IconTile icon={Users} />} title="Repeat buyers" sub="2,418 shoppers · score 60+" />
@@ -100,25 +101,19 @@ function Hero({ label }: SceneProps) {
               b={<Meter pct={100} label="Delivered" value="2,418 / 2,418" tone="emerald" />}
             />
           </div>
-          <Reveal at={9.6}>
-            <div className="cp-earned">
-              <Stat label="Revenue from this campaign" value="₹1,84,200" delta="+212 orders · after Meta fees" />
-            </div>
-          </Reveal>
-          <Attach place="tr" at={9} dx={1.6} dy={-0.6}>
-            <Toast icon={ShoppingBag} tone="emerald" title="New order · ₹2,499" sub="Riya S. · from Diwali sale" />
-          </Attach>
         </Panel>
       </Float>
-      <Float x={56} y={0} at={0.2}>
+
+      {/* Act 2: it lands on Riya's phone; she buys */}
+      <Float x={34.1} y={4.6} at={3.4} until={10.6} act="both">
         <IPhone
           name="Mira Ethnic"
           logo={<BrandDp />}
           time="7:30"
           overlay={
             <>
-              <PhoneBanner at={2.8} until={4.2} title="Mira Ethnic" body="Riya, the Diwali edit is here. 20% off till Sunday" />
-              <PhoneSheet at={6} url="miraethnic.in">
+              <PhoneBanner at={4} until={5.2} title="Mira Ethnic" body="Riya, the Diwali edit is here. 20% off till Sunday" />
+              <PhoneSheet at={6.9} url="miraethnic.in">
                 <ProductArt kind="kurta" h={10} tag="−20%" />
                 <h5 className="fv-shop__title">Rani pink silk kurta</h5>
                 <div className="fv-shop__price">
@@ -129,13 +124,13 @@ function Hero({ label }: SceneProps) {
                 <span className="fv-shop__applied">
                   <Tag strokeWidth={2.4} /> Diwali offer applied
                 </span>
-                <span className="fv-shop__cta is-press" data-cursor="buy" style={vars({ '--fv-press': '7.6s' })}>
+                <span className="fv-shop__cta is-press" data-cursor="buy" style={vars({ '--fv-press': '8.4s' })}>
                   <ShoppingBag strokeWidth={2.2} /> Buy now
                 </span>
               </PhoneSheet>
-              <PhoneSheet at={8.1}>
+              <PhoneSheet at={8.9}>
                 <div className="fv-shop__done">
-                  <span className="fv-shop__check" style={vars({ '--fv-check-at': '8.5s' })}>
+                  <span className="fv-shop__check" style={vars({ '--fv-check-at': '9.3s' })}>
                     <Check strokeWidth={3} />
                   </span>
                   <h5>Order placed</h5>
@@ -154,21 +149,36 @@ function Hero({ label }: SceneProps) {
             </>
           }
         >
-          <Reveal at={3.4}>
+          <Reveal at={4.6}>
             <Bubble
               from="biz"
               time="7:30 pm"
               media={<ProductArt kind="kurta" h={7} />}
               title="The Diwali edit is here ✨"
-              buttons={[{ label: 'Shop the edit', icon: ExternalLink, at: 5.4, cursor: 'shop' }]}
+              buttons={[{ label: 'Shop the edit', icon: ExternalLink, at: 6.4, cursor: 'shop' }]}
             >
               Riya, 20% off festive wear till Sunday. Free shipping on prepaid orders.
             </Bubble>
           </Reveal>
         </IPhone>
       </Float>
-      <Cursor path={[[30, 96, 0.3], ['send', 1.3], ['send', 1.9], [34, 96, 2.6]]} clicks={[1.6]} />
-      <Cursor touch path={[['shop', 5.1], ['shop', 5.7], ['buy', 7.3], ['buy', 7.9]]} clicks={[5.4, 7.6]} />
+
+      {/* Act 3: what the campaign earned */}
+      <Float x={28} y={20} w={44} at={10.8} act="in">
+        <Panel title="Diwali sale" icon={Megaphone} right={<Chip tone="emerald" dot>Sent</Chip>}>
+          <div className="cp-earned cp-earned--top">
+            <Stat label="Revenue from this campaign" value="₹1,84,200" delta="After Meta fees" />
+          </div>
+          <KV k="Delivered" v="2,418" />
+          <KV k="Read" v="2,071" />
+          <KV k="Orders" v="212" />
+          <Attach place="tr" at={11.6} dx={1.6} dy={-0.6}>
+            <Toast icon={ShoppingBag} tone="emerald" title="New order · ₹2,499" sub="Riya S. · from Diwali sale" />
+          </Attach>
+        </Panel>
+      </Float>
+      <Cursor path={[[44, 96, 0.3], ['send', 1.3], ['send', 1.9], [52, 96, 2.6]]} clicks={[1.6]} />
+      <Cursor touch path={[['shop', 6.1], ['shop', 6.7], ['buy', 8.1], ['buy', 8.7]]} clicks={[6.4, 8.4]} />
     </Stage>
   );
 }

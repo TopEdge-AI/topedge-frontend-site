@@ -29,6 +29,7 @@ import {
   Float,
   IconTile,
   IPhone,
+  PhoneBanner,
   Label,
   Panel,
   ProductArt,
@@ -76,8 +77,9 @@ function TemplatePreview({ at }: { at?: number }) {
 /** Write, submit, Meta approves, and the message lands on a real phone. */
 function LibraryHero({ label }: SceneProps) {
   return (
-    <Stage label={label} shape="wide" duration={12}>
-      <Float x={6} y={6} w={50}>
+    <Stage label={label} shape="wide" duration={13}>
+      {/* Act 1: write it, submit it, Meta approves */}
+      <Float x={25} y={14} w={50} until={6.4} act="out">
         <Panel title="cart_recovery_1" icon={FileText} right={<Chip>Marketing</Chip>}>
           <Lifecycle review={2.6} approved={5} />
           <div className="mm-editor">
@@ -91,14 +93,16 @@ function LibraryHero({ label }: SceneProps) {
               <Swap at={2.6} a={<Btn primary icon={Send} pressAt={2.3}>Submit to Meta</Btn>} b={<Swap at={5} a={<Chip tone="amber" dot>Waiting for Meta</Chip>} b={<Chip tone="emerald" icon={Check}>Approved · live</Chip>} />} />
             </span>
           </div>
-          <Attach place="b" at={5} dy={1.6}>
+          <Attach place="b" at={5.2} dy={1.6}>
             <Toast icon={MetaLogo} title="Approved by Meta" sub="Ready for journeys and campaigns" />
           </Attach>
         </Panel>
       </Float>
-      <Float x={64} y={0} at={0.2}>
-        <IPhone name="Glow Co">
-          <Reveal at={6.6}>
+
+      {/* Act 2: the approved template reaches a shopper */}
+      <Float x={34.1} y={4.6} at={6.6} act="in">
+        <IPhone name="Glow Co" overlay={<PhoneBanner at={7.2} until={8.4} title="Glow Co" body="Still thinking it over? Your gel is waiting" />}>
+          <Reveal at={7.8}>
             <Bubble
               from="biz"
               time="18:20"
@@ -109,14 +113,17 @@ function LibraryHero({ label }: SceneProps) {
               Hi Aarav, your hydrating gel is still in your cart.
             </Bubble>
           </Reveal>
-          <Reveal at={8.4}>
+          <Reveal at={9.6}>
             <Bubble from="user" time="18:24" read>
               Ordering now, thanks!
             </Bubble>
           </Reveal>
         </IPhone>
+        <Attach place="r" at={10.2} dx={7.5} dy={6}>
+          <Toast icon={Check} tone="emerald" title="Delivered and read" sub="cart_recovery_1 · ₹0.8631" />
+        </Attach>
       </Float>
-      <Cursor path={[[30, 96, 1], ['submit', 2], ['submit', 2.6], [40, 96, 3.6]]} clicks={[2.3]} />
+      <Cursor path={[[50, 96, 1], ['submit', 2], ['submit', 2.6], [56, 96, 3.6]]} clicks={[2.3]} />
     </Stage>
   );
 }

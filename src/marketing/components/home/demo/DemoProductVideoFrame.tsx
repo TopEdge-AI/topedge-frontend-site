@@ -14,6 +14,10 @@ type DemoProductVideoFrameProps = {
   /** Compressed source for narrow viewports — enables in-view autoplay on mobile. */
   mobileSrc?: string;
   poster?: string;
+  /** Poster for the phone encode (same frame, its own aspect). */
+  mobilePoster?: string;
+  /** The phone encode is portrait 4:5; the frame turns 4:5 below 900px to match it. */
+  portraitMobile?: boolean;
   title?: string;
   glow?: DemoVideoGlow;
   /** Eager-load bytes (hero only). Features stay lazy. */
@@ -25,8 +29,11 @@ function prefersReducedMotion() {
   return typeof window !== 'undefined' && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 }
 
+/** Must match the <source media> below and the portrait-frame CSS. */
+const NARROW = '(max-width: 900px)';
+
 function isNarrowViewport() {
-  return typeof window !== 'undefined' && window.matchMedia('(max-width: 900px)').matches;
+  return typeof window !== 'undefined' && window.matchMedia(NARROW).matches;
 }
 
 function tryPlay(video: HTMLVideoElement) {
@@ -72,6 +79,8 @@ export default function DemoProductVideoFrame({
   src,
   mobileSrc,
   poster,
+  mobilePoster,
+  portraitMobile = false,
   title = 'Product demo video',
   glow = 'violet',
   priority = false,
@@ -227,22 +236,25 @@ export default function DemoProductVideoFrame({
   return (
     <div
       ref={hostRef}
-      className={['demo-video-glow', className].filter(Boolean).join(' ')}
+      className={['demo-video-glow', portraitMobile ? 'demo-video-glow--portrait-m' : '', className].filter(Boolean).join(' ')}
       data-glow={glow}
     >
       <div className={`demo-video-glow__frame${ready ? ' is-ready' : ''}`}>
         {poster ? (
-          <img
-            className="demo-video-glow__poster"
-            src={poster}
-            alt=""
-            width={1280}
-            height={720}
-            decoding="async"
-            loading={priority ? 'eager' : 'lazy'}
-            fetchPriority={priority ? 'high' : 'low'}
-            aria-hidden
-          />
+          <picture>
+            {mobilePoster ? <source media={NARROW} srcSet={mobilePoster} /> : null}
+            <img
+              className="demo-video-glow__poster"
+              src={poster}
+              alt=""
+              width={1280}
+              height={720}
+              decoding="async"
+              loading={priority ? 'eager' : 'lazy'}
+              fetchPriority={priority ? 'high' : 'low'}
+              aria-hidden
+            />
+          </picture>
         ) : null}
         {needsTap ? (
           <button
@@ -266,7 +278,7 @@ export default function DemoProductVideoFrame({
             the observer opens the gate that <img> is what the visitor sees,
             so the attribute has nothing to show anyway.
           */
-          poster={canPlay ? poster : undefined}
+          poster={canPlay ? (mobilePoster && isNarrowViewport() ? mobilePoster : poster) : undefined}
           muted
           loop
           playsInline
@@ -282,7 +294,7 @@ export default function DemoProductVideoFrame({
           {/* Narrow first: the browser takes the first matching source, so the
               mobile encode must precede the desktop fallback. */}
           {mobileSrc ? (
-            <source src={mobileSrc} media="(max-width: 900px)" type="video/mp4" />
+            <source src={mobileSrc} media={NARROW} type="video/mp4" />
           ) : null}
           <source src={src} type="video/mp4" />
         </video>

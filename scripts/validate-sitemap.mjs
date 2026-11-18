@@ -36,7 +36,12 @@ function rewriteBase(loc, base) {
   return loc.replace(SITE, base.replace(/\/$/, ''));
 }
 
-async function checkUrl(loc) {
+/**
+ * `loc` is fetched; `canonicalLoc` is the production URL the sitemap lists.
+ * In local mode (BASE_URL) the two differ, and the page's canonical must
+ * still point at production, so the comparison always uses the sitemap URL.
+ */
+async function checkUrl(loc, canonicalLoc = loc) {
   const res = await fetch(loc, { redirect: 'manual' });
   const status = res.status;
   const location = res.headers.get('location') || '';
@@ -51,7 +56,8 @@ async function checkUrl(loc) {
     title = t?.[1] || '';
   }
 
-  const expectedCanonical = loc.endsWith('/') && loc !== `${SITE}/` ? loc.slice(0, -1) : loc;
+  const expectedCanonical =
+    canonicalLoc.endsWith('/') && canonicalLoc !== `${SITE}/` ? canonicalLoc.slice(0, -1) : canonicalLoc;
   const ok =
     status === 200 &&
     (!canonical || canonical === expectedCanonical || canonical === `${expectedCanonical}/`);
@@ -62,18 +68,19 @@ async function checkUrl(loc) {
 async function main() {
   const base = process.env.BASE_URL || '';
   const xml = await loadSitemapXml();
-  const locs = locsFromXml(xml).map((l) => rewriteBase(l, base));
-  console.log(`Checking ${locs.length} sitemap URLs…\n`);
+  const prodLocs = locsFromXml(xml);
+  console.log(`Checking ${prodLocs.length} sitemap URLs…\n`);
 
   let failed = 0;
-  for (const loc of locs) {
+  for (const prodLoc of prodLocs) {
+    const loc = rewriteBase(prodLoc, base);
     try {
-      const r = await checkUrl(loc);
+      const r = await checkUrl(loc, prodLoc);
       const mark = r.ok ? '✓' : '✗';
       if (!r.ok) failed += 1;
       console.log(
         `${mark} ${r.status} ${r.loc}${r.location ? ` → ${r.location}` : ''}${
-          r.canonical && r.canonical !== r.loc ? `  canon=${r.canonical}` : ''
+          r.canonical && r.canonical !== prodLoc ? `  canon=${r.canonical}` : ''
         }`
       );
     } catch (err) {

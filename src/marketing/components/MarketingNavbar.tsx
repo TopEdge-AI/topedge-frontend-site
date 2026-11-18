@@ -1,37 +1,37 @@
-import { useState, useEffect, useRef, type ComponentType, type CSSProperties } from 'react';
+import { useState, useEffect, useRef, type CSSProperties } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { AnimatePresence, motion, useReducedMotion } from 'framer-motion';
+import { ChevronDown, Menu, X } from 'lucide-react';
+import { HugeiconsIcon, type IconSvgElement } from '@hugeicons/react';
 import {
-  Bot,
-  ChevronDown,
-  Crosshair,
-  MapPin,
-  Megaphone,
-  Menu,
-  PackageCheck,
-  Radio,
-  ShieldCheck,
-  ShoppingBag,
-  Split,
-  TrendingUp,
-  Undo2,
-  UserCircle2,
-  Wand2,
-  Workflow,
-  X,
-  type LucideProps,
-} from 'lucide-react';
+  AiBrain01Icon,
+  AiSearchIcon,
+  AnalyticsUpIcon,
+  ArrowReloadHorizontalIcon,
+  ArrowUpRight01Icon,
+  ContactBookIcon,
+  FlowConnectionIcon,
+  GitForkIcon,
+  MagicWand01Icon,
+  Megaphone01Icon,
+  MoneyExchange01Icon,
+  Radar01Icon,
+  Route01Icon,
+  SecurityCheckIcon,
+  ShoppingCartRemove01Icon,
+} from '@hugeicons/core-free-icons';
 import { cn } from '@/lib/utils';
 import { useLenis } from 'lenis/react';
 import BrandMark from './BrandMark';
 import MarketingAnnouncement from './MarketingAnnouncement';
-
-type NavIcon = ComponentType<LucideProps>;
+import '../styles/nav-mega.css';
 
 type NavLink = {
   label: string;
+  /** One line under the label: what it does for the store, not what it is. */
+  desc: string;
   href: string;
-  icon: NavIcon;
+  icon: IconSvgElement;
 };
 
 type NavColumn = {
@@ -48,32 +48,32 @@ const productColumns: NavColumn[] = [
     id: 'journey',
     title: 'Journeys & COD',
     items: [
-      { label: 'Journey', href: '/features/journeys', icon: MapPin },
-      { label: 'Abandoned Cart', href: '/features/journeys#abandoned-cart', icon: ShoppingBag },
-      { label: 'Conditional routes', href: '/features/journeys#conditional-routes', icon: Split },
-      { label: 'Return & retarget', href: '/features/journeys#return-retarget', icon: Undo2 },
-      { label: 'COD → Prepaid', href: '/features/journeys', icon: PackageCheck },
+      { label: 'Journey', desc: 'Automate WhatsApp from any Shopify event', href: '/features/journeys', icon: Route01Icon },
+      { label: 'Abandoned Cart', desc: 'Win carts back in three reminders', href: '/features/journeys#abandoned-cart', icon: ShoppingCartRemove01Icon },
+      { label: 'Conditional routes', desc: 'Branch on COD, prepaid or a reply', href: '/features/journeys#conditional-routes', icon: GitForkIcon },
+      { label: 'Return & retarget', desc: 'Reach shoppers who came back', href: '/features/journeys#return-retarget', icon: ArrowReloadHorizontalIcon },
+      { label: 'COD → Prepaid', desc: 'Confirm COD and nudge to prepaid', href: '/features/journeys', icon: MoneyExchange01Icon },
     ],
   },
   {
     id: 'engage',
     title: 'Outreach & audience',
     items: [
-      { label: 'Flow + Shopify Tools', href: '/features/flow-builder', icon: Workflow },
-      { label: 'Opt-in tools', href: '/features/opt-in-tools', icon: Wand2 },
-      { label: 'Audience Campaigns', href: '/features/campaigns', icon: Megaphone },
-      { label: 'Audience CRM', href: '/features/audience-crm', icon: UserCircle2 },
-      { label: 'Warranty', href: '/features/warranty', icon: ShieldCheck },
+      { label: 'Flow + Shopify Tools', desc: 'Bots that read live orders', href: '/features/flow-builder', icon: FlowConnectionIcon },
+      { label: 'Opt-in tools', desc: 'Spin, scratch and popups that grow a list', href: '/features/opt-in-tools', icon: MagicWand01Icon },
+      { label: 'Audience Campaigns', desc: 'Broadcasts with net-of-Meta revenue', href: '/features/campaigns', icon: Megaphone01Icon },
+      { label: 'Audience CRM', desc: 'One profile for every shopper', href: '/features/audience-crm', icon: ContactBookIcon },
+      { label: 'Warranty', desc: 'QR registration and claims on WhatsApp', href: '/features/warranty', icon: SecurityCheckIcon },
     ],
   },
   {
     id: 'intelligence',
     title: 'Data & intelligence',
     items: [
-      { label: 'Tracking Pixel', href: '/features/analytics', icon: Crosshair },
-      { label: 'Intent detection', href: '/features/intent-detection', icon: Radio },
-      { label: 'AI Brain', href: '/features/ai-brain', icon: Bot },
-      { label: 'Profit & costs', href: '/features/profit-loss', icon: TrendingUp },
+      { label: 'Tracking Pixel', desc: 'Live shopper intent from your store', href: '/features/analytics', icon: Radar01Icon },
+      { label: 'Intent detection', desc: 'Route Hinglish without AI spend', href: '/features/intent-detection', icon: AiSearchIcon },
+      { label: 'AI Brain', desc: 'Answers grounded in your policies', href: '/features/ai-brain', icon: AiBrain01Icon },
+      { label: 'Profit & costs', desc: 'True profit on every order', href: '/features/profit-loss', icon: AnalyticsUpIcon },
     ],
   },
 ];
@@ -247,7 +247,6 @@ export default function MarketingNavbar() {
                           <p className="mkt-nav__mega-title">{col.title}</p>
                           <ul className="mkt-nav__mega-links">
                             {col.items.map((item, itemIndex) => {
-                              const Icon = item.icon;
                               return (
                                 <li
                                   key={item.label}
@@ -255,9 +254,12 @@ export default function MarketingNavbar() {
                                 >
                                   <Link to={item.href} className="mkt-nav__mega-link">
                                     <span className="mkt-nav__mega-link-icon" aria-hidden>
-                                      <Icon strokeWidth={1.6} absoluteStrokeWidth={false} />
+                                      <HugeiconsIcon icon={item.icon} size={26} strokeWidth={1.4} />
                                     </span>
-                                    <span className="mkt-nav__mega-link-label">{item.label}</span>
+                                    <span className="mkt-nav__mega-link-text">
+                                      <span className="mkt-nav__mega-link-label">{item.label}</span>
+                                      <span className="mkt-nav__mega-link-desc">{item.desc}</span>
+                                    </span>
                                   </Link>
                                 </li>
                               );
@@ -291,9 +293,16 @@ export default function MarketingNavbar() {
                             height={225}
                           />
                         </span>
+                        <span className="mkt-nav__mega-promo-go" aria-hidden>
+                          <HugeiconsIcon icon={ArrowUpRight01Icon} size={16} strokeWidth={1.8} />
+                        </span>
                         <span className="mkt-nav__mega-promo-body">
                           <span className="mkt-nav__mega-promo-h">{NAV_PROMO.title}</span>
                           <span className="mkt-nav__mega-promo-p">{NAV_PROMO.blurb}</span>
+                        </span>
+                        <span className="mkt-nav__mega-promo-cta">
+                          Read the comparison
+                          <HugeiconsIcon icon={ArrowUpRight01Icon} size={14} strokeWidth={2} />
                         </span>
                       </Link>
                     </div>
@@ -404,7 +413,6 @@ export default function MarketingNavbar() {
                                 {col.title}
                               </p>,
                               ...col.items.map((item, itemIndex) => {
-                                const Icon = item.icon;
                                 return (
                                   <motion.div
                                     key={item.label}
@@ -422,9 +430,12 @@ export default function MarketingNavbar() {
                                       onClick={() => setOpen(false)}
                                     >
                                       <span className="mkt-nav__mobile-item-icon" aria-hidden>
-                                        <Icon strokeWidth={1.7} absoluteStrokeWidth={false} />
+                                        <HugeiconsIcon icon={item.icon} size={26} strokeWidth={1.4} />
                                       </span>
-                                      <span className="mkt-nav__mobile-item-label">{item.label}</span>
+                                      <span className="mkt-nav__mobile-item-text">
+                                        <span className="mkt-nav__mobile-item-label">{item.label}</span>
+                                        <span className="mkt-nav__mobile-item-desc">{item.desc}</span>
+                                      </span>
                                     </Link>
                                   </motion.div>
                                 );

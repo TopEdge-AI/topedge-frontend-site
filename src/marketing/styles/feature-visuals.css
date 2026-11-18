@@ -45,9 +45,10 @@
   container-type: inline-size;
   isolation: isolate;
   line-height: 1.35;
-  font-family: var(--mkt-font, 'Plus Jakarta Sans', system-ui, sans-serif);
-  font-feature-settings: 'tnum' 1, 'ss01' 1;
-  letter-spacing: -0.006em;
+  /* Product UI type, not the site's: SF on Apple devices, Inter elsewhere. */
+  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Inter', 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+  font-feature-settings: 'tnum' 1, 'cv11' 1;
+  letter-spacing: -0.011em;
   color: var(--fv-ink);
   background: #fbfbfd;
   -webkit-font-smoothing: antialiased;
@@ -117,43 +118,58 @@
 .fv-float { position: absolute; z-index: 2; }
 .fv-float__px, .fv-float__in { position: relative; }
 
+/*
+ * Arrive: a card rises a little and is revealed top to bottom through a soft
+ * gradient edge (a "wipe"), so it reads as unfolding rather than popping.
+ * The wipe runs with fill `backwards` only, so once it ends the mask is
+ * gone and nothing (attached toasts, shadows) is ever clipped.
+ * Leave: the card dissolves from the bottom up and drifts slightly up.
+ */
 .fv.is-armed .fv-float,
 .fv.is-armed .fv-attach { opacity: 0; }
-.fv.is-armed.is-in .fv-float,
-.fv.is-armed.is-in .fv-attach {
-  animation: fv-in 0.8s var(--fv-ease) var(--fv-d, 0ms) both;
-}
-.fv.is-armed.is-in .fv-float--until,
-.fv.is-armed.is-in .fv-attach--until {
+.fv.is-armed.is-in .fv-float {
   animation:
-    fv-in 0.8s var(--fv-ease) var(--fv-d, 0ms) both,
-    fv-leave 0.38s var(--fv-ease-in) var(--fv-until) forwards;
+    fv-in 0.95s var(--fv-ease) var(--fv-d, 0ms) both,
+    fv-unfold 1.05s cubic-bezier(0.4, 0, 0.2, 1) var(--fv-d, 0ms) backwards;
+}
+.fv.is-armed.is-in .fv-float--until {
+  animation:
+    fv-in 0.95s var(--fv-ease) var(--fv-d, 0ms) both,
+    fv-unfold 1.05s cubic-bezier(0.4, 0, 0.2, 1) var(--fv-d, 0ms) backwards,
+    fv-leave 0.6s cubic-bezier(0.4, 0, 0.6, 1) var(--fv-until) forwards;
 }
 @keyframes fv-in {
-  from { opacity: 0; transform: translate3d(0, 0.9em, 0) scale(0.985); }
+  from { opacity: 0; transform: translate3d(0, 1.1em, 0) scale(0.975); }
+  45% { opacity: 1; }
   to { opacity: 1; transform: none; }
+}
+@keyframes fv-unfold {
+  from { -webkit-mask-image: linear-gradient(180deg, #000 0%, #000 42%, transparent 58%); mask-image: linear-gradient(180deg, #000 0%, #000 42%, transparent 58%); -webkit-mask-size: 100% 260%; mask-size: 100% 260%; -webkit-mask-repeat: no-repeat; mask-repeat: no-repeat; -webkit-mask-position: 0 100%; mask-position: 0 100%; }
+  to { -webkit-mask-image: linear-gradient(180deg, #000 0%, #000 42%, transparent 58%); mask-image: linear-gradient(180deg, #000 0%, #000 42%, transparent 58%); -webkit-mask-size: 100% 260%; mask-size: 100% 260%; -webkit-mask-repeat: no-repeat; mask-repeat: no-repeat; -webkit-mask-position: 0 0; mask-position: 0 0; }
 }
 @keyframes fv-leave {
-  to { opacity: 0; transform: translate3d(0, -0.35em, 0) scale(0.99); visibility: hidden; }
+  from { -webkit-mask-image: linear-gradient(0deg, transparent 0%, transparent 40%, #000 60%, #000 100%); mask-image: linear-gradient(0deg, transparent 0%, transparent 40%, #000 60%, #000 100%); -webkit-mask-size: 100% 260%; mask-size: 100% 260%; -webkit-mask-repeat: no-repeat; mask-repeat: no-repeat; -webkit-mask-position: 0 0; mask-position: 0 0; }
+  to { opacity: 0; transform: translate3d(0, -0.5em, 0) scale(0.985); visibility: hidden; -webkit-mask-image: linear-gradient(0deg, transparent 0%, transparent 40%, #000 60%, #000 100%); mask-image: linear-gradient(0deg, transparent 0%, transparent 40%, #000 60%, #000 100%); -webkit-mask-size: 100% 260%; mask-size: 100% 260%; -webkit-mask-repeat: no-repeat; mask-repeat: no-repeat; -webkit-mask-position: 0 100%; mask-position: 0 100%; }
 }
-/* Attached satellites pop from their anchor instead of rising. */
-@keyframes fv-pop-in {
-  from { opacity: 0; transform: translate3d(0, 0.5em, 0) scale(0.94); }
-  to { opacity: 1; transform: none; }
-}
-.fv.is-armed.is-in .fv-attach { animation-name: fv-pop-in; animation-timing-function: var(--fv-spring); animation-duration: 0.6s; }
+/* Attached satellites pop from their anchor with a soft spring. */
+.fv.is-armed.is-in .fv-attach { animation: fv-pop-in 0.7s var(--fv-spring) var(--fv-d, 0ms) both; }
 .fv.is-armed.is-in .fv-attach--until {
   animation:
-    fv-pop-in 0.6s var(--fv-spring) var(--fv-d, 0ms) both,
-    fv-leave 0.38s var(--fv-ease-in) var(--fv-until) forwards;
+    fv-pop-in 0.7s var(--fv-spring) var(--fv-d, 0ms) both,
+    fv-pop-out 0.4s cubic-bezier(0.4, 0, 1, 1) var(--fv-until) forwards;
 }
+@keyframes fv-pop-in {
+  from { opacity: 0; transform: translate3d(0, 0.6em, 0) scale(0.92); }
+  60% { opacity: 1; }
+  to { opacity: 1; transform: none; }
+}
+@keyframes fv-pop-out { to { opacity: 0; transform: translate3d(0, 0.3em, 0) scale(0.95); visibility: hidden; } }
 
-/* The whole scene settles out at once, then replays. */
-.fv__canvas { transition: none; }
-.fv.is-out .fv__canvas {
-  opacity: 0;
-  transform: translate3d(0, -0.3em, 0);
-  transition: opacity 0.5s ease, transform 0.6s var(--fv-ease-in);
+/* The whole scene settles out at once, dissolving from the bottom, then replays. */
+.fv.is-out .fv__canvas { animation: fv-scene-out 0.6s cubic-bezier(0.4, 0, 0.6, 1) both; }
+@keyframes fv-scene-out {
+  from { -webkit-mask-image: linear-gradient(0deg, transparent 0%, transparent 40%, #000 60%, #000 100%); mask-image: linear-gradient(0deg, transparent 0%, transparent 40%, #000 60%, #000 100%); -webkit-mask-size: 100% 260%; mask-size: 100% 260%; -webkit-mask-repeat: no-repeat; mask-repeat: no-repeat; -webkit-mask-position: 0 0; mask-position: 0 0; }
+  to { opacity: 0; transform: translate3d(0, -0.4em, 0); -webkit-mask-image: linear-gradient(0deg, transparent 0%, transparent 40%, #000 60%, #000 100%); mask-image: linear-gradient(0deg, transparent 0%, transparent 40%, #000 60%, #000 100%); -webkit-mask-size: 100% 260%; mask-size: 100% 260%; -webkit-mask-repeat: no-repeat; mask-repeat: no-repeat; -webkit-mask-position: 0 100%; mask-position: 0 100%; }
 }
 
 /* A gentle idle bob for one focal element, when asked for. */
@@ -187,9 +203,9 @@
   display: flex;
   align-items: center;
   gap: 0.65em;
-  padding: 0.6em 0.95em 0.6em 0.6em;
-  border-radius: 0.95em;
-  background: rgba(255, 255, 255, 0.96);
+  padding: 0.7em 1.05em 0.7em 0.8em;
+  border-radius: 1.15em;
+  background: rgba(255, 255, 255, 0.97);
   box-shadow: var(--fv-shadow-pop);
   white-space: nowrap;
 }
@@ -198,7 +214,7 @@
 .fv-toast__text small { font-size: 0.82em; color: var(--fv-muted); }
 .fv-toast--dark { color: #fff; background: linear-gradient(180deg, #1d2433, #0b1220); box-shadow: 0 0 0 1px rgba(11, 18, 32, 0.9), inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 1.2em 2.4em -1.2em rgba(11, 18, 32, 0.55); }
 .fv-toast--dark .fv-toast__text small { color: rgba(255, 255, 255, 0.62); }
-.fv-toast--dark .fv-icon { color: #fff; background: rgba(255, 255, 255, 0.1); box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.14); }
+.fv-toast--dark .fv-icon { color: #c4b5fd; }
 
 /* ── Wires ─────────────────────────────────────────────────────────────── */
 .fv-wires { position: absolute; inset: 0; width: 100%; height: 100%; z-index: 1; overflow: visible; }
@@ -214,7 +230,7 @@
 .fv-panel {
   position: relative;
   padding: 1em;
-  border-radius: 1.1em;
+  border-radius: 1.4em;
   background: var(--fv-surface);
   box-shadow: var(--fv-shadow-card);
 }
@@ -242,45 +258,16 @@
     0 1.2em 2.4em -1.6em rgba(40, 24, 96, 0.28);
 }
 
-/* ── Icon tile ─────────────────────────────────────────────────────────── */
-.fv-icon {
-  position: relative;
-  flex: none;
-  display: inline-grid;
-  place-items: center;
-  width: 2.35em;
-  height: 2.35em;
-  border-radius: 0.7em;
-  color: var(--t-600);
-  background: linear-gradient(180deg, #ffffff 0%, #f5f6f8 100%);
-  box-shadow: 0 0 0 1px var(--fv-line), 0 1px 2px rgba(16, 24, 40, 0.05), inset 0 1px 0 #fff;
-}
-.fv-icon svg { width: 50%; height: 50%; }
-.fv-icon--sm { width: 1.8em; height: 1.8em; border-radius: 0.52em; }
-.fv-icon--lg { width: 3.2em; height: 3.2em; border-radius: 0.95em; }
-.fv-icon--xl { width: 4.6em; height: 4.6em; border-radius: 1.3em; }
-.fv-icon--lg svg, .fv-icon--xl svg { width: 46%; height: 46%; }
-.fv-icon--tint { color: var(--t-600); background: var(--t-50); box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--t-500) 16%, transparent); }
-.fv-icon--solid {
-  color: #fff;
-  background:
-    radial-gradient(120% 80% at 50% 0%, rgba(255, 255, 255, 0.26), transparent 55%),
-    linear-gradient(180deg, var(--t-500) 0%, var(--t-700) 100%);
-  box-shadow:
-    0 0 0 1px color-mix(in srgb, var(--t-800) 60%, transparent),
-    inset 0 1px 0 rgba(255, 255, 255, 0.28),
-    0 0.5em 1.1em -0.4em color-mix(in srgb, var(--t-600) 55%, transparent);
-}
-.fv-icon--pulse::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  border-radius: inherit;
-  box-shadow: 0 0 0 2px var(--t-400);
-  opacity: 0;
-  animation: fv-ring 2.6s var(--fv-ease) infinite;
-}
-@keyframes fv-ring { 0% { opacity: 0.55; transform: scale(1); } 100% { opacity: 0; transform: scale(1.4); } }
+/* ── Icon: bare glyph, no tile behind it ──────────────────────────────── */
+.fv-icon { position: relative; flex: none; display: inline-grid; place-items: center; width: 1.9em; height: 1.9em; color: #475467; }
+.fv-icon svg { width: 1.32em; height: 1.32em; }
+.fv-icon--sm { width: 1.55em; height: 1.55em; }
+.fv-icon--sm svg { width: 1.16em; height: 1.16em; }
+.fv-icon--lg { width: 2.6em; height: 2.6em; }
+.fv-icon--lg svg { width: 1.9em; height: 1.9em; }
+.fv-icon--xl { width: 3.6em; height: 3.6em; }
+.fv-icon--xl svg { width: 2.7em; height: 2.7em; }
+.fv-icon[data-tone], .fv-icon--solid, .fv-icon--tint { color: var(--t-600); }
 
 /* ── Chip ──────────────────────────────────────────────────────────────── */
 .fv-chip {
@@ -325,8 +312,8 @@
   display: flex;
   align-items: center;
   gap: 0.7em;
-  padding: 0.6em 0.9em 0.6em 0.6em;
-  border-radius: 0.95em;
+  padding: 0.65em 1em 0.65em 0.7em;
+  border-radius: 1.15em;
   background: var(--fv-surface);
   box-shadow: var(--fv-shadow-card);
   transition: box-shadow 0.4s var(--fv-ease);
@@ -347,8 +334,8 @@
   display: flex;
   align-items: center;
   gap: 0.7em;
-  padding: 0.55em 0.55em;
-  border-radius: 0.7em;
+  padding: 0.6em 0.65em;
+  border-radius: 0.9em;
 }
 .fv-row + .fv-row::before,
 .fv-reveal + .fv-row::before,
@@ -362,10 +349,7 @@
   height: 1px;
   background: var(--fv-line-2);
 }
-.fv-row--active {
-  background: color-mix(in srgb, var(--t-50) 80%, #fff);
-  box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--t-500) 16%, transparent);
-}
+.fv-row--active { background: #f4f5f8; }
 .fv-row--active::before, .fv-row--active + .fv-row::before { display: none; }
 .fv-row__text { flex: 1 1 auto; }
 .fv-row__right { margin-left: auto; flex: none; display: inline-flex; align-items: center; gap: 0.45em; font-size: 0.98em; font-weight: 600; font-variant-numeric: tabular-nums; }
@@ -495,27 +479,28 @@
   align-items: center;
   justify-content: center;
   gap: 0.38em;
-  padding: 0.46em 0.85em;
-  border-radius: 0.62em;
+  padding: 0.52em 1.1em;
+  border-radius: 99em;
   font-size: 0.95em;
   font-weight: 600;
+  letter-spacing: -0.01em;
   white-space: nowrap;
   color: var(--fv-ink);
-  background: linear-gradient(180deg, #ffffff, #f8f9fb);
-  box-shadow: 0 0 0 1px rgba(16, 24, 40, 0.1), 0 1px 2px rgba(16, 24, 40, 0.06), inset 0 1px 0 #fff;
+  background: #fff;
+  box-shadow: 0 0 0 1px rgba(16, 24, 40, 0.12), 0 1px 2px rgba(16, 24, 40, 0.06);
 }
 .fv-btn svg { width: 1.05em; height: 1.05em; }
 .fv-btn--primary {
   color: #fff;
-  background: linear-gradient(180deg, var(--t-500), var(--t-600));
-  box-shadow: 0 0 0 1px var(--t-700), inset 0 1px 0 rgba(255, 255, 255, 0.26), 0 0.45em 1em -0.35em color-mix(in srgb, var(--t-600) 70%, transparent);
+  background: linear-gradient(180deg, color-mix(in srgb, var(--t-500) 85%, #fff), var(--t-600));
+  box-shadow: 0 0 0 1px var(--t-700), inset 0 1px 0 rgba(255, 255, 255, 0.24), 0 0.4em 0.9em -0.35em color-mix(in srgb, var(--t-600) 65%, transparent);
 }
 .fv-btn--block { display: flex; width: 100%; padding: 0.62em 0.9em; }
 .fv.is-in .fv-btn--press { animation: fv-press 0.42s ease var(--fv-press) both; }
 @keyframes fv-press { 0% { transform: none; } 40% { transform: scale(0.94); filter: brightness(0.93); } 100% { transform: none; } }
 .fv-field { display: flex; flex-direction: column; gap: 0.3em; }
 .fv-field small { font-size: 0.82em; font-weight: 500; color: var(--fv-muted); }
-.fv-field > span { padding: 0.5em 0.7em; border-radius: 0.6em; font-size: 0.98em; background: #fff; box-shadow: inset 0 0 0 1px rgba(16, 24, 40, 0.1), 0 1px 2px rgba(16, 24, 40, 0.04); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.fv-field > span { padding: 0.58em 0.85em; border-radius: 0.85em; font-size: 0.98em; background: #fff; box-shadow: inset 0 0 0 1px rgba(16, 24, 40, 0.1), 0 1px 2px rgba(16, 24, 40, 0.04); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .fv-field > span.is-mono { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 0.9em; }
 .fv-thumb { display: grid; place-items: center; width: 100%; border-radius: 0.65em; color: #fff; background: radial-gradient(100% 120% at 15% 0%, rgba(255, 255, 255, 0.45), transparent 55%), linear-gradient(140deg, var(--t-300), var(--t-600)); }
 .fv-thumb svg { width: 2.2em; height: 2.2em; opacity: 0.95; }
@@ -530,8 +515,8 @@
 .fv-kv--total > span { color: var(--fv-ink); font-weight: 600; }
 
 /* ── Cursor ────────────────────────────────────────────────────────────── */
-.fv-cursor { position: absolute; z-index: 9; width: 1.9em; height: 1.9em; pointer-events: none; }
-.fv-cursor svg { position: relative; z-index: 1; width: 100%; height: 100%; fill: #0b1220; stroke: #fff; stroke-width: 1.6; stroke-linejoin: round; filter: drop-shadow(0 0.15em 0.3em rgba(11, 18, 32, 0.28)); }
+.fv-cursor { position: absolute; z-index: 9; width: 2.1em; height: 2.1em; pointer-events: none; }
+.fv-cursor svg { position: relative; z-index: 1; width: 100%; height: 100%; overflow: visible; fill: #000; stroke: #fff; stroke-width: 1.5; stroke-linejoin: round; paint-order: stroke; filter: drop-shadow(0 0.12em 0.22em rgba(0, 0, 0, 0.35)); }
 .fv-cursor__ripple { position: absolute; left: 0.1em; top: 0.1em; width: 2em; height: 2em; margin: -1em 0 0 -1em; border-radius: 50%; background: color-mix(in srgb, var(--t-500) 40%, transparent); opacity: 0; }
 .fv.is-armed .fv-cursor { opacity: 0; }
 .fv.is-armed.is-in .fv-cursor:not(.fv-cursor--path) { animation: fv-cursor 5.6s var(--fv-ease) var(--fv-d, 0ms) infinite both; }
@@ -606,21 +591,22 @@
 .fv-reveal { display: grid; grid-template-rows: 1fr; }
 .fv-reveal > * { min-height: 0; overflow: clip; overflow-clip-margin: 0.9em; }
 .fv.is-armed .fv-reveal { grid-template-rows: 0fr; opacity: 0; }
-.fv.is-armed.is-in .fv-reveal { animation: fv-reveal 0.6s var(--fv-ease) var(--fv-r-at) both; }
+.fv.is-armed.is-in .fv-reveal { animation: fv-reveal 0.75s cubic-bezier(0.32, 0.72, 0, 1) var(--fv-r-at) both; }
 .fv.is-armed.is-in .fv-reveal--until {
   animation:
-    fv-reveal 0.6s var(--fv-ease) var(--fv-r-at) both,
-    fv-unreveal 0.4s var(--fv-ease-in) var(--fv-r-until) forwards;
+    fv-reveal 0.75s cubic-bezier(0.32, 0.72, 0, 1) var(--fv-r-at) both,
+    fv-unreveal 0.5s cubic-bezier(0.4, 0, 0.6, 1) var(--fv-r-until) forwards;
 }
 @keyframes fv-reveal {
-  from { grid-template-rows: 0fr; opacity: 0; transform: translateY(0.4em); }
+  from { grid-template-rows: 0fr; opacity: 0; transform: translateY(0.6em); }
+  55% { opacity: 1; }
   to { grid-template-rows: 1fr; opacity: 1; transform: none; }
 }
-@keyframes fv-unreveal { to { grid-template-rows: 0fr; opacity: 0; } }
+@keyframes fv-unreveal { to { grid-template-rows: 0fr; opacity: 0; transform: translateY(-0.3em); } }
 /* A row that lands gets a soft accent wash that fades out: "this is new". */
-.fv.is-armed.is-in .fv-reveal > .fv-row:not(.fv-row--active) { animation: fv-land 1.8s ease-out var(--fv-r-at) both; }
+.fv.is-armed.is-in .fv-reveal > .fv-row:not(.fv-row--active) { animation: fv-land 2.2s ease-out var(--fv-r-at) both; }
 @keyframes fv-land {
-  0%, 20% { background-color: color-mix(in srgb, var(--t-50) 95%, transparent); }
+  0%, 25% { background-color: #f4f5f8; }
   100% { background-color: transparent; }
 }
 .fv-stack > .fv-reveal, .fv-phone__chat > .fv-reveal { display: grid; }
@@ -634,11 +620,11 @@
 .fv-swap { display: grid; }
 .fv-swap > * { grid-area: 1 / 1; }
 .fv.is-armed .fv-swap__a { animation: none; }
-.fv.is-armed.is-in .fv-swap__a { animation: fv-swap-out 0.3s var(--fv-ease-in) var(--fv-swap-at) forwards; }
+.fv.is-armed.is-in .fv-swap__a { animation: fv-swap-out 0.35s cubic-bezier(0.4, 0, 1, 1) var(--fv-swap-at) forwards; }
 .fv.is-armed .fv-swap__b { opacity: 0; }
-.fv.is-armed.is-in .fv-swap__b { animation: fv-swap-in 0.45s var(--fv-ease) calc(var(--fv-swap-at) + 0.12s) both; }
-@keyframes fv-swap-out { to { opacity: 0; transform: translateY(-0.3em); visibility: hidden; } }
-@keyframes fv-swap-in { from { opacity: 0; transform: translateY(0.3em); } to { opacity: 1; transform: none; } }
+.fv.is-armed.is-in .fv-swap__b { animation: fv-swap-in 0.6s var(--fv-spring) calc(var(--fv-swap-at) + 0.1s) both; }
+@keyframes fv-swap-out { to { opacity: 0; transform: translateY(-0.25em) scale(0.97); visibility: hidden; } }
+@keyframes fv-swap-in { from { opacity: 0; transform: translateY(0.3em) scale(0.96); } to { opacity: 1; transform: none; } }
 
 /* ── Without motion: show the END state of every story ─────────────────── */
 .fv:not(.is-armed) .fv-float--until,
@@ -660,6 +646,8 @@
 /* Phones: the hero frame turns 4:3 below 768px; let a scene keep its own 16:10. */
 @media (max-width: 767px) {
   .demo-video-glow--still .demo-video-glow__frame.is-scene { aspect-ratio: 16 / 10; }
+  /* Hero films ship a 4:3 phone cut (h-m.mp4) composed for this frame. */
+  .demo-video-glow--still .demo-video-glow__frame.is-scene.is-film { aspect-ratio: 4 / 3; }
 }
 
 /* ── WhatsApp template parts ───────────────────────────────────────────── */
@@ -814,7 +802,7 @@
 .fv-shop__price em { font-style: normal; font-size: 0.8em; font-weight: 700; color: #047857; background: #ecfdf5; padding: 0.1em 0.45em; border-radius: 99em; }
 .fv-shop__applied { display: flex; align-items: center; gap: 0.45em; padding: 0.55em 0.7em; border-radius: 0.7em; font-size: 0.84em; font-weight: 600; color: #047857; background: #ecfdf5; box-shadow: inset 0 0 0 1px rgba(16, 185, 129, 0.25); }
 .fv-shop__applied svg { width: 1.1em; height: 1.1em; }
-.fv-shop__cta { display: flex; align-items: center; justify-content: center; gap: 0.4em; margin-top: auto; padding: 0.8em; border-radius: 0.8em; font-weight: 650; font-size: 0.98em; color: #fff; background: #111; box-shadow: 0 0.7em 1.4em -0.7em rgba(0, 0, 0, 0.5); }
+.fv-shop__cta { display: flex; align-items: center; justify-content: center; gap: 0.4em; margin-top: auto; padding: 0.8em; border-radius: 99em; font-weight: 650; font-size: 0.98em; color: #fff; background: #111; box-shadow: 0 0.7em 1.4em -0.7em rgba(0, 0, 0, 0.5); }
 .fv-shop__cta svg { width: 1.1em; height: 1.1em; }
 .fv.is-in .fv-shop__cta.is-press { animation: fv-press 0.42s ease var(--fv-press) both; }
 .fv-shop__done { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; gap: 0.35em; }
@@ -887,7 +875,7 @@
 .fv-cursor--touch .fv-cursor__ripple { left: 50%; top: 50%; background: rgba(11, 18, 32, 0.18); }
 
 /* ── Browser ───────────────────────────────────────────────────────────── */
-.fv-browser { overflow: hidden; border-radius: 1em; background: #fff; box-shadow: var(--fv-shadow-card); }
+.fv-browser { overflow: hidden; border-radius: 1.3em; background: #fff; box-shadow: var(--fv-shadow-card); }
 .fv-browser__bar { display: flex; align-items: center; gap: 0.8em; padding: 0.6em 0.8em; background: #f6f6f8; box-shadow: inset 0 -1px 0 var(--fv-line-2); }
 .fv-browser__dots { display: inline-flex; gap: 0.36em; }
 .fv-browser__dots i { width: 0.62em; height: 0.62em; border-radius: 50%; background: #e0e2e7; }
@@ -939,19 +927,6 @@
 @keyframes fv-shake { 20%, 60% { transform: translateX(-0.35em); } 40%, 80% { transform: translateX(0.35em); } }
 
 /* ── Restraint pass: real product UI is mostly neutral ─────────────────── */
-/* Row and header icons: quiet neutral glyphs; colour only when a tone is set. */
-.fv-icon:not(.fv-icon--solid):not(.fv-icon--tint):not([data-tone]) {
-  color: #475467;
-  background: #f2f4f7;
-  box-shadow: inset 0 0 0 1px rgba(16, 24, 40, 0.04);
-}
-.fv-icon:not(.fv-icon--solid):not(.fv-icon--tint)[data-tone] {
-  color: var(--t-600);
-  background: var(--t-50);
-  box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--t-500) 14%, transparent);
-}
-.fv-panel__head .fv-icon:not([data-tone]) { color: #344054; background: transparent; box-shadow: none; width: 1.3em; height: 1.3em; }
-.fv-panel__head .fv-icon:not([data-tone]) svg { width: 100%; height: 100%; }
 /* Chips without a meaning are grey; status chips keep their colour. */
 .fv-chip:not([data-tone]):not(.fv-chip--solid) {
   color: #344054;
@@ -960,7 +935,7 @@
 }
 .fv-chip:not([data-tone]) .fv-chip__dot, .fv-chip:not([data-tone]) .fv-chip__dot::after { background: #10b981; }
 /* Active rows: a neutral highlight with a thin accent edge, not a purple wash. */
-.fv-row--active { background: #f8f9fb; box-shadow: inset 0 0 0 1px rgba(16, 24, 40, 0.07), inset 0.18em 0 0 var(--t-500); }
+.fv-row--active { background: #f4f5f8; box-shadow: none; }
 /* Avatars: varied, soft hues like a real customer list. */
 .fv-avatar[data-hue] { color: hsl(var(--h) 45% 32%); background: hsl(var(--h) 70% 93%); box-shadow: inset 0 0 0 1px hsl(var(--h) 50% 80% / 0.6); }
 /* Inline icons inside text stay inline (Tailwind preflight makes svg block). */
@@ -971,10 +946,8 @@
 .fv-attach[data-place='l'] { translate: calc(-50% - var(--fv-dx, 0em)) calc(-50% + var(--fv-dy, 0em)); }
 
 /* ── Icons: Phosphor duotone + brand marks ─────────────────────────────── */
-.fv .fv-pi { display: block; flex: none; }
-.fv-icon .fv-pi { width: 56%; height: 56%; }
-.fv-icon--sm .fv-pi { width: 60%; height: 60%; }
-.fv-chip .fv-pi, .fv-btn .fv-pi { width: 1.1em; height: 1.1em; }
+.fv .fv-hi { display: block; flex: none; }
+.fv-chip .fv-hi, .fv-btn .fv-hi { width: 1.1em; height: 1.1em; }
 .fv-brand { display: inline-block; flex: none; width: 1em; height: 1em; }
 .fv-brand--shopify { color: #95bf47; }
 .fv-brand--whatsapp { color: #25d366; }
@@ -1003,3 +976,100 @@
 .fv-art--photo { background: #f1efea; }
 .fv-art--photo::before { display: none; }
 .fv-art img { position: relative; z-index: 1; display: block; width: 100%; height: 100%; object-fit: cover; }
+
+/* Older messages dissolve at the top of a chat as new ones push them up. */
+.fv-wa__chat { -webkit-mask-image: linear-gradient(180deg, transparent 0, #000 2.6em); mask-image: linear-gradient(180deg, transparent 0, #000 2.6em); }
+
+/* ── Stronger colour: less white, more of the page's light ─────────────── */
+.fv__bg .aurora::before { filter: blur(3cqw) saturate(1.2); }
+.fv__bg .aurora::after {
+  background: linear-gradient(var(--au-band), transparent 26%, rgba(255, 255, 255, 0.42) 50%, rgba(255, 255, 255, 0.3) 56%, transparent 78%);
+}
+.fv--square .fv__bg .aurora {
+  opacity: 0.95;
+  -webkit-mask-image: linear-gradient(180deg, #000 0%, #000 45%, rgba(0, 0, 0, 0.55) 75%, rgba(0, 0, 0, 0.15) 100%);
+  mask-image: linear-gradient(180deg, #000 0%, #000 45%, rgba(0, 0, 0, 0.55) 75%, rgba(0, 0, 0, 0.15) 100%);
+}
+
+/* ── Phones: a taller showcase frame so the product can zoom up ────────── */
+@media (max-width: 640px) {
+  .mkt-pf__showcase-media .fv--wide { aspect-ratio: 1 / 1; }
+}
+
+/* ── Per-card patterns (Stage picks one per card position) ─────────────── */
+.fv__pattern {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  --px: 0%;
+  --py: 0%;
+  -webkit-mask-image: radial-gradient(80% 90% at var(--px) var(--py), #000 0%, rgba(0, 0, 0, 0.55) 42%, transparent 78%);
+  mask-image: radial-gradient(80% 90% at var(--px) var(--py), #000 0%, rgba(0, 0, 0, 0.55) 42%, transparent 78%);
+}
+.fv__pattern[data-corner='1'] { --px: 100%; --py: 0%; }
+.fv__pattern[data-corner='2'] { --px: 100%; --py: 100%; }
+.fv__pattern[data-corner='3'] { --px: 0%; --py: 100%; }
+/* Tiles fade into the card body below, so their pattern lives up top. */
+.fv--square .fv__pattern[data-corner='2'] { --px: 100%; --py: 0%; }
+.fv--square .fv__pattern[data-corner='3'] { --px: 50%; --py: 0%; }
+
+.fv__pattern[data-pattern='dots'] {
+  background: radial-gradient(circle, rgba(46, 32, 110, 0.2) 1px, transparent 1.5px) 0 0 / 14px 14px;
+}
+.fv__pattern[data-pattern='grid'] {
+  background:
+    linear-gradient(rgba(46, 32, 110, 0.075) 1px, transparent 1px) 0 0 / 28px 28px,
+    linear-gradient(90deg, rgba(46, 32, 110, 0.075) 1px, transparent 1px) 0 0 / 28px 28px;
+}
+.fv__pattern[data-pattern='lines'] {
+  background: repeating-linear-gradient(135deg, rgba(46, 32, 110, 0.08) 0 1px, transparent 1px 11px);
+}
+.fv__pattern[data-pattern='rings'] {
+  background: repeating-radial-gradient(circle at var(--px) var(--py), transparent 0 26px, rgba(46, 32, 110, 0.09) 26px 27px);
+}
+.fv__pattern[data-pattern='mesh'] {
+  background:
+    repeating-linear-gradient(45deg, rgba(46, 32, 110, 0.06) 0 1px, transparent 1px 16px),
+    repeating-linear-gradient(-45deg, rgba(46, 32, 110, 0.06) 0 1px, transparent 1px 16px);
+}
+/* Soft shafts of light across the colour, drifting very slowly. */
+.fv__pattern[data-pattern='beams'] {
+  inset: -10%;
+  background: repeating-linear-gradient(105deg, rgba(255, 255, 255, 0) 0 46px, rgba(255, 255, 255, 0.5) 46px 74px, rgba(255, 255, 255, 0) 74px 130px);
+  filter: blur(8px);
+  animation: fv-beams 24s ease-in-out infinite alternate;
+}
+@keyframes fv-beams { from { transform: translateX(-3%); } to { transform: translateX(3%); } }
+@media (prefers-reduced-motion: reduce) { .fv__pattern[data-pattern='beams'] { animation: none; } }
+
+/* ── Scene switches (Float `act`) ──────────────────────────────────────────
+   One act on stage at a time: the outgoing UI eases out to the left and
+   shrinks a touch; the next one arrives from the right. Overlap them by
+   ~0.2s (next `at` = previous `until` + 0.2) for a continuous hand-off. */
+.fv.is-armed.is-in .fv-float.fv-float--act-in {
+  animation: fv-act-in 0.95s var(--fv-ease) var(--fv-d, 0ms) both;
+}
+.fv.is-armed.is-in .fv-float.fv-float--until.fv-float--act-out {
+  animation:
+    fv-in 0.95s var(--fv-ease) var(--fv-d, 0ms) both,
+    fv-unfold 1.05s cubic-bezier(0.4, 0, 0.2, 1) var(--fv-d, 0ms) backwards,
+    fv-act-out 0.7s cubic-bezier(0.65, 0, 0.35, 1) var(--fv-until) forwards;
+}
+.fv.is-armed.is-in .fv-float.fv-float--until.fv-float--act-in.fv-float--act-out {
+  animation:
+    fv-act-in 0.95s var(--fv-ease) var(--fv-d, 0ms) both,
+    fv-act-out 0.7s cubic-bezier(0.65, 0, 0.35, 1) var(--fv-until) forwards;
+}
+@keyframes fv-act-in {
+  from { opacity: 0; transform: translate3d(5em, 0, 0) scale(0.95); }
+  45% { opacity: 1; }
+  to { opacity: 1; transform: none; }
+}
+@keyframes fv-act-out {
+  from { opacity: 1; transform: none; }
+  to { opacity: 0; transform: translate3d(-5em, 0, 0) scale(0.95); visibility: hidden; }
+}
+.fv .fv-cursor--touch svg { display: none; }
+
+/* Clean gradients only: no dot/grid/line patterns on any scene stage. */
+.fv .fv__pattern { display: none; }

@@ -85,6 +85,22 @@ const BLOCKS: TopicBlock[] = [
     body: 'RTO means Return to Origin: a parcel the buyer never accepted, coming back to you. Read how it differs from an NDR and a customer return, and what one refused COD order costs line by line.',
     link: { label: 'What RTO means in ecommerce', href: '/blog/rto-meaning-ecommerce' },
   },
+  {
+    kind: 'callout',
+    id: 'benchmark',
+    tone: 'note',
+    title: 'Is your RTO rate normal for your category?',
+    body: 'Fashion runs 25% to 40%, FMCG 8% to 12%. Compare your number with the published Indian bands.',
+    link: { label: 'See the 2026 RTO benchmark', href: '/blog/cod-rto-benchmark-india-2026' },
+  },
+  {
+    kind: 'callout',
+    id: 'sop',
+    tone: 'note',
+    title: 'How to reduce RTO, step by step',
+    body: 'Message timing, the reply branches and the warehouse hold rule, in one operating playbook.',
+    link: { label: 'Read the COD confirmation SOP', href: '/blog/how-to-reduce-rto-with-whatsapp-cod-confirmation' },
+  },
 ];
 
 export default function RtoCalculatorPage() {

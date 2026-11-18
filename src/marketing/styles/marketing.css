@@ -2024,13 +2024,8 @@ a.mkt-foot__partner:hover {
    that leads with a picture.
  * ------------------------------------------------------------------ */
 
-/* The reference lists plain words. The violet pill in front of every row
-   halved the space the label had and gave fifteen equal items fifteen equal
-   badges, which is decoration doing no sorting. */
-.mkt-nav__mega-link-icon,
-.mkt-nav__mobile-item-icon {
-  display: none !important;
-}
+/* Row icons are back (Nov 2026), as soft grey tiles with a line of
+   description beside each name: see styles/nav-mega.css. */
 
 .mkt-nav__mega-link {
   padding-left: 0.65rem;

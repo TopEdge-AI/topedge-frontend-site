@@ -10,6 +10,7 @@ import {
   Inbox,
   MessageCircle,
   Plus,
+  QrCode,
   ShieldCheck,
   ShieldPlus,
   UserCheck,
@@ -72,8 +73,9 @@ function Field({ label, children }: { label: string; children: ReactNode }) {
 
 function Register({ label }: SceneProps) {
   return (
-    <Stage label={label} shape="wide" duration={12}>
-      <Float x={8} y={10} w={38}>
+    <Stage label={label} shape="wide" duration={12.5}>
+      {/* Act 1: the box, and the QR on it */}
+      <Float x={31} y={18} w={38} until={2.9} act="out">
         <div className="wr-box">
           <div className="wr-box__top">
             <b>aura</b>
@@ -89,35 +91,40 @@ function Register({ label }: SceneProps) {
           </div>
           <span className="wr-box__serial">S/N AP2-48213</span>
         </div>
-        <Attach place="br" at={9.4} dx={1.2} dy={-2}>
-          <Toast icon={ShieldCheck} tone="emerald" title="Record created" sub="Warranty hub · Vikram Nair" />
+        <Attach place="br" at={1.8} dx={1.2} dy={-2}>
+          <Toast dark icon={QrCode} title="Scanned" sub="Opening WhatsApp" />
         </Attach>
       </Float>
-      <Float x={60} y={0} at={1.6}>
+
+      {/* Act 2: registered on WhatsApp */}
+      <Float x={34.1} y={4.6} at={3.1} act="in">
         <IPhone name="Aura Home" logo={<AuraDp />} time="18:04">
-          <Reveal at={2.4}>
+          <Reveal at={3.7}>
             <Bubble from="user" time="18:04" read>
               Hi! I want to register my warranty. Serial AP2-48213
             </Bubble>
           </Reveal>
-          <Reveal at={3.6}>
-            <Bubble from="biz" time="18:04" buttons={[{ label: 'Yes, register it', at: 5.6, cursor: 'yes' }]}>
+          <Reveal at={4.9}>
+            <Bubble from="biz" time="18:04" buttons={[{ label: 'Yes, register it', at: 6.9, cursor: 'yes' }]}>
               Found it, Vikram. Air purifier X2 from order #1144, delivered 12 Sept. Register this one?
             </Bubble>
           </Reveal>
-          <Reveal at={6.6}>
+          <Reveal at={7.6}>
             <Bubble from="user" time="18:05" read>
               Yes, register it
             </Bubble>
           </Reveal>
-          <Reveal at={7.6}>
+          <Reveal at={8.6}>
             <Bubble from="biz" time="18:05" media={<WarrantyCard />}>
               You're covered for 24 months. Reply CLAIM here any time you need help.
             </Bubble>
           </Reveal>
         </IPhone>
+        <Attach place="r" at={9.6} dx={7.5} dy={6}>
+          <Toast icon={ShieldCheck} tone="emerald" title="Record created" sub="Warranty hub · Vikram Nair" />
+        </Attach>
       </Float>
-      <Cursor touch path={[['qr', 0.6], ['qr', 1.3], ['yes', 5.3], ['yes', 5.9]]} clicks={[0.9, 5.6]} />
+      <Cursor touch path={[['qr', 0.6], ['qr', 1.3], ['yes', 6.6], ['yes', 7.2]]} clicks={[0.9, 6.9]} />
     </Stage>
   );
 }

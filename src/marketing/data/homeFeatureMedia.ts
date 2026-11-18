@@ -1,5 +1,5 @@
 /**
- * Homepage feature videos + CRM / identity stills.
+ * Homepage feature films + CRM bento stills.
  */
 
 export type DemoVideo = {
@@ -7,70 +7,33 @@ export type DemoVideo = {
   poster: string;
   /** Smaller encode for phones; when set, mobile autoplays in-view (no Play tap). */
   mobileSrc?: string;
+  /** Poster for the phone encode; its presence marks the phone encode as portrait 4:5. */
+  mobilePoster?: string;
 };
 
-const CART: DemoVideo = {
-  src: '/marketing/demos/cart-recovery.mp4',
-  poster: '/marketing/demos/cart-recovery-poster.jpg',
-  mobileSrc: '/marketing/demos/cart-recovery-mobile.mp4',
-};
+/**
+ * Code-rendered launch films (video/, src/comps/launch*.tsx): one per home story,
+ * 1600x900 on desktop and a portrait 720x900 cut composed for phones.
+ */
+const V = '20261119d';
+const film = (name: string): DemoVideo => ({
+  src: `/marketing/feature-clips/home/${name}.mp4?v=${V}`,
+  mobileSrc: `/marketing/feature-clips/home/${name}-mobile.mp4?v=${V}`,
+  poster: `/marketing/feature-clips/home/${name}-poster.jpg?v=${V}`,
+  mobilePoster: `/marketing/feature-clips/home/${name}-mobile-poster.jpg?v=${V}`,
+});
 
-const COD: DemoVideo = {
-  src: '/marketing/demos/cod-prepaid11.mp4?v=20260918a',
-  poster: '/marketing/demos/cod-prepaid-poster.jpg?v=20260918a',
-  mobileSrc: '/marketing/demos/cod-prepaid-mobile.mp4',
-};
-
-const FLOW: DemoVideo = {
-  src: '/marketing/demos/flowwww1.mp4?v=20260918a',
-  poster: '/marketing/demos/flow-builder-poster.jpg?v=20260918a',
-  mobileSrc: '/marketing/demos/flow-builder-mobile.mp4',
-};
-
-const INTENT: DemoVideo = {
-  src: '/marketing/demos/intentt.mp4?v=20260918a',
-  poster: '/marketing/demos/intent-poster.jpg?v=20260918a',
-  mobileSrc: '/marketing/demos/intent-mobile.mp4',
-};
-
-const OPTIN: DemoVideo = {
-  src: '/marketing/demos/opt-in.mp4?v=20260918a',
-  poster: '/marketing/demos/optin-popup-poster.jpg?v=20260918a',
-  mobileSrc: '/marketing/demos/opt-in-mobile.mp4',
-};
-
-const SEGMENT: DemoVideo = {
-  src: '/marketing/demos/segment.mp4',
-  poster: '/marketing/demos/segment-poster.jpg',
-  mobileSrc: '/marketing/demos/segment-mobile.mp4',
-};
-
-/** Feature moments, video demos. */
-export const FEATURE_VIDEOS = {
-  cart: CART,
-  cod: COD,
-  shopifyTools: FLOW,
-  campaigns: CART,
-  optin: OPTIN,
-  intent: INTENT,
-  segmentation: SEGMENT,
-} as const;
-
-/** Feature moments that use a still instead of video. */
-export const FEATURE_IMAGES = {
-  campaigns: {
-    src: '/campaignn.webp?v=20260921lcp',
-  },
-  unifiedIdentity: {
-    src: '/leaadd.webp?v=20260921lcp',
-  },
-  pixel: {
-    src: '/website-pixel.webp?v=20260921lcp',
-  },
-  /** Same still as the /features/profit-loss hero. */
-  profit: {
-    src: '/pnl/39.webp',
-  },
+export const HOME_FILMS = {
+  cart: film('cart'),
+  campaigns: film('campaigns'),
+  optin: film('optin'),
+  pixel: film('pixel'),
+  cod: film('cod'),
+  flow: film('flow'),
+  intent: film('intent'),
+  identity: film('identity'),
+  segments: film('segments'),
+  profit: film('profit'),
 } as const;
 
 export const CRM_BENTO = {

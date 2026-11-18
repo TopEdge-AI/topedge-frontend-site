@@ -3953,6 +3953,14 @@
   }
 }
 
+@media (max-width: 900px) {
+  .home-sticky__moment-scene .demo-video-glow.demo-video-glow--portrait-m {
+    width: min(100%, 520px);
+    max-width: 520px;
+    margin-inline: auto;
+  }
+}
+
 /* Reduced motion / static fallback — normal stack, no pin */
 .home-sticky--moments-static .home-sticky__static {
   gap: clamp(5rem, 10vh, 8rem);

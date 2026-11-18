@@ -1,0 +1,209 @@
+TOPEDGE AI — "EVERY FEATURE, SHOWN" — VOICEOVER SCRIPT (17:57.5, narrated master only)
+Website cut-downs are silent. Generated from the VO cues in the shot lists: if a line changes, change it there and regenerate.
+
+CASTING      Warm, confident, conversational Indian English; founder-to-founder; age 28–38; unhurried. Not trailer, not radio, not ASMR.
+PRONOUNCE    TopEdge = TOP-edge · COD = see-oh-dee · WhatsApp = WOTS-app · lakh = laakh · Hinglish lines as a native speaker says them
+             (kab aayega = kub aa-YE-gaa · kidhar = KID-har · karna hai = KUR-naa hai) · ₹ always read as "rupees" after the number.
+ELEVENLABS   Eleven v3 or Multilingual v2 · Stability 45 · Similarity 78 · Style 20 · Speaker boost ON · Speed 1.00.
+             Generate EACH LINE SEPARATELY, 3–4 takes, place at the timecode. Keep breaths (−6 to −8 dB).
+POST         HPF 80 Hz → de-ess 5–7 kHz (≤ −3 dB) → 2:1 comp → +1.5 dB at 2–3 kHz. No reverb. Room tone −62 dBFS under the VO bus.
+MARKS        / short pause · // long pause · CAPS = stress · … = let it hang
+
+TIME (mm:ss.cc)  LINE                                                                                   DIRECTION
+
+— CH01 FLOW BUILDER —
+00:05.20–00:08.38  Flow Builder. Bots that read every order.                                                chapter title: name, short pause, then the promise
+00:08.40–00:11.58  A shopper asks where his order is.                                                       land it, then a beat of air
+00:11.60–00:14.78  Shopify, read live. Answered in a second.                                                land it, then a beat of air
+00:18.00–00:20.27  When someone wants a human…                                                              carry into the next line, no drop
+00:21.00–00:25.09  …the bot steps aside and your team takes over.                                           land it, then a beat of air
+00:28.50–00:32.14  Orders and shipments arrive the moment they happen…                                      carry into the next line, no drop
+00:32.20–00:34.93  …so every answer uses today's data.                                                      land it, then a beat of air
+00:38.20–00:40.47  All your flows, in folders.                                                              land it, then a beat of air
+00:41.00–00:44.18  Switch one on, publish, and it's live.                                                   land it, then a beat of air
+00:44.40–00:48.04  The next shopper who writes in gets it.                                                  land it, then a beat of air
+00:53.20–00:55.93  Menus and branches, on one canvas.                                                       land it, then a beat of air
+00:57.00–01:00.64  Each tap moves the shopper one step on.                                                  land it, then a beat of air
+01:08.20–01:12.29  Test the flow before a single customer sees it.                                          land it, then a beat of air
+01:14.80–01:16.16  Every step passes…                                                                       carry into the next line, no drop
+01:16.60–01:17.51  …then publish.                                                                           land it, then a beat of air
+
+— CH02 OPT-IN TOOLS —
+01:22.70–01:25.88  Opt-in tools. A list that said yes.                                                      chapter title: name, short pause, then the promise
+01:26.20–01:30.29  Every signup lands on one list, with consent recorded.                                   land it, then a beat of air
+01:35.40–01:39.95  Choose when it shows: exit intent, a delay, a scroll.                                    land it, then a beat of air
+01:45.60–01:48.33  A chat button on every page…                                                             carry into the next line, no drop
+01:49.20–01:52.38  …that captures the number, then opens WhatsApp.                                          land it, then a beat of air
+01:55.60–01:58.78  A VIP drop: one tap to reveal.                                                           land it, then a beat of air
+01:59.00–02:00.36  Claimed on WhatsApp…                                                                     carry into the next line, no drop
+02:00.50–02:02.32  …and on your list.                                                                       land it, then a beat of air
+02:10.60–02:14.24  Aditi leaves her number for ten percent off.                                             land it, then a beat of air
+02:15.80–02:18.07  The code arrives on WhatsApp…                                                            carry into the next line, no drop
+02:18.40–02:20.67  …one tap to the product…                                                                 carry into the next line, no drop
+02:21.60–02:23.87  …and the order is placed.                                                                land it, then a beat of air
+02:28.20–02:29.56  Spin to win…                                                                             carry into the next line, no drop
+02:31.60–02:35.24  …with consent and a number for every spin.                                               land it, then a beat of air
+02:43.20–02:44.56  Scratch to reveal…                                                                       carry into the next line, no drop
+02:46.00–02:48.73  …then unlock it with a number.                                                           land it, then a beat of air
+
+— CH03 CAMPAIGNS —
+02:57.70–03:00.43  Campaigns. Measured in rupees, not ticks.                                                chapter title: name, short pause, then the promise
+03:00.40–03:04.04  Send the Diwali edit to your repeat buyers…                                              carry into the next line, no drop
+03:04.20–03:06.47  …it lands on Riya's phone…                                                               carry into the next line, no drop
+03:07.20–03:09.47  …one tap, and she buys.                                                                  land it, then a beat of air
+03:11.40–03:15.04  Two hundred and twelve orders, after Meta's fees.                                        land it, then a beat of air
+03:18.00–03:19.82  Segments from real behaviour…                                                            carry into the next line, no drop
+03:20.60–03:22.42  …not an old spreadsheet.                                                                 land it, then a beat of air
+03:28.20–03:32.29  Rank shoppers by intent, so broadcasts reach buyers first.                               land it, then a beat of air
+03:38.20–03:40.93  Profit per campaign, after messaging fees.                                               land it, then a beat of air
+03:48.20–03:50.47  Pick who earned a message…                                                               carry into the next line, no drop
+03:51.60–03:52.51  …and send.                                                                               land it, then a beat of air
+04:03.20–04:05.93  Only approved templates can go out.                                                      land it, then a beat of air
+04:05.90–04:08.63  Drafts never touch your quality rating.                                                  land it, then a beat of air
+04:18.20–04:20.93  Every campaign, in rupees after fees…                                                    carry into the next line, no drop
+04:21.80–04:24.07  …and what each one returned.                                                             land it, then a beat of air
+
+— CH04 AUDIENCE CRM —
+04:32.70–04:35.43  Audience CRM. One shopper, every order.                                                  chapter title: name, short pause, then the promise
+04:35.60–04:38.33  Riya's whole history, on one record.                                                     land it, then a beat of air
+04:38.80–04:40.62  Two numbers, one profile…                                                                carry into the next line, no drop
+04:40.80–04:43.53  …and every segment she belongs to.                                                       land it, then a beat of air
+04:53.20–04:56.38  Browsing, chats and orders on one contact.                                               land it, then a beat of air
+05:03.20–05:05.93  Build it once, use it everywhere…                                                        carry into the next line, no drop
+05:06.00–05:06.91  …no exports.                                                                             land it, then a beat of air
+05:13.20–05:15.93  Scores from what shoppers actually do.                                                   land it, then a beat of air
+05:23.20–05:26.84  A message from a number you don't know…                                                  carry into the next line, no drop
+05:26.80–05:29.98  …matched to the shopper it belongs to.                                                   land it, then a beat of air
+05:38.20–05:39.56  Open any shopper…                                                                        carry into the next line, no drop
+05:41.20–05:44.38  …orders, chats and campaigns on one screen.                                              land it, then a beat of air
+05:53.20–05:56.38  Stack the rules and watch the count…                                                     carry into the next line, no drop
+05:56.80–05:58.62  …then send to it.                                                                        land it, then a beat of air
+
+— CH05 JOURNEYS —
+06:07.70–06:09.97  Journeys. Follow-ups that run themselves.                                                chapter title: name, short pause, then the promise
+06:10.60–06:14.69  Drag a wait between the trigger and the message…                                         carry into the next line, no drop
+06:20.60–06:23.78  Or start from journeys that already work.                                                land it, then a beat of air
+06:31.60–06:35.24  Nothing goes live until Meta approves the template…                                      carry into the next line, no drop
+06:35.20–06:36.56  …then it runs.                                                                           land it, then a beat of air
+06:40.60–06:46.05  Naina leaves a ₹3,450 cart. The journey waits, then reminds her.                         land it, then a beat of air
+06:47.00–06:49.27  One tap back to checkout…                                                                carry into the next line, no drop
+06:49.60–06:50.96  …and she pays.                                                                           land it, then a beat of air
+06:52.00–06:52.91  Recovered, automatically.                                                                land it, then a beat of air
+06:58.20–07:00.47  Branch on how they paid…                                                                 carry into the next line, no drop
+07:01.60–07:05.24  …COD gets a confirmation, prepaid gets a thank-you.                                      land it, then a beat of air
+07:13.20–07:18.65  Riya's back for the third time, but her size is sold out…                                carry into the next line, no drop
+07:18.60–07:22.24  …so when it's back, the journey tells her.                                               land it, then a beat of air
+07:22.60–07:24.87  Interest, caught while it's warm.                                                        land it, then a beat of air
+
+— CH06 WEBSITE PIXEL —
+07:30.20–07:32.93  The website pixel. See who browses.                                                      chapter title: name, short pause, then the promise
+07:33.20–07:35.02  Aarav views the serum…                                                                   carry into the next line, no drop
+07:35.10–07:36.92  …adds it to cart…                                                                        carry into the next line, no drop
+07:37.00–07:37.91  …and leaves.                                                                             land it, then a beat of air
+07:39.60–07:42.78  Twenty minutes later, WhatsApp brings him back.                                          land it, then a beat of air
+07:43.20–07:45.47  Every step, on one profile.                                                              land it, then a beat of air
+07:50.60–07:54.24  Turn it on from your theme. No code.                                                     land it, then a beat of air
+08:00.60–08:03.78  Views, carts and checkouts, as they happen.                                              land it, then a beat of air
+08:10.60–08:12.87  See exactly where they drop…                                                             carry into the next line, no drop
+08:20.60–08:22.87  Intent, while it's still warm…                                                           carry into the next line, no drop
+08:24.20–08:26.02  …queued for recovery automatically.                                                      land it, then a beat of air
+08:35.60–08:38.33  The moment checkout gives a number…                                                      carry into the next line, no drop
+08:38.60–08:41.33  …the whole visit joins his profile.                                                      land it, then a beat of air
+08:50.60–08:52.87  Know the pixel is working…                                                               carry into the next line, no drop
+08:54.20–08:56.93  …and use the audiences it builds.                                                        land it, then a beat of air
+
+— CH07 AI BRAIN —
+09:05.20–09:08.38  AI Brain. Answers from your own policies.                                                chapter title: name, short pause, then the promise
+09:08.40–09:12.04  Tanvi asks something only your policy can answer.                                        land it, then a beat of air
+09:12.00–09:17.45  Maya answers from the return policy, and says where it came from.                        land it, then a beat of air
+09:18.20–09:22.29  Then it does the work: the pickup is booked.                                             land it, then a beat of air
+09:25.60–09:29.69  Import your policies and pages. They stay in sync.                                       land it, then a beat of air
+09:35.60–09:39.24  Bring your own key: OpenAI, Claude or Gemini.                                            land it, then a beat of air
+09:39.20–09:41.47  You pay the provider directly.                                                           land it, then a beat of air
+09:45.60–09:51.05  Set the name and the tone, and every reply stays on brand.                               land it, then a beat of air
+09:55.60–09:59.24  Pick the model and cap the reply length…                                                 carry into the next line, no drop
+09:59.20–10:02.38  …and see the cost, with no markup.                                                       land it, then a beat of air
+10:10.60–10:13.33  Ask it anything about your store…                                                        carry into the next line, no drop
+10:14.60–10:18.69  …it answers in your voice, from your own pages.                                          land it, then a beat of air
+10:25.60–10:29.69  Known questions go to flows, at no AI cost…                                              carry into the next line, no drop
+10:30.20–10:34.29  …and a human request always goes to a person.                                            land it, then a beat of air
+
+— CH08 META MANAGER —
+10:40.20–10:42.93  Meta Manager. Approved before it sends.                                                  chapter title: name, short pause, then the promise
+10:43.20–10:46.38  Write the template, submit it to Meta…                                                   carry into the next line, no drop
+10:47.80–10:50.07  …and the moment it's approved…                                                           carry into the next line, no drop
+10:50.60–10:53.33  …it's on its way to shoppers.                                                            land it, then a beat of air
+11:00.60–11:02.87  Approved, pending, rejected, and why.                                                    land it, then a beat of air
+11:10.60–11:15.15  Blueprints come ready, with your live product in the header.                             land it, then a beat of air
+11:20.60–11:26.05  Your catalog, synced from Shopify, and a QR that opens your chat.                        land it, then a beat of air
+11:30.60–11:31.96  Sync from Meta…                                                                          carry into the next line, no drop
+11:33.00–11:37.09  …every status, and Meta's reason when it says no.                                        land it, then a beat of air
+11:45.60–11:47.87  Write once, with named variables…                                                        carry into the next line, no drop
+11:48.60–11:51.78  …and see exactly what shoppers will get.                                                 land it, then a beat of air
+12:00.60–12:01.96  Refresh from Shopify…                                                                    carry into the next line, no drop
+12:04.40–12:08.49  …and download a QR for your packaging and ads.                                           land it, then a beat of air
+
+— CH09 CHAT RULES —
+12:15.20–12:18.38  Chat rules. Every chat, the right person.                                                chapter title: name, short pause, then the promise
+12:18.40–12:22.04  A shopper wants to cancel a COD order…                                                   carry into the next line, no drop
+12:22.00–12:25.18  …the rule sends it straight to Ops.                                                      land it, then a beat of air
+12:25.10–12:27.83  Solved before the queue piles up.                                                        land it, then a beat of air
+12:35.60–12:37.42  Keywords in any language…                                                                carry into the next line, no drop
+12:38.00–12:41.18  …route the chat to the right team.                                                       land it, then a beat of air
+12:45.60–12:48.33  When the intent is 'a human'…                                                            carry into the next line, no drop
+12:48.30–12:52.39  …your team takes over with the order already open.                                       land it, then a beat of air
+12:55.60–12:57.87  Filters that follow your rules…                                                          carry into the next line, no drop
+12:58.00–12:59.82  …so nothing sits unowned.                                                                land it, then a beat of air
+13:05.60–13:09.69  When a message says refund, return or paisa wapas…                                       carry into the next line, no drop
+13:09.60–13:14.15  …assign it and pause the bot. Live in one click.                                         land it, then a beat of air
+13:20.60–13:24.24  COD to Ops, VIPs to your best agent…                                                     carry into the next line, no drop
+13:24.10–13:26.37  …and anything tricky is flagged.                                                         land it, then a beat of air
+13:35.60–13:37.42  The AI replies first…                                                                    carry into the next line, no drop
+13:38.20–13:40.47  …until your agent takes control.                                                         land it, then a beat of air
+
+— CH10 WARRANTY —
+13:50.20–13:52.02  Warranty. Registered on WhatsApp.                                                        chapter title: name, short pause, then the promise
+13:53.20–13:56.38  Vikram scans the QR on the box…                                                          carry into the next line, no drop
+13:56.40–14:00.04  …WhatsApp opens with the serial already filled in.                                       land it, then a beat of air
+14:00.80–14:05.80  Registered in seconds, with the card right there in the chat.                            land it, then a beat of air
+14:10.60–14:14.24  Every warranty, claim and expiry in one hub.                                             land it, then a beat of air
+14:14.60–14:18.24  Add one by hand when you need to.                                                        land it, then a beat of air
+14:25.60–14:27.87  Nothing waits without an owner…                                                          carry into the next line, no drop
+14:28.60–14:31.33  …and the customer hears about it.                                                        land it, then a beat of air
+14:40.60–14:43.33  A claim comes in on WhatsApp…                                                            carry into the next line, no drop
+14:43.30–14:47.39  …you match the order and the right person, yourself.                                     land it, then a beat of air
+
+— CH11 PROFIT & COSTS —
+14:55.20–14:58.38  Profit and costs. What you actually kept.                                                chapter title: name, short pause, then the promise
+14:58.40–15:00.22  One seven-hundred-ninety-nine-rupee COD order…                                           carry into the next line, no drop
+15:00.60–15:03.78  …packing, freight, the COD fee, returns, support…                                        carry into the next line, no drop
+15:03.70–15:09.15  …a hundred and seventy-nine rupees. More than twice the freight you see.                 land it, then a beat of air
+15:15.60–15:18.78  Start from what each product really costs…                                               carry into the next line, no drop
+15:25.60–15:29.69  Gateway, platform and ad cost per order, pulled in.                                      land it, then a beat of air
+15:35.60–15:38.78  Three in ten COD orders come back…                                                       carry into the next line, no drop
+15:38.70–15:41.88  …each one costs a hundred and twenty-five.                                               land it, then a beat of air
+15:45.60–15:47.42  Switch to thirty days…                                                                   carry into the next line, no drop
+15:48.00–15:52.55  …three thousand five hundred and sixty-two rupees, after every cost.                     land it, then a beat of air
+16:00.60–16:03.78  Revenue, then every cost, step by step…                                                  carry into the next line, no drop
+16:05.00–16:07.73  …and the biggest one, called out.                                                        land it, then a beat of air
+16:15.60–16:20.15  Sort by margin, and the loss-maker rises to the top.                                     land it, then a beat of air
+16:20.00–16:23.18  Now you know which one to fix.                                                           land it, then a beat of air
+
+— CH12 INTENT DETECTION —
+16:30.20–16:33.38  Intent detection. It understands how India types.                                        chapter title: name, short pause, then the promise
+16:33.30–16:34.66  Parcel kab aayega…                                                                       carry into the next line, no drop
+16:35.80–16:38.53  …or order kidhar hai. Same intent.                                                       land it, then a beat of air
+16:43.20–16:46.38  A matched intent starts the right flow…                                                  carry into the next line, no drop
+16:46.30–16:49.03  …without spending a single AI token.                                                     land it, then a beat of air
+16:53.20–16:56.38  Test a phrase before it goes live…                                                       carry into the next line, no drop
+16:56.30–16:59.03  …and see how sure it is.                                                                 land it, then a beat of air
+17:03.20–17:05.47  Add an intent in seconds…                                                                carry into the next line, no drop
+17:07.40–17:09.22  …and switch it on.                                                                       land it, then a beat of air
+17:18.20–17:21.38  Teach it the way your customers write…                                                   carry into the next line, no drop
+17:21.60–17:23.87  …and decide what happens next.                                                           land it, then a beat of air
+17:33.20–17:35.93  Rahul asks the way he talks…                                                             carry into the next line, no drop
+17:36.40–17:40.49  …and gets his real order status in a second.                                             land it, then a beat of air
+17:41.20–17:43.93  Every feature, doing its one job.                                                        land it, then a beat of air
+
+Lines: 170 · Words: 1098 · Average 1.02 words/sec over the film (sparse on purpose: the pictures carry the story).
+Do not add words. If a take runs long, trim the pause after it, never the next line's start.

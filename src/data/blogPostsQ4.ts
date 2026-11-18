@@ -261,7 +261,7 @@ const BITESPEED_FAQS: Faq[] = [
   {
     question: 'Is Bitespeed a good fit for small Indian Shopify stores?',
     answer:
-      'Usually not. According to our September 2026 research Bitespeed asks stores to reach a minimum monthly revenue to qualify for onboarding, with baseline plans starting around ₹15,000 a month. That suits larger brands, while smaller D2C stores usually look for a plan sized to order volume instead.',
+      'Usually not. Bitespeed publishes no price, but third-party figures from September 2026 describe a minimum monthly revenue to qualify for onboarding and baseline plans around ₹15,000 a month. That suits larger brands, while smaller D2C stores usually look for a plan sized to order volume instead.',
   },
   {
     question: 'What is the best Bitespeed alternative for Shopify India?',
@@ -271,7 +271,12 @@ const BITESPEED_FAQS: Faq[] = [
   {
     question: 'Does Bitespeed charge extra for AI?',
     answer:
-      'Yes, on the public information: listings and third-party summaries in September 2026 describe the AI chatbot and AI marketing agent as separate add-ons. Confirm the current price on bitespeed.co or the Shopify App Store before you compare.',
+      'Yes, on the public information: listings and third-party summaries in September 2026 describe the AI chatbot and AI marketing agent as separate add-ons. Bitespeed’s pricing page now opens a demo form, so ask for the add-on price in writing before you compare.',
+  },
+  {
+    question: 'How much does Bitespeed cost?',
+    answer:
+      'Bitespeed does not publish a price: on 17 November 2026 its pricing page redirected to a demo request form. Its Shopify App Store listing is free to install with additional charges billed every 30 days. Third-party figures from September 2026 put baseline plans around ₹15,000 a month.',
   },
   {
     question: 'Can I keep my Shopify data when I change WhatsApp tools?',
@@ -452,6 +457,11 @@ const RTO_MEANING_FAQS: Faq[] = [
       'An NDR (Non-Delivery Report) is raised when one delivery attempt fails, and the order can still be saved. An RTO is what an unresolved NDR becomes: the parcel is on its way back. Amazon Shipping India states that nearly every failed delivery not resolved within 36 hours of the NDR ends in cancellation and RTO.',
   },
   {
+    question: 'What does NDR raised mean?',
+    answer:
+      'It means the courier tried to deliver, the attempt failed, and it logged a Non-Delivery Report that now needs an action: a reattempt, a corrected address or a return. Act fast, because Amazon Shipping India states that nearly every NDR left unresolved for 36 hours ends in RTO.',
+  },
+  {
     question: 'How much does one RTO cost a seller in India?',
     answer:
       '₹180 to ₹240 in direct logistics per parcel, per Amazon Shipping India: forward shipping, the return leg, repackaging and inventory held in transit. Counting the ad spend that won the order, ClickPost puts the fully loaded loss at ₹450 to ₹900 per RTO order, via First Resort. Both were read on 21 October 2026.',
@@ -493,6 +503,34 @@ const WHATSAPP_BUTTON_FAQS: Faq[] = [
     question: 'Where do chats from the button arrive?',
     answer:
       'On whichever number the link points to. If that number is on the WhatsApp Business app, chats arrive on that phone. If it is connected to a WhatsApp Business Platform tool such as TopEdge AI, they land in a shared inbox where several people can reply, with the Shopify order shown beside the chat.',
+  },
+];
+
+const SHIPPING_TOOLS_FAQS: Faq[] = [
+  {
+    question: 'What is a shipping aggregator?',
+    answer:
+      'A shipping aggregator, also called a courier aggregator, puts many courier companies behind one account. You book, label, track and settle COD for every courier from one panel, at the aggregator’s negotiated rates, instead of signing a contract with each courier yourself.',
+  },
+  {
+    question: 'Which is the best courier aggregator in India?',
+    answer:
+      'For most D2C brands under 1,500 orders a month, Shiprocket is the safest first pick: free to start, paid plans from ₹199 a month, and 648 Shopify App Store reviews to read first. Once you run your own courier contracts, ClickPost connects 700+ carriers with NDR automation on a custom quote.',
+  },
+  {
+    question: 'What is a good Shiprocket alternative?',
+    answer:
+      'It depends on why you are leaving. For lower published per-parcel rates at volume, compare NimbusPost and Shipmozo. For tracking and returns built in, look at Shipway. For your own courier contracts on one platform, ClickPost.',
+  },
+  {
+    question: 'What does NDR mean in shipping?',
+    answer:
+      'NDR stands for Non-Delivery Report: the courier logs a failed delivery attempt and waits for an action. Amazon Shipping India states that nearly every NDR left unresolved for 36 hours ends in RTO, which is why NDR automation matters when you compare tools.',
+  },
+  {
+    question: 'How do I reduce RTO before the parcel ships?',
+    answer:
+      'Confirm every COD order on WhatsApp before you book the courier, and hold anything the buyer does not confirm. One utility message costs ₹0.1150 at Meta’s India rate, against ₹180 to ₹240 in direct logistics for each parcel that comes back.',
   },
 ];
 
@@ -905,7 +943,7 @@ ${faqHtml(AISENSY_FAQS)}
   },
   {
     id: 29,
-    title: 'Interakt Alternative for Shopify India (2026)',
+    title: 'Interakt Alternative for Shopify India (2027)',
     description:
       'Best Interakt alternative for Shopify India: TopEdge AI, Updatrr, WATI and AiSensy with prices read 18 Nov 2026, AI reply costs and when to stay.',
     summary: [
@@ -1061,7 +1099,7 @@ ${faqHtml(INTERAKT_FAQS)}
     ],
     slug: 'bitespeed-alternative-shopify-india',
     date: '2026-10-08',
-    updated: '2026-10-21',
+    updated: '2026-11-17',
     readTime: '8 min',
     category: 'Comparisons',
     author: 'Moksh Patel',
@@ -1092,7 +1130,7 @@ ${faqHtml(INTERAKT_FAQS)}
       },
     ],
     content: `
-${verdict(`<p><strong>A Bitespeed alternative for Shopify India makes sense when you are under its revenue floor.</strong> Bitespeed asks for about ₹5,00,000 monthly revenue and baseline plans from about ₹15,000 a month. TopEdge AI, our own app, starts at ₹1,999 a month plus GST with no Meta markup. Past 1,500 orders a month, or for SMS and voice, Bitespeed still fits.</p>`)}
+${verdict(`<p><strong>Bitespeed publishes no price:</strong> its pricing page now opens a demo form (checked 17 November 2026). Third-party figures from September 2026 put its floor near ₹5,00,000 monthly revenue and plans near ₹15,000 a month. TopEdge AI, our own app, starts at ₹1,999 a month plus GST with no Meta markup. Past 1,500 orders a month, or for SMS and voice, Bitespeed still fits.</p>`)}
 
 <p>Most people searching for a <strong>Bitespeed alternative</strong> are not unhappy with the product. They have read the pricing page, found a revenue floor they do not clear yet, and are looking for something that will take their money today. That is a sizing problem, not a features problem, and it changes which questions are worth asking.</p>
 <p>Bitespeed is often named in roundups for WhatsApp-heavy markets including India. The question for a small or mid-size D2C brand is not whether it is good, but whether its pricing model fits your size.</p>
@@ -1107,13 +1145,16 @@ ${verdict(`<p><strong>A Bitespeed alternative for Shopify India makes sense when
 </ol>
 <p>If none of those apply, stay. Switching platforms costs a fortnight of attention, and that is real money too.</p>
 
-<h2>Where does Bitespeed pricing stop fitting?</h2>
+<h2>Bitespeed pricing for 2027: what is published</h2>
+<p>Nothing, on Bitespeed’s own site. <a href="https://www.bitespeed.co/pricing" target="_blank" rel="noopener noreferrer">bitespeed.co/pricing</a> now redirects to a demo request form that says its sales team will get in touch. We checked on 17 November 2026.</p>
+<p>The <a href="https://apps.shopify.com/bitespeed-fb-messenger-chatbot" target="_blank" rel="noopener noreferrer">Shopify App Store listing</a> says “Free to install. Additional charges may apply”, billed in USD or INR every 30 days. It is rated 4.6 from 406 reviews.</p>
+<p>Everything else is third-party, from September 2026, and not confirmed by Bitespeed:</p>
 <ul>
-<li><strong>Onboarding threshold.</strong> Our September 2026 research found a minimum monthly revenue requirement and baseline plans from about ₹15,000 a month.</li>
-<li><strong>AI add-ons.</strong> The AI chatbot and AI marketing agent are described as separate add-ons of roughly $100 a month each.</li>
-<li><strong>Markup on Meta rates.</strong> Platform usage and conversation markup apply on top of Meta’s base rates.</li>
-<li><strong>Warranty</strong> is not natively supported.</li>
+<li><strong>Onboarding threshold.</strong> A minimum of about ₹5,00,000 monthly revenue, with baseline plans from about ₹15,000 a month.</li>
+<li><strong>AI add-ons.</strong> The AI chatbot and AI marketing agent described as separate add-ons of roughly $100 a month each.</li>
+<li><strong>Markup on Meta rates.</strong> Platform usage and conversation markup on top of Meta’s base rates.</li>
 </ul>
+<p>Treat those as estimates and ask Bitespeed for a written quote at your order volume. One thing is not in doubt: warranty is not natively supported.</p>
 <p>What Bitespeed does well: native COD to prepaid, broad omnichannel coverage and opt-in widgets such as spin-the-wheel pop-ups.</p>
 
 <h2>Compared with a flat order-based plan</h2>
@@ -1121,9 +1162,9 @@ ${verdict(`<p><strong>A Bitespeed alternative for Shopify India makes sense when
 <thead><tr><th>Area</th><th>TopEdge AI</th><th>Bitespeed (public patterns)</th></tr></thead>
 <tbody>
 <tr><td>Who it is built for</td><td>Shopify D2C in India</td><td>Larger brands, omnichannel</td></tr>
-<tr><td>Entry price</td><td>₹1,999/mo + GST</td><td>About ₹15,000/mo baseline</td></tr>
+<tr><td>Entry price</td><td>₹1,999/mo + GST</td><td>Not published; about ₹15,000/mo per third parties</td></tr>
 <tr><td>AI</td><td>Bring your own key</td><td>Separate add-ons</td></tr>
-<tr><td>Meta billing</td><td>Meta rates, no markup</td><td>Platform markup applies</td></tr>
+<tr><td>Meta billing</td><td>Meta rates, no markup</td><td>Platform markup, per third parties</td></tr>
 <tr><td>Warranty</td><td>Built in</td><td>Not native</td></tr>
 </tbody>
 </table>
@@ -1138,8 +1179,8 @@ ${verdict(`<p><strong>A Bitespeed alternative for Shopify India makes sense when
 <tr><td>TopEdge AI Launch, billed yearly</td><td>₹1,599</td><td><strong>₹19,188</strong></td></tr>
 <tr><td>TopEdge AI Growth, billed yearly</td><td>₹3,199</td><td><strong>₹38,388</strong></td></tr>
 <tr><td>TopEdge AI Scale, billed yearly</td><td>₹5,199</td><td><strong>₹62,388</strong></td></tr>
-<tr><td>Bitespeed baseline</td><td>About ₹15,000</td><td><strong>About ₹1,80,000</strong></td></tr>
-<tr><td>Bitespeed baseline plus two AI add-ons at about $100 each</td><td>About ₹32,000</td><td><strong>About ₹3,84,000</strong></td></tr>
+<tr><td>Bitespeed baseline (third-party estimate)</td><td>About ₹15,000</td><td><strong>About ₹1,80,000</strong></td></tr>
+<tr><td>Bitespeed baseline plus two AI add-ons at about $100 each (third-party estimate)</td><td>About ₹32,000</td><td><strong>About ₹3,84,000</strong></td></tr>
 </tbody>
 </table>
 </div>
@@ -1148,10 +1189,10 @@ ${verdict(`<p><strong>A Bitespeed alternative for Shopify India makes sense when
 <h2>What you give up by leaving Bitespeed</h2>
 <p>A comparison page written by one of the two products is worth reading sceptically, so here is the honest side of the ledger. Moving to a WhatsApp-first platform costs you real things:</p>
 <ul>
-<li><strong>Channel breadth.</strong> Email, SMS and web chat leave the contract. If your flows genuinely span them, you are swapping one bill for two.</li>
+<li><strong>Channel breadth.</strong> SMS and web chat leave the contract; email stays if you connect your own Gmail to TopEdge AI. If your flows genuinely span SMS, you are swapping one bill for two.</li>
 <li><strong>One vendor for everything.</strong> Two tools means two support queues and two places a journey can break.</li>
 <li><strong>A packaged AI agent suite.</strong> Bring-your-own-key is cheaper and more controllable, and it is also more setup than a toggle.</li>
-<li><strong>Whatever you have already built.</strong> Templates, segments and automations do not port. Budget for rebuilding them.</li>
+<li><strong>Whatever you have already built.</strong> Templates carry over if you keep the same WABA; segments and automations do not. Budget for rebuilding them.</li>
 </ul>
 <p>None of that is fatal, and for a store under the revenue floor it is mostly theoretical. But decide it deliberately rather than discovering it in week two.</p>
 
@@ -2751,13 +2792,14 @@ ${faqHtml(AISENSY_PRICING_FAQS)}
     ],
     slug: 'rto-meaning-ecommerce',
     date: '2026-11-15',
-    updated: '2026-11-15',
+    updated: '2026-11-17',
     readTime: '6 min',
     category: 'COD',
     author: 'Moksh Patel',
-    image: '/marketing/solutions/sol-cod-rto-saas.jpg',
+    image: '/blog/rto-meaning-ecommerce.jpg',
+    imageWebp: '/blog/rto-meaning-ecommerce.webp',
     imageAlt:
-      'An RTO risk panel with confirmed, prepaid and at-risk COD counts, beside a WhatsApp thread confirming a buyer’s shipping address',
+      'RTO in ecommerce: a parcel and a delivery van on a return loop, an RTO cost card reading ₹240 per parcel and a Status: NDR Raised badge',
     keywords: [
       'rto in ecommerce',
       'rto full form in ecommerce',
@@ -2765,6 +2807,8 @@ ${faqHtml(AISENSY_PRICING_FAQS)}
       'return to origin',
       'rto vs ndr',
       'rto cost per order india',
+      'ndr full form',
+      'ndr meaning',
     ],
     faqs: RTO_MEANING_FAQS,
     content: `
@@ -2790,6 +2834,11 @@ ${faqHtml(AISENSY_PRICING_FAQS)}
 </table>
 </div>
 <p>An NDR comes first, and an NDR left unresolved becomes an RTO. <a href="https://shipping.amazon.in/blog/what-is-ndr-in-shipping-india" target="_blank" rel="noopener noreferrer">Amazon Shipping India’s NDR guide</a> states that nearly every failed delivery not resolved within <strong>36 hours</strong> of the NDR being raised ends in cancellation and RTO.</p>
+
+<h2>NDR full form and meaning</h2>
+<p><strong>NDR stands for Non-Delivery Report.</strong> The courier raises one each time a delivery attempt fails, with the reason it logged: the buyer could not be reached, the address was incomplete, or the buyer refused or asked for another day. The parcel is still with the courier, so the order can still be saved.</p>
+<p>On a tracking page or courier panel you will see it as <strong>“NDR raised”</strong> or <strong>“NDR initiated”</strong>. Both mean a failed attempt is logged and waiting for an action: a reattempt, a corrected address or a return to you.</p>
+<p>What a seller does with one: reach the buyer within 2 to 4 hours, as Amazon Shipping India advises, fix the address or agree a slot, and push the reattempt through the courier panel. Most shipping aggregators automate that follow-up; we compared ten in <a href="/blog/best-shipping-aggregators-logistics-tools-india">the best shipping aggregators and logistics tools in India</a>.</p>
 
 <h3>From failed attempt to RTO</h3>
 <ol>
@@ -2821,7 +2870,7 @@ ${faqHtml(AISENSY_PRICING_FAQS)}
 <h2>5 ways to reduce RTO on COD orders</h2>
 <p>Each fix acts before the parcel ships or inside the NDR window. The full operating playbook, with message timings and warehouse hold rules, is <a href="/blog/how-to-reduce-rto-with-whatsapp-cod-confirmation">our WhatsApp COD confirmation SOP</a>.</p>
 <ol>
-<li><strong>Confirm every COD order on WhatsApp.</strong> Send an approved utility template within minutes of checkout with Confirm and Cancel buttons, and hold the parcel until a reply lands. At ₹0.1150 a message it is the cheapest line on this page. <a href="/features/cod-confirmation">TopEdge AI’s COD confirmation</a> is on every plan.</li>
+<li><strong>Confirm every COD order on WhatsApp.</strong> Send an approved utility template within minutes of checkout with Confirm and Cancel buttons, and hold the parcel until a reply lands. At ₹0.1150 a message it is the cheapest line on this page. <a href="/features/cod-confirmation">TopEdge AI’s COD confirmation</a> is on <a href="/pricing">every plan</a>.</li>
 <li><strong>Check the address before dispatch.</strong> Ask for a landmark or a corrected address in the same thread, above all for buyers in pincodes that often return. The <a href="/whatsapp-journey-examples/cod-confirmation">COD confirmation journey</a> shows the message and each reply branch.</li>
 <li><strong>Move COD buyers to prepaid.</strong> A prepaid order is worth about ₹68 more than the same order on COD once the remittance fee and RTO risk are counted. Send the offer as a separate message after confirmation, because a discount inside the confirmation turns a ₹0.1150 utility message into a ₹0.8631 marketing one. See <a href="/blog/cod-to-prepaid-whatsapp-shopify-india">COD to prepaid on WhatsApp</a>; on TopEdge AI it starts on the Growth plan.</li>
 <li><strong>Follow up every NDR within hours.</strong> Message the buyer as soon as the NDR lands, offering a new slot or an address fix, and treat anything still silent at hour 24 as an escalation. Keeping buyers updated with tracking before the first attempt, as in the <a href="/whatsapp-journey-examples/order-status-updates">order status journey</a>, means fewer surprises at the door.</li>
@@ -2851,10 +2900,10 @@ ${faqHtml(RTO_MEANING_FAQS)}
     readTime: '5 min',
     category: 'Guides',
     author: 'Moksh Patel',
-    image: '/marketing/features/shopify-whatsapp.jpg',
-    imageWebp: '/marketing/features/shopify-whatsapp.webp',
+    image: '/blog/add-whatsapp-chat-button-shopify.jpg',
+    imageWebp: '/blog/add-whatsapp-chat-button-shopify.webp',
     imageAlt:
-      'A shared WhatsApp inbox where a shopper’s question about their order sits beside the Shopify order, a ₹1,359 Cash on Delivery order',
+      'Add a WhatsApp chat button to Shopify: the wa.me link code for the button, the WhatsApp icon and an Opt-In Active status',
     keywords: [
       'whatsapp chat button shopify',
       'add whatsapp to shopify',
@@ -2929,6 +2978,311 @@ ${faqHtml(RTO_MEANING_FAQS)}
 ${faqHtml(WHATSAPP_BUTTON_FAQS)}
 
 <p class="mkt-blog-footnote">Sources: <a href="https://faq.whatsapp.com/5913398998672934" target="_blank" rel="noopener noreferrer">WhatsApp’s click to chat help page</a>, read 15 November 2026; <a href="https://shopify.dev/docs/storefronts/themes/best-practices/performance" target="_blank" rel="noopener noreferrer">Shopify’s theme performance best practices</a>; <a href="https://developers.facebook.com/docs/whatsapp/pricing/" target="_blank" rel="noopener noreferrer">Meta’s pricing documentation</a>, effective 1 October 2026. TopEdge AI prices from our <a href="/pricing">pricing page</a>.</p>
+`,
+  },
+  {
+    id: 67,
+    title: '10 Best Shipping Aggregators & Logistics Tools in India 2027',
+    description:
+      'The 10 best shipping aggregators and logistics tools for Indian D2C brands in 2027: Shiprocket, ClickPost and 8 more, with prices checked in November.',
+    summary: [
+      'Going into 2027, the best shipping aggregator for most Indian Shopify brands shipping 100 to 1,500 orders a month is Shiprocket: free to start, paid plans from ₹199 a month, rated 3.9 from 648 App Store reviews (read 17 November 2026).',
+      'ClickPost is the pick once you run your own courier contracts: 700+ carriers on one platform, NDR automation and a voice AI agent, priced on a custom quote.',
+      'Shipway, iThink Logistics, Eshopbox, Shipmozo and NimbusPost are the other aggregators worth a trial. Unicommerce, EasyEcom and Return Prime cover orders, stock and returns.',
+      'Judge tools on NDR and RTO handling, not the per-parcel rate: at 500 orders a month, returned parcels can cost ₹14,760 to ₹19,680, about as much as the shipping bill itself.',
+    ],
+    slug: 'best-shipping-aggregators-logistics-tools-india',
+    date: '2026-11-17',
+    updated: '2026-11-17',
+    readTime: '11 min',
+    category: 'COD',
+    author: 'Moksh Patel',
+    image: '/blog/best-shipping-aggregators-logistics-tools-india.jpg',
+    imageWebp: '/blog/best-shipping-aggregators-logistics-tools-india.webp',
+    imageAlt:
+      '10 best shipping aggregators in India: courier logos for Delhivery, Ekart, XpressBees and Ecom Express beside Courier Assigned and NDR Automated status cards',
+    keywords: [
+      'shipping aggregator india',
+      'best shipping aggregator in india 2027',
+      'courier aggregator in india',
+      'best courier aggregator in india',
+      'logistics software for d2c brands',
+      'ndr management software',
+      'multi carrier shipping software',
+      'shiprocket alternative',
+    ],
+    faqs: SHIPPING_TOOLS_FAQS,
+    itemList: [
+      { name: 'Shiprocket', url: 'https://www.shiprocket.in/', description: 'Shipping aggregator with free and paid plans, NDR automation, branded tracking and early COD.', software: { category: 'BusinessApplication', operatingSystem: 'Web' } },
+      { name: 'ClickPost', url: 'https://www.clickpost.ai/', description: 'Logistics intelligence platform: 700+ carriers, AI carrier allocation, NDR management, tracking, returns and the Parth voice AI agent.', software: { category: 'BusinessApplication', operatingSystem: 'Web' } },
+      { name: 'Shipway', url: 'https://www.shipway.com/', description: 'Multi-courier shipping from Unicommerce with ShipSense AI courier selection, NDR management, tracking and returns.', software: { category: 'BusinessApplication', operatingSystem: 'Web' } },
+      { name: 'iThink Logistics', url: 'https://www.ithinklogistics.com/', description: 'Courier aggregator with AI NDR handling, buyer intent checks and next-day COD remittance.', software: { category: 'BusinessApplication', operatingSystem: 'Web' } },
+      { name: 'Eshopbox', url: 'https://www.eshopbox.com/', description: 'Shipping from your own location or fulfilment from Eshopbox warehouses, with an RTO reduction suite.', software: { category: 'BusinessApplication', operatingSystem: 'Web' } },
+      { name: 'Shipmozo', url: 'https://www.shipmozo.com/', description: 'Courier aggregator with a free plan, free NDR calling and out-for-delivery alerts.', software: { category: 'BusinessApplication', operatingSystem: 'Web' } },
+      { name: 'NimbusPost', url: 'https://nimbuspost.com/', description: 'Courier aggregator with published per-parcel rates that fall with monthly volume.', software: { category: 'BusinessApplication', operatingSystem: 'Web' } },
+      { name: 'Unicommerce', url: 'https://unicommerce.com/', description: 'Order and warehouse management (Uniware) for multichannel brands.', software: { category: 'BusinessApplication', operatingSystem: 'Web' } },
+      { name: 'EasyEcom', url: 'https://www.easyecom.io/', description: 'Inventory and order management priced on orders, SKUs and warehouses.', software: { category: 'BusinessApplication', operatingSystem: 'Web' } },
+      { name: 'Return Prime', url: 'https://apps.shopify.com/return-prime', description: 'Returns and exchanges portal for Shopify brands.', software: { category: 'BusinessApplication', operatingSystem: 'Web' } },
+    ],
+    content: `
+<details class="mkt-blog-verdict" open>
+<summary>Direct answer</summary>
+<p>The best shipping aggregator in India for most D2C brands going into 2027 is <strong>Shiprocket</strong>, free to start with paid plans from ₹199 a month. <strong>ClickPost</strong> is the strongest platform once you run your own courier contracts. Every price below was read on the vendor’s own site on <strong>17 November 2026</strong>.</p>
+</details>
+
+<p>Who wrote this: TopEdge AI is a Shopify app for Indian D2C brands that automates abandoned cart recovery, COD confirmation and order updates over WhatsApp and email. We do not ship parcels, so we are not on this list.</p>
+<p>Why we care about shipping tools: returned COD parcels are the biggest leak our merchants bring to us. If RTO is new to you, start with <a href="/blog/rto-meaning-ecommerce">what RTO means in ecommerce</a>, then come back to choose the tool.</p>
+
+<h2>The 10 tools at a glance</h2>
+<div class="mkt-blog-table-wrap">
+<table>
+<thead><tr><th>#</th><th>Tool</th><th>Type</th><th>Best for</th><th>Published price, 17 Nov 2026</th><th>Rating</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>Shiprocket</td><td>Shipping aggregator</td><td>Most brands, from the first order</td><td>Free; ₹199, ₹499, ₹799 a month</td><td>3.9 (648), App Store</td></tr>
+<tr><td>2</td><td>ClickPost</td><td>Logistics intelligence platform</td><td>Multi-carrier shipping and RTO reduction</td><td>Custom quote</td><td>4.8 (148), G2</td></tr>
+<tr><td>3</td><td>Shipway</td><td>Aggregator with post-purchase tools</td><td>Tracking, NDR and returns in one signup</td><td>Free signup, rates in the panel</td><td>4.2 (183), App Store</td></tr>
+<tr><td>4</td><td>iThink Logistics</td><td>Shipping aggregator</td><td>COD-heavy brands fighting RTO</td><td>Wallet, no public rate card</td><td>4.2 (81), App Store</td></tr>
+<tr><td>5</td><td>Eshopbox</td><td>Shipping and fulfilment</td><td>Brands that may outsource the warehouse</td><td>From ₹21 an order</td><td>4.6 (9), App Store</td></tr>
+<tr><td>6</td><td>Shipmozo</td><td>Shipping aggregator</td><td>Budget brands that want NDR calling included</td><td>Free; from ₹20 per 500g</td><td>3.3 (26), App Store</td></tr>
+<tr><td>7</td><td>NimbusPost</td><td>Shipping aggregator</td><td>Per-parcel rates that fall with volume</td><td>₹25.50, ₹24, ₹19 per 500g</td><td>2.4 (51), App Store</td></tr>
+<tr><td>8</td><td>Unicommerce</td><td>Order and warehouse management</td><td>Multichannel brands with their own warehouse</td><td>On request</td><td>No App Store score found</td></tr>
+<tr><td>9</td><td>EasyEcom</td><td>Inventory and order management</td><td>Stock sync across many channels</td><td>On request</td><td>No App Store score found</td></tr>
+<tr><td>10</td><td>Return Prime</td><td>Returns and exchanges</td><td>Shopify brands with real return volume</td><td>Free to 5 returns; $100 a month at 200</td><td>4.8 (780), App Store</td></tr>
+</tbody>
+</table>
+</div>
+<p>Ratings are Shopify App Store scores and review counts read on 17 November 2026. ClickPost’s is its G2 score, checked the same day.</p>
+
+<h2>How we ranked them</h2>
+<p>Four tests, in this order. Fit for an Indian Shopify brand at 100 to 1,500 orders a month. How much of the job after checkout it covers: courier choice, NDR follow-up, tracking, returns and COD remittance. Whether the price is published. Then the review score.</p>
+<p>The first seven move parcels. The last three run orders, stock and returns around them, which is where a brand usually goes next.</p>
+
+<h2>1. Shiprocket: Best for most D2C brands from the first order</h2>
+<p><a href="https://www.shiprocket.in/pricing/" target="_blank" rel="noopener noreferrer">Shiprocket</a> is India’s best-known shipping aggregator: one panel to book 25+ courier partners, print labels, track parcels and settle COD. Its pricing page lists NDR automation, a branded tracking page, early COD remittance and a courier recommendation engine that weighs cost, pickup time and delivery performance.</p>
+<p>The proof that matters at your size is public: its <a href="https://apps.shopify.com/shiprocket" target="_blank" rel="noopener noreferrer">Shopify app</a> carries 648 reviews, so you can read what stores like yours complain about before you sign up.</p>
+<p><strong>Best for:</strong> Shopify brands from the first order to a few thousand a month that want self-serve shipping with no contract.</p>
+<p><strong>Pricing:</strong> Lite is free, suggested for up to 5 orders a month. Business is ₹199, Advanced ₹499 and Pro ₹799 a month, with average shipment costs shown of ₹41, ₹39 and ₹36. Each paid plan refunds its fee in a month you ship 100, 500 or 1,000 parcels. Quarterly, half-yearly and annual billing are priced differently.</p>
+<p><strong>AI:</strong> The courier recommendation engine picks a courier per order. Shiprocket also sells data APIs (Sense) and a Voice AI product.</p>
+<p><strong>Rating:</strong> 3.9 out of 5 on the Shopify App Store across 648 reviews.</p>
+<p><strong>Pros:</strong></p>
+<ul>
+<li>Free to start, with no minimum sign-up period</li>
+<li>The widest add-on range here: fulfilment, cross-border, capital and a pre-order suite</li>
+</ul>
+<p><strong>Cons:</strong></p>
+<ul>
+<li>The suggested order bands jump from Advanced (50 to 200 a month) to Pro (3,000 to 10,000), so ask which plan fits 200 to 3,000</li>
+<li>A 3.9 score: read the recent one-star reviews on support before you commit</li>
+</ul>
+<p><strong>Verdict:</strong> The default starting point. Move on when you want your own courier contracts and deeper exception workflows.</p>
+<p class="mkt-blog-pick-cta"><a href="https://www.shiprocket.in/" target="_blank" rel="noopener noreferrer">Visit Shiprocket</a><a href="https://apps.shopify.com/shiprocket" target="_blank" rel="noopener noreferrer">See on App Store</a></p>
+
+<h2>2. ClickPost: Best for multi-carrier shipping and RTO reduction</h2>
+<p><a href="https://www.clickpost.ai/" target="_blank" rel="noopener noreferrer">ClickPost</a> is a logistics intelligence platform that helps D2C brands manage multi-carrier shipping, delivery exceptions and post-purchase operations. It connects 700+ carriers through a single platform, using AI-powered carrier allocation to optimise courier selection. Its capabilities also include automated NDR management, shipment tracking, returns and exchanges.</p>
+<p>Snitch uses ClickPost to manage its logistics operations with a six-member team. Its automated, multichannel NDR workflows improved NDR-to-delivery conversion from 40-45% to 75%. <a href="https://www.clickpost.ai/customers/snitch" target="_blank" rel="noopener noreferrer">Read the Snitch case study</a>.</p>
+<p><strong>Best for:</strong> Mid-market and enterprise D2C brands dealing with high RTO rates and complex multi-carrier shipping operations.</p>
+<p><strong>Pricing:</strong> Quote-based, depending on shipment volume and selected modules.</p>
+<p><strong>AI:</strong> AI-powered carrier allocation, predictive delivery intelligence, automated NDR management and Parth, a voice AI agent for COD confirmation and NDR recovery.</p>
+<p><strong>Rating:</strong> <a href="https://www.g2.com/products/clickpost/reviews" target="_blank" rel="noopener noreferrer">4.8/5 on G2</a> across 148 reviews.</p>
+<p><strong>Pros:</strong></p>
+<ul>
+<li>Carrier allocation based on recent carrier performance and each brand’s operational priorities</li>
+<li>Proactive identification of shipment risks, enabling timely corrective action</li>
+</ul>
+<p><strong>Cons:</strong></p>
+<ul>
+<li>Smaller brands with straightforward shipping needs may not need its full feature set</li>
+<li>Its extensive capabilities may require configuration to suit specific operational workflows</li>
+</ul>
+<p><strong>Verdict:</strong> A strong fit for established D2C brands seeking smarter carrier allocation, proactive exception management and lower RTO.</p>
+<p class="mkt-blog-pick-cta"><a href="https://www.clickpost.ai/" target="_blank" rel="noopener noreferrer">Visit ClickPost</a><a href="https://www.clickpost.ai/pricing" target="_blank" rel="noopener noreferrer">See ClickPost pricing</a></p>
+
+<h2>3. Shipway: Best for tracking, NDR and returns in one signup</h2>
+<p><a href="https://www.shipway.com/" target="_blank" rel="noopener noreferrer">Shipway</a> is the multi-courier shipping product of Unicommerce: 20+ courier partners, 19,000+ serviceable PIN codes and 50+ integrations. Its ShipSense AI picks the courier for each order, and the same panel runs branded tracking, NDR follow-up and a self-serve returns flow.</p>
+<p>Shipway quotes Debaans at over 90% delivery success with RTO around 4%. That is a customer quote on Shipway’s site, not a published study.</p>
+<p><strong>Best for:</strong> Brands that want the post-purchase experience to come with the shipping account, not as a second app.</p>
+<p><strong>Pricing:</strong> Free signup. Courier rates show in the panel by weight, zone and service; there is no public rate card.</p>
+<p><strong>AI:</strong> ShipSense AI for courier selection.</p>
+<p><strong>Rating:</strong> 4.2 out of 5 on the Shopify App Store across 183 reviews.</p>
+<p><strong>Pros:</strong></p>
+<ul>
+<li>Tracking, NDR and returns in one place from day one</li>
+<li>An in-house upgrade path to Unicommerce’s order and warehouse software</li>
+</ul>
+<p><strong>Cons:</strong></p>
+<ul>
+<li>No published rates, so you can only compare after you sign up</li>
+<li>20+ couriers is a smaller network than ClickPost’s</li>
+</ul>
+<p><strong>Verdict:</strong> The aggregator to trial if your support inbox is full of “where is my order” messages.</p>
+<p class="mkt-blog-pick-cta"><a href="https://www.shipway.com/" target="_blank" rel="noopener noreferrer">Visit Shipway</a><a href="https://apps.shopify.com/ezyslips-order-processing-made-easy" target="_blank" rel="noopener noreferrer">See on App Store</a></p>
+
+<h2>4. iThink Logistics: Best for COD-heavy brands fighting RTO</h2>
+<p><a href="https://www.ithinklogistics.com/" target="_blank" rel="noopener noreferrer">iThink Logistics</a> is a Mumbai-based courier aggregator covering 29,000+ serviceable pin codes, with WhatsApp and SMS updates and weekly or next-day COD remittance. Its App Store listing names buyer intent checks and WhatsApp order confirmation inside the shipping panel.</p>
+<p>iThink says its AI-driven NDR platform resolves non-deliveries within 24 hours. That is the vendor’s claim; ask for your own NDR conversion data on the trial.</p>
+<p><strong>Best for:</strong> Brands where COD is most of the volume and RTO is the main shipping cost.</p>
+<p><strong>Pricing:</strong> A wallet you recharge as you ship, with no upfront courier cost. No public rate card.</p>
+<p><strong>AI:</strong> AI courier recommendation and AI NDR handling.</p>
+<p><strong>Rating:</strong> 4.2 out of 5 on the Shopify App Store across 81 reviews.</p>
+<p><strong>Pros:</strong></p>
+<ul>
+<li>RTO tools built into shipping rather than sold as a separate product</li>
+<li>Next-day COD remittance helps cash flow</li>
+</ul>
+<p><strong>Cons:</strong></p>
+<ul>
+<li>No published rates</li>
+<li>A smaller review base than Shiprocket or Shipway</li>
+</ul>
+<p><strong>Verdict:</strong> Worth a side-by-side trial against Shiprocket if most of your orders are COD.</p>
+<p class="mkt-blog-pick-cta"><a href="https://www.ithinklogistics.com/" target="_blank" rel="noopener noreferrer">Visit iThink Logistics</a><a href="https://apps.shopify.com/ithink-logistics" target="_blank" rel="noopener noreferrer">See on App Store</a></p>
+
+<h2>5. Eshopbox: Best for brands that may outsource the warehouse</h2>
+<p><a href="https://www.eshopbox.com/pricing" target="_blank" rel="noopener noreferrer">Eshopbox</a> sells two products. Eshopbox Ship moves orders packed at your own location. Eshopbox Fulfill stores, packs and ships from its warehouses. Ship lists AI carrier selection, an RTO reduction suite, NDR automation, weight protection, a WhatsApp engagement suite and early COD remittance.</p>
+<p>Eshopbox advertises a 95%+ on-time delivery guarantee. Ask what the guarantee pays out if it is missed.</p>
+<p><strong>Best for:</strong> Brands that want to start with shipping and move to outsourced fulfilment without changing vendor.</p>
+<p><strong>Pricing:</strong> Shipping from ₹21 an order, marked with an asterisk on the page. Fulfilment is on quote.</p>
+<p><strong>AI:</strong> AI carrier selection and smart order routing.</p>
+<p><strong>Rating:</strong> 4.6 out of 5 on the Shopify App Store, from only 9 reviews.</p>
+<p><strong>Pros:</strong></p>
+<ul>
+<li>A published starting price per order</li>
+<li>One partner for shipping and warehousing</li>
+</ul>
+<p><strong>Cons:</strong></p>
+<ul>
+<li>Nine reviews is too few to judge support</li>
+<li>₹21 is a starting rate; your weight and zones decide the real one</li>
+</ul>
+<p><strong>Verdict:</strong> The right call when packing orders yourself is what stops you growing.</p>
+<p class="mkt-blog-pick-cta"><a href="https://www.eshopbox.com/" target="_blank" rel="noopener noreferrer">Visit Eshopbox</a><a href="https://apps.shopify.com/eshopbox-2" target="_blank" rel="noopener noreferrer">See on App Store</a></p>
+
+<h2>6. Shipmozo: Best for budget brands that want NDR calling included</h2>
+<p><a href="https://www.shipmozo.com/pricing" target="_blank" rel="noopener noreferrer">Shipmozo</a> is a courier aggregator with 27+ courier partners and 29,000+ pincodes. Its App Store listing includes free WhatsApp and SMS out-for-delivery alerts, free NDR calling and RTO revoke support, and its paid plans add a free NDR call centre setup.</p>
+<p><strong>Best for:</strong> Price-led brands that want NDR follow-up without paying for an add-on.</p>
+<p><strong>Pricing:</strong> Lite is free, with rates from ₹26 per 500g within a city. Professional rates start from ₹20 per 500g. Enterprise is custom.</p>
+<p><strong>AI:</strong> A smart courier recommendation per order, on serviceability, cost and past delivery performance.</p>
+<p><strong>Rating:</strong> 3.3 out of 5 on the Shopify App Store across 26 reviews.</p>
+<p><strong>Pros:</strong></p>
+<ul>
+<li>NDR calling and delivery alerts included, not sold separately</li>
+<li>Published starting rates and a free plan</li>
+</ul>
+<p><strong>Cons:</strong></p>
+<ul>
+<li>3.3 from 26 reviews is a thin, middling record</li>
+<li>Starting rates are for within-city parcels; national zones cost more</li>
+</ul>
+<p><strong>Verdict:</strong> A good second quote to hold against Shiprocket.</p>
+<p class="mkt-blog-pick-cta"><a href="https://www.shipmozo.com/" target="_blank" rel="noopener noreferrer">Visit Shipmozo</a><a href="https://apps.shopify.com/shipmozo" target="_blank" rel="noopener noreferrer">See on App Store</a></p>
+
+<h2>7. NimbusPost: Best for per-parcel rates that fall with volume</h2>
+<p><a href="https://nimbuspost.com/pricing" target="_blank" rel="noopener noreferrer">NimbusPost</a> manages 25+ couriers with AI courier allocation, an RTO suite and NDR management, and publishes its B2C rates by volume band.</p>
+<p><strong>Best for:</strong> Brands that want to see how the per-parcel rate drops as orders grow.</p>
+<p><strong>Pricing:</strong> Essential from ₹25.50 per 500g (up to 300 orders a month), Elevate from ₹24 (300 to 1,000) and Elite from ₹19 (1,000+). NDR automation and early COD payouts are add-ons.</p>
+<p><strong>AI:</strong> AI courier allocation.</p>
+<p><strong>Rating:</strong> 2.4 out of 5 on the Shopify App Store across 51 reviews, the lowest here.</p>
+<p><strong>Pros:</strong></p>
+<ul>
+<li>The clearest volume-based rate card on this list</li>
+<li>B2B, fulfilment and add-on services priced on the same page</li>
+</ul>
+<p><strong>Cons:</strong></p>
+<ul>
+<li>A 2.4 score: read the reviews before you move volume</li>
+<li>NDR automation costs extra</li>
+</ul>
+<p><strong>Verdict:</strong> Use its rate card as a benchmark in every negotiation, even if you ship elsewhere.</p>
+<p class="mkt-blog-pick-cta"><a href="https://nimbuspost.com/" target="_blank" rel="noopener noreferrer">Visit NimbusPost</a><a href="https://apps.shopify.com/nimbuspost" target="_blank" rel="noopener noreferrer">See on App Store</a></p>
+
+<h2>8. Unicommerce: Best for multichannel brands with their own warehouse</h2>
+<p><a href="https://unicommerce.com/plan/" target="_blank" rel="noopener noreferrer">Unicommerce</a> is order and warehouse management. Its Uniware product runs website and marketplace orders, inventory across facilities, returns and payment reconciliation from one panel. Shipway, entry 3, is its shipping product.</p>
+<p><strong>Best for:</strong> Brands selling on their site and marketplaces from one or more warehouses.</p>
+<p><strong>Pricing:</strong> Standard (1 facility, 1 lakh SKUs, 3 user roles), Professional (2 facilities, 3 lakh SKUs) and higher plans, all priced through a demo.</p>
+<p><strong>AI:</strong> Not a selling point on its plan page.</p>
+<p><strong>Rating:</strong> We found no Shopify App Store score to quote.</p>
+<p><strong>Pros:</strong></p>
+<ul>
+<li>Warehouse depth an aggregator does not have</li>
+<li>Its India D2C Report is one of the few large RTO datasets, built from 410M+ shipments</li>
+</ul>
+<p><strong>Cons:</strong></p>
+<ul>
+<li>No public price</li>
+<li>More system than a single-channel Shopify brand needs</li>
+</ul>
+<p><strong>Verdict:</strong> The step after an aggregator, when marketplaces and stock become the hard part.</p>
+<p class="mkt-blog-pick-cta"><a href="https://unicommerce.com/" target="_blank" rel="noopener noreferrer">Visit Unicommerce</a></p>
+
+<h2>9. EasyEcom: Best for stock sync across many channels</h2>
+<p><a href="https://www.easyecom.io/pricing" target="_blank" rel="noopener noreferrer">EasyEcom</a> is inventory and order management that prices on orders, SKUs, warehouses and the modules you switch on. Its Starter plan covers one warehouse, up to 3 users and about 100,000 SKUs, with unlimited channels, unlimited rate-carded carriers, real-time inventory sync and returns.</p>
+<p><strong>Best for:</strong> Brands where stock goes wrong across Shopify, marketplaces and retail.</p>
+<p><strong>Pricing:</strong> Starter, Growth and Enterprise, all through a demo. Billing is monthly and you can cancel any time.</p>
+<p><strong>AI:</strong> Not a selling point on its pricing page.</p>
+<p><strong>Rating:</strong> We found no Shopify App Store score to quote.</p>
+<p><strong>Pros:</strong></p>
+<ul>
+<li>455+ integrations, including Tally, QuickBooks and Xero sync</li>
+<li>Monthly billing with no lock-in</li>
+</ul>
+<p><strong>Cons:</strong></p>
+<ul>
+<li>No public price</li>
+<li>It is not a courier aggregator: you bring your own carrier accounts</li>
+</ul>
+<p><strong>Verdict:</strong> Pick it when overselling, not shipping, is what costs you orders.</p>
+<p class="mkt-blog-pick-cta"><a href="https://www.easyecom.io/" target="_blank" rel="noopener noreferrer">Visit EasyEcom</a></p>
+
+<h2>10. Return Prime: Best for returns and exchanges on Shopify</h2>
+<p><a href="https://apps.shopify.com/return-prime" target="_blank" rel="noopener noreferrer">Return Prime</a> runs the returns flow: a branded portal where buyers raise returns and exchanges, rules for exchange, store credit or refund, fraud detection and links to 100+ WMS and logistics tools.</p>
+<p><strong>Best for:</strong> Shopify brands where returns and size exchanges are a weekly job.</p>
+<p><strong>Pricing:</strong> Free for 5 returns a month. <a href="https://www.returnprime.com/pricing" target="_blank" rel="noopener noreferrer">Paid plans</a> are priced by returns volume, showing $100 a month at 200 returns.</p>
+<p><strong>AI:</strong> Its Thrive AI plan suggests exchanges and sets dynamic fees.</p>
+<p><strong>Rating:</strong> 4.8 out of 5 on the Shopify App Store across 780 reviews, the strongest record on this list.</p>
+<p><strong>Pros:</strong></p>
+<ul>
+<li>The best-reviewed tool here</li>
+<li>A free plan to test the portal on real returns</li>
+</ul>
+<p><strong>Cons:</strong></p>
+<ul>
+<li>Priced in US dollars</li>
+<li>Returns only: it does not touch RTO, which happens before delivery</li>
+</ul>
+<p><strong>Verdict:</strong> Add it once exchanges, not RTO, are the return problem.</p>
+<p class="mkt-blog-pick-cta"><a href="https://www.returnprime.com/" target="_blank" rel="noopener noreferrer">Visit Return Prime</a><a href="https://apps.shopify.com/return-prime" target="_blank" rel="noopener noreferrer">See on App Store</a></p>
+
+<h2>What RTO adds to your shipping bill</h2>
+<p>Founders compare aggregators on the per-parcel rate. The bigger line is the parcels that come back. Here is the same store at three sizes, with 60% of orders on COD.</p>
+<div class="mkt-blog-table-wrap">
+<table>
+<thead><tr><th>Orders a month</th><th>100</th><th>500</th><th>1,500</th></tr></thead>
+<tbody>
+<tr><td>Forward shipping at ₹36 to ₹45 a parcel</td><td>₹3,600 to ₹4,500</td><td>₹18,000 to ₹22,500</td><td>₹54,000 to ₹67,500</td></tr>
+<tr><td>Parcels returned (26% of COD, 2% of prepaid)</td><td>16</td><td>82</td><td>246</td></tr>
+<tr><td>Direct loss at ₹180 to ₹240 per returned parcel</td><td>₹2,880 to ₹3,840</td><td>₹14,760 to ₹19,680</td><td>₹44,280 to ₹59,040</td></tr>
+<tr><td>WhatsApp confirmation of every COD order at ₹0.1150</td><td>₹6.90</td><td>₹34.50</td><td>₹103.50</td></tr>
+</tbody>
+</table>
+</div>
+<p>Do not add the rows: the ₹180 to ₹240 already includes the forward leg of each returned parcel. The point is the size. At every volume, returns cost about as much as the shipping bill, so a tool that saves one parcel in ten from RTO beats one that is ₹2 cheaper per parcel.</p>
+<p>How the rows are built: ₹36 to ₹45 is the range of average shipment costs on Shiprocket’s plans. The 26% COD and under 2% prepaid RTO rates are GoKwik’s, via <a href="https://www.firstresort.in/blogs/research/fashion-ecommerce-returns-rto-india-2026" target="_blank" rel="noopener noreferrer">First Resort</a>. The ₹180 to ₹240 is <a href="https://shipping.amazon.in/blog/what-is-rto-how-to-reduce-return-to-origin" target="_blank" rel="noopener noreferrer">Amazon Shipping India’s RTO breakdown</a>. The 60% COD share is our assumption. Category bands are in our <a href="/blog/cod-rto-benchmark-india-2026">2026 COD and RTO benchmark</a>, and you can run your own numbers in the <a href="/tools/rto-cost-calculator">RTO cost calculator</a>.</p>
+
+<h2>Where WhatsApp COD confirmation fits</h2>
+<p>Every tool above works after the courier is booked, or inside the NDR window. The cheaper fix comes earlier. GoKwik’s data, via First Resort, puts 60% to 70% of RTOs down to low buying intent rather than logistics. A buyer who will refuse at the door can often be caught with one message before you ship.</p>
+<p>That is the job <a href="/features/cod-confirmation">TopEdge AI’s COD confirmation</a> does: a WhatsApp message with Confirm and Cancel buttons minutes after checkout, and the order held until the buyer replies. It is on <a href="/pricing">every plan</a>, from ₹1,999 a month plus GST on our site or $19 a month on the Shopify App Store. The full routine is in <a href="/blog/how-to-reduce-rto-with-whatsapp-cod-confirmation">our COD confirmation SOP</a>.</p>
+<p>Where the shipping tools are better: TopEdge AI does not book couriers and does not handle NDRs, so you still need one of the ten above. Some already confirm orders too. iThink lists WhatsApp order confirmation and ClickPost’s Parth confirms by voice, so check what yours includes before you add an app.</p>
+
+<h2>Honest limits of this list</h2>
+<ul>
+<li><strong>List prices only.</strong> Courier rates depend on weight, zone and payment mode, so your quote will differ.</li>
+<li><strong>No test parcels.</strong> We read each vendor’s site and App Store listing; we did not ship through all ten.</li>
+<li><strong>Ratings mix two things.</strong> A low score on an aggregator can reflect courier delays as much as the software.</li>
+</ul>
+
+${faqHtml(SHIPPING_TOOLS_FAQS)}
+
+<p class="mkt-blog-footnote">Sources: each tool’s own site, Shopify App Store listing and, for ClickPost, G2, all read 17 November 2026.</p>
 `,
   },
 ];

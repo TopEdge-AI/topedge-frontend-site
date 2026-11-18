@@ -26,7 +26,8 @@ import FeatureMeshStage, { AURORA_PALETTE } from '../components/effects/FeatureM
 import HomeTrust from '../components/home/HomeTrust';
 import { PrimaryButton, GhostButton } from '../components/ui';
 import { ScenesContext, ScenePlaceholder, usePageScenes, useScene } from '../components/visuals';
-import { AccentContext, MeshContext } from '../components/visuals/kit';
+import { AccentContext, MeshContext, SceneSlotContext } from '../components/visuals/kit';
+import { FeatureClip, clipFor, hasClips } from '../components/visuals/clips';
 import '../styles/product-feature.css';
 import '../styles/feature-premium.css';
 
@@ -38,15 +39,35 @@ function ShotFrame({
   src,
   label,
   wide,
+  clipKey,
 }: {
   src: string;
   label: string;
   wide?: boolean;
+  /** [pageId, slot] for a rendered film clip, e.g. ['campaigns', 't1']. */
+  clipKey?: [string, string];
 }) {
   const [failed, setFailed] = useState(false);
   const empty = failed || !src;
   // A coded scene (components/visuals) replaces the screenshot where one exists.
   const { Scene, pending } = useScene(src);
+  // A rendered film clip, where one exists, plays in place of the coded scene.
+  const clip = clipKey ? clipFor(clipKey[0], clipKey[1]) : null;
+
+  if (clip) {
+    const fallback = Scene ? (
+      <Scene label={label} />
+    ) : src ? (
+      <img className="mkt-pf__shot-img" src={src} alt={label} loading="lazy" decoding="async" />
+    ) : (
+      <ScenePlaceholder label={label} wide={wide} />
+    );
+    return (
+      <div className={`mkt-pf__shot${wide ? ' is-wide' : ''} is-scene is-clip`}>
+        <FeatureClip clip={clip} label={label} wide={wide} fallback={fallback} />
+      </div>
+    );
+  }
 
   if (Scene || pending) {
     return (
@@ -83,14 +104,16 @@ function ShotFrame({
   );
 }
 
-function BentoTile({ tile }: { tile: ProductBento }) {
+function BentoTile({ tile, slot, pageId }: { tile: ProductBento; slot: number; pageId: string }) {
   const span = tile.span === 'half' ? 'half' : tile.span === 'full' ? 'full' : 'third';
   const label = tile.imageAlt || `${tile.titleLead} ${tile.titleAccent}`.trim();
 
   return (
     <article className={`mkt-pf__tile mkt-pf__tile--${span}`}>
       <div className="mkt-pf__tile-visual">
-        <ShotFrame src={tile.image} label={label} />
+        <SceneSlotContext.Provider value={slot}>
+          <ShotFrame src={tile.image} label={label} clipKey={[pageId, `t${slot + 1}`]} />
+        </SceneSlotContext.Provider>
       </div>
       <div className="mkt-pf__tile-body">
         <h3 className="mkt-pf__tile-title">
@@ -103,7 +126,7 @@ function BentoTile({ tile }: { tile: ProductBento }) {
   );
 }
 
-function ShowcaseRow({ item, index }: { item: ProductShowcase; index: number }) {
+function ShowcaseRow({ item, index, slot, pageId }: { item: ProductShowcase; index: number; slot: number; pageId: string }) {
   const reverse = item.reverse ?? index % 2 === 1;
   const label = item.imageLabel || `${item.title}${item.titleAccent ? ` ${item.titleAccent}` : ''}`;
 
@@ -113,7 +136,9 @@ function ShowcaseRow({ item, index }: { item: ProductShowcase; index: number }) 
       className={`mkt-pf__showcase${reverse ? ' is-reverse' : ''}${item.anchor ? ' has-anchor' : ''}`}
     >
       <div className="mkt-pf__showcase-media">
-        <ShotFrame src={item.image} label={label} wide />
+        <SceneSlotContext.Provider value={slot}>
+          <ShotFrame src={item.image} label={label} wide clipKey={[pageId, `s${index + 1}`]} />
+        </SceneSlotContext.Provider>
       </div>
       <div className="mkt-pf__showcase-copy">
         <h2 className="mkt-pf__showcase-title">
@@ -139,8 +164,12 @@ function ProductFeatureView({ page }: { page: ProductPage }) {
   const hasRelated = Boolean(page.related?.length);
   const proof = page.proofTable;
   const modifiedIso = featurePagesModifiedIso();
-  const heroDemo = page.hero.kind === 'video' ? demoAssetBySrc(page.hero.src) : undefined;
-  const scenes = usePageScenes(page.id);
+  // Every feature hero now plays its launch film; the screen recording a page
+  // used to carry is no longer on the page, so it gets no VideoObject either.
+  const heroClip = clipFor(page.id, 'h');
+  const heroDemo = !heroClip && page.hero.kind === 'video' ? demoAssetBySrc(page.hero.src) : undefined;
+  // Pages whose every slot plays a film skip the coded-scene chunk entirely.
+  const scenes = usePageScenes(hasClips(page.id) ? '' : page.id);
   const HeroScene =
     page.hero.kind === 'image' ? scenes.map?.[page.hero.src.split('?')[0]] ?? null : null;
 
@@ -219,7 +248,26 @@ function ProductFeatureView({ page }: { page: ProductPage }) {
         </header>
 
           <section className="mkt-pf__media" aria-label="Product preview">
-            {page.hero.kind === 'video' ? (
+            {heroClip ? (
+              <div className="demo-video-glow demo-video-glow--still" data-glow={page.hero.glow ?? 'violet'}>
+                <div className="demo-video-glow__frame is-ready is-scene is-film">
+                  <FeatureClip
+                    clip={heroClip}
+                    label={page.hero.kind === 'video' ? page.hero.label : page.hero.alt}
+                    wide
+                    fallback={
+                      page.hero.kind === 'video' ? (
+                        <img className="demo-video-glow__still" src={page.hero.poster} alt={page.hero.label} decoding="async" />
+                      ) : HeroScene ? (
+                        <HeroScene label={page.hero.alt} />
+                      ) : (
+                        <img className="demo-video-glow__still" src={page.hero.src} alt={page.hero.alt} decoding="async" />
+                      )
+                    }
+                  />
+                </div>
+              </div>
+            ) : page.hero.kind === 'video' ? (
               <DemoProductVideoFrame
                 src={page.hero.src}
                 mobileSrc={page.hero.mobileSrc}
@@ -253,8 +301,8 @@ function ProductFeatureView({ page }: { page: ProductPage }) {
               {page.bentoSub ? <p className="mkt-pf__head-sub">{page.bentoSub}</p> : null}
             </div>
             <div className={`mkt-pf__bento${page.bentos.length >= 5 ? ' mkt-pf__bento--five' : ''}`}>
-              {page.bentos.map((tile) => (
-                <BentoTile key={`${tile.titleLead}-${tile.titleAccent}`} tile={tile} />
+              {page.bentos.map((tile, i) => (
+                <BentoTile key={`${tile.titleLead}-${tile.titleAccent}`} tile={tile} slot={i} pageId={page.id} />
               ))}
             </div>
           </section>
@@ -267,7 +315,7 @@ function ProductFeatureView({ page }: { page: ProductPage }) {
           >
             <div className="mkt-pf__showcases">
               {page.showcases!.map((item, i) => (
-                <ShowcaseRow key={`${item.title}-${i}`} item={item} index={i} />
+                <ShowcaseRow key={`${item.title}-${i}`} item={item} index={i} slot={page.bentos.length + i} pageId={page.id} />
               ))}
             </div>
           </section>

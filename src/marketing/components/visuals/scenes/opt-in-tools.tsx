@@ -241,7 +241,7 @@ function WelcomePopup({ label }: SceneProps) {
   return (
     <Stage label={label} shape="wide" duration={14}>
       {/* Act 1: the popup on the storefront */}
-      <Float x={29} y={0} w={42} until={4.9}>
+      <Float x={29} y={0} w={42} until={4.9} act="out">
         <div className="oi-pop oi-pop--banner">
           <span className="oi-close">✕</span>
           <div className="oi-banner">
@@ -273,7 +273,7 @@ function WelcomePopup({ label }: SceneProps) {
       </Float>
 
       {/* Act 2 to 4: the shopper's phone */}
-      <Float x={35} y={0} at={5.1}>
+      <Float x={34.1} y={4.6} at={5.1} act="in">
         <IPhone
           name="Nova Home"
           logo={<NovaDp />}

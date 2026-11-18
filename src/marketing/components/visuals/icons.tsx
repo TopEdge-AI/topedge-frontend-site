@@ -1,95 +1,100 @@
 /**
- * Icons for the feature scenes: Phosphor duotone (two-tone, softer and more
- * crafted than single-weight outlines) plus real brand marks. Exported under
- * the names the scenes use, so a scene imports from here instead of
- * lucide-react. `strokeWidth` is accepted for compatibility and ignored:
- * these icons are filled shapes.
+ * Icons for the feature scenes: Hugeicons (stroke rounded, the free set),
+ * drawn bare at 1.6px so they read like a real product UI, plus the real
+ * brand marks from Simple Icons in their own colours. Exported under the
+ * names the scenes use. `strokeWidth` is accepted for compatibility and
+ * ignored, so every icon in a scene shares one weight.
  */
-import type { IconType as RIcon } from 'react-icons';
+import { HugeiconsIcon, type IconSvgElement } from '@hugeicons/react';
 import {
-  PiArrowSquareOutBold,
-  PiArrowUUpLeftDuotone,
-  PiArrowsClockwiseDuotone,
-  PiBookOpenTextDuotone,
-  PiBracketsCurlyDuotone,
-  PiCalendarDuotone,
-  PiChartLineUpDuotone,
-  PiChatCircleDotsDuotone,
-  PiChatsCircleDuotone,
-  PiCheckBold,
-  PiClockDuotone,
-  PiCodeDuotone,
-  PiCopyDuotone,
-  PiCreditCardDuotone,
-  PiCrownDuotone,
-  PiCubeDuotone,
-  PiCurrencyInrDuotone,
-  PiCursorClickDuotone,
-  PiCursorDuotone,
-  PiDownloadSimpleDuotone,
-  PiEnvelopeDuotone,
-  PiEyeDuotone,
-  PiFileTextDuotone,
-  PiFingerprintDuotone,
-  PiFlaskDuotone,
-  PiFlowArrowDuotone,
-  PiFolderDuotone,
-  PiFootprintsDuotone,
-  PiFunnelDuotone,
-  PiGaugeDuotone,
-  PiGiftDuotone,
-  PiGitBranchDuotone,
-  PiHandTapDuotone,
-  PiHeadsetDuotone,
-  PiHouseDuotone,
-  PiKeyDuotone,
-  PiLayoutDuotone,
-  PiLightningDuotone,
-  PiLinkDuotone,
-  PiListBulletsDuotone,
-  PiLockDuotone,
-  PiMagnifyingGlassDuotone,
-  PiMegaphoneDuotone,
-  PiMoneyDuotone,
-  PiPackageDuotone,
-  PiPaperPlaneTiltDuotone,
-  PiPauseCircleDuotone,
-  PiPercentDuotone,
-  PiPhoneDuotone,
-  PiPlayDuotone,
-  PiPlusBold,
-  PiPulseDuotone,
-  PiQrCodeDuotone,
-  PiReceiptDuotone,
-  PiRepeatDuotone,
-  PiRobotDuotone,
-  PiScrollDuotone,
-  PiSealCheckDuotone,
-  PiShieldCheckDuotone,
-  PiShieldPlusDuotone,
-  PiShoppingBagDuotone,
-  PiShoppingCartDuotone,
-  PiSignOutDuotone,
-  PiSortDescendingDuotone,
-  PiSparkleDuotone,
-  PiStackDuotone,
-  PiStorefrontDuotone,
-  PiTShirtDuotone,
-  PiTagDuotone,
-  PiTargetDuotone,
-  PiTrayDuotone,
-  PiTreeStructureDuotone,
-  PiTrendUpDuotone,
-  PiTruckDuotone,
-  PiUserCheckDuotone,
-  PiUserDuotone,
-  PiUserPlusDuotone,
-  PiUsersThreeDuotone,
-  PiWalletDuotone,
-  PiWarningDuotone,
-  PiWatchDuotone,
-  PiWebhooksLogoDuotone,
-} from 'react-icons/pi';
+  Activity01Icon,
+  ArrowLeft01Icon,
+  Mic01Icon,
+  TickDouble02Icon,
+  Video01Icon,
+  Alert02Icon,
+  ArrowTurnBackwardIcon,
+  BookOpen01Icon,
+  Calendar03Icon,
+  CallIcon,
+  ChartIncreaseIcon,
+  ChartLineData01Icon,
+  CheckmarkBadge01Icon,
+  Clock01Icon,
+  ClothesIcon,
+  CodeIcon,
+  Copy01Icon,
+  CreditCardIcon,
+  CrownIcon,
+  CubeIcon,
+  Cursor01Icon,
+  CursorPointer01Icon,
+  CustomerSupportIcon,
+  DashboardSpeed01Icon,
+  DeliveryBox01Icon,
+  DeliveryTruck01Icon,
+  Download04Icon,
+  Exchange01Icon,
+  File01Icon,
+  FilterHorizontalIcon,
+  FingerPrintIcon,
+  FlashIcon,
+  FlaskConicalIcon,
+  Folder01Icon,
+  GiftIcon,
+  GitBranchIcon,
+  HierarchyIcon,
+  Home01Icon,
+  InboxIcon,
+  IndianRupeeIcon,
+  Invoice01Icon,
+  Key01Icon,
+  Layers01Icon,
+  LayoutTable01Icon,
+  LeftToRightListBulletIcon,
+  Link01Icon,
+  LinkSquare02Icon,
+  Logout01Icon,
+  Mail01Icon,
+  Megaphone01Icon,
+  Message01Icon,
+  MessageMultiple01Icon,
+  Money01Icon,
+  PauseIcon,
+  PercentIcon,
+  PlayIcon,
+  PlusSignIcon,
+  QrCodeIcon,
+  RefreshIcon,
+  Robot01Icon,
+  Route01Icon,
+  ScrollIcon,
+  Search01Icon,
+  SentIcon,
+  ShieldCheckIcon,
+  ShieldUserIcon,
+  ShoppingBag01Icon,
+  ShoppingCart01Icon,
+  SmartWatch01Icon,
+  Sorting05Icon,
+  SourceCodeIcon,
+  SparklesIcon,
+  SquareLock02Icon,
+  Store01Icon,
+  Tag01Icon,
+  Target01Icon,
+  Tick02Icon,
+  Touch01Icon,
+  UserAdd01Icon,
+  UserCheck01Icon,
+  UserGroupIcon,
+  UserIcon,
+  ViewIcon,
+  Wallet01Icon,
+  WebhookIcon,
+  FlowConnectionIcon,
+} from '@hugeicons/core-free-icons';
+import type { IconType as RIcon } from 'react-icons';
 import {
   SiAnthropic,
   SiGooglegemini,
@@ -102,101 +107,123 @@ import {
 
 export type SceneIconProps = { strokeWidth?: number; className?: string };
 
-const wrap = (I: RIcon, cls = 'fv-pi') => {
+const STROKE = 1.6;
+
+const huge = (icon: IconSvgElement) => {
   function SceneIcon({ className }: SceneIconProps) {
-    return <I className={className ? `${cls} ${className}` : cls} aria-hidden />;
+    return (
+      <HugeiconsIcon
+        icon={icon}
+        size="1em"
+        strokeWidth={STROKE}
+        className={className ? `fv-hi ${className}` : 'fv-hi'}
+        aria-hidden
+      />
+    );
   }
   return SceneIcon;
 };
 
-export const Activity = wrap(PiPulseDuotone);
-export const ArrowDownWideNarrow = wrap(PiSortDescendingDuotone);
-export const BadgeCheck = wrap(PiSealCheckDuotone);
-export const BookOpen = wrap(PiBookOpenTextDuotone);
-export const Bot = wrap(PiRobotDuotone);
-export const Boxes = wrap(PiCubeDuotone);
-export const Braces = wrap(PiBracketsCurlyDuotone);
-export const CalendarDays = wrap(PiCalendarDuotone);
-export const Check = wrap(PiCheckBold);
-export const Clock = wrap(PiClockDuotone);
-export const Code2 = wrap(PiCodeDuotone);
-export const Copy = wrap(PiCopyDuotone);
-export const CreditCard = wrap(PiCreditCardDuotone);
-export const Crown = wrap(PiCrownDuotone);
-export const Download = wrap(PiDownloadSimpleDuotone);
-export const ExternalLink = wrap(PiArrowSquareOutBold);
-export const Eye = wrap(PiEyeDuotone);
-export const FileText = wrap(PiFileTextDuotone);
-export const Filter = wrap(PiFunnelDuotone);
-export const Fingerprint = wrap(PiFingerprintDuotone);
-export const FlaskConical = wrap(PiFlaskDuotone);
-export const Folder = wrap(PiFolderDuotone);
-export const Footprints = wrap(PiFootprintsDuotone);
-export const Gauge = wrap(PiGaugeDuotone);
-export const Gift = wrap(PiGiftDuotone);
-export const GitBranch = wrap(PiGitBranchDuotone);
-export const Hand = wrap(PiHandTapDuotone);
-export const Headphones = wrap(PiHeadsetDuotone);
-export const Home = wrap(PiHouseDuotone);
-export const Inbox = wrap(PiTrayDuotone);
-export const IndianRupee = wrap(PiCurrencyInrDuotone);
-export const KeyRound = wrap(PiKeyDuotone);
-export const Layers = wrap(PiStackDuotone);
-export const LayoutTemplate = wrap(PiLayoutDuotone);
-export const Link2 = wrap(PiLinkDuotone);
-export const List = wrap(PiListBulletsDuotone);
-export const Lock = wrap(PiLockDuotone);
-export const LogOut = wrap(PiSignOutDuotone);
-export const Mail = wrap(PiEnvelopeDuotone);
-export const Megaphone = wrap(PiMegaphoneDuotone);
-export const MessageCircle = wrap(PiChatCircleDotsDuotone);
-export const MousePointer2 = wrap(PiCursorDuotone);
-export const MousePointerClick = wrap(PiCursorClickDuotone);
-export const Package = wrap(PiPackageDuotone);
-export const PauseCircle = wrap(PiPauseCircleDuotone);
-export const Percent = wrap(PiPercentDuotone);
-export const Phone = wrap(PiPhoneDuotone);
-export const Play = wrap(PiPlayDuotone);
-export const Plus = wrap(PiPlusBold);
-export const QrCode = wrap(PiQrCodeDuotone);
-export const RefreshCw = wrap(PiArrowsClockwiseDuotone);
-export const Repeat = wrap(PiRepeatDuotone);
-export const ScrollText = wrap(PiScrollDuotone);
-export const Search = wrap(PiMagnifyingGlassDuotone);
-export const Send = wrap(PiPaperPlaneTiltDuotone);
-export const ShieldCheck = wrap(PiShieldCheckDuotone);
-export const ShieldPlus = wrap(PiShieldPlusDuotone);
-export const Shirt = wrap(PiTShirtDuotone);
-export const ShoppingBag = wrap(PiShoppingBagDuotone);
-export const ShoppingCart = wrap(PiShoppingCartDuotone);
-export const Sparkles = wrap(PiSparkleDuotone);
-export const Store = wrap(PiStorefrontDuotone);
-export const Tag = wrap(PiTagDuotone);
-export const Target = wrap(PiTargetDuotone);
-export const TrendingUp = wrap(PiTrendUpDuotone);
-export const Truck = wrap(PiTruckDuotone);
-export const Undo2 = wrap(PiArrowUUpLeftDuotone);
-export const User = wrap(PiUserDuotone);
-export const UserCheck = wrap(PiUserCheckDuotone);
-export const UserPlus = wrap(PiUserPlusDuotone);
-export const Users = wrap(PiUsersThreeDuotone);
-export const Wallet = wrap(PiWalletDuotone);
-export const Watch = wrap(PiWatchDuotone);
-export const Webhook = wrap(PiWebhooksLogoDuotone);
-export const Workflow = wrap(PiFlowArrowDuotone);
-export const Zap = wrap(PiLightningDuotone);
-export const AlertTriangle = wrap(PiWarningDuotone);
-export const LineChart = wrap(PiChartLineUpDuotone);
-export const Receipt = wrap(PiReceiptDuotone);
-export const Tree = wrap(PiTreeStructureDuotone);
-export const Chats = wrap(PiChatsCircleDuotone);
-export const Money = wrap(PiMoneyDuotone);
+const brand = (I: RIcon, name: string) => {
+  function BrandIcon({ className }: SceneIconProps) {
+    const cls = `fv-brand fv-brand--${name}`;
+    return <I className={className ? `${cls} ${className}` : cls} aria-hidden />;
+  }
+  return BrandIcon;
+};
 
-/* Brand marks: use in their own colours, only where the brand is meant. */
-export const ShopifyLogo = wrap(SiShopify, 'fv-brand fv-brand--shopify');
-export const WhatsAppLogo = wrap(SiWhatsapp, 'fv-brand fv-brand--whatsapp');
-export const MetaLogo = wrap(SiMeta, 'fv-brand fv-brand--meta');
-export const OpenAILogo = wrap(SiOpenai, 'fv-brand fv-brand--openai');
-export const AnthropicLogo = wrap(SiAnthropic, 'fv-brand fv-brand--anthropic');
-export const GeminiLogo = wrap(SiGooglegemini, 'fv-brand fv-brand--gemini');
-export const RazorpayLogo = wrap(SiRazorpay, 'fv-brand fv-brand--razorpay');
+export const Activity = huge(Activity01Icon);
+export const ArrowDownWideNarrow = huge(Sorting05Icon);
+export const BadgeCheck = huge(CheckmarkBadge01Icon);
+export const BookOpen = huge(BookOpen01Icon);
+export const Bot = huge(Robot01Icon);
+export const Boxes = huge(CubeIcon);
+export const Braces = huge(CodeIcon);
+export const CalendarDays = huge(Calendar03Icon);
+export const Check = huge(Tick02Icon);
+export const Clock = huge(Clock01Icon);
+export const Code2 = huge(SourceCodeIcon);
+export const Copy = huge(Copy01Icon);
+export const CreditCard = huge(CreditCardIcon);
+export const Crown = huge(CrownIcon);
+export const Download = huge(Download04Icon);
+export const ExternalLink = huge(LinkSquare02Icon);
+export const Eye = huge(ViewIcon);
+export const FileText = huge(File01Icon);
+export const Filter = huge(FilterHorizontalIcon);
+export const Fingerprint = huge(FingerPrintIcon);
+export const FlaskConical = huge(FlaskConicalIcon);
+export const Folder = huge(Folder01Icon);
+export const Footprints = huge(Route01Icon);
+export const Gauge = huge(DashboardSpeed01Icon);
+export const Gift = huge(GiftIcon);
+export const GitBranch = huge(GitBranchIcon);
+export const Hand = huge(Touch01Icon);
+export const Headphones = huge(CustomerSupportIcon);
+export const Home = huge(Home01Icon);
+export const Inbox = huge(InboxIcon);
+export const IndianRupee = huge(IndianRupeeIcon);
+export const KeyRound = huge(Key01Icon);
+export const Layers = huge(Layers01Icon);
+export const LayoutTemplate = huge(LayoutTable01Icon);
+export const Link2 = huge(Link01Icon);
+export const List = huge(LeftToRightListBulletIcon);
+export const Lock = huge(SquareLock02Icon);
+export const LogOut = huge(Logout01Icon);
+export const Mail = huge(Mail01Icon);
+export const Megaphone = huge(Megaphone01Icon);
+export const MessageCircle = huge(Message01Icon);
+export const MousePointer2 = huge(Cursor01Icon);
+export const MousePointerClick = huge(CursorPointer01Icon);
+export const Package = huge(DeliveryBox01Icon);
+export const PauseCircle = huge(PauseIcon);
+export const Percent = huge(PercentIcon);
+export const Phone = huge(CallIcon);
+export const Play = huge(PlayIcon);
+export const Plus = huge(PlusSignIcon);
+export const QrCode = huge(QrCodeIcon);
+export const RefreshCw = huge(RefreshIcon);
+export const Repeat = huge(Exchange01Icon);
+export const ScrollText = huge(ScrollIcon);
+export const Search = huge(Search01Icon);
+export const Send = huge(SentIcon);
+export const ShieldCheck = huge(ShieldCheckIcon);
+export const ShieldPlus = huge(ShieldUserIcon);
+export const Shirt = huge(ClothesIcon);
+export const ShoppingBag = huge(ShoppingBag01Icon);
+export const ShoppingCart = huge(ShoppingCart01Icon);
+export const Sparkles = huge(SparklesIcon);
+export const Store = huge(Store01Icon);
+export const Tag = huge(Tag01Icon);
+export const Target = huge(Target01Icon);
+export const TrendingUp = huge(ChartIncreaseIcon);
+export const Truck = huge(DeliveryTruck01Icon);
+export const Undo2 = huge(ArrowTurnBackwardIcon);
+export const User = huge(UserIcon);
+export const UserCheck = huge(UserCheck01Icon);
+export const UserPlus = huge(UserAdd01Icon);
+export const Users = huge(UserGroupIcon);
+export const Wallet = huge(Wallet01Icon);
+export const Watch = huge(SmartWatch01Icon);
+export const Webhook = huge(WebhookIcon);
+export const Workflow = huge(FlowConnectionIcon);
+export const Zap = huge(FlashIcon);
+export const AlertTriangle = huge(Alert02Icon);
+export const LineChart = huge(ChartLineData01Icon);
+export const Receipt = huge(Invoice01Icon);
+export const Tree = huge(HierarchyIcon);
+export const Chats = huge(MessageMultiple01Icon);
+export const Money = huge(Money01Icon);
+export const ChevronLeft = huge(ArrowLeft01Icon);
+export const Mic = huge(Mic01Icon);
+export const Video = huge(Video01Icon);
+export const CheckCheck = huge(TickDouble02Icon);
+
+/* Brand marks: only where the brand itself is meant. */
+export const ShopifyLogo = brand(SiShopify, 'shopify');
+export const WhatsAppLogo = brand(SiWhatsapp, 'whatsapp');
+export const MetaLogo = brand(SiMeta, 'meta');
+export const OpenAILogo = brand(SiOpenai, 'openai');
+export const AnthropicLogo = brand(SiAnthropic, 'anthropic');
+export const GeminiLogo = brand(SiGooglegemini, 'gemini');
+export const RazorpayLogo = brand(SiRazorpay, 'razorpay');
