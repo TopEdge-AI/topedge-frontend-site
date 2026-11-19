@@ -148,8 +148,8 @@ export const SOURCES = {
     label: 'AiSensy’s published pricing page',
     publisher: 'AiSensy',
     claim:
-      'Read 12 November 2026 on the monthly, quarterly and yearly views. Per-message rates for Indian users, effective 1 October 2026 and the same on every paid plan: marketing ₹1.09, utility ₹0.145, authentication ₹0.145, service ₹0.145 after 1,000 free service messages a month. Against Meta’s India card of ₹0.8631 marketing and ₹0.1150 utility, that is about 26% above Meta on both lines. Plans billed monthly: Free Forever ₹0 (no broadcasting), Basic ₹1,500, Pro ₹3,200, Premium ₹9,100, Unlimited ₹45,000. Billed quarterly (save 5%): ₹1,425, ₹3,040, ₹8,645 and ₹42,750 a month. Billed yearly (save 10%): ₹1,350, ₹2,880, ₹8,190 and ₹40,500 a month. Basic lists 1 owner plus 5 agents and Shopify and WooCommerce integrations; Premium 1 owner plus 9 agents; Unlimited up to 200 agents. Extra agents ₹750 each a month; AI Chat Agent ₹1,350 a month for 1,000 AI messages; Chatbot Flows ₹2,500 a month. All billing is prepaid through WhatsApp Conversation Credits. The 7 November 2026 reading recorded the monthly view only. Per-message rates re-read 16 November 2026 on the default view: unchanged.',
-    verified: '2026-11-12',
+      'Read 12 November 2026 on the monthly, quarterly and yearly views. Per-message rates for Indian users, effective 1 October 2026 and the same on every paid plan: marketing ₹1.09, utility ₹0.145, authentication ₹0.145, service ₹0.145 after 1,000 free service messages a month. Against Meta’s India card of ₹0.8631 marketing and ₹0.1150 utility, that is about 26% above Meta on both lines. Plans billed monthly: Free Forever ₹0 (no broadcasting), Basic ₹1,500, Pro ₹3,200, Premium ₹9,100, Unlimited ₹45,000. Billed quarterly (save 5%): ₹1,425, ₹3,040, ₹8,645 and ₹42,750 a month. Billed yearly (save 10%): ₹1,350, ₹2,880, ₹8,190 and ₹40,500 a month. Basic lists 1 owner plus 5 agents and Shopify and WooCommerce integrations; Premium 1 owner plus 9 agents; Unlimited up to 200 agents. Extra agents ₹750 each a month; AI Chat Agent ₹1,350 a month for 1,000 AI messages; Chatbot Flows ₹2,500 a month. All billing is prepaid through WhatsApp Conversation Credits. The 7 November 2026 reading recorded the monthly view only. Per-message rates re-read 16 November 2026 on the default view: unchanged. Re-read 19 November 2026 on the monthly, quarterly and yearly views: plans, add-ons and per-message rates all unchanged.',
+    verified: '2026-11-19',
   },
   aisensyShopifyListing: {
     id: 'aisensyShopifyListing',
@@ -157,8 +157,35 @@ export const SOURCES = {
     label: 'AiSensy on the Shopify App Store',
     publisher: 'Shopify App Store',
     claim:
-      'Read 12 November 2026 from India: rated 4.1 from 57 reviews (31 five-star, 10 four-star, 3 three-star, 13 one-star), launched 23 July 2024, priced as a ₹93.77 one-time charge (Shopify’s estimate at 1 INR = 0.0107 USD). The listing names automated abandoned cart notifications, COD confirmation notifications, order and shipping notifications and broadcasts.',
-    verified: '2026-11-12',
+      'Read 12 November 2026 from India: rated 4.1 from 57 reviews (31 five-star, 10 four-star, 3 three-star, 13 one-star), launched 23 July 2024, priced as a ₹93.77 one-time charge (Shopify’s estimate at 1 INR = 0.0107 USD). The listing names automated abandoned cart notifications, COD confirmation notifications, order and shipping notifications and broadcasts. Re-read 19 November 2026: still 4.1 from 57 reviews, now shown as a ₹93.47 one-time charge; the feature list is unchanged and does not name COD-to-prepaid conversion.',
+    verified: '2026-11-19',
+  },
+  gallaboxPricing: {
+    id: 'gallaboxPricing',
+    url: 'https://gallabox.com/pricing',
+    label: 'Gallabox’s published pricing page',
+    publisher: 'Gallabox',
+    claim:
+      'Read 19 November 2026 from India on both billing views; there is no monthly billing. Billed quarterly: Basic ₹2,999, Essential ₹6,999, Advanced ₹16,999 a month; Enterprise on request. Billed yearly (save 20%, the default view): ₹2,399, ₹5,599 and ₹13,599 a month. Basic: 3 users (hard cap), 500 AI credits a month, one WhatsApp, Instagram and web widget channel each, chatbot flows, catalog and payments, and an integration list that starts with Shopify, Razorpay, Cashfree, Shiprocket and Shipway. Essential: 6 users, ₹1,200 per extra user a month, 2,000 AI credits, CRM integrations including Zoho, LeadSquared, HubSpot, WebEngage, CleverTap and MoEngage. Advanced: 10 users, ₹1,500 per extra user, 8,000 AI credits. WhatsApp conversation fees are billed separately per the rate card; Enterprise is listed with a discounted markup. A popup offered 3 months free on yearly Essential and Advanced plans.',
+    verified: '2026-11-19',
+  },
+  gallaboxRateCard: {
+    id: 'gallaboxRateCard',
+    url: 'https://docs.gallabox.com/pricing-and-billing/whatsapp-pricing/rate-card',
+    label: 'Gallabox’s WhatsApp rate card',
+    publisher: 'Gallabox',
+    claim:
+      'Read 19 November 2026, INR tab, rates effective 1 October 2026. India: marketing ₹0.9926, utility ₹0.1323, authentication ₹0.1323, service ₹0.1323. Each business phone number gets 1,000 free service messages a calendar month; utility templates inside the 24-hour window are billed from the first one. Against Meta’s India card of ₹0.8631 marketing and ₹0.1150 utility, both lines are about 15% above Meta.',
+    verified: '2026-11-19',
+  },
+  gallaboxShopify: {
+    id: 'gallaboxShopify',
+    url: 'https://gallabox.com/whatsapp-integrations/shopify',
+    label: 'Gallabox’s Shopify integration page',
+    publisher: 'Gallabox',
+    claim:
+      'Read 19 November 2026. Names WhatsApp abandoned cart reminders, Shopify catalog sync to a WhatsApp store, converting WhatsApp carts to Shopify carts, automated order update flows for all orders including COD, post-purchase feedback, broadcasts segmented on Shopify buying behaviour, and a section headed “Convert COD orders to prepaid”.',
+    verified: '2026-11-19',
   },
   interaktPricing: {
     id: 'interaktPricing',
@@ -166,8 +193,8 @@ export const SOURCES = {
     label: 'Interakt’s published pricing page',
     publisher: 'Interakt',
     claim:
-      'Read 9 November 2026 on all three billing views, plus taxes. Monthly: Starter ₹999 (Instagram only), Growth ₹2,799, Advanced ₹3,799. Quarterly: Starter ₹3,499, Growth ₹7,699, Advanced ₹10,499. Yearly: Starter ₹11,999, Growth ₹26,399, Advanced ₹35,999. On quarterly and yearly billing Starter is “Pick any one channel”, WhatsApp or Instagram; Growth and Advanced include both. Enterprise on request. Unlimited agents on every plan, owner roles only on Starter. Per-message rates for Indian numbers: Starter marketing ₹0.970, authentication ₹0.129, utility ₹0.160, service ₹0.129; Growth ₹0.958, ₹0.128, ₹0.150, ₹0.128; Advanced ₹0.949, ₹0.127, ₹0.140, ₹0.127; service charged after 1,000 free service messages. Only Enterprise is listed with “No Markup Charges”. Against Meta’s ₹0.8631 marketing and ₹0.1150 utility, Growth is about 11% above Meta on marketing and 30% on utility. The feature table lists “Shopify Integration (Only included on Shopify plan...)” linking to apps.shopify.com/interakt-marketing. WhatsApp AI Agents tab: ₹9,000 a quarter (+GST), shown as a ₹3,000 add-on for Growth and Advanced on the main table, 100 free AI messages, then ₹0.50 per AI message. Sales CRM is a separate product; its ₹2,499 for 5 agents was last read 21 October 2026. The 7 November reading recorded the monthly view only and so missed the quarterly Starter channel rule.',
-    verified: '2026-11-09',
+      'Read 9 November 2026 on all three billing views, plus taxes. Monthly: Starter ₹999 (Instagram only), Growth ₹2,799, Advanced ₹3,799. Quarterly: Starter ₹3,499, Growth ₹7,699, Advanced ₹10,499. Yearly: Starter ₹11,999, Growth ₹26,399, Advanced ₹35,999. On quarterly and yearly billing Starter is “Pick any one channel”, WhatsApp or Instagram; Growth and Advanced include both. Enterprise on request. Unlimited agents on every plan, owner roles only on Starter. Per-message rates for Indian numbers: Starter marketing ₹0.970, authentication ₹0.129, utility ₹0.160, service ₹0.129; Growth ₹0.958, ₹0.128, ₹0.150, ₹0.128; Advanced ₹0.949, ₹0.127, ₹0.140, ₹0.127; service charged after 1,000 free service messages. Only Enterprise is listed with “No Markup Charges”. Against Meta’s ₹0.8631 marketing and ₹0.1150 utility, Growth is about 11% above Meta on marketing and 30% on utility. The feature table lists “Shopify Integration (Only included on Shopify plan...)” linking to apps.shopify.com/interakt-marketing. WhatsApp AI Agents tab: ₹9,000 a quarter (+GST), shown as a ₹3,000 add-on for Growth and Advanced on the main table, 100 free AI messages, then ₹0.50 per AI message. Sales CRM is a separate product; its ₹2,499 for 5 agents was last read 21 October 2026. The 7 November reading recorded the monthly view only and so missed the quarterly Starter channel rule. Re-read 19 November 2026 on the default view: Growth ₹2,799, “Add on: WhatsApp AI Agents @ 3000 INR for Growth & Advanced plan”, 100 free AI messages, then ₹0.50 per AI message, all unchanged.',
+    verified: '2026-11-19',
   },
   topedgeShopifyListing: {
     id: 'topedgeShopifyListing',
@@ -476,7 +503,7 @@ export const SOURCES = {
   },
   reconvertListing: {
     id: 'reconvertListing',
-    url: 'https://apps.shopify.com/reconvert',
+    url: 'https://apps.shopify.com/reconvert-upsell-cross-sell',
     label: 'ReConvert’s Shopify App Store listing',
     publisher: 'Shopify',
     claim:
@@ -951,7 +978,7 @@ export const SOURCES = {
   },
   shopifyCommunity: {
     id: 'shopifyCommunity',
-    url: 'https://community.shopify.com/c/shopify-discussions/bd-p/shopify-discussion',
+    url: 'https://community.shopify.com/c/shopify-discussion/95',
     label: 'the Shopify Community discussions forum',
     publisher: 'Shopify',
     claim:
@@ -1067,7 +1094,7 @@ export const SOURCES = {
   },
   nimbuspostPricing: {
     id: 'nimbuspostPricing',
-    url: 'https://nimbuspost.com/pricing',
+    url: 'https://nimbuspost.com/pricing/',
     label: 'NimbusPost pricing',
     publisher: 'NimbusPost',
     claim:
@@ -1085,7 +1112,7 @@ export const SOURCES = {
   },
   eshopboxPricing: {
     id: 'eshopboxPricing',
-    url: 'https://www.eshopbox.com/pricing',
+    url: 'https://www.eshopbox.com/eshopbox-pricing',
     label: 'Eshopbox pricing',
     publisher: 'Eshopbox',
     claim:

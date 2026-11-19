@@ -1,0 +1,894 @@
+On-page audit: https://topedgeai.com/blog/aisensy-alternative-shopify-india
+Keyword: aisensy vs gallabox
+Competitors: https://gallabox.com/compare/aisensy, https://wanotifier.com/compare/aisensy-vs-gallabox/, https://www.g2.com/compare/aisensy-vs-gallabox
+Run: 2026-11-19T04:52:21.274Z
+
+
+===== Overview =====
+Download CSV
+Save as PDF
+New audit
+Overview
+Keyword
+Competitors
+Full audit
+2
+Links & images
+Structure
+Previews
+AI & tech
+On-page score
+
+Weighted share of checks passed. Warnings count half, info items do not count. It measures on-page setup, not backlinks or authority.
+
+88
+YOU
+topedgeai.com
+52 pass · 4 warn · 2 fail
+78
+COMP 1
+gallabox.com
+31 pass · 13 warn · 3 fail
+93
+COMP 2
+wanotifier.com
+36 pass · 11 warn · 0 fail
+42
+COMP 3
+g2.com
+14 pass · 13 warn · 12 fail
+Page at a glance
+4,129
+Content words
+1
+Exact keyword uses
+69
+Internal pages linked
+15
+Images
+0
+Broken links
+771 ms
+HTML download time
+109 KB
+HTML size
+18
+Schema types
+Fix these first
+
+Your biggest issues, ordered by the weight each check carries in this audit.
+
+Keyword in title: Not found
+Use the exact keyword phrase in the title.
+High impact
+Keyword in H1: Not found
+Put the keyword, or a close variant, in the H1.
+High impact
+Keyword in meta description: Not found
+Google bolds matching words in the snippet. Use the keyword once.
+Medium impact
+Keyword in first 100 words: Not found
+Say what the page is about early.
+Medium impact
+Keyword in URL: Not in URL
+Use short keyword slugs for new pages. Do not change live URLs without a 301 redirect.
+Low impact
+Keyword in an image alt: None
+Describe one relevant image using the keyword naturally.
+Low impact
+Your Google result
+
+An estimate of how your title and description may look. Widths are measured in Arial on your device; Google’s real cut-off varies by device and query.
+
+TopEdge AI
+https://topedgeai.com › blog › aisensy-alternative-shopify-india
+Best AiSensy Alternative for Shopify India 2026 | TopEdge AI
+AiSensy alternative for Shopify India: AiSensy vs Interakt, WATI, Gallabox and Twilio on price, AI cost and COD to prepaid.
+Title: 539 px of about 600 px
+Description: 759 px of about 920 px
+
+Google may rewrite titles and descriptions. A clear, matching title and H1 lowers that chance.
+
+Want these fixed and ranking?
+
+I turn audits like this into a clear plan and do the work: on-page, technical, content and links.
+
+Get a free SEO consultation
+
+How it works: the tool downloads the HTML your server sends, the same first copy Googlebot gets, and checks it in your browser. Content added later by JavaScript is not counted. Link and image checks use live HTTP requests. Scores cover on-page setup only; rankings also depend on backlinks, authority and search intent.
+
+===== Keyword =====
+Download CSV
+Save as PDF
+New audit
+Overview
+Keyword
+Competitors
+Full audit
+2
+Links & images
+Structure
+Previews
+AI & tech
+Keyword placement map
+
+Exact matches of “aisensy vs gallabox” in every spot Google reads. Red cells are spots where the keyword is missing.
+
+PAGE	TITLE	META DESC	URL	H1	H2-H6	FIRST 100 WORDS	BODY	IMAGE ALT	LINK ANCHORS
+You: topedgeai.com	0	0	no	0	1	0	1	0	0
+Comp 1: gallabox.com	0	0	no	0	0	0	0	0	0
+Comp 2: wanotifier.com	1	1	yes	1	0	1	1	0	0
+Comp 3: g2.com	0	0	yes	0	0	0	0	0	0
+missing
+low
+medium
+highest
+Keyword numbers
+Exact
+1 uses in 4,129 words (0.07%)
+Word
+“aisensy” appears 62 times
+Word
+“vs” appears 13 times
+Word
+“gallabox” appears 13 times
+Anchors
+0 links use the keyword
+What your page talks about
+
+Most used phrases and words. If your topic is not near the top, Google may see the page as being about something else.
+
+whatsapp business
+16×
+aisensy alternative
+12×
+chatbot builder
+11×
+team inbox
+8×
+business account
+8×
+cart recovery
+7×
+cod confirmation
+7×
+pricing page
+7×
+service message
+7×
+whatsapp number
+7×
+meta charges
+6×
+shared team
+6×
+aisensy
+61×
+whatsapp
+50×
+shopify
+34×
+meta
+33×
+cod
+29×
+alternative
+27×
+message
+25×
+number
+24×
+order
+22×
+wati
+21×
+free
+21×
+service
+18×
+Want these fixed and ranking?
+
+I turn audits like this into a clear plan and do the work: on-page, technical, content and links.
+
+Get a free SEO consultation
+
+How it works: the tool downloads the HTML your server sends, the same first copy Googlebot gets, and checks it in your browser. Content added later by JavaScript is not counted. Link and image checks use live HTTP requests. Scores cover on-page setup only; rankings also depend on backlinks, authority and search intent.
+
+===== Competitors =====
+Download CSV
+Save as PDF
+New audit
+Overview
+Keyword
+Competitors
+Full audit
+2
+Links & images
+Structure
+Previews
+AI & tech
+You vs competitors
+
+Your real numbers against the average of the competitor pages that loaded.
+
+Content depth
+You have 4,129 words. Competitors average 813.
+Sections
+You use 19 H2 sections. Competitors average 3.
+Internal linking
+You link to 69 internal pages. Competitors average 57.
+Schema types
+You cover the schema types competitors use.
+Keyword placement
+Competitors place the keyword in: Title, Meta desc, URL, H1, First 100 words. You do not.
+Question headings
+You have 18. Competitors average 1.
+METRIC	YOU
+topedgeai.com	COMP 1
+gallabox.com	COMP 2
+wanotifier.com	COMP 3
+g2.com
+On-page score	88	78	93	42
+Content words	4,129	684	1,747	8
+Exact keyword uses	1	0	1	0
+Keyword density %	0.07	0	0.17	0
+Title width px	539	447	445	66
+Keyword in title	✕ no	✕ no	✓ yes	✕ no
+Meta description chars	123	145	138	0
+Keyword in meta	✕ no	✕ no	✓ yes	✕ no
+Keyword in URL	✕ no	✕ no	✓ yes	✓ yes
+H1 count	1	1	1	0
+Keyword in H1	✕ no	✕ no	✓ yes	✕ no
+H2 sections	19	3	6	0
+H3 sections	11	8	10	0
+Question headings	18	3	0	0
+Images	15	121	17	0
+Images missing alt	0	0	0	0
+Videos	0	0	0	0
+Unique internal links	69	98	73	0
+Unique external links	24	17	13	0
+Lists / tables	23 / 4	1 / 0	50 / 0	0 / 0
+Schema types	FAQPage, Question, Answer, BreadcrumbList, ListItem	none	WebPage, ReadAction, ImageObject, BreadcrumbList, ListItem	none
+Readability (Flesch)	63	16	37	n/a
+HTML size KB	109	154	361	2
+HTML download ms	771	48	178	53
+Last updated	2026-11-07	n/a	2026-02-04	n/a
+Tech	n/a	Next.js, Google Tag Manager, Google Analytics	WordPress, Yoast SEO, Google Tag Manager	Cloudflare
+Sections competitors have, you do not
+
+Competitor H2 and H3 headings whose main words barely appear on your page. Each one is a sub-topic to consider adding.
+
+Comp 1 · H3
+Intelligent workflow automation
+Comp 1 · H3
+Actionable campaign insights
+Comp 1 · H3
+Enterprise-grade safeguards
+Comp 2 · H2
+Get Started with WANotifier Today!
+Missing terms
+
+Words and phrases repeated on competitor pages that never appear on yours. Use the ones that fit your topic.
+
+Phrases
+whatsapp forms
+2/3 · ~3×
+Words
+available
+2/3 · ~7×
+enterprise
+2/3 · ~6×
+
+Format: used by X of Y competitors · average uses per page.
+
+Want these fixed and ranking?
+
+I turn audits like this into a clear plan and do the work: on-page, technical, content and links.
+
+Get a free SEO consultation
+
+How it works: the tool downloads the HTML your server sends, the same first copy Googlebot gets, and checks it in your browser. Content added later by JavaScript is not counted. Link and image checks use live HTTP requests. Scores cover on-page setup only; rankings also depend on backlinks, authority and search intent.
+
+===== Full audit =====
+Download CSV
+Save as PDF
+New audit
+Overview
+Keyword
+Competitors
+Full audit
+2
+Links & images
+Structure
+Previews
+AI & tech
+Full audit of your page
+
+64 checks on topedgeai.com
+
+All
+Fails (2)
+Warnings (4)
+Passed (52)
+Info (6)
+Meta & URL
+3/6 passed
+✓
+Title tag
+"Best AiSensy Alternative for Shopify India 2026 | TopEdge AI" (60 chars, 539 px)
+Likely fits in Google results.
+✕
+Keyword in title
+Not found
+Use the exact keyword phrase in the title.
+✓
+Meta description
+"AiSensy alternative for Shopify India: AiSensy vs Interakt, WATI, Gallabox and Twilio on price, AI cost and COD to prepaid." (123 chars, 759 px)
+Good length.
+!
+Keyword in meta description
+Not found
+Google bolds matching words in the snippet. Use the keyword once.
+!
+Keyword in URL
+Not in URL
+Use short keyword slugs for new pages. Do not change live URLs without a 301 redirect.
+✓
+URL length
+60 chars
+Keep URLs short and readable.
+Headings
+4/5 passed
+✓
+H1 tag
+1 H1: "Best AiSensy Alternative for Shopify India 2026"
+One clear H1.
+✕
+Keyword in H1
+Not found
+Put the keyword, or a close variant, in the H1.
+✓
+Subheadings (H2)
+19 H2, 11 H3, 0 H4-H6
+Split content into sections with H2s that match sub-topics people search.
+✓
+Keyword in an H2
+1 H2 contain it
+Use the keyword or a variant in at least one H2.
+✓
+Heading order
+No skipped levels
+Go H1 > H2 > H3 in order. Style with CSS, not heading tags.
+Content & keyword
+5/7 passed
+✓
+Content length
+4,129 words in main content (4,743 incl. header/footer), about 19 min read
+No magic number. Compare with pages that rank and cover every sub-topic they cover.
+!
+Keyword in first 100 words
+Not found
+Say what the page is about early.
+✓
+Keyword usage
+1 exact uses, 0.07% density
+Natural usage. Write for readers, not a density target.
+i
+Keyword words used separately
+"aisensy" 62x, "vs" 13x, "gallabox" 13x
+Shows partial matches and variations Google also understands.
+✓
+Readability (Flesch, English)
+63 / 100, average 19 words per sentence
+Short sentences and simple words help. Estimate for English text.
+✓
+Text to HTML ratio
+25.2% of the HTML is visible text
+Low ratio means heavy code. Page builders and inline scripts add bulk.
+✓
+Content freshness
+Last date found: 2026-11-07 (12 days ago)
+Review key pages at least once a year and update the modified date honestly.
+Links
+6/6 passed
+✓
+Internal links
+102 links, 69 unique pages
+Link to related service, case study and blog pages with descriptive anchors.
+✓
+External links
+27 links, 24 unique, 5 nofollow/sponsored/ugc
+Cite trusted sources where it helps the reader.
+✓
+Links without anchor text
+0 found
+Give every link visible text or an aria-label.
+✓
+Generic anchors
+0 like "click here" or "read more"
+Describe the destination: "see SEO case studies", not "click here".
+✓
+Broken links
+None in 40 checked links (of 93)
+Fix or remove broken links. They waste crawl budget and hurt users.
+✓
+Internal links that redirect
+None
+Point internal links straight to the final URL.
+Images
+4/6 passed
+✓
+Images missing alt
+0 of 15 have no alt (7 empty alt="")
+Describe meaningful images. Empty alt is fine only for decoration.
+!
+Keyword in an image alt
+None
+Describe one relevant image using the keyword naturally.
+✓
+Modern formats (WebP/AVIF)
+9 of 15
+WebP or AVIF files are smaller and load faster.
+✓
+Width and height set
+0 image(s) without both
+Set width and height to stop layout shift (CLS).
+i
+First image in HTML lazy loaded
+No
+If this is your main above-the-fold image, remove lazy loading. It delays LCP. If it is a logo or icon, ignore this.
+✓
+Heavy images (over 200 KB)
+None in 15 measured
+Compress and resize. Aim for under 200 KB for most content images.
+Technical & indexing
+15/15 passed
+✓
+HTTP status
+200
+Page loads.
+✓
+Indexable
+robots: index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1
+Search engines can index this page.
+✓
+robots.txt (Googlebot)
+Allowed, sitemap declared
+Good.
+✓
+Page in XML sitemap
+Listed in https://topedgeai.com/sitemap.xml
+Important pages belong in the sitemap you submit to Search Console.
+✓
+Canonical tag
+https://topedgeai.com/blog/aisensy-alternative-shopify-india (self)
+Good.
+✓
+HTTPS
+Secure
+Serve every page on HTTPS.
+✓
+Mixed content
+None
+Load every file over https:// or browsers block it.
+✓
+Mobile viewport
+width=device-width, initial-scale=1.0
+Add <meta name="viewport" content="width=device-width, initial-scale=1">.
+✓
+Language attribute
+en-IN
+Set <html lang="en-IN"> or your language.
+✓
+Doctype and charset
+Doctype ok, charset ok
+Start with <!DOCTYPE html> and <meta charset="utf-8">.
+✓
+HTML size and DOM
+109 KB HTML, 1,128 elements
+Heavy HTML and big DOMs slow rendering. Page builders add extra wrappers.
+✓
+Page download time
+771 ms to download the full HTML from the audit server
+Includes connection and full HTML download, not just TTFB. Use page caching and good hosting.
+✓
+Render-blocking scripts in head
+0 blocking, 1 external scripts, 7 stylesheets
+Add defer or async to scripts that do not need to run first.
+✓
+Compression
+br
+Enable gzip or brotli on the server.
+✓
+HSTS security header
+Enabled
+Strict-Transport-Security forces HTTPS for returning visitors.
+AI search readiness
+5/6 passed
+✓
+AI search crawlers allowed
+ChatGPT search, Perplexity, Bing/Copilot and Claude search can crawl
+Blocking AI search bots removes you from their answers and citations.
+i
+AI training crawlers
+Not blocked (GPTBot, ClaudeBot, Google-Extended, CCBot)
+Your choice. Blocking training bots does not affect Google rankings.
+✓
+llms.txt file
+Found at /llms.txt (38 KB)
+An optional summary file for AI tools. Low effort, low impact today.
+✓
+Question-style headings
+18 found
+Headings phrased as real questions, answered right below, are easy for AI Overviews and ChatGPT to quote.
+✓
+Lists and tables
+23 lists, 4 tables
+Lists and tables are easy to scan and easy for AI answers to quote.
+✓
+FAQ structured data
+FAQPage found
+FAQ rich results are limited now, but the markup still helps machines read Q&A.
+Schema & trust
+4/4 passed
+✓
+Structured data
+FAQPage, Question, Answer, BreadcrumbList, ListItem, Organization, ImageObject, Person, PostalAddress, Country, Offer, PriceSpecification
+Add JSON-LD that matches the page: LocalBusiness, Service, Article, FAQPage, BreadcrumbList.
+✓
+Breadcrumbs markup
+BreadcrumbList found
+Breadcrumbs show your site path in Google results.
+✓
+Author and dates
+Author: Moksh Patel | Published: 2026-10-08 | Updated: 2026-11-07
+Show who wrote it and when it was updated. Supports E-E-A-T.
+✓
+Trust page links
+About yes, Contact yes, Privacy yes
+Link to About, Contact and Privacy pages from every page.
+Local SEO
+3/6 passed
+✓
+Click-to-call phone
++919429784875
+Local visitors call from mobile. Add a tel: link.
+i
+LocalBusiness schema
+Not found
+For local services add LocalBusiness with name, address, phone, hours and geo.
+✓
+Address on page
+Found (schema or <address>)
+Show the same name, address and phone as your Google Business Profile.
+i
+Map link or embed
+Not found
+Link or embed your Google Maps location.
+i
+Reviews markup
+Not found
+Only mark up genuine reviews shown on the page.
+✓
+WhatsApp contact
+Found
+Useful if customers contact you on WhatsApp.
+Social sharing
+3/3 passed
+✓
+Open Graph tags
+og:title yes, og:description yes, og:image yes
+Controls the preview on WhatsApp, LinkedIn and Facebook.
+✓
+Twitter/X card
+summary_large_image
+Add twitter:card = summary_large_image.
+✓
+Favicon
+Found
+Google shows your favicon next to your results.
+Want these fixed and ranking?
+
+I turn audits like this into a clear plan and do the work: on-page, technical, content and links.
+
+Get a free SEO consultation
+
+How it works: the tool downloads the HTML your server sends, the same first copy Googlebot gets, and checks it in your browser. Content added later by JavaScript is not counted. Link and image checks use live HTTP requests. Scores cover on-page setup only; rankings also depend on backlinks, authority and search intent.
+
+===== Links & images =====
+Download CSV
+Save as PDF
+New audit
+Overview
+Keyword
+Competitors
+Full audit
+2
+Links & images
+Structure
+Previews
+AI & tech
+Link health
+
+Live status of 40 unique links (first 40 of 93, internal first). 0 broken, 0 redirecting.
+
+STATUS	TYPE	ANCHOR	URL	NOTE
+200	internal	Signup 14-days trial	https://topedgeai.com/pricing	
+200	internal	TopEdge AI	https://topedgeai.com/	
+200	internal	JourneyAutomate WhatsApp from any Shopify event	https://topedgeai.com/features/journeys	
+200	internal	Flow + Shopify ToolsBots that read live orders	https://topedgeai.com/features/flow-builder	
+200	internal	Opt-in toolsSpin, scratch and popups that grow a list	https://topedgeai.com/features/opt-in-tools	
+200	internal	Audience CampaignsBroadcasts with net-of-Meta revenue	https://topedgeai.com/features/campaigns	
+200	internal	Audience CRMOne profile for every shopper	https://topedgeai.com/features/audience-crm	
+200	internal	WarrantyQR registration and claims on WhatsApp	https://topedgeai.com/features/warranty	
+200	internal	Tracking PixelLive shopper intent from your store	https://topedgeai.com/features/analytics	
+200	internal	Intent detectionRoute Hinglish without AI spend	https://topedgeai.com/features/intent-detection	
+200	internal	AI BrainAnswers grounded in your policies	https://topedgeai.com/features/ai-brain	
+200	internal	Profit & costsTrue profit on every order	https://topedgeai.com/features/profit-loss	
+200	internal	Best Shopify App for Abandoned CartThe 2026 India shortlist, comparedRead the co	https://topedgeai.com/blog/best-shopify-app-for-abandoned-cart-recovery-india	
+200	internal	Docs	https://topedgeai.com/docs	
+200	internal	Customers	https://topedgeai.com/customers	
+200	internal	Log in	https://topedgeai.com/login	
+200	internal	Start free	https://topedgeai.com/signup	
+200	internal	Blog	https://topedgeai.com/blog	
+200	internal	Comparisons	https://topedgeai.com/blog/category/comparisons	
+200	internal	Moksh Patel	https://topedgeai.com/about	
+200	internal	Automation	https://topedgeai.com/blog/category/automation	
+200	internal	COD & RTO	https://topedgeai.com/blog/category/cod-rto	
+200	internal	Meta & templates	https://topedgeai.com/blog/category/meta-templates	
+200	internal	AI & inbox	https://topedgeai.com/blog/category/ai-and-inbox	
+200	internal	Growth	https://topedgeai.com/blog/category/growth	
+200	internal	AiSensy pricing breakdown	https://topedgeai.com/blog/aisensy-pricing-india	
+200	internal	India WhatsApp API pricing guide	https://topedgeai.com/blog/whatsapp-business-api-pricing-india	
+200	internal	AiSensy alternative comparison	https://topedgeai.com/compare/aisensy	
+200	internal	Interakt alternative	https://topedgeai.com/blog/interakt-alternative-shopify-india	
+200	internal	WATI alternative	https://topedgeai.com/blog/wati-alternative-shopify-india	
+200	internal	TopEdge AI vs WATI vs AiSensy	https://topedgeai.com/compare/topedge-vs-wati-vs-aisensy	
+200	internal	WhatsApp opt-in rules for Shopify India	https://topedgeai.com/blog/whatsapp-opt-in-shopify-india	
+200	internal	why templates get rejected and how to fix them	https://topedgeai.com/blog/whatsapp-template-rejected-meta-shopify-fix	
+200	internal	Bitespeed alternative	https://topedgeai.com/blog/bitespeed-alternative-shopify-india	
+200	internal	Zoko alternative	https://topedgeai.com/blog/zoko-alternative-shopify-india	
+200	internal	Getgabs alternative	https://topedgeai.com/blog/getgabs-alternative-shopify-whatsapp	
+200	internal	Kanal alternative	https://topedgeai.com/blog/kanal-whatsapp-alternative-shopify	
+200	internal	Dondy alternative	https://topedgeai.com/blog/dondy-alternative-shopify-india	
+200	internal	Updatrr alternative	https://topedgeai.com/blog/updatrr-alternative-shopify-india	
+200	internal	COD confirmation on WhatsApp	https://topedgeai.com/blog/how-to-reduce-rto-with-whatsapp-cod-confirmation	
+
+Some sites block automated checks (403/999). Open those links by hand before removing them.
+
+Image weight
+
+File size of the first 15 images. Over 200 KB is heavy for most web images.
+
+SIZE	STATUS	ALT	IMAGE
+73 KB	200	AiSensy alternative for Shopify India, with 0% Meta markup and native COD-to-prepaid conversion on WhatsApp	https://topedgeai.com/blog/aisensy-alternative-shopify-india.jpg
+66 KB	200	Updatrr alternative for Shopify India, comparing INR, USD, EUR and GBP plans from ₹1,999 a month with BYOK AI active	https://topedgeai.com/blog/updatrr-alternative-shopify-india.jpg
+65 KB	200	WATI alternative for Shopify India, with a support ticket beside a ₹1,299 Shopify order and native COD confirmation active	https://topedgeai.com/blog/wati-alternative-shopify-india.jpg
+61 KB	200	Interakt alternative for Shopify India, comparing Starter and Growth plans from ₹1,999 a month with BYOK AI active	https://topedgeai.com/blog/interakt-alternative-shopify-india.jpg
+39 KB	200	Best Shopify app for abandoned cart recovery in India, the TopEdge AI 2026 shortlist	https://topedgeai.com/blog/best-shopify-app-for-abandoned-cart-recovery-india.webp
+15 KB	200	(empty)	https://topedgeai.com/logo.png
+12 KB	200	(empty)	https://topedgeai.com/brand-mark-56.png
+9 KB	200	Meta Business Partner	https://topedgeai.com/badges/meta-business-partner.webp?v=5
+9 KB	200	Shopify Available on App Store	https://topedgeai.com/badges/shopify-app-store.webp?v=5
+9 KB	200	(empty)	https://topedgeai.com/ai/chatgpt.webp
+9 KB	200	WhatsApp Business Partner	https://topedgeai.com/badges/whatsapp-cloud-api.webp?v=6
+7 KB	200	(empty)	https://topedgeai.com/ai/gemini.webp
+5 KB	200	(empty)	https://topedgeai.com/ai/claude.webp
+4 KB	200	(empty)	https://topedgeai.com/ai/grok.webp
+4 KB	200	(empty)	https://topedgeai.com/ai/perplexity.webp
+All links and images on the page
+Links131 total, 69 internal pages, 24 external
+Images15 total, 0 missing alt
+Want these fixed and ranking?
+
+I turn audits like this into a clear plan and do the work: on-page, technical, content and links.
+
+Get a free SEO consultation
+
+How it works: the tool downloads the HTML your server sends, the same first copy Googlebot gets, and checks it in your browser. Content added later by JavaScript is not counted. Link and image checks use live HTTP requests. Scores cover on-page setup only; rankings also depend on backlinks, authority and search intent.
+
+===== Structure =====
+Download CSV
+Save as PDF
+New audit
+Overview
+Keyword
+Competitors
+Full audit
+2
+Links & images
+Structure
+Previews
+AI & tech
+Heading outline
+
+The structure Google sees. Switch pages to compare how competitors split the topic.
+
+You: topedgeai.com (31)
+Comp 1: gallabox.com (14)
+Comp 2: wanotifier.com (31)
+Comp 3: g2.com (0)
+H1
+Best AiSensy Alternative for Shopify India 2026
+H2
+Read this first
+H2
+What is the best AiSensy alternative for WhatsApp in India?
+H2
+AiSensy alternative comparison: six WhatsApp platforms side by side
+H2
+Where do Shopify brands hit limits with AiSensy?
+H2
+The service message markup: ₹0.145 against Meta’s ₹0.115
+H2
+Is there a free AiSensy alternative?
+H2
+What people actually ask before choosing an AiSensy alternative
+H2
+AiSensy vs TopEdge AI
+H2
+AiSensy vs Interakt
+H2
+AiSensy vs WATI
+H2
+AiSensy vs Gallabox
+H2
+AiSensy vs Twilio
+H2
+Features to check before you pick an AiSensy alternative
+H2
+How to move your WhatsApp number without downtime
+H2
+What to test before you leave AiSensy
+H2
+Which AiSensy alternative fits which store
+H2
+Frequently asked questions
+H3
+What is the best AiSensy alternative for WhatsApp in India?
+H3
+Is there a free AiSensy alternative?
+H3
+What do Indian store owners ask before leaving AiSensy?
+H3
+Does AiSensy mark up Meta’s WhatsApp rates in India?
+H3
+AiSensy vs Interakt: which is cheaper for a Shopify store?
+H3
+AiSensy vs WATI vs Gallabox: what is the actual difference?
+H3
+Is Twilio a realistic AiSensy alternative?
+H3
+Will I lose my approved templates and my WhatsApp number if I switch?
+H3
+Is AiSensy good for Shopify COD confirmation?
+H3
+What should I test before switching from AiSensy?
+H3
+How long does it take to move from AiSensy to another platform?
+H2
+Run cart recovery on your Shopify store
+H2
+Related playbooks
+Want these fixed and ranking?
+
+I turn audits like this into a clear plan and do the work: on-page, technical, content and links.
+
+Get a free SEO consultation
+
+How it works: the tool downloads the HTML your server sends, the same first copy Googlebot gets, and checks it in your browser. Content added later by JavaScript is not counted. Link and image checks use live HTTP requests. Scores cover on-page setup only; rankings also depend on backlinks, authority and search intent.
+
+===== Previews =====
+Download CSV
+Save as PDF
+New audit
+Overview
+Keyword
+Competitors
+Full audit
+2
+Links & images
+Structure
+Previews
+AI & tech
+Google preview
+
+Desktop and mobile estimates, truncated by measured pixel width. Google may also rewrite titles and descriptions.
+
+Desktop
+
+TopEdge AI
+https://topedgeai.com › blog › aisensy-alternative-shopify-india
+Best AiSensy Alternative for Shopify India 2026 | TopEdge AI
+AiSensy alternative for Shopify India: AiSensy vs Interakt, WATI, Gallabox and Twilio on price, AI cost and COD to prepaid.
+
+Mobile
+
+TopEdge AI
+https://topedgeai.com › blog › aisensy-alternative-shopify-india
+Best AiSensy Alternative for Shopify India 2026 | ...
+AiSensy alternative for Shopify India: AiSensy vs Interakt, WATI, Gallabox and Twilio on price, AI ...
+Social share preview
+
+How a shared link looks on WhatsApp, Facebook and LinkedIn, built from your Open Graph tags.
+
+TOPEDGEAI.COM
+Best AiSensy Alternative for Shopify India 2026 | TopEdge AI
+AiSensy alternative for Shopify India: AiSensy vs Interakt, WATI, Gallabox and Twilio on price, AI cost and COD to prepaid.
+og:title
+Best AiSensy Alternative for Shopify India 2026 | TopEdge AI
+og:description
+AiSensy alternative for Shopify India: AiSensy vs Interakt, WATI, Gallabox and Twilio on price, AI cost and COD to prepaid.
+og:image
+https://topedgeai.com/blog/aisensy-alternative-shopify-india.jpg
+og:type
+article
+twitter:card
+summary_large_image
+Want these fixed and ranking?
+
+I turn audits like this into a clear plan and do the work: on-page, technical, content and links.
+
+Get a free SEO consultation
+
+How it works: the tool downloads the HTML your server sends, the same first copy Googlebot gets, and checks it in your browser. Content added later by JavaScript is not counted. Link and image checks use live HTTP requests. Scores cover on-page setup only; rankings also depend on backlinks, authority and search intent.
+
+===== AI & tech =====
+Download CSV
+Save as PDF
+New audit
+Overview
+Keyword
+Competitors
+Full audit
+2
+Links & images
+Structure
+Previews
+AI & tech
+AI crawler access
+
+What your robots.txt allows for this URL. Search bots decide if AI assistants can cite you. Training bots only collect data.
+
+BOT	USED FOR	TYPE	THIS PAGE	RULE
+OAI-SearchBot	ChatGPT search results	Search / answers	Allowed	Allow: /
+PerplexityBot	Perplexity answers	Search / answers	Allowed	Allow: /
+Bingbot	Bing and Copilot	Search / answers	Allowed	Allow: /
+Claude-SearchBot	Claude search	Search / answers	Allowed	Allow: /
+GPTBot	OpenAI model training	Training	Allowed	Allow: /
+ClaudeBot	Anthropic model training	Training	Allowed	Allow: /
+Google-Extended	Gemini training	Training	Allowed	Allow: /
+CCBot	Common Crawl dataset	Training	Allowed	Allow: /
+Applebot-Extended	Apple AI training	Training	Allowed	Allow: /
+Detected technology
+Nothing detected from the HTML.
+Head and server data
+Canonical
+https://topedgeai.com/blog/aisensy-alternative-shopify-india
+Meta robots
+index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1
+X-Robots-Tag
+not found
+Lang
+en-IN
+hreflang
+en-IN, x-default
+AMP
+not found
+Cache-Control
+public,max-age=0,must-revalidate
+Compression
+br
+Preconnect / preload
+3 / 0
+Sitemaps
+https://topedgeai.com/sitemap.xml
+Social profiles linked
+developers.facebook.com, twitter.com, linkedin.com, facebook.com, instagram.com, youtube.com
+Want these fixed and ranking?
+
+I turn audits like this into a clear plan and do the work: on-page, technical, content and links.
+
+Get a free SEO consultation
+
+How it works: the tool downloads the HTML your server sends, the same first copy Googlebot gets, and checks it in your browser. Content added later by JavaScript is not counted. Link and image checks use live HTTP requests. Scores cover on-page setup only; rankings also depend on backlinks, authority and search intent.

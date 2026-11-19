@@ -47,6 +47,17 @@ export default function CompareAlternativesPage() {
             { name: 'Compare', path: '/compare' },
             { name: 'Alternatives', path: PATH },
           ]),
+          {
+            '@context': 'https://schema.org',
+            '@type': 'ItemList',
+            name: 'WhatsApp automation alternatives for Shopify India',
+            itemListElement: COMPARE_ALTERNATIVES.map((a, i) => ({
+              '@type': 'ListItem',
+              position: i + 1,
+              name: a.name,
+              url: `https://topedgeai.com${a.href}`,
+            })),
+          },
         ]}
       />
       <MarketingPage className="mkt-cmp">

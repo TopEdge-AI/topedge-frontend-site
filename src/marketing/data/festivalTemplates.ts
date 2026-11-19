@@ -1852,14 +1852,26 @@ export function upcomingFestivals(
   return (ahead.length ? ahead : withTiming).slice(0, limit);
 }
 
-/** Sibling festivals for the "what else is close" rail on a detail page. */
+/**
+ * Sibling festivals for the "what else is close" rail on a detail page: the
+ * next `limit` festivals in calendar order, wrapping at the end of the year.
+ *
+ * It used to return the first few festivals of the same cluster, so in every
+ * cluster larger than the rail the same pages were linked and the rest got no
+ * sibling link at all. The 18 Nov 2026 Ahrefs crawl found 10 festival pages
+ * whose only internal link was the hub, and Search Console had 23 of them as
+ * "Discovered, currently not indexed". Walking the calendar gives every page
+ * exactly `limit` inbound sibling links, and it matches the section's own
+ * copy: the campaign that follows is the one to plan next.
+ */
 export function nearbyFestivals(festival: Festival, limit = 3): Festival[] {
-  const sameCluster = FESTIVALS.filter((f) => f.cluster === festival.cluster && f.slug !== festival.slug);
-  if (sameCluster.length >= limit) return sameCluster.slice(0, limit);
-  const rest = FESTIVALS.filter(
-    (f) => f.slug !== festival.slug && !sameCluster.some((s) => s.slug === f.slug),
-  );
-  return [...sameCluster, ...rest].slice(0, limit);
+  const i = FESTIVALS.findIndex((f) => f.slug === festival.slug);
+  if (i < 0) return FESTIVALS.slice(0, limit);
+  const out: Festival[] = [];
+  for (let k = 1; k <= limit && k < FESTIVALS.length; k += 1) {
+    out.push(FESTIVALS[(i + k) % FESTIVALS.length]);
+  }
+  return out;
 }
 
 /** Slugs in calendar order — the route registry mirrors this list. */

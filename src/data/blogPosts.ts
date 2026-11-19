@@ -4886,7 +4886,7 @@ export const blogPosts: BlogPost[] = [
 <tbody>
 <tr>
 <td><strong>WhatsApp automation</strong></td>
-<td>TopEdge AI, WATI, AiSensy, Interakt, Gallabox. All operate as Meta Business Solution Providers. Plans vary widely by message volume, so check current vendor pricing before you budget.</td>
+<td>TopEdge AI, WATI, AiSensy, Interakt, Gallabox. TopEdge AI is a Shopify app that runs on your own WhatsApp Business Account, not a messaging reseller. Plans vary widely by message volume, so check current vendor pricing before you budget.</td>
 </tr>
 <tr>
 <td><strong>Email marketing</strong></td>

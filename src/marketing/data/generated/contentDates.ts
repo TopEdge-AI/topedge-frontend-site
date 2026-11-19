@@ -8,7 +8,7 @@ export const CONTENT_DATES = {
   /** Last edit of 3-way compare page (+ feature matrix). */
   compareThreeWay: '2026-11-12',
   /** Last edit of blogPosts.ts (used as Article dateModified fallback). */
-  blogPosts: '2026-11-18',
+  blogPosts: '2026-11-19',
   /** Last edit of feature / product page content. */
   featurePages: '2026-11-15',
   /** Last edit of published plan catalog (pricing Offers). */
@@ -41,7 +41,7 @@ export const BLOG_DATES_BY_SLUG = {
   "organic-ecommerce-leads-short-form-video": "2026-10-21",
   "trending-products-to-sell-online-india-2026": "2026-10-21",
   "wati-alternative-shopify-india": "2026-11-07",
-  "aisensy-alternative-shopify-india": "2026-11-07",
+  "aisensy-alternative-shopify-india": "2026-11-19",
   "interakt-alternative-shopify-india": "2026-11-18",
   "bitespeed-alternative-shopify-india": "2026-11-17",
   "whatsapp-template-rejected-meta-shopify-fix": "2026-10-21",
@@ -52,7 +52,7 @@ export const BLOG_DATES_BY_SLUG = {
   "ecommerce-funnel-drop-off-benchmarks-visitor-identity-resolution": "2026-11-01",
   "interakt-pricing-india": "2026-11-15",
   "wati-pricing-india": "2026-11-15",
-  "aisensy-pricing-india": "2026-11-15",
+  "aisensy-pricing-india": "2026-11-19",
   "rto-meaning-ecommerce": "2026-11-17",
   "add-whatsapp-chat-button-shopify": "2026-11-15",
   "best-shipping-aggregators-logistics-tools-india": "2026-11-17"
