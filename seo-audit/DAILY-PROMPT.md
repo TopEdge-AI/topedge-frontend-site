@@ -1,6 +1,6 @@
 # Daily prompt (version 4, 18 Nov 2026)
 
-Paste everything below the line into a new session each day. Change only N and the date. Day N is the first row in `seo-audit/PLAN-AND-LOG.md` section 3 whose status is not Done.
+Paste everything below the line into a new session each day. Change only N and the date. N is the owner's own count (Day 1 = 15 Nov, Day 3 = 18 Nov, Day 4 = 19 Nov, Day 5 = 20 Nov). Run the row labelled Day N in `seo-audit/PLAN-AND-LOG.md` section 3. If that row is already Done, run the first row below it that is not Done and say so in one line. Never restart the count.
 
 ---
 
@@ -52,7 +52,7 @@ Before changing anything, tell me in a few lines: what the log says is done, tod
 2. Search Console first (through OpenSEO). Use the regex families in the plan doc and exclude local junk.
 3. OpenSEO: always pass locationCode 2356 and languageCode "en". Check credits with whoami and spend carefully. One get_keyword_metrics call for many keywords beats many small calls.
 4. Read the live India results before trusting volume, and look at who holds positions 3 to 10. Small sites and third parties: go. Only vendors and giants: drop it.
-5. Known traps, do not target: rto meaning, rto charges, cod meaning, rto calculator (transport office), bitespeed review (employee reviews), best whatsapp api provider in india (reseller lists), whatsapp flow template (Meta Flows). "ndr full form" is unchecked until Day 7.
+5. Known traps, do not target: rto meaning, rto charges, cod meaning, rto calculator (transport office), bitespeed review (employee reviews), best whatsapp api provider in india (reseller lists), whatsapp flow template (Meta Flows). "ndr full form" is unchecked: read its India SERP before targeting it.
 6. Do not build pages for chatbot, bulk sender or API reseller searches, whatever the volume.
 7. Report India numbers separately from worldwide. Search Console beats volume tools on small queries.
 
@@ -128,7 +128,7 @@ Follow `seo-audit/PLAN-AND-LOG.md` section 2 step by step:
 8. Off-page item for the day: drafts only, I send.
 9. Build (exit 0), dist audit, preview, commit, push, live check. Re-run the audit tool into .../after/.
 10. IndexNow (repo script and OpenSEO for Bing), and give me the full URLs for Search Console Request indexing.
-11. Log the day in PLAN-AND-LOG.md section 5 and set its status. Mondays and Day 8 and Day 15: scorecard and stop rule. Memory: only new facts.
+11. Log the day in PLAN-AND-LOG.md section 5 and set its status. Mondays, Day 10 (25 Nov) and Day 17 (2 Dec): scorecard and stop rule. Memory: only new facts.
 
 ## 11. END-OF-DAY REPORT
 
