@@ -70,6 +70,7 @@ const columns: { title: string; links: FootLink[] }[] = [
       { label: 'WhatsApp templates', href: '/whatsapp-templates' },
       { label: 'Festival templates', href: '/whatsapp-festival-templates', badge: 'New' },
       { label: 'Shopify WhatsApp integration', href: '/shopify-whatsapp-integration' },
+      { label: 'WhatsApp app for Shopify', href: '/whatsapp-app-for-shopify' },
       { label: 'WhatsApp cart recovery app', href: '/whatsapp-abandoned-cart-recovery-app' },
       { label: 'Integrations', href: '/integrations' },
       { label: 'Meta India rate card', href: '/pricing/meta-rates' },

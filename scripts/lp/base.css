@@ -794,3 +794,14 @@ html[data-v="switch"] .mig{display:block}
   .cmp-row{padding:1.15rem 1rem;text-align:center}
   .cmp-x,.cmp-v{text-align:center}
 }
+
+/* Feature clips in the platform panels (20 Nov 2026): the real product films
+   replace the drawn illustrations. 16:9 desktop cut, portrait phone cut. */
+.clip{display:block;width:100%;height:auto;aspect-ratio:16/9;margin-top:1.35rem;border-radius:20px;background:#f6f2ff;object-fit:cover}
+.bx--n .clip{aspect-ratio:4/3}
+@media (max-width:48rem){.clip,.bx--n .clip{aspect-ratio:4/5}}
+.stp-n{display:flex;align-items:center;justify-content:center;width:2.6rem;height:2.6rem;border-radius:999px;background:#f3edff;color:var(--violet);font-weight:600;font-size:1.05rem}
+.steps--5{width:min(100%,72rem)}
+@media (min-width:62rem){.steps--5{grid-template-columns:repeat(5,minmax(0,1fr))}}
+.cmp-note{margin-top:1.25rem;text-align:center;font-size:.8rem;opacity:.7}
+.mid-cta{display:flex;flex-wrap:wrap;gap:.75rem;justify-content:center}

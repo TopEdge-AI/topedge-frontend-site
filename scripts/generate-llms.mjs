@@ -191,6 +191,7 @@ const CORE = [
   ['Features', '/features'],
   ['COD confirmation', '/features/cod-confirmation'],
   ['Shopify WhatsApp integration', '/shopify-whatsapp-integration'],
+  ['WhatsApp app for Shopify', '/whatsapp-app-for-shopify'],
   ['WhatsApp abandoned cart recovery app', '/whatsapp-abandoned-cart-recovery-app'],
   ['Integrations', '/integrations'],
   ['Customers', '/customers'],

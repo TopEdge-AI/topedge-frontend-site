@@ -12,7 +12,11 @@
  * Theme: scripts/lp/base.css mirrors the --mkt-* tokens in src/marketing/styles/marketing.css
  * and the .mkt-pf hero/step/card patterns, with the same system font stack (no webfont download).
  *
- * Output pages are noindex, not in sitemap.xml or llms.txt, and linked from nowhere.
+ * Since 20 Nov 2026 the pages are search landing pages as well as ad pages: each
+ * PAGES entry with `index: true` is written to public/<out>/index.html with a
+ * canonical, schema and an exact-keyword H1, and is listed in STATIC_LANDING_PATHS
+ * (scripts/marketing-urls.mjs) for the sitemap. The platform panels play the home
+ * page's product films instead of drawn illustrations (owner, 20 Nov 2026).
  *
  * Usage: node scripts/generate-landing-pages.mjs
  */
@@ -134,9 +138,9 @@ const TRIAL_SHORT = `${TRIAL.days}-day free trial on every plan. ${TRIAL.orders}
  */
 const HERO_VARIANTS = {
   platform: {
-    lead: 'Shopify Growth Suite ',
-    mark: 'TopEdge',
-    sub: 'WhatsApp cart recovery, COD-to-prepaid RTO reduction and automated customer journeys for Shopify brands, plus 20 more features in one suite.',
+    lead: 'WhatsApp App for Shopify ',
+    mark: 'TopEdge AI',
+    sub: 'Recover abandoned carts, confirm COD orders and send order updates on WhatsApp. Built for Indian Shopify D2C brands, with 20 more features in one suite.',
   },
   cod: {
     lead: 'Confirm COD orders before you ',
@@ -212,7 +216,7 @@ const PROOF_VARIANTS = {
     // and Meta's own symbol says that faster than the label under it.
     statMark: '/brand/meta-mark.webp',
     statLabel: 'added to what Meta charges you',
-    src: 'Meta bills your Business account at its own per-conversation rates. We charge for the software only.',
+    src: 'Meta bills your Business account at its own per-message rates. We charge for the software only.',
   },
   cod: {
     h: 'The brands that verify COD orders run half the RTO',
@@ -260,7 +264,7 @@ const SWITCH = [
   {
     icon: 'percent',
     topic: 'WhatsApp API pricing',
-    them: 'A hidden 20% to 30% per-message tax on top of the official Meta conversation rate',
+    them: 'A hidden 20% to 30% per-message tax on top of the official Meta message rate',
     us: '0% Meta API markup. Meta bills you directly, and the number and templates stay yours.',
   },
   {
@@ -345,91 +349,52 @@ const PATHS = [
 const WA_GLYPH =
   '<svg viewBox="0 0 24 24" width="22" height="22" fill="#fff" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm4.5 12.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.1-.2 0-.4.1-.5l.4-.5c.1-.2.2-.3.3-.5v-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.8.8-1 1.9-.7 3a7.6 7.6 0 0 0 1.6 2.8 9.2 9.2 0 0 0 4.4 3.1c1.4.4 2.2.3 2.9.2.6-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.2-.2-.4-.3z"/></svg>';
 
+/**
+ * The platform panels, each playing the product film for that feature.
+ *
+ * Until 20 Nov 2026 every panel was a drawing in markup and CSS. The owner asked
+ * for the real product instead: these are the same films the home page plays
+ * (video/src/comps/launch*.tsx, rendered to public/marketing/feature-clips/home),
+ * so the page shows what the dashboard actually does and stays in step with the
+ * home page. Each clip weighs nothing until it scrolls near the viewport
+ * (page.js attaches one source, the phone cut on small screens) and pauses off
+ * screen.
+ */
 const BENTO = [
   {
     w: true,
     h: 'Win back the carts that leave',
-    p: 'A reminder on WhatsApp while the cart is still warm, then one more the next day. Shopify tells us the cart; the buyer replies in the thread they already use.',
-    viz: `<div class="viz">
-          <span class="orb orb--l"></span>
-          <div class="stage">
-            <div class="pane pane--hero">
-              <p class="k">Recovered this month <i>sample</i></p>
-              <p class="big">&#8377;4,18,700</p>
-              <p class="spark"><i style="height:34%"></i><i style="height:52%"></i><i style="height:41%"></i><i style="height:68%"></i><i style="height:59%"></i><i style="height:86%"></i><i style="height:100%"></i></p>
-            </div>
-            <div class="pane pane--wa">
-              <p class="wa-h"><i class="wa-dot"></i>WhatsApp</p>
-              <p class="wa-b">Still thinking about the Linen Shirt? Your cart is saved.</p>
-              <p class="wa-cta">Resume checkout</p>
-            </div>
-          </div>
-        </div>`,
+    p: 'A reminder on WhatsApp while the cart is still warm, then two more if they need it. Shopify tells us the cart; the buyer replies in the thread they already use.',
+    film: 'cart',
+    label: 'A shopper leaves a Shopify checkout, gets a WhatsApp reminder with the cart, and completes the order',
   },
   {
     w: true,
     h: 'Confirm COD before you ship',
     p: 'One message the moment the order lands. The buyer confirms, cancels, or pays online instead, and you decide what each answer does to the order in Shopify.',
-    viz: `<div class="viz">
-          <span class="orb orb--r"></span>
-          <div class="stage">
-            <div class="pane pane--ord">
-              <p class="ord-h"><span class="thumb"></span><span><b>Linen Shirt</b><em>Olive &middot; M &middot; &#8377;1,499</em></span></p>
-              <p class="ord-f"><span class="tag tag--cod">Cash on delivery</span><span class="tag tag--ok">&#10003; Confirmed</span></p>
-            </div>
-            <div class="pane pane--ask">
-              <p class="wa-b">Confirm order #1042 so we can ship it today.</p>
-              <span class="ask-btns"><i class="is-on">Confirm</i><i>Cancel</i></span>
-            </div>
-          </div>
-        </div>`,
+    film: 'cod',
+    label: 'A cash on delivery order is confirmed on WhatsApp before dispatch, and the order is tagged in Shopify',
   },
   {
     w: false,
     h: 'Broadcast to the right people',
     p: 'Segment by what they bought, when they last ordered, or where they dropped off.',
-    viz: `<div class="viz viz--mid">
-          <span class="orb orb--c"></span>
-          <div class="orbit">
-            <span class="ring ring--1"></span><span class="ring ring--2"></span>
-            <span class="core">${WA_GLYPH}</span>
-            <span class="sat sat--1">Bought once</span>
-            <span class="sat sat--2">90 days quiet</span>
-            <span class="sat sat--3">Mumbai</span>
-          </div>
-          <div class="pane pane--aud"><b>2,418</b><span>in this segment</span></div>
-        </div>`,
+    film: 'campaigns',
+    label: 'A WhatsApp campaign is sent to a segment built from Shopify order history',
   },
   {
     w: false,
     h: 'See every step before the sale',
     p: 'The pages they opened, the product they lingered on, and where they dropped off, tied to the same WhatsApp thread.',
-    viz: `<div class="viz">
-          <span class="orb orb--c"></span>
-          <div class="pane pane--trail">
-            <p class="brow"><i></i><i></i><i></i><span>yourstore.com</span></p>
-            <ol class="trail">
-              <li><b></b><span>Viewed Linen Shirt<em>2:14</em></span></li>
-              <li><b></b><span>Added to cart<em>2:16</em></span></li>
-              <li class="is-drop"><b></b><span>Left at checkout<em>2:19</em></span></li>
-            </ol>
-          </div>
-        </div>`,
+    film: 'pixel',
+    label: 'Store visits, products viewed and checkout drop-off appear on the shopper profile',
   },
   {
     w: false,
     h: 'Flows you build by dragging',
     p: 'No developer, no theme edits, no checkout scripts. Branch on what the buyer did.',
-    viz: `<div class="viz viz--grid">
-          <span class="orb orb--c"></span>
-          <div class="fl">
-            <span class="nd nd--a">Cart abandoned</span>
-            <span class="wire"></span>
-            <span class="nd nd--b">Wait 45 minutes</span>
-            <span class="wire"></span>
-            <span class="fl-split"><span class="nd nd--c">Send reminder</span><span class="nd nd--d">Tag and wait</span></span>
-          </div>
-        </div>`,
+    film: 'flow',
+    label: 'A WhatsApp journey is built by dragging steps onto a canvas',
   },
 ];
 
@@ -655,13 +620,27 @@ const XMARK =
 const CHECK =
   '<svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>';
 
-const switchHtml = SWITCH.map(
-  (w) => `      <div class="cmp-row">
+const switchRows = (rows) =>
+  rows
+    .map(
+      (w) => `      <div class="cmp-row">
         <p class="cmp-t">${iconChip(w.icon)}<span>${esc(w.topic)}</span></p>
         <p class="cmp-x"><i>${XMARK}</i>${esc(w.them)}</p>
         <p class="cmp-v"><i>${CHECK}</i>${esc(w.us)}</p>
       </div>`,
-).join('\n');
+    )
+    .join('\n');
+const switchHtml = switchRows(SWITCH);
+
+/** One sourced figure with its argument, in the proof block's layout. */
+const costHtml = (c) => `      <div class="pf" data-pf="platform">
+        <div class="pf-stat"><p class="pf-fig"><b>${esc(c.stat)}</b></p><span>${esc(c.statLabel)}</span></div>
+        <div class="pf-copy">
+          <h2>${esc(c.h)}</h2>
+          <p>${esc(c.p)}</p>
+          <p class="pf-src">${esc(c.src)}</p>
+        </div>
+      </div>`;
 
 const quoteCardsHtml = QUOTES.map(
   (q) => `      <blockquote class="card quote">
@@ -691,13 +670,38 @@ function pathsHtml(slug) {
   ).join('\n');
 }
 
-const bentoHtml = BENTO.map(
-  (b, i) => `      <article class="bx bx--${b.w ? 'w' : 'n'}" data-rv style="--d:${i * 70}ms">
+/** Home films, versioned with the home page so a re-render busts both caches. */
+const HOME_FILM_V = (fs
+  .readFileSync(path.join(root, 'src/marketing/data/homeFeatureMedia.ts'), 'utf8')
+  .match(/const V = '([^']+)'/) || [])[1];
+if (!HOME_FILM_V) throw new Error('homeFeatureMedia.ts: film version V not found');
+const homeFilm = (name) => {
+  const base = `/marketing/feature-clips/home/${name}`;
+  if (!fs.existsSync(path.join(root, 'public', `${base}.mp4`))) throw new Error(`no home film ${base}.mp4`);
+  return {
+    lg: `${base}.mp4?v=${HOME_FILM_V}`,
+    sm: `${base}-mobile.mp4?v=${HOME_FILM_V}`,
+    poster: `${base}-poster.jpg?v=${HOME_FILM_V}`,
+    posterSm: `${base}-mobile-poster.jpg?v=${HOME_FILM_V}`,
+  };
+};
+
+/** A feature clip: no src, no autoplay attribute; page.js loads and plays it on screen. */
+function clipHtml(film, label) {
+  const f = homeFilm(film);
+  return `<video class="clip" muted loop playsinline preload="none" poster="${f.poster}" data-psm="${f.posterSm}" data-lg="${f.lg}" data-sm="${f.sm}" width="1600" height="900" aria-label="${esc(label)}"></video>`;
+}
+
+const bentoHtml = (items) =>
+  items
+    .map(
+      (b, i) => `      <article class="bx bx--${b.w ? 'w' : 'n'}" data-rv style="--d:${i * 70}ms">
         <h3>${esc(b.h)}</h3>
         <p>${esc(b.p)}</p>
-        ${b.viz}
+        ${clipHtml(b.film, b.label)}
       </article>`,
-).join('\n');
+    )
+    .join('\n');
 
 
 const includedHtml = (() => {
@@ -802,7 +806,7 @@ const FAQS = [
   },
   {
     q: 'What does Meta actually charge me?',
-    a: 'Meta bills your own Business account directly, at its own per-conversation rates, and TopEdge AI adds 0% on top. You pay us for the software and Meta for the messages, and you can see both bills separately.',
+    a: 'Meta bills your own Business account directly, at its own per-message rates, and TopEdge AI adds 0% on top. You pay us for the software and Meta for the messages, and you can see both bills separately.',
   },
   {
     q: 'Do I need my own Meta Business account, or do you give me a number?',
@@ -1027,9 +1031,10 @@ const PILLARS = [
 // The .vh heading is there so the three claims, which are h3s, sit under an h2
 // rather than jumping a level straight from the page h1. Hidden because the
 // hero reads as one block and a visible title over the ticks would break it.
-const pillarsHtml = `<h2 class="vh">Why brands choose TopEdge AI</h2><ul class="pil">${PILLARS.map(
-  (x) => `<li><i class="pil-t">${TICK}</i><h3>${esc(x)}</h3></li>`,
-).join('')}</ul>`;
+const pillarsHtml = (items) =>
+  `<h2 class="vh">Why brands choose TopEdge AI</h2><ul class="pil">${items
+    .map((x) => `<li><i class="pil-t">${TICK}</i><h3>${esc(x)}</h3></li>`)
+    .join('')}</ul>`;
 
 /**
  * The customer ribbon. Four copies of the five marks: the band runs full
@@ -1094,13 +1099,13 @@ const VIDEO = {
  * `controls` stays: a loop longer than five seconds needs a way to stop it
  * (WCAG 2.2.2), and it is also how a viewer turns the sound on.
  */
-function filmHtml() {
+function filmHtml(v = VIDEO) {
   return `<figure class="film-wrap">
         <video id="lv" class="film" controls muted loop playsinline preload="none"
-               poster="${VIDEO.poster}" width="1280" height="720"
-               data-lg="${VIDEO.lg}" data-sm="${VIDEO.sm}"
-               aria-label="${esc(VIDEO.label)}">
-          <p>Your browser cannot play this video. <a href="${VIDEO.lg}">Download it instead</a>.</p>
+               poster="${v.poster}" width="1280" height="720"
+               data-lg="${v.lg}" data-sm="${v.sm}"
+               aria-label="${esc(v.label)}">
+          <p>Your browser cannot play this video. <a href="${v.lg}">Download it instead</a>.</p>
         </video>
       </figure>`;
 }
@@ -1148,14 +1153,181 @@ const postsHtml = (await loadPosts())
   )
   .join('\n');
 
+const SITE = 'https://topedgeai.com';
+
+/**
+ * The cart recovery page (keyword map #1, PLAN-AND-LOG section 3b). Facts come
+ * from the product docs (docs/guides/abandoned-cart-recovery: 25 minutes, then
+ * 4 hours, then 36 hours; remaining reminders cancelled on order), Meta's India
+ * card in src/data/sources.ts (metaPricing, re-read 16 Nov 2026) and Shopify's
+ * Help Center and Changelog (read 20 Nov 2026).
+ */
+const CART = {
+  hero: {
+    lead: 'WhatsApp Abandoned Cart ',
+    mark: 'Recovery App',
+    sub: 'Three timed WhatsApp reminders for every abandoned Shopify checkout, cancelled the moment the shopper buys. Built for Indian D2C brands.',
+  },
+  film: {
+    lg: homeFilm('cart').lg,
+    // The hero frame is 16:9 at every width, so phones get the same cut.
+    sm: homeFilm('cart').lg,
+    poster: homeFilm('cart').poster,
+    label: 'TopEdge AI cart recovery film: a shopper leaves a Shopify checkout, gets a WhatsApp reminder with the cart, and completes the order',
+  },
+  pillars: [
+    'First WhatsApp reminder about 25 minutes after the shopper leaves',
+    'Every remaining reminder cancelled the moment the order is placed',
+    'Meta’s own rate, ₹0.8631 per reminder in India, with 0% markup',
+  ],
+  steps: [
+    { h: 'A shopper leaves checkout', p: 'They type a phone number at checkout and close the tab. TopEdge AI saves the cart with its products. No phone number, no message.' },
+    { h: 'Reminder 1 after about 25 minutes', p: 'The product and a link back to the same checkout, while they are still deciding. You can change the wait.' },
+    { h: 'Reminder 2 four hours later', p: 'Answers what stopped them: delivery time, returns, or whether cash on delivery is available.' },
+    { h: 'Reminder 3 thirty-six hours later', p: 'The last nudge, and the only one where a discount belongs.' },
+    { h: 'Order placed, sequence stops', p: 'The rest are cancelled, the cart is marked recovered and the revenue is credited to the reminder that won it back.' },
+  ],
+  bento: [
+    { w: true, h: 'The reminder, with the cart inside it', p: 'Line items, price and a resume-checkout link in an approved WhatsApp template, sent from your own number.', film: 'cart', label: 'An abandoned Shopify cart triggers a WhatsApp reminder that carries the products and a resume-checkout link' },
+    { w: true, h: 'Build the sequence on a canvas', p: 'Start from the Cart recovery playbook, then change the waits, the copy and the branches without a developer.', film: 'flow', label: 'The cart recovery journey is edited on a drag-and-drop canvas' },
+    { w: false, h: 'Know where they dropped off', p: 'Pages viewed and the checkout step they left at, beside the WhatsApp thread.', film: 'pixel', label: 'The shopper profile shows pages viewed and where checkout was abandoned' },
+    { w: false, h: 'One profile per shopper', p: 'A new number or email at checkout joins the same customer, so reminders never double up.', film: 'identity', label: 'Two phone numbers and an email resolve to one customer profile' },
+    { w: false, h: 'Then confirm the COD order', p: 'A recovered cart that comes back as COD gets a confirmation before it ships.', film: 'cod', label: 'A cash on delivery order is confirmed on WhatsApp before dispatch' },
+  ],
+  them: 'Shopify’s own reminders',
+  switch: [
+    { icon: 'flow', topic: 'Channel', them: 'Abandoned checkout email; since 28 Oct 2026, WhatsApp reminders through Shopify Messaging', us: 'WhatsApp and email, from one journey' },
+    { icon: 'identity', topic: 'Who it reaches', them: 'WhatsApp goes to WhatsApp marketing subscribers only, and Shopify does not let you widen that', us: 'Every shopper who left a phone number and opted in to WhatsApp messages from your store' },
+    { icon: 'percent', topic: 'Price per WhatsApp message in India', them: '$0.024, about ₹2.25, on your Shopify bill', us: '₹0.8631, Meta’s own rate, billed by Meta, with 0% markup' },
+    { icon: 'ret', topic: 'COD orders', them: 'No COD confirmation or order updates on WhatsApp', us: 'COD confirmation on every plan, COD to prepaid from Growth' },
+  ],
+  migration: {
+    h: 'When Shopify’s own reminders are enough',
+    p: 'If your store is mostly prepaid and you only want cart reminders for WhatsApp marketing subscribers, Shopify Messaging can send them itself. You need an app when you also confirm COD orders, send order updates and answer replies with the order beside the chat.',
+  },
+  cost: {
+    h: 'What it costs per 100 abandoned checkouts',
+    p: 'Each reminder is a Meta marketing template at ₹0.8631 in India. If all three reach 100 shoppers who opted in, Meta bills ₹258.93. That is the ceiling: every shopper who buys after the first or second reminder stops the rest.',
+    stat: '₹258.93',
+    statLabel: 'Meta’s bill for 300 reminders, the most 100 abandoned checkouts can cost',
+    src: 'Meta India marketing rate ₹0.8631 per delivered message, re-read 16 November 2026. Shopify Messaging India rate $0.024, read 20 November 2026.',
+  },
+  faqs: [
+    { q: 'What is a WhatsApp abandoned cart recovery app?', a: 'An app that watches your Shopify checkouts and messages shoppers on WhatsApp when they leave without paying, with the products and a link back to the same checkout. TopEdge AI sends up to three reminders and cancels the rest the moment the order is placed.' },
+    { q: 'When should the first abandoned cart message go out?', a: 'About 25 minutes after the shopper leaves, the default in the Cart recovery playbook. Sooner chases people who only switched tabs, and waiting several hours loses the ones still deciding.' },
+    { q: 'How much does WhatsApp cart recovery cost on Shopify?', a: 'Meta charges ₹0.8631 per delivered marketing message in India, so three reminders cost ₹2.59 at most per cart. TopEdge AI plans start at ₹1,999 a month plus GST, or $19 on the Shopify App Store, with no markup on Meta’s rate.' },
+    { q: 'Can Shopify send abandoned cart messages on WhatsApp without an app?', a: 'Yes since 28 October 2026. Shopify Messaging can send WhatsApp abandoned cart and checkout reminders to WhatsApp marketing subscribers, at $0.024 a message in India. It lists no COD confirmation or order updates, which is where an app is still needed.' },
+    { q: 'Should an abandoned cart message include a discount?', a: 'Not the first one. Most recovered carts come back without a discount, so keep any offer for the third reminder and you avoid paying for sales you would have made anyway.' },
+    { q: 'Do I need opt-in to send cart reminders on WhatsApp?', a: 'Yes. Meta requires opt-in before a business messages someone, and a phone number typed at checkout is not consent on its own. Add a WhatsApp opt-in at checkout or on your storefront before you switch reminders on.' },
+  ],
+};
+
+/**
+ * Pages built from this generator. `index: true` pages are search landing pages
+ * as well as ad pages: canonical, in the sitemap, with schema. The ad page that
+ * lived at /lp/shopify-whatsapp moved to /whatsapp-app-for-shopify on 20 Nov 2026
+ * (owner: rank it on its keyword); /lp/shopify-whatsapp 301s there with the query
+ * string, so running ads keep their UTMs and click ids. `attr` is the lp= value
+ * attribution sends, kept as it was so reporting does not break.
+ */
 const PAGES = [
   {
     slug: 'shopify-whatsapp',
-    title: 'WhatsApp Automation for Shopify | TopEdge AI',
+    attr: 'shopify-whatsapp',
+    template: 'shopify-whatsapp',
+    out: 'whatsapp-app-for-shopify',
+    index: true,
+    title: 'WhatsApp App for Shopify: Cart Recovery & COD | TopEdge AI',
     description:
-      'Confirm COD orders, recover abandoned carts and answer every chat on WhatsApp. One subscription for Indian Shopify stores. 14-day trial, no card.',
+      'WhatsApp app for Shopify India: recover abandoned carts, confirm COD orders and send order updates on WhatsApp. 0% Meta markup, 14-day free trial.',
+    name: 'WhatsApp App for Shopify',
+    hero: HERO_VARIANTS.platform,
+    variants: HERO_VARIANTS,
+    film: VIDEO,
+    pillars: PILLARS,
+    bento: BENTO,
+    steps: STEPS,
+    faqs: FAQS,
+  },
+  {
+    slug: 'whatsapp-abandoned-cart-recovery-app',
+    attr: 'cart-recovery-app',
+    template: 'whatsapp-abandoned-cart-recovery-app',
+    out: 'whatsapp-abandoned-cart-recovery-app',
+    index: true,
+    title: 'WhatsApp Abandoned Cart Recovery App for Shopify',
+    description:
+      'WhatsApp abandoned cart recovery app for Shopify India: 3 reminders at 25 min, 4 h and 36 h, stopped on purchase, ₹0.8631 per message at Meta’s rate.',
+    name: 'WhatsApp Abandoned Cart Recovery App for Shopify',
+    hero: CART.hero,
+    variants: {},
+    film: CART.film,
+    pillars: CART.pillars,
+    bento: CART.bento,
+    steps: CART.steps.map((x, i) => ({ mark: `<span class="stp-n">${i + 1}</span>`, h: x.h, p: x.p })),
+    faqs: CART.faqs,
   },
 ];
+
+const priceNumber = (label) => Number(String(label).replace(/[^0-9.]/g, ''));
+
+/** Schema for an indexable page: the same Organization @id the site uses, so they merge. */
+function jsonLdHtml(page) {
+  const url = `${SITE}/${page.out}`;
+  const graph = [
+    {
+      '@type': 'Organization',
+      '@id': `${SITE}/#organization`,
+      name: 'TopEdge AI',
+      alternateName: ['TopEdge', LEGAL_NAME],
+      url: SITE,
+      logo: { '@type': 'ImageObject', url: `${SITE}/og-image.png` },
+    },
+    {
+      '@type': 'SoftwareApplication',
+      name: 'TopEdge AI',
+      applicationCategory: 'BusinessApplication',
+      operatingSystem: 'Web, Shopify',
+      url: SITE,
+      publisher: { '@id': `${SITE}/#organization` },
+      offers: plans.map((p) => ({
+        '@type': 'Offer',
+        name: p.displayName,
+        price: priceNumber(p.monthlyPriceLabel),
+        priceCurrency: 'INR',
+        url: `${SITE}/pricing`,
+      })),
+    },
+    { '@type': 'WebPage', '@id': url, url, name: page.name, description: page.description, inLanguage: 'en-IN' },
+    {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Home', item: `${SITE}/` },
+        { '@type': 'ListItem', position: 2, name: page.name, item: url },
+      ],
+    },
+    {
+      '@type': 'FAQPage',
+      mainEntity: page.faqs.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
+    },
+  ];
+  return `<script type="application/ld+json">${JSON.stringify({ '@context': 'https://schema.org', '@graph': graph }).replace(/</g, '\\u003c')}</script>`;
+}
+
+function headSeo(page) {
+  if (!page.index) return '<meta name="robots" content="noindex,nofollow">';
+  const url = `${SITE}/${page.out}`;
+  return `<meta name="robots" content="index,follow,max-image-preview:large">
+<link rel="canonical" href="${url}">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="TopEdge AI">
+<meta property="og:title" content="${esc(page.title)}">
+<meta property="og:description" content="${esc(page.description)}">
+<meta property="og:url" content="${url}">
+<meta property="og:image" content="${SITE}/og-share.jpg">
+<meta name="twitter:card" content="summary_large_image">
+${jsonLdHtml(page)}`;
+}
 
 // Tagging is optional: with neither id set the page makes no analytics request at all.
 // When set, gtag.js loads only after the window `load` event, so it cannot delay first paint.
@@ -1264,39 +1436,99 @@ const variantCss = Object.keys(PROOF_VARIANTS)
   .map((k) => `html[data-v="${k}"] .pf[data-pf="platform"]{display:none}html[data-v="${k}"] .pf[data-pf="${k}"]{display:grid}`)
   .join('');
 
+
+/**
+ * Drop CSS rules whose class selectors match nothing on this page.
+ *
+ * base.css serves every page this generator builds, and since 20 Nov 2026 the
+ * platform panels play films instead of drawn illustrations, so the drawing
+ * rules are dead weight on every page. Rather than hand-delete them (and lose
+ * them for a page that might want one back), each page keeps only the rules it
+ * can use. A class counts as used when it appears in the page markup or as a
+ * word anywhere in the page's scripts (page.js adds `on`, `is-solid`, `js-rv`).
+ * At-rules recurse; keyframes and font-face blocks are kept whole.
+ */
+function usedClasses(markupParts, scriptParts) {
+  const set = new Set();
+  for (const h of markupParts) for (const m of h.matchAll(/class="([^"]+)"/g)) m[1].split(/\s+/).forEach((c) => set.add(c));
+  for (const j of scriptParts) for (const m of j.matchAll(/[A-Za-z][\w-]*/g)) set.add(m[0]);
+  return set;
+}
+
+function blockEnd(src, open) {
+  let depth = 1;
+  let j = open + 1;
+  while (depth && j < src.length) {
+    if (src[j] === '{') depth++;
+    else if (src[j] === '}') depth--;
+    j++;
+  }
+  return j;
+}
+
+function purgeCss(src, used) {
+  let out = '';
+  let i = 0;
+  while (i < src.length) {
+    const open = src.indexOf('{', i);
+    if (open < 0) break;
+    const head = src.slice(i, open);
+    if (head.startsWith('@media') || head.startsWith('@supports') || head.startsWith('@container')) {
+      const end = blockEnd(src, open);
+      const inner = purgeCss(src.slice(open + 1, end - 1), used);
+      if (inner) out += `${head}{${inner}}`;
+      i = end;
+      continue;
+    }
+    if (head.startsWith('@')) {
+      const end = blockEnd(src, open);
+      out += src.slice(i, end);
+      i = end;
+      continue;
+    }
+    const close = src.indexOf('}', open);
+    const keep = head
+      .split(',')
+      .filter((sel) => [...sel.matchAll(/\.([A-Za-z][\w-]*)/g)].every((m) => used.has(m[1])));
+    if (keep.length) out += `${keep.join(',')}${src.slice(open, close + 1)}`;
+    i = close + 1;
+  }
+  return out;
+}
+
 const fill = (tpl, map) => tpl.replace(/\{\{([A-Z0-9_]+)\}\}/g, (m, k) => (k in map ? map[k] : m));
 
 for (const page of PAGES) {
-  const body = fill(fs.readFileSync(path.join(lpDir, `${page.slug}.body.html`), 'utf8'), {
-    PLAN_CARDS: planCards(page.slug),
+  const body = fill(fs.readFileSync(path.join(lpDir, `${page.template}.body.html`), 'utf8'), {
+    PLAN_CARDS: planCards(page.attr),
     QUOTES: quotesHtml,
-    NAV: navHtml(page.slug),
+    NAV: navHtml(page.attr),
     FOOTER: footHtml(),
-    PATHS: pathsHtml(page.slug),
-    BENTO: bentoHtml,
+    PATHS: pathsHtml(page.attr),
+    BENTO: bentoHtml(page.bento),
     POSTS: postsHtml,
     SWITCH_ROWS: switchHtml,
     TP_STAR,
     INCLUDED_LIST: includedHtml,
-    PILLARS: pillarsHtml,
+    PILLARS: pillarsHtml(page.pillars),
     STRIP_LOGOS: stripHtml,
     STRIP_BADGES: badgesHtml,
-    FILM: filmHtml(),
-    SLUG: page.slug,
-    SIGNUP_FALLBACK: SIGNUP_FALLBACK(page.slug),
+    FILM: filmHtml(page.film),
+    SLUG: page.attr,
+    SIGNUP_FALLBACK: SIGNUP_FALLBACK(page.attr),
     SHOPIFY_URL,
     HELP_WHATSAPP_URL: esc(HELP_WHATSAPP_URL),
     COMPANY_PHONE: esc(COMPANY_PHONE),
     TRIAL_SHORT,
-    HERO_LEAD: esc(HERO_VARIANTS.platform.lead),
-    HERO_MARK: esc(HERO_VARIANTS.platform.mark),
-    HERO_SUB: esc(HERO_VARIANTS.platform.sub),
+    HERO_LEAD: esc(page.hero.lead),
+    HERO_MARK: esc(page.hero.mark),
+    HERO_SUB: esc(page.hero.sub),
     HERO_PROOF: heroProof(),
     PROOF_BLOCKS: proofHtml(),
-    STEPS: STEPS.map(
+    STEPS: page.steps.map(
       (x, i) => `      <li class="stp" data-rv style="--d:${i * 70}ms"><b class="stp-m">${x.mark}</b><h3>${esc(x.h)}</h3><p>${esc(x.p)}</p></li>`,
     ).join('\n'),
-    FAQS: FAQS.map(
+    FAQS: page.faqs.map(
       (f) => `      <details class="fq"><summary>${esc(f.q)}<i aria-hidden="true"></i></summary><p>${esc(f.a)}</p></details>`,
     ).join('\n'),
     LAUNCH_YEARLY: esc(planPricing(plans[0], 'yearly').effectiveMonthlyLabel),
@@ -1305,7 +1537,12 @@ for (const page of PAGES) {
     MIGRATION_P: esc(MIGRATION.p),
     SHOPIFY_BTN: SHOPIFY_BUTTON,
     FREE_NOTE,
-    HERO_VARIANTS_JSON: JSON.stringify(HERO_VARIANTS).replace(/</g, '\\u003c'),
+    HERO_VARIANTS_JSON: JSON.stringify(page.variants).replace(/</g, '\\u003c'),
+    CART_SWITCH_ROWS: switchRows(CART.switch),
+    CART_THEM: esc(CART.them),
+    CART_MIG_H: esc(CART.migration.h),
+    CART_MIG_P: esc(CART.migration.p),
+    CART_COST: costHtml(CART.cost),
     LEGAL_NAME: esc(LEGAL_NAME),
     COMPANY_EMAIL: esc(COMPANY_EMAIL),
   });
@@ -1317,10 +1554,10 @@ for (const page of PAGES) {
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>${esc(page.title)}</title>
 <meta name="description" content="${esc(page.description)}">
-<meta name="robots" content="noindex,nofollow">
+${headSeo(page)}
 <meta name="theme-color" content="#7C3AED">
 <link rel="icon" type="image/png" sizes="96x96" href="/favicon.png">
-<style>${css}${variantCss}</style>
+<style>${purgeCss(css + variantCss, usedClasses([body, analytics, posthog], [behavior, attribution]))}</style>
 </head>
 <body>
 ${body}
@@ -1328,7 +1565,7 @@ ${analytics}${posthog}<script>
 ${behavior}
 </script>
 <script>
-${attribution.replaceAll('{{SLUG}}', page.slug).replaceAll('{{ADS_SEND_TO}}', ADS_SEND_TO).replaceAll('{{SIGNUP_URL}}', DASH_SIGNUP)}
+${attribution.replaceAll('{{SLUG}}', page.attr).replaceAll('{{ADS_SEND_TO}}', ADS_SEND_TO).replaceAll('{{SIGNUP_URL}}', DASH_SIGNUP)}
 </script>
 </body>
 </html>
@@ -1343,7 +1580,10 @@ ${attribution.replaceAll('{{SLUG}}', page.slug).replaceAll('{{ADS_SEND_TO}}', AD
   const markup = html.replace(/<script\b[^>]*>[\s\S]*?<\/script>/g, '');
   const problems = [];
   if (bytes > MAX_BYTES) problems.push(`${bytes} bytes exceeds the ${MAX_BYTES} byte budget`);
-  if (!html.includes('<meta name="robots" content="noindex,nofollow">')) problems.push('missing noindex');
+  if (page.index) {
+    if (!html.includes(`<link rel="canonical" href="${SITE}/${page.out}">`)) problems.push('missing canonical');
+    if ((markup.match(/<h1\b/g) || []).length !== 1) problems.push('needs exactly one h1');
+  } else if (!html.includes('<meta name="robots" content="noindex,nofollow">')) problems.push('missing noindex');
   if (/\{\{[A-Z0-9_]+\}\}/.test(html)) problems.push('unreplaced {{placeholder}}');
   if (/<script[^>]+src=|<link[^>]+rel="stylesheet"|fonts\.googleapis/.test(html)) problems.push('external script/stylesheet/font');
   if (/<iframe\b/.test(markup)) problems.push('iframe not allowed');
@@ -1356,12 +1596,12 @@ ${attribution.replaceAll('{{SLUG}}', page.slug).replaceAll('{{ADS_SEND_TO}}', AD
     if (!/\bposter="/.test(v)) problems.push('<video> without a poster');
   }
   if (problems.length) {
-    console.error(`✖ /lp/${page.slug}: ${problems.join('; ')}`);
+    console.error(`✖ /${page.out}: ${problems.join('; ')}`);
     process.exit(1);
   }
 
-  const outDir = path.join(root, 'public', 'lp', page.slug);
+  const outDir = path.join(root, 'public', page.out);
   fs.mkdirSync(outDir, { recursive: true });
   fs.writeFileSync(path.join(outDir, 'index.html'), html, 'utf8');
-  console.log(`✅ public/lp/${page.slug}/index.html (${(bytes / 1024).toFixed(1)} KB)`);
+  console.log(`✅ public/${page.out}/index.html (${(bytes / 1024).toFixed(1)} KB)`);
 }

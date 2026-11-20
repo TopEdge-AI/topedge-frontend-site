@@ -1,5 +1,8 @@
 /**
- * Asserts the generated ad page (public/lp/shopify-whatsapp/index.html).
+ * Asserts the generated platform page (public/whatsapp-app-for-shopify/index.html).
+ * It was the noindex ad page at /lp/shopify-whatsapp until 20 Nov 2026, when the
+ * owner moved it to its keyword URL to rank and swapped the drawn panels for the
+ * product films. /lp/shopify-whatsapp now 301s here.
  *
  * This page is bought by the click. Every rule below exists because something
  * on it either costs money when it breaks or misleads a reader when it drifts,
@@ -23,7 +26,7 @@ import { fileURLToPath, pathToFileURL } from 'node:url';
 import { loadBillingCatalog } from './load-billing-catalog.mjs';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
-const file = path.join(__dirname, '..', 'public', 'lp', 'shopify-whatsapp', 'index.html');
+const file = path.join(__dirname, '..', 'public', 'whatsapp-app-for-shopify', 'index.html');
 const html = fs.readFileSync(file, 'utf8');
 const { FALLBACK_CATALOG, TRIAL } = await loadBillingCatalog();
 
@@ -72,7 +75,11 @@ const withoutQuotes = markup.replace(/<blockquote[\s\S]*?<\/blockquote>/g, '');
 
 // --- Page contract ---
 must(Buffer.byteLength(html) <= 100 * 1024, 'exceeds the 100 KB budget');
-must(html.includes('<meta name="robots" content="noindex,nofollow">'), 'missing noindex');
+must(html.includes('<meta name="robots" content="index,follow,max-image-preview:large">'), 'the page is meant to rank: robots must be index,follow');
+must(html.includes('<link rel="canonical" href="https://topedgeai.com/whatsapp-app-for-shopify">'), 'missing canonical');
+must(/"@type":"FAQPage"/.test(html) && /"@type":"SoftwareApplication"/.test(html), 'missing FAQPage or SoftwareApplication schema');
+must(!/"@type":"Product"/.test(html), 'Product schema is banned on this site');
+must(!/aggregateRating/.test(html), 'no self-written rating markup');
 must(!/\{\{[A-Z0-9_]+\}\}/.test(html), 'unreplaced {{placeholder}}');
 must(!/<script[^>]+src=|<link[^>]+rel="stylesheet"|fonts\.googleapis/.test(html), 'external script/stylesheet/font');
 must(!/<iframe\b/.test(markup), 'iframe present');
@@ -90,8 +97,20 @@ must(upper.length === 0, `uppercase is back on: ${upper.map((r) => r.split('{')[
 // The first screen is the product moving. It carries no autoplay attribute and
 // no src: page.js attaches one source and calls play() on intersection, so
 // nothing downloads before first paint and reduced motion leaves it on its poster.
-const videos = markup.match(/<video\b[^>]*>/g) || [];
-must(videos.length === 1, `expected exactly 1 <video>, found ${videos.length}`);
+const allVideos = markup.match(/<video\b[^>]*>/g) || [];
+const videos = allVideos.filter((v) => /\bid="lv"/.test(v));
+const clipTags = allVideos.filter((v) => /\bclass="clip"/.test(v));
+must(videos.length === 1, `expected exactly 1 hero film, found ${videos.length}`);
+must(clipTags.length + videos.length === allVideos.length, 'a <video> that is neither the hero film nor a feature clip');
+// Feature clips (20 Nov 2026): the real product films in the platform panels.
+// Muted loops without controls, so they must weigh nothing until on screen.
+for (const v of clipTags) {
+  must(/\bpreload="none"/.test(v) && /\bmuted\b/.test(v) && /\bloop\b/.test(v) && /\bplaysinline\b/.test(v), 'a feature clip must be preload="none", muted, loop and playsinline');
+  must(/\bposter="\/[^"]+"/.test(v), 'a feature clip has no poster');
+  must(!/\bautoplay\b/.test(v) && !/\bsrc="/.test(v), 'a feature clip must not autoplay or hardcode src; page.js loads it on screen');
+  must(/\bdata-lg="\/marketing\/feature-clips\/home\//.test(v), 'a feature clip is not one of the home films');
+  must(/\baria-label="[^"]{20,}"/.test(v), 'a feature clip needs an aria-label describing it');
+}
 for (const v of videos) {
   must(/\bpreload="none"/.test(v), '<video> must set preload="none" so it costs nothing until play');
   must(/\bposter="\/[^"]+"/.test(v), '<video> must have a poster so the hero still paints instantly');
@@ -146,7 +165,8 @@ must(/data-cta="trial"/.test(bar) && /data-cta="shopify"/.test(bar), 'the mobile
 must(/data-cta="shopify"[^>]*href="https:\/\/apps\.shopify\.com\//.test(markup), 'the Shopify CTA does not link to the App Store');
 
 const h1 = ((markup.match(/<h1 id="hero-h1">([\s\S]*?)<\/h1>/) || [])[1] || '').replace(/<[^>]+>/g, '');
-must(/Shopify Growth Suite TopEdge/.test(h1), 'default H1 no longer names the product and the brand');
+must(/^WhatsApp App for Shopify/.test(h1), 'the default H1 must lead with the page keyword, WhatsApp App for Shopify');
+must(/TopEdge AI/.test(h1), 'the default H1 no longer names the brand');
 must(h1.length <= 60, `H1 is ${h1.length} characters; over 60 wraps past two lines on desktop`);
 must(/<mark class="chip" id="hero-mark">/.test(markup), 'the H1 payload is not highlighted like the site titles');
 // The default sub dropped the "Built for Indian Shopify D2C brands" line when
@@ -244,8 +264,8 @@ must(!/M17 4v4h-4M7 20v-4h4/.test(html), 'the floating right-angle arrowheads ar
 // each, which read as three unrelated pictures. One vertical gradient now,
 // near-white at the top and violet at the foot, shared by the entry cards and
 // the bento, and no hairline: the gradient is the edge.
-must(/\.art,\.viz\{--p1:[^}]*linear-gradient\(180deg/.test(html), 'the illustration panels no longer share one vertical surface');
-must(!/\.(art|viz)\{[^}]*box-shadow:inset 0 0 0 1px/.test(html), 'the illustration panels have their hairline back; the gradient is the edge');
+must(/\.art(,\.viz)?\{--p1:[^}]*linear-gradient\(180deg/.test(html), 'the entry-card artwork lost its vertical surface');
+must(!/\.(art|viz)\{[^}]*box-shadow:inset 0 0 0 1px/.test(html), 'the artwork has its hairline back; the gradient is the edge');
 must(!/\.orb--(warn|wa)\{[^}]*rgba\((244,63,94|37,211,102)/.test(html), 'an orb is colour-coding a panel again; they are light, not colour');
 
 // --- The self-hosted face ---
@@ -417,7 +437,7 @@ must(/#dcdce6/.test(starSvg), 'the unfilled stars are missing; a 4.0 drawn as fo
 // still links to the page that prints it, and no larger number may appear.
 const vh = (markup.match(/<i class="vh">[\s\S]*?<\/i>/) || [''])[0];
 must(new RegExp(`from ${TRUSTPILOT_REVIEWS} reviews`).test(vh), 'the review count is gone from the accessible text as well as the visible line');
-must(!/class="vh"/.test(markup.replace(/<i class="vh">[\s\S]*?<\/i>/g, '')) , 'a second visually hidden run appeared; keep one place for text that is said and not drawn');
+must(!/class="vh"/.test(markup.replace(/<i class="vh">[\s\S]*?<\/i>/g, '').replace(/<h2 class="vh">Why brands choose TopEdge AI<\/h2>/, '')) , 'a second visually hidden run appeared; keep one place for text that is said and not drawn');
 const counts = [...prose.matchAll(/([\d,]+)\s+reviews?\b/gi)].map((m) => m[1]);
 for (const n of counts) must(SOURCED_REVIEWS.includes(n), `states ${n} reviews on the page; the sourced counts are ${SOURCED_REVIEWS.join(' and ')}`);
 must(/trustpilot\.com\/review\/topedgeai\.com/.test(starRow), 'the rating does not link to the page it came from');
@@ -562,18 +582,9 @@ const bx = markup.match(/<article class="bx bx--[wn]"[\s\S]*?<\/article>/g) || [
 must(bx.length === 5, `expected 5 platform panels, found ${bx.length}`);
 must(count(/class="bx bx--w"/g) === 2, 'the bento is no longer asymmetric: expected 2 wide panels');
 for (const b of bx) {
-  must(/class="viz/.test(b), 'a platform panel has no illustration');
-  // No raster image: a screenshot is the thing these replaced. An inline <svg>
-  // path is as drawn as a border-radius and weighs less.
-  must(!/<img\b/.test(b), 'a platform panel ships an image; these are drawn, not photographed');
+  must(/<video class="clip"/.test(b), 'a platform panel has no product film; the owner asked for the real product, not drawings (20 Nov 2026)');
+  must(!/<img\b/.test(b), 'a platform panel ships a still image; it plays the film instead');
 }
-must(bx.filter((b) => /class="orb orb--/.test(b)).length === 5, 'a platform panel lost the orb behind its composition');
-for (const cls of ['pane--wa', 'pane--ask', 'pane--aud']) {
-  must(markup.includes(cls), `the floating card ${cls} is gone; the panel is flat again`);
-}
-must(/\.pane--hero\{width:[0-9]+%/.test(html), 'the recovery subject is full width again; the floating reminder will cover its figures');
-must(/\.pane--ord\{width:[0-9]+%/.test(html), 'the order subject is full width again; the floating reply will cover its price');
-must(/Recovered this month <i>sample<\/i>/.test(markup), 'the money figure in the recovery panel is not marked as sample data');
 must(!/class="shotc"|lp\/shots\//.test(markup), 'a dashboard screenshot is back; every illustration on this page is drawn');
 must(!/\.alt\{[^}]*linear-gradient/.test(html), 'a section has a gradient background again; only the hero has one');
 for (const job of ['carts that leave', 'Confirm COD before you ship', 'Broadcast', 'every step before the sale', 'Flows you build']) {
@@ -634,7 +645,7 @@ for (const p of FALLBACK_CATALOG.plans) {
   );
   must(new RegExp(`data-plan="${p.slug}"`).test(markup), `${p.displayName}: card has no CTA`);
 }
-must(/TopEdge adds 0% markup/.test(html), 'missing 0% markup line');
+must(/TopEdge AI adds 0% markup/.test(html), 'missing 0% markup line');
 must(
   html.includes(`${TRIAL.days}-day free trial on every plan. ${TRIAL.orders} free order confirmations, no credit card.`),
   'the trial terms are gone, or no longer match TRIAL',

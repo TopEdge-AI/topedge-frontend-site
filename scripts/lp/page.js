@@ -63,6 +63,28 @@
     });
   }
 
+  // Feature clips (the platform panels). Same rules as the film: no source in the
+  // markup, ONE source attached when the clip nears the viewport (the portrait phone
+  // cut on small screens, with its own poster), muted and looping, paused off screen.
+  // Save-Data keeps the posters.
+  var clips=$$('video.clip');
+  if(clips.length){
+    var narrow=w.matchMedia&&w.matchMedia('(max-width: 48rem)').matches;
+    if(narrow)clips.forEach(function(v){var ps=v.getAttribute('data-psm');if(ps)v.poster=ps});
+    if(!(navigator.connection&&navigator.connection.saveData)&&'IntersectionObserver' in w){
+      var cio=new IntersectionObserver(function(es){
+        es.forEach(function(e){
+          var v=e.target;
+          if(e.isIntersecting){
+            if(!v.getAttribute('src')){v.muted=true;v.loop=true;v.playsInline=true;v.src=(narrow&&v.getAttribute('data-sm'))||v.getAttribute('data-lg')}
+            if(!reduce){var p=v.play();if(p&&p.catch)p.catch(function(){})}
+          }else if(!v.paused){v.pause()}
+        });
+      },{rootMargin:'150px 0px',threshold:.3});
+      clips.forEach(function(v){cio.observe(v)});
+    }
+  }
+
   // Pricing cycle toggle. Both prices are in the HTML, so the page reads correctly before this runs.
   var plans=$('#plans');
   $$('[data-cycle]',d).forEach(function(b){

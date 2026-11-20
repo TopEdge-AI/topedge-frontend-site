@@ -14,6 +14,11 @@
 http://www.topedgeai.com/*  https://topedgeai.com/:splat  301!
 https://www.topedgeai.com/*  https://topedgeai.com/:splat  301!
 
+# The ad page moved to its keyword URL on 20 Nov 2026 (static, indexable).
+# Netlify keeps the query string, so running ads keep UTMs and click ids.
+/lp/shopify-whatsapp  /whatsapp-app-for-shopify  301!
+/lp/shopify-whatsapp/  /whatsapp-app-for-shopify  301!
+
 # Legal (static HTML for Meta crawlers)
 /privacy  /privacy.html  200!
 /privacy/  /privacy.html  200!
@@ -102,8 +107,8 @@ https://www.topedgeai.com/*  https://topedgeai.com/:splat  301!
 /whatsapp-cart-recovery/  /features/journeys  301!
 # The ad page was renamed when it stopped being a COD-only page (11 Oct 2026).
 # Any ad, bookmark or QR still pointing at the old path lands on the new one.
-/lp/cod-confirmation  /lp/shopify-whatsapp  301!
-/lp/cod-confirmation/  /lp/shopify-whatsapp  301!
+/lp/cod-confirmation  /whatsapp-app-for-shopify  301!
+/lp/cod-confirmation/  /whatsapp-app-for-shopify  301!
 /cod-confirmation-whatsapp  /features/journeys  301!
 /cod-confirmation-whatsapp/  /features/journeys  301!
 /booking  /contact  301!

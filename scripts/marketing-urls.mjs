@@ -79,7 +79,14 @@ export const COMPARE_MULTIWAY_SLUGS = [
   'topedge-vs-wati-vs-interakt-vs-aisensy',
 ];
 
-export const TOPIC_SLUGS = ['shopify-whatsapp-integration', 'whatsapp-abandoned-cart-recovery-app'];
+export const TOPIC_SLUGS = ['shopify-whatsapp-integration'];
+
+/**
+ * Static landing pages built by scripts/generate-landing-pages.mjs into
+ * public/<path>/index.html. Indexable and in the sitemap, never prerendered
+ * (prerendering would write a second copy beside the static file).
+ */
+export const STATIC_LANDING_PATHS = ['/whatsapp-app-for-shopify', '/whatsapp-abandoned-cart-recovery-app'];
 
 export const BLOG_SLUGS = [
   'ecommerce-funnel-drop-off-benchmarks-visitor-identity-resolution',
@@ -244,6 +251,7 @@ export function getMarketingPrerenderPaths() {
 export function getSitemapPaths() {
   return [
     ...getMarketingPrerenderPaths().filter((p) => p !== NOT_FOUND_PRERENDER_PATH),
+    ...STATIC_LANDING_PATHS,
     '/privacy',
     '/terms',
   ];
