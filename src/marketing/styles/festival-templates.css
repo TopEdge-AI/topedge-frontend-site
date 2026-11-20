@@ -831,6 +831,17 @@ a.mkt-ftc__festival:hover {
   }
 }
 
+/* Festival detail pages: steps only, one centred column. */
+.mkt-fper--compact {
+  max-width: 40rem;
+}
+
+@media (min-width: 900px) {
+  .mkt-fper--compact {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
 .mkt-fper__fields,
 .mkt-fper__steps {
   padding: 1.3rem 1.3rem 1.4rem;

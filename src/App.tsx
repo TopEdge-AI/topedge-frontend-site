@@ -284,6 +284,10 @@ const AnimatedRoutes = () => {
             path="/shopify-whatsapp-integration"
             element={<SeoTopicPage slug="shopify-whatsapp-integration" />}
           />
+          <Route
+            path="/whatsapp-abandoned-cart-recovery-app"
+            element={<SeoTopicPage slug="whatsapp-abandoned-cart-recovery-app" />}
+          />
           <Route path="/tools" element={<ToolsIndexPage />} />
           <Route path="/tools/best-whatsapp-tool-for-shopify" element={<ToolFinderPage />} />
           <Route path="/tools/rto-cost-calculator" element={<RtoCalculatorPage />} />

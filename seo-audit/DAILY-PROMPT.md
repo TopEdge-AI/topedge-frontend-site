@@ -1,17 +1,18 @@
-# Daily prompt (version 4, 18 Nov 2026)
+# Daily prompt (version 5, 20 Nov 2026)
 
-Paste everything below the line into a new session each day. Change only N and the date. N is the owner's own count (Day 1 = 15 Nov, Day 3 = 18 Nov, Day 4 = 19 Nov, Day 5 = 20 Nov). Run the row labelled Day N in `seo-audit/PLAN-AND-LOG.md` section 3. If that row is already Done, run the first row below it that is not Done and say so in one line. Never restart the count.
+Paste everything below the line into a new session each day. Change only N and the date. N is the owner's own count (Day 1 = 15 Nov, Day 3 = 18 Nov, Day 5 = 20 Nov, Day 6 = 21 Nov). Run the row labelled Day N in `seo-audit/PLAN-AND-LOG.md` section 3. If that row is already Done, run the first row below it that is not Done and say so in one line. Never restart the count.
 
 ---
 
 Continue TopEdge SEO, Day [N]. Today's date: [DD/MM/YY].
 
-You are my SEO, AEO and GEO agent for TopEdge AI (topedgeai.com). Goal for these 15 days: move our ICP pages that rank on Google pages 2 to 5 up to page 1. Do Day [N] only, end to end, then deploy. Never run two days in one session. Do not re-plan unless today's data proves the plan wrong; if it does, say so first, then change the plan file.
+You are my SEO, AEO and GEO agent for TopEdge AI (topedgeai.com). Goal for these 15 days: move our ICP pages that rank on Google pages 2 to 5 up to page 1, and build the keyword landing pages in PLAN-AND-LOG section 3b. Every day runs two tracks: **Track A**, one blog page with the full on-page, off-page and AEO audit (Search Console export, the exploremayank on-page tool, the analysis prompt as a PDF, then fixes); **Track B**, one landing page from the map (Days 6 to 10). Do Day [N] only, end to end, then deploy. Use the project skills `topedge-seo-day`, `topedge-landing-page` and `google-search-policies` in `.claude/skills/`. Never run two days in one session. Do not re-plan unless today's data proves the plan wrong; if it does, say so first, then change the plan file.
 
 ## 1. READ THESE FIRST, IN THIS ORDER
 
 1. **`seo-audit/PLAN-AND-LOG.md` in the repo.** It is the only plan and the only log. Read all of it: the daily routine (section 2), the day table (section 3), the last log rows (section 5) and the open owner items (section 6). Check the log before doing anything, so nothing is redone. The claude.ai docs are retired.
 2. `seo-audit/PAGE-ANALYSIS-PROMPT.md`: the analysis prompt you run on the day's page.
+2a. `seo-audit/2026-11-20/01-google-ai-content-guidance.md`: what Google says about AI content, the people-first rules and every spam policy with our rule. Every page must pass it.
 3. Saved memory, starting with topedge-seo-plan-nov15, then topedge-seo-14-day-plan, topedge-seo-state, topedge-blog-publishing-checklist, topedge-link-exchange-partners, topedge-static-page-duplicates, feedback-no-cluttered-visible-copy. Memory is point-in-time: verify against the code. If memory conflicts with the plan file, the plan file wins.
 4. The repo: /Users/patelmoksh/Downloads/topedge netlify final/topedge-frontend-site-update-pricing
    - seo-audit/2026-11-10/01-page-by-page-audit.csv: `primary_keyword` is the one-owner keyword map; `auto_flags` lists what each page is missing.
@@ -54,6 +55,9 @@ Before changing anything, tell me in a few lines: what the log says is done, tod
 4. Read the live India results before trusting volume, and look at who holds positions 3 to 10. Small sites and third parties: go. Only vendors and giants: drop it.
 5. Known traps, do not target: rto meaning, rto charges, cod meaning, rto calculator (transport office), bitespeed review (employee reviews), best whatsapp api provider in india (reseller lists), whatsapp flow template (Meta Flows). "ndr full form" is unchecked: read its India SERP before targeting it.
 6. Do not build pages for chatbot, bulk sender or API reseller searches, whatever the volume.
+6a. Product keywords a buyer types when choosing a tool come first ("whatsapp abandoned cart recovery app", "shopify cod app", "whatsapp app for shopify", "shopify whatsapp integration", "whatsapp order notification shopify", "rto reduction"). Rival-versus-rival queries such as "aisensy vs gallabox" or "wati vs aisensy" are not our keywords: accuracy fixes only.
+6b. Landing pages own product keywords; blog posts own "best X", "X alternative" and "how to" queries. Keep the exact keyword in the landing page's URL, title, H1 and the line under the H1.
+6c. Home page and feature pages are frozen except for factual corrections, and a title or H1 fix when a feature page owns a landing-page keyword (/features/cod-confirmation).
 7. Report India numbers separately from worldwide. Search Console beats volume tools on small queries.
 
 ## 5. ON-PAGE STANDARD FOR EVERY PAGE TOUCHED
@@ -125,6 +129,7 @@ Follow `seo-audit/PLAN-AND-LOG.md` section 2 step by step:
 4. Ahrefs site audit: health score and errors; fix real ones.
 5. Keyword cluster and live India SERP for the day's page.
 6. Day's page: Search Console export CSV, on-page audit tool vs the top 3 India results, the analysis prompt as a PDF report, re-read competitor prices, implement. All files in seo-audit/<date>/page-audits/<page>/.
+6b. Track B: the day's landing page from PLAN-AND-LOG section 3b, built to `.claude/skills/topedge-landing-page/SKILL.md` (keyword in URL, title, H1 and sub-line; home feature film; both pricing doors; real-query FAQ; doorway and people-first checks).
 7. Two body-only fixes on other ICP posts.
 8. Off-page item for the day: drafts only, I send.
 9. Build (exit 0), dist audit, preview, commit, push, live check. Re-run the audit tool into .../after/.

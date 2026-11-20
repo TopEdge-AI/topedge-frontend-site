@@ -68,9 +68,16 @@ const STEPS: { title: string; body: string }[] = [
   },
 ];
 
-export default function FestivalPersonalise() {
+/**
+ * `compact` is for the 25 festival detail pages. The full field-by-field
+ * version lives on the hub; repeating 400 identical words on every festival
+ * page made those pages near-copies of each other (people-first audit,
+ * 20 Nov 2026), so a detail page carries only the four step titles.
+ */
+export default function FestivalPersonalise({ compact = false }: { compact?: boolean }) {
   return (
-    <div className="mkt-fper">
+    <div className={`mkt-fper${compact ? ' mkt-fper--compact' : ''}`}>
+      {!compact && (
       <div className="mkt-fper__fields">
         <h3 className="mkt-fper__h3">What you change</h3>
         <ul className="mkt-fper__list">
@@ -89,6 +96,7 @@ export default function FestivalPersonalise() {
           ))}
         </ul>
       </div>
+      )}
 
       <div className="mkt-fper__steps">
         <h3 className="mkt-fper__h3">From catalog to campaign</h3>
@@ -100,7 +108,7 @@ export default function FestivalPersonalise() {
               </span>
               <span>
                 <strong>{s.title}</strong>
-                <span className="mkt-fper__detail">{s.body}</span>
+                {!compact && <span className="mkt-fper__detail">{s.body}</span>}
               </span>
             </li>
           ))}
@@ -112,10 +120,12 @@ export default function FestivalPersonalise() {
             See the Meta template manager
           </Link>
         </div>
-        <p className="mkt-fper__fine">
-          Free for 14 days, no card. Templates are submitted under your own WhatsApp Business
-          account, so they stay yours.
-        </p>
+        {!compact && (
+          <p className="mkt-fper__fine">
+            Free for 14 days, no card. Templates are submitted under your own WhatsApp Business
+            account, so they stay yours.
+          </p>
+        )}
       </div>
     </div>
   );

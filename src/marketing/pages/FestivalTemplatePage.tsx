@@ -61,11 +61,11 @@ export default function FestivalTemplatePage({ slug }: { slug: string }) {
     ...festival.faqs,
     {
       question: `Can I download these ${festival.shortName} WhatsApp templates for free?`,
-      answer: `Yes. Download all four as a CSV from the button under the previews, or copy any single message with the button on its card. The CSV carries the body, footer, button label, Meta template name and send window in separate columns. No sign-up, no email.`,
+      answer: `Yes. Use the CSV button under the previews, or copy one message from its card. No sign-up.`,
     },
     {
       question: `Can I edit the ${festival.shortName} template copy?`,
-      answer: `You are expected to. Each template arrives with the body, footer and button already in place and your store name and discount code left as blanks, so you change the wording, the offer, the button and the language, then submit it to Meta under your own WhatsApp Business account. The copy here is a starting draft, not a script.`,
+      answer: `Yes. Change the wording, offer, button and language, then submit it to Meta from your own WhatsApp Business account.`,
     },
   ];
 
@@ -82,26 +82,20 @@ export default function FestivalTemplatePage({ slug }: { slug: string }) {
         {
           label: 'Early access',
           cells: [stageSendWindow(festival, items[0].stage), 'Repeat buyers and your highest-spend segment'],
-          note: items[0].stage.purpose,
         },
         {
           label: 'Gift guide',
           cells: [stageSendWindow(festival, items[1].stage), 'The full opted-in list'],
-          note: items[1].stage.purpose,
         },
         {
           label: 'Flash sale',
           cells: [stageSendWindow(festival, items[2].stage), 'Everyone who has not bought from the first two'],
-          note: items[2].stage.purpose,
         },
         {
           label: 'Day-of greeting',
           cells: [stageSendWindow(festival, items[3].stage), 'The full opted-in list, offer-free'],
-          note: items[3].stage.purpose,
         },
       ],
-      footnote:
-        'Windows are a starting point, not a rule. Shift them earlier if you ship nationwide, and earlier again for anything that has to arrive before the day.',
     },
     {
       kind: 'prose',
@@ -121,7 +115,7 @@ export default function FestivalTemplatePage({ slug }: { slug: string }) {
       id: 'cost',
       tone: 'note',
       title: `What this campaign costs: ${FESTIVAL_SEQUENCE_COST} per customer`,
-      body: `All four ${festival.shortName} templates are marketing templates, which Meta bills at ${FESTIVAL_MARKETING_RATE} per delivered message in India, about ${FESTIVAL_SEQUENCE_COST} to reach one customer across the sequence, or roughly ₹3,450 for a list of a thousand. Meta bills your own WhatsApp Business account and TopEdge AI adds no markup.`,
+      body: `Four marketing templates at ${FESTIVAL_MARKETING_RATE} each in India: ${FESTIVAL_SEQUENCE_COST} per customer, about ₹3,450 for a list of a thousand. Meta bills your own account; TopEdge AI adds no markup.`,
       link: { label: 'See the full India rate card', href: '/pricing/meta-rates' },
     },
   ];
@@ -254,7 +248,6 @@ export default function FestivalTemplatePage({ slug }: { slug: string }) {
           <SectionHeading
             title={`What moves at ${festival.shortName}`}
             accent={festival.shortName}
-            subtitle="The commercial facts behind the copy: when the money moves, what sells, and where in India it matters."
           />
           <div className="mkt-fbrief">
             <div className="mkt-fbrief__item">
@@ -286,11 +279,11 @@ export default function FestivalTemplatePage({ slug }: { slug: string }) {
 
         <Section wash="soft">
           <SectionHeading
-            title="Customise and personalise it in the dashboard"
-            accent="personalise it"
-            subtitle={`The ${festival.shortName} copy is a draft, not a script. Rewrite it, set your own offer, pick the audience, and submit it to Meta from your own WhatsApp Business account.`}
+            title={`Make the ${festival.shortName} templates yours`}
+            accent="yours"
+            subtitle={`Rewrite the ${festival.shortName} copy, set your offer and audience, and submit it to Meta from your own account.`}
           />
-          <FestivalPersonalise />
+          <FestivalPersonalise compact />
         </Section>
 
         <Section>
@@ -306,9 +299,8 @@ export default function FestivalTemplatePage({ slug }: { slug: string }) {
 
         <Section>
           <SectionHeading
-            title="Festivals close to this one"
-            accent="close to this one"
-            subtitle="Plan the run rather than the date. The campaign that follows is usually the one that pays for this one."
+            title={`Plan what comes after ${festival.shortName}`}
+            accent="comes after"
           />
           <ul className="mkt-fgroup__grid mx-auto max-w-5xl">
             {siblings.map((s) => (
@@ -341,7 +333,7 @@ export default function FestivalTemplatePage({ slug }: { slug: string }) {
 
         <MarketingCtaBand
           title={`Run your ${festival.shortName} campaign on WhatsApp`}
-          subtitle="Copy the four templates, edit them to your brand, push them to Meta for approval and schedule the sends. Free for 14 days, no card."
+          subtitle={`Edit the four ${festival.shortName} templates, get them approved and schedule the sends. Free for 14 days, no card.`}
           primaryLabel="Start free"
           secondaryLabel="See pricing"
           secondaryTo="/pricing"

@@ -70,3 +70,31 @@ It is not an AI detector and gives no "AI score". It flags the patterns Google's
 - Festival pages: rewrite the top 5 and freeze the rest (recommended), or consolidate into the hub.
 - AI disclosure: Google suggests explaining how content was made where readers would reasonably expect it. Recommendation: one short "How we write these guides" note on /about (prices read from vendor pages on a stated date, founders review every post, AI tools help with drafts). Do not label individual posts. Your call.
 - Blog cover images: if any were AI-generated, they should carry IPTC metadata. Tell us which ones.
+
+## 7. Every Google spam policy, and our rule for each (read 20 Nov 2026)
+
+Source: [Spam policies for Google web search](https://developers.google.com/search/docs/essentials/spam-policies). A site can be demoted by automated systems or get a manual action for any of these. Check Search Console > Manual actions once a month (it was clean on 6 Nov 2026).
+
+| Google policy | What it means | Our rule |
+|---|---|---|
+| Cloaking | Showing search engines different content from what people see | Prerendered HTML must match what the React page shows. Never serve a bot-only version. |
+| **Doorway abuse** | Many sites or pages built for similar queries that funnel people somewhere else; city or region pages that all funnel to one page; near-identical pages | **The main risk for keyword landing pages.** Each landing page must answer its own query fully on the page (price, steps, limits, FAQ) and differ in substance, not just the keyword. No city or "for X industry" variants. One page per intent; see the keyword map in PLAN-AND-LOG section 3b. |
+| Expired domain abuse | Buying an old domain to rank low-value content | Never buy domains for SEO. |
+| Hacked content | Content injected through a security hole | Keep dependencies patched; check Search Console Security issues monthly. |
+| Hidden text and link abuse | Text or links visible to bots but not people | Accordions and tabs are fine. Never `display:none` copy written for crawlers, white-on-white text or off-screen text. |
+| Keyword stuffing | Unnatural repetition or lists of keywords | Keyword once in title, H1, description and first sentence, then write naturally. No keyword lists in footers or alt text. The `keywords` meta field does nothing in Google. |
+| Link spam | Buying, selling or excessively trading links for ranking | No bought links, PBNs or new link exchanges. Paid or sponsored links carry `rel="sponsored"`. The two existing exchanges stay as they are. |
+| Machine-generated traffic | Automated queries to Google | Use OpenSEO and Search Console APIs, never scripts that scrape Google results. |
+| Malicious practices | Malware, unwanted software, back-button hijacking (added 13 Apr 2026) | No scripts that trap the back button or open unexpected pop-ups on back; the exit-intent modal must never block "back". |
+| Misleading functionality | Claiming a tool or feature that does not work | Free tools (calculators, link generator) must work fully without sign-up. Never claim NDR handling, partial COD or Meta WhatsApp Flows. |
+| Scaled content abuse | Mass-produced low-value pages, by AI, scraping or stitching | One landing page and one blog page a day at most, each passing the people-first gate. No batch of templated pages. Festival pages must differ in substance (section 5). |
+| Scraping | Republishing other sites' content with little added | Quote under 15 words, link the source, add our own reading and arithmetic. |
+| Site reputation abuse | Hosting third-party content to ride the site's ranking | No guest posts or sponsored articles on topedgeai.com. |
+| Sneaky redirects | Redirects that send people somewhere other than what they clicked | 301s only for real merges, to the closest matching page. Never redirect by device or referrer. |
+| Thin affiliation | Affiliate pages that copy merchant descriptions | We have no affiliate pages. Competitor facts are read live and dated, with our own analysis. |
+| User-generated spam | Spam through comments, forums, sign-ups | We host no public UGC. If reviews or comments are ever added, moderate them and mark links `ugc`. |
+| Other: legal and personal-information removals | Many valid removal requests can demote a site | Use only our own screenshots and licensed images; never publish customer data. |
+| Other: policy circumvention | Repeating a violation on new subdomains or sites | No microsites or subdomains for SEO. |
+| Other: scam and fraud | Impersonation, false business info | Correct company details on /about and /contact; never imply partnerships we do not have. |
+
+Reviews have their own rule: Google added a guideline on 24 Jul 2026 against fake and undisclosed incentivised reviews. App Store review asks never offer anything in return.

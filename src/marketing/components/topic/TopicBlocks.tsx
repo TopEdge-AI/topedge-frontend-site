@@ -1,4 +1,5 @@
 import { Fragment, type ReactNode } from 'react';
+import { Link } from 'react-router-dom';
 import { SOURCES, type SourceId } from '@/data/sources';
 import '../../styles/topic-blocks.css';
 
@@ -96,15 +97,24 @@ export function TopicToc({ blocks }: { blocks: TopicBlock[] }) {
   );
 }
 
-/** `**word**` renders as emphasis, the one inline markup prose content gets. */
+/**
+ * Inline markup prose content gets: `**word**` for emphasis and `[label](/path)`
+ * for an internal link. Only site-relative paths become links, so a landing
+ * page can point at its related posts without any block reaching off-site.
+ */
 function renderInline(text: string) {
-  return text.split(/(\*\*[^*]+\*\*)/g).map((part, i) =>
-    /^\*\*[^*]+\*\*$/.test(part) ? (
-      <strong key={i}>{part.slice(2, -2)}</strong>
-    ) : (
-      <Fragment key={i}>{part}</Fragment>
-    ),
-  );
+  return text.split(/(\*\*[^*]+\*\*|\[[^\]]+\]\(\/[^)\s]*\))/g).map((part, i) => {
+    if (/^\*\*[^*]+\*\*$/.test(part)) return <strong key={i}>{part.slice(2, -2)}</strong>;
+    const link = part.match(/^\[([^\]]+)\]\((\/[^)\s]*)\)$/);
+    if (link) {
+      return (
+        <Link key={i} to={link[2]}>
+          {link[1]}
+        </Link>
+      );
+    }
+    return <Fragment key={i}>{part}</Fragment>;
+  });
 }
 
 const CALLOUT_ICON: Record<'note' | 'warn', ReactNode> = {

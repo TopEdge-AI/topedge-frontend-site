@@ -171,7 +171,7 @@ Setup guides and screen-by-screen reference, written for the person running the 
 
 ## Canonical URL directory
 
-All 166 indexable URLs on this domain, no trailing slash except the root.
+All 167 indexable URLs on this domain, no trailing slash except the root.
 
 - https://topedgeai.com/
 - https://topedgeai.com/pricing
@@ -220,6 +220,7 @@ All 166 indexable URLs on this domain, no trailing slash except the root.
 - https://topedgeai.com/compare/gupshup
 - https://topedgeai.com/compare/alternatives
 - https://topedgeai.com/shopify-whatsapp-integration
+- https://topedgeai.com/whatsapp-abandoned-cart-recovery-app
 - https://topedgeai.com/tools
 - https://topedgeai.com/tools/best-whatsapp-tool-for-shopify
 - https://topedgeai.com/tools/rto-cost-calculator

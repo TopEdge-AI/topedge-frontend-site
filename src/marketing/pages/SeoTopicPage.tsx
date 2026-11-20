@@ -8,7 +8,10 @@ import { PrimaryButton, GhostButton } from '../components/ui';
 import { TopicBlockView } from '../components/topic/TopicBlocks';
 import FaqAccordion from '../components/topic/FaqAccordion';
 import TrustBand from '../components/journey/TrustBand';
+import LandingFilm from '../components/landing/LandingFilm';
+import LandingPlans from '../components/landing/LandingPlans';
 import { getSeoTopic } from '../data/seoTopics';
+import { SHOPIFY_APP_PRICING } from '../data/shopifyAppPricing';
 import {
   breadcrumbJsonLd,
   organizationJsonLd,
@@ -18,6 +21,19 @@ import {
 import '../styles/topic-page.css';
 
 type Props = { slug: string };
+
+/** Renders `text` with the first occurrence of `accent` highlighted. */
+function withAccent(text: string, accent: string) {
+  const i = text.toLowerCase().indexOf(accent.toLowerCase());
+  if (i < 0) return text;
+  return (
+    <>
+      {text.slice(0, i)}
+      <span className="mkt-hl">{text.slice(i, i + accent.length)}</span>
+      {text.slice(i + accent.length)}
+    </>
+  );
+}
 
 /**
  * Commercial SEO/GEO lander bound to a fixed slug (not a :param catch-all).
@@ -74,20 +90,30 @@ export default function SeoTopicPage({ slug }: Props) {
       <MarketingPage className="mkt-topic">
         <header className="mkt-topic__hero">
           <div className="mkt-topic__hero-inner">
-            <Link className="mkt-topic__kicker" to="/integrations">
-              Integrations
+            <Link className="mkt-topic__kicker" to={topic.kicker?.href ?? '/integrations'}>
+              {topic.kicker?.label ?? 'Integrations'}
               <ArrowUpRight size={12} strokeWidth={2.2} aria-hidden />
             </Link>
 
             <h1 className="mkt-topic__title">
-              Shopify <span className="mkt-hl">WhatsApp integration</span> for Indian D2C stores
+              {topic.h1Accent ? (
+                withAccent(topic.h1, topic.h1Accent)
+              ) : (
+                <>
+                  Shopify <span className="mkt-hl">WhatsApp integration</span> for Indian D2C stores
+                </>
+              )}
             </h1>
 
             <p className="mkt-topic__sub">{topic.subtitle}</p>
 
             <div className="mkt-topic__actions">
               <PrimaryButton to="/signup">Start free</PrimaryButton>
-              <GhostButton to="/pricing">See pricing</GhostButton>
+              {topic.appStoreCta ? (
+                <GhostButton href={SHOPIFY_APP_PRICING.listingUrl}>Install on Shopify</GhostButton>
+              ) : (
+                <GhostButton to="/pricing">See pricing</GhostButton>
+              )}
             </div>
 
             <div className="mkt-topic__proof">
@@ -96,14 +122,18 @@ export default function SeoTopicPage({ slug }: Props) {
           </div>
 
           <figure className="mkt-topic__stage">
-            <img
-              src="/marketing/features/shopify-whatsapp-inbox.webp"
-              alt="A shared inbox showing a WhatsApp thread beside the Shopify order it belongs to: order number, Cash on Delivery status, and the product that was bought."
-              width={1200}
-              height={900}
-              loading="eager"
-              decoding="async"
-            />
+            {topic.film ? (
+              <LandingFilm film={topic.film} label={topic.filmLabel ?? topic.h1} />
+            ) : (
+              <img
+                src="/marketing/features/shopify-whatsapp-inbox.webp"
+                alt="A shared inbox showing a WhatsApp thread beside the Shopify order it belongs to: order number, Cash on Delivery status, and the product that was bought."
+                width={1200}
+                height={900}
+                loading="eager"
+                decoding="async"
+              />
+            )}
           </figure>
         </header>
 
@@ -113,7 +143,7 @@ export default function SeoTopicPage({ slug }: Props) {
         <section className="mkt-topic__answer" aria-labelledby="topic-answer-head">
           <div className="mkt-answer">
             <p className="mkt-answer__label" id="topic-answer-head">
-              The short answer
+              {topic.answerLabel ?? 'The short answer'}
             </p>
             <p className="mkt-answer__body">{topic.answerFirst}</p>
             <ul className="mkt-answer__chips">
@@ -125,7 +155,7 @@ export default function SeoTopicPage({ slug }: Props) {
         </section>
 
         <section className="mkt-topic__trust">
-          <TrustBand title="Shopify brands connected to WhatsApp with TopEdge AI" />
+          <TrustBand title={topic.trustTitle ?? 'Shopify brands connected to WhatsApp with TopEdge AI'} />
         </section>
 
         {blocks.length > 0 ? (
@@ -145,14 +175,17 @@ export default function SeoTopicPage({ slug }: Props) {
           </div>
         )}
 
+        {topic.plans && <LandingPlans intro={topic.plans.intro} />}
+
         <section className="mkt-topic__faq" aria-labelledby="topic-faq-head">
           <header className="mkt-topic__sec-head">
             <h2 className="mkt-topic__sec-title" id="topic-faq-head">
-              Questions <span className="mkt-hl">teams ask</span>
+              {topic.faqTitle?.lead ?? 'Questions'}{' '}
+              <span className="mkt-hl">{topic.faqTitle?.accent ?? 'teams ask'}</span>
             </h2>
             <p className="mkt-topic__sec-sub">
-              Connection steps, Meta pricing in India, COD, and how this compares with Shopify
-              abandoned cart email.
+              {topic.faqSub ??
+                'Connection steps, Meta pricing in India, COD, and how this compares with Shopify abandoned cart email.'}
             </p>
           </header>
           <div className="mkt-topic__faq-body">
@@ -179,8 +212,11 @@ export default function SeoTopicPage({ slug }: Props) {
         </section>
 
         <MarketingCtaBand
-          title="Connect WhatsApp to your Shopify store"
-          subtitle="Start free, authorise Shopify, add your Meta credentials, approve templates, publish the first journey."
+          title={topic.cta?.title ?? 'Connect WhatsApp to your Shopify store'}
+          subtitle={
+            topic.cta?.subtitle ??
+            'Start free, authorise Shopify, add your Meta credentials, approve templates, publish the first journey.'
+          }
           primaryLabel="Start free"
           secondaryLabel="See pricing"
           secondaryTo="/pricing"

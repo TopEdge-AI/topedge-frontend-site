@@ -15,8 +15,16 @@ Status: not started (owner).
 
 ## 2. Ahrefs: sign in again in the built-in browser
 
-The built-in browser was signed out of Ahrefs on 20 Nov (app.ahrefs.com redirects to the public site with a "Sign in" button), so today's site-audit check was skipped. Sign in once in the Claude app's browser pane at https://app.ahrefs.com and the Day 6 session will read project 10574646.
+Done by the owner on 20 Nov. Read the same afternoon: health 100, AI Discoverability 98 (was 87), crawl of 19 Nov; top issues are the known dash.topedgeai.com rows, Article-schema notices and the aggregateRating warnings only real reviews fix.
 
 ## 3. Decisions from the AI-content review
 
 See `01-google-ai-content-guidance.md`, section 6: festival pages, an optional "How we write these guides" note on /about, and which blog cover images (if any) were AI-generated.
+
+## 4. Festival template copy (decision, afternoon 20 Nov)
+
+The website side of the 25 festival pages was cleaned on 20 Nov: shared stage notes, the long personalise block, generic FAQ answers and generic subtitles were cut, so each page now leads with its own festival facts.
+
+What is left is the template copy itself. The 100 messages are the same four texts with only the festival name swapped ("Our Diwali collection is live at [Store Name], and you're seeing it first."). The website copies them word for word from the dashboard catalog (`chatbot-dashboard-frontend-main/src/config/festivalMarketingCatalog.js`), and `festivalTemplateCatalog.ts` says never to change them on the website alone, or the page starts describing templates the dashboard does not have.
+
+Recommendation: rewrite the catalog in the dashboard with festival-specific copy (what people actually buy and say at each festival, e.g. rakhi hampers and sibling gifting for Raksha Bandhan, the Onam sadya and kasavu wear for Onam), starting with the next five festivals in the calendar (Christmas, New Year and Makar Sankranti are the first three). Then re-vendor to the website in the same deploy. Say yes and a session will draft the new copy in the dashboard repo for your review; nothing ships to the dashboard without you.

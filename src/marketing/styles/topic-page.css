@@ -383,3 +383,110 @@
     padding-inline: 1rem;
   }
 }
+
+/* ---------- landing pages (20 Nov 2026): hero film and plan strip ---------- */
+
+.mkt-topic__stage .mkt-lp-film {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  border-radius: 18px;
+  background: #f4f1fd;
+  object-fit: cover;
+}
+
+.mkt-lp-plans {
+  width: min(100%, 62rem);
+  margin: clamp(3.5rem, 7vw, 5.5rem) auto 0;
+  padding-inline: 1.25rem;
+}
+
+.mkt-lp-plans__grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.mkt-lp-plan {
+  padding: 1.35rem 1.25rem 1.25rem;
+  border: 1px solid var(--mkt-border);
+  border-radius: var(--mkt-radius-card, 20px);
+  background: #fff;
+}
+
+.mkt-lp-plan--pick {
+  border-color: #c4b5fd;
+  box-shadow: 0 24px 48px -36px rgba(76, 29, 149, 0.45);
+}
+
+.mkt-lp-plan__name {
+  margin: 0;
+  font-weight: 600;
+  color: var(--mkt-violet);
+}
+
+.mkt-lp-plan__price {
+  margin: 0.35rem 0 0;
+  font-family: var(--mkt-font);
+  font-size: 1.75rem;
+  font-weight: 650;
+  color: var(--mkt-ink);
+}
+
+.mkt-lp-plan__price span {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--mkt-muted);
+}
+
+.mkt-lp-plan__usd {
+  margin: 0.25rem 0 0;
+  font-size: 0.85rem;
+  color: var(--mkt-muted);
+}
+
+.mkt-lp-plan__facts {
+  margin: 1rem 0 0;
+  padding: 0;
+  list-style: none;
+  font-size: 0.92rem;
+  color: var(--mkt-body);
+}
+
+.mkt-lp-plan__facts li + li {
+  margin-top: 0.4rem;
+}
+
+.mkt-lp-plans__note {
+  max-width: 46rem;
+  margin: 1.1rem auto 0;
+  text-align: center;
+  font-size: 0.88rem;
+  color: var(--mkt-muted);
+}
+
+.mkt-lp-plans__note a {
+  color: var(--mkt-violet);
+}
+
+@media (max-width: 760px) {
+  .mkt-lp-plans__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .mkt-lp-plans {
+    padding-inline: 1rem;
+  }
+}
+
+/* Same breakpoint as the <source media> that picks the portrait phone cut. */
+@media (max-width: 640px) {
+  .mkt-topic__stage .mkt-lp-film {
+    aspect-ratio: 4 / 5;
+    border-radius: 14px;
+  }
+}

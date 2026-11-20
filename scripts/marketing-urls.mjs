@@ -79,7 +79,7 @@ export const COMPARE_MULTIWAY_SLUGS = [
   'topedge-vs-wati-vs-interakt-vs-aisensy',
 ];
 
-export const TOPIC_SLUGS = ['shopify-whatsapp-integration'];
+export const TOPIC_SLUGS = ['shopify-whatsapp-integration', 'whatsapp-abandoned-cart-recovery-app'];
 
 export const BLOG_SLUGS = [
   'ecommerce-funnel-drop-off-benchmarks-visitor-identity-resolution',
