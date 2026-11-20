@@ -24,6 +24,7 @@ Move our ICP pages that already rank on Google pages 2 to 5 (average position 11
       (It drives https://exploremayank.in/tools/free-on-page-seo-audit-tool/ and saves `onpage-audit.pdf` and `.txt`.)
    3. Run `seo-audit/PAGE-ANALYSIS-PROMPT.md` on that export and the tool output. Write the report as HTML and render it: `node seo-audit/tools/html-to-pdf.mjs <in.html> <out.pdf>` → `analysis-report.pdf`.
    4. Re-read every competitor price the page states, then implement the report's changes (DAILY-PROMPT sections 3 and 5 apply).
+   4a. People-first gate: `node seo-audit/tools/people-first-audit.mjs dist <day-folder>/people-first --only <route>` on the built page before and after the change; it must not gain a flag (rules in `2026-11-20/01-google-ai-content-guidance.md`).
    5. After deploy, re-run the tool into `.../after/`. Add `?v=<date>` to our URL: the tool caches pages by URL and otherwise audits the old copy.
 7. **Two body-only fixes** on other ICP blog posts from the striking-distance list or the `auto_flags` column of `2026-11-10/01-page-by-page-audit.csv`.
 8. **Off-page:** the day's off-page item from the table below. Drafts only; the owner sends. At most 20 sends a week.

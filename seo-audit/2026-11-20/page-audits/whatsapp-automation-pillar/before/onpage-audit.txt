@@ -1,0 +1,915 @@
+On-page audit: https://topedgeai.com/blog/whatsapp-automation-for-shopify
+Keyword: shopify whatsapp automation
+Competitors: https://zapify.pt/en/blog/whatsapp-automation-guide, https://pickyassist.com/blog/whatsapp-integration-with-shopify/, https://helpdocumentation.gitbook.io/user/integrations/shopify
+Run: 2026-11-20T04:34:53.672Z
+
+
+===== Overview =====
+Download CSV
+Save as PDF
+New audit
+Overview
+Keyword
+Competitors
+Full audit
+1
+Links & images
+Structure
+Previews
+AI & tech
+On-page score
+
+Weighted share of checks passed. Warnings count half, info items do not count. It measures on-page setup, not backlinks or authority.
+
+90
+YOU
+topedgeai.com
+52 pass · 5 warn · 1 fail
+69
+COMP 1
+zapify.pt
+25 pass · 16 warn · 4 fail
+73
+COMP 2
+pickyassist.com
+31 pass · 12 warn · 5 fail
+62
+COMP 3
+helpdocumentation.gitbook.io
+22 pass · 12 warn · 7 fail
+Page at a glance
+3,690
+Content words
+9
+Exact keyword uses
+74
+Internal pages linked
+15
+Images
+0
+Broken links
+836 ms
+HTML download time
+107 KB
+HTML size
+17
+Schema types
+Fix these first
+
+Your biggest issues, ordered by the weight each check carries in this audit.
+
+Keyword in H1: Not found
+Put the keyword, or a close variant, in the H1.
+High impact
+Keyword in title: All words present, not as a phrase
+Use the exact keyword phrase in the title.
+High impact
+Keyword in meta description: Not found
+Google bolds matching words in the snippet. Use the keyword once.
+Medium impact
+Page download time: 836 ms to download the full HTML from the audit server
+Includes connection and full HTML download, not just TTFB. Use page caching and good hosting.
+Medium impact
+Readability (Flesch, English): 46 / 100, average 17 words per sentence
+Short sentences and simple words help. Estimate for English text.
+Low impact
+Keyword in an image alt: None
+Describe one relevant image using the keyword naturally.
+Low impact
+Your Google result
+
+An estimate of how your title and description may look. Widths are measured in Arial on your device; Google’s real cut-off varies by device and query.
+
+TopEdge AI
+https://topedgeai.com › blog › whatsapp-automation-for-shopify
+WhatsApp Automation for Shopify India: Complete Guide
+WhatsApp automation for Shopify: store events to journeys, lifecycle workflows, App vs Cloud API, opt-in, India COD, and cost.
+Title: 505 px of about 600 px
+Description: 786 px of about 920 px
+
+Google may rewrite titles and descriptions. A clear, matching title and H1 lowers that chance.
+
+Want these fixed and ranking?
+
+I turn audits like this into a clear plan and do the work: on-page, technical, content and links.
+
+Get a free SEO consultation
+
+How it works: the tool downloads the HTML your server sends, the same first copy Googlebot gets, and checks it in your browser. Content added later by JavaScript is not counted. Link and image checks use live HTTP requests. Scores cover on-page setup only; rankings also depend on backlinks, authority and search intent.
+
+===== Keyword =====
+Download CSV
+Save as PDF
+New audit
+Overview
+Keyword
+Competitors
+Full audit
+1
+Links & images
+Structure
+Previews
+AI & tech
+Keyword placement map
+
+Exact matches of “shopify whatsapp automation” in every spot Google reads. Red cells are spots where the keyword is missing.
+
+PAGE	TITLE	META DESC	URL	H1	H2-H6	FIRST 100 WORDS	BODY	IMAGE ALT	LINK ANCHORS
+You: topedgeai.com	0	0	yes	0	6	1	9	0	1
+Comp 1: zapify.pt	0	0	no	0	0	0	0	0	0
+Comp 2: pickyassist.com	0	0	no	0	0	0	0	0	0
+Comp 3: helpdocumentation.gitbook.io	0	0	no	0	0	0	0	0	0
+missing
+low
+medium
+highest
+Keyword numbers
+Exact
+9 uses in 3,690 words (0.73%)
+Word
+“shopify” appears 81 times
+Word
+“whatsapp” appears 94 times
+Word
+“automation” appears 41 times
+Anchors
+1 links use the keyword
+What your page talks about
+
+Most used phrases and words. If your topic is not near the top, Google may see the page as being about something else.
+
+whatsapp automation
+23×
+shopify whatsapp
+16×
+whatsapp business
+16×
+cloud api
+9×
+business platform
+9×
+cart recovery
+8×
+cod confirmation
+8×
+abandoned cart
+7×
+shared inbox
+7×
+approved templates
+6×
+service window
+6×
+business app
+5×
+whatsapp
+91×
+shopify
+80×
+order
+42×
+automation
+40×
+meta
+29×
+cod
+24×
+templates
+23×
+business
+22×
+customer
+21×
+cart
+19×
+opt-in
+18×
+marketing
+18×
+Want these fixed and ranking?
+
+I turn audits like this into a clear plan and do the work: on-page, technical, content and links.
+
+Get a free SEO consultation
+
+How it works: the tool downloads the HTML your server sends, the same first copy Googlebot gets, and checks it in your browser. Content added later by JavaScript is not counted. Link and image checks use live HTTP requests. Scores cover on-page setup only; rankings also depend on backlinks, authority and search intent.
+
+===== Competitors =====
+Download CSV
+Save as PDF
+New audit
+Overview
+Keyword
+Competitors
+Full audit
+1
+Links & images
+Structure
+Previews
+AI & tech
+You vs competitors
+
+Your real numbers against the average of the competitor pages that loaded.
+
+Content depth
+You have 3,690 words. Competitors average 606.
+Sections
+You use 16 H2 sections. Competitors average 7.
+Internal linking
+You link to 74 internal pages. Competitors average 50.
+Schema types
+Competitors use Product, Review, Rating, AggregateRating. You do not.
+Keyword placement
+You use the keyword in every spot competitors do.
+Question headings
+You have 20. Competitors average 2.
+METRIC	YOU
+topedgeai.com	COMP 1
+zapify.pt	COMP 2
+pickyassist.com	COMP 3
+helpdocumentation.gitbook.io
+On-page score	90	69	73	62
+Content words	3,690	597	1,149	71
+Exact keyword uses	9	0	0	0
+Keyword density %	0.73	0	0	0
+Title width px	505	658	542	265
+Keyword in title	✕ no	✕ no	✕ no	✕ no
+Meta description chars	126	167	0	0
+Keyword in meta	✕ no	✕ no	✕ no	✕ no
+Keyword in URL	✓ yes	✕ no	✕ no	✕ no
+H1 count	1	1	1	1
+Keyword in H1	✕ no	✕ no	✕ no	✕ no
+H2 sections	16	9	13	0
+H3 sections	23	1	1	0
+Question headings	20	2	3	0
+Images	15	8	12	0
+Images missing alt	0	0	0	0
+Videos	0	0	0	0
+Unique internal links	74	18	84	48
+Unique external links	20	12	8	1
+Lists / tables	24 / 2	8 / 0	26 / 1	4 / 0
+Schema types	FAQPage, Question, Answer, BreadcrumbList, ListItem	none	WebPage, ReadAction, ImageObject, BreadcrumbList, ListItem	none
+Readability (Flesch)	46	29	33	n/a
+HTML size KB	107	63	99	520
+HTML download ms	836	485	687	223
+Last updated	2026-10-21	n/a	2021-03-25	n/a
+Tech	n/a	Google Analytics, Meta Pixel	WordPress, Yoast SEO, Google Analytics	Cloudflare
+Sections competitors have, you do not
+
+Competitor H2 and H3 headings whose main words barely appear on your page. Each one is a sub-topic to consider adding.
+
+Comp 1 · H2
+Some of the benefits of automation with ZAPIFY include:
+Comp 1 · H2
+The Future of Automation with ZAPIFY
+Comp 1 · H2
+Invest in the future of your company’s communication with ZAPIFY and make the most of WhatsApp in 2025!
+Comp 2 · H2
+Pre-Requisite
+Comp 2 · H2
+Getting Started
+Comp 2 · H2
+References
+Comp 2 · H2
+How CRM for Solar Can Automate Lead Management and Boost Sales?
+Missing terms
+
+Words and phrases repeated on competitor pages that never appear on yours. Use the ones that fit your topic.
+
+Phrases
+No repeated phrase gap.
+Words
+crm
+2/3 · ~6×
+
+Format: used by X of Y competitors · average uses per page.
+
+Want these fixed and ranking?
+
+I turn audits like this into a clear plan and do the work: on-page, technical, content and links.
+
+Get a free SEO consultation
+
+How it works: the tool downloads the HTML your server sends, the same first copy Googlebot gets, and checks it in your browser. Content added later by JavaScript is not counted. Link and image checks use live HTTP requests. Scores cover on-page setup only; rankings also depend on backlinks, authority and search intent.
+
+===== Full audit =====
+Download CSV
+Save as PDF
+New audit
+Overview
+Keyword
+Competitors
+Full audit
+1
+Links & images
+Structure
+Previews
+AI & tech
+Full audit of your page
+
+64 checks on topedgeai.com
+
+All
+Fails (1)
+Warnings (5)
+Passed (52)
+Info (6)
+Meta & URL
+4/6 passed
+✓
+Title tag
+"WhatsApp Automation for Shopify India: Complete Guide" (53 chars, 505 px)
+Likely fits in Google results.
+!
+Keyword in title
+All words present, not as a phrase
+Use the exact keyword phrase in the title.
+✓
+Meta description
+"WhatsApp automation for Shopify: store events to journeys, lifecycle workflows, App vs Cloud API, opt-in, India COD, and cost." (126 chars, 786 px)
+Good length.
+!
+Keyword in meta description
+Not found
+Google bolds matching words in the snippet. Use the keyword once.
+✓
+Keyword in URL
+All keyword words present
+Use short keyword slugs for new pages. Do not change live URLs without a 301 redirect.
+✓
+URL length
+58 chars
+Keep URLs short and readable.
+Headings
+4/5 passed
+✓
+H1 tag
+1 H1: "WhatsApp Automation for Shopify India: Complete Guide"
+One clear H1.
+✕
+Keyword in H1
+Not found
+Put the keyword, or a close variant, in the H1.
+✓
+Subheadings (H2)
+16 H2, 23 H3, 0 H4-H6
+Split content into sections with H2s that match sub-topics people search.
+✓
+Keyword in an H2
+5 H2 contain it
+Use the keyword or a variant in at least one H2.
+✓
+Heading order
+No skipped levels
+Go H1 > H2 > H3 in order. Style with CSS, not heading tags.
+Content & keyword
+5/7 passed
+✓
+Content length
+3,690 words in main content (4,313 incl. header/footer), about 17 min read
+No magic number. Compare with pages that rank and cover every sub-topic they cover.
+✓
+Keyword in first 100 words
+Found
+Say what the page is about early.
+✓
+Keyword usage
+9 exact uses, 0.73% density
+Natural usage. Write for readers, not a density target.
+i
+Keyword words used separately
+"shopify" 81x, "whatsapp" 94x, "automation" 41x
+Shows partial matches and variations Google also understands.
+!
+Readability (Flesch, English)
+46 / 100, average 17 words per sentence
+Short sentences and simple words help. Estimate for English text.
+✓
+Text to HTML ratio
+25.9% of the HTML is visible text
+Low ratio means heavy code. Page builders and inline scripts add bulk.
+✓
+Content freshness
+Last date found: 2026-10-21 (30 days ago)
+Review key pages at least once a year and update the modified date honestly.
+Links
+6/6 passed
+✓
+Internal links
+128 links, 74 unique pages
+Link to related service, case study and blog pages with descriptive anchors.
+✓
+External links
+20 links, 20 unique, 5 nofollow/sponsored/ugc
+Cite trusted sources where it helps the reader.
+✓
+Links without anchor text
+0 found
+Give every link visible text or an aria-label.
+✓
+Generic anchors
+0 like "click here" or "read more"
+Describe the destination: "see SEO case studies", not "click here".
+✓
+Broken links
+None in 40 checked links (of 94)
+Fix or remove broken links. They waste crawl budget and hurt users.
+✓
+Internal links that redirect
+None
+Point internal links straight to the final URL.
+Images
+4/6 passed
+✓
+Images missing alt
+0 of 15 have no alt (7 empty alt="")
+Describe meaningful images. Empty alt is fine only for decoration.
+!
+Keyword in an image alt
+None
+Describe one relevant image using the keyword naturally.
+✓
+Modern formats (WebP/AVIF)
+9 of 15
+WebP or AVIF files are smaller and load faster.
+✓
+Width and height set
+0 image(s) without both
+Set width and height to stop layout shift (CLS).
+i
+First image in HTML lazy loaded
+No
+If this is your main above-the-fold image, remove lazy loading. It delays LCP. If it is a logo or icon, ignore this.
+✓
+Heavy images (over 200 KB)
+None in 15 measured
+Compress and resize. Aim for under 200 KB for most content images.
+Technical & indexing
+14/15 passed
+✓
+HTTP status
+200
+Page loads.
+✓
+Indexable
+robots: index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1
+Search engines can index this page.
+✓
+robots.txt (Googlebot)
+Allowed, sitemap declared
+Good.
+✓
+Page in XML sitemap
+Listed in https://topedgeai.com/sitemap.xml
+Important pages belong in the sitemap you submit to Search Console.
+✓
+Canonical tag
+https://topedgeai.com/blog/whatsapp-automation-for-shopify (self)
+Good.
+✓
+HTTPS
+Secure
+Serve every page on HTTPS.
+✓
+Mixed content
+None
+Load every file over https:// or browsers block it.
+✓
+Mobile viewport
+width=device-width, initial-scale=1.0
+Add <meta name="viewport" content="width=device-width, initial-scale=1">.
+✓
+Language attribute
+en-IN
+Set <html lang="en-IN"> or your language.
+✓
+Doctype and charset
+Doctype ok, charset ok
+Start with <!DOCTYPE html> and <meta charset="utf-8">.
+✓
+HTML size and DOM
+107 KB HTML, 1,100 elements
+Heavy HTML and big DOMs slow rendering. Page builders add extra wrappers.
+!
+Page download time
+836 ms to download the full HTML from the audit server
+Includes connection and full HTML download, not just TTFB. Use page caching and good hosting.
+✓
+Render-blocking scripts in head
+0 blocking, 1 external scripts, 7 stylesheets
+Add defer or async to scripts that do not need to run first.
+✓
+Compression
+br
+Enable gzip or brotli on the server.
+✓
+HSTS security header
+Enabled
+Strict-Transport-Security forces HTTPS for returning visitors.
+AI search readiness
+5/6 passed
+✓
+AI search crawlers allowed
+ChatGPT search, Perplexity, Bing/Copilot and Claude search can crawl
+Blocking AI search bots removes you from their answers and citations.
+i
+AI training crawlers
+Not blocked (GPTBot, ClaudeBot, Google-Extended, CCBot)
+Your choice. Blocking training bots does not affect Google rankings.
+✓
+llms.txt file
+Found at /llms.txt (38 KB)
+An optional summary file for AI tools. Low effort, low impact today.
+✓
+Question-style headings
+20 found
+Headings phrased as real questions, answered right below, are easy for AI Overviews and ChatGPT to quote.
+✓
+Lists and tables
+24 lists, 2 tables
+Lists and tables are easy to scan and easy for AI answers to quote.
+✓
+FAQ structured data
+FAQPage found
+FAQ rich results are limited now, but the markup still helps machines read Q&A.
+Schema & trust
+4/4 passed
+✓
+Structured data
+FAQPage, Question, Answer, BreadcrumbList, ListItem, Organization, ImageObject, Person, PostalAddress, Country, Offer, PriceSpecification
+Add JSON-LD that matches the page: LocalBusiness, Service, Article, FAQPage, BreadcrumbList.
+✓
+Breadcrumbs markup
+BreadcrumbList found
+Breadcrumbs show your site path in Google results.
+✓
+Author and dates
+Author: Moksh Patel | Published: 2026-09-21 | Updated: 2026-10-21
+Show who wrote it and when it was updated. Supports E-E-A-T.
+✓
+Trust page links
+About yes, Contact yes, Privacy yes
+Link to About, Contact and Privacy pages from every page.
+Local SEO
+3/6 passed
+✓
+Click-to-call phone
++919429784875
+Local visitors call from mobile. Add a tel: link.
+i
+LocalBusiness schema
+Not found
+For local services add LocalBusiness with name, address, phone, hours and geo.
+✓
+Address on page
+Found (schema or <address>)
+Show the same name, address and phone as your Google Business Profile.
+i
+Map link or embed
+Not found
+Link or embed your Google Maps location.
+i
+Reviews markup
+Not found
+Only mark up genuine reviews shown on the page.
+✓
+WhatsApp contact
+Found
+Useful if customers contact you on WhatsApp.
+Social sharing
+3/3 passed
+✓
+Open Graph tags
+og:title yes, og:description yes, og:image yes
+Controls the preview on WhatsApp, LinkedIn and Facebook.
+✓
+Twitter/X card
+summary_large_image
+Add twitter:card = summary_large_image.
+✓
+Favicon
+Found
+Google shows your favicon next to your results.
+Want these fixed and ranking?
+
+I turn audits like this into a clear plan and do the work: on-page, technical, content and links.
+
+Get a free SEO consultation
+
+How it works: the tool downloads the HTML your server sends, the same first copy Googlebot gets, and checks it in your browser. Content added later by JavaScript is not counted. Link and image checks use live HTTP requests. Scores cover on-page setup only; rankings also depend on backlinks, authority and search intent.
+
+===== Links & images =====
+Download CSV
+Save as PDF
+New audit
+Overview
+Keyword
+Competitors
+Full audit
+1
+Links & images
+Structure
+Previews
+AI & tech
+Link health
+
+Live status of 40 unique links (first 40 of 94, internal first). 0 broken, 0 redirecting.
+
+STATUS	TYPE	ANCHOR	URL	NOTE
+200	internal	Signup 14-days trial	https://topedgeai.com/pricing	
+200	internal	TopEdge AI	https://topedgeai.com/	
+200	internal	JourneyAutomate WhatsApp from any Shopify event	https://topedgeai.com/features/journeys	
+200	internal	Flow + Shopify ToolsBots that read live orders	https://topedgeai.com/features/flow-builder	
+200	internal	Opt-in toolsSpin, scratch and popups that grow a list	https://topedgeai.com/features/opt-in-tools	
+200	internal	Audience CampaignsBroadcasts with net-of-Meta revenue	https://topedgeai.com/features/campaigns	
+200	internal	Audience CRMOne profile for every shopper	https://topedgeai.com/features/audience-crm	
+200	internal	WarrantyQR registration and claims on WhatsApp	https://topedgeai.com/features/warranty	
+200	internal	Tracking PixelLive shopper intent from your store	https://topedgeai.com/features/analytics	
+200	internal	Intent detectionRoute Hinglish without AI spend	https://topedgeai.com/features/intent-detection	
+200	internal	AI BrainAnswers grounded in your policies	https://topedgeai.com/features/ai-brain	
+200	internal	Profit & costsTrue profit on every order	https://topedgeai.com/features/profit-loss	
+200	internal	Best Shopify App for Abandoned CartThe 2026 India shortlist, comparedRead the co	https://topedgeai.com/blog/best-shopify-app-for-abandoned-cart-recovery-india	
+200	internal	Docs	https://topedgeai.com/docs	
+200	internal	Customers	https://topedgeai.com/customers	
+200	internal	Log in	https://topedgeai.com/login	
+200	internal	Start free	https://topedgeai.com/signup	
+200	internal	Blog	https://topedgeai.com/blog	
+200	internal	Automation	https://topedgeai.com/blog/category/automation	
+200	internal	Moksh Patel	https://topedgeai.com/about	
+200	internal	Comparisons	https://topedgeai.com/blog/category/comparisons	
+200	internal	COD & RTO	https://topedgeai.com/blog/category/cod-rto	
+200	internal	Meta & templates	https://topedgeai.com/blog/category/meta-templates	
+200	internal	AI & inbox	https://topedgeai.com/blog/category/ai-and-inbox	
+200	internal	Growth	https://topedgeai.com/blog/category/growth	
+200	internal	Shopify abandoned cart recovery with WhatsApp	https://topedgeai.com/blog/whatsapp-abandoned-cart-recovery-shopify	
+200	internal	best WhatsApp apps for Shopify	https://topedgeai.com/blog/best-whatsapp-apps-for-shopify	
+200	internal	what ecommerce automation means on Shopify WhatsApp	https://topedgeai.com/blog/what-is-ecommerce-automation-shopify-whatsapp	
+200	internal	WhatsApp journey examples with costs	https://topedgeai.com/whatsapp-journey-examples	
+200	internal	COD confirmation on WhatsApp	https://topedgeai.com/blog/how-to-reduce-rto-with-whatsapp-cod-confirmation	
+200	internal	shared inbox with Shopify orders	https://topedgeai.com/blog/whatsapp-shared-inbox-shopify-order-context	
+200	internal	AI WhatsApp chatbot for Shopify India	https://topedgeai.com/blog/ai-whatsapp-chatbot-for-shopify-india	
+200	internal	Comment, story or mention interest	https://topedgeai.com/integrations	
+200	internal	what to automate first	https://topedgeai.com/blog/shopify-whatsapp-automation-what-to-automate-first	
+200	internal	Shopify WhatsApp automation checklist	https://topedgeai.com/blog/shopify-automation-checklist-whatsapp-cart-recovery	
+200	internal	Shopify WhatsApp integration	https://topedgeai.com/shopify-whatsapp-integration	
+200	internal	Meta WhatsApp Cloud API templates	https://topedgeai.com/blog/meta-whatsapp-cloud-api-shopify-templates	
+200	internal	WhatsApp Business API pricing in India	https://topedgeai.com/blog/whatsapp-business-api-pricing-india	
+200	internal	Live Chat	https://topedgeai.com/features	
+200	internal	Meta Manager	https://topedgeai.com/features/meta-manager	
+
+Some sites block automated checks (403/999). Open those links by hand before removing them.
+
+Image weight
+
+File size of the first 15 images. Over 200 KB is heavy for most web images.
+
+SIZE	STATUS	ALT	IMAGE
+77 KB	200	Best WhatsApp apps for Shopify compared, with a WhatsApp-to-Shopify sync panel showing orders, customers and messages at 0% Meta markup	https://topedgeai.com/blog/best-whatsapp-apps-for-shopify.jpg
+70 KB	200	What to automate first on Shopify WhatsApp: cart recovery, order updates, shipping updates and post-purchase nurture, rolled out in stages	https://topedgeai.com/blog/shopify-whatsapp-automation-what-to-automate-first.jpg
+64 KB	200	Automating a Shopify store in India, with an active Shopify-to-WhatsApp workflow running order, support and delivery updates	https://topedgeai.com/blog/how-to-automate-ecommerce-store-india.jpg
+63 KB	200	WhatsApp automation for Shopify India, with automated journeys linking a Shopify order to WhatsApp messages, tags and tracking	https://topedgeai.com/blog/whatsapp-automation-for-shopify.jpg
+39 KB	200	Best Shopify app for abandoned cart recovery in India, the TopEdge AI 2026 shortlist	https://topedgeai.com/blog/best-shopify-app-for-abandoned-cart-recovery-india.webp
+15 KB	200	(empty)	https://topedgeai.com/logo.png
+12 KB	200	(empty)	https://topedgeai.com/brand-mark-56.png
+9 KB	200	Meta Business Partner	https://topedgeai.com/badges/meta-business-partner.webp?v=5
+9 KB	200	Shopify Available on App Store	https://topedgeai.com/badges/shopify-app-store.webp?v=5
+9 KB	200	(empty)	https://topedgeai.com/ai/chatgpt.webp
+9 KB	200	WhatsApp Business Partner	https://topedgeai.com/badges/whatsapp-cloud-api.webp?v=6
+7 KB	200	(empty)	https://topedgeai.com/ai/gemini.webp
+5 KB	200	(empty)	https://topedgeai.com/ai/claude.webp
+4 KB	200	(empty)	https://topedgeai.com/ai/grok.webp
+4 KB	200	(empty)	https://topedgeai.com/ai/perplexity.webp
+All links and images on the page
+Links150 total, 74 internal pages, 20 external
+Images15 total, 0 missing alt
+Want these fixed and ranking?
+
+I turn audits like this into a clear plan and do the work: on-page, technical, content and links.
+
+Get a free SEO consultation
+
+How it works: the tool downloads the HTML your server sends, the same first copy Googlebot gets, and checks it in your browser. Content added later by JavaScript is not counted. Link and image checks use live HTTP requests. Scores cover on-page setup only; rankings also depend on backlinks, authority and search intent.
+
+===== Structure =====
+Download CSV
+Save as PDF
+New audit
+Overview
+Keyword
+Competitors
+Full audit
+1
+Links & images
+Structure
+Previews
+AI & tech
+Heading outline
+
+The structure Google sees. Switch pages to compare how competitors split the topic.
+
+You: topedgeai.com (40)
+Comp 1: zapify.pt (14)
+Comp 2: pickyassist.com (19)
+Comp 3: helpdocumentation.gitbook.io (1)
+H1
+WhatsApp Automation for Shopify India: Complete Guide
+H2
+Read this first
+H2
+What Is WhatsApp Automation for Shopify?
+H2
+How Shopify + WhatsApp Automation Works
+H2
+What Can Shopify Stores Automate With WhatsApp?
+H3
+1. Abandoned Cart Recovery
+H3
+2. COD Confirmation
+H3
+3. Order Confirmation
+H3
+4. Shipping & Delivery Updates
+H3
+5. Customer Support
+H3
+6. Product Questions & Recommendations
+H3
+7. Reviews
+H3
+8. Cross-Sells & Upsells
+H3
+9. Win-Back Campaigns
+H3
+10. Instagram-to-WhatsApp Conversations
+H2
+WhatsApp Business App vs WhatsApp Business Platform
+H2
+Shopify WhatsApp Automation vs Manual WhatsApp Messaging
+H2
+How to Set Up WhatsApp Automation for Shopify
+H2
+Important WhatsApp Opt-In & Messaging Rules
+H2
+WhatsApp Automation for Shopify in India
+H2
+How Much Does Shopify WhatsApp Automation Cost?
+H2
+Common Shopify WhatsApp Automation Mistakes
+H2
+What to Look for in a Shopify WhatsApp Automation Tool
+H2
+How TopEdge AI Fits Into Shopify WhatsApp Automation
+H2
+Common questions
+H3
+What is WhatsApp automation for Shopify?
+H3
+How does WhatsApp automation work with Shopify?
+H3
+How do I automate WhatsApp messages for Shopify?
+H3
+How to connect WhatsApp to Shopify?
+H3
+What can you automate with WhatsApp on Shopify?
+H3
+Can Shopify send automatic WhatsApp messages?
+H3
+How can WhatsApp automation increase Shopify sales?
+H3
+How can Shopify stores automate COD confirmation?
+H3
+How can I send Shopify order updates on WhatsApp?
+H3
+How can I recover Shopify abandoned carts through WhatsApp?
+H3
+WhatsApp Business API vs WhatsApp Business App for Shopify?
+H3
+How much does Shopify WhatsApp automation cost?
+H3
+Is WhatsApp automation worth it for a Shopify store?
+H2
+Run cart recovery on your Shopify store
+H2
+Related playbooks
+Want these fixed and ranking?
+
+I turn audits like this into a clear plan and do the work: on-page, technical, content and links.
+
+Get a free SEO consultation
+
+How it works: the tool downloads the HTML your server sends, the same first copy Googlebot gets, and checks it in your browser. Content added later by JavaScript is not counted. Link and image checks use live HTTP requests. Scores cover on-page setup only; rankings also depend on backlinks, authority and search intent.
+
+===== Previews =====
+Download CSV
+Save as PDF
+New audit
+Overview
+Keyword
+Competitors
+Full audit
+1
+Links & images
+Structure
+Previews
+AI & tech
+Google preview
+
+Desktop and mobile estimates, truncated by measured pixel width. Google may also rewrite titles and descriptions.
+
+Desktop
+
+TopEdge AI
+https://topedgeai.com › blog › whatsapp-automation-for-shopify
+WhatsApp Automation for Shopify India: Complete Guide
+WhatsApp automation for Shopify: store events to journeys, lifecycle workflows, App vs Cloud API, opt-in, India COD, and cost.
+
+Mobile
+
+TopEdge AI
+https://topedgeai.com › blog › whatsapp-automation-for-shopify
+WhatsApp Automation for Shopify India: Complete Guide
+WhatsApp automation for Shopify: store events to journeys, lifecycle workflows, App vs Cloud API, ...
+Social share preview
+
+How a shared link looks on WhatsApp, Facebook and LinkedIn, built from your Open Graph tags.
+
+TOPEDGEAI.COM
+WhatsApp Automation for Shopify India: Complete Guide
+WhatsApp automation for Shopify: store events to journeys, lifecycle workflows, App vs Cloud API, opt-in, India COD, and cost.
+og:title
+WhatsApp Automation for Shopify India: Complete Guide
+og:description
+WhatsApp automation for Shopify: store events to journeys, lifecycle workflows, App vs Cloud API, opt-in, India COD, and cost.
+og:image
+https://topedgeai.com/blog/whatsapp-automation-for-shopify.jpg
+og:type
+article
+twitter:card
+summary_large_image
+Want these fixed and ranking?
+
+I turn audits like this into a clear plan and do the work: on-page, technical, content and links.
+
+Get a free SEO consultation
+
+How it works: the tool downloads the HTML your server sends, the same first copy Googlebot gets, and checks it in your browser. Content added later by JavaScript is not counted. Link and image checks use live HTTP requests. Scores cover on-page setup only; rankings also depend on backlinks, authority and search intent.
+
+===== AI & tech =====
+Download CSV
+Save as PDF
+New audit
+Overview
+Keyword
+Competitors
+Full audit
+1
+Links & images
+Structure
+Previews
+AI & tech
+AI crawler access
+
+What your robots.txt allows for this URL. Search bots decide if AI assistants can cite you. Training bots only collect data.
+
+BOT	USED FOR	TYPE	THIS PAGE	RULE
+OAI-SearchBot	ChatGPT search results	Search / answers	Allowed	Allow: /
+PerplexityBot	Perplexity answers	Search / answers	Allowed	Allow: /
+Bingbot	Bing and Copilot	Search / answers	Allowed	Allow: /
+Claude-SearchBot	Claude search	Search / answers	Allowed	Allow: /
+GPTBot	OpenAI model training	Training	Allowed	Allow: /
+ClaudeBot	Anthropic model training	Training	Allowed	Allow: /
+Google-Extended	Gemini training	Training	Allowed	Allow: /
+CCBot	Common Crawl dataset	Training	Allowed	Allow: /
+Applebot-Extended	Apple AI training	Training	Allowed	Allow: /
+Detected technology
+Nothing detected from the HTML.
+Head and server data
+Canonical
+https://topedgeai.com/blog/whatsapp-automation-for-shopify
+Meta robots
+index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1
+X-Robots-Tag
+not found
+Lang
+en-IN
+hreflang
+en-IN, x-default
+AMP
+not found
+Cache-Control
+public,max-age=0,must-revalidate
+Compression
+br
+Preconnect / preload
+3 / 0
+Sitemaps
+https://topedgeai.com/sitemap.xml
+Social profiles linked
+twitter.com, linkedin.com, facebook.com, instagram.com, youtube.com
+Want these fixed and ranking?
+
+I turn audits like this into a clear plan and do the work: on-page, technical, content and links.
+
+Get a free SEO consultation
+
+How it works: the tool downloads the HTML your server sends, the same first copy Googlebot gets, and checks it in your browser. Content added later by JavaScript is not counted. Link and image checks use live HTTP requests. Scores cover on-page setup only; rankings also depend on backlinks, authority and search intent.

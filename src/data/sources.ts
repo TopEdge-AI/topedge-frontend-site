@@ -1146,6 +1146,33 @@ export const SOURCES = {
       'Read 17 November 2026: Free plan, 5 returns per month; paid plans (Grow, Thrive AI, Scale) priced on a returns-per-month slider, showing $100/month at 200 returns, $0.49 to $0.79 per extra request. Shopify app rated 4.8 from 780 reviews; branded returns portal, exchanges, store credit, fraud detection, 100+ WMS and logistics tools.',
     verified: '2026-11-17',
   },
+  shopifyWhatsAppAutomationsChangelog: {
+    id: 'shopifyWhatsAppAutomationsChangelog',
+    url: 'https://changelog.shopify.com/posts/create-whatsapp-marketing-automations-in-shopify-messaging',
+    label: 'Shopify Changelog: WhatsApp marketing automations in Shopify Messaging',
+    publisher: 'Shopify',
+    claim:
+      'Read 20 November 2026. Dated 28 October 2026, titled "Create WhatsApp marketing automations in Shopify Messaging": merchants can send automated WhatsApp messages, with pre-built templates for abandoned browse, abandoned cart and abandoned checkout, and can add WhatsApp messages to custom automations. Set up from Messaging > Automations. States no eligibility rules or prices.',
+    verified: '2026-11-20',
+  },
+  shopifyMessagingAutomationTemplates: {
+    id: 'shopifyMessagingAutomationTemplates',
+    url: 'https://help.shopify.com/en/manual/promoting-marketing/create-marketing/shopify-messaging/marketing-automations/create',
+    label: 'Shopify Help Center: creating marketing automations',
+    publisher: 'Shopify',
+    claim:
+      'Read 20 November 2026. Convert abandoned product browse, Recover abandoned cart and Recover abandoned checkout support email, SMS and WhatsApp. Welcome, post-purchase and customer appreciation templates are email only. Meta must approve WhatsApp templates before they send. Automations go to marketing subscribers only, and for WhatsApp this cannot be changed to all customers. Abandoned checkout SMS and WhatsApp messages are charged.',
+    verified: '2026-11-20',
+  },
+  shopifyMessagingWhatsAppPricing: {
+    id: 'shopifyMessagingWhatsAppPricing',
+    url: 'https://help.shopify.com/en/manual/promoting-marketing/create-marketing/shopify-messaging/whatsapp/pricing',
+    label: 'Shopify Help Center: WhatsApp pricing in Shopify Messaging',
+    publisher: 'Shopify',
+    claim:
+      'Read 20 November 2026. India: $0.024 USD per marketing message and $0.0014 USD per service message. Marketing covers campaign messages, confirmations to new subscribers and automated keyword replies; service covers replies inside the 24-hour customer service window. 1,000 service messages a month free per WhatsApp Business Account, shared across connected platforms; up to 25 test messages a week free. Charged per message, billed monthly on the Shopify bill as "WhatsApp"; from 1 October 2026 service messages past the free threshold are charged too. No utility category is listed.',
+    verified: '2026-11-20',
+  },
 
 } as const satisfies Record<string, Source>;
 

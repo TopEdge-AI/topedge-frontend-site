@@ -70,13 +70,14 @@ Before changing anything, tell me in a few lines: what the log says is done, tod
 10. Do not rewrite titles on /compare/* pages or on /blog/best-whatsapp-apps-for-shopify. Body and openings only. Blog "X alternative" titles may change when the audit shows the exact query is missing.
 11. Titles 60 characters or fewer including " | TopEdge AI" when it fits. Use 2027, not 2026, in new or rewritten titles, descriptions and headings; reading dates stay as they are.
 12. Never mention business arrangements (link exchanges, agreed listings) in published copy.
-12. Keep sentences that already answer long prompts reaching us.
+13. Keep sentences that already answer long prompts reaching us.
+14. People-first gate (added 20 Nov 2026, from Google's own AI-content guidance; see `seo-audit/2026-11-20/01-google-ai-content-guidance.md`). Google does not penalise AI use; it penalises low-effort, unoriginal, templated or scaled pages. Run `node seo-audit/tools/people-first-audit.mjs dist <out> --only <route>` before and after editing; the page must not gain a flag. Never use humaniser or paraphrasing tools, invented stories or fake authors. Change the visible "Updated" date only when the content really changed.
 
 ## 6. AEO AND GEO RULES
 
 Do: answer-first text, tables and definitions that can be lifted, sourced statistics, inclusion in independent lists and review sites, App Store reviews, real demos on YouTube, the same brand facts everywhere.
 
-Not tactics: llms.txt, schema added for AI, chunking for LLMs, more self-ranked listicles, seeded Reddit posts, fake mentions. Do not judge AI visibility from one prompt.
+Not tactics: llms.txt, schema added for AI, chunking for LLMs, more self-ranked listicles, seeded Reddit posts, fake mentions. Do not judge AI visibility from one prompt. Google confirmed all of these on 15 May 2026 ("Optimizing for generative AI features") and removed FAQ rich results on 15 Jun 2026: FAQs are for readers, not a rich result.
 
 ## 7. OFF-PAGE RULES
 

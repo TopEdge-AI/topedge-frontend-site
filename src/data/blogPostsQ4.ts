@@ -1785,7 +1785,7 @@ ${faqHtml(COD_PREPAID_FAQS)}
     ],
     slug: 'best-shopify-app-for-abandoned-cart-recovery-india',
     date: '2026-10-30',
-    updated: '2026-11-07',
+    updated: '2026-11-20',
     readTime: '18 min',
     category: 'Comparisons',
     author: 'Moksh Patel',
@@ -1958,12 +1958,13 @@ ${faqHtml(COD_PREPAID_FAQS)}
 <h2>What Shopify’s abandoned cart email already does for free</h2>
 <p>The abandoned cart recovery Shopify already includes costs you nothing extra, and a surprising number of merchants shop for apps without switching it on.</p>
 <p>Per <a href="https://help.shopify.com/manual/orders/abandoned-checkouts" target="_blank" rel="noopener noreferrer">Shopify’s own abandoned checkout documentation</a>, a checkout counts as abandoned once it has stayed incomplete for more than <strong>ten minutes</strong> after the customer gave their email, and Shopify’s Messaging automations can send a recovery email with a link straight back to that incomplete checkout. Shopify also documents when it will <em>not</em> send: the customer already completed the purchase, products are unavailable, shipping is not supported to the address, payment processing errored, or a high-risk block applies.</p>
+<p><strong>New since 28 October 2026:</strong> the same reminders can go out on WhatsApp. Shopify Messaging’s abandoned browse, cart and checkout templates now support WhatsApp, sent to WhatsApp marketing subscribers only, at $0.024 a message in India on your Shopify bill (<a href="https://help.shopify.com/en/manual/promoting-marketing/create-marketing/shopify-messaging/whatsapp/pricing" target="_blank" rel="noopener noreferrer">Shopify’s WhatsApp pricing</a>, read 20 November 2026). That is about ₹2.25 a message at ₹93.92 to the dollar, against ₹0.8631 on Meta’s own India card.</p>
 <p>That is a real baseline. What it does not give you:</p>
 <ul>
 <li>a sequence, rather than a send</li>
-<li>WhatsApp, where most Indian shoppers actually read</li>
+<li>WhatsApp reminders to shoppers who never subscribed to WhatsApp marketing</li>
 <li>branching by payment method, so COD and prepaid carts get different copy</li>
-<li>a reply path, so "is this COD?" gets answered instead of ignored</li>
+<li>a reply path into an inbox that shows the cart, so "is this COD?" gets answered</li>
 <li>recovered revenue attributed to a step you can tune</li>
 </ul>
 <p>If none of those five matter to your store, you do not need an app. Saying so costs us a sale and saves you a subscription.</p>
@@ -1996,10 +1997,10 @@ ${faqHtml(COD_PREPAID_FAQS)}
 
 <h2>2. Shopify’s built-in abandoned checkout automation</h2>
 <p><strong>Best for:</strong> stores under roughly 100 orders a month, and anyone who has not yet switched it on.</p>
-<p>Free, already installed, email only, one send. It is the control group every paid app should be measured against, and the honest benchmark for whether an app is adding anything. Turn it on, leave it running for a month, and read the Email status column before you shop.</p>
-<p><strong>Know exactly what it does and does not catch.</strong> <a href="https://help.shopify.com/manual/orders/abandoned-checkouts" target="_blank" rel="noopener noreferrer">Shopify counts a checkout as abandoned</a> when it stays incomplete for more than ten minutes after the customer has given their email, and recovery emails are available on the Online Store and Buy Button channels only. Two consequences follow, and both are the reason paid apps exist. It fires on abandoned <em>checkout</em>, not abandoned cart, so every shopper who filled a cart and left before reaching the email field is invisible to it. And it needs an email address, which in an Indian D2C funnel is frequently the field the shopper abandoned at.</p>
+<p>Free for email, already installed, and since 28 October 2026 able to send the same reminder on WhatsApp at $0.024 a message in India. It is the control group every paid app should be measured against, and the honest benchmark for whether an app is adding anything. Turn it on, leave it running for a month, and read the Email status column before you shop.</p>
+<p><strong>Know exactly what it does and does not catch.</strong> <a href="https://help.shopify.com/manual/orders/abandoned-checkouts" target="_blank" rel="noopener noreferrer">Shopify counts a checkout as abandoned</a> when it stays incomplete for more than ten minutes after the customer has given their email, and recovery emails are available on the Online Store and Buy Button channels only. Two consequences follow, and both are the reason paid apps exist. The default recovery email fires on abandoned <em>checkout</em>. Shopify Messaging also has abandoned cart and browse templates, but every automation except the abandoned checkout email goes to marketing subscribers only (<a href="https://help.shopify.com/en/manual/promoting-marketing/create-marketing/shopify-messaging/marketing-automations/create" target="_blank" rel="noopener noreferrer">Shopify’s automation templates</a>, read 20 November 2026), so a shopper who never subscribed is invisible to them. And the email needs an email address, which in an Indian D2C funnel is frequently the field the shopper abandoned at.</p>
 <p><strong>Set the benchmark properly before you spend.</strong> Run it for one full month untouched, then record three numbers: how many abandoned checkouts Shopify logged, how many recovery emails it sent, and how many orders carry a recovered-checkout attribution. That third number is your baseline. Every paid app on this page should be measured as a delta against it, not against zero. A store recovering 4% through the free email and 6% through a paid WhatsApp app has bought 2 points, not 6, and the 2 points are what has to cover the subscription.</p>
-<p><strong>Where it is not the answer:</strong> one send, no branching, no COD path, no reply. It cannot ask the question that is actually blocking an Indian cart, which is usually about cash on delivery, delivery time or returns.</p>
+<p><strong>Where it is not the answer:</strong> no COD path, no order updates on WhatsApp, and WhatsApp reaches marketing subscribers only. It cannot ask the question that is actually blocking an Indian cart, which is usually about cash on delivery, delivery time or returns.</p>
 
 <h2>3. Wiz AI Abandoned Cart Recovery</h2>
 <p><strong>Best for:</strong> an email-first store that wants more than Shopify’s single send without paying per message.</p>
@@ -2097,7 +2098,7 @@ ${faqHtml(COD_PREPAID_FAQS)}
 <h2>Is there a free best Shopify app for abandoned cart recovery India?</h2>
 <p>Partly, and the honest version of the answer has three layers.</p>
 <ol>
-<li><strong>Genuinely free and already yours:</strong> Shopify’s abandoned checkout email. No app, no subscription, no per-message cost.</li>
+<li><strong>Genuinely free and already yours:</strong> Shopify’s abandoned checkout email. No app, no subscription, no per-message cost. Its WhatsApp version is not free: $0.024 a message in India.</li>
 <li><strong>Free tier with a ceiling:</strong> Wiz AI Abandoned Cart Recovery publishes a free plan limited by active contacts. Email apps can do this because email has no per-message cost to pass on.</li>
 <li><strong>Free trial, not a free plan:</strong> most WhatsApp apps, including TopEdge AI’s 14 days and Updatrr’s 7. This is where "free" stops being free, because <em>nobody</em> gives away WhatsApp messages. Meta bills your WhatsApp Business Account at ₹0.8631 per delivered marketing template in India whichever app triggered it.</li>
 </ol>
