@@ -536,8 +536,6 @@
        column the page read as oversized; the extra leading keeps it airy. */
     --mkt-blog-body-size: 1.0625rem;
     --mkt-blog-body-lh: 1.58;
-    /* Prose holds a 65 to 75ch measure; tables and cards still span the column. */
-    --mkt-blog-prose-measure: 47rem;
   }
 }
 
@@ -608,11 +606,7 @@
   }
 }
 
-@media (min-width: 1100px) {
-  .mkt-blog-prose > :is(p, ul, ol, blockquote, h2, h3, h4) {
-    max-width: var(--mkt-blog-prose-measure, none);
-  }
-}
+/* Owner, 22 Nov 2026: prose fills the column up to the contents rail; no capped measure that leaves an empty band beside the text. */
 
 .mkt-nowrap {
   white-space: nowrap;

@@ -17,6 +17,7 @@ The plan and log live in `seo-audit/PLAN-AND-LOG.md`. The prompt the owner paste
 - Positioning: read `.claude/skills/topedge-positioning/SKILL.md` before writing any copy that names TopEdge AI. All-in-one D2C software for Shopify stores, built as one suite; single jobs are modules. Never write about positioning itself.
 - FAQs are always open: visible cards, no accordion (the blog SOP's accordion rule is replaced).
 - Direct answer box: solid light yellow, thin border, no gradient, no left bar.
+- Prose fills the article column up to the contents rail; no capped measure leaving an empty band (overrides the SOP's 65 to 75ch rule).
 - No monospace or `<code>` styling in articles; paths and file names use the body font.
 
 ## 1. Data (free first, then credits)

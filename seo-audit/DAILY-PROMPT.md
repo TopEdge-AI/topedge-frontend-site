@@ -80,6 +80,7 @@ Before changing anything, tell me in a few lines: what the log says is done, tod
 15. Blog UI overrides (owner, 22 Nov 2026; these win over the account blog SOP skill):
    - **FAQs are always open.** Every question and answer visible as open cards, no accordion, no click to expand, so readers, Google and AI crawlers read every answer with no interaction. FAQPage schema matches the visible text.
    - **Direct answer box:** plain solid light yellow background (#FEF9C3), a thin #FDE68A border, no gradient and no left accent bar. Label "Direct answer" in sentence case.
+   - **Prose fills the article column** up to the contents rail on desktop. No capped reading measure that leaves an empty band between the text and the rail.
    - **No code font in articles.** Paths, parameters and file names such as /collections/all or robots.txt are set in the body font, not monospace. Do not wrap them in `<code>` for looks.
 
 ## 6. AEO AND GEO RULES
