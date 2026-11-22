@@ -9,6 +9,7 @@ import {
 } from '../marketing/data/pageSeo';
 import { SITE_URL } from '../marketing/data/marketingSeo';
 import MarketingPage from '../marketing/components/MarketingPage';
+import MarketingCtaBand from '../marketing/components/MarketingCtaBand';
 import { COMPANY_ADDRESS_LINES, COMPANY_EMAIL } from '../marketing/legal/companyIdentity';
 import '../marketing/styles/about.css';
 
@@ -229,36 +230,19 @@ export default function About() {
             </ul>
           </section>
 
-          <section className="mkt-about2__cta" aria-labelledby="about-cta">
-            <div className="mkt-about2__cta-copy">
-              <h2 id="about-cta" className="mkt-about2__cta-title">
-                Grow your Shopify brand with one suite.
-              </h2>
-              <p className="mkt-about2__cta-sub">
-                Flat INR plans from ₹1,999/mo, or $19 on the Shopify App Store. 14-day free trial.
-              </p>
-              <div className="mkt-about2__cta-actions">
-                <Link to="/signup" className="mkt-about2__btn mkt-about2__btn--light">
-                  Start free trial
-                </Link>
-                <Link to="/contact" className="mkt-about2__btn mkt-about2__btn--dark">
-                  Talk to our team
-                </Link>
-              </div>
-              <p className="mkt-about2__address">
-                {COMPANY_ADDRESS_LINES.join(', ')} · {COMPANY_EMAIL}
-              </p>
-            </div>
-            <ul className="mkt-about2__picker" aria-hidden>
-              {modules.map((m, i) => (
-                <li key={m.name} className={i === 0 ? 'is-on' : undefined}>
-                  <m.icon className="h-5 w-5" />
-                  <span>{m.name}</span>
-                </li>
-              ))}
-            </ul>
-          </section>
         </div>
+
+        <MarketingCtaBand
+          title={
+            <>
+              Grow your Shopify brand <span className="mkt-about2__hl">with one suite.</span>
+            </>
+          }
+          subtitle="Flat INR plans from ₹1,999/mo, or $19 on the Shopify App Store. 14-day free trial."
+          primaryLabel="Start free trial"
+          secondaryLabel="Talk to our team"
+          secondaryTo="/contact"
+        />
       </MarketingPage>
     </>
   );

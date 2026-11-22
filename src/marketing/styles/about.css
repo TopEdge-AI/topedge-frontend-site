@@ -23,9 +23,8 @@
   --ab-margin: rgba(124, 58, 237, 0.28);
   --ab-violet: #7c3aed;
   --ab-tilt: -1.2deg;
-  background:
-    radial-gradient(60% 50% at 50% 0%, #f4f2fb 0%, rgba(244, 242, 251, 0) 70%),
-    #f8f8f7;
+  /* Owner, 22 Nov 2026: plain white page. */
+  background: #fff;
   font-family: var(--mkt-font);
 }
 
@@ -550,4 +549,16 @@ a.mkt-about2__mark--ul:hover {
   .mkt-about2__name::after {
     clip-path: none;
   }
+}
+
+/* Closing band uses the site CTA; the highlight matches the theme (pricing heads). */
+.mkt-about2 .mkt-cta {
+  background: #fff;
+}
+
+.mkt-about2__hl {
+  padding: 0.08em 0.28em 0.12em;
+  border-radius: 0.35em;
+  background: #e4d4ff;
+  color: #0c1222;
 }

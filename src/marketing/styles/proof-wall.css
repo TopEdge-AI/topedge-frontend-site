@@ -387,41 +387,48 @@
   max-height: 42px;
 }
 
-/* Section wrapper on marketing pages (heading in the site's highlight style). */
+/* Section wrapper on marketing pages (owner, 22 Nov 2026): smaller wall,
+   centred light title with the theme highlight, like the pricing heads. */
 .mkt-pwall-section {
-  width: min(100% - 2rem, 52rem);
+  width: min(100% - 2rem, 40rem);
   margin: 4rem auto 3rem;
+  text-align: center;
 }
 
 .mkt-pwall-section__title {
-  margin: 0 0 0.75rem;
+  margin: 0 0 0.6rem;
   font-family: var(--mkt-font);
-  font-size: clamp(1.75rem, 3.4vw, 2.6rem);
-  font-weight: 600;
-  line-height: 1.18;
-  letter-spacing: -0.025em;
-  color: #0f172a;
+  font-size: clamp(1.45rem, 2.8vw, 2.05rem);
+  font-weight: 400;
+  line-height: 1.2;
+  letter-spacing: -0.034em;
+  color: #0c1222;
 }
 
 .mkt-pwall-section__hl {
   display: inline-block;
-  margin-top: 0.35rem;
-  padding: 0.1em 0.3em;
-  border-radius: 10px;
-  background: #ede9fe;
-  color: #3b0764;
+  margin-top: 0.3rem;
+  padding: 0.12em 0.28em 0.16em;
+  border-radius: 0.35em;
+  background: #e4d4ff;
+  color: #0c1222;
+  font-weight: 400;
 }
 
 .mkt-pwall-section__sub {
-  margin: 0 0 1.75rem;
-  max-width: 36rem;
-  font-size: 1rem;
+  margin: 0 auto 1.5rem;
+  max-width: 32rem;
+  font-size: 0.95rem;
   line-height: 1.55;
   color: #475569;
 }
 
+.mkt-pwall-section .mkt-pwall__grid {
+  gap: 8px;
+}
+
 @media (max-width: 640px) {
-  .mkt-pwall__grid {
-    gap: 6px;
+  .mkt-pwall-section .mkt-pwall__grid {
+    gap: 5px;
   }
 }
