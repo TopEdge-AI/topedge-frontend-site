@@ -1,5 +1,6 @@
+import type { CSSProperties } from 'react';
 import { Link } from 'react-router-dom';
-import { ExternalLink } from 'lucide-react';
+import { ArrowRight, ArrowUpRight, BadgeCheck, LineChart, Megaphone, MessagesSquare, Workflow, Users } from 'lucide-react';
 import MarketingSEO from '../marketing/components/MarketingSEO';
 import {
   PAGE_SEO,
@@ -8,28 +9,8 @@ import {
 } from '../marketing/data/pageSeo';
 import { SITE_URL } from '../marketing/data/marketingSeo';
 import MarketingPage from '../marketing/components/MarketingPage';
-import MarketingCtaBand from '../marketing/components/MarketingCtaBand';
-import ProofBadges from '../marketing/components/ProofBadges';
-import BrandWord from '../marketing/components/BrandWord';
-import { PrimaryButton, GhostButton } from '../marketing/components/ui';
-import { Reveal, Stagger, StaggerItem } from '../marketing/components/motion';
 import { COMPANY_ADDRESS_LINES, COMPANY_EMAIL } from '../marketing/legal/companyIdentity';
 import '../marketing/styles/about.css';
-
-const beliefs = [
-  {
-    title: 'Built for Indian D2C',
-    desc: 'COD, ₹ pricing, RTO, and Meta template rules, designed for how Indian stores actually sell.',
-  },
-  {
-    title: 'Revenue over vanity metrics',
-    desc: 'We track recovered carts, reply rates, and campaign ROI, not empty send volume.',
-  },
-  {
-    title: 'You stay in control',
-    desc: 'Approve every template before Meta. Pause AI the moment a human takes the thread.',
-  },
-];
 
 const founders = [
   {
@@ -104,6 +85,15 @@ function aboutPageJsonLd() {
   };
 }
 
+const modules = [
+  { name: 'Journeys & cart recovery', desc: 'Win back abandoned checkouts on WhatsApp and email', href: '/features/journeys', icon: Workflow },
+  { name: 'COD confirmation', desc: 'Confirm COD orders and move them to prepaid', href: '/features/cod-confirmation', icon: BadgeCheck },
+  { name: 'Campaigns', desc: 'Broadcasts that report revenue after Meta fees', href: '/features/campaigns', icon: Megaphone },
+  { name: 'Audience CRM', desc: 'One profile for every shopper and order', href: '/features/audience-crm', icon: Users },
+  { name: 'Flow builder & live chat', desc: 'Answer order questions with live Shopify data', href: '/features/flow-builder', icon: MessagesSquare },
+  { name: 'Profit & costs', desc: 'True profit on every order, after RTO', href: '/features/profit-loss', icon: LineChart },
+];
+
 export default function About() {
   return (
     <>
@@ -122,222 +112,153 @@ export default function About() {
           ]),
         ]}
       />
-      <MarketingPage className="mkt-about">
-        <header className="mkt-about__hero">
-          <p className="mkt-about__brand">
-            <img src="/brand-mark.png" alt="" aria-hidden width={26} height={26} decoding="async" />
-            <span>
-              TopEdge <span>AI</span>
-            </span>
-          </p>
-          <h1 className="mkt-about__h1">
-            <BrandWord platform="whatsapp">The WhatsApp app for </BrandWord>
-            <span className="mkt-about__h1-accent">
-              <BrandWord platform="shopify">Shopify India</BrandWord>
-            </span>
-            {', built in Ahmedabad'}
-          </h1>
-          <p className="mkt-about__lede">
-            Founded by Moksh Patel and Smit Tilva to help Shopify brands in India recover carts,
-            confirm COD orders and see net profit, from one WhatsApp app.
-          </p>
-          <div className="mkt-about__actions">
-            <PrimaryButton to="/signup">
-              Start free
-            </PrimaryButton>
-            <GhostButton to="/contact">Contact</GhostButton>
-          </div>
-
-          {/* The page asks a stranger to believe a company they have not heard
-              of. The scores and the platform badges are the only two things on
-              it they can go and check, so they sit under the hero rather than
-              at the bottom where the old page put nothing at all. */}
-          <div className="mkt-about__proof">
-            <ProofBadges brief className="mkt-about__proof-row" />
-            <ul className="mkt-about__badges">
-              <li>
-                <img
-                  src="/badges/meta-business-partner.webp?v=5"
-                  alt="Meta Business Partner"
-                  width={104}
-                  height={34}
-                  loading="lazy"
-                  decoding="async"
-                />
-              </li>
-              <li>
-                <img
-                  src="/badges/shopify-app-store.webp?v=5"
-                  alt="Available on the Shopify App Store"
-                  width={104}
-                  height={34}
-                  loading="lazy"
-                  decoding="async"
-                />
-              </li>
-              <li>
-                <img
-                  src="/badges/whatsapp-cloud-api.webp?v=6"
-                  alt="WhatsApp Business Platform"
-                  width={104}
-                  height={34}
-                  loading="lazy"
-                  decoding="async"
-                />
-              </li>
-            </ul>
-            <p className="mkt-about__proof-note">
-              Messages run on Meta&rsquo;s own WhatsApp Business Platform. Scores are published by
-              Trustpilot and Product Hunt, not by us.
-            </p>
-          </div>
+      <MarketingPage className="mkt-about2">
+        {/*
+          Layout and motion after kachingappz.com/about (owner, 22 Nov 2026):
+          a letter on notebook paper that settles in, marks that draw
+          themselves, a bordered product grid and a dark closing band. Our
+          font, our words, our facts.
+        */}
+        <header className="mkt-about2__stage">
+          <article className="mkt-about2__letter" aria-labelledby="about-title">
+            <h1 id="about-title" className="mkt-about2__h1">
+              Built in Ahmedabad,
+              <br />
+              for Shopify brands.
+            </h1>
+            <div className="mkt-about2__body">
+              <p>
+                TopEdge AI is all-in-one D2C software for Shopify stores, built as one suite. We
+                started it in 2024 because Indian brands were stitching five apps together to
+                recover carts, confirm COD orders and answer &ldquo;where is my order?&rdquo; on
+                WhatsApp.
+              </p>
+              <p>
+                So we put it in{' '}
+                <span className="mkt-about2__mark mkt-about2__mark--hl" style={{ '--m': 0 } as CSSProperties}>
+                  one suite
+                </span>
+                : cart recovery, COD confirmation, campaigns, a shopper CRM, live chat and profit
+                reporting, priced in rupees with 0% markup on Meta&rsquo;s rates. Every plan starts
+                with{' '}
+                <span className="mkt-about2__mark mkt-about2__mark--ul" style={{ '--m': 1 } as CSSProperties}>
+                  a 14-day free trial
+                </span>
+                .
+              </p>
+              <p>
+                If something could be better,{' '}
+                <Link to="/contact" className="mkt-about2__mark mkt-about2__mark--ul" style={{ '--m': 2 } as CSSProperties}>
+                  tell us
+                </Link>
+                . It shapes what we build next.
+              </p>
+            </div>
+            <div className="mkt-about2__founders">
+              {founders.map((f, i) => (
+                <figure key={f.name} className="mkt-about2__founder" style={{ '--s': i } as CSSProperties}>
+                  <span className="mkt-about2__photo">
+                    <img src={f.image} alt={f.imageAlt} width={72} height={84} loading="eager" decoding="async" />
+                  </span>
+                  <figcaption>
+                    <span className="mkt-about2__name">{f.name}</span>
+                    <span className="mkt-about2__role">{f.role}</span>
+                  </figcaption>
+                </figure>
+              ))}
+            </div>
+          </article>
         </header>
 
-        {/*
-          Plain-text entity paragraph. States what TopEdge AI is, where it operates,
-          and what it is not, so search and LLMs can separate this entity from the
-          unrelated hardware companies that share the name.
-        */}
-        <section className="mkt-about__entity" aria-label="About TopEdge AI">
-          <p className="mkt-about__entity-para">
-            TopEdge AI is all-in-one D2C software for Shopify stores, built as one suite. It brings cart recovery, COD confirmation and COD to prepaid, WhatsApp and email journeys, campaigns, a shopper CRM, live chat, opt-in tools, a tracking pixel and profit reporting into one platform. It is built in Ahmedabad, Gujarat, and connects to Shopify and to
-            Meta&rsquo;s WhatsApp Cloud API on your own Business Account. TopEdge AI is not related
-            to edge-AI hardware or other products with a similar name.
-          </p>
-        </section>
-
-        <section className="mkt-about__section" aria-labelledby="about-why">
-          <Reveal>
-            <p className="mkt-about__eyebrow">Why TopEdge AI</p>
-            <h2 id="about-why" className="mkt-about__heading">
-              Conversations that close revenue
-            </h2>
-            <p className="mkt-about__intro">
-              TopEdge AI sits between your store, Meta, and WhatsApp, not another chatbot. Carts, COD
-              status, and order context stay live, so journeys and Live Chat match your Shopify
-              admin.
-            </p>
-          </Reveal>
-          <Stagger className="mkt-about__beliefs">
-            {beliefs.map((b) => (
-              <StaggerItem key={b.title}>
-                <article className="mkt-about__belief">
-                  <h3>{b.title}</h3>
-                  <p>{b.desc}</p>
-                </article>
-              </StaggerItem>
-            ))}
-          </Stagger>
-        </section>
-
-        <section className="mkt-about__section mkt-about__section--wash" aria-labelledby="about-founders">
-          <div className="mkt-about__section-inner">
-            <Reveal>
-              <p className="mkt-about__eyebrow">Founders</p>
-              <h2 id="about-founders" className="mkt-about__heading">
-                Founded in Ahmedabad for <BrandWord platform="shopify" small>Shopify India</BrandWord>
-              </h2>
-              <p className="mkt-about__intro">
-                Moksh Patel and Smit Tilva run product and growth for brands that want WhatsApp
-                automation without Meta markup games or vanity send counts.
-              </p>
-            </Reveal>
-            <Stagger className="mkt-about__founders">
-              {founders.map((f) => (
-                <StaggerItem key={f.name}>
-                  <article className="mkt-about__founder">
-                    <div className="mkt-about__founder-media">
-                      <img
-                        src={f.image}
-                        alt={f.imageAlt}
-                        width={560}
-                        height={560}
-                        loading="lazy"
-                        decoding="async"
-                      />
-                    </div>
-                    <div className="mkt-about__founder-body">
-                      <p className="mkt-about__founder-role">{f.role}</p>
-                      <h3 className="mkt-about__founder-name">{f.name}</h3>
-                      <p className="mkt-about__founder-bio">{f.bio}</p>
-                    </div>
-                  </article>
-                </StaggerItem>
-              ))}
-            </Stagger>
-          </div>
-        </section>
-
-        <section className="mkt-about__section" aria-labelledby="about-brands">
-          <Reveal>
-            <p className="mkt-about__eyebrow">Brands we serve</p>
-            <h2 id="about-brands" className="mkt-about__heading">
-              Brands recovering on <BrandWord platform="whatsapp" small>WhatsApp</BrandWord>
-            </h2>
-            <p className="mkt-about__intro">
-              From smart home to lighting, they need cart recovery, COD clarity, and support that
-              already knows the order.
-            </p>
-          </Reveal>
-          <Stagger className="mkt-about__brands">
-            {brands.map((b) => (
-              <StaggerItem key={b.name}>
-                <article className="mkt-about__brand-card">
-                  <div className="mkt-about__brand-top">
-                    <div className="mkt-about__brand-logo">
-                      <img src={b.logo} alt={`${b.name} logo`} width={140} height={36} loading="lazy" />
-                    </div>
-                    <span className="mkt-about__brand-site">
-                      {b.href.replace(/^https?:\/\//, '').replace(/\/$/, '')}
+        <div className="mkt-about2__frame">
+          <section className="mkt-about2__section" aria-labelledby="about-build">
+            <div className="mkt-about2__head">
+              <div>
+                <h2 id="about-build" className="mkt-about2__h2">What we build.</h2>
+                <p className="mkt-about2__sub">
+                  Six modules, one customer record.
+                  <br />
+                  Start with one and switch on the rest when you need them.
+                </p>
+              </div>
+              <Link to="/features" className="mkt-about2__all">
+                All features <ArrowRight aria-hidden className="h-4 w-4" />
+              </Link>
+            </div>
+            <ul className="mkt-about2__grid">
+              {modules.map((m) => (
+                <li key={m.name}>
+                  <Link to={m.href} className="mkt-about2__cell">
+                    <span className="mkt-about2__icon" aria-hidden>
+                      <m.icon className="h-5 w-5" />
                     </span>
-                  </div>
-                  <div className="mkt-about__brand-body">
-                    <h3 className="mkt-about__brand-name">{b.name}</h3>
-                    <p className="mkt-about__brand-tag">{b.tag}</p>
-                    <p className="mkt-about__brand-copy">{b.copy}</p>
-                    <div className="mkt-about__brand-stats">
-                      {b.stats.map((s) => (
-                        <span key={s} className="mkt-about__brand-stat">
-                          {s}
-                        </span>
-                      ))}
-                    </div>
-                    <a
-                      className="mkt-about__brand-link"
-                      href={b.href}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      Visit site
-                      <ExternalLink className="h-3.5 w-3.5" aria-hidden />
-                    </a>
-                  </div>
-                </article>
-              </StaggerItem>
-            ))}
-          </Stagger>
-          <Reveal>
-            <p className="mkt-about__intro" style={{ marginTop: '1.75rem' }}>
-              More outcomes on{' '}
-              <Link to="/customers" className="font-medium text-[#7C3AED] underline underline-offset-2">
-                Customers
-              </Link>
-              . Stack comparisons in{' '}
-              <Link to="/compare" className="font-medium text-[#7C3AED] underline underline-offset-2">
-                Compare
-              </Link>
-              .
-            </p>
-          </Reveal>
-        </section>
+                    <span className="mkt-about2__cell-text">
+                      <span className="mkt-about2__cell-name">{m.name}</span>
+                      <span className="mkt-about2__cell-desc">{m.desc}</span>
+                    </span>
+                    <ArrowUpRight aria-hidden className="mkt-about2__cell-arrow h-4 w-4" />
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </section>
 
-        <MarketingCtaBand
-          title="Ready to run it on your store?"
-          subtitle="Connect Shopify, approve templates, publish your first flow, or talk to us about managed setup."
-          primaryLabel="Create free account"
-          secondaryLabel="Contact sales"
-          secondaryTo="/contact"
-        />
+          <section className="mkt-about2__section" aria-labelledby="about-brands">
+            <div className="mkt-about2__head">
+              <div>
+                <h2 id="about-brands" className="mkt-about2__h2">Brands that run on it.</h2>
+                <p className="mkt-about2__sub">Shopify brands in India using TopEdge AI today.</p>
+              </div>
+              <Link to="/customers" className="mkt-about2__all">
+                Customer stories <ArrowRight aria-hidden className="h-4 w-4" />
+              </Link>
+            </div>
+            <ul className="mkt-about2__grid mkt-about2__grid--two">
+              {brands.map((b) => (
+                <li key={b.name}>
+                  <a href={b.href} target="_blank" rel="noopener noreferrer" className="mkt-about2__cell mkt-about2__cell--brand">
+                    <span className="mkt-about2__cell-text">
+                      <span className="mkt-about2__cell-name">{b.name}</span>
+                      <span className="mkt-about2__cell-desc">{b.tag}</span>
+                      <span className="mkt-about2__cell-copy">{b.copy}</span>
+                    </span>
+                    <ArrowUpRight aria-hidden className="mkt-about2__cell-arrow h-4 w-4" />
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </section>
+
+          <section className="mkt-about2__cta" aria-labelledby="about-cta">
+            <div className="mkt-about2__cta-copy">
+              <h2 id="about-cta" className="mkt-about2__cta-title">
+                Grow your Shopify brand with one suite.
+              </h2>
+              <p className="mkt-about2__cta-sub">
+                Flat INR plans from ₹1,999/mo, or $19 on the Shopify App Store. 14-day free trial.
+              </p>
+              <div className="mkt-about2__cta-actions">
+                <Link to="/signup" className="mkt-about2__btn mkt-about2__btn--light">
+                  Start free trial
+                </Link>
+                <Link to="/contact" className="mkt-about2__btn mkt-about2__btn--dark">
+                  Talk to our team
+                </Link>
+              </div>
+              <p className="mkt-about2__address">
+                {COMPANY_ADDRESS_LINES.join(', ')} · {COMPANY_EMAIL}
+              </p>
+            </div>
+            <ul className="mkt-about2__picker" aria-hidden>
+              {modules.map((m, i) => (
+                <li key={m.name} className={i === 0 ? 'is-on' : undefined}>
+                  <m.icon className="h-5 w-5" />
+                  <span>{m.name}</span>
+                </li>
+              ))}
+            </ul>
+          </section>
+        </div>
       </MarketingPage>
     </>
   );

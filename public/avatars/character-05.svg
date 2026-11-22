@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" fill="none">
+  <defs>
+    <linearGradient id="c5-bg" x1="0" y1="0" x2="120" y2="120" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F97316"/><stop offset="1" stop-color="#EA580C"/>
+    </linearGradient>
+    <linearGradient id="c5-skin" x1="60" y1="32" x2="60" y2="88" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#C68642"/><stop offset="1" stop-color="#8D5524"/>
+    </linearGradient>
+    <linearGradient id="c5-hair" x1="20" y1="8" x2="100" y2="80" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#1C1917"/><stop offset="1" stop-color="#0C0A09"/>
+    </linearGradient>
+    <linearGradient id="c5-hoodie" x1="10" y1="76" x2="110" y2="120" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FDBA74"/><stop offset="1" stop-color="#F97316"/>
+    </linearGradient>
+    <filter id="c5-sh" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="2" stdDeviation="2.5" flood-color="#7C2D12" flood-opacity="0.22"/>
+    </filter>
+  </defs>
+  <rect width="120" height="120" rx="28" fill="url(#c5-bg)"/>
+  <!-- curly hair volume -->
+  <circle cx="34" cy="36" r="14" fill="url(#c5-hair)"/>
+  <circle cx="52" cy="26" r="12" fill="url(#c5-hair)"/>
+  <circle cx="72" cy="28" r="13" fill="url(#c5-hair)"/>
+  <circle cx="88" cy="40" r="12" fill="url(#c5-hair)"/>
+  <circle cx="28" cy="52" r="11" fill="url(#c5-hair)"/>
+  <circle cx="92" cy="54" r="11" fill="url(#c5-hair)"/>
+  <!-- hoodie -->
+  <path d="M4 118c10-26 32-38 56-38s46 12 56 38H4z" fill="url(#c5-hoodie)"/>
+  <path d="M36 82c0-8 10-14 24-14s24 6 24 14v8H36v-8z" fill="#FB923C" opacity=".6"/>
+  <path d="M48 88h24v4c0 4-8 6-12 6s-12-2-12-6v-4z" fill="#FFF7ED" opacity=".2"/>
+  <!-- drawstrings -->
+  <path d="M52 92v14M68 92v14" stroke="#FFF" stroke-width="2" stroke-linecap="round" opacity=".5"/>
+  <circle cx="52" cy="106" r="2.5" fill="#FFF" opacity=".6"/><circle cx="68" cy="106" r="2.5" fill="#FFF" opacity=".6"/>
+  <!-- neck -->
+  <ellipse cx="60" cy="82" rx="11" ry="7" fill="#8D5524"/>
+  <!-- face -->
+  <ellipse cx="60" cy="58" rx="32" ry="30" fill="url(#c5-skin)" filter="url(#c5-sh)"/>
+  <!-- hair front curls -->
+  <circle cx="38" cy="48" r="9" fill="#292524"/>
+  <circle cx="54" cy="42" r="8" fill="#1C1917"/>
+  <circle cx="70" cy="42" r="9" fill="#292524"/>
+  <circle cx="84" cy="50" r="8" fill="#1C1917"/>
+  <!-- brows -->
+  <path d="M40 52c6-2 10-1 14 2" stroke="#1C1917" stroke-width="3" stroke-linecap="round"/>
+  <path d="M66 54c4-3 12-4 18-1" stroke="#1C1917" stroke-width="3" stroke-linecap="round"/>
+  <!-- eyes -->
+  <ellipse cx="46" cy="60" rx="5" ry="5.5" fill="#1C1917"/>
+  <ellipse cx="74" cy="60" rx="5" ry="5.5" fill="#1C1917"/>
+  <circle cx="47" cy="58" r="2" fill="#FFF"/>
+  <circle cx="75" cy="58" r="2" fill="#FFF"/>
+  <!-- nose -->
+  <ellipse cx="60" cy="66" rx="5" ry="4" fill="#7C4A1E" opacity=".35"/>
+  <!-- wide smile -->
+  <path d="M46 74c6 8 22 8 28 0" fill="#FFF" opacity=".9"/>
+  <path d="M48 74c5 5 19 5 24 0" stroke="#7C2D12" stroke-width="2" stroke-linecap="round" fill="none"/>
+  <!-- teeth hint -->
+  <rect x="54" y="74" width="12" height="4" rx="1" fill="#F8FAFC" opacity=".85"/>
+  <!-- blush -->
+  <ellipse cx="36" cy="66" rx="5" ry="3.5" fill="#F97316" opacity=".2"/>
+  <ellipse cx="84" cy="66" rx="5" ry="3.5" fill="#F97316" opacity=".2"/>
+</svg>

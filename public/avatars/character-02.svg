@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" fill="none">
+  <defs>
+    <linearGradient id="c2-bg" x1="0" y1="0" x2="120" y2="120" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#A16207"/><stop offset="1" stop-color="#78350F"/>
+    </linearGradient>
+    <linearGradient id="c2-skin" x1="60" y1="30" x2="60" y2="90" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F0C9A8"/><stop offset="1" stop-color="#D4A574"/>
+    </linearGradient>
+    <linearGradient id="c2-hair" x1="30" y1="6" x2="95" y2="55" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#6B4423"/><stop offset="1" stop-color="#4A2C17"/>
+    </linearGradient>
+    <linearGradient id="c2-shirt" x1="24" y1="80" x2="96" y2="120" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FDBA74"/><stop offset="1" stop-color="#EA580C"/>
+    </linearGradient>
+    <filter id="c2-sh" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="2" stdDeviation="2.5" flood-color="#1C1917" flood-opacity="0.22"/>
+    </filter>
+  </defs>
+  <rect width="120" height="120" rx="28" fill="url(#c2-bg)"/>
+  <!-- shirt -->
+  <path d="M6 118c8-24 30-36 54-36s46 12 54 36H6z" fill="url(#c2-shirt)"/>
+  <path d="M44 88c0 4 8 8 16 8s16-4 16-8" stroke="#C2410C" stroke-width="1.5" opacity=".35"/>
+  <path d="M52 92h16v4H52z" fill="#FFF7ED" opacity=".25"/>
+  <!-- neck -->
+  <ellipse cx="60" cy="84" rx="13" ry="9" fill="#D4A574"/>
+  <!-- face -->
+  <ellipse cx="60" cy="56" rx="35" ry="33" fill="url(#c2-skin)" filter="url(#c2-sh)"/>
+  <!-- beard -->
+  <path d="M30 56c3 20 14 32 30 34s27-14 30-34c-3 16-14 26-30 26S33 72 30 56z" fill="url(#c2-hair)"/>
+  <!-- hair waves -->
+  <path d="M22 54c4-30 20-44 38-44s34 14 38 44c-6-14-18-22-38-22S28 40 22 54z" fill="url(#c2-hair)"/>
+  <path d="M28 38c8-8 20-12 32-12s24 4 32 12c-6-6-16-10-32-10S34 32 28 38z" fill="#8B5E34" opacity=".4"/>
+  <path d="M30 32c6-6 14-8 22-6M68 26c8 2 14 8 16 14" stroke="#8B5E34" stroke-width="2.5" stroke-linecap="round" opacity=".35"/>
+  <!-- glasses -->
+  <circle cx="44" cy="56" r="11" fill="#FFF" fill-opacity=".12" stroke="#1F2937" stroke-width="2.5"/>
+  <circle cx="76" cy="56" r="11" fill="#FFF" fill-opacity=".12" stroke="#1F2937" stroke-width="2.5"/>
+  <path d="M55 56h10" stroke="#1F2937" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M33 54c-4 0-6 2-6 4M87 54c4 0 6 2 6 4" stroke="#1F2937" stroke-width="2" stroke-linecap="round"/>
+  <!-- eyes -->
+  <ellipse cx="44" cy="57" rx="4" ry="5" fill="#1F2937"/>
+  <ellipse cx="76" cy="57" rx="4" ry="5" fill="#1F2937"/>
+  <circle cx="45" cy="55" r="1.5" fill="#FFF" opacity=".9"/>
+  <circle cx="77" cy="55" r="1.5" fill="#FFF" opacity=".9"/>
+  <!-- brows -->
+  <path d="M34 48c8-3 14-2 18 2" stroke="#4A2C17" stroke-width="3" stroke-linecap="round"/>
+  <path d="M68 50c4-4 12-5 20-2" stroke="#4A2C17" stroke-width="3" stroke-linecap="round"/>
+  <!-- smile -->
+  <path d="M48 70c6 6 18 6 24 0" stroke="#92400E" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+  <path d="M52 68c4 2 12 2 16 0" fill="#FFF" opacity=".15"/>
+  <!-- blush -->
+  <ellipse cx="36" cy="64" rx="5" ry="3.5" fill="#F472B6" opacity=".18"/>
+  <ellipse cx="84" cy="64" rx="5" ry="3.5" fill="#F472B6" opacity=".18"/>
+</svg>

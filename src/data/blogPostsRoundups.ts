@@ -1152,7 +1152,7 @@ ${faqHtml(SEO_EXPERTS_FAQS)}
 <tbody>
 <tr><td>1</td><td>KLoc Technologies</td><td>Bangalore</td><td>Premier</td><td>2015</td><td>51 to 200</td><td>Shopify Plus and complex builds</td></tr>
 <tr><td>2</td><td>Dynamic Dreamz</td><td>Surat</td><td>Platinum</td><td>2013</td><td>11 to 50</td><td>Enterprise theme, POS and international stores</td></tr>
-<tr><td>3</td><td>Click400 Technologies</td><td>Jodhpur</td><td>Select</td><td>2021</td><td>1 to 10</td><td>A first D2C store plus design and ads in one team</td></tr>
+<tr><td>3</td><td>Click400 Technologies</td><td>Jodhpur</td><td>Select</td><td>2021</td><td>About 25</td><td>A first D2C store plus design and ads in one team</td></tr>
 <tr><td>4</td><td>Softpulse Infotech</td><td>Surat</td><td>Select</td><td>2013</td><td>11 to 50</td><td>Indian brands, set-up to checkout work</td></tr>
 <tr><td>5</td><td>ControlF5</td><td>Indore</td><td>Select</td><td>2016</td><td>11 to 50</td><td>Fashion, jewellery and lifestyle</td></tr>
 <tr><td>6</td><td>Codify Infotech</td><td>Surat</td><td>Plus</td><td>2018</td><td>11 to 50</td><td>Growing brands, checkout and migrations</td></tr>
@@ -1164,7 +1164,7 @@ ${faqHtml(SEO_EXPERTS_FAQS)}
 </table>
 </div>
 
-<p>Tier, city, partner since and team size are from each agency’s Partner Directory profile on 22 November 2026.</p>
+<p>Tier, city, partner since and team size are from each agency’s Partner Directory profile on 22 November 2026, except Click400 Technologies’ team size, which is the company’s own figure.</p>
 
 <h2>For Shopify Plus and complex builds</h2>
 
@@ -1217,7 +1217,7 @@ ${faqHtml(SEO_EXPERTS_FAQS)}
 <p>The detail worth noting is support. Its Shopify page says “Every Shopify build ships with a full year of complimentary support”, covering bug fixes and performance checks. Get that in the contract, because the first months after launch are when themes and apps clash.</p>
 <p><strong>Based in:</strong> Jodhpur, working in English, Spanish and Hindi.</p>
 <p><strong>Shopify tier:</strong> Select, partner since 2021.</p>
-<p><strong>Team size:</strong> 1 to 10 people, 25+ active projects (Shopify’s estimates).</p>
+<p><strong>Team size:</strong> About 25 people, per Click400 Technologies, with 25+ active Shopify projects on its Partner Directory profile.</p>
 <p><strong>Verified clients:</strong> Lila Dry Fruits, Z1 Knee Brace, Homes of Rajasthan, The Manukonda, Ai+ Store, Wooden Bazar.</p>
 <p><strong>Support:</strong> One year of post-launch support included, per its Shopify page.</p>
 <p><strong>Pros:</strong></p>
@@ -1228,7 +1228,6 @@ ${faqHtml(SEO_EXPERTS_FAQS)}
 </ul>
 <p><strong>Cons:</strong></p>
 <ul>
-<li>A small team (1 to 10 people) running 25+ projects, so confirm who works on your account and how fast they respond</li>
 <li>Partner since 2021, newer to the programme than most agencies on this list</li>
 </ul>
 <p><strong>Verdict:</strong> A good fit for an Indian D2C founder who wants one partner from launch to first campaigns, with a year of support behind the build.</p>

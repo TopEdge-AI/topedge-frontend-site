@@ -189,7 +189,6 @@ function FeatureMoment({ story }: { story: Story }) {
     >
       <div className="home-sticky__stage">
         <div className="home-sticky__static-copy home-sticky__copy-layer">
-          <p className="home-sticky__job">{story.job}</p>
           <h2 className="home-sticky__title">
             {story.titleLead}{' '}
             <span className="home-sticky__title-accent">{story.titleAccent}</span>

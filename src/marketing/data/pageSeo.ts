@@ -63,7 +63,7 @@ export const PAGE_SEO = {
     noSuffix: true,
   },
   pricing: {
-    title: 'TopEdge AI Pricing: Shopify WhatsApp from ₹1,999/mo',
+    title: 'TopEdge AI Pricing: Plans from ₹1,999/mo, 0% Meta Markup',
     description:
       'TopEdge AI pricing: ₹1,999 to ₹6,499/mo + GST by order volume, or from $19 on Shopify. 0% markup on Meta rates of ₹0.8631 and ₹0.115. 14-day free trial.',
     keywords:

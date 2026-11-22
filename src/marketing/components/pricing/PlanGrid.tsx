@@ -10,7 +10,6 @@ import {
   planBlurb,
   planFeatureKicker,
   planPricing,
-  cycleNoun,
 } from '../../lib/billingCatalog';
 import PriceRoll from './PriceRoll';
 
@@ -190,9 +189,9 @@ function PlanCard({
           switching billing cycle does not shift the grid and everything below it. */}
       {!compact ? (
         <p className="mkt-plan__billing-note">
-          {cycle === 'monthly'
-            ? '\u00a0'
-            : `billed ${cycle} (${pricing.billedLabel}/${cycleNoun(cycle)}) · ${plan.monthlyPriceLabel}/mo month-to-month`}
+          {/* Owner, 22 Nov 2026: no long billing line under the price; the
+              "per month, billed yearly" label beside the price carries it. */}
+          {'\u00a0'}
         </p>
       ) : null}
       <p className="mkt-plan__blurb">{planBlurb(slug)}</p>

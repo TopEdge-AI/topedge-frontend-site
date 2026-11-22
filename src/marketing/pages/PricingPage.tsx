@@ -19,7 +19,7 @@ import IncludedFeatures from '../components/pricing/IncludedFeatures';
 import PricingFaq, { PRICING_FAQS } from '../components/pricing/PricingFaq';
 import PricingSectionHead from '../components/pricing/PricingSectionHead';
 import PricingSalesCta from '../components/pricing/PricingSalesCta';
-import TrustpilotProof from '../components/TrustpilotProof';
+import ProofWall from '../components/ProofWall';
 import ProofBadges from '../components/ProofBadges';
 import HomeTrust from '../components/home/HomeTrust';
 import {
@@ -110,7 +110,7 @@ export default function PricingPage() {
             <motion.div {...rise(0)}>
               <PricingSectionHead
                 as="h1"
-                title="Shopify WhatsApp pricing, priced by orders,"
+                title="TopEdge AI pricing, by the orders you ship,"
                 highlight="with 0% Meta markup."
                 sub={
                   <>
@@ -157,9 +157,10 @@ export default function PricingPage() {
 
             <IncludedFeatures items={catalog.universalFeatures} />
 
-            <TrustpilotProof
-              intro="Published reviews from Shopify brands running TopEdge AI, quoted as written."
-              omitAuthors={['Robin']}
+            <ProofWall
+              title="What merchants say."
+              highlight="Reviews from Shopify brands, as written."
+              sub="Hover any face or logo to read the published Trustpilot or Product Hunt review behind it."
             />
 
             <FeatureMatrix plans={catalog.plans} cycle={cycle} />

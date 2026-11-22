@@ -11,7 +11,7 @@ import {
 import MarketingPage from '../components/MarketingPage';
 import MarketingCtaBand from '../components/MarketingCtaBand';
 import HomeTrust from '../components/home/HomeTrust';
-import CustomerReviewWall from '../components/CustomerReviewWall';
+import ProofWall from '../components/ProofWall';
 import ProofBadges from '../components/ProofBadges';
 import { PrimaryButton, GhostButton } from '../components/ui';
 import { CUSTOMER_STORIES, TRUSTPILOT, PRODUCT_HUNT } from '../data/socialProof';
@@ -262,7 +262,11 @@ export default function CustomersPage() {
         </section>
 
         <div className="mkt-customers__reviews">
-          <CustomerReviewWall />
+          <ProofWall
+            title="More orders from WhatsApp."
+            highlight="Fewer carts left behind."
+            sub="Hover any face or logo to read the published review or the brand behind it."
+          />
         </div>
 
         <MarketingCtaBand

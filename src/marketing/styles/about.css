@@ -1,495 +1,553 @@
-/* About — theme-aligned company story */
+/*
+ * About page (owner, 22 Nov 2026): layout and motion after kachingappz.com/about,
+ * in our own font (Plus Jakarta Sans via --mkt-font) and colours.
+ *
+ *   1. A letter on notebook paper: perforated top edge, ruled lines, a margin
+ *      rule, a slight tilt. It settles in on load (drop, rotate, scale) and its
+ *      marks draw themselves in after it lands.
+ *   2. A framed page with hairline guides: a bordered product grid and a brand
+ *      grid, cells that tint and nudge their arrow on hover.
+ *   3. A dark closing band with a halftone dot fade on the right.
+ *
+ * Everything animates once, respects prefers-reduced-motion, and the text is in
+ * the HTML from the first byte.
+ */
 
-.mkt-about {
-  background: #ffffff;
-  color: var(--mkt-ink, #0c1222);
-}
-
-.mkt-about__hero {
-  max-width: min(100%, 46rem);
-  margin: 0 auto;
-  padding: clamp(5.5rem, 10vw, 7.5rem) 1.25rem 2.5rem;
-  text-align: center;
-}
-
-.mkt-about__brand {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-  margin: 0 auto 1rem;
-  font-size: 0.875rem;
-  font-weight: 600;
-  letter-spacing: -0.01em;
-  color: var(--mkt-ink);
-}
-
-.mkt-about__brand img {
-  width: 26px;
-  height: 26px;
-  border-radius: 7px;
-}
-
-.mkt-about__brand span span {
-  color: var(--mkt-violet);
-}
-
-.mkt-about__h1 {
-  margin: 0 auto;
+.mkt-about2 {
+  --ab-ink: #0f172a;
+  --ab-body: #334155;
+  --ab-muted: #64748b;
+  --ab-line: #e5e7eb;
+  --ab-paper: #fdfdfb;
+  --ab-rule: rgba(148, 163, 184, 0.28);
+  --ab-margin: rgba(124, 58, 237, 0.28);
+  --ab-violet: #7c3aed;
+  --ab-tilt: -1.2deg;
+  background:
+    radial-gradient(60% 50% at 50% 0%, #f4f2fb 0%, rgba(244, 242, 251, 0) 70%),
+    #f8f8f7;
   font-family: var(--mkt-font);
-  font-size: clamp(1.75rem, 4vw, 2.55rem);
-  font-weight: 400;
-  letter-spacing: -0.034em;
-  line-height: 1.12;
-  color: var(--mkt-ink);
-  text-wrap: balance;
-  max-width: 16ch;
 }
 
-@media (min-width: 900px) {
-  .mkt-about__h1 {
-    max-width: none;
-    width: max-content;
-    white-space: nowrap;
-    text-wrap: nowrap;
-    font-size: clamp(1.7rem, 2.35vw, 2.35rem);
+/* ---------- 1. the letter ---------- */
+
+.mkt-about2__stage {
+  padding: clamp(2rem, 6vw, 5rem) 1rem clamp(3rem, 7vw, 5.5rem);
+}
+
+.mkt-about2__letter {
+  position: relative;
+  max-width: 47rem;
+  margin: 0 auto;
+  padding: clamp(2.25rem, 5vw, 4.5rem) clamp(1.5rem, 6vw, 5.5rem) clamp(2rem, 5vw, 3.5rem)
+    clamp(2.5rem, 8vw, 6.75rem);
+  background:
+    /* margin rule */
+    linear-gradient(90deg, transparent calc(clamp(1.6rem, 5vw, 4.4rem) - 1px), var(--ab-margin) calc(clamp(1.6rem, 5vw, 4.4rem) - 1px), var(--ab-margin) clamp(1.6rem, 5vw, 4.4rem), transparent clamp(1.6rem, 5vw, 4.4rem)),
+    /* ruled lines, one per 1.9rem of body text */
+    repeating-linear-gradient(to bottom, transparent 0, transparent calc(1.9rem - 1px), var(--ab-rule) calc(1.9rem - 1px), var(--ab-rule) 1.9rem),
+    var(--ab-paper);
+  background-position: 0 0, 0 0.35rem, 0 0;
+  box-shadow:
+    0 1px 2px rgba(15, 23, 42, 0.05),
+    0 24px 60px -24px rgba(15, 23, 42, 0.25),
+    0 60px 120px -60px rgba(76, 29, 149, 0.18);
+  rotate: var(--ab-tilt);
+  animation: mkt-about2-settle 1.2s cubic-bezier(0.22, 1, 0.36, 1) 0.12s both;
+  /* perforated, torn top edge */
+  -webkit-mask:
+    radial-gradient(circle at 50% 0, transparent 5px, #000 5.5px) top / 22px 12px repeat-x,
+    linear-gradient(#000, #000) 0 11px / 100% calc(100% - 11px) no-repeat;
+  mask:
+    radial-gradient(circle at 50% 0, transparent 5px, #000 5.5px) top / 22px 12px repeat-x,
+    linear-gradient(#000, #000) 0 11px / 100% calc(100% - 11px) no-repeat;
+}
+
+@keyframes mkt-about2-settle {
+  0% {
+    opacity: 0;
+    translate: 0 -28px;
+    rotate: calc(var(--ab-tilt) - 3.5deg);
+    scale: 1.015;
   }
-
-  .mkt-about__hero {
-    max-width: min(100%, 72rem);
+  35% {
+    opacity: 1;
   }
 }
 
-.mkt-about__h1-accent {
-  color: #5b21b6;
-  background: #ede9fe;
-  border-radius: 0.45em;
-  padding: 0.02em 0.18em 0.04em;
-  box-decoration-break: clone;
-  -webkit-box-decoration-break: clone;
+.mkt-about2__h1 {
+  margin: 0 0 1.6rem;
+  font-size: clamp(2rem, 4.6vw, 3.1rem);
+  font-weight: 800;
+  line-height: 1.08;
+  letter-spacing: -0.035em;
+  color: var(--ab-ink);
 }
 
-.mkt-about__lede {
-  margin: 1.1rem auto 0;
-  max-width: 34rem;
-  font-size: clamp(0.98rem, 1.5vw, 1.1rem);
-  line-height: 1.6;
-  color: var(--mkt-muted);
-  text-wrap: pretty;
+.mkt-about2__body p {
+  margin: 0 0 1.25rem;
+  font-size: clamp(1rem, 1.35vw, 1.125rem);
+  line-height: 1.9rem;
+  color: var(--ab-body);
 }
 
-.mkt-about__actions {
+/* Marks that draw themselves after the letter lands: a marker highlight and a
+   hand-drawn underline, staggered by --m. */
+.mkt-about2__mark {
+  position: relative;
+  color: var(--ab-ink);
+  font-weight: 600;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.mkt-about2__mark--hl {
+  background: linear-gradient(transparent 52%, rgba(250, 204, 21, 0.55) 52%, rgba(250, 204, 21, 0.55) 92%, transparent 92%) no-repeat 0 0 / 0% 100%;
+  animation: mkt-about2-hl 0.55s cubic-bezier(0.6, 0, 0.3, 1) calc(1s + var(--m, 0) * 0.35s) both;
+}
+
+@keyframes mkt-about2-hl {
+  to {
+    background-size: 100% 100%;
+  }
+}
+
+.mkt-about2__mark--ul::after {
+  content: '';
+  position: absolute;
+  left: -2px;
+  right: -2px;
+  bottom: -5px;
+  height: 8px;
+  background: no-repeat center / 100% 100%
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 8' preserveAspectRatio='none'%3E%3Cpath d='M2 5.5C30 2 70 1.5 118 4.5' fill='none' stroke='%237c3aed' stroke-width='2.2' stroke-linecap='round'/%3E%3C/svg%3E");
+  clip-path: inset(0 100% 0 0);
+  animation: mkt-about2-draw 0.5s cubic-bezier(0.6, 0, 0.3, 1) calc(1s + var(--m, 0) * 0.35s) both;
+}
+
+a.mkt-about2__mark--ul:hover {
+  color: var(--ab-violet);
+}
+
+@keyframes mkt-about2-draw {
+  to {
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+/* Founders: photos taped to the page, names underlined by hand. */
+.mkt-about2__founders {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  gap: 0.75rem;
-  margin-top: 1.6rem;
-}
-
-.mkt-about__section {
-  max-width: min(100%, 68rem);
-  margin: 0 auto;
-  padding: 3rem 1.25rem;
-}
-
-@media (min-width: 768px) {
-  .mkt-about__section {
-    padding: 4rem 1.5rem;
-  }
-}
-
-.mkt-about__section--wash {
-  max-width: none;
-  padding-left: 0;
-  padding-right: 0;
-  background: #faf9ff;
-  border-top: 1px solid var(--mkt-border, #efeaf8);
-  border-bottom: 1px solid var(--mkt-border, #efeaf8);
-}
-
-.mkt-about__section--wash > .mkt-about__section-inner {
-  max-width: min(100%, 68rem);
-  margin: 0 auto;
-  padding: 0 1.25rem;
-}
-
-@media (min-width: 768px) {
-  .mkt-about__section--wash > .mkt-about__section-inner {
-    padding: 0 1.5rem;
-  }
-}
-
-/* One title treatment for the whole page.
-   The hero and the closing band are centred; the sections in between were
-   left-aligned against a 68rem container, so each heading sat stranded with a
-   third of the row empty beside it. Centring the header block and letting the
-   cards keep their grid makes the page read as one piece, and the eyebrow is a
-   pill rather than loose violet caps floating above the type. */
-.mkt-about__eyebrow {
-  display: inline-flex;
-  align-items: center;
-  margin: 0;
-  padding: 0.3rem 0.7rem;
-  border-radius: 999px;
-  border: 1px solid rgba(124, 58, 237, 0.16);
-  background: #f5f3ff;
-  font-size: 0.6875rem;
-  font-weight: 600;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--mkt-violet);
-}
-
-.mkt-about__section > .mkt-animate,
-.mkt-about__section-inner > .mkt-animate {
-  text-align: center;
-}
-
-.mkt-about__heading {
-  margin: 0.8rem auto 0;
-  font-family: var(--mkt-font);
-  font-size: clamp(1.45rem, 2.6vw, 1.9rem);
-  font-weight: 560;
-  letter-spacing: -0.025em;
-  line-height: 1.2;
-  color: var(--mkt-ink);
-  text-wrap: balance;
-  max-width: 32rem;
-}
-
-.mkt-about__intro {
-  margin: 0.9rem auto 0;
-  max-width: 38rem;
-  font-size: 1.02rem;
-  line-height: 1.65;
-  color: var(--mkt-body-2);
-}
-
-.mkt-about__beliefs {
-  display: grid;
-  gap: 1.75rem;
+  gap: 1.5rem 3rem;
   margin-top: 2.25rem;
 }
 
-@media (min-width: 768px) {
-  .mkt-about__beliefs {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
-  }
-}
-
-.mkt-about__belief h3 {
-  margin: 0;
-  font-family: var(--mkt-font);
-  font-size: 1.05rem;
-  font-weight: 560;
-  letter-spacing: -0.015em;
-  color: var(--mkt-ink);
-}
-
-.mkt-about__belief p {
-  margin: 0.55rem 0 0;
-  font-size: 0.9375rem;
-  line-height: 1.6;
-  color: var(--mkt-muted);
-}
-
-.mkt-about__founders {
-  display: grid;
-  gap: 1.25rem;
-  margin-top: 2.25rem;
-}
-
-@media (min-width: 768px) {
-  .mkt-about__founders {
-    grid-template-columns: 1fr 1fr;
-    gap: 1.5rem;
-  }
-}
-
-.mkt-about__founder {
+.mkt-about2__founder {
   display: flex;
-  flex-direction: column;
-  border: 1px solid var(--mkt-border, #efeaf8);
-  border-radius: 12px;
+  align-items: center;
+  gap: 1rem;
+  margin: 0;
+}
+
+.mkt-about2__photo {
+  position: relative;
+  flex: none;
+  padding: 5px 5px 14px;
   background: #fff;
-  overflow: hidden;
-  box-shadow: 0 1px 0 rgba(15, 23, 42, 0.03);
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.12), 0 8px 18px -8px rgba(15, 23, 42, 0.35);
+  rotate: calc(-3deg + var(--s, 0) * 5deg);
+  animation: mkt-about2-pin 0.7s cubic-bezier(0.22, 1, 0.36, 1) calc(1.6s + var(--s, 0) * 0.3s) both;
 }
 
-.mkt-about__founder-media {
-  aspect-ratio: 1 / 1;
-  overflow: hidden;
-  background: #0c1222;
+.mkt-about2__photo::before {
+  content: '';
+  position: absolute;
+  top: -9px;
+  left: 50%;
+  width: 46px;
+  height: 16px;
+  translate: -50% 0;
+  rotate: 4deg;
+  background: rgba(226, 232, 240, 0.85);
+  box-shadow: 0 1px 1px rgba(15, 23, 42, 0.06);
 }
 
-.mkt-about__founder-media img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center top;
+.mkt-about2__photo img {
   display: block;
+  width: 72px;
+  height: 84px;
+  object-fit: cover;
+  filter: saturate(0.95);
 }
 
-.mkt-about__founder-body {
-  padding: 1.35rem 1.4rem 1.55rem;
-}
-
-.mkt-about__founder-role {
-  margin: 0;
-  font-size: 0.6875rem;
-  font-weight: 600;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--mkt-violet);
-}
-
-.mkt-about__founder-name {
-  margin: 0.4rem 0 0;
-  font-family: var(--mkt-font);
-  font-size: 1.25rem;
-  font-weight: 560;
-  letter-spacing: -0.02em;
-  color: var(--mkt-ink);
-}
-
-.mkt-about__founder-bio {
-  margin: 0.65rem 0 0;
-  font-size: 0.9375rem;
-  line-height: 1.6;
-  color: var(--mkt-muted);
-}
-
-.mkt-about__brands {
-  display: grid;
-  gap: 1.25rem;
-  margin-top: 2.25rem;
-}
-
-@media (min-width: 768px) {
-  .mkt-about__brands {
-    grid-template-columns: 1fr 1fr;
-    gap: 1.5rem;
+@keyframes mkt-about2-pin {
+  from {
+    opacity: 0;
+    translate: 0 10px;
+    scale: 0.96;
   }
 }
 
-.mkt-about__brand-card {
-  display: flex;
-  flex-direction: column;
-  border: 1px solid var(--mkt-border, #efeaf8);
-  border-radius: 12px;
+.mkt-about2__founder figcaption {
+  display: grid;
+  gap: 0.2rem;
+}
+
+.mkt-about2__name {
+  position: relative;
+  justify-self: start;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--ab-ink);
+}
+
+.mkt-about2__name::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -4px;
+  height: 6px;
+  background: no-repeat center / 100% 100%
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 6' preserveAspectRatio='none'%3E%3Cpath d='M2 4C40 1.5 80 1.5 118 3' fill='none' stroke='%230f172a' stroke-opacity='.55' stroke-width='1.6' stroke-linecap='round'/%3E%3C/svg%3E");
+  clip-path: inset(0 100% 0 0);
+  animation: mkt-about2-draw 1.1s cubic-bezier(0.45, 0, 0.25, 1) calc(1.9s + var(--s, 0) * 0.45s) both;
+}
+
+.mkt-about2__role {
+  font-size: 0.875rem;
+  color: var(--ab-muted);
+}
+
+/* ---------- 2. the framed page ---------- */
+
+.mkt-about2__frame {
+  max-width: 75rem;
+  margin: 0 auto;
+  border-left: 1px solid var(--ab-line);
+  border-right: 1px solid var(--ab-line);
+  border-top: 1px solid var(--ab-line);
   background: #fff;
-  overflow: hidden;
-  transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
-.mkt-about__brand-card:hover {
-  border-color: #ddd6fe;
-  box-shadow: 0 16px 36px -28px rgba(15, 23, 42, 0.35);
+.mkt-about2__section {
+  border-bottom: 1px solid var(--ab-line);
 }
 
-.mkt-about__brand-top {
-  display: flex;
-  align-items: center;
-  gap: 0.85rem;
-  padding: 1.15rem 1.35rem;
-  background: #0c1222;
-}
-
-.mkt-about__brand-logo {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 2.25rem;
-  max-width: 8.5rem;
-}
-
-.mkt-about__brand-logo img {
-  max-height: 100%;
-  max-width: 100%;
-  width: auto;
-  object-fit: contain;
-}
-
-.mkt-about__brand-site {
-  margin-left: auto;
-  font-size: 0.75rem;
-  font-weight: 500;
-  color: rgba(255, 255, 255, 0.55);
-}
-
-.mkt-about__brand-body {
-  padding: 1.25rem 1.35rem 1.5rem;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-}
-
-.mkt-about__brand-name {
-  margin: 0;
-  font-family: var(--mkt-font);
-  font-size: 1.1rem;
-  font-weight: 560;
-  letter-spacing: -0.015em;
-  color: var(--mkt-ink);
-}
-
-.mkt-about__brand-tag {
-  margin: 0.35rem 0 0;
-  font-size: 0.8125rem;
-  color: var(--mkt-muted);
-}
-
-.mkt-about__brand-copy {
-  margin: 0.85rem 0 0;
-  font-size: 0.9375rem;
-  line-height: 1.6;
-  color: var(--mkt-body-2);
-  flex: 1;
-}
-
-.mkt-about__brand-stats {
+.mkt-about2__head {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.5rem;
-  margin-top: 1.1rem;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 1rem 2rem;
+  padding: clamp(2.5rem, 6vw, 5rem) clamp(1.25rem, 3vw, 2.25rem) 2rem;
 }
 
-.mkt-about__brand-stat {
-  padding: 0.35rem 0.65rem;
-  border-radius: 9999px;
-  font-size: 0.75rem;
-  font-weight: 550;
-  color: #5b21b6;
-  background: #ede9fe;
+.mkt-about2__h2 {
+  margin: 0 0 0.75rem;
+  font-size: clamp(1.9rem, 3.6vw, 2.6rem);
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -0.035em;
+  color: var(--ab-ink);
 }
 
-.mkt-about__brand-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.35rem;
-  margin-top: 1.15rem;
-  font-size: 0.875rem;
-  font-weight: 550;
-  color: var(--mkt-violet);
-}
-
-.mkt-about__brand-link:hover {
-  opacity: 0.85;
-}
-
-/* Plain-text entity paragraph, directly under the hero. */
-.mkt-about__entity {
-  max-width: 48rem;
-  margin: 0 auto;
-  padding: 2rem var(--mkt-gutter, 1.5rem) 0;
-}
-
-.mkt-about__entity-para {
+.mkt-about2__sub {
   margin: 0;
   font-size: 1rem;
-  line-height: 1.75;
-  color: var(--mkt-body-2);
+  line-height: 1.55;
+  color: var(--ab-body);
 }
 
-@media (max-width: 600px) {
-  .mkt-about__entity {
-    padding-top: 1.5rem;
-  }
-  .mkt-about__entity-para {
-    font-size: 0.9375rem;
-  }
-}
-
-/* ──────────────────────────────────────────────────────────────
-   Hero proof
-   ──────────────────────────────────────────────────────────────
-   The About page is where a stranger decides whether this is a real company.
-   It used to run from the h1 straight into a wall of prose with a large dead
-   gap in between, and nothing on it could be verified from outside. The two
-   published scores and the three platform badges go here, directly under the
-   buttons, because they are the only claims on the page a reader can check. */
-.mkt-about__proof {
-  display: flex;
-  flex-direction: column;
+.mkt-about2__all {
+  display: inline-flex;
   align-items: center;
-  gap: 0.9rem;
-  margin-top: 2rem;
-  padding-top: 1.75rem;
-  border-top: 1px solid rgba(15, 23, 42, 0.08);
+  gap: 0.4rem;
+  font-weight: 600;
+  color: var(--ab-ink);
+  text-decoration: none;
 }
 
-.mkt-proof-row.mkt-about__proof-row {
-  justify-content: center;
+.mkt-about2__all svg {
+  transition: translate 0.18s ease;
 }
 
-.mkt-about__badges {
-  list-style: none;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  gap: 0.6rem;
+.mkt-about2__all:hover svg {
+  translate: 3px 0;
+}
+
+.mkt-about2__grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   margin: 0;
   padding: 0;
+  list-style: none;
+  border-top: 1px solid var(--ab-line);
 }
 
-.mkt-about__badges img {
-  display: block;
-  height: 46px;
-  width: auto;
-  border-radius: 8px;
-  border: 1px solid rgba(15, 23, 42, 0.07);
+.mkt-about2__grid > li + li {
+  border-left: 1px solid var(--ab-line);
+}
+
+.mkt-about2__grid > li:nth-child(3n + 1) {
+  border-left: 0;
+}
+
+.mkt-about2__grid > li:nth-child(n + 4) {
+  border-top: 1px solid var(--ab-line);
+}
+
+.mkt-about2__grid--two {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.mkt-about2__grid--two > li:nth-child(3n + 1) {
+  border-left: 0;
+}
+
+.mkt-about2__grid--two > li:nth-child(2n) {
+  border-left: 1px solid var(--ab-line);
+}
+
+.mkt-about2__cell {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  height: 100%;
+  padding: 1.6rem clamp(1.25rem, 3vw, 2.25rem);
+  color: inherit;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+}
+
+.mkt-about2__cell:hover {
+  background: #fafafb;
+}
+
+.mkt-about2__icon {
+  display: grid;
+  flex: none;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  background: linear-gradient(140deg, #8b5cf6, #6d28d9);
+  color: #fff;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3), 0 6px 14px -6px rgba(109, 40, 217, 0.55);
+}
+
+.mkt-about2__cell-text {
+  display: grid;
+  gap: 0.3rem;
+  min-width: 0;
+  padding-right: 1.5rem;
+}
+
+.mkt-about2__cell-name {
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: var(--ab-ink);
+}
+
+.mkt-about2__cell-desc {
+  font-size: 0.95rem;
+  line-height: 1.45;
+  color: var(--ab-body);
+}
+
+.mkt-about2__cell-copy {
+  margin-top: 0.4rem;
+  font-size: 0.95rem;
+  line-height: 1.55;
+  color: var(--ab-muted);
+}
+
+.mkt-about2__cell-arrow {
+  position: absolute;
+  top: 1.75rem;
+  right: clamp(1.25rem, 3vw, 2.25rem);
+  color: var(--ab-muted);
+  transition: translate 0.18s ease, color 0.18s ease;
+}
+
+.mkt-about2__cell:hover .mkt-about2__cell-arrow {
+  translate: 2px -2px;
+  color: var(--ab-ink);
+}
+
+/* ---------- 3. the dark band ---------- */
+
+.mkt-about2__cta {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+  align-items: center;
+  gap: 2rem;
+  margin: clamp(2rem, 4vw, 3rem) clamp(1.25rem, 3vw, 2.25rem);
+  padding: clamp(2rem, 5vw, 4rem);
+  overflow: hidden;
+  border-radius: 28px;
+  background: #0b0a12;
+  color: #fff;
+}
+
+/* halftone dots fading in from the right */
+.mkt-about2__cta::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle, rgba(196, 181, 253, 0.55) 1px, transparent 1.6px) 0 0 / 7px 7px;
+  -webkit-mask: linear-gradient(90deg, transparent 35%, #000 100%);
+  mask: linear-gradient(90deg, transparent 35%, #000 100%);
+  pointer-events: none;
+}
+
+.mkt-about2__cta-copy,
+.mkt-about2__picker {
+  position: relative;
+}
+
+.mkt-about2__cta-title {
+  margin: 0 0 0.75rem;
+  font-size: clamp(1.75rem, 3.4vw, 2.5rem);
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+}
+
+.mkt-about2__cta-sub {
+  margin: 0 0 1.75rem;
+  color: rgba(255, 255, 255, 0.72);
+  line-height: 1.55;
+}
+
+.mkt-about2__cta-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.mkt-about2__btn {
+  display: inline-flex;
+  align-items: center;
+  min-height: 46px;
+  padding: 0 1.4rem;
+  border-radius: 12px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: transform 0.18s ease, background-color 0.18s ease;
+}
+
+.mkt-about2__btn:hover {
+  transform: translateY(-1px);
+}
+
+.mkt-about2__btn--light {
   background: #fff;
-  object-fit: contain;
+  color: #0b0a12;
 }
 
-.mkt-about__proof-note {
+.mkt-about2__btn--dark {
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: rgba(255, 255, 255, 0.06);
+  color: #fff;
+}
+
+.mkt-about2__address {
+  margin: 1.5rem 0 0;
+  font-size: 0.8125rem;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.mkt-about2__picker {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0;
   margin: 0;
-  max-width: 34rem;
-  text-align: center;
-  font-size: 0.75rem;
-  line-height: 1.5;
-  color: #6b7686;
+  padding: 0;
+  list-style: none;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 18px;
+  background: rgba(17, 16, 28, 0.85);
+  overflow: hidden;
 }
 
-@media (max-width: 639px) {
-  .mkt-about__proof {
-    margin-top: 1.5rem;
-    padding-top: 1.35rem;
+.mkt-about2__picker li {
+  display: grid;
+  gap: 0.6rem;
+  padding: 1rem;
+  border-right: 1px solid rgba(255, 255, 255, 0.08);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.45);
+}
+
+.mkt-about2__picker li:nth-child(3n) {
+  border-right: 0;
+}
+
+.mkt-about2__picker li.is-on {
+  margin: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.06);
+  color: #fff;
+}
+
+/* ---------- responsive ---------- */
+
+@media (max-width: 900px) {
+  .mkt-about2__grid {
+    grid-template-columns: minmax(0, 1fr);
   }
 
-  .mkt-about__badges img {
-    height: 36px;
+  .mkt-about2__grid > li,
+  .mkt-about2__grid--two > li:nth-child(2n) {
+    border-left: 0;
+  }
+
+  .mkt-about2__grid > li + li {
+    border-top: 1px solid var(--ab-line);
+  }
+
+  .mkt-about2__cta {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .mkt-about2__picker {
+    display: none;
   }
 }
 
+@media (max-width: 560px) {
+  .mkt-about2 {
+    --ab-tilt: -0.6deg;
+  }
 
-/* The header block above each grid is centred; the cards under it are not. */
-.mkt-about__beliefs,
-.mkt-about__founders,
-.mkt-about__brands {
-  text-align: left;
+  .mkt-about2__mark {
+    white-space: normal;
+  }
 }
 
-/* The entity paragraph states what the company is and is not, for search and
-   for anyone checking. It was a loose left-aligned block under a centred hero;
-   it now sits on its own surface, centred with the rest. */
-.mkt-about__entity {
-  max-width: 52rem;
-  padding-top: 2.5rem;
-}
+@media (prefers-reduced-motion: reduce) {
+  .mkt-about2__letter,
+  .mkt-about2__photo,
+  .mkt-about2__mark--hl,
+  .mkt-about2__mark--ul::after,
+  .mkt-about2__name::after {
+    animation: none;
+  }
 
-.mkt-about__entity-para {
-  padding: 1.4rem 1.6rem;
-  border-radius: 1rem;
-  border: 1px solid var(--mkt-border, #efeaf8);
-  background: #fbfaff;
-  font-size: 0.98rem;
-}
+  .mkt-about2__mark--hl {
+    background-size: 100% 100%;
+  }
 
-@media (max-width: 639px) {
-  .mkt-about__entity-para {
-    padding: 1.1rem 1.15rem;
+  .mkt-about2__mark--ul::after,
+  .mkt-about2__name::after {
+    clip-path: none;
   }
 }

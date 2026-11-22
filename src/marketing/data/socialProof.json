@@ -101,5 +101,46 @@
       "logoColor": "/trust/apex-color.png",
       "tint": "#f4ecff"
     }
+  ],
+  "reviews": [
+    {
+      "source": "productHunt",
+      "author": "Devansh Patel",
+      "text": "Honestly, TopEdge AI completely changed how we handle customer support and sales on our Shopify store. The WhatsApp automation is rock solid—it takes care of everything from catching abandoned carts and confirming COD orders to sending out tracking updates and warranty info. The whole setup was super smooth, and I really appreciate the transparent pricing with no hidden surprises. If you're running a D2C brand in India, this tool is honestly a no-brainer."
+    },
+    {
+      "source": "productHunt",
+      "author": "Delitech Smart Home",
+      "text": "TopEdge AI is exactly what our Shopify store needed their automated WhatsApp COD-to-prepaid flows immediately helped us reduce RTOs, and the cart recovery works flawlessly"
+    },
+    {
+      "source": "productHunt",
+      "author": "Dr.himmat Patel",
+      "text": "TopEdge AI has made managing our Shopify store much easier, especially when it comes to customer support and WhatsApp automation. The AI can handle common customer questions, understand what shoppers are looking for, provide product-related information, and help customers with order and support queries."
+    },
+    {
+      "source": "trustpilot",
+      "author": "Consumer",
+      "rating": 5,
+      "text": "We recently switched from Updatrr cuz feature flexibility were not that great, topedge offers very wide ground of work around Abandoned cart, COD to prepaid which works with mostly every checkout, and other 20+ features having unlimited execution made our software understanding and setup guide more easy, their team helps so much man, for first 3-5 days they call you everyday to provide any possible assistance i found this so great, nice work topedge ai, wish you great journey ahead."
+    },
+    {
+      "source": "trustpilot",
+      "author": "Krunal Patel",
+      "rating": 5,
+      "text": "Excellent product has all major features that many flagship providers don't give for 10x the price."
+    },
+    {
+      "source": "trustpilot",
+      "author": "ved Patel",
+      "rating": 5,
+      "text": "I’ve been using TopEdge AI and it has completely streamlined our Shopify store's post-purchase journey Unlike basic broadcast tools like Wati or Interakt it’s built specifically for e-commerce"
+    },
+    {
+      "source": "trustpilot",
+      "author": "Solanki Ira",
+      "rating": 4,
+      "text": "Gold ui ux though, everything is understandable while it offer advance compatibility"
+    }
   ]
 }
