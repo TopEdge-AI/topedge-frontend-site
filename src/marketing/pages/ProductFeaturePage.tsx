@@ -271,6 +271,7 @@ function ProductFeatureView({ page }: { page: ProductPage }) {
               <DemoProductVideoFrame
                 src={page.hero.src}
                 mobileSrc={page.hero.mobileSrc}
+                mobilePoster={page.hero.mobilePoster}
                 poster={page.hero.poster}
                 glow={page.hero.glow ?? 'violet'}
                 title={page.hero.label}

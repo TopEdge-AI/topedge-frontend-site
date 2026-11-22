@@ -303,20 +303,11 @@ export default function BlogPost() {
                   Common questions
                 </h2>
                 <div className="mkt-blog-faq">
-                  {post.faqs.map((f, n) => (
-                    // Collapsed by default, but the answer is always in the
-                    // served HTML: <details> hides it visually, not from
-                    // crawlers (blog SOP section 7B).
-                    <details key={f.question} className="mkt-blog-faq__item">
-                      <summary className="mkt-blog-faq__q" aria-controls={`faq-a-${n}`}>
-                        <h3 className="mkt-blog-faq__qtext">{f.question}</h3>
-                        <span className="mkt-blog-faq__icon" aria-hidden>
-                          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                            <path d="m6 9 6 6 6-6" />
-                          </svg>
-                        </span>
-                      </summary>
-                      <div className="mkt-blog-faq__a" id={`faq-a-${n}`}>
+                  {post.faqs.map((f) => (
+                    // Always open (owner, 22 Nov 2026): every answer visible.
+                    <div key={f.question} className="mkt-blog-faq__item">
+                      <h3 className="mkt-blog-faq__q">{f.question}</h3>
+                      <div className="mkt-blog-faq__a">
                         {faqAnswerParagraphs(f.answer).map((paragraph, p) => (
                           <p key={p}>
                             {splitNumericRanges(paragraph).map((part, i) =>
@@ -331,7 +322,7 @@ export default function BlogPost() {
                           </p>
                         ))}
                       </div>
-                    </details>
+                    </div>
                   ))}
                 </div>
               </section>

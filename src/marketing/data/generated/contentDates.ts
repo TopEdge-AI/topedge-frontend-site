@@ -10,7 +10,7 @@ export const CONTENT_DATES = {
   /** Last edit of blogPosts.ts (used as Article dateModified fallback). */
   blogPosts: '2026-11-22',
   /** Last edit of feature / product page content. */
-  featurePages: '2026-11-15',
+  featurePages: '2026-11-22',
   /** Last edit of published plan catalog (pricing Offers). */
   pricing: '2026-11-10',
 } as const;

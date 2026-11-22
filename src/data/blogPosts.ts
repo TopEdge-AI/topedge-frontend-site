@@ -3307,7 +3307,7 @@ export const blogPosts: BlogPost[] = [
 <p>Buying guides: <a href="/blog/best-whatsapp-apps-for-shopify">best WhatsApp apps for Shopify</a> and <a href="/blog/how-to-choose-whatsapp-app-shopify-app-store">how to choose from the App Store</a>.</p>
 
 <h2>Where TopEdge AI fits</h2>
-<p>TopEdge AI is a Shopify app for Indian D2C brands that automates abandoned cart recovery, COD confirmation and order updates over WhatsApp and email.</p>
+<p>TopEdge AI is all-in-one D2C software for Shopify stores, built as one suite. WhatsApp automation is one part of it, next to cart recovery, COD confirmation, campaigns, a shopper CRM and profit reporting.</p>
 <ul>
 <li><a href="/shopify-whatsapp-integration">Shopify WhatsApp integration</a>: store sync over OAuth plus Meta’s Cloud API</li>
 <li><a href="/features/journeys">Journeys</a>: cart, COD and shipping sequences that only send approved templates</li>

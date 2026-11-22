@@ -51,8 +51,8 @@ export default function HomeHero() {
                 </span>
               </h1>
               <p className="home-hero__sub">
-                TopEdge AI is the WhatsApp marketing and automation app for Shopify brands in
-                India, from ₹1,999/mo with 0% markup on Meta rates and a 14-day free trial.
+                TopEdge AI is all-in-one D2C software for Shopify stores, built as one suite.
+                Flat INR plans start at ₹1,999/mo with a 14-day free trial.
               </p>
               <div className="home-hero__actions">
                 <PrimaryButton to="/signup">

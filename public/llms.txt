@@ -1,6 +1,6 @@
 # TopEdge AI
 
-> TopEdge AI is the WhatsApp marketing and automation app for Shopify brands in India: it recovers abandoned carts, confirms COD orders, moves COD to prepaid, and shows net profit after RTO, with 0% markup on Meta rates. Connect Shopify and the Meta WhatsApp Cloud API to run cart recovery, COD confirmation, a shared inbox, journeys and Meta-safe campaigns.
+> TopEdge AI is all-in-one D2C software for Shopify stores, built as one suite. It brings cart recovery, COD confirmation and COD to prepaid, WhatsApp and email journeys, campaigns, a shopper CRM, live chat, opt-in tools, a tracking pixel and profit reporting into one platform. Flat INR plans start at ₹1,999/mo with 0% markup on Meta rates and a 14-day free trial. Connect Shopify and the Meta WhatsApp Cloud API to run every module on one customer record.
 
 ## Entity
 
@@ -13,7 +13,7 @@
 - Marketing site: https://topedgeai.com/ · Application: https://dash.topedgeai.com
 - Shopify App Store: https://apps.shopify.com/topedge-ai
 
-Disambiguation: TopEdge AI is a WhatsApp marketing and automation app for Shopify brands in India, built on Shopify and the Meta WhatsApp Cloud API. It is not related to edge-AI hardware, IoT semiconductors, or voice call-centre agencies.
+Disambiguation: TopEdge AI is all-in-one D2C software for Shopify stores, built on Shopify and the Meta WhatsApp Cloud API. It is not related to edge-AI hardware, IoT semiconductors, or voice call-centre agencies.
 
 Notes for anyone quoting this file:
 
@@ -50,6 +50,7 @@ the billing catalog, which scripts/check-catalog-drift.mjs pins to the live API.
 - [Warranty](https://topedgeai.com/features/warranty): Shopify warranty registration on WhatsApp: buyers register with an OTP, claims tie to the order and your team assigns each one. On every plan.
 - [Profit & costs](https://topedgeai.com/features/profit-loss): A Shopify profit and loss app for India: net profit after COGS, ₹12 to ₹24 packaging, ₹30 COD fees, ₹180 to ₹240 RTO losses and ad spend, in one waterfall.
 - [Intent detection](https://topedgeai.com/features/intent-detection): WhatsApp intent detection for Shopify: route shipping, returns, COD and handoff chats to the right flow or agent before you spend any AI tokens.
+- [COD confirmation](https://topedgeai.com/features/cod-confirmation): Shopify COD app that confirms every cash on delivery order on WhatsApp before dispatch, at ₹0.115 a message against ₹180 to ₹240 lost per RTO.
 
 ## Documentation
 
@@ -126,7 +127,7 @@ Setup guides and screen-by-screen reference, written for the person running the 
 
 ## Playbooks
 
-- [Shopify Development Companies in India (2027)](https://topedgeai.com/blog/best-shopify-development-companies-india): Shopify development company India shortlist: 10 agencies checked on Shopify’s Partner Directory on 22 Nov 2026, with tier, city, team size and launch costs.
+- [Shopify Development Companies in India (2027)](https://topedgeai.com/blog/best-shopify-development-companies-india): A shortlist of 10 Shopify development companies in India, checked on Shopify’s Partner Directory on 22 Nov 2026, with tier, city, team size and costs.
 - [10 Best Shipping Aggregators & Logistics Tools in India 2027](https://topedgeai.com/blog/best-shipping-aggregators-logistics-tools-india): The 10 best shipping aggregators and logistics tools for Indian D2C brands in 2027: Shiprocket, ClickPost and 8 more, with prices checked in November.
 - [RTO in Ecommerce: Meaning, Full Form and Cost](https://topedgeai.com/blog/rto-meaning-ecommerce): RTO in ecommerce means Return to Origin: a parcel the buyer never accepts comes back to you. What one RTO costs, RTO vs NDR, and 5 ways to cut it.
 - [Add a WhatsApp Chat Button to Shopify (3 Ways)](https://topedgeai.com/blog/add-whatsapp-chat-button-shopify): Add a WhatsApp chat button to your Shopify store three ways: a free wa.me link, a theme code snippet or an app widget. Steps, code and a comparison.

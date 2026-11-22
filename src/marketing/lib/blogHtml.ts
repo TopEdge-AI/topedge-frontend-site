@@ -63,41 +63,25 @@ function staticVerdicts(root: HTMLElement) {
   });
 }
 
-const FAQ_CHEVRON =
-  '<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>';
-
 /*
- * In-post FAQs become a click-to-expand accordion (blog SOP section 7, owner
- * skill of 22 Nov 2026), replacing the always-open cards. The answer stays in
- * the served HTML inside <details>, which hides it visually only, so Google,
- * AI crawlers and the FAQPage schema all still read every word. Two stored
- * shapes are handled: <details><summary> pairs and the faqHtml() cards.
+ * In-post FAQs are always open (owner, 22 Nov 2026, overriding the blog SOP's
+ * accordion): every question and answer is visible as a card, so readers,
+ * Google and AI crawlers read each answer without a click. Two stored shapes
+ * are normalised to one: <details><summary> pairs and the faqHtml() cards.
  */
-function accordionFaqs(root: HTMLElement) {
+function openFaqs(root: HTMLElement) {
   const doc = root.ownerDocument;
-  let n = 0;
   const build = (questionNodes: Node[], answerNodes: Node[]) => {
-    n += 1;
-    const id = `faq-answer-${n}`;
-    const details = doc.createElement('details');
-    details.className = 'mkt-blog-faq__item';
-    const summary = doc.createElement('summary');
-    summary.className = 'mkt-blog-faq__q';
-    summary.setAttribute('aria-controls', id);
+    const item = doc.createElement('div');
+    item.className = 'mkt-blog-faq__item';
     const h3 = doc.createElement('h3');
-    h3.className = 'mkt-blog-faq__qtext';
+    h3.className = 'mkt-blog-faq__q';
     h3.append(...questionNodes);
-    const icon = doc.createElement('span');
-    icon.className = 'mkt-blog-faq__icon';
-    icon.setAttribute('aria-hidden', 'true');
-    icon.innerHTML = FAQ_CHEVRON;
-    summary.append(h3, icon);
     const answer = doc.createElement('div');
     answer.className = 'mkt-blog-faq__a';
-    answer.id = id;
     answer.append(...answerNodes);
-    details.append(summary, answer);
-    return details;
+    item.append(h3, answer);
+    return item;
   };
   root.querySelectorAll('.mkt-blog-faq').forEach((faq) => {
     for (const item of [...faq.children]) {
@@ -557,7 +541,7 @@ export function enhanceBlogHtml(html: string, inlineImages: InlineImage[] = []):
   upgradeListEntries(root);
   splitLongParagraphs(root);
   staticVerdicts(root);
-  accordionFaqs(root);
+  openFaqs(root);
   wrapNumericRanges(root);
   prepareTables(root);
   addHeadingIds(root);

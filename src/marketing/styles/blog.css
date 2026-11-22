@@ -820,17 +820,16 @@
 }
 
 /*
- * Direct answer / quick verdict (blog SOP section 5, 22 Nov 2026): a warm
- * amber callout, never the purple of the page chrome, so the eye finds the
- * answer in a second.
+ * Direct answer / quick verdict: solid light yellow, never the purple of the
+ * page chrome, so the eye finds the answer in a second.
  */
 .mkt-blog-prose .mkt-blog-verdict {
+  /* Owner, 22 Nov 2026: plain solid yellow, thin border, no gradient, no left bar. */
   margin: 0 0 1.5rem;
   padding: 1rem 1rem 1.05rem;
   border: 1px solid #fde68a;
-  border-left: 3px solid #d97706;
   border-radius: 12px;
-  background: linear-gradient(135deg, #fffbeb 0%, #fef9c3 45%, #fffdf7 100%);
+  background: #fef9c3;
 }
 
 @media (min-width: 640px) {
@@ -1187,14 +1186,10 @@
 }
 
 /*
- * FAQ accordion (blog SOP section 7, 22 Nov 2026).
- *
- * Every FAQ, inline or from the template, is a <details> card: collapsed by
- * default, question in an H3 inside the summary, a round chevron on the right
- * that turns purple and rotates when open. The answer is always in the served
- * HTML, so crawlers and the FAQPage schema read it without a click. The
- * open animation uses ::details-content where the browser supports it and
- * simply snaps open where it does not.
+ * FAQ cards, always open (owner, 22 Nov 2026). Every question and answer is
+ * visible: no accordion, no click, nothing for a crawler to expand. The card
+ * styling from the blog SOP stays (rounded white card, hairline under the
+ * question), only the collapse is gone.
  */
 .mkt-blog-faq {
   display: flex;
@@ -1210,51 +1205,12 @@
   border-radius: 12px;
   background: #ffffff;
   box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04);
-  transition: border-color 0.2s ease;
-  interpolate-size: allow-keywords;
 }
 
-.mkt-blog-faq .mkt-blog-faq__item::details-content {
-  block-size: 0;
-  overflow: hidden;
-  transition: block-size 0.22s ease, content-visibility 0.22s allow-discrete;
-}
-
-.mkt-blog-faq .mkt-blog-faq__item[open]::details-content {
-  block-size: auto;
-}
-
-.mkt-blog-faq .mkt-blog-faq__item[open] {
-  border-color: rgba(124, 58, 237, 0.35);
-}
-
+.mkt-blog-prose .mkt-blog-faq .mkt-blog-faq__q,
 .mkt-blog-faq .mkt-blog-faq__q {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
-  width: 100%;
   margin: 0;
-  padding: 15px 16px;
-  list-style: none;
-  cursor: pointer;
-  text-align: left;
-  border-radius: 12px;
-}
-
-.mkt-blog-faq .mkt-blog-faq__q::-webkit-details-marker {
-  display: none;
-}
-
-.mkt-blog-faq .mkt-blog-faq__q:focus-visible {
-  outline: 2px solid #7c3aed;
-  outline-offset: 2px;
-}
-
-/* Higher specificity than the prose h3 rule, so the question keeps its size. */
-.mkt-blog-prose .mkt-blog-faq .mkt-blog-faq__qtext,
-.mkt-blog-faq .mkt-blog-faq__qtext {
-  margin: 0;
+  padding: 15px 16px 12px;
   font-family: var(--mkt-font);
   font-size: 0.9375rem;
   font-weight: 600;
@@ -1262,42 +1218,11 @@
   letter-spacing: -0.005em;
   color: #0f172a;
   text-wrap: pretty;
-  transition: color 0.2s ease;
-}
-
-.mkt-blog-faq .mkt-blog-faq__item[open] .mkt-blog-faq__qtext {
-  color: #7c3aed;
-}
-
-.mkt-blog-faq .mkt-blog-faq__icon {
-  display: inline-flex;
-  flex: none;
-  align-items: center;
-  justify-content: center;
-  width: 30px;
-  height: 30px;
-  border-radius: 999px;
-  background: #f1f5f9;
-  color: #475569;
-  transition: background-color 0.2s ease, color 0.2s ease;
-}
-
-.mkt-blog-faq .mkt-blog-faq__icon svg {
-  transition: transform 0.2s ease;
-}
-
-.mkt-blog-faq .mkt-blog-faq__item[open] .mkt-blog-faq__icon {
-  background: #f5f3ff;
-  color: #7c3aed;
-}
-
-.mkt-blog-faq .mkt-blog-faq__item[open] .mkt-blog-faq__icon svg {
-  transform: rotate(180deg);
 }
 
 .mkt-blog-faq .mkt-blog-faq__a {
   margin: 0 16px;
-  padding: 12px 0 14px;
+  padding: 12px 0 15px;
   border-top: 1px solid #eef2f6;
   font-size: 0.9375rem;
   line-height: 1.58;
@@ -1325,18 +1250,15 @@
 }
 
 @media (min-width: 640px) {
+  .mkt-blog-prose .mkt-blog-faq .mkt-blog-faq__q,
   .mkt-blog-faq .mkt-blog-faq__q {
-    padding: 17px 20px;
-  }
-
-  .mkt-blog-prose .mkt-blog-faq .mkt-blog-faq__qtext,
-  .mkt-blog-faq .mkt-blog-faq__qtext {
+    padding: 17px 20px 13px;
     font-size: 1rem;
   }
 
   .mkt-blog-faq .mkt-blog-faq__a {
     margin: 0 20px;
-    padding: 14px 0 16px;
+    padding: 13px 0 16px;
   }
 }
 
@@ -2503,4 +2425,22 @@
 
 .mkt-blog-prose .mkt-blog-pick-cta a[href^="/"]:hover::after {
   transform: translateX(2px);
+}
+
+/*
+ * No code font in articles (owner, 22 Nov 2026). Paths and file names such as
+ * /collections/all or robots.txt read as part of the sentence, in the body
+ * font, not as a monospace chip.
+ */
+.mkt-blog-prose code,
+.mkt-blog-summary code,
+.mkt-blog-faq code {
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: none;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  color: inherit;
 }

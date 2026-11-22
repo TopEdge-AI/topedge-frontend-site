@@ -13,6 +13,12 @@ The plan and log live in `seo-audit/PLAN-AND-LOG.md`. The prompt the owner paste
 3. Read memory `topedge-seo-plan-nov15` and `feedback-ai-content-people-first`. The plan file wins over memory.
 4. Give the owner a five-line status (done per log, today's pages, what you need, blockers), then start.
 
+## 0b. House rules that override the account blog SOP skill (owner, 22 Nov 2026)
+- Positioning: read `.claude/skills/topedge-positioning/SKILL.md` before writing any copy that names TopEdge AI. All-in-one D2C software for Shopify stores, built as one suite; single jobs are modules. Never write about positioning itself.
+- FAQs are always open: visible cards, no accordion (the blog SOP's accordion rule is replaced).
+- Direct answer box: solid light yellow, thin border, no gradient, no left bar.
+- No monospace or `<code>` styling in articles; paths and file names use the body font.
+
 ## 1. Data (free first, then credits)
 - Search Console through OpenSEO (project `852f0ce0-39cf-43e3-9b80-84ff3449a4a8`): `inspect_urls` for yesterday's pages; striking-distance list (query + page, country `ind`, last 28 days, minPosition 8, minImpressions 3, query notContains `spa`). Ignore local junk (restaurants, salons, massage).
 - `whoami` for credits. One `get_keyword_metrics` call per day for the day's families (locationCode 2356, languageCode "en"). `get_serp_results` mobile, India, `finalUrls: true`, collect again after 2 to 3 minutes. Large outputs: parse the saved file with python, do not read it whole.

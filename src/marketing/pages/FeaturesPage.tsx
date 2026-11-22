@@ -201,7 +201,7 @@ export default function FeaturesPage() {
             <span className="mkt-fx__hl">by job</span>
           </h1>
           <p className="mkt-fx__sub">
-            TopEdge AI is the WhatsApp marketing and automation app for Shopify brands in India: it recovers abandoned carts, confirms COD orders, moves COD to prepaid, and shows net profit after RTO, with 0% markup on Meta rates. Every
+            TopEdge AI is all-in-one D2C software for Shopify stores, built as one suite. Every module below works on the same customer data, and every
             plan starts with a 14-day free trial, from ₹1,999/mo.
           </p>
           <div className="mkt-fx__actions">

@@ -1,6 +1,6 @@
 # TopEdge AI
 
-> TopEdge AI is the WhatsApp marketing and automation app for Shopify brands in India: it recovers abandoned carts, confirms COD orders, moves COD to prepaid, and shows net profit after RTO, with 0% markup on Meta rates. Connect Shopify and the Meta WhatsApp Cloud API to run cart recovery, COD confirmation, a shared inbox, journeys and Meta-safe campaigns.
+> TopEdge AI is all-in-one D2C software for Shopify stores, built as one suite. It brings cart recovery, COD confirmation and COD to prepaid, WhatsApp and email journeys, campaigns, a shopper CRM, live chat, opt-in tools, a tracking pixel and profit reporting into one platform. Flat INR plans start at ₹1,999/mo with 0% markup on Meta rates and a 14-day free trial. Connect Shopify and the Meta WhatsApp Cloud API to run every module on one customer record.
 
 ## Entity
 
@@ -13,7 +13,7 @@
 - Marketing site: https://topedgeai.com/ · Application: https://dash.topedgeai.com
 - Shopify App Store: https://apps.shopify.com/topedge-ai
 
-Disambiguation: TopEdge AI is a WhatsApp marketing and automation app for Shopify brands in India, built on Shopify and the Meta WhatsApp Cloud API. It is not related to edge-AI hardware, IoT semiconductors, or voice call-centre agencies.
+Disambiguation: TopEdge AI is all-in-one D2C software for Shopify stores, built on Shopify and the Meta WhatsApp Cloud API. It is not related to edge-AI hardware, IoT semiconductors, or voice call-centre agencies.
 
 Notes for anyone quoting this file:
 
@@ -200,6 +200,20 @@ TopEdge AI Intent Detection is WhatsApp intent detection for Shopify support tea
 - **Can intents escalate to Live Chat?** Yes. Configure handoff intents to assign humans, and Live Chat takeover still pauses bots on that thread.
 - **How does this reduce AI cost?** By answering routine questions without the model. Shipping, returns and COD questions are matched by intent and answered by a flow, so the model is only called when a question needs it.
 - **What happens when no intent matches?** It falls through to AI Brain if AI is on, or to Live Chat if it is not. Nothing is answered by guessing, and nothing is left unanswered.
+
+### COD confirmation
+
+https://topedgeai.com/features/cod-confirmation
+
+Shopify COD app that confirms every cash on delivery order on WhatsApp before dispatch, at ₹0.115 a message against ₹180 to ₹240 lost per RTO.
+
+COD confirmation is the Shopify COD app module of TopEdge AI, all-in-one D2C software for Shopify stores. It messages every cash on delivery buyer on WhatsApp the moment the order lands, so you ship only confirmed orders. It is on every plan.
+
+- **How do I confirm COD orders on WhatsApp in Shopify?** Connect Shopify and your WhatsApp Business account, then publish the COD confirmation journey. It triggers on every new cash on delivery order and sends a Meta-approved template with Confirm and Cancel buttons. The step-by-step setup is in the COD confirmation guide in our docs.
+- **Does COD confirmation reduce RTO?** It stops you shipping orders that were never going to be accepted, such as impulse, duplicate or mistaken orders. It cannot fix RTO caused by failed deliveries or wrong addresses, so measure your own RTO before and after rather than trusting a headline number.
+- **What happens if the customer does not reply?** You decide. Send one follow-up, then hold the order, call the buyer or dispatch anyway, according to the rule you set in the journey.
+- **Can I convert COD orders to prepaid on WhatsApp?** Yes, on the Growth and Scale plans. TopEdge AI sends a WhatsApp payment link created from a Shopify draft invoice, so the buyer can pay now instead of in cash. The Launch plan includes COD confirmation only.
+- **How much does WhatsApp COD confirmation cost?** COD confirmation is on every TopEdge AI plan, from ₹1,999 a month plus GST on the website or $19 a month on the Shopify App Store. Meta bills its own message fee on your Meta account at 0% TopEdge AI markup: a confirmation is a utility template at ₹0.1150 per delivered message in India, so confirming 500 COD orders costs ₹57.50.
 
 ## Documentation
 

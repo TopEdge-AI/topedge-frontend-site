@@ -52,7 +52,7 @@ const productColumns: NavColumn[] = [
       { label: 'Abandoned Cart', desc: 'Win carts back in three reminders', href: '/features/journeys#abandoned-cart', icon: ShoppingCartRemove01Icon },
       { label: 'Conditional routes', desc: 'Branch on COD, prepaid or a reply', href: '/features/journeys#conditional-routes', icon: GitForkIcon },
       { label: 'Return & retarget', desc: 'Reach shoppers who came back', href: '/features/journeys#return-retarget', icon: ArrowReloadHorizontalIcon },
-      { label: 'COD → Prepaid', desc: 'Confirm COD and nudge to prepaid', href: '/features/journeys', icon: MoneyExchange01Icon },
+      { label: 'COD → Prepaid', desc: 'Confirm COD and nudge to prepaid', href: '/features/cod-confirmation', icon: MoneyExchange01Icon },
     ],
   },
   {

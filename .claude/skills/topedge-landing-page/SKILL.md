@@ -39,7 +39,7 @@ Every landing page uses the static design that was the Google Ads page (`/lp/sho
 7. Preview with `preview_start` name `topedge-dist` at `http://localhost:4190/<out>/` on desktop and 375 px.
 
 ## Facts you may state (re-check before each page)
-- Canonical sentence: "TopEdge AI is a Shopify app for Indian D2C brands that automates abandoned cart recovery, COD confirmation and order updates over WhatsApp and email."
+- Canonical sentence: "TopEdge AI is all-in-one D2C software for Shopify stores, built as one suite." The landing page's H1 names its one job (its keyword); the body says that job is one module of the suite. Rules: `.claude/skills/topedge-positioning/SKILL.md`.
 - Plans: Launch ₹1,999, Growth ₹3,999, Scale ₹6,499 a month plus GST on the website; $19, $39, $65 on the App Store. Orders: 100, 800, 1,500. Trial 14 days, 20 orders, 200 sends.
 - COD confirmation on every plan; COD to prepaid and Journey Branch on Growth and up. No NDR handling, no partial COD, no Meta WhatsApp Flows.
 - Meta India: ₹0.8631 marketing, ₹0.1150 utility, billed per message (sources.ts `metaPricing`). Never "per conversation".

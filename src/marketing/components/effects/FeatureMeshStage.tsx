@@ -25,6 +25,7 @@ export const AURORA_PALETTE: Record<MeshKey, string> = {
   warranty: 'mint',
   'profit-loss': 'sunrise',
   'intent-detection': 'lagoon',
+  'cod-confirmation': 'mint',
   'features-index': 'iris',
   default: 'iris',
 };

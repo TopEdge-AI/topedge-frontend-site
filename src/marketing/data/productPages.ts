@@ -15,10 +15,11 @@ export type ProductPageId =
   | 'chat-rules'
   | 'warranty'
   | 'profit-loss'
-  | 'intent-detection';
+  | 'intent-detection'
+  | 'cod-confirmation';
 
 export type ProductHeroMedia =
-  | { kind: 'video'; src: string; poster: string; mobileSrc?: string; label: string; glow?: ProductGlow }
+  | { kind: 'video'; src: string; poster: string; mobileSrc?: string; mobilePoster?: string; label: string; glow?: ProductGlow }
   | { kind: 'image'; src: string; alt: string; glow?: ProductGlow };
 
 export type ProductGlow = 'violet' | 'emerald' | 'sky' | 'amber' | 'rose' | 'indigo';
@@ -1940,6 +1941,130 @@ export const PRODUCT_PAGES: Record<ProductPageId, ProductPage> = {
     ctaSub: 'Match shipping, returns, and COD phrases first. Pair with AI Brain when shoppers need catalog answers.',
   },
 
+
+  'cod-confirmation': {
+    id: 'cod-confirmation',
+    path: '/features/cod-confirmation',
+    eyebrow: 'COD confirmation',
+    // Owns "shopify cod app" (PLAN-AND-LOG 3b, row 2): exact keyword leads the title and H1.
+    title: 'Shopify COD app',
+    titleAccent: 'that confirms orders on WhatsApp',
+    subtitle:
+      'Every cash on delivery buyer confirms on WhatsApp before you ship, so RTO falls and COD can turn into prepaid.',
+    answerFirst:
+      'COD confirmation is the Shopify COD app module of TopEdge AI, all-in-one D2C software for Shopify stores. It messages every cash on delivery buyer on WhatsApp the moment the order lands, so you ship only confirmed orders. It is on every plan.',
+    faqs: [
+      {
+        question: 'How do I confirm COD orders on WhatsApp in Shopify?',
+        answer:
+          'Connect Shopify and your WhatsApp Business account, then publish the COD confirmation journey. It triggers on every new cash on delivery order and sends a Meta-approved template with Confirm and Cancel buttons. The step-by-step setup is in the COD confirmation guide in our docs.',
+      },
+      {
+        question: 'Does COD confirmation reduce RTO?',
+        answer:
+          'It stops you shipping orders that were never going to be accepted, such as impulse, duplicate or mistaken orders. It cannot fix RTO caused by failed deliveries or wrong addresses, so measure your own RTO before and after rather than trusting a headline number.',
+      },
+      {
+        question: 'What happens if the customer does not reply?',
+        answer:
+          'You decide. Send one follow-up, then hold the order, call the buyer or dispatch anyway, according to the rule you set in the journey.',
+      },
+      {
+        question: 'Can I convert COD orders to prepaid on WhatsApp?',
+        answer:
+          'Yes, on the Growth and Scale plans. TopEdge AI sends a WhatsApp payment link created from a Shopify draft invoice, so the buyer can pay now instead of in cash. The Launch plan includes COD confirmation only.',
+      },
+      {
+        question: 'How much does WhatsApp COD confirmation cost?',
+        answer:
+          'COD confirmation is on every TopEdge AI plan, from ₹1,999 a month plus GST on the website or $19 a month on the Shopify App Store. Meta bills its own message fee on your Meta account at 0% TopEdge AI markup: a confirmation is a utility template at ₹0.1150 per delivered message in India, so confirming 500 COD orders costs ₹57.50.',
+      },
+    ],
+    seoTitle: 'Shopify COD App: Confirm COD Orders on WhatsApp | TopEdge AI',
+    seoDescription:
+      'Shopify COD app that confirms every cash on delivery order on WhatsApp before dispatch, at ₹0.115 a message against ₹180 to ₹240 lost per RTO.',
+    keywords:
+      'Shopify COD app, COD app Shopify, COD verification Shopify, WhatsApp COD confirmation Shopify, COD confirmation WhatsApp India, reduce RTO Shopify, COD to prepaid WhatsApp',
+    hero: {
+      kind: 'video',
+      src: '/marketing/feature-clips/home/cod.mp4?v=20261119d',
+      poster: '/marketing/feature-clips/home/cod-poster.jpg?v=20261119d',
+      // Phones play the same 16:9 film (the portrait home cut crops badly in
+      // this frame); setting mobileSrc is what lets phones autoplay it.
+      mobileSrc: '/marketing/feature-clips/home/cod.mp4?v=20261119d',
+      label: 'A Shopify cash on delivery order confirmed on WhatsApp in TopEdge AI',
+      glow: 'emerald',
+    },
+    bentoTitle: 'Confirm, convert,',
+    bentoAccent: 'then ship',
+    bentoSub: 'Three jobs on every COD order, before it reaches the courier.',
+    bentos: [
+      {
+        titleLead: 'Confirm',
+        titleAccent: 'on WhatsApp',
+        body: 'Each COD order gets a Meta-approved message with Confirm and Cancel buttons the moment it is placed.',
+        image: '/marketing/solutions/sol-cod-confirm-saas.webp',
+        imageAlt: 'Shopify COD order awaiting confirmation, with the WhatsApp message asking the buyer to confirm COD or switch to prepaid',
+      },
+      {
+        titleLead: 'COD to',
+        titleAccent: 'prepaid',
+        body: 'A WhatsApp payment link from a Shopify draft invoice turns a COD order into a paid one. Growth and Scale.',
+        image: '/marketing/solutions/sol-cod-prepaid-saas.jpg',
+        imageAlt: 'COD to prepaid on WhatsApp: confirm, prepaid offer and paid steps with a payment link in the chat',
+      },
+      {
+        titleLead: 'Branch by',
+        titleAccent: 'reply',
+        body: 'COD, prepaid and no-reply orders each take their own path, so a silent buyer gets a different step, not the same message.',
+        image: '/journey-sub-feature/11.webp?v=20261115a',
+        imageAlt: 'Journey branch for a Shopify order: payment is COD, payment is prepaid, or no reply',
+      },
+    ],
+    showcasesTitle: 'Built in',
+    showcasesAccent: 'Journeys',
+    showcases: [
+      {
+        title: 'One journey,',
+        titleAccent: 'your rules',
+        body: 'COD confirmation is a ready journey in the builder: trigger on a COD order, send the template, wait, then branch. You set the wait times and what happens when nobody replies.',
+        image: '/docs/img/journey-cod.webp',
+        imageLabel: 'TopEdge AI journey builder with the COD confirmation journey for Shopify',
+      },
+    ],
+    proofTable: {
+      title: 'What one confirmation',
+      titleAccent: 'costs',
+      columns: ['Line', 'Cost'],
+      rows: [
+        ['WhatsApp utility confirmation, Meta India rate', '₹0.1150 per delivered message'],
+        ['Confirming 500 COD orders', '₹57.50'],
+        ['One returned COD parcel: forward, reverse, repack and holding', '₹180 to ₹240'],
+        ['TopEdge AI plan with COD confirmation', 'From ₹1,999/mo + GST, or $19/mo on the App Store'],
+      ],
+      emphasise: [1, 2],
+      note: 'Meta’s India utility rate from its WhatsApp pricing documentation, re-read 16 November 2026. Parcel cost lines from Amazon Shipping India and ClickPost, read 21 October 2026: national indicative ranges, not customer results. Website plans are billed in INR; App Store plans are billed by Shopify in USD.',
+    },
+    stepsTitle: 'How it',
+    stepsAccent: 'goes live',
+    steps: [
+      { title: 'Connect Shopify and WhatsApp', body: 'Shopify by OAuth, and your own WhatsApp Business account through Meta.' },
+      { title: 'Get the template approved', body: 'Meta approves the confirmation template; journeys cannot send it before that.' },
+      { title: 'Publish the COD journey', body: 'Every new COD order is asked to confirm, and you ship what is confirmed.' },
+    ],
+    relatedTitle: 'Read',
+    relatedAccent: 'next',
+    related: [
+      { label: 'COD confirmation setup guide', href: '/docs/guides/cod-confirmation' },
+      { label: 'Journeys', href: '/features/journeys' },
+      { label: 'Profit & costs', href: '/features/profit-loss' },
+      { label: 'How to reduce RTO with COD confirmation', href: '/blog/how-to-reduce-rto-with-whatsapp-cod-confirmation' },
+      { label: 'COD to prepaid on WhatsApp', href: '/blog/cod-to-prepaid-whatsapp-shopify-india' },
+      { label: 'Pricing', href: '/pricing' },
+    ],
+    ctaTitle: 'Ship only the COD orders buyers confirm',
+    ctaSub: '14 days, 20 orders, no card. Connect Shopify and WhatsApp, approve one template, go live.',
+  },
 };
 
 export function getProductPage(id: ProductPageId): ProductPage {

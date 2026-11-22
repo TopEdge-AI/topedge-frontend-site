@@ -26,7 +26,7 @@ Before changing anything, tell me in a few lines: what the log says is done, tod
 
 ## 2. BUSINESS FACTS
 
-- Canonical sentence, word for word: "TopEdge AI is a Shopify app for Indian D2C brands that automates abandoned cart recovery, COD confirmation and order updates over WhatsApp and email."
+- Canonical sentence, word for word (owner, 22 Nov 2026): "TopEdge AI is all-in-one D2C software for Shopify stores, built as one suite." Cart recovery, COD confirmation and COD to prepaid are modules of the suite, never the whole product. Full rules, module list and the long form: `.claude/skills/topedge-positioning/SKILL.md`. Never write about positioning itself in published copy ("we position ourselves as").
 - **Always write the brand as "TopEdge AI".** Never bare "TopEdge". Only exceptions: the schema alternateName, a customer's own quoted words, and the legal name "TopEdge Ai".
 - ICP: Indian Shopify D2C brands, about 100 to 1,500 orders a month, heavy COD, real RTO cost. Buyer is the founder or growth lead.
 - Peers: Updatrr and Bitespeed. We are NOT a chatbot vendor, BSP, API reseller or bulk sender.
@@ -76,6 +76,11 @@ Before changing anything, tell me in a few lines: what the log says is done, tod
 12. Never mention business arrangements (link exchanges, agreed listings) in published copy.
 13. Keep sentences that already answer long prompts reaching us.
 14. People-first gate (added 20 Nov 2026, from Google's own AI-content guidance; see `seo-audit/2026-11-20/01-google-ai-content-guidance.md`). Google does not penalise AI use; it penalises low-effort, unoriginal, templated or scaled pages. Run `node seo-audit/tools/people-first-audit.mjs dist <out> --only <route>` before and after editing; the page must not gain a flag. Never use humaniser or paraphrasing tools, invented stories or fake authors. Change the visible "Updated" date only when the content really changed.
+
+15. Blog UI overrides (owner, 22 Nov 2026; these win over the account blog SOP skill):
+   - **FAQs are always open.** Every question and answer visible as open cards, no accordion, no click to expand, so readers, Google and AI crawlers read every answer with no interaction. FAQPage schema matches the visible text.
+   - **Direct answer box:** plain solid light yellow background (#FEF9C3), a thin #FDE68A border, no gradient and no left accent bar. Label "Direct answer" in sentence case.
+   - **No code font in articles.** Paths, parameters and file names such as /collections/all or robots.txt are set in the body font, not monospace. Do not wrap them in `<code>` for looks.
 
 ## 6. AEO AND GEO RULES
 

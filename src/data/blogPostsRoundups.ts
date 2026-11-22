@@ -1047,10 +1047,10 @@ ${faqHtml(SEO_EXPERTS_FAQS)}
     readTime: '13 min',
     category: 'Guides',
     author: 'Moksh Patel',
-    image: '/blog/best-shopify-development-companies-india.jpg',
-    imageWebp: '/blog/best-shopify-development-companies-india.webp',
+    image: '/blog/best-shopify-development-companies-india-cover.jpg',
+    imageWebp: '/blog/best-shopify-development-companies-india-cover.webp',
     imageAlt:
-      'Shopify development companies in India: a shortlist card with Shopify partner tier, city and team size for ten agencies',
+      'Shopify development companies in India: a founder beside a Shopify store build, a Partner Directory verified badge and 10 agencies audited',
     keywords: [
       'shopify development company india',
       'shopify development companies in india',
@@ -1427,7 +1427,7 @@ ${faqHtml(SEO_EXPERTS_FAQS)}
 
 <p>Shopify Messaging facts are from <a href="https://help.shopify.com/en/manual/promoting-marketing/create-marketing/shopify-messaging/whatsapp/pricing" target="_blank" rel="noopener noreferrer">Shopify’s WhatsApp pricing page</a>, read 20 November 2026. If you only need email and a WhatsApp nudge to subscribers, Shopify is enough and you should not pay for more.</p>
 
-<p>This is where we fit, and only here. TopEdge AI is a Shopify app for Indian D2C brands that automates abandoned cart recovery, COD confirmation and order updates over WhatsApp and email. It is not an agency and does not build stores. Plans are Launch ₹1,999, Growth ₹3,999 and Scale ₹6,499 a month plus GST, billed in INR on our website, or $19, $39 and $65 a month billed by Shopify in USD on the App Store. See <a href="/pricing">TopEdge AI pricing</a>, the <a href="/whatsapp-abandoned-cart-recovery-app">WhatsApp abandoned cart recovery app</a> and <a href="/features/cod-confirmation">COD confirmation on WhatsApp</a>. For a side-by-side of every recovery tool, read <a href="/blog/best-shopify-app-for-abandoned-cart-recovery-india">the best Shopify app for abandoned cart recovery in India</a>.</p>
+<p>This is where we fit, and only here. TopEdge AI is all-in-one D2C software for Shopify stores, built as one suite. Cart recovery and COD confirmation are two of its modules, next to campaigns, a shopper CRM, live chat and profit reporting. It is not an agency and does not build stores. Plans are Launch ₹1,999, Growth ₹3,999 and Scale ₹6,499 a month plus GST, billed in INR on our website, or $19, $39 and $65 a month billed by Shopify in USD on the App Store. See <a href="/pricing">TopEdge AI pricing</a>, the <a href="/whatsapp-abandoned-cart-recovery-app">WhatsApp abandoned cart recovery app</a> and <a href="/features/cod-confirmation">COD confirmation on WhatsApp</a>. For a side-by-side of every recovery tool, read <a href="/blog/best-shopify-app-for-abandoned-cart-recovery-india">the best Shopify app for abandoned cart recovery in India</a>.</p>
 
 <h2>When you do not need an agency</h2>
 
