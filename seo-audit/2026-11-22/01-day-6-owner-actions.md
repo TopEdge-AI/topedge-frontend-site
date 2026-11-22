@@ -38,9 +38,6 @@ Open each URL in Search Console, URL Inspection, then click Request indexing:
 2. https://topedgeai.com/blog/whatsapp-abandoned-cart-recovery-shopify
 3. https://topedgeai.com/features/cod-confirmation
 
-## 3. Decision: the click400 post
+## 3. The Click400 Technologies entry
 
-The post `/blog/best-shopify-development-companies-india` lists Click400 at number 3 on its own published facts. Its tier, team size and verified clients cannot be checked, because we found no Shopify Partner Directory profile under `click400`, `click400-technologies` or `click400technologies` on 22 Nov 2026. The entry says so in plain words, as every other entry would.
-
-- If Click400 has a Partner Directory profile, ask them for the link. We add the tier, partner since year and verified clients, and the "profile not found" line goes.
-- The post never mentions any arrangement with Click400, and it should stay that way (DAILY-PROMPT rule 5.12). If Click400 links back, that is a link exchange of the kind `2026-11-05/24-outreach-templates.md` says not to repeat. One more is a small risk; a pattern of them is the risk Google's link-spam policy names.
+Updated 22 Nov with the Partner Directory profile you supplied (https://www.shopify.com/partners/directory/partner/click400-technologies2): Select tier, Jodhpur, partner since 2021, team 1 to 10, 25+ active projects, India as top market, six Shopify-verified clients. The "profile not found" lines are gone. The post never mentions any arrangement with Click400, and it should stay that way.

@@ -1314,6 +1314,9 @@ function jsonLdHtml(page) {
   return `<script type="application/ld+json">${JSON.stringify({ '@context': 'https://schema.org', '@graph': graph }).replace(/</g, '\\u003c')}</script>`;
 }
 
+// Same alt as OG_IMAGE_ALT_DEFAULT in src/marketing/data/seoContracts.ts.
+const OG_ALT = 'TopEdge AI, all-in-one D2C software for Shopify stores: order and cart recovery updates on WhatsApp';
+
 function headSeo(page) {
   if (!page.index) return '<meta name="robots" content="noindex,nofollow">';
   const url = `${SITE}/${page.out}`;
@@ -1325,7 +1328,14 @@ function headSeo(page) {
 <meta property="og:description" content="${esc(page.description)}">
 <meta property="og:url" content="${url}">
 <meta property="og:image" content="${SITE}/og-share.jpg">
+<meta property="og:image:width" content="1280">
+<meta property="og:image:height" content="720">
+<meta property="og:image:alt" content="${esc(OG_ALT)}">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="${esc(page.title)}">
+<meta name="twitter:description" content="${esc(page.description)}">
+<meta name="twitter:image" content="${SITE}/og-share.jpg">
+<meta name="twitter:image:alt" content="${esc(OG_ALT)}">
 ${jsonLdHtml(page)}`;
 }
 

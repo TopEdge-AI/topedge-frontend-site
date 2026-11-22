@@ -136,7 +136,7 @@ Stop rule (kept from 15 Nov): if India commercial impressions are flat two weeks
 - [ ] Brand sentence: canonical sentence vs the 15 Nov category line (canonical sentence is in no src file).
 - [ ] Profit calculator: build or not (was old Day 9).
 - [ ] Submit SourceForge, productgrowth.in and CostBench listings with the copy in `2026-11-22/01-day-6-owner-actions.md`.
-- [ ] Ask Click400 for its Shopify Partner Directory link (none found on 22 Nov); if it has one, the post gets its tier and verified clients.
+- [x] Click400 Technologies Partner Directory link supplied by the owner (22 Nov); entry updated with Select tier, 2021, verified clients.
 - [ ] Request indexing in batches of about 10 a day from `2026-11-22/02-gsc-request-indexing.md` (54 URLs).
 - [ ] Decide: home title and H1 still say "WhatsApp App for Shopify India" while the new positioning is the all-in-one D2C suite, and /whatsapp-app-for-shopify now owns that keyword. Recommendation: move the home title and H1 to the suite, as one change, and watch Search Console for 2 weeks.
 - [ ] Update the account blog SOP skill text (sections 5 and 7) to match: FAQs always open, Direct answer plain solid yellow, no code font.

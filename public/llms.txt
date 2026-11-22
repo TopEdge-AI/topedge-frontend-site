@@ -58,7 +58,7 @@ Setup guides and screen-by-screen reference, written for the person running the 
 
 ### Get started
 
-- [TopEdge AI Documentation](https://topedgeai.com/docs): Guides and reference for running WhatsApp automation on Shopify with TopEdge AI, setup, journeys, cart recovery, COD confirmation, templates and billing.
+- [TopEdge AI Documentation: Setup Guides and Reference](https://topedgeai.com/docs): Guides and reference for running WhatsApp automation on Shopify with TopEdge AI, setup, journeys, cart recovery, COD confirmation, templates and billing.
 - [Quickstart: WhatsApp automation for Shopify](https://topedgeai.com/docs/quickstart): Go live with TopEdge AI in about 30 minutes: connect Shopify and WhatsApp, approve an order template, publish one journey and send yourself a test message.
 - [Connect WhatsApp Cloud API to TopEdge AI](https://topedgeai.com/docs/connect-whatsapp): Connect your WhatsApp Business Account to TopEdge AI: embedded Meta signup, the messages webhook, permanent access tokens and fixing a dropped channel.
 - [Connect Shopify to TopEdge AI](https://topedgeai.com/docs/connect-shopify): Install the TopEdge AI Shopify app, understand the permissions it asks for, verify that orders sync, and fix a store stuck on Reconnect.

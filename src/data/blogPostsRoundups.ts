@@ -1078,9 +1078,9 @@ ${faqHtml(SEO_EXPERTS_FAQS)}
         description: 'Platinum tier Shopify partner in Surat since 2013, 11 to 50 people. Best for enterprise-grade theme, POS and international work.',
       },
       {
-        name: 'Click400',
-        url: 'https://click400.com/shopify-development/',
-        description: 'Jodhpur agency for D2C brands that builds the Shopify store and runs design, CRO and performance marketing, with one year of post-launch support included.',
+        name: 'Click400 Technologies',
+        url: 'https://www.shopify.com/partners/directory/partner/click400-technologies2',
+        description: 'Select tier Shopify partner in Jodhpur since 2021 whose top market is India. Builds the Shopify store and runs design, CRO and performance marketing, with one year of post-launch support included.',
       },
       {
         name: 'Softpulse Infotech',
@@ -1122,7 +1122,7 @@ ${faqHtml(SEO_EXPERTS_FAQS)}
     content: `
 <details class="mkt-blog-verdict" open>
 <summary>Direct answer</summary>
-<p>For an Indian D2C brand, start with an agency whose <strong>Shopify Partner Directory</strong> profile lists India in its top markets and a tier that matches your size. On <strong>22 November 2026</strong>, the highest-tier Indian agencies we found were <strong>KLoc Technologies</strong> (Premier, Bangalore) and <strong>Dynamic Dreamz</strong> (Platinum, Surat). For a first store, <strong>Softpulse Infotech</strong>, <strong>ControlF5</strong> and <strong>Click400</strong> are closer fits. Budget the platform first: <strong>Shopify Basic is ₹1,994 a month</strong>, or ₹1,499 billed yearly.</p>
+<p>For an Indian D2C brand, start with an agency whose <strong>Shopify Partner Directory</strong> profile lists India in its top markets and a tier that matches your size. On <strong>22 November 2026</strong>, the highest-tier Indian agencies we found were <strong>KLoc Technologies</strong> (Premier, Bangalore) and <strong>Dynamic Dreamz</strong> (Platinum, Surat). For a first store, <strong>Softpulse Infotech</strong>, <strong>ControlF5</strong> and <strong>Click400 Technologies</strong> are closer fits. Budget the platform first: <strong>Shopify Basic is ₹1,994 a month</strong>, or ₹1,499 billed yearly.</p>
 </details>
 
 <p>A Shopify development company in India builds, migrates or customises your store on Shopify. There are hundreds of them, and most of the pages ranking for this search are written by an agency that puts itself first. This one is written by a Shopify app team, so none of the ten below is us.</p>
@@ -1142,7 +1142,7 @@ ${faqHtml(SEO_EXPERTS_FAQS)}
 
 <p>The tier is easy to misread. In Shopify’s own wording, Select partners “are typically chosen by small and medium-sized businesses”, Plus partners by “mid-market and larger businesses”, Premier partners by “large enterprises” and Platinum partners by “global enterprise businesses”. A higher tier means bigger clients, not a better fit for a store doing 300 orders a month.</p>
 
-<p>We kept agencies headquartered in India and grouped them by the job they suit. Nine have a live profile. The tenth, Click400, is listed on the facts its own website publishes, because we could not find its profile, and its entry says so. The numbers are for reference only.</p>
+<p>We kept agencies headquartered in India with a live profile, and grouped them by the job they suit. The numbers are for reference only. Where we could not verify something, the entry says so.</p>
 
 <h2>The 10 at a glance</h2>
 
@@ -1152,7 +1152,7 @@ ${faqHtml(SEO_EXPERTS_FAQS)}
 <tbody>
 <tr><td>1</td><td>KLoc Technologies</td><td>Bangalore</td><td>Premier</td><td>2015</td><td>51 to 200</td><td>Shopify Plus and complex builds</td></tr>
 <tr><td>2</td><td>Dynamic Dreamz</td><td>Surat</td><td>Platinum</td><td>2013</td><td>11 to 50</td><td>Enterprise theme, POS and international stores</td></tr>
-<tr><td>3</td><td>Click400</td><td>Jodhpur</td><td>Profile not found</td><td>Not stated</td><td>Not stated</td><td>A first D2C store plus design and ads in one team</td></tr>
+<tr><td>3</td><td>Click400 Technologies</td><td>Jodhpur</td><td>Select</td><td>2021</td><td>1 to 10</td><td>A first D2C store plus design and ads in one team</td></tr>
 <tr><td>4</td><td>Softpulse Infotech</td><td>Surat</td><td>Select</td><td>2013</td><td>11 to 50</td><td>Indian brands, set-up to checkout work</td></tr>
 <tr><td>5</td><td>ControlF5</td><td>Indore</td><td>Select</td><td>2016</td><td>11 to 50</td><td>Fashion, jewellery and lifestyle</td></tr>
 <tr><td>6</td><td>Codify Infotech</td><td>Surat</td><td>Plus</td><td>2018</td><td>11 to 50</td><td>Growing brands, checkout and migrations</td></tr>
@@ -1164,7 +1164,7 @@ ${faqHtml(SEO_EXPERTS_FAQS)}
 </table>
 </div>
 
-<p>Tier, city, partner since and team size are from each agency’s Partner Directory profile on 22 November 2026. Click400’s row is from its own website on the same day.</p>
+<p>Tier, city, partner since and team size are from each agency’s Partner Directory profile on 22 November 2026.</p>
 
 <h2>For Shopify Plus and complex builds</h2>
 
@@ -1212,25 +1212,27 @@ ${faqHtml(SEO_EXPERTS_FAQS)}
 
 <p>This group suits a brand launching its first Shopify store or rebuilding one that grew messy, usually on Basic or Grow.</p>
 
-<h3>3. Click400: Best for a D2C launch with design and ads in one team</h3>
-<p><a href="https://click400.com/shopify-development/" target="_blank" rel="noopener noreferrer">Click400</a> sells the whole launch: the Shopify build, UI and UX, conversion work and performance marketing on Google and Meta. Its site lists D2C brands such as Cotton Curls, Z1 Knee Brace, Hybite Foods and Myne Jewels among its projects.</p>
+<h3>3. Click400 Technologies: Best for a D2C launch with design and ads in one team</h3>
+<p><a href="https://click400.com/shopify-development/" target="_blank" rel="noopener noreferrer">Click400 Technologies</a> sells the whole launch: the Shopify build, UI and UX, conversion work and performance marketing on Google and Meta. Its Partner Directory profile lists India as its top market, ahead of Spain and the United States, with furniture, apparel and beauty as its top industries.</p>
 <p>The detail worth noting is support. Its Shopify page says “Every Shopify build ships with a full year of complimentary support”, covering bug fixes and performance checks. Get that in the contract, because the first months after launch are when themes and apps clash.</p>
-<p><strong>Based in:</strong> Jodhpur (office address on its contact page).</p>
-<p><strong>Shopify tier:</strong> We found no public Partner Directory profile on 22 November 2026; its site states “Shopify Partner status Verified”. Ask for the profile link.</p>
-<p><strong>Known for:</strong> Store builds, Shopify Plus, migrations from WooCommerce, Magento and BigCommerce, custom apps, plus design, CRO and ads. Its home page claims 150+ Shopify stores built.</p>
+<p><strong>Based in:</strong> Jodhpur, working in English, Spanish and Hindi.</p>
+<p><strong>Shopify tier:</strong> Select, partner since 2021.</p>
+<p><strong>Team size:</strong> 1 to 10 people, 25+ active projects (Shopify’s estimates).</p>
+<p><strong>Verified clients:</strong> Lila Dry Fruits, Z1 Knee Brace, Homes of Rajasthan, The Manukonda, Ai+ Store, Wooden Bazar.</p>
 <p><strong>Support:</strong> One year of post-launch support included, per its Shopify page.</p>
 <p><strong>Pros:</strong></p>
 <ul>
 <li>One team for the store, the design and the ads, so nobody blames the other agency for a weak launch</li>
+<li>India is its top market, with six Indian D2C clients that Shopify has verified</li>
 <li>A year of included support is longer than most build contracts offer</li>
 </ul>
 <p><strong>Cons:</strong></p>
 <ul>
-<li>No Partner Directory profile we could find, so tier, team size and verified clients cannot be checked independently</li>
-<li>Its site has Shopify pages for dozens of cities; the office we could confirm is in Jodhpur, so ask where your team sits</li>
+<li>A small team (1 to 10 people) running 25+ projects, so confirm who works on your account and how fast they respond</li>
+<li>Partner since 2021, newer to the programme than most agencies on this list</li>
 </ul>
-<p><strong>Verdict:</strong> A good fit for a founder who wants one partner from launch to first campaigns. Ask for the Partner Directory link before you sign.</p>
-<p class="mkt-blog-pick-cta"><a href="https://click400.com/shopify-development/" target="_blank" rel="noopener noreferrer">Visit Click400</a></p>
+<p><strong>Verdict:</strong> A good fit for an Indian D2C founder who wants one partner from launch to first campaigns, with a year of support behind the build.</p>
+<p class="mkt-blog-pick-cta"><a href="https://click400.com/shopify-development/" target="_blank" rel="noopener noreferrer">Visit Click400 Technologies</a><a href="https://www.shopify.com/partners/directory/partner/click400-technologies2" target="_blank" rel="noopener noreferrer">See Partner Directory profile</a></p>
 
 <h3>4. Softpulse Infotech: Best for Indian brands that want one team from set-up to checkout</h3>
 <p>Softpulse is one of two agencies here whose profile lists India first among its top markets, ahead of the United States and the United Kingdom. Its services run from new store set-up to checkout customisation and Shopify Functions.</p>
@@ -1443,7 +1445,7 @@ ${faqHtml(SEO_EXPERTS_FAQS)}
 
 ${faqHtml(SHOPIFY_DEV_INDIA_FAQS, 'Questions founders ask about Shopify agencies')}
 
-<p class="mkt-blog-footnote">Sources. Agency tier, city, languages, team size, active projects, partner since year, top markets, services and verified clients were read from each agency’s profile on the <a href="https://www.shopify.com/partners/directory" target="_blank" rel="noopener noreferrer">Shopify Partner Directory</a> on 22 November 2026, and tier definitions are quoted from the same profiles. Click400’s services, support terms, claims and address were read from <a href="https://click400.com/shopify-development/" target="_blank" rel="noopener noreferrer">its own site</a> the same day. Shopify plan prices: <a href="https://www.shopify.com/in/pricing" target="_blank" rel="noopener noreferrer">Shopify India pricing</a>, 22 November 2026. Directory data changes; check the profile on the day you hire.</p>
+<p class="mkt-blog-footnote">Sources. Agency tier, city, languages, team size, active projects, partner since year, top markets, services and verified clients were read from each agency’s profile on the <a href="https://www.shopify.com/partners/directory" target="_blank" rel="noopener noreferrer">Shopify Partner Directory</a> on 22 November 2026, and tier definitions are quoted from the same profiles. Click400 Technologies’ services and support terms were read from <a href="https://click400.com/shopify-development/" target="_blank" rel="noopener noreferrer">its own site</a> the same day. Shopify plan prices: <a href="https://www.shopify.com/in/pricing" target="_blank" rel="noopener noreferrer">Shopify India pricing</a>, 22 November 2026. Directory data changes; check the profile on the day you hire.</p>
 `,
   },
 ];

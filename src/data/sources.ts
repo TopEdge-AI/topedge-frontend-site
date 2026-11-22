@@ -1198,7 +1198,7 @@ export const SOURCES = {
     label: 'Click400 Shopify development',
     publisher: 'Click400 Technologies',
     claim:
-      'Read 22 November 2026. Services: custom Shopify store development, Shopify Plus development, multi-store and international, platform migrations from WooCommerce, Magento and BigCommerce, custom Shopify apps, ERP, API and headless (Hydrogen). "Every Shopify build ships with a full year of complimentary support – bug fixes, performance checks and priority response, at no extra cost." Agency vs freelancer table lists "Shopify Partner status Verified" and "Post-launch support 1 year included". Home page (same day): "150+ Shopify Stores Built", "50+ Brands Scaled", services include UI/UX, CRO, performance marketing (Google Ads, Meta Ads) and SEO. About page: "300+ Projects Delivered", "7+ Years of Experience". Contact page: 19, Saraswati Nagar, near Hotel Monarch, Jodhpur 342005. Portfolio page lists Rohan, Cotton Curls, Greensense, Z1 Knee Brace, Hybite Foods, Highnotes Fashion, Myne Jewels, Revel Home and others. No Shopify Partner Directory profile was found under the handles click400, click400-technologies or click400technologies on the same day.',
+      'Read 22 November 2026. Services: custom Shopify store development, Shopify Plus development, multi-store and international, platform migrations from WooCommerce, Magento and BigCommerce, custom Shopify apps, ERP, API and headless (Hydrogen). "Every Shopify build ships with a full year of complimentary support – bug fixes, performance checks and priority response, at no extra cost." Agency vs freelancer table lists "Shopify Partner status Verified" and "Post-launch support 1 year included". Home page (same day): "150+ Shopify Stores Built", "50+ Brands Scaled", services include UI/UX, CRO, performance marketing (Google Ads, Meta Ads) and SEO. About page: "300+ Projects Delivered", "7+ Years of Experience". Contact page: 19, Saraswati Nagar, near Hotel Monarch, Jodhpur 342005. Portfolio page lists Rohan, Cotton Curls, Greensense, Z1 Knee Brace, Hybite Foods, Highnotes Fashion, Myne Jewels, Revel Home and others.',
     verified: '2026-11-22',
   },
   klocPartnerProfile: {
@@ -1379,6 +1379,15 @@ export const SOURCES = {
     publisher: 'Meta',
     claim:
       'Read 22 November 2026. "Every template has a quality rating based on usage, customer feedback, and engagement." GREEN: high quality, little to no negative feedback. YELLOW: medium quality, negative feedback from multiple users or low read-rates, "may soon become paused or disabled". RED: low quality, "in danger of being paused or disabled soon".',
+    verified: '2026-11-22',
+  },
+  click400PartnerProfile: {
+    id: 'click400PartnerProfile',
+    url: 'https://www.shopify.com/partners/directory/partner/click400-technologies2',
+    label: 'Click400 Technologies on the Shopify Partner Directory',
+    publisher: 'Shopify',
+    claim:
+      'Read 22 November 2026 (link supplied by the owner). Click400 Technologies: Select tier, Jodhpur, India; English, Spanish, Hindi; estimated team 1–10; estimated active projects 25+; partner since 2021; top markets India, Spain, United States; top industries Furniture, Apparel & Accessories, Health & Beauty; top services storefront and theme customization, new store setup, platform migration, retail and POS, products and metafield management, blog and content management; featured clients verified by Shopify: Lila Dry Fruits, z1kneebrace, Homes of Rajasthan, The Manukonda, Ai+ Store, Wooden Bazar.',
     verified: '2026-11-22',
   },
 } as const satisfies Record<string, Source>;

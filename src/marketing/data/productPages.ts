@@ -1998,40 +1998,11 @@ export const PRODUCT_PAGES: Record<ProductPageId, ProductPage> = {
     bentoTitle: 'Confirm, convert,',
     bentoAccent: 'then ship',
     bentoSub: 'Three jobs on every COD order, before it reaches the courier.',
-    bentos: [
-      {
-        titleLead: 'Confirm',
-        titleAccent: 'on WhatsApp',
-        body: 'Each COD order gets a Meta-approved message with Confirm and Cancel buttons the moment it is placed.',
-        image: '/marketing/solutions/sol-cod-confirm-saas.webp',
-        imageAlt: 'Shopify COD order awaiting confirmation, with the WhatsApp message asking the buyer to confirm COD or switch to prepaid',
-      },
-      {
-        titleLead: 'COD to',
-        titleAccent: 'prepaid',
-        body: 'A WhatsApp payment link from a Shopify draft invoice turns a COD order into a paid one. Growth and Scale.',
-        image: '/marketing/solutions/sol-cod-prepaid-saas.jpg',
-        imageAlt: 'COD to prepaid on WhatsApp: confirm, prepaid offer and paid steps with a payment link in the chat',
-      },
-      {
-        titleLead: 'Branch by',
-        titleAccent: 'reply',
-        body: 'COD, prepaid and no-reply orders each take their own path, so a silent buyer gets a different step, not the same message.',
-        image: '/journey-sub-feature/11.webp?v=20261115a',
-        imageAlt: 'Journey branch for a Shopify order: payment is COD, payment is prepaid, or no reply',
-      },
-    ],
+    // Video only (owner, 22 Nov 2026): no image tiles; the hero film shows the product.
+    bentos: [],
     showcasesTitle: 'Built in',
     showcasesAccent: 'Journeys',
-    showcases: [
-      {
-        title: 'One journey,',
-        titleAccent: 'your rules',
-        body: 'COD confirmation is a ready journey in the builder: trigger on a COD order, send the template, wait, then branch. You set the wait times and what happens when nobody replies.',
-        image: '/docs/img/journey-cod.webp',
-        imageLabel: 'TopEdge AI journey builder with the COD confirmation journey for Shopify',
-      },
-    ],
+    showcases: [],
     proofTable: {
       title: 'What one confirmation',
       titleAccent: 'costs',

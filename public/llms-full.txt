@@ -217,7 +217,7 @@ COD confirmation is the Shopify COD app module of TopEdge AI, all-in-one D2C sof
 
 ## Documentation
 
-### TopEdge AI Documentation
+### TopEdge AI Documentation: Setup Guides and Reference
 
 https://topedgeai.com/docs · Get started · updated 2026-11-11
 
@@ -698,7 +698,7 @@ Sourcing: Board compiled Sep 2026 from TopEdge AI product positioning vs publicl
 
 https://topedgeai.com/blog/best-shopify-development-companies-india · published 2026-11-22 · updated 2026-11-22 · by Moksh Patel
 
-For an Indian D2C brand, start with an agency whose Shopify Partner Directory profile lists India in its top markets and a tier that matches your size. On 22 November 2026 , the highest-tier Indian agencies we found were KLoc Technologies (Premier, Bangalore) and Dynamic Dreamz (Platinum, Surat). For a first store, Softpulse Infotech , ControlF5 and Click400 are closer fits. Budget the platform first: Shopify Basic is ₹1,994 a month , or ₹1,499 billed yearly.
+For an Indian D2C brand, start with an agency whose Shopify Partner Directory profile lists India in its top markets and a tier that matches your size. On 22 November 2026 , the highest-tier Indian agencies we found were KLoc Technologies (Premier, Bangalore) and Dynamic Dreamz (Platinum, Surat). For a first store, Softpulse Infotech , ControlF5 and Click400 Technologies are closer fits. Budget the platform first: Shopify Basic is ₹1,994 a month , or ₹1,499 billed yearly.
 
 - **Which is the best Shopify development company in India?** There is no single best one; the right agency depends on the size of the build. On Shopify’s own Partner Directory on 22 November 2026, KLoc Technologies (Premier, Bangalore) and Dynamic Dreamz (Platinum, Surat) held the highest tiers among Indian agencies we checked, which suits Shopify Plus and complex builds. For a first D2C store, a Select or Plus tier agency with India in its top markets, such as Softpulse Infotech or ControlF5, is usually a closer fit.
 - **How much does Shopify store development cost in India?** The agency fee is quote-based: none of the ten agencies here publishes a build price on its Shopify Partner Directory profile. What you can check is the platform fee. Shopify’s India pricing page, read on 22 November 2026, lists Basic at ₹1,994 a month billed monthly or ₹1,499 billed yearly, and Grow at ₹7,447 or ₹5,599. Ask every agency for a fixed-scope quote on the same brief so the numbers compare.
