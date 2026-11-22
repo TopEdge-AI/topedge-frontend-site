@@ -126,6 +126,7 @@ Setup guides and screen-by-screen reference, written for the person running the 
 
 ## Playbooks
 
+- [Shopify Development Companies in India (2027)](https://topedgeai.com/blog/best-shopify-development-companies-india): Shopify development company India shortlist: 10 agencies checked on Shopify’s Partner Directory on 22 Nov 2026, with tier, city, team size and launch costs.
 - [10 Best Shipping Aggregators & Logistics Tools in India 2027](https://topedgeai.com/blog/best-shipping-aggregators-logistics-tools-india): The 10 best shipping aggregators and logistics tools for Indian D2C brands in 2027: Shiprocket, ClickPost and 8 more, with prices checked in November.
 - [RTO in Ecommerce: Meaning, Full Form and Cost](https://topedgeai.com/blog/rto-meaning-ecommerce): RTO in ecommerce means Return to Origin: a parcel the buyer never accepts comes back to you. What one RTO costs, RTO vs NDR, and 5 ways to cut it.
 - [Add a WhatsApp Chat Button to Shopify (3 Ways)](https://topedgeai.com/blog/add-whatsapp-chat-button-shopify): Add a WhatsApp chat button to your Shopify store three ways: a free wa.me link, a theme code snippet or an app widget. Steps, code and a comparison.
@@ -167,11 +168,11 @@ Setup guides and screen-by-screen reference, written for the person running the 
 - [Meta WhatsApp Cloud API Templates for Shopify](https://topedgeai.com/blog/meta-whatsapp-cloud-api-shopify-templates): A plain-English guide to Meta WhatsApp Cloud API templates for Shopify ecommerce: categories, approval tips, journey gating, and transparent rates.
 - [WhatsApp vs Email Marketing for D2C India](https://topedgeai.com/blog/ecommerce-automation-whatsapp-vs-email-india): WhatsApp vs email marketing for D2C India: which channel owns cart recovery, COD checks and order updates, what email keeps, and how to sequence both.
 - [What to Automate First on Shopify WhatsApp](https://topedgeai.com/blog/shopify-whatsapp-automation-what-to-automate-first): What to automate first on Shopify WhatsApp: abandoned cart, then COD confirmation, order updates and campaigns, in a 14-day rollout for Indian D2C stores.
-- [WhatsApp Abandoned Cart Recovery: Shopify India](https://topedgeai.com/blog/whatsapp-abandoned-cart-recovery-shopify): WhatsApp abandoned cart recovery for Shopify India: cart vs checkout events, timing, template rules, opt-in, and why a 3-step sequence costs ₹2.59 at most.
+- [WhatsApp Abandoned Cart Recovery: Shopify India](https://topedgeai.com/blog/whatsapp-abandoned-cart-recovery-shopify): How WhatsApp abandoned cart recovery works on Shopify in India: events, timing, opt-in, templates, and why 3 reminders cost ₹2.59 at most.
 
 ## Canonical URL directory
 
-All 168 indexable URLs on this domain, no trailing slash except the root.
+All 169 indexable URLs on this domain, no trailing slash except the root.
 
 - https://topedgeai.com/
 - https://topedgeai.com/pricing
@@ -299,6 +300,7 @@ All 168 indexable URLs on this domain, no trailing slash except the root.
 - https://topedgeai.com/blog/rto-meaning-ecommerce
 - https://topedgeai.com/blog/add-whatsapp-chat-button-shopify
 - https://topedgeai.com/blog/best-shipping-aggregators-logistics-tools-india
+- https://topedgeai.com/blog/best-shopify-development-companies-india
 - https://topedgeai.com/docs
 - https://topedgeai.com/docs/quickstart
 - https://topedgeai.com/docs/connect-whatsapp

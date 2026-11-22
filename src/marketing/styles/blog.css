@@ -364,20 +364,21 @@
  * the h1 was barely a step above the article's h2s. Both now clear the body.
  */
 .mkt-blog-title {
-  margin-top: 0.95rem;
+  /* SOP 4B: breadcrumb, 12px, H1. SOP 2A: 26 to 30px phone, up to 38px desktop, 700. */
+  margin-top: 0;
   font-family: var(--mkt-font);
-  font-size: clamp(1.625rem, 2.4vw, 2rem);
-  font-weight: 600;
-  line-height: 1.16;
-  letter-spacing: -0.03em;
+  font-size: clamp(1.625rem, 2.6vw, 2.375rem);
+  font-weight: 700;
+  line-height: 1.18;
+  letter-spacing: -0.025em;
   color: var(--mkt-ink);
   text-wrap: balance;
 }
 
 .mkt-blog-lede {
-  margin-top: 1.1rem;
+  margin-top: 12px;
   font-size: 1rem;
-  line-height: 1.65;
+  line-height: 1.55;
   color: var(--mkt-body-2);
   text-wrap: pretty;
 }
@@ -393,7 +394,7 @@
   flex-wrap: wrap;
   align-items: center;
   gap: 0.5rem 0.85rem;
-  margin-top: 1.35rem;
+  margin-top: 1rem;
   /* This line carries the byline, the date, the reading time and the
      revision date — the things a reader checks before deciding whether a
      post is worth their time — so it is set at a size those can actually be
@@ -513,14 +514,16 @@
 .mkt-blog-layout {
   --mkt-blog-measure: 100%;
   --mkt-blog-body-size: 1rem;
-  --mkt-blog-body-lh: 1.8;
+  /* Blog SOP 2A (22 Nov 2026): 1.5 to 1.62 at every width. 1.8 to 1.9 broke
+     each paragraph into floating lines and showed eight lines a phone screen. */
+  --mkt-blog-body-lh: 1.6;
 }
 
 @media (min-width: 640px) {
   .mkt-blog-layout {
     --mkt-blog-measure: 42rem;
     --mkt-blog-body-size: 1rem;
-    --mkt-blog-body-lh: 1.85;
+    --mkt-blog-body-lh: 1.6;
   }
 }
 
@@ -531,8 +534,10 @@
     --mkt-blog-measure: 100%;
     /* 16px, matching Getgabs (Wati runs 18px). At 18px across this wide a
        column the page read as oversized; the extra leading keeps it airy. */
-    --mkt-blog-body-size: 1rem;
-    --mkt-blog-body-lh: 1.9;
+    --mkt-blog-body-size: 1.0625rem;
+    --mkt-blog-body-lh: 1.58;
+    /* Prose holds a 65 to 75ch measure; tables and cards still span the column. */
+    --mkt-blog-prose-measure: 47rem;
   }
 }
 
@@ -592,9 +597,21 @@
   margin-bottom: 0;
 }
 
-/* About 25px at 18px: a clear paragraph break, still less than one line. */
+/* SOP 2B: 14px on a phone, 16px on desktop. Never a double gap. */
 .mkt-blog-prose p {
-  margin: 0 0 calc(var(--mkt-blog-rhythm) * 1.35);
+  margin: 0 0 0.875rem;
+}
+
+@media (min-width: 768px) {
+  .mkt-blog-prose p {
+    margin-bottom: 1rem;
+  }
+}
+
+@media (min-width: 1100px) {
+  .mkt-blog-prose > :is(p, ul, ol, blockquote, h2, h3, h4) {
+    max-width: var(--mkt-blog-prose-measure, none);
+  }
 }
 
 .mkt-nowrap {
@@ -612,10 +629,11 @@
  * Sizes are in em so they track whatever body size the breakpoint set.
  */
 .mkt-blog-prose h2 {
-  margin: calc(var(--mkt-blog-rhythm) * 2) 0 calc(var(--mkt-blog-rhythm) * 0.7);
+  /* SOP 2C: 32px above, 12px below on a phone; 40px above on desktop. */
+  margin: 2rem 0 0.75rem;
   font-family: var(--mkt-font);
   font-size: var(--mkt-blog-h2);
-  font-weight: 650;
+  font-weight: 700;
   line-height: 1.22;
   letter-spacing: -0.022em;
   color: var(--mkt-ink);
@@ -623,7 +641,7 @@
 }
 
 .mkt-blog-prose h3 {
-  margin: calc(var(--mkt-blog-rhythm) * 1.6) 0 calc(var(--mkt-blog-rhythm) * 0.5);
+  margin: 1.375rem 0 0.5rem;
   font-family: var(--mkt-font);
   font-size: var(--mkt-blog-h3);
   font-weight: 650;
@@ -633,22 +651,32 @@
   text-wrap: balance;
 }
 
+@media (min-width: 768px) {
+  .mkt-blog-prose h2 {
+    margin-top: 2.5rem;
+  }
+
+  .mkt-blog-prose h3 {
+    margin-top: 1.75rem;
+  }
+}
+
 /* A subhead straight under its section head needs the gap closed, not opened. */
 .mkt-blog-prose h2 + h3 {
-  margin-top: calc(var(--mkt-blog-rhythm) * 1.1);
+  margin-top: 1rem;
 }
 
 /* Lenis (desktop) applies its own anchor offset and also reads scroll-margin, so only set it where Lenis is off. */
 @media (max-width: 900px) {
   .mkt-blog-prose [id] {
-    scroll-margin-top: calc(var(--marketing-nav-h, 76px) + 0.75rem);
+    scroll-margin-top: calc(var(--marketing-nav-h, 76px) + 1.5rem);
   }
 }
 
 .mkt-blog-prose ul,
 .mkt-blog-prose ol {
-  margin: 0 0 calc(var(--mkt-blog-rhythm) * 1.45);
-  padding-left: 1.4em;
+  margin: 1rem 0;
+  padding-left: 1.25rem;
 }
 
 /*
@@ -656,8 +684,8 @@
  * three-line bullet reads as three bullets.
  */
 .mkt-blog-prose li {
-  margin: 0.7em 0;
-  padding-left: 0.3em;
+  margin: 0.45rem 0;
+  padding-left: 0.2em;
 }
 
 .mkt-blog-prose li > ul,
@@ -720,7 +748,7 @@
 }
 
 .mkt-blog-prose figure {
-  margin: calc(var(--mkt-blog-rhythm) * 1.8) 0;
+  margin: 1.375rem 0;
 }
 
 .mkt-blog-prose figcaption {
@@ -741,7 +769,7 @@
  * a note, it is prose, so leave it in the body.
  */
 .mkt-blog-prose .mkt-blog-callout {
-  margin: calc(var(--mkt-blog-rhythm) * 1.7) 0;
+  margin: 1.375rem 0;
   padding: 1.2rem 1.35rem 1.25rem;
   border: 1px solid var(--mkt-border);
   border-radius: 14px;
@@ -773,7 +801,7 @@
 .mkt-blog-prose .mkt-blog-callout p {
   margin: 0 0 0.7em;
   font-size: 1em;
-  line-height: 1.7;
+  line-height: 1.58;
 }
 
 .mkt-blog-prose .mkt-blog-callout > *:last-child {
@@ -791,17 +819,23 @@
   line-height: 1.65;
 }
 
+/*
+ * Direct answer / quick verdict (blog SOP section 5, 22 Nov 2026): a warm
+ * amber callout, never the purple of the page chrome, so the eye finds the
+ * answer in a second.
+ */
 .mkt-blog-prose .mkt-blog-verdict {
-  margin: 0 0 2rem;
-  padding: 1.25rem 1.25rem 1.35rem;
-  border: 1px solid #e6e0f8;
-  border-radius: 16px;
-  background: #fbfaff;
+  margin: 0 0 1.5rem;
+  padding: 1rem 1rem 1.05rem;
+  border: 1px solid #fde68a;
+  border-left: 3px solid #d97706;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #fffbeb 0%, #fef9c3 45%, #fffdf7 100%);
 }
 
 @media (min-width: 640px) {
   .mkt-blog-prose .mkt-blog-verdict {
-    padding: 1.5rem 1.75rem 1.6rem;
+    padding: 1.2rem 1.35rem 1.3rem;
   }
 }
 
@@ -809,12 +843,12 @@
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  margin: 0;
-  font-size: var(--mkt-blog-small);
+  margin: 0 0 0.5rem;
+  font-size: 0.875rem;
   font-weight: 600;
-  letter-spacing: 0.01em;
+  letter-spacing: 0;
   line-height: 1.4;
-  color: var(--mkt-violet);
+  color: #92400e;
   list-style: none;
   pointer-events: none;
 }
@@ -822,11 +856,11 @@
 .mkt-blog-prose .mkt-blog-verdict :is(summary, .mkt-blog-verdict__label)::before {
   content: '';
   flex: none;
-  width: 0.45rem;
-  height: 0.45rem;
+  width: 8px;
+  height: 8px;
   border-radius: 999px;
-  background: var(--mkt-violet);
-  box-shadow: 0 0 0 4px rgba(124, 58, 237, 0.14);
+  background: #d97706;
+  box-shadow: 0 0 0 4px rgba(245, 158, 11, 0.2);
 }
 
 .mkt-blog-prose .mkt-blog-verdict summary::-webkit-details-marker {
@@ -834,15 +868,19 @@
 }
 
 .mkt-blog-prose .mkt-blog-verdict p:not(.mkt-blog-verdict__label) {
-  margin: 0.75rem 0 0;
+  margin: 0.5rem 0 0;
   font-size: 1em;
-  line-height: 1.65;
-  color: var(--mkt-body-2);
+  line-height: 1.58;
+  color: #1e293b;
+}
+
+.mkt-blog-prose .mkt-blog-verdict p:not(.mkt-blog-verdict__label):first-of-type {
+  margin-top: 0;
 }
 
 .mkt-blog-prose .mkt-blog-verdict p:not(.mkt-blog-verdict__label) strong {
-  font-weight: 650;
-  color: var(--mkt-ink);
+  font-weight: 600;
+  color: #111827;
 }
 
 .mkt-blog-prose .mkt-blog-verdict .mkt-blog-verdict__lead {
@@ -854,7 +892,11 @@
 .mkt-blog-prose .mkt-blog-verdict ul {
   margin: 0.5rem 0 0;
   padding-left: 1.2rem;
-  color: var(--mkt-body-2);
+  color: #1e293b;
+}
+
+.mkt-blog-prose .mkt-blog-verdict li::marker {
+  color: #b45309;
 }
 
 .mkt-blog-prose .mkt-blog-verdict li {
@@ -917,17 +959,14 @@
  * screen to swipe to.
  */
 .mkt-blog-prose .mkt-blog-table-wrap {
-  --mkt-table-head: #f6f4fd;
-  --mkt-table-stripe: #fbfaff;
-  --mkt-table-line: #ece8f6;
+  --mkt-table-head: #f8fafc;
+  --mkt-table-stripe: #ffffff;
+  --mkt-table-line: #e5e7eb;
   position: relative;
-  margin: calc(var(--mkt-blog-rhythm) * 1.8) 0;
+  margin: 1.375rem 0;
   border: 1px solid var(--mkt-table-line);
-  border-radius: 16px;
+  border-radius: 12px;
   background: #fff;
-  box-shadow:
-    0 1px 2px rgba(15, 23, 42, 0.04),
-    0 8px 24px -12px rgba(76, 29, 149, 0.12);
   overflow: hidden;
 }
 
@@ -940,11 +979,19 @@
   font-size: 0.78rem;
   font-weight: 500;
   line-height: 1.4;
-  color: var(--mkt-violet);
+  color: #64748b;
 }
 
-.mkt-blog-prose .mkt-blog-table-wrap.is-scrollable .mkt-blog-table-hint {
+.mkt-blog-prose .mkt-blog-table-wrap.is-scrollable::before {
+  content: 'Swipe sideways to see every column';
   display: block;
+  padding: 0.5rem 1rem;
+  border-bottom: 1px solid var(--mkt-table-line);
+  background: var(--mkt-table-head);
+  font-size: 0.78rem;
+  font-weight: 500;
+  line-height: 1.4;
+  color: #64748b;
 }
 
 .mkt-blog-prose .mkt-blog-table-scroll {
@@ -979,24 +1026,59 @@
   width: 100%;
   border-collapse: separate;
   border-spacing: 0;
-  font-size: var(--mkt-blog-small);
-  line-height: 1.55;
+  font-size: 0.875rem;
+  line-height: 1.5;
   font-variant-numeric: tabular-nums;
 }
 
 .mkt-blog-prose th,
 .mkt-blog-prose td {
-  padding: 0.85em 1em;
+  padding: 14px 16px;
   text-align: left;
   vertical-align: top;
-  border-bottom: 1px solid var(--mkt-table-line);
+  border-bottom: 1px solid #eef2f6;
+  color: #334155;
 }
 
 .mkt-blog-prose th {
   background: var(--mkt-table-head);
+  border-bottom-color: #e2e8f0;
   font-weight: 600;
-  color: var(--mkt-ink);
+  text-transform: none;
+  letter-spacing: 0;
+  color: #0f172a;
   white-space: nowrap;
+}
+
+/* SOP 1A: the entity column is the anchor of every row. */
+.mkt-blog-prose td:first-child {
+  font-weight: 600;
+  color: #0f172a;
+}
+
+/* SOP 9A: matrix tables (numbers, plans, tiers) get vertical dividers. */
+.mkt-blog-prose .mkt-blog-table--matrix :is(th, td) + :is(th, td) {
+  border-left: 1px solid #e5e7eb;
+}
+
+.mkt-blog-prose .mkt-blog-table--matrix td:not(:first-child) {
+  font-variant-numeric: tabular-nums;
+}
+
+/* SOP 1A: a rank column never absorbs width; the name beside it is the anchor. */
+.mkt-blog-prose .mkt-blog-table--ranked :is(th, td):first-child {
+  width: 40px;
+  max-width: 44px;
+  padding-left: 10px;
+  padding-right: 8px;
+  white-space: nowrap;
+  font-weight: 500;
+  color: #64748b;
+}
+
+.mkt-blog-prose .mkt-blog-table--ranked td:nth-child(2) {
+  font-weight: 600;
+  color: #0f172a;
 }
 
 .mkt-blog-prose tbody tr:nth-child(even) td {
@@ -1007,13 +1089,9 @@
   border-bottom: none;
 }
 
-.mkt-blog-prose td:first-child {
-  color: var(--mkt-ink);
-}
-
 @media (hover: hover) {
   .mkt-blog-prose tbody tr:hover td {
-    background: #f4f1fc;
+    background: #f8fafc;
   }
 }
 
@@ -1028,25 +1106,39 @@
     min-width: 100%;
   }
 
+  .mkt-blog-prose table {
+    font-size: 0.8125rem;
+  }
+
   .mkt-blog-prose th,
   .mkt-blog-prose td {
-    min-width: 7.5rem;
+    min-width: 6.5rem;
     max-width: 15rem;
-    padding: 0.75em 0.9em;
+    padding: 10px 11px;
   }
 
   .mkt-blog-prose th {
     white-space: normal;
   }
 
+  /* SOP 1B option A: one compact, opaque pinned column, capped at 145px. */
   .mkt-blog-prose :is(th, td):first-child {
     position: sticky;
     left: 0;
     z-index: 1;
-    min-width: 8.5rem;
-    max-width: 10.5rem;
+    min-width: 7rem;
+    max-width: 9rem;
     background: #fff;
-    box-shadow: inset -1px 0 0 var(--mkt-table-line);
+    box-shadow: inset -1px 0 0 #e2e8f0;
+  }
+
+  /* SOP 1B option B: ranked tables scroll as one unit, rank column 32 to 36px. */
+  .mkt-blog-prose .mkt-blog-table--ranked :is(th, td):first-child {
+    position: static;
+    min-width: 32px;
+    width: 34px;
+    max-width: 36px;
+    box-shadow: none;
   }
 
   .mkt-blog-prose th:first-child {
@@ -1056,6 +1148,10 @@
 
   .mkt-blog-prose tbody tr:nth-child(even) td:first-child {
     background: var(--mkt-table-stripe);
+  }
+
+  .mkt-blog-prose .mkt-blog-table--ranked .mkt-blog-table-scroll :is(th, td):first-child {
+    box-shadow: none !important;
   }
 
   /* Once the reader has scrolled, a soft shadow shows the pinned column is floating over the rest. */
@@ -1090,111 +1186,174 @@
   border-top: 0;
 }
 
-/* Shared by inline FAQs in post content and the template's fallback FAQ block; always expanded. */
 /*
- * FAQ list.
+ * FAQ accordion (blog SOP section 7, 22 Nov 2026).
  *
- * Reworked 3 Nov 2026. The old version packed a six-sentence answer into one
- * block at 1.65 line-height, which the owner correctly called unreadable. Two
- * fixes, and they work together: `faqAnswerHtml` in src/data/faqHtml.ts breaks
- * a long answer into two or three paragraphs, and the spacing below gives
- * those paragraphs somewhere to breathe. The question now carries a marker so
- * the eye can find the next one while scrolling.
+ * Every FAQ, inline or from the template, is a <details> card: collapsed by
+ * default, question in an H3 inside the summary, a round chevron on the right
+ * that turns purple and rotates when open. The answer is always in the served
+ * HTML, so crawlers and the FAQPage schema read it without a click. The
+ * open animation uses ::details-content where the browser supports it and
+ * simply snaps open where it does not.
  */
 .mkt-blog-faq {
   display: flex;
   flex-direction: column;
-  gap: 0.9rem;
+  gap: 10px;
   margin: 1rem 0 1.5rem;
   font-size: var(--mkt-blog-body-size, 1rem);
-  line-height: var(--mkt-blog-body-lh, 1.6);
+  line-height: 1.58;
 }
 
-.mkt-blog-faq :is(.mkt-blog-faq__item, details) {
-  padding: 1.15rem 1.2rem 1.25rem;
-  border: 1px solid var(--mkt-border);
-  border-radius: 14px;
-  background: #fff;
+.mkt-blog-faq .mkt-blog-faq__item {
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  background: #ffffff;
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04);
+  transition: border-color 0.2s ease;
+  interpolate-size: allow-keywords;
 }
 
-@media (min-width: 640px) {
-  .mkt-blog-faq :is(.mkt-blog-faq__item, details) {
-    padding: 1.4rem 1.6rem 1.5rem;
-  }
+.mkt-blog-faq .mkt-blog-faq__item::details-content {
+  block-size: 0;
+  overflow: hidden;
+  transition: block-size 0.22s ease, content-visibility 0.22s allow-discrete;
 }
 
-.mkt-blog-faq :is(.mkt-blog-faq__q, summary) {
+.mkt-blog-faq .mkt-blog-faq__item[open]::details-content {
+  block-size: auto;
+}
+
+.mkt-blog-faq .mkt-blog-faq__item[open] {
+  border-color: rgba(124, 58, 237, 0.35);
+}
+
+.mkt-blog-faq .mkt-blog-faq__q {
   display: flex;
-  align-items: baseline;
-  gap: 0.6rem;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  width: 100%;
   margin: 0;
-  font-family: var(--mkt-font);
-  font-size: 1.02em;
-  font-weight: 650;
-  line-height: 1.5;
-  letter-spacing: -0.01em;
-  color: var(--mkt-ink);
+  padding: 15px 16px;
   list-style: none;
-  pointer-events: none;
-  text-wrap: pretty;
+  cursor: pointer;
+  text-align: left;
+  border-radius: 12px;
 }
 
-.mkt-blog-faq :is(.mkt-blog-faq__q, summary)::before {
-  content: '';
-  flex: none;
-  width: 0.4rem;
-  height: 0.4rem;
-  margin-top: 0.1em;
-  border-radius: 999px;
-  background: var(--mkt-violet);
-  transform: translateY(-0.15em);
-}
-
-.mkt-blog-faq summary::-webkit-details-marker {
+.mkt-blog-faq .mkt-blog-faq__q::-webkit-details-marker {
   display: none;
 }
 
-.mkt-blog-faq :is(.mkt-blog-faq__item, details) :is(ul, ol) {
-  margin: 0.75em 0 0;
+.mkt-blog-faq .mkt-blog-faq__q:focus-visible {
+  outline: 2px solid #7c3aed;
+  outline-offset: 2px;
+}
+
+/* Higher specificity than the prose h3 rule, so the question keeps its size. */
+.mkt-blog-prose .mkt-blog-faq .mkt-blog-faq__qtext,
+.mkt-blog-faq .mkt-blog-faq__qtext {
+  margin: 0;
+  font-family: var(--mkt-font);
+  font-size: 0.9375rem;
+  font-weight: 600;
+  line-height: 1.4;
+  letter-spacing: -0.005em;
+  color: #0f172a;
+  text-wrap: pretty;
+  transition: color 0.2s ease;
+}
+
+.mkt-blog-faq .mkt-blog-faq__item[open] .mkt-blog-faq__qtext {
+  color: #7c3aed;
+}
+
+.mkt-blog-faq .mkt-blog-faq__icon {
+  display: inline-flex;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 999px;
+  background: #f1f5f9;
+  color: #475569;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.mkt-blog-faq .mkt-blog-faq__icon svg {
+  transition: transform 0.2s ease;
+}
+
+.mkt-blog-faq .mkt-blog-faq__item[open] .mkt-blog-faq__icon {
+  background: #f5f3ff;
+  color: #7c3aed;
+}
+
+.mkt-blog-faq .mkt-blog-faq__item[open] .mkt-blog-faq__icon svg {
+  transform: rotate(180deg);
+}
+
+.mkt-blog-faq .mkt-blog-faq__a {
+  margin: 0 16px;
+  padding: 12px 0 14px;
+  border-top: 1px solid #eef2f6;
+  font-size: 0.9375rem;
+  line-height: 1.58;
+  color: #334155;
+}
+
+.mkt-blog-faq .mkt-blog-faq__a > * {
+  margin: 0;
+  font-size: 1em;
+  line-height: 1.58;
+  color: #334155;
+}
+
+.mkt-blog-faq .mkt-blog-faq__a > * + * {
+  margin-top: 0.7em;
+}
+
+.mkt-blog-faq .mkt-blog-faq__a :is(ul, ol) {
   padding-left: 1.2rem;
 }
 
-.mkt-blog-faq :is(.mkt-blog-faq__item, details) li {
-  margin: 0.5em 0;
-  padding-left: 0.2em;
-  line-height: 1.7;
-  color: var(--mkt-body-2);
+.mkt-blog-faq .mkt-blog-faq__a li {
+  margin: 0.35em 0;
+  line-height: 1.55;
 }
 
-.mkt-blog-faq :is(.mkt-blog-faq__item, details) li::marker {
-  color: var(--mkt-violet);
-}
+@media (min-width: 640px) {
+  .mkt-blog-faq .mkt-blog-faq__q {
+    padding: 17px 20px;
+  }
 
-.mkt-blog-faq :is(.mkt-blog-faq__item, details) p + p {
-  margin-top: 0.85em;
-}
+  .mkt-blog-prose .mkt-blog-faq .mkt-blog-faq__qtext,
+  .mkt-blog-faq .mkt-blog-faq__qtext {
+    font-size: 1rem;
+  }
 
-.mkt-blog-faq :is(.mkt-blog-faq__item, details) > :not(.mkt-blog-faq__q, summary) {
-  margin: 0.85em 0 0;
-  font-size: 1em;
-  line-height: 1.75;
-  color: var(--mkt-body-2);
+  .mkt-blog-faq .mkt-blog-faq__a {
+    margin: 0 20px;
+    padding: 14px 0 16px;
+  }
 }
 
 /* Same space above as a prose h2 gets, because it opens a section like one. */
 .mkt-blog-faq-block {
-  margin: calc(var(--mkt-blog-body-size) * 3.2) 0 0;
+  margin: 2.5rem 0 0;
 }
 
 .mkt-blog-faq-block__title {
-  margin: 0 0 1rem;
+  margin: 0 0 0.75rem;
   font-family: var(--mkt-font);
   /* Same step as a prose h2, because that is what it is. */
-  font-size: calc(var(--mkt-blog-body-size) * 1.6);
-  font-weight: 650;
-  line-height: 1.22;
+  font-size: calc(var(--mkt-blog-body-size) * 1.5);
+  font-weight: 700;
+  line-height: 1.25;
   letter-spacing: -0.02em;
-  color: #0c1222;
+  color: #0f172a;
 }
 
 .mkt-blog-faq-block .mkt-blog-faq {
@@ -1420,15 +1579,69 @@
  * sticky over the text as the reader scrolled.
  */
 .mkt-blog-layout > .mkt-blog-toc {
-  margin: 2rem 0 0;
-  padding: 0.9rem 1rem;
-  border: 1px solid #eceaf4;
+  display: none;
+}
+
+/* Below 1024px the contents is one collapsed bar (SOP 8C), not a long list. */
+.mkt-blog-toc-bar {
+  margin: 1rem 0 0;
+  max-width: var(--mkt-blog-measure);
+  border: 1px solid #e2e8f0;
   border-radius: 12px;
-  background: #fbfafd;
+  background: #ffffff;
+}
+
+.mkt-blog-toc-bar > summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  min-height: 44px;
+  padding: 10px 14px;
+  list-style: none;
+  cursor: pointer;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: #0f172a;
+}
+
+.mkt-blog-toc-bar > summary::-webkit-details-marker {
+  display: none;
+}
+
+.mkt-blog-toc-bar > summary svg {
+  color: #64748b;
+  transition: transform 0.2s ease;
+}
+
+.mkt-blog-toc-bar[open] > summary svg {
+  transform: rotate(180deg);
+}
+
+.mkt-blog-toc-bar nav {
+  padding: 4px 14px 12px;
+  border-top: 1px solid #eef2f6;
+}
+
+.mkt-blog-toc-bar .mkt-blog-toc__list {
+  gap: 0;
+}
+
+.mkt-blog-toc-bar .mkt-blog-toc__list a {
+  padding: 8px 0;
+  border-left: 0;
+  margin-left: 0;
+}
+
+@media (min-width: 1024px) {
+  .mkt-blog-toc-bar {
+    display: none;
+  }
 }
 
 @media (min-width: 1024px) {
   .mkt-blog-layout > .mkt-blog-toc {
+    display: block;
     position: sticky;
     /* Clears the fixed navbar and the announcement strip above it. */
     top: calc(var(--marketing-nav-h, 76px) + 1.25rem);
@@ -1438,9 +1651,19 @@
     overscroll-behavior: contain;
     background: transparent;
     border: 0;
-    border-left: 1px solid var(--mkt-border);
     border-radius: 0;
-    padding: 0.1rem 0 0.1rem 1.25rem;
+    padding: 0.1rem 12px 0.1rem 0;
+    scrollbar-width: thin;
+    scrollbar-color: #cbd5e1 transparent;
+  }
+
+  .mkt-blog-layout > .mkt-blog-toc::-webkit-scrollbar {
+    width: 4px;
+  }
+
+  .mkt-blog-layout > .mkt-blog-toc::-webkit-scrollbar-thumb {
+    border-radius: 999px;
+    background: #cbd5e1;
   }
 }
 
@@ -1448,29 +1671,44 @@
   margin: 0 0 0.7rem;
   font-size: 0.875rem;
   font-weight: 600;
-  letter-spacing: 0.005em;
-    color: var(--mkt-violet);
+  letter-spacing: 0;
+  color: #0f172a;
 }
 
+/* SOP 8B: a 1px rail; the active entry lights its segment purple. */
 .mkt-blog-toc__list {
   margin: 0;
   padding: 0;
   list-style: none;
   counter-reset: toc;
   display: grid;
-  gap: 0.65rem;
+  gap: 2px;
+  border-left: 1px solid #e2e8f0;
 }
 
 .mkt-blog-toc__list a {
   display: block;
-  font-size: 0.875rem;
-  line-height: 1.5;
-  color: var(--mkt-body-2);
+  margin-left: -1px;
+  padding: 6px 10px 6px 14px;
+  border-left: 2px solid transparent;
+  border-radius: 0 6px 6px 0;
+  font-size: 0.84rem;
+  font-weight: 400;
+  line-height: 1.4;
+  color: #64748b;
   text-decoration: none;
+  transition: color 0.15s ease, background-color 0.15s ease, border-color 0.15s ease;
 }
 
 .mkt-blog-toc__list a:hover {
-  color: var(--mkt-violet);
+  color: #0f172a;
+}
+
+.mkt-blog-toc__list a.is-active {
+  border-left-color: #7c3aed;
+  background: rgba(124, 58, 237, 0.06);
+  font-weight: 600;
+  color: #5b21b6;
 }
 
 /* ---------- read this first ---------- */
@@ -1508,7 +1746,7 @@
  * in shrinking its title until nobody notices it.
  */
 .mkt-blog-summary__label {
-  margin: 0 0 1.25rem;
+  margin: 0 0 0.9rem;
   font-family: var(--mkt-font);
   font-size: 1.0625rem;
   font-weight: 650;
@@ -1534,7 +1772,7 @@
   padding: 0;
   list-style: none;
   display: grid;
-  gap: 1.1rem;
+  gap: 0.75rem;
 }
 
 .mkt-blog-summary__list li {
@@ -1542,7 +1780,7 @@
   padding-left: 2.25rem;
   /* Takeaways are read as text, so they sit at body size, not a step under. */
   font-size: var(--mkt-blog-body-size, 1rem);
-  line-height: 1.75;
+  line-height: 1.58;
   color: var(--mkt-body);
 }
 
@@ -1551,7 +1789,7 @@
   position: absolute;
   left: 0;
   /* Centred on the first line: (line-height - icon) / 2. */
-  top: calc((1.75em - 1.375rem) / 2);
+  top: calc((1.58em - 1.375rem) / 2);
   width: 1.375rem;
   height: 1.375rem;
   border-radius: 999px;
@@ -1741,78 +1979,47 @@
 
 /* ---------- breadcrumb ---------- */
 
+/* SOP 4A: Home > Blog > Category as plain text with chevrons, no capsules. */
 .mkt-blog-crumbs {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 0.5rem;
-  margin-bottom: 1rem;
+  margin-bottom: 12px;
   font-size: 0.8125rem;
-  color: var(--mkt-muted);
+  font-weight: 500;
 }
 
-.mkt-blog-crumbs a {
-  color: var(--mkt-body-2);
-  text-decoration: none;
-}
-
-.mkt-blog-crumbs a:hover {
-  color: var(--mkt-violet);
-}
-
-.mkt-blog-crumbs span {
-  color: #c4c0d4;
-}
-
-/* ---------- category strip under the hero ---------- */
-
-.mkt-blog-catstrip {
+.mkt-blog-crumbs ol {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 0.4rem 0.75rem;
-  margin-top: 0.9rem;
-  padding: 0.55rem 0.9rem;
-  border: 1px solid #eceaf4;
-  border-radius: 12px;
-  background: #ffffff;
-}
-
-.mkt-blog-catstrip__label {
-  font-size: 0.76rem;
-  font-weight: 500;
-  color: var(--mkt-faint);
-}
-
-.mkt-blog-catstrip ul {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.4rem;
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-.mkt-blog-catstrip a {
+.mkt-blog-crumbs li {
   display: inline-flex;
-  padding: 0.28rem 0.7rem;
-  border-radius: 999px;
-  font-size: 0.8rem;
-  font-weight: 450;
-  color: var(--mkt-body-2);
+  align-items: center;
+}
+
+.mkt-blog-crumbs a {
+  color: #64748b;
   text-decoration: none;
-  transition: background 0.15s ease, color 0.15s ease;
+  text-underline-offset: 3px;
+  transition: color 0.15s ease;
 }
 
-.mkt-blog-catstrip a:hover {
-  background: #f4f2ff;
-  color: var(--mkt-ink);
+.mkt-blog-crumbs a:hover {
+  color: #0f172a;
+  text-decoration: underline;
 }
 
-.mkt-blog-catstrip a.is-active {
-  background: #efeafe;
-  color: var(--mkt-violet);
-  font-weight: 500;
+.mkt-blog-crumbs a.mkt-blog-crumbs__current {
+  color: #334155;
+}
+
+.mkt-blog-crumbs__sep {
+  flex: none;
+  margin: 0 7px;
+  color: #94a3b8;
 }
 
 /* ---------- categories bar on the archives ---------- */
@@ -2071,66 +2278,79 @@
   }
 }
 
-/* Spec sheet: Best for, Pricing, AI, Rating as label and value rows. */
+/*
+ * Spec box (blog SOP section 3B): label and value on one precision grid, a
+ * 1px vertical divider between them that matches the row rules, a tinted
+ * label rail, natural casing. Two columns stay side by side on a phone.
+ */
 .mkt-blog-prose .mkt-blog-facts {
-  margin: 1.1rem 0 1.4rem;
-  border: 1px solid #ece8f4;
+  margin: 1rem 0 1.25rem;
+  border: 1px solid #e5e7eb;
   border-radius: 12px;
-  background: #fbfaff;
+  background: #ffffff;
   overflow: hidden;
 }
 
 .mkt-blog-prose .mkt-blog-facts__row {
   display: grid;
-  grid-template-columns: 7.5rem minmax(0, 1fr);
-  gap: 1rem;
-  padding: 0.8rem 1.1rem;
+  grid-template-columns: 8.5rem minmax(0, 1fr);
+  margin: 0;
 }
 
 .mkt-blog-prose .mkt-blog-facts__row + .mkt-blog-facts__row {
-  border-top: 1px solid #ece8f4;
+  border-top: 1px solid #e5e7eb;
 }
 
 .mkt-blog-prose .mkt-blog-facts dt {
+  padding: 12px 15px;
+  border-right: 1px solid #e5e7eb;
+  background: #f8fafc;
   font-family: var(--mkt-font);
-  font-size: var(--mkt-blog-small);
-  font-weight: 650;
-  letter-spacing: 0.06em;
-  line-height: 1.9;
-  text-transform: uppercase;
-  color: var(--mkt-faint);
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 0;
+  line-height: 1.5;
+  text-transform: none;
+  color: #334155;
 }
 
 .mkt-blog-prose .mkt-blog-facts dd {
   margin: 0;
-  line-height: 1.7;
+  padding: 12px 15px;
+  font-size: 0.9375rem;
+  line-height: 1.5;
+  color: #1f2937;
 }
 
 @media (max-width: 639px) {
   .mkt-blog-prose .mkt-blog-facts__row {
-    grid-template-columns: minmax(0, 1fr);
-    gap: 0.15rem;
+    grid-template-columns: 6.25rem minmax(0, 1fr);
+  }
+
+  .mkt-blog-prose .mkt-blog-facts dt {
+    padding: 10px 11px;
+    font-size: 0.84rem;
+  }
+
+  .mkt-blog-prose .mkt-blog-facts dd {
+    padding: 10px 11px;
+    font-size: 0.875rem;
   }
 }
 
 /* A single labelled line ("Best for: ...") outside a full spec sheet. */
 .mkt-blog-prose .mkt-blog-fact-line > strong:first-child {
-  display: inline-block;
-  margin-right: 0.45rem;
-  padding: 0.05rem 0.55rem;
-  border-radius: 6px;
-  background: var(--mkt-violet-light);
-  color: var(--mkt-violet);
-  font-size: var(--mkt-blog-small);
-  letter-spacing: 0.02em;
+  margin-right: 0.35rem;
+  color: #1e293b;
+  font-weight: 600;
 }
 
 /* Pros and cons: two columns under a green and a red bar. */
 .mkt-blog-prose .mkt-blog-proscons {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 1.25rem 2.25rem;
-  margin: 1.4rem 0 1.5rem;
+  gap: 1.125rem 1.75rem;
+  margin: 1.25rem 0;
 }
 
 @media (max-width: 639px) {
@@ -2139,22 +2359,23 @@
   }
 }
 
+/* SOP 3C: "Pros" and "Cons" in natural case, forest green and crimson. */
 .mkt-blog-prose .mkt-blog-proscons__label {
-  margin: 0 0 0.75rem;
+  margin: 0 0 0.5rem;
   font-family: var(--mkt-font);
-  font-size: var(--mkt-blog-small);
-  font-weight: 700;
-  letter-spacing: 0.16em;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  letter-spacing: 0;
   line-height: 1.4;
-  text-transform: uppercase;
+  text-transform: none;
 }
 
 .mkt-blog-prose .mkt-blog-proscons__col--pros {
-  --mkt-proscons-tone: #12a15a;
+  --mkt-proscons-tone: #15803d;
 }
 
 .mkt-blog-prose .mkt-blog-proscons__col--cons {
-  --mkt-proscons-tone: #e5482d;
+  --mkt-proscons-tone: #b91c1c;
 }
 
 .mkt-blog-prose .mkt-blog-proscons__col--pros .mkt-blog-proscons__label,
@@ -2163,8 +2384,8 @@
 }
 
 .mkt-blog-prose .mkt-blog-proscons__body {
-  padding-left: 1.1rem;
-  border-left: 4px solid var(--mkt-proscons-tone);
+  padding-left: 0.9rem;
+  border-left: 3px solid var(--mkt-proscons-tone);
   border-radius: 2px;
 }
 
@@ -2176,8 +2397,9 @@
 }
 
 .mkt-blog-prose .mkt-blog-proscons__body li {
-  margin: 0 0 0.85em;
+  margin: 0 0 0.55rem;
   padding-left: 0;
+  line-height: 1.55;
 }
 
 .mkt-blog-prose .mkt-blog-proscons__body > *:last-child,
@@ -2198,34 +2420,87 @@
   background: #f6f4fb;
 }
 
-/* The link out, as a button rather than a buried inline link. */
+/*
+ * The links out, as tactile buttons with one icon each (blog SOP section 6,
+ * 22 Nov 2026). The icon comes from the link itself, so stored posts need no
+ * markup change: an App Store link gets a bag, a pricing link a tag, a docs
+ * link a page, an internal TopEdge AI link an arrow, any other site an
+ * external arrow. The first button carries the stronger border.
+ */
 .mkt-blog-prose .mkt-blog-pick-cta {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.6rem;
+  gap: 10px;
   margin: 1.1rem 0 0;
 }
 
 .mkt-blog-prose .mkt-blog-pick-cta a {
+  --cta-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M7 17 17 7M8 7h9v9'/%3E%3C/svg%3E");
   display: inline-flex;
   align-items: center;
-  gap: 0.4rem;
-  padding: 0.55rem 1rem;
-  border: 1px solid #ddd6ee;
+  justify-content: center;
+  gap: 7px;
+  min-height: 40px;
+  padding: 9px 15px;
+  border: 1px solid #e2e8f0;
   border-radius: 999px;
   background: #ffffff;
-  color: var(--mkt-ink);
-  font-size: var(--mkt-blog-small);
+  color: #0f172a;
+  font-size: 0.875rem;
   font-weight: 600;
-  line-height: 1.4;
+  line-height: 1.3;
   text-decoration: none;
-  transition: border-color 0.15s ease, background-color 0.15s ease;
+  transition: border-color 0.18s ease, background-color 0.18s ease, color 0.18s ease;
+}
+
+.mkt-blog-prose .mkt-blog-pick-cta a:first-child {
+  border-color: #94a3b8;
+}
+
+.mkt-blog-prose .mkt-blog-pick-cta a::after {
+  content: '';
+  flex: none;
+  width: 15px;
+  height: 15px;
+  background: currentColor;
+  -webkit-mask: var(--cta-icon) center / contain no-repeat;
+  mask: var(--cta-icon) center / contain no-repeat;
+  transition: transform 0.18s ease;
+}
+
+.mkt-blog-prose .mkt-blog-pick-cta a[href*="apps.shopify.com"] {
+  --cta-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z'/%3E%3Cpath d='M3 6h18M16 10a4 4 0 0 1-8 0'/%3E%3C/svg%3E");
+}
+
+.mkt-blog-prose .mkt-blog-pick-cta a:is([href*="pricing"], [href*="/plans"], [href*="rate-card"]) {
+  --cta-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20.6 13.4 13.4 20.6a2 2 0 0 1-2.8 0L2 12V2h10l8.6 8.6a2 2 0 0 1 0 2.8z'/%3E%3Ccircle cx='7' cy='7' r='1.5'/%3E%3C/svg%3E");
+}
+
+.mkt-blog-prose .mkt-blog-pick-cta a:is([href*="/docs"], [href*="help."], [href*="/partners/directory"]) {
+  --cta-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z'/%3E%3Cpath d='M14 2v6h6M16 13H8M16 17H8'/%3E%3C/svg%3E");
+}
+
+.mkt-blog-prose .mkt-blog-pick-cta a[href^="/"] {
+  --cta-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12h14M13 6l6 6-6 6'/%3E%3C/svg%3E");
+}
+
+/* Store, plan and document icons read before the label; arrows follow it. */
+.mkt-blog-prose .mkt-blog-pick-cta a:is([href*="apps.shopify.com"], [href*="pricing"], [href*="/plans"], [href*="rate-card"], [href*="/docs"], [href*="help."], [href*="/partners/directory"])::after {
+  order: -1;
 }
 
 .mkt-blog-prose .mkt-blog-pick-cta a:hover,
 .mkt-blog-prose .mkt-blog-pick-cta a:focus-visible {
-  border-color: var(--mkt-violet);
-  background: var(--mkt-violet-light);
-  color: var(--mkt-violet);
+  border-color: #64748b;
+  background: #f8fafc;
+  color: #0f172a;
   text-decoration: none;
+}
+
+.mkt-blog-prose .mkt-blog-pick-cta a:not([href^="/"]):hover::after {
+  transform: translate(1px, -1px);
+}
+
+.mkt-blog-prose .mkt-blog-pick-cta a[href^="/"]:hover::after {
+  transform: translateX(2px);
 }

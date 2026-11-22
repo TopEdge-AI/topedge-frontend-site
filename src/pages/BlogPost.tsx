@@ -8,7 +8,7 @@ import { SITE_URL } from '../marketing/data/marketingSeo';
 import { ORG_REF, authorJsonLd, breadcrumbJsonLd, DEFAULT_AUTHOR, TEAM } from '../marketing/data/pageSeo';
 import { blogPosts } from '../data/blogPosts';
 import { filterMarketingBlogPosts, relatedBlogPosts } from '../marketing/data/blog';
-import { BLOG_CATEGORIES, groupForCategory } from '../marketing/data/blogCategories';
+import { groupForCategory } from '../marketing/data/blogCategories';
 import type { BlogPost as BlogPostModel } from '../types/blog';
 import {
   articleDateModifiedIso,
@@ -23,10 +23,19 @@ import {
 import { bindCalculators } from '../marketing/lib/blogCalculators';
 import SummarizeWithAI from '../marketing/components/blog/SummarizeWithAI';
 import BlogEndCta from '../marketing/components/blog/BlogEndCta';
+import BlogToc from '../marketing/components/blog/BlogToc';
 import '../marketing/styles/blog.css';
 import '../marketing/styles/calculator.css';
 
 const allBlogPosts = filterMarketingBlogPosts([...blogPosts] as BlogPostModel[]);
+
+function Chevron() {
+  return (
+    <svg className="mkt-blog-crumbs__sep" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+      <path d="m9 6 6 6-6 6" />
+    </svg>
+  );
+}
 
 function formatDate(date: string) {
   const parsed = new Date(date);
@@ -96,11 +105,15 @@ export default function BlogPost() {
         articleAuthor={authorName}
         articleSection={post.category}
         faqSchema={post.faqs}
+        // Mirrors the visible trail exactly: Home > Blog > Category. A post
+        // with no category group ends on its own title instead.
         jsonLd={[
           breadcrumbJsonLd([
             { name: 'Home', path: '/' },
             { name: 'Blog', path: '/blog' },
-            { name: post.title, path: `/blog/${post.slug}` },
+            group
+              ? { name: group.label, path: `/blog/category/${group.slug}` }
+              : { name: post.title, path: `/blog/${post.slug}` },
           ]),
         ]}
       />
@@ -171,25 +184,30 @@ export default function BlogPost() {
           <div className="marketing-container mkt-blog-shell">
             <div className="mkt-blog-hero__card">
               <div className="mkt-blog-hero__text">
+                {/*
+                  Blog SOP section 4 (22 Nov 2026): plain chevron trail, no
+                  capsules, and no category pill under it. The category is the
+                  last crumb, so a second copy above the H1 was noise.
+                */}
                 <nav className="mkt-blog-crumbs" aria-label="Breadcrumb">
-                  <Link to="/">Home</Link>
-                  <span aria-hidden>|</span>
-                  <Link to="/blog">Blog</Link>
-                  {group ? (
-                    <>
-                      <span aria-hidden>|</span>
-                      <Link to={`/blog/category/${group.slug}`}>{group.label}</Link>
-                    </>
-                  ) : null}
+                  <ol>
+                    <li>
+                      <Link to="/">Home</Link>
+                    </li>
+                    <li>
+                      <Chevron />
+                      <Link to="/blog">Blog</Link>
+                    </li>
+                    {group ? (
+                      <li>
+                        <Chevron />
+                        <Link to={`/blog/category/${group.slug}`} className="mkt-blog-crumbs__current">
+                          {group.label}
+                        </Link>
+                      </li>
+                    ) : null}
+                  </ol>
                 </nav>
-
-                {group ? (
-                  <Link to={`/blog/category/${group.slug}`} className="mkt-blog-pill">
-                    {post.category}
-                  </Link>
-                ) : (
-                  <span className="mkt-blog-pill">{post.category}</span>
-                )}
 
                 <h1 className="mkt-blog-title">{post.title}</h1>
                 <p className="mkt-blog-lede">{post.description}</p>
@@ -231,23 +249,6 @@ export default function BlogPost() {
               </div>
             </div>
 
-            {/* Sideways navigation, so a post is not a dead end. */}
-            <nav className="mkt-blog-catstrip" aria-label="Blog categories">
-              <span className="mkt-blog-catstrip__label">Categories</span>
-              <ul>
-                {BLOG_CATEGORIES.map((c) => (
-                  <li key={c.slug}>
-                    <Link
-                      to={`/blog/category/${c.slug}`}
-                      className={group?.slug === c.slug ? 'is-active' : undefined}
-                      aria-current={group?.slug === c.slug ? 'page' : undefined}
-                    >
-                      {c.label}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </nav>
           </div>
         </header>
 
@@ -287,22 +288,7 @@ export default function BlogPost() {
             ) : null}
 
             {/* Hand-written contents lists inside posts are stripped in enhanceBlogHtml, so this is the only one. */}
-            {toc.length >= 3 ? (
-              <aside className="mkt-blog-toc" aria-label="On this page">
-                <p className="mkt-blog-toc__label">On this page</p>
-                <nav>
-                  <ol className="mkt-blog-toc__list">
-                    {toc
-                      .filter((t) => t.level === 2)
-                      .map((t) => (
-                        <li key={t.id}>
-                          <a href={`#${t.id}`}>{t.label}</a>
-                        </li>
-                      ))}
-                  </ol>
-                </nav>
-              </aside>
-            ) : null}
+            {toc.length >= 3 ? <BlogToc items={toc.filter((t) => t.level === 2)} /> : null}
 
             <div className="mkt-blog-body-wrap">
               <div
@@ -317,28 +303,35 @@ export default function BlogPost() {
                   Common questions
                 </h2>
                 <div className="mkt-blog-faq">
-                  {post.faqs.map((f) => (
-                    <div key={f.question} className="mkt-blog-faq__item">
-                      <h3 className="mkt-blog-faq__q">{f.question}</h3>
-                      {/*
-                        Same split as the inlined blocks (src/data/faqHtml.ts),
-                        so a post that carries its FAQs here reads identically
-                        to one that inlines them into `content`.
-                      */}
-                      {faqAnswerParagraphs(f.answer).map((paragraph, p) => (
-                        <p key={p}>
-                          {splitNumericRanges(paragraph).map((part, i) =>
-                            part.range ? (
-                              <span key={i} className="mkt-nowrap">
-                                {part.text}
-                              </span>
-                            ) : (
-                              part.text
-                            ),
-                          )}
-                        </p>
-                      ))}
-                    </div>
+                  {post.faqs.map((f, n) => (
+                    // Collapsed by default, but the answer is always in the
+                    // served HTML: <details> hides it visually, not from
+                    // crawlers (blog SOP section 7B).
+                    <details key={f.question} className="mkt-blog-faq__item">
+                      <summary className="mkt-blog-faq__q" aria-controls={`faq-a-${n}`}>
+                        <h3 className="mkt-blog-faq__qtext">{f.question}</h3>
+                        <span className="mkt-blog-faq__icon" aria-hidden>
+                          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                            <path d="m6 9 6 6 6-6" />
+                          </svg>
+                        </span>
+                      </summary>
+                      <div className="mkt-blog-faq__a" id={`faq-a-${n}`}>
+                        {faqAnswerParagraphs(f.answer).map((paragraph, p) => (
+                          <p key={p}>
+                            {splitNumericRanges(paragraph).map((part, i) =>
+                              part.range ? (
+                                <span key={i} className="mkt-nowrap">
+                                  {part.text}
+                                </span>
+                              ) : (
+                                part.text
+                              ),
+                            )}
+                          </p>
+                        ))}
+                      </div>
+                    </details>
                   ))}
                 </div>
               </section>

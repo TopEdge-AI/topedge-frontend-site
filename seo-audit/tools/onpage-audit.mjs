@@ -21,7 +21,8 @@ if (!ourUrl || !keyword || !outDir) {
 fs.mkdirSync(outDir, { recursive: true });
 
 const TOOL = 'https://exploremayank.in/tools/free-on-page-seo-audit-tool/';
-const browser = await chromium.launch();
+// PW_CHROMIUM lets a cloud container point at its preinstalled Chromium.
+const browser = await chromium.launch(process.env.PW_CHROMIUM ? { executablePath: process.env.PW_CHROMIUM } : {});
 const page = await browser.newPage({ viewport: { width: 1280, height: 900 } });
 await page.goto(TOOL, { waitUntil: 'domcontentloaded', timeout: 60000 });
 

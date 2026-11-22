@@ -293,3 +293,27 @@
     padding-left: 0.75rem;
   }
 }
+
+/* Home COD film (22 Nov 2026), poster first, plays only on screen. */
+.mkt-cod__film {
+  width: min(100%, 62rem);
+  margin: 1.5rem auto 0;
+  padding: 0 1.25rem;
+}
+
+.mkt-cod__film .mkt-lp-film {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  border-radius: 18px;
+  background: #f4f1fd;
+  object-fit: cover;
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.06), 0 18px 40px -24px rgba(76, 29, 149, 0.35);
+}
+
+@media (max-width: 640px) {
+  .mkt-cod__film .mkt-lp-film {
+    aspect-ratio: 4 / 5;
+  }
+}

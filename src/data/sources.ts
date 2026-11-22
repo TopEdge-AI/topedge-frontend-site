@@ -1174,6 +1174,213 @@ export const SOURCES = {
     verified: '2026-11-20',
   },
 
+  shopifyPartnerDirectory: {
+    id: 'shopifyPartnerDirectory',
+    url: 'https://www.shopify.com/partners/directory',
+    label: 'Shopify Partner Directory',
+    publisher: 'Shopify',
+    claim:
+      'Read 22 November 2026. Each partner profile shows a tier, primary location, languages, estimated team size, estimated active projects, partner since year, top markets and industries "based on the last 4 years of Shopify data", top services, and featured clients marked "Relationships verified by Shopify". Tier definitions on the profiles: "Select tier partners consistently bring new businesses to Shopify and support their early success. These partners are typically chosen by small and medium-sized businesses." "Plus tier partners support merchant growth across more complex business needs. These partners are typically chosen by mid-market and larger businesses." "Premier tier partners deliver sustained impact for merchants with larger, more complex businesses. These partners are typically chosen by large enterprises." "Platinum tier partners support enterprise merchants at scale, delivering sustained impact across complex operations. These partners are typically chosen by global enterprise businesses." No profile read showed a published build price.',
+    verified: '2026-11-22',
+  },
+  shopifyPricingIndia: {
+    id: 'shopifyPricingIndia',
+    url: 'https://www.shopify.com/in/pricing',
+    label: 'Shopify pricing for India',
+    publisher: 'Shopify',
+    claim:
+      'Read 22 November 2026, both billing views. Billed yearly: Basic ₹1,499, Grow ₹5,599, Advanced ₹22,680 a month. Billed monthly: Basic ₹1,994, Grow ₹7,447, Advanced ₹30,164 a month. Plus "from ₹1,75,000 /mo", "Billed monthly on a yearly contract". Offer: "Try 3 days free, then ₹20/month for 3 months". POS Pro add-on +₹7,000 a month.',
+    verified: '2026-11-22',
+  },
+  click400Shopify: {
+    id: 'click400Shopify',
+    url: 'https://click400.com/shopify-development/',
+    label: 'Click400 Shopify development',
+    publisher: 'Click400 Technologies',
+    claim:
+      'Read 22 November 2026. Services: custom Shopify store development, Shopify Plus development, multi-store and international, platform migrations from WooCommerce, Magento and BigCommerce, custom Shopify apps, ERP, API and headless (Hydrogen). "Every Shopify build ships with a full year of complimentary support – bug fixes, performance checks and priority response, at no extra cost." Agency vs freelancer table lists "Shopify Partner status Verified" and "Post-launch support 1 year included". Home page (same day): "150+ Shopify Stores Built", "50+ Brands Scaled", services include UI/UX, CRO, performance marketing (Google Ads, Meta Ads) and SEO. About page: "300+ Projects Delivered", "7+ Years of Experience". Contact page: 19, Saraswati Nagar, near Hotel Monarch, Jodhpur 342005. Portfolio page lists Rohan, Cotton Curls, Greensense, Z1 Knee Brace, Hybite Foods, Highnotes Fashion, Myne Jewels, Revel Home and others. No Shopify Partner Directory profile was found under the handles click400, click400-technologies or click400technologies on the same day.',
+    verified: '2026-11-22',
+  },
+  klocPartnerProfile: {
+    id: 'klocPartnerProfile',
+    url: 'https://www.shopify.com/partners/directory/partner/kloc-technologies-pvt-ltd',
+    label: 'KLoc Technologies on the Shopify Partner Directory',
+    publisher: 'Shopify',
+    claim:
+      'Read 22 November 2026. Premier tier, Bangalore, India; English and Hindi; estimated team 51–200; estimated active projects 25+; partner since 2015; top markets United States, India, United Kingdom; top industries Apparel & Accessories, Home & Garden, Health & Beauty; top services storefront and theme customization, platform migration, custom app and API development, checkout and customer accounts customization, retail and POS, products and metafield management; featured clients verified by Shopify include curiospace and I was a Sari.',
+    verified: '2026-11-22',
+  },
+  klocSite: {
+    id: 'klocSite',
+    url: 'https://kloctechnologies.com/',
+    label: 'KLoc Technologies',
+    publisher: 'KLoc Technologies',
+    claim:
+      'The website listed on the agency’s Shopify Partner Directory profile, read 22 November 2026. Facts in the post come from that profile, not from this site.',
+    verified: '2026-11-22',
+  },
+  dynamicDreamzPartnerProfile: {
+    id: 'dynamicDreamzPartnerProfile',
+    url: 'https://www.shopify.com/partners/directory/partner/dynamic-dreamz',
+    label: 'Dynamic Dreamz on the Shopify Partner Directory',
+    publisher: 'Shopify',
+    claim:
+      'Read 22 November 2026. Platinum tier, Surat, India; English and Hindi; estimated team 11–50; estimated active projects 25+; partner since 2013; top markets United States, Australia, United Kingdom; top services storefront and theme customization, retail and POS, products and metafield management, platform migration, internationalization and markets, checkout and customer accounts customization.',
+    verified: '2026-11-22',
+  },
+  dynamicDreamzSite: {
+    id: 'dynamicDreamzSite',
+    url: 'https://www.dynamicdreamz.com/',
+    label: 'Dynamic Dreamz',
+    publisher: 'Dynamic Dreamz',
+    claim:
+      'The website listed on the agency’s Shopify Partner Directory profile, read 22 November 2026. Facts in the post come from that profile, not from this site.',
+    verified: '2026-11-22',
+  },
+  softpulsePartnerProfile: {
+    id: 'softpulsePartnerProfile',
+    url: 'https://www.shopify.com/partners/directory/partner/softpulse-infotech',
+    label: 'Softpulse Infotech on the Shopify Partner Directory',
+    publisher: 'Shopify',
+    claim:
+      'Read 22 November 2026. Select tier, Surat, India; English, Spanish, German; estimated team 11–50; estimated active projects 25+; partner since 2013; top markets India, United States, United Kingdom; top industries Apparel & Accessories, Health & Beauty, Home & Garden; top services storefront and theme customization, platform migration, retail and POS, checkout and customer accounts customization, new store setup, Shopify Functions.',
+    verified: '2026-11-22',
+  },
+  softpulseSite: {
+    id: 'softpulseSite',
+    url: 'https://softpulseinfotech.com/',
+    label: 'Softpulse Infotech',
+    publisher: 'Softpulse Infotech',
+    claim:
+      'The website listed on the agency’s Shopify Partner Directory profile, read 22 November 2026. Facts in the post come from that profile, not from this site.',
+    verified: '2026-11-22',
+  },
+  controlf5PartnerProfile: {
+    id: 'controlf5PartnerProfile',
+    url: 'https://www.shopify.com/partners/directory/partner/controlf5india',
+    label: 'ControlF5 on the Shopify Partner Directory',
+    publisher: 'Shopify',
+    claim:
+      'Read 22 November 2026. Select tier, Indore, India; English, French, Hindi; estimated team 11–50; estimated active projects 25+; partner since 2016 (5 September 2016); top markets United States, India, United Kingdom; top services storefront and theme customization, new store setup, internationalization and markets, platform migration, retail and POS, products and metafield management; featured clients verified by Shopify: B3books, The Alpine Apothecary, KatKare, Yallatoys, Isharya, Congo Clothing Company.',
+    verified: '2026-11-22',
+  },
+  controlf5Site: {
+    id: 'controlf5Site',
+    url: 'https://www.controlf5.in/',
+    label: 'ControlF5',
+    publisher: 'ControlF5',
+    claim:
+      'The website listed on the agency’s Shopify Partner Directory profile, read 22 November 2026. Facts in the post come from that profile, not from this site.',
+    verified: '2026-11-22',
+  },
+  codifyPartnerProfile: {
+    id: 'codifyPartnerProfile',
+    url: 'https://www.shopify.com/partners/directory/partner/codify-infotech',
+    label: 'Codify Infotech on the Shopify Partner Directory',
+    publisher: 'Shopify',
+    claim:
+      'Read 22 November 2026. Plus tier, Surat, India; English, Spanish, German; estimated team 11–50; estimated active projects 25+; partner since 2018; top markets United States, Netherlands, India; top services storefront and theme customization, platform migration, new store setup, checkout and customer accounts customization, retail and POS, internationalization and markets; featured clients verified by Shopify include ALVA, Ravel, Smotect Azaadi, Rejuva Fresh Canada, AHW Atelier and LAQARE.',
+    verified: '2026-11-22',
+  },
+  codifySite: {
+    id: 'codifySite',
+    url: 'https://codifyinfotech.com/',
+    label: 'Codify Infotech',
+    publisher: 'Codify Infotech',
+    claim:
+      'The website listed on the agency’s Shopify Partner Directory profile, read 22 November 2026. Facts in the post come from that profile, not from this site.',
+    verified: '2026-11-22',
+  },
+  stalwartPartnerProfile: {
+    id: 'stalwartPartnerProfile',
+    url: 'https://www.shopify.com/partners/directory/partner/stalwart-digital-co',
+    label: 'Stalwart Digital on the Shopify Partner Directory',
+    publisher: 'Shopify',
+    claim:
+      'Read 22 November 2026. Plus tier, Ahmedabad, India; Hindi and English; estimated team 11–50; estimated active projects 25+; partner since 2015; top markets United States, United Kingdom, Netherlands; top industries Apparel & Accessories, Food & Beverages, Health & Beauty; top services storefront and theme customization, custom app and API development, checkout and customer accounts customization, platform migration, Shopify Functions, new store setup; featured client verified by Shopify: Be Amazing.',
+    verified: '2026-11-22',
+  },
+  stalwartSite: {
+    id: 'stalwartSite',
+    url: 'https://www.stalwartdigital.com/',
+    label: 'Stalwart Digital',
+    publisher: 'Stalwart Digital',
+    claim:
+      'The website listed on the agency’s Shopify Partner Directory profile, read 22 November 2026. Facts in the post come from that profile, not from this site.',
+    verified: '2026-11-22',
+  },
+  ditInteractivePartnerProfile: {
+    id: 'ditInteractivePartnerProfile',
+    url: 'https://www.shopify.com/partners/directory/partner/ditindia',
+    label: 'DIT Interactive on the Shopify Partner Directory',
+    publisher: 'Shopify',
+    claim:
+      'Read 22 November 2026. Select tier, Ahmedabad, India; English and Hindi; estimated team 11–50; estimated active projects 6–25; partner since 2015; top markets United States, United Kingdom, Australia; top services storefront and theme customization, checkout and customer accounts customization, Shopify Functions, platform migration, internationalization and markets, custom app and API development.',
+    verified: '2026-11-22',
+  },
+  ditInteractiveSite: {
+    id: 'ditInteractiveSite',
+    url: 'https://ditinteractive.com/',
+    label: 'DIT Interactive',
+    publisher: 'DIT Interactive',
+    claim:
+      'The website listed on the agency’s Shopify Partner Directory profile, read 22 November 2026. Facts in the post come from that profile, not from this site.',
+    verified: '2026-11-22',
+  },
+  ptiWebtechPartnerProfile: {
+    id: 'ptiWebtechPartnerProfile',
+    url: 'https://www.shopify.com/partners/directory/partner/ptiwebtech',
+    label: 'Prerna Trimurty Infotech (PTI WebTech) on the Shopify Partner Directory',
+    publisher: 'Shopify',
+    claim:
+      'Read 22 November 2026. Select tier, Jaipur, India; English and Hindi; estimated team 1–10; estimated active projects 6–25; partner since 2013; top markets India, United Kingdom, United States; top services storefront and theme customization, platform migration, retail and POS, products and metafield management, internationalization and markets, new store setup; featured clients verified by Shopify: Vishal Prints, Pooja Kitchen Gallery, Saini World.',
+    verified: '2026-11-22',
+  },
+  ptiWebtechSite: {
+    id: 'ptiWebtechSite',
+    url: 'https://www.ptiwebtech.com/',
+    label: 'Prerna Trimurty Infotech (PTI WebTech)',
+    publisher: 'Prerna Trimurty Infotech (PTI WebTech)',
+    claim:
+      'The website listed on the agency’s Shopify Partner Directory profile, read 22 November 2026. Facts in the post come from that profile, not from this site.',
+    verified: '2026-11-22',
+  },
+  webkulPartnerProfile: {
+    id: 'webkulPartnerProfile',
+    url: 'https://www.shopify.com/partners/directory/partner/webkul',
+    label: 'Webkul on the Shopify Partner Directory',
+    publisher: 'Shopify',
+    claim:
+      'Read 22 November 2026. Select tier, Noida, India; English and Hindi; estimated team 11–50; estimated active projects 1–5; partner since 2014; top markets United States, Australia, Belgium; top services platform migration, storefront and theme customization, new store setup; featured clients verified by Shopify: UNICO (United Products & Instruments Inc.), Studio 100 Webshop, BidNWinStore.',
+    verified: '2026-11-22',
+  },
+  webkulSite: {
+    id: 'webkulSite',
+    url: 'https://webkul.com/',
+    label: 'Webkul',
+    publisher: 'Webkul',
+    claim:
+      'The website listed on the agency’s Shopify Partner Directory profile, read 22 November 2026. Facts in the post come from that profile, not from this site.',
+    verified: '2026-11-22',
+  },
+  metaMessagingLimits: {
+    id: 'metaMessagingLimits',
+    url: 'https://developers.facebook.com/docs/whatsapp/messaging-limits',
+    label: 'Meta’s WhatsApp messaging limits documentation',
+    publisher: 'Meta',
+    claim:
+      'Read 22 November 2026. "Messaging limits are the maximum number of unique WhatsApp user phone numbers your business can deliver messages to, outside of a customer service window, within a moving 24-hour period." Limits are set at the business portfolio level and shared by all its phone numbers. A business reaches the 2,000 limit by one of the scaling paths, including sending 2,000 delivered messages outside customer service windows to unique users within a 30-day moving period "using templates with a high quality rating"; higher tiers (10,000, 100,000, unlimited) come through automatic scaling for businesses sending high-quality messages.',
+    verified: '2026-11-22',
+  },
+  metaTemplateQuality: {
+    id: 'metaTemplateQuality',
+    url: 'https://developers.facebook.com/docs/whatsapp/business-management-api/message-templates/template-quality',
+    label: 'Meta’s template quality rating documentation',
+    publisher: 'Meta',
+    claim:
+      'Read 22 November 2026. "Every template has a quality rating based on usage, customer feedback, and engagement." GREEN: high quality, little to no negative feedback. YELLOW: medium quality, negative feedback from multiple users or low read-rates, "may soon become paused or disabled". RED: low quality, "in danger of being paused or disabled soon".',
+    verified: '2026-11-22',
+  },
 } as const satisfies Record<string, Source>;
 
 export type SourceId = keyof typeof SOURCES;

@@ -5,6 +5,7 @@ import MarketingSEO from '../components/MarketingSEO';
 import MarketingPage from '../components/MarketingPage';
 import MarketingCtaBand from '../components/MarketingCtaBand';
 import FeatureMeshStage from '../components/effects/FeatureMeshStage';
+import LandingFilm from '../components/landing/LandingFilm';
 import { PrimaryButton, GhostButton } from '../components/ui';
 import {
   breadcrumbJsonLd,
@@ -19,9 +20,13 @@ import '../styles/cod-confirmation.css';
 
 const PATH = '/features/cod-confirmation';
 
-const SEO_TITLE = 'Shopify COD Confirmation App on WhatsApp | TopEdge AI';
+// Owns "shopify cod app" (PLAN-AND-LOG 3b, row 2): exact keyword at the start of title and H1.
+const SEO_TITLE = 'Shopify COD App: Confirm COD Orders on WhatsApp | TopEdge AI';
 const SEO_DESCRIPTION =
-  'Confirm every Shopify COD order on WhatsApp before dispatch at ₹0.115 a message, against ₹180 to ₹240 lost per RTO parcel. On every plan, 14-day trial.';
+  'Shopify COD app that confirms every cash on delivery order on WhatsApp before dispatch, at ₹0.115 a message against ₹180 to ₹240 lost per RTO.';
+
+/** The Shopify App Store door: same plans, billed by Shopify in USD (DAILY-PROMPT section 2). */
+const APP_STORE_USD: Record<string, string> = { launch: '$19', growth: '$39', scale: '$65' };
 
 const STEPS = [
   {
@@ -130,14 +135,14 @@ export default function CodConfirmationPage() {
       <MarketingSEO
         title={SEO_TITLE}
         description={SEO_DESCRIPTION}
-        keywords="WhatsApp COD confirmation Shopify, COD confirmation WhatsApp India, reduce RTO Shopify, COD to prepaid WhatsApp, cash on delivery confirmation automation"
+        keywords="Shopify COD app, COD app Shopify, COD verification Shopify, WhatsApp COD confirmation Shopify, COD confirmation WhatsApp India, reduce RTO Shopify, COD to prepaid WhatsApp, cash on delivery confirmation automation"
         path={PATH}
         noSuffix
         faqSchema={FAQS.map((f) => ({ question: f.question, answer: f.answer }))}
         jsonLd={[
           organizationJsonLd(),
           webPageJsonLd({
-            name: 'WhatsApp COD confirmation for Shopify',
+            name: 'Shopify COD app: confirm COD orders on WhatsApp',
             description: SEO_DESCRIPTION,
             path: PATH,
             dateModified: modifiedIso,
@@ -158,13 +163,13 @@ export default function CodConfirmationPage() {
         <FeatureMeshStage mesh="journeys">
           <header className="mkt-pf__hero">
             <h1 className="mkt-pf__title">
-              Confirm COD orders on <BrandWord platform="whatsapp">WhatsApp</BrandWord> to cut RTO{' '}
-              <span className="mkt-pf__title-accent">and convert COD to prepaid</span>
+              Shopify COD app that confirms orders on{' '}
+              <BrandWord platform="whatsapp">WhatsApp</BrandWord>
             </h1>
             <p className="mkt-pf__sub">
-              A returned COD parcel costs you shipping both ways and a lost sale. TopEdge AI messages
-              the buyer on WhatsApp as soon as a COD order lands, asks them to confirm, and lets
-              you ship only what they confirm.
+              A Shopify COD app that asks every cash on delivery buyer to confirm on WhatsApp the
+              moment the order lands, so you ship only confirmed orders, cut RTO and can turn COD
+              into prepaid.
             </p>
             <div className="mkt-cod__actions">
               <PrimaryButton to="/signup">
@@ -200,6 +205,10 @@ export default function CodConfirmationPage() {
                 Example message. Your approved Meta template may differ.
               </figcaption>
             </figure>
+          </section>
+
+          <section className="mkt-cod__film" aria-label="COD confirmation journey in TopEdge AI">
+            <LandingFilm film="cod" label="A Shopify COD order confirmed on WhatsApp in TopEdge AI" />
           </section>
         </FeatureMeshStage>
 
@@ -346,11 +355,24 @@ export default function CodConfirmationPage() {
                     <td key={p.slug}>{yearlyMonthly(p)}</td>
                   ))}
                 </tr>
+                <tr className="mkt-cod__price-row">
+                  <th scope="row">
+                    On the Shopify App Store
+                    <span className="mkt-cod__row-note">Billed by Shopify in USD</span>
+                  </th>
+                  {plans.map((p) => (
+                    <td key={p.slug}>{APP_STORE_USD[p.slug] ? `${APP_STORE_USD[p.slug]} a month` : '-'}</td>
+                  ))}
+                </tr>
               </tbody>
             </table>
           </div>
           <p className="mkt-cod__foot">
-            {GST_FOOTNOTE} GST invoices issued. Meta&rsquo;s per-message WhatsApp fees are not
+            Website prices are billed in INR, {GST_FOOTNOTE} GST invoices issued. Installing from the{' '}
+            <a href="https://apps.shopify.com/topedge-ai" target="_blank" rel="noopener noreferrer">
+              Shopify App Store
+            </a>{' '}
+            bills the same plans through Shopify in USD. Meta&rsquo;s per-message WhatsApp fees are not
             included in the plan price. Meta bills them directly on your own Meta account, and
             TopEdge AI adds 0% markup.
           </p>

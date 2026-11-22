@@ -158,6 +158,39 @@ const SEO_EXPERTS_FAQS: Faq[] = [
   },
 ];
 
+const SHOPIFY_DEV_INDIA_FAQS: Faq[] = [
+  {
+    question: 'Which is the best Shopify development company in India?',
+    answer:
+      'There is no single best one; the right agency depends on the size of the build. On Shopify’s own Partner Directory on 22 November 2026, KLoc Technologies (Premier, Bangalore) and Dynamic Dreamz (Platinum, Surat) held the highest tiers among Indian agencies we checked, which suits Shopify Plus and complex builds. For a first D2C store, a Select or Plus tier agency with India in its top markets, such as Softpulse Infotech or ControlF5, is usually a closer fit.',
+  },
+  {
+    question: 'How much does Shopify store development cost in India?',
+    answer:
+      'The agency fee is quote-based: none of the ten agencies here publishes a build price on its Shopify Partner Directory profile. What you can check is the platform fee. Shopify’s India pricing page, read on 22 November 2026, lists Basic at ₹1,994 a month billed monthly or ₹1,499 billed yearly, and Grow at ₹7,447 or ₹5,599. Ask every agency for a fixed-scope quote on the same brief so the numbers compare.',
+  },
+  {
+    question: 'How do I check if a Shopify agency is a real Shopify Partner?',
+    answer:
+      'Ask for the link to its profile on the Shopify Partner Directory at shopify.com/partners/directory and open it yourself. A real profile shows the tier, city, partner since year, top markets and featured clients that Shopify marks as verified relationships. A badge image on the agency’s own site is not proof on its own.',
+  },
+  {
+    question: 'What is the difference between Shopify Select, Plus, Premier and Platinum partners?',
+    answer:
+      'They are Shopify’s partner tiers. In Shopify’s own words, Select partners are typically chosen by small and medium-sized businesses, Plus partners by mid-market and larger businesses, Premier partners by large enterprises, and Platinum partners by global enterprise businesses. A higher tier signals more complex work for bigger merchants, not a better fit for a 300-order-a-month store.',
+  },
+  {
+    question: 'Should I hire a Shopify freelancer or an agency?',
+    answer:
+      'Hire a freelancer for a theme set-up and a small catalogue; hire an agency when you need custom sections, a migration with redirects, checkout changes or ongoing support. The deciding questions are who fixes the store when it breaks a month after launch, and who owns the theme code and the Shopify collaborator access when the project ends.',
+  },
+  {
+    question: 'Will a Shopify agency set up abandoned cart recovery and COD confirmation?',
+    answer:
+      'Usually it installs whichever app you choose, but running the messages is your job after launch. Shopify Messaging can now send WhatsApp abandoned checkout reminders to marketing subscribers, but it has no utility category, so it does not send COD confirmations or order updates. For those, Indian D2C brands add an app such as TopEdge AI, whose plans start at ₹1,999 a month plus GST on its website or $19 a month on the Shopify App Store.',
+  },
+];
+
 export const blogPostsRoundups: BlogPost[] = [
   {
     id: 60,
@@ -992,7 +1025,425 @@ ${faqHtml(UPSELL_FAQS)}
 
 ${faqHtml(SEO_EXPERTS_FAQS)}
 
+<p>If the SEO work comes with a rebuild or a platform move, the agency doing the build matters as much as the consultant. We checked ten on Shopify’s Partner Directory in <a href="/blog/best-shopify-development-companies-india">our list of Shopify development companies in India</a>, with the redirect question to ask before you sign.</p>
+
 <p class="mkt-blog-footnote">Sources and further reading. What Shopify permits, title and description limits, automatic sitemaps and canonicals: <a href="https://help.shopify.com/en/manual/promoting-marketing/seo/seo-overview" target="_blank" rel="noopener noreferrer">Shopify's SEO overview</a>, <a href="https://help.shopify.com/en/manual/promoting-marketing/seo/adding-keywords" target="_blank" rel="noopener noreferrer">its guide to editing titles and descriptions</a> and <a href="https://help.shopify.com/en/manual/promoting-marketing/seo/hide-a-page-from-search-engines" target="_blank" rel="noopener noreferrer">hiding a page from search engines</a>. Theme-level metadata, canonical_url, hreflang and the Lighthouse 60 threshold: <a href="https://shopify.dev/docs/storefronts/themes/seo/metadata" target="_blank" rel="noopener noreferrer">shopify.dev on metadata</a>, <a href="https://shopify.dev/docs/storefronts/themes/seo/robots-txt" target="_blank" rel="noopener noreferrer">robots.txt.liquid</a>, <a href="https://shopify.dev/docs/storefronts/themes/seo/hreflang" target="_blank" rel="noopener noreferrer">hreflang</a> and <a href="https://shopify.dev/docs/storefronts/themes/best-practices/performance" target="_blank" rel="noopener noreferrer">theme performance</a>. Shopify's newer AI guidance: <a href="https://help.shopify.com/en/manual/promoting-marketing/seo/optimizing-store-for-ai" target="_blank" rel="noopener noreferrer">optimising your store for AI</a>. Canonical signal strength, parameter handling and faceted navigation: <a href="https://developers.google.com/search/docs/crawling-indexing/consolidate-duplicate-urls" target="_blank" rel="noopener noreferrer">Google on consolidating duplicate URLs</a>, <a href="https://developers.google.com/search/docs/crawling-indexing/url-structure" target="_blank" rel="noopener noreferrer">URL structure</a> and <a href="https://developers.google.com/crawling/docs/faceted-navigation" target="_blank" rel="noopener noreferrer">faceted navigation</a>. The canonical tags and robots.txt rules quoted here were read from the live HTML of allbirds.com, rothys.com and gymshark.com on 3 November 2026; <code>canonical_url</code> is theme-controlled, so verify your own store with <a href="https://www.screamingfrog.co.uk/seo-spider/" target="_blank" rel="noopener noreferrer">Screaming Frog</a> rather than assuming these results transfer. Practitioner claims are sourced to each person's own site, linked in their section, with third-party corroboration noted where it exists: <a href="https://asia.wordcamp.org/2023/speaker/rahul-d-sarker/" target="_blank" rel="noopener noreferrer">WordCamp Asia 2023</a> for Rahul D Sarker's background and <a href="https://podcasts.apple.com/us/podcast/the-unofficial-shopify-podcast/id918602360" target="_blank" rel="noopener noreferrer">Apple Podcasts</a> for the Unofficial Shopify Podcast. Referring-domain counts are from DataForSEO, read 3 November 2026. Where a credential or a result was self-reported and not independently checkable, we have said so in the entry rather than repeat it as fact.</p>
+`,
+  },
+  {
+    id: 68,
+    title: 'Shopify Development Companies in India (2027)',
+    description:
+      'A shortlist of 10 Shopify development companies in India, checked on Shopify’s Partner Directory on 22 Nov 2026, with tier, city, team size and costs.',
+    summary: [
+      'Check the agency on Shopify’s own Partner Directory before you check its portfolio. The profile shows its tier, city, team size, partner since year and clients Shopify has verified, which no agency can edit into a better story.',
+      'Tier is about client size, not quality. Shopify says Select partners are typically chosen by small and medium-sized businesses and Platinum partners by global enterprises, so a 300-order D2C brand rarely needs the top tier.',
+      'The platform fee is the one cost you can verify today: Shopify Basic is ₹1,994 a month billed monthly or ₹1,499 billed yearly (Shopify India pricing, read 22 November 2026). Every agency fee here is quote-based.',
+      'The store going live is not the finish line. Around 70% of carts are abandoned (Baymard Institute) and every unconfirmed COD order is a possible RTO, and those two jobs fall to you, not the agency, after launch.',
+    ],
+    slug: 'best-shopify-development-companies-india',
+    date: '2026-11-22',
+    updated: '2026-11-22',
+    readTime: '13 min',
+    category: 'Guides',
+    author: 'Moksh Patel',
+    image: '/blog/best-shopify-development-companies-india.jpg',
+    imageWebp: '/blog/best-shopify-development-companies-india.webp',
+    imageAlt:
+      'Shopify development companies in India: a shortlist card with Shopify partner tier, city and team size for ten agencies',
+    keywords: [
+      'shopify development company india',
+      'shopify development companies in india',
+      'best shopify development company in india',
+      'shopify development agency india',
+      'shopify agency india',
+      'shopify agencies in india',
+      'shopify development agency',
+      'shopify development company',
+      'shopify experts india',
+      'shopify developers india',
+      'shopify partner india',
+      'shopify plus agency india',
+      'shopify store development cost india',
+    ],
+    itemList: [
+      {
+        name: 'KLoc Technologies',
+        url: 'https://www.shopify.com/partners/directory/partner/kloc-technologies-pvt-ltd',
+        description: 'Premier tier Shopify partner in Bangalore since 2015, 51 to 200 people, with India among its top markets. Best for Shopify Plus and complex builds.',
+      },
+      {
+        name: 'Dynamic Dreamz',
+        url: 'https://www.shopify.com/partners/directory/partner/dynamic-dreamz',
+        description: 'Platinum tier Shopify partner in Surat since 2013, 11 to 50 people. Best for enterprise-grade theme, POS and international work.',
+      },
+      {
+        name: 'Click400',
+        url: 'https://click400.com/shopify-development/',
+        description: 'Jodhpur agency for D2C brands that builds the Shopify store and runs design, CRO and performance marketing, with one year of post-launch support included.',
+      },
+      {
+        name: 'Softpulse Infotech',
+        url: 'https://www.shopify.com/partners/directory/partner/softpulse-infotech',
+        description: 'Select tier partner in Surat since 2013 whose top market is India. Best for Indian brands that want store set-up, migration and checkout work from one team.',
+      },
+      {
+        name: 'ControlF5',
+        url: 'https://www.shopify.com/partners/directory/partner/controlf5india',
+        description: 'Select tier partner in Indore since 2016 with Shopify-verified Indian clients such as Isharya and B3books. Best for fashion, jewellery and lifestyle stores.',
+      },
+      {
+        name: 'Codify Infotech',
+        url: 'https://www.shopify.com/partners/directory/partner/codify-infotech',
+        description: 'Plus tier partner in Surat since 2018 with India in its top markets. Best for growing brands that need checkout customisation and migrations.',
+      },
+      {
+        name: 'Stalwart Digital',
+        url: 'https://www.shopify.com/partners/directory/partner/stalwart-digital-co',
+        description: 'Plus tier partner in Ahmedabad since 2015. Best for custom app and API work alongside the storefront.',
+      },
+      {
+        name: 'DIT Interactive',
+        url: 'https://www.shopify.com/partners/directory/partner/ditindia',
+        description: 'Select tier partner in Ahmedabad since 2015. Best for Shopify Functions, checkout and custom app development.',
+      },
+      {
+        name: 'Prerna Trimurty Infotech (PTI WebTech)',
+        url: 'https://www.shopify.com/partners/directory/partner/ptiwebtech',
+        description: 'Select tier partner in Jaipur since 2013, a team of 1 to 10 whose top market is India. Best for smaller budgets and a founder who wants to talk to the builder.',
+      },
+      {
+        name: 'Webkul',
+        url: 'https://www.shopify.com/partners/directory/partner/webkul',
+        description: 'Select tier partner in Noida since 2014, better known for Shopify apps. Best for migrations and app-led builds.',
+      },
+    ],
+    faqs: SHOPIFY_DEV_INDIA_FAQS,
+    content: `
+<details class="mkt-blog-verdict" open>
+<summary>Direct answer</summary>
+<p>For an Indian D2C brand, start with an agency whose <strong>Shopify Partner Directory</strong> profile lists India in its top markets and a tier that matches your size. On <strong>22 November 2026</strong>, the highest-tier Indian agencies we found were <strong>KLoc Technologies</strong> (Premier, Bangalore) and <strong>Dynamic Dreamz</strong> (Platinum, Surat). For a first store, <strong>Softpulse Infotech</strong>, <strong>ControlF5</strong> and <strong>Click400</strong> are closer fits. Budget the platform first: <strong>Shopify Basic is ₹1,994 a month</strong>, or ₹1,499 billed yearly.</p>
+</details>
+
+<p>A Shopify development company in India builds, migrates or customises your store on Shopify. There are hundreds of them, and most of the pages ranking for this search are written by an agency that puts itself first. This one is written by a Shopify app team, so none of the ten below is us.</p>
+
+<p>We checked them against one neutral source: Shopify’s own Partner Directory, read on 22 November 2026. Then we wrote down what each profile says, where each one is weaker, and what you still have to run once the store is live, which is the part our <a href="/blog/whatsapp-automation-for-shopify">guide to Shopify WhatsApp automation</a> covers in full.</p>
+
+<h2>How we checked these 10 agencies</h2>
+
+<p>Every agency site says “certified Shopify experts”. The <a href="https://www.shopify.com/partners/directory" target="_blank" rel="noopener noreferrer">Shopify Partner Directory</a> is the one place where Shopify, not the agency, publishes the facts. Each profile shows:</p>
+
+<ul>
+<li><strong>Tier:</strong> Select, Plus, Premier or Platinum.</li>
+<li><strong>Primary location, team size and active projects</strong>, as Shopify estimates them.</li>
+<li><strong>Partner since</strong>, and top markets and industries “based on the last 4 years of Shopify data”.</li>
+<li><strong>Featured clients</strong> marked “Relationships verified by Shopify”.</li>
+</ul>
+
+<p>The tier is easy to misread. In Shopify’s own wording, Select partners “are typically chosen by small and medium-sized businesses”, Plus partners by “mid-market and larger businesses”, Premier partners by “large enterprises” and Platinum partners by “global enterprise businesses”. A higher tier means bigger clients, not a better fit for a store doing 300 orders a month.</p>
+
+<p>We kept agencies headquartered in India and grouped them by the job they suit. Nine have a live profile. The tenth, Click400, is listed on the facts its own website publishes, because we could not find its profile, and its entry says so. The numbers are for reference only.</p>
+
+<h2>The 10 at a glance</h2>
+
+<div class="mkt-blog-table-wrap">
+<table>
+<thead><tr><th>#</th><th>Agency</th><th>City</th><th>Shopify tier</th><th>Partner since</th><th>Team size</th><th>Best for</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>KLoc Technologies</td><td>Bangalore</td><td>Premier</td><td>2015</td><td>51 to 200</td><td>Shopify Plus and complex builds</td></tr>
+<tr><td>2</td><td>Dynamic Dreamz</td><td>Surat</td><td>Platinum</td><td>2013</td><td>11 to 50</td><td>Enterprise theme, POS and international stores</td></tr>
+<tr><td>3</td><td>Click400</td><td>Jodhpur</td><td>Profile not found</td><td>Not stated</td><td>Not stated</td><td>A first D2C store plus design and ads in one team</td></tr>
+<tr><td>4</td><td>Softpulse Infotech</td><td>Surat</td><td>Select</td><td>2013</td><td>11 to 50</td><td>Indian brands, set-up to checkout work</td></tr>
+<tr><td>5</td><td>ControlF5</td><td>Indore</td><td>Select</td><td>2016</td><td>11 to 50</td><td>Fashion, jewellery and lifestyle</td></tr>
+<tr><td>6</td><td>Codify Infotech</td><td>Surat</td><td>Plus</td><td>2018</td><td>11 to 50</td><td>Growing brands, checkout and migrations</td></tr>
+<tr><td>7</td><td>Stalwart Digital</td><td>Ahmedabad</td><td>Plus</td><td>2015</td><td>11 to 50</td><td>Custom apps and API work</td></tr>
+<tr><td>8</td><td>DIT Interactive</td><td>Ahmedabad</td><td>Select</td><td>2015</td><td>11 to 50</td><td>Shopify Functions and checkout</td></tr>
+<tr><td>9</td><td>PTI WebTech</td><td>Jaipur</td><td>Select</td><td>2013</td><td>1 to 10</td><td>Small budgets, founder-to-builder</td></tr>
+<tr><td>10</td><td>Webkul</td><td>Noida</td><td>Select</td><td>2014</td><td>11 to 50</td><td>Migrations and app-led builds</td></tr>
+</tbody>
+</table>
+</div>
+
+<p>Tier, city, partner since and team size are from each agency’s Partner Directory profile on 22 November 2026. Click400’s row is from its own website on the same day.</p>
+
+<h2>For Shopify Plus and complex builds</h2>
+
+<p>Pick from this group if you are on Shopify Plus, or will be within a year, and need checkout extensions, ERP links or several storefronts.</p>
+
+<h3>1. KLoc Technologies: Best for Shopify Plus brands that sell in India</h3>
+<p>KLoc is the only Premier tier agency headquartered in India that we found. Its profile puts India second among its top markets, after the United States, which matters if you want a team that already knows COD-heavy Indian checkouts.</p>
+<p><strong>Based in:</strong> Bangalore, working in English and Hindi.</p>
+<p><strong>Shopify tier:</strong> Premier, partner since 2015.</p>
+<p><strong>Team size:</strong> 51 to 200 people, 25+ active projects (Shopify’s estimates).</p>
+<p><strong>Known for:</strong> Theme customisation, platform migration, custom apps and APIs, checkout, POS and metafields.</p>
+<p><strong>Pros:</strong></p>
+<ul>
+<li>The largest team in this list, so holidays and attrition hurt a project less</li>
+<li>India is a top market, with Shopify-verified clients such as I was a Sari</li>
+</ul>
+<p><strong>Cons:</strong></p>
+<ul>
+<li>A Premier agency is built for large accounts; a small first store may not get senior attention</li>
+<li>No published price, so you need a scoped quote to compare</li>
+</ul>
+<p><strong>Verdict:</strong> The first call for a Plus brand that wants an India-based team with enterprise experience.</p>
+<p class="mkt-blog-pick-cta"><a href="https://kloctechnologies.com/" target="_blank" rel="noopener noreferrer">Visit KLoc Technologies</a><a href="https://www.shopify.com/partners/directory/partner/kloc-technologies-pvt-ltd" target="_blank" rel="noopener noreferrer">See Partner Directory profile</a></p>
+
+<h3>2. Dynamic Dreamz: Best for enterprise theme, POS and international stores</h3>
+<p>Dynamic Dreamz holds Shopify’s Platinum tier, the tier Shopify describes as chosen by global enterprise businesses. Its top markets are the United States, Australia and the United Kingdom.</p>
+<p><strong>Based in:</strong> Surat, working in English and Hindi.</p>
+<p><strong>Shopify tier:</strong> Platinum, partner since 2013.</p>
+<p><strong>Team size:</strong> 11 to 50 people, 25+ active projects.</p>
+<p><strong>Known for:</strong> Theme customisation, retail and POS, metafields, migrations, international markets and checkout.</p>
+<p><strong>Pros:</strong></p>
+<ul>
+<li>The highest tier Shopify awards, held since a 2013 start</li>
+<li>Strong on international and multi-market stores</li>
+</ul>
+<p><strong>Cons:</strong></p>
+<ul>
+<li>India is not among its top three markets on the profile, so ask for Indian COD and courier work</li>
+<li>Enterprise focus can mean a higher minimum project than a first store needs</li>
+</ul>
+<p><strong>Verdict:</strong> Right for a brand going abroad or running retail and online on one Shopify setup.</p>
+<p class="mkt-blog-pick-cta"><a href="https://www.dynamicdreamz.com/" target="_blank" rel="noopener noreferrer">Visit Dynamic Dreamz</a><a href="https://www.shopify.com/partners/directory/partner/dynamic-dreamz" target="_blank" rel="noopener noreferrer">See Partner Directory profile</a></p>
+
+<h2>For a first D2C store</h2>
+
+<p>This group suits a brand launching its first Shopify store or rebuilding one that grew messy, usually on Basic or Grow.</p>
+
+<h3>3. Click400: Best for a D2C launch with design and ads in one team</h3>
+<p><a href="https://click400.com/shopify-development/" target="_blank" rel="noopener noreferrer">Click400</a> sells the whole launch: the Shopify build, UI and UX, conversion work and performance marketing on Google and Meta. Its site lists D2C brands such as Cotton Curls, Z1 Knee Brace, Hybite Foods and Myne Jewels among its projects.</p>
+<p>The detail worth noting is support. Its Shopify page says “Every Shopify build ships with a full year of complimentary support”, covering bug fixes and performance checks. Get that in the contract, because the first months after launch are when themes and apps clash.</p>
+<p><strong>Based in:</strong> Jodhpur (office address on its contact page).</p>
+<p><strong>Shopify tier:</strong> We found no public Partner Directory profile on 22 November 2026; its site states “Shopify Partner status Verified”. Ask for the profile link.</p>
+<p><strong>Known for:</strong> Store builds, Shopify Plus, migrations from WooCommerce, Magento and BigCommerce, custom apps, plus design, CRO and ads. Its home page claims 150+ Shopify stores built.</p>
+<p><strong>Support:</strong> One year of post-launch support included, per its Shopify page.</p>
+<p><strong>Pros:</strong></p>
+<ul>
+<li>One team for the store, the design and the ads, so nobody blames the other agency for a weak launch</li>
+<li>A year of included support is longer than most build contracts offer</li>
+</ul>
+<p><strong>Cons:</strong></p>
+<ul>
+<li>No Partner Directory profile we could find, so tier, team size and verified clients cannot be checked independently</li>
+<li>Its site has Shopify pages for dozens of cities; the office we could confirm is in Jodhpur, so ask where your team sits</li>
+</ul>
+<p><strong>Verdict:</strong> A good fit for a founder who wants one partner from launch to first campaigns. Ask for the Partner Directory link before you sign.</p>
+<p class="mkt-blog-pick-cta"><a href="https://click400.com/shopify-development/" target="_blank" rel="noopener noreferrer">Visit Click400</a></p>
+
+<h3>4. Softpulse Infotech: Best for Indian brands that want one team from set-up to checkout</h3>
+<p>Softpulse is one of two agencies here whose profile lists India first among its top markets, ahead of the United States and the United Kingdom. Its services run from new store set-up to checkout customisation and Shopify Functions.</p>
+<p><strong>Based in:</strong> Surat.</p>
+<p><strong>Shopify tier:</strong> Select, partner since 2013.</p>
+<p><strong>Team size:</strong> 11 to 50 people, 25+ active projects.</p>
+<p><strong>Known for:</strong> Theme customisation, migration, POS, checkout and customer accounts, new store set-up, Shopify Functions.</p>
+<p><strong>Pros:</strong></p>
+<ul>
+<li>India is its top market, so Indian payment and courier set-ups are routine work</li>
+<li>Thirteen years on Shopify’s partner programme</li>
+</ul>
+<p><strong>Cons:</strong></p>
+<ul>
+<li>No featured clients shown on the profile we read, so ask for live Indian stores you can open</li>
+<li>Select tier: check senior capacity if you plan to move to Plus</li>
+</ul>
+<p><strong>Verdict:</strong> A sensible default for an Indian D2C brand on Basic or Grow.</p>
+<p class="mkt-blog-pick-cta"><a href="https://softpulseinfotech.com/" target="_blank" rel="noopener noreferrer">Visit Softpulse Infotech</a><a href="https://www.shopify.com/partners/directory/partner/softpulse-infotech" target="_blank" rel="noopener noreferrer">See Partner Directory profile</a></p>
+
+<h3>5. ControlF5: Best for fashion, jewellery and lifestyle stores</h3>
+<p>ControlF5 shows the clearest proof in this group: six featured clients that Shopify marks as verified relationships, including Isharya, B3books, KatKare and Yallatoys. Its top markets are the United States, India and the United Kingdom.</p>
+<p><strong>Based in:</strong> Indore, working in English, French and Hindi.</p>
+<p><strong>Shopify tier:</strong> Select, partner since September 2016.</p>
+<p><strong>Team size:</strong> 11 to 50 people, 25+ active projects.</p>
+<p><strong>Verified clients:</strong> Isharya, B3books, The Alpine Apothecary, KatKare, Yallatoys, Congo Clothing Company.</p>
+<p><strong>Pros:</strong></p>
+<ul>
+<li>Named Indian clients you can open and judge for yourself</li>
+<li>Covers new store set-up, migrations and international markets</li>
+</ul>
+<p><strong>Cons:</strong></p>
+<ul>
+<li>Checkout customisation and custom apps are not among its listed top services</li>
+<li>Select tier, so Plus-level projects need a specific reference</li>
+</ul>
+<p><strong>Verdict:</strong> Strong for a design-led fashion or jewellery store that sells in India and abroad.</p>
+<p class="mkt-blog-pick-cta"><a href="https://www.controlf5.in/" target="_blank" rel="noopener noreferrer">Visit ControlF5</a><a href="https://www.shopify.com/partners/directory/partner/controlf5india" target="_blank" rel="noopener noreferrer">See Partner Directory profile</a></p>
+
+<h2>Plus-tier specialists for growing brands</h2>
+
+<p>When the store works but the checkout, the apps or the back office do not, this group does the deeper engineering.</p>
+
+<h3>6. Codify Infotech: Best for growing brands that need checkout and migration work</h3>
+<p>Codify holds Shopify’s Plus tier, with India third among its top markets and six Shopify-verified clients including ALVA, Ravel and LAQARE.</p>
+<p><strong>Based in:</strong> Surat.</p>
+<p><strong>Shopify tier:</strong> Plus, partner since 2018.</p>
+<p><strong>Team size:</strong> 11 to 50 people, 25+ active projects.</p>
+<p><strong>Known for:</strong> Theme customisation, migration, new store set-up, checkout, POS and international markets.</p>
+<p><strong>Pros:</strong></p>
+<ul>
+<li>Plus tier with a mid-sized team, a useful step up from a first-store agency</li>
+<li>Verified clients across beauty, apparel and home</li>
+</ul>
+<p><strong>Cons:</strong></p>
+<ul>
+<li>The newest partner on this list (2018)</li>
+<li>Top markets lead with the United States and the Netherlands</li>
+</ul>
+<p><strong>Verdict:</strong> A good second agency when your first store has outgrown its theme.</p>
+<p class="mkt-blog-pick-cta"><a href="https://codifyinfotech.com/" target="_blank" rel="noopener noreferrer">Visit Codify Infotech</a><a href="https://www.shopify.com/partners/directory/partner/codify-infotech" target="_blank" rel="noopener noreferrer">See Partner Directory profile</a></p>
+
+<h3>7. Stalwart Digital: Best for custom apps and API work</h3>
+<p>Stalwart lists custom app and API development second among its top services, which is rarer than theme work and the reason to call it.</p>
+<p><strong>Based in:</strong> Ahmedabad.</p>
+<p><strong>Shopify tier:</strong> Plus, partner since 2015.</p>
+<p><strong>Team size:</strong> 11 to 50 people, 25+ active projects.</p>
+<p><strong>Known for:</strong> Theme customisation, custom apps and APIs, checkout, migrations, Shopify Functions.</p>
+<p><strong>Pros:</strong></p>
+<ul>
+<li>App and API work for stores whose needs no App Store app covers</li>
+<li>Food and beverage among its top industries, useful for consumables brands</li>
+</ul>
+<p><strong>Cons:</strong></p>
+<ul>
+<li>India is not in its top three markets</li>
+<li>One featured client on the profile, so ask for more references</li>
+</ul>
+<p><strong>Verdict:</strong> Call it when the job is an integration, not a redesign.</p>
+<p class="mkt-blog-pick-cta"><a href="https://www.stalwartdigital.com/" target="_blank" rel="noopener noreferrer">Visit Stalwart Digital</a><a href="https://www.shopify.com/partners/directory/partner/stalwart-digital-co" target="_blank" rel="noopener noreferrer">See Partner Directory profile</a></p>
+
+<h3>8. DIT Interactive: Best for Shopify Functions and checkout</h3>
+<p>DIT leads its service list with theme work, checkout and customer accounts, and Shopify Functions, the toolkit for custom discounts, delivery and payment rules.</p>
+<p><strong>Based in:</strong> Ahmedabad.</p>
+<p><strong>Shopify tier:</strong> Select, partner since 2015.</p>
+<p><strong>Team size:</strong> 11 to 50 people, 6 to 25 active projects.</p>
+<p><strong>Known for:</strong> Checkout, Shopify Functions, migration, international markets, custom apps.</p>
+<p><strong>Pros:</strong></p>
+<ul>
+<li>Functions can hide COD by rule, for example above an order value, which matters to Indian stores</li>
+<li>Fewer active projects than most here, so more attention per client</li>
+</ul>
+<p><strong>Cons:</strong></p>
+<ul>
+<li>India is not in its top three markets</li>
+<li>No featured clients on the profile we read</li>
+</ul>
+<p><strong>Verdict:</strong> Worth a quote when your problem is checkout logic rather than looks.</p>
+<p class="mkt-blog-pick-cta"><a href="https://ditinteractive.com/" target="_blank" rel="noopener noreferrer">Visit DIT Interactive</a><a href="https://www.shopify.com/partners/directory/partner/ditindia" target="_blank" rel="noopener noreferrer">See Partner Directory profile</a></p>
+
+<h2>For tight budgets and app-led builds</h2>
+
+<h3>9. PTI WebTech: Best for small budgets and talking to the builder</h3>
+<p>Prerna Trimurty Infotech, trading as PTI WebTech, is the smallest team here at 1 to 10 people, with India as its top market and Shopify-verified Indian clients such as Vishal Prints and Pooja Kitchen Gallery.</p>
+<p><strong>Based in:</strong> Jaipur.</p>
+<p><strong>Shopify tier:</strong> Select, partner since 2013.</p>
+<p><strong>Team size:</strong> 1 to 10 people, 6 to 25 active projects.</p>
+<p><strong>Known for:</strong> Theme customisation, migration, POS, metafields, new store set-up.</p>
+<p><strong>Pros:</strong></p>
+<ul>
+<li>Thirteen years on Shopify with a small team, so you deal with the people who build</li>
+<li>Indian clients you can check</li>
+</ul>
+<p><strong>Cons:</strong></p>
+<ul>
+<li>A team this size has little cover when someone is away</li>
+<li>Not the choice for Plus or heavy custom development</li>
+</ul>
+<p><strong>Verdict:</strong> Good value for a straightforward Indian store.</p>
+<p class="mkt-blog-pick-cta"><a href="https://www.ptiwebtech.com/" target="_blank" rel="noopener noreferrer">Visit PTI WebTech</a><a href="https://www.shopify.com/partners/directory/partner/ptiwebtech" target="_blank" rel="noopener noreferrer">See Partner Directory profile</a></p>
+
+<h3>10. Webkul: Best for migrations and app-led builds</h3>
+<p>Webkul is better known for building Shopify apps than stores, and its profile shows only 1 to 5 active store projects. That is the point: pick it when the hard part is moving platforms or bending Shopify with apps.</p>
+<p><strong>Based in:</strong> Noida.</p>
+<p><strong>Shopify tier:</strong> Select, partner since 2014.</p>
+<p><strong>Team size:</strong> 11 to 50 people on the Shopify profile.</p>
+<p><strong>Known for:</strong> Platform migration, theme customisation, new store set-up.</p>
+<p><strong>Pros:</strong></p>
+<ul>
+<li>Deep app-building experience on Shopify</li>
+<li>Migration is its first listed service</li>
+</ul>
+<p><strong>Cons:</strong></p>
+<ul>
+<li>Few active store projects, so store design is not its main business</li>
+<li>Top markets are the United States, Australia and Belgium</li>
+</ul>
+<p><strong>Verdict:</strong> Use it for a migration or an app problem, then hand design to a store specialist.</p>
+<p class="mkt-blog-pick-cta"><a href="https://webkul.com/" target="_blank" rel="noopener noreferrer">Visit Webkul</a><a href="https://www.shopify.com/partners/directory/partner/webkul" target="_blank" rel="noopener noreferrer">See Partner Directory profile</a></p>
+
+<h2>What a Shopify launch costs in India before the agency fee</h2>
+
+<p>No agency in this list publishes a build price on its Shopify profile, so the agency line is a quote. The platform is not. These are Shopify’s own India prices, read on both billing views on 22 November 2026.</p>
+
+<div class="mkt-blog-table-wrap">
+<table>
+<thead><tr><th>Shopify plan</th><th>Billed monthly</th><th>Billed yearly</th><th>Who it suits</th></tr></thead>
+<tbody>
+<tr><td>Basic</td><td>₹1,994 a month</td><td>₹1,499 a month</td><td>Solo founders and a first store</td></tr>
+<tr><td>Grow</td><td>₹7,447 a month</td><td>₹5,599 a month</td><td>Small team, up to 5 staff accounts</td></tr>
+<tr><td>Advanced</td><td>₹30,164 a month</td><td>₹22,680 a month</td><td>Selling in several regions</td></tr>
+<tr><td>Plus</td><td>From ₹1,75,000 a month</td><td>On a yearly contract</td><td>Complex or enterprise businesses</td></tr>
+<tr><td>Agency build</td><td>Quote only</td><td>Quote only</td><td>Ask for a fixed scope in writing</td></tr>
+</tbody>
+</table>
+</div>
+
+<p>Source: <a href="https://www.shopify.com/in/pricing" target="_blank" rel="noopener noreferrer">Shopify pricing for India</a>. Shopify also showed a 3-day trial, then ₹20 a month for three months. Apps, payment fees and GST are on top.</p>
+
+<h2>Seven questions to ask before you sign</h2>
+
+<ol>
+<li><strong>What is the link to your Shopify Partner Directory profile?</strong> Open it and match the tier and city to the pitch.</li>
+<li><strong>Which live Indian stores did you build, and can I open them now?</strong> Check mobile speed on a 4G phone, not on their office Wi-Fi.</li>
+<li><strong>Who owns the theme code and the collaborator access when we finish?</strong> It should be you, in writing.</li>
+<li><strong>How long is post-launch support, and what does it cover?</strong> Get the number of days and the response time.</li>
+<li><strong>How will you set up COD?</strong> Ask about COD fees, hiding COD by pincode or order value, and who confirms COD orders before dispatch.</li>
+<li><strong>For a migration, where is the 301 redirect map?</strong> Losing old product URLs loses the search traffic you already had. Our <a href="/blog/shopify-seo-experts">Shopify SEO guide</a> covers what to check.</li>
+<li><strong>Which apps will you install, and who pays for them?</strong> Every app is a monthly fee and a script on your pages.</li>
+</ol>
+
+<h2>After launch: the jobs an agency hands back to you</h2>
+
+<p>An agency’s work ends when the store is live. Three jobs start that day, and they decide whether the store makes money.</p>
+
+<ul>
+<li><strong>Abandoned checkouts.</strong> Around 70% of online carts are abandoned, per <a href="https://baymard.com/blog/cart-abandonment-rate" target="_blank" rel="noopener noreferrer">Baymard Institute’s average of 50 studies</a>. Someone has to send the reminder.</li>
+<li><strong>COD orders nobody confirmed.</strong> An unconfirmed COD order is a parcel you pay to send and pay again to get back. We explain the maths in <a href="/blog/how-to-reduce-rto-with-whatsapp-cod-confirmation">how to reduce RTO with COD confirmation</a>.</li>
+<li><strong>Order updates.</strong> “Where is my order?” messages pile up in your inbox unless shipping updates go out on their own.</li>
+</ul>
+
+<div class="mkt-blog-table-wrap">
+<table>
+<thead><tr><th>Job after launch</th><th>Shopify on its own</th><th>A WhatsApp app such as TopEdge AI</th></tr></thead>
+<tbody>
+<tr><td>Abandoned checkout reminder</td><td>Yes: email, and WhatsApp to marketing subscribers through Shopify Messaging</td><td>Yes, timed WhatsApp and email reminders that stop when the shopper buys</td></tr>
+<tr><td>COD order confirmation</td><td>No: Shopify Messaging has no utility category</td><td>Yes, on every plan</td></tr>
+<tr><td>COD to prepaid nudge</td><td>No</td><td>Yes, on Growth and Scale</td></tr>
+<tr><td>Order and shipping updates on WhatsApp</td><td>No</td><td>Yes</td></tr>
+<tr><td>Price</td><td>$0.024 per WhatsApp marketing message in India</td><td>From ₹1,999 a month plus GST, or $19 on the App Store</td></tr>
+</tbody>
+</table>
+</div>
+
+<p>Shopify Messaging facts are from <a href="https://help.shopify.com/en/manual/promoting-marketing/create-marketing/shopify-messaging/whatsapp/pricing" target="_blank" rel="noopener noreferrer">Shopify’s WhatsApp pricing page</a>, read 20 November 2026. If you only need email and a WhatsApp nudge to subscribers, Shopify is enough and you should not pay for more.</p>
+
+<p>This is where we fit, and only here. TopEdge AI is a Shopify app for Indian D2C brands that automates abandoned cart recovery, COD confirmation and order updates over WhatsApp and email. It is not an agency and does not build stores. Plans are Launch ₹1,999, Growth ₹3,999 and Scale ₹6,499 a month plus GST, billed in INR on our website, or $19, $39 and $65 a month billed by Shopify in USD on the App Store. See <a href="/pricing">TopEdge AI pricing</a>, the <a href="/whatsapp-abandoned-cart-recovery-app">WhatsApp abandoned cart recovery app</a> and <a href="/features/cod-confirmation">COD confirmation on WhatsApp</a>. For a side-by-side of every recovery tool, read <a href="/blog/best-shopify-app-for-abandoned-cart-recovery-india">the best Shopify app for abandoned cart recovery in India</a>.</p>
+
+<h2>When you do not need an agency</h2>
+
+<p>Plenty of Indian brands launch without one, and that is often the right call.</p>
+
+<ul>
+<li><strong>A free or paid theme from the Shopify Theme Store</strong> and a catalogue under about 50 products is a weekend of set-up, not a project.</li>
+<li><strong>A freelancer from the Partner Directory</strong> is enough for a few custom sections. The same profile checks apply.</li>
+<li><strong>If cash is tight</strong>, spend it on stock and the first ads, not a custom theme. Our guide to <a href="/blog/profitable-ecommerce-business-india">running a profitable ecommerce business in India</a> does that arithmetic.</li>
+</ul>
+
+<p>Hire an agency when the work is a migration, custom checkout logic, an integration or a redesign you will live with for years. Shipping set-up is its own decision: see <a href="/blog/best-shipping-aggregators-logistics-tools-india">the best shipping aggregators in India</a>.</p>
+
+${faqHtml(SHOPIFY_DEV_INDIA_FAQS, 'Questions founders ask about Shopify agencies')}
+
+<p class="mkt-blog-footnote">Sources. Agency tier, city, languages, team size, active projects, partner since year, top markets, services and verified clients were read from each agency’s profile on the <a href="https://www.shopify.com/partners/directory" target="_blank" rel="noopener noreferrer">Shopify Partner Directory</a> on 22 November 2026, and tier definitions are quoted from the same profiles. Click400’s services, support terms, claims and address were read from <a href="https://click400.com/shopify-development/" target="_blank" rel="noopener noreferrer">its own site</a> the same day. Shopify plan prices: <a href="https://www.shopify.com/in/pricing" target="_blank" rel="noopener noreferrer">Shopify India pricing</a>, 22 November 2026. Directory data changes; check the profile on the day you hire.</p>
 `,
   },
 ];

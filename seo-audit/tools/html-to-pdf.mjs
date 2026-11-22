@@ -8,7 +8,8 @@ if (!input || !output) {
   console.error('Usage: node seo-audit/tools/html-to-pdf.mjs <in.html> <out.pdf>');
   process.exit(1);
 }
-const browser = await chromium.launch();
+// PW_CHROMIUM lets a cloud container point at its preinstalled Chromium.
+const browser = await chromium.launch(process.env.PW_CHROMIUM ? { executablePath: process.env.PW_CHROMIUM } : {});
 const page = await browser.newPage();
 await page.goto(`file://${path.resolve(input)}`, { waitUntil: 'load' });
 await page.pdf({ path: output, format: 'A4', printBackground: true, margin: { top: '16mm', bottom: '16mm', left: '14mm', right: '14mm' } });

@@ -63,24 +63,75 @@ function staticVerdicts(root: HTMLElement) {
   });
 }
 
-/** FAQ answers stay visible in the served HTML (answer engines don't expand accordions). */
-function staticFaqs(root: HTMLElement) {
+const FAQ_CHEVRON =
+  '<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>';
+
+/*
+ * In-post FAQs become a click-to-expand accordion (blog SOP section 7, owner
+ * skill of 22 Nov 2026), replacing the always-open cards. The answer stays in
+ * the served HTML inside <details>, which hides it visually only, so Google,
+ * AI crawlers and the FAQPage schema all still read every word. Two stored
+ * shapes are handled: <details><summary> pairs and the faqHtml() cards.
+ */
+function accordionFaqs(root: HTMLElement) {
   const doc = root.ownerDocument;
-  root.querySelectorAll('.mkt-blog-faq details').forEach((details) => {
-    const item = doc.createElement('div');
-    item.className = 'mkt-blog-faq__item';
-    for (const child of [...details.childNodes]) {
-      if (child.nodeName === 'SUMMARY') {
-        const q = doc.createElement('h3');
-        q.className = 'mkt-blog-faq__q';
-        q.append(...child.childNodes);
-        item.append(q);
-      } else {
-        item.append(child);
+  let n = 0;
+  const build = (questionNodes: Node[], answerNodes: Node[]) => {
+    n += 1;
+    const id = `faq-answer-${n}`;
+    const details = doc.createElement('details');
+    details.className = 'mkt-blog-faq__item';
+    const summary = doc.createElement('summary');
+    summary.className = 'mkt-blog-faq__q';
+    summary.setAttribute('aria-controls', id);
+    const h3 = doc.createElement('h3');
+    h3.className = 'mkt-blog-faq__qtext';
+    h3.append(...questionNodes);
+    const icon = doc.createElement('span');
+    icon.className = 'mkt-blog-faq__icon';
+    icon.setAttribute('aria-hidden', 'true');
+    icon.innerHTML = FAQ_CHEVRON;
+    summary.append(h3, icon);
+    const answer = doc.createElement('div');
+    answer.className = 'mkt-blog-faq__a';
+    answer.id = id;
+    answer.append(...answerNodes);
+    details.append(summary, answer);
+    return details;
+  };
+  root.querySelectorAll('.mkt-blog-faq').forEach((faq) => {
+    for (const item of [...faq.children]) {
+      if (item.tagName === 'DETAILS') {
+        const summary = item.querySelector(':scope > summary');
+        const rest = [...item.childNodes].filter((c) => c !== summary);
+        item.replaceWith(build(summary ? [...summary.childNodes] : [], rest));
+      } else if (item.classList.contains('mkt-blog-faq__item')) {
+        const q = item.querySelector(':scope > .mkt-blog-faq__q, :scope > h3');
+        const rest = [...item.childNodes].filter((c) => c !== q);
+        item.replaceWith(build(q ? [...q.childNodes] : [], rest));
       }
     }
-    details.replaceWith(item);
   });
+}
+
+/*
+ * Table roles (blog SOP sections 1 and 9). A table whose first header is "#"
+ * or "Rank" is a ranked list: the rank column is locked narrow and nothing is
+ * pinned. A table of short values (numbers, prices, yes/no) or one with four
+ * columns or fewer is a matrix and gets vertical column dividers. A wide table
+ * of prose is a directory: horizontal rules only.
+ */
+function classifyTable(wrap: HTMLElement, table: HTMLTableElement) {
+  const heads = [...table.querySelectorAll('thead th')].map((th) => th.textContent?.trim() ?? '');
+  const cols = heads.length || table.rows[0]?.cells.length || 0;
+  if (/^(#|rank|no\.?)$/i.test(heads[0] ?? '')) wrap.classList.add('mkt-blog-table--ranked');
+  const cells = [...table.querySelectorAll('tbody tr')].flatMap((tr) => [...tr.children].slice(1));
+  const short = cells.filter((c) => {
+    const t = (c.textContent ?? '').trim();
+    return t.length <= 28 && (/[\d₹$%✓✗×]/.test(t) || /^(yes|no|n\/a|none|free|included)\b/i.test(t));
+  }).length;
+  const matrix = cols <= 4 || (cells.length > 0 && short / cells.length >= 0.5);
+  wrap.classList.add(matrix ? 'mkt-blog-table--matrix' : 'mkt-blog-table--directory');
 }
 
 function prepareTables(root: HTMLElement) {
@@ -88,6 +139,7 @@ function prepareTables(root: HTMLElement) {
   root.querySelectorAll<HTMLElement>('.mkt-blog-table-wrap').forEach((wrap) => {
     const table = wrap.querySelector('table');
     if (!table) return;
+    classifyTable(wrap, table);
 
     const labels = [...table.querySelectorAll('thead th')].map((th) => th.textContent?.trim() ?? '');
     table.querySelectorAll('tbody tr').forEach((tr) => {
@@ -107,14 +159,9 @@ function prepareTables(root: HTMLElement) {
       scroller.append(table);
     }
 
-    // Shown only while the table is wider than its column (see bindBlogTables).
-    if (!wrap.querySelector('.mkt-blog-table-hint')) {
-      const hint = doc.createElement('p');
-      hint.className = 'mkt-blog-table-hint';
-      hint.setAttribute('aria-hidden', 'true');
-      hint.textContent = 'Swipe sideways to see every column';
-      wrap.prepend(hint);
-    }
+    // The swipe hint is CSS content on .is-scrollable (see blog.css), not
+    // text: as text it was read as page copy, five times on a long post.
+    wrap.querySelectorAll('.mkt-blog-table-hint').forEach((el) => el.remove());
   });
 }
 
@@ -361,7 +408,8 @@ function splitLongParagraphs(root: HTMLElement) {
  * text and headings are untouched, so the contents rail, anchors and the
  * ItemList schema read exactly as before.
  */
-const FACT_LABEL = /^(best for|good for|pricing|price|price from|ai|rating|trial|free trial|type)$/i;
+const FACT_LABEL =
+  /^(best for|good for|pricing|price|price from|ai|rating|trial|free trial|type|based in|shopify tier|partner since|team size|active projects|top markets|verified clients|known for|support|ask them)$/i;
 
 /** The bold lead-in label of a plain paragraph ("Pricing" for <p><strong>Pricing:</strong> …</p>). */
 function leadLabel(el: Element | null): string | null {
@@ -509,7 +557,7 @@ export function enhanceBlogHtml(html: string, inlineImages: InlineImage[] = []):
   upgradeListEntries(root);
   splitLongParagraphs(root);
   staticVerdicts(root);
-  staticFaqs(root);
+  accordionFaqs(root);
   wrapNumericRanges(root);
   prepareTables(root);
   addHeadingIds(root);

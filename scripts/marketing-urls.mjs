@@ -131,6 +131,7 @@ export const BLOG_SLUGS = [
   'rto-meaning-ecommerce',
   'add-whatsapp-chat-button-shopify',
   'best-shipping-aggregators-logistics-tools-india',
+  'best-shopify-development-companies-india',
 ];
 
 /** Soft-404 shell — prerendered to dist/404.html (Netlify 404 document). Not in sitemap. */
