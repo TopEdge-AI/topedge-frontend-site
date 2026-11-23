@@ -105,8 +105,19 @@ export default function PartnersPage() {
       <MarketingPage className="mkt-partners">
         {/* 1. Hero with the calculator */}
         <header className="mkt-phero" ref={heroRef}>
+          <div className="mkt-phero__panel">
+            <img
+              className="mkt-phero__bg"
+              src="/hero-aurora-preview.jpg"
+              alt=""
+              width={1024}
+              height={576}
+              decoding="async"
+              aria-hidden
+            />
+            <div className="mkt-phero__inner">
           <div className="mkt-phero__copy">
-            <p className="mkt-psec__eyebrow">TopEdge AI Partner Program</p>
+            <p className="mkt-phero__eyebrow">TopEdge AI Partner Program</p>
             <h1 className="mkt-phero__title">{PARTNERS_SEO.h1}</h1>
             <p className="mkt-phero__sub">
               You already tell Shopify brands which tools to use. Now that advice pays. Earn a share of every
@@ -124,6 +135,8 @@ export default function PartnersPage() {
           </div>
           <div className="mkt-phero__calc">
             <PartnerCalculator plans={plans} />
+          </div>
+            </div>
           </div>
         </header>
 
@@ -157,7 +170,7 @@ export default function PartnersPage() {
         <PartnerTools />
 
         {/* 9. FAQ */}
-        <Reveal className="mkt-psection mkt-psection--wash" labelledBy="partners-faq">
+        <Reveal className="mkt-psection" labelledBy="partners-faq">
           <PricingSectionHead id="partners-faq" eyebrow="FAQ" title="Questions" highlight="partners ask" />
           <FaqAccordion items={PARTNER_FAQS} />
         </Reveal>

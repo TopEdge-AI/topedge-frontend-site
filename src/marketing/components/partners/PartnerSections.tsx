@@ -135,7 +135,7 @@ export function PartnerTierLadder() {
   const maxBp = Math.max(...PARTNER_TIERS.map((t) => t.rateBp));
   const [, t2, t3] = PARTNER_TIERS;
   return (
-    <Reveal className="mkt-psection mkt-psection--wash" labelledBy="partners-tiers">
+    <Reveal className="mkt-psection" labelledBy="partners-tiers">
       <PricingSectionHead
         id="partners-tiers"
         eyebrow="Your rate"
@@ -143,24 +143,34 @@ export function PartnerTierLadder() {
         highlight="the higher your rate"
         sub="Your rate is based on how many clients have paid through your links."
       />
-      <ol className="mkt-pladder">
-        {PARTNER_TIERS.map((t, i) => (
-          <li key={t.minClients} className={`mkt-pladder__step mkt-pladder__step--${i + 1}`}>
-            <div className="mkt-pladder__track" aria-hidden>
-              <motion.span
-                className="mkt-pladder__bar"
-                style={{ height: `${(t.rateBp / maxBp) * 100}%`, originY: 1 }}
-                initial={animate ? { scaleY: 0 } : false}
-                whileInView={animate ? { scaleY: 1 } : undefined}
-                viewport={{ once: true, amount: 0.4 }}
-                transition={{ duration: 0.6, delay: i * 0.12, ease }}
-              />
-            </div>
-            <p className="mkt-pladder__rate">{pct(t.rateBp)}</p>
-            <p className="mkt-pladder__range">{tierRangeLabel(i)}</p>
-          </li>
-        ))}
-      </ol>
+      <div className="mkt-pladder-card">
+        <ol className="mkt-pladder">
+          {PARTNER_TIERS.map((t, i) => (
+            <li
+              key={t.minClients}
+              className={`mkt-pladder__step mkt-pladder__step--${i + 1}${i === PARTNER_TIERS.length - 1 ? ' is-top' : ''}`}
+            >
+              <div className="mkt-pladder__track" aria-hidden>
+                <motion.span
+                  className="mkt-pladder__bar"
+                  style={{ height: `${Math.max(38, (t.rateBp / maxBp) * 100)}%`, originY: 1 }}
+                  initial={animate ? { scaleY: 0 } : false}
+                  whileInView={animate ? { scaleY: 1 } : undefined}
+                  viewport={{ once: true, amount: 0.4 }}
+                  transition={{ duration: 0.6, delay: i * 0.12, ease }}
+                >
+                  <span className="mkt-pladder__bar-rate">{pct(t.rateBp)}</span>
+                </motion.span>
+              </div>
+              <div className="mkt-pladder__meta">
+                <span className="mkt-pladder__tier">Tier {i + 1}</span>
+                <p className="sr-only">{pct(t.rateBp)} commission</p>
+                <p className="mkt-pladder__range">{tierRangeLabel(i)}</p>
+              </div>
+            </li>
+          ))}
+        </ol>
+      </div>
       <div className="mkt-pladder__copy">
         <p>
           When you reach {t2.minClients} paying clients your rate becomes {pct(t2.rateBp)} on every one of your
@@ -246,7 +256,7 @@ export function PartnerPayouts({ plans }: { plans: CatalogPlan[] }) {
     'Clients who subscribe through Shopify’s own app billing are not covered yet.',
   ];
   return (
-    <Reveal className="mkt-psection mkt-psection--wash" id="payouts" labelledBy="partners-payouts">
+    <Reveal className="mkt-psection" id="payouts" labelledBy="partners-payouts">
       <PricingSectionHead
         id="partners-payouts"
         eyebrow="Payouts"
