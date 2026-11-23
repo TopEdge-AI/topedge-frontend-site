@@ -423,6 +423,12 @@
   color: #475569;
 }
 
+.mkt-pwall-section__extra {
+  display: flex;
+  justify-content: center;
+  margin: -0.35rem 0 1.5rem;
+}
+
 .mkt-pwall-section .mkt-pwall__grid {
   gap: 8px;
 }

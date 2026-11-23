@@ -1,6 +1,7 @@
 import { TRUSTPILOT, TRUSTPILOT_QUOTES, PRODUCT_HUNT, hasProductHuntRating } from '../data/socialProof';
 import { TrustpilotScore } from './TrustpilotProof';
 import { ProductHuntBadge, ProductHuntMark } from './ProductHuntProof';
+import { highlightTitle } from '../lib/highlight';
 import './../styles/proof.css';
 
 const TP_STAR = 'M12 1.6l3.1 7.2 7.8.6-5.9 5.1 1.8 7.6L12 18l-6.8 4.1 1.8-7.6L1.1 9.4l7.8-.6z';
@@ -29,7 +30,7 @@ export default function ReviewPlatforms({
     <section className="mkt-rp" aria-labelledby="mkt-rp-head">
       <header className="mkt-rp__head">
         <h2 className="mkt-rp__title" id="mkt-rp-head">
-          {heading}
+          {highlightTitle(heading)}
         </h2>
         {intro ? <p className="mkt-rp__intro">{intro}</p> : null}
       </header>

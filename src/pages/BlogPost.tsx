@@ -337,7 +337,7 @@ export default function BlogPost() {
           <section className="mkt-blog-related" aria-labelledby="related-heading">
             <div className="marketing-container mkt-blog-shell">
               <h2 id="related-heading" className="mkt-blog-related__title">
-                Related playbooks
+                Related <span className="mkt-hl">playbooks</span>
               </h2>
               <div className="mkt-blog-related__grid">
                 {related.map((r) => (

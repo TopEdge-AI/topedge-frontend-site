@@ -21,49 +21,27 @@
   border-right: 1px solid var(--pk-line);
 }
 
-/* ——— Buttons ——— */
-.pk-btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-  min-height: 3.25rem;
+/* ——— Buttons ———
+   The page uses the site's own pills: .mkt-btn-primary (purple) for the main
+   action and .mkt-btn-ghost (white, lilac edge) for the second. No black
+   buttons and no square corners anywhere on /partners. */
+.pk .mkt-btn-primary,
+.pk .mkt-btn-ghost {
+  min-height: 3rem;
+  height: auto;
   padding: 0 1.6rem;
-  border-radius: 14px;
-  font-size: 1rem;
-  font-weight: 600;
-  letter-spacing: -0.01em;
+  font-size: 0.95rem;
   white-space: nowrap;
-  text-decoration: none;
-  transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
 }
 
-.pk-btn:focus-visible {
-  outline: 2px solid var(--pk-violet);
-  outline-offset: 3px;
-}
-
-.pk-btn--dark {
-  background: var(--pk-ink);
-  color: #fff;
-  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.12) inset, 0 8px 20px -10px rgba(12, 18, 34, 0.6);
-}
-
-.pk-btn--dark:hover {
-  background: #1d2433;
-  transform: translateY(-1px);
-}
-
-.pk-btn--light {
+.pk .mkt-btn-ghost {
+  font-weight: 500;
   background: #fff;
-  color: var(--pk-ink);
-  border: 1px solid #e5e5ec;
-  box-shadow: 0 1px 2px rgba(12, 18, 34, 0.05);
 }
 
-.pk-btn--light:hover {
-  border-color: #d4d4de;
-  transform: translateY(-1px);
+.pk .mkt-btn-ghost img {
+  flex: none;
+  display: block;
 }
 
 /* ——— Hero ——— */
@@ -108,20 +86,32 @@
 
 .pk-hero__title {
   margin: 0;
-  font-size: clamp(2.3rem, 4.6vw, 3.6rem);
-  font-weight: 700;
-  line-height: 1.04;
-  letter-spacing: -0.045em;
+  font-family: var(--mkt-font);
+  font-size: clamp(1.7rem, 3.4vw, 2.75rem);
+  font-weight: 400;
+  line-height: 1.16;
+  letter-spacing: -0.04em;
   color: var(--pk-ink);
+  text-wrap: balance;
 }
 
+@media (min-width: 380px) {
+  .pk-hero__line {
+    white-space: nowrap;
+  }
+}
+
+/* The same lilac highlight as every section head on the site. */
 .pk-hero__accent {
-  display: block;
+  display: inline;
   margin-top: 0.1em;
-  background: linear-gradient(92deg, #6d28d9 0%, #8b5cf6 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
+  padding: 0.08em 0.26em 0.14em;
+  border-radius: 0.32em;
+  background: #e4d4ff;
+  color: #0c1222;
+  font-weight: 400;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
 }
 
 .pk-hero__sub {
@@ -144,14 +134,23 @@
   margin-top: 2rem;
 }
 
+/* The dithered panel runs on past the framed column to the right edge of the
+   window, so the pattern reads as wide as the page rather than as a box. The
+   earnings card stays centred in the part of the panel inside the column. */
+.pk {
+  --pk-bleed: max(0px, calc((100vw - 1240px) / 2));
+}
+
 .pk-hero__stage {
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: clamp(2.5rem, 5vw, 4.5rem) clamp(1rem, 3vw, 3rem);
+  margin-right: calc(var(--pk-bleed) * -1);
+  padding: clamp(2.5rem, 5vw, 4.5rem) calc(clamp(1rem, 3vw, 3rem) + var(--pk-bleed)) clamp(2.5rem, 5vw, 4.5rem)
+    clamp(1rem, 3vw, 3rem);
   border-left: 1px solid var(--pk-line);
-  background: var(--pk-dither) center / cover no-repeat;
+  background: var(--pk-dither) 100% 50% / cover no-repeat;
   image-rendering: pixelated;
 }
 
@@ -334,6 +333,28 @@
     repeating-linear-gradient(90deg, transparent 0 calc(10% - 1px), #efedf5 calc(10% - 1px) 10%) bottom / 100% 0.5rem no-repeat,
     #fbfbfd;
   overflow: hidden;
+  cursor: pointer;
+  /* Horizontal drags belong to the slider; vertical swipes still scroll the page. */
+  touch-action: pan-y;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.pk-calc__track.is-dragging {
+  cursor: grabbing;
+}
+
+.pk-calc__track.is-dragging .pk-calc__fill,
+.pk-calc__track.is-dragging .pk-calc__stepper {
+  transition: none;
+}
+
+.pk-calc__stepper output {
+  cursor: grab;
+}
+
+.pk-calc__track.is-dragging .pk-calc__stepper output {
+  cursor: grabbing;
 }
 
 .pk-calc__track:focus-within {
@@ -357,7 +378,10 @@
   height: 100%;
   margin: 0;
   opacity: 0;
-  cursor: ew-resize;
+  /* Pointer input is handled on the track itself (PartnerCalculator.tsx) so the
+     visible stepper can be grabbed and dragged; the input stays for the keyboard
+     and screen readers. */
+  pointer-events: none;
 }
 
 .pk-calc__stepper {
@@ -534,31 +558,36 @@
 
 .pk-head {
   max-width: 40rem;
-  margin-bottom: clamp(2rem, 4vw, 3rem);
-}
-
-.pk-head--center {
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto clamp(2rem, 4vw, 3rem);
   text-align: center;
 }
 
+/* Same head as the pricing, customers and home sections: light weight, one
+   lilac highlight on the second line, a short grey line under it. */
 .pk-head__title {
   margin: 0;
-  font-size: clamp(1.9rem, 3.6vw, 2.75rem);
-  font-weight: 700;
-  line-height: 1.08;
-  letter-spacing: -0.04em;
+  font-family: var(--mkt-font);
+  font-size: clamp(1.6rem, 3.2vw, 2.3rem);
+  font-weight: 400;
+  line-height: 1.2;
+  letter-spacing: -0.034em;
   color: var(--pk-ink);
 }
 
-.pk-head__muted {
-  color: #9ca3af;
+.pk-head__hl {
+  display: inline-block;
+  margin-top: 0.3rem;
+  padding: 0.1em 0.28em 0.15em;
+  border-radius: 0.35em;
+  background: #e4d4ff;
+  color: #0c1222;
+  font-weight: 400;
 }
 
 .pk-head__sub {
-  margin: 1rem 0 0;
-  font-size: 1.08rem;
+  max-width: 32rem;
+  margin: 1rem auto 0;
+  font-size: 1rem;
   line-height: 1.55;
   color: var(--pk-muted);
 }
@@ -589,11 +618,17 @@
 
 .pk-frame__title {
   margin: 0 0 1.25rem;
-  font-size: clamp(1.35rem, 2.4vw, 1.75rem);
-  font-weight: 700;
-  line-height: 1.15;
-  letter-spacing: -0.035em;
+  font-family: var(--mkt-font);
+  font-size: clamp(1.3rem, 2.3vw, 1.7rem);
+  font-weight: 400;
+  line-height: 1.2;
+  letter-spacing: -0.034em;
+  text-align: center;
   color: var(--pk-ink);
+}
+
+.pk-frame__title .pk-head__hl {
+  margin-top: 0.25rem;
 }
 
 .pk-frame .mkt-pdash {
@@ -621,10 +656,10 @@
   place-items: center;
   width: 2.75rem;
   height: 2.75rem;
-  border-radius: 12px;
-  background: var(--pk-ink);
-  color: #fff;
-  box-shadow: 0 6px 14px -8px rgba(12, 18, 34, 0.7);
+  border-radius: 14px;
+  background: #ede9fe;
+  color: #6d28d9;
+  box-shadow: 0 0 0 1px #ddd6fe inset;
 }
 
 .pk-points__title {
@@ -858,102 +893,6 @@
   color: var(--pk-violet);
 }
 
-/* FAQ: heading on the left, questions on the right */
-.pk-faq {
-  display: grid;
-  grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
-  gap: clamp(2rem, 5vw, 4rem);
-  align-items: start;
-}
-
-.pk-faq .pk-head {
-  position: sticky;
-  top: calc(var(--mkt-nav-h, 4.5rem) + 2rem);
-  margin-bottom: 0;
-}
-
-/* Final call to action */
-.pk-final {
-  padding: clamp(1rem, 2vw, 1.5rem);
-}
-
-.pk-final__card {
-  position: relative;
-  isolation: isolate;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: clamp(3.5rem, 7vw, 5.5rem) 1.5rem;
-  border-radius: 28px;
-  border: 1px solid var(--pk-line);
-  text-align: center;
-  background: #fff;
-}
-
-.pk-final__card::before,
-.pk-final__card::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  z-index: -1;
-  width: 34%;
-  background: var(--pk-dither) 100% 50% / cover no-repeat;
-  image-rendering: pixelated;
-  pointer-events: none;
-}
-
-.pk-final__card::before {
-  left: 0;
-  transform: scaleX(-1);
-  mask-image: linear-gradient(90deg, transparent 0%, #000 100%);
-  -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 100%);
-}
-
-.pk-final__card::after {
-  right: 0;
-  mask-image: linear-gradient(90deg, transparent 0%, #000 100%);
-  -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 100%);
-}
-
-.pk-final__title {
-  margin: 0;
-  font-size: clamp(2.2rem, 4.6vw, 3.4rem);
-  font-weight: 700;
-  line-height: 1.04;
-  letter-spacing: -0.045em;
-  color: var(--pk-ink);
-}
-
-.pk-final__sub {
-  margin: 1rem 0 0;
-  font-size: 1.1rem;
-  color: var(--pk-muted);
-}
-
-.pk-final__actions {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 0.75rem;
-  margin-top: 2rem;
-}
-
-.pk-final__meta {
-  margin: 1.5rem 0 0;
-  font-size: 0.9rem;
-  color: var(--pk-muted);
-}
-
-.pk-final__meta a {
-  color: var(--pk-ink);
-  font-weight: 600;
-  text-decoration: underline;
-  text-decoration-color: #d4d4de;
-  text-underline-offset: 3px;
-}
-
 /* Mobile sticky bar */
 .pk-sticky {
   display: none;
@@ -962,18 +901,13 @@
 /* ——— Responsive ——— */
 @media (max-width: 1000px) {
   .pk-hero,
-  .pk-value,
-  .pk-faq {
+  .pk-value {
     grid-template-columns: minmax(0, 1fr);
   }
 
   .pk-hero__stage {
     border-left: 0;
     border-top: 1px solid var(--pk-line);
-  }
-
-  .pk-faq .pk-head {
-    position: static;
   }
 
   .pk-stats {
@@ -1002,8 +936,10 @@
     font-size: 0.78rem;
   }
 
-  .pk-hero__actions .pk-btn {
+  .pk-hero__actions .mkt-btn-primary,
+  .pk-hero__actions .mkt-btn-ghost {
     flex: 1 1 100%;
+    max-width: none;
   }
 
   .pk-hero__stage {
@@ -1099,23 +1035,9 @@
     gap: 0.15rem;
   }
 
-  .pk-final {
-    padding: 0.75rem 0.75rem 5.5rem;
-  }
-
-  .pk-final__card {
-    padding: 3rem 1.25rem;
-    border-radius: 22px;
-  }
-
-  .pk-final__card::before,
-  .pk-final__card::after {
-    width: 14%;
-    opacity: 0.55;
-  }
-
-  .pk-final__actions .pk-btn {
-    flex: 1 1 100%;
+  /* Room under the closing card for the sticky "Become a partner" bar. */
+  .pk .mkt-cta {
+    padding-bottom: 5.5rem;
   }
 
   .mkt-pdash__money {
@@ -1150,13 +1072,13 @@
     transform: none;
   }
 
-  .pk-sticky .pk-btn {
+  .pk-sticky .mkt-btn-primary {
     width: 100%;
+    max-width: none;
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .pk-btn,
   .pk-sticky,
   .pk-calc__fill,
   .pk-calc__stepper,

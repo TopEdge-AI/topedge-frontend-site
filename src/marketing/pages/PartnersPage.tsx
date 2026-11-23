@@ -5,6 +5,7 @@ import '../styles/pricing.css';
 import '../styles/partners.css';
 import MarketingSEO from '../components/MarketingSEO';
 import MarketingPage from '../components/MarketingPage';
+import MarketingCtaBand from '../components/MarketingCtaBand';
 import ProofBadges from '../components/ProofBadges';
 import FaqAccordion from '../components/topic/FaqAccordion';
 import PartnerCalculator from '../components/partners/PartnerCalculator';
@@ -41,7 +42,7 @@ const PARTNER_WHATSAPP_URL = `https://wa.me/${COMPANY_PHONE_E164}?text=${encodeU
 
 function WhatsAppButton({ className = '' }: { className?: string }) {
   return (
-    <a className={`pk-btn pk-btn--light ${className}`} href={PARTNER_WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
+    <a className={`mkt-btn-ghost ${className}`.trim()} href={PARTNER_WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
       <img src="/platforms/whatsapp.svg" alt="" width={18} height={18} aria-hidden />
       Chat on WhatsApp
     </a>
@@ -51,7 +52,7 @@ function WhatsAppButton({ className = '' }: { className?: string }) {
 function StickyBar({ hide }: { hide: boolean }) {
   return (
     <div className={`pk-sticky${hide ? '' : ' is-on'}`} aria-hidden={hide}>
-      <a className="pk-btn pk-btn--dark" href={PARTNER_SIGNUP_URL} tabIndex={hide ? -1 : 0}>
+      <a className="mkt-btn-primary" href={PARTNER_SIGNUP_URL} tabIndex={hide ? -1 : 0}>
         Become a partner
       </a>
     </div>
@@ -61,7 +62,7 @@ function StickyBar({ hide }: { hide: boolean }) {
 export default function PartnersPage() {
   const [catalog, setCatalog] = useState<BillingCatalog>(FALLBACK_CATALOG);
   const heroRef = useRef<HTMLElement>(null);
-  const finalRef = useRef<HTMLElement>(null);
+  const finalRef = useRef<HTMLDivElement>(null);
   const [heroVisible, setHeroVisible] = useState(true);
   const [finalVisible, setFinalVisible] = useState(false);
 
@@ -125,14 +126,17 @@ export default function PartnersPage() {
                 For agencies, freelancers and creators who work with Shopify brands
               </p>
               <h1 className="pk-hero__title">
-                Recommend TopEdge AI.
-                <span className="pk-hero__accent">Earn {PARTNER_RATE_RANGE}, every month.</span>
+                <span className="pk-hero__line">Recommend TopEdge AI.</span>
+                <br />
+                <span className="pk-hero__accent">Earn {PARTNER_RATE_RANGE},</span>
+                <br />
+                <span className="pk-hero__accent">every month.</span>
               </h1>
               <p className="pk-hero__sub">
                 Get recurring commission on every paid plan you refer, for as long as the brand stays.
               </p>
               <div className="pk-hero__actions">
-                <a className="pk-btn pk-btn--dark" href={PARTNER_SIGNUP_URL}>
+                <a className="mkt-btn-primary" href={PARTNER_SIGNUP_URL}>
                   Become a partner
                 </a>
                 <WhatsAppButton />
@@ -151,35 +155,38 @@ export default function PartnersPage() {
           <PartnerSteps />
           <PartnerPayouts plans={plans} />
 
-          <Reveal className="pk-sec pk-faq" labelledBy="partners-faq">
+          <Reveal className="pk-sec" labelledBy="partners-faq">
             <SecHead
               id="partners-faq"
               title="Questions"
-              muted="partners ask."
+              highlight="partners ask."
               sub="Anything else? Message us on WhatsApp and we reply the same day."
             />
             <FaqAccordion items={PARTNER_FAQS} />
           </Reveal>
 
-          {/* Final call to action: centred, two ways in */}
-          <section className="pk-final" ref={finalRef} aria-labelledby="partners-final">
-            <div className="pk-final__card">
-              <h2 className="pk-final__title" id="partners-final">
-                Start with one link.
-              </h2>
-              <p className="pk-final__sub">Free to join. Your partner link is ready in minutes.</p>
-              <div className="pk-final__actions">
-                <a className="pk-btn pk-btn--dark" href={PARTNER_SIGNUP_URL}>
-                  Become a partner <ArrowRight size={16} aria-hidden />
-                </a>
-                <WhatsAppButton />
-              </div>
-              <p className="pk-final__meta">
-                Prefer email? <a href={`mailto:${PARTNER_EMAIL}`}>{PARTNER_EMAIL}</a> ·{' '}
-                <Link to={PARTNERS_TERMS_PATH}>Partner Terms</Link>
-              </p>
-            </div>
-          </section>
+          {/* Final call to action: the same card as every other page, two ways in */}
+          <div ref={finalRef}>
+            <MarketingCtaBand
+              label="Become a partner"
+              title="Start with one link."
+              subtitle="Free to join. Your partner link is ready in minutes."
+              actions={
+                <>
+                  <a className="mkt-btn-primary" href={PARTNER_SIGNUP_URL}>
+                    Become a partner <ArrowRight size={16} aria-hidden />
+                  </a>
+                  <WhatsAppButton />
+                </>
+              }
+              meta={
+                <>
+                  Prefer email? <a href={`mailto:${PARTNER_EMAIL}`}>{PARTNER_EMAIL}</a> ·{' '}
+                  <Link to={PARTNERS_TERMS_PATH}>Partner Terms</Link>
+                </>
+              }
+            />
+          </div>
         </div>
       </MarketingPage>
       <StickyBar hide={heroVisible || finalVisible} />

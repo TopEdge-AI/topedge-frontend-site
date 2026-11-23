@@ -1,4 +1,4 @@
-import { useEffect, useId, useState } from 'react';
+import { useCallback, useEffect, useId, useRef, useState, type PointerEvent as ReactPointerEvent } from 'react';
 import { Check, ChevronLeft, ChevronRight, Info } from 'lucide-react';
 import PriceRoll from '../pricing/PriceRoll';
 import { inrAmountFromLabel, type CatalogPlan } from '../../lib/billingCatalog';
@@ -34,6 +34,12 @@ export default function PartnerCalculator({ plans }: { plans: CatalogPlan[] }) {
   const [clients, setClients] = useState(CALC_DEFAULT_CLIENTS);
   const [settled, setSettled] = useState(CALC_DEFAULT_CLIENTS);
   const [planSlug, setPlanSlug] = useState(CALC_DEFAULT_PLAN);
+  const [dragging, setDragging] = useState(false);
+  const trackRef = useRef<HTMLDivElement>(null);
+  const stepRef = useRef<HTMLSpanElement>(null);
+  const labelRef = useRef<HTMLSpanElement>(null);
+  const drag = useRef<{ id: number; startX: number; startClients: number; moved: boolean } | null>(null);
+  const swallowClick = useRef(false);
 
   useEffect(() => {
     if (clients === settled) return;
@@ -49,7 +55,85 @@ export default function PartnerCalculator({ plans }: { plans: CatalogPlan[] }) {
   const monthlyLabel = formatInr(Math.round(monthly));
   const yearLabel = formatInr(Math.round(monthly * MONTHS));
   const fill = ((clients - CALC_MIN_CLIENTS) / (CALC_MAX_CLIENTS - CALC_MIN_CLIENTS)) * 100;
-  const set = (n: number) => setClients(Math.min(CALC_MAX_CLIENTS, Math.max(CALC_MIN_CLIENTS, n)));
+  const set = useCallback(
+    (n: number) => setClients(Math.min(CALC_MAX_CLIENTS, Math.max(CALC_MIN_CLIENTS, Math.round(n)))),
+    [],
+  );
+
+  /** Pixels the stepper can travel: the track, less the stepper, the end label and the gutters (see the CSS). */
+  const travel = () => {
+    const track = trackRef.current;
+    const step = stepRef.current;
+    const label = labelRef.current;
+    if (!track || !step || !label) return 0;
+    const rem = parseFloat(getComputedStyle(document.documentElement).fontSize) || 16;
+    return Math.max(1, track.clientWidth - step.offsetWidth - label.offsetWidth - 0.9 * rem);
+  };
+
+  const fromDelta = (startClients: number, dx: number) =>
+    startClients + (dx / travel()) * (CALC_MAX_CLIENTS - CALC_MIN_CLIENTS);
+
+  const onPointerDown = (e: ReactPointerEvent<HTMLDivElement>) => {
+    if (e.pointerType === 'mouse' && e.button !== 0) return;
+    const track = trackRef.current;
+    const step = stepRef.current;
+    const label = labelRef.current;
+    if (!track || !step || !label) return;
+    const target = e.target as HTMLElement;
+    // The arrows still step by one on a plain click; they only turn into a drag once the pointer moves.
+    if (target.closest('button')) {
+      drag.current = { id: e.pointerId, startX: e.clientX, startClients: clients, moved: false };
+      return;
+    }
+    const rect = track.getBoundingClientRect();
+    if (e.clientX >= label.getBoundingClientRect().left) return; // the end label is not part of the slider
+    let startClients = clients;
+    if (!step.contains(target)) {
+      // A click on the bare track moves the stepper there, centred under the pointer.
+      const rem = parseFloat(getComputedStyle(document.documentElement).fontSize) || 16;
+      const x = e.clientX - rect.left - track.clientLeft - step.offsetWidth / 2 - 0.3 * rem;
+      startClients = CALC_MIN_CLIENTS + (x / travel()) * (CALC_MAX_CLIENTS - CALC_MIN_CLIENTS);
+      startClients = Math.min(CALC_MAX_CLIENTS, Math.max(CALC_MIN_CLIENTS, Math.round(startClients)));
+      set(startClients);
+    }
+    track.setPointerCapture(e.pointerId);
+    drag.current = { id: e.pointerId, startX: e.clientX, startClients, moved: true };
+    setDragging(true);
+    e.preventDefault();
+    track.querySelector<HTMLInputElement>('input[type="range"]')?.focus({ preventScroll: true });
+  };
+
+  const onPointerMove = (e: ReactPointerEvent<HTMLDivElement>) => {
+    const d = drag.current;
+    if (!d || d.id !== e.pointerId) return;
+    const dx = e.clientX - d.startX;
+    if (!d.moved) {
+      if (Math.abs(dx) < 4) return;
+      d.moved = true;
+      swallowClick.current = true;
+      trackRef.current?.setPointerCapture(e.pointerId);
+      setDragging(true);
+    }
+    set(fromDelta(d.startClients, dx));
+  };
+
+  const endDrag = (e: ReactPointerEvent<HTMLDivElement>) => {
+    const d = drag.current;
+    if (!d || d.id !== e.pointerId) return;
+    drag.current = null;
+    setDragging(false);
+    const track = trackRef.current;
+    if (track?.hasPointerCapture(e.pointerId)) track.releasePointerCapture(e.pointerId);
+    // A drag that started on an arrow must not also count as a click on it.
+    window.setTimeout(() => {
+      swallowClick.current = false;
+    }, 0);
+  };
+
+  const stepBy = (n: number) => {
+    if (swallowClick.current) return;
+    set(clients + n);
+  };
 
   return (
     <div className="pk-calc" role="group" aria-labelledby={`${sliderId}-title`}>
@@ -106,7 +190,15 @@ export default function PartnerCalculator({ plans }: { plans: CatalogPlan[] }) {
         })}
       </fieldset>
 
-      <div className="pk-calc__track" style={{ ['--p' as string]: String(fill / 100) }}>
+      <div
+        ref={trackRef}
+        className={`pk-calc__track${dragging ? ' is-dragging' : ''}`}
+        style={{ ['--p' as string]: String(fill / 100) }}
+        onPointerDown={onPointerDown}
+        onPointerMove={onPointerMove}
+        onPointerUp={endDrag}
+        onPointerCancel={endDrag}
+      >
         <span className="pk-calc__fill" aria-hidden />
         <input
           id={sliderId}
@@ -120,16 +212,16 @@ export default function PartnerCalculator({ plans }: { plans: CatalogPlan[] }) {
           aria-valuetext={clientsLabel(clients)}
           onChange={(e) => set(Number(e.target.value))}
         />
-        <span className="pk-calc__stepper">
-          <button type="button" onClick={() => set(clients - 1)} aria-label="One client fewer">
+        <span ref={stepRef} className="pk-calc__stepper">
+          <button type="button" onClick={() => stepBy(-1)} aria-label="One client fewer">
             <ChevronLeft size={14} />
           </button>
           <output htmlFor={sliderId}>{clients}</output>
-          <button type="button" onClick={() => set(clients + 1)} aria-label="One client more">
+          <button type="button" onClick={() => stepBy(1)} aria-label="One client more">
             <ChevronRight size={14} />
           </button>
         </span>
-        <span className="pk-calc__clients-label" aria-hidden>
+        <span ref={labelRef} className="pk-calc__clients-label" aria-hidden>
           Paying clients
         </span>
       </div>

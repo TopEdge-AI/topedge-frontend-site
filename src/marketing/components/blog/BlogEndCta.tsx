@@ -1,5 +1,7 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { ArrowRight } from 'lucide-react';
+import MarketingCtaBand from '../MarketingCtaBand';
 import { DASH_SIGNUP } from '../../routes';
 import { TRUSTPILOT, TRUSTPILOT_QUOTES } from '../../data/socialProof';
 import '../../styles/blog-endcta.css';
@@ -94,13 +96,11 @@ function shareHref(key: ShareKey, url: string, title: string) {
 }
 
 /**
- * The end of every article: one conversion panel with a real review beside
- * it, then the share row.
+ * The end of every article: the shared closing-CTA card with a real review
+ * under the buttons, then the share row.
  *
- * The panel used to be a pale bordered box with a heading and two buttons,
- * which is the shape a reader's eye has learned to skip. Pairing the offer
- * with somebody else's words is the thing that makes an end-of-post CTA
- * convert, and the words have to be real: the quote comes verbatim from
+ * Pairing the offer with somebody else's words is what makes an end-of-post
+ * CTA convert, and the words have to be real: the quote comes verbatim from
  * socialProof.json and the star row is the published aggregate TrustScore,
  * labelled as the aggregate. No per-review rating is invented, because
  * Trustpilot publishes one score and we did not collect the rest.
@@ -131,27 +131,22 @@ export default function BlogEndCta({
 
   return (
     <>
-      <aside className="mkt-bend" aria-label="Start free">
-        <div className="mkt-bend__glow" aria-hidden />
-
-        <div className="mkt-bend__pitch">
-          <h2 className="mkt-bend__title">
-            Run cart recovery on your <span className="mkt-bend__hl">Shopify store</span>
-          </h2>
-          <p className="mkt-bend__sub">
-            Connect Shopify and WhatsApp Cloud API, approve your Meta templates, and publish the
-            first journey. Free for 14 days, no card.
-          </p>
-          <div className="mkt-bend__actions">
-            <a href={DASH_SIGNUP} className="mkt-bend__btn mkt-bend__btn--primary">
-              Start free
+      <MarketingCtaBand
+        variant="inline"
+        title="Run cart recovery on your Shopify store"
+        highlight="Shopify store"
+        subtitle="Connect Shopify and WhatsApp Cloud API, approve your Meta templates, and publish the first journey. Free for 14 days, no card."
+        actions={
+          <>
+            <a href={DASH_SIGNUP} className="mkt-btn-primary">
+              Start free <ArrowRight size={16} aria-hidden />
             </a>
-            <Link to="/pricing" className="mkt-bend__btn mkt-bend__btn--ghost">
+            <Link to="/pricing" className="mkt-btn-ghost">
               See pricing
             </Link>
-          </div>
-        </div>
-
+          </>
+        }
+      >
         {review ? (
           <figure className="mkt-bend__review">
             <div className="mkt-bend__stars" aria-hidden>
@@ -166,17 +161,12 @@ export default function BlogEndCta({
               <p>{review.text}</p>
             </blockquote>
             <figcaption className="mkt-bend__by">
-              <span className="mkt-bend__avatar" aria-hidden>
-                {review.author.trim().charAt(0)}
-              </span>
-              <span className="mkt-bend__by-text">
-                <b>{review.author}</b>
-                <span>Verified review on Trustpilot</span>
-              </span>
+              <b>{review.author}</b>
+              <span>Verified review on Trustpilot</span>
             </figcaption>
           </figure>
         ) : null}
-      </aside>
+      </MarketingCtaBand>
 
       <section className="mkt-bshare" aria-label="Share this article">
         <p className="mkt-bshare__label">Share this article</p>

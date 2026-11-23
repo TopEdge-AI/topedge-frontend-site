@@ -9,6 +9,7 @@ import {
 } from '../marketing/data/pageSeo';
 import MarketingPage from '../marketing/components/MarketingPage';
 import ProofBadges from '../marketing/components/ProofBadges';
+import { highlightTitle } from '../marketing/lib/highlight';
 import {
   COMPANY_ADDRESS_LINES,
   COMPANY_EMAIL,
@@ -137,7 +138,7 @@ export default function Contact() {
 
         <section className="mkt-contact__rest" aria-labelledby="contact-rest-head">
           <h2 className="mkt-contact__rest-head" id="contact-rest-head">
-            Not a sales question?
+            {highlightTitle('Not a sales question?')}
           </h2>
           <dl className="mkt-contact__rows">
             <div className="mkt-contact__row">

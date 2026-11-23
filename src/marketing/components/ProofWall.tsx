@@ -160,7 +160,18 @@ function PopCard({ tile }: { tile: Exclude<Tile, { kind: 'filler' }> }) {
   );
 }
 
-export default function ProofWall({ title, highlight, sub }: { title: string; highlight?: string; sub?: string }) {
+export default function ProofWall({
+  title,
+  highlight,
+  sub,
+  children,
+}: {
+  title: string;
+  highlight?: string;
+  sub?: string;
+  /** Optional strip between the sub line and the wall (the home page puts the review scores here). */
+  children?: ReactNode;
+}) {
   const tiles = useMemo(buildTiles, []);
   const wrapRef = useRef<HTMLDivElement>(null);
   const cardRef = useRef<HTMLDivElement>(null);
@@ -205,6 +216,7 @@ export default function ProofWall({ title, highlight, sub }: { title: string; hi
         ) : null}
       </h2>
       {sub ? <p className="mkt-pwall-section__sub">{sub}</p> : null}
+      {children ? <div className="mkt-pwall-section__extra">{children}</div> : null}
       <div
         ref={wrapRef}
         className={clsx('mkt-pwall', activeId && 'mkt-pwall--focus')}

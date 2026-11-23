@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { CUSTOMER_STORIES } from '../../data/socialProof';
 import ProofBadges from '../ProofBadges';
+import { highlightTitle } from '../../lib/highlight';
 import '../../styles/journey-flow.css';
 
 const LOGOS = [
@@ -27,7 +28,7 @@ export default function TrustBand({
     <section className="mkt-trust" aria-labelledby="mkt-trust-title">
       <div className="mkt-trust__head">
         <h2 className="mkt-trust__title" id="mkt-trust-title">
-          {title}
+          {highlightTitle(title)}
         </h2>
         <ProofBadges compact />
       </div>

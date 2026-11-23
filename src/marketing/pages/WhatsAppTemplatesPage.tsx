@@ -10,6 +10,7 @@ import JourneyHero from '../components/journey/JourneyHero';
 import PhoneMock, { type TemplateMessage } from '../components/journey/PhoneMock';
 import TrustBand from '../components/journey/TrustBand';
 import HowItWorks from '../components/journey/HowItWorks';
+import { highlightTitle } from '../lib/highlight';
 import {
   TEMPLATE_GROUPS,
   TEMPLATE_RATE,
@@ -233,8 +234,8 @@ function CopyTemplates() {
 
   return (
     <div className="mx-auto max-w-5xl">
-      <h2 className="text-center text-2xl font-semibold tracking-tight text-[#1a1033] md:text-3xl">
-        Three templates to copy now
+      <h2 className="text-center text-2xl font-normal tracking-tight text-[#0c1222] md:text-3xl">
+        {highlightTitle('Three templates to copy now')}
       </h2>
       <p className="mx-auto mt-3 max-w-2xl text-center text-[0.95rem] leading-relaxed text-[#5b5470]">
         Example wording in Meta’s {'{{1}}'} format. Submit it from your own account in{' '}

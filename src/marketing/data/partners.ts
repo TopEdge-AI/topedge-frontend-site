@@ -14,6 +14,8 @@
  *
  * Prices are never typed here: they come from lib/billingCatalog.ts.
  */
+import { COMPANY_EMAIL } from '../legal/companyIdentity';
+
 
 export type PartnerTier = {
   /** Qualified paying clients needed for this tier. */
@@ -38,7 +40,8 @@ export const PARTNER_COOKIE_DAYS = 90;
 export const PARTNER_PORTAL_URL = 'https://partners.topedgeai.com';
 export const PARTNER_PORTAL_HOST = 'partners.topedgeai.com';
 export const PARTNER_SIGNUP_URL = `${PARTNER_PORTAL_URL}/signup?from=partners-page`;
-export const PARTNER_EMAIL = 'partners@topedgeai.com';
+/** One inbox for everything: the partner program uses the company address, with no separate partner mailbox. */
+export const PARTNER_EMAIL = COMPANY_EMAIL;
 
 export const PARTNERS_PATH = '/partners';
 export const PARTNERS_TERMS_PATH = '/partners/terms';

@@ -1,6 +1,7 @@
 import { Fragment, type ReactNode } from 'react';
 import { Link } from 'react-router-dom';
 import { SOURCES, type SourceId } from '@/data/sources';
+import { highlightTitle } from '../../lib/highlight';
 import '../../styles/topic-blocks.css';
 
 /**
@@ -196,15 +197,8 @@ function SpecTable({ block }: { block: Extract<TopicBlock, { kind: 'specTable' }
  * not present, rather than rendering a half-matched span.
  */
 function BlockHeading({ h2, accent }: { h2: string; accent?: string }) {
-  const i = accent ? h2.indexOf(accent) : -1;
-  if (!accent || i < 0) return <h2 className="mkt-blk__h2">{h2}</h2>;
-  return (
-    <h2 className="mkt-blk__h2">
-      {h2.slice(0, i)}
-      <span className="mkt-hl">{accent}</span>
-      {h2.slice(i + accent.length)}
-    </h2>
-  );
+  // An explicit accent wins; a block without one still gets the closing-phrase highlight.
+  return <h2 className="mkt-blk__h2">{highlightTitle(h2, accent)}</h2>;
 }
 
 export function TopicBlockView({ block }: { block: TopicBlock }) {

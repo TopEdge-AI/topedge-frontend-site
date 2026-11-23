@@ -147,13 +147,10 @@ export const howItWorks = [
 ];
 
 /**
- * Home testimonials.
- *
- * `source` says where the words came from, and the card shows it: 'direct'
- * for a quote given to us, 'trustpilot' for one published under the author's
- * name on Trustpilot. The Trustpilot entries are appended at runtime from
- * socialProof.json (see homeTestimonials.ts) rather than copied here, so
- * there is one copy of each published review and it stays verbatim.
+ * Merchant quotes given to us directly. The home page no longer shows these
+ * as cards: its testimonial section is the review wall (ProofWall), the same as
+ * /customers, which carries published reviews and live merchants only. Kept as
+ * the record of what each merchant said.
  */
 export const testimonials = [
   {

@@ -12,6 +12,7 @@ import LandingFilm from '../components/landing/LandingFilm';
 import LandingPlans from '../components/landing/LandingPlans';
 import { getSeoTopic } from '../data/seoTopics';
 import { SHOPIFY_APP_PRICING } from '../data/shopifyAppPricing';
+import { highlightTitle } from '../lib/highlight';
 import {
   breadcrumbJsonLd,
   organizationJsonLd,
@@ -168,7 +169,7 @@ export default function SeoTopicPage({ slug }: Props) {
           <div className="mkt-topic__article">
             {topic.sections.map((s) => (
               <section className="mkt-blk" key={s.h2}>
-                <h2 className="mkt-blk__h2">{s.h2}</h2>
+                <h2 className="mkt-blk__h2">{highlightTitle(s.h2)}</h2>
                 <p className="mkt-blk__body mkt-blk__body--lede">{s.body}</p>
               </section>
             ))}

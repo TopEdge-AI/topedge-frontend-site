@@ -56,33 +56,35 @@ export function Reveal({
   );
 }
 
-/** Section heading: two short lines, the second in muted ink, plus one line of copy. */
+/**
+ * Section heading, the same as every other section on the site: centred, light
+ * weight, the second line carried by the lilac highlight, one short grey line
+ * under it.
+ */
 export function SecHead({
   id,
   title,
-  muted,
+  highlight,
   sub,
-  center = false,
 }: {
   id: string;
   title: string;
-  muted?: string;
+  highlight?: string;
   sub?: string;
-  center?: boolean;
 }) {
   return (
-    <div className={`pk-head${center ? ' pk-head--center' : ''}`}>
+    <header className="pk-head">
       <h2 className="pk-head__title" id={id}>
         {title}
-        {muted ? (
+        {highlight ? (
           <>
             <br />
-            <span className="pk-head__muted">{muted}</span>
+            <span className="pk-head__hl">{highlight}</span>
           </>
         ) : null}
       </h2>
       {sub ? <p className="pk-head__sub">{sub}</p> : null}
-    </div>
+    </header>
   );
 }
 
@@ -167,7 +169,7 @@ export function PartnerValue({ plans, trialDays }: { plans: CatalogPlan[]; trial
       <SecHead
         id="partners-why"
         title="A good recommendation."
-        muted="A lasting income."
+        highlight="A lasting income."
         sub="You help Shopify brands pick the right tools. We make it worth your while."
       />
       <div className="pk-value">
@@ -176,7 +178,7 @@ export function PartnerValue({ plans, trialDays }: { plans: CatalogPlan[]; trial
             <p className="pk-frame__title">
               One referral.
               <br />
-              Every payment after.
+              <span className="pk-head__hl">Every payment after.</span>
             </p>
             <PartnerDashboardPreview plans={plans} />
           </div>
@@ -209,7 +211,7 @@ export function PartnerTierLadder() {
       <SecHead
         id="partners-tiers"
         title="Bring more brands."
-        muted="Earn a higher rate."
+        highlight="Earn a higher rate."
         sub="Your rate rises with your paying clients and never goes down."
       />
       <ol className="pk-tiers">
@@ -253,7 +255,7 @@ export function PartnerSteps() {
   ];
   return (
     <Reveal className="pk-sec" labelledBy="partners-steps">
-      <SecHead id="partners-steps" title="From first link" muted="to first payout." />
+      <SecHead id="partners-steps" title="From first link" highlight="to first payout." />
       <ol className="pk-steps">
         {steps.map((s, i) => (
           <li key={s.title} className="pk-steps__item">
@@ -295,7 +297,7 @@ export function PartnerPayouts({ plans }: { plans: CatalogPlan[] }) {
   ];
   return (
     <Reveal className="pk-sec" id="payouts" labelledBy="partners-payouts">
-      <SecHead id="partners-payouts" title="Clear money," muted="on a clear date." />
+      <SecHead id="partners-payouts" title="Clear money," highlight="on a clear date." />
       <div className="pk-pay">
         <ol className="pk-pay__timeline" aria-label="Example payout timeline">
           {timeline.map((t, i) => (

@@ -13,7 +13,9 @@ export default function NotFoundPage() {
       />
       <div className="text-center">
         <p className="mkt-eyebrow">404</p>
-        <h1 className="mkt-display mt-4 text-4xl font-medium text-[#0c1222]">Page not found</h1>
+        <h1 className="mkt-display mt-4 text-4xl font-normal text-[#0c1222]">
+          Page <span className="mkt-hl">not found</span>
+        </h1>
         <p className="mt-4 text-[#5a6474]">Let’s get you back to the main TopEdge AI story.</p>
         <Link to="/" className="mkt-btn-primary mt-8">
           Go home

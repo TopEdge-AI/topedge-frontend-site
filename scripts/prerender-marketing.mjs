@@ -292,7 +292,7 @@ async function renderHomeBelowFold(page) {
     [...document.head.querySelectorAll('link[href]')].map((l) => l.getAttribute('href')),
   );
   await page.evaluate((evt) => window.dispatchEvent(new Event(evt)), HOME_BELOW_FOLD_EVENT);
-  await page.waitForSelector('.home-voices', { timeout: 20000 });
+  await page.waitForSelector('.mkt-pwall-section', { timeout: 20000 });
   await page.waitForSelector('.mkt-cta', { timeout: 20000 });
   await sleep(150);
   return baselineHrefs;

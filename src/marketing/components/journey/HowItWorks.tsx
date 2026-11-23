@@ -1,3 +1,4 @@
+import { highlightTitle } from '../../lib/highlight';
 import '../../styles/journey-flow.css';
 
 const STEPS = [
@@ -19,7 +20,7 @@ export default function HowItWorks({ title = 'Live in three steps' }: { title?: 
   return (
     <section className="mkt-how" aria-labelledby="mkt-how-title">
       <h2 className="mkt-how__title" id="mkt-how-title">
-        {title}
+        {highlightTitle(title)}
       </h2>
       <ol className="mkt-how__steps">
         {STEPS.map((s, i) => (

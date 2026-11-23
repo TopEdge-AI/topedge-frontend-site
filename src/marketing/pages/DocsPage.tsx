@@ -280,6 +280,7 @@ export default function DocsPage() {
 
       <MarketingCtaBand
         title="Run these automations on your own store"
+        highlight="your own store"
         subtitle="Connect Shopify and WhatsApp in one sitting. Compare plans on the pricing page, or see every feature first."
         primaryLabel="Start free"
         primaryTo="/signup"

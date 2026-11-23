@@ -77,7 +77,7 @@
 .mkt-about2__h1 {
   margin: 0 0 1.6rem;
   font-size: clamp(2rem, 4.6vw, 3.1rem);
-  font-weight: 800;
+  font-weight: 600;
   line-height: 1.08;
   letter-spacing: -0.035em;
   color: var(--ab-ink);
@@ -236,24 +236,26 @@ a.mkt-about2__mark--ul:hover {
 
 .mkt-about2__head {
   display: flex;
-  flex-wrap: wrap;
-  align-items: flex-end;
-  justify-content: space-between;
-  gap: 1rem 2rem;
-  padding: clamp(2.5rem, 6vw, 5rem) clamp(1.25rem, 3vw, 2.25rem) 2rem;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.1rem;
+  padding: clamp(2.5rem, 6vw, 5rem) clamp(1.25rem, 3vw, 2.25rem) 2.25rem;
+  text-align: center;
 }
 
+/* The same section head as the rest of the site: centred, light, one lilac highlight. */
 .mkt-about2__h2 {
-  margin: 0 0 0.75rem;
-  font-size: clamp(1.9rem, 3.6vw, 2.6rem);
-  font-weight: 800;
-  line-height: 1.1;
-  letter-spacing: -0.035em;
+  margin: 0 0 0.85rem;
+  font-size: clamp(1.6rem, 3.2vw, 2.3rem);
+  font-weight: 400;
+  line-height: 1.2;
+  letter-spacing: -0.034em;
   color: var(--ab-ink);
 }
 
 .mkt-about2__sub {
-  margin: 0;
+  max-width: 32rem;
+  margin: 0 auto;
   font-size: 1rem;
   line-height: 1.55;
   color: var(--ab-body);
@@ -549,16 +551,4 @@ a.mkt-about2__mark--ul:hover {
   .mkt-about2__name::after {
     clip-path: none;
   }
-}
-
-/* Closing band uses the site CTA; the highlight matches the theme (pricing heads). */
-.mkt-about2 .mkt-cta {
-  background: #fff;
-}
-
-.mkt-about2__hl {
-  padding: 0.08em 0.28em 0.12em;
-  border-radius: 0.35em;
-  background: #e4d4ff;
-  color: #0c1222;
 }

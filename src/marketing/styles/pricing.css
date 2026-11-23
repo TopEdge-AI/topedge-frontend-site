@@ -1354,74 +1354,6 @@
   display: none;
 }
 
-/* ——— Sales closing CTA ——— */
-.mkt-sales {
-  margin-top: 2.5rem;
-  padding-top: 0.5rem;
-}
-
-.mkt-sales__card {
-  width: min(100%, 42rem);
-  margin: 0 auto;
-  padding: 0.55rem;
-  border-radius: 1.35rem;
-  border: 1px solid #eef0f4;
-  background: #f8fafc;
-}
-
-.mkt-sales__body {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1.15rem 1.5rem;
-  padding: 1.25rem 1.35rem;
-  border-radius: 1.05rem;
-  border: 1px solid #eef0f4;
-  background: #fff;
-}
-
-.mkt-sales__head .mkt-psec__title {
-  font-size: clamp(1.2rem, 2.2vw, 1.5rem);
-}
-
-.mkt-sales__head .mkt-psec__sub {
-  margin-top: 0.45rem;
-  font-size: 0.875rem;
-  max-width: 26rem;
-}
-
-.mkt-sales__cta {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.35rem;
-  flex-shrink: 0;
-  min-height: 2.35rem;
-  padding: 0 1.1rem;
-  border-radius: 9999px;
-  border: 1px solid #e2e8f0;
-  background: #fff;
-  color: #0c1222;
-  font-size: 0.8125rem;
-  font-weight: 550;
-  text-decoration: none;
-  white-space: nowrap;
-  box-shadow: 0 4px 14px -10px rgba(15, 23, 42, 0.14);
-  transition:
-    border-color 0.15s ease,
-    color 0.15s ease,
-    background 0.15s ease,
-    transform 0.15s ease;
-}
-
-.mkt-sales__cta:hover {
-  border-color: #ddd6fe;
-  background: #faf5ff;
-  color: #6d28d9;
-  transform: translateY(-1px);
-}
-
 /* ——— ROI (kept for shared styles) ——— */
 .mkt-roi {
   display: flex;
@@ -1765,15 +1697,6 @@
   }
 
   .mkt-roi-card__cta {
-    width: 100%;
-  }
-
-  .mkt-sales__body {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .mkt-sales__cta {
     width: 100%;
   }
 

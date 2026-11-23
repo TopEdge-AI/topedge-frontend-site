@@ -10,6 +10,7 @@ import {
 import { SITE_URL } from '../marketing/data/marketingSeo';
 import MarketingPage from '../marketing/components/MarketingPage';
 import MarketingCtaBand from '../marketing/components/MarketingCtaBand';
+import { highlightTitle } from '../marketing/lib/highlight';
 import { COMPANY_ADDRESS_LINES, COMPANY_EMAIL } from '../marketing/legal/companyIdentity';
 import '../marketing/styles/about.css';
 
@@ -125,7 +126,7 @@ export default function About() {
             <h1 id="about-title" className="mkt-about2__h1">
               Built in Ahmedabad,
               <br />
-              for Shopify brands.
+              <span className="mkt-hl">for Shopify brands.</span>
             </h1>
             <div className="mkt-about2__body">
               <p>
@@ -175,7 +176,9 @@ export default function About() {
           <section className="mkt-about2__section" aria-labelledby="about-build">
             <div className="mkt-about2__head">
               <div>
-                <h2 id="about-build" className="mkt-about2__h2">What we build.</h2>
+                <h2 id="about-build" className="mkt-about2__h2">
+                  {highlightTitle('What we build.', 'build.')}
+                </h2>
                 <p className="mkt-about2__sub">
                   Six modules, one customer record.
                   <br />
@@ -207,7 +210,9 @@ export default function About() {
           <section className="mkt-about2__section" aria-labelledby="about-brands">
             <div className="mkt-about2__head">
               <div>
-                <h2 id="about-brands" className="mkt-about2__h2">Brands that run on it.</h2>
+                <h2 id="about-brands" className="mkt-about2__h2">
+                  {highlightTitle('Brands that run on it.', 'run on it.')}
+                </h2>
                 <p className="mkt-about2__sub">Shopify brands in India using TopEdge AI today.</p>
               </div>
               <Link to="/customers" className="mkt-about2__all">
@@ -233,11 +238,8 @@ export default function About() {
         </div>
 
         <MarketingCtaBand
-          title={
-            <>
-              Grow your Shopify brand <span className="mkt-about2__hl">with one suite.</span>
-            </>
-          }
+          title="Grow your Shopify brand with one suite."
+          highlight="with one suite."
           subtitle="Flat INR plans from ₹1,999/mo, or $19 on the Shopify App Store. 14-day free trial."
           primaryLabel="Start free trial"
           secondaryLabel="Talk to our team"

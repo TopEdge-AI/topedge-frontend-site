@@ -109,7 +109,7 @@ export default function MarketingNavbar() {
   const [productOpen, setProductOpen] = useState(false);
   const [mobileProductOpen, setMobileProductOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const closeTimer = useRef<number | null>(null);
+  const productRef = useRef<HTMLDivElement>(null);
   const lockY = useRef(0);
   const location = useLocation();
   const lenis = useLenis();
@@ -154,6 +154,16 @@ export default function MarketingNavbar() {
     };
   }, [open, lenis]);
 
+  // A click anywhere outside the menu closes it.
+  useEffect(() => {
+    if (!productOpen) return;
+    const onDown = (e: PointerEvent) => {
+      if (!productRef.current?.contains(e.target as Node)) setProductOpen(false);
+    };
+    document.addEventListener('pointerdown', onDown);
+    return () => document.removeEventListener('pointerdown', onDown);
+  }, [productOpen]);
+
   useEffect(() => {
     if (!productOpen && !open) return;
     const onKey = (e: KeyboardEvent) => {
@@ -177,15 +187,9 @@ export default function MarketingNavbar() {
   // Transparent (ghost) until scroll, solid capsule after scroll / mobile menu open
   const capsule = scrolled || open;
 
-  const openProduct = () => {
-    if (closeTimer.current) window.clearTimeout(closeTimer.current);
-    setProductOpen(true);
-  };
-
-  const scheduleCloseProduct = () => {
-    if (closeTimer.current) window.clearTimeout(closeTimer.current);
-    closeTimer.current = window.setTimeout(() => setProductOpen(false), 140);
-  };
+  // The Products menu opens on a click, never on hover or focus: a menu that
+  // appears because the pointer drifted past it covers the page underneath.
+  const toggleProduct = () => setProductOpen((v) => !v);
 
   const toggleMobileProduct = () => {
     setMobileProductOpen((v) => !v);
@@ -217,9 +221,7 @@ export default function MarketingNavbar() {
             <nav className="mkt-nav__desktop" aria-label="Primary">
               <div
                 className="mkt-nav__product"
-                onMouseEnter={openProduct}
-                onMouseLeave={scheduleCloseProduct}
-                onFocus={openProduct}
+                ref={productRef}
                 onBlur={(e) => {
                   if (!e.currentTarget.contains(e.relatedTarget as Node)) {
                     setProductOpen(false);
@@ -231,17 +233,14 @@ export default function MarketingNavbar() {
                   className={cn('mkt-nav__link mkt-nav__link--btn', productOpen && 'is-active')}
                   aria-expanded={productOpen}
                   aria-haspopup="true"
+                  onClick={toggleProduct}
                 >
                   Products
                   <ChevronDown className={cn('mkt-nav__chev', productOpen && 'is-open')} aria-hidden />
                 </button>
 
                 {/* Always mounted so every feature link is in the prerendered HTML; visibility is CSS-only. */}
-                <div
-                  className={cn('mkt-nav__mega', productOpen && 'is-open')}
-                  onMouseEnter={openProduct}
-                  onMouseLeave={scheduleCloseProduct}
-                >
+                <div className={cn('mkt-nav__mega', productOpen && 'is-open')}>
                   <div className="mkt-nav__mega-card">
                     <div className="mkt-nav__mega-cols">
                       {productColumns.map((col) => (

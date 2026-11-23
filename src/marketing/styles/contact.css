@@ -185,10 +185,12 @@
 }
 
 .mkt-contact__rest-head {
-  margin: 0 0 1.5rem;
-  font-size: clamp(1.1rem, 2.1vw, 1.4rem);
+  margin: 0 0 1.75rem;
+  font-size: clamp(1.45rem, 2.8vw, 2.05rem);
   font-weight: 400;
-  letter-spacing: -0.03em;
+  line-height: 1.2;
+  letter-spacing: -0.034em;
+  text-align: center;
   color: #0c1222;
 }
 

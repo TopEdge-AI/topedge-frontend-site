@@ -1283,10 +1283,13 @@
 }
 
 .mkt-blog-related__title {
+  margin-bottom: 1.5rem;
   font-family: var(--mkt-font);
-  font-size: 1.25rem;
-  font-weight: 560;
-  letter-spacing: -0.02em;
+  font-size: clamp(1.45rem, 2.8vw, 2.05rem);
+  font-weight: 400;
+  line-height: 1.2;
+  letter-spacing: -0.034em;
+  text-align: center;
   color: var(--mkt-ink);
 }
 
