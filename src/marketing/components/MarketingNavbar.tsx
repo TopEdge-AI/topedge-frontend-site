@@ -98,6 +98,8 @@ const primaryLinks = [
   // an internal Link, slashless like every other route here.
   { label: 'Docs', href: '/docs' },
   { label: 'Customers', href: '/customers' },
+  // Partner program (agencies, creators, consultants). Not a merchant page, so it sits last.
+  { label: 'Partners', href: '/partners' },
 ] as const;
 
 const easeSoft = [0.16, 1, 0.3, 1] as const;

@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "build:netlify": "npm run check:pricing && npm run check:blog && npm run check:festivals && npm run check:links && npm run check:crops && node scripts/generate-content-dates.mjs && node scripts/generate-landing-pages.mjs && node scripts/generate-sitemap.mjs && node scripts/generate-llms.mjs && node scripts/generate-redirects.mjs && vite build && node build-static.js && node scripts/prerender-marketing.mjs && node scripts/retain-old-assets.mjs && node scripts/check-dist.mjs && node scripts/check-chunk-failure.mjs && node scripts/check-image-weight.mjs && node scripts/check-structured-data.mjs && node scripts/check-video-markup.mjs && node scripts/check-llms.mjs",
+    "build:netlify": "npm run check:pricing && npm run check:partner-offer && npm run check:blog && npm run check:festivals && npm run check:links && npm run check:crops && node scripts/generate-content-dates.mjs && node scripts/generate-landing-pages.mjs && node scripts/generate-sitemap.mjs && node scripts/generate-llms.mjs && node scripts/generate-partner-destinations.mjs && node scripts/generate-redirects.mjs && vite build && node build-static.js && node scripts/prerender-marketing.mjs && node scripts/retain-old-assets.mjs && node scripts/check-dist.mjs && node scripts/check-chunk-failure.mjs && node scripts/check-image-weight.mjs && node scripts/check-structured-data.mjs && node scripts/check-video-markup.mjs && node scripts/check-llms.mjs && node scripts/check-partner-offer.mjs --dist",
     "build:firebase": "npm run check:pricing && npm run check:blog && npm run check:festivals && npm run check:links && npm run check:crops && node scripts/generate-content-dates.mjs && node scripts/generate-landing-pages.mjs && node scripts/generate-llms.mjs && vite build && node build-static.js && node scripts/prerender-marketing.mjs && node scripts/check-dist.mjs && node scripts/check-chunk-failure.mjs && node scripts/check-image-weight.mjs && node scripts/check-structured-data.mjs && node scripts/check-video-markup.mjs && node scripts/check-llms.mjs",
     "build:static": "npm run check:pricing && npm run check:blog && npm run check:festivals && npm run check:links && npm run check:crops && node scripts/generate-content-dates.mjs && node scripts/generate-landing-pages.mjs && node scripts/generate-llms.mjs && vite build && node build-static.js && node scripts/prerender-marketing.mjs && node scripts/check-dist.mjs && node scripts/check-chunk-failure.mjs && node scripts/check-image-weight.mjs && node scripts/check-structured-data.mjs && node scripts/check-video-markup.mjs && node scripts/check-llms.mjs",
     "prerender": "node scripts/prerender-marketing.mjs",
@@ -25,6 +25,8 @@
     "check:catalog-drift": "node scripts/check-catalog-drift.mjs",
     "check:llms-pricing": "node scripts/check-llms-pricing.mjs",
     "check:pricing": "node scripts/check-catalog-drift.mjs && node scripts/check-llms-pricing.mjs",
+    "check:partner-offer": "node scripts/check-partner-offer.mjs",
+    "partner-destinations": "node scripts/generate-partner-destinations.mjs",
     "seo:contracts": "node scripts/seo-contracts.selftest.mjs",
     "seo:audit": "node scripts/seo-audit.mjs",
     "sitemap:validate": "node scripts/validate-sitemap.mjs",

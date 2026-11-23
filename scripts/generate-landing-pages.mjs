@@ -1366,6 +1366,10 @@ const DENY_REGION =
 // signup in Google Ads (3 reported conversions, 0 real accounts, 18 Oct 2026).
 const adsLpCtaLabel = String(viteEnv.VITE_GOOGLE_ADS_LP_CTA_LABEL || '').trim();
 const ADS_SEND_TO = ADS_OK && adsLpCtaLabel ? `${adsId}/${adsLpCtaLabel}` : '';
+// Partner click beacon origin for attribution.js (same default as src/marketing/lib/partnerRef.ts).
+const PARTNERS_API = String(viteEnv.VITE_PARTNERS_API_URL || 'https://partners-api.topedgeai.com')
+  .trim()
+  .replace(/\/+$/, '');
 const analytics = tagId
   ? `<script>
 window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}window.gtag=gtag;
@@ -1575,7 +1579,7 @@ ${analytics}${posthog}<script>
 ${behavior}
 </script>
 <script>
-${attribution.replaceAll('{{SLUG}}', page.attr).replaceAll('{{ADS_SEND_TO}}', ADS_SEND_TO).replaceAll('{{SIGNUP_URL}}', DASH_SIGNUP)}
+${attribution.replaceAll('{{SLUG}}', page.attr).replaceAll('{{ADS_SEND_TO}}', ADS_SEND_TO).replaceAll('{{SIGNUP_URL}}', DASH_SIGNUP).replaceAll('{{PARTNERS_API}}', PARTNERS_API)}
 </script>
 </body>
 </html>

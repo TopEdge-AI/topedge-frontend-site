@@ -1,0 +1,342 @@
+{
+  "version": 1,
+  "generatedAt": "2026-11-23T02:47:38.428Z",
+  "base": "https://topedgeai.com",
+  "destinations": [
+    {
+      "path": "/",
+      "label": "Home",
+      "group": "main"
+    },
+    {
+      "path": "/pricing",
+      "label": "Pricing",
+      "group": "main"
+    },
+    {
+      "path": "/signup",
+      "label": "Sign up (free trial)",
+      "group": "main"
+    },
+    {
+      "path": "/features",
+      "label": "All features",
+      "group": "features"
+    },
+    {
+      "path": "/features/journeys",
+      "label": "Journey",
+      "group": "features"
+    },
+    {
+      "path": "/features/flow-builder",
+      "label": "Flow Builder",
+      "group": "features"
+    },
+    {
+      "path": "/features/ai-brain",
+      "label": "AI Brain",
+      "group": "features"
+    },
+    {
+      "path": "/features/campaigns",
+      "label": "Campaigns",
+      "group": "features"
+    },
+    {
+      "path": "/features/analytics",
+      "label": "Tracking Pixel",
+      "group": "features"
+    },
+    {
+      "path": "/features/meta-manager",
+      "label": "Meta Manager",
+      "group": "features"
+    },
+    {
+      "path": "/features/audience-crm",
+      "label": "Audience CRM",
+      "group": "features"
+    },
+    {
+      "path": "/features/chat-rules",
+      "label": "Chat rules",
+      "group": "features"
+    },
+    {
+      "path": "/features/warranty",
+      "label": "Warranty",
+      "group": "features"
+    },
+    {
+      "path": "/features/opt-in-tools",
+      "label": "Opt-in tools",
+      "group": "features"
+    },
+    {
+      "path": "/features/profit-loss",
+      "label": "Profit & costs",
+      "group": "features"
+    },
+    {
+      "path": "/features/intent-detection",
+      "label": "Intent detection",
+      "group": "features"
+    },
+    {
+      "path": "/features/cod-confirmation",
+      "label": "COD confirmation",
+      "group": "features"
+    },
+    {
+      "path": "/tools",
+      "label": "All free tools",
+      "group": "tools"
+    },
+    {
+      "path": "/tools/best-whatsapp-tool-for-shopify",
+      "label": "Find the best WhatsApp tool for your store",
+      "group": "tools"
+    },
+    {
+      "path": "/tools/rto-cost-calculator",
+      "label": "RTO cost calculator",
+      "group": "tools"
+    },
+    {
+      "path": "/tools/cart-recovery-calculator",
+      "label": "Cart recovery revenue calculator",
+      "group": "tools"
+    },
+    {
+      "path": "/tools/whatsapp-link-generator",
+      "label": "WhatsApp link generator with free QR code",
+      "group": "tools"
+    },
+    {
+      "path": "/pricing/meta-rates",
+      "label": "WhatsApp message cost calculator",
+      "group": "tools"
+    },
+    {
+      "path": "/blog",
+      "label": "Blog",
+      "group": "blog"
+    },
+    {
+      "path": "/blog/ecommerce-funnel-drop-off-benchmarks-visitor-identity-resolution",
+      "label": "Ecommerce Funnel Drop-Off Benchmarks (2026) & Identity Guide",
+      "group": "blog"
+    },
+    {
+      "path": "/blog/whatsapp-abandoned-cart-recovery-shopify",
+      "label": "WhatsApp Abandoned Cart Recovery: Shopify India",
+      "group": "blog"
+    },
+    {
+      "path": "/blog/best-shopify-app-for-abandoned-cart-recovery-india",
+      "label": "Best Shopify App for Abandoned Cart Recovery India (2026)",
+      "group": "blog"
+    },
+    {
+      "path": "/blog/whatsapp-automation-for-shopify",
+      "label": "Shopify WhatsApp Automation: India Guide (2027)",
+      "group": "blog"
+    },
+    {
+      "path": "/blog/best-whatsapp-apps-for-shopify",
+      "label": "Best WhatsApp Apps for Shopify in 2026",
+      "group": "blog"
+    },
+    {
+      "path": "/blog/shopify-whatsapp-automation-what-to-automate-first",
+      "label": "What to Automate First on Shopify WhatsApp",
+      "group": "blog"
+    },
+    {
+      "path": "/blog/ecommerce-automation-whatsapp-vs-email-india",
+      "label": "WhatsApp vs Email Marketing for D2C India",
+      "group": "blog"
+    },
+    {
+      "path": "/blog/meta-whatsapp-cloud-api-shopify-templates",
+      "label": "Meta WhatsApp Cloud API Templates for Shopify",
+      "group": "blog"
+    },
+    {
+      "path": "/blog/whatsapp-shared-inbox-shopify-order-context",
+      "label": "WhatsApp Shared Inbox with Shopify Orders",
+      "group": "blog"
+    },
+    {
+      "path": "/blog/shopify-automation-checklist-whatsapp-cart-recovery",
+      "label": "WhatsApp Cart Recovery Go-Live Checklist for Shopify India",
+      "group": "blog"
+    },
+    {
+      "path": "/blog/best-whatsapp-automation-tools-shopify-india",
+      "label": "Best WhatsApp Commerce Tools for Shopify (2026)",
+      "group": "blog"
+    },
+    {
+      "path": "/blog/how-to-reduce-rto-with-whatsapp-cod-confirmation",
+      "label": "Reduce RTO with WhatsApp COD Confirmation (SOP)",
+      "group": "blog"
+    },
+    {
+      "path": "/blog/what-is-ecommerce-automation-shopify-whatsapp",
+      "label": "What Is Ecommerce Automation on Shopify and WhatsApp?",
+      "group": "blog"
+    },
+    {
+      "path": "/blog/ai-whatsapp-chatbot-for-shopify-india",
+      "label": "AI WhatsApp Chatbot for Shopify India",
+      "group": "blog"
+    },
+    {
+      "path": "/blog/zoko-alternative-shopify-india",
+      "label": "Best Zoko Alternative for Shopify India (2026)",
+      "group": "blog"
+    },
+    {
+      "path": "/blog/getgabs-alternative-shopify-whatsapp",
+      "label": "Best Getgabs Alternative for Shopify India 2026",
+      "group": "blog"
+    },
+    {
+      "path": "/blog/kanal-whatsapp-alternative-shopify",
+      "label": "Kanal Alternative for Shopify India: INR vs EUR",
+      "group": "blog"
+    },
+    {
+      "path": "/blog/how-to-choose-whatsapp-app-shopify-app-store",
+      "label": "How to Choose a WhatsApp App on Shopify",
+      "group": "blog"
+    },
+    {
+      "path": "/blog/whatsapp-business-api-pricing-india",
+      "label": "WhatsApp Business API Pricing India 2026: ₹ Rates & Fees",
+      "group": "blog"
+    },
+    {
+      "path": "/blog/dondy-alternative-shopify-india",
+      "label": "Best Dondy Alternative for Shopify India (2026)",
+      "group": "blog"
+    },
+    {
+      "path": "/blog/organic-vs-paid-ecommerce-marketing-2026",
+      "label": "Organic vs Paid Ecommerce Marketing in India: 2026 Guide",
+      "group": "blog"
+    },
+    {
+      "path": "/blog/cod-rto-benchmark-india-2026",
+      "label": "COD & RTO in Indian D2C: 2026 Benchmark & ₹ Cost Per Order",
+      "group": "blog"
+    },
+    {
+      "path": "/blog/profitable-ecommerce-business-india",
+      "label": "Ecommerce Profit Margins in India 2026: CAC, RTO & COD",
+      "group": "blog"
+    },
+    {
+      "path": "/blog/how-to-automate-ecommerce-store-india",
+      "label": "How to Automate a Shopify Store in India (2026)",
+      "group": "blog"
+    },
+    {
+      "path": "/blog/organic-ecommerce-leads-short-form-video",
+      "label": "Turn Instagram Reels & YouTube Shorts into Ecommerce Leads",
+      "group": "blog"
+    },
+    {
+      "path": "/blog/trending-products-to-sell-online-india-2026",
+      "label": "Top 5 Product Categories to Sell Online in India 2026",
+      "group": "blog"
+    },
+    {
+      "path": "/blog/wati-alternative-shopify-india",
+      "label": "Best WATI Alternative for Shopify India (2026)",
+      "group": "blog"
+    },
+    {
+      "path": "/blog/aisensy-alternative-shopify-india",
+      "label": "AiSensy Alternative (2027): AiSensy vs Gallabox",
+      "group": "blog"
+    },
+    {
+      "path": "/blog/interakt-alternative-shopify-india",
+      "label": "Interakt Alternative for Shopify India (2027)",
+      "group": "blog"
+    },
+    {
+      "path": "/blog/interakt-pricing-india",
+      "label": "Interakt Pricing in India (2026): Monthly Cost",
+      "group": "blog"
+    },
+    {
+      "path": "/blog/wati-pricing-india",
+      "label": "Wati Pricing in India (2026): Plans and Seats",
+      "group": "blog"
+    },
+    {
+      "path": "/blog/aisensy-pricing-india",
+      "label": "AiSensy Pricing in India (2026): Rates and Bill",
+      "group": "blog"
+    },
+    {
+      "path": "/blog/bitespeed-alternative-shopify-india",
+      "label": "Bitespeed Alternative for Shopify India (2026)",
+      "group": "blog"
+    },
+    {
+      "path": "/blog/whatsapp-template-rejected-meta-shopify-fix",
+      "label": "WhatsApp Template Rejected? Fix It for Shopify",
+      "group": "blog"
+    },
+    {
+      "path": "/blog/whatsapp-opt-in-shopify-india",
+      "label": "WhatsApp Opt-In for Shopify India: Checkout, Popups & DPDP",
+      "group": "blog"
+    },
+    {
+      "path": "/blog/updatrr-alternative-shopify-india",
+      "label": "Best Updatrr Alternative for Shopify India 2026",
+      "group": "blog"
+    },
+    {
+      "path": "/blog/cod-to-prepaid-whatsapp-shopify-india",
+      "label": "COD to Prepaid on WhatsApp: Shopify India 2026",
+      "group": "blog"
+    },
+    {
+      "path": "/blog/best-shopify-upsell-apps",
+      "label": "Top 10 Best Shopify Upsell Apps for 2027",
+      "group": "blog"
+    },
+    {
+      "path": "/blog/shopify-seo-experts",
+      "label": "Top 10 Shopify SEO Experts & Resources for 2027",
+      "group": "blog"
+    },
+    {
+      "path": "/blog/rto-meaning-ecommerce",
+      "label": "RTO in Ecommerce: Meaning, Full Form and Cost",
+      "group": "blog"
+    },
+    {
+      "path": "/blog/add-whatsapp-chat-button-shopify",
+      "label": "Add a WhatsApp Chat Button to Shopify (3 Ways)",
+      "group": "blog"
+    },
+    {
+      "path": "/blog/best-shipping-aggregators-logistics-tools-india",
+      "label": "10 Best Shipping Aggregators & Logistics Tools in India 2027",
+      "group": "blog"
+    },
+    {
+      "path": "/blog/best-shopify-development-companies-india",
+      "label": "Shopify Development Companies in India (2027)",
+      "group": "blog"
+    }
+  ]
+}

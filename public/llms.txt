@@ -109,6 +109,10 @@ Setup guides and screen-by-screen reference, written for the person running the 
 
 - [Troubleshooting WhatsApp automation](https://topedgeai.com/docs/troubleshooting): Find the symptom and fix: messages not sending, empty inbox, rejected templates, carts without phone numbers, blocked broadcasts and connection errors.
 
+## Partner program
+
+- [TopEdge AI Partner Program](https://topedgeai.com/partners): agencies, freelancers, creators and Shopify consultants earn recurring commission on every payment a referred client makes on a paid plan billed by TopEdge AI, calculated before GST: 20% for 1 to 4 paying clients, 30% for 5 to 9 paying clients, 40% for 10 or more paying clients. Each commission goes through a 7-day check period, then it is approved and paid on the 1st of the next month by UPI or bank transfer, with no minimum payout. Referral links are remembered for 90 days, last partner click wins. Free to join at https://partners.topedgeai.com.
+
 ## Compare
 
 - [All 10 alternatives](https://topedgeai.com/compare/alternatives)
@@ -173,7 +177,7 @@ Setup guides and screen-by-screen reference, written for the person running the 
 
 ## Canonical URL directory
 
-All 169 indexable URLs on this domain, no trailing slash except the root.
+All 170 indexable URLs on this domain, no trailing slash except the root.
 
 - https://topedgeai.com/
 - https://topedgeai.com/pricing
@@ -340,6 +344,7 @@ All 169 indexable URLs on this domain, no trailing slash except the root.
 - https://topedgeai.com/docs/platform/conversation-pricing
 - https://topedgeai.com/docs/platform/limits-and-quotas
 - https://topedgeai.com/docs/troubleshooting
+- https://topedgeai.com/partners
 - https://topedgeai.com/whatsapp-app-for-shopify
 - https://topedgeai.com/whatsapp-abandoned-cart-recovery-app
 - https://topedgeai.com/privacy

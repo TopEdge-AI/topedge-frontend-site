@@ -40,6 +40,8 @@ const SKIP_PREFIXES = [
   '/privacy',
   '/terms',
   '/pricing',
+  // Partner pages speak to agencies and creators, not to merchants.
+  '/partners',
   '/contact',
   '/community',
   '/admin',

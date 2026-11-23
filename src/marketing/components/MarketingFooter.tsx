@@ -40,6 +40,7 @@ const columns: { title: string; links: FootLink[] }[] = [
       // other route: prerender writes flat docs.html, served with a 200.
       { label: 'Docs', href: '/docs' },
       { label: 'Blog', href: '/blog' },
+      { label: 'Partner program', href: '/partners' },
       { label: 'Contact', href: '/contact' },
     ],
   },

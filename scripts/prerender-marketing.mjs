@@ -402,7 +402,8 @@ async function main() {
         // /pricing renders catalog values into the saved HTML. Without this the
         // snapshot races the intercepted fetch and can bake in the bundled
         // FALLBACK_CATALOG seed instead, silently and with no warning.
-        if (route === '/pricing' && liveCatalogBody) {
+        // /partners does the same for the earnings calculator's default figures.
+        if ((route === '/pricing' || route === '/partners') && liveCatalogBody) {
           const deadline = Date.now() + 10000;
           while (!catalogFulfilled && Date.now() < deadline) await sleep(50);
           if (!catalogFulfilled) {

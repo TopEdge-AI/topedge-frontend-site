@@ -352,6 +352,14 @@ export default function PrivacyPolicy() {
             signups. They do not contain your name or contact details.
           </p>
           <p>
+            When you arrive through a TopEdge AI partner&apos;s referral link (a link carrying a <code>via</code> code),
+            we store a first-party cookie named <code>te_ref</code>, and the same value in your browser&apos;s local
+            storage, for 90 days. It holds the partner&apos;s code, the name of their link, the time of the click and
+            the page you landed on. We use it only to credit the partner if you create a TopEdge AI account, and we
+            count the click without storing your IP address or browser details with it. A later partner link replaces
+            it; ad and campaign tags never change it. It does not contain your name or contact details.
+          </p>
+          <p>
             Storefront opt-in widgets and the TopEdge AI pixel set first-party identifiers (e.g. visitor id) on your domain
             as configured by you. You must disclose those technologies in your store privacy notice.
           </p>

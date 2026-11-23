@@ -66,6 +66,17 @@ const { COMPARE_COMPETITORS } = await loadTs('src/marketing/data/compareCompetit
 const { PRODUCT_PAGES: PRODUCT_PAGE_MAP } = await loadTs('src/marketing/data/productPages.ts');
 const PRODUCT_PAGES = Object.values(PRODUCT_PAGE_MAP);
 const identity = await loadTs('src/marketing/legal/companyIdentity.ts');
+const partners = await loadTs('src/marketing/data/partners.ts');
+
+/** The partner program, from src/marketing/data/partners.ts (the page's own source). */
+function partnerLines() {
+  const tiers = partners.PARTNER_TIERS.map(
+    (t, i) => `${partners.pct(t.rateBp)} for ${partners.tierRangeLabel(i)}`,
+  ).join(', ');
+  return [
+    `- [TopEdge AI Partner Program](${url(partners.PARTNERS_PATH)}): agencies, freelancers, creators and Shopify consultants earn recurring commission on every payment a referred client makes on a paid plan billed by TopEdge AI, calculated before GST: ${tiers}. Each commission goes through a ${partners.PARTNER_HOLD_DAYS}-day check period, then it is approved and paid on the ${partners.PARTNER_PAYOUT_DAY}st of the next month by UPI or bank transfer, with no minimum payout. Referral links are remembered for ${partners.PARTNER_COOKIE_DAYS} days, last partner click wins. Free to join at ${partners.PARTNER_PORTAL_URL}.`,
+  ];
+}
 
 const DOCS = loadDocsContent();
 
@@ -197,6 +208,7 @@ const CORE = [
   ['Customers', '/customers'],
   ['About', '/about'],
   ['Contact', '/contact'],
+  ['Partner program', '/partners'],
   ['Blog', '/blog'],
   ['Compare', '/compare'],
   ['Privacy', '/privacy'],
@@ -238,6 +250,10 @@ const concise = [
   `Setup guides and screen-by-screen reference, written for the person running the store: ${url('/docs')}`,
   '',
   ...docLines(),
+  '## Partner program',
+  '',
+  ...partnerLines(),
+  '',
   '## Compare',
   '',
   ...compareLines(),
@@ -306,6 +322,7 @@ for (const g of docGroups()) {
   }
 }
 
+fullParts.push('## Partner program', '', ...partnerLines(), '');
 fullParts.push('## Compare boards', '');
 for (const slug of COMPARE_ORDER) {
   const c = COMPARE_COMPETITORS[slug];

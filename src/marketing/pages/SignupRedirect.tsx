@@ -3,6 +3,7 @@ import { useLocation } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { DASH_SIGNUP } from '../lib/billingCatalog';
 import { attributionQuery } from '../lib/attribution';
+import { partnerRefQuery } from '../lib/partnerRef';
 import '../styles/auth-redirect.css';
 
 const ALLOWED_PLANS = new Set(['launch', 'growth', 'scale']);
@@ -21,6 +22,8 @@ export default function SignupRedirect() {
     out.set('from', 'www');
     // Ad attribution captured on this or an earlier page (see lib/attribution.ts).
     for (const [k, v] of Object.entries(attributionQuery())) out.set(k, v);
+    // Partner referral (?via=&vl=, or te_ref from an earlier partner click; lib/partnerRef.ts).
+    for (const [k, v] of Object.entries(partnerRefQuery(location.search))) out.set(k, v);
     const lp = String(incoming.get('lp') || '').replace(/[<>"'`]/g, '').slice(0, 200);
     if (lp && !out.has('lp')) out.set('lp', lp);
     window.location.replace(`${DASH_SIGNUP}?${out.toString()}`);

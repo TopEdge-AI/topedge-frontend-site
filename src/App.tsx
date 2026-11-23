@@ -101,6 +101,8 @@ const CartRecoveryCalculatorPage = React.lazy(
 const WhatsAppLinkGeneratorPage = React.lazy(
   () => import('./marketing/pages/tools/WhatsAppLinkGeneratorPage'),
 );
+const PartnersPage = React.lazy(() => import('./marketing/pages/PartnersPage'));
+const PartnersTermsPage = React.lazy(() => import('./marketing/pages/PartnersTermsPage'));
 const NotFoundPage = React.lazy(() => import('./marketing/pages/NotFoundPage'));
 const PrivacyPolicy = React.lazy(() => import('./pages/PrivacyPolicy'));
 
@@ -289,6 +291,8 @@ const AnimatedRoutes = () => {
           <Route path="/tools/rto-cost-calculator" element={<RtoCalculatorPage />} />
           <Route path="/tools/cart-recovery-calculator" element={<CartRecoveryCalculatorPage />} />
           <Route path="/tools/whatsapp-link-generator" element={<WhatsAppLinkGeneratorPage />} />
+          <Route path="/partners" element={<PartnersPage />} />
+          <Route path="/partners/terms" element={<PartnersTermsPage />} />
           <Route path="/signup" element={<SignupRedirect />} />
           <Route path="/login" element={<LoginRedirect />} />
           <Route path="/docs" element={<DocsPage />} />

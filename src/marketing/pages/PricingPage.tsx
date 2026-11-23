@@ -210,6 +210,9 @@ export default function PricingPage() {
                 sub="Billing, trial, and checkout, answered in one place."
               />
               <PricingFaq />
+              <p className="mkt-pricing__note mkt-pricing__partner-link">
+                <Link to="/partners">Run an agency? See the partner program</Link>
+              </p>
             </section>
 
             <PricingSalesCta />

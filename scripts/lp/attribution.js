@@ -15,6 +15,27 @@
     }
     var o=s?JSON.parse(s):{};
     var q=KEYS.filter(function(k){return o[k];}).map(function(k){return k+'='+encodeURIComponent(o[k]);});
+    // Partner referral (?via=code&vl=slug), same rules as src/marketing/lib/partnerRef.ts:
+    // te_ref in localStorage + cookie for 90 days, last partner click wins, UTMs never touch it,
+    // one click beacon per capturing load. Forwarded to signup as via/vl.
+    var r=null;
+    try{
+      var cl=function(v){return String(v||'').replace(/[<>"'`]/g,'').trim().slice(0,200).toLowerCase();};
+      var vc=cl(p.get('via')),vs=cl(p.get('vl'));
+      if(/^[a-z0-9-]{3,24}$/.test(vc)){
+        if(!/^[a-z0-9-]{1,32}$/.test(vs))vs='';
+        r={c:vc,l:vs,ts:new Date().toISOString(),lp:location.pathname.slice(0,200)};
+        var rj=JSON.stringify(r),h=location.hostname;
+        try{localStorage.setItem('te_ref',rj);}catch(e){}
+        document.cookie='te_ref='+encodeURIComponent(rj)+'; Path=/; Max-Age=7776000; SameSite=Lax'+(h==='topedgeai.com'||/\.topedgeai\.com$/.test(h)?'; Domain=.topedgeai.com':'')+(location.protocol==='https:'?'; Secure':'');
+        if(navigator.sendBeacon)navigator.sendBeacon('{{PARTNERS_API}}/v1/public/click',new Blob([JSON.stringify({code:vc,slug:vs})],{type:'text/plain'}));
+      }else{
+        var rs=null;try{rs=localStorage.getItem('te_ref');}catch(e){}
+        if(!rs){var rm=document.cookie.match(/(?:^|;\s*)te_ref=([^;]*)/);rs=rm?decodeURIComponent(rm[1]):null;}
+        if(rs){r=JSON.parse(rs);if(!/^[a-z0-9-]{3,24}$/.test(cl(r.c))||!(Date.now()-Date.parse(r.ts)<7776000000))r=null;}
+      }
+    }catch(e){r=null;}
+    if(r){q.push('via='+encodeURIComponent(cl(r.c)));if(/^[a-z0-9-]{1,32}$/.test(cl(r.l)))q.push('vl='+encodeURIComponent(cl(r.l)));}
     q.push('lp='+encodeURIComponent(SLUG));
     // from=www is what the dashboard reads to clear a stale paid-plan intent, and it is
     // added here because this link no longer passes through the www /signup route.

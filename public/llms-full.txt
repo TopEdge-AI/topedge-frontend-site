@@ -580,6 +580,10 @@ Most problems are one of four things: a journey left in Draft, a template not Ap
 - **Why is my WhatsApp inbox empty?** Almost always because TopEdge AI isn't subscribed to your messages. Reconnect from Settings → WhatsApp to fix it. Sending works without it but nothing inbound arrives. Check the Webhook tab in WhatsApp settings, and test by messaging your business number from a personal phone.
 - **Who do I contact for help with TopEdge AI?** Use the contact page on this site. Include your store domain, what you expected, what actually happened, a screenshot of any banner, and the order number if it’s about a specific order. That usually gets a fix in one reply.
 
+## Partner program
+
+- [TopEdge AI Partner Program](https://topedgeai.com/partners): agencies, freelancers, creators and Shopify consultants earn recurring commission on every payment a referred client makes on a paid plan billed by TopEdge AI, calculated before GST: 20% for 1 to 4 paying clients, 30% for 5 to 9 paying clients, 40% for 10 or more paying clients. Each commission goes through a 7-day check period, then it is approved and paid on the 1st of the next month by UPI or bank transfer, with no minimum payout. Referral links are remembered for 90 days, last partner click wins. Free to join at https://partners.topedgeai.com.
+
 ## Compare boards
 
 ### TopEdge AI vs WATI

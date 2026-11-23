@@ -134,6 +134,17 @@ export const BLOG_SLUGS = [
   'best-shopify-development-companies-india',
 ];
 
+/**
+ * Partner program (src/marketing/pages/PartnersPage.tsx and PartnersTermsPage.tsx).
+ * /partners is indexable. /partners/terms is a draft for the lawyer: prerendered
+ * (so it serves a 200 as a flat partners/terms.html) but noindex, and kept out of
+ * the sitemap and llms by NOINDEX_PRERENDER_PATHS until it is approved.
+ */
+export const PARTNER_PATHS = ['/partners', '/partners/terms'];
+
+/** Prerendered pages that carry noindex: never in sitemap.xml or llms.txt. */
+export const NOINDEX_PRERENDER_PATHS = ['/partners/terms'];
+
 /** Soft-404 shell — prerendered to dist/404.html (Netlify 404 document). Not in sitemap. */
 export const NOT_FOUND_PRERENDER_PATH = '/404';
 
@@ -244,6 +255,7 @@ export function getMarketingPrerenderPaths() {
     ...JOURNEY_EXAMPLE_SLUGS.map((s) => `/whatsapp-journey-examples/${s}`),
     ...BLOG_SLUGS.map((s) => `/blog/${s}`),
     ...DOC_PATHS,
+    ...PARTNER_PATHS,
     NOT_FOUND_PRERENDER_PATH,
   ];
 }
@@ -251,7 +263,9 @@ export function getMarketingPrerenderPaths() {
 /** Indexable URLs for sitemap.xml (includes static legal pages; excludes soft-404 shell). */
 export function getSitemapPaths() {
   return [
-    ...getMarketingPrerenderPaths().filter((p) => p !== NOT_FOUND_PRERENDER_PATH),
+    ...getMarketingPrerenderPaths().filter(
+      (p) => p !== NOT_FOUND_PRERENDER_PATH && !NOINDEX_PRERENDER_PATHS.includes(p),
+    ),
     ...STATIC_LANDING_PATHS,
     '/privacy',
     '/terms',

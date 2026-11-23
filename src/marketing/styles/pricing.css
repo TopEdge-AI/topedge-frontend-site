@@ -2111,3 +2111,18 @@
   white-space: nowrap;
   border: 0;
 }
+
+/* Contextual link under the FAQ to the partner program (/partners). */
+.mkt-pricing__partner-link {
+  margin-top: 1.25rem;
+  font-size: 0.875rem;
+}
+
+.mkt-pricing__partner-link a {
+  color: var(--mkt-violet);
+  font-weight: 600;
+}
+
+.mkt-pricing__partner-link a:hover {
+  text-decoration: underline;
+}
