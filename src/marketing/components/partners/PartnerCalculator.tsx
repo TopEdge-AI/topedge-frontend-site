@@ -1,4 +1,5 @@
 import { useEffect, useId, useState } from 'react';
+import { Check, ChevronLeft, ChevronRight, Info } from 'lucide-react';
 import PriceRoll from '../pricing/PriceRoll';
 import { inrAmountFromLabel, type CatalogPlan } from '../../lib/billingCatalog';
 import {
@@ -6,7 +7,6 @@ import {
   CALC_DEFAULT_PLAN,
   CALC_MAX_CLIENTS,
   CALC_MIN_CLIENTS,
-  PARTNER_TIERS,
   formatInr,
   monthlyCommission,
   nextTierFor,
@@ -14,23 +14,23 @@ import {
   tierFor,
 } from '../../data/partners';
 
-const DEBOUNCE_MS = 300;
+const DEBOUNCE_MS = 250;
+const MONTHS = 12;
 
 function clientsLabel(n: number) {
   return `${n} ${n === 1 ? 'client' : 'clients'}`;
 }
 
 /**
- * "What could you earn?" (spec 9.4).
+ * "You earn" card in the hero.
  *
  * The first render is the default (5 clients on Growth), so the prerendered
- * HTML carries the real default figures as text. The result region is
- * aria-live and only updates 300 ms after the slider stops moving. PriceRoll
- * already renders an instant change under prefers-reduced-motion.
+ * HTML carries real default figures. The bars show what you have earned in
+ * total by the end of each month of year one, at a steady client count.
  */
 export default function PartnerCalculator({ plans }: { plans: CatalogPlan[] }) {
   const sliderId = useId();
-  const planName = useId();
+  const planGroup = useId();
   const [clients, setClients] = useState(CALC_DEFAULT_CLIENTS);
   const [settled, setSettled] = useState(CALC_DEFAULT_CLIENTS);
   const [planSlug, setPlanSlug] = useState(CALC_DEFAULT_PLAN);
@@ -46,103 +46,100 @@ export default function PartnerCalculator({ plans }: { plans: CatalogPlan[] }) {
   const monthly = monthlyCommission(settled, price);
   const rate = pct(tierFor(settled).tier.rateBp);
   const next = nextTierFor(settled);
-  const monthlyLabel = formatInr(monthly);
-  const yearLabel = formatInr(monthly * 12);
-  const span = CALC_MAX_CLIENTS - CALC_MIN_CLIENTS;
-  const markers = PARTNER_TIERS.filter((t) => t.minClients > CALC_MIN_CLIENTS);
+  const monthlyLabel = formatInr(Math.round(monthly));
+  const yearLabel = formatInr(Math.round(monthly * MONTHS));
+  const fill = ((clients - CALC_MIN_CLIENTS) / (CALC_MAX_CLIENTS - CALC_MIN_CLIENTS)) * 100;
+  const set = (n: number) => setClients(Math.min(CALC_MAX_CLIENTS, Math.max(CALC_MIN_CLIENTS, n)));
 
   return (
-    <div className="mkt-pcalc" aria-labelledby={`${sliderId}-title`} role="group">
-      <div className="mkt-pcalc__top">
-        <h2 className="mkt-pcalc__title" id={`${sliderId}-title`}>
-          What could you earn?
+    <div className="pk-calc" role="group" aria-labelledby={`${sliderId}-title`}>
+      <div className="pk-calc__head">
+        <h2 className="pk-calc__label" id={`${sliderId}-title`}>
+          You earn
         </h2>
-        <span className="mkt-ppill">Example figures</span>
+        <span className="pk-calc__rate">{rate} recurring commission</span>
       </div>
 
-      <div className="mkt-pcalc__field">
-        <div className="mkt-pcalc__label-row">
-          <label htmlFor={sliderId} className="mkt-pcalc__label">
-            Paying clients
-          </label>
-          <output htmlFor={sliderId} className="mkt-pcalc__count">
-            {clients}
-          </output>
-        </div>
-        <div className="mkt-pcalc__range-wrap">
-          <input
-            id={sliderId}
-            type="range"
-            className="mkt-pcalc__range"
-            min={CALC_MIN_CLIENTS}
-            max={CALC_MAX_CLIENTS}
-            step={1}
-            value={clients}
-            aria-valuetext={clientsLabel(clients)}
-            onChange={(e) => setClients(Number(e.target.value))}
-            style={{ ['--fill' as string]: `${((clients - CALC_MIN_CLIENTS) / span) * 100}%` }}
-          />
-          <div className="mkt-pcalc__marks" aria-hidden>
-            {markers.map((t) => (
-              <span
-                key={t.minClients}
-                className="mkt-pcalc__mark"
-                style={{ left: `${((t.minClients - CALC_MIN_CLIENTS) / span) * 100}%` }}
-              >
-                {t.minClients}
-              </span>
-            ))}
-          </div>
-        </div>
+      <p className="pk-calc__amount" aria-live="polite" aria-atomic="true">
+        <span aria-hidden>
+          <PriceRoll value={monthlyLabel} size="lg" replayKey={`${settled}-${plan?.slug}`} />
+        </span>
+        <span className="sr-only">{monthlyLabel} a month</span>
+        <span className="pk-calc__per" aria-hidden>
+          /mo
+        </span>
+      </p>
+
+      <div className="pk-calc__bars" aria-hidden>
+        {Array.from({ length: MONTHS }, (_, i) => (
+          <span key={i} className="pk-calc__bar" style={{ height: `${8 + ((i + 1) / MONTHS) * 92}%` }} />
+        ))}
+      </div>
+      <div className="pk-calc__axis">
+        <span>Month 1: {monthlyLabel}</span>
+        <strong>{yearLabel} in year one</strong>
       </div>
 
-      <fieldset className="mkt-pcalc__field mkt-pcalc__plans">
-        <legend className="mkt-pcalc__label">Their plan</legend>
-        <div className="mkt-pcalc__seg">
-          {plans.map((p) => (
-            <label key={p.slug} className={`mkt-pcalc__opt${p.slug === plan?.slug ? ' is-on' : ''}`}>
+      <fieldset className="pk-calc__plans">
+        <legend className="sr-only">Plan your clients are on</legend>
+        {plans.map((p) => {
+          const on = p.slug === plan?.slug;
+          return (
+            <label key={p.slug} className={`pk-calc__plan${on ? ' is-on' : ''}`}>
               <input
                 type="radio"
-                name={planName}
+                name={planGroup}
                 value={p.slug}
-                checked={p.slug === plan?.slug}
+                checked={on}
                 onChange={() => {
                   setPlanSlug(p.slug);
                   setSettled(clients);
                 }}
               />
-              <span>{p.displayName}</span>
+              <span className="pk-calc__check" aria-hidden>
+                {on ? <Check size={12} strokeWidth={3} /> : null}
+              </span>
+              <span className="pk-calc__plan-name">{p.displayName}</span>
+              <span className="pk-calc__plan-price">{p.monthlyPriceLabel}/mo</span>
             </label>
-          ))}
-        </div>
+          );
+        })}
       </fieldset>
 
-      <div className="mkt-pcalc__result" aria-live="polite" aria-atomic="true">
-        <p className="mkt-pcalc__amount">
-          <span aria-hidden>
-            <PriceRoll value={monthlyLabel} size="lg" replayKey={`${settled}-${plan?.slug}`} />
-          </span>
-          <span className="sr-only">{monthlyLabel}</span>
-          <span className="mkt-pcalc__per">per month</span>
-        </p>
-        <div className="mkt-pcalc__stats">
-          <p className="mkt-pcalc__chip">
-            Your rate: <strong>{rate}</strong>
-          </p>
-          <p className="mkt-pcalc__year">
-            In your first year: <strong>{yearLabel}</strong>
-          </p>
-        </div>
-        {next ? (
-          <p className="mkt-pcalc__next">
-            At {next.minClients} clients your rate becomes {pct(next.rateBp)}
-          </p>
-        ) : null}
+      <div className="pk-calc__track" style={{ ['--p' as string]: String(fill / 100) }}>
+        <span className="pk-calc__fill" aria-hidden />
+        <input
+          id={sliderId}
+          type="range"
+          className="pk-calc__range"
+          min={CALC_MIN_CLIENTS}
+          max={CALC_MAX_CLIENTS}
+          step={1}
+          value={clients}
+          aria-label="Paying clients"
+          aria-valuetext={clientsLabel(clients)}
+          onChange={(e) => set(Number(e.target.value))}
+        />
+        <span className="pk-calc__stepper">
+          <button type="button" onClick={() => set(clients - 1)} aria-label="One client fewer">
+            <ChevronLeft size={14} />
+          </button>
+          <output htmlFor={sliderId}>{clients}</output>
+          <button type="button" onClick={() => set(clients + 1)} aria-label="One client more">
+            <ChevronRight size={14} />
+          </button>
+        </span>
+        <span className="pk-calc__clients-label" aria-hidden>
+          Paying clients
+        </span>
       </div>
 
-      <p className="mkt-pcalc__note">
-        Based on {clientsLabel(settled)} on {plan?.displayName} at {formatInr(price)} a month before GST, all
-        paying monthly. It is an illustration: your earnings depend on clients who actually pay.
+      <p className="pk-calc__note">
+        <Info size={14} aria-hidden />
+        <span>
+          {clientsLabel(settled)} on {plan?.displayName} at {formatInr(price)}/mo before GST.
+          {next ? ` At ${next.minClients} clients your rate becomes ${pct(next.rateBp)}.` : ''} Example figures.
+        </span>
       </p>
     </div>
   );

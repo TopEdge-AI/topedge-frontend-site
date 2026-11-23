@@ -1,12 +1,11 @@
 import type { ReactNode } from 'react';
-import { Link } from 'react-router-dom';
 import { motion, useReducedMotion } from 'framer-motion';
-import { ArrowRight, Check } from 'lucide-react';
-import PricingSectionHead from '../pricing/PricingSectionHead';
+import { BadgeCheck, Check, Gauge, Info, Link2, Users, Wallet } from 'lucide-react';
+import PartnerDashboardPreview from './PartnerDashboardPreview';
 import { inrAmountFromLabel, type CatalogPlan } from '../../lib/billingCatalog';
 import {
+  PARTNER_COOKIE_DAYS,
   PARTNER_HOLD_DAYS,
-  PARTNER_RATE_RANGE,
   PARTNER_TIERS,
   formatInr,
   pct,
@@ -49,7 +48,7 @@ export function Reveal({
       aria-labelledby={labelledBy}
       initial={{ opacity: 0, y: 12 }}
       whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, amount: 0.15 }}
+      viewport={{ once: true, amount: 0.12 }}
       transition={{ duration: 0.5, ease }}
     >
       {children}
@@ -57,24 +56,53 @@ export function Reveal({
   );
 }
 
-const priceOf = (plans: CatalogPlan[], slug: string) =>
-  Number(inrAmountFromLabel(plans.find((p) => p.slug === slug)?.monthlyPriceLabel || '')) || 0;
-
-/* ——— 2. Facts strip ——— */
-export function PartnerFacts() {
-  const facts = [
-    { fig: PARTNER_RATE_RANGE, line: 'Recurring on every paid month, for as long as the client stays' },
-    { fig: '1st', line: 'Every approved commission is paid out on the 1st of the month' },
-    { fig: '₹0', line: 'Minimum payout. Any amount is paid' },
-    { fig: 'UPI or bank', line: 'Choose how you want to be paid' },
-  ];
+/** Section heading: two short lines, the second in muted ink, plus one line of copy. */
+export function SecHead({
+  id,
+  title,
+  muted,
+  sub,
+  center = false,
+}: {
+  id: string;
+  title: string;
+  muted?: string;
+  sub?: string;
+  center?: boolean;
+}) {
   return (
-    <section className="mkt-pfacts" aria-label="The offer in four facts">
-      <ul className="mkt-pfacts__list">
-        {facts.map((f) => (
-          <li key={f.fig} className="mkt-pfacts__item">
-            <span className="mkt-pfacts__fig">{f.fig}</span>
-            <span className="mkt-pfacts__line">{f.line}</span>
+    <div className={`pk-head${center ? ' pk-head--center' : ''}`}>
+      <h2 className="pk-head__title" id={id}>
+        {title}
+        {muted ? (
+          <>
+            <br />
+            <span className="pk-head__muted">{muted}</span>
+          </>
+        ) : null}
+      </h2>
+      {sub ? <p className="pk-head__sub">{sub}</p> : null}
+    </div>
+  );
+}
+
+/* ——— Logo strip ——— */
+const LOGOS = [
+  { name: 'Delitech Smart Home', src: '/trust/delitech-white.png' },
+  { name: 'Apex Light', src: '/trust/apex-white.png' },
+  { name: 'ajeeb', src: '/trust/ajeeb-black.png' },
+  { name: 'Ecom', src: '/trust/ecom-black.png' },
+  { name: 'Oleez Online', src: '/trust/oleez-black.png' },
+];
+
+export function PartnerLogos() {
+  return (
+    <section className="pk-row pk-logos" aria-label="Shopify brands that use TopEdge AI">
+      <p className="pk-logos__label">Used by Shopify brands across India</p>
+      <ul className="pk-logos__list">
+        {LOGOS.map((l) => (
+          <li key={l.name}>
+            <img src={l.src} alt={l.name} loading="lazy" decoding="async" />
           </li>
         ))}
       </ul>
@@ -82,137 +110,158 @@ export function PartnerFacts() {
   );
 }
 
-/* ——— 3. Why recommend TopEdge AI ——— */
-export function PartnerWhy({ plans, trialDays }: { plans: CatalogPlan[]; trialDays: number }) {
+/* ——— Stats grid ——— */
+export function PartnerStats() {
+  const top = PARTNER_TIERS[PARTNER_TIERS.length - 1];
+  const stats = [
+    { fig: `${PARTNER_TIERS[0].rateBp / 100}–${pct(top.rateBp)}`, label: 'Recurring commission' },
+    { fig: '₹0', label: 'Minimum payout' },
+    { fig: '1st', label: 'Paid every month' },
+    { fig: `${PARTNER_COOKIE_DAYS} days`, label: 'Link tracking window' },
+  ];
+  return (
+    <section className="pk-row" aria-label="The offer in four numbers">
+      <ul className="pk-stats">
+        {stats.map((s) => (
+          <li key={s.label} className="pk-stats__item">
+            <span className="pk-stats__fig">{s.fig}</span>
+            <span className="pk-stats__label">{s.label}</span>
+          </li>
+        ))}
+      </ul>
+      <p className="pk-stats__note">
+        <BadgeCheck size={16} aria-hidden />
+        Reach {top.minClients} paying clients for {pct(top.rateBp)}. Agencies with volume can ask for a custom rate.
+      </p>
+    </section>
+  );
+}
+
+/* ——— Why partners recommend it ——— */
+export function PartnerValue({ plans, trialDays }: { plans: CatalogPlan[]; trialDays: number }) {
   const launch = plans.find((p) => p.slug === 'launch') ?? plans[0];
   const points = [
     {
-      title: 'Brands can try it first',
-      body: `Every new account gets a ${trialDays}-day free trial, so you never ask a client to pay before they have seen it work.`,
+      icon: Users,
+      title: 'A natural fit for your work.',
+      body: 'Build stores, run ads or advise brands? Recommend the suite that runs their WhatsApp.',
     },
     {
-      title: 'Built for how Indian stores sell',
-      body: 'Every plan is priced in rupees and includes COD confirmation, GST invoices and the WhatsApp Cloud API connection.',
+      icon: Gauge,
+      title: 'Easy for brands to say yes.',
+      body: `${trialDays}-day free trial and flat rupee plans from ${launch?.monthlyPriceLabel}/mo. Nothing to negotiate.`,
     },
     {
-      title: 'Prices you can quote',
-      body: `Plans start at ${launch?.monthlyPriceLabel} a month before GST and are listed on the pricing page, so there is nothing to negotiate.`,
+      icon: Link2,
+      title: 'Every referral tracked.',
+      body: 'Your own links, with clicks, sign-ups and commission for each one in a single dashboard.',
+    },
+    {
+      icon: Wallet,
+      title: 'Paid on the 1st, every month.',
+      body: 'By UPI or bank transfer, with no minimum and a statement for every payout.',
     },
   ];
   return (
-    <Reveal className="mkt-psection" labelledBy="partners-why">
-      <PricingSectionHead
+    <Reveal className="pk-sec" labelledBy="partners-why">
+      <SecHead
         id="partners-why"
-        eyebrow="Why recommend it"
-        title="Easy to recommend,"
-        highlight="easy to explain"
-        sub="TopEdge AI is all-in-one D2C software for Shopify stores, built as one suite. It brings cart recovery, COD confirmation and COD to prepaid, WhatsApp and email journeys, campaigns, a shopper CRM, live chat, opt-in tools, a tracking pixel and profit reporting into one platform."
+        title="A good recommendation."
+        muted="A lasting income."
+        sub="You help Shopify brands pick the right tools. We make it worth your while."
       />
-      <div className="mkt-pwhy">
-        {points.map((p, i) => (
-          <article key={p.title} className="mkt-pwhy__card">
-            <span className="mkt-pwhy__num" aria-hidden>
-              {String(i + 1).padStart(2, '0')}
-            </span>
-            <h3 className="mkt-pwhy__title">{p.title}</h3>
-            <p className="mkt-pwhy__body">{p.body}</p>
-          </article>
-        ))}
+      <div className="pk-value">
+        <div className="pk-frame">
+          <div className="pk-frame__inner">
+            <p className="pk-frame__title">
+              One referral.
+              <br />
+              Every payment after.
+            </p>
+            <PartnerDashboardPreview plans={plans} />
+          </div>
+        </div>
+        <ul className="pk-points">
+          {points.map(({ icon: Icon, title, body }) => (
+            <li key={title} className="pk-points__item">
+              <span className="pk-points__icon" aria-hidden>
+                <Icon size={18} strokeWidth={2} />
+              </span>
+              <div>
+                <h3 className="pk-points__title">{title}</h3>
+                <p className="pk-points__body">{body}</p>
+              </div>
+            </li>
+          ))}
+        </ul>
       </div>
-      <p className="mkt-psection__link">
-        <Link to="/pricing">
-          See the plans <ArrowRight size={15} aria-hidden />
-        </Link>
+    </Reveal>
+  );
+}
+
+/* ——— Tier ladder ——— */
+export function PartnerTierLadder() {
+  const reduceMotion = useReducedMotion();
+  const animate = !reduceMotion && !isPrerender();
+  const maxBp = Math.max(...PARTNER_TIERS.map((t) => t.rateBp));
+  return (
+    <Reveal className="pk-sec" labelledBy="partners-tiers">
+      <SecHead
+        id="partners-tiers"
+        title="Bring more brands."
+        muted="Earn a higher rate."
+        sub="Your rate rises with your paying clients and never goes down."
+      />
+      <ol className="pk-tiers">
+        {PARTNER_TIERS.map((t, i) => (
+          <li key={t.minClients} className={`pk-tiers__item pk-tiers__item--${i + 1}`}>
+            <div className="pk-tiers__track" aria-hidden>
+              <motion.span
+                className="pk-tiers__bar"
+                style={{ height: `${Math.max(40, (t.rateBp / maxBp) * 100)}%`, originY: 1 }}
+                initial={animate ? { scaleY: 0 } : false}
+                whileInView={animate ? { scaleY: 1 } : undefined}
+                viewport={{ once: true, amount: 0.4 }}
+                transition={{ duration: 0.6, delay: i * 0.12, ease }}
+              />
+            </div>
+            <p className="pk-tiers__rate">{pct(t.rateBp)}</p>
+            <p className="pk-tiers__range">{tierRangeLabel(i)}</p>
+          </li>
+        ))}
+      </ol>
+      <p className="pk-tiers__note">
+        <Info size={14} aria-hidden />A client counts once their first payment clears the {PARTNER_HOLD_DAYS}-day check
+        period. Your new rate applies to all your clients from then on.
       </p>
     </Reveal>
   );
 }
 
-/* ——— 4. Tier ladder ——— */
-export function PartnerTierLadder() {
-  const reduceMotion = useReducedMotion();
-  const animate = !reduceMotion && !isPrerender();
-  const maxBp = Math.max(...PARTNER_TIERS.map((t) => t.rateBp));
-  const [, t2, t3] = PARTNER_TIERS;
-  return (
-    <Reveal className="mkt-psection" labelledBy="partners-tiers">
-      <PricingSectionHead
-        id="partners-tiers"
-        eyebrow="Your rate"
-        title="The more clients you bring,"
-        highlight="the higher your rate"
-        sub="Your rate is based on how many clients have paid through your links."
-      />
-      <div className="mkt-pladder-card">
-        <ol className="mkt-pladder">
-          {PARTNER_TIERS.map((t, i) => (
-            <li
-              key={t.minClients}
-              className={`mkt-pladder__step mkt-pladder__step--${i + 1}${i === PARTNER_TIERS.length - 1 ? ' is-top' : ''}`}
-            >
-              <div className="mkt-pladder__track" aria-hidden>
-                <motion.span
-                  className="mkt-pladder__bar"
-                  style={{ height: `${Math.max(38, (t.rateBp / maxBp) * 100)}%`, originY: 1 }}
-                  initial={animate ? { scaleY: 0 } : false}
-                  whileInView={animate ? { scaleY: 1 } : undefined}
-                  viewport={{ once: true, amount: 0.4 }}
-                  transition={{ duration: 0.6, delay: i * 0.12, ease }}
-                >
-                  <span className="mkt-pladder__bar-rate">{pct(t.rateBp)}</span>
-                </motion.span>
-              </div>
-              <div className="mkt-pladder__meta">
-                <span className="mkt-pladder__tier">Tier {i + 1}</span>
-                <p className="sr-only">{pct(t.rateBp)} commission</p>
-                <p className="mkt-pladder__range">{tierRangeLabel(i)}</p>
-              </div>
-            </li>
-          ))}
-        </ol>
-      </div>
-      <div className="mkt-pladder__copy">
-        <p>
-          When you reach {t2.minClients} paying clients your rate becomes {pct(t2.rateBp)} on every one of your
-          clients&apos; payments from then on. At {t3.minClients} clients it becomes {pct(t3.rateBp)}. Your rate
-          never goes down, even if a client cancels later.
-        </p>
-        <p className="mkt-pladder__small">
-          A client counts toward your rate once their first payment has cleared the {PARTNER_HOLD_DAYS}-day check
-          period.
-        </p>
-      </div>
-    </Reveal>
-  );
-}
-
-/* ——— 6. How it works ——— */
+/* ——— How it works ——— */
 export function PartnerSteps() {
   const steps = [
+    { title: 'Join free', body: 'Create a partner account. Your link is ready in minutes.' },
     {
-      title: 'Join and get your link.',
-      body: 'Create a free partner account. Your tracked link is ready as soon as the account is active, and you can make a separate one for each client or channel.',
+      title: 'Share your link',
+      body: `Send it to clients, add it to videos or proposals. Sign-ups within ${PARTNER_COOKIE_DAYS} days count.`,
     },
     {
-      title: 'Share TopEdge AI your way.',
-      body: 'Send it to a client, add it to a video description, put it in a proposal. Your link is remembered in the visitor’s browser for 90 days, so a sign-up in that time is recorded against you.',
-    },
-    {
-      title: 'Get paid on the 1st.',
-      body: `Every payment from a referred client earns you commission. After a ${PARTNER_HOLD_DAYS}-day check period it is approved, and it is paid out on the 1st of the next month by UPI or bank transfer.`,
+      title: 'Get paid on the 1st',
+      body: `Each payment clears a ${PARTNER_HOLD_DAYS}-day check, then lands in your UPI or bank.`,
     },
   ];
   return (
-    <Reveal className="mkt-psection" labelledBy="partners-steps">
-      <PricingSectionHead id="partners-steps" eyebrow="How it works" title="From first link to" highlight="first payout" />
-      <ol className="mkt-psteps">
+    <Reveal className="pk-sec" labelledBy="partners-steps">
+      <SecHead id="partners-steps" title="From first link" muted="to first payout." />
+      <ol className="pk-steps">
         {steps.map((s, i) => (
-          <li key={s.title} className="mkt-psteps__item">
-            <span className="mkt-psteps__num" aria-hidden>
-              {i + 1}
+          <li key={s.title} className="pk-steps__item">
+            <span className="pk-steps__num" aria-hidden>
+              {String(i + 1).padStart(2, '0')}
             </span>
-            <h3 className="mkt-psteps__title">{s.title}</h3>
-            <p className="mkt-psteps__body">{s.body}</p>
+            <h3 className="pk-steps__title">{s.title}</h3>
+            <p className="pk-steps__body">{s.body}</p>
           </li>
         ))}
       </ol>
@@ -220,99 +269,51 @@ export function PartnerSteps() {
   );
 }
 
-/* ——— 7. How and when you get paid ——— */
-const ordinal = (n: number) => {
-  const v = n % 100;
-  const suf = v >= 11 && v <= 13 ? 'th' : ['th', 'st', 'nd', 'rd'][n % 10] || 'th';
-  return `${n}${suf}`;
-};
-
+/* ——— Payouts ——— */
 const shortDate = (d: Date) =>
   d.toLocaleDateString('en-IN', { day: 'numeric', month: 'short', timeZone: 'UTC' });
 
 export function PartnerPayouts({ plans }: { plans: CatalogPlan[] }) {
   const growth = plans.find((p) => p.slug === 'growth') ?? plans[0];
-  const commission = (priceOf(plans, growth?.slug || '') * PARTNER_TIERS[0].rateBp) / 10000;
-  // A fixed worked example: a payment on 12 Nov, approved after the check period, paid on the 1st after that.
+  const price = Number(inrAmountFromLabel(growth?.monthlyPriceLabel || '')) || 0;
+  const commission = (price * PARTNER_TIERS[0].rateBp) / 10000;
+  // A fixed worked example: paid on 12 Nov, approved after the check period, paid out on the next 1st.
   const paid = new Date(Date.UTC(2026, 10, 12));
   const approved = new Date(paid.getTime() + PARTNER_HOLD_DAYS * 86400000);
   const payout = new Date(Date.UTC(approved.getUTCFullYear(), approved.getUTCMonth() + 1, 1));
-  const cutoff = 31 - PARTNER_HOLD_DAYS;
   const timeline = [
-    { when: shortDate(paid), what: `A client pays ${growth?.monthlyPriceLabel} for the ${growth?.displayName} plan` },
-    {
-      when: 'Same day',
-      what: `Your commission of ${formatInr(commission)} (${pct(PARTNER_TIERS[0].rateBp)}) is recorded and starts its ${PARTNER_HOLD_DAYS}-day check period`,
-    },
-    { when: shortDate(approved), what: 'Approved' },
-    { when: shortDate(payout), what: 'Paid to your UPI or bank account' },
+    { when: shortDate(paid), what: `Client pays ${growth?.monthlyPriceLabel} for ${growth?.displayName}` },
+    { when: 'Same day', what: `${formatInr(commission)} commission recorded` },
+    { when: shortDate(approved), what: 'Approved after the check period' },
+    { when: shortDate(payout), what: 'Paid to your UPI or bank' },
   ];
   const rules = [
-    'Commission is calculated on the amount before GST.',
-    'Only paid plans earn commission. Free trials do not.',
-    `Each commission goes through a ${PARTNER_HOLD_DAYS}-day check period, then it is approved.`,
-    `Payments made after about the ${ordinal(cutoff)} usually fall into the following month’s payout, because of the ${PARTNER_HOLD_DAYS}-day check period.`,
-    'We deduct TDS where the law requires it and give you a statement for every payout.',
-    'Clients who subscribe through Shopify’s own app billing are not covered yet.',
+    'Commission is on the amount before GST.',
+    'Only paid plans earn. Free trials do not.',
+    'TDS is deducted where the law requires it.',
+    'Shopify app billing sign-ups are not covered yet.',
   ];
   return (
-    <Reveal className="mkt-psection" id="payouts" labelledBy="partners-payouts">
-      <PricingSectionHead
-        id="partners-payouts"
-        eyebrow="Payouts"
-        title="No guesswork about"
-        highlight="your money"
-      />
-      <div className="mkt-ppay">
-        <div className="mkt-ppay__timeline">
-          <span className="mkt-ppill">Example</span>
-          <ol>
-            {timeline.map((t) => (
-              <li key={t.what}>
-                <span className="mkt-ppay__when">{t.when}</span>
-                <span className="mkt-ppay__what">{t.what}</span>
-              </li>
-            ))}
-          </ol>
-        </div>
-        <div className="mkt-ppay__rules">
-          <ul>
-            {rules.map((r) => (
-              <li key={r}>
-                <Check size={16} strokeWidth={2.4} aria-hidden className="mkt-ppay__tick" />
-                <span>{r}</span>
-              </li>
-            ))}
-          </ul>
-          <p className="mkt-ppay__note">
-            You will need your PAN and bank or UPI details before your first payout. Your approved earnings wait
-            for you until you add them.
-          </p>
-        </div>
+    <Reveal className="pk-sec" id="payouts" labelledBy="partners-payouts">
+      <SecHead id="partners-payouts" title="Clear money," muted="on a clear date." />
+      <div className="pk-pay">
+        <ol className="pk-pay__timeline" aria-label="Example payout timeline">
+          {timeline.map((t, i) => (
+            <li key={t.what} className={i === timeline.length - 1 ? 'is-last' : undefined}>
+              <span className="pk-pay__when">{t.when}</span>
+              <span className="pk-pay__what">{t.what}</span>
+            </li>
+          ))}
+        </ol>
+        <ul className="pk-pay__rules">
+          {rules.map((r) => (
+            <li key={r}>
+              <Check size={16} strokeWidth={2.4} aria-hidden />
+              <span>{r}</span>
+            </li>
+          ))}
+        </ul>
       </div>
-    </Reveal>
-  );
-}
-
-/* ——— 8. What you get ——— */
-export function PartnerTools() {
-  const items = [
-    'A tracked link for every client or channel, with clicks, sign-ups and earnings for each.',
-    'QR codes and ready-to-send messages for WhatsApp, email and LinkedIn.',
-    'One place to see every referral and exactly where each commission stands.',
-    'Monthly payout statements you can use for your own accounts.',
-  ];
-  return (
-    <Reveal className="mkt-psection" labelledBy="partners-tools">
-      <PricingSectionHead id="partners-tools" eyebrow="What you get" title="Tools that make" highlight="sharing simple" />
-      <ul className="mkt-ptools">
-        {items.map((t) => (
-          <li key={t} className="mkt-ptools__item">
-            <Check size={18} strokeWidth={2.4} aria-hidden className="mkt-ptools__tick" />
-            <span>{t}</span>
-          </li>
-        ))}
-      </ul>
     </Reveal>
   );
 }

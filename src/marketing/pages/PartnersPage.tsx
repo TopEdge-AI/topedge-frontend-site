@@ -1,22 +1,22 @@
 import { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { ArrowRight } from 'lucide-react';
 import '../styles/pricing.css';
 import '../styles/partners.css';
 import MarketingSEO from '../components/MarketingSEO';
 import MarketingPage from '../components/MarketingPage';
-import PricingSectionHead from '../components/pricing/PricingSectionHead';
+import ProofBadges from '../components/ProofBadges';
 import FaqAccordion from '../components/topic/FaqAccordion';
 import PartnerCalculator from '../components/partners/PartnerCalculator';
-import PartnerAudienceTabs from '../components/partners/PartnerAudienceTabs';
-import PartnerContactForm from '../components/partners/PartnerContactForm';
 import {
-  PartnerFacts,
+  PartnerLogos,
   PartnerPayouts,
+  PartnerStats,
   PartnerSteps,
   PartnerTierLadder,
-  PartnerTools,
-  PartnerWhy,
+  PartnerValue,
   Reveal,
+  SecHead,
 } from '../components/partners/PartnerSections';
 import { PARTNER_FAQS } from '../components/partners/partnerFaq';
 import { breadcrumbJsonLd, webPageJsonLd } from '../data/pageSeo';
@@ -27,18 +27,31 @@ import {
   PARTNERS_PATH,
   PARTNERS_TERMS_PATH,
 } from '../data/partners';
+import { COMPANY_PHONE_E164 } from '../legal/companyIdentity';
 import { BillingCatalog, FALLBACK_CATALOG, fetchBillingCatalog } from '../lib/billingCatalog';
 
 const PARTNERS_SEO = {
   title: `TopEdge AI Partner Program: ${PARTNER_RATE_RANGE} Recurring Commission`,
   description: `Earn ${PARTNER_RATE_RANGE} recurring commission on every TopEdge AI client you refer. Free to join, paid on the 1st of each month by UPI or bank, no minimum payout.`,
-  h1: `Earn ${PARTNER_RATE_RANGE} recurring commission on every TopEdge AI client you refer`,
 };
+
+const PARTNER_WHATSAPP_URL = `https://wa.me/${COMPANY_PHONE_E164}?text=${encodeURIComponent(
+  'Hi TopEdge AI, I want to join the partner program.',
+)}`;
+
+function WhatsAppButton({ className = '' }: { className?: string }) {
+  return (
+    <a className={`pk-btn pk-btn--light ${className}`} href={PARTNER_WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
+      <img src="/platforms/whatsapp.svg" alt="" width={18} height={18} aria-hidden />
+      Chat on WhatsApp
+    </a>
+  );
+}
 
 function StickyBar({ hide }: { hide: boolean }) {
   return (
-    <div className={`mkt-psticky${hide ? '' : ' is-on'}`} aria-hidden={hide}>
-      <a className="mkt-btn-primary mkt-psticky__btn" href={PARTNER_SIGNUP_URL} tabIndex={hide ? -1 : 0}>
+    <div className={`pk-sticky${hide ? '' : ' is-on'}`} aria-hidden={hide}>
+      <a className="pk-btn pk-btn--dark" href={PARTNER_SIGNUP_URL} tabIndex={hide ? -1 : 0}>
         Become a partner
       </a>
     </div>
@@ -102,96 +115,72 @@ export default function PartnersPage() {
           ]),
         ]}
       />
-      <MarketingPage className="mkt-partners">
-        {/* 1. Hero with the calculator */}
-        <header className="mkt-phero" ref={heroRef}>
-          <div className="mkt-phero__panel">
-            <img
-              className="mkt-phero__bg"
-              src="/hero-aurora-preview.jpg"
-              alt=""
-              width={1024}
-              height={576}
-              decoding="async"
-              aria-hidden
+      <MarketingPage className="pk">
+        <div className="pk-shell">
+          {/* Hero: copy on white, the earnings card on the dithered panel */}
+          <header className="pk-hero" ref={heroRef}>
+            <div className="pk-hero__copy">
+              <p className="pk-hero__pill">
+                <span className="pk-hero__pill-dot" aria-hidden />
+                For agencies, freelancers and creators who work with Shopify brands
+              </p>
+              <h1 className="pk-hero__title">
+                Recommend TopEdge AI.
+                <span className="pk-hero__accent">Earn {PARTNER_RATE_RANGE}, every month.</span>
+              </h1>
+              <p className="pk-hero__sub">
+                Get recurring commission on every paid plan you refer, for as long as the brand stays.
+              </p>
+              <div className="pk-hero__actions">
+                <a className="pk-btn pk-btn--dark" href={PARTNER_SIGNUP_URL}>
+                  Become a partner
+                </a>
+                <WhatsAppButton />
+              </div>
+              <ProofBadges compact brief className="pk-hero__proof" />
+            </div>
+            <div className="pk-hero__stage">
+              <PartnerCalculator plans={plans} />
+            </div>
+          </header>
+
+          <PartnerLogos />
+          <PartnerStats />
+          <PartnerValue plans={plans} trialDays={catalog.trialDays} />
+          <PartnerTierLadder />
+          <PartnerSteps />
+          <PartnerPayouts plans={plans} />
+
+          <Reveal className="pk-sec pk-faq" labelledBy="partners-faq">
+            <SecHead
+              id="partners-faq"
+              title="Questions"
+              muted="partners ask."
+              sub="Anything else? Message us on WhatsApp and we reply the same day."
             />
-            <div className="mkt-phero__inner">
-          <div className="mkt-phero__copy">
-            <p className="mkt-phero__eyebrow">TopEdge AI Partner Program</p>
-            <h1 className="mkt-phero__title">{PARTNERS_SEO.h1}</h1>
-            <p className="mkt-phero__sub">
-              You already tell Shopify brands which tools to use. Now that advice pays. Earn a share of every
-              payment your referred clients make, for as long as they stay on a paid plan.
-            </p>
-            <div className="mkt-phero__actions">
-              <a className="mkt-btn-primary" href={PARTNER_SIGNUP_URL}>
-                Become a partner
-              </a>
-              <a className="mkt-btn-ghost" href="#payouts">
-                See how payouts work
-              </a>
+            <FaqAccordion items={PARTNER_FAQS} />
+          </Reveal>
+
+          {/* Final call to action: centred, two ways in */}
+          <section className="pk-final" ref={finalRef} aria-labelledby="partners-final">
+            <div className="pk-final__card">
+              <h2 className="pk-final__title" id="partners-final">
+                Start with one link.
+              </h2>
+              <p className="pk-final__sub">Free to join. Your partner link is ready in minutes.</p>
+              <div className="pk-final__actions">
+                <a className="pk-btn pk-btn--dark" href={PARTNER_SIGNUP_URL}>
+                  Become a partner <ArrowRight size={16} aria-hidden />
+                </a>
+                <WhatsAppButton />
+              </div>
+              <p className="pk-final__meta">
+                Prefer email? <a href={`mailto:${PARTNER_EMAIL}`}>{PARTNER_EMAIL}</a> ·{' '}
+                <Link to={PARTNERS_TERMS_PATH}>Partner Terms</Link>
+              </p>
             </div>
-            <p className="mkt-phero__note">Free to join. Paid on the 1st of every month. No minimum payout.</p>
-          </div>
-          <div className="mkt-phero__calc">
-            <PartnerCalculator plans={plans} />
-          </div>
-            </div>
-          </div>
-        </header>
-
-        {/* 2. Facts */}
-        <PartnerFacts />
-
-        {/* 3. Why recommend */}
-        <PartnerWhy plans={plans} trialDays={catalog.trialDays} />
-
-        {/* 4. Tier ladder */}
-        <PartnerTierLadder />
-
-        {/* 5. Who it is for */}
-        <Reveal className="mkt-psection" labelledBy="partners-who">
-          <PricingSectionHead
-            id="partners-who"
-            eyebrow="Who it is for"
-            title="Built for people who"
-            highlight="advise store owners"
-          />
-          <PartnerAudienceTabs plans={plans} />
-        </Reveal>
-
-        {/* 6. How it works */}
-        <PartnerSteps />
-
-        {/* 7. Payouts */}
-        <PartnerPayouts plans={plans} />
-
-        {/* 8. What you get */}
-        <PartnerTools />
-
-        {/* 9. FAQ */}
-        <Reveal className="mkt-psection" labelledBy="partners-faq">
-          <PricingSectionHead id="partners-faq" eyebrow="FAQ" title="Questions" highlight="partners ask" />
-          <FaqAccordion items={PARTNER_FAQS} />
-        </Reveal>
-
-        {/* 10. Final call to action and contact form */}
-        <section className="mkt-pfinal" ref={finalRef} aria-labelledby="partners-final">
-          <div className="mkt-pfinal__cta">
-            <h2 className="mkt-pfinal__title" id="partners-final">
-              Start with one link.
-            </h2>
-            <p className="mkt-pfinal__sub">Create your free partner account and share your first link today.</p>
-            <a className="mkt-btn-primary mkt-pfinal__btn" href={PARTNER_SIGNUP_URL}>
-              Become a partner
-            </a>
-            <p className="mkt-pfinal__meta">
-              Questions first? Write to <a href={`mailto:${PARTNER_EMAIL}`}>{PARTNER_EMAIL}</a>. Read the{' '}
-              <Link to={PARTNERS_TERMS_PATH}>Partner Terms</Link>.
-            </p>
-          </div>
-          <PartnerContactForm />
-        </section>
+          </section>
+        </div>
       </MarketingPage>
       <StickyBar hide={heroVisible || finalVisible} />
     </>
