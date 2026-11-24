@@ -103,7 +103,7 @@ const COMPANY_PHONE_E164 = identity('COMPANY_PHONE_E164');
 // the same way here rather than read as a string. Throws if that shape ever changes.
 const WHATSAPP_MSG = (identitySrc.match(/COMPANY_WHATSAPP_URL =[\s\S]{0,120}?encodeURIComponent\(\s*'([^']+)'/) || [])[1];
 if (!WHATSAPP_MSG) throw new Error('companyIdentity.ts: COMPANY_WHATSAPP_URL message not found');
-const WHATSAPP_URL = `https://wa.me/${COMPANY_PHONE_E164}?text=${encodeURIComponent(WHATSAPP_MSG)}`;
+const WHATSAPP_URL = `https://api.whatsapp.com/send?phone=${COMPANY_PHONE_E164}&text=${encodeURIComponent(WHATSAPP_MSG)}`;
 
 // The FAQ is gone. Six accordions at the bottom of an ad page answer objections to
 // nobody: the visitor who still has a question wants a person, and this audience already
@@ -111,7 +111,7 @@ const WHATSAPP_URL = `https://wa.me/${COMPANY_PHONE_E164}?text=${encodeURICompon
 // where they came from, and so the reply can pick up the context.
 const HELP_MSG =
   'Hi TopEdge AI, I have a question about WhatsApp COD confirmation for my Shopify store.';
-const HELP_WHATSAPP_URL = `https://wa.me/${COMPANY_PHONE_E164}?text=${encodeURIComponent(HELP_MSG)}`;
+const HELP_WHATSAPP_URL = `https://api.whatsapp.com/send?phone=${COMPANY_PHONE_E164}&text=${encodeURIComponent(HELP_MSG)}`;
 const ADDRESS_LINES = identityList('COMPANY_ADDRESS_LINES');
 const SOCIAL = identityMap('COMPANY_SOCIAL');
 
@@ -140,7 +140,7 @@ const HERO_VARIANTS = {
   platform: {
     lead: 'WhatsApp App for Shopify ',
     mark: 'TopEdge AI',
-    sub: 'Recover abandoned carts, confirm COD orders and send order updates on WhatsApp. Built for Indian Shopify D2C brands, with 20 more features in one suite.',
+    sub: 'A WhatsApp app for Shopify that recovers abandoned carts, confirms COD orders and sends order updates. Built for Indian Shopify D2C brands, with 20 more features in one suite.',
   },
   cod: {
     lead: 'Confirm COD orders before you ',
@@ -800,6 +800,11 @@ const STEPS = [
  * not do reads as more honest than one that only sells.
  */
 const FAQS = [
+  // Question-first (owner, 24 Nov 2026): the page's own query, answered in one line.
+  {
+    q: 'What is a WhatsApp app for Shopify?',
+    a: 'A WhatsApp app for Shopify connects your store\u2019s carts and orders to WhatsApp, so cart reminders, COD confirmations and order updates go out automatically and replies come back to your team. TopEdge AI runs on Meta\u2019s official Cloud API with 0% markup on Meta\u2019s rates, from \u20b91,999 a month or $19 on the Shopify App Store.',
+  },
   {
     q: 'Will my WhatsApp number get banned?',
     a: 'Messages send on the official WhatsApp Cloud API, not an unofficial bridge, which is where bans come from. Every template is approved by Meta on your own Business account before it can send, so nothing goes out that Meta has not already cleared.',
@@ -1239,7 +1244,7 @@ const PAGES = [
     index: true,
     title: 'WhatsApp App for Shopify: Cart Recovery & COD | TopEdge AI',
     description:
-      'WhatsApp app for Shopify India: recover abandoned carts, confirm COD orders and send order updates on WhatsApp. 0% Meta markup, 14-day free trial.',
+      'WhatsApp app for Shopify India: recover carts, confirm COD orders and send order updates on WhatsApp. 0% Meta markup, 14-day free trial.',
     name: 'WhatsApp App for Shopify',
     hero: HERO_VARIANTS.platform,
     variants: HERO_VARIANTS,
@@ -1543,7 +1548,7 @@ for (const page of PAGES) {
       (x, i) => `      <li class="stp" data-rv style="--d:${i * 70}ms"><b class="stp-m">${x.mark}</b><h3>${esc(x.h)}</h3><p>${esc(x.p)}</p></li>`,
     ).join('\n'),
     FAQS: page.faqs.map(
-      (f) => `      <details class="fq"><summary>${esc(f.q)}<i aria-hidden="true"></i></summary><p>${esc(f.a)}</p></details>`,
+      (f, i) => `      <details class="fq"><summary><span>${i + 1}. ${esc(f.q)}</span><i aria-hidden="true"></i></summary><p>${esc(f.a)}</p></details>`,
     ).join('\n'),
     LAUNCH_YEARLY: esc(planPricing(plans[0], 'yearly').effectiveMonthlyLabel),
     TRIAL_DAYS: String(TRIAL.days),

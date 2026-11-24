@@ -83,6 +83,14 @@ Before changing anything, tell me in a few lines: what the log says is done, tod
    - **Prose fills the article column** up to the contents rail on desktop. No capped reading measure that leaves an empty band between the text and the rail.
    - **No code font in articles.** Paths, parameters and file names such as /collections/all or robots.txt are set in the body font, not monospace. Do not wrap them in `<code>` for looks.
 
+16. Question-first structure and numbered FAQ (owner, 24 Nov 2026; models: click400.com/best-shopify-themes-for-jewellery-stores, getgabs.com/blogs/whatsapp-ai-agents, wati.io/en/blog/whatsapp-abandoned-cart-messages):
+   - **Research the questions first.** Before writing, list the real questions people ask about the page's topic: the page's Search Console queries, People Also Ask in the live India SERP, and one `get_keyword_metrics` call (2356, en) for question forms. Keep only questions with impressions or search volume, and record the source of each in the analysis report.
+   - **Open with the main question, above the list or body.** Right after the Direct answer box and intro, the first H2 is the question a searcher actually types, with the keyword in it ("What is a WhatsApp app for Shopify?", "Why do customers abandon their carts?"). Its first sentence is a one-line direct answer that makes sense on its own; then two to four short sentences or a three to six item list; one sourced number where it helps (e.g. Baymard's cart abandonment rate). On a "best X" list, the next H2 is the buying criteria ("What should you look for in X?").
+   - **List entries:** numbered headings in the form "1. Name: best for Y", each followed by a short spec box (Best for, Price with reading date, Watch-out).
+   - **"Which X is best for your Y?" H2** with one H3 per real long-tail query ("Best X for COD orders") and a one or two sentence answer under each.
+   - **FAQ like a printed FAQ:** H2 "Frequently asked questions about <topic>" (post field `faqHeading`), questions numbered 1, 2, 3 (CSS adds the number, schema text stays clean), five to eight questions from the research list, each answer starting with "Yes.", "No." or the direct answer, two or three sentences, naming the product or number instead of "it". No question repeated from another post.
+   - Never pad: a question with no search demand and no reader value is cut, whatever the template says.
+
 ## 6. AEO AND GEO RULES
 
 Do: answer-first text, tables and definitions that can be lifted, sourced statistics, inclusion in independent lists and review sites, App Store reviews, real demos on YouTube, the same brand facts everywhere.

@@ -4,15 +4,15 @@
  */
 export const CONTENT_DATES = {
   /** Last edit of compare competitor data (+ feature matrix). */
-  compareTwoWay: '2026-11-15',
+  compareTwoWay: '2026-11-24',
   /** Last edit of 3-way compare page (+ feature matrix). */
-  compareThreeWay: '2026-11-12',
+  compareThreeWay: '2026-11-24',
   /** Last edit of blogPosts.ts (used as Article dateModified fallback). */
-  blogPosts: '2026-11-22',
+  blogPosts: '2026-11-24',
   /** Last edit of feature / product page content. */
   featurePages: '2026-11-22',
   /** Last edit of published plan catalog (pricing Offers). */
-  pricing: '2026-11-22',
+  pricing: '2026-11-23',
 } as const;
 
 export const BLOG_DATES_BY_SLUG = {
@@ -27,13 +27,13 @@ export const BLOG_DATES_BY_SLUG = {
   "what-is-ecommerce-automation-shopify-whatsapp": "2026-10-21",
   "ai-whatsapp-chatbot-for-shopify-india": "2026-10-21",
   "zoko-alternative-shopify-india": "2026-11-12",
-  "getgabs-alternative-shopify-whatsapp": "2026-11-08",
+  "getgabs-alternative-shopify-whatsapp": "2026-11-24",
   "kanal-whatsapp-alternative-shopify": "2026-11-02",
   "how-to-choose-whatsapp-app-shopify-app-store": "2026-11-07",
   "whatsapp-business-api-pricing-india": "2026-11-16",
   "dondy-alternative-shopify-india": "2026-11-08",
   "whatsapp-automation-for-shopify": "2026-11-20",
-  "best-whatsapp-apps-for-shopify": "2026-11-07",
+  "best-whatsapp-apps-for-shopify": "2026-11-24",
   "organic-vs-paid-ecommerce-marketing-2026": "2026-10-21",
   "cod-rto-benchmark-india-2026": "2026-10-21",
   "profitable-ecommerce-business-india": "2026-10-21",

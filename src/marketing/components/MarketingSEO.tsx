@@ -93,7 +93,7 @@ export default function MarketingSEO({
   const fullTitle = noSuffix ? title : withBrandSuffix(title);
   const url = canonicalUrlForPath(path);
   const robots = noIndex
-    ? 'noindex, nofollow'
+    ? 'noindex, follow'
     : 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1';
 
   const schemas: Record<string, unknown>[] = [];

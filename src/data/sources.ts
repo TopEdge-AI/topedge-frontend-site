@@ -76,8 +76,8 @@ export const SOURCES = {
     label: 'Shopify’s own abandoned checkout documentation',
     publisher: 'Shopify',
     claim:
-      'A checkout counts as abandoned when it stays incomplete for more than ten minutes after the customer has given their email. Recovery emails are available on the Online Store and Buy Button channels only.',
-    verified: '2026-10-21',
+      'A checkout counts as abandoned when it stays incomplete for more than ten minutes after the customer has given their email. Recovery emails are available on the Online Store and Buy Button channels only. Re-read 24 November 2026 (now served at help.shopify.com/en/manual/promoting-marketing/create-marketing/abandoned-checkouts): the ten-minute rule after the email is given is unchanged.',
+    verified: '2026-11-24',
   },
   shopifyAbandonedApi: {
     id: 'shopifyAbandonedApi',
@@ -144,12 +144,12 @@ export const SOURCES = {
   },
   aisensyPricing: {
     id: 'aisensyPricing',
-    url: 'https://aisensy.com/pricing',
+    url: 'https://www.aisensy.com/pricing',
     label: 'AiSensy’s published pricing page',
     publisher: 'AiSensy',
     claim:
-      'Read 12 November 2026 on the monthly, quarterly and yearly views. Per-message rates for Indian users, effective 1 October 2026 and the same on every paid plan: marketing ₹1.09, utility ₹0.145, authentication ₹0.145, service ₹0.145 after 1,000 free service messages a month. Against Meta’s India card of ₹0.8631 marketing and ₹0.1150 utility, that is about 26% above Meta on both lines. Plans billed monthly: Free Forever ₹0 (no broadcasting), Basic ₹1,500, Pro ₹3,200, Premium ₹9,100, Unlimited ₹45,000. Billed quarterly (save 5%): ₹1,425, ₹3,040, ₹8,645 and ₹42,750 a month. Billed yearly (save 10%): ₹1,350, ₹2,880, ₹8,190 and ₹40,500 a month. Basic lists 1 owner plus 5 agents and Shopify and WooCommerce integrations; Premium 1 owner plus 9 agents; Unlimited up to 200 agents. Extra agents ₹750 each a month; AI Chat Agent ₹1,350 a month for 1,000 AI messages; Chatbot Flows ₹2,500 a month. All billing is prepaid through WhatsApp Conversation Credits. The 7 November 2026 reading recorded the monthly view only. Per-message rates re-read 16 November 2026 on the default view: unchanged. Re-read 19 November 2026 on the monthly, quarterly and yearly views: plans, add-ons and per-message rates all unchanged.',
-    verified: '2026-11-19',
+      'Read 12 November 2026 on the monthly, quarterly and yearly views. Per-message rates for Indian users, effective 1 October 2026 and the same on every paid plan: marketing ₹1.09, utility ₹0.145, authentication ₹0.145, service ₹0.145 after 1,000 free service messages a month. Against Meta’s India card of ₹0.8631 marketing and ₹0.1150 utility, that is about 26% above Meta on both lines. Plans billed monthly: Free Forever ₹0 (no broadcasting), Basic ₹1,500, Pro ₹3,200, Premium ₹9,100, Unlimited ₹45,000. Billed quarterly (save 5%): ₹1,425, ₹3,040, ₹8,645 and ₹42,750 a month. Billed yearly (save 10%): ₹1,350, ₹2,880, ₹8,190 and ₹40,500 a month. Basic lists 1 owner plus 5 agents and Shopify and WooCommerce integrations; Premium 1 owner plus 9 agents; Unlimited up to 200 agents. Extra agents ₹750 each a month; AI Chat Agent ₹1,350 a month for 1,000 AI messages; Chatbot Flows ₹2,500 a month. All billing is prepaid through WhatsApp Conversation Credits. The 7 November 2026 reading recorded the monthly view only. Per-message rates re-read 16 November 2026 on the default view: unchanged. Re-read 19 November 2026 on the monthly, quarterly and yearly views: plans, add-ons and per-message rates all unchanged. Re-read 24 November 2026 at www.aisensy.com/pricing: marketing ₹1.09, utility ₹0.145, service ₹0.145 after 1,000 free a month, unchanged.',
+    verified: '2026-11-24',
   },
   aisensyShopifyListing: {
     id: 'aisensyShopifyListing',
@@ -193,8 +193,8 @@ export const SOURCES = {
     label: 'Interakt’s published pricing page',
     publisher: 'Interakt',
     claim:
-      'Read 9 November 2026 on all three billing views, plus taxes. Monthly: Starter ₹999 (Instagram only), Growth ₹2,799, Advanced ₹3,799. Quarterly: Starter ₹3,499, Growth ₹7,699, Advanced ₹10,499. Yearly: Starter ₹11,999, Growth ₹26,399, Advanced ₹35,999. On quarterly and yearly billing Starter is “Pick any one channel”, WhatsApp or Instagram; Growth and Advanced include both. Enterprise on request. Unlimited agents on every plan, owner roles only on Starter. Per-message rates for Indian numbers: Starter marketing ₹0.970, authentication ₹0.129, utility ₹0.160, service ₹0.129; Growth ₹0.958, ₹0.128, ₹0.150, ₹0.128; Advanced ₹0.949, ₹0.127, ₹0.140, ₹0.127; service charged after 1,000 free service messages. Only Enterprise is listed with “No Markup Charges”. Against Meta’s ₹0.8631 marketing and ₹0.1150 utility, Growth is about 11% above Meta on marketing and 30% on utility. The feature table lists “Shopify Integration (Only included on Shopify plan...)” linking to apps.shopify.com/interakt-marketing. WhatsApp AI Agents tab: ₹9,000 a quarter (+GST), shown as a ₹3,000 add-on for Growth and Advanced on the main table, 100 free AI messages, then ₹0.50 per AI message. Sales CRM is a separate product; its ₹2,499 for 5 agents was last read 21 October 2026. The 7 November reading recorded the monthly view only and so missed the quarterly Starter channel rule. Re-read 19 November 2026 on the default view: Growth ₹2,799, “Add on: WhatsApp AI Agents @ 3000 INR for Growth & Advanced plan”, 100 free AI messages, then ₹0.50 per AI message, all unchanged.',
-    verified: '2026-11-19',
+      'Read 9 November 2026 on all three billing views, plus taxes. Monthly: Starter ₹999 (Instagram only), Growth ₹2,799, Advanced ₹3,799. Quarterly: Starter ₹3,499, Growth ₹7,699, Advanced ₹10,499. Yearly: Starter ₹11,999, Growth ₹26,399, Advanced ₹35,999. On quarterly and yearly billing Starter is “Pick any one channel”, WhatsApp or Instagram; Growth and Advanced include both. Enterprise on request. Unlimited agents on every plan, owner roles only on Starter. Per-message rates for Indian numbers: Starter marketing ₹0.970, authentication ₹0.129, utility ₹0.160, service ₹0.129; Growth ₹0.958, ₹0.128, ₹0.150, ₹0.128; Advanced ₹0.949, ₹0.127, ₹0.140, ₹0.127; service charged after 1,000 free service messages. Only Enterprise is listed with “No Markup Charges”. Against Meta’s ₹0.8631 marketing and ₹0.1150 utility, Growth is about 11% above Meta on marketing and 30% on utility. The feature table lists “Shopify Integration (Only included on Shopify plan...)” linking to apps.shopify.com/interakt-marketing. WhatsApp AI Agents tab: ₹9,000 a quarter (+GST), shown as a ₹3,000 add-on for Growth and Advanced on the main table, 100 free AI messages, then ₹0.50 per AI message. Sales CRM is a separate product; its ₹2,499 for 5 agents was last read 21 October 2026. The 7 November reading recorded the monthly view only and so missed the quarterly Starter channel rule. Re-read 19 November 2026 on the default view: Growth ₹2,799, “Add on: WhatsApp AI Agents @ 3000 INR for Growth & Advanced plan”, 100 free AI messages, then ₹0.50 per AI message, all unchanged. Re-read 24 November 2026, monthly and quarterly views: unchanged, including the per-message rates, the ₹3,000 AI Agents add-on with 100 free AI messages then ₹0.50, and Shopify integration listed in the feature table.',
+    verified: '2026-11-24',
   },
   topedgeShopifyListing: {
     id: 'topedgeShopifyListing',
@@ -238,8 +238,8 @@ export const SOURCES = {
     label: 'Interakt on the Shopify App Store',
     publisher: 'Shopify App Store',
     claim:
-      'Read 9 November 2026 from India. Rating 4.3 from 233 reviews. Prices shown as Shopify’s INR estimates at 1 INR = 0.0106 USD, billed in the store’s billing currency: Starter ₹1,973.48 a month or ₹16,915.54 a year; Growth ₹3,852.99 or ₹27,816.67; Advanced ₹4,792.74 or ₹43,980.42; Premier ₹9,303.55 or ₹78,845.23; each plus additional WhatsApp conversation charges, each with a 14-day free trial. Starter: API approval and setup, automated notifications, shared team inbox, WhatsApp widget, Blue tick application. Growth adds notifications with delay, analytics and reports, basic WhatsApp chatbot, roles and permissions, Instagram automation. Advanced adds advanced chatbot, API rate limit 600 msg/min, agent stats, advanced chat auto-routing. Premier adds WhatsApp AI agents (sales, FAQ, lead qualification), a popup for collecting WhatsApp numbers, cart reminders to those numbers, and Shopify actions in the workflow builder.',
-    verified: '2026-11-09',
+      'Read 9 November 2026 from India. Rating 4.3 from 233 reviews. Prices shown as Shopify’s INR estimates at 1 INR = 0.0106 USD, billed in the store’s billing currency: Starter ₹1,973.48 a month or ₹16,915.54 a year; Growth ₹3,852.99 or ₹27,816.67; Advanced ₹4,792.74 or ₹43,980.42; Premier ₹9,303.55 or ₹78,845.23; each plus additional WhatsApp conversation charges, each with a 14-day free trial. Starter: API approval and setup, automated notifications, shared team inbox, WhatsApp widget, Blue tick application. Growth adds notifications with delay, analytics and reports, basic WhatsApp chatbot, roles and permissions, Instagram automation. Advanced adds advanced chatbot, API rate limit 600 msg/min, agent stats, advanced chat auto-routing. Premier adds WhatsApp AI agents (sales, FAQ, lead qualification), a popup for collecting WhatsApp numbers, cart reminders to those numbers, and Shopify actions in the workflow builder. Re-read 24 November 2026 (USD view): Starter $21, Growth $41, Advanced $51, Premier $99 a month, billed in USD by Shopify, 14-day trial, 4.3 from 236 reviews; WhatsApp AI agents, the number-collecting popup with cart reminders to those numbers, and Shopify actions in the workflow builder are listed only on Premier.',
+    verified: '2026-11-24',
   },
   updatrrPricing: {
     id: 'updatrrPricing',
@@ -247,8 +247,8 @@ export const SOURCES = {
     label: 'Updatrr’s published pricing page',
     publisher: 'Updatrr',
     claim:
-      'Growth $29.99/month, Pro $49.99/month, Pro AI $99.99/month, all with a 7-day free trial and no card required. Updatrr states it does not add a markup on Meta’s conversation fees and that Meta bills WhatsApp conversations separately. Pro lists a “Custom No-code Chatbot”, shown as “No-code AI Chatbot” in the plan comparison table. “AI Chatbot with Smart Human Handover”, AI voice calling and the unified WhatsApp, Instagram and Facebook inbox are on Pro AI only. Team members: 1 on Growth, 3 on Pro, 10 on Pro AI. No order limit is published on any plan, and the page publishes no per-message AI fee. It says country-wise pricing is available inside the dashboard and annual pricing is on request. Re-read 9 November 2026, unchanged.',
-    verified: '2026-11-09',
+      'Growth $29.99/month, Pro $49.99/month, Pro AI $99.99/month, all with a 7-day free trial and no card required. Updatrr states it does not add a markup on Meta’s conversation fees and that Meta bills WhatsApp conversations separately. Pro lists a “Custom No-code Chatbot”, shown as “No-code AI Chatbot” in the plan comparison table. “AI Chatbot with Smart Human Handover”, AI voice calling and the unified WhatsApp, Instagram and Facebook inbox are on Pro AI only. Team members: 1 on Growth, 3 on Pro, 10 on Pro AI. No order limit is published on any plan, and the page publishes no per-message AI fee. It says country-wise pricing is available inside the dashboard and annual pricing is on request. Re-read 9 November 2026, unchanged. Re-read 24 November 2026: Growth $29.99, Pro $49.99, Pro AI $99.99 a month, 7-day free trial on every plan, no card; “AI Chatbot with Human Handover” ticked only on Pro AI; “Country-wise pricing available inside the dashboard”. The page no longer carries a no-markup line on Meta fees.',
+    verified: '2026-11-24',
   },
   littledataConversion: {
     id: 'littledataConversion',
@@ -355,8 +355,8 @@ export const SOURCES = {
     label: 'WATI’s published pricing page',
     publisher: 'WATI',
     claim:
-      'Read 7 November 2026 and re-read 10 November 2026 (unchanged). Billed annually: Growth ₹2,199, Pro ₹4,899 and Business ₹14,799 a month. Add-ons on 10 November: 1,000 extra automation triggers ₹1,000/month, 2,000 extra Wati AI credits ₹1,600/month, additional WhatsApp numbers ₹2,499/month each; 7-day free trial, no setup fee; Growth lists 15k broadcasts a month. India plans billed quarterly: Growth ₹2,699/month (3 users, no additional users), Pro ₹5,799/month (5 users included, additional users ₹1,299/user/month), Business ₹16,799/month (5 users included, additional users ₹2,199/user/month). Billed monthly: ₹2,999, ₹6,499 and ₹18,499. Every plan card says “Additional charges apply for template messages”. Broadcasts are listed at “Standard rates” on Growth and Pro, and volume discounts on Business, but the per-message prices are on WATI’s own rate cards (see watiRateCard), which sit above Meta. A Shopify Integration add-on is listed at USD 4.99/month. Growth includes 1 Astra AI agent, 2,000 Wati AI credits and 1,000 free automation triggers a month; Pro 2 agents, 5,000 credits and 2,000 triggers; Business unlimited agents, 20,000 credits and 5,000 triggers. Advanced inbox features (teams, intelligent routing) start on Pro. Correction: an earlier reading of this entry (2 Nov 2026) took “Standard rates” to mean Meta’s rate passed through; WATI’s rate cards show that is wrong.',
-    verified: '2026-11-10',
+      'Read 7 November 2026 and re-read 10 November 2026 (unchanged). Billed annually: Growth ₹2,199, Pro ₹4,899 and Business ₹14,799 a month. Add-ons on 10 November: 1,000 extra automation triggers ₹1,000/month, 2,000 extra Wati AI credits ₹1,600/month, additional WhatsApp numbers ₹2,499/month each; 7-day free trial, no setup fee; Growth lists 15k broadcasts a month. India plans billed quarterly: Growth ₹2,699/month (3 users, no additional users), Pro ₹5,799/month (5 users included, additional users ₹1,299/user/month), Business ₹16,799/month (5 users included, additional users ₹2,199/user/month). Billed monthly: ₹2,999, ₹6,499 and ₹18,499. Every plan card says “Additional charges apply for template messages”. Broadcasts are listed at “Standard rates” on Growth and Pro, and volume discounts on Business, but the per-message prices are on WATI’s own rate cards (see watiRateCard), which sit above Meta. A Shopify Integration add-on is listed at USD 4.99/month. Growth includes 1 Astra AI agent, 2,000 Wati AI credits and 1,000 free automation triggers a month; Pro 2 agents, 5,000 credits and 2,000 triggers; Business unlimited agents, 20,000 credits and 5,000 triggers. Advanced inbox features (teams, intelligent routing) start on Pro. Correction: an earlier reading of this entry (2 Nov 2026) took “Standard rates” to mean Meta’s rate passed through; WATI’s rate cards show that is wrong. Re-read 24 November 2026 on all three views: monthly Growth ₹2,999, Pro ₹6,499, Business ₹18,499; quarterly ₹2,699, ₹5,799, ₹16,799; annual ₹2,199, ₹4,899, ₹14,799. Growth includes 3 users, Pro and Business 5, extra users ₹1,299 (Pro) and ₹2,199 (Business) a month.',
+    verified: '2026-11-24',
   },
   watiRateCard: {
     id: 'watiRateCard',
@@ -364,8 +364,8 @@ export const SOURCES = {
     label: 'WATI’s INR rate card for the Growth plan',
     publisher: 'WATI',
     claim:
-      'Rate card dated 1 October 2026, linked from wati.io/pricing as “View Rate Card”, read 7 November 2026; the three PDFs were still last modified 1 October 2026 when checked on 10 November 2026. India (+91) per message: Growth plan marketing ₹1.0357, utility ₹0.1495, authentication ₹0.1495, service ₹0.1380. The Pro plan card lists ₹0.9926, ₹0.1495, ₹0.1495, ₹0.1380 and the Business plan card ₹0.9667, ₹0.1380, ₹0.1380, ₹0.1231. Against Meta’s ₹0.8631 marketing and ₹0.1150 utility, Growth is 20% above Meta on marketing and 30% on utility; Pro 15% and 30%; Business 12% and 20%. States that every business gets 1,000 free service messages a month. On 16 November 2026 all three PDFs still showed Last-Modified 1 October 2026.',
-    verified: '2026-11-07',
+      'Rate card dated 1 October 2026, linked from wati.io/pricing as “View Rate Card”, read 7 November 2026; the three PDFs were still last modified 1 October 2026 when checked on 10 November 2026. India (+91) per message: Growth plan marketing ₹1.0357, utility ₹0.1495, authentication ₹0.1495, service ₹0.1380. The Pro plan card lists ₹0.9926, ₹0.1495, ₹0.1495, ₹0.1380 and the Business plan card ₹0.9667, ₹0.1380, ₹0.1380, ₹0.1231. Against Meta’s ₹0.8631 marketing and ₹0.1150 utility, Growth is 20% above Meta on marketing and 30% on utility; Pro 15% and 30%; Business 12% and 20%. States that every business gets 1,000 free service messages a month. On 16 November 2026 all three PDFs still showed Last-Modified 1 October 2026. Re-read 24 November 2026: India marketing ₹1.0357.',
+    verified: '2026-11-24',
   },
   zokoPricing: {
     id: 'zokoPricing',
@@ -373,8 +373,8 @@ export const SOURCES = {
     label: 'Zoko’s published pricing page',
     publisher: 'Zoko',
     claim:
-      'Read 12 November 2026: Starter $49.99/month with a $0.015 markup on all conversations and unlimited agents; Plus $79.99/month with 5,000 conversations at no markup then $0.00199 each, 5 agents then $15 each; Elite $139.99/month with 100,000 conversations then $0.00099 each, 10 agents then $12 each. Priced in US dollars with no rupee plan and no billing toggle; every feature is on every plan; 7-day free trial. WhatsApp is charged at Meta’s rate card, paid directly to Meta; Instagram $9.99/month. Essential flows are free on every plan and include double-confirm COD orders and convert COD to prepaid; premium flows are $5.99 a month per flow, with 500K flow steps a month included then $0.0002 a step. AI agents are $24.99/month plus $0.09 per resolution, and an order-taking agent is $24.99/month plus 3% of order value. A conversation is a 24-hour session that starts with the first business message.',
-    verified: '2026-11-12',
+      'Read 12 November 2026: Starter $49.99/month with a $0.015 markup on all conversations and unlimited agents; Plus $79.99/month with 5,000 conversations at no markup then $0.00199 each, 5 agents then $15 each; Elite $139.99/month with 100,000 conversations then $0.00099 each, 10 agents then $12 each. Priced in US dollars with no rupee plan and no billing toggle; every feature is on every plan; 7-day free trial. WhatsApp is charged at Meta’s rate card, paid directly to Meta; Instagram $9.99/month. Essential flows are free on every plan and include double-confirm COD orders and convert COD to prepaid; premium flows are $5.99 a month per flow, with 500K flow steps a month included then $0.0002 a step. AI agents are $24.99/month plus $0.09 per resolution, and an order-taking agent is $24.99/month plus 3% of order value. A conversation is a 24-hour session that starts with the first business message. Re-read 24 November 2026 (no billing toggle; monthly or yearly, no contracts): Starter $49.99 a month with a $0.015 markup on all conversations and unlimited agents; Plus $79.99 with 5,000 conversations at $0 markup then $0.00199 each, first 5 agents free then $15; Elite $139.99 with 100,000 conversations at $0 markup then $0.00099, first 10 agents free then $12. WhatsApp at Meta’s rate card, paid directly to Meta. Essential flows free on every plan: 11 pre-built flows including abandoned checkout recovery, double-confirm COD orders, convert COD to prepaid and order notifications; premium flows $5.99 a month each; AI agents $24.99 a month plus $0.09 per resolution, or plus 3% of order value for the order-taking agent.',
+    verified: '2026-11-24',
   },
   zokoShopifyListing: {
     id: 'zokoShopifyListing',
@@ -400,8 +400,8 @@ export const SOURCES = {
     label: 'Dondy’s Shopify App Store listing',
     publisher: 'Shopify',
     claim:
-      'Dondy carries the Built for Shopify badge, lists a free plan and a free trial, is rated 4.9 from 835 reviews, and the listing states the developer is based in India. Served to an Indian store in rupees: Pro ₹656.88, Power Automation ₹7,517.01 and Elite ₹15,034.96 a month, against $6.99, $79.99 and $159.99 list prices, which is about ₹93.97 to the dollar; Shopify bills in the store’s currency at the exchange rate on the day of each charge. Power says WhatsApp automation rates start from $0.0158 (US), Elite from $0.0126 (US), and both include 1,000 one-click messages every 30 days. COD verification is named among the chat features. Interface languages are English, Spanish, Italian, Portuguese (Brazil) and French.',
-    verified: '2026-11-08',
+      'Dondy carries the Built for Shopify badge, lists a free plan and a free trial, is rated 4.9 from 835 reviews, and the listing states the developer is based in India. Served to an Indian store in rupees: Pro ₹656.88, Power Automation ₹7,517.01 and Elite ₹15,034.96 a month, against $6.99, $79.99 and $159.99 list prices, which is about ₹93.97 to the dollar; Shopify bills in the store’s currency at the exchange rate on the day of each charge. Power says WhatsApp automation rates start from $0.0158 (US), Elite from $0.0126 (US), and both include 1,000 one-click messages every 30 days. COD verification is named among the chat features. Interface languages are English, Spanish, Italian, Portuguese (Brazil) and French. Re-read 24 November 2026: Built for Shopify, based in India, 4.9 from 829 reviews. Free plan is the WhatsApp button only; Pro $6.99 a month (manual abandoned cart recovery and manual order confirmation messages); Power Automation $79.99 (WhatsApp abandoned cart recovery, campaigns, Shopify inbox, official API; rates from $0.0158 US); Elite $159.99 (AI chatbot, inbox with 5 agents). Billed in USD. Lists COD verification.',
+    verified: '2026-11-24',
   },
   dondyPricing: {
     id: 'dondyPricing',
@@ -436,8 +436,8 @@ export const SOURCES = {
     label: 'Getgabs’s published pricing page',
     publisher: 'Getgabs',
     claim:
-      'Read from India: Basic ₹699, Plus ₹1,499 and Pro ₹4,499 a month, or ₹6,990, ₹14,990 and ₹44,990 a year, each plan labelled “0% Markup”, with free onboarding and setup. Broadcast limits are 30,000, 500,000 and unlimited a month. Lists Meta messaging cost as marketing ₹0.8631, authentication ₹0.115, utility ₹0.115 and service ₹0.115 after 1,000 messages a month.',
-    verified: '2026-11-08',
+      'Read from India: Basic ₹699, Plus ₹1,499 and Pro ₹4,499 a month, or ₹6,990, ₹14,990 and ₹44,990 a year, each plan labelled “0% Markup”, with free onboarding and setup. Broadcast limits are 30,000, 500,000 and unlimited a month. Lists Meta messaging cost as marketing ₹0.8631, authentication ₹0.115, utility ₹0.115 and service ₹0.115 after 1,000 messages a month. Re-read 24 November 2026, monthly view: Basic ₹699, Plus ₹1,499, Business ₹2,999 a month, each “0% Markup”, Enterprise custom; Meta cost listed as marketing ₹0.8631, utility ₹0.115, service ₹0.115 after 1,000 a month; annual billing gives 2 months free.',
+    verified: '2026-11-24',
   },
   getgabsListing: {
     id: 'getgabsListing',
@@ -445,8 +445,17 @@ export const SOURCES = {
     label: 'Getgabs’s Shopify App Store listing',
     publisher: 'Shopify',
     claim:
-      'Getgabs: WhatsApp Chat Widget, by GETGABS LLP, rated 4.4 from 15 reviews. Free to install, with the note that a Getgabs subscription is required to unlock all features. Served to an Indian store: Plus ₹1,033.72 a month (₹10,243.21 a year) with 500,000 broadcasts and 3 inbox agents, Pro ₹5,544.49 a month (₹55,350.90 a year) with unlimited broadcasts and 10 agents. External charges may be billed by GETGABS LLP separately from the Shopify invoice.',
-    verified: '2026-11-08',
+      'Getgabs: WhatsApp Chat Widget, by GETGABS LLP, rated 4.4 from 15 reviews. Free to install, with the note that a Getgabs subscription is required to unlock all features. Served to an Indian store: Plus ₹1,033.72 a month (₹10,243.21 a year) with 500,000 broadcasts and 3 inbox agents, Pro ₹5,544.49 a month (₹55,350.90 a year) with unlimited broadcasts and 10 agents. External charges may be billed by GETGABS LLP separately from the Shopify invoice. Re-read 24 November 2026: the listing says “This app is not currently available on the Shopify App Store”, and an App Store search for getgabs returns no app. getgabs.com/integrations/shopify still offers the integration.',
+    verified: '2026-11-24',
+  },
+  metaWhatsAppShopifyApp: {
+    id: 'metaWhatsAppShopifyApp',
+    url: 'https://apps.shopify.com/whatsapp',
+    label: 'Meta’s WhatsApp app on the Shopify App Store',
+    publisher: 'Shopify',
+    claim:
+      'Read 24 November 2026: “WhatsApp” by Meta, “The official app from Meta”, launched 11 July 2025, rated 4.4 from 986 reviews. Free to install, “External charges may be billed by Meta separately from your Shopify invoice”. Sends order updates and abandoned cart marketing messages to shoppers who opt in, with pre-built or custom templates. Categories: order tracking, notifications, abandoned cart. App support by Meta.',
+    verified: '2026-11-24',
   },
   delightchatPricing: {
     id: 'delightchatPricing',
@@ -454,8 +463,8 @@ export const SOURCES = {
     label: 'DelightChat’s published pricing page',
     publisher: 'DelightChat',
     claim:
-      'Three published tiers at $29, $99 and $299 a month. Overages are metered on support volume rather than messages: $10 per extra 100 tickets and $10 per extra 1,000 contacts. Every additional WhatsApp API number costs a further $25 a month. Priced in US dollars with no rupee plan published.',
-    verified: '2026-11-02',
+      'Three published tiers at $29, $99 and $299 a month. Overages are metered on support volume rather than messages: $10 per extra 100 tickets and $10 per extra 1,000 contacts. Every additional WhatsApp API number costs a further $25 a month. Priced in US dollars with no rupee plan published. Re-read 24 November 2026: Startup $29 (500 tickets, 2,500 contacts, 5 team members, 1 Shopify store), Scale $99 (2,000 tickets, 10,000 contacts, 20 members), $299 (6,000 tickets); overages $10, $8 and $5 per extra 100 tickets. A ticket is billable only when a human replies. Every plan lists abandoned cart and checkout recovery, COD verification and COD to prepaid, order confirmation and Shopify order data in the inbox. WhatsApp charges are added on top; the page does not state a rate. 14-day free trial. The $25 per extra number line was not found on 24 November.',
+    verified: '2026-11-24',
   },
 
   /*

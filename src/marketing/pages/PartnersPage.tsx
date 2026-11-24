@@ -36,7 +36,7 @@ const PARTNERS_SEO = {
   description: `Earn ${PARTNER_RATE_RANGE} recurring commission on every TopEdge AI client you refer. Free to join, paid on the 1st of each month by UPI or bank, no minimum payout.`,
 };
 
-const PARTNER_WHATSAPP_URL = `https://wa.me/${COMPANY_PHONE_E164}?text=${encodeURIComponent(
+const PARTNER_WHATSAPP_URL = `https://api.whatsapp.com/send?phone=${COMPANY_PHONE_E164}&text=${encodeURIComponent(
   'Hi TopEdge AI, I want to join the partner program.',
 )}`;
 

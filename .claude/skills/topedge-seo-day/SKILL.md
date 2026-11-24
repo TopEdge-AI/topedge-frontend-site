@@ -19,6 +19,7 @@ The plan and log live in `seo-audit/PLAN-AND-LOG.md`. The prompt the owner paste
 - Direct answer box: solid light yellow, thin border, no gradient, no left bar.
 - Prose fills the article column up to the contents rail; no capped measure leaving an empty band (overrides the SOP's 65 to 75ch rule).
 - No monospace or `<code>` styling in articles; paths and file names use the body font.
+- Question-first structure (owner, 24 Nov 2026): research real questions (GSC queries, People Also Ask, `get_keyword_metrics`); the first H2 above the list or body is the main searched question with a one-line direct answer; list entries are numbered "1. Name: best for Y" with a spec box; a "Which X is best for your Y?" section answers long-tail queries in one line each; FAQ heading is "Frequently asked questions about <topic>" (`faqHeading`), numbered questions, answers start with Yes/No or the answer. Full rule: DAILY-PROMPT 5.16.
 
 ## 1. Data (free first, then credits)
 - Search Console through OpenSEO (project `852f0ce0-39cf-43e3-9b80-84ff3449a4a8`): `inspect_urls` for yesterday's pages; striking-distance list (query + page, country `ind`, last 28 days, minPosition 8, minImpressions 3, query notContains `spa`). Ignore local junk (restaurants, salons, massage).
@@ -29,10 +30,11 @@ The plan and log live in `seo-audit/PLAN-AND-LOG.md`. The prompt the owner paste
 Folder: `seo-audit/<YYYY-MM-DD>/page-audits/<short-name>/`.
 1. Save `gsc-export-india-28-days.csv` and `gsc-export-all-countries-3-months.csv`.
 2. `node seo-audit/tools/onpage-audit.mjs <url> "<keyword>" <folder>/before <comp1> <comp2> <comp3>` with the top 3 India results above us (exploremayank.in tool; background it).
-3. Run `seo-audit/PAGE-ANALYSIS-PROMPT.md`; write `analysis-report.html`, render with `node seo-audit/tools/html-to-pdf.mjs`.
-4. Re-read every competitor price or feature the page states, on the live page, every billing toggle; date the reading; register new hosts in `src/data/sources.ts`.
-5. Implement. On-page standard is DAILY-PROMPT section 5. People-first gate: `node seo-audit/tools/people-first-audit.mjs dist <folder>/people-first --only <route>` before and after; no new flags.
-6. Two body-only fixes on other ICP posts.
+3. List the real questions for the topic (GSC queries, People Also Ask from the SERP read, question forms in the day's `get_keyword_metrics` call) with their source; they decide the opening question H2, the "which is best for" H3s and the FAQ (DAILY-PROMPT 5.16).
+4. Run `seo-audit/PAGE-ANALYSIS-PROMPT.md`; write `analysis-report.html`, render with `node seo-audit/tools/html-to-pdf.mjs`.
+5. Re-read every competitor price or feature the page states, on the live page, every billing toggle; date the reading; register new hosts in `src/data/sources.ts`.
+6. Implement. On-page standard is DAILY-PROMPT section 5. People-first gate: `node seo-audit/tools/people-first-audit.mjs dist <folder>/people-first --only <route>` before and after; no new flags.
+7. Two body-only fixes on other ICP posts.
 
 ## 3. Track B: one landing page (Days 6 to 10)
 Use the `topedge-landing-page` skill and the map in PLAN-AND-LOG section 3b.

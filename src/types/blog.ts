@@ -18,6 +18,8 @@ export interface BlogPost {
   keywords?: string[];
   /** Visible FAQ answers + FAQPage schema (pillar / GEO pages). */
   faqs?: { question: string; answer: string }[];
+  /** Topic-specific FAQ heading, e.g. "Frequently asked questions about WhatsApp apps for Shopify". Defaults to "Common questions". */
+  faqHeading?: string;
   /**
    * Three or four lines answering the question in the title before the reader
    * scrolls. Rendered as the "Read this first" card above the contents list.

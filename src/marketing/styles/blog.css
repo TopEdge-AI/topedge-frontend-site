@@ -1186,6 +1186,7 @@
  * question), only the collapse is gone.
  */
 .mkt-blog-faq {
+  counter-reset: mkt-faq;
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -1212,6 +1213,14 @@
   letter-spacing: -0.005em;
   color: #0f172a;
   text-wrap: pretty;
+}
+
+/* Numbered questions (owner, 24 Nov 2026): "1. Which ... ?" like a printed
+ * FAQ. The number is CSS only, so the H3 text and FAQPage schema stay identical. */
+.mkt-blog-faq .mkt-blog-faq__q::before {
+  counter-increment: mkt-faq;
+  content: counter(mkt-faq) '. ';
+  font-variant-numeric: tabular-nums;
 }
 
 .mkt-blog-faq .mkt-blog-faq__a {

@@ -749,14 +749,14 @@ export const GETGABS_PAIRWISE_MATRIX: PairwiseFeatureRow[] = [
     topedge:
       '14-day free trial, then ₹1,999/month (₹1,599/month billed yearly) + 18% GST on topedgeai.com, or $19/month billed by Shopify in USD from the Shopify App Store',
     competitor:
-      'Free to install, then Plus ₹1,033.72/mo and Pro ₹5,544.49/mo on the Shopify listing, or Basic ₹699 · Plus ₹1,499 · Pro ₹4,499 on getgabs.com (8 Nov 2026); surfaces disagree',
+      'Basic ₹699 · Plus ₹1,499 · Business ₹2,999 a month on getgabs.com (24 Nov 2026); its Shopify App Store listing was unavailable that day',
   },
   {
     id: 'template-markup',
     label: 'Meta markup',
     description: 'Platform fee above Meta conversation rates.',
     topedge: '0% markup; Meta pass-through',
-    competitor: '0% Meta markup on every plan, with Meta’s ₹0.8631 / ₹0.115 India rates listed on getgabs.com (8 Nov 2026); subscription billed separately',
+    competitor: '0% Meta markup on every plan, with Meta’s ₹0.8631 / ₹0.115 India rates listed on getgabs.com (24 Nov 2026); subscription billed separately',
   },
   {
     id: 'ai-llm',
@@ -812,7 +812,7 @@ export const GETGABS_PAIRWISE_MATRIX: PairwiseFeatureRow[] = [
     label: 'Entry pricing',
     description: 'Cost to start.',
     topedge: 'Launch ₹1,999/mo (published INR)',
-    competitor: 'Free to install on Shopify; paid from ₹699/mo on getgabs.com or ₹1,033.72/mo on the App Store (8 Nov 2026)',
+    competitor: 'From ₹699/mo on getgabs.com (24 Nov 2026); not on the Shopify App Store that day',
   },
 ];
 

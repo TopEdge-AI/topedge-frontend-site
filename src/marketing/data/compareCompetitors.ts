@@ -144,7 +144,7 @@ export const COMPARE_COMPETITORS: Record<string, CompareCompetitor> = {
     slug: 'aisensy',
     name: 'AiSensy',
     shortName: 'AiSensy',
-    website: 'https://aisensy.com',
+    website: 'https://www.aisensy.com',
     logo: '/marketing/compare/compare-logo-aisensy.png',
     logoAlt: 'AiSensy logo',
     accent: '#0f766e',
@@ -299,7 +299,7 @@ export const COMPARE_COMPETITORS: Record<string, CompareCompetitor> = {
     brandTag: 'Low-cost WhatsApp entry',
     title: 'TopEdge AI vs Getgabs (2026): Native COD Depth vs USD Entry',
     description:
-      'Compare TopEdge AI vs Getgabs for Shopify India: native COD to prepaid journeys, unified identity and a warranty hub vs $11 to $59/mo USD entry plans.',
+      'Compare TopEdge AI vs Getgabs for Shopify India: native COD to prepaid journeys, unified identity and a warranty hub vs ₹699 to ₹2,999/mo entry plans.',
     keywords:
       'TopEdge AI vs Getgabs, Getgabs alternative Shopify, Getgabs pricing, cheap WhatsApp Shopify app, Getgabs vs TopEdge AI',
     h1: 'TopEdge AI vs Getgabs',
@@ -312,7 +312,7 @@ export const COMPARE_COMPETITORS: Record<string, CompareCompetitor> = {
       competitor,
     })),
     matrixNote:
-      'Getgabs pricing read 8 November 2026 from India: getgabs.com lists Basic ₹699 · Plus ₹1,499 · Pro ₹4,499 a month, each labelled 0% Meta markup. Shopify App Store (apps.shopify.com/getgabs-whatsapp-chatbot-api) shows free to install, Plus ₹1,033.72/mo, Pro ₹5,544.49/mo, 15 reviews. Figures disagree across surfaces, so confirm live before purchase.',
+      'Getgabs pricing read 24 November 2026 from India: getgabs.com lists Basic ₹699 · Plus ₹1,499 · Business ₹2,999 a month, each labelled 0% Meta markup. Its Shopify App Store listing (apps.shopify.com/getgabs-whatsapp-chatbot-api) read “not currently available on the Shopify App Store” that day, so confirm how it connects before purchase.',
     related: [
       { label: 'Getgabs alternatives guide', href: '/blog/getgabs-alternative-shopify-whatsapp' },
       { label: 'Alternatives index', href: '/compare/alternatives' },

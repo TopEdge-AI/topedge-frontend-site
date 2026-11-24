@@ -23,7 +23,7 @@ export const COMPANY_PHONE = '+91 94297 84875';
 export const COMPANY_PHONE_E164 = '919429784875';
 
 export const COMPANY_WHATSAPP_URL =
-  `https://wa.me/${COMPANY_PHONE_E164}?text=${encodeURIComponent(
+  `https://api.whatsapp.com/send?phone=${COMPANY_PHONE_E164}&text=${encodeURIComponent(
     'Hi TopEdge AI, I want to talk about WhatsApp automation for my Shopify store.',
   )}`;
 

@@ -89,7 +89,7 @@ function shareHref(key: ShareKey, url: string, title: string) {
     case 'facebook':
       return `https://www.facebook.com/sharer/sharer.php?u=${u}`;
     case 'whatsapp':
-      return `https://wa.me/?text=${t}%20${u}`;
+      return `https://api.whatsapp.com/send?text=${t}%20${u}`;
     default:
       return url;
   }

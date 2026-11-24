@@ -300,7 +300,7 @@ export default function BlogPost() {
             {post.faqs?.length && !(post.content || '').includes('mkt-blog-faq') ? (
               <section className="mkt-blog-faq-block" aria-labelledby="blog-faq-heading">
                 <h2 id="blog-faq-heading" className="mkt-blog-faq-block__title">
-                  Common questions
+                  {post.faqHeading || 'Common questions'}
                 </h2>
                 <div className="mkt-blog-faq">
                   {post.faqs.map((f) => (

@@ -23,7 +23,7 @@ Every landing page uses the static design that was the Google Ads page (`/lp/sho
 9. **One sourced figure** (the proof block): a rupee number with its source line.
 10. **Trustpilot quotes**, verbatim.
 11. **Pricing**: plan cards with the monthly and yearly toggle from the billing catalog, plus the App Store door in USD and the 0% Meta markup line. A second CTA pair (Start free trial, Install on Shopify).
-12. **FAQ**: 5 to 7 questions from real queries, 2 or 3 sentences each, as native `<details>`; it also emits FAQPage schema.
+12. **FAQ**: 5 to 7 questions from real queries (Search Console, People Also Ask, `get_keyword_metrics` question forms; source recorded), numbered, each answer opening with "Yes.", "No." or the direct answer in 2 or 3 sentences; it also emits FAQPage schema. The answer panel above it opens with the page's main searched question and a one-line answer (DAILY-PROMPT 5.16).
 13. **Footer**, sticky mobile CTA bar and desktop top bar.
 
 **UI/UX rules:** one primary action everywhere (Start free trial), App Store as the secondary. Short headings with one highlighted phrase. No long paragraphs anywhere above the FAQ. Real product on screen, never illustrations. Nothing above the fold that is not H1, sub, CTA, proof and the film. Test at 375 px and desktop: no sideways scroll, film visible in the first screen, all clips playing.
