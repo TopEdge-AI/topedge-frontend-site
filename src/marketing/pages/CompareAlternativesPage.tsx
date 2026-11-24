@@ -60,8 +60,20 @@ export default function CompareAlternativesPage() {
           },
         ]}
       />
-      <MarketingPage className="mkt-cmp">
+      <MarketingPage className="mkt-cmp mkt-cmp--alt fx">
+        <div className="fx-shell">
         <header className="mkt-cmp__arena">
+          <nav aria-label="Breadcrumb">
+            <ol className="fx-crumbs">
+              <li>
+                <Link to="/">Home</Link>
+              </li>
+              <li>
+                <Link to="/compare">Compare</Link>
+              </li>
+              <li aria-current="page">Alternatives</li>
+            </ol>
+          </nav>
           <p className="mkt-cmp__kicker">
             Alternatives index
             <span className="mkt-cmp__asof">
@@ -103,18 +115,18 @@ export default function CompareAlternativesPage() {
           merchant in USD or EUR, so the real monthly cost moves with the
           exchange rate. That is a cost nobody puts in a pricing table.
         */}
-        <section className="mkt-cmp__block" aria-labelledby="alt-table">
-          <div className="mkt-cmp__block-head">
-            <h2 id="alt-table">
+        <section className="mkt-cmp__block fx-sec" aria-labelledby="alt-table">
+          <div className="mkt-cmp__block-head fx-head">
+            <h2 id="alt-table" className="fx-head__title">
               Entry price and <span className="mkt-cmp__hl">Meta markup</span>, side by side
             </h2>
+            <p className="fx-head__sub">
+              What each platform charges to start, what it adds on top of Meta&rsquo;s own
+              per-message fees, and what it bills you in. Published figures as researched, not
+              quotes we were given. Check any number against the vendor&rsquo;s live pricing page
+              before you buy, because these move.
+            </p>
           </div>
-          <p className="mkt-cmp__fine" style={{ maxWidth: '44rem', marginBottom: '1.25rem' }}>
-            What each platform charges to start, what it adds on top of Meta&rsquo;s own
-            per-message fees, and what it bills you in. Published figures as researched, not
-            quotes we were given. Check any number against the vendor&rsquo;s live pricing page
-            before you buy, because these move.
-          </p>
 
           <div className="mkt-spec" role="table" aria-label="WhatsApp platform entry price and markup">
             <div
@@ -189,19 +201,19 @@ export default function CompareAlternativesPage() {
           </p>
         </section>
 
-        <section className="mkt-cmp__block" aria-labelledby="alt-intro">
-          <div className="mkt-cmp__block-head">
-            <h2 id="alt-intro">
+        <section className="mkt-cmp__block fx-sec" aria-labelledby="alt-intro">
+          <div className="mkt-cmp__block-head fx-head">
+            <h2 id="alt-intro" className="fx-head__title">
               WhatsApp tools people <span className="mkt-cmp__hl">compare</span>
             </h2>
+            <p className="fx-head__sub">
+              One honest line per competitor. Open the full board for pricing footnotes, scorecards,
+              and plan tables. Figures are verified against each vendor’s live pricing or Shopify
+              listing when we publish, and still need a live check before you buy.
+            </p>
           </div>
-          <p className="mkt-cmp__fine" style={{ maxWidth: '42rem', marginBottom: '1.25rem' }}>
-            One honest line per competitor. Open the full board for pricing footnotes, scorecards,
-            and plan tables. Figures are verified against each vendor’s live pricing or Shopify
-            listing when we publish, and still need a live check before you buy.
-          </p>
 
-          <ul className="mkt-cmp-alt__list">
+          <ul className="mkt-cmp-alt__list fx-cells fx-cells--2 fx-cells--bleed">
             {COMPARE_ALTERNATIVES.map((a) => (
               <li key={a.slug}>
                 <Link to={a.href} className="mkt-cmp-alt__row">
@@ -226,26 +238,26 @@ export default function CompareAlternativesPage() {
           are on a pricing page: the markup, the currency, the minimum, and
           whether the tool can read a Shopify order at all.
         */}
-        <section className="mkt-cmp__block" aria-labelledby="alt-how">
-          <div className="mkt-cmp__block-head">
-            <h2 id="alt-how">
+        <section className="mkt-cmp__block fx-sec" aria-labelledby="alt-how">
+          <div className="mkt-cmp__block-head fx-head">
+            <h2 id="alt-how" className="fx-head__title">
               How to compare these <span className="mkt-cmp__hl">without getting caught</span>
             </h2>
+            <p className="fx-head__sub">
+              The monthly plan price is rarely what decides the bill. Four questions catch most of
+              the difference, and you can answer all four from a vendor&rsquo;s own pricing page in
+              about ten minutes.
+            </p>
           </div>
-          <p className="mkt-cmp__fine" style={{ maxWidth: '44rem', marginBottom: '1.25rem' }}>
-            The monthly plan price is rarely what decides the bill. Four questions catch most of
-            the difference, and you can answer all four from a vendor&rsquo;s own pricing page in
-            about ten minutes.
-          </p>
 
-          <ol className="mkt-steps">
-            <li className="mkt-steps__item">
-              <span className="mkt-steps__n" aria-hidden>
+          <ol className="mkt-steps fx-cells fx-cells--2 fx-cells--bleed">
+            <li className="mkt-steps__item fx-step">
+              <span className="mkt-steps__n fx-step__num" aria-hidden>
                 1
               </span>
               <div>
-                <h3 className="mkt-steps__title">Does it add anything on top of Meta&rsquo;s fees?</h3>
-                <p className="mkt-steps__body">
+                <h3 className="mkt-steps__title fx-step__title">Does it add anything on top of Meta&rsquo;s fees?</h3>
+                <p className="mkt-steps__body fx-step__copy">
                   Meta charges every platform the same India rates: ₹0.8631 per delivered
                   marketing message, ₹0.1150 per utility or authentication message. Some platforms
                   pass those straight through, some publish their own higher rate card. Read on
@@ -257,13 +269,13 @@ export default function CompareAlternativesPage() {
                 </p>
               </div>
             </li>
-            <li className="mkt-steps__item">
-              <span className="mkt-steps__n" aria-hidden>
+            <li className="mkt-steps__item fx-step">
+              <span className="mkt-steps__n fx-step__num" aria-hidden>
                 2
               </span>
               <div>
-                <h3 className="mkt-steps__title">What currency are you actually billed in?</h3>
-                <p className="mkt-steps__body">
+                <h3 className="mkt-steps__title fx-step__title">What currency are you actually billed in?</h3>
+                <p className="mkt-steps__body fx-step__copy">
                   Five of the ten platforms above bill in USD or EUR: Zoko, Getgabs, Kanal, Dondy
                   and Updatrr. A $49.99 plan is not a fixed Indian cost: it moves with the
                   exchange rate, and your card may add a foreign transaction fee. If you budget
@@ -271,13 +283,13 @@ export default function CompareAlternativesPage() {
                 </p>
               </div>
             </li>
-            <li className="mkt-steps__item">
-              <span className="mkt-steps__n" aria-hidden>
+            <li className="mkt-steps__item fx-step">
+              <span className="mkt-steps__n fx-step__num" aria-hidden>
                 3
               </span>
               <div>
-                <h3 className="mkt-steps__title">Is there a minimum you have to clear?</h3>
-                <p className="mkt-steps__body">
+                <h3 className="mkt-steps__title fx-step__title">Is there a minimum you have to clear?</h3>
+                <p className="mkt-steps__body fx-step__copy">
                   Not every platform will take your store. At least one in this list asks for a
                   minimum monthly revenue before it will onboard you, and enterprise CPaaS vendors
                   often publish no tiers at all and route you to a sales quote. If you are doing
@@ -286,13 +298,13 @@ export default function CompareAlternativesPage() {
                 </p>
               </div>
             </li>
-            <li className="mkt-steps__item">
-              <span className="mkt-steps__n" aria-hidden>
+            <li className="mkt-steps__item fx-step">
+              <span className="mkt-steps__n fx-step__num" aria-hidden>
                 4
               </span>
               <div>
-                <h3 className="mkt-steps__title">Can it read a Shopify order, or only send messages?</h3>
-                <p className="mkt-steps__body">
+                <h3 className="mkt-steps__title fx-step__title">Can it read a Shopify order, or only send messages?</h3>
+                <p className="mkt-steps__body fx-step__copy">
                   This is the line between a WhatsApp sender and a Shopify WhatsApp integration. If
                   the COD flag, the order number and the cart lines do not reach the tool, it
                   cannot confirm a COD order before dispatch, branch a journey on payment method,
@@ -304,18 +316,24 @@ export default function CompareAlternativesPage() {
           </ol>
         </section>
 
-        <section className="mkt-cmp__block" aria-label="Related">
-          <nav className="mkt-cmp__more" aria-label="Related">
-            <Link to="/compare">All comparisons</Link>
-            <Link to="/compare/topedge-vs-wati-vs-aisensy">3-way board</Link>
-            <Link to="/blog/best-whatsapp-automation-tools-shopify-india">
+        <div className="mkt-cmp__block mkt-cmp__block--related fx-sec fx-sec--flush">
+          <nav className="mkt-cmp__more fx-cells fx-links" aria-label="Related">
+            <Link to="/compare" className="fx-link">
+              All comparisons
+            </Link>
+            <Link to="/compare/topedge-vs-wati-vs-aisensy" className="fx-link">
+              3-way board
+            </Link>
+            <Link to="/blog/best-whatsapp-automation-tools-shopify-india" className="fx-link">
               Best tools pillar
             </Link>
-            <Link to="/pricing">TopEdge AI pricing</Link>
+            <Link to="/pricing" className="fx-link">
+              TopEdge AI pricing
+            </Link>
           </nav>
-        </section>
+        </div>
 
-        <section className="mkt-cmp__block" aria-label="Reviews">
+        <section className="mkt-cmp__block mkt-cmp__block--reviews fx-sec" aria-label="Reviews">
           <ReviewPlatforms />
         </section>
 
@@ -326,6 +344,7 @@ export default function CompareAlternativesPage() {
           secondaryLabel="See pricing"
           secondaryTo="/pricing"
         />
+        </div>
       </MarketingPage>
     </>
   );

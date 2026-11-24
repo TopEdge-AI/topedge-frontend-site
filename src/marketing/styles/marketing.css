@@ -266,6 +266,21 @@ body::-webkit-scrollbar {
   right: 0;
 }
 
+/* Narrower screens: the two dither bands were 34% of the card each, so on a
+   tablet they ran under the sub-line. The bands thin out and the copy column
+   narrows so the text sits on the clear centre. Phones are handled in the
+   720px block further down. */
+@media (max-width: 899px) {
+  .mkt-cta__card::before,
+  .mkt-cta__card::after {
+    width: 21%;
+  }
+
+  .mkt-cta__card .mkt-cta__sub {
+    max-width: 25rem;
+  }
+}
+
 .mkt-cta__inner {
   position: relative;
   z-index: 1;

@@ -5,13 +5,14 @@ import MarketingSEO from '../marketing/components/MarketingSEO';
 import {
   PAGE_SEO,
   organizationJsonLd,
+  ORG_REF,
+  WEBSITE_ID,
   breadcrumbJsonLd,
 } from '../marketing/data/pageSeo';
 import { SITE_URL } from '../marketing/data/marketingSeo';
 import MarketingPage from '../marketing/components/MarketingPage';
 import MarketingCtaBand from '../marketing/components/MarketingCtaBand';
 import { highlightTitle } from '../marketing/lib/highlight';
-import { COMPANY_ADDRESS_LINES, COMPANY_EMAIL } from '../marketing/legal/companyIdentity';
 import '../marketing/styles/about.css';
 
 const founders = [
@@ -57,33 +58,13 @@ function aboutPageJsonLd() {
     name: 'About TopEdge AI',
     description: PAGE_SEO.about.description,
     url: `${SITE_URL}/about`,
-    isPartOf: { '@type': 'WebSite', name: 'TopEdge AI', url: SITE_URL },
-    mainEntity: {
-      '@type': 'Organization',
-      name: 'TopEdge AI',
-      url: SITE_URL,
-      email: COMPANY_EMAIL,
-      address: {
-        '@type': 'PostalAddress',
-        streetAddress: COMPANY_ADDRESS_LINES.slice(0, 2).join(' '),
-        addressLocality: 'Ahmedabad',
-        addressRegion: 'Gujarat',
-        postalCode: '380051',
-        addressCountry: 'IN',
-      },
-      founder: founders.map((f) => ({
-        '@type': 'Person',
-        name: f.name,
-        jobTitle: f.role,
-        image: `${SITE_URL}${f.image}`,
-      })),
-      knowsAbout: [
-        'WhatsApp automation for Shopify',
-        'Abandoned cart recovery',
-        'COD confirmation WhatsApp',
-        'Meta WhatsApp Cloud API',
-      ],
-    },
+    // Both by reference. Until 24 Nov 2026 this nested a second, anonymous
+    // Organization with its own founders and a differently split address, so
+    // the page described the company twice with two sets of facts (schema
+    // audit, seo-audit/2026-11-24/full-audit/03-schema.md). The full node,
+    // founders included, is organizationJsonLd() in the same graph.
+    isPartOf: { '@id': WEBSITE_ID },
+    mainEntity: ORG_REF,
   };
 }
 
@@ -114,14 +95,27 @@ export default function About() {
           ]),
         ]}
       />
-      <MarketingPage className="mkt-about2">
+      <MarketingPage className="mkt-about2 fx">
         {/*
           Layout and motion after kachingappz.com/about (owner, 22 Nov 2026):
-          a letter on notebook paper that settles in, marks that draw
-          themselves, a bordered product grid and a dark closing band. Our
-          font, our words, our facts.
+          a letter on notebook paper that settles in and marks that draw
+          themselves. Our font, our words, our facts.
+
+          24 Nov 2026: the page sits in the framed column (styles/frame.css).
+          The letter is the deliberate left-aligned exception; it now lies on
+          the stage row instead of floating on open white.
         */}
-        <header className="mkt-about2__stage">
+        <div className="fx-shell">
+        <header className="mkt-about2__stage fx-stage fx-stage--soft">
+          <nav aria-label="Breadcrumb">
+            <ol className="fx-crumbs">
+              <li>
+                <Link to="/">Home</Link>
+              </li>
+              <li aria-current="page">About</li>
+            </ol>
+          </nav>
+          <div className="mkt-about2__sheet">
           <article className="mkt-about2__letter" aria-labelledby="about-title">
             <h1 id="about-title" className="mkt-about2__h1">
               Built in Ahmedabad,
@@ -170,10 +164,10 @@ export default function About() {
               ))}
             </div>
           </article>
+          </div>
         </header>
 
-        <div className="mkt-about2__frame">
-          <section className="mkt-about2__section" aria-labelledby="about-build">
+          <section className="mkt-about2__section fx-sec" aria-labelledby="about-build">
             <div className="mkt-about2__head">
               <div>
                 <h2 id="about-build" className="mkt-about2__h2">
@@ -189,7 +183,7 @@ export default function About() {
                 All features <ArrowRight aria-hidden className="h-4 w-4" />
               </Link>
             </div>
-            <ul className="mkt-about2__grid">
+            <ul className="mkt-about2__grid fx-cells fx-cells--bleed">
               {modules.map((m) => (
                 <li key={m.name}>
                   <Link to={m.href} className="mkt-about2__cell">
@@ -207,7 +201,7 @@ export default function About() {
             </ul>
           </section>
 
-          <section className="mkt-about2__section" aria-labelledby="about-brands">
+          <section className="mkt-about2__section fx-sec" aria-labelledby="about-brands">
             <div className="mkt-about2__head">
               <div>
                 <h2 id="about-brands" className="mkt-about2__h2">
@@ -219,7 +213,7 @@ export default function About() {
                 Customer stories <ArrowRight aria-hidden className="h-4 w-4" />
               </Link>
             </div>
-            <ul className="mkt-about2__grid mkt-about2__grid--two">
+            <ul className="mkt-about2__grid mkt-about2__grid--two fx-cells fx-cells--2 fx-cells--bleed">
               {brands.map((b) => (
                 <li key={b.name}>
                   <a href={b.href} target="_blank" rel="noopener noreferrer" className="mkt-about2__cell mkt-about2__cell--brand">
@@ -235,8 +229,6 @@ export default function About() {
             </ul>
           </section>
 
-        </div>
-
         <MarketingCtaBand
           title="Grow your Shopify brand with one suite."
           highlight="with one suite."
@@ -245,6 +237,7 @@ export default function About() {
           secondaryLabel="Talk to our team"
           secondaryTo="/contact"
         />
+        </div>
       </MarketingPage>
     </>
   );

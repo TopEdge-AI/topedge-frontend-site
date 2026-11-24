@@ -1,5 +1,5 @@
 import { SITE_URL } from './marketingSeo';
-import { TRUSTPILOT } from './socialProof';
+import { TRUSTPILOT, PRODUCT_HUNT } from './socialProof';
 import {
   COMPANY_GSTIN,
   COMPANY_LEGAL_NAME,
@@ -453,6 +453,8 @@ export function organizationJsonLd() {
       // /customers. Gemini and Perplexity both surfaced the Trustpilot profile
       // while sameAs did not name it, which is how an entity gets split.
       TRUSTPILOT.profileUrl,
+      // Same reason: the listing exists and /customers quotes its rating.
+      PRODUCT_HUNT.productUrl,
     ],
     contactPoint: {
       '@type': 'ContactPoint',
@@ -470,6 +472,10 @@ export function organizationJsonLd() {
     },
   };
 }
+
+/** The one description of the product, shared by every node that carries SOFTWARE_ID. */
+const SOFTWARE_DESCRIPTION =
+  'TopEdge AI is all-in-one D2C software for Shopify stores, built as one suite. It brings cart recovery, COD confirmation and COD to prepaid, WhatsApp and email journeys, campaigns, a shopper CRM, live chat, opt-in tools, a tracking pixel and profit reporting into one platform. 0% markup on Meta rates.';
 
 /**
  * Shared commercial schema for home / pricing / SEO topic pages.
@@ -504,8 +510,7 @@ export function softwareApplicationJsonLd() {
     url: SITE_URL,
     image: [imageUrl],
     screenshot: imageUrl,
-    description:
-      'TopEdge AI is all-in-one D2C software for Shopify stores, built as one suite. It brings cart recovery, COD confirmation and COD to prepaid, WhatsApp and email journeys, campaigns, a shopper CRM, live chat, opt-in tools, a tracking pixel and profit reporting into one platform. 0% markup on Meta rates.',
+    description: SOFTWARE_DESCRIPTION,
     publisher: ORG_REF,
     provider: ORG_REF,
     offers: [
@@ -585,11 +590,16 @@ export function featureSoftwareJsonLd(opts: { name: string; description: string;
     name: 'TopEdge AI',
     alternateName: 'TopEdge',
     applicationCategory: 'BusinessApplication',
-    applicationSubCategory: opts.name,
-    operatingSystem: 'Web, Shopify, Meta WhatsApp Cloud API',
+    // Same operatingSystem and description as softwareApplicationJsonLd():
+    // thirteen feature pages share this @id, and until 24 Nov 2026 each one
+    // redeclared the product with its own description and sub-category, so a
+    // parser merging the graph saw thirteen conflicting values for one entity
+    // (schema audit, seo-audit/2026-11-24/full-audit/03-schema.md). The page's
+    // own subject is carried by its WebPage node and by featureList here.
+    operatingSystem: 'Web',
     url: SITE_URL,
     image: [ORG_LOGO_URL],
-    description: opts.description,
+    description: SOFTWARE_DESCRIPTION,
     featureList: [opts.name],
     publisher: ORG_REF,
     provider: ORG_REF,

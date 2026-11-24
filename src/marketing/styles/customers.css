@@ -293,21 +293,6 @@
   transform: translateY(-3px);
 }
 
-/* The brand header, not a stock cover photo. We do not have photography for
-   these catalogs, and an invented one would be the exact kind of filler this
-   page exists to replace. The brand's own mark on its own tint is honest and
-   is the thing a returning reader recognises. */
-.mkt-story__cover {
-  display: flex;
-  align-items: center;
-  gap: 0.9rem;
-  padding: 1.25rem 1.35rem;
-  background:
-    radial-gradient(120% 140% at 85% 0%, rgba(255, 255, 255, 0.85), transparent 60%),
-    var(--tint, #f1ecff);
-  border-bottom: 1px solid rgba(12, 18, 34, 0.05);
-}
-
 .mkt-story__tile {
   display: inline-flex;
   flex: none;
@@ -346,13 +331,6 @@
   margin-top: 0.1rem;
   font-size: 0.78rem;
   color: #5b5570;
-}
-
-.mkt-story__body {
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-  padding: 1.5rem 1.45rem 1.55rem;
 }
 
 .mkt-story__headline {
@@ -591,17 +569,543 @@
     width: 100%;
   }
 
-  .mkt-story__cover {
-    padding: 1.1rem 1.15rem;
-  }
-
-  .mkt-story__body {
-    padding: 1.3rem 1.15rem 1.35rem;
-  }
-
   .mkt-customers__cases,
   .mkt-customers__rollout,
   .mkt-customers__creds {
     padding-inline: 1rem;
+  }
+}
+
+/* ==================================================================== *
+   Framed layout (24 Nov 2026)
+   --------------------------------------------------------------------
+   The customers page now sits in the same frame as /partners
+   (styles/frame.css): one column between two hairline rails, hairline
+   rows between sections, cells that share their dividers. The violet
+   bloom behind the title, the gradient brand headers on the two stories
+   and the separate bordered step cards are gone. Copy, headings, links
+   and schema are unchanged.
+
+   Every rule is scoped `.mkt-customers.fx` so it wins over the layers
+   above without touching them.
+ * ==================================================================== */
+
+/* ——— Hero ——— */
+.mkt-customers.fx .mkt-customers__hero {
+  max-width: none;
+  margin: 0;
+  padding: calc(var(--mkt-nav-h, 4.5rem) + clamp(2.25rem, 5vw, 4rem)) var(--fx-gut) clamp(2.5rem, 4.5vw, 3.5rem);
+  text-align: center;
+}
+
+.mkt-customers.fx .mkt-customers__hero::before {
+  content: none;
+}
+
+.mkt-customers.fx .mkt-customers__title {
+  max-width: 27ch;
+  font-size: clamp(2.05rem, 4.6vw, 3.35rem);
+  line-height: 1.12;
+  letter-spacing: -0.042em;
+}
+
+.mkt-customers.fx .mkt-customers__title .mkt-hl {
+  margin: 0;
+  padding: 0.04em 0.24em 0.1em;
+  border-radius: 0.3em;
+  color: #0c1222;
+}
+
+.mkt-customers.fx .mkt-customers__actions {
+  gap: 0.75rem;
+  margin-top: 2rem;
+}
+
+.mkt-customers.fx .mkt-customers__actions .mkt-btn-primary,
+.mkt-customers.fx .mkt-customers__actions .mkt-btn-ghost {
+  min-height: 3rem;
+  padding: 0 1.6rem;
+  font-size: 0.95rem;
+}
+
+.mkt-customers.fx .mkt-customers__score {
+  margin-top: 2.25rem;
+}
+
+.mkt-customers.fx .mkt-customers__rating {
+  max-width: 40rem;
+  margin: 1rem auto 0;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--fx-muted);
+  text-wrap: balance;
+}
+
+/* ——— Logo strip: one static row ———
+   Five marks fit the frame at every width, so the marquee is stopped and
+   its clone set hidden. That is also what keeps the strip from printing
+   twice when motion is reduced. */
+.mkt-customers.fx .mkt-customers__trust {
+  width: auto;
+  margin: 0;
+  padding: clamp(1.5rem, 2.6vw, 2rem) var(--fx-gut);
+  border-top: 1px solid var(--fx-line);
+}
+
+.mkt-customers.fx .mkt-customers__trust .home-trust-logos__label,
+.mkt-customers.fx .mkt-customers__trust .home-trust-logos--on-stage .home-trust-logos__label {
+  margin: 0 0 0.9rem;
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  color: var(--fx-muted);
+}
+
+.mkt-customers.fx .mkt-customers__trust .home-trust-logos__viewport {
+  overflow: visible;
+  -webkit-mask-image: none;
+  mask-image: none;
+}
+
+.mkt-customers.fx .mkt-customers__trust .home-trust-logos__track {
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem clamp(1.25rem, 4.2vw, 3.5rem);
+  animation: none;
+}
+
+.mkt-customers.fx .mkt-customers__trust .home-trust-logos__item[aria-hidden='true'] {
+  display: none;
+}
+
+.mkt-customers.fx .mkt-customers__trust .home-trust-logos__item img,
+.mkt-customers.fx .mkt-customers__trust .home-trust-logos--on-stage .home-trust-logos__item img {
+  height: 26px;
+  max-width: 140px;
+  filter: brightness(0) opacity(0.62);
+}
+
+.mkt-customers.fx .mkt-customers__trust .home-trust-logos__item:hover img,
+.mkt-customers.fx .mkt-customers__trust .home-trust-logos--on-stage .home-trust-logos__item:hover img {
+  filter: brightness(0) opacity(0.9);
+}
+
+/* ——— Platform badges: three cells, hairline dividers ——— */
+.mkt-customers.fx .mkt-customers__creds {
+  width: auto;
+  margin: 0;
+  padding: 0;
+}
+
+.mkt-customers.fx .mkt-creds {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1px;
+  border: 0;
+  border-bottom: 1px solid var(--fx-line);
+  border-radius: 0;
+  background: #fff;
+}
+
+.mkt-customers.fx .mkt-creds__item {
+  gap: 1.1rem;
+  padding: clamp(1.4rem, 2.4vw, 1.9rem) var(--fx-gut);
+  border: 0;
+}
+
+.mkt-customers.fx .mkt-creds__badge {
+  width: auto;
+  height: 48px;
+}
+
+.mkt-customers.fx .mkt-creds__text b {
+  font-size: 1rem;
+  line-height: 1.35;
+  letter-spacing: -0.015em;
+}
+
+.mkt-customers.fx .mkt-creds__text span {
+  margin-top: 0.2rem;
+  font-size: 0.9rem;
+  line-height: 1.45;
+  color: var(--fx-muted);
+  text-wrap: balance;
+}
+
+/* ——— Section rows and heads ——— */
+.mkt-customers.fx .mkt-customers__cases,
+.mkt-customers.fx .mkt-customers__rollout,
+.mkt-customers.fx .mkt-customers__reviews {
+  width: auto;
+  max-width: none;
+  margin: 0;
+  padding: clamp(3.25rem, 6.5vw, 5.5rem) var(--fx-gut);
+}
+
+.mkt-customers.fx .mkt-sec-head {
+  max-width: 42rem;
+  margin: 0 auto clamp(2rem, 4vw, 3rem);
+}
+
+.mkt-customers.fx .mkt-sec-head__title {
+  font-size: clamp(1.6rem, 3.2vw, 2.3rem);
+  line-height: 1.22;
+  letter-spacing: -0.034em;
+}
+
+.mkt-customers.fx .mkt-sec-head__title .mkt-hl {
+  margin: 0;
+}
+
+.mkt-customers.fx .mkt-sec-head__sub {
+  max-width: 34rem;
+  margin: 1rem auto 0;
+  font-size: 1.02rem;
+  line-height: 1.6;
+  color: var(--fx-muted);
+}
+
+/* ——— The two stories: one framed row, one centre hairline ——— */
+.mkt-customers.fx .mkt-customers__case-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1px;
+  align-items: stretch;
+}
+
+.mkt-customers.fx .mkt-story,
+.mkt-customers.fx .mkt-story:hover {
+  border: 0;
+  border-radius: 0;
+  background: #fff;
+  box-shadow: var(--fx-cell-lines);
+  transform: none;
+}
+
+.mkt-customers.fx .mkt-story {
+  --story-pt: clamp(2rem, 3.4vw, 2.85rem);
+  --story-pb: clamp(1.75rem, 3vw, 2.4rem);
+  overflow: visible;
+  padding: var(--story-pt) var(--fx-gut) var(--story-pb);
+  transition: none;
+}
+
+.mkt-customers.fx .mkt-story__brand {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+}
+
+.mkt-customers.fx .mkt-story__tile {
+  width: 3rem;
+  height: 3rem;
+  border: 1px solid var(--fx-line);
+  border-radius: 12px;
+  box-shadow: none;
+}
+
+.mkt-customers.fx .mkt-story__ident b {
+  font-size: 1.02rem;
+  line-height: 1.3;
+}
+
+.mkt-customers.fx .mkt-story__ident span {
+  margin-top: 0.15rem;
+  font-size: 0.88rem;
+  color: var(--fx-muted);
+}
+
+.mkt-customers.fx .mkt-story__headline {
+  max-width: 24ch;
+  margin-top: clamp(1.6rem, 2.6vw, 2.1rem);
+  font-size: clamp(1.5rem, 2.5vw, 1.95rem);
+  font-weight: 400;
+  line-height: 1.2;
+  letter-spacing: -0.03em;
+}
+
+/* A pull quote, not a boxed testimonial: larger type on one thin violet rule. */
+.mkt-customers.fx .mkt-story__quote {
+  max-width: 34rem;
+  margin: clamp(1.35rem, 2.2vw, 1.75rem) 0 0;
+  padding: 0.1rem 0 0.1rem 1.25rem;
+  border-left: 2px solid var(--mkt-violet);
+}
+
+.mkt-customers.fx .mkt-story__quote p {
+  font-size: clamp(1.06rem, 1.45vw, 1.2rem);
+  line-height: 1.6;
+  letter-spacing: -0.012em;
+  color: var(--mkt-ink);
+}
+
+.mkt-customers.fx .mkt-story__attrib {
+  gap: 0.75rem;
+  margin-top: clamp(1.35rem, 2.2vw, 1.75rem);
+}
+
+.mkt-customers.fx .mkt-story__avatar {
+  width: 2.35rem;
+  height: 2.35rem;
+  font-size: 0.9rem;
+}
+
+.mkt-customers.fx .mkt-story__who b {
+  font-size: 0.95rem;
+  line-height: 1.35;
+}
+
+.mkt-customers.fx .mkt-story__who span {
+  font-size: 0.86rem;
+  line-height: 1.4;
+  color: var(--fx-muted);
+}
+
+/* Outcomes sit under a hairline that runs the full width of the cell, so the
+   two cells read as one table: story above the line, results below it. */
+.mkt-customers.fx .mkt-story__facts {
+  gap: 0.7rem;
+  margin: clamp(1.75rem, 3vw, 2.4rem) calc(var(--fx-gut) * -1) 0;
+  padding: clamp(1.5rem, 2.6vw, 2rem) var(--fx-gut) 0;
+  border-top: 1px solid var(--fx-line);
+}
+
+.mkt-customers.fx .mkt-story__facts li {
+  display: block;
+  padding-left: 1.75rem;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: var(--fx-body);
+}
+
+.mkt-customers.fx .mkt-story__foot {
+  margin: 1.5rem 0 0;
+}
+
+.mkt-customers.fx .mkt-story__site,
+.mkt-customers.fx .mkt-steps-row__link {
+  gap: 0.3rem;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 4px;
+  background: none;
+  font-size: 0.92rem;
+  font-weight: 500;
+  color: var(--mkt-violet);
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+.mkt-customers.fx .mkt-story__site:hover,
+.mkt-customers.fx .mkt-steps-row__link:hover {
+  color: var(--fx-deep);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transform: none;
+}
+
+.mkt-customers.fx .mkt-story__site:focus-visible,
+.mkt-customers.fx .mkt-steps-row__link:focus-visible {
+  outline: 2px solid #c4b5fd;
+  outline-offset: 3px;
+}
+
+/* Side by side, the two stories share their row lines: brand, headline, quote,
+   person, outcomes and link each start at the same height in both cells. */
+@supports (grid-template-rows: subgrid) {
+  @media (min-width: 900px) {
+    .mkt-customers.fx .mkt-story {
+      display: grid;
+      grid-template-rows: subgrid;
+      grid-row: span 6;
+      row-gap: 0;
+      align-content: start;
+    }
+
+    .mkt-customers.fx .mkt-story > * {
+      align-self: start;
+    }
+  }
+}
+
+/* ——— Rollout: three step cells ——— */
+.mkt-customers.fx .mkt-steps-row {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1px;
+}
+
+.mkt-customers.fx .mkt-steps-row__item,
+.mkt-customers.fx .mkt-steps-row__item:hover {
+  border: 0;
+  border-radius: 0;
+  background: #fff;
+}
+
+.mkt-customers.fx .mkt-steps-row__item {
+  padding: clamp(1.5rem, 2.6vw, 2.1rem) var(--fx-gut) clamp(1.6rem, 2.8vw, 2.25rem);
+  transition: none;
+}
+
+.mkt-customers.fx .mkt-steps-row__n {
+  gap: 0.6rem;
+  margin: 0;
+  font-size: 0.82rem;
+  letter-spacing: 0.04em;
+  color: var(--fx-muted);
+}
+
+.mkt-customers.fx .mkt-steps-row__n span {
+  color: var(--mkt-violet);
+}
+
+.mkt-customers.fx .mkt-steps-row__title {
+  margin: 1.1rem 0 0;
+  font-size: 1.12rem;
+  line-height: 1.35;
+  letter-spacing: -0.018em;
+}
+
+.mkt-customers.fx .mkt-steps-row__detail {
+  margin: 0.6rem 0 0;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--fx-muted);
+}
+
+.mkt-customers.fx .mkt-steps-row__link {
+  margin-top: 1.35rem;
+}
+
+/* ——— Review wall: the shared component, sized to the frame's heads ——— */
+.mkt-customers.fx .mkt-customers__reviews .mkt-pwall-section {
+  width: min(100%, 44rem);
+  margin: 0 auto;
+}
+
+.mkt-customers.fx .mkt-customers__reviews .mkt-pwall-section__title {
+  margin: 0;
+  font-size: clamp(1.6rem, 3.2vw, 2.3rem);
+  line-height: 1.22;
+}
+
+.mkt-customers.fx .mkt-customers__reviews .mkt-pwall-section__sub {
+  max-width: 34rem;
+  margin: 1rem auto clamp(1.75rem, 3.5vw, 2.5rem);
+  font-size: 1.02rem;
+  line-height: 1.6;
+  color: var(--fx-muted);
+}
+
+/* ——— Narrow ——— */
+@media (max-width: 899px) {
+  .mkt-customers.fx .mkt-customers__hero {
+    padding-top: calc(var(--mkt-nav-h, 4rem) + 1.75rem);
+  }
+
+  .mkt-customers.fx .mkt-customers__cases,
+  .mkt-customers.fx .mkt-customers__rollout,
+  .mkt-customers.fx .mkt-customers__reviews {
+    padding-top: clamp(2.75rem, 9vw, 3.75rem);
+    padding-bottom: clamp(2.75rem, 9vw, 3.75rem);
+  }
+
+  /* The bleed grids end flush with the row, whatever its padding is here. */
+  .mkt-customers.fx .mkt-customers__case-grid,
+  .mkt-customers.fx .mkt-steps-row {
+    grid-template-columns: minmax(0, 1fr);
+    margin-bottom: calc(clamp(2.75rem, 9vw, 3.75rem) * -1);
+  }
+
+  /* Three across still fits a tablet once the badge sits above its text. */
+  .mkt-customers.fx .mkt-creds__item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+
+  .mkt-customers.fx .mkt-story__headline {
+    max-width: none;
+  }
+}
+
+/* Tablet: the stories stack, so each one splits instead. Story on the left,
+   outcomes and the store link on the right of one vertical hairline. */
+@media (min-width: 600px) and (max-width: 899px) {
+  .mkt-customers.fx .mkt-story {
+    display: grid;
+    grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
+    grid-template-rows: auto auto auto 1fr;
+    column-gap: calc(var(--fx-gut) * 2);
+  }
+
+  .mkt-customers.fx .mkt-story > * {
+    grid-column: 1;
+  }
+
+  .mkt-customers.fx .mkt-story::after {
+    content: '';
+    grid-column: 2;
+    grid-row: 1 / span 4;
+    justify-self: start;
+    width: 1px;
+    margin: calc(var(--story-pt) * -1) 0 calc(var(--story-pb) * -1) calc(var(--fx-gut) * -1);
+    background: var(--fx-line);
+  }
+
+  .mkt-customers.fx .mkt-story__facts {
+    grid-column: 2;
+    grid-row: 1 / span 3;
+    align-self: start;
+    margin: 0;
+    padding: 0.2rem 0 0;
+    border-top: 0;
+  }
+
+  .mkt-customers.fx .mkt-story__foot {
+    grid-column: 2;
+    grid-row: 4;
+    align-self: end;
+    margin: 1.5rem 0 0.45rem;
+  }
+}
+
+@media (max-width: 599px) {
+  .mkt-customers.fx .mkt-customers__title {
+    max-width: none;
+    font-size: clamp(1.95rem, 8.6vw, 2.4rem);
+  }
+
+  /* Phones: the badge strip is three rows, badge left and text right, with
+     the three badges in one column so the text lines up down the page. */
+  .mkt-customers.fx .mkt-creds {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .mkt-customers.fx .mkt-creds__item {
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .mkt-customers.fx .mkt-customers__actions .mkt-btn-primary,
+  .mkt-customers.fx .mkt-customers__actions .mkt-btn-ghost {
+    flex: 1 1 auto;
+  }
+
+  .mkt-customers.fx .mkt-customers__trust .home-trust-logos__track {
+    gap: 0.4rem 1.05rem;
+  }
+
+  .mkt-customers.fx .mkt-customers__trust .home-trust-logos__item img,
+  .mkt-customers.fx .mkt-customers__trust .home-trust-logos--on-stage .home-trust-logos__item img {
+    height: 17px;
+    max-width: 76px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mkt-customers.fx .mkt-story__site,
+  .mkt-customers.fx .mkt-steps-row__link {
+    transition: none;
   }
 }

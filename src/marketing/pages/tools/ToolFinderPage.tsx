@@ -2,20 +2,16 @@ import { Link } from 'react-router-dom';
 import MarketingSEO from '../../components/MarketingSEO';
 import MarketingPage from '../../components/MarketingPage';
 import MarketingCtaBand from '../../components/MarketingCtaBand';
-import { Section, SectionHeading } from '../../components/ui';
-import JourneyHero from '../../components/journey/JourneyHero';
-import { TopicBlockView, type TopicBlock } from '../../components/topic/TopicBlocks';
-import FaqAccordion from '../../components/topic/FaqAccordion';
+import type { TopicBlock } from '../../components/topic/TopicBlocks';
 import ToolFinder from '../../components/tools/ToolFinder';
-import ToolCards from '../../components/tools/ToolCards';
-import { otherTools } from '../../data/freeTools';
+import { MoreToolsRow, ToolBlocks, ToolFaqRow, ToolHero } from '../../components/tools/ToolFrame';
 import {
   breadcrumbJsonLd,
   organizationJsonLd,
   softwareApplicationJsonLd,
   webPageJsonLd,
 } from '../../data/pageSeo';
-import '../../styles/journey-flow.css';
+import '../../styles/tools.css';
 
 const PATH = '/tools/best-whatsapp-tool-for-shopify';
 const TITLE = 'Which WhatsApp Tool for Shopify? Free 2-Minute Quiz';
@@ -117,66 +113,50 @@ export default function ToolFinderPage() {
           ]),
         ]}
       />
-      <MarketingPage>
-        <JourneyHero
-          eyebrow="Free tool"
-          title="Help me find the best WhatsApp tool for my Shopify store"
-          accent="best WhatsApp tool"
-          subtitle="A six-question quiz on which WhatsApp tool fits your Shopify store. You get a ranked shortlist, the reasons, and where each tool falls short."
-          trust
-        />
+      <MarketingPage className="mkt-toolpage mkt-toolpage--finder fx">
+        <div className="fx-shell">
+          <ToolHero
+            crumbs={[{ name: 'Free tools', to: '/tools' }, { name: 'WhatsApp tool finder' }]}
+            title="Help me find the best WhatsApp tool for my Shopify store"
+            accent="best WhatsApp tool"
+            subtitle="A six-question quiz on which WhatsApp tool fits your Shopify store. You get a ranked shortlist, the reasons, and where each tool falls short."
+          />
 
-        <Section className="!pt-10 md:!pt-14">
-          <ToolFinder />
-        </Section>
-
-        <Section wash="soft">
-          <div className="mkt-jx-centered mx-auto flex max-w-3xl flex-col gap-14 md:gap-16">
-            {BLOCKS.map((b) => (
-              <TopicBlockView key={b.id} block={b} />
-            ))}
+          {/* Single-column tool: one framed card on a tint row. */}
+          <div className="mkt-toolpage__tool mkt-toolpage__tool--card">
+            <ToolFinder />
           </div>
-        </Section>
 
-        <Section>
-          <SectionHeading title="Questions teams ask" accent="teams ask" />
-          <div className="mx-auto max-w-3xl">
-            <FaqAccordion items={FAQS} />
-          </div>
-          <ul className="mx-auto mt-10 flex max-w-3xl flex-wrap justify-center gap-3">
-            {[
-              { label: 'TopEdge AI vs WATI', href: '/compare/wati' },
-              { label: 'TopEdge AI vs Interakt', href: '/compare/interakt' },
-              { label: 'TopEdge AI vs AiSensy', href: '/compare/aisensy' },
-              { label: 'TopEdge AI vs Bitespeed', href: '/compare/bitespeed' },
-              { label: '4-way comparison', href: '/compare/topedge-vs-wati-vs-interakt-vs-aisensy' },
-            ].map((r) => (
-              <li key={r.href}>
-                <Link
-                  to={r.href}
-                  className="inline-flex rounded-full border border-[#efeaf8] bg-white px-4 py-2 text-sm font-medium text-[#7C3AED] hover:border-[#c4b5fd]"
-                >
-                  {r.label}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </Section>
+          <ToolBlocks blocks={BLOCKS} />
 
-        <Section wash="soft">
-          <SectionHeading title="More free tools" accent="free tools" />
-          <div className="mx-auto max-w-5xl">
-            <ToolCards tools={otherTools('best-whatsapp-tool-for-shopify').slice(0, 3)} columns={3} />
-          </div>
-        </Section>
+          <ToolFaqRow faqs={FAQS}>
+            <ul className="mkt-toolpage__compare fx-cells fx-cells--bleed fx-links">
+              {[
+                { label: 'TopEdge AI vs WATI', href: '/compare/wati' },
+                { label: 'TopEdge AI vs Interakt', href: '/compare/interakt' },
+                { label: 'TopEdge AI vs AiSensy', href: '/compare/aisensy' },
+                { label: 'TopEdge AI vs Bitespeed', href: '/compare/bitespeed' },
+                { label: '4-way comparison', href: '/compare/topedge-vs-wati-vs-interakt-vs-aisensy' },
+              ].map((r) => (
+                <li key={r.href}>
+                  <Link to={r.href} className="fx-link">
+                    {r.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </ToolFaqRow>
 
-        <MarketingCtaBand
-          title="Try TopEdge AI free for 14 days"
-          subtitle="Connect Shopify, switch on COD confirmation and cart recovery, and watch it run on your own orders."
-          primaryLabel="Start free"
-          secondaryLabel="See pricing"
-          secondaryTo="/pricing"
-        />
+          <MoreToolsRow slug="best-whatsapp-tool-for-shopify" />
+
+          <MarketingCtaBand
+            title="Try TopEdge AI free for 14 days"
+            subtitle="Connect Shopify, switch on COD confirmation and cart recovery, and watch it run on your own orders."
+            primaryLabel="Start free"
+            secondaryLabel="See pricing"
+            secondaryTo="/pricing"
+          />
+        </div>
       </MarketingPage>
     </>
   );

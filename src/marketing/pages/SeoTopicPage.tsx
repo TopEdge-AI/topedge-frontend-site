@@ -88,9 +88,19 @@ export default function SeoTopicPage({ slug }: Props) {
           ]),
         ]}
       />
-      <MarketingPage className="mkt-topic">
+      <MarketingPage className="mkt-topic fx">
+        <div className="fx-shell">
         <header className="mkt-topic__hero">
           <div className="mkt-topic__hero-inner">
+            <nav aria-label="Breadcrumb">
+              <ol className="fx-crumbs">
+                <li>
+                  <Link to="/">Home</Link>
+                </li>
+                <li aria-current="page">{topic.h1}</li>
+              </ol>
+            </nav>
+
             <Link className="mkt-topic__kicker" to={topic.kicker?.href ?? '/integrations'}>
               {topic.kicker?.label ?? 'Integrations'}
               <ArrowUpRight size={12} strokeWidth={2.2} aria-hidden />
@@ -121,7 +131,10 @@ export default function SeoTopicPage({ slug }: Props) {
               <ProofBadges compact />
             </div>
           </div>
+        </header>
 
+        {/* The page's lead visual on the one stage every product visual uses. */}
+        <div className="mkt-topic__stage-row fx-stage">
           <figure className="mkt-topic__stage">
             {topic.film ? (
               <LandingFilm film={topic.film} label={topic.filmLabel ?? topic.h1} />
@@ -136,7 +149,7 @@ export default function SeoTopicPage({ slug }: Props) {
               />
             )}
           </figure>
-        </header>
+        </div>
 
         {/* The answer-first block, as the answer rather than as prose. Answer
             engines quote this paragraph; a reader who only wants the
@@ -200,12 +213,11 @@ export default function SeoTopicPage({ slug }: Props) {
               Keep <span className="mkt-hl">reading</span>
             </h2>
           </header>
-          <ul className="mkt-topic__related-list">
+          <ul className="mkt-topic__related-list fx-cells fx-cells--bleed fx-links">
             {topic.related.map((r) => (
               <li key={r.href}>
-                <Link to={r.href}>
+                <Link to={r.href} className="fx-link">
                   {r.label}
-                  <ArrowUpRight size={13} strokeWidth={2} aria-hidden />
                 </Link>
               </li>
             ))}
@@ -222,6 +234,7 @@ export default function SeoTopicPage({ slug }: Props) {
           secondaryLabel="See pricing"
           secondaryTo="/pricing"
         />
+        </div>
       </MarketingPage>
     </>
   );

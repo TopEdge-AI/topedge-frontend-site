@@ -19,22 +19,22 @@ type Tone = 'source' | 'core' | 'out' | 'warn' | 'muted';
 const FILL: Record<Tone, string> = {
   source: '#f5f3ff',
   core: '#7c3aed',
-  out: '#ecfdf5',
-  warn: '#fff7ed',
-  muted: '#f8fafc',
+  out: '#f6fcf9',
+  warn: '#fffbf4',
+  muted: '#faf9fd',
 };
 const STROKE: Record<Tone, string> = {
   source: '#ddd6fe',
   core: '#6d28d9',
-  out: '#a7f3d0',
-  warn: '#fed7aa',
-  muted: '#e2e8f0',
+  out: '#bfe5d2',
+  warn: '#f0dcb4',
+  muted: '#e2e0ea',
 };
 const TEXT: Record<Tone, string> = {
   source: '#4c1d95',
   core: '#ffffff',
   out: '#065f46',
-  warn: '#9a3412',
+  warn: '#92400e',
   muted: '#334155',
 };
 
@@ -390,8 +390,8 @@ function Split({
           width={boxW}
           height={boxH + 8}
           rx={10}
-          fill="#fffbeb"
-          stroke="#fde68a"
+          fill="#f4f1fb"
+          stroke="#d9ccf5"
           strokeWidth={1.25}
         />
         {wrap(test, 20).map((line, i) => (
@@ -403,7 +403,7 @@ function Split({
             dominantBaseline="middle"
             fontSize={11}
             fontWeight={600}
-            fill="#92400e"
+            fill="#5b21b6"
           >
             {line}
           </text>

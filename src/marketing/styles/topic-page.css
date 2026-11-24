@@ -490,3 +490,464 @@
     border-radius: 14px;
   }
 }
+
+/* ==================================================================== *
+   Framed layout (24 Nov 2026)
+   --------------------------------------------------------------------
+   The topic lander now sits in the same frame as /partners
+   (styles/frame.css): one column between two hairline rails and a
+   hairline row per section. The radial wash behind the hero and the
+   gradient panels are gone; the lead visual sits on the violet dither
+   stage. This layer sets the rows; the blocks inside the article are
+   restyled in the matching layer at the end of topic-blocks.css. Copy,
+   headings, links and schema are unchanged.
+
+   Every rule is scoped `.mkt-topic.fx` so it wins over the layers above
+   without touching them.
+ * ==================================================================== */
+
+.mkt-topic.fx {
+  --topic-sec: clamp(3.25rem, 6.5vw, 5.5rem);
+  --topic-gap: clamp(2rem, 4vw, 3rem);
+  /* The reading column: prose, the short answer and callouts share it. */
+  --topic-measure: 43rem;
+}
+
+/* --- Hero --- */
+.mkt-topic.fx .mkt-topic__hero {
+  padding: calc(var(--mkt-nav-h, 4.5rem) + clamp(2.25rem, 5vw, 4rem)) var(--fx-gut) clamp(2.25rem, 4vw, 3.25rem);
+  overflow: visible;
+}
+
+.mkt-topic.fx .mkt-topic__hero::before {
+  content: none;
+}
+
+.mkt-topic.fx .mkt-topic__hero-inner {
+  width: auto;
+}
+
+.mkt-topic.fx .mkt-topic__hero .fx-crumbs {
+  margin-bottom: 1.1rem;
+}
+
+.mkt-topic.fx .mkt-topic__kicker {
+  gap: 0.35rem;
+  padding: 0.36rem 0.85rem;
+  border: 1px solid #e7e5ee;
+  background: #fff;
+  box-shadow: 0 1px 2px rgba(12, 18, 34, 0.04);
+  font-size: 0.72rem;
+  color: var(--mkt-violet);
+}
+
+.mkt-topic.fx .mkt-topic__kicker:hover {
+  border-color: #c4b5fd;
+  color: var(--fx-deep);
+}
+
+.mkt-topic.fx .mkt-topic__kicker:focus-visible {
+  outline: 2px solid #c4b5fd;
+  outline-offset: 2px;
+}
+
+.mkt-topic.fx .mkt-topic__title {
+  max-width: 21ch;
+  margin: 1.25rem auto 0;
+  font-size: clamp(2.05rem, 4.6vw, 3.35rem);
+  line-height: 1.12;
+  letter-spacing: -0.042em;
+  /* Lets the highlight sit under the text of the line above it. */
+  isolation: isolate;
+}
+
+.mkt-topic.fx .mkt-topic__title .mkt-hl {
+  position: relative;
+  z-index: -1;
+  margin: 0;
+  padding: 0.04em 0.24em 0.1em;
+  border-radius: 0.3em;
+  background: #e4d4ff;
+  color: #0c1222;
+  white-space: normal;
+}
+
+.mkt-topic.fx .mkt-topic__sub {
+  max-width: 38rem;
+  margin: 1.35rem auto 0;
+  font-size: clamp(1.02rem, 1.4vw, 1.12rem);
+  line-height: 1.55;
+  color: var(--fx-muted);
+}
+
+.mkt-topic.fx .mkt-topic__actions {
+  gap: 0.75rem;
+  margin-top: 2rem;
+}
+
+.mkt-topic.fx .mkt-topic__actions .mkt-btn-primary,
+.mkt-topic.fx .mkt-topic__actions .mkt-btn-ghost {
+  height: auto;
+  min-height: 3rem;
+  padding: 0 1.6rem;
+  font-size: 0.95rem;
+}
+
+.mkt-topic.fx .mkt-topic__actions .mkt-btn-ghost {
+  background: #fff;
+}
+
+.mkt-topic.fx .mkt-topic__proof {
+  margin-top: 1.75rem;
+}
+
+/* --- Lead visual on the dither stage --- */
+.mkt-topic.fx .mkt-topic__stage-row {
+  padding: clamp(1.75rem, 4.5vw, 3.75rem) var(--fx-gut);
+  border-top: 1px solid var(--fx-line);
+  border-bottom: 1px solid var(--fx-line);
+}
+
+.mkt-topic.fx .mkt-topic__stage {
+  width: min(100%, 1020px);
+  margin: 0 auto;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  border-radius: 18px;
+  background: #fff;
+  box-shadow: 0 0 0 1px rgba(12, 18, 34, 0.05), 0 40px 80px -42px rgba(46, 16, 101, 0.55);
+}
+
+.mkt-topic.fx .mkt-topic__stage img,
+.mkt-topic.fx .mkt-topic__stage .mkt-lp-film {
+  border-radius: 0;
+}
+
+/* --- The short answer: label on the left rail, the answer beside it --- */
+.mkt-topic.fx .mkt-topic__answer {
+  width: auto;
+  margin: 0;
+  padding: clamp(2.5rem, 5vw, 3.75rem) var(--fx-gut);
+  border-bottom: 1px solid var(--fx-line);
+  background: var(--fx-tint);
+}
+
+.mkt-topic.fx .mkt-answer {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 0.9rem;
+  max-width: var(--topic-measure);
+  margin: 0 auto;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: none;
+}
+
+.mkt-topic.fx .mkt-answer__label {
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+}
+
+.mkt-topic.fx .mkt-answer__body {
+  margin: 0;
+  font-size: clamp(1.05rem, 1.5vw, 1.2rem);
+  line-height: 1.65;
+  color: var(--mkt-ink);
+}
+
+.mkt-topic.fx .mkt-answer__chips {
+  gap: 0.5rem;
+  margin: 0.6rem 0 0;
+  padding: 0;
+  border-top: 0;
+}
+
+.mkt-topic.fx .mkt-answer__chips li {
+  padding: 0.36rem 0.8rem;
+  border: 1px solid var(--fx-line);
+  background: #fff;
+  font-size: 0.82rem;
+  color: var(--fx-body);
+}
+
+@media (min-width: 900px) {
+  .mkt-topic.fx .mkt-answer {
+    grid-template-columns: 11rem minmax(0, var(--topic-measure));
+    column-gap: clamp(2rem, 4vw, 3.5rem);
+    justify-content: center;
+    max-width: none;
+  }
+
+  .mkt-topic.fx .mkt-answer__label {
+    grid-row: 1 / span 2;
+    padding-top: 0.45rem;
+  }
+
+  .mkt-topic.fx .mkt-answer__body,
+  .mkt-topic.fx .mkt-answer__chips {
+    grid-column: 2;
+  }
+}
+
+/* --- Trust band: head, marks, two stories as cells, one link row --- */
+.mkt-topic.fx .mkt-topic__trust {
+  width: auto;
+  margin: 0;
+  padding: var(--topic-sec) var(--fx-gut) 0;
+  border-bottom: 1px solid var(--fx-line);
+}
+
+.mkt-topic.fx .mkt-trust {
+  max-width: none;
+}
+
+.mkt-topic.fx .mkt-trust__head {
+  gap: 1.1rem;
+}
+
+.mkt-topic.fx .mkt-trust__title {
+  max-width: 42rem;
+  font-size: clamp(1.6rem, 3.2vw, 2.3rem);
+  line-height: 1.22;
+  letter-spacing: -0.034em;
+}
+
+.mkt-topic.fx .mkt-trust__title .mkt-hl,
+.mkt-topic.fx .mkt-topic__sec-title .mkt-hl {
+  margin: 0;
+  padding: 0.08em 0.28em 0.14em;
+  border-radius: 0.35em;
+  background: #e4d4ff;
+  color: #0c1222;
+}
+
+.mkt-topic.fx .mkt-trust__logos {
+  margin-top: 1.75rem;
+}
+
+.mkt-topic.fx .mkt-trust__stories {
+  gap: 1px;
+  overflow: hidden;
+  margin: var(--topic-gap) calc(var(--fx-gut) * -1) 0;
+  border-top: 1px solid var(--fx-line);
+}
+
+.mkt-topic.fx .mkt-trust__story {
+  padding: clamp(1.5rem, 2.6vw, 2.25rem) var(--fx-gut);
+  border: 0;
+  border-radius: 0;
+  background: #fff;
+  box-shadow: var(--fx-cell-lines);
+}
+
+.mkt-topic.fx .mkt-trust__headline {
+  font-size: 1.08rem;
+  font-weight: 600;
+  letter-spacing: -0.018em;
+}
+
+.mkt-topic.fx .mkt-trust__quote p {
+  color: var(--fx-body);
+}
+
+.mkt-topic.fx .mkt-trust__by {
+  border-top: 0;
+  padding-top: 0;
+}
+
+.mkt-topic.fx .mkt-trust__more {
+  margin: 0 calc(var(--fx-gut) * -1);
+  padding: 1.1rem var(--fx-gut);
+  border-top: 1px solid var(--fx-line);
+}
+
+.mkt-topic.fx .mkt-trust__more a:hover {
+  color: var(--fx-deep);
+  text-decoration: none;
+}
+
+/* --- Article: one hairline row per block --- */
+.mkt-topic.fx .mkt-topic__article {
+  display: block;
+  width: auto;
+  margin: 0;
+  padding: 0;
+}
+
+.mkt-topic.fx .mkt-topic__article > .mkt-blk {
+  width: auto;
+  margin: 0;
+  padding: var(--topic-sec) var(--fx-gut);
+  border-bottom: 1px solid var(--fx-line);
+}
+
+/* --- Section heads shared by the plans, FAQ and related rows --- */
+.mkt-topic.fx .mkt-topic__sec-head {
+  max-width: 42rem;
+  margin: 0 auto var(--topic-gap);
+}
+
+.mkt-topic.fx .mkt-topic__sec-title {
+  font-size: clamp(1.6rem, 3.2vw, 2.3rem);
+  line-height: 1.22;
+  letter-spacing: -0.034em;
+}
+
+.mkt-topic.fx .mkt-topic__sec-sub {
+  max-width: 34rem;
+  margin: 1rem auto 0;
+  font-size: 1.02rem;
+  line-height: 1.6;
+  color: var(--fx-muted);
+}
+
+/* --- Plans (landing topics that carry them) --- */
+.mkt-topic.fx .mkt-lp-plans {
+  width: auto;
+  margin: 0;
+  padding: var(--topic-sec) var(--fx-gut);
+  border-bottom: 1px solid var(--fx-line);
+}
+
+.mkt-topic.fx .mkt-lp-plans__grid {
+  max-width: 62rem;
+  margin-inline: auto;
+}
+
+.mkt-topic.fx .mkt-lp-plan {
+  border-color: var(--fx-line);
+  box-shadow: none;
+}
+
+.mkt-topic.fx .mkt-lp-plan--pick {
+  border-color: #c4b5fd;
+  background: var(--fx-tint);
+}
+
+/* --- FAQ --- */
+.mkt-topic.fx .mkt-topic__faq {
+  width: auto;
+  margin: 0;
+  padding: var(--topic-sec) var(--fx-gut);
+  border-bottom: 1px solid var(--fx-line);
+}
+
+.mkt-topic.fx .mkt-topic__faq-body {
+  max-width: none;
+}
+
+/* --- Related: link cells, rail to rail --- */
+.mkt-topic.fx .mkt-topic__related {
+  width: auto;
+  margin: 0;
+  padding: var(--topic-sec) var(--fx-gut) 0;
+}
+
+.mkt-topic.fx .mkt-topic__related-list {
+  --fx-cols: 3;
+  display: grid;
+  flex-wrap: nowrap;
+  justify-content: stretch;
+  gap: 1px;
+  margin: 0 calc(var(--fx-gut) * -1);
+}
+
+.mkt-topic.fx .mkt-topic__related-list a {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.15rem var(--fx-gut);
+  border: 0;
+  border-radius: 0;
+  background: #fff;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--mkt-ink);
+  transform: none;
+}
+
+.mkt-topic.fx .mkt-topic__related-list a:hover {
+  background: var(--fx-tint);
+  color: var(--fx-deep);
+  transform: none;
+}
+
+@media (max-width: 899px) {
+  .mkt-topic.fx {
+    --topic-sec: clamp(2.75rem, 9vw, 3.75rem);
+  }
+
+  .mkt-topic.fx .mkt-topic__hero {
+    padding-top: calc(var(--mkt-nav-h, 4rem) + 1.75rem);
+  }
+
+  .mkt-topic.fx .mkt-topic__related-list {
+    --fx-cols: 2;
+  }
+}
+
+@media (max-width: 640px) {
+  .mkt-topic.fx .mkt-topic__hero {
+    padding-inline: var(--fx-gut);
+  }
+
+  .mkt-topic.fx .mkt-topic__answer,
+  .mkt-topic.fx .mkt-topic__trust,
+  .mkt-topic.fx .mkt-topic__faq,
+  .mkt-topic.fx .mkt-topic__related,
+  .mkt-topic.fx .mkt-lp-plans {
+    padding-inline: var(--fx-gut);
+  }
+
+  .mkt-topic.fx .mkt-topic__stage {
+    padding: 0;
+    border-radius: 14px;
+  }
+
+  .mkt-topic.fx .mkt-topic__stage img,
+  .mkt-topic.fx .mkt-topic__stage .mkt-lp-film {
+    border-radius: 0;
+  }
+}
+
+@media (max-width: 599px) {
+  .mkt-topic.fx .mkt-topic__title {
+    font-size: clamp(1.95rem, 8.6vw, 2.4rem);
+  }
+
+  .mkt-topic.fx .mkt-topic__stage-row {
+    padding: 1.25rem 0.9rem;
+  }
+
+  .mkt-topic.fx .mkt-topic__related-list {
+    --fx-cols: 1;
+  }
+}
+
+/* Section titles: the highlight sits under the title's own text, so the
+   descenders of the line above it are drawn over the lilac, not cut by it. */
+.mkt-topic.fx .mkt-trust__title,
+.mkt-topic.fx .mkt-topic__sec-title,
+.mkt-topic.fx .mkt-blk__h2 {
+  isolation: isolate;
+}
+
+.mkt-topic.fx .mkt-trust__title .mkt-hl,
+.mkt-topic.fx .mkt-topic__sec-title .mkt-hl,
+.mkt-topic.fx .mkt-blk__h2 .mkt-hl {
+  position: relative;
+  z-index: -1;
+}
+
+.mkt-topic.fx .mkt-topic__hero .fx-crumbs {
+  margin-bottom: 1.25rem;
+}
+
+/* Two across: an odd count closes on one full-width link, not an empty half. */
+@media (min-width: 600px) and (max-width: 899px) {
+  .mkt-topic.fx .mkt-topic__related-list > li:last-child:nth-child(odd) {
+    grid-column: span 2;
+  }
+}

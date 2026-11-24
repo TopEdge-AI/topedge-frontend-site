@@ -139,3 +139,28 @@
     margin-left: 0;
   }
 }
+
+/* ====================================================================
+   Framed layout (24 Nov 2026)
+   --------------------------------------------------------------------
+   Inside a framed post the share row is flat like everything else: a
+   hairline border and no lift on hover.
+ * ==================================================================== */
+.mkt-blog-article.fx .mkt-bshare {
+  border-color: var(--fx-line);
+}
+
+.mkt-blog-article.fx .mkt-bshare__btn {
+  border-color: #e7e5ee;
+  transition: color 0.15s ease, border-color 0.15s ease, background 0.15s ease;
+}
+
+.mkt-blog-article.fx .mkt-bshare__btn:hover {
+  background: var(--fx-tint);
+  transform: none;
+}
+
+.mkt-blog-article.fx .mkt-bshare__btn:focus-visible {
+  outline: 2px solid #c4b5fd;
+  outline-offset: 2px;
+}

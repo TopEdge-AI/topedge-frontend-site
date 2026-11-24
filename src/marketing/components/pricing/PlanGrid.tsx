@@ -106,7 +106,7 @@ function TrialCard({ delay = 0, compact = false }: { delay?: number; compact?: b
       </div>
       <p className="mkt-plan__blurb">{planBlurb('trial')}</p>
       {!compact ? (
-        <Link className="mkt-plan__cta mkt-plan__cta--ghost" to={signupTo}>
+        <Link className="mkt-plan__cta mkt-plan__cta--ghost mkt-btn-ghost" to={signupTo}>
           Start free trial
         </Link>
       ) : null}
@@ -197,7 +197,9 @@ function PlanCard({
       <p className="mkt-plan__blurb">{planBlurb(slug)}</p>
       {!compact ? (
         <Link
-          className={`mkt-plan__cta${emphasized ? ' mkt-plan__cta--solid' : ' mkt-plan__cta--ghost'}`}
+          className={`mkt-plan__cta${
+            emphasized ? ' mkt-plan__cta--solid mkt-btn-primary' : ' mkt-plan__cta--ghost mkt-btn-ghost'
+          }`}
           to={signupTo}
         >
           {`Choose ${plan.displayName}`}

@@ -2875,3 +2875,1196 @@
   padding: 0.75rem 0 0.95rem;
   border-top: 1px solid #eef2f6;
 }
+
+/* ==================================================================== *
+   Framed layout (24 Nov 2026)
+   --------------------------------------------------------------------
+   Every compare template (hub, alternatives, refreshed two-way, older
+   two-way, three-way and four-way) now sits in the same frame as
+   /partners (styles/frame.css): one column between two hairline rails,
+   hairline rows between sections, cells that share their dividers.
+
+   The capability board itself is NOT restyled here. Only the row it
+   lives in, the outer border of its wrapper and the column count of the
+   multi-vendor grid are set, so its rows, cells, ticks and status chips
+   read exactly as before. The yellow short-answer box keeps its solid
+   #fef9c3 (owner's choice, the one exception to the colour rule).
+
+   Every rule is scoped `.mkt-cmp.fx` so it wins over the layers above
+   without touching them.
+ * ==================================================================== */
+
+.mkt-cmp.fx {
+  --cmp-sec-y: clamp(3.25rem, 6.5vw, 5.5rem);
+  --cmp-read: 48rem;
+  --pad-x: var(--fx-gut);
+}
+
+@media (max-width: 899px) {
+  .mkt-cmp.fx {
+    --cmp-sec-y: clamp(2.75rem, 9vw, 3.75rem);
+  }
+}
+
+/* --- Hero row --- */
+.mkt-cmp.fx .mkt-cmp__arena {
+  width: auto;
+  max-width: none;
+  margin: 0;
+  padding: calc(var(--mkt-nav-h, 4.5rem) + clamp(2.25rem, 5vw, 4rem)) var(--fx-gut)
+    clamp(2.5rem, 4.5vw, 3.5rem);
+  border-bottom: 1px solid var(--fx-line);
+  text-align: center;
+}
+
+.mkt-cmp.fx .mkt-cmpx__hero::before {
+  content: none;
+}
+
+.mkt-cmp.fx .mkt-cmp__kicker,
+.mkt-cmp.fx .mkt-cmpx__eyebrow {
+  display: block;
+  margin: 0 0 1.15rem;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: none;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--mkt-violet);
+}
+
+.mkt-cmp.fx .mkt-cmpx__eyebrow::before {
+  content: none;
+}
+
+.mkt-cmp.fx .mkt-cmp__asof {
+  color: var(--fx-muted);
+  font-weight: 500;
+}
+
+.mkt-cmp.fx .mkt-cmp__h1 {
+  gap: 0.4rem 0.7rem;
+  font-family: var(--mkt-font);
+  font-size: clamp(1.75rem, 4vw, 3rem);
+  letter-spacing: -0.04em;
+  line-height: 1.15;
+}
+
+.mkt-cmp.fx.mkt-cmpx .mkt-cmp__h1,
+.mkt-cmp.fx.mkt-cmp--alt .mkt-cmp__h1 {
+  font-size: clamp(1.6rem, 3.5vw, 2.6rem);
+}
+
+.mkt-cmp.fx .mkt-cmp__h1--trio {
+  gap: 0.4rem 0.6rem;
+  font-size: clamp(1.35rem, 2.9vw, 2.2rem);
+}
+
+.mkt-cmp.fx .mkt-cmp__h1-brand,
+.mkt-cmp.fx .mkt-cmp__h1-peer,
+.mkt-cmp.fx .mkt-cmp__h1-name,
+.mkt-cmp.fx .mkt-cmp__h1-rest {
+  letter-spacing: inherit;
+}
+
+.mkt-cmp.fx .mkt-cmp__h1-vs {
+  color: #9a9fae;
+}
+
+.mkt-cmp.fx .mkt-cmp__sub,
+.mkt-cmp.fx .mkt-cmpx__sub {
+  max-width: 36rem;
+  margin: 1.35rem auto 0;
+  font-size: clamp(1.02rem, 1.4vw, 1.15rem);
+  line-height: 1.55;
+  color: var(--fx-muted);
+}
+
+.mkt-cmp.fx .mkt-cmp__hero-cta {
+  gap: 0.75rem;
+  margin-top: 2rem;
+}
+
+.mkt-cmp.fx .mkt-cmp__hero-cta .mkt-btn-primary,
+.mkt-cmp.fx .mkt-cmp__hero-cta .mkt-btn-ghost {
+  min-height: 3rem;
+  padding: 0 1.6rem;
+  font-size: 0.95rem;
+}
+
+.mkt-cmp.fx .mkt-cmp__hero-note {
+  margin-top: 1rem;
+  font-size: 0.84rem;
+  color: var(--fx-muted);
+}
+
+.mkt-cmp.fx .mkt-cmp__hero-note a {
+  color: var(--fx-deep);
+}
+
+.mkt-cmp.fx .mkt-cmp__proof {
+  margin-top: 2rem;
+}
+
+/* Hub hero chips: flat pills, violet dot (green carried no meaning). */
+.mkt-cmp.fx .mkt-cmpx__chips {
+  margin-top: 1.6rem;
+}
+
+.mkt-cmp.fx .mkt-cmpx__chips li {
+  padding: 0.38rem 0.85rem;
+  border-color: #e7e5ee;
+  box-shadow: none;
+  font-size: 0.82rem;
+  color: var(--fx-body);
+}
+
+.mkt-cmp.fx .mkt-cmpx__chips li::before {
+  background: var(--mkt-violet);
+}
+
+/* --- Section rows --- */
+.mkt-cmp.fx .mkt-cmp__block {
+  width: auto;
+  max-width: none;
+  margin: 0;
+  padding: var(--cmp-sec-y) var(--fx-gut);
+}
+
+.mkt-cmp.fx .mkt-cmp__block.fx-sec--tight {
+  padding-top: clamp(2rem, 4vw, 2.75rem);
+  padding-bottom: clamp(2rem, 4vw, 2.75rem);
+}
+
+.mkt-cmp.fx .mkt-cmp__block.fx-sec--flush {
+  padding: 0;
+}
+
+.mkt-cmp.fx .mkt-cmp__block-head,
+.mkt-cmp.fx .mkt-cmpx__head {
+  max-width: 46rem;
+  margin: 0 auto clamp(2rem, 4vw, 3rem);
+  text-align: center;
+}
+
+.mkt-cmp.fx .mkt-cmp__block-head h2,
+.mkt-cmp.fx .mkt-cmpx__head h2 {
+  margin: 0;
+  font-family: var(--mkt-font);
+  font-size: clamp(1.6rem, 3.2vw, 2.3rem);
+  font-weight: 400;
+  line-height: 1.22;
+  letter-spacing: -0.034em;
+  color: var(--mkt-ink);
+  text-wrap: balance;
+}
+
+.mkt-cmp.fx .mkt-cmp__hl {
+  padding: 0.08em 0.28em 0.14em;
+  border-radius: 0.35em;
+  background: #e4d4ff;
+  color: #0c1222;
+  font-weight: 400;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
+
+.mkt-cmp.fx .mkt-cmp__block-head .mkt-cmp__hl {
+  white-space: nowrap;
+}
+
+.mkt-cmp.fx .mkt-cmp__block-head p,
+.mkt-cmp.fx .mkt-cmpx__head p {
+  display: block;
+  max-width: 38rem;
+  margin: 1rem auto 0;
+  font-size: 1.02rem;
+  line-height: 1.6;
+  color: var(--fx-muted);
+}
+
+.mkt-cmp.fx .mkt-cmp__fine {
+  max-width: 46rem;
+  margin: 1.35rem auto 0;
+  font-size: 0.8rem;
+  line-height: 1.6;
+  color: var(--fx-muted);
+}
+
+/* --- Short answer (refreshed boards): the owner's solid yellow, seated --- */
+.mkt-cmp.fx .mkt-cmp__answer {
+  max-width: var(--cmp-read);
+  padding: clamp(1.15rem, 2.2vw, 1.5rem) clamp(1.25rem, 2.4vw, 1.75rem);
+  border-radius: 16px;
+}
+
+.mkt-cmp.fx .mkt-cmp__answer-label {
+  margin: 0 0 0.5rem;
+  font-size: 0.95rem;
+}
+
+.mkt-cmp.fx .mkt-cmp__answer p {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* --- Quick verdict (older boards): same seat, flat tint, still a toggle --- */
+.mkt-cmp.fx .mkt-cmp__verdict {
+  max-width: var(--cmp-read);
+  margin: 0 auto;
+  padding: 0 clamp(1.25rem, 2.4vw, 1.75rem);
+  border: 1px solid var(--fx-line);
+  border-radius: 16px;
+  background: var(--fx-tint);
+}
+
+.mkt-cmp.fx .mkt-cmp__verdict summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.1rem 0;
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: var(--mkt-ink);
+  text-align: left;
+}
+
+.mkt-cmp.fx .mkt-cmp__verdict summary::after {
+  content: '+';
+  font-size: 1.2rem;
+  font-weight: 400;
+  line-height: 1;
+  color: var(--mkt-violet);
+}
+
+.mkt-cmp.fx .mkt-cmp__verdict[open] summary::after {
+  content: '\2212';
+}
+
+.mkt-cmp.fx .mkt-cmp__verdict summary:focus-visible {
+  outline: 2px solid #c4b5fd;
+  outline-offset: 4px;
+  border-radius: 8px;
+}
+
+.mkt-cmp.fx .mkt-cmp__verdict p {
+  margin: 0;
+  padding-bottom: 1.2rem;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--fx-body);
+}
+
+/* --- Cell grids: reasons, gaps, switch steps, hub cards, guides ---
+   Each bleeds to the rails and sits on the row's bottom hairline. */
+.mkt-cmp.fx .mkt-cmp__why,
+.mkt-cmp.fx .mkt-cmp__gaps,
+.mkt-cmp.fx .mkt-cmp__steps,
+.mkt-cmp.fx .mkt-cmpx__grid,
+.mkt-cmp.fx .mkt-cmpx__method,
+.mkt-cmp.fx .mkt-cmp-alt__list,
+.mkt-cmp.fx .mkt-steps {
+  display: grid;
+  grid-template-columns: repeat(var(--fx-cols), minmax(0, 1fr));
+  gap: 1px;
+  max-width: none;
+  margin: 0 calc(var(--fx-gut) * -1) calc(var(--cmp-sec-y) * -1);
+  padding: 0;
+  border: 0;
+  border-top: 1px solid var(--fx-line);
+  border-radius: 0;
+  background: #fff;
+  overflow: hidden;
+  list-style: none;
+}
+
+.mkt-cmp.fx .mkt-cmp__why,
+.mkt-cmp.fx .mkt-cmp__gaps,
+.mkt-cmp.fx .mkt-cmpx__method,
+.mkt-cmp.fx .mkt-cmpx__featured {
+  --fx-cols: 3;
+}
+
+.mkt-cmp.fx .mkt-cmp__why-row,
+.mkt-cmp.fx .mkt-cmp__gap,
+.mkt-cmp.fx .mkt-cmp__steps > li {
+  display: block;
+  padding: clamp(1.5rem, 2.6vw, 2.1rem) var(--fx-gut) clamp(1.75rem, 3vw, 2.5rem);
+  border: 0;
+  border-radius: 0;
+  background: #fff;
+}
+
+.mkt-cmp.fx .mkt-cmp__why-num {
+  display: block;
+  width: auto;
+  height: auto;
+  border-radius: 0;
+  background: none;
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  line-height: 1.2;
+  color: var(--mkt-violet);
+  font-variant-numeric: tabular-nums;
+}
+
+.mkt-cmp.fx .mkt-cmp__why-copy h3,
+.mkt-cmp.fx .mkt-cmp__gap h3,
+.mkt-cmp.fx .mkt-cmp__steps h3 {
+  margin: 1.1rem 0 0;
+  font-size: 1.08rem;
+  font-weight: 600;
+  line-height: 1.35;
+  letter-spacing: -0.018em;
+  color: var(--mkt-ink);
+}
+
+.mkt-cmp.fx .mkt-cmp__gap h3,
+.mkt-cmp.fx .mkt-cmp__steps h3 {
+  margin-top: 0;
+}
+
+.mkt-cmp.fx .mkt-cmp__why-copy p,
+.mkt-cmp.fx .mkt-cmp__gap p,
+.mkt-cmp.fx .mkt-cmp__steps p {
+  margin: 0.55rem 0 0;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--fx-muted);
+}
+
+/* Switch steps: the counter becomes the violet step number above the title. */
+.mkt-cmp.fx .mkt-cmp__steps h3::before {
+  content: counter(cmp-step, decimal-leading-zero);
+  display: block;
+  width: auto;
+  height: auto;
+  margin: 0 0 1.1rem;
+  border-radius: 0;
+  background: none;
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  line-height: 1.2;
+  color: var(--mkt-violet);
+  font-variant-numeric: tabular-nums;
+}
+
+/* --- Capability board: seated only (row, outer border, column count) --- */
+.mkt-cmp.fx .mkt-cmp__board-wrap,
+.mkt-cmp.fx .mkt-cmp__triple-wrap {
+  border-color: var(--fx-line);
+  box-shadow: none;
+}
+
+@media (min-width: 720px) {
+  .mkt-cmp.fx .mkt-cmp__triple-wrap {
+    margin-block: 0;
+  }
+
+  /* One status column per vendor. The base grid was fixed at three, so the
+     four-vendor board wrapped its last column under "Feature". */
+  .mkt-cmp.fx .mkt-cmp__triple-wrap .mkt-cmp__triple-head,
+  .mkt-cmp.fx .mkt-cmp__triple-wrap .mkt-cmp__triple-row {
+    grid-template-columns: minmax(14rem, 0.9fr) repeat(var(--cmp-cols, 3), minmax(12rem, 1.15fr));
+  }
+}
+
+/* Between the stacked phone layout and the full desktop grid the board is
+   wider than the frame: it scrolls inside its own block, never the page. */
+@media (min-width: 720px) and (max-width: 1099px) {
+  .mkt-cmp.fx .mkt-cmp__triple-wrap {
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .mkt-cmp.fx .mkt-cmp__triple-wrap .mkt-cmp__triple {
+    min-width: max(56rem, calc(14rem + var(--cmp-cols, 3) * 12rem));
+  }
+}
+
+@media (min-width: 1100px) {
+  .mkt-cmp.fx .mkt-cmp__triple-wrap .mkt-cmp__triple-head,
+  .mkt-cmp.fx .mkt-cmp__triple-wrap .mkt-cmp__triple-row {
+    grid-template-columns: minmax(calc(25rem - var(--cmp-cols, 3) * 3rem), 0.8fr) repeat(
+        var(--cmp-cols, 3),
+        minmax(0, 1.2fr)
+      );
+  }
+}
+
+/* --- Inline and closing CTA sit inside the frame --- */
+.mkt-cmp.fx .mkt-cta {
+  margin-top: 0;
+}
+
+.mkt-cmp.fx .mkt-cta--inline {
+  margin: 0;
+  border-bottom: 1px solid var(--fx-line);
+}
+
+/* --- Where X is the better pick: flat tinted block, tick list --- */
+.mkt-cmp.fx .mkt-cmp__fair {
+  display: grid;
+  gap: 0.95rem;
+  max-width: var(--cmp-read);
+  margin: 0 auto;
+  padding: clamp(1.4rem, 2.6vw, 2rem) clamp(1.25rem, 2.6vw, 2rem);
+  border: 1px solid var(--fx-line);
+  border-radius: var(--fx-radius);
+  background: var(--fx-tint);
+  list-style: none;
+}
+
+.mkt-cmp.fx .mkt-cmp__fair li {
+  display: block;
+  padding: 0 0 0 1.9rem;
+  border: 0;
+  border-radius: 0;
+  background: none;
+}
+
+.mkt-cmp.fx .mkt-cmp__fair li::before {
+  top: 0.2rem;
+  background-color: #fff;
+  box-shadow: inset 0 0 0 1px #e4d4ff;
+}
+
+.mkt-cmp.fx .mkt-cmp__fair span {
+  font-size: 1rem;
+  line-height: 1.55;
+  color: var(--fx-body);
+}
+
+/* --- Dated pricing table: framed, tinted head, scrolls in its own block --- */
+.mkt-cmp.fx .mkt-cmp__cost-wrap {
+  max-width: 60rem;
+  border: 1px solid var(--fx-line);
+  border-radius: var(--fx-radius);
+  background: #fff;
+}
+
+.mkt-cmp.fx .mkt-cmp__cost {
+  font-size: 0.95rem;
+}
+
+.mkt-cmp.fx .mkt-cmp__cost th,
+.mkt-cmp.fx .mkt-cmp__cost td {
+  padding: 0.95rem 1.25rem;
+  border-color: var(--fx-line);
+  color: var(--fx-body);
+}
+
+.mkt-cmp.fx .mkt-cmp__cost thead th {
+  background: var(--fx-tint);
+  font-size: 0.84rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  color: var(--mkt-ink);
+}
+
+.mkt-cmp.fx .mkt-cmp__cost tbody th {
+  background: #fff;
+  font-weight: 600;
+  color: var(--mkt-ink);
+}
+
+.mkt-cmp.fx .mkt-cmp__cost tbody .is-te {
+  background: var(--fx-tint);
+  color: var(--mkt-ink);
+  font-weight: 500;
+}
+
+.mkt-cmp.fx .mkt-cmp__cost thead .is-te {
+  background: var(--fx-tint-2);
+  color: var(--fx-deep);
+}
+
+/* --- FAQ, always open and numbered: one bordered block, hairline rows --- */
+.mkt-cmp.fx .mkt-cmp__qa {
+  gap: 0;
+  width: min(100%, var(--cmp-read));
+  border: 1px solid var(--fx-line);
+  border-radius: var(--fx-radius);
+  background: #fff;
+  overflow: hidden;
+}
+
+.mkt-cmp.fx .mkt-cmp__qa-item {
+  padding: 1.3rem clamp(1.15rem, 2.2vw, 1.5rem) 1.4rem;
+  border: 0;
+  border-radius: 0;
+  background: none;
+  box-shadow: none;
+}
+
+.mkt-cmp.fx .mkt-cmp__qa-item + .mkt-cmp__qa-item {
+  border-top: 1px solid var(--fx-line);
+}
+
+.mkt-cmp.fx .mkt-cmp__qa-q {
+  padding: 0;
+  font-size: 1.02rem;
+  font-weight: 600;
+  line-height: 1.4;
+  letter-spacing: -0.012em;
+  color: var(--mkt-ink);
+}
+
+.mkt-cmp.fx .mkt-cmp__qa-q::before {
+  color: var(--mkt-violet);
+  font-variant-numeric: tabular-nums;
+}
+
+.mkt-cmp.fx .mkt-cmp__qa-a {
+  margin: 0.6rem 0 0;
+  padding: 0;
+  border-top: 0;
+  font-size: 0.97rem;
+  line-height: 1.65;
+  color: var(--fx-body);
+}
+
+/* --- FAQ accordion (older two-way and multi-way boards): same block --- */
+.mkt-cmp.fx .mkt-cmp-faq {
+  gap: 0;
+  width: min(100%, var(--cmp-read));
+  border: 1px solid var(--fx-line);
+  border-radius: var(--fx-radius);
+  background: #fff;
+  overflow: hidden;
+}
+
+.mkt-cmp.fx .mkt-cmp-faq__item {
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.mkt-cmp.fx .mkt-cmp-faq__item + .mkt-cmp-faq__item {
+  border-top: 1px solid var(--fx-line);
+}
+
+.mkt-cmp.fx .mkt-cmp-faq__item.is-open {
+  background: var(--fx-tint);
+}
+
+.mkt-cmp.fx .mkt-cmp-faq__trigger {
+  padding: 1.2rem clamp(1.15rem, 2.2vw, 1.4rem);
+}
+
+.mkt-cmp.fx .mkt-cmp-faq__trigger:focus-visible {
+  outline: 2px solid #c4b5fd;
+  outline-offset: -2px;
+}
+
+.mkt-cmp.fx .mkt-cmp-faq__q {
+  font-size: 1.02rem;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.mkt-cmp.fx .mkt-cmp-faq__chev-wrap {
+  border-color: var(--fx-line);
+  background: #fff;
+}
+
+.mkt-cmp.fx .mkt-cmp-faq__item.is-open .mkt-cmp-faq__chev-wrap {
+  border-color: #e4d4ff;
+  background: #fff;
+}
+
+.mkt-cmp.fx .mkt-cmp-faq__a {
+  padding: 0 clamp(1.15rem, 2.2vw, 1.4rem) 1.3rem;
+  font-size: 0.97rem;
+  line-height: 1.65;
+  color: var(--fx-body);
+}
+
+/* --- Related links: link cells with a chevron --- */
+.mkt-cmp.fx .mkt-cmp__more {
+  --fx-cols: 4;
+  display: grid;
+  grid-template-columns: repeat(var(--fx-cols), minmax(0, 1fr));
+  gap: 1px;
+  max-width: none;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.mkt-cmp.fx .mkt-cmp__more a {
+  display: flex;
+  min-height: 0;
+  padding: 1.15rem var(--fx-gut);
+  border: 0;
+  border-radius: 0;
+  background: #fff;
+  box-shadow: var(--fx-cell-lines);
+  font-size: 0.95rem;
+  font-weight: 500;
+  letter-spacing: 0;
+  color: var(--mkt-ink);
+}
+
+.mkt-cmp.fx .mkt-cmp__more a:hover {
+  background: var(--fx-tint);
+  color: var(--fx-deep);
+}
+
+/* --- Review platforms (shared block), seated as two cell rows --- */
+.mkt-cmp.fx .mkt-rp {
+  max-width: none;
+}
+
+.mkt-cmp.fx .mkt-rp__head {
+  max-width: 42rem;
+  margin: 0 auto clamp(2rem, 4vw, 3rem);
+}
+
+.mkt-cmp.fx .mkt-rp__title {
+  font-size: clamp(1.6rem, 3.2vw, 2.3rem);
+  line-height: 1.22;
+  letter-spacing: -0.034em;
+  text-wrap: balance;
+}
+
+.mkt-cmp.fx .mkt-rp__intro {
+  max-width: 34rem;
+  margin-top: 1rem;
+  font-size: 1.02rem;
+  color: var(--fx-muted);
+}
+
+.mkt-cmp.fx .mkt-rp__grid,
+.mkt-cmp.fx .mkt-rp__quotes {
+  gap: 1px;
+  margin: 0 calc(var(--fx-gut) * -1);
+  border-top: 1px solid var(--fx-line);
+  overflow: hidden;
+}
+
+.mkt-cmp.fx .mkt-rp__quotes {
+  margin-bottom: calc(var(--cmp-sec-y) * -1);
+}
+
+.mkt-cmp.fx .mkt-rp__grid:last-child {
+  margin-bottom: calc(var(--cmp-sec-y) * -1);
+}
+
+.mkt-cmp.fx .mkt-rp__card,
+.mkt-cmp.fx .mkt-rp__quote {
+  border: 0;
+  border-radius: 0;
+  background: #fff;
+  box-shadow: var(--fx-cell-lines);
+}
+
+.mkt-cmp.fx .mkt-rp__link,
+.mkt-cmp.fx .mkt-rp__card--partner,
+.mkt-cmp.fx .mkt-rp__quote {
+  padding: clamp(1.4rem, 2.4vw, 1.9rem) var(--fx-gut);
+}
+
+.mkt-cmp.fx .mkt-rp__link {
+  transition: background 0.15s ease;
+}
+
+.mkt-cmp.fx .mkt-rp__link:hover {
+  background: var(--fx-tint);
+}
+
+.mkt-cmp.fx .mkt-rp__link:focus-visible {
+  outline: 2px solid #c4b5fd;
+  outline-offset: -2px;
+}
+
+.mkt-cmp.fx .mkt-rp__quote {
+  background: var(--fx-tint);
+}
+
+.mkt-cmp.fx .mkt-rp__quote p {
+  font-size: 0.95rem;
+  color: var(--fx-body);
+}
+
+/* --- Hub: featured boards as three cells --- */
+.mkt-cmp.fx .mkt-cmpx__featured {
+  display: grid;
+  grid-template-columns: repeat(var(--fx-cols), minmax(0, 1fr));
+  gap: 1px;
+  max-width: none;
+  margin: 0;
+  border: 0;
+}
+
+.mkt-cmp.fx .mkt-cmpx-feat {
+  padding: clamp(1.6rem, 2.8vw, 2.4rem) var(--fx-gut);
+  border: 0;
+  border-radius: 0;
+  background: #fff;
+  box-shadow: var(--fx-cell-lines);
+  transition: background 0.15s ease;
+}
+
+.mkt-cmp.fx .mkt-cmpx-feat:hover {
+  transform: none;
+  background: var(--fx-tint);
+  box-shadow: var(--fx-cell-lines);
+}
+
+.mkt-cmp.fx .mkt-cmpx-feat:focus-visible,
+.mkt-cmp.fx .mkt-cmpx-card:focus-visible,
+.mkt-cmp.fx .mkt-cmp-alt__row:focus-visible {
+  outline: 2px solid #c4b5fd;
+  outline-offset: -2px;
+}
+
+.mkt-cmp.fx .mkt-cmpx-feat__logos img {
+  width: 2.4rem;
+  height: 2.4rem;
+  border: 2px solid #fff;
+  box-shadow: 0 0 0 1px var(--fx-line);
+}
+
+.mkt-cmp.fx .mkt-cmpx-feat__logos img + img {
+  margin-left: -0.55rem;
+}
+
+.mkt-cmp.fx .mkt-cmpx-feat__badge {
+  padding: 0.3rem 0.7rem;
+  border: 0;
+  background: var(--fx-tint-2);
+  font-size: 0.74rem;
+  font-weight: 600;
+  color: var(--fx-deep);
+}
+
+.mkt-cmp.fx .mkt-cmpx-feat h3 {
+  margin: 1.4rem 0 0;
+  font-size: 1.12rem;
+  font-weight: 600;
+  line-height: 1.3;
+  letter-spacing: -0.02em;
+  color: var(--mkt-ink);
+}
+
+.mkt-cmp.fx .mkt-cmpx-feat p {
+  margin: 0.55rem 0 0;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--fx-muted);
+}
+
+.mkt-cmp.fx .mkt-cmpx-feat__cta {
+  margin-top: 1.35rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--mkt-violet);
+}
+
+.mkt-cmp.fx .mkt-cmpx-feat:hover .mkt-cmpx-feat__cta {
+  color: var(--fx-deep);
+}
+
+/* --- Hub: the ten head-to-head boards as one cell grid --- */
+.mkt-cmp.fx .mkt-cmpx-card {
+  padding: 1.5rem clamp(1.1rem, 1.9vw, 1.6rem) 1.6rem;
+  border: 0;
+  border-radius: 0;
+  background: #fff;
+  box-shadow: var(--fx-cell-lines);
+  transition: background 0.15s ease;
+}
+
+.mkt-cmp.fx .mkt-cmpx-card:hover {
+  transform: none;
+  background: var(--fx-tint);
+  box-shadow: var(--fx-cell-lines);
+}
+
+.mkt-cmp.fx .mkt-cmpx-card__logo {
+  width: 2.75rem;
+  height: 2.75rem;
+  border: 1px solid var(--fx-line);
+  border-radius: 12px;
+  box-shadow: none;
+}
+
+.mkt-cmp.fx .mkt-cmpx-card__arrow {
+  top: 1.75rem;
+  right: clamp(1.1rem, 1.9vw, 1.6rem);
+  width: 0.5rem;
+  height: 0.5rem;
+  border-top: 1.5px solid #b6b9c6;
+  border-right: 1.5px solid #b6b9c6;
+  transform: rotate(45deg);
+  transition: border-color 0.15s ease, transform 0.15s ease;
+}
+
+.mkt-cmp.fx .mkt-cmpx-card:hover .mkt-cmpx-card__arrow {
+  border-color: var(--mkt-violet);
+  transform: translateX(2px) rotate(45deg);
+}
+
+.mkt-cmp.fx .mkt-cmpx-card h3 {
+  margin: 1.15rem 0 0;
+  font-size: 1.06rem;
+  font-weight: 600;
+  line-height: 1.3;
+  letter-spacing: -0.02em;
+  color: var(--mkt-ink);
+}
+
+.mkt-cmp.fx .mkt-cmpx-card__pre {
+  margin-bottom: 0.2rem;
+  font-size: 0.76rem;
+  color: var(--fx-muted);
+}
+
+.mkt-cmp.fx .mkt-cmpx-card p {
+  margin: 0.4rem 0 0;
+  font-size: 0.86rem;
+  line-height: 1.5;
+  color: var(--fx-muted);
+}
+
+/* --- Hub: how we compare, three cells, icon beside the title --- */
+.mkt-cmp.fx .mkt-cmpx-method {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  column-gap: 0.7rem;
+  align-items: center;
+  align-content: start;
+  padding: clamp(1.5rem, 2.6vw, 2.1rem) var(--fx-gut) clamp(1.75rem, 3vw, 2.5rem);
+  border: 0;
+  border-radius: 0;
+  background: #fff;
+}
+
+.mkt-cmp.fx .mkt-cmpx-method__icon {
+  width: auto;
+  height: auto;
+  border-radius: 0;
+  background: none;
+  color: var(--mkt-violet);
+}
+
+.mkt-cmp.fx .mkt-cmpx-method h3 {
+  margin: 0;
+  font-size: 1.08rem;
+  font-weight: 600;
+  line-height: 1.35;
+  letter-spacing: -0.018em;
+  color: var(--mkt-ink);
+}
+
+.mkt-cmp.fx .mkt-cmpx-method p {
+  grid-column: 1 / -1;
+  margin: 0.7rem 0 0;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--fx-muted);
+}
+
+/* --- Alternatives: decision table (shared .mkt-spec), framed --- */
+.mkt-cmp.fx .mkt-spec {
+  margin-top: 0;
+  border: 1px solid var(--fx-line);
+  border-radius: var(--fx-radius);
+  background: #fff;
+  overflow: hidden;
+}
+
+.mkt-cmp.fx .mkt-spec__row {
+  border-bottom-color: var(--fx-line);
+}
+
+.mkt-cmp.fx .mkt-spec__row--head {
+  background: var(--fx-tint);
+}
+
+.mkt-cmp.fx .mkt-spec__cell {
+  padding: 1rem 1.25rem;
+  font-size: 0.93rem;
+  color: var(--fx-body);
+}
+
+.mkt-cmp.fx .mkt-spec__cell--label {
+  font-weight: 600;
+  color: var(--mkt-ink);
+}
+
+.mkt-cmp.fx .mkt-spec__row--head .mkt-spec__cell {
+  font-size: 0.76rem;
+  color: var(--mkt-ink);
+}
+
+.mkt-cmp.fx .mkt-spec__cell--mine {
+  background: var(--fx-tint);
+  color: var(--mkt-ink);
+  font-weight: 500;
+}
+
+.mkt-cmp.fx .mkt-cmp-alt__tablelink:focus-visible {
+  outline: 2px solid #c4b5fd;
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+.mkt-cmp.fx .mkt-spec__footnote {
+  max-width: 52rem;
+  margin: 1.35rem auto 0;
+  font-size: 0.8rem;
+  line-height: 1.6;
+  text-align: center;
+  color: var(--fx-muted);
+}
+
+@media (min-width: 768px) {
+  .mkt-cmp.fx .mkt-spec__cell + .mkt-spec__cell {
+    border-left: 1px solid var(--fx-line);
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .mkt-cmp.fx .mkt-spec__cell {
+    padding: 0.9rem 0.85rem;
+    font-size: 0.88rem;
+  }
+}
+
+/* Phones: the rows restack as before, but inside one bordered block with
+   hairlines between platforms instead of ten separate cards. */
+@media (max-width: 767px) {
+  .mkt-cmp.fx .mkt-spec__row {
+    margin: 0;
+    padding: 0.6rem 0 0.75rem;
+    border: 0;
+    border-bottom: 1px solid var(--fx-line);
+    border-radius: 0;
+    background: #fff;
+  }
+
+  .mkt-cmp.fx .mkt-spec__row:last-child {
+    border-bottom: 0;
+  }
+
+  .mkt-cmp.fx .mkt-spec__cell {
+    padding: 0.45rem 1.15rem;
+  }
+
+  .mkt-cmp.fx .mkt-spec__cell--label {
+    padding-top: 0.6rem;
+    font-size: 1.02rem;
+  }
+
+  .mkt-cmp.fx .mkt-spec__row:has(.mkt-spec__cell--mine) {
+    background: var(--fx-tint);
+  }
+
+  .mkt-cmp.fx .mkt-spec__cell[data-col]::before {
+    color: var(--fx-muted);
+  }
+}
+
+/* --- Alternatives: one cell per platform guide --- */
+.mkt-cmp.fx .mkt-cmp-alt__list > li {
+  display: flex;
+}
+
+.mkt-cmp.fx .mkt-cmp-alt__row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  grid-template-areas:
+    'brand cta'
+    'line line';
+  gap: 0.7rem 1rem;
+  align-items: center;
+  align-content: start;
+  width: 100%;
+  padding: clamp(1.35rem, 2.3vw, 1.85rem) var(--fx-gut);
+  border: 0;
+  border-radius: 0;
+  background: #fff;
+}
+
+.mkt-cmp.fx .mkt-cmp-alt__row:hover {
+  background: var(--fx-tint);
+}
+
+.mkt-cmp.fx .mkt-cmp-alt__brand {
+  grid-area: brand;
+  font-size: 1.06rem;
+  letter-spacing: -0.018em;
+}
+
+.mkt-cmp.fx .mkt-cmp-alt__brand strong {
+  font-weight: 600;
+}
+
+.mkt-cmp.fx .mkt-cmp-alt__brand img {
+  border-radius: 8px;
+}
+
+.mkt-cmp.fx .mkt-cmp-alt__line {
+  grid-area: line;
+  font-size: 0.95rem;
+  line-height: 1.55;
+  color: var(--fx-muted);
+}
+
+.mkt-cmp.fx .mkt-cmp-alt__cta {
+  grid-area: cta;
+  font-size: 0.84rem;
+  color: var(--fx-muted);
+  white-space: nowrap;
+  transition: color 0.15s ease;
+}
+
+.mkt-cmp.fx .mkt-cmp-alt__row:hover .mkt-cmp-alt__cta {
+  color: var(--fx-deep);
+}
+
+/* --- Alternatives: the four questions as numbered step cells --- */
+.mkt-cmp.fx .mkt-steps__item {
+  display: block;
+  padding: clamp(1.5rem, 2.6vw, 2.1rem) var(--fx-gut) clamp(1.75rem, 3vw, 2.5rem);
+  border: 0;
+  border-radius: 0;
+  background: #fff;
+}
+
+.mkt-cmp.fx .mkt-steps__item:hover {
+  background: #fff;
+}
+
+.mkt-cmp.fx .mkt-steps__n {
+  display: block;
+  width: auto;
+  height: auto;
+  border: 0;
+  border-radius: 0;
+  background: none;
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  line-height: 1.2;
+  color: var(--mkt-violet);
+}
+
+.mkt-cmp.fx .mkt-steps__n::before {
+  content: '0';
+}
+
+.mkt-cmp.fx .mkt-steps__title {
+  margin: 1.1rem 0 0;
+  font-size: 1.08rem;
+  font-weight: 600;
+  line-height: 1.35;
+  letter-spacing: -0.018em;
+  color: var(--mkt-ink);
+}
+
+.mkt-cmp.fx .mkt-steps__body {
+  margin: 0.55rem 0 0;
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: var(--fx-muted);
+}
+
+/* --- Long-form sections kept for boards that carry them: violet and
+   grey only, hairline borders --- */
+.mkt-cmp.fx .mkt-cmp__pick-col,
+.mkt-cmp.fx .mkt-cmp__score-wrap,
+.mkt-cmp.fx .mkt-cmp__deep,
+.mkt-cmp.fx .mkt-cmp__duel {
+  border-color: var(--fx-line);
+}
+
+.mkt-cmp.fx .mkt-cmp__pick-col {
+  background: #fff;
+}
+
+.mkt-cmp.fx .mkt-cmp__pick-col.is-te {
+  background: var(--fx-tint);
+}
+
+.mkt-cmp.fx .mkt-cmp__edge.is-comp,
+.mkt-cmp.fx .mkt-cmp__edge.is-trade {
+  color: var(--fx-body);
+  background: #f1f2f6;
+}
+
+/* --- Small screens --- */
+@media (max-width: 899px) {
+  .mkt-cmp.fx .mkt-cmp__arena {
+    padding-top: calc(var(--mkt-nav-h, 4rem) + 1.75rem);
+  }
+
+  .mkt-cmp.fx .mkt-cmpx__featured {
+    --fx-cols: 1;
+  }
+
+  .mkt-cmp.fx .mkt-cmp__more {
+    --fx-cols: 2;
+  }
+}
+
+@media (max-width: 719px) {
+  .mkt-cmp.fx .mkt-cmp__why,
+  .mkt-cmp.fx .mkt-cmp__gaps,
+  .mkt-cmp.fx .mkt-cmpx__method {
+    --fx-cols: 1;
+  }
+
+  .mkt-cmp.fx .mkt-cmp__h1 {
+    font-size: clamp(1.4rem, 6.2vw, 1.85rem);
+    gap: 0.35rem 0.5rem;
+  }
+
+  .mkt-cmp.fx .mkt-cmp__h1--trio {
+    font-size: clamp(1.2rem, 5.4vw, 1.5rem);
+  }
+}
+
+@media (max-width: 599px) {
+  .mkt-cmp.fx .mkt-cmp__hero-cta .mkt-btn-primary,
+  .mkt-cmp.fx .mkt-cmp__hero-cta .mkt-btn-ghost {
+    flex: 1 1 auto;
+  }
+
+  .mkt-cmp.fx .mkt-cmp__more {
+    --fx-cols: 1;
+  }
+
+  .mkt-cmp.fx .mkt-cmp__cost th,
+  .mkt-cmp.fx .mkt-cmp__cost td {
+    padding: 0.8rem 0.95rem;
+  }
+
+  .mkt-cmp.fx .mkt-cmp-alt__row {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-areas:
+      'brand'
+      'line'
+      'cta';
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mkt-cmp.fx .mkt-cmpx-feat,
+  .mkt-cmp.fx .mkt-cmpx-card,
+  .mkt-cmp.fx .mkt-cmpx-card__arrow,
+  .mkt-cmp.fx .mkt-rp__link,
+  .mkt-cmp.fx .mkt-cmp-alt__cta {
+    transition: none;
+  }
+}

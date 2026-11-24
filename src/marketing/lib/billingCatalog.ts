@@ -405,6 +405,8 @@ export function catalogDefaultCycleOffersJsonLd(
           '@type': 'UnitPriceSpecification' as const,
           price,
           priceCurrency: currency,
+          // Plans are listed before 18% GST everywhere on the site.
+          valueAddedTaxIncluded: false,
           billingDuration: period.billingDuration,
           billingIncrement: 1,
           unitCode: period.unitCode,

@@ -546,3 +546,524 @@
   color: #b45309;
   border-color: #fde68a;
 }
+
+/* ==================================================================== *
+   Framed layout (24 Nov 2026)
+   --------------------------------------------------------------------
+   Two parts.
+
+   1. `.fx …`: surface only, for any framed page that renders these
+      blocks. The do/avoid pair loses its green and pink washes, the warn
+      callout loses its yellow, the callout becomes a flat lilac block
+      with a violet left rule and the table of contents becomes a quiet
+      framed list. No layout changes, so a page's own stylesheet still
+      decides where a block sits.
+
+   2. `.mkt-topic.fx …`: the full restyle on the topic lander
+      (/shopify-whatsapp-integration), where each block is a hairline row
+      of the frame (rows are set in topic-page.css). The spec table is a
+      framed table with a tinted head that still restacks into labelled
+      cards under 768px; steps and cited figures are cells that share
+      their dividers; the checklist is two cells of tick and cross lists;
+      prose holds a 68ch measure.
+
+   Copy, headings and links are unchanged.
+ * ==================================================================== */
+
+/* --- 1. Surface, on any framed page --- */
+
+.fx .mkt-toc {
+  border: 1px solid var(--fx-line);
+  border-radius: var(--fx-radius);
+  background: #fff;
+}
+
+.fx .mkt-toc__label {
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  color: var(--fx-muted);
+}
+
+.fx .mkt-toc__list a {
+  color: var(--fx-body);
+}
+
+.fx .mkt-toc__list a:hover {
+  color: var(--fx-deep);
+}
+
+.fx .mkt-check__col,
+.fx .mkt-check__col--do,
+.fx .mkt-check__col--dont {
+  border-color: var(--fx-line);
+  background: #fff;
+}
+
+.fx .mkt-check__col--do .mkt-check__head {
+  color: var(--mkt-violet);
+}
+
+.fx .mkt-check__col--dont .mkt-check__head {
+  color: #b42318;
+}
+
+.fx .mkt-check__col--do .mkt-check__list li::before {
+  color: var(--mkt-violet);
+}
+
+.fx .mkt-check__col--dont .mkt-check__list li::before {
+  color: #d92d20;
+}
+
+.fx .mkt-callout,
+.fx .mkt-callout--warn {
+  border: 0;
+  border-left: 3px solid var(--mkt-violet);
+  border-radius: 4px 14px 14px 4px;
+  background: #f6f2ff;
+}
+
+.fx .mkt-callout__icon,
+.fx .mkt-callout--warn .mkt-callout__icon {
+  align-self: flex-start;
+  width: auto;
+  height: auto;
+  margin-top: 0.12rem;
+  border-radius: 0;
+  background: none;
+  box-shadow: none;
+  color: var(--mkt-violet);
+}
+
+.fx .mkt-callout__link,
+.fx .mkt-callout--warn .mkt-callout__link {
+  border-color: #ddd6fe;
+  color: var(--mkt-violet);
+}
+
+.fx .mkt-callout__link:hover {
+  border-color: #c4b5fd;
+  color: var(--fx-deep);
+  transform: none;
+}
+
+/* --- 2. The topic lander --- */
+
+/* Block head: the same centred head every framed section opens on. */
+.mkt-topic.fx .mkt-blk__h2 {
+  max-width: 42rem;
+  margin: 0 auto;
+  font-size: clamp(1.6rem, 3.2vw, 2.3rem);
+  line-height: 1.22;
+  letter-spacing: -0.034em;
+  text-align: center;
+  text-wrap: balance;
+}
+
+.mkt-topic.fx .mkt-blk__h2 .mkt-hl {
+  margin: 0;
+  padding: 0.08em 0.28em 0.14em;
+  border-radius: 0.35em;
+  background: #e4d4ff;
+  color: #0c1222;
+}
+
+.mkt-topic.fx .mkt-blk__intro {
+  max-width: 36rem;
+  margin: 1rem auto 0;
+  font-size: 1.02rem;
+  line-height: 1.6;
+  text-align: center;
+  color: var(--fx-muted);
+}
+
+/* --- Prose: a comfortable reading column, never squeezed into cells --- */
+.mkt-topic.fx .mkt-topic__article > .mkt-blk[data-kind='prose'] .mkt-blk__body {
+  max-width: 68ch;
+  margin: 1.15rem auto 0;
+  font-size: 1.0625rem;
+  line-height: 1.75;
+  color: var(--fx-body);
+}
+
+.mkt-topic.fx .mkt-topic__article > .mkt-blk[data-kind='prose'] .mkt-blk__body--lede {
+  margin-top: var(--topic-gap, 2.5rem);
+  color: #2f3645;
+}
+
+.mkt-topic.fx .mkt-blk__body a {
+  color: var(--mkt-violet);
+  text-decoration: underline;
+  text-decoration-color: #ddd6fe;
+  text-underline-offset: 0.2em;
+}
+
+.mkt-topic.fx .mkt-blk__body a:hover {
+  color: var(--fx-deep);
+  text-decoration-color: currentColor;
+}
+
+/* --- Spec table: framed, tinted head, rows on hairlines --- */
+.mkt-topic.fx .mkt-topic__article .mkt-spec {
+  max-width: 64rem;
+  margin: var(--topic-gap, 2.5rem) auto 0;
+  border: 1px solid var(--fx-line);
+  border-radius: var(--fx-radius);
+  background: #fff;
+}
+
+.mkt-topic.fx .mkt-spec__row {
+  border-bottom-color: var(--fx-line);
+}
+
+.mkt-topic.fx .mkt-spec__row--head {
+  background: var(--fx-tint);
+}
+
+.mkt-topic.fx .mkt-spec__cell {
+  padding: 1.05rem 1.35rem;
+  font-size: 0.95rem;
+  line-height: 1.55;
+  color: var(--fx-body);
+}
+
+.mkt-topic.fx .mkt-spec__cell--label {
+  font-weight: 600;
+  color: var(--mkt-ink);
+}
+
+.mkt-topic.fx .mkt-spec__row--head .mkt-spec__cell {
+  padding-top: 0.9rem;
+  padding-bottom: 0.9rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: var(--fx-muted);
+}
+
+.mkt-topic.fx .mkt-spec__cell--mine {
+  background: #f6f2ff;
+  font-weight: 500;
+  color: var(--mkt-ink);
+}
+
+.mkt-topic.fx .mkt-spec__row--head .mkt-spec__cell--mine {
+  color: var(--fx-deep);
+}
+
+.mkt-topic.fx .mkt-spec__note {
+  font-weight: 400;
+  color: var(--fx-muted);
+}
+
+.mkt-topic.fx .mkt-topic__article .mkt-spec__footnote {
+  max-width: 46rem;
+  margin: 1.1rem auto 0;
+  font-size: 0.84rem;
+  text-align: center;
+  color: var(--fx-muted);
+}
+
+/* Under 768px each row is its own labelled card, as before. */
+@media (max-width: 767px) {
+  .mkt-topic.fx .mkt-topic__article .mkt-spec {
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+  }
+
+  .mkt-topic.fx .mkt-spec__row {
+    margin-bottom: 0.75rem;
+    padding: 0.4rem 0 0.55rem;
+    overflow: hidden;
+    border: 1px solid var(--fx-line);
+    border-radius: 16px;
+    background: #fff;
+  }
+
+  .mkt-topic.fx .mkt-spec__row:last-child {
+    margin-bottom: 0;
+  }
+
+  .mkt-topic.fx .mkt-spec__cell {
+    padding: 0.5rem 1.15rem;
+  }
+
+  .mkt-topic.fx .mkt-spec__cell--label {
+    padding-top: 0.75rem;
+    font-size: 1.02rem;
+  }
+
+  .mkt-topic.fx .mkt-spec__cell[data-col]::before {
+    margin-bottom: 0.2rem;
+    letter-spacing: 0.08em;
+    color: var(--fx-muted);
+  }
+}
+
+/* --- Steps and cited figures: cells that share their dividers ---
+   Twelve tracks. Three across by default; four items go four across; a last
+   row of two or one fills its row, so no count leaves an empty corner. */
+.mkt-topic.fx .mkt-topic__article > .mkt-blk[data-kind='steps'],
+.mkt-topic.fx .mkt-topic__article > .mkt-blk[data-kind='figures'],
+.mkt-topic.fx .mkt-topic__article > .mkt-blk[data-kind='checklist'] {
+  padding-bottom: 0;
+}
+
+.mkt-topic.fx .mkt-topic__article .mkt-steps,
+.mkt-topic.fx .mkt-topic__article .mkt-figs {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: 1px;
+  max-width: none;
+  margin: var(--topic-gap, 2.5rem) calc(var(--fx-gut) * -1) 0;
+  overflow: hidden;
+  border-top: 1px solid var(--fx-line);
+  background: #fff;
+}
+
+.mkt-topic.fx .mkt-steps__item,
+.mkt-topic.fx .mkt-figs__item {
+  grid-column: span 4;
+  min-width: 0;
+  border: 0;
+  border-radius: 0;
+  background: #fff;
+  box-shadow: var(--fx-cell-lines);
+}
+
+.mkt-topic.fx .mkt-steps__item:nth-last-child(2):nth-child(3n + 1),
+.mkt-topic.fx .mkt-steps__item:last-child:nth-child(3n + 2),
+.mkt-topic.fx .mkt-figs__item:nth-last-child(2):nth-child(3n + 1),
+.mkt-topic.fx .mkt-figs__item:last-child:nth-child(3n + 2) {
+  grid-column: span 6;
+}
+
+.mkt-topic.fx .mkt-steps__item:last-child:nth-child(3n + 1),
+.mkt-topic.fx .mkt-figs__item:last-child:nth-child(3n + 1) {
+  grid-column: span 12;
+}
+
+.mkt-topic.fx .mkt-steps__item:first-child:nth-last-child(4),
+.mkt-topic.fx .mkt-steps__item:first-child:nth-last-child(4) ~ .mkt-steps__item,
+.mkt-topic.fx .mkt-figs__item:first-child:nth-last-child(4),
+.mkt-topic.fx .mkt-figs__item:first-child:nth-last-child(4) ~ .mkt-figs__item {
+  grid-column: span 3;
+}
+
+/* Steps */
+.mkt-topic.fx .mkt-topic__article .mkt-steps {
+  counter-reset: topic-step;
+}
+
+.mkt-topic.fx .mkt-steps__item {
+  display: block;
+  padding: clamp(1.5rem, 2.6vw, 2.1rem) var(--fx-gut) clamp(1.75rem, 3vw, 2.5rem);
+  counter-increment: topic-step;
+  transition: none;
+}
+
+.mkt-topic.fx .mkt-steps__item:hover {
+  background: #fff;
+}
+
+/* The disc becomes the frame's step number: 01, 02, 03. */
+.mkt-topic.fx .mkt-steps__n {
+  display: block;
+  width: auto;
+  height: auto;
+  border: 0;
+  border-radius: 0;
+  background: none;
+  font-size: 0;
+  line-height: 1.2;
+}
+
+.mkt-topic.fx .mkt-steps__n::before {
+  content: counter(topic-step, decimal-leading-zero);
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: var(--mkt-violet);
+  font-variant-numeric: tabular-nums;
+}
+
+.mkt-topic.fx .mkt-steps__title {
+  margin: 1.1rem 0 0;
+  font-size: 1.08rem;
+  font-weight: 600;
+  line-height: 1.35;
+  letter-spacing: -0.018em;
+}
+
+.mkt-topic.fx .mkt-steps__body {
+  max-width: 34rem;
+  margin: 0.55rem 0 0;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--fx-muted);
+}
+
+.mkt-topic.fx .mkt-steps__meta {
+  margin-top: 1rem;
+  padding: 0.22rem 0.65rem;
+  border: 1px solid var(--fx-line);
+  background: var(--fx-tint);
+  font-size: 0.7rem;
+  letter-spacing: 0.06em;
+  color: var(--fx-muted);
+}
+
+/* Cited figures: the number, what it measures, then who published it and
+   the day it was read, kept in the same cell. */
+.mkt-topic.fx .mkt-figs__item {
+  padding: clamp(1.5rem, 2.8vw, 2.25rem) var(--fx-gut);
+}
+
+.mkt-topic.fx .mkt-figs__value {
+  margin: 0;
+  font-size: clamp(1.7rem, 3vw, 2.4rem);
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: -0.045em;
+}
+
+.mkt-topic.fx .mkt-figs__label {
+  max-width: 34rem;
+  margin: 0.85rem 0 0;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--fx-body);
+}
+
+.mkt-topic.fx .mkt-figs__cite {
+  margin: 1.1rem 0 0;
+  padding-top: 0.9rem;
+  border-top: 1px solid var(--fx-line);
+  font-size: 0.78rem;
+  line-height: 1.55;
+  color: var(--fx-muted);
+}
+
+/* --- Checklist: two cells, ticks on one side and crosses on the other --- */
+.mkt-topic.fx .mkt-topic__article .mkt-check {
+  gap: 1px;
+  margin: var(--topic-gap, 2.5rem) calc(var(--fx-gut) * -1) 0;
+  overflow: hidden;
+  border-top: 1px solid var(--fx-line);
+}
+
+.mkt-topic.fx .mkt-check__col,
+.mkt-topic.fx .mkt-check__col--do,
+.mkt-topic.fx .mkt-check__col--dont {
+  padding: clamp(1.5rem, 2.6vw, 2.25rem) var(--fx-gut) clamp(1.75rem, 3vw, 2.5rem);
+  border: 0;
+  border-radius: 0;
+  background: #fff;
+  box-shadow: var(--fx-cell-lines);
+}
+
+.mkt-topic.fx .mkt-check__head {
+  margin: 0 0 1.15rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+}
+
+.mkt-topic.fx .mkt-check__list {
+  gap: 0.75rem;
+  max-width: 34rem;
+}
+
+.mkt-topic.fx .mkt-check__list li {
+  padding-left: 1.75rem;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: var(--fx-body);
+}
+
+.mkt-topic.fx .mkt-check__col .mkt-check__list li::before {
+  content: '';
+  top: 0.18rem;
+  width: 1.1rem;
+  height: 1.1rem;
+  border-radius: 50%;
+}
+
+.mkt-topic.fx .mkt-check__col--do .mkt-check__list li::before {
+  background: #ede9fe
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='%237c3aed' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M4.5 8.3l2.2 2.2 4.8-5'/%3E%3C/svg%3E")
+    center / 0.8rem no-repeat;
+}
+
+.mkt-topic.fx .mkt-check__col--dont .mkt-check__list li::before {
+  background: #fee4e2
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='%23d92d20' stroke-width='2' stroke-linecap='round'%3E%3Cpath d='M5.2 5.2l5.6 5.6M10.8 5.2l-5.6 5.6'/%3E%3C/svg%3E")
+    center / 0.8rem no-repeat;
+}
+
+/* --- Callout: a short row of its own between two blocks --- */
+.mkt-topic.fx .mkt-topic__article > .mkt-callout {
+  width: min(var(--topic-measure, 43rem), calc(100% - 2 * var(--fx-gut)));
+  max-width: none;
+  margin: clamp(2rem, 4vw, 3rem) auto;
+  padding: 1.25rem 1.5rem 1.35rem 1.35rem;
+}
+
+.mkt-topic.fx .mkt-topic__article > .mkt-callout + .mkt-blk {
+  border-top: 1px solid var(--fx-line);
+}
+
+.mkt-topic.fx .mkt-topic__article:has(> .mkt-callout:last-child) {
+  border-bottom: 1px solid var(--fx-line);
+}
+
+.mkt-topic.fx .mkt-callout__title {
+  font-size: 1rem;
+}
+
+.mkt-topic.fx .mkt-callout__body {
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: var(--fx-body);
+}
+
+@media (max-width: 899px) {
+  .mkt-topic.fx .mkt-steps__item,
+  .mkt-topic.fx .mkt-figs__item,
+  .mkt-topic.fx .mkt-steps__item:nth-last-child(2):nth-child(3n + 1),
+  .mkt-topic.fx .mkt-steps__item:last-child:nth-child(3n + 2),
+  .mkt-topic.fx .mkt-figs__item:nth-last-child(2):nth-child(3n + 1),
+  .mkt-topic.fx .mkt-figs__item:last-child:nth-child(3n + 2),
+  .mkt-topic.fx .mkt-steps__item:first-child:nth-last-child(4),
+  .mkt-topic.fx .mkt-steps__item:first-child:nth-last-child(4) ~ .mkt-steps__item,
+  .mkt-topic.fx .mkt-figs__item:first-child:nth-last-child(4),
+  .mkt-topic.fx .mkt-figs__item:first-child:nth-last-child(4) ~ .mkt-figs__item {
+    grid-column: span 6;
+  }
+
+  /* An odd count closes on one full-width cell. */
+  .mkt-topic.fx .mkt-steps__item:last-child:nth-child(odd),
+  .mkt-topic.fx .mkt-figs__item:last-child:nth-child(odd) {
+    grid-column: span 12;
+  }
+}
+
+@media (max-width: 599px) {
+  .mkt-topic.fx .mkt-steps__item,
+  .mkt-topic.fx .mkt-figs__item,
+  .mkt-topic.fx .mkt-steps__item:nth-last-child(2):nth-child(3n + 1),
+  .mkt-topic.fx .mkt-steps__item:last-child:nth-child(3n + 2),
+  .mkt-topic.fx .mkt-figs__item:nth-last-child(2):nth-child(3n + 1),
+  .mkt-topic.fx .mkt-figs__item:last-child:nth-child(3n + 2),
+  .mkt-topic.fx .mkt-steps__item:first-child:nth-last-child(4),
+  .mkt-topic.fx .mkt-steps__item:first-child:nth-last-child(4) ~ .mkt-steps__item,
+  .mkt-topic.fx .mkt-figs__item:first-child:nth-last-child(4),
+  .mkt-topic.fx .mkt-figs__item:first-child:nth-last-child(4) ~ .mkt-figs__item {
+    grid-column: span 12;
+  }
+
+  .mkt-topic.fx .mkt-topic__article > .mkt-blk[data-kind='prose'] .mkt-blk__body {
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+}

@@ -18,7 +18,7 @@ export default function FestivalCalendarRail({ limit = 4 }: { limit?: number }) 
   if (!next.length) return null;
 
   return (
-    <ul className="mkt-fcal">
+    <ul className="mkt-fcal fx-cells fx-cells--4 fx-cells--bleed fx-cells--keep2">
       {next.map(({ festival, timing }) => (
         <li key={festival.slug}>
           <Link to={festivalPath(festival.slug)} className="mkt-fcal__item">

@@ -24,8 +24,9 @@ import { MARKETING_FEATURES, type MarketingFeature } from '../data/features';
  */
 import { demoAssetFor } from '../data/productDemoVideos';
 import { Link } from 'react-router-dom';
+import HomeTrust from '../components/home/HomeTrust';
+import { PrimaryButton, GhostButton } from '../components/ui';
 import {
-  ArrowUpRight,
   BadgeCheck,
   BrainCircuit,
   GitBranch,
@@ -38,14 +39,13 @@ import {
   ScanSearch,
   ShieldCheck,
   Split,
-  UserCheck,
   UserPlus,
   Users,
   Workflow,
 } from 'lucide-react';
 import '../styles/features-hub.css';
 
-const ICON_PROPS = { size: 20, strokeWidth: 1.9, 'aria-hidden': true } as const;
+const ICON_PROPS = { size: 16, strokeWidth: 1.9, 'aria-hidden': true } as const;
 
 const CARD_META: Record<string, { label: string; icon: ReactNode }> = {
   journeys: { label: 'Journeys', icon: <Workflow {...ICON_PROPS} /> },
@@ -132,17 +132,14 @@ const GROUPS = [
 
 const PRINCIPLES = [
   {
-    icon: <RefreshCw {...ICON_PROPS} />,
     title: 'Shopify is source of truth',
     body: 'Connect once. Catalog, carts and orders sync from your store.',
   },
   {
-    icon: <BadgeCheck {...ICON_PROPS} />,
     title: 'You approve Meta templates',
     body: 'Nothing sends until Meta approves the template. Meta rates pass through at 0% markup.',
   },
   {
-    icon: <UserCheck {...ICON_PROPS} />,
     title: 'Operators stay in control',
     body: 'An agent taking over a chat pauses the AI. Journeys and flows need no developer.',
   },
@@ -156,6 +153,10 @@ function cardFor(slug: string, bySlug: Map<string, MarketingFeature>): HubCard |
   return { key: slug, href: `/features/${slug}`, title: feature.title, body: feature.body };
 }
 
+/*
+ * One module, one cell. The whole cell is the link; the chevron in its corner
+ * is drawn in CSS, so the link's text is the label, the title and the line.
+ */
 function FeatureCard({ card }: { card: HubCard }) {
   const meta = CARD_META[card.key];
   return (
@@ -163,7 +164,6 @@ function FeatureCard({ card }: { card: HubCard }) {
       <div className="mkt-fx-card__top">
         <span className="mkt-fx-card__icon">{meta?.icon}</span>
         <span className="mkt-fx-card__label">{card.label ?? meta?.label ?? card.key}</span>
-        <ArrowUpRight className="mkt-fx-card__arrow" size={18} aria-hidden />
       </div>
       <h3>{card.title}</h3>
       <p>{card.body}</p>
@@ -192,91 +192,100 @@ export default function FeaturesPage() {
           // Hero demo is the page's lead visual, so it is main content.
         ]}
       />
-      <MarketingPage className="mkt-fx">
-        <header className="mkt-fx__hero">
-          <p className="mkt-fx__eyebrow">Features</p>
-          <h1 className="mkt-fx__h1">
-            TopEdge AI features for <BrandWord platform="shopify">Shopify</BrandWord> brands on{' '}
-            <BrandWord platform="whatsapp">WhatsApp</BrandWord>,{' '}
-            <span className="mkt-fx__hl">by job</span>
-          </h1>
-          <p className="mkt-fx__sub">
-            TopEdge AI is all-in-one D2C software for Shopify stores, built as one suite. Every module below works on the same customer data, and every
-            plan starts with a 14-day free trial, from ₹1,999/mo.
-          </p>
-          <div className="mkt-fx__actions">
-            <Link to="/signup" className="mkt-btn-primary">
-              Start free
-            </Link>
-            <Link to="/pricing" className="mkt-fx__btn">
-              See pricing
-            </Link>
-          </div>
-        </header>
-
-        {GROUPS.map((g) => (
-          <section
-            key={g.id}
-            className={`mkt-fx__section mkt-fx-group mkt-fx-group--${g.id}`}
-            aria-labelledby={`mkt-fx-${g.id}`}
-          >
-            <div className="mkt-fx__head">
-              <h2 id={`mkt-fx-${g.id}`}>
-                {g.lead} <span className="mkt-fx__hl">{g.accent}</span>
-              </h2>
-              <p>{g.sub}</p>
+      <MarketingPage className="mkt-fx fx">
+        <div className="fx-shell">
+          <header className="mkt-fx__hero">
+            <nav aria-label="Breadcrumb">
+              <ol className="fx-crumbs">
+                <li>
+                  <Link to="/">Home</Link>
+                </li>
+                <li aria-current="page">Features</li>
+              </ol>
+            </nav>
+            <h1 className="mkt-fx__h1">
+              TopEdge AI features for <span className="mkt-fx__brand"><BrandWord platform="shopify">Shopify</BrandWord></span> brands on{' '}
+              <span className="mkt-fx__brand"><BrandWord platform="whatsapp">WhatsApp</BrandWord></span>,{' '}
+              <span className="mkt-fx__hl">by job</span>
+            </h1>
+            <p className="mkt-fx__sub">
+              TopEdge AI is all-in-one D2C software for Shopify stores, built as one suite. Every module below works on the same customer data, and every
+              plan starts with a 14-day free trial, from ₹1,999/mo.
+            </p>
+            <div className="mkt-fx__actions">
+              <PrimaryButton to="/signup">Start free</PrimaryButton>
+              <GhostButton to="/pricing">See pricing</GhostButton>
             </div>
-            <div className={`mkt-fx__grid mkt-fx__grid--${g.slugs.length}`}>
-              {g.slugs.map((slug) => {
-                const card = cardFor(slug, bySlug);
-                return card ? <FeatureCard key={slug} card={card} /> : null;
-              })}
+            <div className="mkt-fx__trust">
+              <HomeTrust onStage />
+            </div>
+          </header>
+
+          {GROUPS.map((g) => (
+            <section
+              key={g.id}
+              className={`mkt-fx__section mkt-fx-group mkt-fx-group--${g.id} fx-sec`}
+              aria-labelledby={`mkt-fx-${g.id}`}
+            >
+              <div className="mkt-fx__head fx-head">
+                <h2 id={`mkt-fx-${g.id}`} className="fx-head__title">
+                  {g.lead} <span className="mkt-fx__hl">{g.accent}</span>
+                </h2>
+                <p className="fx-head__sub">{g.sub}</p>
+              </div>
+              <div className={`mkt-fx__grid mkt-fx__grid--${g.slugs.length} fx-cells fx-cells--bleed`}>
+                {g.slugs.map((slug) => {
+                  const card = cardFor(slug, bySlug);
+                  return card ? <FeatureCard key={slug} card={card} /> : null;
+                })}
+              </div>
+            </section>
+          ))}
+
+          <section className="mkt-fx__section mkt-fx__section--demo fx-sec" aria-labelledby="mkt-fx-demo">
+            <div className="mkt-fx__head fx-head">
+              <h2 id="mkt-fx-demo" className="fx-head__title">
+                See TopEdge AI in <span className="mkt-fx__hl">motion</span>
+              </h2>
+              <p className="fx-head__sub">
+                A short demo of cart recovery, journeys and the shared inbox.
+              </p>
+            </div>
+            <div className="mkt-fx__demo fx-stage">
+              <div className="mkt-fx__demo-inner">
+                <ProductDemoVideo
+                  src={demoAssetFor('hero').src}
+                  poster={demoAssetFor('hero').poster}
+                  label="TopEdge AI product demo"
+                />
+              </div>
             </div>
           </section>
-        ))}
 
-        <section className="mkt-fx__section" aria-labelledby="mkt-fx-demo">
-          <div className="mkt-fx__head">
-            <h2 id="mkt-fx-demo">
-              See TopEdge AI in <span className="mkt-fx__hl">motion</span>
-            </h2>
-            <p>
-              A short demo of cart recovery, journeys and the shared inbox.
-            </p>
-          </div>
-          <div className="mkt-fx__demo">
-            <ProductDemoVideo
-              src={demoAssetFor('hero').src}
-              poster={demoAssetFor('hero').poster}
-              label="TopEdge AI product demo"
-            />
-          </div>
-        </section>
+          <section className="mkt-fx__section fx-sec" aria-labelledby="mkt-fx-principles">
+            <div className="mkt-fx__head fx-head">
+              <h2 id="mkt-fx-principles" className="fx-head__title">
+                Built for how <span className="mkt-fx__hl">operators</span> work
+              </h2>
+            </div>
+            <div className="mkt-fx__principles fx-cells fx-cells--bleed">
+              {PRINCIPLES.map((p) => (
+                <div key={p.title} className="mkt-fx-principle fx-step">
+                  <h3 className="fx-step__title">{p.title}</h3>
+                  <p className="fx-step__copy">{p.body}</p>
+                </div>
+              ))}
+            </div>
+          </section>
 
-        <section className="mkt-fx__section" aria-labelledby="mkt-fx-principles">
-          <div className="mkt-fx__head">
-            <h2 id="mkt-fx-principles">
-              Built for how <span className="mkt-fx__hl">operators</span> work
-            </h2>
-          </div>
-          <div className="mkt-fx__principles">
-            {PRINCIPLES.map((p) => (
-              <div key={p.title} className="mkt-fx-principle">
-                <span className="mkt-fx-principle__icon">{p.icon}</span>
-                <h3>{p.title}</h3>
-                <p>{p.body}</p>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        <MarketingCtaBand
-          title="See it live on your store"
-          subtitle="Start free. About 30 minutes of setup. Meta verification and template review are the wait."
-          primaryLabel="Start free"
-          secondaryLabel="See pricing"
-          secondaryTo="/pricing"
-        />
+          <MarketingCtaBand
+            title="See it live on your store"
+            subtitle="Start free. About 30 minutes of setup. Meta verification and template review are the wait."
+            primaryLabel="Start free"
+            secondaryLabel="See pricing"
+            secondaryTo="/pricing"
+          />
+        </div>
       </MarketingPage>
     </>
   );

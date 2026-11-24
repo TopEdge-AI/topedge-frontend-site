@@ -26,7 +26,7 @@ export default function CopyButton({
   return (
     <button
       type="button"
-      className={`mkt-fcopy${state !== 'idle' ? ` is-${state}` : ''} ${className}`.trim()}
+      className={`mkt-btn-ghost mkt-fcopy${state !== 'idle' ? ` is-${state}` : ''} ${className}`.trim()}
       onClick={async () => {
         const ok = await copyText(text);
         setState(ok ? 'copied' : 'failed');

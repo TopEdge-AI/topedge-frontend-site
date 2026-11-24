@@ -7,7 +7,8 @@
  *      marks draw themselves in after it lands.
  *   2. A framed page with hairline guides: a bordered product grid and a brand
  *      grid, cells that tint and nudge their arrow on hover.
- *   3. A dark closing band with a halftone dot fade on the right.
+ *   3. The shared closing CTA card (MarketingCtaBand). The dark band that was
+ *      first built here never shipped and its rules were removed on 24 Nov.
  *
  * Everything animates once, respects prefers-reduced-motion, and the text is in
  * the HTML from the first byte.
@@ -221,15 +222,6 @@ a.mkt-about2__mark--ul:hover {
 
 /* ---------- 2. the framed page ---------- */
 
-.mkt-about2__frame {
-  max-width: 75rem;
-  margin: 0 auto;
-  border-left: 1px solid var(--ab-line);
-  border-right: 1px solid var(--ab-line);
-  border-top: 1px solid var(--ab-line);
-  background: #fff;
-}
-
 .mkt-about2__section {
   border-bottom: 1px solid var(--ab-line);
 }
@@ -379,126 +371,6 @@ a.mkt-about2__mark--ul:hover {
   color: var(--ab-ink);
 }
 
-/* ---------- 3. the dark band ---------- */
-
-.mkt-about2__cta {
-  position: relative;
-  display: grid;
-  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
-  align-items: center;
-  gap: 2rem;
-  margin: clamp(2rem, 4vw, 3rem) clamp(1.25rem, 3vw, 2.25rem);
-  padding: clamp(2rem, 5vw, 4rem);
-  overflow: hidden;
-  border-radius: 28px;
-  background: #0b0a12;
-  color: #fff;
-}
-
-/* halftone dots fading in from the right */
-.mkt-about2__cta::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(circle, rgba(196, 181, 253, 0.55) 1px, transparent 1.6px) 0 0 / 7px 7px;
-  -webkit-mask: linear-gradient(90deg, transparent 35%, #000 100%);
-  mask: linear-gradient(90deg, transparent 35%, #000 100%);
-  pointer-events: none;
-}
-
-.mkt-about2__cta-copy,
-.mkt-about2__picker {
-  position: relative;
-}
-
-.mkt-about2__cta-title {
-  margin: 0 0 0.75rem;
-  font-size: clamp(1.75rem, 3.4vw, 2.5rem);
-  font-weight: 800;
-  line-height: 1.1;
-  letter-spacing: -0.03em;
-}
-
-.mkt-about2__cta-sub {
-  margin: 0 0 1.75rem;
-  color: rgba(255, 255, 255, 0.72);
-  line-height: 1.55;
-}
-
-.mkt-about2__cta-actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.75rem;
-}
-
-.mkt-about2__btn {
-  display: inline-flex;
-  align-items: center;
-  min-height: 46px;
-  padding: 0 1.4rem;
-  border-radius: 12px;
-  font-weight: 600;
-  text-decoration: none;
-  transition: transform 0.18s ease, background-color 0.18s ease;
-}
-
-.mkt-about2__btn:hover {
-  transform: translateY(-1px);
-}
-
-.mkt-about2__btn--light {
-  background: #fff;
-  color: #0b0a12;
-}
-
-.mkt-about2__btn--dark {
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  background: rgba(255, 255, 255, 0.06);
-  color: #fff;
-}
-
-.mkt-about2__address {
-  margin: 1.5rem 0 0;
-  font-size: 0.8125rem;
-  color: rgba(255, 255, 255, 0.5);
-}
-
-.mkt-about2__picker {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 0;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  border-radius: 18px;
-  background: rgba(17, 16, 28, 0.85);
-  overflow: hidden;
-}
-
-.mkt-about2__picker li {
-  display: grid;
-  gap: 0.6rem;
-  padding: 1rem;
-  border-right: 1px solid rgba(255, 255, 255, 0.08);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-  font-size: 0.82rem;
-  font-weight: 600;
-  color: rgba(255, 255, 255, 0.45);
-}
-
-.mkt-about2__picker li:nth-child(3n) {
-  border-right: 0;
-}
-
-.mkt-about2__picker li.is-on {
-  margin: 6px;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 12px;
-  background: rgba(255, 255, 255, 0.06);
-  color: #fff;
-}
-
 /* ---------- responsive ---------- */
 
 @media (max-width: 900px) {
@@ -513,14 +385,6 @@ a.mkt-about2__mark--ul:hover {
 
   .mkt-about2__grid > li + li {
     border-top: 1px solid var(--ab-line);
-  }
-
-  .mkt-about2__cta {
-    grid-template-columns: minmax(0, 1fr);
-  }
-
-  .mkt-about2__picker {
-    display: none;
   }
 }
 
@@ -550,5 +414,233 @@ a.mkt-about2__mark--ul:hover {
   .mkt-about2__mark--ul::after,
   .mkt-about2__name::after {
     clip-path: none;
+  }
+}
+
+/* ====================================================================
+   Framed layout (24 Nov 2026)
+   --------------------------------------------------------------------
+   The page now sits in the shared frame (styles/frame.css): one column
+   between two hairline rails, hairline rows, cells that share dividers.
+
+   The founder letter stays the deliberate left-aligned exception, with
+   its tilt, ruled paper and hand-drawn marks. What changed is where it
+   lies: on the soft lilac stage row (no pattern, the owner asked for a
+   quiet page on 22 Nov), with a
+   hairline under it, instead of floating on open white. The yellow
+   marker became lilac, the gradient icon tiles became flat lilac tiles,
+   and the old dark closing band (unused) is gone.
+
+   Every rule is scoped `.mkt-about2.fx` so it wins over the layers above.
+ * ==================================================================== */
+
+/* ——— Row 1: breadcrumb and the letter, on the stage ——— */
+.mkt-about2.fx .mkt-about2__stage {
+  padding: calc(var(--mkt-nav-h, 4.5rem) + clamp(1.5rem, 3vw, 2.25rem)) var(--fx-gut) clamp(3.25rem, 6.5vw, 5.5rem);
+  border-bottom: 1px solid var(--fx-line);
+}
+
+.mkt-about2.fx .mkt-about2__stage .fx-crumbs {
+  margin-bottom: clamp(1.75rem, 3.5vw, 2.75rem);
+}
+
+/* The paper is masked (torn top edge), which clips its own box-shadow, so
+   the one soft violet shadow is drawn by this wrapper instead. */
+.mkt-about2.fx .mkt-about2__sheet {
+  max-width: 47rem;
+  margin: 0 auto;
+  filter: drop-shadow(0 1px 1px rgba(12, 18, 34, 0.06)) drop-shadow(0 34px 44px rgba(46, 16, 101, 0.2));
+}
+
+.mkt-about2.fx .mkt-about2__letter {
+  box-shadow: none;
+}
+
+.mkt-about2.fx .mkt-about2__h1 {
+  font-weight: 400;
+  line-height: 1.12;
+  letter-spacing: -0.042em;
+  color: var(--mkt-ink);
+}
+
+.mkt-about2.fx .mkt-about2__h1 .mkt-hl {
+  margin-left: 0;
+  color: #0c1222;
+}
+
+/* Marker highlight in the page's own colour family: lilac, not yellow. */
+.mkt-about2.fx .mkt-about2__mark--hl {
+  background-image: linear-gradient(transparent 50%, #dccbff 50%, #dccbff 94%, transparent 94%);
+}
+
+.mkt-about2.fx .mkt-about2__mark:focus-visible {
+  outline: 2px solid #c4b5fd;
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+.mkt-about2.fx .mkt-about2__name {
+  font-weight: 600;
+  color: var(--mkt-ink);
+}
+
+.mkt-about2.fx .mkt-about2__role {
+  color: var(--fx-muted);
+}
+
+/* ——— Section rows ——— */
+.mkt-about2.fx .mkt-about2__head {
+  gap: 1.25rem;
+  max-width: 42rem;
+  margin: 0 auto clamp(2rem, 4vw, 3rem);
+  padding: 0;
+}
+
+.mkt-about2.fx .mkt-about2__h2 {
+  margin: 0;
+  line-height: 1.22;
+  color: var(--mkt-ink);
+  text-wrap: balance;
+}
+
+.mkt-about2.fx .mkt-about2__h2 .mkt-hl {
+  padding: 0.08em 0.28em 0.14em;
+  color: #0c1222;
+}
+
+.mkt-about2.fx .mkt-about2__sub {
+  max-width: 34rem;
+  margin: 1rem auto 0;
+  font-size: 1.02rem;
+  line-height: 1.6;
+  color: var(--fx-muted);
+}
+
+.mkt-about2.fx .mkt-about2__all {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--mkt-ink);
+  transition: color 0.15s ease;
+}
+
+.mkt-about2.fx .mkt-about2__all:hover {
+  color: var(--fx-deep);
+}
+
+.mkt-about2.fx .mkt-about2__all:focus-visible {
+  outline: 2px solid #c4b5fd;
+  outline-offset: 4px;
+  border-radius: 6px;
+}
+
+/* ——— Module and brand cells (frame.css draws the dividers) ——— */
+.mkt-about2.fx .mkt-about2__grid {
+  grid-template-columns: repeat(var(--fx-cols), minmax(0, 1fr));
+  border-top: 1px solid var(--fx-line);
+}
+
+.mkt-about2.fx .mkt-about2__grid > li {
+  border: 0;
+}
+
+.mkt-about2.fx .mkt-about2__cell {
+  gap: 1rem;
+  padding: clamp(1.5rem, 2.6vw, 2.1rem) var(--fx-gut);
+}
+
+.mkt-about2.fx .mkt-about2__cell:hover {
+  background: var(--fx-tint);
+}
+
+.mkt-about2.fx .mkt-about2__cell:focus-visible {
+  outline: 2px solid #c4b5fd;
+  outline-offset: -2px;
+}
+
+.mkt-about2.fx .mkt-about2__icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  background: #f1ebff;
+  color: var(--mkt-violet);
+  box-shadow: none;
+}
+
+.mkt-about2.fx .mkt-about2__cell-text {
+  gap: 0.35rem;
+  padding-right: 1.75rem;
+}
+
+.mkt-about2.fx .mkt-about2__cell-name {
+  font-size: 1.08rem;
+  font-weight: 600;
+  line-height: 1.35;
+  letter-spacing: -0.018em;
+  color: var(--mkt-ink);
+}
+
+.mkt-about2.fx .mkt-about2__cell-desc {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: var(--fx-muted);
+}
+
+.mkt-about2.fx .mkt-about2__cell-copy {
+  max-width: 34rem;
+  margin-top: 0.65rem;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--fx-body);
+}
+
+.mkt-about2.fx .mkt-about2__cell-arrow {
+  top: clamp(1.6rem, 2.7vw, 2.2rem);
+  right: var(--fx-gut);
+  color: #b6b9c6;
+}
+
+.mkt-about2.fx .mkt-about2__cell:hover .mkt-about2__cell-arrow {
+  color: var(--mkt-violet);
+}
+
+.mkt-about2.fx .mkt-about2__cell:hover .mkt-about2__cell-name {
+  color: var(--fx-deep);
+}
+
+@media (max-width: 899px) {
+  .mkt-about2.fx .mkt-about2__stage {
+    padding-top: calc(var(--mkt-nav-h, 4rem) + 1.5rem);
+  }
+}
+
+@media (max-width: 599px) {
+  .mkt-about2.fx .mkt-about2__stage {
+    padding-left: 0.9rem;
+    padding-right: 0.9rem;
+  }
+}
+
+/* On phones the marks are allowed to wrap, and a drawn underline cannot
+   follow a phrase across two lines (it left a stray dot). A real text
+   underline wraps with the words. */
+@media (max-width: 560px) {
+  .mkt-about2.fx .mkt-about2__mark--ul::after {
+    content: none;
+  }
+
+  .mkt-about2.fx .mkt-about2__mark--ul {
+    text-decoration: underline;
+    text-decoration-color: var(--mkt-violet);
+    text-decoration-thickness: 2px;
+    text-underline-offset: 5px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mkt-about2.fx .mkt-about2__all,
+  .mkt-about2.fx .mkt-about2__all svg,
+  .mkt-about2.fx .mkt-about2__cell,
+  .mkt-about2.fx .mkt-about2__cell-arrow {
+    transition: none;
   }
 }

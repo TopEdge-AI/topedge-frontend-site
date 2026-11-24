@@ -538,7 +538,8 @@ for (const b of pfBlocks) {
   must(!hasNumber || /class="pf-src"/.test(b), `a proof block states ${stat} with no source line under it`);
 }
 must(/Baymard Institute/.test(copy), 'the cart statistic lost its source');
-must(/Unicommerce\/Shipway/.test(copy), 'the RTO statistic lost its source');
+// The registered source (src/data/sources.ts, unicommerceRto), named as the report is.
+must(/India D2C Report 2026/.test(copy), 'the RTO statistic lost its source');
 must(/Illustrative courier rates/.test(copy), 'the courier arithmetic is no longer labelled illustrative');
 
 // --- The comparison, promoted and inverted ---
@@ -647,7 +648,7 @@ for (const p of FALLBACK_CATALOG.plans) {
 }
 must(/TopEdge AI adds 0% markup/.test(html), 'missing 0% markup line');
 must(
-  html.includes(`${TRIAL.days}-day free trial on every plan. ${TRIAL.orders} free order confirmations, no credit card.`),
+  html.includes(`${TRIAL.days}-day free trial on every plan: ${TRIAL.orders} orders and ${TRIAL.sends} sends, no credit card.`),
   'the trial terms are gone, or no longer match TRIAL',
 );
 
@@ -655,7 +656,8 @@ must(
 // The seven questions a merchant has at eleven at night. They were previously
 // pushed into a WhatsApp thread nobody opens at that hour.
 const faqs = markup.match(/<details class="fq"[^>]*>[\s\S]*?<\/details>/g) || [];
-must(faqs.length === 7, `expected 7 FAQ items, found ${faqs.length}`);
+// Eight since 24 Nov 2026: the question-first "What is a WhatsApp app for Shopify?" leads the list.
+must(faqs.length === 8, `expected 8 FAQ items, found ${faqs.length}`);
 for (const f of faqs) {
   must(/<summary>/.test(f) && /<p>/.test(f), 'an FAQ item is missing its question or its answer');
   must(!/\bopen\b/.test(f.slice(0, f.indexOf('>'))), 'an FAQ item ships open; the list is closed by default');
@@ -665,7 +667,7 @@ for (const [topic, needle] of [
   ['number bans', 'official WhatsApp Cloud API'],
   ['what Meta charges', 'Meta bills your own Business account directly'],
   ['who owns the account', 'Your number, your templates, your quality rating'],
-  ['setup time', 'about fifteen minutes'],
+  ['setup time', 'about 30 minutes'],
   ['migration', 'rebuild it here before you cancel'],
   ['the order limit', 'Nothing switches off mid-month'],
   ['GST', 'GSTIN'],
@@ -673,7 +675,8 @@ for (const [topic, needle] of [
   must(faqCopy.includes(needle), `the FAQ does not answer ${topic}`);
 }
 const wa = (markup.match(/<a[^>]*data-cta="whatsapp"[^>]*>/) || [''])[0];
-must(/href="https:\/\/wa\.me\/\d{8,}\?text=\S+"/.test(wa), 'the WhatsApp fallback must open the company number with a prefilled message');
+// api.whatsapp.com/send since 24 Nov 2026: wa.me answers with a 302, which Ahrefs flags.
+must(/href="https:\/\/api\.whatsapp\.com\/send\?phone=\d{8,}&(amp;)?text=\S+"/.test(wa), 'the WhatsApp fallback must open the company number with a prefilled message');
 must(/target="_blank"/.test(wa) && /rel="noopener"/.test(wa), 'the WhatsApp link must open safely in a new tab');
 
 // --- Leakage ---
@@ -683,7 +686,13 @@ must(!/href="\/blog/.test(markup), 'a blog link is back on the ad page');
 // Anchors only. The favicon and the film's download fallback are not exits,
 // and the footer's legal pages and the signup and login paths are the point.
 const allowed = ['/signup', '/login', '/privacy', '/terms', '/favicon', '/marketing/demos/'];
-const outbound = [...markup.matchAll(/<a [^>]*href="(\/[^"#][^"]*)"/g)]
+// Since 24 Nov 2026 the footer carries a block of site links (the page is an
+// indexable landing page as well as an ad page, and the link audit found it
+// linked to nothing). Those are allowed in that block and nowhere else: the
+// body above the footer still has no exit but the trial.
+const bodyMarkup = markup.replace(/<nav class="mkt-foot__cols"[\s\S]*?<\/nav>/, '');
+must(!/href="\/(blog|compare)/.test(markup), 'the footer links name a blog post or a compare board');
+const outbound = [...bodyMarkup.matchAll(/<a [^>]*href="(\/[^"#][^"]*)"/g)]
   .map((m) => m[1])
   .filter((h) => h !== '/' && !allowed.some((a) => h.startsWith(a)));
 must(outbound.length === 0, `these links leave the ad page for the marketing site: ${[...new Set(outbound)].join(', ')}`);

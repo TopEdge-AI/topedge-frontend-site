@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useState } from 'react';
 import { Link, useSearchParams } from 'react-router-dom';
 import { AnimatePresence, motion, useReducedMotion } from 'framer-motion';
-import { ArrowLeft, ArrowRight, Check, ExternalLink, Link2, RotateCcw } from 'lucide-react';
+import { ArrowLeft, Check, ExternalLink, Link2, Pencil, RotateCcw } from 'lucide-react';
 import { SOURCES } from '@/data/sources';
 import {
   COMPARE_ROWS,
@@ -57,7 +57,6 @@ function Intro({ onStart }: { onStart: () => void }) {
       </ul>
       <button type="button" className="mkt-btn-primary mkt-finder__start" onClick={onStart}>
         Find my best match
-        <ArrowRight size={17} strokeWidth={2.2} aria-hidden />
       </button>
       <p className="mkt-finder__intro-note">
         Built by TopEdge AI, scored in the open. If another tool suits your store better, the result
@@ -139,7 +138,6 @@ function QuestionStep({
           onClick={onNext}
         >
           Continue
-          <ArrowRight size={16} strokeWidth={2.2} aria-hidden />
         </button>
       )}
 
@@ -241,7 +239,7 @@ function ResultCard({ r, top, answers }: { r: VendorResult; top?: boolean; answe
               className={top ? 'mkt-btn-primary' : 'mkt-finder__link'}
             >
               Visit {v.name}
-              <ExternalLink size={14} strokeWidth={2.2} aria-hidden />
+              {top ? null : <ExternalLink size={14} strokeWidth={2.2} aria-hidden />}
             </a>
             {v.comparePath && (
               <Link to={v.comparePath} className="mkt-finder__link">
@@ -332,15 +330,15 @@ function Results({
           )}
         </ul>
         <div className="mkt-finder__tools">
-          <button type="button" onClick={onEdit}>
-            <ArrowLeft size={15} strokeWidth={2.2} aria-hidden />
+          <button type="button" className="mkt-btn-ghost" onClick={onEdit}>
+            <Pencil size={15} strokeWidth={2.2} aria-hidden />
             Change answers
           </button>
-          <button type="button" onClick={onRestart}>
+          <button type="button" className="mkt-btn-ghost" onClick={onRestart}>
             <RotateCcw size={15} strokeWidth={2.2} aria-hidden />
             Start over
           </button>
-          <button type="button" onClick={copy}>
+          <button type="button" className="mkt-btn-ghost" onClick={copy}>
             <Link2 size={15} strokeWidth={2.2} aria-hidden />
             {copied ? 'Link copied' : 'Copy link to results'}
           </button>

@@ -1,7 +1,7 @@
 import type { ReactNode } from 'react';
 import BrandWord from '../components/BrandWord';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Check, MousePointerClick } from 'lucide-react';
+import { MousePointerClick } from 'lucide-react';
 import MarketingSEO from '../components/MarketingSEO';
 import {
   PAGE_SEO,
@@ -11,6 +11,8 @@ import {
 } from '../data/pageSeo';
 import MarketingPage from '../components/MarketingPage';
 import MarketingCtaBand from '../components/MarketingCtaBand';
+import FaqAccordion from '../components/topic/FaqAccordion';
+import { PrimaryButton, GhostButton } from '../components/ui';
 import '../styles/integrations.css';
 
 function InstagramGlyph({ size = 22 }: { size?: number }) {
@@ -210,122 +212,122 @@ export default function IntegrationsPage() {
           ]),
         ]}
       />
-      <MarketingPage className="mkt-int">
-        <header className="mkt-int__hero">
-          <p className="mkt-int__eyebrow">Integrations</p>
-          <h1 className="mkt-int__h1">
-            Connect <BrandWord platform="shopify">Shopify</BrandWord> and{' '}
-            <BrandWord platform="whatsapp">WhatsApp</BrandWord> in{' '}
-            <span className="mkt-int__hl">one workspace</span>
-          </h1>
-          <p className="mkt-int__sub">
-            TopEdge AI integrations connect Shopify by OAuth and the Meta WhatsApp Cloud API on your
-            own Business Account, in about 30 minutes of setup.
-          </p>
-          <div className="mkt-int__actions">
-            <Link to="/signup" className="mkt-btn-primary">
-              Start free
-            </Link>
-            <Link to="/shopify-whatsapp-integration" className="mkt-int__btn">
-              Shopify integration guide
-            </Link>
-          </div>
-          <Hub />
-        </header>
+      <MarketingPage className="mkt-int fx">
+        <div className="fx-shell">
+          <header className="mkt-int__hero">
+            <nav aria-label="Breadcrumb">
+              <ol className="fx-crumbs">
+                <li>
+                  <Link to="/">Home</Link>
+                </li>
+                <li aria-current="page">Integrations</li>
+              </ol>
+            </nav>
+            <h1 className="mkt-int__h1">
+              Connect <span className="mkt-int__brand"><BrandWord platform="shopify">Shopify</BrandWord></span> and{' '}
+              <span className="mkt-int__brand"><BrandWord platform="whatsapp">WhatsApp</BrandWord></span> in{' '}
+              <span className="mkt-int__hl">one workspace</span>
+            </h1>
+            <p className="mkt-int__sub">
+              TopEdge AI integrations connect Shopify by OAuth and the Meta WhatsApp Cloud API on your
+              own Business Account, in about 30 minutes of setup.
+            </p>
+            <div className="mkt-int__actions">
+              <PrimaryButton to="/signup">Start free</PrimaryButton>
+              <GhostButton to="/shopify-whatsapp-integration">Shopify integration guide</GhostButton>
+            </div>
+          </header>
 
-        <section className="mkt-int__section" aria-labelledby="mkt-int-connect">
-          <div className="mkt-int__head">
-            <h2 id="mkt-int-connect">
-              What <span className="mkt-int__hl">connects</span>
-            </h2>
-            <p>Native connections for standard ecommerce flows, no middleware to maintain.</p>
+          <div className="mkt-int__stage fx-stage">
+            <Hub />
           </div>
-          <div className="mkt-int__cards">
-            {CONNECTIONS.map((c) => (
-              <article key={c.id} className={`mkt-int-card mkt-int-card--${c.id}`}>
-                <div className="mkt-int-card__top">
-                  <span className="mkt-int-card__icon">{c.icon}</span>
-                  <div>
-                    <h3>{c.name}</h3>
-                    <p className="mkt-int-card__kind">{c.kind}</p>
+
+          <section className="mkt-int__section fx-sec" aria-labelledby="mkt-int-connect">
+            <div className="mkt-int__head fx-head">
+              <h2 id="mkt-int-connect" className="fx-head__title">
+                What <span className="mkt-int__hl">connects</span>
+              </h2>
+              <p className="fx-head__sub">Native connections for standard ecommerce flows, no middleware to maintain.</p>
+            </div>
+            <div className="mkt-int__cards fx-cells fx-cells--4 fx-cells--bleed">
+              {CONNECTIONS.map((c) => (
+                <article key={c.id} className={`mkt-int-card mkt-int-card--${c.id}`}>
+                  <div className="mkt-int-card__top">
+                    <span className="mkt-int-card__icon">{c.icon}</span>
+                    <div>
+                      <h3>{c.name}</h3>
+                      <p className="mkt-int-card__kind">{c.kind}</p>
+                    </div>
                   </div>
-                </div>
-                <ul className="mkt-int-card__points">
-                  {c.points.map((pt) => (
-                    <li key={pt}>
-                      <Check size={15} strokeWidth={2.5} aria-hidden />
-                      {pt}
-                    </li>
-                  ))}
-                </ul>
-                <Link to={c.href} className="mkt-int-card__link">
-                  {c.cta}
-                  <ArrowRight size={14} aria-hidden />
+                  <ul className="mkt-int-card__points fx-checks">
+                    {c.points.map((pt) => (
+                      <li key={pt}>{pt}</li>
+                    ))}
+                  </ul>
+                  <Link to={c.href} className="mkt-int-card__link">
+                    {c.cta}
+                  </Link>
+                </article>
+              ))}
+            </div>
+          </section>
+
+          <section className="mkt-int__section fx-sec" aria-labelledby="mkt-int-setup">
+            <div className="mkt-int__head fx-head">
+              <h2 id="mkt-int-setup" className="fx-head__title">
+                How setup <span className="mkt-int__hl">works</span>
+              </h2>
+              <p className="fx-head__sub">About 30 minutes of setup. Meta verification and template review are the wait.</p>
+            </div>
+            <ol className="mkt-int__steps fx-cells fx-cells--bleed">
+              {STEPS.map((s, i) => (
+                <li key={s.title} className="mkt-int-step fx-step">
+                  <span className="mkt-int-step__n fx-step__num" aria-hidden>
+                    {String(i + 1).padStart(2, '0')}
+                  </span>
+                  <h3 className="fx-step__title">{s.title}</h3>
+                  <p className="fx-step__copy">{s.body}</p>
+                </li>
+              ))}
+            </ol>
+          </section>
+
+          <section className="mkt-int__section fx-sec" aria-labelledby="mkt-int-guides">
+            <div className="mkt-int__head fx-head">
+              <h2 id="mkt-int-guides" className="fx-head__title">
+                Go <span className="mkt-int__hl">deeper</span>
+              </h2>
+            </div>
+            <div className="mkt-int__guides fx-cells fx-cells--bleed">
+              {GUIDES.map((g) => (
+                <Link key={g.href} to={g.href} className="mkt-int-guide">
+                  <span className="mkt-int-guide__label">{g.label}</span>
+                  <h3>{g.title}</h3>
+                  <p>{g.body}</p>
                 </Link>
-              </article>
-            ))}
-          </div>
-        </section>
+              ))}
+            </div>
+          </section>
 
-        <section className="mkt-int__section" aria-labelledby="mkt-int-setup">
-          <div className="mkt-int__head">
-            <h2 id="mkt-int-setup">
-              How setup <span className="mkt-int__hl">works</span>
-            </h2>
-            <p>About 30 minutes of setup. Meta verification and template review are the wait.</p>
-          </div>
-          <ol className="mkt-int__steps">
-            {STEPS.map((s, i) => (
-              <li key={s.title} className="mkt-int-step">
-                <span className="mkt-int-step__n">{i + 1}</span>
-                <h3>{s.title}</h3>
-                <p>{s.body}</p>
-              </li>
-            ))}
-          </ol>
-        </section>
+          <section className="mkt-int__section fx-sec" aria-labelledby="mkt-int-faq">
+            <div className="mkt-int__head fx-head">
+              <h2 id="mkt-int-faq" className="fx-head__title">
+                Common <span className="mkt-int__hl">questions</span>
+              </h2>
+            </div>
+            <div className="mkt-int__faq">
+              <FaqAccordion items={FAQS} />
+            </div>
+          </section>
 
-        <section className="mkt-int__section" aria-labelledby="mkt-int-guides">
-          <div className="mkt-int__head">
-            <h2 id="mkt-int-guides">
-              Go <span className="mkt-int__hl">deeper</span>
-            </h2>
-          </div>
-          <div className="mkt-int__guides">
-            {GUIDES.map((g) => (
-              <Link key={g.href} to={g.href} className="mkt-int-guide">
-                <span className="mkt-int-guide__label">{g.label}</span>
-                <h3>{g.title}</h3>
-                <p>{g.body}</p>
-                <ArrowRight className="mkt-int-guide__arrow" size={16} aria-hidden />
-              </Link>
-            ))}
-          </div>
-        </section>
-
-        <section className="mkt-int__section" aria-labelledby="mkt-int-faq">
-          <div className="mkt-int__head">
-            <h2 id="mkt-int-faq">
-              Common <span className="mkt-int__hl">questions</span>
-            </h2>
-          </div>
-          <div className="mkt-int__faq">
-            {FAQS.map((f) => (
-              <div key={f.question} className="mkt-int-faq">
-                <h3>{f.question}</h3>
-                <p>{f.answer}</p>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        <MarketingCtaBand
-          title="Connect your store in about 30 minutes"
-          subtitle="Start free. Shopify OAuth and WhatsApp credentials are guided in onboarding, then Meta verification and template review are the wait."
-          primaryLabel="Start free"
-          secondaryLabel="See features"
-          secondaryTo="/features"
-        />
+          <MarketingCtaBand
+            title="Connect your store in about 30 minutes"
+            subtitle="Start free. Shopify OAuth and WhatsApp credentials are guided in onboarding, then Meta verification and template review are the wait."
+            primaryLabel="Start free"
+            secondaryLabel="See features"
+            secondaryTo="/features"
+          />
+        </div>
       </MarketingPage>
     </>
   );

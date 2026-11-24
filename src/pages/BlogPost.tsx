@@ -131,7 +131,8 @@ export default function BlogPost() {
             dateModified,
             author: authorJsonLd(authorName),
             publisher: ORG_REF,
-            isPartOf: { '@type': 'Blog', '@id': `${SITE_URL}/blog`, name: 'TopEdge AI Playbooks', url: `${SITE_URL}/blog` },
+            // #blog is the @id the Blog node on /blog actually carries (src/pages/Blog.tsx).
+            isPartOf: { '@type': 'Blog', '@id': `${SITE_URL}/blog#blog`, name: 'TopEdge AI Playbooks', url: `${SITE_URL}/blog` },
             mainEntityOfPage: { '@type': 'WebPage', '@id': canonical },
             url: canonical,
             keywords: post.keywords?.join(', '),
@@ -172,7 +173,11 @@ export default function BlogPost() {
         ) : null}
       </Helmet>
 
-      <MarketingPage className="mkt-blog-article !bg-transparent">
+      <MarketingPage className="mkt-blog-article fx !bg-transparent">
+        {/* Framed layout (24 Nov 2026): the header block, the article and the
+            related posts are rows of one framed column. Only the outer chrome
+            moved; nothing inside the article body changed. */}
+        <div className="fx-shell">
         {/*
           The hero is a contained card with the cover beside the title rather
           than a full-bleed violet wash with the image stacked under it. The
@@ -339,7 +344,7 @@ export default function BlogPost() {
               <h2 id="related-heading" className="mkt-blog-related__title">
                 Related <span className="mkt-hl">playbooks</span>
               </h2>
-              <div className="mkt-blog-related__grid">
+              <div className="mkt-blog-related__grid fx-cells">
                 {related.map((r) => (
                   <Link key={r.slug} to={`/blog/${r.slug}`} className="mkt-blog-related__card">
                     <div className="mkt-blog-related__thumb">
@@ -368,6 +373,7 @@ export default function BlogPost() {
             </div>
           </section>
         )}
+        </div>
       </MarketingPage>
     </>
   );

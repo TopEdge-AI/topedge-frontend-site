@@ -1,4 +1,3 @@
-import { ArrowUpRight } from 'lucide-react';
 import { SALES_WHATSAPP_URL } from '../../lib/billingCatalog';
 import MarketingCtaBand from '../MarketingCtaBand';
 
@@ -14,7 +13,7 @@ export default function PricingSalesCta() {
       subtitle="Tell us your order volume on WhatsApp, we'll recommend a plan and help you launch your first recovery flow."
       actions={
         <a className="mkt-btn-primary" href={SALES_WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
-          Talk to sales on WhatsApp <ArrowUpRight size={16} aria-hidden />
+          Talk to sales on WhatsApp
         </a>
       }
     />

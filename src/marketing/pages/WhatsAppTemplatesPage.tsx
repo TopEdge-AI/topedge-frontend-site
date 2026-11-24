@@ -3,13 +3,15 @@ import { Link } from 'react-router-dom';
 import MarketingSEO from '../components/MarketingSEO';
 import MarketingPage from '../components/MarketingPage';
 import MarketingCtaBand from '../components/MarketingCtaBand';
-import { Section, SectionHeading, PrimaryButton } from '../components/ui';
-import { TopicBlockView, type TopicBlock } from '../components/topic/TopicBlocks';
+import { PrimaryButton, GhostButton } from '../components/ui';
+import type { TopicBlock } from '../components/topic/TopicBlocks';
 import FaqAccordion from '../components/topic/FaqAccordion';
 import JourneyHero from '../components/journey/JourneyHero';
 import PhoneMock, { type TemplateMessage } from '../components/journey/PhoneMock';
 import TrustBand from '../components/journey/TrustBand';
 import HowItWorks from '../components/journey/HowItWorks';
+import { FxHead, FxLinks } from '../components/journey/Framed';
+import FxBlocks from '../components/journey/FramedBlocks';
 import { highlightTitle } from '../lib/highlight';
 import {
   TEMPLATE_GROUPS,
@@ -233,55 +235,44 @@ function CopyTemplates() {
   };
 
   return (
-    <div className="mx-auto max-w-5xl">
-      <h2 className="text-center text-2xl font-normal tracking-tight text-[#0c1222] md:text-3xl">
-        {highlightTitle('Three templates to copy now')}
-      </h2>
-      <p className="mx-auto mt-3 max-w-2xl text-center text-[0.95rem] leading-relaxed text-[#5b5470]">
-        Example wording in Meta’s {'{{1}}'} format. Submit it from your own account in{' '}
-        <Link to="/features/meta-manager" className="font-medium text-[#7C3AED] hover:underline">
-          Meta Manager
-        </Link>
-        , and see{' '}
-        <Link
-          to="/blog/whatsapp-template-rejected-meta-shopify-fix"
-          className="font-medium text-[#7C3AED] hover:underline"
-        >
-          why templates get rejected
-        </Link>{' '}
-        before you do.
-      </p>
-      <ul className="mt-8 grid gap-5 md:grid-cols-3">
+    <>
+      <div className="fx-head">
+        <h2 className="fx-head__title">{highlightTitle('Three templates to copy now')}</h2>
+        <p className="fx-head__sub">
+          Example wording in Meta’s {'{{1}}'} format. Submit it from your own account in{' '}
+          <Link to="/features/meta-manager">Meta Manager</Link>, and see{' '}
+          <Link to="/blog/whatsapp-template-rejected-meta-shopify-fix">
+            why templates get rejected
+          </Link>{' '}
+          before you do.
+        </p>
+      </div>
+      <ul className="mkt-wtq fx-cells fx-cells--bleed">
         {QUICK_TEMPLATES.map((t) => (
-          <li
-            key={t.id}
-            className="flex flex-col rounded-2xl border border-[#efeaf8] bg-white p-5 shadow-[0_1px_2px_rgba(26,16,51,0.04)]"
-          >
-            <div className="flex items-center justify-between gap-3">
-              <h3 className="text-base font-semibold text-[#1a1033]">{t.title}</h3>
+          <li key={t.id} className="mkt-wtq__cell">
+            <div className="mkt-wtq__top">
+              <h3 className="mkt-wtq__title">{t.title}</h3>
               <span className={`mkt-jf__cat mkt-jf__cat--${t.category.toLowerCase()}`}>
                 {t.category} · {TEMPLATE_RATE[t.category]}
               </span>
             </div>
-            <pre className="mt-4 flex-1 whitespace-pre-wrap rounded-xl bg-[#f7f4fd] p-4 font-sans text-[0.9rem] leading-relaxed text-[#1a1033]">
-              {t.body}
-            </pre>
-            <p className="mt-3 text-[0.8rem] leading-relaxed text-[#5b5470]">
-              <strong className="font-medium text-[#1a1033]">Buttons:</strong> {t.buttons}
+            <pre className="mkt-wtq__text">{t.body}</pre>
+            <p className="mkt-wtq__meta">
+              <strong>Buttons:</strong> {t.buttons}
               <br />
-              <strong className="font-medium text-[#1a1033]">Variables:</strong> {t.vars}
+              <strong>Variables:</strong> {t.vars}
             </p>
             <button
               type="button"
               onClick={() => copy(t.id, t.body)}
-              className="mt-4 inline-flex items-center justify-center rounded-full border border-[#7C3AED] px-4 py-2 text-sm font-medium text-[#7C3AED] hover:bg-[#7C3AED] hover:text-white"
+              className="mkt-btn-ghost mkt-wtq__copy"
             >
               {copied === t.id ? 'Copied' : 'Copy text'}
             </button>
           </li>
         ))}
       </ul>
-    </div>
+    </>
   );
 }
 
@@ -381,7 +372,7 @@ function TemplateLibrary() {
         })}
       </div>
 
-      <ul className="mkt-lib__grid">
+      <ul className="mkt-lib__grid fx-cells">
         {items.map((item) => (
           <li key={item.id}>
             <TemplateCard item={item} />
@@ -416,8 +407,10 @@ export default function WhatsAppTemplatesPage() {
           ]),
         ]}
       />
-      <MarketingPage>
+      <MarketingPage className="mkt-jx mkt-jx--templates fx">
+        <div className="fx-shell">
         <JourneyHero
+          crumbs={[{ name: 'Home', path: '/' }, { name: 'WhatsApp templates' }]}
           eyebrow="Template library"
           title="WhatsApp order confirmation templates and more for Shopify"
           trust
@@ -426,21 +419,16 @@ export default function WhatsAppTemplatesPage() {
           actions={
             <>
               <PrimaryButton to="/signup">Start free</PrimaryButton>
-              <Link
-                to={FESTIVAL_PATH}
-                className="text-sm font-medium text-[#7C3AED] hover:underline"
-              >
-                See the 100 festival templates
-              </Link>
+              <GhostButton to={FESTIVAL_PATH}>See the 100 festival templates</GhostButton>
             </>
           }
         />
 
-        <Section className="!pt-10 md:!pt-14" id="copy">
+        <section className="fx-sec" id="copy">
           <CopyTemplates />
-        </Section>
+        </section>
 
-        <Section className="!pt-4 md:!pt-6" id="library">
+        <section className="fx-sec fx-sec--flush" id="library">
           <TemplateLibrary />
 
           {/*
@@ -451,56 +439,44 @@ export default function WhatsAppTemplatesPage() {
             searching for "Diwali template" needs to be sent there rather than
             left thinking three is all there is.
           */}
-          <div className="mx-auto mt-6 max-w-5xl">
-            <Link to="/whatsapp-festival-templates" className="mkt-jx-note">
-              <span className="mkt-jx-note__icon" aria-hidden>
-                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M7 21h10c0-3.5-2.6-6-5-6s-5 2.5-5 6Z" />
-                  <path d="M12 12c1.8-2.4 0-5 0-5s-3 2.5-3 5a3 3 0 0 0 6 0" />
-                </svg>
+          <Link to="/whatsapp-festival-templates" className="mkt-jx-note">
+            <span className="mkt-jx-note__icon" aria-hidden>
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M7 21h10c0-3.5-2.6-6-5-6s-5 2.5-5 6Z" />
+                <path d="M12 12c1.8-2.4 0-5 0-5s-3 2.5-3 5a3 3 0 0 0 6 0" />
+              </svg>
+            </span>
+            <span className="mkt-jx-note__body">
+              <span className="mkt-jx-note__tag">100 more templates</span>
+              <span className="mkt-jx-note__title">Festival templates, 25 festivals</span>
+              <span className="mkt-jx-note__desc">
+                Four ready messages each for Diwali, Dhanteras, Holi, Eid, Rakhi, Navratri,
+                Christmas and eighteen more, with the send dates and what each one costs.
               </span>
-              <span className="mkt-jx-note__body">
-                <span className="mkt-jx-note__tag">100 more templates</span>
-                <span className="mkt-jx-note__title">Festival templates, 25 festivals</span>
-                <span className="mkt-jx-note__desc">
-                  Four ready messages each for Diwali, Dhanteras, Holi, Eid, Rakhi, Navratri,
-                  Christmas and eighteen more, with the send dates and what each one costs.
-                </span>
-              </span>
-              <span className="mkt-jx-note__cta">
-                Browse festival templates
-                <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M5 12h14M13 6l6 6-6 6" />
-                </svg>
-              </span>
-            </Link>
-          </div>
-        </Section>
+            </span>
+            <span className="mkt-jx-note__cta">
+              Browse festival templates
+              <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M5 12h14M13 6l6 6-6 6" />
+              </svg>
+            </span>
+          </Link>
+        </section>
 
-        <Section wash="soft">
+        <div className="fx-sec">
           <TrustBand />
-        </Section>
+        </div>
 
-        <Section>
-          <HowItWorks />
-        </Section>
+        <HowItWorks />
 
-        <Section wash="soft">
-          <div className="mkt-jx-centered mx-auto flex max-w-3xl flex-col gap-14 md:gap-16">
-            {BLOCKS.map((b) => (
-              <TopicBlockView key={b.id} block={b} />
-            ))}
-          </div>
-        </Section>
+        <FxBlocks blocks={BLOCKS} />
 
-        <Section>
-          <SectionHeading title="Questions teams ask" accent="teams ask" />
-          <div className="mx-auto max-w-3xl">
-            <FaqAccordion items={FAQS} />
-          </div>
+        <section className="fx-sec">
+          <FxHead title="Questions teams ask" accent="teams ask" />
+          <FaqAccordion items={FAQS} />
 
-          <ul className="mx-auto mt-10 flex max-w-3xl flex-wrap justify-center gap-3">
-            {[
+          <FxLinks
+            items={[
               { label: 'Festival templates', href: '/whatsapp-festival-templates' },
               { label: 'Journey examples', href: '/whatsapp-journey-examples' },
               { label: 'Meta template manager', href: '/features/meta-manager' },
@@ -508,18 +484,9 @@ export default function WhatsAppTemplatesPage() {
               { label: 'Why templates get rejected', href: '/blog/whatsapp-template-rejected-meta-shopify-fix' },
               { label: 'Opt-in rules', href: '/blog/whatsapp-opt-in-shopify-india' },
               { label: 'Pricing', href: '/pricing' },
-            ].map((r) => (
-              <li key={r.href}>
-                <Link
-                  to={r.href}
-                  className="inline-flex rounded-full border border-[#efeaf8] bg-white px-4 py-2 text-sm font-medium text-[#7C3AED] hover:border-[#c4b5fd]"
-                >
-                  {r.label}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </Section>
+            ]}
+          />
+        </section>
 
         <MarketingCtaBand
           title="Start sending these templates this week"
@@ -528,6 +495,7 @@ export default function WhatsAppTemplatesPage() {
           secondaryLabel="See pricing"
           secondaryTo="/pricing"
         />
+        </div>
       </MarketingPage>
     </>
   );

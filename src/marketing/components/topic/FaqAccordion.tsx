@@ -44,19 +44,21 @@ export default function FaqAccordion({
             viewport={{ once: true, amount: 0.2 }}
             transition={{ duration: 0.4, delay: index * 0.04, ease }}
           >
-            <button
-              type="button"
-              className="mkt-faq__trigger"
-              aria-expanded={isOpen}
-              aria-controls={`mkt-faq-panel-${index}`}
-              id={`mkt-faq-trigger-${index}`}
-              onClick={() => setOpen(isOpen ? null : index)}
-            >
-              <span className="mkt-faq__q">{item.question}</span>
-              <span className="mkt-faq__chev-wrap" aria-hidden>
-                <ChevronDown className="mkt-faq__chev" size={15} strokeWidth={2.25} />
-              </span>
-            </button>
+            <h3 className="mkt-faq__h">
+              <button
+                type="button"
+                className="mkt-faq__trigger"
+                aria-expanded={isOpen}
+                aria-controls={`mkt-faq-panel-${index}`}
+                id={`mkt-faq-trigger-${index}`}
+                onClick={() => setOpen(isOpen ? null : index)}
+              >
+                <span className="mkt-faq__q">{item.question}</span>
+                <span className="mkt-faq__chev-wrap" aria-hidden>
+                  <ChevronDown className="mkt-faq__chev" size={15} strokeWidth={2.25} />
+                </span>
+              </button>
+            </h3>
 
             <div
               id={`mkt-faq-panel-${index}`}

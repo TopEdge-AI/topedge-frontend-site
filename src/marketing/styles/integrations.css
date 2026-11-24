@@ -555,3 +555,460 @@
     height: 36px;
   }
 }
+
+/* ==================================================================== *
+   Framed layout (24 Nov 2026)
+   --------------------------------------------------------------------
+   /integrations now sits in the same frame as /partners (styles/frame.css):
+   one column between two hairline rails, hairline rows between sections,
+   cells that share their dividers. The green, pink and lilac card tints
+   are gone; each connection is a white cell that keeps its own logo. The
+   connection diagram sits on the violet dither stage, the setup steps are
+   numbered cells and the FAQ is the shared accordion. Copy, headings,
+   links and schema are unchanged.
+
+   Every rule is scoped `.mkt-int.fx` so it wins over the layer above
+   without touching it.
+ * ==================================================================== */
+
+/* --- Hero --- */
+.mkt-int.fx .mkt-int__hero {
+  max-width: none;
+  margin: 0;
+  padding: calc(var(--mkt-nav-h, 4.5rem) + clamp(2.25rem, 5vw, 4rem)) var(--fx-gut) clamp(2.5rem, 4.5vw, 3.5rem);
+  text-align: center;
+}
+
+.mkt-int.fx .mkt-int__hero::before {
+  content: none;
+}
+
+.mkt-int.fx .mkt-int__h1 {
+  max-width: 22ch;
+  font-family: var(--mkt-font);
+  font-size: clamp(2.05rem, 4.6vw, 3.35rem);
+  font-weight: 400;
+  line-height: 1.12;
+  letter-spacing: -0.042em;
+  color: var(--mkt-ink);
+}
+
+.mkt-int.fx .mkt-int__hl {
+  color: #0c1222;
+}
+
+.mkt-int.fx .mkt-int__h1 .mkt-int__hl {
+  padding: 0.04em 0.24em 0.1em;
+  border-radius: 0.3em;
+}
+
+.mkt-int.fx .mkt-int__sub {
+  max-width: 37rem;
+  margin: 1.35rem auto 0;
+  font-size: clamp(1.02rem, 1.4vw, 1.12rem);
+  line-height: 1.55;
+  color: var(--fx-muted);
+}
+
+.mkt-int.fx .mkt-int__actions {
+  gap: 0.75rem;
+  margin-top: 2rem;
+}
+
+.mkt-int.fx .mkt-int__actions .mkt-btn-primary,
+.mkt-int.fx .mkt-int__actions .mkt-btn-ghost {
+  height: auto;
+  min-height: 3rem;
+  padding: 0 1.6rem;
+  font-size: 0.95rem;
+}
+
+.mkt-int.fx .mkt-int__actions .mkt-btn-ghost {
+  background: #fff;
+}
+
+/* --- Connection diagram on the dither stage --- */
+.mkt-int.fx .mkt-int__stage {
+  padding: clamp(2rem, 5vw, 4rem) var(--fx-gut);
+  border-top: 1px solid var(--fx-line);
+  border-bottom: 1px solid var(--fx-line);
+}
+
+.mkt-int.fx .mkt-int-hub {
+  max-width: 44rem;
+  margin: 0 auto;
+  padding: clamp(1.1rem, 3vw, 2rem);
+  border: 0;
+  border-radius: 18px;
+  background: #fff;
+  box-shadow: 0 0 0 1px rgba(12, 18, 34, 0.05), 0 36px 72px -40px rgba(46, 16, 101, 0.5);
+  -webkit-backdrop-filter: none;
+  backdrop-filter: none;
+}
+
+.mkt-int.fx .mkt-int-hub__node,
+.mkt-int.fx .mkt-int-hub__node--shopify,
+.mkt-int.fx .mkt-int-hub__node--pixel,
+.mkt-int.fx .mkt-int-hub__node--whatsapp,
+.mkt-int.fx .mkt-int-hub__node--instagram {
+  border: 1px solid var(--fx-line);
+  border-radius: 14px;
+  background: #fff;
+  color: var(--fx-body);
+}
+
+.mkt-int.fx .mkt-int-hub__node--pixel svg {
+  color: var(--mkt-violet);
+}
+
+.mkt-int.fx .mkt-int-hub__core {
+  border: 1px solid #e4d4ff;
+  border-radius: 16px;
+  background: var(--fx-tint);
+  box-shadow: none;
+  color: var(--mkt-ink);
+}
+
+/* --- Sections --- */
+.mkt-int.fx .mkt-int__section {
+  width: auto;
+  margin: 0;
+  padding: clamp(3.25rem, 6.5vw, 5.5rem) var(--fx-gut);
+}
+
+.mkt-int.fx .mkt-int__head {
+  max-width: 42rem;
+  margin: 0 auto clamp(2rem, 4vw, 3rem);
+}
+
+.mkt-int.fx .mkt-int__head h2 {
+  font-size: clamp(1.6rem, 3.2vw, 2.3rem);
+  line-height: 1.22;
+  letter-spacing: -0.034em;
+  color: var(--mkt-ink);
+  text-wrap: balance;
+}
+
+.mkt-int.fx .mkt-int__head p {
+  max-width: 34rem;
+  margin: 1rem auto 0;
+  font-size: 1.02rem;
+  line-height: 1.6;
+  color: var(--fx-muted);
+}
+
+/* --- Connection cells: logo, name, kind chip, what syncs, where to read on --- */
+.mkt-int.fx .mkt-int__cards {
+  gap: 1px;
+}
+
+.mkt-int.fx .mkt-int-card {
+  padding: clamp(1.5rem, 2.4vw, 2rem) var(--fx-gut) 0;
+  border: 0;
+  border-radius: 0;
+  background: #fff;
+  box-shadow: var(--fx-cell-lines);
+  transform: none;
+  transition: none;
+}
+
+.mkt-int.fx .mkt-int-card:hover {
+  box-shadow: var(--fx-cell-lines);
+  transform: none;
+}
+
+.mkt-int.fx .mkt-int-card__top {
+  gap: 0.85rem;
+}
+
+.mkt-int.fx .mkt-int-card__icon {
+  width: 2.75rem;
+  height: 2.75rem;
+  border: 1px solid var(--fx-line);
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: none;
+  color: var(--mkt-violet);
+}
+
+.mkt-int.fx .mkt-int-card h3 {
+  font-size: 1.08rem;
+  font-weight: 600;
+  line-height: 1.3;
+  letter-spacing: -0.018em;
+  color: var(--mkt-ink);
+}
+
+.mkt-int.fx .mkt-int-card__kind {
+  display: inline-block;
+  margin: 0.35rem 0 0;
+  padding: 0.14rem 0.55rem;
+  border-radius: 999px;
+  background: var(--fx-tint-2);
+  font-size: 0.74rem;
+  font-weight: 500;
+  line-height: 1.5;
+  color: var(--fx-deep);
+}
+
+.mkt-int.fx .mkt-int-card__points {
+  display: grid;
+  align-content: start;
+  gap: 0.7rem;
+  flex: 1;
+  margin: 1.4rem 0 0;
+  padding-bottom: clamp(1.4rem, 2.2vw, 1.8rem);
+}
+
+.mkt-int.fx .mkt-int-card__points li {
+  display: block;
+  font-size: 0.93rem;
+  line-height: 1.5;
+  color: var(--fx-body);
+}
+
+/* The onward link is the cell's foot: a hairline row, rail to rail. */
+.mkt-int.fx .mkt-int-card__link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  align-self: stretch;
+  width: auto;
+  margin: 0 calc(var(--fx-gut) * -1);
+  padding: 1rem var(--fx-gut);
+  border-top: 1px solid var(--fx-line);
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--mkt-ink);
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.mkt-int.fx .mkt-int-card__link::after,
+.mkt-int.fx .mkt-int-guide::after {
+  content: '';
+  flex: none;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-top: 1.5px solid #b6b9c6;
+  border-right: 1.5px solid #b6b9c6;
+  transform: rotate(45deg);
+  transition: border-color 0.15s ease, transform 0.15s ease;
+}
+
+.mkt-int.fx .mkt-int-card__link:hover {
+  background: var(--fx-tint);
+  color: var(--fx-deep);
+}
+
+.mkt-int.fx .mkt-int-card__link:hover::after,
+.mkt-int.fx .mkt-int-guide:hover::after {
+  border-color: var(--mkt-violet);
+  transform: translateX(2px) rotate(45deg);
+}
+
+.mkt-int.fx .mkt-int-card__link:focus-visible,
+.mkt-int.fx .mkt-int-guide:focus-visible {
+  outline: 2px solid #c4b5fd;
+  outline-offset: -2px;
+}
+
+/* --- Setup steps --- */
+.mkt-int.fx .mkt-int__steps {
+  gap: 1px;
+}
+
+.mkt-int.fx .mkt-int-step {
+  padding: clamp(1.5rem, 2.6vw, 2.1rem) var(--fx-gut) clamp(1.75rem, 3vw, 2.5rem);
+  border: 0;
+  border-radius: 0;
+  background: #fff;
+}
+
+.mkt-int.fx .mkt-int-step__n {
+  display: block;
+  width: auto;
+  height: auto;
+  border-radius: 0;
+  background: none;
+  box-shadow: none;
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  line-height: 1.2;
+  color: var(--mkt-violet);
+}
+
+.mkt-int.fx .mkt-int-step h3 {
+  margin: 1.1rem 0 0;
+  font-size: 1.08rem;
+  font-weight: 600;
+  line-height: 1.35;
+  letter-spacing: -0.018em;
+  color: var(--mkt-ink);
+}
+
+.mkt-int.fx .mkt-int-step p {
+  margin: 0.55rem 0 0;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--fx-muted);
+}
+
+/* --- Guides: three link cells --- */
+.mkt-int.fx .mkt-int__guides {
+  gap: 1px;
+}
+
+.mkt-int.fx .mkt-int-guide {
+  position: relative;
+  padding: clamp(1.5rem, 2.4vw, 2rem) var(--fx-gut) clamp(1.6rem, 2.6vw, 2.15rem);
+  border: 0;
+  border-radius: 0;
+  background: #fff;
+  box-shadow: var(--fx-cell-lines);
+  transition: background 0.15s ease;
+}
+
+.mkt-int.fx .mkt-int-guide:hover {
+  background: var(--fx-tint);
+  box-shadow: var(--fx-cell-lines);
+}
+
+.mkt-int.fx .mkt-int-guide::after {
+  position: absolute;
+  top: calc(clamp(1.5rem, 2.4vw, 2rem) + 0.25rem);
+  right: var(--fx-gut);
+}
+
+.mkt-int.fx .mkt-int-guide__label {
+  display: block;
+  padding-right: 1.5rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  color: var(--mkt-violet);
+}
+
+.mkt-int.fx .mkt-int-guide h3 {
+  margin: 1.1rem 0 0;
+  font-size: 1.08rem;
+  font-weight: 600;
+  line-height: 1.35;
+  letter-spacing: -0.018em;
+  color: var(--mkt-ink);
+}
+
+.mkt-int.fx .mkt-int-guide:hover h3 {
+  color: var(--fx-deep);
+}
+
+.mkt-int.fx .mkt-int-guide p {
+  margin: 0.55rem 0 0;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--fx-muted);
+}
+
+/* --- FAQ: the shared accordion --- */
+.mkt-int.fx .mkt-int__faq {
+  display: block;
+  max-width: none;
+}
+
+.mkt-int.fx .mkt-cta {
+  margin-top: 0;
+}
+
+@media (max-width: 1099px) {
+  .mkt-int.fx .mkt-int__cards {
+    --fx-cols: 2;
+  }
+}
+
+@media (max-width: 899px) {
+  .mkt-int.fx .mkt-int__hero {
+    padding-top: calc(var(--mkt-nav-h, 4rem) + 1.75rem);
+  }
+
+  .mkt-int.fx .mkt-int__section {
+    padding-top: clamp(2.75rem, 9vw, 3.75rem);
+    padding-bottom: clamp(2.75rem, 9vw, 3.75rem);
+  }
+
+  .mkt-int.fx .mkt-int__section > .fx-cells--bleed:last-child {
+    margin-bottom: calc(clamp(2.75rem, 9vw, 3.75rem) * -1);
+  }
+
+  /* Three steps and three guides read better stacked than as two and one. */
+  .mkt-int.fx .mkt-int__steps,
+  .mkt-int.fx .mkt-int__guides {
+    --fx-cols: 1;
+  }
+}
+
+@media (max-width: 599px) {
+  .mkt-int.fx .mkt-int__h1 {
+    font-size: clamp(1.95rem, 8.6vw, 2.4rem);
+  }
+
+  .mkt-int.fx .mkt-int__actions .mkt-btn-primary,
+  .mkt-int.fx .mkt-int__actions .mkt-btn-ghost {
+    flex: 1 1 auto;
+  }
+
+  .mkt-int.fx .mkt-int__cards {
+    --fx-cols: 1;
+  }
+
+  .mkt-int.fx .mkt-int__stage {
+    padding: 1.5rem 0.9rem;
+  }
+
+  .mkt-int.fx .mkt-int-hub {
+    padding: 0.9rem 0.6rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mkt-int.fx .mkt-int-card__link,
+  .mkt-int.fx .mkt-int-card__link::after,
+  .mkt-int.fx .mkt-int-guide,
+  .mkt-int.fx .mkt-int-guide::after {
+    transition: none;
+  }
+}
+
+/* A platform mark stays on the same line as its own name. */
+.mkt-int.fx .mkt-int__brand {
+  white-space: nowrap;
+}
+
+/* The highlight sits under the heading's own text, so the descenders of the
+   line above it ("Shopify") are drawn over the lilac, not cut off by it. */
+.mkt-int.fx .mkt-int__h1 {
+  isolation: isolate;
+}
+
+.mkt-int.fx .mkt-int__h1 .mkt-int__hl {
+  position: relative;
+  z-index: -1;
+}
+
+.mkt-int.fx .mkt-int__head h2 {
+  isolation: isolate;
+}
+
+.mkt-int.fx .mkt-int__head h2 .mkt-int__hl {
+  position: relative;
+  z-index: -1;
+}
+
+/* On a phone the two hero pills stack at one width. */
+@media (max-width: 479px) {
+  .mkt-int.fx .mkt-int__actions .mkt-btn-primary,
+  .mkt-int.fx .mkt-int__actions .mkt-btn-ghost {
+    flex: 1 1 100%;
+    max-width: none;
+  }
+}

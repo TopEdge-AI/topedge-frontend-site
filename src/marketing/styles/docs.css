@@ -1831,3 +1831,815 @@
 .docs-rail__cta:hover {
   color: var(--docs-violet);
 }
+
+/* ====================================================================
+   Framed layout (24 Nov 2026)
+   --------------------------------------------------------------------
+   The docs stay a reading layout (sidebar, left-aligned article, contents
+   rail) and a deliberate exception to the centred, cell-based marketing
+   pages. This layer only seats that layout in the site frame
+   (styles/frame.css): the three columns sit between the two rails and are
+   divided by hairlines, every border is --fx-line, every surface is white,
+   tint or lilac, and groups of links (tasks, index, related, pager, FAQ)
+   are cells that share their dividers instead of separate cards.
+
+   Copy, headings, links, screenshots, their marks and the search are
+   unchanged. Every rule is scoped `.docs-shell.fx` so it wins over the
+   layers above without touching them.
+ * ==================================================================== */
+
+.docs-shell.fx {
+  --docs-ink: var(--mkt-ink, #0c1222);
+  --docs-text: #1b2230;
+  --docs-muted: var(--fx-body);
+  --docs-faint: var(--fx-muted);
+  --docs-line: var(--fx-line);
+  --docs-line-soft: var(--fx-line);
+  --docs-violet: var(--mkt-violet, #7c3aed);
+  --docs-violet-ink: var(--fx-deep);
+  --docs-violet-bg: var(--fx-tint-2);
+  --docs-sidebar-w: 248px;
+  --docs-rail-w: 208px;
+  --docs-bar: 3.25rem;
+  /* The whole fixed header: the announcement strip plus the nav band. */
+  --docs-top: calc(var(--mkt-ann-h, 0px) + var(--mkt-nav-h, 4.5rem));
+  --docs-sticky-top: var(--docs-top);
+}
+
+/* ——— The three columns, one frame ——— */
+.docs-shell.fx .docs-layout {
+  display: block;
+  max-width: none;
+  margin: 0;
+  padding: var(--mkt-nav-h, 4.5rem) 0 0;
+  border-bottom: 1px solid var(--fx-line);
+}
+
+@media (min-width: 1024px) {
+  .docs-shell.fx .docs-layout {
+    display: grid;
+    grid-template-columns: var(--docs-sidebar-w) minmax(0, 1fr);
+    gap: 0;
+  }
+}
+
+@media (min-width: 1280px) {
+  .docs-shell.fx .docs-layout {
+    grid-template-columns: var(--docs-sidebar-w) minmax(0, 1fr) var(--docs-rail-w);
+  }
+}
+
+.docs-shell.fx .docs-sidebar {
+  margin: 0;
+  padding: 0;
+  border-right: 1px solid var(--fx-line);
+}
+
+.docs-shell.fx .docs-rail {
+  border-left: 1px solid var(--fx-line);
+}
+
+.docs-shell.fx .docs-sidebar__inner,
+.docs-shell.fx .docs-rail__inner {
+  top: var(--docs-top);
+  max-height: calc(100vh - var(--docs-top));
+  padding: 0 0 1.5rem;
+  scrollbar-color: #e4e2ec transparent;
+}
+
+/* One bar runs across the top of all three columns: docs home link,
+   breadcrumb, "On this page". */
+.docs-shell.fx .docs-sidebar .docs-sidebar__home {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  height: var(--docs-bar);
+  margin: 0;
+  padding: 0 1.25rem;
+  border-bottom: 1px solid var(--fx-line);
+  background: #fff;
+  font-size: 0.95rem;
+}
+
+.docs-shell.fx .docs-sidebar .docs-nav {
+  padding: 1rem 0.75rem 0;
+}
+
+.docs-shell.fx .docs-toc__title {
+  display: flex;
+  align-items: center;
+  height: var(--docs-bar);
+  margin: 0;
+  padding: 0 1.25rem;
+  border-bottom: 1px solid var(--fx-line);
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+}
+
+.docs-shell.fx .docs-toc ul {
+  margin: 1.1rem 1.25rem 0;
+}
+
+.docs-shell.fx .docs-toc a {
+  padding: 0.32rem 0 0.32rem 0.85rem;
+  font-size: 0.84rem;
+}
+
+.docs-shell.fx .docs-rail__cta {
+  margin: 1.25rem 1.25rem 0;
+}
+
+/* ——— Sidebar: search and tree ——— */
+.docs-shell.fx .docs-search__input {
+  border-color: var(--fx-line);
+  border-radius: 12px;
+  background: var(--fx-tint);
+}
+
+.docs-shell.fx .docs-search__input:focus {
+  background: #fff;
+  border-color: #c4b5fd;
+}
+
+.docs-shell.fx .docs-search__icon,
+.docs-shell.fx .docs-search__input::placeholder {
+  color: #9aa0ae;
+}
+
+.docs-shell.fx .docs-search__clear {
+  color: var(--fx-muted);
+}
+
+.docs-shell.fx .docs-search__clear:hover {
+  background: var(--fx-tint-2);
+}
+
+.docs-shell.fx .docs-nav__group {
+  margin-top: 1.35rem;
+}
+
+.docs-shell.fx .docs-nav__label {
+  margin: 0 0 0.4rem 0.6rem;
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+}
+
+.docs-shell.fx .docs-nav__link {
+  padding: 0.36rem 0.6rem;
+  border-radius: 8px;
+  font-size: 0.89rem;
+  color: var(--fx-body);
+}
+
+.docs-shell.fx .docs-nav__link:hover {
+  background: var(--fx-tint);
+  color: var(--mkt-ink);
+}
+
+.docs-shell.fx .docs-nav__link.is-active {
+  background: var(--fx-tint-2);
+  color: var(--fx-deep);
+}
+
+/* ——— Top bar: breadcrumb (and the menu button on phones) ——— */
+.docs-shell.fx .docs-topbar {
+  min-height: var(--docs-bar);
+  margin: 0;
+  padding: 0 var(--fx-gut);
+  border-bottom: 1px solid var(--fx-line);
+}
+
+.docs-shell.fx .docs-topbar__menu {
+  height: 2.125rem;
+  border-color: var(--fx-line);
+  box-shadow: none;
+  font-weight: 500;
+}
+
+.docs-shell.fx .docs-topbar__menu:hover {
+  border-color: #c4b5fd;
+  color: var(--fx-deep);
+}
+
+.docs-shell.fx .docs-topbar__menu:focus-visible,
+.docs-shell.fx .docs-sheet__close:focus-visible,
+.docs-shell.fx .docs-search__clear:focus-visible {
+  outline: 2px solid #c4b5fd;
+  outline-offset: 2px;
+}
+
+.docs-shell.fx .docs-crumbs {
+  gap: 0.4rem;
+  font-size: 0.84rem;
+  color: var(--fx-muted);
+}
+
+.docs-shell.fx .docs-crumbs a {
+  color: var(--fx-muted);
+  transition: color 0.15s ease;
+}
+
+.docs-shell.fx .docs-crumbs a:hover {
+  color: var(--fx-deep);
+}
+
+.docs-shell.fx .docs-crumbs svg {
+  color: #c9cbd4;
+}
+
+.docs-shell.fx .docs-crumbs [aria-current='page'] {
+  color: var(--mkt-ink);
+}
+
+/* ——— Article head ——— */
+.docs-shell.fx .docs-article {
+  padding: clamp(1.75rem, 3.4vw, 2.75rem) var(--fx-gut) 0;
+}
+
+.docs-shell.fx .docs-head {
+  margin: 0 calc(var(--fx-gut) * -1);
+  padding: 0 var(--fx-gut) clamp(1.5rem, 2.6vw, 2rem);
+  border-bottom: 1px solid var(--fx-line);
+}
+
+.docs-shell.fx .docs-eyebrow {
+  margin: 0 0 0.8rem;
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.docs-shell.fx .docs-h1 {
+  font-size: clamp(1.85rem, 1.25rem + 2.3vw, 2.65rem);
+  font-weight: 400;
+  line-height: 1.14;
+  letter-spacing: -0.036em;
+}
+
+.docs-shell.fx .docs-lead {
+  max-width: 40rem;
+  margin-top: 1rem;
+  color: var(--fx-body);
+}
+
+.docs-shell.fx .docs-meta {
+  gap: 0.6rem 0.9rem;
+  margin-top: 1.35rem;
+}
+
+.docs-shell.fx .docs-meta__date {
+  display: inline-flex;
+  align-items: center;
+  height: 2.25rem;
+  padding: 0 0.85rem;
+  border: 1px solid var(--fx-line);
+  border-radius: 999px;
+  background: #fff;
+  font-size: 0.82rem;
+  font-variant-numeric: tabular-nums;
+  color: var(--fx-muted);
+}
+
+.docs-shell.fx .docs-meta__cta {
+  height: 2.25rem;
+  padding: 0 1rem;
+  background: var(--mkt-violet);
+  font-size: 0.86rem;
+  font-weight: 500;
+}
+
+.docs-shell.fx .docs-meta__cta:hover {
+  background: var(--mkt-violet-hover, #6d28d9);
+}
+
+.docs-shell.fx .docs-meta__cta:focus-visible,
+.docs-shell.fx .docs-rail__cta:focus-visible,
+.docs-shell.fx .docs-toc a:focus-visible,
+.docs-shell.fx .docs-crumbs a:focus-visible,
+.docs-shell.fx .docs-link:focus-visible,
+.docs-shell.fx .docs-foot__help a:focus-visible {
+  outline: 2px solid #c4b5fd;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+.docs-shell.fx .docs-meta__cta:focus-visible {
+  border-radius: 999px;
+}
+
+/* ——— Body: each h2 opens a row ——— */
+.docs-shell.fx .docs-body > :first-child {
+  margin-top: clamp(1.5rem, 2.6vw, 2rem);
+}
+
+.docs-shell.fx .docs-h2 {
+  margin: 2.5rem calc(var(--fx-gut) * -1) 0.8rem;
+  padding: 2.25rem var(--fx-gut) 0;
+  border-top: 1px solid var(--fx-line);
+  /* The row's hairline lands just under the fixed header on a deep link. */
+  scroll-margin-top: calc(var(--docs-top) - 1px);
+  font-size: clamp(1.3rem, 1.1rem + 0.8vw, 1.55rem);
+  font-weight: 500;
+  letter-spacing: -0.026em;
+}
+
+.docs-shell.fx .docs-index .docs-h2 {
+  margin-top: 2.5rem;
+}
+
+.docs-shell.fx .docs-h3 {
+  letter-spacing: -0.014em;
+}
+
+.docs-shell.fx .docs-anchor {
+  color: #c4b5fd;
+}
+
+.docs-shell.fx .docs-link {
+  color: var(--fx-deep);
+}
+
+.docs-shell.fx .docs-link:hover {
+  color: var(--mkt-violet);
+}
+
+.docs-shell.fx .docs-ul li::marker {
+  color: #b9a4f5;
+}
+
+/* Code and key labels: a quiet tinted chip. */
+.docs-shell.fx .docs-code {
+  padding: 0.14em 0.42em;
+  border: 0;
+  border-radius: 6px;
+  background: var(--fx-tint-2);
+  color: var(--fx-deep);
+}
+
+.docs-shell.fx .docs-codeblock pre {
+  border: 1px solid var(--fx-line);
+  border-radius: 14px;
+  background: var(--fx-tint);
+  color: var(--mkt-ink);
+}
+
+.docs-shell.fx .docs-codeblock__lang {
+  color: var(--fx-muted);
+}
+
+/* ——— Answer, panels, steps ——— */
+.docs-shell.fx .docs-answer {
+  padding: 1.1rem 1.35rem;
+  border-color: var(--fx-line);
+  border-radius: 16px;
+  background: var(--fx-tint);
+}
+
+.docs-shell.fx .docs-answer__label {
+  margin-bottom: 0.35rem;
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+}
+
+.docs-shell.fx .docs-panel {
+  padding: 1.05rem 1.35rem 0.95rem;
+  border-color: var(--fx-line);
+  border-radius: 16px;
+}
+
+/* "Check it worked": the green ticks carry the meaning, the surface stays white. */
+.docs-shell.fx .docs-panel--verify {
+  border-color: var(--fx-line);
+  background: #fff;
+}
+
+.docs-shell.fx .docs-panel--verify .docs-panel__title {
+  color: var(--mkt-ink);
+}
+
+.docs-shell.fx .docs-panel--verify .docs-panel__title svg {
+  color: #059669;
+}
+
+.docs-shell.fx .docs-steps__item:not(:last-child)::before {
+  background: #e4d4ff;
+}
+
+.docs-shell.fx .docs-steps__num {
+  border-color: #e4d4ff;
+  background: var(--fx-tint-2);
+  color: var(--fx-deep);
+}
+
+.docs-shell.fx .docs-steps__note {
+  border-left-color: #e4d4ff;
+  color: var(--fx-body);
+}
+
+/* ——— Callouts: neutral by default, a restrained tint only where the
+   colour carries meaning (warning, done) ——— */
+.docs-shell.fx .docs-callout {
+  padding: 0.95rem 1.2rem;
+  border-radius: 16px;
+}
+
+.docs-shell.fx .docs-callout--info {
+  border-color: var(--fx-line);
+  background: var(--fx-tint);
+}
+
+.docs-shell.fx .docs-callout--info .docs-callout__icon {
+  color: var(--fx-muted);
+}
+
+.docs-shell.fx .docs-callout--tip {
+  border-color: #e4d4ff;
+  background: var(--fx-tint-2);
+}
+
+.docs-shell.fx .docs-callout--warning {
+  border-color: #f3e3c4;
+  background: #fffbf4;
+}
+
+.docs-shell.fx .docs-callout--warning .docs-callout__icon {
+  color: #b45309;
+}
+
+.docs-shell.fx .docs-callout--success {
+  border-color: #d3ecdf;
+  background: #f6fcf9;
+}
+
+/* ——— Tables: framed, tinted head ——— */
+.docs-shell.fx .docs-table-wrap {
+  border-color: var(--fx-line);
+  border-radius: 16px;
+}
+
+.docs-shell.fx .docs-table thead th {
+  border-bottom: 1px solid var(--fx-line);
+  background: var(--fx-tint);
+  font-size: 0.78rem;
+  letter-spacing: 0.01em;
+  color: var(--fx-body);
+}
+
+.docs-shell.fx .docs-table-caption {
+  padding: 0.85rem 1rem 0.8rem;
+  background: #fff;
+}
+
+.docs-shell.fx .docs-dl {
+  border-radius: 16px;
+}
+
+.docs-shell.fx .docs-dl__row {
+  padding: 0.85rem 1.2rem;
+}
+
+/* Troubleshooting: one framed block, a hairline between cases. */
+.docs-shell.fx .docs-fixes {
+  gap: 0;
+  overflow: hidden;
+  border: 1px solid var(--fx-line);
+  border-radius: 16px;
+}
+
+.docs-shell.fx .docs-fix {
+  padding: 1rem 1.2rem;
+  border: 0;
+  border-radius: 0;
+}
+
+.docs-shell.fx .docs-fix + .docs-fix {
+  border-top: 1px solid var(--fx-line);
+}
+
+/* ——— Screenshots and diagrams: hairline, 14px radius, no shadow.
+   The image, its marks and its labels are untouched. ——— */
+.docs-shell.fx .docs-figure__zoom {
+  border-color: var(--fx-line);
+  border-radius: 14px;
+  background: var(--fx-tint);
+  box-shadow: none;
+  transition: border-color 0.2s ease;
+}
+
+.docs-shell.fx .docs-figure__zoom:hover {
+  border-color: #d9ccf5;
+  box-shadow: none;
+}
+
+.docs-shell.fx .docs-figure__zoom:focus-visible {
+  outline: 2px solid #c4b5fd;
+}
+
+.docs-shell.fx .docs-figure__stage {
+  border-radius: 13px;
+}
+
+.docs-shell.fx .docs-figure__legend {
+  color: var(--docs-text);
+}
+
+.docs-shell.fx .docs-diagram__frame {
+  border-color: var(--fx-line);
+  border-radius: 14px;
+  background: var(--fx-tint);
+}
+
+.docs-shell.fx .docs-diagram__label {
+  color: var(--mkt-ink);
+}
+
+.docs-shell.fx .docs-diagram--text {
+  border: 1px solid var(--fx-line);
+  border-radius: 14px;
+  background: var(--fx-tint);
+}
+
+/* ——— Cell grids: "How do I..." tasks and related pages ——— */
+.docs-shell.fx .docs-tasks__title,
+.docs-shell.fx .docs-related__title {
+  margin: 0 0 0.75rem;
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  color: var(--fx-muted);
+}
+
+.docs-shell.fx .docs-tasks__grid,
+.docs-shell.fx .docs-related__grid {
+  gap: 1px;
+  overflow: hidden;
+  border: 1px solid var(--fx-line);
+  border-radius: 16px;
+  background: #fff;
+}
+
+.docs-shell.fx .docs-tasks__grid > li,
+.docs-shell.fx .docs-related__card {
+  min-width: 0;
+  background: #fff;
+  box-shadow: var(--fx-cell-lines);
+}
+
+.docs-shell.fx .docs-tasks__card {
+  padding: 0.95rem 2.6rem 0.95rem 1.15rem;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  transition: background-color 0.15s ease;
+}
+
+.docs-shell.fx .docs-related__card {
+  padding: 0.95rem 1.15rem;
+  border: 0;
+  border-radius: 0;
+  transition: background-color 0.15s ease;
+}
+
+.docs-shell.fx .docs-tasks__card:hover,
+.docs-shell.fx .docs-related__card:hover {
+  background: var(--fx-tint);
+}
+
+.docs-shell.fx .docs-tasks__card:hover .docs-tasks__q,
+.docs-shell.fx .docs-related__card:hover .docs-related__label {
+  color: var(--fx-deep);
+}
+
+.docs-shell.fx .docs-tasks__card:focus-visible,
+.docs-shell.fx .docs-related__card:focus-visible,
+.docs-shell.fx .docs-index__link:focus-visible,
+.docs-shell.fx .docs-pager__link:focus-visible,
+.docs-shell.fx .docs-faq__row summary:focus-visible {
+  outline: 2px solid #c4b5fd;
+  outline-offset: -2px;
+  border-radius: 0;
+}
+
+.docs-shell.fx .docs-tasks__arrow {
+  right: 1rem;
+  color: #b6b9c6;
+}
+
+.docs-shell.fx .docs-tasks__card:hover .docs-tasks__arrow {
+  color: var(--mkt-violet);
+}
+
+.docs-shell.fx .docs-tasks__note,
+.docs-shell.fx .docs-related__note {
+  color: var(--fx-muted);
+}
+
+.docs-shell.fx .docs-related__label svg {
+  color: #b6b9c6;
+}
+
+.docs-shell.fx .docs-related__card:hover .docs-related__label svg {
+  color: var(--mkt-violet);
+}
+
+/* ——— Docs home index: two columns in one frame ——— */
+.docs-shell.fx .docs-index__grid {
+  display: grid;
+  columns: auto;
+  gap: 0;
+  overflow: hidden;
+  border: 1px solid var(--fx-line);
+  border-radius: 18px;
+  background: #fff;
+}
+
+.docs-shell.fx .docs-index__col {
+  min-width: 0;
+}
+
+.docs-shell.fx .docs-index__col + .docs-index__col {
+  border-top: 1px solid var(--fx-line);
+}
+
+@media (min-width: 720px) {
+  .docs-shell.fx .docs-index__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .docs-shell.fx .docs-index__col + .docs-index__col {
+    border-top: 0;
+    border-left: 1px solid var(--fx-line);
+  }
+}
+
+.docs-shell.fx .docs-index__card {
+  margin: 0;
+  padding: 1.3rem 0 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+}
+
+.docs-shell.fx .docs-index__card + .docs-index__card {
+  border-top: 1px solid var(--fx-line);
+}
+
+.docs-shell.fx .docs-index__title,
+.docs-shell.fx .docs-index__blurb {
+  padding: 0 1.25rem;
+}
+
+.docs-shell.fx .docs-index__blurb {
+  margin: 0.3rem 0 1.05rem;
+  color: var(--fx-muted);
+}
+
+.docs-shell.fx .docs-index__link {
+  padding: 0.6rem 1.25rem;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.docs-shell.fx .docs-index__link:hover {
+  background: var(--fx-tint);
+  color: var(--fx-deep);
+}
+
+.docs-shell.fx .docs-index__link svg {
+  color: #b6b9c6;
+}
+
+.docs-shell.fx .docs-index__link:hover svg {
+  color: var(--mkt-violet);
+}
+
+/* ——— FAQ: one framed block with hairline rows ——— */
+.docs-shell.fx .docs-faq__list {
+  overflow: hidden;
+  border: 1px solid var(--fx-line);
+  border-radius: 16px;
+}
+
+.docs-shell.fx .docs-faq__row {
+  border-bottom: 0;
+}
+
+.docs-shell.fx .docs-faq__row + .docs-faq__row {
+  border-top: 1px solid var(--fx-line);
+}
+
+.docs-shell.fx .docs-faq__row[open] {
+  background: var(--fx-tint);
+}
+
+.docs-shell.fx .docs-faq__row summary {
+  padding: 1rem 1.2rem;
+}
+
+.docs-shell.fx .docs-faq__row summary:hover {
+  color: var(--fx-deep);
+}
+
+.docs-shell.fx .docs-faq__row p {
+  padding: 0 1.2rem 1.1rem;
+}
+
+/* ——— Foot: help line, then previous / next as two link cells ——— */
+.docs-shell.fx .docs-foot {
+  margin: clamp(2.5rem, 4vw, 3.25rem) calc(var(--fx-gut) * -1) 0;
+  border-top: 1px solid var(--fx-line);
+}
+
+.docs-shell.fx .docs-foot__help {
+  margin: 0;
+  padding: 1.15rem var(--fx-gut);
+  color: var(--fx-muted);
+}
+
+.docs-shell.fx .docs-foot__help a {
+  color: var(--fx-deep);
+}
+
+.docs-shell.fx .docs-pager {
+  gap: 0;
+  border-top: 1px solid var(--fx-line);
+}
+
+.docs-shell.fx .docs-pager__link {
+  gap: 0.3rem;
+  padding: 1.15rem var(--fx-gut);
+  border: 0;
+  border-radius: 0;
+  background: #fff;
+  transition: background-color 0.15s ease;
+}
+
+.docs-shell.fx .docs-pager > * + * {
+  border-top: 1px solid var(--fx-line);
+}
+
+.docs-shell.fx .docs-pager > .docs-pager__spacer + * {
+  border-top: 0;
+}
+
+@media (min-width: 640px) {
+  .docs-shell.fx .docs-pager > * + *,
+  .docs-shell.fx .docs-pager > .docs-pager__spacer + * {
+    border-top: 0;
+    border-left: 1px solid var(--fx-line);
+  }
+}
+
+.docs-shell.fx .docs-pager__link:hover {
+  background: var(--fx-tint);
+}
+
+.docs-shell.fx .docs-pager__dir {
+  font-size: 0.78rem;
+  color: var(--fx-muted);
+}
+
+.docs-shell.fx .docs-pager__dir svg {
+  color: #b6b9c6;
+  transition: color 0.15s ease;
+}
+
+.docs-shell.fx .docs-pager__title {
+  font-size: 0.98rem;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+}
+
+.docs-shell.fx .docs-pager__link:hover .docs-pager__title {
+  color: var(--fx-deep);
+}
+
+.docs-shell.fx .docs-pager__link:hover .docs-pager__dir svg {
+  color: var(--mkt-violet);
+}
+
+/* ——— Phone menu sheet: flat, hairline, the scrim does the separating ——— */
+.docs-shell.fx .docs-sheet__panel {
+  border: 1px solid var(--fx-line);
+  box-shadow: none;
+}
+
+.docs-shell.fx .docs-sheet__scrim {
+  background: rgba(12, 18, 34, 0.38);
+}
+
+.docs-shell.fx .docs-sheet__close {
+  background: var(--fx-tint-2);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .docs-shell.fx .docs-tasks__card,
+  .docs-shell.fx .docs-related__card,
+  .docs-shell.fx .docs-index__link,
+  .docs-shell.fx .docs-pager__link,
+  .docs-shell.fx .docs-pager__dir svg,
+  .docs-shell.fx .docs-figure__zoom,
+  .docs-shell.fx .docs-crumbs a {
+    transition: none;
+  }
+}

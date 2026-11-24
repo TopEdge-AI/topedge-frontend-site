@@ -1,6 +1,6 @@
-# TopEdge AI SEO: 15-day plan and daily log (18 Nov to 2 Dec 2026)
+# TopEdge AI SEO: plan and daily log (18 Nov 2026 onward; 30-day plan in section 8)
 
-**This file is the one plan and the one log.** It lives in the repo so every Claude account and session can read it. Every session reads it first and writes its day's log row at the end. It replaces the claude.ai docs (NNh35xPQKRDFbPQFoPyrEz and Rapg6dht2P14bug5nC7xH4) and `2026-11-15/00-AUDIT-AND-14-DAY-PLAN.md` from Day 1 below. Research from 15 Nov in `2026-11-15/` still stands.
+**This file is the one plan and the one log.** From 24 Nov 2026 the plan runs to Day 37: section 8 holds the 30-day plan, the working method and the care list, written from the full audit in `2026-11-24/full-audit/`. It lives in the repo so every Claude account and session can read it. Every session reads it first and writes its day's log row at the end. It replaces the claude.ai docs (NNh35xPQKRDFbPQFoPyrEz and Rapg6dht2P14bug5nC7xH4) and `2026-11-15/00-AUDIT-AND-14-DAY-PLAN.md` from Day 1 below. Research from 15 Nov in `2026-11-15/` still stands.
 
 ## 1. Goal
 
@@ -136,6 +136,7 @@ Stop rule (kept from 15 Nov): if India commercial impressions are flat two weeks
 
 | Day | Date | Page and what changed | Audit files | Off-page | Not done | Commit |
 |---|---|---|---|---|---|---|
+| 7c | Tue 24 Nov (owner request: full audit, 30-day plan, site-wide design) | **Full audit with every claude-seo sub-agent** (technical, content, schema, sitemap and links, performance, GEO, agent readiness, SXO, keyword clusters, backlinks, images, competitors) and a drift baseline of 43 live pages before any change. Findings ranked in `00-MASTER-AUDIT.md` (H1 to H11, M1 to M25, L1 to L11). **30-day plan** written as section 8 (Day 8 to Day 37, new Track D, working method, care list); DAILY-PROMPT is version 7. **Fixed in the repo:** landing page facts (RTO line now follows `sources.ts` unicommerceRto, unsourced "20% to 30% markup" removed, trial terms, setup time 30 minutes, "nothing is metered", "Immediate RTO reduction"); landing page footers carry 14 site links (check-landing-pages now guards the body only); Trustpilot read in the browser as 4.2 from 6 (`socialProof.json`); schema (one product description across 13 feature pages, ex-GST offers, Product Hunt in sameAs, About references the shared Organization, blog isPartOf id); llms.txt (broken link, App Store prices, yearly against monthly); `netlify.toml` (4 security headers, font and SVG caching); icons and manifest; FAQ questions are h3 in the shared accordion. **Design:** new framed layout system (`docs/DESIGN-SYSTEM.md`, `src/marketing/styles/frame.css`) applied to features (below the hero), pricing, Meta rates, customers, about, contact, services, features hub, integrations, the Shopify WhatsApp integration page, compare (5 templates, capability board byte-identical), blog index and post header, docs, tools (5), templates, festival and journey pages, 404, partner terms and home (below the hero). **Owner correction the same day:** the home hero (aurora image, cursor effect) and all feature page heroes were put back exactly as they were; rule added to the design doc and DAILY-PROMPT. New tool `seo-audit/tools/seo-diff.mjs` | `2026-11-24/full-audit/` (00 master, 01 to 12 reports, `drift/seo-diff.md`, `people-first/`) | 30 link prospects in `10-backlinks.md`; drafts only | Pushed to update-pricing on the owner's instruction the same evening. Checks re-run after the hero revert: `build:netlify` exit 0, `check-landing-pages` passed, seo-diff on 170 pages = 0 changed titles, descriptions, canonicals, robots or H1s, 34 page types loaded from the production build at 1440 and 375 with no overflow and one H1 each. **Day 8 first:** live check on a real phone, `drift_compare.py` against the 24 Nov baseline, IndexNow. Heroes of pages other than home and the 13 feature pages (features hub, pricing, customers, about, contact, services, compare, tools, templates) are still the new framed version: owner to say whether those revert too. People-first run on the new build: 85 of 158 pages flagged, not yet compared page by page with the 20 Nov run. No field Core Web Vitals, Search Console or OpenSEO data this session (no keys or connector). The plugin's `drift_compare.py` runs only against live URLs, so it runs after the deploy | not committed |
 | 7b | Tue 24 Nov (owner request, second deploy) | **Track C started (owner):** compare boards rebuilt after reverse-engineering wati.io/wati-vs-interakt and wati.io/wati-vs-aisensy (read 24 Nov). New template `CompareRefreshed` + data `compareRefresh.ts`: hero line, Start free and WhatsApp buttons, yellow short answer, "why Shopify brands switch" (3), capability board unchanged, inline CTA, "where X falls short and TopEdge AI does better" (3), "where X is the better pick", dated pricing table, four switch steps, 5 numbered always-open FAQs from real queries (OpenSEO India: wati pricing 2,400, interakt pricing 1,900, aisensy pricing 1,600, aisensy review 480, interakt review 170), closing CTA with WhatsApp; each board has its own Updated date. **Boards 1 to 3: /compare/interakt, /compare/wati, /compare/aisensy**, every fact re-read 24 Nov (WATI all three billing views, $4.99 Shopify add-on, 7-day trial, trigger caps; AiSensy monthly plans ₹1,500 to ₹45,000, Chatbot Flows ₹2,500, AI ₹1,350 per 1,000, App Store 4.1 from 56; Interakt web and Shopify app plans; TopEdge AI App Store 0 reviews). Titles "TopEdge AI vs X (2027): ..." 58 to 60 chars (compare title lock lifted by the owner, keyword rule 4.6d). **Plan:** section 3c (13 boards, three a day to Day 11), DAILY-PROMPT v6 (Track C), new skill `topedge-compare-board`. **Correction:** removed "an App Store search returned nothing" about Getgabs (the search page renders no results in our browser for any query, so it proved nothing). **Ahrefs** rest of warnings: noindex/no-outlinks/H1/word-count rows are /login, /signup and dash.topedgeai.com (intended); redirect chain is the http://www seed with 0 inlinks; 54 SoftwareApplication "missing rating" left (real App Store reviews only); "changed pages not submitted to IndexNow" fixed by a full sitemap submission. **OpenSEO site audit** (new, 175 pages): 0 critical, 0 warnings, 6 info (intended noindex) | `2026-11-24/people-first-compare/` | GSC list `2026-11-24/02-gsc-request-indexing.md` | Boards 4 to 13 on Days 8 to 11. Three-way and four-way boards need a three-column variant. Live 24 Nov (e4912a7, about 3.5 min after push): 3 boards HTTP 200 with new sections; Rich Results Test /compare/interakt 3 valid items, no errors; people-first repeated passages Interakt 69% to 35%, AiSensy 69% to 35%, WATI 58% to 25%, identical-H2 flag gone; IndexNow full sitemap (repo script HTTP 200) and OpenSEO 73 URLs | e4912a7 |
 | 7 | Tue 24 Nov (owner's prompt said Day 5, which was Done 20 Nov; ran the first row not Done) | **Track A /blog/best-whatsapp-apps-for-shopify** (body only, title and H1 locked): India 28 d "best whatsapp app for shopify" 41 impr, 7 clicks, pos 21.5. Every competitor price re-read 24 Nov on all billing views. **Five false facts corrected:** Getgabs App Store listing "not currently available" (was #2, now #11 with the fact stated; owner decision open), Dondy free plan is a chat button only (automation from $79.99), DelightChat lists cart recovery, COD verification and COD to prepaid on every plan and bills tickets only when a human replies, Zoko now Starter $0.015 per conversation / Plus 5,000 free, Updatrr no longer states no markup. **Added:** Meta's official WhatsApp app (free, 4.4 from 986, launched 11 Jul 2025; #1 India result for "whatsapp app for shopify") and Shopify Messaging ($0.024 India marketing, re-read). **New structure (owner rule 24 Nov):** question-first H2 "What is a WhatsApp app for Shopify?", six criteria H3s, dated 11-row table under H2 "Best WhatsApp commerce tools for Shopify stores" (GSC 70 impr @ 41), numbered entries "1. Name: best for X" with spec boxes, H2 "Best WhatsApp app for Shopify by job" with 7 one-line H3s (support apps @ 9.3, order notifications, free, COD), rupee bill at 100/500/1,500 orders (TopEdge AI plan + Meta fees; AiSensy and Interakt utility markups), 8 numbered FAQs from GSC and OpenSEO question forms. Description 146 with the singular keyword. Unsourced BYOK ₹0.10 to ₹0.30 and "RTO risk filtering" removed. **Track B /whatsapp-app-for-shopify** (review): no GSC impressions yet (indexed 20 Nov); not in the India top 11 for its keyword; keyword now in the line under the H1, question-first FAQ added, FAQs numbered, description 146 to 136. **Body fixes:** Getgabs facts in /blog/getgabs-alternative-shopify-whatsapp (table re-priced: Business ₹2,999; 2 arrows removed), /compare/getgabs description and matrix, /blog/zoko-alternative-shopify-india bullet; Dondy free-plan claim in /blog/best-shopify-app-for-abandoned-cart-recovery-india; Dondy review count in its alternative post. **Ahrefs (signed in, 23 Nov crawl):** health 100, 0 errors, 113 warnings, AI Discoverability 98. Fixed: 51 pages with a nofollow inlink (all from noindex,nofollow /partners/terms; noindex pages now "noindex, follow"), wa.me 302 links on share buttons and LP contact links (now api.whatsapp.com/send), aisensy.com 307 (now www). Left: bitespeed.co/pricing 301 (it is the evidence for the redirect claim), Interakt 302 only for Ahrefs' US crawler (200 for browsers), Trustpilot 403 bot block, rahuldsarker.co "Deployment Paused" 402 (owner). **Template:** post field `faqHeading`, CSS-numbered FAQ questions sitewide (schema text unchanged). **Rule added:** DAILY-PROMPT 5.16, step 3b here, seo-day and landing-page skills | `2026-11-24/page-audits/best-whatsapp-apps-blog/` (gsc exports, before/ and after/ onpage-audit.pdf, analysis-report.pdf); `2026-11-24/page-audits/whatsapp-app-for-shopify-lp/` (before/, after/); `2026-11-24/people-first-before/`, `people-first-after/` | YouTube demo 1 outline in `2026-11-24/01-day-7-owner-actions.md` (owner records) | Tool after: post 85 to 87 (2 fails are the locked title and H1), LP 90 to 91, 0 fails (was 1). People-first: post 0 before and 0 after, Getgabs post 1 (arrows) to 0, cart shortlist and LP 0. Editing the Getgabs compare data moved the shared compare "Updated" date on all two-way and three-way boards (the Day 14 issue; the change itself is real). On-page tool used go-apps.io (pos. 4) instead of shopplaza.io (pos. 3, a setup guide). The account blog SOP skill (accordion FAQ) cannot be edited from the repo; DAILY-PROMPT 5.15 and 5.16 win. Live 24 Nov (1f1d8d5, about 3.5 min after push): 9 URLs HTTP 200 with new text; Rich Results Test on the post: 3 valid items, no errors; IndexNow: repo script HTTP 200, OpenSEO 8 submitted. Monday scorecard (Day 8) not run today | 1f1d8d5 |
 | 6c | Sun 22 Nov (owner request, third deploy) | Click400 Technologies entry rebuilt from its Partner Directory profile (owner link: Select, Jodhpur, since 2021, team 1 to 10, 25+ active projects, India top market, six verified clients); "profile not found" lines removed. /features/cod-confirmation: image tiles and showcase removed, COD film is the only visual (owner: no generated images where films exist). 27 unused files deleted from public (feature-clip files all checked against clips.tsx and kept). Sitewide metadata audit of 169 indexable pages: no duplicate titles or descriptions, canonicals and og:url correct everywhere; fixed landing-page Twitter tags and og:image:alt, privacy/terms og:site_name, default OG alt, docs title. 34 titles still say 2026: left until each page's facts are re-read (changing the year alone is a freshness signal Google's guidance warns against) | - | - | Generated premium images were made and then removed at the owner's request; none shipped | 83da0f7 |
@@ -183,3 +184,100 @@ Stop rule (kept from 15 Nov): if India commercial impressions are flat two weeks
 - 19 Nov: the 18 Nov session gave two different day numbers ("say Day 4", then "say Day 2"), so this file had restarted at Day 1 = 18 Nov while the owner kept counting from 15 Nov. Fixed the same day: the table and log now use the owner's count (18 Nov = Day 3, 19 Nov = Day 4). The AiSensy page ran on 19 Nov as Day 4; the pillar and Bitespeed pages became Days 5 and 6; every later page keeps its date. The owner also asked for a full Ahrefs and Search Console sweep on 19 Nov (results in the Day 4 row).
 - 24 Nov: the owner's prompt said "Day 5" (done 20 Nov), so the session ran Day 7, the first row not Done. The next prompt should say Day 8. The owner also added the question-first and numbered-FAQ rule (DAILY-PROMPT 5.16).
 - 22 Nov: the owner ran Day 6 on Sun 22 Nov (planned for Sat 21 Nov), so each later row runs one calendar day after the date in its row. Day numbers stay the owner's count. The owner also asked for a new post for Click400 and for the blog UI/UX SOP to be applied across every post; both shipped as part of Day 6.
+
+## 8. The 30-day plan (Day 8 to Day 37), from the 24 Nov 2026 full audit
+
+The owner asked on 24 Nov for the plan to stretch to 30 days and to carry everything the full audit found. Sections 3, 3b and 3c stay as written for Days 8 to 17; this section adds a fourth track to those days and then Days 18 to 37. Evidence for every row is in `2026-11-24/full-audit/00-MASTER-AUDIT.md` (finding numbers H1 to H11, M1 to M25, L1 to L11 are from that file).
+
+### 8.1 The four tracks
+
+| Track | What | Source of the day's item |
+|---|---|---|
+| A | One blog page, full audit (section 2, step 6) | Section 3, then the cluster map in `2026-11-24/full-audit/09-keyword-clusters.md` |
+| B | One landing page or new page | Section 3b, then section 8.3 |
+| C | Compare boards, three a day | Section 3c |
+| D | One engineering or design item (new) | Section 8.2 and 8.3 |
+
+One deploy a day. A day that cannot finish all four ships what is done and moves the rest down one row; it never skips the checks.
+
+### 8.2 Track D added to Days 8 to 17
+
+| Day | Track D item | Finding |
+|---|---|---|
+| 8 | After the redesign deploy: check every redesigned template on a real phone and at 375, 768 and 1440; fix what is off. Then `BlogPost.tsx` `isPartOf` and the `/about` duplicate Organization | M20, M21 |
+| 9 | Split the blog data so a post page loads only its own body; preload the post cover | H7 |
+| 10 | PostHog after idle and without the survey bundle (the session recorder stays unless the owner says replays are no longer watched); lazy-load `animations-*.js` | M12, M13 |
+| 11 | Critical CSS inline, the global sheet non-blocking | M11 |
+| 12 | Re-measure Lighthouse on the 11 pages in `05-performance-cwv.md`; fix any CLS still above 0.1 | M14 |
+| 13 | Home LCP image priority (home pass, owner agrees first because home is frozen) | M15 |
+| 14 | OG images, batch 1: pricing, features hub, customers, compare hub, tools hub (real product UI, 1200 by 630) | M22 |
+| 15 | Video posters for feature films; "Sample store data" caption under films with demo numbers | M23, L10 |
+| 16 | Image sweep by template: `width` and `height`, alts over 125 characters, empty alts on real images | L9 |
+| 17 | Skip link, `aria-controls` on the pricing tabs; scorecard | L8 |
+
+### 8.3 Days 18 to 37
+
+Dates assume one working session a day from Thu 3 Dec; a missed day moves every later row, as before. Each new page needs the live India SERP read first, a dated first-hand fact, the people-first gate and three inbound links. "Verify first" means a fact has to be re-read before the page is written.
+
+| Day | Track A or B (the page) | Track D or off-page | Finding or cluster |
+|---|---|---|---|
+| 18 | New post `/blog/best-cod-confirmation-apps-shopify-india`; add a WhatsApp vs IVR vs OTP table to `/features/cod-confirmation` | 3 outreach emails | H11, COD cluster |
+| 19 | `/whatsapp-app-for-shopify`: "your options" table (Meta's free app, Shopify Messaging, a broadcast-first app, TopEdge AI), App Store button in the hero; inbound links from home (owner agrees), `/features`, `/pricing` and three posts | Link matrix, first 10 links (`04`, section 3) | H8, H10, M19 |
+| 20 | New board `/compare/shopify-messaging`. Verify first: the launch date (29 Jul or 28 Oct 2026) on Shopify's changelog | App Store review round (owner) | L11, cluster 1 |
+| 21 | New post `/blog/fake-cod-orders-shopify-india` | 3 outreach emails | COD cluster |
+| 22 | Two hand-written template pages: `/whatsapp-templates/cod-confirmation`, `/whatsapp-templates/abandoned-cart` (variants, Meta category, price, approval notes, copy buttons). Not a programmatic set | Fix "ships 11 templates" against the 14 shown | Clusters 2, 3, 5 |
+| 23 | Scorecard. New post `/blog/how-to-enable-cod-shopify-india` | Monday checks | COD cluster |
+| 24 | New post `/blog/whatsapp-marketing-for-shopify` | Blog closing banner matched to the post's topic | Cluster 1, M17 |
+| 25 | Customer stories: one detail page each for Delitech and Apex Light, only with numbers the brands approve. If no numbers yet: feature page depth, batch 1 (journeys, flow-builder, campaigns): one sourced figure, one table, a problem section | Owner asks the two brands for figures | H9, M16 |
+| 26 | Feature page depth, batch 2 (audience-crm, opt-in-tools, analytics, intent-detection) | Link matrix, next 10 | M16 |
+| 27 | Feature page depth, batch 3 (ai-brain after the provider facts are settled, meta-manager, chat-rules, warranty) | AlternativeTo, SaaSHub, G2 profile checks (owner) | M8, M16 |
+| 28 | New post `/blog/shiprocket-engage-alternative-shopify` | 3 outreach emails | Alternatives cluster |
+| 29 | Integration detail pages, only for integrations that are live (owner confirms the list): what it does, setup steps with screenshots, flows, FAQs | | Competitor gap 5 |
+| 30 | Scorecard. Public changelog page if the owner wants one: dated entries, New, Improved, Fixed | Monday checks | Competitor gap 10 |
+| 31 | India D2C glossary, part 1 (RTO, NDR, COD to prepaid, utility and marketing templates, and so on): written definitions that link to features and tools | | Competitor gap 15 |
+| 32 | Glossary, part 2 | Per-page `lastmod` for features and festival pages | L4 |
+| 33 | New post on Bitespeed pricing (re-read bitespeed.co first); researched boards for QuickReply, DelightChat and LimeChat, one a day from here | | Clusters 6, 7 |
+| 34 | Hub post: best Shopify apps for Indian stores (our pick only where it is true) | Content-Security-Policy in Report-Only | Cluster 8, H6 |
+| 35 | `/pricing`: compact bill estimator (orders and message mix in, plan plus Meta fees out) and the longer comparison table behind a toggle | Owner decision H5 applied | Competitor gaps 6, 7 |
+| 36 | People-first re-run over every changed page; drift comparison against the 24 Nov baseline; fix regressions | | Section 8.5 |
+| 37 | Final scorecard against section 8.4, then write the next plan from what moved | Off-page review | |
+
+### 8.4 Targets for Day 37 (Estimates, not promises)
+
+| Measure | 24 Nov reading | Target |
+|---|---|---|
+| Day pages with the main query at India position 10 or better | Read on the Day 10 scorecard | 6 |
+| India non-brand clicks, 7 days | Read on the Day 10 scorecard | 15 |
+| Shopify App Store reviews | 0 (checked live 24 Nov) | 5 |
+| Real referring domains gained since 18 Nov | 0 | 5 |
+| Lab LCP, mobile, slow 4G, median of 3 runs on a blog post | 5.6 to 5.9 s (`05`) | under 3.5 s |
+| Lab CLS on `/features/*` | 0.14 to 0.19 (`05`) | under 0.1 |
+| Blog post first-party JavaScript | 1.69 MB raw (`01`) | under 600 KB |
+| Pages on the framed layout | See the Day 7c log row | Every marketing template |
+
+The stop rule in section 4 still applies: if India commercial impressions are flat two weeks running, stop page rewrites and put the days into reviews, list inclusion and links. The audit says the same thing from three directions: the App Store listing with 0 reviews and the thin customer proof are the largest limits, and neither is a website fix.
+
+### 8.5 How every session works (read this before touching anything)
+
+1. Read this file, `DAILY-PROMPT.md`, memory, then `git fetch`, `git status`, `git log`.
+2. **Baseline before any change:** `claude-seo run drift_baseline.py --skip-cwv <live-url>` for each page the day will touch. Compare after the deploy with `drift_compare.py`. Title, description, canonical, H1 and schema must be the same unless the day's plan says they change.
+3. **Use the skills, not memory.** `claude-seo` for planning, building and verifying (the phases in the repo `CLAUDE.md`); `topedge-positioning` for any sentence that names the product; `google-search-policies` before publishing; `topedge-landing-page`, `topedge-compare-board`, `topedge-seo-day` for their page types.
+4. **Design:** every page uses the framed layout in `docs/DESIGN-SYSTEM.md`. New sections are built from `src/marketing/styles/frame.css`. No new card style, no new colour, no bespoke FAQ or closing block.
+5. **Facts:** a number goes on a page only if it is in `src/data/sources.ts` with the date it was read, or it was read in the browser that day. Review counts and ratings come from `socialProof.json` only.
+6. **Sub-agents:** give each one a written brief with its own file list, the hard rules, and the screenshot tools; no two agents edit the same file; shared files (`frame.css`, `marketing.css`, navbar, footer, `MarketingCtaBand`, `FaqAccordion`, anything under `data/`) are edited by the main session only.
+7. **Checks before a deploy:** `npm run build:netlify` exits 0; `node scripts/check-landing-pages.mjs` (not in the build chain); people-first gate on changed pages; screenshots at 1440, 768 and 375 of every changed template.
+8. **After a deploy:** live check, IndexNow, the Search Console request list for the owner, the log row here.
+9. Label every claim in a report Verified, Estimate or Hypothesis, and never report a score that was not run.
+
+### 8.6 What to take care of
+
+- **Never** change a film, a video or a screenshot; never invent a review, a customer, a number or an author; never add Product schema; never use a humaniser.
+- Home and feature page copy is frozen except factual fixes. Their layout may follow the design system.
+- The capability board on compare pages stays as it is. Editing `compareCompetitors.ts` or `compareFeatureMatrix.ts` re-dates every older board.
+- Blog article bodies keep the 22 Nov SOP: always-open numbered FAQ cards, the plain yellow Direct answer box, the contents rail.
+- `/privacy`, `/terms` and the two landing pages are static HTML. Landing pages are generated by `scripts/generate-landing-pages.mjs` from `scripts/lp/`; edit the generator, never the output.
+- A new blog post needs four places to agree (post data, `BLOG_SLUGS`, both cover files, `sources.ts`).
+- Use 2027 in new or rewritten titles, descriptions and headings. Keep reading dates as read.
+- No em dashes. One contact email: team@topedgeai.com. Always "TopEdge AI".
+- Do not target chatbot, bulk sender, BSP or Meta Flows keywords, or rival-versus-rival queries.
+- The Yearly default on `/pricing` was chosen to protect annual plans. Do not change it without the owner (finding H5).

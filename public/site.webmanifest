@@ -1,10 +1,11 @@
 {
-  "short_name": "TopEdge",
-  "name": "TopEdge — WhatsApp automation for Shopify India",
-  "description": "WhatsApp automation, cart recovery, and ecommerce journeys for Shopify D2C brands in India.",
+  "short_name": "TopEdge AI",
+  "name": "TopEdge AI: all-in-one D2C software for Shopify stores",
+  "description": "TopEdge AI is all-in-one D2C software for Shopify stores, built as one suite.",
   "icons": [
-    { "src": "/icons/icon-192x192.png", "sizes": "192x192", "type": "image/png", "purpose": "any maskable" },
-    { "src": "/icons/icon-512x512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
+    { "src": "/icons/icon-192x192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "/web-app-manifest-192x192.png", "sizes": "192x192", "type": "image/png", "purpose": "maskable" },
+    { "src": "/web-app-manifest-512x512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
   ],
   "start_url": "/",
   "display": "standalone",

@@ -1,0 +1,305 @@
+/* ====================================================================
+   /services: Framed layout (24 Nov 2026)
+   --------------------------------------------------------------------
+   The page sits in the shared frame (styles/frame.css): one column
+   between two hairline rails, hairline rows between sections.
+
+     hero        centred, breadcrumb, one highlight, review badges
+     intro       one paragraph on a tinted strip
+     outcomes    seven split rows: the promise and its links on white,
+                 the deliverables as a tick list on the tinted half
+     steps       four step cells
+     questions   the shared accordion
+     proof       the shared trust band, its two stories as joined cells
+     closing     the shared CTA card
+
+   The page used Tailwind utility cards with drop shadows before; those
+   are gone. Every rule is scoped `.mkt-svc.fx`.
+ * ==================================================================== */
+
+/* ——— Hero ——— */
+.mkt-svc.fx .mkt-svc__hero {
+  padding: calc(var(--mkt-nav-h, 4.5rem) + clamp(2.25rem, 5vw, 4rem)) var(--fx-gut) clamp(2.5rem, 4.5vw, 3.5rem);
+  border-bottom: 1px solid var(--fx-line);
+  text-align: center;
+}
+
+.mkt-svc.fx .mkt-svc__title {
+  max-width: 24ch;
+  margin: 0 auto;
+  font-family: var(--mkt-font);
+  font-size: clamp(2.05rem, 4.6vw, 3.35rem);
+  font-weight: 400;
+  line-height: 1.16;
+  letter-spacing: -0.042em;
+  color: var(--mkt-ink);
+  text-wrap: balance;
+}
+
+.mkt-svc.fx .mkt-svc__title-accent {
+  padding: 0.02em 0.24em 0.1em;
+  border-radius: 0.3em;
+  background: #e4d4ff;
+  color: #0c1222;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
+
+.mkt-svc.fx .mkt-svc__sub {
+  max-width: 40rem;
+  margin: 1.35rem auto 0;
+  font-size: clamp(1.02rem, 1.4vw, 1.15rem);
+  line-height: 1.55;
+  color: var(--fx-muted);
+  text-wrap: pretty;
+}
+
+.mkt-svc.fx .mkt-svc__proof {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+/* ——— Intro strip ——— */
+.mkt-svc.fx .mkt-svc__intro p {
+  max-width: 50rem;
+  margin: 0 auto;
+  font-size: 1.02rem;
+  line-height: 1.7;
+  color: var(--fx-body);
+  text-align: center;
+  text-wrap: pretty;
+}
+
+/* ——— Section heads ——— */
+.mkt-svc.fx .fx-head__title .mkt-hl {
+  margin: 0;
+}
+
+.mkt-svc.fx .mkt-svc__head {
+  margin-bottom: 0;
+  padding: clamp(3.25rem, 6.5vw, 5.5rem) var(--fx-gut) clamp(2rem, 4vw, 3rem);
+  max-width: none;
+}
+
+.mkt-svc.fx .mkt-svc__head .fx-head__title {
+  max-width: 42rem;
+  margin: 0 auto;
+}
+
+/* ——— Outcomes: split rows ——— */
+.mkt-svc.fx .mkt-svc__rows {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  counter-reset: svc-row;
+}
+
+/* Source order is title, copy, deliverables, links (unchanged); the grid
+   seats the links under the copy and the deliverables beside both. */
+.mkt-svc.fx .mkt-svc__row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-areas: 'main' 'links' 'list';
+  border-top: 1px solid var(--fx-line);
+  counter-increment: svc-row;
+  scroll-margin-top: calc(var(--mkt-nav-h, 4.5rem) + 1rem);
+}
+
+.mkt-svc.fx .mkt-svc__row-main {
+  grid-area: main;
+  padding: clamp(1.75rem, 3.4vw, 2.75rem) var(--fx-gut) 0;
+}
+
+.mkt-svc.fx .mkt-svc__row-main::before {
+  content: counter(svc-row, decimal-leading-zero);
+  display: block;
+  margin-bottom: 1.1rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: var(--mkt-violet);
+  font-variant-numeric: tabular-nums;
+}
+
+.mkt-svc.fx .mkt-svc__row-title {
+  max-width: 26rem;
+  margin: 0;
+  font-size: clamp(1.2rem, 1.9vw, 1.45rem);
+  font-weight: 600;
+  line-height: 1.28;
+  letter-spacing: -0.024em;
+  color: var(--mkt-ink);
+  text-wrap: balance;
+}
+
+.mkt-svc.fx .mkt-svc__row-copy {
+  max-width: 32rem;
+  margin: 0.8rem 0 0;
+  font-size: 0.98rem;
+  line-height: 1.65;
+  color: var(--fx-body);
+}
+
+.mkt-svc.fx .mkt-svc__row-links {
+  grid-area: links;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  gap: 0.5rem 1.35rem;
+  padding: 1.35rem var(--fx-gut) clamp(1.75rem, 3.4vw, 2.75rem);
+}
+
+.mkt-svc.fx .mkt-svc__row-links a,
+.mkt-svc.fx .mkt-svc__note a {
+  font-weight: 500;
+  color: var(--mkt-violet);
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+.mkt-svc.fx .mkt-svc__row-links a {
+  font-size: 0.92rem;
+}
+
+.mkt-svc.fx .mkt-svc__row-links a:hover,
+.mkt-svc.fx .mkt-svc__note a:hover {
+  color: var(--fx-deep);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.mkt-svc.fx .mkt-svc__row-links a:focus-visible,
+.mkt-svc.fx .mkt-svc__note a:focus-visible {
+  outline: 2px solid #c4b5fd;
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+.mkt-svc.fx .mkt-svc__row-list {
+  grid-area: list;
+  align-content: start;
+  gap: 0.85rem;
+  padding: clamp(1.5rem, 3.4vw, 2.75rem) var(--fx-gut);
+  border-top: 1px solid var(--fx-line);
+  background: var(--fx-tint);
+}
+
+.mkt-svc.fx .mkt-svc__row-list li {
+  font-size: 0.97rem;
+}
+
+.mkt-svc.fx .mkt-svc__row-list li::before {
+  background-color: #e9e0ff;
+}
+
+@media (min-width: 860px) {
+  .mkt-svc.fx .mkt-svc__row {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    grid-template-rows: auto 1fr;
+    grid-template-areas: 'main list' 'links list';
+  }
+
+  /* The first tick lines up with the row title, under the row number. */
+  .mkt-svc.fx .mkt-svc__row-list {
+    padding-top: calc(clamp(1.75rem, 3.4vw, 2.75rem) + 2.45rem);
+    border-top: 0;
+    border-left: 1px solid var(--fx-line);
+  }
+}
+
+/* ——— Steps ——— */
+/* The step number is the page's own "1"; the leading zero is drawn. */
+.mkt-svc.fx .mkt-svc__step-num::before {
+  content: '0';
+}
+
+.mkt-svc.fx .mkt-svc__note {
+  max-width: 44rem;
+  margin: clamp(1.75rem, 3.5vw, 2.5rem) auto 0;
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: var(--fx-muted);
+  text-align: center;
+  text-wrap: pretty;
+}
+
+/* ——— Proof: the shared trust band, flattened into the frame ——— */
+.mkt-svc.fx .mkt-trust {
+  max-width: none;
+}
+
+.mkt-svc.fx .mkt-trust__title {
+  max-width: 42rem;
+  font-size: clamp(1.6rem, 3.2vw, 2.3rem);
+  line-height: 1.22;
+  letter-spacing: -0.034em;
+}
+
+.mkt-svc.fx .mkt-trust__title .mkt-hl {
+  margin: 0;
+  padding: 0.08em 0.28em 0.14em;
+  color: #0c1222;
+}
+
+.mkt-svc.fx .mkt-trust__head {
+  gap: 1.25rem;
+}
+
+.mkt-svc.fx .mkt-trust__stories {
+  gap: 1px;
+  max-width: 62rem;
+  margin: clamp(2rem, 4vw, 2.75rem) auto 0;
+  overflow: hidden;
+  border: 1px solid var(--fx-line);
+  border-radius: var(--fx-radius);
+  background: #fff;
+}
+
+.mkt-svc.fx .mkt-trust__story {
+  padding: clamp(1.5rem, 2.8vw, 2.1rem);
+  border: 0;
+  border-radius: 0;
+  box-shadow: var(--fx-cell-lines);
+}
+
+.mkt-svc.fx .mkt-trust__headline {
+  font-size: 1.08rem;
+  font-weight: 600;
+  letter-spacing: -0.018em;
+}
+
+.mkt-svc.fx .mkt-trust__quote p {
+  color: var(--fx-body);
+}
+
+.mkt-svc.fx .mkt-trust__by {
+  border-top-color: var(--fx-line);
+}
+
+.mkt-svc.fx .mkt-trust__more a:hover {
+  color: var(--fx-deep);
+}
+
+@media (max-width: 899px) {
+  .mkt-svc.fx .mkt-svc__hero {
+    padding-top: calc(var(--mkt-nav-h, 4rem) + 1.75rem);
+  }
+}
+
+@media (max-width: 599px) {
+  .mkt-svc.fx .mkt-svc__title {
+    font-size: clamp(1.9rem, 8.4vw, 2.3rem);
+  }
+
+  .mkt-svc.fx .mkt-svc__intro p {
+    text-align: left;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mkt-svc.fx .mkt-svc__row-links a,
+  .mkt-svc.fx .mkt-svc__note a {
+    transition: none;
+  }
+}

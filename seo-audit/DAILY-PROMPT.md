@@ -1,16 +1,24 @@
-# Daily prompt (version 6, 24 Nov 2026)
+# Daily prompt (version 7, 24 Nov 2026, after the full audit)
 
-Paste everything below the line into a new session each day. Change only N and the date. N is the owner's own count (Day 1 = 15 Nov, Day 3 = 18 Nov, Day 5 = 20 Nov, Day 6 = 22 Nov, Day 7 = 24 Nov, so the next is Day 8). Run the row labelled Day N in `seo-audit/PLAN-AND-LOG.md` section 3. If that row is already Done, run the first row below it that is not Done and say so in one line. Never restart the count.
+Paste everything below the line into a new session each day. Change only N and the date. N is the owner's own count (Day 1 = 15 Nov, Day 3 = 18 Nov, Day 5 = 20 Nov, Day 6 = 22 Nov, Day 7 = 24 Nov, so the next is Day 8). **Start at Day 8.** Run the row labelled Day N in `seo-audit/PLAN-AND-LOG.md`: section 3 (Tracks A, B, C) plus section 8.2 (Track D) for Days 8 to 17, section 8.3 for Days 18 to 37. If that row is already Done, run the first row below it that is not Done and say so in one line. Never restart the count.
 
 ---
 
 Continue TopEdge SEO, Day [N]. Today's date: [DD/MM/YY].
 
-You are my SEO, AEO and GEO agent for TopEdge AI (topedgeai.com). Goal for these 15 days: move our ICP pages that rank on Google pages 2 to 5 up to page 1, and build the keyword landing pages in PLAN-AND-LOG section 3b. Every day runs three tracks: **Track A**, one blog page with the full on-page, off-page and AEO audit (Search Console export, the exploremayank on-page tool, the analysis prompt as a PDF, then fixes); **Track B**, one landing page from the map (section 3b); **Track C**, three comparison boards refreshed to the new compare template (section 3c, `src/marketing/data/compareRefresh.ts`). Do Day [N] only, end to end, then deploy. Use the project skills `topedge-seo-day`, `topedge-landing-page`, `topedge-compare-board` and `google-search-policies` in `.claude/skills/`. Never run two days in one session. Do not re-plan unless today's data proves the plan wrong; if it does, say so first, then change the plan file.
+You are my SEO, AEO and GEO agent for TopEdge AI (topedgeai.com). Goal for these 30 days: move our ICP pages that rank on Google pages 2 to 5 up to page 1, and build the keyword landing pages in PLAN-AND-LOG section 3b. Every day runs three tracks: **Track A**, one blog page with the full on-page, off-page and AEO audit (Search Console export, the exploremayank on-page tool, the analysis prompt as a PDF, then fixes); **Track B**, one landing page from the map (section 3b); **Track C**, three comparison boards refreshed to the new compare template (section 3c, `src/marketing/data/compareRefresh.ts`). Do Day [N] only, end to end, then deploy. Use the project skills `topedge-seo-day`, `topedge-landing-page`, `topedge-compare-board` and `google-search-policies` in `.claude/skills/`. Never run two days in one session. Do not re-plan unless today's data proves the plan wrong; if it does, say so first, then change the plan file.
+
+**Added in version 7 (owner, 24 Nov 2026):**
+- The plan now runs 30 days, Day 8 to Day 37. It is in `seo-audit/PLAN-AND-LOG.md` section 8, with the working method (8.5) and the care list (8.6). Read both every day.
+- Every day has a fourth track, **Track D**: one engineering or design item from section 8.2 or 8.3.
+- Every finding of the 24 Nov full audit (technical, content, schema, links, performance, GEO, agent readiness, SXO, keyword clusters, backlinks, competitors, images) is in `seo-audit/2026-11-24/full-audit/00-MASTER-AUDIT.md`, numbered H1 to H11, M1 to M25, L1 to L11, each with its fix and status. When a day's row names a finding number, open that file and the specialist report it cites before you start. When you fix one, change its Status there.
+- Design: every page follows `docs/DESIGN-SYSTEM.md` (framed layout, `src/marketing/styles/frame.css`). **Never touch a hero section**: the home hero (aurora image, cursor effect, film) and every feature page hero stay exactly as they are. Never change a film or video.
+- Before a deploy that is meant to change layout only, run `node seo-audit/tools/seo-diff.mjs dist` and read the report: it must show 0 pages with a changed title, description, canonical, robots value or H1.
+- Day 8 starts with the items left open on 24 Nov: see the newest log row in section 5.
 
 ## 1. READ THESE FIRST, IN THIS ORDER
 
-1. **`seo-audit/PLAN-AND-LOG.md` in the repo.** It is the only plan and the only log. Read all of it: the daily routine (section 2), the day table (section 3), the last log rows (section 5) and the open owner items (section 6). Check the log before doing anything, so nothing is redone. The claude.ai docs are retired.
+1. **`seo-audit/PLAN-AND-LOG.md` in the repo.** It is the only plan and the only log. Read all of it, section 8 included: the daily routine (section 2), the day table (section 3), the last log rows (section 5) and the open owner items (section 6). Check the log before doing anything, so nothing is redone. The claude.ai docs are retired.
 2. `seo-audit/PAGE-ANALYSIS-PROMPT.md`: the analysis prompt you run on the day's page.
 2a. `seo-audit/2026-11-20/01-google-ai-content-guidance.md`: what Google says about AI content, the people-first rules and every spam policy with our rule. Every page must pass it.
 3. Saved memory, starting with topedge-seo-plan-nov15, then topedge-seo-14-day-plan, topedge-seo-state, topedge-blog-publishing-checklist, topedge-link-exchange-partners, topedge-static-page-duplicates, feedback-no-cluttered-visible-copy. Memory is point-in-time: verify against the code. If memory conflicts with the plan file, the plan file wins.

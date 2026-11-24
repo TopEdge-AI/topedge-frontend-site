@@ -152,7 +152,7 @@ export default function FestivalLibrary() {
         </p>
       ) : (
         <>
-          <ul className="mkt-flib__grid">
+          <ul className="mkt-flib__grid fx-cells">
             {shown.map((item) => (
               <li key={item.id}>
                 <FestivalTemplateCard item={item} />
@@ -164,7 +164,7 @@ export default function FestivalLibrary() {
             <div className="mkt-flib__more">
               <button
                 type="button"
-                className="mkt-flib__more-btn"
+                className="mkt-btn-ghost mkt-flib__more-btn"
                 onClick={() => setLimit((n) => n + PAGE)}
               >
                 Show {Math.min(PAGE, results.length - shown.length)} more
@@ -181,7 +181,7 @@ export default function FestivalLibrary() {
           <div className="mkt-fdl mkt-fdl--after">
             <button
               type="button"
-              className="mkt-fdl__btn"
+              className="mkt-btn-ghost mkt-fdl__btn"
               onClick={() =>
                 downloadTemplatesCsv(
                   results,

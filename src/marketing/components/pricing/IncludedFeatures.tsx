@@ -110,7 +110,7 @@ export default function IncludedFeatures({ items }: { items: string[] }) {
   if (!groups.length) return null;
 
   return (
-    <section className="mkt-included" aria-label="Included on every plan">
+    <section className="mkt-included fx-sec" aria-label="Included on every plan">
       <PricingSectionHead
         className="mkt-included__head"
         title="Included"
@@ -123,7 +123,7 @@ export default function IncludedFeatures({ items }: { items: string[] }) {
         }
       />
       <div className="mkt-included__card">
-        <div className="mkt-included__grid">
+        <div className="mkt-included__grid fx-cells">
           {groups.map((group) => (
             <div key={group.id} className="mkt-included__col">
               <p className="mkt-included__col-title">{group.title}</p>

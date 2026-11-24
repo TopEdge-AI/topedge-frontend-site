@@ -1,14 +1,16 @@
-import { Link, Navigate } from 'react-router-dom';
+import { Navigate } from 'react-router-dom';
 import MarketingSEO from '../components/MarketingSEO';
 import MarketingPage from '../components/MarketingPage';
 import MarketingCtaBand from '../components/MarketingCtaBand';
-import { Section, SectionHeading, PrimaryButton } from '../components/ui';
-import { TopicBlockView, TopicToc } from '../components/topic/TopicBlocks';
+import { PrimaryButton, GhostButton } from '../components/ui';
+import { TopicToc } from '../components/topic/TopicBlocks';
 import FaqAccordion from '../components/topic/FaqAccordion';
 import JourneyFlow from '../components/journey/JourneyFlow';
 import JourneyHero from '../components/journey/JourneyHero';
 import JourneyCard from '../components/journey/JourneyCard';
 import TrustBand from '../components/journey/TrustBand';
+import { FxHead, FxLinks } from '../components/journey/Framed';
+import FxBlocks from '../components/journey/FramedBlocks';
 import { JOURNEY_EXAMPLES, journeyExampleBySlug } from '../data/journeyExamples';
 import {
   breadcrumbJsonLd,
@@ -47,8 +49,15 @@ export default function JourneyExamplePage({ slug }: { slug: string }) {
           ]),
         ]}
       />
-      <MarketingPage>
+      <MarketingPage className="mkt-jx mkt-jx--example fx">
+        <div className="fx-shell">
         <JourneyHero
+          crumbs={[
+            { name: 'Home', path: '/' },
+            { name: 'Journey examples', path: INDEX_PATH },
+            { name: j.cardTitle },
+          ]}
+          stage
           eyebrow={j.eyebrow}
           title={j.h1}
           accent={j.h1Accent}
@@ -59,66 +68,53 @@ export default function JourneyExamplePage({ slug }: { slug: string }) {
           actions={
             <>
               <PrimaryButton to="/signup">Start free</PrimaryButton>
-              <Link
-                to={INDEX_PATH}
-                className="text-sm font-medium text-[#7C3AED] hover:underline"
-              >
-                All journey examples
-              </Link>
+              <GhostButton to={INDEX_PATH}>All journey examples</GhostButton>
             </>
           }
         />
 
-        <Section className="!pt-0">
-          <div className="mx-auto max-w-3xl">
-            <p className="mkt-jh-lead">{j.answerFirst}</p>
+        <section className="fx-sec fx-sec--tight mkt-jx__lead">
+          <p className="mkt-jh-lead">{j.answerFirst}</p>
+        </section>
 
-            {/*
-              The diagram sits above the prose on purpose. A merchant comparing
-              platforms wants the shape of the automation before the argument
-              for it, and the shape is the thing a feature list cannot show.
-            */}
-            {/*
-              Hidden label for the diagram. The step titles inside it are H3s,
-              so they need an H2 above them rather than jumping from the H1.
-            */}
-            <h2 className="sr-only">{j.h1}: step by step</h2>
-            <JourneyFlow trigger={j.trigger} triggerNote={j.triggerNote} steps={j.steps} />
+        {/*
+          The diagram sits above the prose on purpose. A merchant comparing
+          platforms wants the shape of the automation before the argument
+          for it, and the shape is the thing a feature list cannot show.
+        */}
+        <section className="fx-sec fx-stage fx-stage--soft mkt-jx__flow">
+          {/*
+            Hidden label for the diagram. The step titles inside it are H3s,
+            so they need an H2 above them rather than jumping from the H1.
+          */}
+          <h2 className="sr-only">{j.h1}: step by step</h2>
+          <JourneyFlow trigger={j.trigger} triggerNote={j.triggerNote} steps={j.steps} />
+        </section>
 
-            {j.blocks.length > 0 && (
-              <div className="mt-10">
-                <TopicToc blocks={j.blocks} />
-              </div>
-            )}
+        {j.blocks.length > 0 && (
+          <div className="fx-row mkt-jx__toc">
+            <TopicToc blocks={j.blocks} />
           </div>
-        </Section>
+        )}
 
-        <Section className="!pt-4">
-          <div className="mkt-jx-centered mx-auto flex max-w-3xl flex-col gap-14 md:gap-16">
-            {j.blocks.map((b) => (
-              <TopicBlockView key={b.id} block={b} />
-            ))}
-          </div>
-        </Section>
+        <FxBlocks blocks={j.blocks} />
 
-        <Section wash="soft">
+        <div className="fx-sec">
           <TrustBand />
-        </Section>
+        </div>
 
-        <Section>
-          <SectionHeading title="Questions teams ask" accent="teams ask" />
-          <div className="mx-auto max-w-3xl">
-            <FaqAccordion items={j.faqs} />
-          </div>
-        </Section>
+        <section className="fx-sec">
+          <FxHead title="Questions teams ask" accent="teams ask" />
+          <FaqAccordion items={j.faqs} />
+        </section>
 
-        <Section wash="soft">
-          <SectionHeading
+        <section className="fx-sec">
+          <FxHead
             title="Other journeys"
             accent="journeys"
             subtitle="More ready-made automations for your Shopify store."
           />
-          <ul className="mx-auto grid max-w-5xl gap-4 md:grid-cols-3">
+          <ul className="mkt-jx-cards fx-cells fx-cells--bleed">
             {siblings.map((s) => (
               <li key={s.slug}>
                 <JourneyCard journey={s} href={`${INDEX_PATH}/${s.slug}`} />
@@ -126,19 +122,8 @@ export default function JourneyExamplePage({ slug }: { slug: string }) {
             ))}
           </ul>
 
-          <ul className="mx-auto mt-8 flex max-w-3xl flex-wrap justify-center gap-3">
-            {j.related.map((r) => (
-              <li key={r.href}>
-                <Link
-                  to={r.href}
-                  className="inline-flex rounded-full border border-[#efeaf8] bg-white px-4 py-2 text-sm font-medium text-[#7C3AED] hover:border-[#c4b5fd]"
-                >
-                  {r.label}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </Section>
+          <FxLinks items={j.related} />
+        </section>
 
         <MarketingCtaBand
           title="Run this journey on your store"
@@ -147,6 +132,7 @@ export default function JourneyExamplePage({ slug }: { slug: string }) {
           secondaryLabel="See pricing"
           secondaryTo="/pricing"
         />
+        </div>
       </MarketingPage>
     </>
   );

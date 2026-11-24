@@ -1174,3 +1174,1038 @@
     flex: none;
   }
 }
+
+/* ==================================================================== *
+   Framed layout (24 Nov 2026)
+   --------------------------------------------------------------------
+   The template library, the festival pages and the journey example pages
+   now sit in the same frame as /partners (styles/frame.css): one column
+   between two hairline rails, hairline rows between sections, cells that
+   share their dividers. Card stacks, hover lifts, gradient panels and the
+   green and amber category chips are gone; colour is violet, lilac and
+   ink. The WhatsApp chat colours inside the previews are product visuals
+   and are untouched. Copy, headings, links and schema are unchanged.
+
+   All five pages carry the root `mkt-jx fx`. Every rule is scoped
+   `.mkt-jx.fx` so it wins over the layers above without touching them and
+   cannot reach the other pages that import this stylesheet. Festival-only
+   pieces are in the matching layer at the end of festival-templates.css.
+ * ==================================================================== */
+
+/* --- Hero --- */
+.mkt-jx.fx .mkt-jh {
+  padding: calc(var(--mkt-nav-h, 4.5rem) + clamp(2.25rem, 5vw, 4rem)) var(--fx-gut) 0;
+  border-bottom: 1px solid var(--fx-line);
+  background: none;
+}
+
+.mkt-jx.fx .mkt-jh__inner {
+  max-width: 56rem;
+  padding-bottom: clamp(2.25rem, 4vw, 3.25rem);
+}
+
+.mkt-jx.fx .mkt-jh__eyebrow {
+  margin: 0 0 0.9rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+}
+
+.mkt-jx.fx .mkt-jh__title {
+  margin: 0 auto;
+  font-size: clamp(2rem, 4.4vw, 3.2rem);
+  line-height: 1.12;
+  letter-spacing: -0.042em;
+}
+
+.mkt-jx.fx .mkt-jh__hl {
+  margin: 0;
+  padding: 0.04em 0.24em 0.1em;
+  border-radius: 0.3em;
+  background: #e4d4ff;
+  color: #0c1222;
+  white-space: nowrap;
+}
+
+.mkt-jx.fx .mkt-jh__sub {
+  max-width: 36rem;
+  margin: 1.35rem auto 0;
+  font-size: clamp(1.02rem, 1.4vw, 1.15rem);
+  line-height: 1.55;
+  color: var(--fx-muted);
+}
+
+.mkt-jx.fx .mkt-jh__actions {
+  gap: 0.75rem;
+  margin-top: 2rem;
+}
+
+.mkt-jx.fx .mkt-jh__actions .mkt-btn-primary,
+.mkt-jx.fx .mkt-jh__actions .mkt-btn-ghost {
+  height: 3rem;
+  padding: 0 1.6rem;
+  font-size: 0.95rem;
+}
+
+.mkt-jx.fx .mkt-jh__trust {
+  margin-top: 2.25rem;
+}
+
+/* The hero picture, reframed on the shared dither stage. */
+.mkt-jx.fx .mkt-jh__stage {
+  max-width: none;
+  margin: 0 calc(var(--fx-gut) * -1);
+  padding: clamp(1.75rem, 4.5vw, 3.75rem) var(--fx-gut);
+  border: 0;
+  border-top: 1px solid var(--fx-line);
+  border-radius: 0;
+  background: #f6f2ff;
+}
+
+.mkt-jx.fx .mkt-jh__stage img {
+  width: min(100%, 920px);
+  margin: 0 auto;
+  border-radius: 18px;
+  box-shadow: 0 0 0 1px rgba(12, 18, 34, 0.05), 0 40px 80px -42px rgba(46, 16, 101, 0.55);
+}
+
+.mkt-jx.fx .mkt-jh-lead {
+  max-width: 44rem;
+  font-size: clamp(1.02rem, 1.5vw, 1.14rem);
+  line-height: 1.65;
+  color: var(--fx-body);
+}
+
+/* --- Shared bits --- */
+.mkt-jx.fx .fx-head__sub a {
+  font-weight: 500;
+  color: var(--mkt-violet);
+  text-decoration: none;
+}
+
+.mkt-jx.fx .fx-head__sub a:hover {
+  color: var(--fx-deep);
+  text-decoration: underline;
+}
+
+/* A flush row opens straight on its cells; the row above already drew the line. */
+.mkt-jx.fx .fx-sec--flush > .fx-cells {
+  border-top: 0;
+}
+
+.mkt-jx.fx .fx-links > li > .fx-link {
+  height: 100%;
+}
+
+.mkt-jx.fx .fx-cells + .fx-links {
+  border-top: 0;
+}
+
+@media (min-width: 900px) {
+  .mkt-jx.fx .fx-links--3 {
+    --fx-cols: 3;
+  }
+
+  .mkt-jx.fx .fx-links--5 {
+    --fx-cols: 5;
+  }
+}
+
+.mkt-jx.fx .mkt-faq {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.mkt-jx.fx .mkt-faq + .fx-links {
+  margin-top: clamp(3.25rem, 6.5vw, 5.5rem);
+}
+
+/* Meta category and rate: quiet chips, not traffic lights. */
+.mkt-jx.fx .mkt-jf__cat {
+  padding: 0.2rem 0.6rem;
+  border: 1px solid var(--fx-line);
+  background: #fff;
+  color: var(--fx-body);
+  font-size: 0.72rem;
+  font-weight: 500;
+}
+
+.mkt-jx.fx .mkt-jf__cat--marketing {
+  border-color: #e6dcfb;
+  background: var(--fx-tint-2);
+  color: var(--fx-deep);
+}
+
+/* --- Three templates to copy --- */
+.mkt-jx.fx .mkt-wtq__cell {
+  display: flex;
+  flex-direction: column;
+  padding: clamp(1.5rem, 2.6vw, 2.1rem) var(--fx-gut) clamp(1.6rem, 2.8vw, 2.25rem);
+}
+
+.mkt-jx.fx .mkt-wtq__top {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.6rem;
+}
+
+.mkt-jx.fx .mkt-wtq__title {
+  margin: 0;
+  font-size: 1.08rem;
+  font-weight: 600;
+  line-height: 1.35;
+  letter-spacing: -0.018em;
+  color: var(--mkt-ink);
+}
+
+.mkt-jx.fx .mkt-wtq__text {
+  flex: 1 1 auto;
+  margin: 1.1rem 0 0;
+  padding: 1.1rem 1.2rem;
+  border-radius: 14px;
+  background: var(--fx-tint);
+  box-shadow: inset 0 0 0 1px rgba(12, 18, 34, 0.05);
+  font-family: var(--mkt-font);
+  font-size: 0.92rem;
+  line-height: 1.6;
+  color: var(--mkt-ink);
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+.mkt-jx.fx .mkt-wtq__meta {
+  margin: 1rem 0 0;
+  font-size: 0.84rem;
+  line-height: 1.6;
+  color: var(--fx-muted);
+}
+
+.mkt-jx.fx .mkt-wtq__meta strong {
+  font-weight: 600;
+  color: var(--mkt-ink);
+}
+
+.mkt-jx.fx .mkt-wtq__copy {
+  align-self: flex-start;
+  height: 2.6rem;
+  margin-top: 1.25rem;
+  padding: 0 1.35rem;
+  font-family: inherit;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.mkt-jx.fx .mkt-wtq__copy:focus-visible {
+  outline: 2px solid #c4b5fd;
+  outline-offset: 2px;
+}
+
+/* --- Template library: filter bar, then preview cells --- */
+.mkt-jx.fx .mkt-lib {
+  max-width: none;
+  margin: 0;
+}
+
+.mkt-jx.fx .mkt-lib__filters {
+  justify-content: center;
+  gap: 0.5rem;
+  margin: 0;
+  padding: 1.1rem var(--fx-gut);
+  border-bottom: 1px solid var(--fx-line);
+  background: var(--fx-tint);
+}
+
+.mkt-jx.fx .mkt-lib__filter {
+  border-color: var(--fx-line);
+}
+
+.mkt-jx.fx .mkt-lib__filter:hover {
+  border-color: #c4b5fd;
+}
+
+.mkt-jx.fx .mkt-lib__filter.is-active {
+  border-color: var(--mkt-violet);
+}
+
+.mkt-jx.fx .mkt-lib__filter:focus-visible {
+  outline: 2px solid #c4b5fd;
+  outline-offset: 2px;
+}
+
+.mkt-jx.fx .mkt-lib__count {
+  background: var(--fx-tint-2);
+}
+
+.mkt-jx.fx .mkt-lib__filter.is-active .mkt-lib__count {
+  background: rgba(255, 255, 255, 0.22);
+}
+
+.mkt-jx.fx .mkt-lib__grid {
+  grid-template-columns: repeat(var(--fx-cols), minmax(0, 1fr));
+  gap: 1px;
+  margin: 0;
+  border-top: 0;
+}
+
+.mkt-jx.fx .mkt-lib-card {
+  padding: clamp(1rem, 1.8vw, 1.5rem);
+  border: 0;
+  border-radius: 0;
+  background: none;
+  overflow: visible;
+  transition: none;
+}
+
+.mkt-jx.fx .mkt-lib-card:hover {
+  box-shadow: none;
+  transform: none;
+}
+
+/* The chat preview on a tint panel. The chat itself is not restyled. */
+.mkt-jx.fx .mkt-lib-card__preview {
+  padding: clamp(0.8rem, 1.3vw, 1.1rem);
+  border: 0;
+  border-radius: 14px;
+  background: var(--fx-tint);
+  box-shadow: inset 0 0 0 1px rgba(12, 18, 34, 0.05);
+}
+
+.mkt-jx.fx .mkt-lib-card__preview .mkt-ph--compact .mkt-ph__screen {
+  border-radius: 12px;
+  box-shadow: 0 0 0 1px rgba(12, 18, 34, 0.06);
+}
+
+.mkt-jx.fx .mkt-lib-card__body {
+  padding: 1.35rem 0.35rem 0.5rem;
+}
+
+.mkt-jx.fx .mkt-lib-card__group {
+  letter-spacing: 0.1em;
+}
+
+.mkt-jx.fx .mkt-lib-card__title {
+  margin: 0.8rem 0 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: -0.018em;
+}
+
+.mkt-jx.fx .mkt-lib-card__purpose {
+  margin: 0.5rem 0 0;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--fx-muted);
+}
+
+.mkt-jx.fx .mkt-lib-card__cta {
+  margin-top: 1rem;
+  font-size: 0.92rem;
+}
+
+.mkt-jx.fx .mkt-lib-card__cta:hover {
+  color: var(--fx-deep);
+}
+
+/* --- The pointer row under a grid (festival library, warranty) --- */
+.mkt-jx.fx .mkt-jx-note {
+  gap: 1.1rem;
+  padding: 1.4rem var(--fx-gut);
+  border: 0;
+  border-radius: 0;
+  background: var(--fx-tint);
+  transition: background 0.15s ease;
+}
+
+.mkt-jx.fx .mkt-jx-note:hover {
+  background: var(--fx-tint-2);
+  box-shadow: none;
+  transform: none;
+}
+
+.mkt-jx.fx .mkt-jx-note:focus-visible {
+  outline: 2px solid #c4b5fd;
+  outline-offset: -2px;
+}
+
+.mkt-jx.fx .mkt-jx-note__icon {
+  width: auto;
+  height: auto;
+  border-radius: 0;
+  background: none;
+  box-shadow: none;
+}
+
+.mkt-jx.fx .mkt-jx-note__tag {
+  letter-spacing: 0.1em;
+}
+
+.mkt-jx.fx .mkt-jx-note__title {
+  margin-top: 0.3rem;
+  font-size: 1.05rem;
+  font-weight: 600;
+  letter-spacing: -0.015em;
+}
+
+.mkt-jx.fx .mkt-jx-note__desc {
+  max-width: 44rem;
+  font-size: 0.93rem;
+  color: var(--fx-muted);
+}
+
+.mkt-jx.fx .mkt-jx-note__cta {
+  font-size: 0.92rem;
+}
+
+/* --- Proof band --- */
+.mkt-jx.fx .mkt-trust {
+  max-width: none;
+}
+
+.mkt-jx.fx .mkt-trust__title,
+.mkt-jx.fx .mkt-how__title {
+  font-size: clamp(1.6rem, 3.2vw, 2.3rem);
+  line-height: 1.22;
+  letter-spacing: -0.034em;
+}
+
+.mkt-jx.fx .mkt-trust__title .mkt-hl {
+  margin: 0;
+  padding: 0.08em 0.28em 0.14em;
+  background: #e4d4ff;
+  color: #0c1222;
+}
+
+.mkt-jx.fx .mkt-trust__head {
+  gap: 1.1rem;
+}
+
+.mkt-jx.fx .mkt-trust__logos {
+  margin-top: 2rem;
+}
+
+.mkt-jx.fx .mkt-trust__stories {
+  gap: 1px;
+  margin: clamp(2rem, 4vw, 3rem) calc(var(--fx-gut) * -1) 0;
+  border-top: 1px solid var(--fx-line);
+  border-bottom: 1px solid var(--fx-line);
+  background: #fff;
+  overflow: hidden;
+}
+
+.mkt-jx.fx .mkt-trust__story {
+  padding: clamp(1.5rem, 2.6vw, 2.25rem) var(--fx-gut);
+  border: 0;
+  border-radius: 0;
+  box-shadow: var(--fx-cell-lines);
+}
+
+.mkt-jx.fx .mkt-trust__headline {
+  font-size: 1.08rem;
+  font-weight: 600;
+  letter-spacing: -0.018em;
+}
+
+.mkt-jx.fx .mkt-trust__quote p {
+  color: var(--fx-body);
+}
+
+.mkt-jx.fx .mkt-trust__by {
+  border-top-color: var(--fx-line);
+}
+
+/* The link out closes the row as a full-width cell. */
+.mkt-jx.fx .mkt-trust__more {
+  margin: 0 calc(var(--fx-gut) * -1) calc(clamp(3.25rem, 6.5vw, 5.5rem) * -1);
+  font-size: 0.95rem;
+}
+
+.mkt-jx.fx .mkt-trust__more a {
+  display: block;
+  padding: 1.15rem var(--fx-gut);
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.mkt-jx.fx .mkt-trust__more a:hover {
+  background: var(--fx-tint);
+  color: var(--fx-deep);
+  text-decoration: none;
+}
+
+.mkt-jx.fx .mkt-trust__more a:focus-visible {
+  outline: 2px solid #c4b5fd;
+  outline-offset: -2px;
+}
+
+/* --- Live in three steps --- */
+.mkt-jx.fx .mkt-how {
+  max-width: none;
+  margin: 0;
+}
+
+.mkt-jx.fx .mkt-how__steps {
+  grid-template-columns: repeat(var(--fx-cols), minmax(0, 1fr));
+  gap: 1px;
+  margin-top: 0;
+}
+
+.mkt-jx.fx .mkt-how__step {
+  padding: clamp(1.5rem, 2.6vw, 2.1rem) var(--fx-gut) clamp(1.75rem, 3vw, 2.5rem);
+  border: 0;
+  border-radius: 0;
+}
+
+.mkt-jx.fx .mkt-how__n {
+  display: block;
+  width: auto;
+  height: auto;
+  border-radius: 0;
+  background: none;
+  font-size: 0.82rem;
+  letter-spacing: 0.04em;
+  line-height: 1.2;
+}
+
+.mkt-jx.fx .mkt-how__step-title {
+  margin: 1.1rem 0 0;
+  font-size: 1.08rem;
+  font-weight: 600;
+  line-height: 1.35;
+  letter-spacing: -0.018em;
+}
+
+.mkt-jx.fx .mkt-how__step-body {
+  margin: 0.55rem 0 0;
+  font-size: 0.95rem;
+  color: var(--fx-muted);
+}
+
+/* --- Journey cards as cells --- */
+.mkt-jx.fx .mkt-jx-cards > li {
+  display: flex;
+}
+
+.mkt-jx.fx .mkt-jx-card,
+.mkt-jx.fx .mkt-jx-card.is-lg {
+  width: 100%;
+  height: auto;
+  padding: clamp(1rem, 1.8vw, 1.5rem) clamp(1rem, 1.8vw, 1.5rem) clamp(1.4rem, 2.2vw, 1.9rem);
+  border: 0;
+  border-radius: 0;
+  background: none;
+  transition: background 0.15s ease;
+}
+
+.mkt-jx.fx .mkt-jx-card:hover {
+  background: var(--fx-tint);
+  box-shadow: none;
+  transform: none;
+}
+
+.mkt-jx.fx .mkt-jx-card:focus-visible {
+  outline: 2px solid #c4b5fd;
+  outline-offset: -2px;
+}
+
+.mkt-jx.fx .mkt-jx-card .mkt-jx-card__media {
+  margin: 0 0 1.4rem;
+  border-radius: 14px;
+  box-shadow: inset 0 0 0 1px rgba(12, 18, 34, 0.05);
+}
+
+.mkt-jx.fx .mkt-jx-card:hover .mkt-jx-card__media img {
+  transform: none;
+}
+
+.mkt-jx.fx .mkt-jx-card__badge,
+.mkt-jx.fx .mkt-jx-card__title,
+.mkt-jx.fx .mkt-jx-card__blurb,
+.mkt-jx.fx .mkt-jx-card__meta,
+.mkt-jx.fx .mkt-jx-card__cta {
+  margin-left: 0.35rem;
+  margin-right: 0.35rem;
+}
+
+.mkt-jx.fx .mkt-jx-card__badge {
+  margin-bottom: 0.9rem;
+}
+
+.mkt-jx.fx .mkt-jx-card__title,
+.mkt-jx.fx .mkt-jx-card.is-lg .mkt-jx-card__title {
+  font-size: 1.12rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+.mkt-jx.fx .mkt-jx-card.is-lg .mkt-jx-card__title {
+  font-size: 1.25rem;
+}
+
+.mkt-jx.fx .mkt-jx-card__blurb {
+  margin-top: 0.55rem;
+  font-size: 0.95rem;
+  color: var(--fx-muted);
+}
+
+.mkt-jx.fx .mkt-jx-card__meta {
+  margin-top: 1.1rem;
+  padding-top: 1rem;
+  border-top-color: var(--fx-line);
+  font-size: 0.9rem;
+}
+
+.mkt-jx.fx .mkt-jx-card__meta em {
+  color: var(--fx-muted);
+}
+
+.mkt-jx.fx .mkt-jx-card__cta {
+  margin-top: 1.1rem;
+  font-size: 0.92rem;
+}
+
+/* --- Journey flow: the diagram keeps its nodes, seated on the soft stage --- */
+.mkt-jx.fx .mkt-jx__lead {
+  border-bottom: 1px solid var(--fx-line);
+}
+
+.mkt-jx.fx .mkt-jx__flow {
+  background: linear-gradient(180deg, #f7f3ff 0%, #fbfaff 100%);
+}
+
+.mkt-jx.fx .mkt-jf {
+  --jf-line: #ddd3f5;
+  max-width: 46rem;
+  margin: 0 auto;
+}
+
+.mkt-jx.fx .mkt-jf__trigger {
+  border-color: #e4dcf7;
+  border-radius: 16px;
+  background: #fff;
+}
+
+.mkt-jx.fx .mkt-jf__trigger-tag {
+  letter-spacing: 0.1em;
+}
+
+.mkt-jx.fx .mkt-jf__trigger-name {
+  font-weight: 600;
+}
+
+.mkt-jx.fx .mkt-jf__gap {
+  color: var(--fx-deep);
+}
+
+.mkt-jx.fx .mkt-jf__card {
+  border-color: #e9e3f6;
+  border-radius: 16px;
+}
+
+.mkt-jx.fx .mkt-jf__n {
+  background: #ede9fe;
+}
+
+.mkt-jx.fx .mkt-jf__title {
+  font-size: 1.04rem;
+  font-weight: 600;
+  letter-spacing: -0.015em;
+}
+
+.mkt-jx.fx .mkt-jf__detail {
+  font-size: 0.93rem;
+  color: var(--fx-body);
+}
+
+.mkt-jx.fx .mkt-wa__label {
+  background: var(--fx-tint-2);
+  color: var(--fx-muted);
+}
+
+.mkt-jx.fx .mkt-jf__branch-label {
+  background: #ede9fe;
+  color: var(--fx-deep);
+}
+
+.mkt-jx.fx .mkt-jf__legend {
+  border-color: #e9e3f6;
+  border-radius: 14px;
+  background: #fff;
+  color: var(--fx-body);
+}
+
+.mkt-jx.fx .mkt-jf__foot {
+  text-align: center;
+  color: var(--fx-muted);
+}
+
+/* --- On this page: one row of link cells --- */
+.mkt-jx.fx .mkt-jx__toc:empty {
+  display: none;
+}
+
+.mkt-jx.fx .mkt-jx__toc .mkt-toc {
+  display: flex;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: none;
+}
+
+.mkt-jx.fx .mkt-jx__toc .mkt-toc__label {
+  display: flex;
+  flex: none;
+  align-items: center;
+  margin: 0;
+  padding: 1.15rem var(--fx-gut);
+  border-right: 1px solid var(--fx-line);
+  background: var(--fx-tint);
+  font-weight: 600;
+  letter-spacing: 0.12em;
+}
+
+.mkt-jx.fx .mkt-jx__toc .mkt-toc__list {
+  flex: 1 1 auto;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  gap: 1px;
+  overflow: hidden;
+}
+
+.mkt-jx.fx .mkt-jx__toc .mkt-toc__list > li {
+  display: flex;
+  box-shadow: var(--fx-cell-lines);
+}
+
+.mkt-jx.fx .mkt-jx__toc .mkt-toc__list a {
+  display: flex;
+  flex: 1 1 auto;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.15rem var(--fx-gut);
+  border-bottom: 0;
+  font-size: 0.95rem;
+  font-weight: 500;
+  line-height: 1.35;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.mkt-jx.fx .mkt-jx__toc .mkt-toc__list a::after {
+  content: '';
+  flex: none;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-top: 1.5px solid #b6b9c6;
+  border-right: 1.5px solid #b6b9c6;
+  transform: rotate(135deg);
+}
+
+.mkt-jx.fx .mkt-jx__toc .mkt-toc__list a:hover {
+  background: var(--fx-tint);
+  color: var(--fx-deep);
+}
+
+.mkt-jx.fx .mkt-jx__toc .mkt-toc__list a:focus-visible {
+  outline: 2px solid #c4b5fd;
+  outline-offset: -2px;
+}
+
+/* --- Topic blocks as rows --- */
+.mkt-jx.fx .mkt-jx__blk .mkt-blk__h2 {
+  max-width: 42rem;
+  margin: 0 auto;
+  text-align: center;
+  font-size: clamp(1.6rem, 3.2vw, 2.3rem);
+  line-height: 1.22;
+  letter-spacing: -0.034em;
+  text-wrap: balance;
+}
+
+.mkt-jx.fx .mkt-jx__blk .mkt-blk__h2 .mkt-hl {
+  margin: 0;
+  padding: 0.08em 0.28em 0.14em;
+  background: #e4d4ff;
+  color: #0c1222;
+}
+
+.mkt-jx.fx .mkt-jx__blk .mkt-blk__intro {
+  max-width: 38rem;
+  margin: 1rem auto 0;
+  text-align: center;
+  font-size: 1.02rem;
+  line-height: 1.6;
+  color: var(--fx-muted);
+}
+
+.mkt-jx.fx .mkt-jx__blk .mkt-blk__body {
+  max-width: 44rem;
+  margin: 1.1rem auto 0;
+  font-size: 1.02rem;
+  line-height: 1.7;
+  color: var(--fx-body);
+}
+
+.mkt-jx.fx .mkt-jx__blk .mkt-blk__h2 + .mkt-blk__body {
+  margin-top: clamp(1.5rem, 3vw, 2.25rem);
+}
+
+.mkt-jx.fx .mkt-jx__blk .mkt-blk__body a {
+  font-weight: 500;
+  color: var(--mkt-violet);
+}
+
+/* Tables: one framed block, tinted head. */
+.mkt-jx.fx .mkt-jx__blk .mkt-spec {
+  max-width: 60rem;
+  margin: clamp(2rem, 4vw, 3rem) auto 0;
+  border: 1px solid var(--fx-line);
+  border-radius: var(--fx-radius);
+  background: #fff;
+  overflow: hidden;
+}
+
+.mkt-jx.fx .mkt-jx__blk .mkt-spec__row {
+  border-bottom-color: var(--fx-line);
+}
+
+.mkt-jx.fx .mkt-jx__blk .mkt-spec__row--head {
+  background: var(--fx-tint);
+}
+
+.mkt-jx.fx .mkt-jx__blk .mkt-spec__cell {
+  padding: 1rem 1.4rem;
+  font-size: 0.95rem;
+  color: var(--fx-body);
+}
+
+.mkt-jx.fx .mkt-jx__blk .mkt-spec__cell--label {
+  font-weight: 600;
+  color: var(--mkt-ink);
+}
+
+.mkt-jx.fx .mkt-jx__blk .mkt-spec__row--head .mkt-spec__cell {
+  font-size: 0.74rem;
+  letter-spacing: 0.08em;
+  color: var(--fx-muted);
+}
+
+.mkt-jx.fx .mkt-jx__blk .mkt-spec__note {
+  font-weight: 400;
+  color: var(--fx-muted);
+}
+
+.mkt-jx.fx .mkt-jx__blk .mkt-spec__footnote {
+  max-width: 46rem;
+  margin: 1.1rem auto 0;
+  text-align: center;
+  font-size: 0.84rem;
+  color: var(--fx-muted);
+}
+
+/* Figures and do / avoid lists run to the rails as cells. */
+.mkt-jx.fx .mkt-jx__blk .mkt-figs,
+.mkt-jx.fx .mkt-jx__blk .mkt-check {
+  gap: 1px;
+  margin: clamp(2rem, 4vw, 3rem) calc(var(--fx-gut) * -1) calc(clamp(3.25rem, 6.5vw, 5.5rem) * -1);
+  border-top: 1px solid var(--fx-line);
+  background: #fff;
+  overflow: hidden;
+}
+
+.mkt-jx.fx .mkt-jx__blk .mkt-figs__item,
+.mkt-jx.fx .mkt-jx__blk .mkt-check__col {
+  padding: clamp(1.5rem, 2.8vw, 2.25rem) var(--fx-gut);
+  border: 0;
+  border-radius: 0;
+  background: #fff;
+  box-shadow: var(--fx-cell-lines);
+}
+
+.mkt-jx.fx .mkt-jx__blk .mkt-figs__value {
+  font-size: clamp(1.7rem, 3vw, 2.4rem);
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: -0.045em;
+}
+
+.mkt-jx.fx .mkt-jx__blk .mkt-figs__label {
+  margin-top: 0.75rem;
+  font-size: 0.95rem;
+  color: var(--fx-muted);
+}
+
+.mkt-jx.fx .mkt-jx__blk .mkt-figs__cite {
+  color: var(--fx-muted);
+}
+
+.mkt-jx.fx .mkt-jx__blk .mkt-check__head,
+.mkt-jx.fx .mkt-jx__blk .mkt-check__col--do .mkt-check__head,
+.mkt-jx.fx .mkt-jx__blk .mkt-check__col--dont .mkt-check__head {
+  margin-bottom: 1.1rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  color: var(--mkt-ink);
+}
+
+.mkt-jx.fx .mkt-jx__blk .mkt-check__list {
+  gap: 0.75rem;
+}
+
+.mkt-jx.fx .mkt-jx__blk .mkt-check__list li {
+  padding-left: 1.6rem;
+  font-size: 0.95rem;
+  color: var(--fx-body);
+}
+
+/* Callouts: flat tinted cells. */
+.mkt-jx.fx .mkt-jx__notes {
+  border-top: 0;
+}
+
+.mkt-jx.fx .mkt-jx__notes .mkt-callout {
+  gap: 1rem;
+  margin: 0;
+  padding: clamp(1.5rem, 2.8vw, 2.25rem) var(--fx-gut);
+  border: 0;
+  border-radius: 0;
+  background: var(--fx-tint);
+}
+
+.mkt-jx.fx .mkt-jx__notes--one {
+  --fx-cols: 1;
+}
+
+.mkt-jx.fx .mkt-jx__notes--one .mkt-callout {
+  justify-content: center;
+}
+
+.mkt-jx.fx .mkt-jx__notes--one .mkt-callout__content {
+  flex: 0 1 46rem;
+}
+
+.mkt-jx.fx .mkt-jx__notes .mkt-callout__icon,
+.mkt-jx.fx .mkt-jx__notes .mkt-callout--warn .mkt-callout__icon {
+  width: auto;
+  height: auto;
+  margin-top: 0.15rem;
+  align-items: flex-start;
+  border-radius: 0;
+  background: none;
+  box-shadow: none;
+  color: var(--mkt-violet);
+}
+
+.mkt-jx.fx .mkt-jx__notes .mkt-callout__title {
+  font-size: 1.08rem;
+  line-height: 1.35;
+  letter-spacing: -0.018em;
+}
+
+.mkt-jx.fx .mkt-jx__notes .mkt-callout__body {
+  margin-top: 0.55rem;
+  font-size: 0.95rem;
+  color: var(--fx-body);
+}
+
+.mkt-jx.fx .mkt-jx__notes .mkt-callout__link,
+.mkt-jx.fx .mkt-jx__notes .mkt-callout--warn .mkt-callout__link {
+  margin-top: 0.9rem;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: none;
+  font-size: 0.92rem;
+  color: var(--mkt-violet);
+}
+
+.mkt-jx.fx .mkt-jx__notes .mkt-callout__link:hover {
+  color: var(--fx-deep);
+  transform: none;
+}
+
+@media (max-width: 767px) {
+  /* Tables restack inside their own block: rows, not loose cards. */
+  .mkt-jx.fx .mkt-jx__blk .mkt-spec {
+    border: 1px solid var(--fx-line);
+    border-radius: 16px;
+    background: #fff;
+    overflow: hidden;
+  }
+
+  .mkt-jx.fx .mkt-jx__blk .mkt-spec__row {
+    margin: 0;
+    padding: 0.45rem 0 0.7rem;
+    border: 0;
+    border-bottom: 1px solid var(--fx-line);
+    border-radius: 0;
+    background: none;
+  }
+
+  .mkt-jx.fx .mkt-jx__blk .mkt-spec__row:last-child {
+    border-bottom: 0;
+  }
+
+  .mkt-jx.fx .mkt-jx__blk .mkt-spec__cell {
+    padding: 0.45rem 1.15rem;
+  }
+
+  .mkt-jx.fx .mkt-jx__blk .mkt-spec__cell--label {
+    padding-top: 0.75rem;
+  }
+
+  .mkt-jx.fx .mkt-jx__toc .mkt-toc {
+    flex-direction: column;
+  }
+
+  .mkt-jx.fx .mkt-jx__toc .mkt-toc__label {
+    border-right: 0;
+    border-bottom: 1px solid var(--fx-line);
+  }
+
+  .mkt-jx.fx .mkt-jx__toc .mkt-toc__list {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 639px) {
+  .mkt-jx.fx .mkt-lib__filters {
+    justify-content: flex-start;
+    margin: 0;
+    padding: 1rem var(--fx-gut);
+  }
+
+  .mkt-jx.fx .mkt-jx-note__cta {
+    padding-left: calc(22px + 1.1rem);
+  }
+}
+
+@media (max-width: 599px) {
+  .mkt-jx.fx .mkt-jh__title {
+    font-size: clamp(1.9rem, 8.4vw, 2.35rem);
+  }
+
+  .mkt-jx.fx .mkt-jh__hl {
+    white-space: normal;
+  }
+
+  .mkt-jx.fx .mkt-jh__actions .mkt-btn-primary,
+  .mkt-jx.fx .mkt-jh__actions .mkt-btn-ghost {
+    flex: 1 1 auto;
+  }
+
+  .mkt-jx.fx .mkt-jh__stage {
+    padding: 1.25rem 0.9rem;
+  }
+
+  .mkt-jx.fx .mkt-jx__flow {
+    padding-left: 0.9rem;
+    padding-right: 0.9rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mkt-jx.fx .mkt-jx-note,
+  .mkt-jx.fx .mkt-jx-card,
+  .mkt-jx.fx .mkt-trust__more a,
+  .mkt-jx.fx .mkt-jx__toc .mkt-toc__list a {
+    transition: none;
+  }
+}

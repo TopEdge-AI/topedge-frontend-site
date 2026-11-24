@@ -334,3 +334,439 @@
 .mkt-fx .mkt-cta {
   margin-top: clamp(3.5rem, 7vw, 5rem);
 }
+
+/* ==================================================================== *
+   Framed layout (24 Nov 2026)
+   --------------------------------------------------------------------
+   The hub now sits in the same frame as /partners (styles/frame.css): one
+   column between two hairline rails, a hairline row per job, and the
+   modules as cells that share their dividers. The four tinted card
+   families (violet, peach, green, blue) are gone: every cell is white,
+   the label is violet, and the whole cell is still the link. The demo
+   plays on the violet dither stage. Copy, headings, links and schema are
+   unchanged.
+
+   Every rule is scoped `.mkt-fx.fx` so it wins over the layer above
+   without touching it.
+ * ==================================================================== */
+
+/* The old layer named its own tokens --fx-*, which now collide with the
+   frame's. Put the frame's values back for this page. */
+.mkt-fx.fx {
+  --fx-line: #ececf2;
+  --fx-muted: #6b7280;
+  --fx-body: #4b5363;
+}
+
+/* --- Hero --- */
+.mkt-fx.fx .mkt-fx__hero {
+  max-width: none;
+  margin: 0;
+  padding: calc(var(--mkt-nav-h, 4.5rem) + clamp(2.25rem, 5vw, 4rem)) var(--fx-gut) clamp(2.5rem, 4.5vw, 3.5rem);
+  border-bottom: 1px solid var(--fx-line);
+  text-align: center;
+}
+
+.mkt-fx.fx .mkt-fx__hero::before {
+  content: none;
+}
+
+.mkt-fx.fx .mkt-fx__h1 {
+  max-width: 24ch;
+  font-family: var(--mkt-font);
+  font-size: clamp(2.05rem, 4.6vw, 3.35rem);
+  font-weight: 400;
+  line-height: 1.12;
+  letter-spacing: -0.042em;
+  color: var(--mkt-ink);
+}
+
+.mkt-fx.fx .mkt-fx__hl {
+  color: #0c1222;
+}
+
+.mkt-fx.fx .mkt-fx__h1 .mkt-fx__hl {
+  padding: 0.04em 0.24em 0.1em;
+  border-radius: 0.3em;
+}
+
+.mkt-fx.fx .mkt-fx__sub {
+  max-width: 38rem;
+  margin: 1.35rem auto 0;
+  font-size: clamp(1.02rem, 1.4vw, 1.12rem);
+  line-height: 1.55;
+  color: var(--fx-muted);
+}
+
+.mkt-fx.fx .mkt-fx__actions {
+  gap: 0.75rem;
+  margin-top: 2rem;
+}
+
+.mkt-fx.fx .mkt-fx__actions .mkt-btn-primary,
+.mkt-fx.fx .mkt-fx__actions .mkt-btn-ghost {
+  height: auto;
+  min-height: 3rem;
+  padding: 0 1.6rem;
+  font-size: 0.95rem;
+}
+
+.mkt-fx.fx .mkt-fx__actions .mkt-btn-ghost {
+  background: #fff;
+}
+
+/* Customer marks under the buttons: one quiet static row. */
+.mkt-fx.fx .mkt-fx__trust {
+  width: min(100%, 36rem);
+  margin: 2.25rem auto 0;
+}
+
+.mkt-fx.fx .mkt-fx__trust .home-trust-logos {
+  margin: 0 auto;
+  max-width: none;
+  text-align: center;
+}
+
+.mkt-fx.fx .mkt-fx__trust .home-trust-logos__label {
+  margin: 0 0 0.8rem;
+  font-size: 0.625rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(15, 23, 42, 0.5);
+  text-shadow: none;
+}
+
+.mkt-fx.fx .mkt-fx__trust .home-trust-logos__viewport {
+  overflow: visible;
+  -webkit-mask-image: none;
+  mask-image: none;
+}
+
+.mkt-fx.fx .mkt-fx__trust .home-trust-logos__track {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem 2.5rem;
+  width: 100%;
+  animation: none;
+  transform: none;
+}
+
+.mkt-fx.fx .mkt-fx__trust .home-trust-logos__item {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 0;
+  min-height: 0;
+  padding: 0;
+  opacity: 1;
+  text-decoration: none;
+}
+
+.mkt-fx.fx .mkt-fx__trust .home-trust-logos__item[aria-hidden='true'] {
+  display: none;
+}
+
+.mkt-fx.fx .mkt-fx__trust .home-trust-logos__item img {
+  display: block;
+  width: auto;
+  height: 20px;
+  max-width: 110px;
+  object-fit: contain;
+  filter: brightness(0) opacity(0.62);
+  opacity: 1;
+}
+
+/* --- Sections --- */
+.mkt-fx.fx .mkt-fx__section {
+  width: auto;
+  margin: 0;
+  padding: clamp(3.25rem, 6.5vw, 5.5rem) var(--fx-gut);
+}
+
+.mkt-fx.fx .mkt-fx__head {
+  max-width: 42rem;
+  margin: 0 auto clamp(2rem, 4vw, 3rem);
+}
+
+.mkt-fx.fx .mkt-fx__head h2 {
+  font-size: clamp(1.6rem, 3.2vw, 2.3rem);
+  line-height: 1.22;
+  letter-spacing: -0.034em;
+  color: var(--mkt-ink);
+  text-wrap: balance;
+}
+
+.mkt-fx.fx .mkt-fx__head p {
+  max-width: 34rem;
+  margin: 1rem auto 0;
+  font-size: 1.02rem;
+  line-height: 1.6;
+  color: var(--fx-muted);
+}
+
+/* --- Module cells ---
+   Six tracks, so a job with five modules sets two wide cells over three and
+   one with two or three fills its row: no group leaves an empty corner. */
+.mkt-fx.fx .mkt-fx__grid {
+  --fx-cols: 6;
+  gap: 1px;
+}
+
+.mkt-fx.fx .mkt-fx__grid > * {
+  grid-column: span 2;
+}
+
+.mkt-fx.fx .mkt-fx__grid--5 > :nth-child(-n + 2),
+.mkt-fx.fx .mkt-fx__grid--2 > *,
+.mkt-fx.fx .mkt-fx__grid--4 > * {
+  grid-column: span 3;
+}
+
+.mkt-fx.fx .mkt-fx__grid--5 > :last-child {
+  grid-column: span 2;
+}
+
+.mkt-fx.fx .mkt-fx-card {
+  position: relative;
+  padding: clamp(1.5rem, 2.4vw, 2rem) var(--fx-gut) clamp(1.6rem, 2.6vw, 2.15rem);
+  border: 0;
+  border-radius: 0;
+  background: #fff;
+  box-shadow: var(--fx-cell-lines);
+  transform: none;
+  transition: background 0.15s ease;
+}
+
+.mkt-fx.fx .mkt-fx-card:hover {
+  background: var(--fx-tint);
+  box-shadow: var(--fx-cell-lines);
+  transform: none;
+}
+
+.mkt-fx.fx .mkt-fx-card:focus-visible {
+  outline: 2px solid #c4b5fd;
+  outline-offset: -2px;
+}
+
+/* The quiet chevron in the corner of each cell. */
+.mkt-fx.fx .mkt-fx-card::after {
+  content: '';
+  position: absolute;
+  top: calc(clamp(1.5rem, 2.4vw, 2rem) + 0.3rem);
+  right: var(--fx-gut);
+  width: 0.5rem;
+  height: 0.5rem;
+  border-top: 1.5px solid #b6b9c6;
+  border-right: 1.5px solid #b6b9c6;
+  transform: rotate(45deg);
+  transition: border-color 0.15s ease, transform 0.15s ease;
+}
+
+.mkt-fx.fx .mkt-fx-card:hover::after {
+  border-color: var(--mkt-violet);
+  transform: translateX(2px) rotate(45deg);
+}
+
+.mkt-fx.fx .mkt-fx-card__top {
+  gap: 0.5rem;
+  padding-right: 1.5rem;
+}
+
+.mkt-fx.fx .mkt-fx-card__icon {
+  display: inline-flex;
+  width: auto;
+  height: auto;
+  border: 0;
+  border-radius: 0;
+  background: none;
+  box-shadow: none;
+  color: var(--mkt-violet);
+}
+
+.mkt-fx.fx .mkt-fx-card__label {
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  color: var(--mkt-violet);
+}
+
+.mkt-fx.fx .mkt-fx-card h3 {
+  margin: 1.1rem 0 0;
+  font-size: 1.08rem;
+  font-weight: 600;
+  line-height: 1.35;
+  letter-spacing: -0.018em;
+  color: var(--mkt-ink);
+}
+
+.mkt-fx.fx .mkt-fx-card:hover h3 {
+  color: var(--fx-deep);
+}
+
+.mkt-fx.fx .mkt-fx-card p {
+  max-width: 34rem;
+  margin: 0.55rem 0 0;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--fx-muted);
+}
+
+/* --- Demo: the film on the dither stage, rail to rail --- */
+.mkt-fx.fx .mkt-fx__section--demo {
+  padding-bottom: 0;
+}
+
+.mkt-fx.fx .mkt-fx__demo {
+  width: auto;
+  margin: 0 calc(var(--fx-gut) * -1);
+  padding: clamp(1.75rem, 4.5vw, 3.75rem) var(--fx-gut);
+  border-top: 1px solid var(--fx-line);
+}
+
+.mkt-fx.fx .mkt-fx__demo-inner {
+  width: min(100%, 1020px);
+  margin: 0 auto;
+}
+
+.mkt-fx.fx .mkt-fx__demo .mkt-demo-video__frame {
+  border: 0;
+  border-radius: 18px;
+  background: #fff;
+  box-shadow: 0 0 0 1px rgba(12, 18, 34, 0.05), 0 40px 80px -42px rgba(46, 16, 101, 0.55);
+}
+
+/* --- Principles: three plain cells --- */
+.mkt-fx.fx .mkt-fx__principles {
+  gap: 1px;
+}
+
+.mkt-fx.fx .mkt-fx-principle {
+  padding: clamp(1.5rem, 2.6vw, 2.1rem) var(--fx-gut) clamp(1.6rem, 2.8vw, 2.25rem);
+  border: 0;
+  border-radius: 0;
+  background: #fff;
+}
+
+.mkt-fx.fx .mkt-fx-principle h3 {
+  margin: 0;
+  font-size: 1.08rem;
+  font-weight: 600;
+  line-height: 1.35;
+  letter-spacing: -0.018em;
+  color: var(--mkt-ink);
+}
+
+.mkt-fx.fx .mkt-fx-principle p {
+  margin: 0.55rem 0 0;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--fx-muted);
+}
+
+.mkt-fx.fx .mkt-cta {
+  margin-top: 0;
+}
+
+@media (max-width: 899px) {
+  .mkt-fx.fx .mkt-fx__hero {
+    padding-top: calc(var(--mkt-nav-h, 4rem) + 1.75rem);
+  }
+
+  .mkt-fx.fx .mkt-fx__section {
+    padding-top: clamp(2.75rem, 9vw, 3.75rem);
+    padding-bottom: clamp(2.75rem, 9vw, 3.75rem);
+  }
+
+  .mkt-fx.fx .mkt-fx__section--demo {
+    padding-bottom: 0;
+  }
+
+  .mkt-fx.fx .mkt-fx__grid {
+    --fx-cols: 2;
+  }
+
+  .mkt-fx.fx .mkt-fx__grid > *,
+  .mkt-fx.fx .mkt-fx__grid--5 > :nth-child(-n + 2),
+  .mkt-fx.fx .mkt-fx__grid--2 > *,
+  .mkt-fx.fx .mkt-fx__grid--4 > * {
+    grid-column: span 1;
+  }
+
+  /* An odd count closes on one full-width cell, not an empty half. */
+  .mkt-fx.fx .mkt-fx__grid > :last-child:nth-child(odd) {
+    grid-column: span 2;
+  }
+
+  /* The bleed grid's bottom margin has to follow the smaller section padding. */
+  .mkt-fx.fx .mkt-fx__section > .fx-cells--bleed:last-child {
+    margin-bottom: calc(clamp(2.75rem, 9vw, 3.75rem) * -1);
+  }
+}
+
+@media (max-width: 599px) {
+  .mkt-fx.fx .mkt-fx__h1 {
+    font-size: clamp(1.9rem, 8.2vw, 2.4rem);
+  }
+
+  .mkt-fx.fx .mkt-fx__actions .mkt-btn-primary,
+  .mkt-fx.fx .mkt-fx__actions .mkt-btn-ghost {
+    flex: 1 1 auto;
+  }
+
+  .mkt-fx.fx .mkt-fx__grid {
+    --fx-cols: 1;
+  }
+
+  .mkt-fx.fx .mkt-fx__grid > *,
+  .mkt-fx.fx .mkt-fx__grid > :last-child:nth-child(odd) {
+    grid-column: span 1;
+  }
+
+  .mkt-fx.fx .mkt-fx__demo {
+    padding: 1.25rem 0.9rem;
+  }
+
+  .mkt-fx.fx .mkt-fx__trust .home-trust-logos__track {
+    gap: 0.6rem 1.5rem;
+  }
+
+  .mkt-fx.fx .mkt-fx__trust .home-trust-logos__item img {
+    height: 16px;
+    max-width: 84px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mkt-fx.fx .mkt-fx-card,
+  .mkt-fx.fx .mkt-fx-card::after {
+    transition: none;
+  }
+}
+
+/* A platform mark stays on the same line as its own name. */
+.mkt-fx.fx .mkt-fx__brand {
+  white-space: nowrap;
+}
+
+/* The highlight sits under the heading's own text, so the descenders of the
+   line above it ("Shopify") are drawn over the lilac, not cut off by it. */
+.mkt-fx.fx .mkt-fx__h1 {
+  isolation: isolate;
+}
+
+.mkt-fx.fx .mkt-fx__h1 .mkt-fx__hl {
+  position: relative;
+  z-index: -1;
+}
+
+.mkt-fx.fx .mkt-fx__head h2 {
+  isolation: isolate;
+}
+
+.mkt-fx.fx .mkt-fx__head h2 .mkt-fx__hl {
+  position: relative;
+  z-index: -1;
+}

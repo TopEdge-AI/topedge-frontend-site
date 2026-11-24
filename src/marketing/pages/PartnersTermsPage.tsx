@@ -283,36 +283,42 @@ export default function PartnersTermsPage() {
   return (
     <>
       <MarketingSEO title={SEO.title} description={SEO.description} path={PARTNERS_TERMS_PATH} noSuffix noIndex />
-      <MarketingPage className="mkt-pterms">
-        <div className="mkt-pterms__inner">
-          <p className="mkt-pterms__crumb">
-            <Link to={PARTNERS_PATH}>Partner program</Link> / Terms
-          </p>
-          <h1 className="mkt-pterms__title">Partner Terms</h1>
-          <div className="mkt-pterms__draft" role="note">
-            <strong>Draft, under legal review.</strong> This is a working draft for our lawyer and CA. It is not yet
-            the final agreement and may change before the program opens. Text in square brackets is still to be
-            decided.
-          </div>
-          <nav className="mkt-pterms__toc" aria-label="Contents">
-            <ol>
+      <MarketingPage className="mkt-pterms fx">
+        <div className="fx-shell mkt-pterms__inner">
+          <header className="mkt-pterms__head">
+            <p className="mkt-pterms__crumb">
+              <Link to={PARTNERS_PATH}>Partner program</Link> / Terms
+            </p>
+            <h1 className="mkt-pterms__title">Partner Terms</h1>
+            <div className="mkt-pterms__draft" role="note">
+              <strong>Draft, under legal review.</strong> This is a working draft for our lawyer and CA. It is not yet
+              the final agreement and may change before the program opens. Text in square brackets is still to be
+              decided.
+            </div>
+          </header>
+          <div className="mkt-pterms__body">
+            <nav className="mkt-pterms__toc" aria-label="Contents">
+              <ol>
+                {sections.map((s, i) => (
+                  <li key={s.id}>
+                    <a href={`#${s.id}`}>
+                      {i + 1}. {s.title}
+                    </a>
+                  </li>
+                ))}
+              </ol>
+            </nav>
+            <div className="mkt-pterms__sections">
               {sections.map((s, i) => (
-                <li key={s.id}>
-                  <a href={`#${s.id}`}>
+                <section key={s.id} id={s.id} className="mkt-pterms__section" aria-labelledby={`${s.id}-h`}>
+                  <h2 id={`${s.id}-h`}>
                     {i + 1}. {s.title}
-                  </a>
-                </li>
+                  </h2>
+                  {s.body}
+                </section>
               ))}
-            </ol>
-          </nav>
-          {sections.map((s, i) => (
-            <section key={s.id} id={s.id} className="mkt-pterms__section" aria-labelledby={`${s.id}-h`}>
-              <h2 id={`${s.id}-h`}>
-                {i + 1}. {s.title}
-              </h2>
-              {s.body}
-            </section>
-          ))}
+            </div>
+          </div>
         </div>
       </MarketingPage>
     </>

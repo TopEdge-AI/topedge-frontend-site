@@ -18,18 +18,20 @@ const STEPS = [
 
 export default function HowItWorks({ title = 'Live in three steps' }: { title?: string }) {
   return (
-    <section className="mkt-how" aria-labelledby="mkt-how-title">
-      <h2 className="mkt-how__title" id="mkt-how-title">
-        {highlightTitle(title)}
-      </h2>
-      <ol className="mkt-how__steps">
+    <section className="mkt-how fx-sec" aria-labelledby="mkt-how-title">
+      <div className="fx-head">
+        <h2 className="mkt-how__title fx-head__title" id="mkt-how-title">
+          {highlightTitle(title)}
+        </h2>
+      </div>
+      <ol className="mkt-how__steps fx-cells fx-cells--bleed">
         {STEPS.map((s, i) => (
-          <li key={s.title} className="mkt-how__step">
-            <span className="mkt-how__n" aria-hidden>
-              {i + 1}
+          <li key={s.title} className="mkt-how__step fx-step">
+            <span className="mkt-how__n fx-step__num" aria-hidden>
+              {String(i + 1).padStart(2, '0')}
             </span>
-            <h3 className="mkt-how__step-title">{s.title}</h3>
-            <p className="mkt-how__step-body">{s.body}</p>
+            <h3 className="mkt-how__step-title fx-step__title">{s.title}</h3>
+            <p className="mkt-how__step-body fx-step__copy">{s.body}</p>
           </li>
         ))}
       </ol>

@@ -161,6 +161,7 @@ export default function ComparePage({ competitor: competitorProp }: Props) {
   const compBest = !lean && data.competitorPlans?.length ? pickBestPlan(data.competitorPlans) : null;
   const duelFeatures = lean ? [] : planDuelFeatures(data.slug as MatrixCompetitor);
   const modifiedIso = refresh?.updated ?? compareTwoWayModifiedIso();
+  const faqCount = lean ? leanFaqs.length : (data.faqs?.length ?? 0);
 
   return (
     <>
@@ -200,8 +201,20 @@ export default function ComparePage({ competitor: competitorProp }: Props) {
           // previously failed URL Inspection with Missing field "image".
         ]}
       />
-      <MarketingPage className="mkt-cmp">
+      <MarketingPage className="mkt-cmp fx">
+        <div className="fx-shell">
         <header className="mkt-cmp__arena">
+          <nav aria-label="Breadcrumb">
+            <ol className="fx-crumbs">
+              <li>
+                <Link to="/">Home</Link>
+              </li>
+              <li>
+                <Link to="/compare">Compare</Link>
+              </li>
+              <li aria-current="page">{data.name}</li>
+            </ol>
+          </nav>
           <p className="mkt-cmp__kicker">
             Comparison
             <span className="mkt-cmp__asof">
@@ -254,7 +267,7 @@ export default function ComparePage({ competitor: competitorProp }: Props) {
         {refresh ? <CompareRefreshed refresh={refresh} name={data.name} logo={data.logo} logoAlt={data.logoAlt} part="top" /> : null}
 
         {lean && data.answerFirst ? (
-          <section className="mkt-cmp__block" aria-label="Quick verdict">
+          <section className="mkt-cmp__block mkt-cmp__block--answer fx-sec fx-sec--tight" aria-label="Quick verdict">
             <details className="mkt-cmp__verdict" open>
               <summary>Quick verdict</summary>
               <p>{data.answerFirst}</p>
@@ -263,7 +276,7 @@ export default function ComparePage({ competitor: competitorProp }: Props) {
         ) : null}
 
         {!lean && data.whoForTopEdge && data.whoForCompetitor ? (
-          <section className="mkt-cmp__block" aria-label="Who it's for">
+          <section className="mkt-cmp__block fx-sec" aria-label="Who it's for">
             <div className="mkt-cmp__pick">
               <article className="mkt-cmp__pick-col is-te">
                 <div className="mkt-cmp__pick-top">
@@ -293,9 +306,9 @@ export default function ComparePage({ competitor: competitorProp }: Props) {
           </section>
         ) : null}
 
-        <section className="mkt-cmp__block" aria-labelledby="cmp-board">
-          <div className="mkt-cmp__block-head">
-            <h2 id="cmp-board">
+        <section className="mkt-cmp__block mkt-cmp__block--board fx-sec" aria-labelledby="cmp-board">
+          <div className="mkt-cmp__block-head fx-head">
+            <h2 id="cmp-board" className="fx-head__title">
               Capability <span className="mkt-cmp__hl">board</span>
             </h2>
           </div>
@@ -351,9 +364,9 @@ export default function ComparePage({ competitor: competitorProp }: Props) {
         {refresh ? <CompareRefreshed refresh={refresh} name={data.name} logo={data.logo} logoAlt={data.logoAlt} part="bottom" /> : null}
 
         {hasScorecard ? (
-          <section className="mkt-cmp__block" aria-labelledby="cmp-score">
-            <div className="mkt-cmp__block-head">
-              <h2 id="cmp-score">
+          <section className="mkt-cmp__block fx-sec" aria-labelledby="cmp-score">
+            <div className="mkt-cmp__block-head fx-head">
+              <h2 id="cmp-score" className="fx-head__title">
                 Honest <span className="mkt-cmp__hl">scorecard</span>
               </h2>
             </div>
@@ -389,9 +402,9 @@ export default function ComparePage({ competitor: competitorProp }: Props) {
         ) : null}
 
         {hasDeepDives ? (
-          <section className="mkt-cmp__block" aria-labelledby="cmp-deep">
-            <div className="mkt-cmp__block-head">
-              <h2 id="cmp-deep">
+          <section className="mkt-cmp__block fx-sec" aria-labelledby="cmp-deep">
+            <div className="mkt-cmp__block-head fx-head">
+              <h2 id="cmp-deep" className="fx-head__title">
                 Where they <span className="mkt-cmp__hl">differ</span>
               </h2>
             </div>
@@ -411,9 +424,9 @@ export default function ComparePage({ competitor: competitorProp }: Props) {
         ) : null}
 
         {!lean && teBest && compBest ? (
-          <section className="mkt-cmp__block" aria-labelledby="cmp-price">
-            <div className="mkt-cmp__block-head">
-              <h2 id="cmp-price">
+          <section className="mkt-cmp__block fx-sec" aria-labelledby="cmp-price">
+            <div className="mkt-cmp__block-head fx-head">
+              <h2 id="cmp-price" className="fx-head__title">
                 Best plan <span className="mkt-cmp__hl">comparison</span>
               </h2>
             </div>
@@ -504,21 +517,21 @@ export default function ComparePage({ competitor: competitorProp }: Props) {
         ) : null}
 
         {!lean && data.differentiators?.length ? (
-          <section className="mkt-cmp__block" aria-labelledby="cmp-why">
-            <div className="mkt-cmp__block-head">
-              <h2 id="cmp-why">
+          <section className="mkt-cmp__block fx-sec" aria-labelledby="cmp-why">
+            <div className="mkt-cmp__block-head fx-head">
+              <h2 id="cmp-why" className="fx-head__title">
                 Why TopEdge <span className="mkt-cmp__hl">AI</span>
               </h2>
             </div>
-            <div className="mkt-cmp__why">
+            <div className="mkt-cmp__why fx-cells fx-cells--bleed">
               {data.differentiators.map((d, i) => (
-                <article key={d.title} className="mkt-cmp__why-row">
-                  <span className="mkt-cmp__why-num" aria-hidden>
+                <article key={d.title} className="mkt-cmp__why-row fx-step">
+                  <span className="mkt-cmp__why-num fx-step__num" aria-hidden>
                     {String(i + 1).padStart(2, '0')}
                   </span>
                   <div className="mkt-cmp__why-copy">
-                    <h3>{brandLabel(d.title)}</h3>
-                    <p>{brandLabel(d.body)}</p>
+                    <h3 className="fx-step__title">{brandLabel(d.title)}</h3>
+                    <p className="fx-step__copy">{brandLabel(d.body)}</p>
                   </div>
                 </article>
               ))}
@@ -528,40 +541,47 @@ export default function ComparePage({ competitor: competitorProp }: Props) {
 
         {refresh ? <CompareRefreshedClose refresh={refresh} name={data.name} /> : null}
 
-        <section className="mkt-cmp__block mkt-cmp__block--faq" aria-labelledby="cmp-faq">
+        {!refresh && faqCount ? (
+          <section className="mkt-cmp__block mkt-cmp__block--faq fx-sec" aria-labelledby="cmp-faq">
+            <div className="mkt-cmp__block-head fx-head">
+              <h2 id="cmp-faq" className="fx-head__title">
+                Common <span className="mkt-cmp__hl">questions</span>
+              </h2>
+            </div>
+            <CompareFaq
+              items={(lean ? leanFaqs : data.faqs!).map((f) => ({
+                question: brandLabel(f.question),
+                answer: brandLabel(f.answer),
+              }))}
+            />
+          </section>
+        ) : null}
+
+        {/* Related boards: link cells in their own row. The heading stays
+            screen-reader only wherever the FAQ above already carries cmp-faq. */}
+        <section
+          className="mkt-cmp__block mkt-cmp__block--related fx-sec fx-sec--flush"
+          aria-labelledby={refresh || !faqCount ? 'cmp-faq' : undefined}
+        >
           {refresh ? (
             <h2 id="cmp-faq" className="sr-only">
               Related comparisons
             </h2>
-          ) : (lean ? leanFaqs.length : data.faqs?.length) ? (
-            <>
-              <div className="mkt-cmp__block-head">
-                <h2 id="cmp-faq">
-                  Common <span className="mkt-cmp__hl">questions</span>
-                </h2>
-              </div>
-              <CompareFaq
-                items={(lean ? leanFaqs : data.faqs!).map((f) => ({
-                  question: brandLabel(f.question),
-                  answer: brandLabel(f.answer),
-                }))}
-              />
-            </>
-          ) : (
+          ) : !faqCount ? (
             <h2 id="cmp-faq" className="sr-only">
               Related
             </h2>
-          )}
-          <nav className="mkt-cmp__more" aria-label="Related">
+          ) : null}
+          <nav className="mkt-cmp__more fx-cells fx-links" aria-label="Related">
             {data.related.map((r) => (
-              <Link key={r.href} to={r.href}>
+              <Link key={r.href} to={r.href} className="fx-link">
                 {brandLabel(r.label)}
               </Link>
             ))}
           </nav>
         </section>
 
-        <section className="mkt-cmp__block" aria-label="Reviews">
+        <section className="mkt-cmp__block mkt-cmp__block--reviews fx-sec" aria-label="Reviews">
           <ReviewPlatforms />
         </section>
 
@@ -583,6 +603,7 @@ export default function ComparePage({ competitor: competitorProp }: Props) {
             secondaryTo="/pricing"
           />
         )}
+        </div>
       </MarketingPage>
     </>
   );

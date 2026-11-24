@@ -1,12 +1,13 @@
-import { Link } from 'react-router-dom';
 import MarketingSEO from '../components/MarketingSEO';
 import MarketingPage from '../components/MarketingPage';
 import MarketingCtaBand from '../components/MarketingCtaBand';
-import { Section, SectionHeading, PrimaryButton } from '../components/ui';
-import { TopicBlockView, type TopicBlock } from '../components/topic/TopicBlocks';
+import { PrimaryButton, GhostButton } from '../components/ui';
+import type { TopicBlock } from '../components/topic/TopicBlocks';
 import FaqAccordion from '../components/topic/FaqAccordion';
 import JourneyHero from '../components/journey/JourneyHero';
 import TrustBand from '../components/journey/TrustBand';
+import { FxHead, FxLinks } from '../components/journey/Framed';
+import FxBlocks from '../components/journey/FramedBlocks';
 import FestivalCalendarRail from '../components/festival/FestivalCalendarRail';
 import FestivalCard from '../components/festival/FestivalCard';
 import FestivalLibrary from '../components/festival/FestivalLibrary';
@@ -230,8 +231,11 @@ export default function FestivalTemplatesPage() {
           },
         ]}
       />
-      <MarketingPage>
+      <MarketingPage className="mkt-jx mkt-jx--fest fx">
+        <div className="fx-shell">
         <JourneyHero
+          crumbs={[{ name: 'Home', path: '/' }, { name: 'Free WhatsApp marketing templates' }]}
+          stage
           title="Free WhatsApp marketing templates for every festival"
           accent="Free WhatsApp marketing templates"
           trust
@@ -240,38 +244,34 @@ export default function FestivalTemplatesPage() {
           imageAlt="A festival campaign calendar running Dussehra to Bhai Dooj beside an approved Diwali WhatsApp template"
           imageWidth={1672}
           imageHeight={941}
-          /* Stacked, not side by side: one primary action on the centre line,
-             and the library link under it as the quieter second choice. */
           actions={
-            <div className="mkt-fhero-actions">
+            <>
               <PrimaryButton to="/signup">Start free</PrimaryButton>
-              <Link to="#library" className="mkt-fhero-actions__link">
-                Browse all {FESTIVAL_TEMPLATE_COUNT} templates
-              </Link>
-            </div>
+              <GhostButton to="#library">Browse all {FESTIVAL_TEMPLATE_COUNT} templates</GhostButton>
+            </>
           }
         />
 
-        <Section className="!pt-10 md:!pt-12">
-          <SectionHeading
+        <section className="fx-sec">
+          <FxHead
             title="The festivals you can still act on"
             accent="still act on"
             subtitle="Meta approval takes hours once your business is verified, so anything more than a week out is comfortably reachable. Each one opens on its own page with the four messages and when to send them."
           />
           <FestivalCalendarRail />
-        </Section>
+        </section>
 
-        <Section wash="soft">
-          <SectionHeading
+        <section className="fx-sec">
+          <FxHead
             title="Four messages, and the order is the product"
             accent="the order is the product"
             subtitle="Every festival in the library ships the same four-message arc. Sent in sequence they answer four different reasons a customer has not bought yet."
           />
           <FestivalStageTrack />
-        </Section>
+        </section>
 
-        <Section>
-          <SectionHeading
+        <section className="fx-sec mkt-fgroups">
+          <FxHead
             title="Browse festivals by when they land"
             accent="when they land"
             subtitle="Grouped the way a merchant plans: by the quarter the festival falls in, not the alphabet. Each card opens a page with the four templates, the demand window and what sells."
@@ -285,7 +285,7 @@ export default function FestivalTemplatesPage() {
                 </h3>
                 <p className="mkt-fgroup__blurb">{cluster.blurb}</p>
               </div>
-              <ul className="mkt-fgroup__grid">
+              <ul className="mkt-fgroup__grid fx-cells">
                 {festivals.map((f) => (
                   <li key={f.slug}>
                     <FestivalCard festival={f} />
@@ -294,57 +294,38 @@ export default function FestivalTemplatesPage() {
               </ul>
             </section>
           ))}
-        </Section>
+        </section>
 
-        <Section wash="soft" id="library">
-          <SectionHeading
+        <section className="fx-sec" id="library">
+          <FxHead
             title={`All ${FESTIVAL_TEMPLATE_COUNT} festive templates`}
             accent="festive templates"
             subtitle="Filter by festival or by stage, or search the copy itself. Each preview is the template exactly as the dashboard hands it over: the real body, footer and button, with the blanks you fill marked in amber. Download the set from the button under the grid."
           />
           <FestivalLibrary />
-        </Section>
+        </section>
 
-        <Section>
-          <SectionHeading
+        <section className="fx-sec">
+          <FxHead
             title="Customise and personalise it in the dashboard"
             accent="personalise it"
             subtitle="These are drafts, not scripts. Every template is submitted to Meta from your own WhatsApp Business account, under your brand, with your offer in it."
           />
           <FestivalPersonalise />
-        </Section>
+        </section>
 
-        <Section wash="soft">
+        <div className="fx-sec">
           <TrustBand title="Brands already sending festive campaigns on WhatsApp" />
-        </Section>
+        </div>
 
-        <Section>
-          <div className="mkt-jx-centered mx-auto flex max-w-3xl flex-col gap-14 md:gap-16">
-            {BLOCKS.map((b) => (
-              <TopicBlockView key={b.id} block={b} />
-            ))}
-          </div>
-        </Section>
+        <FxBlocks blocks={BLOCKS} />
 
-        <Section wash="soft">
-          <SectionHeading title="Questions teams ask" accent="teams ask" />
-          <div className="mx-auto max-w-3xl">
-            <FaqAccordion items={FAQS} />
-          </div>
+        <section className="fx-sec">
+          <FxHead title="Questions teams ask" accent="teams ask" />
+          <FaqAccordion items={FAQS} />
 
-          <ul className="mx-auto mt-10 flex max-w-3xl flex-wrap justify-center gap-3">
-            {RELATED.map((r) => (
-              <li key={r.href}>
-                <Link
-                  to={r.href}
-                  className="inline-flex rounded-full border border-[#efeaf8] bg-white px-4 py-2 text-sm font-medium text-[#7C3AED] hover:border-[#c4b5fd]"
-                >
-                  {r.label}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </Section>
+          <FxLinks items={RELATED} />
+        </section>
 
         <MarketingCtaBand
           title="Set up your next festival this week"
@@ -353,6 +334,7 @@ export default function FestivalTemplatesPage() {
           secondaryLabel="See pricing"
           secondaryTo="/pricing"
         />
+        </div>
       </MarketingPage>
     </>
   );

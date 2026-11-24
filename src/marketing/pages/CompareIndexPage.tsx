@@ -1,6 +1,5 @@
-import type { CSSProperties } from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, ArrowUpRight, CalendarCheck, FileSearch, Receipt } from 'lucide-react';
+import { ArrowRight, CalendarCheck, FileSearch, Receipt } from 'lucide-react';
 import MarketingSEO from '../components/MarketingSEO';
 import { PAGE_SEO, organizationJsonLd, breadcrumbJsonLd, webPageJsonLd } from '../data/pageSeo';
 import MarketingPage from '../components/MarketingPage';
@@ -117,8 +116,17 @@ export default function CompareIndexPage() {
           ]),
         ]}
       />
-      <MarketingPage className="mkt-cmp mkt-cmpx">
+      <MarketingPage className="mkt-cmp mkt-cmpx fx">
+        <div className="fx-shell">
         <header className="mkt-cmp__arena mkt-cmpx__hero">
+          <nav aria-label="Breadcrumb">
+            <ol className="fx-crumbs">
+              <li>
+                <Link to="/">Home</Link>
+              </li>
+              <li aria-current="page">Compare</li>
+            </ol>
+          </nav>
           <p className="mkt-cmpx__eyebrow">Comparison</p>
           <h1 className="mkt-cmp__h1">
             <span className="mkt-cmp__h1-brand">
@@ -158,11 +166,14 @@ export default function CompareIndexPage() {
           </div>
         </header>
 
-        <section className="mkt-cmp__block mkt-cmpx__block" aria-labelledby="mkt-cmpx-featured">
+        <section
+          className="mkt-cmp__block mkt-cmpx__block fx-sec fx-sec--flush"
+          aria-labelledby="mkt-cmpx-featured"
+        >
           <h2 id="mkt-cmpx-featured" className="sr-only">
             Featured comparisons
           </h2>
-          <div className="mkt-cmpx__featured">
+          <div className="mkt-cmpx__featured fx-cells">
             {FEATURED.map((f) => (
               <Link key={f.href} to={f.href} className={`mkt-cmpx-feat mkt-cmpx-feat--${f.tone}`}>
                 <div className="mkt-cmpx-feat__top">
@@ -184,30 +195,25 @@ export default function CompareIndexPage() {
           </div>
         </section>
 
-        <section className="mkt-cmp__block mkt-cmpx__block" aria-labelledby="mkt-cmpx-pairs">
-          <div className="mkt-cmpx__head">
-            <h2 id="mkt-cmpx-pairs">
+        <section className="mkt-cmp__block mkt-cmpx__block fx-sec" aria-labelledby="mkt-cmpx-pairs">
+          <div className="mkt-cmpx__head fx-head">
+            <h2 id="mkt-cmpx-pairs" className="fx-head__title">
               Head-to-head <span className="mkt-cmp__hl">boards</span>
             </h2>
-            <p>
+            <p className="fx-head__sub">
               Pick the tool you are evaluating. Each board compares it with TopEdge AI row by row.
               To choose, start with the job: COD confirmation and RTO need Shopify order triggers,
               while large broadcasts need the lowest Meta markup. Then price the plan your order
               volume needs, not the entry plan.
             </p>
           </div>
-          <div className="mkt-cmpx__grid">
+          <div className="mkt-cmpx__grid fx-cells fx-cells--5 fx-cells--bleed fx-cells--keep2">
             {competitors.map((c) => (
-              <Link
-                key={c.slug}
-                to={`/compare/${c.slug}`}
-                className="mkt-cmpx-card"
-                style={{ '--accent': c.accent } as CSSProperties}
-              >
+              <Link key={c.slug} to={`/compare/${c.slug}`} className="mkt-cmpx-card">
                 <span className="mkt-cmpx-card__logo">
                   <img src={c.logo} alt={c.logoAlt} width={40} height={40} />
                 </span>
-                <ArrowUpRight className="mkt-cmpx-card__arrow" size={18} aria-hidden />
+                <span className="mkt-cmpx-card__arrow" aria-hidden />
                 <h3>
                   <span className="mkt-cmpx-card__pre">TopEdge AI vs</span> {c.name}
                 </h3>
@@ -217,15 +223,15 @@ export default function CompareIndexPage() {
           </div>
         </section>
 
-        <section className="mkt-cmp__block mkt-cmpx__block" aria-labelledby="mkt-cmpx-method">
-          <div className="mkt-cmpx__head">
-            <h2 id="mkt-cmpx-method">
+        <section className="mkt-cmp__block mkt-cmpx__block fx-sec" aria-labelledby="mkt-cmpx-method">
+          <div className="mkt-cmpx__head fx-head">
+            <h2 id="mkt-cmpx-method" className="fx-head__title">
               How we <span className="mkt-cmp__hl">compare</span>
             </h2>
           </div>
-          <div className="mkt-cmpx__method">
+          <div className="mkt-cmpx__method fx-cells fx-cells--bleed">
             {method.map((m) => (
-              <div key={m.title} className="mkt-cmpx-method">
+              <div key={m.title} className="mkt-cmpx-method fx-cell">
                 <span className="mkt-cmpx-method__icon">
                   <m.icon size={18} strokeWidth={2} aria-hidden />
                 </span>
@@ -236,7 +242,7 @@ export default function CompareIndexPage() {
           </div>
         </section>
 
-        <section className="mkt-cmp__block" aria-label="Reviews">
+        <section className="mkt-cmp__block mkt-cmp__block--reviews fx-sec" aria-label="Reviews">
           <ReviewPlatforms />
         </section>
 
@@ -247,6 +253,7 @@ export default function CompareIndexPage() {
           secondaryLabel="See pricing"
           secondaryTo="/pricing"
         />
+        </div>
       </MarketingPage>
     </>
   );

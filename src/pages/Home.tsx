@@ -81,18 +81,25 @@ export default function Home() {
         }}
       />
 
-      <MarketingPage className="home-page !bg-white">
+      {/* `fx` + `.fx-shell`: the framed column every marketing page shares
+          (styles/frame.css). The rails run from the navbar to the footer and
+          each section below is one hairline row; see the "Framed layout"
+          layer at the end of home.css. */}
+      <MarketingPage className="home-page fx !bg-white">
+        {/* The hero stays outside the frame, exactly as it was (owner, 24 Nov 2026). */}
         <div className="home-hero-stage">
           <HomeHero />
         </div>
-        {belowFoldReady ? (
-          <Suspense fallback={null}>
-            <HomeStickyStories />
-            <HomeCrmSurface />
-            <HomeTestimonials />
-            <HomeClose />
-          </Suspense>
-        ) : null}
+        <div className="fx-shell">
+          {belowFoldReady ? (
+            <Suspense fallback={null}>
+              <HomeStickyStories />
+              <HomeCrmSurface />
+              <HomeTestimonials />
+              <HomeClose />
+            </Suspense>
+          ) : null}
+        </div>
       </MarketingPage>
     </>
   );

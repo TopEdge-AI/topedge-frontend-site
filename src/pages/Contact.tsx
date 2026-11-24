@@ -94,53 +94,76 @@ export default function Contact() {
           ]),
         ]}
       />
-      <MarketingPage className="mkt-contact">
-        <header className="mkt-contact__hero">
-          <p className="mkt-contact__eyebrow">Contact</p>
-          <h1 className="mkt-contact__title">
-            Message us where you already{' '}
-            <span className="mkt-contact__title-accent">message everyone</span>
-          </h1>
-          <p className="mkt-contact__sub">
-            No form, no callback queue. Send us the store and what you want automated first:
-            WhatsApp cart recovery, COD confirmation, or the whole rollout, and you will be
-            talking to the people who build it.
-          </p>
-          <div className="mkt-contact__score">
-            <ProofBadges compact />
+      <MarketingPage className="mkt-contact fx">
+        <div className="fx-shell">
+        {/* Split hero, as on /partners: copy on white, the two channels in one
+            window on the stage. */}
+        <div className="mkt-contact__hero">
+          <header className="mkt-contact__copy">
+            <nav aria-label="Breadcrumb">
+              <ol className="fx-crumbs">
+                <li>
+                  <Link to="/">Home</Link>
+                </li>
+                <li aria-current="page">Contact</li>
+              </ol>
+            </nav>
+            <h1 className="mkt-contact__title">
+              Message us where you already{' '}
+              <span className="mkt-contact__title-accent">message everyone</span>
+            </h1>
+            <p className="mkt-contact__sub">
+              No form, no callback queue. Send us the store and what you want automated first:
+              WhatsApp cart recovery, COD confirmation, or the whole rollout, and you will be
+              talking to the people who build it.
+            </p>
+            <div className="mkt-contact__score">
+              <ProofBadges compact />
+            </div>
+          </header>
+
+          <section className="mkt-contact__channels fx-stage" aria-label="Ways to reach TopEdge AI">
+            <div className="mkt-contact__window fx-window">
+              {CHANNELS.map(({ id, Glyph, label, lede, action, href, note }) => (
+                <a
+                  key={id}
+                  className={`mkt-contact__channel mkt-contact__channel--${id}`}
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <span className="mkt-contact__channel-mark" aria-hidden>
+                    <Glyph />
+                  </span>
+                  <span className="mkt-contact__channel-body">
+                    <span className="mkt-contact__channel-head">
+                      <span className="mkt-contact__channel-label">{label}</span>
+                      <ArrowUpRight size={16} strokeWidth={2} aria-hidden />
+                    </span>
+                    <span className="mkt-contact__channel-lede">{lede}</span>
+                    {/* The pill is the cell's own action, drawn inside the one link. */}
+                    <span
+                      className={`mkt-contact__channel-action ${
+                        id === 'whatsapp' ? 'mkt-btn-primary' : 'mkt-btn-ghost'
+                      }`}
+                    >
+                      {action}
+                    </span>
+                    <span className="mkt-contact__channel-note">{note}</span>
+                  </span>
+                </a>
+              ))}
+            </div>
+          </section>
+        </div>
+
+        <section className="mkt-contact__rest fx-sec" aria-labelledby="contact-rest-head">
+          <div className="fx-head">
+            <h2 className="mkt-contact__rest-head fx-head__title" id="contact-rest-head">
+              {highlightTitle('Not a sales question?')}
+            </h2>
           </div>
-        </header>
-
-        <section className="mkt-contact__channels" aria-label="Ways to reach TopEdge AI">
-          {CHANNELS.map(({ id, Glyph, label, lede, action, href, note }) => (
-            <a
-              key={id}
-              className={`mkt-contact__channel mkt-contact__channel--${id}`}
-              href={href}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <span className="mkt-contact__channel-mark" aria-hidden>
-                <Glyph />
-              </span>
-              <span className="mkt-contact__channel-body">
-                <span className="mkt-contact__channel-head">
-                  <span className="mkt-contact__channel-label">{label}</span>
-                  <ArrowUpRight size={16} strokeWidth={2} aria-hidden />
-                </span>
-                <span className="mkt-contact__channel-lede">{lede}</span>
-                <span className="mkt-contact__channel-action">{action}</span>
-                <span className="mkt-contact__channel-note">{note}</span>
-              </span>
-            </a>
-          ))}
-        </section>
-
-        <section className="mkt-contact__rest" aria-labelledby="contact-rest-head">
-          <h2 className="mkt-contact__rest-head" id="contact-rest-head">
-            {highlightTitle('Not a sales question?')}
-          </h2>
-          <dl className="mkt-contact__rows">
+          <dl className="mkt-contact__rows fx-cells fx-cells--4 fx-cells--bleed">
             <div className="mkt-contact__row">
               <dt>Billing, partnerships, anything on paper</dt>
               <dd>
@@ -170,6 +193,7 @@ export default function Contact() {
             </div>
           </dl>
         </section>
+        </div>
       </MarketingPage>
     </>
   );

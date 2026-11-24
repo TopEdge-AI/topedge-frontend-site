@@ -2,10 +2,9 @@ import { Link } from 'react-router-dom';
 import MarketingSEO from '../../components/MarketingSEO';
 import MarketingPage from '../../components/MarketingPage';
 import MarketingCtaBand from '../../components/MarketingCtaBand';
-import { Section } from '../../components/ui';
-import JourneyHero from '../../components/journey/JourneyHero';
 import TrustBand from '../../components/journey/TrustBand';
 import { ToolCard } from '../../components/tools/ToolCards';
+import { ToolHero } from '../../components/tools/ToolFrame';
 import { FREE_TOOLS, TOOLS_PATH } from '../../data/freeTools';
 import {
   breadcrumbJsonLd,
@@ -47,19 +46,20 @@ export default function ToolsIndexPage() {
           },
         ]}
       />
-      <MarketingPage>
-        <JourneyHero
-          eyebrow="Free tools"
-          title="Free tools for Shopify stores"
-          accent="Free tools"
-          subtitle="Free calculators and generators for Indian Shopify stores, covering RTO cost, abandoned cart recovery and WhatsApp links, with no sign-up."
-          trust
-        />
+      <MarketingPage className="mkt-toolpage mkt-toolpage--hub fx">
+        <div className="fx-shell">
+          <ToolHero
+            crumbs={[{ name: 'Free tools' }]}
+            title="Free tools for Shopify stores"
+            accent="Free tools"
+            subtitle="Free calculators and generators for Indian Shopify stores, covering RTO cost, abandoned cart recovery and WhatsApp links, with no sign-up."
+          />
 
-        <Section className="!pt-10 md:!pt-14">
-          <div className="mx-auto flex max-w-5xl flex-col gap-4">
-            <ToolCard tool={feature} />
-            <ul className="mkt-tools-grid">
+          <div className="mkt-toolpage__hub">
+            <ul className="mkt-toolpage__tools fx-cells">
+              <li className="is-feature">
+                <ToolCard tool={feature} />
+              </li>
               {rest.map((t) => (
                 <li key={t.slug}>
                   <ToolCard tool={t} />
@@ -73,19 +73,19 @@ export default function ToolsIndexPage() {
               </Link>
             </p>
           </div>
-        </Section>
 
-        <Section wash="soft">
-          <TrustBand title="Made by the team behind TopEdge AI, used by Shopify brands" />
-        </Section>
+          <section className="mkt-toolpage__sec mkt-toolpage__sec--trust fx-sec">
+            <TrustBand title="Made by the team behind TopEdge AI, used by Shopify brands" />
+          </section>
 
-        <MarketingCtaBand
-          title="When you are ready to automate it"
-          subtitle="COD confirmation, cart recovery and order updates on WhatsApp for your Shopify store. Free for 14 days."
-          primaryLabel="Start free"
-          secondaryLabel="See pricing"
-          secondaryTo="/pricing"
-        />
+          <MarketingCtaBand
+            title="When you are ready to automate it"
+            subtitle="COD confirmation, cart recovery and order updates on WhatsApp for your Shopify store. Free for 14 days."
+            primaryLabel="Start free"
+            secondaryLabel="See pricing"
+            secondaryTo="/pricing"
+          />
+        </div>
       </MarketingPage>
     </>
   );

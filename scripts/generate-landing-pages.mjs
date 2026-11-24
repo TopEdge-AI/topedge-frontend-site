@@ -115,7 +115,10 @@ const HELP_WHATSAPP_URL = `https://api.whatsapp.com/send?phone=${COMPANY_PHONE_E
 const ADDRESS_LINES = identityList('COMPANY_ADDRESS_LINES');
 const SOCIAL = identityMap('COMPANY_SOCIAL');
 
-const TRIAL_SHORT = `${TRIAL.days}-day free trial on every plan. ${TRIAL.orders} free order confirmations, no credit card.`;
+// The trial is orders AND sends; the old line named the orders only, so the
+// landing pages described a smaller trial than /pricing and llms.txt do
+// (content audit, 24 Nov 2026).
+const TRIAL_SHORT = `${TRIAL.days}-day free trial on every plan: ${TRIAL.orders} orders and ${TRIAL.sends} sends, no credit card.`;
 
 // ---- data for the redesigned page ----
 
@@ -210,7 +213,9 @@ const ICONS = {
 const PROOF_VARIANTS = {
   platform: {
     h: '100% asset ownership. 0% WhatsApp API markup.',
-    p: 'Stop paying a hidden 20% to 30% markup on every customer message. TopEdge AI connects straight to your own Meta Business account, so you pay Meta directly at cost. Your phone numbers, subscriber database, templates and green tick verification stay under your brand\u2019s control. We charge for the software suite only.',
+    // No percentage here: the old "hidden 20% to 30%" had no source, and our own
+    // dated vendor reads range from 0% upward (content audit, 24 Nov 2026).
+    p: 'Stop paying a markup on every customer message. TopEdge AI connects straight to your own Meta Business account, so you pay Meta directly at cost. Your phone numbers, subscriber database, templates and green tick verification stay under your brand\u2019s control. We charge for the software suite only.',
     stat: '0%',
     // The mark earns its place on this one: the figure is about who bills you,
     // and Meta's own symbol says that faster than the label under it.
@@ -219,11 +224,15 @@ const PROOF_VARIANTS = {
     src: 'Meta bills your Business account at its own per-message rates. We charge for the software only.',
   },
   cod: {
-    h: 'The brands that verify COD orders run half the RTO',
-    p: 'Verification is the difference, and verification is one WhatsApp message before dispatch. Ask first and the parcels that leave your warehouse are the ones somebody still wants.',
+    // Wording follows the registered source (src/data/sources.ts, unicommerceRto)
+    // exactly: one report, March 2026, three practices together. The old line
+    // credited "Unicommerce/Shipway, February" and a headline that put the whole
+    // drop down to verification alone (content and GEO audits, 24 Nov 2026).
+    h: 'Brands that verify before dispatch saw RTO fall from 39% to 21%',
+    p: 'Pre-dispatch verification was one of three habits those brands shared, and it is one WhatsApp message before dispatch. Ask first and the parcels that leave your warehouse are the ones somebody still wants.',
     stat: '21% vs 39%',
-    statLabel: 'RTO among brands that verify orders, against the network at festive peak',
-    src: 'Unicommerce/Shipway, 410M+ shipments across 6,000+ brands: 39% at the November 2025 peak, 21% by February 2026 among brands that verify orders and optimise courier selection.',
+    statLabel: 'RTO by March 2026 at brands that verify, route and reward prepaid, against the festive peak',
+    src: 'Unicommerce\u2019s India D2C Report 2026, 410M+ shipments across 6,000+ brands: 39.2% at the November 2025 festive peak, 21.0% by March 2026 among brands running prepaid incentives, pincode-level courier routing and pre-dispatch address verification.',
   },
   rto: {
     h: 'Every refused parcel bills you twice',
@@ -244,7 +253,7 @@ const PROOF_VARIANTS = {
     p: 'Most tools add a per-message fee on top of Meta\u2019s, then meter your automation runs and ration them as you grow. We do neither.',
     stat: '0%',
     statLabel: 'markup on Meta\u2019s message fees, on every plan',
-    src: 'Flow automations run unlimited times on every plan, and nothing is metered by us.',
+    src: 'Flow automations run unlimited times on every plan. Plans are sized by orders and sends, never by automation runs.',
   },
 };
 
@@ -264,7 +273,7 @@ const SWITCH = [
   {
     icon: 'percent',
     topic: 'WhatsApp API pricing',
-    them: 'A hidden 20% to 30% per-message tax on top of the official Meta message rate',
+    them: 'A per-message fee added on top of the official Meta message rate',
     us: '0% Meta API markup. Meta bills you directly, and the number and templates stay yours.',
   },
   {
@@ -487,11 +496,48 @@ const BRAND_CHIPS = [
   { logo: '/trust/oleez-black.png', name: '', company: 'Oleez Online' },
 ];
 
-// The site footer, minus the Compare column (this page may not name a competitor, and
-// paid traffic should not be sent shopping) and the newsletter form (a second form
-// competes with the trial for the same click). Docs point at the dashboard, which is
-// where the documentation lives since the marketing copy was removed.
-const FOOT_COLUMNS = [];
+// The site footer's link columns. Empty until 24 Nov 2026, when these pages were
+// ad-only: the internal link audit that day (seo-audit/2026-11-24/full-audit/
+// 04-sitemap-internal-links.md) found the two indexable landing pages linked to
+// nothing but home, login, privacy and terms, so they passed no context to the
+// rest of the site and a reader had nowhere to go but the trial button.
+//
+// Still left out on purpose: the Compare column (this page may not name a
+// competitor, and paid traffic should not be sent shopping), blog links
+// (check-landing-pages.mjs asserts none) and the newsletter form. Set this back
+// to [] to return to a link-free ad page.
+const FOOT_COLUMNS = [
+  {
+    title: 'Product',
+    links: [
+      ['All features', '/features'],
+      ['Pricing', '/pricing'],
+      ['Shopify COD app', '/features/cod-confirmation'],
+      ['WhatsApp abandoned cart recovery app', '/whatsapp-abandoned-cart-recovery-app'],
+      ['WhatsApp app for Shopify', '/whatsapp-app-for-shopify'],
+      ['Shopify WhatsApp integration', '/shopify-whatsapp-integration'],
+    ],
+  },
+  {
+    title: 'Resources',
+    links: [
+      ['Docs', '/docs'],
+      ['WhatsApp templates', '/whatsapp-templates'],
+      ['Journey examples', '/whatsapp-journey-examples'],
+      ['Free tools', '/tools'],
+      ['Meta India rate card', '/pricing/meta-rates'],
+    ],
+  },
+  {
+    title: 'Company',
+    links: [
+      ['About', '/about'],
+      ['Customers', '/customers'],
+      ['Partner program', '/partners'],
+      ['Contact', '/contact'],
+    ],
+  },
+];
 
 // Same brand fills the site footer uses. Instagram's real mark is a radial gradient;
 // a single mid-gradient magenta reads the same at 16px and costs no gradient def.
@@ -819,7 +865,7 @@ const FAQS = [
   },
   {
     q: 'How long does setup take?',
-    a: 'Installing from the Shopify App Store and switching on a journey takes about fifteen minutes. The part that is not in your hands is Meta template approval, which is usually same day but is Meta’s clock, not ours.',
+    a: 'Installing from the Shopify App Store and switching on a journey takes about 30 minutes. The part that is not in your hands is Meta template approval, which is usually same day but is Meta’s clock, not ours.',
   },
   {
     q: 'I am already on another WhatsApp tool. Can I move my flows?',
@@ -884,11 +930,12 @@ function navHtml(slug) {
  * would send paid traffic shopping. The newsletter form is a second thing to fill in,
  * competing with the one conversion this page is paid for.
  */
-function footHtml() {
+// `self` is the page's own path: a page does not list itself in its footer.
+function footHtml(self) {
   const cols = !FOOT_COLUMNS.length ? '' : FOOT_COLUMNS.map(
     (c) => `        <div class="mkt-foot__col">
           <p class="mkt-foot__capsule">${esc(c.title)}</p>
-          <ul class="mkt-foot__list">${c.links.map(([label, href]) => `<li><a class="mkt-foot__link" href="${href}">${esc(label)}</a></li>`).join('')}</ul>
+          <ul class="mkt-foot__list">${c.links.filter(([, href]) => href !== self).map(([label, href]) => `<li><a class="mkt-foot__link" href="${href}">${esc(label)}</a></li>`).join('')}</ul>
         </div>`,
   ).join('\n');
   const socials = Object.entries(SOCIAL)
@@ -910,7 +957,7 @@ function footHtml() {
         </div>
         <ul class="mkt-foot__social-list">${socials}</ul>
       </div>
-${cols}
+${cols ? `      <nav class="mkt-foot__cols" aria-label="Site">\n${cols}\n      </nav>` : ''}
     </div>
     <div class="mkt-foot__legal">
       <p>&copy; 2026 ${esc(LEGAL_NAME)}. Meta&rsquo;s WhatsApp fees are billed by Meta on your own account. TopEdge AI adds 0% markup.</p>
@@ -1029,7 +1076,7 @@ function heroProof() {
  */
 const PILLARS = [
   'Built for the whole order lifecycle, not just a WhatsApp chat widget',
-  'Immediate RTO reduction: confirm COD and boost prepaid conversions',
+  'RTO cut at the source: confirm COD and move buyers to prepaid',
   'Zero message markup (keep total asset and phone number ownership)',
 ];
 
@@ -1522,7 +1569,7 @@ for (const page of PAGES) {
     PLAN_CARDS: planCards(page.attr),
     QUOTES: quotesHtml,
     NAV: navHtml(page.attr),
-    FOOTER: footHtml(),
+    FOOTER: footHtml(`/${page.out}`),
     PATHS: pathsHtml(page.attr),
     BENTO: bentoHtml(page.bento),
     POSTS: postsHtml,

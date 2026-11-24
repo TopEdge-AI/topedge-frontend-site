@@ -1,3 +1,4 @@
+import type { CSSProperties } from 'react';
 import { Link } from 'react-router-dom';
 import MarketingSEO from '../components/MarketingSEO';
 import MarketingPage from '../components/MarketingPage';
@@ -85,8 +86,20 @@ export default function CompareMultiWayPage<K extends string>({
           }),
         ]}
       />
-      <MarketingPage className="mkt-cmp">
+      <MarketingPage className="mkt-cmp fx">
+        <div className="fx-shell">
         <header className="mkt-cmp__arena">
+          <nav aria-label="Breadcrumb">
+            <ol className="fx-crumbs">
+              <li>
+                <Link to="/">Home</Link>
+              </li>
+              <li>
+                <Link to="/compare">Compare</Link>
+              </li>
+              <li aria-current="page">{shortName}</li>
+            </ol>
+          </nav>
           <p className="mkt-cmp__kicker">
             Comparison · {ways}
             <span className="mkt-cmp__asof">
@@ -125,14 +138,19 @@ export default function CompareMultiWayPage<K extends string>({
           </div>
         </header>
 
-        <section className="mkt-cmp__block" aria-labelledby="cmp-multi">
-          <div className="mkt-cmp__block-head">
-            <h2 id="cmp-multi">
+        <section className="mkt-cmp__block mkt-cmp__block--board fx-sec" aria-labelledby="cmp-multi">
+          <div className="mkt-cmp__block-head fx-head">
+            <h2 id="cmp-multi" className="fx-head__title">
               Capability <span className="mkt-cmp__hl">board</span>
             </h2>
           </div>
 
-          <div className="mkt-cmp__triple-wrap">
+          {/* --cmp-cols seats the board: one status column per vendor, so a
+              four-vendor row no longer wraps its last column under "Feature". */}
+          <div
+            className="mkt-cmp__triple-wrap"
+            style={{ '--cmp-cols': peers.length + 1 } as CSSProperties}
+          >
             <table className="mkt-cmp__triple" aria-label={boardLabel}>
               <thead>
                 <tr className="mkt-cmp__triple-head">
@@ -181,33 +199,39 @@ export default function CompareMultiWayPage<K extends string>({
               </tbody>
             </table>
           </div>
+        </section>
 
-          <nav className="mkt-cmp__more" aria-label="Pairwise comparisons">
+        <div className="mkt-cmp__block mkt-cmp__block--related fx-sec fx-sec--flush">
+          <nav className="mkt-cmp__more fx-cells fx-links" aria-label="Pairwise comparisons">
             {peers.map((peer) => (
-              <Link to={peer.href} key={peer.key}>
+              <Link to={peer.href} key={peer.key} className="fx-link">
                 TopEdge AI vs {peer.name}
               </Link>
             ))}
             {(config.alsoSee ?? []).map((item) => (
-              <Link to={item.href} key={item.href}>
+              <Link to={item.href} key={item.href} className="fx-link">
                 {item.label}
               </Link>
             ))}
-            <Link to="/compare">All comparisons</Link>
-            <Link to="/pricing">TopEdge AI pricing</Link>
+            <Link to="/compare" className="fx-link">
+              All comparisons
+            </Link>
+            <Link to="/pricing" className="fx-link">
+              TopEdge AI pricing
+            </Link>
           </nav>
-        </section>
+        </div>
 
-        <section className="mkt-cmp__block mkt-cmp__block--faq" aria-labelledby="cmp-faq">
-          <div className="mkt-cmp__block-head">
-            <h2 id="cmp-faq">
+        <section className="mkt-cmp__block mkt-cmp__block--faq fx-sec" aria-labelledby="cmp-faq">
+          <div className="mkt-cmp__block-head fx-head">
+            <h2 id="cmp-faq" className="fx-head__title">
               Common <span className="mkt-cmp__hl">questions</span>
             </h2>
           </div>
           <CompareFaq items={faqs} />
         </section>
 
-        <section className="mkt-cmp__block" aria-label="Reviews">
+        <section className="mkt-cmp__block mkt-cmp__block--reviews fx-sec" aria-label="Reviews">
           <ReviewPlatforms />
         </section>
 
@@ -218,6 +242,7 @@ export default function CompareMultiWayPage<K extends string>({
           secondaryLabel="See pricing"
           secondaryTo="/pricing"
         />
+        </div>
       </MarketingPage>
     </>
   );

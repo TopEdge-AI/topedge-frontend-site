@@ -1388,3 +1388,347 @@
     font-size: clamp(1.35rem, 6vw, 1.7rem);
   }
 }
+
+/* ==================================================================== *
+   Framed layout (24 Nov 2026)
+   --------------------------------------------------------------------
+   Feature pages now sit in the same frame as /partners (styles/frame.css):
+   one column between two hairline rails, hairline rows between sections,
+   cells that share their dividers. The full-bleed pastel aurora behind the
+   hero is gone; the film plays on the violet dither stage instead, the
+   one backdrop every product visual on the site uses. Films, copy,
+   headings and schema are unchanged.
+
+   Every rule is scoped `.mkt-pf.fx` so it wins over the layers above
+   without touching them.
+ * ==================================================================== */
+
+/* Hero and film stage: not part of this layer. The owner asked on 24 Nov
+   2026 for every hero to stay exactly as it was (aurora stage included). */
+
+/* ——— Sections ——— */
+.mkt-pf.fx .mkt-pf__section {
+  width: auto;
+  margin: 0;
+  padding: var(--fx-sec-y) var(--fx-gut);
+}
+
+.mkt-pf.fx .mkt-pf__section.fx-sec--flush {
+  padding: 0;
+}
+
+.mkt-pf.fx .mkt-pf__head {
+  max-width: 42rem;
+  margin: 0 auto clamp(2rem, 4vw, 3rem);
+}
+
+.mkt-pf.fx .mkt-pf__head-title {
+  font-size: clamp(1.6rem, 3.2vw, 2.3rem);
+  line-height: 1.22;
+  letter-spacing: -0.034em;
+}
+
+.mkt-pf.fx .mkt-pf__head-title span {
+  padding: 0.08em 0.28em 0.14em;
+  border-radius: 0.35em;
+  background: #e4d4ff;
+  color: #0c1222;
+}
+
+.mkt-pf.fx .mkt-pf__head-sub {
+  max-width: 34rem;
+  margin: 1rem auto 0;
+  font-size: 1.02rem;
+  line-height: 1.6;
+  color: var(--fx-muted);
+}
+
+/* ——— Capability cells (was the shadowed bento) ——— */
+.mkt-pf.fx .mkt-pf__bento {
+  gap: 1px;
+  align-items: stretch;
+}
+
+.mkt-pf.fx .mkt-pf__bento--five {
+  --fx-cols: 3;
+}
+
+.mkt-pf.fx .mkt-pf__tile {
+  height: auto;
+  padding: clamp(1rem, 1.8vw, 1.5rem);
+  border-radius: 0;
+  background: #fff;
+  box-shadow: var(--fx-cell-lines);
+  overflow: visible;
+}
+
+.mkt-pf.fx .mkt-pf__theme .mkt-pf__tile-visual {
+  border-radius: 14px;
+  overflow: hidden;
+  background: var(--fx-tint);
+  box-shadow: inset 0 0 0 1px rgba(12, 18, 34, 0.05);
+}
+
+.mkt-pf.fx .mkt-pf__tile-body {
+  padding: 1.35rem 0.35rem 0.6rem;
+  text-align: left;
+}
+
+.mkt-pf.fx .mkt-pf__tile-title {
+  margin: 0;
+  font-size: 1.12rem;
+  font-weight: 600;
+  line-height: 1.3;
+  letter-spacing: -0.02em;
+  color: var(--mkt-ink);
+}
+
+.mkt-pf.fx .mkt-pf__tile-accent {
+  padding: 0.04em 0.22em 0.08em;
+  border-radius: 0.35em;
+  background: #e4d4ff;
+  color: #0c1222;
+  font-weight: inherit;
+}
+
+.mkt-pf.fx .mkt-pf__tile-copy {
+  margin: 0.6rem 0 0;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--fx-muted);
+}
+
+/* ——— Showcase rows: film on a tinted half, copy on the white half ——— */
+.mkt-pf.fx .mkt-pf__showcases {
+  display: block;
+  counter-reset: pf-show;
+}
+
+.mkt-pf.fx .mkt-pf__showcase {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-areas: 'media' 'copy';
+  gap: 0;
+  align-items: stretch;
+  counter-increment: pf-show;
+}
+
+.mkt-pf.fx .mkt-pf__showcase + .mkt-pf__showcase {
+  border-top: 1px solid var(--fx-line);
+}
+
+.mkt-pf.fx .mkt-pf__showcase-media {
+  grid-area: media;
+  display: flex;
+  align-items: center;
+  padding: clamp(1rem, 2.6vw, 2.25rem);
+  background: var(--fx-tint);
+  border-bottom: 1px solid var(--fx-line);
+}
+
+.mkt-pf.fx .mkt-pf__showcase-media .mkt-pf__shot {
+  width: 100%;
+}
+
+.mkt-pf.fx .mkt-pf__theme .mkt-pf__showcase-media .mkt-pf__shot.is-scene,
+.mkt-pf.fx .mkt-pf__showcase-media .mkt-pf__shot {
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 0 0 1px rgba(12, 18, 34, 0.05), 0 28px 56px -40px rgba(46, 16, 101, 0.4);
+}
+
+.mkt-pf.fx .mkt-pf__showcase-copy {
+  grid-area: copy;
+  align-self: center;
+  justify-self: start;
+  max-width: 34rem;
+  padding: clamp(1.75rem, 4vw, 3.5rem) var(--fx-gut);
+  text-align: left;
+}
+
+.mkt-pf.fx .mkt-pf__showcase-copy::before {
+  content: counter(pf-show, decimal-leading-zero);
+  display: block;
+  margin-bottom: 1.1rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: var(--mkt-violet);
+  font-variant-numeric: tabular-nums;
+}
+
+.mkt-pf.fx .mkt-pf__showcase-title {
+  margin: 0;
+  font-size: clamp(1.45rem, 2.5vw, 1.95rem);
+  font-weight: 400;
+  line-height: 1.2;
+  letter-spacing: -0.03em;
+  color: var(--mkt-ink);
+  text-wrap: balance;
+}
+
+.mkt-pf.fx .mkt-pf__showcase-body {
+  margin: 0.95rem 0 0;
+  font-size: 1.02rem;
+  line-height: 1.65;
+  color: var(--fx-body);
+}
+
+@media (min-width: 860px) {
+  .mkt-pf.fx .mkt-pf__showcase {
+    grid-template-columns: minmax(0, 1.18fr) minmax(0, 0.82fr);
+    grid-template-areas: 'media copy';
+  }
+
+  .mkt-pf.fx .mkt-pf__showcase.is-reverse {
+    grid-template-columns: minmax(0, 0.82fr) minmax(0, 1.18fr);
+    grid-template-areas: 'copy media';
+  }
+
+  .mkt-pf.fx .mkt-pf__showcase-media {
+    border-bottom: 0;
+    border-right: 1px solid var(--fx-line);
+  }
+
+  .mkt-pf.fx .mkt-pf__showcase.is-reverse .mkt-pf__showcase-media {
+    border-right: 0;
+    border-left: 1px solid var(--fx-line);
+  }
+
+  .mkt-pf.fx .mkt-pf__showcase.is-reverse .mkt-pf__showcase-copy {
+    justify-self: start;
+  }
+}
+
+/* ——— Proof table ——— */
+.mkt-pf.fx .mkt-pf__proof {
+  max-width: 60rem;
+  margin: 0 auto;
+}
+
+.mkt-pf.fx .mkt-pf__proof-scroll {
+  border: 1px solid var(--fx-line);
+  border-radius: var(--fx-radius);
+  background: #fff;
+  box-shadow: none;
+}
+
+.mkt-pf.fx .mkt-pf__proof-table thead th {
+  background: var(--fx-tint);
+}
+
+/* ——— Steps ——— */
+.mkt-pf.fx .mkt-pf__steps {
+  display: grid;
+  gap: 1px;
+  border-top: 1px solid var(--fx-line);
+}
+
+.mkt-pf.fx .mkt-pf__steps::before {
+  content: none;
+}
+
+.mkt-pf.fx .mkt-pf__step {
+  display: block;
+  min-height: 0;
+  padding: clamp(1.5rem, 2.6vw, 2.1rem) var(--fx-gut) clamp(1.75rem, 3vw, 2.5rem);
+  border-bottom: 0;
+  background: #fff;
+}
+
+.mkt-pf.fx .mkt-pf__step-index {
+  display: block;
+  height: auto;
+}
+
+.mkt-pf.fx .mkt-pf__step-num {
+  display: block;
+  min-width: 0;
+  height: auto;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: none;
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: var(--mkt-violet);
+  line-height: 1.2;
+}
+
+.mkt-pf.fx .mkt-pf__step-body {
+  padding: 0;
+}
+
+.mkt-pf.fx .mkt-pf__step-title {
+  margin: 1.1rem 0 0;
+  font-size: 1.08rem;
+  font-weight: 600;
+  line-height: 1.35;
+  letter-spacing: -0.018em;
+}
+
+.mkt-pf.fx .mkt-pf__step-copy {
+  max-width: none;
+  margin: 0.55rem 0 0;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--fx-muted);
+}
+
+/* ——— Related links ——— */
+.mkt-pf.fx .mkt-pf__related {
+  display: grid;
+  gap: 1px;
+  margin-top: 0;
+}
+
+.mkt-pf.fx .mkt-pf__related-link {
+  padding: 1.15rem var(--fx-gut);
+  border: 0;
+  border-radius: 0;
+  background: #fff;
+  box-shadow: var(--fx-cell-lines);
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--mkt-ink);
+}
+
+.mkt-pf.fx .mkt-pf__related-link:hover {
+  background: var(--fx-tint);
+  color: var(--fx-deep);
+  transform: none;
+}
+
+@media (max-width: 899px) {
+  .mkt-pf.fx .mkt-pf__section {
+    --fx-sec-y: clamp(2.75rem, 9vw, 3.75rem);
+  }
+
+  .mkt-pf.fx .mkt-pf__section.fx-sec--flush {
+    padding: 0;
+  }
+
+  .mkt-pf.fx .mkt-pf__bento {
+    --fx-cols: 1;
+  }
+
+  .mkt-pf.fx .mkt-pf__tile-visual {
+    aspect-ratio: 1 / 1;
+  }
+}
+
+@media (min-width: 640px) and (max-width: 899px) {
+  .mkt-pf.fx .mkt-pf__bento {
+    --fx-cols: 2;
+  }
+
+  .mkt-pf.fx .mkt-pf__bento > :last-child:nth-child(odd) {
+    grid-column: span 2;
+  }
+
+  .mkt-pf.fx .mkt-pf__bento > :last-child:nth-child(odd) .mkt-pf__tile-visual {
+    aspect-ratio: 16 / 9;
+  }
+}
+

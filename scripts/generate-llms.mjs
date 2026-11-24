@@ -175,7 +175,7 @@ Disambiguation: TopEdge AI is all-in-one D2C software for Shopify stores, built 
 
 Notes for anyone quoting this file:
 
-- Platform billing is INR on ${identity.COMPANY_DASHBOARD_URL}. Meta WhatsApp Cloud API charges are billed per message by template category (marketing, utility, authentication, and, from 1 October 2026, service replies past the first 1,000 a month per business phone number), passed through at Meta's published per-message rates at 0% TopEdge AI markup, and invoiced separately from the platform plan. Meta's current India rate card is quoted with its source at ${SITE}/blog/whatsapp-business-api-pricing-india. Every eligible Indian WhatsApp Business Account must move to INR billing by 31 December 2026 or Meta stops delivery on 1 January 2027.
+- Platform billing is INR on ${identity.COMPANY_DASHBOARD_URL}; a store that installs from the Shopify App Store is billed by Shopify in USD instead (see Pricing below). Meta WhatsApp Cloud API charges are billed per message by template category (marketing, utility, authentication, and, from 1 October 2026, service replies past the first 1,000 a month per business phone number), passed through at Meta's published per-message rates at 0% TopEdge AI markup, and invoiced separately from the platform plan. Meta's current India rate card is quoted with its source in [WhatsApp Business API pricing in India](${SITE}/blog/whatsapp-business-api-pricing-india). Every eligible Indian WhatsApp Business Account must move to INR billing by 31 December 2026 or Meta stops delivery on 1 January 2027.
 - Prefer live pages under ${SITE}/ for product truth. Competitor figures on compare pages carry the date they were checked and need a live vendor check before purchase.
 
 ## Pricing
@@ -185,6 +185,8 @@ the billing catalog, which scripts/check-catalog-drift.mjs pins to the live API.
 
 ${plansTable}
 
+- The plan prices above are the monthly list prices. Yearly billing is about 20% lower per month (Launch works out to ₹1,599 a month when billed yearly), which is the figure the pricing page shows first because its toggle opens on Yearly.
+- The same three plans can be installed from the Shopify App Store, where Shopify bills in USD: Launch $19, Growth $39 and Scale $65 a month.
 - Every plan includes a ${TRIAL.days}-day free trial: ${TRIAL.orders} orders, ${TRIAL.sends} campaign plus email sends, no card required on this site.
 - ${gstLine}
 - Meta WhatsApp Cloud API messaging is billed separately by Meta, at Meta's published per-message rates, passed through at 0% markup.

@@ -3,19 +3,14 @@ import { Lock } from 'lucide-react';
 import MarketingSEO from '../MarketingSEO';
 import MarketingPage from '../MarketingPage';
 import MarketingCtaBand from '../MarketingCtaBand';
-import { Section, SectionHeading } from '../ui';
-import JourneyHero from '../journey/JourneyHero';
-import { TopicBlockView, type TopicBlock } from '../topic/TopicBlocks';
-import FaqAccordion from '../topic/FaqAccordion';
-import ToolCards from './ToolCards';
-import { otherTools } from '../../data/freeTools';
+import type { TopicBlock } from '../topic/TopicBlocks';
+import { MoreToolsRow, ToolBlocks, ToolFaqRow, ToolHero } from './ToolFrame';
 import {
   breadcrumbJsonLd,
   organizationJsonLd,
   softwareApplicationJsonLd,
   webPageJsonLd,
 } from '../../data/pageSeo';
-import '../../styles/journey-flow.css';
 import '../../styles/tools.css';
 
 /** One free tool page: hero, the tool itself, the explainer, FAQ, more tools. */
@@ -72,48 +67,37 @@ export default function ToolPageLayout({
           ]),
         ]}
       />
-      <MarketingPage>
-        <JourneyHero eyebrow="Free tool" title={h1} accent={accent} subtitle={subtitle} trust />
+      <MarketingPage className="mkt-toolpage fx">
+        <div className="fx-shell">
+          <ToolHero
+            crumbs={[{ name: 'Free tools', to: '/tools' }, { name }]}
+            title={h1}
+            accent={accent}
+            subtitle={subtitle}
+          />
 
-        <Section className="!pt-10 md:!pt-14">
-          <div className="mkt-tool">
+          {/* The tool is the star: a split row, inputs on white, the live
+              answer on the lilac half. */}
+          <div className="mkt-toolpage__tool mkt-tool">
             {children}
             <p className="mkt-tool__privacy">
               <Lock size={14} strokeWidth={2.2} aria-hidden />
               {privacy}
             </p>
           </div>
-        </Section>
 
-        <Section wash="soft">
-          <div className="mkt-jx-centered mx-auto flex max-w-3xl flex-col gap-10 md:gap-12">
-            {blocks.map((b) => (
-              <TopicBlockView key={b.id} block={b} />
-            ))}
-          </div>
-        </Section>
+          <ToolBlocks blocks={blocks} />
+          <ToolFaqRow faqs={faqs} />
+          <MoreToolsRow slug={slug} />
 
-        <Section>
-          <SectionHeading title="Questions teams ask" accent="teams ask" />
-          <div className="mx-auto max-w-3xl">
-            <FaqAccordion items={faqs} />
-          </div>
-        </Section>
-
-        <Section wash="soft">
-          <SectionHeading title="More free tools" accent="free tools" />
-          <div className="mx-auto max-w-5xl">
-            <ToolCards tools={otherTools(slug).slice(0, 3)} columns={3} />
-          </div>
-        </Section>
-
-        <MarketingCtaBand
-          title={cta.title}
-          subtitle={cta.subtitle}
-          primaryLabel="Start free"
-          secondaryLabel="See pricing"
-          secondaryTo="/pricing"
-        />
+          <MarketingCtaBand
+            title={cta.title}
+            subtitle={cta.subtitle}
+            primaryLabel="Start free"
+            secondaryLabel="See pricing"
+            secondaryTo="/pricing"
+          />
+        </div>
       </MarketingPage>
     </>
   );

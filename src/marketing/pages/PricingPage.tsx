@@ -104,9 +104,11 @@ export default function PricingPage() {
           ]),
         ]}
       />
-      <MarketingPage>
-        <div className="mkt-pricing">
-          <header className="mkt-pricing__hero">
+      <MarketingPage className="mkt-pricing fx">
+        <div className="fx-shell">
+          {/* Hero row: headline, proof, and the billing-cycle switch that
+              drives the plan block directly underneath. */}
+          <header className="mkt-pricing__hero fx-row">
             <motion.div {...rise(0)}>
               <PricingSectionHead
                 as="h1"
@@ -131,20 +133,13 @@ export default function PricingPage() {
                 <HomeTrust onStage />
               </div>
             </motion.div>
+
+            <CycleToggle value={cycle} onChange={setCycle} />
           </header>
 
-          <motion.div
-            className="mkt-pricing__inner"
-            id="plans"
-            {...(reduceMotion
-              ? {}
-              : {
-                  initial: { opacity: 1, y: 16 },
-                  animate: { opacity: 1, y: 0 },
-                  transition: { duration: 0.55, delay: 0.2, ease },
-                })}
-          >
-            <CycleToggle value={cycle} onChange={setCycle} />
+          {/* One framed block: four plan cells sharing hairlines, the GST note
+              as its footer row. */}
+          <section className="mkt-pricing__plans fx-sec fx-sec--flush" id="plans" aria-label="Plans">
             <PlanGrid plans={catalog.plans} cycle={cycle} />
             <div className="mkt-pricing__footnote">
               <p className="mkt-gst">{GST_FOOTNOTE} Prices are exclusive of tax.</p>
@@ -154,69 +149,71 @@ export default function PricingPage() {
                 </p>
               ) : null}
             </div>
+          </section>
 
-            <IncludedFeatures items={catalog.universalFeatures} />
+          <IncludedFeatures items={catalog.universalFeatures} />
 
+          <div className="mkt-pricing__reviews fx-sec">
             <ProofWall
               title="What merchants say."
               highlight="Reviews from Shopify brands, as written."
               sub="Hover any face or logo to read the published Trustpilot or Product Hunt review behind it."
             />
+          </div>
 
-            <FeatureMatrix plans={catalog.plans} cycle={cycle} />
+          <FeatureMatrix plans={catalog.plans} cycle={cycle} />
 
-            {/* The Meta rate card used to live here in full: two four-column
-                tables, a markup board, a calculator and a sourcing footnote.
-                It is the right proof and it was in the wrong place, between a
-                plan grid and a buy button. Three figures and a link now, the
-                detail on /pricing/meta-rates. */}
-            <section className="mkt-pricing__block" aria-labelledby="meta-fees">
-              <PricingSectionHead
-                id="meta-fees"
-                eyebrow="META FEES"
-                title="Meta bills you directly."
-                highlight="We add ₹0."
-                sub="Your WhatsApp messages are charged by Meta to your own Business Account at its published India rates. We never sit in the middle of that line."
-              />
-              <ul className="mkt-pricing__meta-figures">
-                <li>
-                  <b>₹0.8631</b>
-                  <span>Marketing, per delivered message</span>
-                </li>
-                <li>
-                  <b>₹0.1150</b>
-                  <span>Utility, authentication and service</span>
-                </li>
-                <li className="is-accent">
-                  <b>₹0</b>
-                  <span>Our markup on either</span>
-                </li>
-              </ul>
-              <p className="mkt-pricing__meta-link">
-                <Link to="/pricing/meta-rates">
-                  See the full rate card, markup comparison and cost calculator
-                  <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
-                    <path d="M5 12h14M13 6l6 6-6 6" />
-                  </svg>
-                </Link>
-              </p>
-            </section>
+          {/* The Meta rate card used to live here in full: two four-column
+              tables, a markup board, a calculator and a sourcing footnote.
+              It is the right proof and it was in the wrong place, between a
+              plan grid and a buy button. Three figures and a link now, the
+              detail on /pricing/meta-rates. */}
+          <section className="mkt-pricing__block mkt-pricing__meta fx-sec" aria-labelledby="meta-fees">
+            <PricingSectionHead
+              id="meta-fees"
+              eyebrow="META FEES"
+              title="Meta bills you directly."
+              highlight="We add ₹0."
+              sub="Your WhatsApp messages are charged by Meta to your own Business Account at its published India rates. We never sit in the middle of that line."
+            />
+            <ul className="mkt-pricing__meta-figures fx-cells fx-cells--bleed">
+              <li className="fx-stat">
+                <b className="fx-stat__fig">₹0.8631</b>
+                <span className="fx-stat__label">Marketing, per delivered message</span>
+              </li>
+              <li className="fx-stat">
+                <b className="fx-stat__fig">₹0.1150</b>
+                <span className="fx-stat__label">Utility, authentication and service</span>
+              </li>
+              <li className="fx-stat is-accent">
+                <b className="fx-stat__fig">₹0</b>
+                <span className="fx-stat__label">Our markup on either</span>
+              </li>
+            </ul>
+            <p className="mkt-pricing__meta-link">
+              <Link to="/pricing/meta-rates">
+                See the full rate card, markup comparison and cost calculator
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+                  <path d="M5 12h14M13 6l6 6-6 6" />
+                </svg>
+              </Link>
+            </p>
+          </section>
 
-            <section className="mkt-pricing__block">
-              <PricingSectionHead
-                eyebrow="FAQ"
-                title="Common"
-                highlight="questions"
-                sub="Billing, trial, and checkout, answered in one place."
-              />
-              <PricingFaq />
-              <p className="mkt-pricing__note mkt-pricing__partner-link">
-                <Link to="/partners">Run an agency? See the partner program</Link>
-              </p>
-            </section>
+          <section className="mkt-pricing__block mkt-pricing__faq fx-sec">
+            <PricingSectionHead
+              eyebrow="FAQ"
+              title="Common"
+              highlight="questions"
+              sub="Billing, trial, and checkout, answered in one place."
+            />
+            <PricingFaq />
+            <p className="mkt-pricing__note mkt-pricing__partner-link">
+              <Link to="/partners">Run an agency? See the partner program</Link>
+            </p>
+          </section>
 
-            <PricingSalesCta />
-          </motion.div>
+          <PricingSalesCta />
         </div>
       </MarketingPage>
     </>

@@ -1,6 +1,7 @@
 import { useMemo, useState } from 'react';
 import qrcode from 'qrcode-generator';
 import { Check, Copy, Download, ExternalLink } from 'lucide-react';
+import { highlightTitle } from '../../lib/highlight';
 import '../../styles/tools.css';
 
 const COUNTRIES = [
@@ -104,7 +105,7 @@ export default function WhatsAppLinkGenerator() {
   return (
     <>
       <div className="mkt-wlg">
-        <div>
+        <div className="mkt-wlg__form">
           <label className="mkt-wlg__field">
             <span className="mkt-wlg__label">Your WhatsApp number</span>
             <span className="mkt-wlg__phone">
@@ -157,54 +158,54 @@ export default function WhatsAppLinkGenerator() {
           </div>
         </div>
 
-        <div className="mkt-wlg__out" aria-live="polite">
-          <div>
+        <div className="mkt-wlg__out fx-stage fx-stage--soft" aria-live="polite">
+          <div className="mkt-wlg__result">
             <p className="mkt-wlg__out-label">Your WhatsApp link</p>
             <p className="mkt-wlg__link">{link}</p>
-          </div>
-          <div className="mkt-wlg__btns">
-            <button
-              type="button"
-              className="mkt-wlg__btn is-primary"
-              disabled={!valid}
-              onClick={() => copy('link', link)}
-            >
-              {copied === 'link' ? <Check size={15} aria-hidden /> : <Copy size={15} aria-hidden />}
-              {copied === 'link' ? 'Copied' : 'Copy link'}
-            </button>
-            <a
-              className="mkt-wlg__btn"
-              href={valid ? link : undefined}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-disabled={!valid}
-            >
-              <ExternalLink size={15} aria-hidden />
-              Test it
-            </a>
+            <div className="mkt-wlg__btns">
+              <button
+                type="button"
+                className="mkt-wlg__btn mkt-btn-primary"
+                disabled={!valid}
+                onClick={() => copy('link', link)}
+              >
+                {copied === 'link' ? <Check size={15} aria-hidden /> : <Copy size={15} aria-hidden />}
+                {copied === 'link' ? 'Copied' : 'Copy link'}
+              </button>
+              <a
+                className="mkt-wlg__btn mkt-btn-ghost"
+                href={valid ? link : undefined}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-disabled={!valid}
+              >
+                <ExternalLink size={15} aria-hidden />
+                Test it
+              </a>
+            </div>
           </div>
 
-          <div>
+          <div className="mkt-wlg__result">
             <p className="mkt-wlg__out-label">QR code</p>
-            <div className="mkt-wlg__qr" style={{ marginTop: '0.5rem' }}>
+            <div className="mkt-wlg__qr">
               <div
                 className="mkt-wlg__qr-box"
                 role="img"
                 aria-label={valid ? 'QR code for your WhatsApp link' : 'QR code appears here'}
                 dangerouslySetInnerHTML={{ __html: qrSvg }}
               />
-              <div>
+              <div className="mkt-wlg__qr-side">
                 <p className="mkt-wlg__qr-text">
                   {valid
                     ? 'Print it on packaging, invoices or your shop counter. Scanning opens a chat with you.'
                     : 'Enter your number to create the QR code.'}
                 </p>
-                <div className="mkt-wlg__btns" style={{ marginTop: '0.6rem' }}>
-                  <button type="button" className="mkt-wlg__btn" disabled={!valid} onClick={downloadPng}>
+                <div className="mkt-wlg__btns">
+                  <button type="button" className="mkt-wlg__btn mkt-btn-ghost" disabled={!valid} onClick={downloadPng}>
                     <Download size={15} aria-hidden />
                     PNG
                   </button>
-                  <button type="button" className="mkt-wlg__btn" disabled={!valid} onClick={downloadSvg}>
+                  <button type="button" className="mkt-wlg__btn mkt-btn-ghost" disabled={!valid} onClick={downloadSvg}>
                     <Download size={15} aria-hidden />
                     SVG
                   </button>
@@ -216,26 +217,34 @@ export default function WhatsAppLinkGenerator() {
       </div>
 
       <section className="mkt-wlg__snippet" aria-labelledby="wlg-snippet">
-        <h2 id="wlg-snippet">Add a WhatsApp chat button to your Shopify store</h2>
-        <ol>
-          <li>In Shopify admin, go to Online Store, then Themes.</li>
-          <li>Click the three dots next to your theme and choose Edit code.</li>
-          <li>Open theme.liquid and paste the code just before the closing &lt;/body&gt; tag.</li>
-          <li>Save. A green chat button now sits in the bottom-right corner of every page.</li>
-        </ol>
-        <div className="mkt-wlg__snippet-head">
-          <p>Code for your button{valid ? '' : ' (enter your number above first)'}</p>
-          <button
-            type="button"
-            className="mkt-wlg__btn"
-            disabled={!valid}
-            onClick={() => copy('snippet', snippet)}
-          >
-            {copied === 'snippet' ? <Check size={15} aria-hidden /> : <Copy size={15} aria-hidden />}
-            {copied === 'snippet' ? 'Copied' : 'Copy code'}
-          </button>
+        <div className="fx-head">
+          <h2 id="wlg-snippet" className="fx-head__title">
+            {highlightTitle('Add a WhatsApp chat button to your Shopify store', 'Shopify store')}
+          </h2>
         </div>
-        <pre className="mkt-wlg__code">{snippet}</pre>
+        <ol className="mkt-wlg__steps fx-cells fx-cells--4">
+          <li className="fx-step">In Shopify admin, go to Online Store, then Themes.</li>
+          <li className="fx-step">Click the three dots next to your theme and choose Edit code.</li>
+          <li className="fx-step">Open theme.liquid and paste the code just before the closing &lt;/body&gt; tag.</li>
+          <li className="fx-step">Save. A green chat button now sits in the bottom-right corner of every page.</li>
+        </ol>
+        <div className="mkt-wlg__codewrap">
+          <div className="mkt-wlg__codecard">
+            <div className="mkt-wlg__snippet-head">
+              <p>Code for your button{valid ? '' : ' (enter your number above first)'}</p>
+              <button
+                type="button"
+                className="mkt-wlg__btn mkt-btn-ghost"
+                disabled={!valid}
+                onClick={() => copy('snippet', snippet)}
+              >
+                {copied === 'snippet' ? <Check size={15} aria-hidden /> : <Copy size={15} aria-hidden />}
+                {copied === 'snippet' ? 'Copied' : 'Copy code'}
+              </button>
+            </div>
+            <pre className="mkt-wlg__code" tabIndex={0}>{snippet}</pre>
+          </div>
+        </div>
       </section>
     </>
   );

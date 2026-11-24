@@ -44,6 +44,16 @@
   for = "/*"
   [headers.values]
     Netlify-CDN-Cache-Control = "public, s-maxage=604800, stale-while-revalidate=604800, durable"
+    # Security headers (technical audit, 24 Nov 2026: live responses carried
+    # HSTS only). These four cannot break a page: no inline-script policy is
+    # set here. A full Content-Security-Policy is deliberately NOT added yet;
+    # GA4, the Google Ads tag, the Meta pixel and PostHog all inject scripts,
+    # so it has to ship as Report-Only first and be tuned from real reports.
+    # frame-ancestors allows our own subdomains (the dashboard) and nobody else.
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Content-Security-Policy = "frame-ancestors 'self' https://*.topedgeai.com"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=(), payment=(), usb=()"
 
 # Long-cache hashed assets + static media (PSI: efficient cache lifetimes)
 [[headers]]
@@ -68,6 +78,18 @@
 
 [[headers]]
   for = "/*.mp4"
+  [headers.values]
+    Cache-Control = "public, max-age=2592000, stale-while-revalidate=86400"
+
+# Fonts and SVG marks had no rule and were revalidated on every visit
+# (technical audit, 24 Nov 2026). The two font files only change with a rename.
+[[headers]]
+  for = "/fonts/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000"
+
+[[headers]]
+  for = "/*.svg"
   [headers.values]
     Cache-Control = "public, max-age=2592000, stale-while-revalidate=86400"
 

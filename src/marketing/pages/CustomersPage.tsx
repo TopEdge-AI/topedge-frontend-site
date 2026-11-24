@@ -1,4 +1,3 @@
-import type { CSSProperties } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowUpRight } from 'lucide-react';
 import MarketingSEO from '../components/MarketingSEO';
@@ -83,7 +82,7 @@ const ROLLOUT = [
 function CaseStudy({ story }: { story: (typeof CUSTOMER_STORIES)[number] }) {
   return (
     <article className="mkt-story" aria-labelledby={`case-${story.slug}`}>
-      <header className="mkt-story__cover" style={{ '--tint': story.tint } as CSSProperties}>
+      <header className="mkt-story__brand">
         <span className="mkt-story__tile">
           <img
             src={story.logoColor ?? story.logo}
@@ -100,37 +99,32 @@ function CaseStudy({ story }: { story: (typeof CUSTOMER_STORIES)[number] }) {
         </span>
       </header>
 
-      <div className="mkt-story__body">
-        <h3 className="mkt-story__headline" id={`case-${story.slug}`}>
-          {story.headline}
-        </h3>
+      <h3 className="mkt-story__headline" id={`case-${story.slug}`}>
+        {story.headline}
+      </h3>
 
-        <blockquote className="mkt-story__quote">
-          <p>{story.quote}</p>
-        </blockquote>
+      <blockquote className="mkt-story__quote">
+        <p>{story.quote}</p>
+      </blockquote>
 
-        <footer className="mkt-story__attrib">
-          <span className="mkt-story__avatar" aria-hidden>
-            {story.person.trim().charAt(0)}
-          </span>
-          <span className="mkt-story__who">
-            <b>{story.person}</b>
-            <span>{story.role}</span>
-          </span>
-        </footer>
+      <footer className="mkt-story__attrib">
+        <span className="mkt-story__avatar" aria-hidden>
+          {story.person.trim().charAt(0)}
+        </span>
+        <span className="mkt-story__who">
+          <b>{story.person}</b>
+          <span>{story.role}</span>
+        </span>
+      </footer>
 
-        <ul className="mkt-story__facts">
-          {story.facts.map((f) => (
-            <li key={f}>
-              <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" strokeWidth="2.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
-                <path d="M20 6L9 17l-5-5" />
-              </svg>
-              {f}
-            </li>
-          ))}
-        </ul>
+      <ul className="mkt-story__facts fx-checks">
+        {story.facts.map((f) => (
+          <li key={f}>{f}</li>
+        ))}
+      </ul>
 
-        {story.href ? (
+      {story.href ? (
+        <p className="mkt-story__foot">
           <a
             className="mkt-story__site"
             href={story.href}
@@ -140,8 +134,8 @@ function CaseStudy({ story }: { story: (typeof CUSTOMER_STORIES)[number] }) {
             Visit {story.name}
             <ArrowUpRight size={14} strokeWidth={2} aria-hidden />
           </a>
-        ) : null}
-      </div>
+        </p>
+      ) : null}
     </article>
   );
 }
@@ -168,114 +162,125 @@ export default function CustomersPage() {
           ]),
         ]}
       />
-      <MarketingPage className="mkt-customers">
-        <header className="mkt-customers__hero">
-          <h1 className="mkt-customers__title">
-            How Indian Shopify brands recover carts and confirm COD on{' '}
-            <span className="mkt-hl">WhatsApp</span>
-          </h1>
+      <MarketingPage className="mkt-customers fx">
+        <div className="fx-shell">
+          <header className="mkt-customers__hero">
+            <nav aria-label="Breadcrumb">
+              <ol className="fx-crumbs">
+                <li>
+                  <Link to="/">Home</Link>
+                </li>
+                <li aria-current="page">Customers</li>
+              </ol>
+            </nav>
 
-          <div className="mkt-customers__actions">
-            <PrimaryButton to="/signup">Start free</PrimaryButton>
-            <GhostButton to="/pricing">See pricing</GhostButton>
-          </div>
+            <h1 className="mkt-customers__title">
+              How Indian Shopify brands recover carts and confirm COD on{' '}
+              <span className="mkt-hl">WhatsApp</span>
+            </h1>
 
-          <div className="mkt-customers__score">
-            <ProofBadges compact />
-          </div>
+            <div className="mkt-customers__actions">
+              <PrimaryButton to="/signup">Start free</PrimaryButton>
+              <GhostButton to="/pricing">See pricing</GhostButton>
+            </div>
 
-          <p className="mkt-customers__rating">
-            Rated {TRUSTPILOT.score} out of 5 from {TRUSTPILOT.reviews} Trustpilot reviews, and{' '}
-            {PRODUCT_HUNT.rating} out of 5 from {PRODUCT_HUNT.reviews} on Product Hunt.
-          </p>
+            <div className="mkt-customers__score">
+              <ProofBadges compact />
+            </div>
 
-          <div className="mkt-customers__trust">
+            <p className="mkt-customers__rating">
+              Rated {TRUSTPILOT.score} out of 5 from {TRUSTPILOT.reviews} Trustpilot reviews, and{' '}
+              {PRODUCT_HUNT.rating} out of 5 from {PRODUCT_HUNT.reviews} on Product Hunt.
+            </p>
+          </header>
+
+          <div className="mkt-customers__trust fx-row">
             <HomeTrust onStage />
           </div>
-        </header>
 
-        <section className="mkt-customers__creds" aria-label="Platform credentials">
-          <ul className="mkt-creds">
-            {CREDENTIALS.map((c) => (
-              <li className="mkt-creds__item" key={c.label}>
-                <img
-                  className="mkt-creds__badge"
-                  src={c.img}
-                  alt={c.alt}
-                  height={34}
-                  loading="lazy"
-                  decoding="async"
-                />
-                <span className="mkt-creds__text">
-                  <b>{c.label}</b>
-                  <span>{c.detail}</span>
-                </span>
-              </li>
-            ))}
-          </ul>
-        </section>
+          <section className="mkt-customers__creds" aria-label="Platform credentials">
+            <ul className="mkt-creds fx-cells">
+              {CREDENTIALS.map((c) => (
+                <li className="mkt-creds__item" key={c.label}>
+                  <img
+                    className="mkt-creds__badge"
+                    src={c.img}
+                    alt={c.alt}
+                    height={34}
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <span className="mkt-creds__text">
+                    <b>{c.label}</b>
+                    <span>{c.detail}</span>
+                  </span>
+                </li>
+              ))}
+            </ul>
+          </section>
 
-        <section className="mkt-customers__cases" aria-labelledby="customers-cases-head">
-          <header className="mkt-sec-head">
-            <h2 className="mkt-sec-head__title" id="customers-cases-head">
-              Shopify stores already <span className="mkt-hl">running this</span>
-            </h2>
-            <p className="mkt-sec-head__sub">
-              Two D2C catalogs, the same stack: abandoned cart recovery, COD confirmation before
-              dispatch, and one shared inbox carrying Shopify order context.
-            </p>
-          </header>
+          <section className="mkt-customers__cases fx-sec" aria-labelledby="customers-cases-head">
+            <header className="mkt-sec-head fx-head">
+              <h2 className="mkt-sec-head__title fx-head__title" id="customers-cases-head">
+                Shopify stores already <span className="mkt-hl">running this</span>
+              </h2>
+              <p className="mkt-sec-head__sub fx-head__sub">
+                Two D2C catalogs, the same stack: abandoned cart recovery, COD confirmation before
+                dispatch, and one shared inbox carrying Shopify order context.
+              </p>
+            </header>
 
-          <div className="mkt-customers__case-grid">
-            {CUSTOMER_STORIES.map((story) => (
-              <CaseStudy key={story.slug} story={story} />
-            ))}
+            <div className="mkt-customers__case-grid fx-cells fx-cells--2 fx-cells--bleed">
+              {CUSTOMER_STORIES.map((story) => (
+                <CaseStudy key={story.slug} story={story} />
+              ))}
+            </div>
+          </section>
+
+          <section className="mkt-customers__rollout fx-sec" aria-labelledby="customers-rollout-head">
+            <header className="mkt-sec-head fx-head">
+              <h2 className="mkt-sec-head__title fx-head__title" id="customers-rollout-head">
+                What a rollout <span className="mkt-hl">actually looks like</span>
+              </h2>
+              <p className="mkt-sec-head__sub fx-head__sub">
+                The same three steps for every brand on this page, whether the catalog is lighting or
+                smart home hardware.
+              </p>
+            </header>
+
+            <ol className="mkt-steps-row fx-cells fx-cells--bleed">
+              {ROLLOUT.map((r, i) => (
+                <li className="mkt-steps-row__item fx-step" key={r.step}>
+                  <p className="mkt-steps-row__n fx-step__num">
+                    <span aria-hidden>{String(i + 1).padStart(2, '0')}</span> {r.step}
+                  </p>
+                  <h3 className="mkt-steps-row__title fx-step__title">{r.title}</h3>
+                  <p className="mkt-steps-row__detail fx-step__copy">{r.detail}</p>
+                  <Link className="mkt-steps-row__link" to={r.to}>
+                    {r.linkLabel}
+                    <ArrowUpRight size={13} strokeWidth={2} aria-hidden />
+                  </Link>
+                </li>
+              ))}
+            </ol>
+          </section>
+
+          <div className="mkt-customers__reviews fx-sec">
+            <ProofWall
+              title="More orders from WhatsApp."
+              highlight="Fewer carts left behind."
+              sub="Hover any face or logo to read the published review or the brand behind it."
+            />
           </div>
-        </section>
 
-        <section className="mkt-customers__rollout" aria-labelledby="customers-rollout-head">
-          <header className="mkt-sec-head">
-            <h2 className="mkt-sec-head__title" id="customers-rollout-head">
-              What a rollout <span className="mkt-hl">actually looks like</span>
-            </h2>
-            <p className="mkt-sec-head__sub">
-              The same three steps for every brand on this page, whether the catalog is lighting or
-              smart home hardware.
-            </p>
-          </header>
-
-          <ol className="mkt-steps-row">
-            {ROLLOUT.map((r, i) => (
-              <li className="mkt-steps-row__item" key={r.step}>
-                <p className="mkt-steps-row__n">
-                  <span aria-hidden>{String(i + 1).padStart(2, '0')}</span> {r.step}
-                </p>
-                <h3 className="mkt-steps-row__title">{r.title}</h3>
-                <p className="mkt-steps-row__detail">{r.detail}</p>
-                <Link className="mkt-steps-row__link" to={r.to}>
-                  {r.linkLabel}
-                  <ArrowUpRight size={13} strokeWidth={2} aria-hidden />
-                </Link>
-              </li>
-            ))}
-          </ol>
-        </section>
-
-        <div className="mkt-customers__reviews">
-          <ProofWall
-            title="More orders from WhatsApp."
-            highlight="Fewer carts left behind."
-            sub="Hover any face or logo to read the published review or the brand behind it."
+          <MarketingCtaBand
+            title="Run the same cart recovery on your store"
+            subtitle="Connect Shopify and WhatsApp, approve your templates, publish the first journey. Start free."
+            primaryLabel="Start free"
+            secondaryLabel="See pricing"
+            secondaryTo="/pricing"
           />
         </div>
-
-        <MarketingCtaBand
-          title="Run the same cart recovery on your store"
-          subtitle="Connect Shopify and WhatsApp, approve your templates, publish the first journey. Start free."
-          primaryLabel="Start free"
-          secondaryLabel="See pricing"
-          secondaryTo="/pricing"
-        />
       </MarketingPage>
     </>
   );

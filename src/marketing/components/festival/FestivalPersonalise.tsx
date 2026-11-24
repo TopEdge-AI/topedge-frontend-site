@@ -76,7 +76,7 @@ const STEPS: { title: string; body: string }[] = [
  */
 export default function FestivalPersonalise({ compact = false }: { compact?: boolean }) {
   return (
-    <div className={`mkt-fper${compact ? ' mkt-fper--compact' : ''}`}>
+    <div className={`mkt-fper${compact ? ' mkt-fper--compact' : ' fx-cells fx-cells--2 fx-cells--bleed'}`}>
       {!compact && (
       <div className="mkt-fper__fields">
         <h3 className="mkt-fper__h3">What you change</h3>
@@ -104,7 +104,7 @@ export default function FestivalPersonalise({ compact = false }: { compact?: boo
           {STEPS.map((s, i) => (
             <li key={s.title}>
               <span className="mkt-fper__num" aria-hidden>
-                {i + 1}
+                {String(i + 1).padStart(2, '0')}
               </span>
               <span>
                 <strong>{s.title}</strong>

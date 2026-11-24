@@ -2049,3 +2049,949 @@
 .mkt-pricing__partner-link a:hover {
   text-decoration: underline;
 }
+
+/* ====================================================================
+   Framed layout (24 Nov 2026)
+   --------------------------------------------------------------------
+   /pricing and /pricing/meta-rates now sit in the same frame as /partners
+   (styles/frame.css): one column between two hairline rails, hairline
+   rows between sections, cells that share their dividers. The four
+   pastel plan cards (yellow, peach, lilac, pink) are one block of four
+   cells with a single violet tick; only Growth carries a colour.
+
+   Prices, plan names, limits, footnotes and the billing-cycle switch are
+   unchanged. Every rule is scoped `.mkt-pricing.fx` (or shared with
+   `.mkt-rates.fx`) so it wins over the layers above without editing them.
+ * ==================================================================== */
+
+/* --- Section heads, shared by both pricing pages --- */
+:is(.mkt-pricing, .mkt-rates).fx .mkt-psec__head {
+  max-width: 42rem;
+  margin: 0 auto clamp(2rem, 4vw, 3rem);
+  text-align: center;
+}
+
+:is(.mkt-pricing, .mkt-rates).fx .mkt-psec__eyebrow {
+  margin: 0 0 0.85rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  color: var(--mkt-violet);
+}
+
+:is(.mkt-pricing, .mkt-rates).fx .mkt-psec__title {
+  font-family: var(--mkt-font);
+  font-size: clamp(1.6rem, 3.2vw, 2.3rem);
+  font-weight: 400;
+  line-height: 1.22;
+  letter-spacing: -0.034em;
+  color: var(--mkt-ink);
+  white-space: normal;
+  text-wrap: balance;
+}
+
+:is(.mkt-pricing, .mkt-rates).fx .mkt-psec__hl {
+  padding: 0.08em 0.28em 0.14em;
+  border-radius: 0.35em;
+  background: #e4d4ff;
+  color: #0c1222;
+  font-weight: 400;
+}
+
+:is(.mkt-pricing, .mkt-rates).fx .mkt-psec__sub {
+  max-width: 34rem;
+  margin: 1rem auto 0;
+  font-size: 1.02rem;
+  line-height: 1.6;
+  color: var(--fx-muted);
+  text-wrap: pretty;
+}
+
+/* Every content row: the frame's padding, no floating margins or own rules. */
+.mkt-pricing.fx :is(.mkt-included, .mkt-compare, .mkt-pricing__block) {
+  margin: 0;
+  padding: clamp(3.25rem, 6.5vw, 5.5rem) var(--fx-gut);
+  border-top: 0;
+}
+
+/* The closing card sits flush under the last row. */
+:is(.mkt-pricing, .mkt-rates).fx .mkt-cta--inline {
+  margin: 0;
+}
+
+/* --- Hero row --- */
+.mkt-pricing.fx .mkt-pricing__hero {
+  max-width: none;
+  margin: 0;
+  padding: calc(var(--mkt-nav-h, 4.5rem) + clamp(2.25rem, 5vw, 4rem)) var(--fx-gut)
+    clamp(2rem, 3.5vw, 2.75rem);
+  text-align: center;
+}
+
+.mkt-pricing.fx .mkt-pricing__hero .mkt-psec__head {
+  max-width: none;
+  margin: 0;
+}
+
+.mkt-pricing.fx .mkt-pricing__hero .mkt-psec__title--hero {
+  display: block;
+  max-width: 24ch;
+  margin: 0 auto;
+  font-size: clamp(2.05rem, 4.4vw, 3.2rem);
+  line-height: 1.2;
+  letter-spacing: -0.042em;
+  white-space: normal;
+  text-wrap: balance;
+}
+
+/* No top padding: the lilac must not sit over the descenders of the line above. */
+.mkt-pricing.fx .mkt-pricing__hero .mkt-psec__title--hero .mkt-psec__hl {
+  padding: 0 0.22em 0.06em;
+  border-radius: 0.3em;
+}
+
+.mkt-pricing.fx .mkt-pricing__hero .mkt-psec__sub {
+  max-width: 36rem;
+  margin: 1.35rem auto 0;
+  font-size: clamp(1.02rem, 1.4vw, 1.15rem);
+  line-height: 1.55;
+}
+
+.mkt-pricing.fx .mkt-pricing__proof {
+  gap: 1.6rem;
+  width: auto;
+  margin: 2rem auto 0;
+  padding: 0;
+}
+
+/* The customer marks, once. The strip's own sheet (home.css) only loads on
+   the home page, so without these rules the track fell out of its marquee
+   and both copies of the logos wrapped onto two rows. */
+.mkt-pricing.fx .mkt-pricing__proof-logos {
+  width: min(100%, 34rem);
+}
+
+.mkt-pricing.fx .mkt-pricing__proof-logos .home-trust-logos {
+  margin: 0 auto;
+  max-width: none;
+  text-align: center;
+}
+
+.mkt-pricing.fx .mkt-pricing__proof-logos .home-trust-logos__label,
+.mkt-pricing.fx .mkt-pricing__proof-logos .home-trust-logos--on-stage .home-trust-logos__label {
+  margin: 0 0 0.8rem;
+  font-size: 0.625rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(15, 23, 42, 0.5);
+  text-shadow: none;
+}
+
+.mkt-pricing.fx .mkt-pricing__proof-logos .home-trust-logos__viewport {
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 12%, #000 88%, transparent);
+  mask-image: linear-gradient(90deg, transparent, #000 12%, #000 88%, transparent);
+}
+
+.mkt-pricing.fx .mkt-pricing__proof-logos .home-trust-logos__track {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  width: max-content;
+  gap: 2.75rem;
+  animation: mkt-pricing-trust-marquee 28s linear infinite;
+}
+
+.mkt-pricing.fx .mkt-pricing__proof-logos .home-trust-logos__item {
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  opacity: 1;
+  text-decoration: none;
+}
+
+.mkt-pricing.fx .mkt-pricing__proof-logos .home-trust-logos__item img,
+.mkt-pricing.fx .mkt-pricing__proof-logos .home-trust-logos--on-stage .home-trust-logos__item img {
+  display: block;
+  width: auto;
+  height: 20px;
+  max-width: 110px;
+  object-fit: contain;
+  filter: brightness(0) opacity(0.6);
+  opacity: 1;
+}
+
+@keyframes mkt-pricing-trust-marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* Still on a phone and for anyone who asked for less motion: the five marks,
+   centred, without the second copy the loop scrolls into. */
+@media (max-width: 767px) {
+  .mkt-pricing.fx .mkt-pricing__proof-logos .home-trust-logos__viewport {
+    -webkit-mask-image: none;
+    mask-image: none;
+  }
+
+  .mkt-pricing.fx .mkt-pricing__proof-logos .home-trust-logos__track {
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.6rem 1.25rem;
+    animation: none;
+  }
+
+  .mkt-pricing.fx .mkt-pricing__proof-logos .home-trust-logos__item[aria-hidden='true'] {
+    display: none;
+  }
+
+  .mkt-pricing.fx .mkt-pricing__proof-logos .home-trust-logos__item img,
+  .mkt-pricing.fx .mkt-pricing__proof-logos .home-trust-logos--on-stage .home-trust-logos__item img {
+    height: 15px;
+    max-width: 72px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mkt-pricing.fx .mkt-pricing__proof-logos .home-trust-logos__viewport {
+    -webkit-mask-image: none;
+    mask-image: none;
+  }
+
+  .mkt-pricing.fx .mkt-pricing__proof-logos .home-trust-logos__track {
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    animation: none;
+  }
+
+  .mkt-pricing.fx .mkt-pricing__proof-logos .home-trust-logos__item[aria-hidden='true'] {
+    display: none;
+  }
+}
+
+/* --- Billing-cycle switch --- */
+.mkt-pricing.fx .mkt-cycle-wrap {
+  margin: clamp(1.75rem, 3vw, 2.25rem) 0 0;
+}
+
+.mkt-pricing.fx .mkt-cycle {
+  padding: 0.25rem;
+  border-color: var(--fx-line);
+  background: var(--fx-tint);
+}
+
+.mkt-pricing.fx .mkt-cycle__btn {
+  min-height: 2.5rem;
+  padding: 0 1.15rem;
+  font-family: inherit;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--fx-muted);
+}
+
+.mkt-pricing.fx .mkt-cycle__btn.is-on {
+  color: var(--mkt-ink);
+}
+
+.mkt-pricing.fx .mkt-cycle__btn:focus-visible {
+  outline: 2px solid #c4b5fd;
+  outline-offset: 2px;
+}
+
+.mkt-pricing.fx .mkt-cycle__pill {
+  top: 0.25rem;
+  bottom: 0.25rem;
+  border-color: var(--fx-line);
+  box-shadow: 0 1px 2px rgba(12, 18, 34, 0.06);
+}
+
+.mkt-pricing.fx .mkt-cycle__chip,
+.mkt-pricing.fx .mkt-cycle__btn.is-on .mkt-cycle__chip {
+  min-height: 1.15rem;
+  padding: 0 0.4rem;
+  background: #ede9fe;
+  color: #6d28d9;
+  font-size: 0.6rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
+/* --- Plans: one framed block, four cells ---
+   Each plan is a subgrid of the block, so the name, price, per-day chip,
+   description, button and limits list start at the same height in every
+   column whatever wraps. The old shell, panel and features wrappers are
+   flattened (display: contents); their children are the grid items. */
+.mkt-pricing.fx .mkt-pricing__plans {
+  scroll-margin-top: calc(var(--mkt-nav-h, 4.5rem) + 6rem);
+}
+
+.mkt-pricing.fx .mkt-plans-wrap {
+  padding: 0;
+}
+
+.mkt-pricing.fx .mkt-plans,
+.mkt-pricing.fx .mkt-plans--with-trial {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0;
+  align-items: stretch;
+  max-width: none;
+  margin: 0;
+}
+
+.mkt-pricing.fx .mkt-plan {
+  --plan-pad: clamp(1.25rem, 2vw, 1.75rem);
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-rows: auto auto auto auto auto auto 1fr;
+  order: 0;
+  height: auto;
+  background: #fff;
+  transition: none;
+}
+
+@supports (grid-template-rows: subgrid) {
+  .mkt-pricing.fx .mkt-plan {
+    grid-row: span 7;
+    grid-template-rows: subgrid;
+  }
+}
+
+.mkt-pricing.fx .mkt-plan + .mkt-plan {
+  border-left: 1px solid var(--fx-line);
+}
+
+.mkt-pricing.fx .mkt-plan__shell,
+.mkt-pricing.fx .mkt-plan__panel,
+.mkt-pricing.fx .mkt-plan__features {
+  display: contents;
+}
+
+/* Growth is the one plan with a colour: a violet bar and a tinted column. */
+.mkt-pricing.fx .mkt-plan--emphasis {
+  background: var(--fx-tint);
+  box-shadow: inset 0 3px 0 var(--mkt-violet);
+}
+
+.mkt-pricing.fx .mkt-plan__title-row {
+  grid-row: 1;
+  align-items: center;
+  width: auto;
+  min-height: 1.6rem;
+  padding: calc(var(--plan-pad) + 0.25rem) var(--plan-pad) 0;
+}
+
+.mkt-pricing.fx .mkt-plan__name {
+  font-size: 1.05rem;
+  font-weight: 600;
+  line-height: 1.3;
+  letter-spacing: -0.018em;
+  color: var(--mkt-ink);
+}
+
+.mkt-pricing.fx .mkt-plan__badge {
+  min-height: 1.5rem;
+  padding: 0.15rem 0.65rem;
+  border-color: #ddd6fe;
+  background: #ede9fe;
+  color: #6d28d9;
+  font-size: 0.7rem;
+  font-weight: 600;
+}
+
+.mkt-pricing.fx .mkt-plan__badge--trial {
+  border-color: var(--fx-line);
+  background: #fff;
+  color: var(--fx-muted);
+}
+
+.mkt-pricing.fx .mkt-plan__price-row {
+  grid-row: 2;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
+  width: auto;
+  margin: 0;
+  padding: 1.25rem var(--plan-pad) 0;
+}
+
+.mkt-pricing.fx .mkt-plan .mkt-price--lg {
+  font-size: clamp(2.1rem, 3vw, 2.6rem);
+  font-weight: 600;
+  letter-spacing: -0.045em;
+  color: var(--mkt-ink);
+}
+
+.mkt-pricing.fx .mkt-plan__period,
+.mkt-pricing.fx .mkt-plan--emphasis .mkt-plan__period {
+  font-size: 0.85rem;
+  font-weight: 400;
+  line-height: 1.35;
+  color: var(--fx-muted);
+}
+
+/* The chip and the reserved blank line share one row, so the row keeps its
+   height when the chip is absent and the cycle switch never shifts the block. */
+.mkt-pricing.fx .mkt-plan__day,
+.mkt-pricing.fx .mkt-plan--emphasis .mkt-plan__day {
+  grid-row: 3;
+  align-self: start;
+  justify-self: start;
+  min-height: 1.6rem;
+  margin: 0.75rem var(--plan-pad) 0;
+  padding: 0 0.6rem;
+  border: 1px solid var(--fx-line);
+  background: #fff;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--fx-body);
+}
+
+.mkt-pricing.fx .mkt-plan__day .mkt-price {
+  color: inherit;
+}
+
+.mkt-pricing.fx .mkt-plan__billing-note {
+  grid-row: 3;
+  width: auto;
+  min-height: 0;
+  height: 2.35rem;
+  margin: 0;
+  visibility: hidden;
+}
+
+.mkt-pricing.fx .mkt-plan__blurb {
+  grid-row: 4;
+  width: auto;
+  min-height: 0;
+  margin: 0;
+  padding: 0.95rem var(--plan-pad) 0;
+  font-size: 0.95rem;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 0;
+  color: var(--fx-muted);
+  text-wrap: pretty;
+}
+
+.mkt-pricing.fx .mkt-plan__cta {
+  grid-row: 5;
+  align-self: start;
+  width: auto;
+  max-width: none;
+  min-height: 2.875rem;
+  margin: 1.4rem var(--plan-pad) calc(var(--plan-pad) + 0.15rem);
+  padding: 0 1rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.mkt-pricing.fx .mkt-plan__cta--ghost,
+.mkt-pricing.fx .mkt-compare__cta.mkt-btn-ghost {
+  border: 1px solid rgba(124, 58, 237, 0.22);
+  background: #fff;
+  color: var(--mkt-ink);
+  box-shadow: none;
+  backdrop-filter: none;
+}
+
+.mkt-pricing.fx .mkt-plan__cta--ghost:hover,
+.mkt-pricing.fx .mkt-compare__cta.mkt-btn-ghost:hover {
+  border-color: #c4b5fd;
+  background: #fff;
+  color: var(--mkt-violet);
+  box-shadow: none;
+}
+
+.mkt-pricing.fx .mkt-plan__cta:focus-visible,
+.mkt-pricing.fx .mkt-compare__cta:focus-visible {
+  outline: 3px solid #c4b5fd;
+  outline-offset: 2px;
+}
+
+/* The limits start on one hairline that runs across all four cells. */
+.mkt-pricing.fx .mkt-plan__kicker {
+  grid-row: 6;
+  margin: 0;
+  padding: 1.4rem var(--plan-pad) 0;
+  border-top: 1px solid var(--fx-line);
+  font-size: 0.9rem;
+  font-weight: 600;
+  line-height: 1.4;
+  letter-spacing: -0.012em;
+  color: var(--mkt-ink);
+}
+
+.mkt-pricing.fx .mkt-plan__meters {
+  grid-row: 7;
+  display: grid;
+  align-content: start;
+  gap: 0.7rem;
+  padding: 1rem var(--plan-pad) calc(var(--plan-pad) + 0.5rem);
+  font-size: 0.92rem;
+  font-weight: 400;
+  line-height: 1.45;
+  letter-spacing: 0;
+  color: var(--fx-body);
+}
+
+.mkt-pricing.fx .mkt-plan__meters li {
+  align-items: flex-start;
+  gap: 0.6rem;
+  padding: 0;
+}
+
+/* One tick for every plan. */
+.mkt-pricing.fx .mkt-plan__mark,
+.mkt-pricing.fx .mkt-included__mark {
+  width: 1.15rem;
+  height: 1.15rem;
+  margin-top: 0.1rem;
+  background: #ede9fe;
+  color: var(--mkt-violet);
+}
+
+.mkt-pricing.fx .mkt-plan__meters li.is-locked {
+  color: #b9c0cc;
+}
+
+.mkt-pricing.fx .mkt-plan__meters li.is-locked .mkt-plan__mark {
+  background: #f4f4f7;
+  color: #b9c0cc;
+}
+
+/* The GST note closes the block as its footer row. */
+.mkt-pricing.fx .mkt-pricing__footnote {
+  width: auto;
+  max-width: none;
+  margin: 0;
+  padding: 0.95rem var(--fx-gut);
+  border: 0;
+  border-top: 1px solid var(--fx-line);
+  border-radius: 0;
+  background: var(--fx-tint);
+}
+
+.mkt-pricing.fx .mkt-gst,
+.mkt-pricing.fx .mkt-fallback {
+  font-size: 0.82rem;
+  line-height: 1.5;
+  color: var(--fx-muted);
+}
+
+@media (max-width: 1099px) {
+  .mkt-pricing.fx .mkt-plans,
+  .mkt-pricing.fx .mkt-plans--with-trial {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .mkt-pricing.fx .mkt-plan:nth-child(odd) {
+    border-left: 0;
+  }
+
+  .mkt-pricing.fx .mkt-plan:nth-child(n + 3) {
+    border-top: 1px solid var(--fx-line);
+  }
+
+  .mkt-pricing.fx .mkt-plan--emphasis {
+    box-shadow: inset 0 3px 0 var(--mkt-violet);
+  }
+}
+
+@media (max-width: 639px) {
+  .mkt-pricing.fx .mkt-plans,
+  .mkt-pricing.fx .mkt-plans--with-trial {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .mkt-pricing.fx .mkt-plan + .mkt-plan {
+    border-left: 0;
+    border-top: 1px solid var(--fx-line);
+  }
+}
+
+/* --- Included on every plan: three cells --- */
+.mkt-pricing.fx .mkt-included__head {
+  max-width: 42rem;
+  margin-bottom: clamp(2rem, 4vw, 3rem);
+}
+
+.mkt-pricing.fx .mkt-included__head .mkt-psec__title {
+  font-size: clamp(1.6rem, 3.2vw, 2.3rem);
+  line-height: 1.22;
+  white-space: normal;
+}
+
+.mkt-pricing.fx .mkt-included__head .mkt-psec__sub {
+  max-width: 34rem;
+  margin-top: 1rem;
+}
+
+/* The old card becomes the cell grid, run out to the rails and the row's
+   bottom hairline. */
+.mkt-pricing.fx .mkt-included__card {
+  margin: 0 calc(var(--fx-gut) * -1) calc(clamp(3.25rem, 6.5vw, 5.5rem) * -1);
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: none;
+  box-shadow: none;
+}
+
+.mkt-pricing.fx .mkt-included__grid {
+  --fx-cols: 3;
+  grid-template-columns: repeat(var(--fx-cols), minmax(0, 1fr));
+  gap: 1px;
+  border-bottom: 0;
+}
+
+.mkt-pricing.fx .mkt-included__col,
+.mkt-pricing.fx .mkt-included__col:not(:last-child) {
+  padding: clamp(1.5rem, 2.6vw, 2.25rem) var(--fx-gut) clamp(1.75rem, 3vw, 2.5rem);
+  border: 0;
+}
+
+.mkt-pricing.fx .mkt-included__col-title {
+  margin: 0 0 1.1rem;
+  font-size: 1.05rem;
+  font-weight: 600;
+  line-height: 1.35;
+  letter-spacing: -0.018em;
+  text-transform: none;
+  color: var(--mkt-ink);
+}
+
+.mkt-pricing.fx .mkt-included__col ul {
+  gap: 0.7rem;
+}
+
+.mkt-pricing.fx .mkt-included__col li {
+  gap: 0.6rem;
+  font-size: 0.95rem;
+  font-weight: 400;
+  line-height: 1.45;
+  letter-spacing: 0;
+  color: var(--fx-body);
+}
+
+@media (max-width: 639px) {
+  .mkt-pricing.fx .mkt-included__grid {
+    --fx-cols: 1;
+  }
+}
+
+/* --- Reviews wall: the shared component, in its own row --- */
+.mkt-pricing.fx .mkt-pricing__reviews .mkt-pwall-section {
+  width: min(100%, 40rem);
+  margin: 0 auto;
+}
+
+.mkt-pricing.fx .mkt-pricing__reviews .mkt-pwall-section__sub {
+  margin: 1rem auto 2rem;
+  max-width: 34rem;
+  font-size: 1.02rem;
+  line-height: 1.6;
+  color: var(--fx-muted);
+}
+
+/* --- Compare all plans: a framed table --- */
+.mkt-pricing.fx .mkt-compare__card {
+  width: min(100%, 60rem);
+  margin: 0 auto;
+  border: 1px solid var(--fx-line);
+  border-radius: var(--fx-radius);
+  box-shadow: none;
+}
+
+.mkt-pricing.fx .mkt-compare__scroll {
+  overflow: visible;
+}
+
+.mkt-pricing.fx .mkt-compare__table {
+  min-width: 0;
+}
+
+.mkt-pricing.fx .mkt-compare__row {
+  grid-template-columns: minmax(0, 1.35fr) repeat(3, minmax(0, 1fr));
+  align-items: stretch;
+  border-bottom: 1px solid var(--fx-line);
+}
+
+.mkt-pricing.fx .mkt-compare__row--head {
+  background: var(--fx-tint);
+}
+
+.mkt-pricing.fx .mkt-compare__row--head .mkt-compare__col-head {
+  padding: 1rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: -0.012em;
+  text-transform: none;
+  color: var(--mkt-ink);
+}
+
+.mkt-pricing.fx .mkt-compare__row--head .mkt-compare__col-head.is-emphasis {
+  background: var(--fx-tint-2);
+  box-shadow: inset 0 3px 0 var(--mkt-violet);
+}
+
+.mkt-pricing.fx .mkt-compare__label {
+  display: flex;
+  align-items: center;
+  padding: 1.05rem 1.4rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+  line-height: 1.4;
+  color: var(--mkt-ink);
+}
+
+.mkt-pricing.fx .mkt-compare__cell {
+  padding: 1.05rem 0.85rem;
+}
+
+.mkt-pricing.fx .mkt-compare__cell.is-emphasis,
+.mkt-pricing.fx .mkt-compare__foot-col.is-emphasis {
+  background: var(--fx-tint);
+}
+
+.mkt-pricing.fx .mkt-compare__text {
+  font-size: 0.92rem;
+  font-weight: 500;
+  color: var(--fx-body);
+}
+
+.mkt-pricing.fx .mkt-compare__icon {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.mkt-pricing.fx .mkt-compare__icon--yes {
+  background: #ede9fe;
+  color: var(--mkt-violet);
+}
+
+.mkt-pricing.fx .mkt-compare__icon--no {
+  background: #f4f4f7;
+  color: #9aa1af;
+}
+
+.mkt-pricing.fx .mkt-compare__row--foot {
+  border-bottom: 0;
+  background: #fff;
+}
+
+.mkt-pricing.fx .mkt-compare__foot-col {
+  justify-content: flex-end;
+  gap: 0.6rem;
+  padding: 1.5rem 0.85rem 1.6rem;
+}
+
+.mkt-pricing.fx .mkt-compare__popular {
+  min-height: 1.5rem;
+  padding: 0.15rem 0.65rem;
+  font-size: 0.7rem;
+  font-weight: 600;
+}
+
+.mkt-pricing.fx .mkt-compare__plan-name {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--mkt-ink);
+}
+
+.mkt-pricing.fx .mkt-compare__cta {
+  width: auto;
+  max-width: 100%;
+  min-height: 2.625rem;
+  padding: 0 1.25rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+/* Phones: all three plans stay on screen (no sideways scroll); the choose
+   buttons restack as one row per plan under the table. */
+@media (max-width: 639px) {
+  .mkt-pricing.fx .mkt-compare__row {
+    grid-template-columns: minmax(0, 1.15fr) repeat(3, minmax(0, 1fr));
+  }
+
+  .mkt-pricing.fx .mkt-compare__row--head .mkt-compare__col-head {
+    padding: 0.85rem 0.25rem;
+    font-size: 0.85rem;
+  }
+
+  .mkt-pricing.fx .mkt-compare__label {
+    padding: 0.85rem 0.4rem 0.85rem 0.85rem;
+    font-size: 0.82rem;
+  }
+
+  .mkt-pricing.fx .mkt-compare__cell {
+    padding: 0.85rem 0.3rem;
+  }
+
+  .mkt-pricing.fx .mkt-compare__text {
+    font-size: 0.8rem;
+  }
+
+  .mkt-pricing.fx .mkt-compare__row--foot {
+    display: block;
+  }
+
+  .mkt-pricing.fx .mkt-compare__row--foot > .mkt-compare__label {
+    display: none;
+  }
+
+  .mkt-pricing.fx .mkt-compare__foot-col {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    justify-items: start;
+    gap: 0.3rem 0.75rem;
+    padding: 0.95rem 0.85rem;
+    text-align: left;
+  }
+
+  .mkt-pricing.fx .mkt-compare__foot-col + .mkt-compare__foot-col {
+    border-top: 1px solid var(--fx-line);
+  }
+
+  .mkt-pricing.fx .mkt-compare__popular {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .mkt-pricing.fx .mkt-compare__plan-name {
+    grid-column: 1;
+  }
+
+  .mkt-pricing.fx .mkt-compare__cta {
+    grid-column: 2;
+    grid-row: 1 / span 2;
+    min-height: 2.5rem;
+    padding: 0 1.1rem;
+    font-size: 0.85rem;
+  }
+}
+
+/* --- Meta fees: three figures in a strip, then the link --- */
+.mkt-pricing.fx .mkt-pricing__meta-figures {
+  --fx-cols: 3;
+  grid-template-columns: repeat(var(--fx-cols), minmax(0, 1fr));
+  gap: 1px;
+  width: auto;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.mkt-pricing.fx .mkt-pricing__meta-figures li {
+  display: flex;
+  gap: 0.55rem;
+  padding: clamp(1.5rem, 2.8vw, 2.25rem) var(--fx-gut);
+  border: 0;
+  border-radius: 0;
+  background: #fff;
+  text-align: left;
+}
+
+.mkt-pricing.fx .mkt-pricing__meta-figures b {
+  font-size: clamp(1.7rem, 3vw, 2.4rem);
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: -0.045em;
+  color: var(--mkt-ink);
+}
+
+.mkt-pricing.fx .mkt-pricing__meta-figures li.is-accent b {
+  color: var(--mkt-violet);
+}
+
+.mkt-pricing.fx .mkt-pricing__meta-figures span {
+  font-size: 0.95rem;
+  line-height: 1.45;
+  color: var(--fx-muted);
+}
+
+/* The link is the strip's footer row, so the section ends on it. */
+.mkt-pricing.fx .mkt-pricing__meta {
+  padding-bottom: 0;
+}
+
+.mkt-pricing.fx .mkt-pricing__meta-link {
+  margin: 0;
+  padding: 0.85rem 0;
+}
+
+.mkt-pricing.fx .mkt-pricing__meta-link a {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--mkt-violet);
+}
+
+.mkt-pricing.fx .mkt-pricing__meta-link a:hover {
+  color: var(--fx-deep);
+}
+
+.mkt-pricing.fx .mkt-pricing__meta-link a:focus-visible {
+  outline: 2px solid #c4b5fd;
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
+@media (max-width: 639px) {
+  .mkt-pricing.fx .mkt-pricing__meta-figures {
+    --fx-cols: 1;
+  }
+
+  .mkt-pricing.fx .mkt-pricing__meta-figures li {
+    display: grid;
+    grid-template-columns: 6.75rem minmax(0, 1fr);
+    align-items: center;
+    gap: 0.9rem;
+    padding: 1.1rem var(--fx-gut);
+  }
+
+  .mkt-pricing.fx .mkt-pricing__meta-figures b {
+    font-size: 1.5rem;
+  }
+
+  .mkt-pricing.fx .mkt-pricing__meta-figures span {
+    font-size: 0.9rem;
+  }
+}
+
+/* --- FAQ row --- */
+.mkt-pricing.fx .mkt-pricing__faq .mkt-faq {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.mkt-pricing.fx .mkt-pricing__partner-link {
+  margin: 1.75rem auto 0;
+  font-size: 0.95rem;
+  color: var(--fx-muted);
+}
+
+.mkt-pricing.fx .mkt-pricing__partner-link a {
+  font-weight: 500;
+  color: var(--mkt-violet);
+}
+
+.mkt-pricing.fx .mkt-pricing__partner-link a:hover {
+  color: var(--fx-deep);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mkt-pricing.fx .mkt-cycle__pill {
+    transition: none !important;
+  }
+}

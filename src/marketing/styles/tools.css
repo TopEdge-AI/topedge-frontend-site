@@ -1118,3 +1118,1451 @@
   font-weight: 500;
   color: var(--mkt-ink);
 }
+
+/* ==================================================================== *
+   Framed layout (24 Nov 2026)
+   --------------------------------------------------------------------
+   The free tools hub and every tool page now sit in the site frame
+   (styles/frame.css): one column between two hairline rails, hairline rows
+   between sections, cells that share their dividers.
+
+   - Hero row with a visible breadcrumb that mirrors the BreadcrumbList.
+   - The tool is the star: a split row, inputs on the white half and the
+     live answer on the lilac half, or one framed card on a tint row when
+     the tool is a single column (the finder quiz).
+   - One control style: hairline border, 12px radius, violet focus ring,
+     label above, muted helper text. Primary action is the purple pill;
+     copy and download are ghost pills.
+   - The explainer below is rows of cells: figures, steps, do and avoid,
+     further reading, FAQ, more tools.
+
+   Copy, headings, links and schema are unchanged. Every rule is scoped
+   `.mkt-toolpage.fx` so it wins over the layers above without touching them.
+ * ==================================================================== */
+
+/* --- Hero --- */
+.mkt-toolpage.fx .mkt-toolpage__hero {
+  padding: calc(var(--mkt-nav-h, 4.5rem) + clamp(2.25rem, 5vw, 4rem)) var(--fx-gut) clamp(2.5rem, 4.5vw, 3.5rem);
+  text-align: center;
+}
+
+.mkt-toolpage.fx .mkt-toolpage__title {
+  max-width: 24ch;
+  margin: 0 auto;
+  font-family: var(--mkt-font);
+  font-size: clamp(2.05rem, 4.4vw, 3.2rem);
+  font-weight: 400;
+  line-height: 1.14;
+  letter-spacing: -0.042em;
+  color: var(--mkt-ink);
+  text-wrap: balance;
+}
+
+.mkt-toolpage.fx .mkt-toolpage__hl {
+  padding: 0.04em 0.24em 0.1em;
+  border-radius: 0.3em;
+  background: #e4d4ff;
+  color: #0c1222;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
+
+.mkt-toolpage.fx .mkt-toolpage__sub {
+  max-width: 38rem;
+  margin: 1.35rem auto 0;
+  font-size: clamp(1.02rem, 1.4vw, 1.15rem);
+  line-height: 1.55;
+  color: var(--fx-muted);
+  text-wrap: balance;
+}
+
+.mkt-toolpage.fx .mkt-toolpage__trust {
+  display: flex;
+  justify-content: center;
+  margin-top: 1.75rem;
+}
+
+/* --- Section heads: the frame's head, with the shared highlight --- */
+.mkt-toolpage.fx .fx-head__title .mkt-hl {
+  margin: 0;
+}
+
+/* --- Tool cells (the hub grid and "More free tools") --- */
+.mkt-toolpage.fx .mkt-toolpage__tools > li {
+  display: flex;
+}
+
+.mkt-toolpage.fx .mkt-tool-card {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: clamp(1.5rem, 2.6vw, 2.1rem) var(--fx-gut) clamp(1.35rem, 2.2vw, 1.75rem);
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+  text-decoration: none;
+  transform: none;
+  transition: background 0.15s ease;
+}
+
+.mkt-toolpage.fx .mkt-tool-card:hover {
+  border: 0;
+  background: var(--fx-tint);
+  box-shadow: none;
+  transform: none;
+}
+
+.mkt-toolpage.fx .mkt-tool-card:focus-visible {
+  outline: 2px solid #c4b5fd;
+  outline-offset: -2px;
+}
+
+.mkt-toolpage.fx .mkt-tool-card__tag {
+  display: inline-flex;
+  align-items: center;
+  align-self: flex-start;
+  gap: 0.5rem;
+  margin: 0;
+  padding: 0;
+  border-radius: 0;
+  background: none;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  color: var(--mkt-violet);
+}
+
+.mkt-toolpage.fx .mkt-tool-card__tag svg {
+  flex: none;
+}
+
+.mkt-toolpage.fx .mkt-tool-card__title {
+  margin-top: 1.1rem;
+  font-size: 1.08rem;
+  font-weight: 600;
+  line-height: 1.35;
+  letter-spacing: -0.018em;
+  color: var(--mkt-ink);
+}
+
+.mkt-toolpage.fx .mkt-tool-card__body {
+  flex: 1 1 auto;
+  margin-top: 0.55rem;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--fx-muted);
+}
+
+.mkt-toolpage.fx .mkt-tool-card__cta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--fx-line);
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--mkt-ink);
+  transition: color 0.15s ease;
+}
+
+.mkt-toolpage.fx .mkt-tool-card__cta::after,
+.mkt-toolpage.fx .mkt-toolpage__more::after {
+  content: '';
+  flex: none;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-top: 1.5px solid #b6b9c6;
+  border-right: 1.5px solid #b6b9c6;
+  transform: rotate(45deg);
+  transition: border-color 0.15s ease, transform 0.15s ease;
+}
+
+.mkt-toolpage.fx .mkt-tool-card:hover .mkt-tool-card__cta {
+  color: var(--fx-deep);
+}
+
+.mkt-toolpage.fx .mkt-tool-card:hover .mkt-tool-card__cta::after {
+  border-color: var(--mkt-violet);
+  transform: translateX(2px) rotate(45deg);
+}
+
+/* The hub: the quiz leads on a tinted double cell, the rest fill the grid. */
+.mkt-toolpage.fx .mkt-toolpage__hub {
+  border-bottom: 1px solid var(--fx-line);
+}
+
+.mkt-toolpage.fx .mkt-toolpage__hub .mkt-toolpage__tools > li.is-feature {
+  grid-column: span 2;
+  background: var(--fx-tint);
+}
+
+.mkt-toolpage.fx .mkt-toolpage__hub li.is-feature .mkt-tool-card:hover {
+  background: var(--fx-tint-2);
+}
+
+.mkt-toolpage.fx .mkt-toolpage__hub li.is-feature .mkt-tool-card__title {
+  max-width: 30ch;
+  font-size: clamp(1.25rem, 2.1vw, 1.6rem);
+  line-height: 1.25;
+  letter-spacing: -0.028em;
+}
+
+.mkt-toolpage.fx .mkt-toolpage__hub li.is-feature .mkt-tool-card__body {
+  max-width: 34rem;
+  font-size: 1rem;
+}
+
+.mkt-toolpage.fx .mkt-toolpage__hub li.is-feature .mkt-tool-card__cta {
+  border-top-color: #e6e0f5;
+}
+
+/* --- The small line under a tool (privacy, or the hub's "no sign-up") --- */
+.mkt-toolpage.fx .mkt-tool__privacy {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25rem 0.45rem;
+  margin: 0;
+  padding: 0.95rem var(--fx-gut);
+  border-top: 1px solid var(--fx-line);
+  font-size: 0.82rem;
+  line-height: 1.5;
+  color: var(--fx-muted);
+  text-align: center;
+}
+
+.mkt-toolpage.fx .mkt-tool__privacy svg {
+  flex: none;
+  color: var(--mkt-violet);
+}
+
+.mkt-toolpage.fx .mkt-toolpage__hub .mkt-tool__privacy {
+  border-top: 0;
+}
+
+/* --- The tool row --- */
+.mkt-toolpage.fx .mkt-toolpage__tool {
+  max-width: none;
+  margin: 0;
+  border-top: 1px solid var(--fx-line);
+  border-bottom: 1px solid var(--fx-line);
+}
+
+/* Single-column tool: one framed card on a tint row. */
+.mkt-toolpage.fx .mkt-toolpage__tool--card {
+  padding: clamp(1.75rem, 5vw, 4rem) var(--fx-gut);
+  background: var(--fx-tint);
+}
+
+/* --- Calculators (the shared .mkt-calc widget, reframed as a split row) --- */
+.mkt-toolpage.fx .mkt-calc {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: #fff;
+  box-shadow: none;
+}
+
+/* Before the widget binds, the placeholder shows its static paragraph. */
+.mkt-toolpage.fx .mkt-calc:not(.is-live) {
+  padding: clamp(1.5rem, 3vw, 2.5rem) var(--fx-gut);
+  font-size: 1rem;
+  line-height: 1.65;
+  color: var(--fx-body);
+}
+
+.mkt-toolpage.fx .mkt-calc__title {
+  margin: 0;
+  padding: clamp(1.5rem, 2.6vw, 2.1rem) var(--fx-gut) 0;
+  font-size: 1.2rem;
+  font-weight: 600;
+  line-height: 1.3;
+  letter-spacing: -0.02em;
+  color: var(--mkt-ink);
+}
+
+.mkt-toolpage.fx .mkt-calc__lead {
+  max-width: 50rem;
+  margin: 0;
+  padding: 0.5rem var(--fx-gut) clamp(1.4rem, 2.4vw, 1.9rem);
+  font-size: 0.97rem;
+  line-height: 1.6;
+  color: var(--fx-muted);
+}
+
+.mkt-toolpage.fx .mkt-calc__body {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 0;
+  align-items: stretch;
+  margin: 0;
+  border-top: 1px solid var(--fx-line);
+}
+
+.mkt-toolpage.fx .mkt-calc__fields {
+  display: grid;
+  gap: 0;
+  align-content: start;
+}
+
+.mkt-toolpage.fx .mkt-calc__field {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  grid-template-areas:
+    'label label'
+    'slider box'
+    'hint hint';
+  align-items: center;
+  gap: 0.6rem 1.25rem;
+  padding: clamp(1.25rem, 2vw, 1.6rem) var(--fx-gut);
+  border: 0;
+  border-bottom: 1px solid var(--fx-line);
+  border-radius: 0;
+  background: #fff;
+}
+
+.mkt-toolpage.fx .mkt-calc__field:last-child {
+  border-bottom: 0;
+}
+
+/* The label and the number box become cells of the field's own grid, so the
+   label sits above and the box sits at the end of the slider. */
+.mkt-toolpage.fx .mkt-calc__field-head {
+  display: contents;
+}
+
+.mkt-toolpage.fx .mkt-calc__label {
+  grid-area: label;
+  font-size: 0.95rem;
+  font-weight: 600;
+  line-height: 1.35;
+  letter-spacing: -0.01em;
+  color: var(--mkt-ink);
+}
+
+.mkt-toolpage.fx .mkt-calc__input {
+  grid-area: box;
+  width: 8.25rem;
+  padding: 0 0.85rem;
+  border: 1px solid #e2e2ec;
+  border-radius: 12px;
+  background: #fff;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.mkt-toolpage.fx .mkt-calc__input:focus-within {
+  border-color: var(--mkt-violet);
+  box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.16);
+}
+
+.mkt-toolpage.fx .mkt-calc__input input {
+  min-height: 2.75rem;
+}
+
+.mkt-toolpage.fx .mkt-calc__suffix {
+  color: var(--fx-muted);
+}
+
+.mkt-toolpage.fx .mkt-calc__slider {
+  grid-area: slider;
+}
+
+.mkt-toolpage.fx .mkt-calc__slider::-webkit-slider-runnable-track {
+  background: linear-gradient(90deg, #7c3aed var(--fill), #ebe7f5 var(--fill));
+}
+
+.mkt-toolpage.fx .mkt-calc__slider::-moz-range-track {
+  background: #ebe7f5;
+}
+
+.mkt-toolpage.fx .mkt-calc__slider::-webkit-slider-thumb {
+  box-shadow: 0 0 0 1px rgba(124, 58, 237, 0.25);
+}
+
+.mkt-toolpage.fx .mkt-calc__slider::-moz-range-thumb {
+  box-shadow: 0 0 0 1px rgba(124, 58, 237, 0.25);
+}
+
+.mkt-toolpage.fx .mkt-calc__slider:focus-visible::-webkit-slider-thumb {
+  box-shadow: 0 0 0 4px rgba(124, 58, 237, 0.28);
+}
+
+.mkt-toolpage.fx .mkt-calc__slider:focus-visible::-moz-range-thumb {
+  box-shadow: 0 0 0 4px rgba(124, 58, 237, 0.28);
+}
+
+.mkt-toolpage.fx .mkt-calc__hint {
+  grid-area: hint;
+  font-size: 0.82rem;
+  line-height: 1.5;
+  color: var(--fx-muted);
+}
+
+/* The answer half: a flat lilac wash, the figure set as a stat. */
+.mkt-toolpage.fx .mkt-calc__results {
+  position: static;
+  padding: clamp(1.5rem, 3vw, 2.5rem) var(--fx-gut);
+  border-top: 1px solid var(--fx-line);
+  background: linear-gradient(180deg, #f7f3ff 0%, #fbfaff 100%);
+}
+
+.mkt-toolpage.fx .mkt-calc__headline {
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: none;
+}
+
+.mkt-toolpage.fx .mkt-calc__headline-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  color: var(--mkt-violet);
+}
+
+.mkt-toolpage.fx .mkt-calc__headline-value {
+  margin: 0.7rem 0 0;
+  font-size: clamp(1.9rem, 3.3vw, 2.75rem);
+  font-weight: 600;
+  line-height: 1.08;
+  letter-spacing: -0.045em;
+  font-variant-numeric: tabular-nums;
+  color: var(--mkt-ink);
+  text-wrap: balance;
+}
+
+.mkt-toolpage.fx .mkt-calc__headline-sub {
+  max-width: 34rem;
+  margin: 0.8rem 0 0;
+  font-size: 0.97rem;
+  line-height: 1.55;
+  color: var(--fx-body);
+}
+
+.mkt-toolpage.fx .mkt-calc__breakdown {
+  margin: clamp(1.5rem, 2.6vw, 2rem) 0 0.65rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  color: var(--fx-muted);
+}
+
+.mkt-toolpage.fx .mkt-calc__out {
+  border: 1px solid var(--fx-line);
+  border-radius: 14px;
+  background: #fff;
+}
+
+.mkt-toolpage.fx .mkt-calc__out table {
+  font-size: 0.9rem;
+}
+
+.mkt-toolpage.fx .mkt-calc__out :is(th, td),
+.mkt-toolpage.fx .mkt-calc__out tr {
+  border-bottom-color: var(--fx-line);
+}
+
+.mkt-toolpage.fx .mkt-calc__out tr.is-total :is(th, td) {
+  background: var(--fx-tint);
+}
+
+.mkt-toolpage.fx .mkt-calc__rowLabel {
+  font-weight: 600;
+}
+
+.mkt-toolpage.fx .mkt-calc__rowDetail {
+  font-size: 0.8rem;
+  color: var(--fx-muted);
+}
+
+.mkt-toolpage.fx .mkt-calc__verdict {
+  margin: 1.25rem 0 0;
+  padding: 0.1rem 0 0.1rem 1rem;
+  border-left: 2px solid var(--mkt-violet);
+  border-radius: 0;
+  background: none;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--fx-body);
+}
+
+.mkt-toolpage.fx .mkt-calc__note {
+  margin: 0;
+  padding: 1.1rem var(--fx-gut);
+  border-top: 1px solid var(--fx-line);
+  background: #fff;
+  font-size: 0.8rem;
+  line-height: 1.6;
+  color: var(--fx-muted);
+}
+
+@media (min-width: 900px) {
+  .mkt-toolpage.fx .mkt-calc__body {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  }
+
+  .mkt-toolpage.fx .mkt-calc__results {
+    border-top: 0;
+    border-left: 1px solid var(--fx-line);
+  }
+
+  /* The fields share the height of the answer beside them, so their
+     hairlines run evenly down the half instead of leaving a void under it. */
+  .mkt-toolpage.fx .mkt-calc__fields {
+    grid-auto-rows: 1fr;
+    align-content: stretch;
+  }
+
+  .mkt-toolpage.fx .mkt-calc__field {
+    align-content: center;
+  }
+}
+
+/* The stacked figure rows the widget switches to in a narrow container. */
+@container (max-width: 480px) {
+  .mkt-toolpage.fx .mkt-calc__out tr.is-total {
+    background: var(--fx-tint);
+  }
+
+  .mkt-toolpage.fx .mkt-calc__out tr.is-total :is(th, td) {
+    background: none;
+  }
+
+  .mkt-toolpage.fx .mkt-calc__input {
+    width: 7rem;
+  }
+}
+
+/* --- WhatsApp link and QR generator --- */
+.mkt-toolpage.fx .mkt-wlg {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: #fff;
+  box-shadow: none;
+}
+
+.mkt-toolpage.fx .mkt-wlg__form {
+  padding: clamp(1.5rem, 3vw, 2.5rem) var(--fx-gut);
+}
+
+.mkt-toolpage.fx .mkt-wlg__field {
+  margin-top: 1.5rem;
+}
+
+.mkt-toolpage.fx .mkt-wlg__field:first-child {
+  margin-top: 0;
+}
+
+.mkt-toolpage.fx .mkt-wlg__label {
+  margin-bottom: 0.55rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: var(--mkt-ink);
+}
+
+.mkt-toolpage.fx .mkt-wlg input,
+.mkt-toolpage.fx .mkt-wlg select,
+.mkt-toolpage.fx .mkt-wlg textarea {
+  min-height: 2.9rem;
+  padding: 0.7rem 0.9rem;
+  border: 1px solid #e2e2ec;
+  border-radius: 12px;
+  background-color: #fff;
+  /* 16px or iOS zooms the page on focus. */
+  font-size: 1rem;
+  color: var(--mkt-ink);
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.mkt-toolpage.fx .mkt-wlg select {
+  flex: 0 0 8.25rem;
+  width: 8.25rem;
+}
+
+.mkt-toolpage.fx .mkt-wlg textarea {
+  min-height: 7rem;
+}
+
+.mkt-toolpage.fx .mkt-wlg input::placeholder,
+.mkt-toolpage.fx .mkt-wlg textarea::placeholder {
+  color: #a3a8b6;
+}
+
+.mkt-toolpage.fx .mkt-wlg input:focus,
+.mkt-toolpage.fx .mkt-wlg select:focus,
+.mkt-toolpage.fx .mkt-wlg textarea:focus {
+  outline: none;
+  border-color: var(--mkt-violet);
+  box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.16);
+}
+
+.mkt-toolpage.fx .mkt-wlg input[aria-invalid='true'] {
+  border-color: #dc2626;
+}
+
+.mkt-toolpage.fx .mkt-wlg input[aria-invalid='true']:focus {
+  box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.14);
+}
+
+.mkt-toolpage.fx .mkt-wlg__hint {
+  margin-top: 0.5rem;
+  font-size: 0.82rem;
+  line-height: 1.5;
+  color: var(--fx-muted);
+}
+
+.mkt-toolpage.fx .mkt-wlg__hint.is-error {
+  color: #dc2626;
+}
+
+.mkt-toolpage.fx .mkt-wlg__presets {
+  gap: 0.45rem;
+  margin-top: 0.85rem;
+}
+
+.mkt-toolpage.fx .mkt-wlg__presets button {
+  min-height: 2rem;
+  padding: 0.3rem 0.8rem;
+  border: 1px solid #e2e2ec;
+  border-radius: 999px;
+  background: #fff;
+  font-size: 0.82rem;
+  color: var(--fx-body);
+  transition: border-color 0.15s ease, color 0.15s ease;
+}
+
+.mkt-toolpage.fx .mkt-wlg__presets button:hover {
+  border-color: #c4b5fd;
+  color: var(--fx-deep);
+}
+
+.mkt-toolpage.fx .mkt-wlg__presets button:focus-visible,
+.mkt-toolpage.fx .mkt-wlg__btn:focus-visible,
+.mkt-toolpage.fx .mkt-wlg__code:focus-visible {
+  outline: 2px solid #c4b5fd;
+  outline-offset: 2px;
+}
+
+/* The answer half. */
+.mkt-toolpage.fx .mkt-wlg__out {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  padding: 0;
+  border: 0;
+  border-top: 1px solid var(--fx-line);
+  border-radius: 0;
+}
+
+.mkt-toolpage.fx .mkt-wlg__result {
+  padding: clamp(1.5rem, 3vw, 2.25rem) var(--fx-gut);
+}
+
+.mkt-toolpage.fx .mkt-wlg__result + .mkt-wlg__result {
+  flex: 1 1 auto;
+  border-top: 1px solid #e9e3f7;
+}
+
+.mkt-toolpage.fx .mkt-wlg__out-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  color: var(--mkt-violet);
+}
+
+.mkt-toolpage.fx .mkt-wlg__link {
+  margin: 0.8rem 0 0;
+  padding: 0.85rem 1rem;
+  border: 1px solid var(--fx-line);
+  border-radius: 12px;
+  background: #fff;
+  font-size: 0.86rem;
+  line-height: 1.55;
+  color: var(--mkt-ink);
+}
+
+.mkt-toolpage.fx .mkt-wlg__btns {
+  gap: 0.6rem;
+  margin-top: 1rem;
+}
+
+.mkt-toolpage.fx .mkt-wlg__btn {
+  height: 2.6rem;
+  padding: 0 1.15rem;
+  gap: 0.45rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.mkt-toolpage.fx .mkt-wlg__btn.mkt-btn-primary {
+  border: 0;
+  background: var(--mkt-violet);
+  color: #fff;
+}
+
+.mkt-toolpage.fx .mkt-wlg__btn.mkt-btn-primary:hover {
+  background: var(--mkt-violet-hover, #6d28d9);
+}
+
+.mkt-toolpage.fx .mkt-wlg__btn.mkt-btn-ghost {
+  border: 1px solid rgba(124, 58, 237, 0.2);
+  background: #fff;
+  color: var(--mkt-ink);
+  backdrop-filter: none;
+}
+
+.mkt-toolpage.fx .mkt-wlg__btn.mkt-btn-ghost:hover {
+  border-color: #c4b5fd;
+  color: var(--mkt-violet);
+}
+
+.mkt-toolpage.fx .mkt-wlg__btn:disabled,
+.mkt-toolpage.fx .mkt-wlg__btn[aria-disabled='true'] {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.mkt-toolpage.fx .mkt-wlg__qr {
+  align-items: center;
+  gap: 1.25rem;
+  margin-top: 0.9rem;
+}
+
+.mkt-toolpage.fx .mkt-wlg__qr-box {
+  width: 9rem;
+  height: 9rem;
+  padding: 0.6rem;
+  border: 1px solid var(--fx-line);
+  border-radius: 14px;
+  background: #fff;
+}
+
+.mkt-toolpage.fx .mkt-wlg__qr-text {
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.55;
+  color: var(--fx-body);
+}
+
+@media (min-width: 900px) {
+  .mkt-toolpage.fx .mkt-wlg {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 0;
+    padding: 0;
+  }
+
+  .mkt-toolpage.fx .mkt-wlg__out {
+    border-top: 0;
+    border-left: 1px solid var(--fx-line);
+  }
+}
+
+/* The Shopify chat button: its own row under the generator. */
+.mkt-toolpage.fx .mkt-wlg__snippet {
+  margin: 0;
+  padding: clamp(3.25rem, 6.5vw, 5.5rem) 0 0;
+  border: 0;
+  border-top: 1px solid var(--fx-line);
+  border-radius: 0;
+  background: #fff;
+}
+
+.mkt-toolpage.fx .mkt-wlg__snippet .fx-head {
+  padding: 0 var(--fx-gut);
+}
+
+.mkt-toolpage.fx .mkt-wlg__snippet h2 {
+  font-size: clamp(1.6rem, 3.2vw, 2.3rem);
+}
+
+.mkt-toolpage.fx .mkt-wlg__snippet ol.mkt-wlg__steps {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  counter-reset: wlg-step;
+  font-size: 0.97rem;
+  line-height: 1.6;
+  color: var(--fx-body);
+}
+
+.mkt-toolpage.fx .mkt-wlg__steps > li {
+  counter-increment: wlg-step;
+}
+
+.mkt-toolpage.fx .mkt-wlg__steps > li::before {
+  content: counter(wlg-step, decimal-leading-zero);
+  display: block;
+  margin-bottom: 1rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  line-height: 1.2;
+  color: var(--mkt-violet);
+  font-variant-numeric: tabular-nums;
+}
+
+.mkt-toolpage.fx .mkt-wlg__codewrap {
+  padding: clamp(1.5rem, 3.5vw, 2.75rem) var(--fx-gut);
+  background: var(--fx-tint);
+}
+
+.mkt-toolpage.fx .mkt-wlg__codecard {
+  max-width: 58rem;
+  margin: 0 auto;
+  overflow: hidden;
+  border: 1px solid var(--fx-line);
+  border-radius: var(--fx-radius);
+  background: #fff;
+}
+
+.mkt-toolpage.fx .mkt-wlg__snippet-head {
+  margin: 0;
+  padding: 0.8rem 0.9rem 0.8rem 1.25rem;
+  border-bottom: 1px solid var(--fx-line);
+}
+
+.mkt-toolpage.fx .mkt-wlg__snippet-head p {
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--mkt-ink);
+}
+
+.mkt-toolpage.fx .mkt-wlg__code {
+  max-height: 15rem;
+  margin: 0;
+  padding: 1.1rem 1.25rem;
+  border-radius: 0;
+  background: #0c1222;
+  font-size: 0.78rem;
+  line-height: 1.6;
+  color: #e4d4ff;
+}
+
+/* --- Tool finder quiz --- */
+.mkt-toolpage.fx .mkt-finder {
+  padding: clamp(1.5rem, 3.5vw, 2.5rem);
+  border: 1px solid var(--fx-line);
+  border-radius: var(--fx-radius);
+  background: #fff;
+  box-shadow: none;
+}
+
+.mkt-toolpage.fx .mkt-finder.is-done {
+  padding: 0;
+  border: 0;
+  background: none;
+}
+
+.mkt-toolpage.fx .mkt-finder__intro-kicker {
+  font-size: 0.9rem;
+  color: var(--fx-muted);
+}
+
+.mkt-toolpage.fx .mkt-finder__intro-logos {
+  gap: 0.9rem 1.5rem;
+  margin-top: 1.6rem;
+  color: var(--fx-muted);
+}
+
+.mkt-toolpage.fx .mkt-finder__logo {
+  border-color: var(--fx-line);
+}
+
+.mkt-toolpage.fx .mkt-finder__start,
+.mkt-toolpage.fx .mkt-finder__next {
+  min-height: 3rem;
+  padding: 0 1.6rem;
+  font-size: 0.95rem;
+}
+
+.mkt-toolpage.fx .mkt-finder__start:focus-visible,
+.mkt-toolpage.fx .mkt-finder__next:focus-visible,
+.mkt-toolpage.fx .mkt-finder__back:focus-visible,
+.mkt-toolpage.fx .mkt-finder__tools button:focus-visible {
+  outline: 2px solid #c4b5fd;
+  outline-offset: 2px;
+}
+
+.mkt-toolpage.fx .mkt-finder__intro-note {
+  color: var(--fx-muted);
+}
+
+.mkt-toolpage.fx .mkt-finder__bar {
+  background: #ebe7f5;
+}
+
+.mkt-toolpage.fx .mkt-finder__count {
+  color: var(--fx-muted);
+}
+
+.mkt-toolpage.fx .mkt-finder__q {
+  letter-spacing: -0.03em;
+  text-wrap: balance;
+}
+
+.mkt-toolpage.fx .mkt-finder__help {
+  color: var(--fx-muted);
+}
+
+.mkt-toolpage.fx .mkt-finder__opt {
+  border-color: #e2e2ec;
+  border-radius: 12px;
+}
+
+.mkt-toolpage.fx .mkt-finder__opt.is-on {
+  border-color: var(--mkt-violet);
+  background: var(--fx-tint);
+}
+
+.mkt-toolpage.fx .mkt-finder__tick {
+  border-color: #c9cbd4;
+}
+
+.mkt-toolpage.fx .mkt-finder__opt.is-on .mkt-finder__tick {
+  border-color: var(--mkt-violet);
+}
+
+.mkt-toolpage.fx .mkt-finder__fact {
+  border: 1px solid var(--fx-line);
+  border-radius: 14px;
+  background: var(--fx-tint);
+}
+
+/* Results */
+.mkt-toolpage.fx .mkt-finder__result-title {
+  font-size: clamp(1.6rem, 3.2vw, 2.3rem);
+  line-height: 1.22;
+  letter-spacing: -0.034em;
+}
+
+.mkt-toolpage.fx .mkt-finder__result-title span {
+  padding: 0.08em 0.28em 0.14em;
+  color: #0c1222;
+}
+
+.mkt-toolpage.fx .mkt-finder__chips li {
+  border-color: #e2e2ec;
+  color: var(--fx-body);
+}
+
+.mkt-toolpage.fx .mkt-finder__tools {
+  gap: 0.5rem;
+  margin-top: 1.4rem;
+}
+
+.mkt-toolpage.fx .mkt-finder__tools button {
+  height: 2.5rem;
+  padding: 0 1.05rem;
+  gap: 0.45rem;
+  border: 1px solid rgba(124, 58, 237, 0.2);
+  background: #fff;
+  backdrop-filter: none;
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: var(--mkt-ink);
+  text-decoration: none;
+}
+
+.mkt-toolpage.fx .mkt-finder__tools button:hover {
+  border-color: #c4b5fd;
+  color: var(--mkt-violet);
+  text-decoration: none;
+}
+
+.mkt-toolpage.fx .mkt-finder__card {
+  border-color: var(--fx-line);
+  border-radius: var(--fx-radius);
+  box-shadow: none;
+}
+
+.mkt-toolpage.fx .mkt-finder__card.is-top {
+  border-color: #c4b5fd;
+  box-shadow: none;
+}
+
+.mkt-toolpage.fx .mkt-finder__card.is-blocked {
+  background: var(--fx-tint);
+}
+
+.mkt-toolpage.fx .mkt-finder__card-title h3 {
+  font-weight: 600;
+  letter-spacing: -0.018em;
+}
+
+.mkt-toolpage.fx .mkt-finder__match-track {
+  background: #ebe7f5;
+}
+
+.mkt-toolpage.fx .mkt-finder__match-fill {
+  background: var(--mkt-violet);
+}
+
+.mkt-toolpage.fx .mkt-finder__card.is-blocked .mkt-finder__match-fill {
+  background: #c9cbd4;
+}
+
+/* "Keep in mind" was an amber box; it is a quiet tint with a hairline now. */
+.mkt-toolpage.fx .mkt-finder__keep {
+  border: 1px solid var(--fx-line);
+  background: var(--fx-tint);
+}
+
+.mkt-toolpage.fx .mkt-finder__keep > p {
+  color: var(--fx-muted);
+}
+
+.mkt-toolpage.fx .mkt-finder__list.is-warn li {
+  color: var(--fx-body);
+}
+
+.mkt-toolpage.fx .mkt-finder__list.is-warn li::before {
+  background: #9aa0b0;
+}
+
+.mkt-toolpage.fx .mkt-finder__plan {
+  background: var(--fx-tint-2);
+  color: var(--mkt-ink);
+}
+
+.mkt-toolpage.fx .mkt-finder__sub {
+  margin: clamp(2.5rem, 5vw, 3.5rem) 0 0;
+  font-size: clamp(1.3rem, 2.4vw, 1.6rem);
+  font-weight: 400;
+  line-height: 1.25;
+  letter-spacing: -0.03em;
+  text-align: center;
+  text-wrap: balance;
+}
+
+.mkt-toolpage.fx .mkt-finder__grid {
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.mkt-toolpage.fx .mkt-finder__table {
+  margin-top: 1.5rem;
+  border-color: var(--fx-line);
+  border-radius: var(--fx-radius);
+}
+
+.mkt-toolpage.fx .mkt-finder__tr {
+  border-color: var(--fx-line);
+}
+
+.mkt-toolpage.fx .mkt-finder__tr.is-head {
+  background: var(--fx-tint);
+}
+
+.mkt-toolpage.fx .mkt-finder__td {
+  color: var(--fx-body);
+}
+
+.mkt-toolpage.fx .mkt-finder__td.is-us {
+  background: var(--fx-tint);
+  color: var(--mkt-ink);
+}
+
+.mkt-toolpage.fx .mkt-finder__fine {
+  text-align: center;
+  color: var(--fx-muted);
+}
+
+@media (max-width: 767px) {
+  .mkt-toolpage.fx .mkt-finder__table {
+    border: 0;
+    border-radius: 0;
+  }
+
+  .mkt-toolpage.fx .mkt-finder__tr {
+    border: 1px solid var(--fx-line);
+    border-radius: 16px;
+  }
+
+  .mkt-toolpage.fx .mkt-finder__rh {
+    background: var(--fx-tint);
+  }
+
+  .mkt-toolpage.fx .mkt-finder__td {
+    border-top-color: var(--fx-line);
+  }
+}
+
+/* --- Explainer rows --- */
+.mkt-toolpage.fx .mkt-toolpage__cite {
+  margin: 0.35rem 0 0;
+  font-size: 0.8rem;
+  line-height: 1.5;
+  color: #8a90a0;
+}
+
+.mkt-toolpage.fx .mkt-toolpage__cite a {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-color: #d5d7e0;
+  text-underline-offset: 2px;
+  transition: color 0.15s ease;
+}
+
+.mkt-toolpage.fx .mkt-toolpage__cite a:hover {
+  color: var(--fx-deep);
+}
+
+.mkt-toolpage.fx .mkt-toolpage__figs .fx-stat__fig {
+  font-size: clamp(1.7rem, 2.8vw, 2.25rem);
+}
+
+.mkt-toolpage.fx .mkt-toolpage__step-meta {
+  display: block;
+  margin-top: 0.6rem;
+  font-size: 0.8rem;
+  color: var(--fx-muted);
+}
+
+@media (min-width: 1100px) {
+  .mkt-toolpage.fx .mkt-toolpage__steps[data-count='5'] {
+    --fx-cols: 5;
+  }
+
+  .mkt-toolpage.fx .mkt-toolpage__steps[data-count='5'] > .fx-step {
+    padding-left: clamp(1.25rem, 2vw, 1.75rem);
+    padding-right: clamp(1.25rem, 2vw, 1.75rem);
+  }
+
+  .mkt-toolpage.fx .mkt-toolpage__steps[data-count='4'] {
+    --fx-cols: 4;
+  }
+}
+
+/* Do and avoid: two cells, the mark carries the colour, not the surface. */
+.mkt-toolpage.fx .mkt-toolpage__check-col {
+  padding: clamp(1.5rem, 2.6vw, 2.25rem) var(--fx-gut);
+}
+
+.mkt-toolpage.fx .mkt-toolpage__check-head {
+  margin: 0;
+  font-size: 1.08rem;
+  font-weight: 600;
+  line-height: 1.35;
+  letter-spacing: -0.018em;
+  color: var(--mkt-ink);
+}
+
+.mkt-toolpage.fx .mkt-toolpage__check-col ul {
+  display: grid;
+  gap: 0.75rem;
+  margin: 1.1rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.mkt-toolpage.fx .mkt-toolpage__check-col li {
+  position: relative;
+  padding-left: 1.85rem;
+  font-size: 0.97rem;
+  line-height: 1.5;
+  color: var(--fx-body);
+}
+
+.mkt-toolpage.fx .mkt-toolpage__check-col li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.16rem;
+  width: 1.15rem;
+  height: 1.15rem;
+  border-radius: 50%;
+  background: #e8f7ef
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='%23059669' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M4.5 8.3l2.2 2.2 4.8-5'/%3E%3C/svg%3E")
+    center / 0.8rem no-repeat;
+}
+
+.mkt-toolpage.fx .mkt-toolpage__check-col.is-dont li::before {
+  background: #fdecec
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='%23dc2626' stroke-width='2' stroke-linecap='round'%3E%3Cpath d='M5 5l6 6M11 5l-6 6'/%3E%3C/svg%3E")
+    center / 0.8rem no-repeat;
+}
+
+/* Further reading: callouts that used to stack as lilac cards share a row. */
+.mkt-toolpage.fx .mkt-toolpage__notes {
+  border-top: 0;
+}
+
+.mkt-toolpage.fx .mkt-toolpage__notes[data-count='1'] {
+  --fx-cols: 1;
+}
+
+.mkt-toolpage.fx .mkt-toolpage__notes,
+.mkt-toolpage.fx .mkt-toolpage__note {
+  background: var(--fx-tint);
+}
+
+.mkt-toolpage.fx .mkt-toolpage__note {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: clamp(1.5rem, 2.6vw, 2.1rem) var(--fx-gut);
+}
+
+.mkt-toolpage.fx .mkt-toolpage__note-copy {
+  flex: 1 1 auto;
+}
+
+.mkt-toolpage.fx .mkt-toolpage__note-title {
+  margin: 0;
+  font-size: 1.08rem;
+  font-weight: 600;
+  line-height: 1.35;
+  letter-spacing: -0.018em;
+  color: var(--mkt-ink);
+}
+
+.mkt-toolpage.fx .mkt-toolpage__note-body {
+  max-width: 40rem;
+  margin: 0.55rem 0 0;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--fx-muted);
+}
+
+.mkt-toolpage.fx .mkt-toolpage__more {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-top: 1.1rem;
+  font-size: 0.92rem;
+  font-weight: 500;
+  color: var(--mkt-violet);
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+.mkt-toolpage.fx .mkt-toolpage__more::after {
+  border-color: var(--mkt-violet);
+}
+
+.mkt-toolpage.fx .mkt-toolpage__more:hover {
+  color: var(--fx-deep);
+}
+
+.mkt-toolpage.fx .mkt-toolpage__more:hover::after {
+  border-color: var(--fx-deep);
+  transform: translateX(2px) rotate(45deg);
+}
+
+.mkt-toolpage.fx .mkt-toolpage__more:focus-visible {
+  outline: 2px solid #c4b5fd;
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+@media (min-width: 760px) {
+  .mkt-toolpage.fx .mkt-toolpage__notes[data-count='1'] .mkt-toolpage__note {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+
+  .mkt-toolpage.fx .mkt-toolpage__notes[data-count='1'] .mkt-toolpage__more {
+    flex: none;
+    margin-top: 0;
+  }
+}
+
+.mkt-toolpage.fx .mkt-toolpage__prose {
+  max-width: 44rem;
+  margin: 0 auto;
+  font-size: 1.02rem;
+  line-height: 1.7;
+  color: var(--fx-body);
+}
+
+.mkt-toolpage.fx .mkt-toolpage__prose p + p {
+  margin-top: 1rem;
+}
+
+/* Comparison links under the finder's FAQ. */
+.mkt-toolpage.fx .mkt-toolpage__compare {
+  --fx-cols: 5;
+  margin-top: clamp(2.25rem, 4.5vw, 3.5rem);
+}
+
+.mkt-toolpage.fx .mkt-toolpage__compare > li {
+  display: flex;
+}
+
+.mkt-toolpage.fx .mkt-toolpage__compare .fx-link {
+  width: 100%;
+  gap: 0.5rem;
+  padding-left: clamp(1rem, 1.6vw, 1.35rem);
+  padding-right: clamp(1rem, 1.6vw, 1.35rem);
+  font-size: 0.92rem;
+}
+
+@media (max-width: 1099px) {
+  .mkt-toolpage.fx .mkt-toolpage__compare {
+    --fx-cols: 3;
+  }
+}
+
+@media (max-width: 767px) {
+  .mkt-toolpage.fx .mkt-toolpage__compare {
+    --fx-cols: 2;
+  }
+}
+
+@media (max-width: 479px) {
+  .mkt-toolpage.fx .mkt-toolpage__compare {
+    --fx-cols: 1;
+  }
+}
+
+/* --- The hub's proof row (shared TrustBand, reframed) --- */
+.mkt-toolpage.fx .mkt-toolpage__sec--trust {
+  padding-bottom: clamp(1.5rem, 3vw, 2rem);
+}
+
+.mkt-toolpage.fx .mkt-trust {
+  max-width: none;
+}
+
+.mkt-toolpage.fx .mkt-trust__head {
+  gap: 1.25rem;
+}
+
+.mkt-toolpage.fx .mkt-trust__title {
+  max-width: 24ch;
+  font-size: clamp(1.6rem, 3.2vw, 2.3rem);
+  line-height: 1.22;
+  letter-spacing: -0.034em;
+}
+
+.mkt-toolpage.fx .mkt-trust__title .mkt-hl {
+  margin: 0;
+  padding: 0.08em 0.28em 0.14em;
+  color: #0c1222;
+  white-space: normal;
+}
+
+.mkt-toolpage.fx .mkt-trust__logos {
+  margin-top: 2.25rem;
+}
+
+.mkt-toolpage.fx .mkt-trust__stories {
+  gap: 1px;
+  margin: clamp(2rem, 4vw, 3rem) calc(var(--fx-gut) * -1) 0;
+  overflow: hidden;
+  border-top: 1px solid var(--fx-line);
+  border-bottom: 1px solid var(--fx-line);
+}
+
+.mkt-toolpage.fx .mkt-trust__story {
+  padding: clamp(1.5rem, 2.6vw, 2.25rem) var(--fx-gut);
+  border: 0;
+  border-radius: 0;
+  background: #fff;
+  box-shadow: var(--fx-cell-lines);
+}
+
+.mkt-toolpage.fx .mkt-trust__headline {
+  font-size: 1.08rem;
+  font-weight: 600;
+  letter-spacing: -0.018em;
+}
+
+.mkt-toolpage.fx .mkt-trust__quote p {
+  color: var(--fx-body);
+}
+
+.mkt-toolpage.fx .mkt-trust__by {
+  border-top-color: var(--fx-line);
+}
+
+.mkt-toolpage.fx .mkt-trust__by > span:last-child > span {
+  color: var(--fx-muted);
+}
+
+.mkt-toolpage.fx .mkt-trust__more {
+  margin-top: clamp(1.5rem, 3vw, 2rem);
+}
+
+/* Two-up on tablets: an odd last cell takes the whole row, no blank cell. */
+@media (min-width: 600px) and (max-width: 899px) {
+  .mkt-toolpage.fx .mkt-toolpage__sec .mkt-toolpage__tools > :last-child:nth-child(odd),
+  .mkt-toolpage.fx .mkt-toolpage__steps > :last-child:nth-child(odd),
+  .mkt-toolpage.fx .mkt-toolpage__figs > :last-child:nth-child(odd) {
+    grid-column: span 2;
+  }
+}
+
+@media (min-width: 640px) {
+  .mkt-toolpage.fx .mkt-toolpage__hl {
+    white-space: nowrap;
+  }
+}
+
+/* --- Smaller screens --- */
+@media (max-width: 899px) {
+  .mkt-toolpage.fx .mkt-toolpage__hero {
+    padding-top: calc(var(--mkt-nav-h, 4rem) + 1.75rem);
+  }
+}
+
+@media (max-width: 599px) {
+  .mkt-toolpage.fx .mkt-toolpage__title {
+    font-size: clamp(1.9rem, 8.4vw, 2.35rem);
+  }
+
+  .mkt-toolpage.fx .mkt-toolpage__hub .mkt-toolpage__tools > li.is-feature {
+    grid-column: auto;
+  }
+
+  .mkt-toolpage.fx .mkt-wlg__phone {
+    flex-wrap: wrap;
+  }
+
+  .mkt-toolpage.fx .mkt-wlg select {
+    flex: 1 1 100%;
+    width: 100%;
+  }
+
+  .mkt-toolpage.fx .mkt-wlg__qr {
+    align-items: flex-start;
+  }
+
+  .mkt-toolpage.fx .mkt-wlg__qr-box {
+    width: 7.5rem;
+    height: 7.5rem;
+  }
+
+  .mkt-toolpage.fx .mkt-finder__tools button {
+    flex: 1 1 auto;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mkt-toolpage.fx .mkt-tool-card,
+  .mkt-toolpage.fx .mkt-tool-card__cta,
+  .mkt-toolpage.fx .mkt-tool-card__cta::after,
+  .mkt-toolpage.fx .mkt-toolpage__more,
+  .mkt-toolpage.fx .mkt-toolpage__more::after,
+  .mkt-toolpage.fx .mkt-calc__input,
+  .mkt-toolpage.fx .mkt-wlg input,
+  .mkt-toolpage.fx .mkt-wlg select,
+  .mkt-toolpage.fx .mkt-wlg textarea,
+  .mkt-toolpage.fx .mkt-wlg__presets button,
+  .mkt-toolpage.fx .mkt-finder__bar span {
+    transition: none;
+  }
+}

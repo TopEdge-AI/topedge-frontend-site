@@ -1,12 +1,14 @@
-import { Link, Navigate } from 'react-router-dom';
+import { Navigate } from 'react-router-dom';
 import MarketingSEO from '../components/MarketingSEO';
 import MarketingPage from '../components/MarketingPage';
 import MarketingCtaBand from '../components/MarketingCtaBand';
-import { Section, SectionHeading, PrimaryButton } from '../components/ui';
-import { TopicBlockView, type TopicBlock } from '../components/topic/TopicBlocks';
+import { PrimaryButton, GhostButton } from '../components/ui';
+import type { TopicBlock } from '../components/topic/TopicBlocks';
 import FaqAccordion from '../components/topic/FaqAccordion';
 import JourneyHero from '../components/journey/JourneyHero';
 import TrustBand from '../components/journey/TrustBand';
+import { FxHead, FxLinks } from '../components/journey/Framed';
+import FxBlocks from '../components/journey/FramedBlocks';
 import FestivalCard from '../components/festival/FestivalCard';
 import FestivalTemplateCard from '../components/festival/FestivalTemplateCard';
 import FestivalPersonalise from '../components/festival/FestivalPersonalise';
@@ -166,44 +168,44 @@ export default function FestivalTemplatePage({ slug }: { slug: string }) {
           },
         ]}
       />
-      <MarketingPage>
+      <MarketingPage className="mkt-jx mkt-jx--fest mkt-jx--fest-one fx">
+        <div className="fx-shell">
         <JourneyHero
+          crumbs={[
+            { name: 'Home', path: '/' },
+            { name: 'Free WhatsApp marketing templates', path: FESTIVAL_HUB_PATH },
+            { name: festival.shortName },
+          ]}
           title={festival.h1}
           accent={festival.h1Accent}
           subtitle={festival.subtitle}
           trust
-          /* Stacked, not side by side: one primary action on the centre line,
-             and the way back to the library under it. */
           actions={
-            <div className="mkt-fhero-actions">
+            <>
               <PrimaryButton to="/signup">Personalise these free</PrimaryButton>
-              <Link to={FESTIVAL_HUB_PATH} className="mkt-fhero-actions__link">
-                All 25 festivals
-              </Link>
-            </div>
+              <GhostButton to={FESTIVAL_HUB_PATH}>All 25 festivals</GhostButton>
+            </>
           }
         />
 
-        <Section className="!pt-0 !pb-6 md:!pb-8">
-          <div className="mx-auto max-w-3xl">
-            <div className="mkt-fplate">
-              {timing.fullLabel && (
-                <span className="mkt-fplate__pill mkt-fplate__pill--date">{timing.fullLabel}</span>
-              )}
-              {timing.label && timing.tone !== 'past' && timing.tone !== 'later' && (
-                <span className={`mkt-fplate__pill mkt-fplate__pill--${timing.tone}`}>
-                  {timing.label}
-                </span>
-              )}
-              <span className="mkt-fplate__pill">4 ready templates</span>
-              <span className="mkt-fplate__pill">
-                {FESTIVAL_TRADITION_LABEL[festival.tradition]}
+        <section className="fx-sec fx-sec--tight fx-sec--tint mkt-fintro">
+          <div className="mkt-fplate">
+            {timing.fullLabel && (
+              <span className="mkt-fplate__pill mkt-fplate__pill--date">{timing.fullLabel}</span>
+            )}
+            {timing.label && timing.tone !== 'past' && timing.tone !== 'later' && (
+              <span className={`mkt-fplate__pill mkt-fplate__pill--${timing.tone}`}>
+                {timing.label}
               </span>
-            </div>
-
-            <p className="mkt-jh-lead">{festival.answerFirst}</p>
+            )}
+            <span className="mkt-fplate__pill">4 ready templates</span>
+            <span className="mkt-fplate__pill">
+              {FESTIVAL_TRADITION_LABEL[festival.tradition]}
+            </span>
           </div>
-        </Section>
+
+          <p className="mkt-jh-lead">{festival.answerFirst}</p>
+        </section>
 
         {/*
           No heading over the previews. Someone who searched for a
@@ -213,14 +215,14 @@ export default function FestivalTemplatePage({ slug }: { slug: string }) {
           instead, where it is an action on something already seen rather than
           a button for a set still out of frame.
         */}
-        <Section className="!pt-4 md:!pt-6">
+        <section className="fx-sec fx-sec--flush">
           {/*
             Visually hidden on purpose: the comment above explains why no
             visible title sits here. The heading still has to exist so the
             card titles below are H3s under an H2, not H3s under the H1.
           */}
           <h2 className="sr-only">{festival.name} WhatsApp templates, ready to send</h2>
-          <ul className="mkt-fseq">
+          <ul className="mkt-fseq fx-cells">
             {items.map((item, i) => (
               <li key={item.id} id={item.row.metaName}>
                 <FestivalTemplateCard item={item} linkFestival={false} step={i + 1} />
@@ -231,7 +233,7 @@ export default function FestivalTemplatePage({ slug }: { slug: string }) {
           <div className="mkt-fdl">
             <button
               type="button"
-              className="mkt-fdl__btn"
+              className="mkt-btn-ghost mkt-fdl__btn"
               onClick={() => downloadTemplatesCsv(items, `${festival.slug}-whatsapp-templates.csv`)}
             >
               <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
@@ -242,14 +244,11 @@ export default function FestivalTemplatePage({ slug }: { slug: string }) {
             </button>
             <span className="mkt-fdl__note">Free, no sign-up. Copy any single message with the button on its card.</span>
           </div>
-        </Section>
+        </section>
 
-        <Section wash="soft">
-          <SectionHeading
-            title={`What moves at ${festival.shortName}`}
-            accent={festival.shortName}
-          />
-          <div className="mkt-fbrief">
+        <section className="fx-sec">
+          <FxHead title={`What moves at ${festival.shortName}`} accent={festival.shortName} />
+          <div className="mkt-fbrief fx-cells fx-cells--2 fx-cells--bleed">
             <div className="mkt-fbrief__item">
               <p className="mkt-fbrief__label">When the money moves</p>
               <p className="mkt-fbrief__text">{festival.peak}</p>
@@ -267,42 +266,31 @@ export default function FestivalTemplatePage({ slug }: { slug: string }) {
               </ul>
             </div>
           </div>
-        </Section>
+        </section>
 
-        <Section>
-          <div className="mkt-jx-centered mx-auto flex max-w-3xl flex-col gap-14 md:gap-16">
-            {blocks.map((b) => (
-              <TopicBlockView key={b.id} block={b} />
-            ))}
-          </div>
-        </Section>
+        <FxBlocks blocks={blocks} />
 
-        <Section wash="soft">
-          <SectionHeading
+        <section className="fx-sec">
+          <FxHead
             title={`Make the ${festival.shortName} templates yours`}
             accent="yours"
             subtitle={`Rewrite the ${festival.shortName} copy, set your offer and audience, and submit it to Meta from your own account.`}
           />
           <FestivalPersonalise compact />
-        </Section>
+        </section>
 
-        <Section>
+        <div className="fx-sec">
           <TrustBand title="Brands already sending these campaigns on WhatsApp" />
-        </Section>
+        </div>
 
-        <Section wash="soft">
-          <SectionHeading title={`${festival.shortName} questions teams ask`} accent="teams ask" />
-          <div className="mx-auto max-w-3xl">
-            <FaqAccordion items={faqs} />
-          </div>
-        </Section>
+        <section className="fx-sec">
+          <FxHead title={`${festival.shortName} questions teams ask`} accent="teams ask" />
+          <FaqAccordion items={faqs} />
+        </section>
 
-        <Section>
-          <SectionHeading
-            title={`Plan what comes after ${festival.shortName}`}
-            accent="comes after"
-          />
-          <ul className="mkt-fgroup__grid mx-auto max-w-5xl">
+        <section className="fx-sec">
+          <FxHead title={`Plan what comes after ${festival.shortName}`} accent="comes after" />
+          <ul className="mkt-fgroup__grid fx-cells fx-cells--bleed">
             {siblings.map((s) => (
               <li key={s.slug}>
                 <FestivalCard festival={s} />
@@ -310,26 +298,17 @@ export default function FestivalTemplatePage({ slug }: { slug: string }) {
             ))}
           </ul>
 
-          <ul className="mx-auto mt-8 flex max-w-3xl flex-wrap justify-center gap-3">
-            {[
+          <FxLinks
+            items={[
               { label: 'All 100 free templates', href: FESTIVAL_HUB_PATH },
               { label: 'All WhatsApp templates', href: '/whatsapp-templates' },
               { label: 'Audience campaigns', href: '/features/campaigns' },
               { label: 'Meta template manager', href: '/features/meta-manager' },
               { label: 'Meta India rate card', href: '/pricing/meta-rates' },
               { label: 'WhatsApp opt-in rules', href: '/blog/whatsapp-opt-in-shopify-india' },
-            ].map((r) => (
-              <li key={r.href}>
-                <Link
-                  to={r.href}
-                  className="inline-flex rounded-full border border-[#efeaf8] bg-white px-4 py-2 text-sm font-medium text-[#7C3AED] hover:border-[#c4b5fd]"
-                >
-                  {r.label}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </Section>
+            ]}
+          />
+        </section>
 
         <MarketingCtaBand
           title={`Run your ${festival.shortName} campaign on WhatsApp`}
@@ -338,6 +317,7 @@ export default function FestivalTemplatePage({ slug }: { slug: string }) {
           secondaryLabel="See pricing"
           secondaryTo="/pricing"
         />
+        </div>
       </MarketingPage>
     </>
   );

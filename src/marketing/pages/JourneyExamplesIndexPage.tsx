@@ -2,14 +2,16 @@ import { Link } from 'react-router-dom';
 import MarketingSEO from '../components/MarketingSEO';
 import MarketingPage from '../components/MarketingPage';
 import MarketingCtaBand from '../components/MarketingCtaBand';
-import { Section, SectionHeading, PrimaryButton } from '../components/ui';
-import { TopicBlockView, type TopicBlock } from '../components/topic/TopicBlocks';
+import { PrimaryButton, GhostButton } from '../components/ui';
+import type { TopicBlock } from '../components/topic/TopicBlocks';
 import FaqAccordion from '../components/topic/FaqAccordion';
 import { JOURNEY_EXAMPLES } from '../data/journeyExamples';
 import JourneyHero from '../components/journey/JourneyHero';
 import JourneyCard from '../components/journey/JourneyCard';
 import TrustBand from '../components/journey/TrustBand';
 import HowItWorks from '../components/journey/HowItWorks';
+import { FxHead } from '../components/journey/Framed';
+import FxBlocks from '../components/journey/FramedBlocks';
 import {
   breadcrumbJsonLd,
   organizationJsonLd,
@@ -131,9 +133,12 @@ export default function JourneyExamplesIndexPage() {
           },
         ]}
       />
-      <MarketingPage>
+      <MarketingPage className="mkt-jx mkt-jx--index fx">
+        <div className="fx-shell">
+        {/* The eyebrow this hero used to carry ("Journey examples") is the
+            breadcrumb's own last item, so the breadcrumb carries it now. */}
         <JourneyHero
-          eyebrow="Journey examples"
+          crumbs={[{ name: 'Home', path: '/' }, { name: 'Journey examples' }]}
           title="WhatsApp journey examples for Shopify stores"
           trust
           accent="journey examples"
@@ -141,18 +146,13 @@ export default function JourneyExamplesIndexPage() {
           actions={
             <>
               <PrimaryButton to="/signup">Start free</PrimaryButton>
-              <Link
-                to="/features/journeys"
-                className="text-sm font-medium text-[#7C3AED] hover:underline"
-              >
-                See the journey builder
-              </Link>
+              <GhostButton to="/features/journeys">See the journey builder</GhostButton>
             </>
           }
         />
 
-        <Section className="!pt-12 md:!pt-16">
-          <ul className="mx-auto grid max-w-5xl gap-5 md:grid-cols-2">
+        <section className="fx-sec fx-sec--flush">
+          <ul className="mkt-jx-cards fx-cells fx-cells--2">
             {JOURNEY_EXAMPLES.map((j) => (
               <li key={j.slug}>
                 <JourneyCard journey={j} href={`${PATH}/${j.slug}`} large />
@@ -165,53 +165,41 @@ export default function JourneyExamplesIndexPage() {
             but nobody searches for it. It gets a feature card pointing at
             /features/warranty rather than a page that could not rank.
           */}
-          <div className="mx-auto mt-5 max-w-5xl">
-            <Link to="/features/warranty" className="mkt-jx-note">
-              <span className="mkt-jx-note__icon" aria-hidden>
-                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M12 3l7 3.2v5.1c0 4.6-3 8.1-7 9.4-4-1.3-7-4.8-7-9.4V6.2L12 3z" />
-                  <path d="M9 12.2l2 2 4-4.2" />
-                </svg>
+          <Link to="/features/warranty" className="mkt-jx-note">
+            <span className="mkt-jx-note__icon" aria-hidden>
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M12 3l7 3.2v5.1c0 4.6-3 8.1-7 9.4-4-1.3-7-4.8-7-9.4V6.2L12 3z" />
+                <path d="M9 12.2l2 2 4-4.2" />
+              </svg>
+            </span>
+            <span className="mkt-jx-note__body">
+              <span className="mkt-jx-note__tag">Also included</span>
+              <span className="mkt-jx-note__title">Warranty registration journey</span>
+              <span className="mkt-jx-note__desc">
+                Sends the customer a warranty confirmation the moment they order.
               </span>
-              <span className="mkt-jx-note__body">
-                <span className="mkt-jx-note__tag">Also included</span>
-                <span className="mkt-jx-note__title">Warranty registration journey</span>
-                <span className="mkt-jx-note__desc">
-                  Sends the customer a warranty confirmation the moment they order.
-                </span>
-              </span>
-              <span className="mkt-jx-note__cta">
-                See the warranty feature
-                <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M5 12h14M13 6l6 6-6 6" />
-                </svg>
-              </span>
-            </Link>
-          </div>
-        </Section>
+            </span>
+            <span className="mkt-jx-note__cta">
+              See the warranty feature
+              <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M5 12h14M13 6l6 6-6 6" />
+              </svg>
+            </span>
+          </Link>
+        </section>
 
-        <Section wash="soft">
+        <div className="fx-sec">
           <TrustBand />
-        </Section>
+        </div>
 
-        <Section>
-          <HowItWorks />
-        </Section>
+        <HowItWorks />
 
-        <Section wash="soft">
-          <div className="mkt-jx-centered mx-auto flex max-w-3xl flex-col gap-14 md:gap-16">
-            {BLOCKS.map((b) => (
-              <TopicBlockView key={b.id} block={b} />
-            ))}
-          </div>
-        </Section>
+        <FxBlocks blocks={BLOCKS} />
 
-        <Section>
-          <SectionHeading title="Questions teams ask" accent="teams ask" />
-          <div className="mx-auto max-w-3xl">
-            <FaqAccordion items={FAQS} />
-          </div>
-        </Section>
+        <section className="fx-sec">
+          <FxHead title="Questions teams ask" accent="teams ask" />
+          <FaqAccordion items={FAQS} />
+        </section>
 
         <MarketingCtaBand
           title="Publish your first journey this week"
@@ -220,6 +208,7 @@ export default function JourneyExamplesIndexPage() {
           secondaryLabel="See pricing"
           secondaryTo="/pricing"
         />
+        </div>
       </MarketingPage>
     </>
   );

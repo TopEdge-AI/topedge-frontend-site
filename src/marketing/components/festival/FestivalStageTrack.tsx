@@ -17,11 +17,11 @@ export default function FestivalStageTrack({
   festivalName?: string;
 }) {
   return (
-    <ol className="mkt-fst">
+    <ol className="mkt-fst fx-cells fx-cells--4 fx-cells--bleed">
       {FESTIVAL_STAGES.map((stage, i) => (
-        <li key={stage.id} className="mkt-fst__step">
+        <li key={stage.id} className="mkt-fst__step fx-step">
           <div className="mkt-fst__rail" aria-hidden>
-            <span className="mkt-fst__dot">{i + 1}</span>
+            <span className="mkt-fst__dot fx-step__num">{String(i + 1).padStart(2, '0')}</span>
           </div>
           <div className="mkt-fst__body">
             <p className="mkt-fst__when">{stage.timing}</p>

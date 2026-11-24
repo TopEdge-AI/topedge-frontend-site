@@ -25,7 +25,8 @@ export default function CycleToggle({
     const wrapRect = wrap.getBoundingClientRect();
     const btnRect = btn.getBoundingClientRect();
     setPill({
-      left: btnRect.left - wrapRect.left,
+      // The pill is positioned inside the border, the rects are measured outside it.
+      left: btnRect.left - wrapRect.left - wrap.clientLeft,
       width: btnRect.width,
     });
   }, [value]);
@@ -36,7 +37,24 @@ export default function CycleToggle({
 
   useEffect(() => {
     window.addEventListener('resize', measure);
-    return () => window.removeEventListener('resize', measure);
+    // The pill is positioned from measured button boxes. Those boxes change
+    // when the web font swaps in after first paint, which no resize event
+    // reports, so watch the control itself and re-measure once fonts settle.
+    const wrap = wrapRef.current;
+    const observer =
+      wrap && typeof ResizeObserver !== 'undefined' ? new ResizeObserver(() => measure()) : null;
+    if (observer && wrap) observer.observe(wrap);
+    let alive = true;
+    document.fonts?.ready
+      .then(() => {
+        if (alive) measure();
+      })
+      .catch(() => {});
+    return () => {
+      alive = false;
+      window.removeEventListener('resize', measure);
+      observer?.disconnect();
+    };
   }, [measure]);
 
   return (

@@ -36,6 +36,30 @@ function formatUpdated(iso: string): string {
   return `${d} ${MONTHS[m - 1]} ${y}`;
 }
 
+type DocNavGroup = (typeof DOC_NAV)[number];
+
+/**
+ * Docs home index: the groups in their nav order, split once into two columns
+ * of about the same number of links. The columns share one frame and one
+ * hairline, so a short group never leaves a hole beside a long one.
+ */
+function splitIndexColumns(groups: DocNavGroup[]): DocNavGroup[][] {
+  const size = (g: DocNavGroup) => g.articles.filter((a) => a.slug).length + 2;
+  const total = groups.reduce((n, g) => n + size(g), 0);
+  let run = 0;
+  let cut = groups.length;
+  for (let i = 0; i < groups.length; i += 1) {
+    if (run + size(groups[i]) > total / 2 && i > 0) {
+      cut = i;
+      break;
+    }
+    run += size(groups[i]);
+  }
+  return [groups.slice(0, cut), groups.slice(cut)].filter((col) => col.length);
+}
+
+const INDEX_COLUMNS = splitIndexColumns(DOC_NAV.filter((g) => g.articles.some((a) => a.slug)));
+
 export default function DocsPage() {
   const { pathname, hash } = useLocation();
   const article = getDocArticleByPath(pathname);
@@ -94,7 +118,7 @@ export default function DocsPage() {
   const bodyBlocks = introCount > 0 ? article.blocks.slice(introCount) : article.blocks;
 
   return (
-    <MarketingPage className="docs-shell">
+    <MarketingPage className="docs-shell fx">
       <MarketingSEO
         title={docPageTitle(article)}
         noSuffix
@@ -108,6 +132,7 @@ export default function DocsPage() {
         jsonLd={jsonLd}
       />
 
+      <div className="fx-shell docs-frame">
       <div className="docs-layout">
         <aside className="docs-sidebar" aria-label="Documentation navigation">
           <div className="docs-sidebar__inner" data-lenis-prevent>
@@ -183,23 +208,27 @@ export default function DocsPage() {
                     Browse the docs
                   </h2>
                   <div className="docs-index__grid">
-                    {DOC_NAV.filter((g) => g.articles.some((a) => a.slug)).map((navGroup) => (
-                      <section key={navGroup.id} id={navGroup.id} className="docs-index__card">
-                        <h3 className="docs-index__title">{navGroup.label}</h3>
-                        <p className="docs-index__blurb">{navGroup.blurb}</p>
-                        <ul className="docs-index__list">
-                          {navGroup.articles
-                            .filter((entry) => entry.slug)
-                            .map((entry) => (
-                              <li key={entry.slug}>
-                                <Link to={docPathFor(entry.slug)} className="docs-index__link">
-                                  <span>{entry.navLabel}</span>
-                                  <ArrowRight size={14} aria-hidden />
-                                </Link>
-                              </li>
-                            ))}
-                        </ul>
-                      </section>
+                    {INDEX_COLUMNS.map((column, ci) => (
+                      <div key={ci} className="docs-index__col">
+                        {column.map((navGroup) => (
+                          <section key={navGroup.id} id={navGroup.id} className="docs-index__card">
+                            <h3 className="docs-index__title">{navGroup.label}</h3>
+                            <p className="docs-index__blurb">{navGroup.blurb}</p>
+                            <ul className="docs-index__list">
+                              {navGroup.articles
+                                .filter((entry) => entry.slug)
+                                .map((entry) => (
+                                  <li key={entry.slug}>
+                                    <Link to={docPathFor(entry.slug)} className="docs-index__link">
+                                      <span>{entry.navLabel}</span>
+                                      <ArrowRight size={14} aria-hidden />
+                                    </Link>
+                                  </li>
+                                ))}
+                            </ul>
+                          </section>
+                        ))}
+                      </div>
                     ))}
                   </div>
                 </section>
@@ -287,6 +316,7 @@ export default function DocsPage() {
         secondaryLabel="See pricing"
         secondaryTo="/pricing"
       />
+      </div>
 
       {sheetOpen ? (
         <div className="docs-sheet" id="docs-sheet" role="dialog" aria-modal="true" aria-label="Documentation menu">

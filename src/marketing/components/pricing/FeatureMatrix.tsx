@@ -102,7 +102,7 @@ export default function FeatureMatrix({
         };
 
   return (
-    <section className="mkt-compare" aria-labelledby="mkt-compare-title">
+    <section className="mkt-compare fx-sec" aria-labelledby="mkt-compare-title">
       <motion.div {...rise(0)}>
         <PricingSectionHead
           id="mkt-compare-title"
@@ -170,7 +170,9 @@ export default function FeatureMatrix({
                     ) : null}
                     <p className="mkt-compare__plan-name">{plan.displayName} Plan</p>
                     <Link
-                      className={`mkt-compare__cta${plan.emphasis ? ' mkt-compare__cta--solid' : ''}`}
+                      className={`mkt-compare__cta${
+                        plan.emphasis ? ' mkt-compare__cta--solid mkt-btn-primary' : ' mkt-btn-ghost'
+                      }`}
                       to={signupTo}
                     >
                       {`Choose ${plan.displayName}`}

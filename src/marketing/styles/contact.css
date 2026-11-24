@@ -248,3 +248,299 @@
     gap: 0.25rem;
   }
 }
+
+/* ====================================================================
+   Framed layout (24 Nov 2026)
+   --------------------------------------------------------------------
+   The page sits in the shared frame (styles/frame.css). The hero is the
+   split one from /partners: copy on white, and the two channels as rows
+   of one window on the violet stage, so WhatsApp is on the first screen
+   with its number as the primary pill. The green and pink channel tiles
+   are gone; the glyphs sit on the same flat lilac tile as every other
+   icon. "Not a sales question?" became a strip of four definition cells.
+
+   Still no form: the channels are the page.
+
+   Every rule is scoped `.mkt-contact.fx` so it wins over the layers above.
+ * ==================================================================== */
+
+/* ——— Split hero ——— */
+.mkt-contact.fx .mkt-contact__hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.02fr);
+  align-items: stretch;
+  width: auto;
+  margin: 0;
+  padding: var(--mkt-nav-h, 4.5rem) 0 0;
+  border-bottom: 1px solid var(--fx-line);
+  text-align: left;
+}
+
+.mkt-contact.fx .mkt-contact__copy {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: clamp(3rem, 6vw, 5rem) clamp(1.25rem, 3.5vw, 3rem);
+}
+
+.mkt-contact.fx .mkt-contact__copy .fx-crumbs {
+  justify-content: flex-start;
+  margin-bottom: 1.6rem;
+}
+
+.mkt-contact.fx .mkt-contact__title {
+  font-family: var(--mkt-font);
+  font-size: clamp(1.85rem, 3.4vw, 2.75rem);
+  /* Room for the highlight under a line with descenders ("you already"). */
+  line-height: 1.26;
+  letter-spacing: -0.04em;
+  color: var(--mkt-ink);
+}
+
+.mkt-contact.fx .mkt-contact__title-accent {
+  padding: 0.02em 0.26em 0.1em;
+  border-radius: 0.32em;
+  background: #e4d4ff;
+  color: #0c1222;
+}
+
+.mkt-contact.fx .mkt-contact__sub {
+  max-width: 31rem;
+  margin: 1.5rem 0 0;
+  font-size: clamp(1rem, 1.3vw, 1.1rem);
+  line-height: 1.6;
+  color: var(--fx-muted);
+}
+
+.mkt-contact.fx .mkt-contact__score {
+  justify-content: flex-start;
+  margin-top: 2rem;
+}
+
+/* ——— The two channels: rows of one window on the stage ——— */
+.mkt-contact.fx .mkt-contact__channels {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  margin: 0;
+  padding: clamp(2.5rem, 5vw, 4.5rem) clamp(1rem, 3vw, 3rem);
+  border-left: 1px solid var(--fx-line);
+}
+
+.mkt-contact.fx .mkt-contact__window {
+  width: min(100%, 30rem);
+  border-radius: 22px;
+}
+
+.mkt-contact.fx .mkt-contact__channel {
+  --channel-ink: var(--mkt-violet);
+  --channel-wash: #f1ebff;
+  gap: 1.1rem;
+  padding: clamp(1.4rem, 2.4vw, 1.9rem);
+  border: 0;
+  border-radius: 0;
+  background: #fff;
+  box-shadow: none;
+  transform: none;
+  transition: background 0.15s ease;
+}
+
+.mkt-contact.fx .mkt-contact__channel + .mkt-contact__channel {
+  border-top: 1px solid var(--fx-line);
+}
+
+.mkt-contact.fx .mkt-contact__channel:hover {
+  border-color: var(--fx-line);
+  background: var(--fx-tint);
+  box-shadow: none;
+  transform: none;
+}
+
+.mkt-contact.fx .mkt-contact__channel:focus-visible {
+  outline: 2px solid #c4b5fd;
+  outline-offset: -4px;
+  border-radius: 20px;
+}
+
+.mkt-contact.fx .mkt-contact__channel-mark {
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 12px;
+}
+
+.mkt-contact.fx .mkt-contact__channel-body {
+  flex: 1 1 auto;
+  align-items: flex-start;
+}
+
+.mkt-contact.fx .mkt-contact__channel-head {
+  gap: 0.4rem;
+  min-height: 2.75rem;
+}
+
+.mkt-contact.fx .mkt-contact__channel-label {
+  font-size: 1.12rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+.mkt-contact.fx .mkt-contact__channel-head svg {
+  color: #b6b9c6;
+}
+
+.mkt-contact.fx .mkt-contact__channel:hover .mkt-contact__channel-head svg {
+  color: var(--mkt-violet);
+}
+
+.mkt-contact.fx .mkt-contact__channel-lede {
+  margin-top: 0.1rem;
+  font-size: 0.95rem;
+  line-height: 1.55;
+  color: var(--fx-muted);
+}
+
+.mkt-contact.fx .mkt-contact__channel-action {
+  margin-top: 1.15rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.mkt-contact.fx .mkt-contact__channel-action.mkt-btn-primary {
+  color: #fff;
+}
+
+.mkt-contact.fx .mkt-contact__channel-action.mkt-btn-ghost {
+  height: auto;
+  min-height: 3rem;
+  padding: 0 1.6rem;
+  background: #fff;
+  color: var(--mkt-ink);
+  font-size: 0.95rem;
+  backdrop-filter: none;
+}
+
+/* The whole row is the link, so the pill answers to the row's hover. */
+.mkt-contact.fx .mkt-contact__channel:hover .mkt-btn-primary {
+  background: linear-gradient(180deg, #7c3aed, #6d28d9);
+}
+
+.mkt-contact.fx .mkt-contact__channel:hover .mkt-btn-ghost {
+  border-color: #c4b5fd;
+  color: var(--mkt-violet);
+}
+
+.mkt-contact.fx .mkt-contact__channel-note {
+  margin-top: 0.85rem;
+  font-size: 0.84rem;
+  line-height: 1.5;
+  color: var(--fx-muted);
+}
+
+/* ——— Everything that is not a sales question: four definition cells ——— */
+.mkt-contact.fx .mkt-contact__rest {
+  width: auto;
+  margin: 0;
+  padding: clamp(3.25rem, 6.5vw, 5.5rem) var(--fx-gut);
+  border-top: 0;
+}
+
+.mkt-contact.fx .mkt-contact__rest-head {
+  margin: 0;
+  font-size: clamp(1.6rem, 3.2vw, 2.3rem);
+  line-height: 1.22;
+}
+
+.mkt-contact.fx .mkt-contact__rest-head .mkt-hl {
+  padding: 0.08em 0.28em 0.14em;
+  color: #0c1222;
+}
+
+.mkt-contact.fx .mkt-contact__rows {
+  gap: 1px;
+}
+
+.mkt-contact.fx .mkt-contact__row,
+.mkt-contact.fx .mkt-contact__row:first-child {
+  display: block;
+  padding: clamp(1.5rem, 2.6vw, 2.1rem) var(--fx-gut) clamp(1.75rem, 3vw, 2.5rem);
+  border-top: 0;
+}
+
+.mkt-contact.fx .mkt-contact__row dt {
+  font-size: 1.02rem;
+  font-weight: 600;
+  line-height: 1.35;
+  letter-spacing: -0.018em;
+  color: var(--mkt-ink);
+  text-wrap: balance;
+}
+
+.mkt-contact.fx .mkt-contact__row dd {
+  margin: 0.6rem 0 0;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--fx-muted);
+}
+
+.mkt-contact.fx .mkt-contact__row a {
+  color: var(--mkt-violet);
+  font-weight: 500;
+  overflow-wrap: anywhere;
+}
+
+.mkt-contact.fx .mkt-contact__row a:hover {
+  color: var(--fx-deep);
+}
+
+.mkt-contact.fx .mkt-contact__row a:focus-visible {
+  outline: 2px solid #c4b5fd;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+@media (max-width: 899px) {
+  .mkt-contact.fx .mkt-contact__hero {
+    grid-template-columns: minmax(0, 1fr);
+    padding-top: var(--mkt-nav-h, 4rem);
+  }
+
+  .mkt-contact.fx .mkt-contact__copy {
+    align-items: center;
+    padding: clamp(2rem, 6vw, 3rem) var(--fx-gut) clamp(2.25rem, 6vw, 3rem);
+    text-align: center;
+  }
+
+  .mkt-contact.fx .mkt-contact__copy .fx-crumbs,
+  .mkt-contact.fx .mkt-contact__score {
+    justify-content: center;
+  }
+
+  .mkt-contact.fx .mkt-contact__sub {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .mkt-contact.fx .mkt-contact__channels {
+    padding: clamp(1.5rem, 6vw, 3rem) clamp(0.9rem, 4vw, 2rem);
+    border-left: 0;
+    border-top: 1px solid var(--fx-line);
+  }
+}
+
+@media (max-width: 599px) {
+  .mkt-contact.fx .mkt-contact__title {
+    font-size: clamp(1.8rem, 8vw, 2.2rem);
+  }
+
+  .mkt-contact.fx .mkt-contact__channel {
+    gap: 0.9rem;
+    padding: 1.25rem 1.1rem 1.35rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mkt-contact.fx .mkt-contact__channel,
+  .mkt-contact.fx .mkt-contact__channel-head svg {
+    transition: none;
+  }
+}

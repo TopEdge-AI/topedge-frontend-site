@@ -1,5 +1,6 @@
 import { ReactNode } from 'react';
 import ProofBadges from '../ProofBadges';
+import { FxCrumbs, type Crumb } from './Framed';
 import '../../styles/journey-flow.css';
 
 /**
@@ -34,6 +35,8 @@ function renderAccent(title: string, accent?: string) {
 }
 
 export default function JourneyHero({
+  crumbs,
+  stage = false,
   eyebrow,
   title,
   accent,
@@ -46,6 +49,10 @@ export default function JourneyHero({
   imageHeight = 900,
   children,
 }: {
+  /** Visible breadcrumb over the headline; mirrors the page's BreadcrumbList. */
+  crumbs?: Crumb[];
+  /** Framed pages: seats the image on the shared dither stage (frame.css). */
+  stage?: boolean;
   /** Small caps label over the headline. Omit it where the headline is enough. */
   eyebrow?: string;
   title: string;
@@ -68,6 +75,7 @@ export default function JourneyHero({
   return (
     <header className="mkt-jh">
       <div className="mkt-jh__inner">
+        {crumbs && <FxCrumbs items={crumbs} />}
         {eyebrow && <p className="mkt-jh__eyebrow">{eyebrow}</p>}
         <h1 className="mkt-jh__title">{renderAccent(title, accent)}</h1>
         <p className="mkt-jh__sub">{subtitle}</p>
@@ -80,7 +88,7 @@ export default function JourneyHero({
       </div>
 
       {image && (
-        <figure className="mkt-jh__stage">
+        <figure className={`mkt-jh__stage${stage ? ' fx-stage' : ''}`}>
           <img
             src={image}
             alt={imageAlt ?? ''}

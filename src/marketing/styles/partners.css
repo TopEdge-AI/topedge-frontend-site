@@ -1372,3 +1372,216 @@
   font-weight: 600;
 }
 
+
+/* ====================================================================
+   Framed layout (24 Nov 2026): /partners/terms only
+   --------------------------------------------------------------------
+   The Partner Terms are a reading page and stay left-aligned. This layer
+   seats them in the site frame (styles/frame.css): a head row, then the
+   contents list beside the legal text, each section a row with a hairline
+   above it and its text held to a 70ch measure. No word is changed.
+
+   Every rule is scoped `.mkt-pterms.fx`; nothing here touches /partners.
+ * ==================================================================== */
+
+.mkt-pterms.fx .mkt-pterms__inner {
+  max-width: var(--fx-max);
+  margin: 0 auto;
+  padding: 0;
+}
+
+/* ——— Head row ——— */
+.mkt-pterms.fx .mkt-pterms__head {
+  padding: calc(var(--mkt-nav-h, 4.5rem) + clamp(2.25rem, 5vw, 3.75rem)) var(--fx-gut) clamp(2rem, 4vw, 3rem);
+  border-bottom: 1px solid var(--fx-line);
+}
+
+.mkt-pterms.fx .mkt-pterms__crumb {
+  margin: 0 0 1.1rem;
+  font-size: 0.84rem;
+  font-weight: 500;
+  color: var(--mkt-ink);
+}
+
+.mkt-pterms.fx .mkt-pterms__crumb a {
+  margin-right: 0.15rem;
+  font-weight: 400;
+  color: var(--fx-muted);
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+.mkt-pterms.fx .mkt-pterms__crumb a:hover {
+  color: var(--fx-deep);
+}
+
+.mkt-pterms.fx .mkt-pterms__title {
+  font-family: var(--mkt-font);
+  font-size: clamp(2.05rem, 4.4vw, 3rem);
+  font-weight: 400;
+  line-height: 1.12;
+  letter-spacing: -0.04em;
+}
+
+.mkt-pterms.fx .mkt-pterms__draft {
+  max-width: 70ch;
+  margin: 1.6rem 0 0;
+  padding: 1rem 1.2rem;
+  border: 1px solid var(--fx-line);
+  border-radius: 14px;
+  background: var(--fx-tint);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--fx-body);
+}
+
+.mkt-pterms.fx .mkt-pterms__draft strong {
+  font-weight: 600;
+  color: var(--fx-deep);
+}
+
+/* ——— Contents ——— */
+.mkt-pterms.fx .mkt-pterms__toc {
+  border-bottom: 1px solid var(--fx-line);
+}
+
+.mkt-pterms.fx .mkt-pterms__toc ol {
+  columns: 2;
+  column-gap: var(--fx-gut);
+  max-width: calc(70ch + var(--fx-gut) * 2);
+  margin: 0 auto;
+  padding: clamp(1.25rem, 3vw, 1.75rem) var(--fx-gut);
+  border: 0;
+  border-radius: 0;
+}
+
+.mkt-pterms.fx .mkt-pterms__toc li {
+  padding: 0;
+}
+
+.mkt-pterms.fx .mkt-pterms__toc a {
+  display: block;
+  padding: 0.3rem 0;
+  font-size: 0.9rem;
+  line-height: 1.45;
+  color: var(--fx-body);
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+.mkt-pterms.fx .mkt-pterms__toc a:hover {
+  color: var(--fx-deep);
+}
+
+.mkt-pterms.fx .mkt-pterms__toc a:focus-visible,
+.mkt-pterms.fx .mkt-pterms__crumb a:focus-visible,
+.mkt-pterms.fx .mkt-pterms__section a:focus-visible {
+  outline: 2px solid #c4b5fd;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* ——— Sections: a hairline between each, text at 70ch ——— */
+.mkt-pterms.fx .mkt-pterms__section {
+  padding: clamp(1.75rem, 3.2vw, 2.5rem) var(--fx-gut);
+  border-top: 0;
+  scroll-margin-top: calc(var(--mkt-ann-h, 0px) + var(--mkt-nav-h, 4.5rem));
+}
+
+.mkt-pterms.fx .mkt-pterms__section + .mkt-pterms__section {
+  border-top: 1px solid var(--fx-line);
+}
+
+.mkt-pterms.fx .mkt-pterms__section > * {
+  max-width: 70ch;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.mkt-pterms.fx .mkt-pterms__section h2 {
+  margin-top: 0;
+  margin-bottom: 0.85rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  line-height: 1.35;
+  letter-spacing: -0.018em;
+}
+
+.mkt-pterms.fx .mkt-pterms__section p,
+.mkt-pterms.fx .mkt-pterms__section li {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--fx-body);
+}
+
+.mkt-pterms.fx .mkt-pterms__section p,
+.mkt-pterms.fx .mkt-pterms__section ul {
+  margin-top: 0;
+  margin-bottom: 0.9rem;
+}
+
+.mkt-pterms.fx .mkt-pterms__section > :last-child {
+  margin-bottom: 0;
+}
+
+.mkt-pterms.fx .mkt-pterms__section li {
+  margin: 0.3rem 0;
+}
+
+.mkt-pterms.fx .mkt-pterms__section li::marker {
+  color: #b9a4f5;
+}
+
+.mkt-pterms.fx .mkt-pterms__section a {
+  font-weight: 500;
+  color: var(--fx-deep);
+  text-decoration: underline;
+  text-decoration-color: rgba(124, 58, 237, 0.35);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+
+.mkt-pterms.fx .mkt-pterms__section a:hover {
+  color: var(--mkt-violet);
+}
+
+@media (max-width: 599px) {
+  .mkt-pterms.fx .mkt-pterms__toc ol {
+    columns: 1;
+  }
+}
+
+/* Desktop: contents rail on the left, the text beside it. */
+@media (min-width: 1024px) {
+  .mkt-pterms.fx .mkt-pterms__body {
+    display: grid;
+    grid-template-columns: 19rem minmax(0, 1fr);
+  }
+
+  .mkt-pterms.fx .mkt-pterms__toc {
+    border-right: 1px solid var(--fx-line);
+    border-bottom: 0;
+  }
+
+  .mkt-pterms.fx .mkt-pterms__toc ol {
+    position: sticky;
+    top: calc(var(--mkt-ann-h, 0px) + var(--mkt-nav-h, 4.5rem));
+    columns: 1;
+    max-width: none;
+    max-height: calc(100vh - var(--mkt-ann-h, 0px) - var(--mkt-nav-h, 4.5rem));
+    overflow-y: auto;
+    padding: clamp(1.75rem, 3.2vw, 2.5rem) var(--fx-gut);
+  }
+
+  .mkt-pterms.fx .mkt-pterms__section > * {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mkt-pterms.fx .mkt-pterms__toc a,
+  .mkt-pterms.fx .mkt-pterms__crumb a {
+    transition: none;
+  }
+}

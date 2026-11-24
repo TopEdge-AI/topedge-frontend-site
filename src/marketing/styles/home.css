@@ -5557,3 +5557,296 @@ html body .home-sticky .home-sticky__static-copy .home-sticky__body {
     height: 12px;
   }
 }
+
+/* ==================================================================== *
+   Framed layout (24 Nov 2026)
+   --------------------------------------------------------------------
+   The home page now sits in the same frame as /partners and the feature
+   pages (styles/frame.css): one 1240px column between two hairline
+   rails, a hairline row per section, cells that share their dividers.
+
+   What changed, top to bottom:
+   - Hero: still the inset rounded board, one viewport tall, film on its
+     bottom edge. The aurora image, the ripple and the blue edge glow
+     are gone; the board carries the site's violet dither instead, the
+     same pattern as the closing card, kept to the lower corners so the
+     copy sits on clean lilac.
+   - Feature moments: each is one row. Copy on white, film on a flat
+     tint band that runs to the rails. No shadows, no coloured glows.
+   - CRM tiles: three cells sharing hairlines, not three shadowed cards.
+     One lilac highlight; the blue and green title chips are gone.
+   - Review wall and closing card: inside the frame, same row padding.
+
+   Films, posters, copy, headings, links and schema are unchanged.
+   Every rule is scoped `.home-page.fx` so it wins over the layers above
+   without editing them.
+ * ==================================================================== */
+
+.home-page.fx {
+  /* The inset the hero board and the closing card share. */
+  --home-pad: clamp(1rem, 2vw, 1.5rem);
+  /* frame.css .fx-sec padding and .fx-head bottom margin, by name. */
+  --home-sec: clamp(3.25rem, 6.5vw, 5.5rem);
+  --home-head-gap: clamp(2rem, 4vw, 3rem);
+}
+
+/* Hero: not part of this layer. The owner asked on 24 Nov 2026 for the hero
+   (aurora image, cursor ripple, board) to stay exactly as it was. */
+
+/* --- Feature moments: one hairline row each --- */
+.home-page.fx .home-sticky {
+  background: transparent;
+}
+
+.home-page.fx .home-sticky .home-sticky__static {
+  width: auto;
+  max-width: none;
+  margin: 0;
+  padding: 0;
+  gap: 0;
+}
+
+.home-page.fx .home-sticky .home-sticky__moment {
+  padding: 0;
+  border-bottom: 1px solid var(--fx-line);
+  --moment-highlight-bg: #e4d4ff;
+  --moment-highlight-fg: #0c1222;
+}
+
+.home-page.fx .home-sticky .home-sticky__stage {
+  width: 100%;
+  max-width: none;
+  gap: 0;
+}
+
+.home-page.fx .home-sticky .home-sticky__static-copy {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: var(--home-sec) var(--fx-gut) var(--home-head-gap);
+  text-shadow: none;
+}
+
+.home-page.fx .home-sticky .home-sticky__static-copy .home-sticky__title {
+  margin: 0;
+  font-family: var(--mkt-font);
+  font-size: clamp(1.6rem, 3.2vw, 2.3rem);
+  font-weight: 400;
+  line-height: 1.22;
+  letter-spacing: -0.034em;
+  color: var(--mkt-ink);
+  text-wrap: balance;
+}
+
+.home-page.fx .home-sticky .home-sticky__title-accent {
+  padding: 0.08em 0.28em 0.14em;
+  border-radius: 0.35em;
+  background: #e4d4ff;
+  color: #0c1222;
+  font-weight: 400;
+}
+
+.home-page.fx .home-sticky .home-sticky__static-copy .home-sticky__body {
+  margin-top: 1rem;
+  color: var(--fx-muted);
+}
+
+/* Phones keep the smaller two-line measure set above (max-width: 759px). */
+@media (min-width: 760px) {
+  .home-page.fx .home-sticky .home-sticky__static-copy .home-sticky__body {
+    font-size: 1.02rem;
+    line-height: 1.6;
+  }
+}
+
+.home-page.fx .home-sticky .home-sticky__static-copy .home-sticky__cta-btn {
+  margin-top: 1.6rem;
+}
+
+/* The film's band: flat tint to the rails, hairline above. */
+.home-page.fx .home-sticky .home-sticky__static-scene {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: clamp(1.25rem, 4vw, 3rem) var(--fx-gut);
+  border-top: 1px solid var(--fx-line);
+  background: var(--fx-tint);
+}
+
+.home-page.fx .home-sticky .home-sticky__moment-scene .demo-video-glow__frame {
+  border: 0;
+  border-radius: 18px;
+  box-shadow: 0 0 0 1px rgba(12, 18, 34, 0.06);
+}
+
+/* --- CRM: three cells that share their hairlines --- */
+.home-page.fx .home-crm {
+  padding: var(--home-sec) var(--fx-gut) 0;
+  border-bottom: 1px solid var(--fx-line);
+  background: transparent;
+}
+
+.home-page.fx .home-crm__inner {
+  width: auto;
+  max-width: none;
+}
+
+.home-page.fx .home-crm__header {
+  max-width: 42rem;
+  margin: 0 auto var(--home-head-gap);
+}
+
+.home-page.fx .home-crm__title {
+  font-family: var(--mkt-font);
+  font-size: clamp(1.6rem, 3.2vw, 2.3rem);
+  font-weight: 400;
+  line-height: 1.22;
+  letter-spacing: -0.034em;
+  color: var(--mkt-ink);
+  text-wrap: balance;
+}
+
+.home-page.fx .home-crm__title-accent {
+  padding: 0.08em 0.28em 0.14em;
+  border-radius: 0.35em;
+  background: #e4d4ff;
+  color: #0c1222;
+  font-weight: 400;
+}
+
+/* The highlighted phrase moves as one piece, so the title sets as the
+   statement and then the highlight, never "stock," stranded beside it. */
+.home-page.fx .home-crm__title {
+  text-wrap: wrap;
+}
+
+.home-page.fx .home-crm__title-accent {
+  display: inline-block;
+}
+
+@media (max-width: 479px) {
+  .home-page.fx .home-crm__title {
+    font-size: 1.5rem;
+  }
+}
+
+.home-page.fx .home-crm__sub {
+  max-width: 34rem;
+  margin: 1rem auto 0;
+  font-size: 1.02rem;
+  line-height: 1.6;
+  color: var(--fx-muted);
+}
+
+.home-page.fx .home-crm__bento {
+  gap: 1px;
+  margin: 0 calc(var(--fx-gut) * -1);
+  overflow: hidden;
+  border-top: 1px solid var(--fx-line);
+  background: #fff;
+}
+
+.home-page.fx .home-crm__tile,
+.home-page.fx .home-crm__tile:hover {
+  height: auto;
+  padding: clamp(1rem, 1.8vw, 1.5rem);
+  border: 0;
+  border-radius: 0;
+  background: #fff;
+  box-shadow: var(--fx-cell-lines);
+  overflow: visible;
+  transform: none;
+}
+
+.home-page.fx .home-crm__tile-visual {
+  border-radius: 14px;
+  background: var(--fx-tint);
+  box-shadow: inset 0 0 0 1px rgba(12, 18, 34, 0.05);
+}
+
+.home-page.fx .home-crm__tile-body {
+  padding: 1.35rem 0.35rem 0.6rem;
+  border-top: 0;
+  background: transparent;
+}
+
+.home-page.fx .home-crm__tile-title {
+  font-size: 1.12rem;
+  font-weight: 600;
+  line-height: 1.3;
+  letter-spacing: -0.02em;
+  color: var(--mkt-ink);
+}
+
+/* One highlight colour: the orders chip was blue, the stock chip green. */
+.home-page.fx .home-crm__tile .home-crm__tile-accent {
+  padding: 0.04em 0.22em 0.08em;
+  border-radius: 0.35em;
+  background: #e4d4ff;
+  color: #0c1222;
+  font-weight: inherit;
+}
+
+.home-page.fx .home-crm__tile-copy {
+  margin: 0.6rem 0 0;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--fx-muted);
+}
+
+/* Three cells side by side from 700px, not one tall tile per screen. */
+@media (min-width: 700px) and (max-width: 960px) {
+  .home-page.fx .home-crm__bento--three {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .home-page.fx .home-crm__tile-visual {
+    aspect-ratio: 1 / 1;
+  }
+}
+
+/* --- Review wall: the shared component as a row in the frame --- */
+.home-page.fx .mkt-pwall-section {
+  width: auto;
+  max-width: none;
+  margin: 0;
+  /* The wall's outer ring of tiles fades to nothing, which already reads
+     as air; the bottom padding gives that much back. */
+  padding: var(--home-sec) var(--fx-gut) calc(var(--home-sec) - 1.75rem);
+  border-bottom: 1px solid var(--fx-line);
+}
+
+.home-page.fx .mkt-pwall-section__title {
+  margin: 0;
+  font-size: clamp(1.6rem, 3.2vw, 2.3rem);
+  line-height: 1.22;
+}
+
+.home-page.fx .mkt-pwall-section__sub {
+  max-width: 34rem;
+  margin: 1rem auto 1.5rem;
+  font-size: 1.02rem;
+  line-height: 1.6;
+  color: var(--fx-muted);
+}
+
+.home-page.fx .mkt-pwall-section__extra {
+  margin: 0 0 var(--home-head-gap);
+}
+
+.home-page.fx .mkt-pwall-section > .mkt-pwall {
+  width: min(100%, 40rem);
+  margin: 0 auto;
+}
+
+/* --- Closing card: same inset as the hero board --- */
+.home-page.fx .mkt-cta {
+  padding: var(--home-pad);
+}
+
+/* --- Narrow --- */
+@media (max-width: 899px) {
+  .home-page.fx {
+    --home-sec: clamp(2.75rem, 9vw, 3.75rem);
+  }
+}

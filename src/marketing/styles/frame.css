@@ -1,0 +1,519 @@
+/*
+ * The framed page system (24 Nov 2026).
+ *
+ * One layout language for every marketing page, lifted from /partners: a
+ * single centred column with a hairline rail down each side, hairline rows
+ * between sections, cell grids that share their dividers, flat cards, and one
+ * violet dither stage behind product visuals. No drop-shadow card stacks, no
+ * rainbow pastel washes: colour is violet, lilac and ink only.
+ *
+ * Loaded globally from main.tsx after marketing.css. Page stylesheets build on
+ * these classes; they do not redefine them.
+ *
+ *   .fx            page root (white, clips horizontal overflow)
+ *   .fx-shell      the framed column
+ *   .fx-sec        a section row with standard padding and a bottom hairline
+ *   .fx-head       centred section head (title, one lilac highlight, sub)
+ *   .fx-cells      a grid whose cells are separated by hairlines
+ *   .fx-stats      figure strip
+ *   .fx-steps      numbered steps in cells
+ *   .fx-stage      violet dither panel for a product film or card
+ *   .fx-card       flat bordered card
+ *   .fx-crumbs     visible breadcrumb (mirrors BreadcrumbList)
+ */
+
+:root {
+  --fx-line: #ececf2;
+  --fx-max: 1240px;
+  --fx-gut: clamp(1.25rem, 3vw, 2.5rem);
+  --fx-tint: #faf9fd;
+  --fx-tint-2: #f4f1fb;
+  --fx-body: #4b5363;
+  --fx-muted: #6b7280;
+  --fx-deep: #5b21b6;
+  --fx-dither: url('/marketing/partners/partner-dither.webp');
+  --fx-radius: 20px;
+}
+
+.fx {
+  background: #fff;
+  overflow-x: clip;
+}
+
+.fx-shell {
+  max-width: var(--fx-max);
+  margin: 0 auto;
+  border-left: 1px solid var(--fx-line);
+  border-right: 1px solid var(--fx-line);
+}
+
+/* Under 1240px the rails would sit on the window edge; drop them. */
+@media (max-width: 1239px) {
+  .fx-shell {
+    border-left: 0;
+    border-right: 0;
+  }
+}
+
+/* ——— Rows and sections ——— */
+.fx-row {
+  border-bottom: 1px solid var(--fx-line);
+}
+
+/* --fx-sec-y is the row's vertical padding. A page that needs a different
+   rhythm sets the variable, never the padding, so a bleeding cell grid at the
+   end of the row (below) still lands exactly on the row's bottom hairline. */
+.fx-sec {
+  --fx-sec-y: clamp(3.25rem, 6.5vw, 5.5rem);
+  padding: var(--fx-sec-y) var(--fx-gut);
+  border-bottom: 1px solid var(--fx-line);
+}
+
+.fx-sec--tight {
+  --fx-sec-y: clamp(2.25rem, 4.5vw, 3.25rem);
+}
+
+.fx-sec--flush {
+  padding: 0;
+}
+
+.fx-sec--tint {
+  background: var(--fx-tint);
+}
+
+.fx-sec--last {
+  border-bottom: 0;
+}
+
+/* ——— Section head ——— */
+.fx-head {
+  max-width: 42rem;
+  margin: 0 auto clamp(2rem, 4vw, 3rem);
+  text-align: center;
+}
+
+.fx-head--left {
+  margin-left: 0;
+  text-align: left;
+}
+
+.fx-eyebrow {
+  margin: 0 0 0.85rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--mkt-violet);
+}
+
+.fx-head__title {
+  margin: 0;
+  font-family: var(--mkt-font);
+  font-size: clamp(1.6rem, 3.2vw, 2.3rem);
+  font-weight: 400;
+  line-height: 1.22;
+  letter-spacing: -0.034em;
+  color: var(--mkt-ink);
+  text-wrap: balance;
+}
+
+.fx-head__title .mkt-hl,
+.fx-head__title > span,
+.fx-hl {
+  padding: 0.08em 0.28em 0.14em;
+  border-radius: 0.35em;
+  background: #e4d4ff;
+  color: #0c1222;
+  font-weight: 400;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
+
+.fx-head__sub {
+  max-width: 34rem;
+  margin: 1rem auto 0;
+  font-size: 1.02rem;
+  line-height: 1.6;
+  color: var(--fx-muted);
+}
+
+.fx-head--left .fx-head__sub {
+  margin-left: 0;
+}
+
+/* ——— Pill kicker ——— */
+.fx-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.42rem 0.95rem 0.42rem 0.7rem;
+  border-radius: 999px;
+  border: 1px solid #e7e5ee;
+  background: #fff;
+  box-shadow: 0 1px 2px rgba(12, 18, 34, 0.04);
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--fx-body);
+}
+
+.fx-pill__dot {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background: var(--mkt-violet);
+  box-shadow: 0 0 0 4px #ede9fe;
+}
+
+/* ——— Breadcrumb ——— */
+.fx-crumbs {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  margin: 0 0 1.4rem;
+  padding: 0;
+  list-style: none;
+  font-size: 0.84rem;
+  color: var(--fx-muted);
+}
+
+.fx-crumbs a {
+  color: var(--fx-muted);
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+.fx-crumbs a:hover {
+  color: var(--fx-deep);
+}
+
+.fx-crumbs li + li::before {
+  content: '/';
+  margin-right: 0.4rem;
+  color: #c9cbd4;
+}
+
+.fx-crumbs [aria-current='page'] {
+  color: var(--mkt-ink);
+  font-weight: 500;
+}
+
+/* ——— Cell grid: neighbours share one hairline ———
+   Cells sit 1px apart and each draws a line into the gap on its right and
+   below; the container clips the outermost ones. Wrapped rows get their
+   dividers without nth-child maths, and an incomplete last row stays white. */
+:root {
+  --fx-cell-lines: 1px 0 0 var(--fx-line), 0 1px 0 var(--fx-line), 1px 1px 0 var(--fx-line);
+}
+
+.fx-cells {
+  --fx-cols: 3;
+  display: grid;
+  grid-template-columns: repeat(var(--fx-cols), minmax(0, 1fr));
+  gap: 1px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow: hidden;
+  background: #fff;
+  border-top: 1px solid var(--fx-line);
+  border-bottom: 1px solid var(--fx-line);
+}
+
+.fx-cells > * {
+  min-width: 0;
+  background: #fff;
+  box-shadow: var(--fx-cell-lines);
+}
+
+.fx-cells--2 { --fx-cols: 2; }
+.fx-cells--4 { --fx-cols: 4; }
+.fx-cells--5 { --fx-cols: 5; }
+
+/* Inside a padded section the grid bleeds to the rails. */
+.fx-sec > .fx-cells--bleed {
+  margin-left: calc(var(--fx-gut) * -1);
+  margin-right: calc(var(--fx-gut) * -1);
+}
+
+.fx-sec > .fx-cells--bleed:last-child {
+  margin-bottom: calc(var(--fx-sec-y) * -1);
+  border-bottom: 0;
+}
+
+.fx-cell {
+  padding: clamp(1.5rem, 2.6vw, 2.25rem) var(--fx-gut);
+}
+
+@media (max-width: 899px) {
+  .fx-cells,
+  .fx-cells--4,
+  .fx-cells--5 {
+    --fx-cols: 2;
+  }
+}
+
+@media (max-width: 599px) {
+  .fx-cells,
+  .fx-cells--2,
+  .fx-cells--4,
+  .fx-cells--5 {
+    --fx-cols: 1;
+  }
+
+  .fx-cells--keep2 {
+    --fx-cols: 2;
+  }
+}
+
+/* ——— Figure strip ——— */
+.fx-stat {
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+  padding: clamp(1.5rem, 2.8vw, 2.25rem) var(--fx-gut);
+}
+
+.fx-stat__fig {
+  font-size: clamp(1.7rem, 3vw, 2.4rem);
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: -0.045em;
+  color: var(--mkt-ink);
+  font-variant-numeric: tabular-nums;
+}
+
+.fx-stat__label {
+  font-size: 0.95rem;
+  line-height: 1.45;
+  color: var(--fx-muted);
+}
+
+/* ——— Numbered steps ——— */
+.fx-step {
+  padding: clamp(1.5rem, 2.6vw, 2.1rem) var(--fx-gut) clamp(1.6rem, 2.8vw, 2.25rem);
+}
+
+.fx-step__num {
+  display: block;
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: var(--mkt-violet);
+  font-variant-numeric: tabular-nums;
+}
+
+.fx-step__title {
+  margin: 1.1rem 0 0;
+  font-size: 1.08rem;
+  font-weight: 600;
+  line-height: 1.35;
+  letter-spacing: -0.018em;
+  color: var(--mkt-ink);
+}
+
+.fx-step__copy {
+  margin: 0.55rem 0 0;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--fx-muted);
+}
+
+/* ——— Dither stage: the one backdrop for product films and cards ——— */
+.fx-stage {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  background: #f6f2ff;
+}
+
+.fx-stage::before,
+.fx-stage::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
+  width: 46%;
+  background: var(--fx-dither) 100% 50% / cover no-repeat;
+  image-rendering: pixelated;
+  pointer-events: none;
+  -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 78%);
+  mask-image: linear-gradient(90deg, transparent 0%, #000 78%);
+}
+
+.fx-stage::before {
+  left: 0;
+  transform: scaleX(-1);
+}
+
+.fx-stage::after {
+  right: 0;
+}
+
+/* A quieter stage for secondary visuals: lilac wash, no pattern. */
+.fx-stage--soft {
+  background: linear-gradient(180deg, #f7f3ff 0%, #fbfaff 100%);
+}
+
+.fx-stage--soft::before,
+.fx-stage--soft::after {
+  content: none;
+}
+
+/* ——— Flat card ——— */
+.fx-card {
+  border: 1px solid var(--fx-line);
+  border-radius: var(--fx-radius);
+  background: #fff;
+}
+
+/* A product window sitting on a stage. */
+.fx-window {
+  overflow: hidden;
+  border-radius: 18px;
+  background: #fff;
+  box-shadow: 0 0 0 1px rgba(12, 18, 34, 0.05), 0 36px 72px -40px rgba(46, 16, 101, 0.5);
+}
+
+/* ——— Link rows (related pages) ——— */
+/* Four across on a desktop, two on a tablet, one per row on a phone. The
+   column count is set inside media queries so it never out-ranks the
+   responsive rules on .fx-cells above. */
+@media (min-width: 900px) {
+  .fx-links {
+    --fx-cols: 4;
+  }
+}
+
+@media (max-width: 599px) {
+  .fx-cells.fx-links {
+    --fx-cols: 1;
+  }
+}
+
+.fx-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.15rem var(--fx-gut);
+  font-size: 0.95rem;
+  font-weight: 500;
+  line-height: 1.35;
+  color: var(--mkt-ink);
+  text-decoration: none;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.fx-link::after {
+  content: '';
+  flex: none;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-top: 1.5px solid #b6b9c6;
+  border-right: 1.5px solid #b6b9c6;
+  transform: rotate(45deg);
+  transition: border-color 0.15s ease, transform 0.15s ease;
+}
+
+.fx-link:hover {
+  background: var(--fx-tint);
+  color: var(--fx-deep);
+}
+
+.fx-link:hover::after {
+  border-color: var(--mkt-violet);
+  transform: translateX(2px) rotate(45deg);
+}
+
+.fx-link:focus-visible {
+  outline: 2px solid #c4b5fd;
+  outline-offset: -2px;
+}
+
+/* ——— Check list ——— */
+.fx-checks {
+  display: grid;
+  gap: 0.7rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.fx-checks li {
+  position: relative;
+  padding-left: 1.75rem;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: var(--fx-body);
+}
+
+.fx-checks li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.18rem;
+  width: 1.1rem;
+  height: 1.1rem;
+  border-radius: 50%;
+  background: #ede9fe
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='%237c3aed' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M4.5 8.3l2.2 2.2 4.8-5'/%3E%3C/svg%3E")
+    center / 0.8rem no-repeat;
+}
+
+/* ——— The closing CTA card sits inside the frame on framed pages ——— */
+.fx .mkt-cta {
+  padding: clamp(1rem, 2vw, 1.5rem);
+}
+
+.fx .mkt-cta__card {
+  width: 100%;
+}
+
+/* ——— The shared FAQ accordion, framed: rows with hairlines, not cards ——— */
+.fx .mkt-faq {
+  gap: 0;
+  width: min(100%, 48rem);
+  border: 1px solid var(--fx-line);
+  border-radius: var(--fx-radius);
+  overflow: hidden;
+  background: #fff;
+}
+
+.fx .mkt-faq__item {
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.fx .mkt-faq__item + .mkt-faq__item {
+  border-top: 1px solid var(--fx-line);
+}
+
+.fx .mkt-faq__item.is-open {
+  background: var(--fx-tint);
+  box-shadow: none;
+}
+
+.fx .mkt-faq__trigger {
+  padding: 1.2rem 1.4rem;
+}
+
+.fx .mkt-faq__q {
+  font-size: 1.02rem;
+}
+
+.fx .mkt-faq__a {
+  padding: 0 1.4rem 1.3rem;
+  font-size: 0.97rem;
+  color: var(--fx-body);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fx-link,
+  .fx-link::after {
+    transition: none;
+  }
+}

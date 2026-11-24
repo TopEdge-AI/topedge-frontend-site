@@ -23,6 +23,7 @@ import {
 import { demoAssetBySrc } from '../data/productDemoVideos';
 import { featurePagesModifiedIso } from '../data/contentDates';
 import FeatureMeshStage, { AURORA_PALETTE } from '../components/effects/FeatureMeshStage';
+import FaqAccordion from '../components/topic/FaqAccordion';
 import HomeTrust from '../components/home/HomeTrust';
 import { PrimaryButton, GhostButton } from '../components/ui';
 import { ScenesContext, ScenePlaceholder, usePageScenes, useScene } from '../components/visuals';
@@ -220,8 +221,9 @@ function ProductFeatureView({ page }: { page: ProductPage }) {
           ...(heroDemo ? [videoObjectJsonLd(heroDemo)] : []),
         ]}
       />
-      <MarketingPage className="mkt-pf">
+      <MarketingPage className="mkt-pf fx">
         <div className="mkt-pf__theme">
+        {/* The hero stays outside the frame, exactly as it was (owner, 24 Nov 2026). */}
         <FeatureMeshStage mesh={page.id}>
         <header className="mkt-pf__hero">
           <h1 className="mkt-pf__title">
@@ -292,16 +294,17 @@ function ProductFeatureView({ page }: { page: ProductPage }) {
             )}
           </section>
         </FeatureMeshStage>
+        <div className="fx-shell">
 
         {page.bentos.length > 0 ? (
-          <section className="mkt-pf__section" aria-labelledby="mkt-pf-bento">
+          <section className="mkt-pf__section fx-sec" aria-labelledby="mkt-pf-bento">
             <div className="mkt-pf__head">
               <h2 id="mkt-pf-bento" className="mkt-pf__head-title">
                 {page.bentoTitle} <span>{page.bentoAccent}</span>
               </h2>
               {page.bentoSub ? <p className="mkt-pf__head-sub">{page.bentoSub}</p> : null}
             </div>
-            <div className={`mkt-pf__bento${page.bentos.length >= 5 ? ' mkt-pf__bento--five' : ''}`}>
+            <div className={`mkt-pf__bento fx-cells fx-cells--bleed${page.bentos.length >= 5 ? ' mkt-pf__bento--five' : ''}`}>
               {page.bentos.map((tile, i) => (
                 <BentoTile key={`${tile.titleLead}-${tile.titleAccent}`} tile={tile} slot={i} pageId={page.id} />
               ))}
@@ -311,7 +314,7 @@ function ProductFeatureView({ page }: { page: ProductPage }) {
 
         {hasShowcases ? (
           <section
-            className="mkt-pf__section"
+            className="mkt-pf__section mkt-pf__section--showcases fx-sec fx-sec--flush"
             aria-label={`${page.showcasesTitle} ${page.showcasesAccent}`.trim()}
           >
             <div className="mkt-pf__showcases">
@@ -323,7 +326,7 @@ function ProductFeatureView({ page }: { page: ProductPage }) {
         ) : null}
 
         {proof ? (
-          <section className="mkt-pf__section" aria-labelledby="mkt-pf-proof">
+          <section className="mkt-pf__section fx-sec" aria-labelledby="mkt-pf-proof">
             <div className="mkt-pf__head">
               <h2 id="mkt-pf-proof" className="mkt-pf__head-title">
                 {proof.title} {proof.titleAccent ? <span>{proof.titleAccent}</span> : null}
@@ -379,7 +382,7 @@ function ProductFeatureView({ page }: { page: ProductPage }) {
         ) : null}
 
         <section
-          className={`mkt-pf__section mkt-pf__section--steps${!(hasFaqs || hasRelated) ? ' mkt-pf__section--last' : ''}`}
+          className="mkt-pf__section mkt-pf__section--steps fx-sec"
           aria-labelledby="mkt-pf-steps"
         >
           <div className="mkt-pf__head">
@@ -387,9 +390,9 @@ function ProductFeatureView({ page }: { page: ProductPage }) {
               {page.stepsTitle} <span>{page.stepsAccent}</span>
             </h2>
           </div>
-          <ol className="mkt-pf__steps">
+          <ol className={`mkt-pf__steps fx-cells fx-cells--bleed fx-cells--${Math.min(page.steps.length, 4)}`}>
             {page.steps.map((step, i) => (
-              <li key={step.title} className="mkt-pf__step">
+              <li key={step.title} className="mkt-pf__step fx-step">
                 <div className="mkt-pf__step-index" aria-hidden>
                   <span className="mkt-pf__step-num">{String(i + 1).padStart(2, '0')}</span>
                 </div>
@@ -403,26 +406,19 @@ function ProductFeatureView({ page }: { page: ProductPage }) {
         </section>
 
         {hasFaqs ? (
-          <section className="mkt-pf__section mkt-pf__section--faq" aria-labelledby="mkt-pf-faq">
+          <section className="mkt-pf__section mkt-pf__section--faq fx-sec" aria-labelledby="mkt-pf-faq">
             <div className="mkt-pf__head">
               <h2 id="mkt-pf-faq" className="mkt-pf__head-title">
                 Common <span>questions</span>
               </h2>
             </div>
-            <div className="mkt-pf__faq">
-              {page.faqs!.map((f) => (
-                <div key={f.question} className="mkt-pf__faq-item">
-                  <h3>{f.question}</h3>
-                  <p>{f.answer}</p>
-                </div>
-              ))}
-            </div>
+            <FaqAccordion items={page.faqs!} />
           </section>
         ) : null}
 
         {hasRelated ? (
           <section
-            className={`mkt-pf__section mkt-pf__section--related${hasFaqs ? '' : ''} mkt-pf__section--last`}
+            className="mkt-pf__section mkt-pf__section--related fx-sec"
             aria-labelledby="mkt-pf-related"
           >
             <div className="mkt-pf__head">
@@ -430,9 +426,9 @@ function ProductFeatureView({ page }: { page: ProductPage }) {
                 {page.relatedTitle} <span>{page.relatedAccent}</span>
               </h2>
             </div>
-            <div className="mkt-pf__related">
+            <div className="mkt-pf__related fx-cells fx-cells--bleed fx-links">
               {page.related.map((r) => (
-                <Link key={r.href} to={r.href} className="mkt-pf__related-link">
+                <Link key={r.href} to={r.href} className="mkt-pf__related-link fx-link">
                   {r.label}
                 </Link>
               ))}
@@ -447,6 +443,7 @@ function ProductFeatureView({ page }: { page: ProductPage }) {
           secondaryLabel="See pricing"
           secondaryTo="/pricing"
         />
+        </div>
         </div>
       </MarketingPage>
     </MeshContext.Provider>

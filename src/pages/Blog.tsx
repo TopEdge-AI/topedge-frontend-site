@@ -53,9 +53,9 @@ function PostCard({ post, featured }: { post: BlogPostModel; featured?: boolean 
               decoding="async"
             />
           </picture>
-          <span className="mkt-blog-card__cat">{post.category}</span>
         </div>
         <div className="mkt-blog-card__body">
+          <span className="mkt-blog-card__cat">{post.category}</span>
           <h2 className="mkt-blog-card__title">{post.title}</h2>
           <p className="mkt-blog-card__excerpt">{post.description}</p>
           <div className="mkt-blog-card__foot">
@@ -286,8 +286,22 @@ export default function Blog({ page = 1, categorySlug }: Props) {
           },
         ]}
       />
-      <MarketingPage className="mkt-blog-index">
+      <MarketingPage className="mkt-blog-index fx">
+        <div className="fx-shell">
         <header className="mkt-blog-index__hero">
+          {category ? (
+            <nav aria-label="Breadcrumb">
+              <ol className="fx-crumbs">
+                <li>
+                  <Link to="/">Home</Link>
+                </li>
+                <li>
+                  <Link to="/blog">Blog</Link>
+                </li>
+                <li aria-current="page">{category.label}</li>
+              </ol>
+            </nav>
+          ) : null}
           <p className="mkt-blog-index__brand">
             <img src="/brand-mark.png" alt="" aria-hidden width={22} height={22} decoding="async" />
             <span>
@@ -315,22 +329,32 @@ export default function Blog({ page = 1, categorySlug }: Props) {
 
         <CategoryBar activeSlug={category?.slug} />
 
-        <div className="mkt-blog-index__grid">
-          {useFeatured && featured ? (
-            <Reveal className="mkt-blog-index__featured">
+        {/*
+          Framed layout (24 Nov 2026): the featured post is its own split row
+          and the list is a cell grid. The cell is the static element that
+          draws the hairlines; the Reveal inside it only fades the content in,
+          so the dividers never move.
+        */}
+        {useFeatured && featured ? (
+          <div className="mkt-blog-index__featured">
+            <Reveal>
               <PostCard post={featured} featured />
             </Reveal>
-          ) : null}
+          </div>
+        ) : null}
 
+        <div className="mkt-blog-index__grid fx-cells">
           {grid.map((post, index) => (
-            <Reveal key={post.slug} delay={0.04 + index * 0.03}>
-              <PostCard post={post} />
-            </Reveal>
+            <div key={post.slug} className="mkt-blog-index__cell">
+              <Reveal delay={0.04 + (index % 3) * 0.03}>
+                <PostCard post={post} />
+              </Reveal>
+            </div>
           ))}
         </div>
 
         {category ? (
-          <nav className="mkt-blog-pager" aria-label="Back to all playbooks">
+          <nav className="mkt-blog-pager mkt-blog-pager--back" aria-label="Back to all playbooks">
             <Link to="/blog" className="mkt-blog-pager__btn">
               <span className="mkt-blog-pager__arrow" aria-hidden>
                 <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" strokeWidth="2.6" strokeLinecap="round" strokeLinejoin="round">
@@ -354,6 +378,7 @@ export default function Blog({ page = 1, categorySlug }: Props) {
           secondaryLabel="See features"
           secondaryTo="/features"
         />
+        </div>
       </MarketingPage>
     </>
   );
