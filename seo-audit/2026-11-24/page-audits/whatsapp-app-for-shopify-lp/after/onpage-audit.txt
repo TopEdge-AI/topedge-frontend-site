@@ -1,0 +1,987 @@
+On-page audit: https://topedgeai.com/whatsapp-app-for-shopify?v=2026-11-24
+Keyword: whatsapp app for shopify
+Competitors: https://apps.shopify.com/whatsapp, https://getkanal.com/best-shopify-apps/best-whatsapp-apps-for-shopify, https://m.aisensy.com/blog/shopify-whatsapp-integration/
+Run: 2026-11-24T06:50:32.886Z
+
+
+===== Overview =====
+Download CSV
+Save as PDF
+New audit
+Overview
+Keyword
+Competitors
+Full audit
+Links & images
+Structure
+Previews
+AI & tech
+On-page score
+
+Weighted share of checks passed. Warnings count half, info items do not count. It measures on-page setup, not backlinks or authority.
+
+91
+YOU
+topedgeai.com
+46 pass · 10 warn · 0 fail
+68
+COMP 1
+apps.shopify.com
+26 pass · 16 warn · 4 fail
+79
+COMP 2
+getkanal.com
+35 pass · 12 warn · 2 fail
+74
+COMP 3
+m.aisensy.com
+29 pass · 14 warn · 4 fail
+Page at a glance
+1,728
+Content words
+2
+Exact keyword uses
+5
+Internal pages linked
+36
+Images
+0
+Broken links
+991 ms
+HTML download time
+97 KB
+HTML size
+10
+Schema types
+Fix these first
+
+Your biggest issues, ordered by the weight each check carries in this audit.
+
+Keyword in first 100 words: Not found
+Say what the page is about early.
+Medium impact
+Page in XML sitemap: Not listed in 1 sitemap file(s), 170 URLs
+Important pages belong in the sitemap you submit to Search Console.
+Medium impact
+Canonical tag: https://topedgeai.com/whatsapp-app-for-shopify (points to another URL)
+This page tells Google another URL is the main version. Confirm it is intended.
+Medium impact
+Page download time: 991 ms to download the full HTML from the audit server
+Includes connection and full HTML download, not just TTFB. Use page caching and good hosting.
+Medium impact
+Keyword in an H2: None
+Use the keyword or a variant in at least one H2.
+Low impact
+Keyword in an image alt: None
+Describe one relevant image using the keyword naturally.
+Low impact
+Modern formats (WebP/AVIF): 11 of 36
+WebP or AVIF files are smaller and load faster.
+Low impact
+Width and height set: 28 image(s) without both
+Set width and height to stop layout shift (CLS).
+Low impact
+Your Google result
+
+An estimate of how your title and description may look. Widths are measured in Arial on your device; Google’s real cut-off varies by device and query.
+
+TopEdge AI
+https://topedgeai.com › whatsapp-app-for-shopify
+WhatsApp App for Shopify: Cart Recovery & COD | TopEdge AI
+WhatsApp app for Shopify India: recover carts, confirm COD orders and send order updates on WhatsApp. 0% Meta markup, 14-day free trial.
+Title: 562 px of about 600 px
+Description: 880 px of about 920 px
+
+Google may rewrite titles and descriptions. A clear, matching title and H1 lowers that chance.
+
+Want these fixed and ranking?
+
+I turn audits like this into a clear plan and do the work: on-page, technical, content and links.
+
+Get a free SEO consultation
+
+How it works: the tool downloads the HTML your server sends, the same first copy Googlebot gets, and checks it in your browser. Content added later by JavaScript is not counted. Link and image checks use live HTTP requests. Scores cover on-page setup only; rankings also depend on backlinks, authority and search intent.
+
+===== Keyword =====
+Download CSV
+Save as PDF
+New audit
+Overview
+Keyword
+Competitors
+Full audit
+Links & images
+Structure
+Previews
+AI & tech
+Keyword placement map
+
+Exact matches of “whatsapp app for shopify” in every spot Google reads. Red cells are spots where the keyword is missing.
+
+PAGE	TITLE	META DESC	URL	H1	H2-H6	FIRST 100 WORDS	BODY	IMAGE ALT	LINK ANCHORS
+You: topedgeai.com	1	1	yes	1	0	0	2	0	0
+Comp 1: apps.shopify.com	0	0	no	0	0	0	0	0	0
+Comp 2: getkanal.com	0	0	no	0	1	0	2	0	0
+Comp 3: m.aisensy.com	0	0	no	0	0	0	0	0	0
+missing
+low
+medium
+highest
+Keyword numbers
+Exact
+2 uses in 1,728 words (0.46%)
+Word
+“whatsapp” appears 20 times
+Word
+“app” appears 7 times
+Word
+“for” appears 15 times
+Word
+“shopify” appears 12 times
+Anchors
+0 links use the keyword
+What your page talks about
+
+Most used phrases and words. If your topic is not near the top, Google may see the page as being about something else.
+
+business account
+8×
+free trial
+6×
+shopify app
+5×
+app store
+5×
+meta business
+4×
+meta bills
+4×
+start free
+4×
+whatsapp tool
+3×
+cart recovery
+3×
+theme edits
+3×
+year save
+3×
+cancel anytimeyearly
+3×
+meta
+27×
+whatsapp
+20×
+month
+15×
+plan
+14×
+cod
+13×
+orders
+12×
+shopify
+12×
+message
+9×
+business
+9×
+account
+9×
+order
+9×
+cart
+9×
+Want these fixed and ranking?
+
+I turn audits like this into a clear plan and do the work: on-page, technical, content and links.
+
+Get a free SEO consultation
+
+How it works: the tool downloads the HTML your server sends, the same first copy Googlebot gets, and checks it in your browser. Content added later by JavaScript is not counted. Link and image checks use live HTTP requests. Scores cover on-page setup only; rankings also depend on backlinks, authority and search intent.
+
+===== Competitors =====
+Download CSV
+Save as PDF
+New audit
+Overview
+Keyword
+Competitors
+Full audit
+Links & images
+Structure
+Previews
+AI & tech
+You vs competitors
+
+Your real numbers against the average of the competitor pages that loaded.
+
+Content depth
+You have 1,728 words. Competitors average 3,180.
+Sections
+You use 13 H2 sections. Competitors average 14.
+Internal linking
+You link to 5 internal pages. Competitors average 46.
+Schema types
+Competitors use AggregateRating, Article, ItemList, BlogPosting. You do not.
+Keyword placement
+Competitors place the keyword in: H2-H6. You do not.
+Question headings
+You have 4. Competitors average 5.
+METRIC	YOU
+topedgeai.com	COMP 1
+apps.shopify.com	COMP 2
+getkanal.com	COMP 3
+m.aisensy.com
+On-page score	91	68	79	74
+Content words	1,728	940	5,728	2,872
+Exact keyword uses	2	0	2	0
+Keyword density %	0.46	0	0.14	0
+Title width px	562	899	553	540
+Keyword in title	✓ yes	✕ no	✕ no	✕ no
+Meta description chars	136	154	139	139
+Keyword in meta	✓ yes	✕ no	✕ no	✕ no
+Keyword in URL	✓ yes	✕ no	✕ no	✕ no
+H1 count	1	1	1	1
+Keyword in H1	✓ yes	✕ no	✕ no	✕ no
+H2 sections	13	11	16	16
+H3 sections	18	3	30	23
+Question headings	4	2	9	5
+Images	36	32	54	23
+Images missing alt	0	11	0	1
+Videos	6	3	0	2
+Unique internal links	5	51	65	23
+Unique external links	9	22	26	52
+Lists / tables	11 / 0	16 / 0	27 / 3	31 / 1
+Schema types	Organization, ImageObject, SoftwareApplication, Offer, WebPage	SoftwareApplication, AggregateRating	Organization, Person, ContactPoint, SoftwareApplication, Offer	BlogPosting
+Readability (Flesch)	70	45	48	37
+HTML size KB	97	213	586	194
+HTML download ms	991	1,264	1,140	356
+Last updated	n/a	n/a	2026-11-09	2026-11-17
+Tech	Google Analytics	Shopify, Google Analytics, Cloudflare	Shopify, Google Tag Manager, Cloudflare	Google Tag Manager, Google Analytics, Meta Pixel
+Sections competitors have, you do not
+
+Competitor H2 and H3 headings whose main words barely appear on your page. Each one is a sub-topic to consider adding.
+
+Comp 1 · H2
+Apps by category
+Comp 1 · H2
+Featured images gallery
+Comp 1 · H2
+Reviews (986)
+Comp 1 · H3
+Resources
+Comp 1 · H2
+More apps like this
+Comp 2 · H2
+At a glance.The first three apps in this comparison.
+Comp 2 · H3
+Zoko
+Comp 2 · H3
+Pushdaddy
+Comp 2 · H3
+SeedGrow
+Comp 2 · H3
+Wati
+Comp 2 · H3
+TextYess
+Comp 2 · H3
+Dondy
+Comp 2 · H3
+Chaty
+Comp 2 · H3
+Interakt
+Comp 2 · H3
+SleekFlow
+Comp 2 · H2
+How we compared the 10 apps
+Comp 2 · H2
+Quick comparison
+Comp 2 · H3
+Where Kanal fits
+Comp 2 · H3
+#3 Pushdaddy, a low-cost chat widget with basic automation
+Comp 2 · H3
+#10 SleekFlow, an omnichannel inbox with AI agents
+Comp 2 · H3
+You already run Klaviyo, a helpdesk or subscriptions
+Comp 2 · H3
+You sell in several countries or want the channel run for you
+Comp 2 · H2
+Four questions that decide the choice
+Comp 2 · H3
+2. How much of the conversation can you automate?
+Comp 2 · H2
+Frequently asked questions
+Comp 2 · H2
+Our recommendation
+Comp 2 · H2
+Related guides.More Shopify app comparisons.
+Comp 3 · H3
+1. Instant Customer Communication
+Comp 3 · H3
+4. Effective Marketing Campaigns
+Comp 3 · H2
+Tips for Maximizing Shopify WhatsApp Integration
+Missing terms
+
+Words and phrases repeated on competitor pages that never appear on yours. Use the ones that fit your topic.
+
+Phrases
+whatsapp business
+3/3 · ~11×
+shopify store
+3/3 · ~8×
+business api
+3/3 · ~7×
+order notifications
+3/3 · ~4×
+whatsapp marketing
+2/3 · ~9×
+marketing campaigns
+2/3 · ~5×
+chat button
+2/3 · ~5×
+shopify integration
+2/3 · ~5×
+best whatsapp
+2/3 · ~4×
+whatsapp apps
+2/3 · ~4×
+whatsapp button
+2/3 · ~4×
+send order
+2/3 · ~3×
+business number
+2/3 · ~3×
+abandoned carts
+2/3 · ~3×
+shipping updates
+2/3 · ~3×
+whatsapp chat
+2/3 · ~3×
+customers informed
+2/3 · ~2×
+Words
+customers
+3/3 · ~16×
+marketing
+3/3 · ~14×
+integration
+3/3 · ~13×
+notifications
+3/3 · ~7×
+apps
+2/3 · ~18×
+reviews
+2/3 · ~16×
+sales
+2/3 · ~13×
+guide
+2/3 · ~11×
+best
+2/3 · ~10×
+automated
+2/3 · ~10×
+automate
+2/3 · ~8×
+products
+2/3 · ~8×
+ratings
+2/3 · ~5×
+details
+2/3 · ~4×
+inside
+2/3 · ~4×
+post-purchase
+2/3 · ~4×
+performance
+2/3 · ~3×
+buttons
+2/3 · ~3×
+hours
+2/3 · ~3×
+catalogs
+2/3 · ~3×
+
+Format: used by X of Y competitors · average uses per page.
+
+Want these fixed and ranking?
+
+I turn audits like this into a clear plan and do the work: on-page, technical, content and links.
+
+Get a free SEO consultation
+
+How it works: the tool downloads the HTML your server sends, the same first copy Googlebot gets, and checks it in your browser. Content added later by JavaScript is not counted. Link and image checks use live HTTP requests. Scores cover on-page setup only; rankings also depend on backlinks, authority and search intent.
+
+===== Full audit =====
+Download CSV
+Save as PDF
+New audit
+Overview
+Keyword
+Competitors
+Full audit
+Links & images
+Structure
+Previews
+AI & tech
+Full audit of your page
+
+64 checks on topedgeai.com
+
+All
+Fails (0)
+Warnings (10)
+Passed (46)
+Info (8)
+Meta & URL
+6/6 passed
+✓
+Title tag
+"WhatsApp App for Shopify: Cart Recovery & COD | TopEdge AI" (58 chars, 562 px)
+Likely fits in Google results.
+✓
+Keyword in title
+Exact match at the start
+Good placement.
+✓
+Meta description
+"WhatsApp app for Shopify India: recover carts, confirm COD orders and send order updates on WhatsApp. 0% Meta markup, 14-day free trial." (136 chars, 880 px)
+Good length.
+✓
+Keyword in meta description
+Found
+Google bolds matching words in the snippet. Use the keyword once.
+✓
+Keyword in URL
+Exact slug match
+Use short keyword slugs for new pages. Do not change live URLs without a 301 redirect.
+✓
+URL length
+59 chars
+Keep URLs short and readable.
+Headings
+4/5 passed
+✓
+H1 tag
+1 H1: "WhatsApp App for Shopify TopEdge AI"
+One clear H1.
+✓
+Keyword in H1
+Found
+Put the keyword, or a close variant, in the H1.
+✓
+Subheadings (H2)
+13 H2, 18 H3, 0 H4-H6
+Split content into sections with H2s that match sub-topics people search.
+!
+Keyword in an H2
+None
+Use the keyword or a variant in at least one H2.
+✓
+Heading order
+No skipped levels
+Go H1 > H2 > H3 in order. Style with CSS, not heading tags.
+Content & keyword
+4/6 passed
+✓
+Content length
+1,728 words in main content (1,896 incl. header/footer), about 8 min read
+No magic number. Compare with pages that rank and cover every sub-topic they cover.
+!
+Keyword in first 100 words
+Not found
+Say what the page is about early.
+✓
+Keyword usage
+2 exact uses, 0.46% density
+Natural usage. Write for readers, not a density target.
+i
+Keyword words used separately
+"whatsapp" 20x, "app" 7x, "for" 15x, "shopify" 12x
+Shows partial matches and variations Google also understands.
+✓
+Readability (Flesch, English)
+70 / 100, average 18 words per sentence
+Short sentences and simple words help. Estimate for English text.
+✓
+Text to HTML ratio
+11.2% of the HTML is visible text
+Low ratio means heavy code. Page builders and inline scripts add bulk.
+Links
+6/7 passed
+✓
+Internal links
+6 links, 5 unique pages
+Link to related service, case study and blog pages with descriptive anchors.
+✓
+External links
+18 links, 9 unique, 0 nofollow/sponsored/ugc
+Cite trusted sources where it helps the reader.
+✓
+Links without anchor text
+0 found
+Give every link visible text or an aria-label.
+✓
+Generic anchors
+0 like "click here" or "read more"
+Describe the destination: "see SEO case studies", not "click here".
+✓
+Broken links
+None in 14 checked links
+Fix or remove broken links. They waste crawl budget and hurt users.
+i
+Links that refused the check
+3 returned 401/403/429/999, e.g. https://www.trustpilot.com/review/topedgeai.com
+These sites block automated requests. Open them by hand to confirm they work.
+✓
+Internal links that redirect
+None
+Point internal links straight to the final URL.
+Images
+2/6 passed
+✓
+Images missing alt
+0 of 36 have no alt (28 empty alt="")
+Describe meaningful images. Empty alt is fine only for decoration.
+!
+Keyword in an image alt
+None
+Describe one relevant image using the keyword naturally.
+!
+Modern formats (WebP/AVIF)
+11 of 36
+WebP or AVIF files are smaller and load faster.
+!
+Width and height set
+28 image(s) without both
+Set width and height to stop layout shift (CLS).
+i
+First image in HTML lazy loaded
+No
+If this is your main above-the-fold image, remove lazy loading. It delays LCP. If it is a logo or icon, ignore this.
+✓
+Heavy images (over 200 KB)
+None in 12 measured
+Compress and resize. Aim for under 200 KB for most content images.
+Technical & indexing
+12/15 passed
+✓
+HTTP status
+200
+Page loads.
+✓
+Indexable
+robots: index,follow,max-image-preview:large
+Search engines can index this page.
+✓
+robots.txt (Googlebot)
+Allowed, sitemap declared
+Good.
+!
+Page in XML sitemap
+Not listed in 1 sitemap file(s), 170 URLs
+Important pages belong in the sitemap you submit to Search Console.
+!
+Canonical tag
+https://topedgeai.com/whatsapp-app-for-shopify (points to another URL)
+This page tells Google another URL is the main version. Confirm it is intended.
+✓
+HTTPS
+Secure
+Serve every page on HTTPS.
+✓
+Mixed content
+None
+Load every file over https:// or browsers block it.
+✓
+Mobile viewport
+width=device-width,initial-scale=1
+Add <meta name="viewport" content="width=device-width, initial-scale=1">.
+✓
+Language attribute
+en-IN
+Set <html lang="en-IN"> or your language.
+✓
+Doctype and charset
+Doctype ok, charset ok
+Start with <!DOCTYPE html> and <meta charset="utf-8">.
+✓
+HTML size and DOM
+97 KB HTML, 749 elements
+Heavy HTML and big DOMs slow rendering. Page builders add extra wrappers.
+!
+Page download time
+991 ms to download the full HTML from the audit server
+Includes connection and full HTML download, not just TTFB. Use page caching and good hosting.
+✓
+Render-blocking scripts in head
+0 blocking, 0 external scripts, 0 stylesheets
+Add defer or async to scripts that do not need to run first.
+✓
+Compression
+br
+Enable gzip or brotli on the server.
+✓
+HSTS security header
+Enabled
+Strict-Transport-Security forces HTTPS for returning visitors.
+AI search readiness
+5/6 passed
+✓
+AI search crawlers allowed
+ChatGPT search, Perplexity, Bing/Copilot and Claude search can crawl
+Blocking AI search bots removes you from their answers and citations.
+i
+AI training crawlers
+Not blocked (GPTBot, ClaudeBot, Google-Extended, CCBot)
+Your choice. Blocking training bots does not affect Google rankings.
+✓
+llms.txt file
+Found at /llms.txt (39 KB)
+An optional summary file for AI tools. Low effort, low impact today.
+✓
+Question-style headings
+4 found
+Headings phrased as real questions, answered right below, are easy for AI Overviews and ChatGPT to quote.
+✓
+Lists and tables
+11 lists, 0 tables
+Lists and tables are easy to scan and easy for AI answers to quote.
+✓
+FAQ structured data
+FAQPage found
+FAQ rich results are limited now, but the markup still helps machines read Q&A.
+Schema & trust
+2/4 passed
+✓
+Structured data
+Organization, ImageObject, SoftwareApplication, Offer, WebPage, BreadcrumbList, ListItem, FAQPage, Question, Answer
+Add JSON-LD that matches the page: LocalBusiness, Service, Article, FAQPage, BreadcrumbList.
+✓
+Breadcrumbs markup
+BreadcrumbList found
+Breadcrumbs show your site path in Google results.
+!
+Author and dates
+Author: not found | Published: n/a | Updated: n/a
+Show who wrote it and when it was updated. Supports E-E-A-T.
+!
+Trust page links
+About no, Contact no, Privacy yes
+Link to About, Contact and Privacy pages from every page.
+Local SEO
+2/6 passed
+✓
+Click-to-call phone
++919429784875
+Local visitors call from mobile. Add a tel: link.
+i
+LocalBusiness schema
+Not found
+For local services add LocalBusiness with name, address, phone, hours and geo.
+i
+Address on page
+Not found
+Show the same name, address and phone as your Google Business Profile.
+i
+Map link or embed
+Not found
+Link or embed your Google Maps location.
+i
+Reviews markup
+Not found
+Only mark up genuine reviews shown on the page.
+✓
+WhatsApp contact
+Found
+Useful if customers contact you on WhatsApp.
+Social sharing
+3/3 passed
+✓
+Open Graph tags
+og:title yes, og:description yes, og:image yes
+Controls the preview on WhatsApp, LinkedIn and Facebook.
+✓
+Twitter/X card
+summary_large_image
+Add twitter:card = summary_large_image.
+✓
+Favicon
+Found
+Google shows your favicon next to your results.
+Want these fixed and ranking?
+
+I turn audits like this into a clear plan and do the work: on-page, technical, content and links.
+
+Get a free SEO consultation
+
+How it works: the tool downloads the HTML your server sends, the same first copy Googlebot gets, and checks it in your browser. Content added later by JavaScript is not counted. Link and image checks use live HTTP requests. Scores cover on-page setup only; rankings also depend on backlinks, authority and search intent.
+
+===== Links & images =====
+Download CSV
+Save as PDF
+New audit
+Overview
+Keyword
+Competitors
+Full audit
+Links & images
+Structure
+Previews
+AI & tech
+Link health
+
+Live status of 14 unique links. 0 broken, 1 redirecting.
+
+STATUS	TYPE	ANCHOR	URL	NOTE
+429	external	[label] Instagram	https://www.instagram.com/topedgeai_com/	site refused the check, verify by hand
+200	internal	TopEdge AI	https://topedgeai.com/	
+200	internal	Log in	https://topedgeai.com/login	
+200	internal	Download it instead	https://topedgeai.com/marketing/demos/topedge-launch-v2.mp4	
+200	internal	Privacy	https://topedgeai.com/privacy	
+200	internal	Terms	https://topedgeai.com/terms	
+200	external	Start free	https://dash.topedgeai.com/signup?lp=shopify-whatsapp&from=www	
+403	external	Trustpilot	https://www.trustpilot.com/review/topedgeai.com	site refused the check, verify by hand
+200	external	Product Hunt	https://www.producthunt.com/products/topedge-ai	
+200	external	Message us on WhatsApp	https://api.whatsapp.com/send?phone=919429784875&text=Hi%20TopEdge%20AI%2C%20I%20have%20a%20question%20about%20WhatsApp%20COD%20confirmation%20for%20my%20Shopify%20store.	
+200	external	WhatsApp	https://api.whatsapp.com/send?phone=919429784875&text=Hi%20TopEdge%20AI%2C%20I%20want%20to%20talk%20about%20WhatsApp%20automation%20for%20my%20Shopify%20store.	
+403	external	[label] Linkedin	https://www.linkedin.com/company/topedgeai	site refused the check, verify by hand
+200	external	[label] Youtube	https://www.youtube.com/@topedge_ai	
+200	external	Install on Shopify	https://apps.shopify.com/topedge-ai	
+
+Some sites block automated checks (403/999). Open those links by hand before removing them.
+
+Image weight
+
+File size of the first 12 images. Over 200 KB is heavy for most web images.
+
+SIZE	STATUS	ALT	IMAGE
+9 KB	200	Meta Business Partner	https://topedgeai.com/badges/meta-business-partner.webp?v=5
+9 KB	200	Available on the Shopify App Store	https://topedgeai.com/badges/shopify-app-store.webp?v=5
+9 KB	200	(empty)	https://topedgeai.com/trust/oleez-black.png
+9 KB	200	Built on the official WhatsApp Cloud API	https://topedgeai.com/badges/whatsapp-cloud-api.webp?v=6
+8 KB	200	(empty)	https://topedgeai.com/brand/shopify-mark.webp
+8 KB	200	(empty)	https://topedgeai.com/brand/meta-mark.webp
+6 KB	200	(empty)	https://topedgeai.com/trust/ajeeb-black.png
+6 KB	200	(empty)	https://topedgeai.com/lp/free-arrow.webp
+4 KB	200	(empty)	https://topedgeai.com/brand-mark-56.webp
+3 KB	200	(empty)	https://topedgeai.com/trust/ecom-black.png
+2 KB	200	(empty)	https://topedgeai.com/trust/apex-white.png
+1 KB	200	(empty)	https://topedgeai.com/trust/delitech-white.png
+All links and images on the page
+Links26 total, 5 internal pages, 9 external
+Images36 total, 0 missing alt
+Want these fixed and ranking?
+
+I turn audits like this into a clear plan and do the work: on-page, technical, content and links.
+
+Get a free SEO consultation
+
+How it works: the tool downloads the HTML your server sends, the same first copy Googlebot gets, and checks it in your browser. Content added later by JavaScript is not counted. Link and image checks use live HTTP requests. Scores cover on-page setup only; rankings also depend on backlinks, authority and search intent.
+
+===== Structure =====
+Download CSV
+Save as PDF
+New audit
+Overview
+Keyword
+Competitors
+Full audit
+Links & images
+Structure
+Previews
+AI & tech
+Heading outline
+
+The structure Google sees. Switch pages to compare how competitors split the topic.
+
+You: topedgeai.com (32)
+Comp 1: apps.shopify.com (20)
+Comp 2: getkanal.com (53)
+Comp 3: m.aisensy.com (47)
+H1
+WhatsApp App for Shopify TopEdge AI
+H2
+Why brands choose TopEdge AI
+H3
+Built for the whole order lifecycle, not just a WhatsApp chat widget
+H3
+Immediate RTO reduction: confirm COD and boost prepaid conversions
+H3
+Zero message markup (keep total asset and phone number ownership)
+H2
+100% asset ownership. 0% WhatsApp API markup.
+H2
+The brands that verify COD orders run half the RTO
+H2
+Every refused parcel bills you twice
+H2
+Seven in ten carts are abandoned
+H2
+You are paying a markup on messages Meta already bills you for
+H2
+Why high-growth Shopify brands Switch to TopEdge AI
+H3
+Moving from another WhatsApp tool?
+H2
+Start where you are, and we will take you to the right next step
+H3
+COD and RTO are eating the margin
+H3
+Must-use D2C suite
+H3
+I am ready to start today
+H2
+What sellers say on Trustpilot
+H2
+One subscription, the whole stack
+H3
+Win back the carts that leave
+H3
+Confirm COD before you ship
+H3
+Broadcast to the right people
+H3
+See every step before the sale
+H3
+Flows you build by dragging
+H2
+Live in about fifteen minutes
+H3
+Install from the Shopify App Store
+H3
+Connect your Meta Business account
+H3
+Switch on your first journey
+H2
+Priced on volume, not on features
+H3
+Launch Plan
+H3
+Growth Plan
+H3
+Scale Plan
+H2
+Before you hand over your Meta account
+Want these fixed and ranking?
+
+I turn audits like this into a clear plan and do the work: on-page, technical, content and links.
+
+Get a free SEO consultation
+
+How it works: the tool downloads the HTML your server sends, the same first copy Googlebot gets, and checks it in your browser. Content added later by JavaScript is not counted. Link and image checks use live HTTP requests. Scores cover on-page setup only; rankings also depend on backlinks, authority and search intent.
+
+===== Previews =====
+Download CSV
+Save as PDF
+New audit
+Overview
+Keyword
+Competitors
+Full audit
+Links & images
+Structure
+Previews
+AI & tech
+Google preview
+
+Desktop and mobile estimates, truncated by measured pixel width. Google may also rewrite titles and descriptions.
+
+Desktop
+
+TopEdge AI
+https://topedgeai.com › whatsapp-app-for-shopify
+WhatsApp App for Shopify: Cart Recovery & COD | TopEdge AI
+WhatsApp app for Shopify India: recover carts, confirm COD orders and send order updates on WhatsApp. 0% Meta markup, 14-day free trial.
+
+Mobile
+
+TopEdge AI
+https://topedgeai.com › whatsapp-app-for-shopify
+WhatsApp App for Shopify: Cart Recovery & COD | ...
+WhatsApp app for Shopify India: recover carts, confirm COD orders and send order updates on ...
+Social share preview
+
+How a shared link looks on WhatsApp, Facebook and LinkedIn, built from your Open Graph tags.
+
+TOPEDGEAI.COM
+WhatsApp App for Shopify: Cart Recovery & COD | TopEdge AI
+WhatsApp app for Shopify India: recover carts, confirm COD orders and send order updates on WhatsApp. 0% Meta markup, 14-day free trial.
+og:title
+WhatsApp App for Shopify: Cart Recovery & COD | TopEdge AI
+og:description
+WhatsApp app for Shopify India: recover carts, confirm COD orders and send order updates on WhatsApp. 0% Meta markup, 14-day free trial.
+og:image
+https://topedgeai.com/og-share.jpg
+og:type
+website
+twitter:card
+summary_large_image
+Want these fixed and ranking?
+
+I turn audits like this into a clear plan and do the work: on-page, technical, content and links.
+
+Get a free SEO consultation
+
+How it works: the tool downloads the HTML your server sends, the same first copy Googlebot gets, and checks it in your browser. Content added later by JavaScript is not counted. Link and image checks use live HTTP requests. Scores cover on-page setup only; rankings also depend on backlinks, authority and search intent.
+
+===== AI & tech =====
+Download CSV
+Save as PDF
+New audit
+Overview
+Keyword
+Competitors
+Full audit
+Links & images
+Structure
+Previews
+AI & tech
+AI crawler access
+
+What your robots.txt allows for this URL. Search bots decide if AI assistants can cite you. Training bots only collect data.
+
+BOT	USED FOR	TYPE	THIS PAGE	RULE
+OAI-SearchBot	ChatGPT search results	Search / answers	Allowed	Allow: /
+PerplexityBot	Perplexity answers	Search / answers	Allowed	Allow: /
+Bingbot	Bing and Copilot	Search / answers	Allowed	Allow: /
+Claude-SearchBot	Claude search	Search / answers	Allowed	Allow: /
+GPTBot	OpenAI model training	Training	Allowed	Allow: /
+ClaudeBot	Anthropic model training	Training	Allowed	Allow: /
+Google-Extended	Gemini training	Training	Allowed	Allow: /
+CCBot	Common Crawl dataset	Training	Allowed	Allow: /
+Applebot-Extended	Apple AI training	Training	Allowed	Allow: /
+Detected technology
+Google Analytics
+Head and server data
+Canonical
+https://topedgeai.com/whatsapp-app-for-shopify
+Meta robots
+index,follow,max-image-preview:large
+X-Robots-Tag
+not found
+Lang
+en-IN
+hreflang
+not found
+AMP
+not found
+Cache-Control
+public,max-age=0,must-revalidate
+Compression
+br
+Preconnect / preload
+0 / 0
+Sitemaps
+https://topedgeai.com/sitemap.xml
+Social profiles linked
+linkedin.com, instagram.com, youtube.com
+Want these fixed and ranking?
+
+I turn audits like this into a clear plan and do the work: on-page, technical, content and links.
+
+Get a free SEO consultation
+
+How it works: the tool downloads the HTML your server sends, the same first copy Googlebot gets, and checks it in your browser. Content added later by JavaScript is not counted. Link and image checks use live HTTP requests. Scores cover on-page setup only; rankings also depend on backlinks, authority and search intent.
