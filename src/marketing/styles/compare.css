@@ -2613,3 +2613,265 @@
     margin-top: 1rem;
   }
 }
+
+/* ——— Refreshed boards (24 Nov 2026): hero buttons, answer, gaps, fair pick, cost, steps, open FAQ ——— */
+.mkt-cmp__sub {
+  max-width: 40rem;
+  margin: 1rem auto 0;
+  font-size: clamp(0.95rem, 1.6vw, 1.05rem);
+  line-height: 1.55;
+  color: var(--muted);
+}
+
+.mkt-cmp__hero-cta {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.65rem;
+  margin: 1.35rem auto 0;
+}
+
+.mkt-cmp__hero-note {
+  margin: 0.7rem auto 0;
+  font-size: 0.8125rem;
+  color: var(--soft);
+}
+
+.mkt-cmp__hero-note a {
+  color: var(--violet);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+/* Direct answer: plain solid yellow, thin border, no gradient (owner, 22 Nov 2026). */
+.mkt-cmp__answer {
+  max-width: 44rem;
+  margin: 0 auto;
+  padding: 1.05rem 1.25rem;
+  border: 1px solid #fde68a;
+  border-radius: 14px;
+  background: #fef9c3;
+}
+
+.mkt-cmp__answer-label {
+  margin: 0 0 0.4rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: #92400e;
+}
+
+.mkt-cmp__answer p {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.58;
+  color: #1e293b;
+}
+
+.mkt-cmp__gaps {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.85rem;
+  max-width: 64rem;
+  margin: 0 auto;
+}
+
+@media (min-width: 860px) {
+  .mkt-cmp__gaps {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+.mkt-cmp__gap {
+  padding: 1.15rem 1.25rem;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: #fff;
+}
+
+.mkt-cmp__gap h3 {
+  margin: 0 0 0.45rem;
+  font-size: 0.975rem;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+}
+
+.mkt-cmp__gap p,
+.mkt-cmp__fair span,
+.mkt-cmp__steps p,
+.mkt-cmp__qa-a {
+  margin: 0;
+  font-size: 0.875rem;
+  line-height: 1.58;
+  color: #334155;
+}
+
+.mkt-cmp__fair {
+  display: grid;
+  gap: 0.6rem;
+  max-width: 44rem;
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+}
+
+.mkt-cmp__fair li {
+  display: grid;
+  grid-template-columns: 1.25rem minmax(0, 1fr);
+  gap: 0.75rem;
+  align-items: start;
+  padding: 0.9rem 1.1rem;
+  border: 1px solid #f1f5f9;
+  border-radius: 14px;
+  background: #fcfcfd;
+}
+
+.mkt-cmp__fair img {
+  width: 1.25rem;
+  height: 1.25rem;
+  border-radius: 5px;
+  object-fit: cover;
+  margin-top: 0.1rem;
+}
+
+.mkt-cmp__cost-wrap {
+  max-width: 52rem;
+  margin: 0 auto;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+}
+
+.mkt-cmp__cost {
+  width: 100%;
+  min-width: 34rem;
+  border-collapse: separate;
+  border-spacing: 0;
+  font-size: 0.875rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.mkt-cmp__cost th,
+.mkt-cmp__cost td {
+  padding: 0.75rem 0.9rem;
+  text-align: left;
+  vertical-align: top;
+  line-height: 1.5;
+  border-bottom: 1px solid #eef2f6;
+}
+
+.mkt-cmp__cost th + th,
+.mkt-cmp__cost td,
+.mkt-cmp__cost th + td {
+  border-left: 1px solid #eef2f6;
+}
+
+.mkt-cmp__cost tr:last-child > * {
+  border-bottom: none;
+}
+
+.mkt-cmp__cost thead th {
+  background: #f8fafc;
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.mkt-cmp__cost tbody th {
+  width: 32%;
+  font-weight: 500;
+  color: #1e293b;
+  background: #fafafc;
+}
+
+.mkt-cmp__cost .is-te {
+  background: #f8f6ff;
+  color: #1e1b4b;
+}
+
+.mkt-cmp__steps {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.75rem;
+  max-width: 64rem;
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+  counter-reset: cmp-step;
+}
+
+@media (min-width: 860px) {
+  .mkt-cmp__steps {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+.mkt-cmp__steps li {
+  padding: 1rem 1.1rem;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: #fff;
+}
+
+.mkt-cmp__steps h3 {
+  margin: 0 0 0.4rem;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+}
+
+.mkt-cmp__steps h3::before {
+  counter-increment: cmp-step;
+  content: counter(cmp-step);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-right: 0.5rem;
+  border-radius: 999px;
+  background: #ede9fe;
+  color: #6d28d9;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+/* FAQ, always open and numbered like a printed FAQ (owner, 24 Nov 2026). */
+.mkt-cmp__qa {
+  display: grid;
+  gap: 0.6rem;
+  width: min(100%, 44rem);
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+  counter-reset: cmp-qa;
+}
+
+.mkt-cmp__qa-item {
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04);
+}
+
+.mkt-cmp__qa-q {
+  margin: 0;
+  padding: 0.95rem 1.1rem 0.75rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  line-height: 1.4;
+  color: #0f172a;
+}
+
+.mkt-cmp__qa-q::before {
+  counter-increment: cmp-qa;
+  content: counter(cmp-qa) '. ';
+}
+
+.mkt-cmp__qa-a {
+  margin: 0 1.1rem;
+  padding: 0.75rem 0 0.95rem;
+  border-top: 1px solid #eef2f6;
+}

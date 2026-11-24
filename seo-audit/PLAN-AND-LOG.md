@@ -61,7 +61,7 @@ Baselines are India, Search Console, 21 Oct to 17 Nov 2026 (Verified 18 Nov). Re
 | 11 | Thu 26 Nov | **A:** /blog/bitespeed-alternative-shopify-india (re-read bitespeed.co first; /pricing 301s to /request-demo). **B:** landing page review: Search Console for all six, fix any cannibalisation | bitespeed alternative 58 @ 17.6; bitespeed pricing 8 @ 23.3 | YouTube demo 2: cart recovery (owner) | Planned |
 | 12 | Fri 27 Nov | **A:** /blog/cod-rto-benchmark-india-2026 | rto rate india by category (178 impressions in 90 days @ 5.9, near page 1) | 3 emails to independent lists | Planned |
 | 13 | Sat 28 Nov | **A:** /blog/whatsapp-business-api-pricing-india | whatsapp business api pricing @ 36.5; whatsapp api pricing @ 52 (5,400 a month India volume) | App Store listing and review round 2 (owner) | Planned |
-| 14 | Sun 29 Nov | Compare boards, body only: one visible "Updated" date per board instead of one shared date, and less shared board text (people-first audit, 20 Nov) | Quality fix, not a keyword day | AlternativeTo and SaaSHub listings (owner) | Planned |
+| 14 | Sun 29 Nov | Reserve blog page (aisensy pricing 16 @ 15.5) plus a people-first re-run over all refreshed compare boards (the per-board date fix moved to Track C, section 3c) | aisensy pricing 1,600 India volume | AlternativeTo and SaaSHub listings (owner) | Planned |
 | 15 | Mon 30 Nov | /tools/whatsapp-link-generator: win QR searches on the existing page (no new URL) | whatsapp qr code generator 1,300 KD1; create whatsapp qr code 1,300 | 3 emails | Planned |
 | 16 | Tue 1 Dec | Cannibalisation: /blog/shopify-whatsapp-automation-what-to-automate-first, and the merge of /blog/what-is-ecommerce-automation-shopify-whatsapp into the pillar if the owner agrees | shopify whatsapp automation 10 @ 39.2 on the wrong page | YouTube demo 3: COD to prepaid (owner) | Planned |
 | 17 | Wed 2 Dec | Final scorecard against section 4, then write the next plan from what moved | | Off-page review | Planned |
@@ -95,6 +95,30 @@ Do not reuse /whatsapp-cart-recovery or /cod-confirmation-whatsapp: both were th
 5. Schema: Organization, SoftwareApplication, WebPage, BreadcrumbList, FAQPage. Never Product.
 6. Ads: the same URL works for Meta and Google ads with UTM tags; the ad headline repeats the H1 (message match). No separate noindex copy.
 7. People-first gate and spam-policy table pass; no two landing pages share more than a short CTA.
+
+## 3c. Track C: comparison boards, three a day (owner, 24 Nov 2026)
+
+The owner asked for every comparison page to match the structure of WATI's own vs pages (wati.io/wati-vs-interakt and wati.io/wati-vs-aisensy, read 24 Nov 2026), keeping our capability board exactly as it is. Three boards a day, alongside Tracks A and B. Skill: `.claude/skills/topedge-compare-board/SKILL.md`. Data: `src/marketing/data/compareRefresh.ts`; template: `src/marketing/components/compare/CompareRefreshed.tsx`.
+
+**New board layout (top to bottom):** kicker with the board's own Updated date → H1 "TopEdge AI vs X" with logos → one-line difference (`heroSub`) → Start free, 14 days + Chat with us on WhatsApp + App Store line → proof badges → yellow answer box "TopEdge AI vs X: the short answer" → "Why Shopify brands switch from X to TopEdge AI" (3 numbered reasons) → capability board (unchanged) → inline CTA → "Where X falls short and TopEdge AI does better" (3 cards) → "Where X is the better pick" (2 or 3 honest lines) → "TopEdge AI vs X pricing, read <date>" (dated table) → "How to switch from X in four steps" → "Frequently asked questions about TopEdge AI vs X" (5, numbered, always open, FAQPage) → related links → review platforms → closing CTA with WhatsApp.
+
+**Keyword rules for boards:** title "TopEdge AI vs X (2027): <differences>" at 60 characters or fewer; never "X alternative" (blog owns) or "X pricing" (pricing post owns) in title, H1 or description; the FAQ answers those and links to the owner. Each board has its own `updated` date, which fixes the shared-date problem planned for Day 14.
+
+| Order | Board | Day | Status |
+|---|---|---|---|
+| 1 | /compare/interakt | 7 (24 Nov) | Done 24 Nov |
+| 2 | /compare/wati | 7 (24 Nov) | Done 24 Nov |
+| 3 | /compare/aisensy | 7 (24 Nov) | Done 24 Nov |
+| 4 | /compare/bitespeed (re-read bitespeed.co; /pricing 301s to /request-demo) | 8 | Planned |
+| 5 | /compare/zoko | 8 | Planned |
+| 6 | /compare/dondy (re-read the ~60% rate-card claim in its title before keeping it) | 8 | Planned |
+| 7 | /compare/updatrr | 9 | Planned |
+| 8 | /compare/getgabs (title "vs USD Entry" is false; listing unavailable 24 Nov) | 9 | Planned |
+| 9 | /compare/kanal | 9 | Planned |
+| 10 | /compare/gupshup | 10 | Planned |
+| 11 | /compare/topedge-vs-wati-vs-aisensy (three-way; needs a three-column variant of the template) | 10 | Planned |
+| 12 | /compare/topedge-vs-wati-vs-interakt-vs-aisensy (four-way; "wati vs aisensy" 48 impressions @ 33.7 is rival-vs-rival, accuracy only) | 10 | Planned |
+| 13 | /compare hub and /compare/alternatives (hub copy, board cards show each board's date) | 11 | Planned |
 
 ## 4. Targets for 2 Dec (Estimates, not promises)
 

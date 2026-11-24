@@ -3602,7 +3602,7 @@ export const blogPosts: BlogPost[] = [
 
 <h3>11. Getgabs: lowest INR plan, but not on the Shopify App Store today</h3>
 <p><strong>Price:</strong> Basic ₹699, Plus ₹1,499 and Business ₹2,999 a month, each at 0% markup on Meta's rates.</p>
-<p>On 24 November 2026 Getgabs's Shopify App Store listing read "This app is not currently available on the Shopify App Store", and a search for it returned nothing. <a href="https://getgabs.com/pricing/" target="_blank" rel="noopener noreferrer">Getgabs's website</a> still offers a Shopify integration. Until the listing returns you cannot install it from the App Store or have Shopify bill it, so confirm how it connects to your store before you pay. We ranked it second in September; it moves to the end until the listing is back.</p>
+<p>On 24 November 2026 Getgabs's Shopify App Store listing read "This app is not currently available on the Shopify App Store". <a href="https://getgabs.com/pricing/" target="_blank" rel="noopener noreferrer">Getgabs's website</a> still offers a Shopify integration. Until the listing returns you cannot install it from the App Store or have Shopify bill it, so confirm how it connects to your store before you pay. We ranked it second in September; it moves to the end until the listing is back.</p>
 
 <h2>Best WhatsApp app for Shopify by job: which one fits your store?</h2>
 <p>Pick the job first. Each answer below is one line, then the detail.</p>

@@ -1,12 +1,12 @@
-# Daily prompt (version 5, 20 Nov 2026)
+# Daily prompt (version 6, 24 Nov 2026)
 
-Paste everything below the line into a new session each day. Change only N and the date. N is the owner's own count (Day 1 = 15 Nov, Day 3 = 18 Nov, Day 5 = 20 Nov, Day 6 = 21 Nov). Run the row labelled Day N in `seo-audit/PLAN-AND-LOG.md` section 3. If that row is already Done, run the first row below it that is not Done and say so in one line. Never restart the count.
+Paste everything below the line into a new session each day. Change only N and the date. N is the owner's own count (Day 1 = 15 Nov, Day 3 = 18 Nov, Day 5 = 20 Nov, Day 6 = 22 Nov, Day 7 = 24 Nov, so the next is Day 8). Run the row labelled Day N in `seo-audit/PLAN-AND-LOG.md` section 3. If that row is already Done, run the first row below it that is not Done and say so in one line. Never restart the count.
 
 ---
 
 Continue TopEdge SEO, Day [N]. Today's date: [DD/MM/YY].
 
-You are my SEO, AEO and GEO agent for TopEdge AI (topedgeai.com). Goal for these 15 days: move our ICP pages that rank on Google pages 2 to 5 up to page 1, and build the keyword landing pages in PLAN-AND-LOG section 3b. Every day runs two tracks: **Track A**, one blog page with the full on-page, off-page and AEO audit (Search Console export, the exploremayank on-page tool, the analysis prompt as a PDF, then fixes); **Track B**, one landing page from the map (Days 6 to 10). Do Day [N] only, end to end, then deploy. Use the project skills `topedge-seo-day`, `topedge-landing-page` and `google-search-policies` in `.claude/skills/`. Never run two days in one session. Do not re-plan unless today's data proves the plan wrong; if it does, say so first, then change the plan file.
+You are my SEO, AEO and GEO agent for TopEdge AI (topedgeai.com). Goal for these 15 days: move our ICP pages that rank on Google pages 2 to 5 up to page 1, and build the keyword landing pages in PLAN-AND-LOG section 3b. Every day runs three tracks: **Track A**, one blog page with the full on-page, off-page and AEO audit (Search Console export, the exploremayank on-page tool, the analysis prompt as a PDF, then fixes); **Track B**, one landing page from the map (section 3b); **Track C**, three comparison boards refreshed to the new compare template (section 3c, `src/marketing/data/compareRefresh.ts`). Do Day [N] only, end to end, then deploy. Use the project skills `topedge-seo-day`, `topedge-landing-page`, `topedge-compare-board` and `google-search-policies` in `.claude/skills/`. Never run two days in one session. Do not re-plan unless today's data proves the plan wrong; if it does, say so first, then change the plan file.
 
 ## 1. READ THESE FIRST, IN THIS ORDER
 
@@ -57,6 +57,7 @@ Before changing anything, tell me in a few lines: what the log says is done, tod
 6. Do not build pages for chatbot, bulk sender or API reseller searches, whatever the volume.
 6a. Product keywords a buyer types when choosing a tool come first ("whatsapp abandoned cart recovery app", "shopify cod app", "whatsapp app for shopify", "shopify whatsapp integration", "whatsapp order notification shopify", "rto reduction"). Rival-versus-rival queries such as "aisensy vs gallabox" or "wati vs aisensy" are not our keywords: accuracy fixes only.
 6b. Landing pages own product keywords; blog posts own "best X", "X alternative" and "how to" queries. Keep the exact keyword in the landing page's URL, title, H1 and the line under the H1.
+6d. Compare boards (owner, 24 Nov 2026): titles may now change, to the formula "TopEdge AI vs X (2027): <two or three differences>" at 60 characters or fewer. A board's title, H1 and description never target "X alternative" (the blog post owns it) or "X pricing" (the pricing post owns it); the board answers those in its FAQ and links to the owner.
 6c. Home page and feature pages are frozen except for factual corrections, and a title or H1 fix when a feature page owns a landing-page keyword (/features/cod-confirmation).
 7. Report India numbers separately from worldwide. Search Console beats volume tools on small queries.
 
@@ -71,7 +72,7 @@ Before changing anything, tell me in a few lines: what the log says is done, tod
 7. FAQ only from real queries. Two or three sentences each.
 8. Vary the H2 skeleton from the last page of the same type. No templated near-duplicates.
 9. Short paragraphs for a busy founder. No em dashes. Heroes and footnotes stay one short line: detail goes in the FAQ accordion, never in hidden text.
-10. Do not rewrite titles on /compare/* pages or on /blog/best-whatsapp-apps-for-shopify. Body and openings only. Blog "X alternative" titles may change when the audit shows the exact query is missing.
+10. Do not rewrite the title on /blog/best-whatsapp-apps-for-shopify; body and openings only. /compare/* titles may change only through the Track C template and keyword rule 4.6d (owner, 24 Nov 2026). Blog "X alternative" titles may change when the audit shows the exact query is missing.
 11. Titles 60 characters or fewer including " | TopEdge AI" when it fits. Use 2027, not 2026, in new or rewritten titles, descriptions and headings; reading dates stay as they are.
 12. Never mention business arrangements (link exchanges, agreed listings) in published copy.
 13. Keep sentences that already answer long prompts reaching us.
@@ -143,6 +144,7 @@ Follow `seo-audit/PLAN-AND-LOG.md` section 2 step by step:
 4. Ahrefs site audit: health score and errors; fix real ones.
 5. Keyword cluster and live India SERP for the day's page.
 6. Day's page: Search Console export CSV, on-page audit tool vs the top 3 India results, the analysis prompt as a PDF report, re-read competitor prices, implement. All files in seo-audit/<date>/page-audits/<page>/.
+6c. Track C: the day's three compare boards from PLAN-AND-LOG section 3c, built to `.claude/skills/topedge-compare-board/SKILL.md`: re-read each competitor's pricing page on every billing view and its Shopify App Store listing, write its entry in compareRefresh.ts (hero line, verdict, three switch reasons, three "falls short", two or three "better pick", dated price rows, four switch steps, five FAQs from real queries), keep the capability board as it is but refresh its dated cells, set the board's own `updated` date, and run the people-first gate.
 6b. Track B: the day's landing page from PLAN-AND-LOG section 3b, built to `.claude/skills/topedge-landing-page/SKILL.md` (keyword in URL, title, H1 and sub-line; home feature film; both pricing doors; real-query FAQ; doorway and people-first checks).
 7. Two body-only fixes on other ICP posts.
 8. Off-page item for the day: drafts only, I send.

@@ -20,4 +20,4 @@ Important instructions: I will provide only one Google Search Console export for
 
 ---
 
-House rules that still apply on top of this prompt: the truth rules, brand rules and keyword rules in `DAILY-PROMPT.md` (one owner per query, no titles changed on /compare/* or /blog/best-whatsapp-apps-for-shopify, re-read any competitor price the day it is stated, no em dashes, short heroes).
+House rules that still apply on top of this prompt: the truth rules, brand rules and keyword rules in `DAILY-PROMPT.md` (one owner per query, no title change on /blog/best-whatsapp-apps-for-shopify, /compare/* titles only through Track C, re-read any competitor price the day it is stated, no em dashes, short heroes).

@@ -18,6 +18,10 @@ import {
 } from '../data/contentDates';
 import ProofBadges from '../components/ProofBadges';
 import ReviewPlatforms from '../components/ReviewPlatforms';
+import { COMPARE_REFRESH } from '../data/compareRefresh';
+import CompareRefreshed, { CompareRefreshedClose } from '../components/compare/CompareRefreshed';
+import { PrimaryButton, GhostButton } from '../components/ui';
+import { COMPANY_SHOPIFY_APP_URL, COMPANY_WHATSAPP_URL } from '../legal/companyIdentity';
 import '../styles/compare.css';
 
 type Props = { competitor?: string };
@@ -135,10 +139,13 @@ export default function ComparePage({ competitor: competitorProp }: Props) {
   }
 
   const path = `/compare/${data.slug}`;
+  // Refreshed boards (24 Nov 2026 on) carry their own sections, FAQ and date.
+  const refresh = COMPARE_REFRESH[data.slug];
   const lean = VERBATIM_ONLY.has(data.slug);
   const leanFaqs = lean ? ownProductFaqs() : [];
-  const faqSchema =
-    lean
+  const faqSchema = refresh
+    ? refresh.faqs
+    : lean
       ? leanFaqs
       : !data.faqs?.length
       ? undefined
@@ -153,7 +160,7 @@ export default function ComparePage({ competitor: competitorProp }: Props) {
   const teBest = !lean && data.competitorPlans?.length ? pickBestPlan(TOPEDGE_PLANS_SUMMARY) : null;
   const compBest = !lean && data.competitorPlans?.length ? pickBestPlan(data.competitorPlans) : null;
   const duelFeatures = lean ? [] : planDuelFeatures(data.slug as MatrixCompetitor);
-  const modifiedIso = compareTwoWayModifiedIso();
+  const modifiedIso = refresh?.updated ?? compareTwoWayModifiedIso();
 
   return (
     <>
@@ -223,10 +230,28 @@ export default function ComparePage({ competitor: competitorProp }: Props) {
               <span className="mkt-cmp__h1-peer-name">{data.name}</span>
             </span>
           </h1>
+          {refresh ? (
+            <>
+              <p className="mkt-cmp__sub">{refresh.heroSub}</p>
+              <div className="mkt-cmp__hero-cta">
+                <PrimaryButton to="/signup">Start free, 14 days</PrimaryButton>
+                <GhostButton href={COMPANY_WHATSAPP_URL}>Chat with us on WhatsApp</GhostButton>
+              </div>
+              <p className="mkt-cmp__hero-note">
+                No card on this site. Or{' '}
+                <a href={COMPANY_SHOPIFY_APP_URL} target="_blank" rel="noopener noreferrer">
+                  install from the Shopify App Store
+                </a>{' '}
+                from $19 a month.
+              </p>
+            </>
+          ) : null}
           <div className="mkt-cmp__proof">
             <ProofBadges compact />
           </div>
         </header>
+
+        {refresh ? <CompareRefreshed refresh={refresh} name={data.name} logo={data.logo} logoAlt={data.logoAlt} part="top" /> : null}
 
         {lean && data.answerFirst ? (
           <section className="mkt-cmp__block" aria-label="Quick verdict">
@@ -322,6 +347,8 @@ export default function ComparePage({ competitor: competitorProp }: Props) {
           </div>
           {data.matrixNote ? <p className="mkt-cmp__fine">{data.matrixNote}</p> : null}
         </section>
+
+        {refresh ? <CompareRefreshed refresh={refresh} name={data.name} logo={data.logo} logoAlt={data.logoAlt} part="bottom" /> : null}
 
         {hasScorecard ? (
           <section className="mkt-cmp__block" aria-labelledby="cmp-score">
@@ -499,8 +526,14 @@ export default function ComparePage({ competitor: competitorProp }: Props) {
           </section>
         ) : null}
 
+        {refresh ? <CompareRefreshedClose refresh={refresh} name={data.name} /> : null}
+
         <section className="mkt-cmp__block mkt-cmp__block--faq" aria-labelledby="cmp-faq">
-          {(lean ? leanFaqs.length : data.faqs?.length) ? (
+          {refresh ? (
+            <h2 id="cmp-faq" className="sr-only">
+              Related comparisons
+            </h2>
+          ) : (lean ? leanFaqs.length : data.faqs?.length) ? (
             <>
               <div className="mkt-cmp__block-head">
                 <h2 id="cmp-faq">
@@ -532,13 +565,24 @@ export default function ComparePage({ competitor: competitorProp }: Props) {
           <ReviewPlatforms />
         </section>
 
-        <MarketingCtaBand
-          title="Try TopEdge AI on your store"
-          subtitle="14-day free trial. Connect Shopify, approve templates, publish recovery."
-          primaryLabel="Start free"
-          secondaryLabel="See pricing"
-          secondaryTo="/pricing"
-        />
+        {refresh ? (
+          <MarketingCtaBand
+            title={`Leave ${data.name}’s markup behind`}
+            highlight="markup behind"
+            subtitle="14-day free trial with 20 orders and 200 sends. Connect Shopify, approve one template, watch a COD order confirm."
+            primaryLabel="Start free"
+            secondaryLabel="Chat with us on WhatsApp"
+            secondaryHref={COMPANY_WHATSAPP_URL}
+          />
+        ) : (
+          <MarketingCtaBand
+            title="Try TopEdge AI on your store"
+            subtitle="14-day free trial. Connect Shopify, approve templates, publish recovery."
+            primaryLabel="Start free"
+            secondaryLabel="See pricing"
+            secondaryTo="/pricing"
+          />
+        )}
       </MarketingPage>
     </>
   );

@@ -118,9 +118,9 @@ Setup guides and screen-by-screen reference, written for the person running the 
 - [All 10 alternatives](https://topedgeai.com/compare/alternatives)
 - [TopEdge AI vs WATI vs AiSensy](https://topedgeai.com/compare/topedge-vs-wati-vs-aisensy): 3-way board
 - [WATI vs Interakt vs AiSensy vs TopEdge AI](https://topedgeai.com/compare/topedge-vs-wati-vs-interakt-vs-aisensy): 4-way board
-- [TopEdge AI vs WATI](https://topedgeai.com/compare/wati): Compare TopEdge AI vs WATI for Shopify India: flat INR plans from ₹1,999/mo and 0% Meta markup vs WATI conversation charges, AI tier gates and API setup.
-- [TopEdge AI vs AiSensy](https://topedgeai.com/compare/aisensy): Compare TopEdge AI vs AiSensy for Shopify India: 0% Meta markup, BYOK AI and native COD to prepaid journeys vs platform charges and credit-metered AI.
-- [TopEdge AI vs Interakt](https://topedgeai.com/compare/interakt): Compare TopEdge AI vs Interakt for Shopify India: ₹1,999/mo Launch plan, 0% Meta markup and BYOK AI vs a ~₹2,799/mo plan with a ₹0.50/msg AI add-on.
+- [TopEdge AI vs WATI](https://topedgeai.com/compare/wati): TopEdge AI vs WATI for Shopify India, read 24 Nov 2026: ₹1,999/mo with 0% Meta markup vs WATI’s ₹2,999 Growth, per-user fees and a 20% marketing markup.
+- [TopEdge AI vs AiSensy](https://topedgeai.com/compare/aisensy): TopEdge AI vs AiSensy for Shopify India, read 24 Nov 2026: COD confirmation and 0% Meta markup vs AiSensy’s ₹1,500 Basic and rates about 26% above Meta.
+- [TopEdge AI vs Interakt](https://topedgeai.com/compare/interakt): TopEdge AI vs Interakt for Shopify India, read 24 Nov 2026: INR plans with COD confirmation and 0% Meta markup vs Interakt’s USD app plans and markups.
 - [TopEdge AI vs Bitespeed](https://topedgeai.com/compare/bitespeed): Compare TopEdge AI vs Bitespeed for Shopify India: ₹1,999/mo flat INR plans, 0% Meta markup and built-in warranty vs ₹5L MRR floors and AI add-ons.
 - [TopEdge AI vs Zoko](https://topedgeai.com/compare/zoko): TopEdge AI vs Zoko for Shopify India: flat INR plans from ₹1,999/mo and 0% Meta markup vs Zoko’s $49.99+ USD base fees and per-conversation metering.
 - [TopEdge AI vs Getgabs](https://topedgeai.com/compare/getgabs): Compare TopEdge AI vs Getgabs for Shopify India: native COD to prepaid journeys, unified identity and a warranty hub vs ₹699 to ₹2,999/mo entry plans.

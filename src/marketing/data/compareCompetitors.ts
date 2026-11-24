@@ -113,13 +113,13 @@ export const COMPARE_COMPETITORS: Record<string, CompareCompetitor> = {
     logoAlt: 'WATI logo',
     accent: '#0d9488',
     brandTag: 'WhatsApp BSP',
-    title: 'TopEdge AI vs WATI (2026): 0% Meta Markup & Shopify COD',
+    title: 'TopEdge AI vs WATI (2027): Shopify COD, Seats & Meta Markup',
     description:
-      'Compare TopEdge AI vs WATI for Shopify India: flat INR plans from ₹1,999/mo and 0% Meta markup vs WATI conversation charges, AI tier gates and API setup.',
+      'TopEdge AI vs WATI for Shopify India, read 24 Nov 2026: ₹1,999/mo with 0% Meta markup vs WATI’s ₹2,999 Growth, per-user fees and a 20% marketing markup.',
     keywords:
       'TopEdge AI vs WATI, WATI alternative India, WhatsApp template markup, COD to prepaid WhatsApp, unified customer identity WhatsApp, intent routing chatbot, WATI vs TopEdge AI Shopify',
     h1: 'TopEdge AI vs WATI',
-    subtitle: 'TopEdge AI vs WATI for Shopify India D2C brands, checked for 2026.',
+    subtitle: 'TopEdge AI vs WATI for Shopify India D2C brands, prices read 24 November 2026.',
     matrix: WATI_PAIRWISE_MATRIX.map(({ label, description, topedge, competitor }) => ({
       label,
       description,
@@ -127,7 +127,7 @@ export const COMPARE_COMPETITORS: Record<string, CompareCompetitor> = {
       competitor,
     })),
     matrixNote:
-      'Prices and per-message rates read off wati.io/pricing and WATI’s INR rate cards (dated 1 Oct 2026) on 7 Nov 2026. Meta’s India card is ₹0.8631 per marketing and ₹0.1150 per utility message. Where WATI is better: a wider inbox (WhatsApp, calling, Instagram, Facebook, TikTok, webchat and RCS) with 5 users on Pro, which suits a multi-agent support desk; TopEdge AI is a Shopify app for WhatsApp and email only. Other capability rows reflect TopEdge AI product positioning. Confirm live plan limits and fees on wati.io before purchase.',
+      'Prices and rates read 24 Nov 2026 on wati.io/pricing (monthly, quarterly and annual views) and WATI’s Growth INR rate card: Growth ₹2,999 / ₹2,699 / ₹2,199, Pro ₹6,499 / ₹5,799 / ₹4,899, Business ₹18,499 / ₹16,799 / ₹14,799; 3 users on Growth, 5 on Pro and Business, then ₹1,299 and ₹2,199 per user; 1,000, 2,000 and 5,000 free automation triggers; Shopify features need a $4.99/mo add-on. Meta’s India card is ₹0.8631 per marketing and ₹0.1150 per utility message.',
     researchAsOf: 'Nov 2026',
     related: [
       { label: 'WATI alternative guide', href: '/blog/wati-alternative-shopify-india' },
@@ -149,13 +149,13 @@ export const COMPARE_COMPETITORS: Record<string, CompareCompetitor> = {
     logoAlt: 'AiSensy logo',
     accent: '#0f766e',
     brandTag: 'WhatsApp marketing platform',
-    title: 'TopEdge AI vs AiSensy (2026): Shopify Cart Recovery & COD',
+    title: 'TopEdge AI vs AiSensy (2027): Shopify COD & Message Markup',
     description:
-      'Compare TopEdge AI vs AiSensy for Shopify India: 0% Meta markup, BYOK AI and native COD to prepaid journeys vs platform charges and credit-metered AI.',
+      'TopEdge AI vs AiSensy for Shopify India, read 24 Nov 2026: COD confirmation and 0% Meta markup vs AiSensy’s ₹1,500 Basic and rates about 26% above Meta.',
     keywords:
       'TopEdge AI vs AiSensy, AiSensy alternative India, AiSensy vs TopEdge AI, WhatsApp template markup, COD prepaid WhatsApp, unified customer profile WhatsApp, AiSensy pricing India',
     h1: 'TopEdge AI vs AiSensy',
-    subtitle: 'TopEdge AI vs AiSensy for Shopify India D2C brands, checked for 2026.',
+    subtitle: 'TopEdge AI vs AiSensy for Shopify India D2C brands, prices read 24 November 2026.',
     matrix: AISENSY_PAIRWISE_MATRIX.map(({ label, description, topedge, competitor }) => ({
       label,
       description,
@@ -163,8 +163,8 @@ export const COMPARE_COMPETITORS: Record<string, CompareCompetitor> = {
       competitor,
     })),
     matrixNote:
-      'Read off aisensy.com/pricing on 21 Oct 2026: from 1 Oct 2026 every WhatsApp Business number gets 1,000 free service messages a month, then AiSensy charges ₹0.145 per service message for Indian users. Meta’s own published India service and utility rate is ₹0.1150, so that is a 26.1% markup on every support or bot reply past the free thousand. Remaining capability claims reflect TopEdge AI product positioning vs publicly described AiSensy platform patterns. Confirm live plan limits, credits and fees on aisensy.com before purchase.',
-    researchAsOf: 'Oct 2026',
+      'Read 24 Nov 2026 on www.aisensy.com/pricing (monthly view): Basic ₹1,500, Pro ₹3,200, Premium ₹9,100, Unlimited ₹45,000; Chatbot Flows ₹2,500/mo extra; AI ₹1,350/mo per 1,000 AI messages; marketing ₹1.09, utility and service ₹0.145 (after 1,000 free service messages), about 26% above Meta’s ₹0.8631 and ₹0.1150. Shopify App Store listing: 4.1 from 56 reviews, $1 one-time charge.',
+    researchAsOf: 'Nov 2026',
     related: [
       { label: 'AiSensy alternative guide', href: '/blog/aisensy-alternative-shopify-india' },
       { label: 'All comparisons', href: '/compare' },
@@ -185,13 +185,13 @@ export const COMPARE_COMPETITORS: Record<string, CompareCompetitor> = {
     logoAlt: 'Interakt logo',
     accent: '#7c3aed',
     brandTag: 'Shopify WhatsApp app',
-    title: 'TopEdge AI vs Interakt (2026): Shopify India Pricing & COD',
+    title: 'TopEdge AI vs Interakt (2027): Shopify COD, Pricing & Markup',
     description:
-      'Compare TopEdge AI vs Interakt for Shopify India: ₹1,999/mo Launch plan, 0% Meta markup and BYOK AI vs a ~₹2,799/mo plan with a ₹0.50/msg AI add-on.',
+      'TopEdge AI vs Interakt for Shopify India, read 24 Nov 2026: INR plans with COD confirmation and 0% Meta markup vs Interakt’s USD app plans and markups.',
     keywords:
       'TopEdge AI vs Interakt, Interakt alternative Shopify, Interakt vs TopEdge AI, WhatsApp marketing Shopify India, abandoned cart WhatsApp Interakt, COD confirmation WhatsApp, Interakt pricing',
     h1: 'TopEdge AI vs Interakt',
-    subtitle: 'TopEdge AI vs Interakt for Shopify India D2C brands, checked for 2026.',
+    subtitle: 'TopEdge AI vs Interakt for Shopify India D2C brands, prices read 24 November 2026.',
     matrix: INTERAKT_PAIRWISE_MATRIX.map(({ label, description, topedge, competitor }) => ({
       label,
       description,
@@ -199,7 +199,7 @@ export const COMPARE_COMPETITORS: Record<string, CompareCompetitor> = {
       competitor,
     })),
     matrixNote:
-      'Read off interakt.shop/pricing and the Shopify App Store on 9 Nov 2026, plus taxes: web Starter ₹999 a month (Instagram only on monthly billing; WhatsApp or Instagram on quarterly ₹3,499 or yearly ₹11,999), Growth ₹2,799 and Advanced ₹3,799 for WhatsApp plus Instagram. Interakt’s Shopify integration is only on its Shopify App Store plans, listed from ₹1,973.48 to ₹9,303.55 a month as Shopify’s INR estimates. Growth lists ₹0.958 per India marketing and ₹0.150 per utility message, against Meta’s ₹0.8631 and ₹0.1150; only Enterprise is listed with no markup. WhatsApp AI Agents is a ₹3,000 add-on on Growth and Advanced. Where Interakt is better: Instagram DM and comment automation, unlimited agent logins on every plan, and the backing of Jio Haptik Technologies, named in its site footer. Remaining capability rows reflect TopEdge AI product positioning. Confirm live App vs India website tiers on interakt.shop before purchase.',
+      'Read 24 Nov 2026 on interakt.shop/pricing (monthly and quarterly views) and apps.shopify.com/interakt-marketing: web Starter ₹999 a month (Instagram only on monthly billing), Growth ₹2,799, Advanced ₹3,799, plus taxes; Growth rates ₹0.958 marketing and ₹0.150 utility; AI agents ₹3,000/mo add-on with 100 free AI messages, then ₹0.50. Shopify app: $21, $41, $51 and $99 a month in USD, 4.3 from 236 reviews; popup number capture, cart reminders to those numbers, Shopify workflow actions and AI agents listed only on Premier.',
     researchAsOf: 'Nov 2026',
     related: [
       { label: 'Interakt alternative guide', href: '/blog/interakt-alternative-shopify-india' },

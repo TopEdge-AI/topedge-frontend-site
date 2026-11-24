@@ -39,6 +39,9 @@ Folder: `seo-audit/<YYYY-MM-DD>/page-audits/<short-name>/`.
 ## 3. Track B: one landing page (Days 6 to 10)
 Use the `topedge-landing-page` skill and the map in PLAN-AND-LOG section 3b.
 
+## 3c. Track C: three compare boards a day
+Use the `topedge-compare-board` skill and the schedule in PLAN-AND-LOG section 3c.
+
 ## 4. Off-page
 The day's item from the table. Drafts only; the owner sends, submits and signs in. At most 20 sends a week. Do-not-approach list: `seo-audit/2026-11-05/24-outreach-templates.md`.
 
@@ -54,6 +57,6 @@ The day's item from the table. Drafts only; the owner sends, submits and signs i
 ## Never
 - Invent a number, a customer result or a competitor fact. Unknown means `[NEEDS REAL DATA]`.
 - Write bare "TopEdge", em dashes, or 2026 in new titles (use 2027).
-- Touch titles on /compare/* or /blog/best-whatsapp-apps-for-shopify.
+- Touch the title on /blog/best-whatsapp-apps-for-shopify, or a /compare/* title outside the Track C template (topedge-compare-board skill).
 - Change the home page or feature pages beyond factual fixes (PLAN-AND-LOG section 1).
 - Turn on slash 301s, paste gtag into index.html, add Product schema, or click Validate fix in Search Console.
