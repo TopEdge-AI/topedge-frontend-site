@@ -1,0 +1,169 @@
+    1 WARNING finding(s)
+    1 INFO finding(s)
+{
+  "status": "ok",
+  "url": "https://topedgeai.com/tools/best-whatsapp-tool-for-shopify",
+  "baseline_id": 27,
+  "baseline_timestamp": "2026-11-24T16:46:14.809362+00:00",
+  "comparison_timestamp": "2026-11-25T04:51:29.681118+00:00",
+  "summary": {
+    "total_rules": 17,
+    "triggered": 2,
+    "critical": 0,
+    "warning": 1,
+    "info": 1
+  },
+  "triggered_findings": [
+    {
+      "rule": "schema_modified",
+      "severity": "WARNING",
+      "triggered": true,
+      "old_value": "52123e2c58e8...",
+      "new_value": "c3869c8ed3dd...",
+      "message": "Schema/JSON-LD content has been modified. Validate with /seo schema."
+    },
+    {
+      "rule": "content_hash_changed",
+      "severity": "INFO",
+      "triggered": true,
+      "old_value": "05ab42eda9bc...",
+      "new_value": "a52fc68aabd6...",
+      "message": "Page content has changed (HTML body hash differs from baseline)."
+    }
+  ],
+  "untriggered_findings": [
+    {
+      "rule": "schema_removed",
+      "severity": "CRITICAL",
+      "triggered": false,
+      "old_value": "5 schema block(s)",
+      "new_value": "0 schema blocks",
+      "message": "Schema presence unchanged."
+    },
+    {
+      "rule": "canonical_changed",
+      "severity": "CRITICAL",
+      "triggered": false,
+      "old_value": "https://topedgeai.com/tools/best-whatsapp-tool-for-shopify",
+      "new_value": "https://topedgeai.com/tools/best-whatsapp-tool-for-shopify",
+      "message": "Canonical URL unchanged."
+    },
+    {
+      "rule": "canonical_removed",
+      "severity": "CRITICAL",
+      "triggered": false,
+      "old_value": "https://topedgeai.com/tools/best-whatsapp-tool-for-shopify",
+      "new_value": null,
+      "message": "Canonical tag presence unchanged."
+    },
+    {
+      "rule": "noindex_added",
+      "severity": "CRITICAL",
+      "triggered": false,
+      "old_value": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+      "new_value": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+      "message": "Robots directives unchanged regarding noindex."
+    },
+    {
+      "rule": "h1_removed",
+      "severity": "CRITICAL",
+      "triggered": false,
+      "old_value": "Help me find the best WhatsApp tool for my Shopify store",
+      "new_value": null,
+      "message": "H1 presence unchanged."
+    },
+    {
+      "rule": "h1_changed",
+      "severity": "CRITICAL",
+      "triggered": false,
+      "old_value": "Help me find the best WhatsApp tool for my Shopify store",
+      "new_value": "Help me find the best WhatsApp tool for my Shopify store",
+      "message": "H1 text is similar enough (similarity: 100%)."
+    },
+    {
+      "rule": "title_removed",
+      "severity": "CRITICAL",
+      "triggered": false,
+      "old_value": "Which WhatsApp Tool for Shopify? Free 2-Minute Quiz",
+      "new_value": null,
+      "message": "Title tag presence unchanged."
+    },
+    {
+      "rule": "status_code_error",
+      "severity": "CRITICAL",
+      "triggered": false,
+      "old_value": 200,
+      "new_value": 200,
+      "message": "Status code: 200 -> 200."
+    },
+    {
+      "rule": "title_changed",
+      "severity": "WARNING",
+      "triggered": false,
+      "old_value": "Which WhatsApp Tool for Shopify? Free 2-Minute Quiz",
+      "new_value": "Which WhatsApp Tool for Shopify? Free 2-Minute Quiz",
+      "message": "Title text unchanged."
+    },
+    {
+      "rule": "meta_description_changed",
+      "severity": "WARNING",
+      "triggered": false,
+      "old_value": "Answer six questions and get an honest shortlist of WhatsApp tools for your Shopify store: TopEdge AI, WATI, Interakt, A...",
+      "new_value": "Answer six questions and get an honest shortlist of WhatsApp tools for your Shopify store: TopEdge AI, WATI, Interakt, A...",
+      "message": "Meta description unchanged."
+    },
+    {
+      "rule": "cwv_regressed",
+      "severity": "WARNING",
+      "triggered": false,
+      "old_value": null,
+      "new_value": null,
+      "message": "CWV comparison skipped (data unavailable)."
+    },
+    {
+      "rule": "perf_score_dropped",
+      "severity": "WARNING",
+      "triggered": false,
+      "old_value": null,
+      "new_value": null,
+      "message": "Performance score comparison skipped."
+    },
+    {
+      "rule": "og_tags_removed",
+      "severity": "WARNING",
+      "triggered": false,
+      "old_value": [
+        "og:type",
+        "og:site_name",
+        "og:locale",
+        "og:url",
+        "og:title",
+        "og:description",
+        "og:image",
+        "og:image:alt",
+        "og:image:width",
+        "og:image:height"
+      ],
+      "new_value": [],
+      "message": "OG tags presence unchanged."
+    },
+    {
+      "rule": "schema_added",
+      "severity": "INFO",
+      "triggered": false,
+      "old_value": "0 schema blocks",
+      "new_value": "5 schema block(s)",
+      "message": "No new schema added."
+    },
+    {
+      "rule": "h2_structure_changed",
+      "severity": "INFO",
+      "triggered": false,
+      "old_value": "5 H2s",
+      "new_value": "5 H2s",
+      "message": "H2 structure unchanged."
+    }
+  ],
+  "current_status_code": 200,
+  "cwv_compared": false
+}

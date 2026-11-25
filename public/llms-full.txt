@@ -625,23 +625,23 @@ Sourcing: Read 24 Nov 2026 on interakt.shop/pricing (monthly and quarterly views
 
 https://topedgeai.com/compare/bitespeed
 
-Compare TopEdge AI vs Bitespeed for Shopify India: ₹1,999/mo flat INR plans, 0% Meta markup and built-in warranty vs ₹5L MRR floors and AI add-ons.
+TopEdge AI vs Bitespeed for Shopify India, read 25 Nov 2026: plans from ₹1,999/mo incl. GST and 0% Meta markup vs no published Bitespeed prices.
 
-Sourcing: Bitespeed pricing and AI add-ons as of September 2026 from public listings / third-party summaries. Confirm live on bitespeed.co and the Shopify App Store before purchase.
+Sourcing: Read 25 Nov 2026: bitespeed.co/pricing redirects to a demo request, and Bitespeed’s Shopify listing (B: WhatsApp, Voice, SMS & Chat, 4.6 from 408 reviews) shows “Free to install. Additional charges may apply.” with no plan prices or message rates. Rows we could not re-read that day are as checked in September 2026. Confirm live before purchase.
 
 - TopEdge AI: 14-day free trial, then ₹1,999/month (₹1,599/month billed yearly) incl. 18% GST on topedgeai.com, or $19/month billed by Shopify in USD from the Shopify App Store
-- Bitespeed: Requires stores to generate a minimum of ₹5,00,000 MRR to qualify for onboarding, with baseline plans starting at ~₹15,000/month
+- Bitespeed: No plan prices published: bitespeed.co/pricing redirects to a demo request, and the Shopify listing reads “Free to install. Additional charges may apply.” (read 25 Nov 2026)
 
 ### TopEdge AI vs Zoko
 
 https://topedgeai.com/compare/zoko
 
-TopEdge AI vs Zoko for Shopify India: flat INR plans from ₹1,999/mo and 0% Meta markup vs Zoko’s $49.99+ USD base fees and per-conversation metering.
+TopEdge AI vs Zoko for Shopify India, read 25 Nov 2026: ₹1,999/mo incl. GST, sized by orders, vs Zoko’s $49.99+ USD plans and $0.015 per conversation.
 
-Sourcing: Read off zoko.io/pricing and apps.shopify.com/whatsapp-button-chat on 12 Nov 2026. Starter $49.99/mo meters $0.015 per conversation with no cap and has unlimited agents. Plus $79.99/mo includes 5,000 conversations then $0.00199 each, with 5 agents and $15 per extra agent. Elite $139.99/mo includes 100,000 then $0.00099, 10 agents at $12 each. A Max plan (5M conversations, 30 agents) is shown only on the App Store listing, at about ₹46,883 a month. AI agents from $24.99/mo, premium flows $5.99 per flow per month, Instagram $9.99/mo. Confirm live before purchase; figures change.
+Sourcing: Read off zoko.io/pricing and apps.shopify.com/whatsapp-button-chat on 25 Nov 2026 (listing: 4.9 from 481 reviews). Starter $49.99/mo meters $0.015 per conversation with no cap and has unlimited agents. Plus $79.99/mo includes 5,000 conversations then $0.00199 each, with 5 agents and $15 per extra agent. Elite $139.99/mo includes 100,000 then $0.00099, 10 agents at $12 each. A Max plan (5M conversations, 30 agents) is shown only on the App Store listing, at about ₹46,455 a month. AI agents from $24.99/mo, premium flows $5.99 per flow per month, Instagram $9.99/mo. Confirm live before purchase; figures change.
 
 - TopEdge AI: 14-day free trial, then ₹1,999/month (₹1,599/month billed yearly) incl. 18% GST on topedgeai.com, or $19/month billed by Shopify in USD from the Shopify App Store
-- Zoko: Starter $49.99 · Plus $79.99 · Elite $139.99 a month in USD (zoko.io, 12 Nov 2026), shown as about ₹4,687 · ₹7,501 · ₹13,127 on its Shopify listing. 7-day trial
+- Zoko: Starter $49.99 · Plus $79.99 · Elite $139.99 a month in USD (zoko.io, 25 Nov 2026), shown as about ₹4,645 · ₹7,432 · ₹13,007 on its Shopify listing. 7-day trial
 
 ### TopEdge AI vs Getgabs
 
@@ -669,12 +669,12 @@ Sourcing: Kanal plans as of September 2026 from getkanal.com/pricing: Pro €89 
 
 https://topedgeai.com/compare/dondy
 
-TopEdge AI vs Dondy for Shopify India: 0% Meta markup and ₹1,999/mo INR plans vs Dondy’s $0.01888/msg India rate and $79.99 to $159.99 USD tiers.
+TopEdge AI vs Dondy for Shopify India, read 25 Nov 2026: Meta’s ₹0.8631 rate at 0% markup vs Dondy’s $0.01888 India rate and $79.99 automation.
 
-Sourcing: Checked 8 Nov 2026: Shopify listing apps.shopify.com/dondy-marketing-ai shows Built for Shopify, 4.9★ / 835 reviews, Free widget, Pro $6.99, Power Automation $79.99 (₹7,517.01 a month to an Indian store), Elite $159.99. dondy.net/dondy-pricing also lists Advanced $14.99 and Ultimate $299 tiers and the per-market rate table (India $0.01888, 1.6× the $0.0118 on Meta’s USD rate card effective 1 Oct 2026). Surfaces disagree on agent seats (listing: 5 on Elite; site: unlimited) and on the US floor (“from $0.0158” on the listing vs North America $0.04 on the table). Dondy bills in dollars: at ₹93.92 to the dollar (ECB reference rate, 6 Nov 2026) that India row is about ₹1.77 a message against Meta’s ₹0.8631 INR rate, about ₹0.91 extra per send, or about ₹9,100 on 10,000 marketing messages. Verify both before purchase.
+Sourcing: Checked 25 Nov 2026: Shopify listing apps.shopify.com/dondy-marketing-ai shows Built for Shopify, 4.9★ / 828 reviews, Free widget, Pro $6.99, Power Automation $79.99 (about ₹7,432 a month as Shopify’s estimate), Elite $159.99. dondy.net/dondy-pricing also lists Advanced $14.99 and Ultimate $299 tiers and the per-market rate table (India $0.01888, 1.6× the $0.0118 on Meta’s USD rate card effective 1 Oct 2026). Surfaces disagree on agent seats (listing: 5 on Elite; site: unlimited) and on the US floor (“from $0.0158” on the listing vs North America $0.04 on the table). Dondy bills in dollars: at ₹93.92 to the dollar (ECB reference rate, 6 Nov 2026) that India row is about ₹1.77 a message against Meta’s ₹0.8631 INR rate, about ₹0.91 extra per send, or about ₹9,100 on 10,000 marketing messages. Verify both before purchase.
 
 - TopEdge AI: 14-day free trial, then ₹1,999/month (₹1,599/month billed yearly) incl. 18% GST on topedgeai.com, or $19/month billed by Shopify in USD from the Shopify App Store
-- Dondy: Free widget, Pro $6.99, Power Automation $79.99, Elite $159.99 per month (21 Sep 2026), in USD, on top of a per-message India rate of $0.01888
+- Dondy: Free widget, Pro $6.99, Power Automation $79.99, Elite $159.99 per month (25 Nov 2026), in USD, on top of a per-message India rate of $0.01888
 
 ### TopEdge AI vs Updatrr
 
@@ -843,23 +843,20 @@ Ecommerce funnel drop-off benchmarks for 2026: the median Shopify store converts
 - **Why do some ecommerce opt-in tools report inaccurate store visitor numbers?** Because they count events, not sessions. If a tool logs the landing, the popup view, the spin and each product view as separate visits, one shopper on a 90-second browse shows up as five or six visits with no order, and your conversion rate looks far worse than it is. A tool built on session deduplication records one visit and keeps the popup interactions and product views as events inside it.
 - **How does unified customer identity reduce WhatsApp marketing costs?** It removes duplicate sends. Meta bills ₹0.8631 per delivered marketing message in India before GST, so a person who sits in your list under three phone numbers costs three times to reach. Merging those numbers into one profile and sending to a primary contact saves your duplicate share: 6,000 duplicate numbers in a 40,000-record list is ₹5,179 saved on every broadcast.
 
-### Best Shopify App for Abandoned Cart Recovery India (2026)
+### Best Shopify App for Abandoned Cart Recovery India (2027)
 
-https://topedgeai.com/blog/best-shopify-app-for-abandoned-cart-recovery-india · published 2026-10-30 · updated 2026-11-20 · by Moksh Patel
+https://topedgeai.com/blog/best-shopify-app-for-abandoned-cart-recovery-india · published 2026-10-30 · updated 2026-11-25 · by Moksh Patel
 
 The best Shopify app for abandoned cart recovery India is the one that passes four tests: it fires on both abandoned cart and abandoned checkout, stops the moment an order is created, holds a timestamped opt-in record, and adds no markup to Meta’s ₹0.8631 per-message rate. In India that means WhatsApp first; TopEdge AI, our own app, leads our ten.
 
-- **What is the best Shopify app for abandoned cart recovery in India?** There is no single winner, but for an Indian D2C store on Shopify the shortlist is almost always WhatsApp-first: TopEdge AI, BiteSpeed, Interakt, AiSensy, WATI and Zoko. Judge them on four things, in this order: does it fire on both abandoned cart and abandoned checkout, does it suppress the rest of the sequence the moment an order is created, does it log opt-in with a timestamp, and does it mark up Meta’s per-message rate.
-- **Is there a free Shopify app for abandoned cart recovery in India?** Yes: Shopify’s own abandoned checkout email is included in your plan, and Wiz AI Abandoned Cart Recovery publishes a free tier limited by active contacts. Several WhatsApp apps offer a free trial rather than a free plan. Free never includes the messages, because Meta bills your own WhatsApp Business Account ₹0.8631 per delivered marketing template in India regardless of which app sends it.
-- **How do I view abandoned carts on Shopify?** In your Shopify admin, go to Orders and then Abandoned checkouts. That list shows incomplete checkouts with the customer’s contact details, the items left behind and an Email status column, and each checkout’s payment events show failed payments. Abandoned checkouts are not kept indefinitely, so export anything you want to analyse later.
-- **What is the Shopify abandoned cart report and where do I find it?** It is one of two things: the Orders then Abandoned checkouts list, which shows who abandoned, what they left and whether an email went out, or Analytics then Reports, which shows sessions that reached checkout against sessions that converted. Shopify does not report recovered revenue by journey for third-party sends, so your recovery app has to attribute that itself.
-- **Does Shopify send abandoned cart emails on its own?** Yes. Shopify treats a checkout as abandoned when it stays incomplete for more than ten minutes after the customer has given their email, and its Messaging automations can send a recovery email containing a link back to that checkout. Shopify also documents cases where it will not send, including when the customer has already bought, products are unavailable, shipping is not supported to the address, or payment processing errored.
-- **Is WhatsApp better than email for abandoned cart recovery on Shopify?** In India it usually is, because the reminder lands where the customer already is and they can reply with the question that stopped them buying. It is not free: a marketing template costs ₹0.8631 per delivered message and you need logged opt-in before you send anything. The durable setup is both, with shared suppression, so one completed order cancels every pending send on every channel.
-- **What is Wiz AI Abandoned Cart Recovery?** Wiz AI Abandoned Cart Recovery is an email app on the Shopify App Store that generates abandoned checkout, cart, welcome and popup flows with AI, and publishes a free plan limited by active contacts. It is a reasonable first step for a store that wants recovery email beyond Shopify’s single send without paying per message. It does not cover WhatsApp, so it will not carry COD confirmation or reply handling for an Indian store.
-- **Can I build abandoned cart recovery with the Shopify API instead of buying an app?** Yes. Shopify’s GraphQL Admin API exposes an abandonedCheckouts query that returns abandoned and recovered checkouts, with fields including abandonedCheckoutUrl, the resume link you would put in a message. What you take on is the part apps earn their fee for: opt-in records, Meta template approval and category handling, suppression on order creation, retries, and attribution.
-- **How much does WhatsApp abandoned cart recovery cost in India?** Meta charges ₹0.8631 per delivered marketing template in India, before 18% GST, so one reminder costs ₹0.8631 and a three-step sequence costs ₹2.59 if the shopper ignores all three. Your app subscription sits on top of that, and some vendors also add a markup to Meta’s rate, which is the line that actually decides your festive bill.
-- **How many abandoned cart messages should a Shopify store send?** Two or three across 24 to 48 hours, then stop. The first should land while intent is still warm, the second should answer the objection that caused the abandonment, and a third is only worth sending if your margin supports an incentive.
-- **What should I check before installing any abandoned cart app?** Ask for four things in writing: which Shopify events it subscribes to, what cancels a pending send, where opt-in is stored and whether you can export it, and what the app adds to Meta’s published per-message rate. An app that cannot answer the last two is a compliance risk and a budget risk, whatever its App Store rating says.
+- **What is the best Shopify app for abandoned cart recovery in India?** A WhatsApp-first app that fires on both abandoned cart and abandoned checkout, stops the moment an order is created, logs opt-in and adds nothing to Meta’s ₹0.8631 marketing rate. TopEdge AI, our own app, leads our list of ten; Zoko and Interakt are the closest picks for a COD-heavy store.
+- **Is there a free abandoned cart app for Shopify?** Yes. Shopify’s own abandoned checkout email is included in your plan, and Wiz AI, Klaviyo and Omnisend have free tiers capped at 500 or 250 contacts. No WhatsApp app is free to run, because Meta bills ₹0.8631 per India marketing message whichever app sends it.
+- **Does Shopify have abandoned cart recovery built in?** Yes. Shopify emails a link back to the checkout when it stays incomplete for more than ten minutes after the shopper gave an email, and since 28 October 2026 it can send the same reminders on WhatsApp to marketing subscribers at $0.024 a message in India. It does not branch on COD or send order updates on WhatsApp.
+- **How do I view abandoned carts on Shopify?** Go to Orders and then Abandoned checkouts in your Shopify admin. The list shows contact details, the items left behind and an Email status column, and each checkout’s payment events show failed payments. Carts that never reached checkout do not appear, and old entries are cleared, so export what you want to keep.
+- **Which abandoned cart app works best for COD orders?** One that branches on payment method, so COD carts get COD copy and a placed COD order gets a confirmation. TopEdge AI confirms COD orders on every plan from ₹1,999 a month including GST and runs COD to prepaid from Growth at ₹3,999; Zoko, Interakt and BiteSpeed also list COD confirmation.
+- **Can I build abandoned cart recovery with the Shopify API instead of buying an app?** Yes. Shopify’s GraphQL Admin API has an abandonedCheckouts query whose abandonedCheckoutUrl field is the resume link you would put in a message. What you take on is the part apps charge for: opt-in records, template approval, suppression on order creation, retries and attribution.
+- **How many abandoned cart messages should a Shopify store send?** Two or three across 24 to 48 hours, then stop. The first lands while intent is warm, the second answers the objection that stopped the purchase, and a third is only worth sending if your margin covers an incentive.
+- **What should I check before installing any abandoned cart app?** Four things, in writing: which Shopify events it subscribes to, what cancels a pending send, where opt-in is stored and whether you can export it, and what it adds to Meta’s per-message rate. An app that cannot answer the last two is a compliance risk and a budget risk.
 
 ### COD to Prepaid on WhatsApp: Shopify India 2026
 

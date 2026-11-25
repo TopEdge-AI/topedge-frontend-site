@@ -168,6 +168,7 @@ Subject: For your Indian Shopify clients on COD
 - **Kovax and webrexstudio.com:** Webrex's cart post closes on Kovax, which runs cart recovery and COD confirmation on WhatsApp.
 - **AiTrillion, Retainful, CampaignHQ, BotSpace, Fast2SMS, Convertway, WANotifier, Chakra HQ:** Vendor pages read sell WhatsApp marketing or COD flows, or recover carts over it.
 - **helo.ai, Getitsms, Happilee, Waplify, WhatzCRM, Sahay, Flowella, Reply.cx, Bevits, Vkit, Commmerce, ChatSales, Deyaho, BossBot, GoDesign, Menuthere, Mursa, Messagedly, Rasayel, AnswerNode:** WhatsApp vendors from the CSVs, publishing their own vs pages and lists. AnswerNode links only to GetGabs.
+- **codingclave.com (PayPerWA):** added 25 Nov 2026. Its D2C tech stack post now says its delivery and RTO layers are what the author built its own WhatsApp product, PayPerWA, for.
 - **Meetanshi:** Ships its own WhatsApp app per the 3 Nov partner notes; I did not re-verify the app today. Earlier notes suggest a guest article, but it has no write-for-us page (404) and your rule excludes rivals.
 
 Most of the domains AI engines cite in this category are rivals: ominiflow, conecxt, pingcart, hillteck, chatmitra and com.bot. Only eesel is in the CSV from that list, at low priority. So the AI-cited set you named gives almost no outreach, and the App Store listing remains the surface that decides.

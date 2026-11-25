@@ -810,5 +810,7 @@ html[data-v="switch"] .mig{display:block}
 .stp-n{display:flex;align-items:center;justify-content:center;width:2.6rem;height:2.6rem;border-radius:999px;background:#f3edff;color:var(--violet);font-weight:600;font-size:1.05rem}
 .steps--5{width:min(100%,72rem)}
 @media (min-width:62rem){.steps--5{grid-template-columns:repeat(5,minmax(0,1fr))}}
+.steps--4{width:min(100%,68rem)}
+@media (min-width:62rem){.steps--4{grid-template-columns:repeat(4,minmax(0,1fr))}}
 .cmp-note{margin-top:1.25rem;text-align:center;font-size:.8rem;opacity:.7}
 .mid-cta{display:flex;flex-wrap:wrap;gap:.75rem;justify-content:center}

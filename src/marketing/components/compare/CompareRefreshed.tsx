@@ -69,8 +69,8 @@ export default function CompareRefreshed({ refresh, name, part }: Props) {
       <MarketingCtaBand
         variant="inline"
         label={`Try TopEdge AI instead of ${name}`}
-        title="Run it on your own orders first"
-        highlight="own orders first"
+        title={`Test it against ${name} on your own orders`}
+        highlight="on your own orders"
         subtitle="14 days, 20 orders and 200 sends. No card on this site."
         primaryLabel="Start free"
         secondaryLabel="Chat with us on WhatsApp"

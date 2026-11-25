@@ -565,7 +565,7 @@ export default function ComparePage({ competitor: competitorProp }: Props) {
         >
           {refresh ? (
             <h2 id="cmp-faq" className="sr-only">
-              Related comparisons
+              {`More boards next to TopEdge AI vs ${data.name}`}
             </h2>
           ) : !faqCount ? (
             <h2 id="cmp-faq" className="sr-only">
@@ -587,8 +587,8 @@ export default function ComparePage({ competitor: competitorProp }: Props) {
 
         {refresh ? (
           <MarketingCtaBand
-            title={`Leave ${data.name}’s markup behind`}
-            highlight="markup behind"
+            title={refresh.closeTitle ?? `Leave ${data.name}’s markup behind`}
+            highlight={refresh.closeHighlight ?? 'markup behind'}
             subtitle="14-day free trial with 20 orders and 200 sends. Connect Shopify, approve one template, watch a COD order confirm."
             primaryLabel="Start free"
             secondaryLabel="Chat with us on WhatsApp"

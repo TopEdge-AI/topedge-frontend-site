@@ -541,7 +541,7 @@ export const BITESPEED_PAIRWISE_MATRIX: PairwiseFeatureRow[] = [
     topedge:
       '14-day free trial, then ₹1,999/month (₹1,599/month billed yearly) incl. 18% GST on topedgeai.com, or $19/month billed by Shopify in USD from the Shopify App Store',
     competitor:
-      'Requires stores to generate a minimum of ₹5,00,000 MRR to qualify for onboarding, with baseline plans starting at ~₹15,000/month',
+      'No plan prices published: bitespeed.co/pricing redirects to a demo request, and the Shopify listing reads “Free to install. Additional charges may apply.” (read 25 Nov 2026)',
   },
   {
     id: 'template-markup',
@@ -551,7 +551,7 @@ export const BITESPEED_PAIRWISE_MATRIX: PairwiseFeatureRow[] = [
     topedge:
       '0% WhatsApp API platform markup (Direct Meta API Billing on your Meta Business Account)',
     competitor:
-      'Platform usage charges and conversation markup fees applied on top of base Meta conversation rates',
+      'No per-message rate published on bitespeed.co or its Shopify listing (read 25 Nov 2026); ask for it in writing',
   },
   {
     id: 'ai-llm',
@@ -663,7 +663,7 @@ export const ZOKO_PAIRWISE_MATRIX: PairwiseFeatureRow[] = [
     topedge:
       '14-day free trial, then ₹1,999/month (₹1,599/month billed yearly) incl. 18% GST on topedgeai.com, or $19/month billed by Shopify in USD from the Shopify App Store',
     competitor:
-      'Starter $49.99 · Plus $79.99 · Elite $139.99 a month in USD (zoko.io, 12 Nov 2026), shown as about ₹4,687 · ₹7,501 · ₹13,127 on its Shopify listing. 7-day trial',
+      'Starter $49.99 · Plus $79.99 · Elite $139.99 a month in USD (zoko.io, 25 Nov 2026), shown as about ₹4,645 · ₹7,432 · ₹13,007 on its Shopify listing. 7-day trial',
   },
   {
     id: 'template-markup',
@@ -678,7 +678,7 @@ export const ZOKO_PAIRWISE_MATRIX: PairwiseFeatureRow[] = [
     label: 'AI / auto order agents',
     description: 'How AI replies and order collection are priced.',
     topedge: 'BYOK + RAG on core plans (est. ~₹0.10-₹0.30 per AI message)',
-    competitor: 'AI agents are add-ons: $24.99/month plus $0.09 per resolution, or $24.99/month plus 3% of order value for the order-taking agent (12 Nov 2026)',
+    competitor: 'AI agents are add-ons: $24.99/month plus $0.09 per resolution, or $24.99/month plus 3% of order value for the order-taking agent (25 Nov 2026)',
   },
   {
     id: 'intent-routing',
@@ -903,7 +903,7 @@ export const DONDYY_PAIRWISE_MATRIX: PairwiseFeatureRow[] = [
     topedge:
       '14-day free trial, then ₹1,999/month (₹1,599/month billed yearly) incl. 18% GST on topedgeai.com, or $19/month billed by Shopify in USD from the Shopify App Store',
     competitor:
-      'Free widget, Pro $6.99, Power Automation $79.99, Elite $159.99 per month (21 Sep 2026), in USD, on top of a per-message India rate of $0.01888',
+      'Free widget, Pro $6.99, Power Automation $79.99, Elite $159.99 per month (25 Nov 2026), in USD, on top of a per-message India rate of $0.01888',
   },
   {
     id: 'template-markup',
@@ -911,7 +911,7 @@ export const DONDYY_PAIRWISE_MATRIX: PairwiseFeatureRow[] = [
     description: 'What you pay versus Meta’s own marketing rate.',
     topedge: '0% markup; Meta pass-through on flat order-based plans',
     competitor:
-      'Published rate table is 60% above Meta marketing rates (India $0.01888/msg on dondy.net against $0.0118 on Meta’s USD card, both read 8 Nov 2026)',
+      'Published rate table is 60% above Meta marketing rates (India $0.01888/msg on dondy.net, read 25 Nov 2026, against $0.0118 on Meta’s USD card, read 8 Nov 2026)',
   },
   {
     id: 'ai-llm',
@@ -961,7 +961,7 @@ export const DONDYY_PAIRWISE_MATRIX: PairwiseFeatureRow[] = [
     label: 'India / INR positioning',
     description: 'Built for Indian D2C operators.',
     topedge: 'India-first: INR pricing on topedgeai.com, COD, Meta gating',
-    competitor: 'USD plans; public languages are EN/ES/IT/PT-BR/FR, not India-specific',
+    competitor: 'USD plans; public languages are EN/ES/IT/PT-BR/FR/TR, not India-specific (25 Nov 2026)',
   },
   {
     id: 'flow-cap',

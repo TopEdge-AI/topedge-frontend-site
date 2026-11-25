@@ -515,6 +515,7 @@ const FOOT_COLUMNS = [
       ['Shopify COD app', '/features/cod-confirmation'],
       ['WhatsApp abandoned cart recovery app', '/whatsapp-abandoned-cart-recovery-app'],
       ['WhatsApp app for Shopify', '/whatsapp-app-for-shopify'],
+      ['Shopify WhatsApp order notifications', '/shopify-whatsapp-order-notifications'],
       ['Shopify WhatsApp integration', '/shopify-whatsapp-integration'],
     ],
   },
@@ -1274,6 +1275,75 @@ const CART = {
   ],
 };
 
+
+/**
+ * The order notifications page (keyword map #4, PLAN-AND-LOG section 3b, Day 8,
+ * 25 Nov 2026). Facts come from the product docs (docs/guides/order-status-updates:
+ * order placed, shipped and delivered journeys, no "order confirmed" trigger,
+ * fulfilment permissions, cancelled orders stop pending steps, missed webhooks
+ * re-read with a duplicate guard, about 20 minutes to set up), Meta's India card
+ * in src/data/sources.ts (metaPricing: ₹0.1150 per utility message, re-read
+ * 16 Nov 2026) and Shopify's Help Center (customer notifications are email and
+ * SMS; Shopify Messaging WhatsApp is marketing only, read 25 Nov 2026).
+ */
+const ORDERS = {
+  hero: {
+    lead: 'Shopify WhatsApp ',
+    mark: 'Order Notifications',
+    sub: 'Shopify WhatsApp order notifications at every stage, from confirmed to delivered, sent from your own number at Meta’s ₹0.1150 rate.',
+  },
+  film: {
+    lg: homeFilm('cod').lg,
+    sm: homeFilm('cod').lg,
+    poster: homeFilm('cod').poster,
+    label: 'TopEdge AI order film: a cash on delivery order is confirmed on WhatsApp before dispatch, and the order is tagged in Shopify',
+  },
+  pillars: [
+    'One journey per stage: order placed, shipped and delivered, each with its own approved template',
+    'Utility messages at Meta’s ₹0.1150 in India, no marketing consent needed, 0% markup',
+    'A cancelled order stops every pending update, and no stage sends twice',
+  ],
+  steps: [
+    { h: 'Connect Shopify with fulfilment access', p: 'Order and fulfilment webhooks start each journey. Shipped and delivered need fulfilment permissions on the connection; confirmations only need orders.' },
+    { h: 'Get one template approved per stage', p: 'Meta Manager’s order lifecycle blueprint prefills confirmed, shipped, out for delivery and delivered, with an image header and a Track order button.' },
+    { h: 'Publish the three playbooks', p: 'Order placed, Order shipped and Order delivered each create a journey with the right trigger. Map every variable to an order field so nothing sends blank.' },
+    { h: 'Test the whole lifecycle', p: 'Place a test order, then move it through shipped and delivered from the Orders screen. Each stage should send exactly one message.' },
+  ],
+  bento: [
+    { w: true, h: 'The confirmation, the moment the order lands', p: 'Order number, items, total and payment method in an approved utility template. A COD order also gets a confirm or cancel reply.', film: 'cod', label: 'A cash on delivery order is confirmed on WhatsApp before dispatch, and the order is tagged in Shopify' },
+    { w: true, h: 'One journey per order stage', p: 'Start from the Order placed, Order shipped and Order delivered playbooks, then change the copy and the waits on a canvas.', film: 'flow', label: 'A WhatsApp journey is built by dragging steps onto a canvas' },
+    { w: false, h: '“Where is my order?” goes to the right flow', p: 'Shipping, returns and COD questions in the chat are spotted and routed.', film: 'intent', label: 'A shipping question in the WhatsApp chat is detected and routed to the right flow' },
+    { w: false, h: 'Every number, one customer', p: 'The full order history sits beside the chat, across every number and email.', film: 'identity', label: 'Two phone numbers and an email resolve to one customer profile' },
+    { w: false, h: 'Then see what the order kept', p: 'Net profit after COD fees, RTO and ad spend, order by order.', film: 'profit', label: 'Net profit after cost of goods, COD fees, RTO, gateway charges and ad spend' },
+  ],
+  them: 'Shopify’s own notifications',
+  switch: [
+    { icon: 'flow', topic: 'Channel', them: 'Email, and SMS in supported countries', us: 'WhatsApp from your own number, plus email' },
+    { icon: 'identity', topic: 'WhatsApp order updates', them: 'Not offered; Shopify Messaging’s WhatsApp sends marketing to subscribers only', us: 'Utility templates for confirmed, shipped, out for delivery and delivered' },
+    { icon: 'percent', topic: 'Price per WhatsApp update in India', them: 'Not available', us: '₹0.1150, Meta’s utility rate, billed by Meta, with 0% markup' },
+    { icon: 'ret', topic: 'COD orders', them: 'No confirm or cancel reply before dispatch', us: 'COD confirmation on every plan, COD to prepaid from Growth' },
+  ],
+  migration: {
+    h: 'When Shopify’s own notifications are enough',
+    p: 'If most orders are prepaid and your customers read email, Shopify’s built-in confirmation and shipping emails cost nothing. Meta’s free WhatsApp app for Shopify also sends order updates. You need more when COD orders must be confirmed before they ship and replies have to land beside the order.',
+  },
+  cost: {
+    h: 'What a month of order updates costs',
+    p: 'Confirmed, shipped and delivered are three utility messages per order. At Meta’s ₹0.1150 each, 500 orders a month is 1,500 updates and ₹172.50 to Meta. At 100 orders it is ₹34.50, at 1,500 orders ₹517.50.',
+    stat: '₹172.50',
+    statLabel: 'Meta’s bill for three WhatsApp updates on each of 500 orders, before GST',
+    src: 'Meta India utility rate ₹0.1150 per delivered message, re-read 16 November 2026. Shopify customer notifications and Shopify Messaging WhatsApp read 25 November 2026.',
+  },
+  faqs: [
+    { q: 'How do I send Shopify order confirmations on WhatsApp?', a: 'Install a WhatsApp app, get an order confirmation approved by Meta as a utility template, and publish a journey on the order placed event. In TopEdge AI that is the Order placed playbook, about 20 minutes from install to a tested message.' },
+    { q: 'Can Shopify send order notifications on WhatsApp without an app?', a: 'No. Shopify’s own customer notifications go by email and SMS, and Shopify Messaging’s WhatsApp sends marketing to subscribers only (read 25 November 2026). For WhatsApp order updates you need an app, such as Meta’s free WhatsApp app or TopEdge AI.' },
+    { q: 'How much does a WhatsApp order update cost in India?', a: 'Meta charges ₹0.1150 per delivered utility message in India, so confirmed, shipped and delivered cost about ₹0.35 per order. TopEdge AI adds 0% to that; plans start at ₹1,999 a month including GST, or $19 on the Shopify App Store.' },
+    { q: 'Do WhatsApp order updates need marketing consent?', a: 'No. Order and shipping updates send as utility templates, which do not need marketing consent. They must stay strictly transactional: one promotional word such as sale or offer gets a utility template rejected.' },
+    { q: 'Why do shipped and delivered messages not send when confirmations do?', a: 'Almost always missing fulfilment permissions on the Shopify connection. Confirmations only need order access, so they keep working while shipping updates send nothing; reconnect Shopify and approve the full list.' },
+    { q: 'How is a COD confirmation different from an order confirmation?', a: 'A COD confirmation asks the buyer to confirm or cancel before you ship, with quick-reply buttons, and writes the answer back to the Shopify order. TopEdge AI includes COD confirmation on every plan and moves buyers from COD to prepaid from Growth.' },
+  ],
+};
+
 /**
  * Pages built from this generator. `index: true` pages are search landing pages
  * as well as ad pages: canonical, in the sitemap, with schema. The ad page that
@@ -1318,6 +1388,25 @@ const PAGES = [
     bento: CART.bento,
     steps: CART.steps.map((x, i) => ({ mark: `<span class="stp-n">${i + 1}</span>`, h: x.h, p: x.p })),
     faqs: CART.faqs,
+  },
+  {
+    slug: 'shopify-whatsapp-order-notifications',
+    attr: 'order-notifications',
+    template: 'shopify-whatsapp-order-notifications',
+    out: 'shopify-whatsapp-order-notifications',
+    index: true,
+    title: 'Shopify WhatsApp Order Notifications (India) | TopEdge AI',
+    description:
+      'Shopify WhatsApp order notifications for Indian stores: confirmed, shipped and delivered updates as utility messages at Meta’s ₹0.1150, 0% markup.',
+    name: 'Shopify WhatsApp Order Notifications',
+    hero: ORDERS.hero,
+    variants: {},
+    film: ORDERS.film,
+    pillars: ORDERS.pillars,
+    bento: ORDERS.bento,
+    steps: ORDERS.steps.map((x, i) => ({ mark: `<span class="stp-n">${i + 1}</span>`, h: x.h, p: x.p })),
+    faqs: ORDERS.faqs,
+    extra: ORDERS,
   },
 ];
 
@@ -1609,6 +1698,11 @@ for (const page of PAGES) {
     CART_MIG_H: esc(CART.migration.h),
     CART_MIG_P: esc(CART.migration.p),
     CART_COST: costHtml(CART.cost),
+    PAGE_SWITCH_ROWS: page.extra ? switchRows(page.extra.switch) : '',
+    PAGE_THEM: page.extra ? esc(page.extra.them) : '',
+    PAGE_MIG_H: page.extra ? esc(page.extra.migration.h) : '',
+    PAGE_MIG_P: page.extra ? esc(page.extra.migration.p) : '',
+    PAGE_COST: page.extra ? costHtml(page.extra.cost) : '',
     LEGAL_NAME: esc(LEGAL_NAME),
     COMPANY_EMAIL: esc(COMPANY_EMAIL),
   });

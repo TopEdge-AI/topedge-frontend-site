@@ -1,0 +1,169 @@
+    1 WARNING finding(s)
+    1 INFO finding(s)
+{
+  "status": "ok",
+  "url": "https://topedgeai.com/partners",
+  "baseline_id": 34,
+  "baseline_timestamp": "2026-11-24T16:46:23.712457+00:00",
+  "comparison_timestamp": "2026-11-25T04:51:38.754844+00:00",
+  "summary": {
+    "total_rules": 17,
+    "triggered": 2,
+    "critical": 0,
+    "warning": 1,
+    "info": 1
+  },
+  "triggered_findings": [
+    {
+      "rule": "schema_modified",
+      "severity": "WARNING",
+      "triggered": true,
+      "old_value": "0807f2c1964a...",
+      "new_value": "460b1a8d086c...",
+      "message": "Schema/JSON-LD content has been modified. Validate with /seo schema."
+    },
+    {
+      "rule": "content_hash_changed",
+      "severity": "INFO",
+      "triggered": true,
+      "old_value": "0006bc05cac2...",
+      "new_value": "e7019c9863e8...",
+      "message": "Page content has changed (HTML body hash differs from baseline)."
+    }
+  ],
+  "untriggered_findings": [
+    {
+      "rule": "schema_removed",
+      "severity": "CRITICAL",
+      "triggered": false,
+      "old_value": "4 schema block(s)",
+      "new_value": "0 schema blocks",
+      "message": "Schema presence unchanged."
+    },
+    {
+      "rule": "canonical_changed",
+      "severity": "CRITICAL",
+      "triggered": false,
+      "old_value": "https://topedgeai.com/partners",
+      "new_value": "https://topedgeai.com/partners",
+      "message": "Canonical URL unchanged."
+    },
+    {
+      "rule": "canonical_removed",
+      "severity": "CRITICAL",
+      "triggered": false,
+      "old_value": "https://topedgeai.com/partners",
+      "new_value": null,
+      "message": "Canonical tag presence unchanged."
+    },
+    {
+      "rule": "noindex_added",
+      "severity": "CRITICAL",
+      "triggered": false,
+      "old_value": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+      "new_value": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+      "message": "Robots directives unchanged regarding noindex."
+    },
+    {
+      "rule": "h1_removed",
+      "severity": "CRITICAL",
+      "triggered": false,
+      "old_value": "Recommend TopEdge AI. Earn 20% to 40%, every month.",
+      "new_value": null,
+      "message": "H1 presence unchanged."
+    },
+    {
+      "rule": "h1_changed",
+      "severity": "CRITICAL",
+      "triggered": false,
+      "old_value": "Recommend TopEdge AI. Earn 20% to 40%, every month.",
+      "new_value": "Recommend TopEdge AI. Earn 20% to 40%, every month.",
+      "message": "H1 text is similar enough (similarity: 100%)."
+    },
+    {
+      "rule": "title_removed",
+      "severity": "CRITICAL",
+      "triggered": false,
+      "old_value": "TopEdge AI Partner Program: 20% to 40% Recurring Commission",
+      "new_value": null,
+      "message": "Title tag presence unchanged."
+    },
+    {
+      "rule": "status_code_error",
+      "severity": "CRITICAL",
+      "triggered": false,
+      "old_value": 200,
+      "new_value": 200,
+      "message": "Status code: 200 -> 200."
+    },
+    {
+      "rule": "title_changed",
+      "severity": "WARNING",
+      "triggered": false,
+      "old_value": "TopEdge AI Partner Program: 20% to 40% Recurring Commission",
+      "new_value": "TopEdge AI Partner Program: 20% to 40% Recurring Commission",
+      "message": "Title text unchanged."
+    },
+    {
+      "rule": "meta_description_changed",
+      "severity": "WARNING",
+      "triggered": false,
+      "old_value": "Earn 20% to 40% recurring commission on every TopEdge AI client you refer. Free to join, paid on the 1st of each month b...",
+      "new_value": "Earn 20% to 40% recurring commission on every TopEdge AI client you refer. Free to join, paid on the 1st of each month b...",
+      "message": "Meta description unchanged."
+    },
+    {
+      "rule": "cwv_regressed",
+      "severity": "WARNING",
+      "triggered": false,
+      "old_value": null,
+      "new_value": null,
+      "message": "CWV comparison skipped (data unavailable)."
+    },
+    {
+      "rule": "perf_score_dropped",
+      "severity": "WARNING",
+      "triggered": false,
+      "old_value": null,
+      "new_value": null,
+      "message": "Performance score comparison skipped."
+    },
+    {
+      "rule": "og_tags_removed",
+      "severity": "WARNING",
+      "triggered": false,
+      "old_value": [
+        "og:type",
+        "og:site_name",
+        "og:locale",
+        "og:url",
+        "og:title",
+        "og:description",
+        "og:image",
+        "og:image:alt",
+        "og:image:width",
+        "og:image:height"
+      ],
+      "new_value": [],
+      "message": "OG tags presence unchanged."
+    },
+    {
+      "rule": "schema_added",
+      "severity": "INFO",
+      "triggered": false,
+      "old_value": "0 schema blocks",
+      "new_value": "4 schema block(s)",
+      "message": "No new schema added."
+    },
+    {
+      "rule": "h2_structure_changed",
+      "severity": "INFO",
+      "triggered": false,
+      "old_value": "7 H2s",
+      "new_value": "7 H2s",
+      "message": "H2 structure unchanged."
+    }
+  ],
+  "current_status_code": 200,
+  "cwv_compared": false
+}

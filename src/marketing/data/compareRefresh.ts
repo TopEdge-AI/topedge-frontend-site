@@ -27,6 +27,10 @@ export type CompareRefresh = {
   priceNote: string;
   switchSteps: { title: string; body: string }[];
   faqs: { question: string; answer: string }[];
+  /** Closing CTA title when the default “Leave X’s markup behind” would not be true for this competitor. */
+  closeTitle?: string;
+  /** Phrase inside closeTitle that gets the lilac highlight. */
+  closeHighlight?: string;
 };
 
 const TE_PRICE = '₹1,999, ₹3,999 or ₹6,499 a month incl. GST on topedgeai.com, or $19, $39 or $65 billed by Shopify';
@@ -281,6 +285,261 @@ export const COMPARE_REFRESH: Record<string, CompareRefresh> = {
         question: 'Is AiSensy or TopEdge AI better for COD orders?',
         answer:
           'Both send COD confirmations. TopEdge AI writes the buyer’s reply back to the Shopify order, offers COD to prepaid from Growth, and does it at Meta’s rate; AiSensy charges ₹0.145 per utility message, so each confirmation costs about 26% more.',
+      },
+    ],
+  },
+
+  bitespeed: {
+    updated: '2026-11-25',
+    // Bitespeed publishes no message rate, so the default closing line about its markup would be unverified.
+    closeTitle: 'See your bill before a sales call',
+    closeHighlight: 'before a sales call',
+    heroSub:
+      'Plans you can price before a sales call: ₹1,999 a month incl. GST, COD confirmation on every plan and Meta’s rates at 0% markup.',
+    verdict:
+      'For an Indian Shopify store that wants to see the bill before a demo, TopEdge AI is the simpler buy: ₹1,999 a month including GST, or $19 on the Shopify App Store, with COD confirmation on every plan. Bitespeed publishes no prices: its pricing address redirects to a demo request, and its App Store listing says free to install with additional charges it does not list. Bitespeed is the stronger pick if you want AI voice calls and SMS from the same vendor. Read 25 November 2026.',
+    switchReasons: [
+      {
+        title: 'A price you can read before the call',
+        body: 'On 25 November 2026 bitespeed.co/pricing redirected to bitespeed.co/request-demo. TopEdge AI’s three plans are on our pricing page: ₹1,999, ₹3,999 and ₹6,499 a month including GST, sized at 100, 800 and 1,500 orders.',
+      },
+      {
+        title: 'Meta’s rate, with nothing added',
+        body: 'Meta charges ₹0.8631 per India marketing message and ₹0.1150 per utility message. TopEdge AI passes both through at 0% markup. Bitespeed publishes no per-message rate, so there is nothing to compare until a quote arrives.',
+      },
+      {
+        title: 'A trial on your own orders, no demo first',
+        body: 'TopEdge AI’s trial is 14 days with 20 orders and 200 sends, started from the App Store or our site. Bitespeed’s listing shows no trial length.',
+      },
+    ],
+    fallsShort: [
+      {
+        title: 'The plan price is not public',
+        body: 'Bitespeed’s Shopify listing reads “Free to install. Additional charges may apply.” and shows no plan price. Two lines on the same listing disagree on currency: “billed in USD/INR” and “billed in USD”.',
+      },
+      {
+        title: 'No message rate to check',
+        body: 'Without a published rate card you cannot set Bitespeed’s per-message cost against Meta’s ₹0.8631 before you sign. On TopEdge AI the message line is Meta’s own bill to your WhatsApp Business Account.',
+      },
+      {
+        title: 'Plans are not sized by orders',
+        body: 'Nothing on bitespeed.co or its listing ties a price to order volume. TopEdge AI plans step at 100, 800 and 1,500 Shopify orders a month, so the bill tracks the store you run.',
+      },
+    ],
+    betterPick: [
+      'You want AI voice calls for cart recovery and COD confirmation: Bitespeed’s listing names an AI voice agent, and TopEdge AI does not make calls.',
+      'You want WhatsApp, SMS, email, Instagram and Messenger from one vendor’s inbox, with SMS campaigns as well.',
+      'Review history matters to you: Bitespeed is rated 4.6 from 408 reviews on the Shopify App Store (25 November 2026), and TopEdge AI has none yet.',
+    ],
+    priceRows: [
+      { label: 'Entry price, monthly billing', topedge: '₹1,999/mo incl. GST, or $19 on the App Store', competitor: 'Not published (pricing page redirects to a demo request)' },
+      { label: 'Billed yearly', topedge: '₹1,599/mo billed yearly', competitor: 'Not published' },
+      { label: 'Shopify App Store', topedge: '$19, $39 or $65 a month, billed by Shopify', competitor: 'Free to install, additional charges not listed' },
+      { label: 'India marketing message', topedge: '₹0.8631, Meta’s rate', competitor: 'Not published' },
+      { label: 'Free trial', topedge: '14 days, 20 orders, 200 sends', competitor: 'Not shown on the listing' },
+      { label: 'Shopify App Store rating', topedge: 'No reviews yet', competitor: '4.6 from 408 reviews' },
+    ],
+    priceNote:
+      'Sources: bitespeed.co/pricing (a 301 redirect to bitespeed.co/request-demo), Bitespeed’s Shopify App Store listing “B: WhatsApp, Voice, SMS & Chat” and bitespeed.co. TopEdge AI prices include 18% GST on our site.',
+    switchSteps: [
+      { title: 'Get the Bitespeed quote in writing', body: 'Ask for the plan, the per-message charge on top of Meta and the notice period. Then you are comparing two real numbers, not a demo against a price page.' },
+      { title: 'Start the TopEdge AI trial', body: 'Install from the Shopify App Store or start on topedgeai.com. No sales call is needed, and orders sync from Shopify on install.' },
+      { title: 'Connect your WhatsApp Business Account', body: 'Approved templates sit in your own WhatsApp Business Account. Connect it in a quiet hour so no COD confirmation is missed during the move.' },
+      { title: 'Rebuild one journey at a time', body: 'COD confirmation first, then cart recovery, then order updates. Leave broadcasts for last, and cancel Bitespeed only after each journey has fired on a real order.' },
+    ],
+    faqs: [
+      {
+        question: 'How much does Bitespeed cost?',
+        answer:
+          'Bitespeed does not publish a price. On 25 November 2026 bitespeed.co/pricing redirected to a demo request, and its Shopify App Store listing said free to install with additional charges it does not list. TopEdge AI starts at ₹1,999 a month including GST, or $19 on the App Store.',
+      },
+      {
+        question: 'Is Bitespeed free?',
+        answer:
+          'Free to install, but not priced beyond that. Bitespeed’s listing says additional charges may apply and does not show them, and WhatsApp messages still cost Meta’s rate whoever sends them: ₹0.8631 per India marketing message.',
+      },
+      {
+        question: 'What do Shopify merchants rate Bitespeed?',
+        answer:
+          'Bitespeed was rated 4.6 from 408 reviews on the Shopify App Store on 25 November 2026: 374 five-star and 23 one-star. TopEdge AI had no App Store reviews yet that day, so judge both on a trial with your own orders.',
+      },
+      {
+        question: 'Does Bitespeed do COD confirmation?',
+        answer:
+          'Yes. Bitespeed’s listing names COD verification and converting COD to prepaid, and its site lists COD confirmation under AI voice calls. TopEdge AI confirms COD orders on WhatsApp on every plan and runs COD to prepaid from Growth at ₹3,999 a month including GST.',
+      },
+      {
+        question: 'Which is better for a Shopify store, Bitespeed or TopEdge AI?',
+        answer:
+          'TopEdge AI if you want published INR plans, 0% markup on Meta’s rates and COD journeys from ₹1,999 a month; Bitespeed if you want AI voice calls and SMS beside WhatsApp and are happy to price it with sales. Our Bitespeed alternatives guide compares more options.',
+      },
+    ],
+  },
+
+  zoko: {
+    updated: '2026-11-25',
+    heroSub:
+      'A flat INR plan sized by Shopify orders against USD plans that meter conversations, with COD confirmation on every plan.',
+    verdict:
+      'For an Indian Shopify store that checks out on its own storefront, TopEdge AI is the simpler bill: ₹1,999 a month including GST, priced by orders, with no conversation fee. Zoko charges $49.99 to $139.99 a month in US dollars and adds $0.015 per conversation on Starter. Zoko is the better pick when a WhatsApp catalog and ordering inside the chat are how you sell. Read 25 November 2026.',
+    switchReasons: [
+      {
+        title: 'Rupees, not dollars',
+        body: 'Zoko’s pricing page says its charges are always in USD; Starter is $49.99 a month, shown as about ₹4,645 on its Shopify listing. TopEdge AI is ₹1,999 a month including GST, billed in INR, or $19 through Shopify.',
+      },
+      {
+        title: 'No conversation meter',
+        body: 'Zoko Starter adds $0.015 per conversation with no cap, so 10,000 conversations a month add $150 to the plan. TopEdge AI charges by Shopify orders, and Meta bills each message at its own rate.',
+      },
+      {
+        title: 'No share of your order value',
+        body: 'Zoko’s order-taking AI agent is $24.99 a month plus 3% of order value after the first 100 orders: on ₹5 lakh of orders through it, that is ₹15,000. TopEdge AI plans are flat.',
+      },
+    ],
+    fallsShort: [
+      {
+        title: 'Starter meters every conversation',
+        body: 'Each marketing, utility or authentication message opens a new 24-hour conversation in Zoko’s definition, and Starter charges $0.015 for each one with no monthly cap.',
+      },
+      {
+        title: 'A 7-day trial',
+        body: 'Zoko’s trial is 7 days on every plan, and its Shopify listing shows no free plan. TopEdge AI’s trial is 14 days with 20 orders and 200 sends, long enough to see COD confirmations come back.',
+      },
+      {
+        title: 'Premium flows cost per flow',
+        body: 'Beyond Zoko’s 11 free essential flows, premium flows are $5.99 a month each, and flow steps past 500,000 a month cost $0.0002. TopEdge AI journeys come with the plan; Journey Branch starts on Growth.',
+      },
+    ],
+    betterPick: [
+      'You sell from a WhatsApp catalog synced from Shopify, and want an AI agent to take the order and the payment inside the chat.',
+      'You want Instagram DMs in the same inbox, which Zoko adds for $9.99 a month.',
+      'Review history matters to you: Zoko is rated 4.9 from 481 reviews on the Shopify App Store (25 November 2026), and TopEdge AI has none yet.',
+    ],
+    priceRows: [
+      { label: 'Entry price', topedge: '₹1,999/mo incl. GST, or $19 on the App Store', competitor: 'Starter $49.99/mo (about ₹4,645 on its listing)' },
+      { label: 'Middle plan', topedge: 'Growth ₹3,999/mo incl. GST', competitor: 'Plus $79.99/mo (about ₹7,432)' },
+      { label: 'Conversation fee', topedge: 'None from us', competitor: 'Starter $0.015 each; Plus 5,000 included, then $0.00199' },
+      { label: 'India marketing message', topedge: '₹0.8631, Meta’s rate', competitor: 'Meta’s rate, paid to Meta' },
+      { label: 'AI agents', topedge: 'Bring your own AI key, every plan', competitor: '$24.99/mo plus $0.09 a resolution, or plus 3% of order value' },
+      { label: 'Free trial', topedge: '14 days, 20 orders, 200 sends', competitor: '7 days' },
+    ],
+    priceNote:
+      'Sources: zoko.io/pricing (monthly view; the page publishes no yearly prices) and Zoko’s Shopify App Store listing, whose rupee figures are Shopify’s own estimates. TopEdge AI prices include 18% GST on our site.',
+    switchSteps: [
+      { title: 'Read last month’s conversation count', body: 'Zoko bills usage after the month ends. That count, times $0.015 on Starter, is the line you stop paying.' },
+      { title: 'List the Zoko flows you actually use', body: 'Abandoned checkout, COD double-confirm, COD to prepaid and order notifications map to TopEdge AI journeys. Note any premium flow you pay $5.99 for.' },
+      { title: 'Connect your WhatsApp Business Account', body: 'Templates you had approved belong to your WhatsApp Business Account, not to Zoko. Connect that account to TopEdge AI during a low-order hour.' },
+      { title: 'Cancel before the next billing period', body: 'Zoko charges its subscription on the first day of each period, so cancel once your journeys have fired on real orders and before the next period starts.' },
+    ],
+    faqs: [
+      {
+        question: 'How much does Zoko cost?',
+        answer:
+          'Zoko’s plans were $49.99, $79.99 and $139.99 a month in US dollars on 25 November 2026, shown on its Shopify listing as about ₹4,645, ₹7,432 and ₹13,007. Starter also adds $0.015 per conversation. TopEdge AI is ₹1,999 a month including GST.',
+      },
+      {
+        question: 'Does Zoko charge per conversation?',
+        answer:
+          'Yes, on Starter: $0.015 per conversation with no monthly cap. Plus includes 5,000 conversations then $0.00199 each, and Elite 100,000 then $0.00099. TopEdge AI charges no conversation fee; Meta bills each message at its own rate.',
+      },
+      {
+        question: 'Does Zoko have a free trial?',
+        answer:
+          'Yes, 7 days on every plan, and its Shopify listing shows no free plan. TopEdge AI’s trial runs 14 days with 20 orders and 200 sends.',
+      },
+      {
+        question: 'Does Zoko work with Shopify?',
+        answer:
+          'Yes. Zoko WhatsApp Marketing & Chat on the Shopify App Store, rated 4.9 from 481 reviews on 25 November 2026, names cart recovery, COD verification, order updates and a WhatsApp catalog synced from Shopify.',
+      },
+      {
+        question: 'Is Zoko or TopEdge AI better for COD orders?',
+        answer:
+          'Both confirm COD orders and offer COD to prepaid. TopEdge AI bills ₹1,999 a month including GST with COD confirmation on every plan and COD to prepaid from Growth; Zoko includes both as free flows but bills in USD from $49.99 with a $0.015 conversation fee on Starter. Our Zoko alternatives guide compares more tools.',
+      },
+    ],
+  },
+
+  dondy: {
+    updated: '2026-11-25',
+    heroSub:
+      'Meta’s own India rates at 0% markup against a single per-message rate 1.6 times Meta’s USD card, with plans in rupees.',
+    verdict:
+      'For an Indian Shopify store that sends real message volume, TopEdge AI costs less to run: ₹1,999 a month including GST, with Meta’s ₹0.8631 marketing rate passed through at 0% markup. Dondy’s published India rate is $0.01888 a message, 1.6 times the $0.0118 on Meta’s USD card, and its automated cart recovery starts on the $79.99 Power Automation plan. Dondy is the better pick for a free WhatsApp chat button or a store that sells mainly outside India. Read 25 November 2026.',
+    switchReasons: [
+      {
+        title: 'Meta’s rate, not 1.6 times it',
+        body: 'At Dondy’s India rate, 10,000 marketing messages cost $188.80; at the $0.0118 on Meta’s USD card they cost $118, so $70.80 more a month. TopEdge AI passes Meta’s ₹0.8631 through with nothing added.',
+      },
+      {
+        title: 'Automation from ₹1,999, not $79.99',
+        body: 'Dondy’s automated WhatsApp cart recovery starts on Power Automation at $79.99 a month, about ₹7,432 on its listing. TopEdge AI Launch, at ₹1,999 including GST, includes cart recovery and COD confirmation journeys.',
+      },
+      {
+        title: 'Billed in rupees',
+        body: 'Dondy’s plans are priced in US dollars. TopEdge AI bills in INR on topedgeai.com, with a GST invoice, or in USD through Shopify if you prefer one Shopify bill.',
+      },
+    ],
+    fallsShort: [
+      {
+        title: 'Pro’s cart recovery is manual',
+        body: 'Dondy Pro at $6.99 a month lists manual abandoned cart recovery and manual order confirmation messages. Automated recovery needs the $79.99 plan.',
+      },
+      {
+        title: 'One rate for every message type',
+        body: 'Dondy’s rate table shows one India figure, $0.01888 a message, with no separate utility price. Meta’s own utility rate is ₹0.1150, so ask Dondy what a COD confirmation costs before you switch it on.',
+      },
+      {
+        title: 'A 7-day trial',
+        body: 'Dondy’s paid plans carry a 7-day trial. TopEdge AI’s runs 14 days with 20 orders and 200 sends, enough to see a COD order confirmed and delivered.',
+      },
+    ],
+    betterPick: [
+      'You only want a WhatsApp chat button: Dondy’s free plan has one, with unlimited conversations and prefilled messages.',
+      'You sell in several countries and want the app in Spanish, Italian, Portuguese, French or Turkish.',
+      'Review history matters to you: Dondy is rated 4.9 from 828 reviews with the Built for Shopify badge (25 November 2026), and TopEdge AI has none yet.',
+    ],
+    priceRows: [
+      { label: 'First plan with automated cart recovery', topedge: 'Launch ₹1,999/mo incl. GST, or $19 on the App Store', competitor: 'Power Automation $79.99/mo (about ₹7,432)' },
+      { label: 'Low tier', topedge: 'Launch includes COD confirmation', competitor: 'Pro $6.99/mo, manual recovery only' },
+      { label: 'India message rate', topedge: '₹0.8631 marketing, ₹0.1150 utility (Meta’s rates)', competitor: '$0.01888 a message, one rate' },
+      { label: '10,000 marketing messages', topedge: '$118 on Meta’s USD card, or ₹8,631 on its INR card', competitor: '$188.80' },
+      { label: 'Free plan', topedge: 'None; 14-day trial', competitor: 'WhatsApp chat button' },
+      { label: 'Free trial', topedge: '14 days, 20 orders, 200 sends', competitor: '7 days on paid plans' },
+    ],
+    priceNote:
+      'Sources: dondy.net/dondy-pricing (plans and the per-market rate table) and Dondy’s Shopify App Store listing, whose rupee figures are Shopify’s estimates. Meta’s USD card rate of $0.0118 was read on 8 November 2026. TopEdge AI prices include 18% GST on our site.',
+    switchSteps: [
+      { title: 'Price last month’s messages both ways', body: 'Take your message count from Dondy and multiply it by $0.01888 and by Meta’s rate. The gap is what the switch saves before plan prices.' },
+      { title: 'Keep Dondy’s free button while you test', body: 'Dondy’s free plan keeps the chat button live, so the widget stays up while your journeys move to TopEdge AI.' },
+      { title: 'Connect your WhatsApp Business Account', body: 'Your approved templates sit in your own WhatsApp Business Account. Connect it to TopEdge AI, and Meta bills that account directly from then on.' },
+      { title: 'Turn on COD confirmation and cart recovery', body: 'Both journeys are pre-built. Watch one COD order get confirmed and one abandoned checkout get a reminder before you cancel the paid Dondy plan.' },
+    ],
+    faqs: [
+      {
+        question: 'How much does Dondy cost?',
+        answer:
+          'Dondy listed Free, Pro $6.99, Power Automation $79.99, Elite $159.99 and Ultimate $299 a month in US dollars on dondy.net on 25 November 2026, plus a per-message rate of $0.01888 in India. Automated abandoned cart recovery starts on Power Automation.',
+      },
+      {
+        question: 'Is Dondy free?',
+        answer:
+          'Partly. Dondy’s free plan is a WhatsApp chat button with unlimited conversations and prefilled messages; its website adds 10 manual abandoned cart and 10 manual order confirmation messages. Automated WhatsApp recovery starts at $79.99 a month.',
+      },
+      {
+        question: 'Does Dondy add a markup on WhatsApp messages?',
+        answer:
+          'Its India rate is $0.01888 a message on dondy.net, 1.6 times the $0.0118 India marketing rate on Meta’s USD card. TopEdge AI adds 0% to Meta’s rates. Our Dondy alternatives guide works through the markup at real volumes.',
+      },
+      {
+        question: 'What do Shopify merchants rate Dondy?',
+        answer:
+          'Dondy was rated 4.9 from 828 reviews on the Shopify App Store on 25 November 2026, with the Built for Shopify badge. TopEdge AI had no App Store reviews yet that day.',
+      },
+      {
+        question: 'Which is better for an Indian Shopify store, Dondy or TopEdge AI?',
+        answer:
+          'TopEdge AI if you send real WhatsApp volume and need COD confirmation and COD to prepaid billed in rupees; Dondy if you mainly want a free chat button or sell across several countries in their own languages.',
       },
     ],
   },

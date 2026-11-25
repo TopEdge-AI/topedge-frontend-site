@@ -123,11 +123,11 @@ Setup guides and screen-by-screen reference, written for the person running the 
 - [TopEdge AI vs WATI](https://topedgeai.com/compare/wati): TopEdge AI vs WATI for Shopify India, read 24 Nov 2026: ₹1,999/mo with 0% Meta markup vs WATI’s ₹2,999 Growth, per-user fees and a 20% marketing markup.
 - [TopEdge AI vs AiSensy](https://topedgeai.com/compare/aisensy): TopEdge AI vs AiSensy for Shopify India, read 24 Nov 2026: COD confirmation and 0% Meta markup vs AiSensy’s ₹1,500 Basic and rates about 26% above Meta.
 - [TopEdge AI vs Interakt](https://topedgeai.com/compare/interakt): TopEdge AI vs Interakt for Shopify India, read 24 Nov 2026: INR plans with COD confirmation and 0% Meta markup vs Interakt’s USD app plans and markups.
-- [TopEdge AI vs Bitespeed](https://topedgeai.com/compare/bitespeed): Compare TopEdge AI vs Bitespeed for Shopify India: ₹1,999/mo flat INR plans, 0% Meta markup and built-in warranty vs ₹5L MRR floors and AI add-ons.
-- [TopEdge AI vs Zoko](https://topedgeai.com/compare/zoko): TopEdge AI vs Zoko for Shopify India: flat INR plans from ₹1,999/mo and 0% Meta markup vs Zoko’s $49.99+ USD base fees and per-conversation metering.
+- [TopEdge AI vs Bitespeed](https://topedgeai.com/compare/bitespeed): TopEdge AI vs Bitespeed for Shopify India, read 25 Nov 2026: plans from ₹1,999/mo incl. GST and 0% Meta markup vs no published Bitespeed prices.
+- [TopEdge AI vs Zoko](https://topedgeai.com/compare/zoko): TopEdge AI vs Zoko for Shopify India, read 25 Nov 2026: ₹1,999/mo incl. GST, sized by orders, vs Zoko’s $49.99+ USD plans and $0.015 per conversation.
 - [TopEdge AI vs Getgabs](https://topedgeai.com/compare/getgabs): Compare TopEdge AI vs Getgabs for Shopify India: native COD to prepaid journeys, unified identity and a warranty hub vs ₹699 to ₹2,999/mo entry plans.
 - [TopEdge AI vs Kanal](https://topedgeai.com/compare/kanal): TopEdge AI vs Kanal for Shopify India: flat INR plans from ₹1,999/mo and native COD to prepaid vs Kanal’s €89 to €149/mo EUR plans and Klaviyo focus.
-- [TopEdge AI vs Dondy](https://topedgeai.com/compare/dondy): TopEdge AI vs Dondy for Shopify India: 0% Meta markup and ₹1,999/mo INR plans vs Dondy’s $0.01888/msg India rate and $79.99 to $159.99 USD tiers.
+- [TopEdge AI vs Dondy](https://topedgeai.com/compare/dondy): TopEdge AI vs Dondy for Shopify India, read 25 Nov 2026: Meta’s ₹0.8631 rate at 0% markup vs Dondy’s $0.01888 India rate and $79.99 automation.
 - [TopEdge AI vs Updatrr](https://topedgeai.com/compare/updatrr): TopEdge AI vs Updatrr for Shopify India: BYOK AI on every plan from ₹1,999/mo, a visitor pixel and a warranty hub vs USD tiers that gate AI at $99.99.
 - [TopEdge AI vs Gupshup](https://topedgeai.com/compare/gupshup): TopEdge AI vs Gupshup for Shopify India: self-serve ₹1,999/mo INR plans, 0% Meta markup and native COD journeys vs per-message enterprise CPaaS fees.
 
@@ -143,7 +143,7 @@ Setup guides and screen-by-screen reference, written for the person running the 
 - [Top 10 Best Shopify Upsell Apps for 2027](https://topedgeai.com/blog/best-shopify-upsell-apps): The 10 best Shopify upsell apps for 2027, ranked by where the offer appears, with App Store ratings, launch dates and rupee prices read 3 November 2026.
 - [Top 10 Shopify SEO Experts & Resources for 2027](https://topedgeai.com/blog/shopify-seo-experts): The 10 Shopify SEO experts and resources worth your time, plus five Shopify-specific questions that tell you in a minute whether a consultant is real.
 - [Ecommerce Funnel Drop-Off Benchmarks (2026) & Identity Guide](https://topedgeai.com/blog/ecommerce-funnel-drop-off-benchmarks-visitor-identity-resolution): Ecommerce funnel benchmarks from 436 Shopify stores: add to cart, checkout and conversion by industry, and how visitor identity resolution works.
-- [Best Shopify App for Abandoned Cart Recovery India (2026)](https://topedgeai.com/blog/best-shopify-app-for-abandoned-cart-recovery-india): Best Shopify app for abandoned cart recovery India: WhatsApp, email and SMS apps ranked on events, suppression, opt-in and what Meta charges per message.
+- [Best Shopify App for Abandoned Cart Recovery India (2027)](https://topedgeai.com/blog/best-shopify-app-for-abandoned-cart-recovery-india): Best Shopify app for abandoned cart recovery in India: 10 WhatsApp and email apps ranked on Meta markup, COD and price, read 25 Nov 2026.
 - [COD to Prepaid on WhatsApp: Shopify India 2026](https://topedgeai.com/blog/cod-to-prepaid-whatsapp-shopify-india): Convert Shopify India COD orders to prepaid on WhatsApp before dispatch: the ₹68 saved per order, the ₹0.1150 vs ₹0.8631 template split, and the flow.
 - [Best Updatrr Alternative for Shopify India 2026](https://topedgeai.com/blog/updatrr-alternative-shopify-india): Updatrr alternative for Shopify India: plans from ₹1,999/mo, a 14-day trial and BYOK AI on every plan, against USD tiers with AI handover at $99.99.
 - [Best WATI Alternative for Shopify India (2026)](https://topedgeai.com/blog/wati-alternative-shopify-india): WATI alternative for Shopify India: what to keep, what to fix (markup, AI access, COD), and how to test a switch in one afternoon.
@@ -179,7 +179,7 @@ Setup guides and screen-by-screen reference, written for the person running the 
 
 ## Canonical URL directory
 
-All 170 indexable URLs on this domain, no trailing slash except the root.
+All 171 indexable URLs on this domain, no trailing slash except the root.
 
 - https://topedgeai.com/
 - https://topedgeai.com/pricing
@@ -349,6 +349,7 @@ All 170 indexable URLs on this domain, no trailing slash except the root.
 - https://topedgeai.com/partners
 - https://topedgeai.com/whatsapp-app-for-shopify
 - https://topedgeai.com/whatsapp-abandoned-cart-recovery-app
+- https://topedgeai.com/shopify-whatsapp-order-notifications
 - https://topedgeai.com/privacy
 - https://topedgeai.com/terms
 

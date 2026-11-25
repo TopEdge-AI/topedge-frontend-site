@@ -179,7 +179,7 @@ export const blogPosts: BlogPost[] = [
 </table>
 </div>
 <p>Source for the price row: <a href="https://help.shopify.com/en/manual/promoting-marketing/create-marketing/shopify-messaging/whatsapp/pricing" target="_blank" rel="noopener noreferrer">Shopify’s WhatsApp pricing</a> (read 20 November 2026) and <a href="https://developers.facebook.com/docs/whatsapp/pricing/" target="_blank" rel="noopener noreferrer">Meta’s rate card</a> (re-read 16 November 2026). At the 1 INR = 0.0106 USD rate Shopify used on our own listing on 9 November, $0.024 is about ₹2.26, so Shopify’s per-message price is roughly 2.6 times Meta’s (Estimate: the exchange rate moves).</p>
-<p><strong>When Shopify is enough:</strong> most of your buyers subscribe to marketing, you sell mostly prepaid, and you only need reminders. <strong>When it is not:</strong> COD is a large share of orders, you want order updates on WhatsApp from the same number, or many checkouts come from shoppers who never ticked the marketing box.</p>
+<p><strong>When Shopify is enough:</strong> most of your buyers subscribe to marketing, you sell mostly prepaid, and you only need reminders. <strong>When it is not:</strong> COD is a large share of orders, you want <a href="/shopify-whatsapp-order-notifications">order updates on WhatsApp</a> from the same number, or many checkouts come from shoppers who never ticked the marketing box.</p>
 
 <h2>How WhatsApp abandoned cart recovery works on Shopify</h2>
 <p>WhatsApp abandoned cart recovery works when four conditions line up:</p>
@@ -1028,7 +1028,7 @@ export const blogPosts: BlogPost[] = [
 </ul>
 <p>Track approval in <a href="/features/meta-manager">Meta Manager</a>. Do not publish live sends on PENDING templates.</p>
 <div class="mkt-blog-callout"><p><strong>Tip:</strong> Submit templates the same hour you connect Shopify. Parallelize review time with inbox training and journey drafts. Our <a href="/whatsapp-templates">copyable WhatsApp order and COD templates</a> give you a first draft, and the <a href="/whatsapp-journey-examples">WhatsApp journey examples with costs</a> show each flow step by step.</p></div>
-<p><strong>Get the category right on submission, because it decides the price for the life of the template.</strong> Utility covers messages about an order that already exists: confirmations, COD checks, dispatch and delivery updates, billed at ₹0.1150 in India. Marketing covers anything that prompts a purchase, including every cart reminder, at ₹0.8631. That is a seven-fold difference on the same screen, and Meta will reclassify a utility template that reads like an advert, so a discount line inside an order update quietly makes it a marketing template.</p>
+<p><strong>Get the category right on submission, because it decides the price for the life of the template.</strong> Utility covers messages about an order that already exists: confirmations, COD checks, dispatch and delivery updates, billed at ₹0.1150 in India. Marketing covers anything that prompts a purchase, including every cart reminder, at ₹0.8631. That is a seven-fold difference on the same screen, and Meta will reclassify a utility template that reads like an advert, so a discount line inside an order update quietly makes it a marketing template. The full set of order-stage templates, and what each one should carry, is on <a href="/shopify-whatsapp-order-notifications">Shopify WhatsApp order notifications</a>.</p>
 <p><strong>Submit variants in the same batch.</strong> Two cart reminders, one for prepaid and one for COD, cost nothing extra to review and save you a second wait when you discover the single version reads wrong to half your buyers. The same goes for a reschedule option in the COD template: adding it later means resubmitting.</p>
 <p><strong>Expect rejections and budget for them.</strong> Most first-time rejections are the same handful of causes: a variable at the very start or end of the body, placeholder text left in an example, or promotional language in a utility submission. Fixes and rewrites are in <a href="/blog/whatsapp-template-rejected-meta-shopify-fix">why Meta rejected your WhatsApp template</a>.</p>
 
@@ -2007,7 +2007,7 @@ export const blogPosts: BlogPost[] = [
 <p>Do not replace Zoko with a thinner inbox that only looks cheaper on day one. Keep the jobs Zoko already does well in your shortlist criteria:</p>
 <ol>
 <li>Shopify cart / order sync you can demo live</li>
-<li>COD confirm (and ideally COD → prepaid) that warehouse respects</li>
+<li>COD confirm (and ideally COD to prepaid) that warehouse respects</li>
 <li>Meta template gating: no sends until APPROVED</li>
 <li>A pricing model finance can forecast in ₹ without guessing peak chatter</li>
 </ol>
@@ -2030,14 +2030,14 @@ export const blogPosts: BlogPost[] = [
 </tr>
 </thead>
 <tbody>
-<tr><td><strong>Entry price</strong></td><td>Launch ₹1,999/mo incl. 18% GST on topedgeai.com, or $19/mo billed by Shopify from the App Store</td><td>Starter $49.99/mo, then Plus $79.99 and Elite $139.99 (about ₹4,687, ₹7,501 and ₹13,127 on its Shopify listing)</td></tr>
+<tr><td><strong>Entry price</strong></td><td>Launch ₹1,999/mo incl. 18% GST on topedgeai.com, or $19/mo billed by Shopify from the App Store</td><td>Starter $49.99/mo, then Plus $79.99 and Elite $139.99 (about ₹4,645, ₹7,432 and ₹13,007 on its Shopify listing, read 25 November 2026)</td></tr>
 <tr><td><strong>Billing unit</strong></td><td>Sized by Shopify orders a month (100, 800 or 1,500). INR on topedgeai.com, USD through Shopify</td><td>USD, plus per-conversation metering on Starter and above each plan’s bucket</td></tr>
 <tr><td><strong>Agent seats</strong></td><td>No per-seat charge on any plan</td><td>Unlimited on Starter. 5 on Plus, then <strong>$15 per extra agent</strong> a month. 10 on Elite, then $12</td></tr>
 <tr><td><strong>Conversation bucket</strong></td><td>No conversation metering</td><td>Starter has none and meters <strong>$0.015 per conversation</strong>; Plus includes 5,000/mo then $0.00199 each</td></tr>
 <tr><td><strong>AI and custom flows</strong></td><td>BYOK AI at about ₹0.10 to ₹0.30 a reply and unlimited flows included</td><td>AI bot add-ons from <strong>$24.99/mo</strong>, plus about <strong>$0.09 per resolved conversation</strong> on the Guru agent; custom flows <strong>$5.99 per flow per month</strong>; Instagram $9.99/mo</td></tr>
 <tr><td><strong>Meta message cost</strong></td><td>0% markup, billed by Meta to your own Business Account</td><td>Meta’s rate card, paid directly to Meta. Starter adds $0.015 per conversation</td></tr>
 <tr><td><strong>COD confirmation and COD to prepaid</strong></td><td>COD confirmation on every plan. COD to prepaid journey on Growth and Scale only</td><td>Both are free pre-built flows on every plan. Reconfirmation with auto-cancel is a $5.99 premium flow</td></tr>
-<tr><td><strong>Shopify App Store rating</strong></td><td>No reviews yet</td><td>4.9 from 475 reviews</td></tr>
+<tr><td><strong>Shopify App Store rating</strong></td><td>No reviews yet</td><td>4.9 from 481 reviews (25 November 2026)</td></tr>
 <tr><td><strong>What it is best at</strong></td><td>Predictable INR cost and India COD and RTO operations</td><td>Catalog in chat and conversational selling, which it has done longest</td></tr>
 </tbody>
 </table>
@@ -3617,7 +3617,7 @@ export const blogPosts: BlogPost[] = [
 <p>Dondy's free plan is a chat button, which is useful for counting how many customers start chats before you pay for automation. For a button with no app at all, <a href="/blog/add-whatsapp-chat-button-shopify">add a WhatsApp chat button to Shopify</a> with a wa.me link.</p>
 <h3>Best WhatsApp app for Shopify order notifications in India</h3>
 <p>For updates alone, Meta's free app; for updates plus COD confirmation that writes the reply back to the order, a suite such as TopEdge AI.</p>
-<p>Order, shipping and delivery updates are utility messages at ₹0.1150 each in India, so three per order cost ₹0.345. At that rate the app's plan, not Meta's fee, is most of your bill.</p>
+<p>Order, shipping and delivery updates are utility messages at ₹0.1150 each in India, so three per order cost ₹0.345. At that rate the app's plan, not Meta's fee, is most of your bill. How each stage is triggered and templated: <a href="/shopify-whatsapp-order-notifications">Shopify WhatsApp order notifications</a>.</p>
 <h3>Best WhatsApp app for marketing broadcasts</h3>
 <p>An app that passes Meta's rate through at 0% markup, such as TopEdge AI or Getgabs, once you send in volume.</p>
 <p>On a 50,000-message festive week, Meta's share is ₹43,155. AiSensy's ₹1.09 adds ₹11,345, WATI's Growth card adds ₹8,630, Interakt's web Growth rate adds ₹4,745, and Zoko Starter's $0.015 per conversation adds $750. Ask every vendor where the segment comes from: a CSV you keep by hand, or live Shopify behaviour. Blocks and reports also lower the Meta quality rating that governs your order confirmations.</p>

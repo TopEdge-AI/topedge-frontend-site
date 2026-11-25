@@ -222,14 +222,14 @@ export const COMPARE_COMPETITORS: Record<string, CompareCompetitor> = {
     logoAlt: 'Bitespeed logo',
     accent: '#ea580c',
     brandTag: 'AI-agent omnichannel OS',
-    title: 'TopEdge AI vs Bitespeed (2026): ₹1,999/mo vs ₹15,000 Floors',
+    title: 'TopEdge AI vs Bitespeed (2027): Public Prices vs Demo Quote',
     description:
-      'Compare TopEdge AI vs Bitespeed for Shopify India: ₹1,999/mo flat INR plans, 0% Meta markup and built-in warranty vs ₹5L MRR floors and AI add-ons.',
+      'TopEdge AI vs Bitespeed for Shopify India, read 25 Nov 2026: plans from ₹1,999/mo incl. GST and 0% Meta markup vs no published Bitespeed prices.',
     keywords:
       'TopEdge AI vs Bitespeed, Bitespeed alternative Shopify, Bitespeed pricing India, Shopify WhatsApp app INR pricing, Bitespeed vs TopEdge AI, Bitespeed AI add-on',
     h1: 'TopEdge AI vs Bitespeed',
-    subtitle: 'TopEdge AI vs Bitespeed for Shopify India D2C brands, checked for 2026.',
-    researchAsOf: 'Sep 2026',
+    subtitle: 'TopEdge AI vs Bitespeed for Shopify India D2C brands, checked 25 November 2026.',
+    researchAsOf: 'Nov 2026',
     matrix: BITESPEED_PAIRWISE_MATRIX.map(({ label, description, topedge, competitor }) => ({
       label,
       description,
@@ -237,7 +237,7 @@ export const COMPARE_COMPETITORS: Record<string, CompareCompetitor> = {
       competitor,
     })),
     matrixNote:
-      'Bitespeed pricing and AI add-ons as of September 2026 from public listings / third-party summaries. Confirm live on bitespeed.co and the Shopify App Store before purchase.',
+      'Read 25 Nov 2026: bitespeed.co/pricing redirects to a demo request, and Bitespeed’s Shopify listing (B: WhatsApp, Voice, SMS & Chat, 4.6 from 408 reviews) shows “Free to install. Additional charges may apply.” with no plan prices or message rates. Rows we could not re-read that day are as checked in September 2026. Confirm live before purchase.',
     related: [
       { label: 'Bitespeed alternative guide', href: '/blog/bitespeed-alternative-shopify-india' },
       { label: 'All comparisons', href: '/compare' },
@@ -259,15 +259,15 @@ export const COMPARE_COMPETITORS: Record<string, CompareCompetitor> = {
     logoAlt: 'Zoko logo',
     accent: '#2563eb',
     brandTag: 'India WhatsApp commerce',
-    title: 'TopEdge AI vs Zoko (2026): Flat INR vs Conversation Meters',
+    title: 'TopEdge AI vs Zoko (2027): Flat INR vs USD Conversation Fees',
     description:
-      'TopEdge AI vs Zoko for Shopify India: flat INR plans from ₹1,999/mo and 0% Meta markup vs Zoko’s $49.99+ USD base fees and per-conversation metering.',
+      'TopEdge AI vs Zoko for Shopify India, read 25 Nov 2026: ₹1,999/mo incl. GST, sized by orders, vs Zoko’s $49.99+ USD plans and $0.015 per conversation.',
     keywords:
       'TopEdge AI vs Zoko, Zoko alternative Shopify, Zoko pricing conversations, Shopify WhatsApp India Zoko, Zoko vs TopEdge AI',
     h1: 'TopEdge AI vs Zoko',
-    subtitle: 'TopEdge AI vs Zoko for Shopify India D2C brands, checked for 2026.',
+    subtitle: 'TopEdge AI vs Zoko for Shopify India D2C brands, checked 25 November 2026.',
     answerFirst:
-      'TopEdge AI vs Zoko comes down to how you want to be billed. TopEdge AI charges a flat fee by Shopify orders: ₹1,999 to ₹6,499 a month including GST on topedgeai.com, or $19 to $65 through Shopify, with no conversation fee. Zoko charges $49.99 to $139.99 a month in US dollars and meters conversations on Starter. Where Zoko is better: selling from a WhatsApp catalog inside the chat, COD to prepaid on every plan, and 4.9 from 475 App Store reviews against none yet for TopEdge AI. Read 12 November 2026.',
+      'TopEdge AI vs Zoko comes down to how you want to be billed. TopEdge AI charges a flat fee by Shopify orders: ₹1,999 to ₹6,499 a month including GST on topedgeai.com, or $19 to $65 through Shopify, with no conversation fee. Zoko charges $49.99 to $139.99 a month in US dollars and meters conversations on Starter. Where Zoko is better: selling from a WhatsApp catalog inside the chat, COD to prepaid on every plan, and 4.9 from 481 App Store reviews against none yet for TopEdge AI. Read 25 November 2026.',
     researchAsOf: 'Nov 2026',
     matrix: ZOKO_PAIRWISE_MATRIX.map(({ label, description, topedge, competitor }) => ({
       label,
@@ -276,7 +276,7 @@ export const COMPARE_COMPETITORS: Record<string, CompareCompetitor> = {
       competitor,
     })),
     matrixNote:
-      'Read off zoko.io/pricing and apps.shopify.com/whatsapp-button-chat on 12 Nov 2026. Starter $49.99/mo meters $0.015 per conversation with no cap and has unlimited agents. Plus $79.99/mo includes 5,000 conversations then $0.00199 each, with 5 agents and $15 per extra agent. Elite $139.99/mo includes 100,000 then $0.00099, 10 agents at $12 each. A Max plan (5M conversations, 30 agents) is shown only on the App Store listing, at about ₹46,883 a month. AI agents from $24.99/mo, premium flows $5.99 per flow per month, Instagram $9.99/mo. Confirm live before purchase; figures change.',
+      'Read off zoko.io/pricing and apps.shopify.com/whatsapp-button-chat on 25 Nov 2026 (listing: 4.9 from 481 reviews). Starter $49.99/mo meters $0.015 per conversation with no cap and has unlimited agents. Plus $79.99/mo includes 5,000 conversations then $0.00199 each, with 5 agents and $15 per extra agent. Elite $139.99/mo includes 100,000 then $0.00099, 10 agents at $12 each. A Max plan (5M conversations, 30 agents) is shown only on the App Store listing, at about ₹46,455 a month. AI agents from $24.99/mo, premium flows $5.99 per flow per month, Instagram $9.99/mo. Confirm live before purchase; figures change.',
     related: [
       { label: 'Zoko alternatives guide', href: '/blog/zoko-alternative-shopify-india' },
       { label: 'Alternatives index', href: '/compare/alternatives' },
@@ -369,14 +369,14 @@ export const COMPARE_COMPETITORS: Record<string, CompareCompetitor> = {
     logoAlt: 'Dondy logo',
     accent: '#0f766e',
     brandTag: 'WhatsApp widget + USD automation',
-    title: 'TopEdge AI vs Dondy (2026): 0% Meta Markup vs ~60% Rate Card',
+    title: 'TopEdge AI vs Dondy (2027): 0% Markup vs a 1.6x Message Rate',
     description:
-      'TopEdge AI vs Dondy for Shopify India: 0% Meta markup and ₹1,999/mo INR plans vs Dondy’s $0.01888/msg India rate and $79.99 to $159.99 USD tiers.',
+      'TopEdge AI vs Dondy for Shopify India, read 25 Nov 2026: Meta’s ₹0.8631 rate at 0% markup vs Dondy’s $0.01888 India rate and $79.99 automation.',
     keywords:
       'TopEdge AI vs Dondy, Dondy alternative Shopify, Dondy WhatsApp markup, Dondy pricing India, Dondy vs TopEdge AI',
     h1: 'TopEdge AI vs Dondy',
-    subtitle: 'TopEdge AI vs Dondy for Shopify India D2C brands, checked for 2026.',
-    researchAsOf: 'Sep 2026',
+    subtitle: 'TopEdge AI vs Dondy for Shopify India D2C brands, checked 25 November 2026.',
+    researchAsOf: 'Nov 2026',
     matrix: DONDYY_PAIRWISE_MATRIX.map(({ label, description, topedge, competitor }) => ({
       label,
       description,
@@ -384,7 +384,7 @@ export const COMPARE_COMPETITORS: Record<string, CompareCompetitor> = {
       competitor,
     })),
     matrixNote:
-      'Checked 8 Nov 2026: Shopify listing apps.shopify.com/dondy-marketing-ai shows Built for Shopify, 4.9★ / 835 reviews, Free widget, Pro $6.99, Power Automation $79.99 (₹7,517.01 a month to an Indian store), Elite $159.99. dondy.net/dondy-pricing also lists Advanced $14.99 and Ultimate $299 tiers and the per-market rate table (India $0.01888, 1.6× the $0.0118 on Meta’s USD rate card effective 1 Oct 2026). Surfaces disagree on agent seats (listing: 5 on Elite; site: unlimited) and on the US floor (“from $0.0158” on the listing vs North America $0.04 on the table). Dondy bills in dollars: at ₹93.92 to the dollar (ECB reference rate, 6 Nov 2026) that India row is about ₹1.77 a message against Meta’s ₹0.8631 INR rate, about ₹0.91 extra per send, or about ₹9,100 on 10,000 marketing messages. Verify both before purchase.',
+      'Checked 25 Nov 2026: Shopify listing apps.shopify.com/dondy-marketing-ai shows Built for Shopify, 4.9★ / 828 reviews, Free widget, Pro $6.99, Power Automation $79.99 (about ₹7,432 a month as Shopify’s estimate), Elite $159.99. dondy.net/dondy-pricing also lists Advanced $14.99 and Ultimate $299 tiers and the per-market rate table (India $0.01888, 1.6× the $0.0118 on Meta’s USD rate card effective 1 Oct 2026). Surfaces disagree on agent seats (listing: 5 on Elite; site: unlimited) and on the US floor (“from $0.0158” on the listing vs North America $0.04 on the table). Dondy bills in dollars: at ₹93.92 to the dollar (ECB reference rate, 6 Nov 2026) that India row is about ₹1.77 a message against Meta’s ₹0.8631 INR rate, about ₹0.91 extra per send, or about ₹9,100 on 10,000 marketing messages. Verify both before purchase.',
     related: [
       { label: 'Dondy alternative (markup)', href: '/blog/dondy-alternative-shopify-india' },
       { label: 'Best WhatsApp tools India', href: '/blog/best-whatsapp-automation-tools-shopify-india' },

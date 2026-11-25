@@ -373,8 +373,8 @@ export const SOURCES = {
     label: 'Zoko’s published pricing page',
     publisher: 'Zoko',
     claim:
-      'Read 12 November 2026: Starter $49.99/month with a $0.015 markup on all conversations and unlimited agents; Plus $79.99/month with 5,000 conversations at no markup then $0.00199 each, 5 agents then $15 each; Elite $139.99/month with 100,000 conversations then $0.00099 each, 10 agents then $12 each. Priced in US dollars with no rupee plan and no billing toggle; every feature is on every plan; 7-day free trial. WhatsApp is charged at Meta’s rate card, paid directly to Meta; Instagram $9.99/month. Essential flows are free on every plan and include double-confirm COD orders and convert COD to prepaid; premium flows are $5.99 a month per flow, with 500K flow steps a month included then $0.0002 a step. AI agents are $24.99/month plus $0.09 per resolution, and an order-taking agent is $24.99/month plus 3% of order value. A conversation is a 24-hour session that starts with the first business message. Re-read 24 November 2026 (no billing toggle; monthly or yearly, no contracts): Starter $49.99 a month with a $0.015 markup on all conversations and unlimited agents; Plus $79.99 with 5,000 conversations at $0 markup then $0.00199 each, first 5 agents free then $15; Elite $139.99 with 100,000 conversations at $0 markup then $0.00099, first 10 agents free then $12. WhatsApp at Meta’s rate card, paid directly to Meta. Essential flows free on every plan: 11 pre-built flows including abandoned checkout recovery, double-confirm COD orders, convert COD to prepaid and order notifications; premium flows $5.99 a month each; AI agents $24.99 a month plus $0.09 per resolution, or plus 3% of order value for the order-taking agent.',
-    verified: '2026-11-24',
+      'Read 12 November 2026: Starter $49.99/month with a $0.015 markup on all conversations and unlimited agents; Plus $79.99/month with 5,000 conversations at no markup then $0.00199 each, 5 agents then $15 each; Elite $139.99/month with 100,000 conversations then $0.00099 each, 10 agents then $12 each. Priced in US dollars with no rupee plan and no billing toggle; every feature is on every plan; 7-day free trial. WhatsApp is charged at Meta’s rate card, paid directly to Meta; Instagram $9.99/month. Essential flows are free on every plan and include double-confirm COD orders and convert COD to prepaid; premium flows are $5.99 a month per flow, with 500K flow steps a month included then $0.0002 a step. AI agents are $24.99/month plus $0.09 per resolution, and an order-taking agent is $24.99/month plus 3% of order value. A conversation is a 24-hour session that starts with the first business message. Re-read 24 November 2026 (no billing toggle; monthly or yearly, no contracts): Starter $49.99 a month with a $0.015 markup on all conversations and unlimited agents; Plus $79.99 with 5,000 conversations at $0 markup then $0.00199 each, first 5 agents free then $15; Elite $139.99 with 100,000 conversations at $0 markup then $0.00099, first 10 agents free then $12. WhatsApp at Meta’s rate card, paid directly to Meta. Essential flows free on every plan: 11 pre-built flows including abandoned checkout recovery, double-confirm COD orders, convert COD to prepaid and order notifications; premium flows $5.99 a month each; AI agents $24.99 a month plus $0.09 per resolution, or plus 3% of order value for the order-taking agent. Re-read 25 November 2026 (monthly view only, no yearly prices shown): unchanged, Starter $49.99 with $0.015 markup on all conversations, Plus $79.99 with 5,000 conversations at $0 markup, Elite $139.99 with 100,000; “Zoko charges are always in USD”; subscription charged on the first day of each period, usage billed after the month ends.',
+    verified: '2026-11-25',
   },
   zokoShopifyListing: {
     id: 'zokoShopifyListing',
@@ -382,8 +382,8 @@ export const SOURCES = {
     label: 'Zoko on the Shopify App Store',
     publisher: 'Shopify App Store',
     claim:
-      'Read 12 November 2026 from India: Starter ₹4,687.47, Plus ₹7,500.52, Elite ₹13,126.61 and Max ₹46,883.15 a month, as Shopify’s INR estimates at 1 INR = 0.0107 USD (about ₹93.77 to the dollar). Max lists 5 million conversations then $0.00049 each and 30 agents then $9 each, and is not shown on zoko.io/pricing. Rated 4.9 from 475 reviews. 7-day free trial.',
-    verified: '2026-11-12',
+      'Read 12 November 2026 from India: Starter ₹4,687.47, Plus ₹7,500.52, Elite ₹13,126.61 and Max ₹46,883.15 a month, as Shopify’s INR estimates at 1 INR = 0.0107 USD (about ₹93.77 to the dollar). Max lists 5 million conversations then $0.00049 each and 30 agents then $9 each, and is not shown on zoko.io/pricing. Rated 4.9 from 475 reviews. 7-day free trial. Re-read 25 November 2026 (fetched at 1 INR = 0.0108 USD): name “Zoko WhatsApp Marketing & Chat”, Bourbon Science Inc., based in India, launched 8 December 2020, rated 4.9 from 481 reviews, no free plan, 7-day free trial on every plan; Starter ₹4,644.70, Plus ₹7,432.08, Elite ₹13,006.84, Max ₹46,455.38 a month as Shopify’s estimates. Lists cart recovery, COD verification, order updates and a WhatsApp catalog synced from Shopify.',
+    verified: '2026-11-25',
   },
   bitespeedPricing: {
     id: 'bitespeedPricing',
@@ -391,8 +391,8 @@ export const SOURCES = {
     label: 'BiteSpeed’s pricing page',
     publisher: 'BiteSpeed',
     claim:
-      'BiteSpeed publishes no prices. Requesting https://www.bitespeed.co/pricing returns a single redirect to https://www.bitespeed.co/request-demo, so there is no plan, tier or per-message rate a buyer can read before speaking to sales. Re-read 17 November 2026: still redirects (“Talk to us. Our sales team will get in touch with you.”). Home page: “Trusted by 5000+ brands”, WhatsApp, Voice, Email and SMS, AI voice agents. Shopify app (apps.shopify.com/bitespeed-fb-messenger-chatbot): “Free to install. Additional charges may apply”, rated 4.6 from 406 reviews, charges billed in USD/INR every 30 days.',
-    verified: '2026-11-17',
+      'BiteSpeed publishes no prices. Requesting https://www.bitespeed.co/pricing returns a single redirect to https://www.bitespeed.co/request-demo, so there is no plan, tier or per-message rate a buyer can read before speaking to sales. Re-read 17 November 2026: still redirects (“Talk to us. Our sales team will get in touch with you.”). Home page: “Trusted by 5000+ brands”, WhatsApp, Voice, Email and SMS, AI voice agents. Shopify app (apps.shopify.com/bitespeed-fb-messenger-chatbot): “Free to install. Additional charges may apply”, rated 4.6 from 406 reviews, charges billed in USD/INR every 30 days. Re-read 25 November 2026 with curl and a browser user agent: HTTP 301 to https://www.bitespeed.co/request-demo (page title “Request Demo”). Shopify listing “B: WhatsApp, Voice, SMS & Chat”, launched 7 October 2019, based in India: 4.6 from 408 reviews (374 five-star, 23 one-star), no Built for Shopify badge, “Free to install. Additional charges may apply.” with no plan prices and no trial length; names COD verification, converting COD to prepaid, order updates, shipping alerts and an AI voice agent.',
+    verified: '2026-11-25',
   },
   dondyListing: {
     id: 'dondyListing',
@@ -400,8 +400,8 @@ export const SOURCES = {
     label: 'Dondy’s Shopify App Store listing',
     publisher: 'Shopify',
     claim:
-      'Dondy carries the Built for Shopify badge, lists a free plan and a free trial, is rated 4.9 from 835 reviews, and the listing states the developer is based in India. Served to an Indian store in rupees: Pro ₹656.88, Power Automation ₹7,517.01 and Elite ₹15,034.96 a month, against $6.99, $79.99 and $159.99 list prices, which is about ₹93.97 to the dollar; Shopify bills in the store’s currency at the exchange rate on the day of each charge. Power says WhatsApp automation rates start from $0.0158 (US), Elite from $0.0126 (US), and both include 1,000 one-click messages every 30 days. COD verification is named among the chat features. Interface languages are English, Spanish, Italian, Portuguese (Brazil) and French. Re-read 24 November 2026: Built for Shopify, based in India, 4.9 from 829 reviews. Free plan is the WhatsApp button only; Pro $6.99 a month (manual abandoned cart recovery and manual order confirmation messages); Power Automation $79.99 (WhatsApp abandoned cart recovery, campaigns, Shopify inbox, official API; rates from $0.0158 US); Elite $159.99 (AI chatbot, inbox with 5 agents). Billed in USD. Lists COD verification.',
-    verified: '2026-11-24',
+      'Dondy carries the Built for Shopify badge, lists a free plan and a free trial, is rated 4.9 from 835 reviews, and the listing states the developer is based in India. Served to an Indian store in rupees: Pro ₹656.88, Power Automation ₹7,517.01 and Elite ₹15,034.96 a month, against $6.99, $79.99 and $159.99 list prices, which is about ₹93.97 to the dollar; Shopify bills in the store’s currency at the exchange rate on the day of each charge. Power says WhatsApp automation rates start from $0.0158 (US), Elite from $0.0126 (US), and both include 1,000 one-click messages every 30 days. COD verification is named among the chat features. Interface languages are English, Spanish, Italian, Portuguese (Brazil) and French. Re-read 24 November 2026: Built for Shopify, based in India, 4.9 from 829 reviews. Free plan is the WhatsApp button only; Pro $6.99 a month (manual abandoned cart recovery and manual order confirmation messages); Power Automation $79.99 (WhatsApp abandoned cart recovery, campaigns, Shopify inbox, official API; rates from $0.0158 US); Elite $159.99 (AI chatbot, inbox with 5 agents). Billed in USD. Lists COD verification. Re-read 25 November 2026: name “Dondy: WhatsApp Marketing+Chat”, Built for Shopify, 4.9 from 828 reviews, launched 15 March 2023; tagged “Based in India” while the developer address on the same page reads Givatayim, Israel; languages now also include Turkish. Pro about ₹649.46, Power Automation about ₹7,432.08, Elite about ₹14,865.09 a month as Shopify’s estimates at 1 INR = 0.0108 USD.',
+    verified: '2026-11-25',
   },
   dondyPricing: {
     id: 'dondyPricing',
@@ -409,8 +409,35 @@ export const SOURCES = {
     label: 'Dondy’s pricing page and per-market rate table',
     publisher: 'Dondy',
     claim:
-      'Plans in US dollars, each with a 7-day free trial: Free $0, Pro $6.99, Advanced $14.99, Power Automation $79.99, Elite $159.99 and Ultimate $299 a month, with 25% off yearly. Power says automation rates start from $0.0158 (US) and include 1,000 one-click messages every 30 days. A “WhatsApp API Pricing, Market Rate Per Message (US$)” table lists India at $0.01888, North America $0.04, Colombia $0.02, Turkey $0.01744 and Rest of Central & Eastern Europe $0.1376. The table does not split marketing from utility messages. India rate re-read 16 November 2026: still $0.01888.',
-    verified: '2026-11-08',
+      'Plans in US dollars, each with a 7-day free trial: Free $0, Pro $6.99, Advanced $14.99, Power Automation $79.99, Elite $159.99 and Ultimate $299 a month, with 25% off yearly. Power says automation rates start from $0.0158 (US) and include 1,000 one-click messages every 30 days. A “WhatsApp API Pricing, Market Rate Per Message (US$)” table lists India at $0.01888, North America $0.04, Colombia $0.02, Turkey $0.01744 and Rest of Central & Eastern Europe $0.1376. The table does not split marketing from utility messages. India rate re-read 16 November 2026: still $0.01888. Re-read 25 November 2026: Free $0 (widget, 10 manual abandoned cart and 10 manual order confirmation messages), Pro $6.99, Power Automation $79.99, Elite $159.99, Ultimate $299 a month; India $0.01888 per message in a single-column table; no saving or markup claim on the page.',
+    verified: '2026-11-25',
+  },
+  bitespeedListing: {
+    id: 'bitespeedListing',
+    url: 'https://apps.shopify.com/bitespeed-fb-messenger-chatbot',
+    label: 'BiteSpeed on the Shopify App Store',
+    publisher: 'Shopify App Store',
+    claim:
+      'Read 25 November 2026: “B: WhatsApp, Voice, SMS & Chat” by BiteSpeed, based in India, launched 7 October 2019, rated 4.6 from 408 reviews, no Built for Shopify badge. Pricing reads “Free to install. Additional charges may apply.” with one plan block and no prices or trial length. Features named: abandoned cart recovery, COD verification, converting COD to prepaid, order updates and shipping alerts, WhatsApp broadcasts, AI chatbots, an AI voice agent, SMS and email reminders.',
+    verified: '2026-11-25',
+  },
+  shopifyCustomerNotifications: {
+    id: 'shopifyCustomerNotifications',
+    url: 'https://help.shopify.com/en/manual/fulfillment/setup/notifications/customer-notifications',
+    label: 'Shopify Help Center: customer notifications',
+    publisher: 'Shopify',
+    claim:
+      'Read 25 November 2026: customer notifications are automated emails and SMS messages about orders, shipping and accounts: order confirmation, shipping confirmation and update, out for delivery and delivered (from carrier or fulfilment-app tracking events, not for local delivery), refund and cancellation. WhatsApp is not offered as a channel for them; Shopify Messaging’s WhatsApp pages cover marketing to opted-in subscribers only.',
+    verified: '2026-11-25',
+  },
+  globalCartAppListings: {
+    id: 'globalCartAppListings',
+    url: 'https://apps.shopify.com/klaviyo-email-marketing',
+    label: 'Klaviyo, Omnisend and Brevo PushOwl on the Shopify App Store',
+    publisher: 'Shopify App Store',
+    claim:
+      'Read 25 November 2026 at 1 INR = 0.0108 USD: Klaviyo: Email Marketing & SMS 4.7 from 3,471, free up to 250 active profiles and 500 emails a month, SMS from ₹1,393.69 and email from ₹1,858.25 a month. Omnisend Email Marketing & SMS (apps.shopify.com/omnisend) 4.7 from 3,243, free for 250 contacts and 500 emails a month with abandoned cart emails, Standard ₹1,486.60 a month. Brevo PushOwl: Email,Push,SMS (apps.shopify.com/pushowl) 4.8 from 2,326, free Basic bundle with 500 web push and 500 emails and no cart automation, Plus ₹1,765.34 a month. Wiz AI Email & Abandoned Cart (apps.shopify.com/emailwiz) 5.0 from 241, free up to 500 active contacts, Pro ₹2,786.45. Cartly (apps.shopify.com/cartly) “not currently available on the Shopify App Store”.',
+    verified: '2026-11-25',
   },
   metaUsdRateCard: {
     id: 'metaUsdRateCard',

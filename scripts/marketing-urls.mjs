@@ -86,7 +86,7 @@ export const TOPIC_SLUGS = ['shopify-whatsapp-integration'];
  * public/<path>/index.html. Indexable and in the sitemap, never prerendered
  * (prerendering would write a second copy beside the static file).
  */
-export const STATIC_LANDING_PATHS = ['/whatsapp-app-for-shopify', '/whatsapp-abandoned-cart-recovery-app'];
+export const STATIC_LANDING_PATHS = ['/whatsapp-app-for-shopify', '/whatsapp-abandoned-cart-recovery-app', '/shopify-whatsapp-order-notifications'];
 
 export const BLOG_SLUGS = [
   'ecommerce-funnel-drop-off-benchmarks-visitor-identity-resolution',

@@ -77,8 +77,8 @@ Status: **Fixed** = changed in the repo today, live after the next deploy. **Own
 | M17 | Every blog post ends with the same cart-recovery banner | COD, RTO, pricing and alternative posts all close on "Run cart recovery on your Shopify store" (`08`). | Match the closing banner to the post's topic. | Planned |
 | M18 | Main navigation omits `/integrations`, `/compare`, `/tools`, `/services` | They are linked from the footer only (`04`). | A "More" column in the Products menu. The menu was last set by the owner on 23 Nov, so this is a decision. | Owner |
 | M19 | Anchor text is weak | 85% of links to `/pricing` say "Pricing" or "See pricing"; some card links concatenate the whole card (`04`). | Use the link matrix in `04`, section 3. | Planned |
-| M20 | Blog `isPartOf` points at an `@id` that does not exist | 43 posts point at `/blog`; the Blog node is `/blog#blog` (`03`). | One-line fix in `BlogPost.tsx`. | Planned (file in redesign today) |
-| M21 | `/about` nests a second, anonymous Organization and founders | `03`. | Reference the existing `@id`s. | Planned (file in redesign today) |
+| M20 | Blog `isPartOf` points at an `@id` that does not exist | 43 posts point at `/blog`; the Blog node is `/blog#blog` (`03`). | One-line fix in `BlogPost.tsx`. | Fixed (24 Nov; verified in source and live 25 Nov: `isPartOf` is `/blog#blog`) |
+| M21 | `/about` nests a second, anonymous Organization and founders | `03`. | Reference the existing `@id`s. | Fixed (24 Nov; verified live 25 Nov: AboutPage `mainEntity` is `/#organization`, one Organization node) |
 | M22 | No OG image is 1200 by 630; 129 pages share the default | Default is 1280 by 720 (`12`). | Dedicated OG images for pricing, features, compare, customers and tools, made from real product UI. | Planned |
 | M23 | 80 of 95 videos have no poster; none has captions | `12`. | Posters for feature films; a transcript or captions for the home film. | Planned |
 | M24 | `/services` H1 is cut off on phones and the page has no agency path | `08`. | Wrap the H1; add a partner-program block. | In redesign today |
@@ -98,7 +98,7 @@ Status: **Fixed** = changed in the repo today, live after the next deploy. **Own
 | L8 | No skip link; pricing tabs lack `aria-controls` | `07`. | Add both. | Planned |
 | L9 | 421 images lack `width`, 108 alts exceed 125 characters, 376 look non-decorative with empty alt | `12`. | Sweep by template. | Planned |
 | L10 | Demo numbers in product films carry no "demo store" label | `08`. | A caption under the film ("Sample store data"). | Planned |
-| L11 | Shopify Messaging WhatsApp launch date | The cluster agent read 29 Jul 2026 in Shopify's changelog; the repo says 28 Oct 2026 (`09`). | Re-read the changelog before touching either page. | Verify first |
+| L11 | Shopify Messaging WhatsApp launch date | The cluster agent read 29 Jul 2026 in Shopify's changelog; the repo says 28 Oct 2026 (`09`). | Re-read the changelog before touching either page. | Settled 25 Nov: both dates are real. 29 Jul = WhatsApp marketing campaigns in Shopify Messaging; 28 Oct = WhatsApp marketing automations (abandoned cart and checkout). The repo's 28 Oct line is right for reminders |
 
 ## 3. Keyword clusters (`09-keyword-clusters.md`)
 

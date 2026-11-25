@@ -1,0 +1,167 @@
+    1 INFO finding(s)
+{
+  "status": "ok",
+  "url": "https://topedgeai.com/whatsapp-abandoned-cart-recovery-app",
+  "baseline_id": 36,
+  "baseline_timestamp": "2026-11-24T16:46:26.067951+00:00",
+  "comparison_timestamp": "2026-11-25T04:51:41.435853+00:00",
+  "summary": {
+    "total_rules": 17,
+    "triggered": 1,
+    "critical": 0,
+    "warning": 0,
+    "info": 1
+  },
+  "triggered_findings": [
+    {
+      "rule": "content_hash_changed",
+      "severity": "INFO",
+      "triggered": true,
+      "old_value": "81fafb57082e...",
+      "new_value": "9f918f49351e...",
+      "message": "Page content has changed (HTML body hash differs from baseline)."
+    }
+  ],
+  "untriggered_findings": [
+    {
+      "rule": "schema_removed",
+      "severity": "CRITICAL",
+      "triggered": false,
+      "old_value": "5 schema block(s)",
+      "new_value": "0 schema blocks",
+      "message": "Schema presence unchanged."
+    },
+    {
+      "rule": "canonical_changed",
+      "severity": "CRITICAL",
+      "triggered": false,
+      "old_value": "https://topedgeai.com/whatsapp-abandoned-cart-recovery-app",
+      "new_value": "https://topedgeai.com/whatsapp-abandoned-cart-recovery-app",
+      "message": "Canonical URL unchanged."
+    },
+    {
+      "rule": "canonical_removed",
+      "severity": "CRITICAL",
+      "triggered": false,
+      "old_value": "https://topedgeai.com/whatsapp-abandoned-cart-recovery-app",
+      "new_value": null,
+      "message": "Canonical tag presence unchanged."
+    },
+    {
+      "rule": "noindex_added",
+      "severity": "CRITICAL",
+      "triggered": false,
+      "old_value": "index,follow,max-image-preview:large",
+      "new_value": "index,follow,max-image-preview:large",
+      "message": "Robots directives unchanged regarding noindex."
+    },
+    {
+      "rule": "h1_removed",
+      "severity": "CRITICAL",
+      "triggered": false,
+      "old_value": "WhatsApp Abandoned Cart Recovery App for Shopify",
+      "new_value": null,
+      "message": "H1 presence unchanged."
+    },
+    {
+      "rule": "h1_changed",
+      "severity": "CRITICAL",
+      "triggered": false,
+      "old_value": "WhatsApp Abandoned Cart Recovery App for Shopify",
+      "new_value": "WhatsApp Abandoned Cart Recovery App for Shopify",
+      "message": "H1 text is similar enough (similarity: 100%)."
+    },
+    {
+      "rule": "title_removed",
+      "severity": "CRITICAL",
+      "triggered": false,
+      "old_value": "WhatsApp Abandoned Cart Recovery App for Shopify",
+      "new_value": null,
+      "message": "Title tag presence unchanged."
+    },
+    {
+      "rule": "status_code_error",
+      "severity": "CRITICAL",
+      "triggered": false,
+      "old_value": 200,
+      "new_value": 200,
+      "message": "Status code: 200 -> 200."
+    },
+    {
+      "rule": "title_changed",
+      "severity": "WARNING",
+      "triggered": false,
+      "old_value": "WhatsApp Abandoned Cart Recovery App for Shopify",
+      "new_value": "WhatsApp Abandoned Cart Recovery App for Shopify",
+      "message": "Title text unchanged."
+    },
+    {
+      "rule": "meta_description_changed",
+      "severity": "WARNING",
+      "triggered": false,
+      "old_value": "WhatsApp abandoned cart recovery app for Shopify India: 3 reminders at 25 min, 4 h and 36 h, stopped on purchase, \u20b90.863...",
+      "new_value": "WhatsApp abandoned cart recovery app for Shopify India: 3 reminders at 25 min, 4 h and 36 h, stopped on purchase, \u20b90.863...",
+      "message": "Meta description unchanged."
+    },
+    {
+      "rule": "cwv_regressed",
+      "severity": "WARNING",
+      "triggered": false,
+      "old_value": null,
+      "new_value": null,
+      "message": "CWV comparison skipped (data unavailable)."
+    },
+    {
+      "rule": "perf_score_dropped",
+      "severity": "WARNING",
+      "triggered": false,
+      "old_value": null,
+      "new_value": null,
+      "message": "Performance score comparison skipped."
+    },
+    {
+      "rule": "og_tags_removed",
+      "severity": "WARNING",
+      "triggered": false,
+      "old_value": [
+        "og:type",
+        "og:site_name",
+        "og:title",
+        "og:description",
+        "og:url",
+        "og:image",
+        "og:image:width",
+        "og:image:height",
+        "og:image:alt"
+      ],
+      "new_value": [],
+      "message": "OG tags presence unchanged."
+    },
+    {
+      "rule": "schema_modified",
+      "severity": "WARNING",
+      "triggered": false,
+      "old_value": "c8594c94b718...",
+      "new_value": "c8594c94b718...",
+      "message": "Schema content hash unchanged."
+    },
+    {
+      "rule": "schema_added",
+      "severity": "INFO",
+      "triggered": false,
+      "old_value": "0 schema blocks",
+      "new_value": "5 schema block(s)",
+      "message": "No new schema added."
+    },
+    {
+      "rule": "h2_structure_changed",
+      "severity": "INFO",
+      "triggered": false,
+      "old_value": "8 H2s",
+      "new_value": "8 H2s",
+      "message": "H2 structure unchanged."
+    }
+  ],
+  "current_status_code": 200,
+  "cwv_compared": false
+}
