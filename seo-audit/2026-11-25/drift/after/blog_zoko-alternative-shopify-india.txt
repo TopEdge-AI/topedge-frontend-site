@@ -1,0 +1,167 @@
+    1 WARNING finding(s)
+    1 INFO finding(s)
+{
+  "status": "ok",
+  "url": "https://topedgeai.com/blog/zoko-alternative-shopify-india",
+  "baseline_id": 51,
+  "baseline_timestamp": "2026-11-25T04:59:37.554291+00:00",
+  "comparison_timestamp": "2026-11-25T05:37:00.704382+00:00",
+  "summary": {
+    "total_rules": 17,
+    "triggered": 2,
+    "critical": 0,
+    "warning": 1,
+    "info": 1
+  },
+  "triggered_findings": [
+    {
+      "rule": "schema_modified",
+      "severity": "WARNING",
+      "triggered": true,
+      "old_value": "cd34d1ea562d...",
+      "new_value": "345142562208...",
+      "message": "Schema/JSON-LD content has been modified. Validate with /seo schema."
+    },
+    {
+      "rule": "content_hash_changed",
+      "severity": "INFO",
+      "triggered": true,
+      "old_value": "125ae154deb2...",
+      "new_value": "20a59a5f2ccd...",
+      "message": "Page content has changed (HTML body hash differs from baseline)."
+    }
+  ],
+  "untriggered_findings": [
+    {
+      "rule": "schema_removed",
+      "severity": "CRITICAL",
+      "triggered": false,
+      "old_value": "5 schema block(s)",
+      "new_value": "0 schema blocks",
+      "message": "Schema presence unchanged."
+    },
+    {
+      "rule": "canonical_changed",
+      "severity": "CRITICAL",
+      "triggered": false,
+      "old_value": "https://topedgeai.com/blog/zoko-alternative-shopify-india",
+      "new_value": "https://topedgeai.com/blog/zoko-alternative-shopify-india",
+      "message": "Canonical URL unchanged."
+    },
+    {
+      "rule": "canonical_removed",
+      "severity": "CRITICAL",
+      "triggered": false,
+      "old_value": "https://topedgeai.com/blog/zoko-alternative-shopify-india",
+      "new_value": null,
+      "message": "Canonical tag presence unchanged."
+    },
+    {
+      "rule": "noindex_added",
+      "severity": "CRITICAL",
+      "triggered": false,
+      "old_value": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+      "new_value": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+      "message": "Robots directives unchanged regarding noindex."
+    },
+    {
+      "rule": "h1_removed",
+      "severity": "CRITICAL",
+      "triggered": false,
+      "old_value": "Best Zoko Alternative for Shopify India (2026)",
+      "new_value": null,
+      "message": "H1 presence unchanged."
+    },
+    {
+      "rule": "h1_changed",
+      "severity": "CRITICAL",
+      "triggered": false,
+      "old_value": "Best Zoko Alternative for Shopify India (2026)",
+      "new_value": "Best Zoko Alternative for Shopify India (2026)",
+      "message": "H1 text is similar enough (similarity: 100%)."
+    },
+    {
+      "rule": "title_removed",
+      "severity": "CRITICAL",
+      "triggered": false,
+      "old_value": "Best Zoko Alternative for Shopify India (2026) | TopEdge AI",
+      "new_value": null,
+      "message": "Title tag presence unchanged."
+    },
+    {
+      "rule": "status_code_error",
+      "severity": "CRITICAL",
+      "triggered": false,
+      "old_value": 200,
+      "new_value": 200,
+      "message": "Status code: 200 -> 200."
+    },
+    {
+      "rule": "title_changed",
+      "severity": "WARNING",
+      "triggered": false,
+      "old_value": "Best Zoko Alternative for Shopify India (2026) | TopEdge AI",
+      "new_value": "Best Zoko Alternative for Shopify India (2026) | TopEdge AI",
+      "message": "Title text unchanged."
+    },
+    {
+      "rule": "meta_description_changed",
+      "severity": "WARNING",
+      "triggered": false,
+      "old_value": "Zoko alternative for Shopify India: Zoko pricing read 12 Nov 2026, the bill at 5,000 conversations in rupees, who should...",
+      "new_value": "Zoko alternative for Shopify India: Zoko pricing read 12 Nov 2026, the bill at 5,000 conversations in rupees, who should...",
+      "message": "Meta description unchanged."
+    },
+    {
+      "rule": "cwv_regressed",
+      "severity": "WARNING",
+      "triggered": false,
+      "old_value": null,
+      "new_value": null,
+      "message": "CWV comparison skipped (data unavailable)."
+    },
+    {
+      "rule": "perf_score_dropped",
+      "severity": "WARNING",
+      "triggered": false,
+      "old_value": null,
+      "new_value": null,
+      "message": "Performance score comparison skipped."
+    },
+    {
+      "rule": "og_tags_removed",
+      "severity": "WARNING",
+      "triggered": false,
+      "old_value": [
+        "og:type",
+        "og:site_name",
+        "og:locale",
+        "og:url",
+        "og:title",
+        "og:description",
+        "og:image",
+        "og:image:alt"
+      ],
+      "new_value": [],
+      "message": "OG tags presence unchanged."
+    },
+    {
+      "rule": "schema_added",
+      "severity": "INFO",
+      "triggered": false,
+      "old_value": "0 schema blocks",
+      "new_value": "5 schema block(s)",
+      "message": "No new schema added."
+    },
+    {
+      "rule": "h2_structure_changed",
+      "severity": "INFO",
+      "triggered": false,
+      "old_value": "13 H2s",
+      "new_value": "13 H2s",
+      "message": "H2 structure unchanged."
+    }
+  ],
+  "current_status_code": 200,
+  "cwv_compared": false
+}

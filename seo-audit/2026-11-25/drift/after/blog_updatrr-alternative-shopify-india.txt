@@ -1,0 +1,167 @@
+    1 WARNING finding(s)
+    1 INFO finding(s)
+{
+  "status": "ok",
+  "url": "https://topedgeai.com/blog/updatrr-alternative-shopify-india",
+  "baseline_id": 52,
+  "baseline_timestamp": "2026-11-25T04:59:39.178012+00:00",
+  "comparison_timestamp": "2026-11-25T05:37:02.075704+00:00",
+  "summary": {
+    "total_rules": 17,
+    "triggered": 2,
+    "critical": 0,
+    "warning": 1,
+    "info": 1
+  },
+  "triggered_findings": [
+    {
+      "rule": "schema_modified",
+      "severity": "WARNING",
+      "triggered": true,
+      "old_value": "c7352edf899b...",
+      "new_value": "33811d24d48a...",
+      "message": "Schema/JSON-LD content has been modified. Validate with /seo schema."
+    },
+    {
+      "rule": "content_hash_changed",
+      "severity": "INFO",
+      "triggered": true,
+      "old_value": "f17db7e752b7...",
+      "new_value": "0a366ce0d1f3...",
+      "message": "Page content has changed (HTML body hash differs from baseline)."
+    }
+  ],
+  "untriggered_findings": [
+    {
+      "rule": "schema_removed",
+      "severity": "CRITICAL",
+      "triggered": false,
+      "old_value": "5 schema block(s)",
+      "new_value": "0 schema blocks",
+      "message": "Schema presence unchanged."
+    },
+    {
+      "rule": "canonical_changed",
+      "severity": "CRITICAL",
+      "triggered": false,
+      "old_value": "https://topedgeai.com/blog/updatrr-alternative-shopify-india",
+      "new_value": "https://topedgeai.com/blog/updatrr-alternative-shopify-india",
+      "message": "Canonical URL unchanged."
+    },
+    {
+      "rule": "canonical_removed",
+      "severity": "CRITICAL",
+      "triggered": false,
+      "old_value": "https://topedgeai.com/blog/updatrr-alternative-shopify-india",
+      "new_value": null,
+      "message": "Canonical tag presence unchanged."
+    },
+    {
+      "rule": "noindex_added",
+      "severity": "CRITICAL",
+      "triggered": false,
+      "old_value": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+      "new_value": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+      "message": "Robots directives unchanged regarding noindex."
+    },
+    {
+      "rule": "h1_removed",
+      "severity": "CRITICAL",
+      "triggered": false,
+      "old_value": "Best Updatrr Alternative for Shopify India 2026",
+      "new_value": null,
+      "message": "H1 presence unchanged."
+    },
+    {
+      "rule": "h1_changed",
+      "severity": "CRITICAL",
+      "triggered": false,
+      "old_value": "Best Updatrr Alternative for Shopify India 2026",
+      "new_value": "Best Updatrr Alternative for Shopify India 2026",
+      "message": "H1 text is similar enough (similarity: 100%)."
+    },
+    {
+      "rule": "title_removed",
+      "severity": "CRITICAL",
+      "triggered": false,
+      "old_value": "Best Updatrr Alternative for Shopify India 2026 | TopEdge AI",
+      "new_value": null,
+      "message": "Title tag presence unchanged."
+    },
+    {
+      "rule": "status_code_error",
+      "severity": "CRITICAL",
+      "triggered": false,
+      "old_value": 200,
+      "new_value": 200,
+      "message": "Status code: 200 -> 200."
+    },
+    {
+      "rule": "title_changed",
+      "severity": "WARNING",
+      "triggered": false,
+      "old_value": "Best Updatrr Alternative for Shopify India 2026 | TopEdge AI",
+      "new_value": "Best Updatrr Alternative for Shopify India 2026 | TopEdge AI",
+      "message": "Title text unchanged."
+    },
+    {
+      "rule": "meta_description_changed",
+      "severity": "WARNING",
+      "triggered": false,
+      "old_value": "Updatrr alternative for Shopify India: plans from \u20b91,999/mo, a 14-day trial and BYOK AI on every plan, against USD tiers...",
+      "new_value": "Updatrr alternative for Shopify India: plans from \u20b91,999/mo, a 14-day trial and BYOK AI on every plan, against USD tiers...",
+      "message": "Meta description unchanged."
+    },
+    {
+      "rule": "cwv_regressed",
+      "severity": "WARNING",
+      "triggered": false,
+      "old_value": null,
+      "new_value": null,
+      "message": "CWV comparison skipped (data unavailable)."
+    },
+    {
+      "rule": "perf_score_dropped",
+      "severity": "WARNING",
+      "triggered": false,
+      "old_value": null,
+      "new_value": null,
+      "message": "Performance score comparison skipped."
+    },
+    {
+      "rule": "og_tags_removed",
+      "severity": "WARNING",
+      "triggered": false,
+      "old_value": [
+        "og:type",
+        "og:site_name",
+        "og:locale",
+        "og:url",
+        "og:title",
+        "og:description",
+        "og:image",
+        "og:image:alt"
+      ],
+      "new_value": [],
+      "message": "OG tags presence unchanged."
+    },
+    {
+      "rule": "schema_added",
+      "severity": "INFO",
+      "triggered": false,
+      "old_value": "0 schema blocks",
+      "new_value": "5 schema block(s)",
+      "message": "No new schema added."
+    },
+    {
+      "rule": "h2_structure_changed",
+      "severity": "INFO",
+      "triggered": false,
+      "old_value": "11 H2s",
+      "new_value": "11 H2s",
+      "message": "H2 structure unchanged."
+    }
+  ],
+  "current_status_code": 200,
+  "cwv_compared": false
+}

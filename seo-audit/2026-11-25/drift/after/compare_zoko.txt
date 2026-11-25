@@ -1,0 +1,169 @@
+    3 WARNING finding(s)
+    2 INFO finding(s)
+{
+  "status": "ok",
+  "url": "https://topedgeai.com/compare/zoko",
+  "baseline_id": 48,
+  "baseline_timestamp": "2026-11-25T04:59:31.738444+00:00",
+  "comparison_timestamp": "2026-11-25T05:36:57.048738+00:00",
+  "summary": {
+    "total_rules": 17,
+    "triggered": 5,
+    "critical": 0,
+    "warning": 3,
+    "info": 2
+  },
+  "triggered_findings": [
+    {
+      "rule": "title_changed",
+      "severity": "WARNING",
+      "triggered": true,
+      "old_value": "TopEdge AI vs Zoko (2026): Flat INR vs Conversation Meters",
+      "new_value": "TopEdge AI vs Zoko (2027): Flat INR vs USD Conversation Fees",
+      "message": "Title tag text has changed. Monitor CTR in Search Console over 2 weeks."
+    },
+    {
+      "rule": "meta_description_changed",
+      "severity": "WARNING",
+      "triggered": true,
+      "old_value": "TopEdge AI vs Zoko for Shopify India: flat INR plans from \u20b91,999/mo and 0% Meta markup vs Zoko\u2019s $49.99+ USD base fees a...",
+      "new_value": "TopEdge AI vs Zoko for Shopify India, read 25 Nov 2026: \u20b91,999/mo incl. GST, sized by orders, vs Zoko\u2019s $49.99+ USD plan...",
+      "message": "Meta description has changed. Verify it includes target keywords and CTA."
+    },
+    {
+      "rule": "schema_modified",
+      "severity": "WARNING",
+      "triggered": true,
+      "old_value": "31fda00ea37e...",
+      "new_value": "89b3ec5b516d...",
+      "message": "Schema/JSON-LD content has been modified. Validate with /seo schema."
+    },
+    {
+      "rule": "h2_structure_changed",
+      "severity": "INFO",
+      "triggered": true,
+      "old_value": "4 H2s",
+      "new_value": "12 H2s",
+      "message": "H2 heading structure changed (4 -> 12 headings)."
+    },
+    {
+      "rule": "content_hash_changed",
+      "severity": "INFO",
+      "triggered": true,
+      "old_value": "9fdd3365f4e3...",
+      "new_value": "009f2eac0339...",
+      "message": "Page content has changed (HTML body hash differs from baseline)."
+    }
+  ],
+  "untriggered_findings": [
+    {
+      "rule": "schema_removed",
+      "severity": "CRITICAL",
+      "triggered": false,
+      "old_value": "5 schema block(s)",
+      "new_value": "0 schema blocks",
+      "message": "Schema presence unchanged."
+    },
+    {
+      "rule": "canonical_changed",
+      "severity": "CRITICAL",
+      "triggered": false,
+      "old_value": "https://topedgeai.com/compare/zoko",
+      "new_value": "https://topedgeai.com/compare/zoko",
+      "message": "Canonical URL unchanged."
+    },
+    {
+      "rule": "canonical_removed",
+      "severity": "CRITICAL",
+      "triggered": false,
+      "old_value": "https://topedgeai.com/compare/zoko",
+      "new_value": null,
+      "message": "Canonical tag presence unchanged."
+    },
+    {
+      "rule": "noindex_added",
+      "severity": "CRITICAL",
+      "triggered": false,
+      "old_value": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+      "new_value": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+      "message": "Robots directives unchanged regarding noindex."
+    },
+    {
+      "rule": "h1_removed",
+      "severity": "CRITICAL",
+      "triggered": false,
+      "old_value": "TopEdge AIvsZoko",
+      "new_value": null,
+      "message": "H1 presence unchanged."
+    },
+    {
+      "rule": "h1_changed",
+      "severity": "CRITICAL",
+      "triggered": false,
+      "old_value": "TopEdge AIvsZoko",
+      "new_value": "TopEdge AIvsZoko",
+      "message": "H1 text is similar enough (similarity: 100%)."
+    },
+    {
+      "rule": "title_removed",
+      "severity": "CRITICAL",
+      "triggered": false,
+      "old_value": "TopEdge AI vs Zoko (2026): Flat INR vs Conversation Meters",
+      "new_value": null,
+      "message": "Title tag presence unchanged."
+    },
+    {
+      "rule": "status_code_error",
+      "severity": "CRITICAL",
+      "triggered": false,
+      "old_value": 200,
+      "new_value": 200,
+      "message": "Status code: 200 -> 200."
+    },
+    {
+      "rule": "cwv_regressed",
+      "severity": "WARNING",
+      "triggered": false,
+      "old_value": null,
+      "new_value": null,
+      "message": "CWV comparison skipped (data unavailable)."
+    },
+    {
+      "rule": "perf_score_dropped",
+      "severity": "WARNING",
+      "triggered": false,
+      "old_value": null,
+      "new_value": null,
+      "message": "Performance score comparison skipped."
+    },
+    {
+      "rule": "og_tags_removed",
+      "severity": "WARNING",
+      "triggered": false,
+      "old_value": [
+        "og:type",
+        "og:site_name",
+        "og:locale",
+        "og:url",
+        "og:title",
+        "og:description",
+        "og:image",
+        "og:image:alt",
+        "og:image:width",
+        "og:image:height"
+      ],
+      "new_value": [],
+      "message": "OG tags presence unchanged."
+    },
+    {
+      "rule": "schema_added",
+      "severity": "INFO",
+      "triggered": false,
+      "old_value": "0 schema blocks",
+      "new_value": "5 schema block(s)",
+      "message": "No new schema added."
+    }
+  ],
+  "current_status_code": 200,
+  "cwv_compared": false
+}

@@ -1,0 +1,169 @@
+    3 WARNING finding(s)
+    2 INFO finding(s)
+{
+  "status": "ok",
+  "url": "https://topedgeai.com/compare/bitespeed",
+  "baseline_id": 47,
+  "baseline_timestamp": "2026-11-25T04:59:29.506666+00:00",
+  "comparison_timestamp": "2026-11-25T05:36:55.753454+00:00",
+  "summary": {
+    "total_rules": 17,
+    "triggered": 5,
+    "critical": 0,
+    "warning": 3,
+    "info": 2
+  },
+  "triggered_findings": [
+    {
+      "rule": "title_changed",
+      "severity": "WARNING",
+      "triggered": true,
+      "old_value": "TopEdge AI vs Bitespeed (2026): \u20b91,999/mo vs \u20b915,000 Floors",
+      "new_value": "TopEdge AI vs Bitespeed (2027): Public Prices vs Demo Quote",
+      "message": "Title tag text has changed. Monitor CTR in Search Console over 2 weeks."
+    },
+    {
+      "rule": "meta_description_changed",
+      "severity": "WARNING",
+      "triggered": true,
+      "old_value": "Compare TopEdge AI vs Bitespeed for Shopify India: \u20b91,999/mo flat INR plans, 0% Meta markup and built-in warranty vs \u20b95L...",
+      "new_value": "TopEdge AI vs Bitespeed for Shopify India, read 25 Nov 2026: plans from \u20b91,999/mo incl. GST and 0% Meta markup vs no pub...",
+      "message": "Meta description has changed. Verify it includes target keywords and CTA."
+    },
+    {
+      "rule": "schema_modified",
+      "severity": "WARNING",
+      "triggered": true,
+      "old_value": "bda12d7e8551...",
+      "new_value": "ff819e30e8c1...",
+      "message": "Schema/JSON-LD content has been modified. Validate with /seo schema."
+    },
+    {
+      "rule": "h2_structure_changed",
+      "severity": "INFO",
+      "triggered": true,
+      "old_value": "4 H2s",
+      "new_value": "12 H2s",
+      "message": "H2 heading structure changed (4 -> 12 headings)."
+    },
+    {
+      "rule": "content_hash_changed",
+      "severity": "INFO",
+      "triggered": true,
+      "old_value": "ea3339689276...",
+      "new_value": "ef6d7a53d9df...",
+      "message": "Page content has changed (HTML body hash differs from baseline)."
+    }
+  ],
+  "untriggered_findings": [
+    {
+      "rule": "schema_removed",
+      "severity": "CRITICAL",
+      "triggered": false,
+      "old_value": "5 schema block(s)",
+      "new_value": "0 schema blocks",
+      "message": "Schema presence unchanged."
+    },
+    {
+      "rule": "canonical_changed",
+      "severity": "CRITICAL",
+      "triggered": false,
+      "old_value": "https://topedgeai.com/compare/bitespeed",
+      "new_value": "https://topedgeai.com/compare/bitespeed",
+      "message": "Canonical URL unchanged."
+    },
+    {
+      "rule": "canonical_removed",
+      "severity": "CRITICAL",
+      "triggered": false,
+      "old_value": "https://topedgeai.com/compare/bitespeed",
+      "new_value": null,
+      "message": "Canonical tag presence unchanged."
+    },
+    {
+      "rule": "noindex_added",
+      "severity": "CRITICAL",
+      "triggered": false,
+      "old_value": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+      "new_value": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+      "message": "Robots directives unchanged regarding noindex."
+    },
+    {
+      "rule": "h1_removed",
+      "severity": "CRITICAL",
+      "triggered": false,
+      "old_value": "TopEdge AIvsBitespeed",
+      "new_value": null,
+      "message": "H1 presence unchanged."
+    },
+    {
+      "rule": "h1_changed",
+      "severity": "CRITICAL",
+      "triggered": false,
+      "old_value": "TopEdge AIvsBitespeed",
+      "new_value": "TopEdge AIvsBitespeed",
+      "message": "H1 text is similar enough (similarity: 100%)."
+    },
+    {
+      "rule": "title_removed",
+      "severity": "CRITICAL",
+      "triggered": false,
+      "old_value": "TopEdge AI vs Bitespeed (2026): \u20b91,999/mo vs \u20b915,000 Floors",
+      "new_value": null,
+      "message": "Title tag presence unchanged."
+    },
+    {
+      "rule": "status_code_error",
+      "severity": "CRITICAL",
+      "triggered": false,
+      "old_value": 200,
+      "new_value": 200,
+      "message": "Status code: 200 -> 200."
+    },
+    {
+      "rule": "cwv_regressed",
+      "severity": "WARNING",
+      "triggered": false,
+      "old_value": null,
+      "new_value": null,
+      "message": "CWV comparison skipped (data unavailable)."
+    },
+    {
+      "rule": "perf_score_dropped",
+      "severity": "WARNING",
+      "triggered": false,
+      "old_value": null,
+      "new_value": null,
+      "message": "Performance score comparison skipped."
+    },
+    {
+      "rule": "og_tags_removed",
+      "severity": "WARNING",
+      "triggered": false,
+      "old_value": [
+        "og:type",
+        "og:site_name",
+        "og:locale",
+        "og:url",
+        "og:title",
+        "og:description",
+        "og:image",
+        "og:image:alt",
+        "og:image:width",
+        "og:image:height"
+      ],
+      "new_value": [],
+      "message": "OG tags presence unchanged."
+    },
+    {
+      "rule": "schema_added",
+      "severity": "INFO",
+      "triggered": false,
+      "old_value": "0 schema blocks",
+      "new_value": "5 schema block(s)",
+      "message": "No new schema added."
+    }
+  ],
+  "current_status_code": 200,
+  "cwv_compared": false
+}
