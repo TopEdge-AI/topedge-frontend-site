@@ -9,6 +9,7 @@ import {
   CALC_MIN_CLIENTS,
   formatInr,
   monthlyCommission,
+  priceBeforeGst,
   nextTierFor,
   pct,
   tierFor,
@@ -229,7 +230,7 @@ export default function PartnerCalculator({ plans }: { plans: CatalogPlan[] }) {
       <p className="pk-calc__note">
         <Info size={14} aria-hidden />
         <span>
-          {clientsLabel(settled)} on {plan?.displayName} at {formatInr(price)}/mo before GST.
+          {clientsLabel(settled)} on {plan?.displayName} at {formatInr(price)}/mo incl. GST; commission is on {formatInr(Math.round(priceBeforeGst(price)))} before GST.
           {next ? ` At ${next.minClients} clients your rate becomes ${pct(next.rateBp)}.` : ''} Example figures.
         </span>
       </p>

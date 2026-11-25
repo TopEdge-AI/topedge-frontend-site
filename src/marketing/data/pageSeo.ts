@@ -65,7 +65,7 @@ export const PAGE_SEO = {
   pricing: {
     title: 'TopEdge AI Pricing: Plans from ₹1,999/mo, 0% Meta Markup',
     description:
-      'TopEdge AI pricing: ₹1,999 to ₹6,499/mo + GST by order volume, or from $19 on Shopify. 0% markup on Meta rates of ₹0.8631 and ₹0.115. 14-day free trial.',
+      'TopEdge AI pricing: ₹1,999 to ₹6,499/mo incl. GST by order volume, or from $19 on Shopify. 0% markup on Meta rates of ₹0.8631 and ₹0.115. 14-day free trial.',
     keywords:
       'topedge ai pricing, shopify whatsapp pricing india, whatsapp automation price india, whatsapp business api 0% markup, whatsapp api rates india 2026, meta whatsapp india rate card inr, cod confirmation app pricing shopify, whatsapp cart recovery cost india, flat inr whatsapp plans',
     path: '/pricing',
@@ -434,7 +434,7 @@ export function organizationJsonLd() {
         minPrice: 1599,
         maxPrice: 6499,
         priceCurrency: 'INR',
-        valueAddedTaxIncluded: false,
+        valueAddedTaxIncluded: true,
       },
     },
     knowsAbout: [

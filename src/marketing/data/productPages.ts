@@ -1977,7 +1977,7 @@ export const PRODUCT_PAGES: Record<ProductPageId, ProductPage> = {
       {
         question: 'How much does WhatsApp COD confirmation cost?',
         answer:
-          'COD confirmation is on every TopEdge AI plan, from ₹1,999 a month plus GST on the website or $19 a month on the Shopify App Store. Meta bills its own message fee on your Meta account at 0% TopEdge AI markup: a confirmation is a utility template at ₹0.1150 per delivered message in India, so confirming 500 COD orders costs ₹57.50.',
+          'COD confirmation is on every TopEdge AI plan, from ₹1,999 a month including GST on the website or $19 a month on the Shopify App Store. Meta bills its own message fee on your Meta account at 0% TopEdge AI markup: a confirmation is a utility template at ₹0.1150 per delivered message in India, so confirming 500 COD orders costs ₹57.50.',
       },
     ],
     seoTitle: 'Shopify COD App: Confirm COD Orders on WhatsApp | TopEdge AI',
@@ -2011,7 +2011,7 @@ export const PRODUCT_PAGES: Record<ProductPageId, ProductPage> = {
         ['WhatsApp utility confirmation, Meta India rate', '₹0.1150 per delivered message'],
         ['Confirming 500 COD orders', '₹57.50'],
         ['One returned COD parcel: forward, reverse, repack and holding', '₹180 to ₹240'],
-        ['TopEdge AI plan with COD confirmation', 'From ₹1,999/mo + GST, or $19/mo on the App Store'],
+        ['TopEdge AI plan with COD confirmation', 'From ₹1,999/mo incl. GST, or $19/mo on the App Store'],
       ],
       emphasise: [1, 2],
       note: 'Meta’s India utility rate from its WhatsApp pricing documentation, re-read 16 November 2026. Parcel cost lines from Amazon Shipping India and ClickPost, read 21 October 2026: national indicative ranges, not customer results. Website plans are billed in INR; App Store plans are billed by Shopify in USD.',

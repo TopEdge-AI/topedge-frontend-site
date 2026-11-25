@@ -22,7 +22,7 @@ Notes for anyone quoting this file:
 
 ## Pricing
 
-TopEdge AI platform pricing, in INR, exclusive of tax. This file is generated from
+TopEdge AI platform pricing, in INR, including 18% GST. This file is generated from
 the billing catalog, which scripts/check-catalog-drift.mjs pins to the live API.
 
 | Plan | Monthly | Yearly (per month) | Yearly total | Orders / month | Campaign + email sends / month | Journey Branch | COD to prepaid |
@@ -34,7 +34,7 @@ the billing catalog, which scripts/check-catalog-drift.mjs pins to the live API.
 - The plan prices above are the monthly list prices. Yearly billing is about 20% lower per month (Launch works out to ₹1,599 a month when billed yearly), which is the figure the pricing page shows first because its toggle opens on Yearly.
 - The same three plans can be installed from the Shopify App Store, where Shopify bills in USD: Launch $19, Growth $39 and Scale $65 a month.
 - Every plan includes a 14-day free trial: 20 orders, 200 campaign plus email sends, no card required on this site.
-- +18% GST. SAC 998314.
+- Prices include 18% GST. SAC 998314.
 - Meta WhatsApp Cloud API messaging is billed separately by Meta, at Meta's published per-message rates, passed through at 0% markup.
 - Journey Branch and automated COD to prepaid are on Growth and Scale only. COD confirmation before dispatch is on every plan.
 

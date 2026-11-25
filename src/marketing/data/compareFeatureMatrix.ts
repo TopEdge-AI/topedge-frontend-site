@@ -310,7 +310,7 @@ export const WATI_PAIRWISE_MATRIX: PairwiseFeatureRow[] = [
     description:
       'Entry cost and trial, as published. The row every buyer opens first, and the one most boards leave out.',
     topedge:
-      '14-day free trial, then ₹1,999/month (₹1,599/month billed yearly) + 18% GST on topedgeai.com, or $19/month billed by Shopify in USD from the Shopify App Store',
+      '14-day free trial, then ₹1,999/month (₹1,599/month billed yearly) incl. 18% GST on topedgeai.com, or $19/month billed by Shopify in USD from the Shopify App Store',
     competitor:
       '7-day free trial, then ₹2,699, ₹5,799 or ₹16,799 a month billed quarterly (₹2,999, ₹6,499, ₹18,499 billed monthly). Pro and Business include 5 users, then ₹1,299 or ₹2,199 per extra user. Read 7 Nov 2026',
   },
@@ -420,7 +420,7 @@ export const AISENSY_PAIRWISE_MATRIX: PairwiseFeatureRow[] = [
     description:
       'Entry cost and trial, as published. The row every buyer opens first, and the one most boards leave out.',
     topedge:
-      '14-day free trial, then ₹1,999/month (₹1,599/month billed yearly) + 18% GST on topedgeai.com, or $19/month billed by Shopify in USD from the Shopify App Store',
+      '14-day free trial, then ₹1,999/month (₹1,599/month billed yearly) incl. 18% GST on topedgeai.com, or $19/month billed by Shopify in USD from the Shopify App Store',
     competitor:
       'Platform plan plus Meta conversation charges and metered AI credits; confirm the current India tier on aisensy.com, which is not fixed per order volume',
   },
@@ -539,7 +539,7 @@ export const BITESPEED_PAIRWISE_MATRIX: PairwiseFeatureRow[] = [
     id: 'subscription',
     label: 'Subscription Model',
     topedge:
-      '14-day free trial, then ₹1,999/month (₹1,599/month billed yearly) + 18% GST on topedgeai.com, or $19/month billed by Shopify in USD from the Shopify App Store',
+      '14-day free trial, then ₹1,999/month (₹1,599/month billed yearly) incl. 18% GST on topedgeai.com, or $19/month billed by Shopify in USD from the Shopify App Store',
     competitor:
       'Requires stores to generate a minimum of ₹5,00,000 MRR to qualify for onboarding, with baseline plans starting at ~₹15,000/month',
   },
@@ -661,7 +661,7 @@ export const ZOKO_PAIRWISE_MATRIX: PairwiseFeatureRow[] = [
     description:
       'Entry cost and trial, as published. The row every buyer opens first, and the one most boards leave out.',
     topedge:
-      '14-day free trial, then ₹1,999/month (₹1,599/month billed yearly) + 18% GST on topedgeai.com, or $19/month billed by Shopify in USD from the Shopify App Store',
+      '14-day free trial, then ₹1,999/month (₹1,599/month billed yearly) incl. 18% GST on topedgeai.com, or $19/month billed by Shopify in USD from the Shopify App Store',
     competitor:
       'Starter $49.99 · Plus $79.99 · Elite $139.99 a month in USD (zoko.io, 12 Nov 2026), shown as about ₹4,687 · ₹7,501 · ₹13,127 on its Shopify listing. 7-day trial',
   },
@@ -747,7 +747,7 @@ export const GETGABS_PAIRWISE_MATRIX: PairwiseFeatureRow[] = [
     description:
       'Entry cost and trial, as published. The row every buyer opens first, and the one most boards leave out.',
     topedge:
-      '14-day free trial, then ₹1,999/month (₹1,599/month billed yearly) + 18% GST on topedgeai.com, or $19/month billed by Shopify in USD from the Shopify App Store',
+      '14-day free trial, then ₹1,999/month (₹1,599/month billed yearly) incl. 18% GST on topedgeai.com, or $19/month billed by Shopify in USD from the Shopify App Store',
     competitor:
       'Basic ₹699 · Plus ₹1,499 · Business ₹2,999 a month on getgabs.com (24 Nov 2026); its Shopify App Store listing was unavailable that day',
   },
@@ -824,7 +824,7 @@ export const KANAL_PAIRWISE_MATRIX: PairwiseFeatureRow[] = [
     description:
       'Entry cost and trial, as published. The row every buyer opens first, and the one most boards leave out.',
     topedge:
-      '14-day free trial, then ₹1,999/month (₹1,599/month billed yearly) + 18% GST on topedgeai.com, or $19/month billed by Shopify in USD from the Shopify App Store',
+      '14-day free trial, then ₹1,999/month (₹1,599/month billed yearly) incl. 18% GST on topedgeai.com, or $19/month billed by Shopify in USD from the Shopify App Store',
     competitor:
       'Pro €89 · Scale €149 · Business €350 · Agency €1,900 per month (Sep 2026), billed in EUR, so the India cost moves with the exchange rate',
   },
@@ -901,7 +901,7 @@ export const DONDYY_PAIRWISE_MATRIX: PairwiseFeatureRow[] = [
     description:
       'Entry cost and trial, as published. The row every buyer opens first, and the one most boards leave out.',
     topedge:
-      '14-day free trial, then ₹1,999/month (₹1,599/month billed yearly) + 18% GST on topedgeai.com, or $19/month billed by Shopify in USD from the Shopify App Store',
+      '14-day free trial, then ₹1,999/month (₹1,599/month billed yearly) incl. 18% GST on topedgeai.com, or $19/month billed by Shopify in USD from the Shopify App Store',
     competitor:
       'Free widget, Pro $6.99, Power Automation $79.99, Elite $159.99 per month (21 Sep 2026), in USD, on top of a per-message India rate of $0.01888',
   },
@@ -979,7 +979,7 @@ export const UPDATRR_PAIRWISE_MATRIX: PairwiseFeatureRow[] = [
     id: 'subscription',
     label: 'Subscription Model',
     topedge:
-      '14-day free trial, then ₹1,999/month (₹1,599/month billed yearly) + 18% GST on topedgeai.com, or $19/month billed by Shopify in USD from the Shopify App Store',
+      '14-day free trial, then ₹1,999/month (₹1,599/month billed yearly) incl. 18% GST on topedgeai.com, or $19/month billed by Shopify in USD from the Shopify App Store',
     competitor:
       '7-day free trial with no card, then $29.99, $49.99 or $99.99 a month (read off updatrr.com/pricing on 6 Nov 2026; it says country-wise prices show inside its dashboard)',
   },
@@ -1110,7 +1110,7 @@ export const GUPSHUP_PAIRWISE_MATRIX: PairwiseFeatureRow[] = [
     description:
       'Baseline platform entry cost, billing structure, and trial availability for e-commerce businesses looking to adopt the software.',
     topedge:
-      '14-day free trial, then ₹1,999/month (₹1,599/month billed yearly) + 18% GST on topedgeai.com, or $19/month billed by Shopify in USD from the Shopify App Store',
+      '14-day free trial, then ₹1,999/month (₹1,599/month billed yearly) incl. 18% GST on topedgeai.com, or $19/month billed by Shopify in USD from the Shopify App Store',
     competitor:
       'Pay-as-you-go model with no fixed entry-level SaaS tiers or public free trial (verify live / sales quote)',
   },
@@ -1212,7 +1212,7 @@ export const INTERAKT_PAIRWISE_MATRIX: PairwiseFeatureRow[] = [
     id: 'subscription',
     label: 'Subscription Model',
     topedge:
-      '14-day free trial, then ₹1,999/month (₹1,599/month billed yearly) + 18% GST on topedgeai.com, or $19/month billed by Shopify in USD from the Shopify App Store',
+      '14-day free trial, then ₹1,999/month (₹1,599/month billed yearly) incl. 18% GST on topedgeai.com, or $19/month billed by Shopify in USD from the Shopify App Store',
     competitor:
       '14-day free trial. Its Shopify integration is only on its Shopify App Store plans, from ₹1,973.48 a month as Shopify’s INR estimate. Web plans: Growth ₹2,799 a month; ₹999 Starter is Instagram only on monthly billing, WhatsApp or Instagram on quarterly (₹3,499) or yearly (₹11,999) billing. Read 9 Nov 2026',
   },

@@ -7080,7 +7080,7 @@
         },
         {
           "question": "Can I get GST invoices?",
-          "answer": "Yes, on every plan. Download them from **Settings → Billing**. Prices exclude GST, which is added at the applicable rate."
+          "answer": "Yes, on every plan. Download them from **Settings → Billing**. Prices include 18% GST, shown separately on the invoice."
         }
       ],
       "blocks": [
@@ -7670,7 +7670,7 @@
             [
               "TopEdge AI",
               "The platform: journeys, inbox, customers, templates, reports. Includes order and send limits per cycle.",
-              "Your subscription, in INR plus GST on [the pricing page](/pricing), or in USD on your Shopify invoice."
+              "Your subscription, in INR with GST included, on [the pricing page](/pricing), or in USD on your Shopify invoice."
             ],
             [
               "Meta",

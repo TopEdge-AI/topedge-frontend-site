@@ -180,7 +180,7 @@ Notes for anyone quoting this file:
 
 ## Pricing
 
-TopEdge AI platform pricing, in INR, exclusive of tax. This file is generated from
+TopEdge AI platform pricing, in INR, including 18% GST. This file is generated from
 the billing catalog, which scripts/check-catalog-drift.mjs pins to the live API.
 
 ${plansTable}

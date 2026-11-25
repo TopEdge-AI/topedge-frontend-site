@@ -157,7 +157,7 @@ export default function CompareAlternativesPage() {
                 TopEdge AI
               </div>
               <div role="cell" data-col="Entry price, as published" className="mkt-spec__cell mkt-spec__cell--mine">
-                ₹1,999/mo, or ₹1,599/mo billed yearly, plus 18% GST. 14-day trial, no card.
+                ₹1,999/mo, or ₹1,599/mo billed yearly, including 18% GST. 14-day trial, no card.
               </div>
               <div role="cell" data-col="On top of Meta fees" className="mkt-spec__cell mkt-spec__cell--mine">
                 Nothing. Meta bills your own account direct at 0% markup.

@@ -30,7 +30,7 @@ export default function LandingPlans({ intro }: { intro?: string }) {
             <p className="mkt-lp-plan__name">{plan.displayName}</p>
             <p className="mkt-lp-plan__price">
               {plan.monthlyPriceLabel}
-              <span> / month + GST</span>
+              <span> / month incl. GST</span>
             </p>
             <p className="mkt-lp-plan__usd">or ${usd.get(plan.slug)} a month on the Shopify App Store</p>
             <ul className="mkt-lp-plan__facts">

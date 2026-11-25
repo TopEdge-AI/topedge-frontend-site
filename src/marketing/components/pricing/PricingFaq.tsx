@@ -10,11 +10,11 @@ const [L, G, S] = SHOPIFY_APP_PRICING.plans;
 export const PRICING_FAQS = [
   {
     q: 'How much does TopEdge AI cost?',
-    a: '₹1,999, ₹3,999 or ₹6,499 a month plus GST, sized by orders: 100, 800 or 1,500 a month. Meta bills your WhatsApp messages directly, at 0% markup from us. COD confirmation is on every plan; COD to prepaid and Journey Branch start on Growth.',
+    a: '₹1,999, ₹3,999 or ₹6,499 a month including GST, sized by orders: 100, 800 or 1,500 a month. Meta bills your WhatsApp messages directly, at 0% markup from us. COD confirmation is on every plan; COD to prepaid and Journey Branch start on Growth.',
   },
   {
     q: 'Is GST included?',
-    a: 'No. Add 18% GST (SAC 998314). You get a GST invoice on every plan.',
+    a: 'Yes. Every price on this page includes 18% GST (SAC 998314). You get a GST invoice on every plan, and a GST-registered business can claim that GST back as input tax credit.',
   },
   {
     q: 'Is the price different on the Shopify App Store?',

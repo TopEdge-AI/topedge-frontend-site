@@ -142,7 +142,7 @@ export default function PricingPage() {
           <section className="mkt-pricing__plans fx-sec fx-sec--flush" id="plans" aria-label="Plans">
             <PlanGrid plans={catalog.plans} cycle={cycle} />
             <div className="mkt-pricing__footnote">
-              <p className="mkt-gst">{GST_FOOTNOTE} Prices are exclusive of tax.</p>
+              <p className="mkt-gst">{GST_FOOTNOTE}</p>
               {catalogFetchFailed ? (
                 <p className="mkt-fallback">
                   Live pricing is unavailable right now · showing our last published prices

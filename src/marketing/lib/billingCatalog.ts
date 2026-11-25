@@ -104,7 +104,7 @@ export const TRIAL = {
   sends: 200,
 };
 
-export const GST_FOOTNOTE = '+18% GST. SAC 998314.';
+export const GST_FOOTNOTE = 'Prices include 18% GST. SAC 998314.';
 
 const UNIVERSAL: string[] = [
   'Live Chat',
@@ -158,7 +158,7 @@ export const FALLBACK_CATALOG: BillingCatalog = {
       ordersPerCycle: 100,
       campaignEmailSendsPerCycle: 3000,
       monthlyPriceLabel: '₹1,999',
-      quarterlyPriceLabel: '₹5,397',
+      quarterlyPriceLabel: '₹5,399',
       yearlyPriceLabel: '₹19,188',
       features: {
         journeyBranch: false,
@@ -170,7 +170,7 @@ export const FALLBACK_CATALOG: BillingCatalog = {
       },
       pricing: {
         monthly: cyclePricing('₹1,999', '₹1,999', '₹67', null, false),
-        quarterly: cyclePricing('₹1,799', '₹5,397', '₹60', '₹600', true),
+        quarterly: cyclePricing('₹1,800', '₹5,399', '₹60', '₹598', true),
         yearly: cyclePricing('₹1,599', '₹19,188', '₹53', '₹4,800', true),
       },
     },
@@ -405,8 +405,8 @@ export function catalogDefaultCycleOffersJsonLd(
           '@type': 'UnitPriceSpecification' as const,
           price,
           priceCurrency: currency,
-          // Plans are listed before 18% GST everywhere on the site.
-          valueAddedTaxIncluded: false,
+          // Plan prices include 18% GST everywhere on the site (since 25 November 2026).
+          valueAddedTaxIncluded: true,
           billingDuration: period.billingDuration,
           billingIncrement: 1,
           unitCode: period.unitCode,

@@ -29,7 +29,7 @@ export type CompareRefresh = {
   faqs: { question: string; answer: string }[];
 };
 
-const TE_PRICE = '₹1,999, ₹3,999 or ₹6,499 a month + GST on topedgeai.com, or $19, $39 or $65 billed by Shopify';
+const TE_PRICE = '₹1,999, ₹3,999 or ₹6,499 a month incl. GST on topedgeai.com, or $19, $39 or $65 billed by Shopify';
 
 export const COMPARE_REFRESH: Record<string, CompareRefresh> = {
   interakt: {
@@ -41,7 +41,7 @@ export const COMPARE_REFRESH: Record<string, CompareRefresh> = {
     switchReasons: [
       {
         title: 'Rupee billing instead of dollars',
-        body: 'Interakt’s Shopify app plans are $21, $41, $51 and $99 a month, billed in USD by Shopify. TopEdge AI is ₹1,999, ₹3,999 or ₹6,499 a month plus GST on topedgeai.com, so the cost does not move with the exchange rate. The App Store door ($19, $39, $65) is there if you prefer one Shopify bill.',
+        body: 'Interakt’s Shopify app plans are $21, $41, $51 and $99 a month, billed in USD by Shopify. TopEdge AI is ₹1,999, ₹3,999 or ₹6,499 a month including GST on topedgeai.com, so the cost does not move with the exchange rate. The App Store door ($19, $39, $65) is there if you prefer one Shopify bill.',
       },
       {
         title: 'Meta’s rate with nothing on top',
@@ -72,7 +72,7 @@ export const COMPARE_REFRESH: Record<string, CompareRefresh> = {
       'You already run campaigns on Interakt and your COD share is small, so confirmation and COD to prepaid matter less than broadcasts.',
     ],
     priceRows: [
-      { label: 'Entry price with Shopify', topedge: '₹1,999/mo + GST, or $19 on the App Store', competitor: '$21/mo on the Shopify App Store' },
+      { label: 'Entry price with Shopify', topedge: '₹1,999/mo incl. GST, or $19 on the App Store', competitor: '$21/mo on the Shopify App Store' },
       { label: 'Plan with Shopify actions and AI', topedge: 'COD to prepaid from Growth, ₹3,999/mo or $39', competitor: 'Premier, $99/mo' },
       { label: 'Billed in', topedge: 'INR on our site, or USD via Shopify', competitor: 'USD via Shopify (app); INR (web plans)' },
       { label: 'India marketing message', topedge: '₹0.8631, Meta’s rate', competitor: '₹0.958 (web Growth)' },
@@ -81,7 +81,7 @@ export const COMPARE_REFRESH: Record<string, CompareRefresh> = {
       { label: 'Shopify App Store rating', topedge: 'No reviews yet', competitor: '4.3 from 236 reviews' },
     ],
     priceNote:
-      'Sources: interakt.shop/pricing (monthly and quarterly views) and apps.shopify.com/interakt-marketing. Interakt web prices are plus taxes; TopEdge AI prices are plus 18% GST on our site.',
+      'Sources: interakt.shop/pricing (monthly and quarterly views) and apps.shopify.com/interakt-marketing. Interakt web prices are plus taxes; TopEdge AI prices include 18% GST on our site.',
     switchSteps: [
       { title: 'Install TopEdge AI alongside Interakt', body: 'Start the 14-day trial from topedgeai.com or the Shopify App Store. Nothing is removed from Interakt yet.' },
       { title: 'Connect your WhatsApp Business Account', body: 'Approved templates belong to your WhatsApp Business Account, not to the app that submitted them. Moving a number between providers goes through Meta, so plan a quiet hour for it.' },
@@ -92,7 +92,7 @@ export const COMPARE_REFRESH: Record<string, CompareRefresh> = {
       {
         question: 'Is TopEdge AI cheaper than Interakt for a Shopify store?',
         answer:
-          'At entry level they are close: Interakt’s Shopify app starts at $21 a month, TopEdge AI at $19 on the App Store or ₹1,999 plus GST on our site. The gap opens on messages and features: Interakt’s web Growth plan charges about 11% over Meta on marketing and 30% on utility messages, and its Shopify actions and AI agents sit on the $99 Premier plan.',
+          'At entry level they are close: Interakt’s Shopify app starts at $21 a month, TopEdge AI at $19 on the App Store or ₹1,999 including GST on our site. The gap opens on messages and features: Interakt’s web Growth plan charges about 11% over Meta on marketing and 30% on utility messages, and its Shopify actions and AI agents sit on the $99 Premier plan.',
       },
       {
         question: 'How much does Interakt cost in India?',
@@ -157,7 +157,7 @@ export const COMPARE_REFRESH: Record<string, CompareRefresh> = {
       'You sell outside Shopify, or across several channels where a Shopify-first tool is not the centre of your stack.',
     ],
     priceRows: [
-      { label: 'Entry price, monthly billing', topedge: '₹1,999/mo + GST, or $19 on the App Store', competitor: 'Growth ₹2,999/mo' },
+      { label: 'Entry price, monthly billing', topedge: '₹1,999/mo incl. GST, or $19 on the App Store', competitor: 'Growth ₹2,999/mo' },
       { label: 'Billed quarterly or yearly', topedge: '₹1,599/mo billed yearly', competitor: '₹2,699 quarterly, ₹2,199 annual' },
       { label: 'Shopify', topedge: 'Built in (it is a Shopify app)', competitor: '$4.99/mo Shopify add-on' },
       { label: 'India marketing message', topedge: '₹0.8631, Meta’s rate', competitor: '₹1.0357 (Growth rate card)' },
@@ -165,7 +165,7 @@ export const COMPARE_REFRESH: Record<string, CompareRefresh> = {
       { label: 'Free trial', topedge: '14 days, 20 orders, 200 sends', competitor: '7 days' },
     ],
     priceNote:
-      'Sources: wati.io/pricing (monthly, quarterly and annual views) and WATI’s Growth INR rate card. TopEdge AI prices are plus 18% GST on our site.',
+      'Sources: wati.io/pricing (monthly, quarterly and annual views) and WATI’s Growth INR rate card. TopEdge AI prices include 18% GST on our site.',
     switchSteps: [
       { title: 'Time it to your WATI renewal', body: 'WATI’s lower prices come with quarterly or annual billing, so start the TopEdge AI trial a couple of weeks before your WATI period ends.' },
       { title: 'Install TopEdge AI on Shopify', body: 'Install from the Shopify App Store or start on topedgeai.com. Your store data syncs without a webhook build.' },
@@ -176,7 +176,7 @@ export const COMPARE_REFRESH: Record<string, CompareRefresh> = {
       {
         question: 'Is TopEdge AI cheaper than WATI?',
         answer:
-          'On monthly billing, yes at entry level: TopEdge AI Launch is ₹1,999 a month plus GST and WATI Growth ₹2,999 (24 November 2026). WATI is cheaper billed annually at ₹2,199, but adds ₹1,299 to ₹2,199 per extra user and charges ₹1.0357 per India marketing message against Meta’s ₹0.8631.',
+          'On monthly billing, yes at entry level: TopEdge AI Launch is ₹1,999 a month including GST and WATI Growth ₹2,999 (24 November 2026). WATI is cheaper billed annually at ₹2,199, but adds ₹1,299 to ₹2,199 per extra user and charges ₹1.0357 per India marketing message against Meta’s ₹0.8631.',
       },
       {
         question: 'Does WATI charge per user?',
@@ -241,7 +241,7 @@ export const COMPARE_REFRESH: Record<string, CompareRefresh> = {
       'You want an app with reviews: AiSensy is rated 4.1 from 56 reviews on the Shopify App Store; TopEdge AI had none yet on 24 November 2026.',
     ],
     priceRows: [
-      { label: 'Entry price, monthly', topedge: '₹1,999/mo + GST, or $19 on the App Store', competitor: 'Basic ₹1,500/mo' },
+      { label: 'Entry price, monthly', topedge: '₹1,999/mo incl. GST, or $19 on the App Store', competitor: 'Basic ₹1,500/mo' },
       { label: 'With automation flows', topedge: 'Included; Growth ₹3,999 adds COD to prepaid', competitor: 'Basic + Chatbot Flows = ₹4,000/mo' },
       { label: 'India marketing message', topedge: '₹0.8631, Meta’s rate', competitor: '₹1.09' },
       { label: 'India utility message', topedge: '₹0.1150, Meta’s rate', competitor: '₹0.145' },
@@ -249,7 +249,7 @@ export const COMPARE_REFRESH: Record<string, CompareRefresh> = {
       { label: 'Shopify App Store rating', topedge: 'No reviews yet', competitor: '4.1 from 56 reviews' },
     ],
     priceNote:
-      'Sources: www.aisensy.com/pricing (monthly view) and apps.shopify.com/aisensy-whatsapp-marketing. TopEdge AI prices are plus 18% GST on our site.',
+      'Sources: www.aisensy.com/pricing (monthly view) and apps.shopify.com/aisensy-whatsapp-marketing. TopEdge AI prices include 18% GST on our site.',
     switchSteps: [
       { title: 'Count your monthly messages first', body: 'Pull last month’s marketing and utility counts from AiSensy. That number, times 26%, is what the markup cost you.' },
       { title: 'Install TopEdge AI on Shopify', body: 'Start the 14-day trial from topedgeai.com or the Shopify App Store.' },

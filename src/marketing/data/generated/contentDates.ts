@@ -4,15 +4,15 @@
  */
 export const CONTENT_DATES = {
   /** Last edit of compare competitor data (+ feature matrix). */
-  compareTwoWay: '2026-11-24',
+  compareTwoWay: '2026-11-25',
   /** Last edit of 3-way compare page (+ feature matrix). */
-  compareThreeWay: '2026-11-24',
+  compareThreeWay: '2026-11-25',
   /** Last edit of blogPosts.ts (used as Article dateModified fallback). */
-  blogPosts: '2026-11-24',
+  blogPosts: '2026-11-25',
   /** Last edit of feature / product page content. */
-  featurePages: '2026-11-22',
+  featurePages: '2026-11-25',
   /** Last edit of published plan catalog (pricing Offers). */
-  pricing: '2026-11-24',
+  pricing: '2026-11-25',
 } as const;
 
 export const BLOG_DATES_BY_SLUG = {

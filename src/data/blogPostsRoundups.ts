@@ -187,7 +187,7 @@ const SHOPIFY_DEV_INDIA_FAQS: Faq[] = [
   {
     question: 'Will a Shopify agency set up abandoned cart recovery and COD confirmation?',
     answer:
-      'Usually it installs whichever app you choose, but running the messages is your job after launch. Shopify Messaging can now send WhatsApp abandoned checkout reminders to marketing subscribers, but it has no utility category, so it does not send COD confirmations or order updates. For those, Indian D2C brands add an app such as TopEdge AI, whose plans start at ₹1,999 a month plus GST on its website or $19 a month on the Shopify App Store.',
+      'Usually it installs whichever app you choose, but running the messages is your job after launch. Shopify Messaging can now send WhatsApp abandoned checkout reminders to marketing subscribers, but it has no utility category, so it does not send COD confirmations or order updates. For those, Indian D2C brands add an app such as TopEdge AI, whose plans start at ₹1,999 a month including GST on its website or $19 a month on the Shopify App Store.',
   },
 ];
 
@@ -1421,14 +1421,14 @@ ${faqHtml(SEO_EXPERTS_FAQS)}
 <tr><td>COD order confirmation</td><td>No: Shopify Messaging has no utility category</td><td>Yes, on every plan</td></tr>
 <tr><td>COD to prepaid nudge</td><td>No</td><td>Yes, on Growth and Scale</td></tr>
 <tr><td>Order and shipping updates on WhatsApp</td><td>No</td><td>Yes</td></tr>
-<tr><td>Price</td><td>$0.024 per WhatsApp marketing message in India</td><td>From ₹1,999 a month plus GST, or $19 on the App Store</td></tr>
+<tr><td>Price</td><td>$0.024 per WhatsApp marketing message in India</td><td>From ₹1,999 a month including GST, or $19 on the App Store</td></tr>
 </tbody>
 </table>
 </div>
 
 <p>Shopify Messaging facts are from <a href="https://help.shopify.com/en/manual/promoting-marketing/create-marketing/shopify-messaging/whatsapp/pricing" target="_blank" rel="noopener noreferrer">Shopify’s WhatsApp pricing page</a>, read 20 November 2026. If you only need email and a WhatsApp nudge to subscribers, Shopify is enough and you should not pay for more.</p>
 
-<p>This is where we fit, and only here. TopEdge AI is all-in-one D2C software for Shopify stores, built as one suite. Cart recovery and COD confirmation are two of its modules, next to campaigns, a shopper CRM, live chat and profit reporting. It is not an agency and does not build stores. Plans are Launch ₹1,999, Growth ₹3,999 and Scale ₹6,499 a month plus GST, billed in INR on our website, or $19, $39 and $65 a month billed by Shopify in USD on the App Store. See <a href="/pricing">TopEdge AI pricing</a>, the <a href="/whatsapp-abandoned-cart-recovery-app">WhatsApp abandoned cart recovery app</a> and <a href="/features/cod-confirmation">COD confirmation on WhatsApp</a>. For a side-by-side of every recovery tool, read <a href="/blog/best-shopify-app-for-abandoned-cart-recovery-india">the best Shopify app for abandoned cart recovery in India</a>.</p>
+<p>This is where we fit, and only here. TopEdge AI is all-in-one D2C software for Shopify stores, built as one suite. Cart recovery and COD confirmation are two of its modules, next to campaigns, a shopper CRM, live chat and profit reporting. It is not an agency and does not build stores. Plans are Launch ₹1,999, Growth ₹3,999 and Scale ₹6,499 a month including GST, billed in INR on our website, or $19, $39 and $65 a month billed by Shopify in USD on the App Store. See <a href="/pricing">TopEdge AI pricing</a>, the <a href="/whatsapp-abandoned-cart-recovery-app">WhatsApp abandoned cart recovery app</a> and <a href="/features/cod-confirmation">COD confirmation on WhatsApp</a>. For a side-by-side of every recovery tool, read <a href="/blog/best-shopify-app-for-abandoned-cart-recovery-india">the best Shopify app for abandoned cart recovery in India</a>.</p>
 
 <h2>When you do not need an agency</h2>
 

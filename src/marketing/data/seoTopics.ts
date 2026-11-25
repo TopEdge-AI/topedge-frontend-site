@@ -434,7 +434,7 @@ export const SEO_TOPICS: Record<string, SeoTopic> = {
       {
         question: 'How much does WhatsApp cost for a Shopify store in India?',
         answer:
-          'Meta bills you per delivered message by category. In India that is ₹0.8631 for a marketing message and ₹0.1150 for a utility or authentication message, and from 1 October 2026 each business phone number gets 1,000 free service messages a month. TopEdge AI adds no markup on those fees, so platform pricing and Meta pricing are separate lines. TopEdge AI plans start at ₹1,999 a month plus GST.',
+          'Meta bills you per delivered message by category. In India that is ₹0.8631 for a marketing message and ₹0.1150 for a utility or authentication message, and from 1 October 2026 each business phone number gets 1,000 free service messages a month. TopEdge AI adds no markup on those fees, so platform pricing and Meta pricing are separate lines. TopEdge AI plans start at ₹1,999 a month including GST.',
       },
       {
         question: 'Can I confirm COD orders on WhatsApp before shipping?',

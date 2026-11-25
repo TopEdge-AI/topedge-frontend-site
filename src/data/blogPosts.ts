@@ -1925,7 +1925,7 @@ export const blogPosts: BlogPost[] = [
     content: `
 <details class="mkt-blog-verdict" open>
 <summary>Direct answer</summary>
-<p>The best Zoko alternative depends on why you are leaving. <strong>Switch</strong> if you earn in rupees, ship up to 1,500 orders a month and want a fee that does not move with conversations or the dollar. TopEdge AI is ₹1,999 to ₹6,499 a month plus GST on topedgeai.com, or $19 to $65 through the Shopify App Store. <strong>Stay</strong> if you sell from a catalog inside the chat. At 5,000 conversations, Zoko Plus costs about <strong>₹7,501 a month</strong> before Meta fees, read 12 November 2026.</p>
+<p>The best Zoko alternative depends on why you are leaving. <strong>Switch</strong> if you earn in rupees, ship up to 1,500 orders a month and want a fee that does not move with conversations or the dollar. TopEdge AI is ₹1,999 to ₹6,499 a month including GST on topedgeai.com, or $19 to $65 through the Shopify App Store. <strong>Stay</strong> if you sell from a catalog inside the chat. At 5,000 conversations, Zoko Plus costs about <strong>₹7,501 a month</strong> before Meta fees, read 12 November 2026.</p>
 </details>
 
 <p><strong>Checked 12 November 2026.</strong> We read <a href="https://www.zoko.io/pricing" rel="noopener noreferrer" target="_blank">zoko.io/pricing</a> and <a href="https://apps.shopify.com/whatsapp-button-chat" rel="noopener noreferrer" target="_blank">Zoko’s Shopify App Store listing</a> that day. This guide is part of our <a href="/compare/alternatives">comparison of WhatsApp tools for Shopify India</a>. TopEdge AI sells a competing app, so where Zoko is cheaper or better below, we say so.</p>
@@ -1987,7 +1987,7 @@ export const blogPosts: BlogPost[] = [
 </div>
 <p class="mkt-blog-footnote">Arithmetic on the rates published on <a href="https://apps.shopify.com/whatsapp-button-chat" rel="noopener noreferrer" target="_blank">Zoko's Shopify App Store listing</a>, read on 12 November 2026, with rupees at ₹93.77 to the dollar. Platform fee only. It excludes Meta's own per-message charges, agent seats above the number your plan includes, and any AI or custom-flow add-ons. Re-check before you buy.</p>
 <p>Two things fall out of that table. The tier that is cheapest flips between 1,000 and 5,000 conversations, so the right plan depends on a number most teams only learn after a festival week. And the jump from 5,000 to 20,000 conversations, a 4x rise in customer contact, moves the platform fee by about 37%, which is the part that works in Zoko's favour once you are past the included bucket. The volatility is at the bottom of the range, not the top.</p>
-<p>For comparison, TopEdge AI charges by Shopify orders rather than conversations: Launch ₹1,999 a month for 100 orders, Growth ₹3,999 for 800, Scale ₹6,499 for 1,500, each about 20% less billed yearly, plus 18% GST. From the Shopify App Store the same plans are $19, $39 and $65 a month, billed by Shopify in US dollars. <strong>Those units are not interchangeable</strong>, and anyone who tells you one is simply cheaper than the other is comparing orders with conversations. The honest question is which number your finance team can predict a quarter out. See <a href="/pricing">TopEdge AI pricing</a> for the current table.</p>
+<p>For comparison, TopEdge AI charges by Shopify orders rather than conversations: Launch ₹1,999 a month for 100 orders, Growth ₹3,999 for 800, Scale ₹6,499 for 1,500, each about 20% less billed yearly, including 18% GST. From the Shopify App Store the same plans are $19, $39 and $65 a month, billed by Shopify in US dollars. <strong>Those units are not interchangeable</strong>, and anyone who tells you one is simply cheaper than the other is comparing orders with conversations. The honest question is which number your finance team can predict a quarter out. See <a href="/pricing">TopEdge AI pricing</a> for the current table.</p>
 
 <h2>Zoko alternatives for Shopify India: the shortlist and who each one suits</h2>
 <p>Most "Zoko alternative" lists are vendor pages dressed as research. Here is the shortlist as we would give it to a merchant who called us, including the cases where the answer is not us. Prices carry the date they were read, because every one of these moves.</p>
@@ -2030,7 +2030,7 @@ export const blogPosts: BlogPost[] = [
 </tr>
 </thead>
 <tbody>
-<tr><td><strong>Entry price</strong></td><td>Launch ₹1,999/mo + 18% GST on topedgeai.com, or $19/mo billed by Shopify from the App Store</td><td>Starter $49.99/mo, then Plus $79.99 and Elite $139.99 (about ₹4,687, ₹7,501 and ₹13,127 on its Shopify listing)</td></tr>
+<tr><td><strong>Entry price</strong></td><td>Launch ₹1,999/mo incl. 18% GST on topedgeai.com, or $19/mo billed by Shopify from the App Store</td><td>Starter $49.99/mo, then Plus $79.99 and Elite $139.99 (about ₹4,687, ₹7,501 and ₹13,127 on its Shopify listing)</td></tr>
 <tr><td><strong>Billing unit</strong></td><td>Sized by Shopify orders a month (100, 800 or 1,500). INR on topedgeai.com, USD through Shopify</td><td>USD, plus per-conversation metering on Starter and above each plan’s bucket</td></tr>
 <tr><td><strong>Agent seats</strong></td><td>No per-seat charge on any plan</td><td>Unlimited on Starter. 5 on Plus, then <strong>$15 per extra agent</strong> a month. 10 on Elite, then $12</td></tr>
 <tr><td><strong>Conversation bucket</strong></td><td>No conversation metering</td><td>Starter has none and meters <strong>$0.015 per conversation</strong>; Plus includes 5,000/mo then $0.00199 each</td></tr>
@@ -2204,7 +2204,7 @@ export const blogPosts: BlogPost[] = [
 </tr>
 </thead>
 <tbody>
-<tr><td><strong>Entry price</strong></td><td>Launch ₹1,999/mo, or ₹1,599/mo billed yearly, + 18% GST</td><td>Basic ₹699, Plus ₹1,499, Business ₹2,999 a month on getgabs.com (24 Nov 2026)</td></tr>
+<tr><td><strong>Entry price</strong></td><td>Launch ₹1,999/mo, or ₹1,599/mo billed yearly, incl. 18% GST</td><td>Basic ₹699, Plus ₹1,499, Business ₹2,999 a month on getgabs.com (24 Nov 2026)</td></tr>
 <tr><td><strong>Shopify App Store</strong></td><td>Listed, $19 to $65 a month billed by Shopify in USD</td><td>Listing not available on 24 Nov 2026; the website still offers a Shopify integration</td></tr>
 <tr><td><strong>Meta message cost</strong></td><td>0% markup, billed by Meta to your own Business Account</td><td>0% markup on every plan, with Meta’s ₹0.8631 and ₹0.115 India rates listed on getgabs.com</td></tr>
 <tr><td><strong>COD to prepaid</strong></td><td>Native journey on Growth and Scale; COD confirmation on every plan</td><td>Not a named workflow on getgabs.com</td></tr>
@@ -2219,7 +2219,7 @@ export const blogPosts: BlogPost[] = [
 <table>
 <thead><tr><th>Tool</th><th>Price, as read</th><th>Suits</th></tr></thead>
 <tbody>
-<tr><td><strong>TopEdge AI</strong></td><td>₹1,999, ₹3,999 and ₹6,499 a month plus GST, 0% on Meta’s rates</td><td>COD-heavy Indian Shopify stores up to 1,500 orders a month</td></tr>
+<tr><td><strong>TopEdge AI</strong></td><td>₹1,999, ₹3,999 and ₹6,499 a month including GST, 0% on Meta’s rates</td><td>COD-heavy Indian Shopify stores up to 1,500 orders a month</td></tr>
 <tr><td><strong>Updatrr</strong></td><td>Growth $29.99 a month, no markup stated (read 9 Nov 2026)</td><td>Shopify stores that want one simple app. <a href="/blog/updatrr-alternative-shopify-india">Updatrr comparison</a></td></tr>
 <tr><td><strong>Interakt</strong></td><td>Shopify plans from ₹1,973.48 a month, rates 10% to 39% above Meta (read 9 Nov 2026)</td><td>Teams that want Instagram in the same inbox. <a href="/blog/interakt-alternative-shopify-india">Interakt alternatives</a></td></tr>
 <tr><td><strong>Dondy</strong></td><td>Free widget, Pro $6.99 a month, about ₹1.77 a marketing message to India (read 8 Nov 2026)</td><td>Stores that mostly need a chat button. <a href="/blog/dondy-alternative-shopify-india">Dondy alternatives</a></td></tr>
@@ -2255,9 +2255,9 @@ export const blogPosts: BlogPost[] = [
     description:
       'Kanal is strong for global WhatsApp + Klaviyo stacks. When India COD and INR pricing matter more than an EUR floor, here is how to evaluate alternatives.',
     summary: [
-      'A Kanal alternative for Shopify India makes sense when COD and rupee budgeting matter more than a Klaviyo-first global stack. Kanal is priced in EUR, from €89 to €1,900 a month, and is not built for cash on delivery. TopEdge AI starts at ₹1,999 a month plus 18% GST, with COD confirmation on every plan.',
+      'A Kanal alternative for Shopify India makes sense when COD and rupee budgeting matter more than a Klaviyo-first global stack. Kanal is priced in EUR, from €89 to €1,900 a month, and is not built for cash on delivery. TopEdge AI starts at ₹1,999 a month including 18% GST, with COD confirmation on every plan.',
       'India D2C diverges on COD. An EUR floor with no COD-to-prepaid path is the usual reason teams start looking.',
-      'If you budget in rupees, price the plan in rupees and add 18% GST, or you are not comparing like with like.',
+      'If you budget in rupees, compare rupee prices with GST included on both sides, or you are not comparing like with like.',
     ],
     slug: 'kanal-whatsapp-alternative-shopify',
     date: '2026-09-20',
@@ -2298,7 +2298,7 @@ export const blogPosts: BlogPost[] = [
       {
         question: 'What is the best Kanal alternative for Shopify India?',
         answer:
-          'For India-only stores where COD is most of the order book, TopEdge AI: INR pricing from ₹1,999 a month plus GST, COD confirmation on every plan and COD to prepaid on Growth and Scale. Stay on Kanal if you sell globally and run WhatsApp alongside Klaviyo email.',
+          'For India-only stores where COD is most of the order book, TopEdge AI: INR pricing from ₹1,999 a month including GST, COD confirmation on every plan and COD to prepaid on Growth and Scale. Stay on Kanal if you sell globally and run WhatsApp alongside Klaviyo email.',
       },
     ],
     itemList: [
@@ -2356,7 +2356,7 @@ export const blogPosts: BlogPost[] = [
 </table>
 </div>
 <p class="mkt-blog-footnote">The three rates are an illustrative band, not a forecast, and not today's rate. Use the rate your card or bank actually gives you on the day, which will also carry a conversion spread. The column that matters is the last one: it is the range the same unchanged plan can occupy across a year, before a single message is sent.</p>
-<p>That swing is the whole argument, and it is worth keeping in proportion. A few hundred rupees a month is not what kills a brand. It is that the number cannot be put in a budget and left alone, and that it moves in the direction of your costs exactly when the rupee is weak. For contrast, TopEdge AI publishes Launch ₹1,999, Growth ₹3,999 and Scale ₹6,499 a month by Shopify order volume, around 20% less billed yearly, plus 18% GST, with no per-seat charge. <strong>Read the inclusions before the totals</strong>: Kanal Pro includes one user account, so a three-person support team is already on Scale. See <a href="/pricing">TopEdge AI pricing</a>.</p>
+<p>That swing is the whole argument, and it is worth keeping in proportion. A few hundred rupees a month is not what kills a brand. It is that the number cannot be put in a budget and left alone, and that it moves in the direction of your costs exactly when the rupee is weak. For contrast, TopEdge AI publishes Launch ₹1,999, Growth ₹3,999 and Scale ₹6,499 a month by Shopify order volume, around 20% less billed yearly, including 18% GST, with no per-seat charge. <strong>Read the inclusions before the totals</strong>: Kanal Pro includes one user account, so a three-person support team is already on Scale. See <a href="/pricing">TopEdge AI pricing</a>.</p>
 
 <h2>The shortlist: who else fits if Kanal does not?</h2>
 <p>Kanal sits on the global, euro-billed side of this market. The useful way to shortlist against it is to decide which side of that line you are on, because the India-native tools and the global ones fail in different directions.</p>
@@ -2388,7 +2388,7 @@ export const blogPosts: BlogPost[] = [
 </tr>
 </thead>
 <tbody>
-<tr><td><strong>Entry price</strong></td><td>Launch ₹1,999/mo, or ₹1,599/mo billed yearly, + 18% GST</td><td>Pro €89/mo, Scale €149, Business €350, Agency €1,900 (Sep 2026)</td></tr>
+<tr><td><strong>Entry price</strong></td><td>Launch ₹1,999/mo, or ₹1,599/mo billed yearly, incl. 18% GST</td><td>Pro €89/mo, Scale €149, Business €350, Agency €1,900 (Sep 2026)</td></tr>
 <tr><td><strong>Currency risk</strong></td><td>INR, so the number on the invoice is the number you budgeted</td><td>EUR, so your India cost moves with the exchange rate</td></tr>
 <tr><td><strong>Meta message cost</strong></td><td>0% markup, billed by Meta to your own Business Account</td><td>Plan fee plus Meta conversation charges</td></tr>
 <tr><td><strong>COD and RTO</strong></td><td>COD confirmation on every plan, COD to prepaid on Growth and Scale</td><td>Built for global WhatsApp and Klaviyo, not for cash on delivery</td></tr>
@@ -2769,7 +2769,7 @@ export const blogPosts: BlogPost[] = [
 <p>None of these are dishonest by themselves. They are just hard to compare, which is the point of asking about them separately from the headline price.</p>
 
 <h2>What TopEdge AI charges</h2>
-<p>There are two ways to pay. On topedgeai.com plans start at ₹1,999 a month plus GST, or ₹1,599 a month billed yearly, charged in rupees. Install from the Shopify App Store and Shopify bills you $19, $39 or $65 a month in USD instead. Full plans and limits are on the <a href="/pricing">pricing page</a>.</p>
+<p>There are two ways to pay. On topedgeai.com plans start at ₹1,999 a month including GST, or ₹1,599 a month billed yearly, charged in rupees. Install from the Shopify App Store and Shopify bills you $19, $39 or $65 a month in USD instead. Full plans and limits are on the <a href="/pricing">pricing page</a>.</p>
 <p>On the Meta side we add nothing. You connect your own Meta WhatsApp account, Meta bills you directly on that account, and we never sit in the middle of that transaction. That is what lets you run the Business Manager comparison above against us and get a clean match, which is the only version of a 0 percent markup claim that is worth anything.</p>
 <p>The honest limitations, since this is a pricing post and you are comparing: we are a young product with a small review base, and COD to prepaid conversion sits on Growth and above rather than on the entry plan. If you need that specific flow, price the Growth plan, not Launch.</p>
 
@@ -2880,7 +2880,7 @@ export const blogPosts: BlogPost[] = [
 <table>
 <thead><tr><th>Line</th><th>TopEdge AI</th><th>Dondy (read 8 Nov 2026)</th></tr></thead>
 <tbody>
-<tr><td>Entry price</td><td>₹1,999 a month plus GST, or $19 on the App Store</td><td>Free widget, Pro $6.99 a month</td></tr>
+<tr><td>Entry price</td><td>₹1,999 a month including GST, or $19 on the App Store</td><td>Free widget, Pro $6.99 a month</td></tr>
 <tr><td>Automations</td><td>On every plan</td><td>From Power Automation at $79.99 a month</td></tr>
 <tr><td>Marketing message to India</td><td>Meta’s ₹0.8631, 0% added</td><td>About ₹1.77, 60% above Meta’s US dollar card</td></tr>
 <tr><td>COD</td><td>COD confirmation on every plan, COD to prepaid on Growth and Scale</td><td>COD verification is listed. We found no COD to prepaid builder on its listing</td></tr>
@@ -2993,7 +2993,7 @@ export const blogPosts: BlogPost[] = [
       {
         question: 'How much does Shopify WhatsApp automation cost in India?',
         answer:
-          'Two lines: the app plan and Meta’s fee per message, ₹0.1150 for an order update and ₹0.8631 for a marketing message. TopEdge AI plans are ₹1,999, ₹3,999 and ₹6,499 a month plus GST on the website, or $19, $39 and $65 on the Shopify App Store, with no markup on Meta’s rates.',
+          'Two lines: the app plan and Meta’s fee per message, ₹0.1150 for an order update and ₹0.8631 for a marketing message. TopEdge AI plans are ₹1,999, ₹3,999 and ₹6,499 a month including GST on the website, or $19, $39 and $65 on the Shopify App Store, with no markup on Meta’s rates.',
       },
       {
         question: 'Is the free WhatsApp Business app enough for a Shopify store?',
@@ -3075,7 +3075,7 @@ export const blogPosts: BlogPost[] = [
 <tr>
 <td><strong>Billing</strong></td>
 <td>Per message, on your Shopify bill in USD</td>
-<td>App plan plus Meta’s per-message fees. TopEdge AI: ₹1,999 to ₹6,499 a month plus GST on the website, or $19 to $65 billed by Shopify on the App Store</td>
+<td>App plan plus Meta’s per-message fees. TopEdge AI: ₹1,999 to ₹6,499 a month including GST on the website, or $19 to $65 billed by Shopify on the App Store</td>
 </tr>
 <tr>
 <td><strong>Replies</strong></td>
@@ -3280,7 +3280,7 @@ export const blogPosts: BlogPost[] = [
 <tr>
 <th>Orders a month</th>
 <th>Meta fees, 5 × ₹0.1150 per order</th>
-<th>TopEdge AI plan that covers it (+GST)</th>
+<th>TopEdge AI plan that covers it (incl. GST)</th>
 <th>Total a month</th>
 <th>Per order</th>
 </tr>
@@ -3370,7 +3370,7 @@ export const blogPosts: BlogPost[] = [
 </details>
 <details>
 <summary>How much does Shopify WhatsApp automation cost in India?</summary>
-<p>Two lines: the app plan and Meta’s fee per message, ₹0.1150 for an order update and ₹0.8631 for a marketing message. TopEdge AI plans are ₹1,999, ₹3,999 and ₹6,499 a month plus GST on the website, or $19, $39 and $65 on the Shopify App Store, with no markup on Meta’s rates.</p>
+<p>Two lines: the app plan and Meta’s fee per message, ₹0.1150 for an order update and ₹0.8631 for a marketing message. TopEdge AI plans are ₹1,999, ₹3,999 and ₹6,499 a month including GST on the website, or $19, $39 and $65 on the Shopify App Store, with no markup on Meta’s rates.</p>
 </details>
 <details>
 <summary>Is the free WhatsApp Business app enough for a Shopify store?</summary>
@@ -3439,7 +3439,7 @@ export const blogPosts: BlogPost[] = [
       {
         question: 'What is the best WhatsApp app for Shopify?',
         answer:
-          'For an Indian D2C store that needs cart recovery, COD confirmation and replies in one place, TopEdge AI, our own app, ranks first at ₹1,999 a month plus GST or $19 on the Shopify App Store, with 0% markup on Meta\'s rates. For free order updates only, Meta\'s official WhatsApp app is the simplest start. Prices were read on 24 November 2026.',
+          'For an Indian D2C store that needs cart recovery, COD confirmation and replies in one place, TopEdge AI, our own app, ranks first at ₹1,999 a month including GST or $19 on the Shopify App Store, with 0% markup on Meta\'s rates. For free order updates only, Meta\'s official WhatsApp app is the simplest start. Prices were read on 24 November 2026.',
       },
       {
         question: 'Is there a free WhatsApp app for Shopify?',
@@ -3481,7 +3481,7 @@ export const blogPosts: BlogPost[] = [
     content: `
 <details class="mkt-blog-verdict" open>
 <summary>Direct answer</summary>
-<p>The best WhatsApp app for Shopify depends on the job you hire it for. For an Indian D2C store that needs cart recovery, COD confirmation and replies in one place, <strong>TopEdge AI</strong>, our own app, leads at <strong>₹1,999 a month</strong> plus GST (or $19 on the Shopify App Store) with Meta's rates passed through at 0% markup. For free order updates only, <strong>Meta's official WhatsApp app</strong> is free to install. Every price here was read on <strong>24 November 2026</strong>.</p>
+<p>The best WhatsApp app for Shopify depends on the job you hire it for. For an Indian D2C store that needs cart recovery, COD confirmation and replies in one place, <strong>TopEdge AI</strong>, our own app, leads at <strong>₹1,999 a month</strong> including GST (or $19 on the Shopify App Store) with Meta's rates passed through at 0% markup. For free order updates only, <strong>Meta's official WhatsApp app</strong> is free to install. Every price here was read on <strong>24 November 2026</strong>.</p>
 </details>
 
 <p>TopEdge AI is our own app. It is listed first and judged on the same columns as the other ten. Each price was read on the vendor's live pricing page or Shopify App Store listing on 24 November 2026, so re-check before you buy. If you are still deciding whether WhatsApp automation is worth it at all, start with the pillar guide, <a href="/blog/whatsapp-automation-for-shopify">Shopify WhatsApp automation</a>, then come back for the shortlist.</p>
@@ -3529,7 +3529,7 @@ export const blogPosts: BlogPost[] = [
 </tr>
 </thead>
 <tbody>
-<tr><td>1</td><td>TopEdge AI</td><td>Cart, COD and inbox in one app</td><td>₹1,999/mo + GST, or $19 on the App Store</td><td>₹0.8631 (0% markup)</td><td>Every plan; COD to prepaid from Growth</td></tr>
+<tr><td>1</td><td>TopEdge AI</td><td>Cart, COD and inbox in one app</td><td>₹1,999/mo incl. GST, or $19 on the App Store</td><td>₹0.8631 (0% markup)</td><td>Every plan; COD to prepaid from Growth</td></tr>
 <tr><td>2</td><td>WhatsApp by Meta</td><td>Free order updates</td><td>Free to install</td><td>₹0.8631, billed by Meta</td><td>Not listed</td></tr>
 <tr><td>3</td><td>Zoko</td><td>Selling from a catalogue in chat</td><td>$49.99/mo</td><td>Meta's rate + $0.015 a conversation on Starter</td><td>Free pre-built flow</td></tr>
 <tr><td>4</td><td>Interakt</td><td>Teams already on Interakt</td><td>$21/mo on the App Store; popup cart reminders on Premier, $99</td><td>₹0.958 on its web Growth plan</td><td>-</td></tr>
@@ -3549,7 +3549,7 @@ export const blogPosts: BlogPost[] = [
 
 <h3>1. TopEdge AI: best for Indian D2C stores that want cart, COD and inbox in one app</h3>
 <p><strong>Best for:</strong> Shopify D2C brands in India doing about 100 to 1,500 orders a month, with enough COD orders to be worth confirming.</p>
-<p><strong>Price:</strong> Launch ₹1,999, Growth ₹3,999 and Scale ₹6,499 a month plus GST on topedgeai.com, or $19, $39 and $65 billed by Shopify in USD on the App Store. Order caps are 100, 800 and 1,500 a month.</p>
+<p><strong>Price:</strong> Launch ₹1,999, Growth ₹3,999 and Scale ₹6,499 a month including GST on topedgeai.com, or $19, $39 and $65 billed by Shopify in USD on the App Store. Order caps are 100, 800 and 1,500 a month.</p>
 <p><strong>Trial:</strong> 14 days, 20 orders and 200 sends.</p>
 <p>TopEdge AI is all-in-one D2C software for Shopify stores, built as one suite. It brings cart recovery, COD confirmation and COD to prepaid, WhatsApp and email journeys, campaigns, a shopper CRM, live chat, opt-in tools, a tracking pixel and profit reporting into one platform. Meta's message rates pass through at 0% markup.</p>
 <p>Basic <a href="/features/cod-confirmation">COD confirmation</a> is on every plan; COD to prepaid and journeys that branch on the reply start on Growth. The tracking pixel matters for <a href="/whatsapp-abandoned-cart-recovery-app">cart recovery</a> because it can recognise a returning shopper before checkout, before Shopify's own abandoned-checkout record exists.</p>
@@ -3644,7 +3644,7 @@ export const blogPosts: BlogPost[] = [
 <tr><td>Meta fees, 3 utility messages per order at ₹0.1150</td><td>₹34.50</td><td>₹172.50</td><td>₹517.50</td></tr>
 <tr><td>The same messages at AiSensy's ₹0.145</td><td>₹43.50</td><td>₹217.50</td><td>₹652.50</td></tr>
 <tr><td>The same messages at Interakt web Growth's ₹0.150</td><td>₹45.00</td><td>₹225.00</td><td>₹675.00</td></tr>
-<tr><td>TopEdge AI plan that fits the volume (plus GST)</td><td>Launch ₹1,999</td><td>Growth ₹3,999</td><td>Scale ₹6,499</td></tr>
+<tr><td>TopEdge AI plan that fits the volume (incl. GST)</td><td>Launch ₹1,999</td><td>Growth ₹3,999</td><td>Scale ₹6,499</td></tr>
 <tr><td>TopEdge AI plan plus Meta fees</td><td>₹2,033.50</td><td>₹4,171.50</td><td>₹7,016.50</td></tr>
 </tbody>
 </table>
@@ -4627,7 +4627,7 @@ export const blogPosts: BlogPost[] = [
     description:
       'A step-by-step guide to automating an Indian Shopify store: order processing, inventory, support, WhatsApp and email workflows, and the tool stack to use.',
     summary: [
-      'To automate a Shopify store in India, start with what saves the most money: COD confirmation first if RTO hurts, cart recovery first if you are mostly prepaid, then order updates, then support. TopEdge AI runs those WhatsApp workflows for ₹1,999 to ₹6,499 a month plus GST, continuously, without a virtual assistant’s salary.',
+      'To automate a Shopify store in India, start with what saves the most money: COD confirmation first if RTO hurts, cart recovery first if you are mostly prepaid, then order updates, then support. TopEdge AI runs those WhatsApp workflows for ₹1,999 to ₹6,499 a month including GST, continuously, without a virtual assistant’s salary.',
       'A returned COD parcel costs ₹180 to ₹240 in direct logistics, per Amazon Shipping India, which is why confirming the order beats discounting it.',
       'Build the stack in layers and start with one workflow. A half-finished five-tool stack costs more than one workflow that runs every day.',
     ],
@@ -4669,7 +4669,7 @@ export const blogPosts: BlogPost[] = [
       {
         question: 'Is ecommerce automation cheaper than hiring a virtual assistant?',
         answer:
-          'For repetitive, rules-based work, usually yes. A VA is a monthly salary for about eight hours a day, while a TopEdge AI plan costs ₹1,999 to ₹6,499 a month plus GST and runs continuously without copy-paste errors. Humans still win on judgment, so automate everything that does not need it.',
+          'For repetitive, rules-based work, usually yes. A VA is a monthly salary for about eight hours a day, while a TopEdge AI plan costs ₹1,999 to ₹6,499 a month including GST and runs continuously without copy-paste errors. Humans still win on judgment, so automate everything that does not need it.',
       },
       {
         question: 'How long does ecommerce automation take to pay for itself?',
@@ -4829,7 +4829,7 @@ export const blogPosts: BlogPost[] = [
 <tr>
 <td><strong>Monthly cost</strong></td>
 <td>A monthly salary, plus hiring and training time</td>
-<td>TopEdge AI: ₹1,999 to ₹6,499 a month plus GST, by order volume</td>
+<td>TopEdge AI: ₹1,999 to ₹6,499 a month including GST, by order volume</td>
 </tr>
 <tr>
 <td><strong>Hours covered</strong></td>

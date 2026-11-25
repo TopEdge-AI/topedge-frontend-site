@@ -267,7 +267,7 @@ export const COMPARE_COMPETITORS: Record<string, CompareCompetitor> = {
     h1: 'TopEdge AI vs Zoko',
     subtitle: 'TopEdge AI vs Zoko for Shopify India D2C brands, checked for 2026.',
     answerFirst:
-      'TopEdge AI vs Zoko comes down to how you want to be billed. TopEdge AI charges a flat fee by Shopify orders: ₹1,999 to ₹6,499 a month plus GST on topedgeai.com, or $19 to $65 through Shopify, with no conversation fee. Zoko charges $49.99 to $139.99 a month in US dollars and meters conversations on Starter. Where Zoko is better: selling from a WhatsApp catalog inside the chat, COD to prepaid on every plan, and 4.9 from 475 App Store reviews against none yet for TopEdge AI. Read 12 November 2026.',
+      'TopEdge AI vs Zoko comes down to how you want to be billed. TopEdge AI charges a flat fee by Shopify orders: ₹1,999 to ₹6,499 a month including GST on topedgeai.com, or $19 to $65 through Shopify, with no conversation fee. Zoko charges $49.99 to $139.99 a month in US dollars and meters conversations on Starter. Where Zoko is better: selling from a WhatsApp catalog inside the chat, COD to prepaid on every plan, and 4.9 from 475 App Store reviews against none yet for TopEdge AI. Read 12 November 2026.',
     researchAsOf: 'Nov 2026',
     matrix: ZOKO_PAIRWISE_MATRIX.map(({ label, description, topedge, competitor }) => ({
       label,

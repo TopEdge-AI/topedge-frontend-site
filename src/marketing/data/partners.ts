@@ -93,7 +93,12 @@ export function formatInr(amount: number): string {
   })}`;
 }
 
-/** Commission on `clients` clients each paying `priceInr` a month before GST. */
-export function monthlyCommission(clients: number, priceInr: number): number {
-  return (clients * priceInr * tierFor(clients).tier.rateBp) / 10000;
+/** Plan price with 18% GST taken out: commission is paid on the amount before GST. */
+export function priceBeforeGst(priceInclGstInr: number): number {
+  return (priceInclGstInr * 100) / 118;
+}
+
+/** Commission on `clients` clients each paying `priceInclGstInr` a month (GST included). */
+export function monthlyCommission(clients: number, priceInclGstInr: number): number {
+  return (clients * priceBeforeGst(priceInclGstInr) * tierFor(clients).tier.rateBp) / 10000;
 }

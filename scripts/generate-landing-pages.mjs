@@ -877,7 +877,7 @@ const FAQS = [
   },
   {
     q: 'Do I get a GST invoice?',
-    a: 'Automatically, every cycle, with your GSTIN on it. Prices on this page are before 18% GST.',
+    a: 'Automatically, every cycle, with your GSTIN on it. Prices on this page include 18% GST.',
   },
 ];
 
@@ -1267,7 +1267,7 @@ const CART = {
   faqs: [
     { q: 'What is a WhatsApp abandoned cart recovery app?', a: 'An app that watches your Shopify checkouts and messages shoppers on WhatsApp when they leave without paying, with the products and a link back to the same checkout. TopEdge AI sends up to three reminders and cancels the rest the moment the order is placed.' },
     { q: 'When should the first abandoned cart message go out?', a: 'About 25 minutes after the shopper leaves, the default in the Cart recovery playbook. Sooner chases people who only switched tabs, and waiting several hours loses the ones still deciding.' },
-    { q: 'How much does WhatsApp cart recovery cost on Shopify?', a: 'Meta charges ₹0.8631 per delivered marketing message in India, so three reminders cost ₹2.59 at most per cart. TopEdge AI plans start at ₹1,999 a month plus GST, or $19 on the Shopify App Store, with no markup on Meta’s rate.' },
+    { q: 'How much does WhatsApp cart recovery cost on Shopify?', a: 'Meta charges ₹0.8631 per delivered marketing message in India, so three reminders cost ₹2.59 at most per cart. TopEdge AI plans start at ₹1,999 a month including GST, or $19 on the Shopify App Store, with no markup on Meta’s rate.' },
     { q: 'Can Shopify send abandoned cart messages on WhatsApp without an app?', a: 'Yes since 28 October 2026. Shopify Messaging can send WhatsApp abandoned cart and checkout reminders to WhatsApp marketing subscribers, at $0.024 a message in India. It lists no COD confirmation or order updates, which is where an app is still needed.' },
     { q: 'Should an abandoned cart message include a discount?', a: 'Not the first one. Most recovered carts come back without a discount, so keep any offer for the third reminder and you avoid paying for sales you would have made anyway.' },
     { q: 'Do I need opt-in to send cart reminders on WhatsApp?', a: 'Yes. Meta requires opt-in before a business messages someone, and a phone number typed at checkout is not consent on its own. Add a WhatsApp opt-in at checkout or on your storefront before you switch reminders on.' },
