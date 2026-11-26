@@ -297,14 +297,14 @@ export const COMPARE_COMPETITORS: Record<string, CompareCompetitor> = {
     logoAlt: 'Getgabs logo',
     accent: '#16a34a',
     brandTag: 'Low-cost WhatsApp entry',
-    title: 'TopEdge AI vs Getgabs (2026): Native COD Depth vs USD Entry',
+    title: 'TopEdge AI vs Getgabs (2027): COD Flows vs ₹699 Broadcasts',
     description:
-      'Compare TopEdge AI vs Getgabs for Shopify India: native COD to prepaid journeys, unified identity and a warranty hub vs ₹699 to ₹2,999/mo entry plans.',
+      'TopEdge AI vs Getgabs for Shopify India, read 26 Nov 2026: COD confirmation on every plan from ₹1,999 vs Getgabs’s ₹699 broadcast-first plans.',
     keywords:
       'TopEdge AI vs Getgabs, Getgabs alternative Shopify, Getgabs pricing, cheap WhatsApp Shopify app, Getgabs vs TopEdge AI',
     h1: 'TopEdge AI vs Getgabs',
-    subtitle: 'TopEdge AI vs Getgabs for Shopify India D2C brands, checked for 2026.',
-    researchAsOf: 'Sep 2026',
+    subtitle: 'TopEdge AI vs Getgabs for Shopify India D2C brands, checked 26 November 2026.',
+    researchAsOf: 'Nov 2026',
     matrix: GETGABS_PAIRWISE_MATRIX.map(({ label, description, topedge, competitor }) => ({
       label,
       description,
@@ -312,7 +312,7 @@ export const COMPARE_COMPETITORS: Record<string, CompareCompetitor> = {
       competitor,
     })),
     matrixNote:
-      'Getgabs pricing read 24 November 2026 from India: getgabs.com lists Basic ₹699 · Plus ₹1,499 · Business ₹2,999 a month, each labelled 0% Meta markup. Its Shopify App Store listing (apps.shopify.com/getgabs-whatsapp-chatbot-api) read “not currently available on the Shopify App Store” that day, so confirm how it connects before purchase.',
+      'Getgabs pricing read 26 November 2026 from India: getgabs.com lists Basic ₹699 · Plus ₹1,499 · Business ₹2,999 a month (₹6,990, ₹14,990 and ₹29,990 a year), each labelled 0% Meta markup; the Shopify app is an add-on on Basic. Its Shopify App Store listing (apps.shopify.com/getgabs-whatsapp-chatbot-api) read “not currently available on the Shopify App Store” that day, so confirm how it connects before purchase.',
     related: [
       { label: 'Getgabs alternatives guide', href: '/blog/getgabs-alternative-shopify-whatsapp' },
       { label: 'Alternatives index', href: '/compare/alternatives' },
@@ -333,14 +333,14 @@ export const COMPARE_COMPETITORS: Record<string, CompareCompetitor> = {
     logoAlt: 'Kanal logo',
     accent: '#7c3aed',
     brandTag: 'Global WhatsApp + Klaviyo',
-    title: 'TopEdge AI vs Kanal (2026): ₹1,999 INR vs €89 EUR Plans',
+    title: 'TopEdge AI vs Kanal (2027): ₹1,999 INR vs €89 EUR Plans',
     description:
-      'TopEdge AI vs Kanal for Shopify India: flat INR plans from ₹1,999/mo and native COD to prepaid vs Kanal’s €89 to €149/mo EUR plans and Klaviyo focus.',
+      'TopEdge AI vs Kanal for Shopify India, read 26 Nov 2026: INR plans from ₹1,999 with COD to prepaid vs Kanal’s €89 and €149 plans built for Europe.',
     keywords:
       'TopEdge AI vs Kanal, Kanal alternative Shopify, Kanal pricing, Kanal WhatsApp Klaviyo, Shopify WhatsApp India vs Kanal',
     h1: 'TopEdge AI vs Kanal',
-    subtitle: 'TopEdge AI vs Kanal for Shopify India D2C brands, checked for 2026.',
-    researchAsOf: 'Sep 2026',
+    subtitle: 'TopEdge AI vs Kanal for Shopify India D2C brands, checked 26 November 2026.',
+    researchAsOf: 'Nov 2026',
     matrix: KANAL_PAIRWISE_MATRIX.map(({ label, description, topedge, competitor }) => ({
       label,
       description,
@@ -348,7 +348,7 @@ export const COMPARE_COMPETITORS: Record<string, CompareCompetitor> = {
       competitor,
     })),
     matrixNote:
-      'Kanal plans as of September 2026 from getkanal.com/pricing: Pro €89 · Scale €149 · Business €350 · Agency €1,900 /mo. Shopify App Store (apps.shopify.com/kanal-marketing-ai) shows Pro/Scale in USD (~$89/$149) and ~97 reviews @ 5.0. Verify live; currency display differs by surface.',
+      'Kanal plans read 26 November 2026 on getkanal.com/pricing: Pro €89 · Scale €149 · Business €350 · Agency €1,900 a month, no commitment. Its Shopify App Store listing (apps.shopify.com/kanal-marketing-ai) shows a free Demo plan, Pro $89 and Scale $149 billed in USD, +$50 a month per extra market, and 5.0 from 153 reviews that day. Currency differs by surface, so verify on the surface you buy from.',
     related: [
       { label: 'Kanal alternatives guide', href: '/blog/kanal-whatsapp-alternative-shopify' },
       { label: 'Alternatives index', href: '/compare/alternatives' },
@@ -404,13 +404,13 @@ export const COMPARE_COMPETITORS: Record<string, CompareCompetitor> = {
     logoAlt: 'Updatrr logo',
     accent: '#ea580c',
     brandTag: 'Shopify-only WhatsApp automation',
-    title: 'TopEdge AI vs Updatrr (2026): BYOK AI & CRM vs Shopify App',
+    title: 'TopEdge AI vs Updatrr (2027): ₹1,999 INR vs $29.99 USD',
     description:
-      'TopEdge AI vs Updatrr for Shopify India: BYOK AI on every plan from ₹1,999/mo, a visitor pixel and a warranty hub vs USD tiers that gate AI at $99.99.',
+      'TopEdge AI vs Updatrr for Shopify India, read 26 Nov 2026: ₹1,999 INR plans and a 14-day trial vs Updatrr’s $29.99 USD plans, with AI on $99.99.',
     keywords:
       'TopEdge AI vs Updatrr, Updatrr alternative India, Updatrr WhatsApp Shopify, Updatrr pricing, TopEdge AI vs Updatrr COD prepaid, Updatrr AI conversation cost',
     h1: 'TopEdge AI vs Updatrr',
-    subtitle: 'TopEdge AI vs Updatrr for Shopify India D2C brands, checked for 2026.',
+    subtitle: 'TopEdge AI vs Updatrr for Shopify India D2C brands, checked 26 November 2026.',
     matrix: UPDATRR_PAIRWISE_MATRIX.map(({ label, description, topedge, competitor }) => ({
       label,
       description,
@@ -418,7 +418,7 @@ export const COMPARE_COMPETITORS: Record<string, CompareCompetitor> = {
       competitor,
     })),
     matrixNote:
-      'Read off updatrr.com/pricing on 6 Nov 2026: Growth $29.99/mo, Pro $49.99/mo, Pro AI $99.99/mo, 7-day no-card trial, country-wise prices inside its dashboard, and Updatrr states it adds no markup on Meta conversation fees (so the Meta line matches ours). Capability rows reflect its publicly described Shopify-app surface on that date, not its roadmap. Confirm live plan limits, AI fees and Meta billing on updatrr.com and apps.shopify.com/prizma-updatrr before purchase.',
+      'Read off updatrr.com/pricing on 26 Nov 2026: Growth $29.99/mo, Pro $49.99/mo, Pro AI $99.99/mo, 7-day no-card trial, country-wise prices inside its dashboard, annual pricing on request, and its pricing FAQ says Updatrr adds no markup on Meta’s fees (so the Meta line matches ours). Its Shopify listing (apps.shopify.com/prizma-updatrr) bills in USD, shows a 15-day trial on ProAI and 5.0 from 45 reviews that day. Capability rows reflect its publicly described Shopify-app surface, not its roadmap.',
     researchAsOf: 'Nov 2026',
     related: [
       { label: 'All comparisons', href: '/compare' },

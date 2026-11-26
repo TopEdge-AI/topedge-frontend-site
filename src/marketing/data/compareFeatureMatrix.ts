@@ -749,14 +749,14 @@ export const GETGABS_PAIRWISE_MATRIX: PairwiseFeatureRow[] = [
     topedge:
       '14-day free trial, then ₹1,999/month (₹1,599/month billed yearly) incl. 18% GST on topedgeai.com, or $19/month billed by Shopify in USD from the Shopify App Store',
     competitor:
-      'Basic ₹699 · Plus ₹1,499 · Business ₹2,999 a month on getgabs.com (24 Nov 2026); its Shopify App Store listing was unavailable that day',
+      'Basic ₹699 · Plus ₹1,499 · Business ₹2,999 a month on getgabs.com (26 Nov 2026); its Shopify App Store listing was unavailable that day',
   },
   {
     id: 'template-markup',
     label: 'Meta markup',
     description: 'Platform fee above Meta conversation rates.',
     topedge: '0% markup; Meta pass-through',
-    competitor: '0% Meta markup on every plan, with Meta’s ₹0.8631 / ₹0.115 India rates listed on getgabs.com (24 Nov 2026); subscription billed separately',
+    competitor: '0% Meta markup on every plan, with Meta’s ₹0.8631 / ₹0.115 India rates listed on getgabs.com (26 Nov 2026); subscription billed separately',
   },
   {
     id: 'ai-llm',
@@ -812,7 +812,7 @@ export const GETGABS_PAIRWISE_MATRIX: PairwiseFeatureRow[] = [
     label: 'Entry pricing',
     description: 'Cost to start.',
     topedge: 'Launch ₹1,999/mo (published INR)',
-    competitor: 'From ₹699/mo on getgabs.com (24 Nov 2026); not on the Shopify App Store that day',
+    competitor: 'From ₹699/mo on getgabs.com (26 Nov 2026); not on the Shopify App Store that day',
   },
 ];
 
@@ -826,7 +826,7 @@ export const KANAL_PAIRWISE_MATRIX: PairwiseFeatureRow[] = [
     topedge:
       '14-day free trial, then ₹1,999/month (₹1,599/month billed yearly) incl. 18% GST on topedgeai.com, or $19/month billed by Shopify in USD from the Shopify App Store',
     competitor:
-      'Pro €89 · Scale €149 · Business €350 · Agency €1,900 per month (Sep 2026), billed in EUR, so the India cost moves with the exchange rate',
+      'Pro €89 · Scale €149 · Business €350 · Agency €1,900 per month (26 Nov 2026), billed in EUR on its site or $89 / $149 in USD through Shopify, so the India cost moves with the exchange rate',
   },
   {
     id: 'template-markup',
@@ -840,7 +840,7 @@ export const KANAL_PAIRWISE_MATRIX: PairwiseFeatureRow[] = [
     label: 'AI agent',
     description: 'Where AI unlocks.',
     topedge: 'BYOK + RAG on core plans',
-    competitor: 'AI Agent on Scale+ (€149+; verify live)',
+    competitor: 'AI agent on Scale (€149) and above (read 26 Nov 2026)',
   },
   {
     id: 'klaviyo',
@@ -854,7 +854,7 @@ export const KANAL_PAIRWISE_MATRIX: PairwiseFeatureRow[] = [
     label: 'India COD workflows',
     description: 'COD confirm and COD → prepaid for Indian D2C.',
     topedge: 'Native COD journeys for India checkout patterns. COD confirmation is on every plan; automated COD to prepaid is on Growth and Scale.',
-    competitor: 'No India-specific COD positioning found on public marketing',
+    competitor: 'Its Shopify listing names order confirmation on WhatsApp and COD verification (26 Nov 2026); no COD to prepaid flow named on its pricing page or listing',
   },
   {
     id: 'unified-identity',
@@ -981,7 +981,7 @@ export const UPDATRR_PAIRWISE_MATRIX: PairwiseFeatureRow[] = [
     topedge:
       '14-day free trial, then ₹1,999/month (₹1,599/month billed yearly) incl. 18% GST on topedgeai.com, or $19/month billed by Shopify in USD from the Shopify App Store',
     competitor:
-      '7-day free trial with no card, then $29.99, $49.99 or $99.99 a month (read off updatrr.com/pricing on 6 Nov 2026; it says country-wise prices show inside its dashboard)',
+      '7-day free trial with no card, then $29.99, $49.99 or $99.99 a month (updatrr.com/pricing, read 26 Nov 2026; country-wise prices show inside its dashboard, and its Shopify listing shows a 15-day trial on ProAI)',
   },
   {
     id: 'template-markup',
@@ -1001,7 +1001,7 @@ export const UPDATRR_PAIRWISE_MATRIX: PairwiseFeatureRow[] = [
     topedge:
       'Bring Your Own Key (BYOK) architecture with built-in RAG pipeline (est. ~₹0.10-₹0.30 per AI response depending on selected AI model)',
     competitor:
-      'AI chatbot on the $99.99 Pro AI tier; no per-conversation AI fee published (read 6 Nov 2026)',
+      'AI chatbot with human handover and AI voice calling on the $99.99 Pro AI tier; Pro lists a no-code chatbot; no per-message AI fee published (read 26 Nov 2026)',
   },
   {
     id: 'store-pixel',

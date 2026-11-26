@@ -11,7 +11,7 @@ import { SITE_URL } from '../marketing/data/marketingSeo';
 import { articleDatePublishedIso } from '../marketing/data/contentDates';
 import MarketingPage from '../marketing/components/MarketingPage';
 import MarketingCtaBand from '../marketing/components/MarketingCtaBand';
-import { blogPosts } from '../data/blogPosts';
+import { blogIndex } from '../data/blogContent';
 import { filterMarketingBlogPosts } from '../marketing/data/blog';
 import {
   BLOG_CATEGORIES,
@@ -24,7 +24,7 @@ import { Reveal } from '../marketing/components/motion';
 import '../marketing/styles/blog.css';
 
 const allBlogPosts = filterMarketingBlogPosts(
-  [...blogPosts].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
+  [...blogIndex].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
 );
 
 function formatDate(date: string) {

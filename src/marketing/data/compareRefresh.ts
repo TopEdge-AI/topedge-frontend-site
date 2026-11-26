@@ -431,6 +431,8 @@ export const COMPARE_REFRESH: Record<string, CompareRefresh> = {
       { title: 'Connect your WhatsApp Business Account', body: 'Templates you had approved belong to your WhatsApp Business Account, not to Zoko. Connect that account to TopEdge AI during a low-order hour.' },
       { title: 'Cancel before the next billing period', body: 'Zoko charges its subscription on the first day of each period, so cancel once your journeys have fired on real orders and before the next period starts.' },
     ],
+    closeTitle: 'Leave the conversation meter behind',
+    closeHighlight: 'conversation meter behind',
     faqs: [
       {
         question: 'How much does Zoko cost?',
@@ -542,5 +544,264 @@ export const COMPARE_REFRESH: Record<string, CompareRefresh> = {
           'TopEdge AI if you send real WhatsApp volume and need COD confirmation and COD to prepaid billed in rupees; Dondy if you mainly want a free chat button or sell across several countries in their own languages.',
       },
     ],
+  },
+
+  updatrr: {
+    updated: '2026-11-26',
+    heroSub:
+      'Rupee plans from ₹1,999 with a 14-day trial, against Updatrr’s USD plans that keep AI replies and voice calls on the $99.99 tier.',
+    verdict:
+      'Both pass Meta’s message rates through with no markup, so the bill comes down to the plan. TopEdge AI costs less at each tier: ₹1,999 a month including GST or $19 on the App Store, against Updatrr’s $29.99, and $65 against $99.99 at the top. Updatrr is the better pick when you want AI voice calls to confirm COD orders, or an app with 45 five-star reviews. Read 26 November 2026.',
+    switchReasons: [
+      {
+        title: 'Less at every tier',
+        body: 'On the Shopify App Store TopEdge AI is $19, $39 and $65 a month against Updatrr’s $29.99, $49.99 and $99.99. On topedgeai.com the same plans are ₹1,999, ₹3,999 and ₹6,499 including GST, billed in INR.',
+      },
+      {
+        title: 'Fourteen days on real COD orders',
+        body: 'TopEdge AI’s trial runs 14 days with 20 orders and 200 sends. Updatrr’s is 7 days on Growth and Pro, which may end before your first confirmed COD order is delivered.',
+      },
+      {
+        title: 'More of the store in one plan',
+        body: 'TopEdge AI is all-in-one D2C software for Shopify stores: a tracking pixel, profit reporting and a warranty hub sit beside cart recovery and COD confirmation. Updatrr’s pricing page lists none of those three (read 26 November 2026).',
+      },
+    ],
+    fallsShort: [
+      {
+        title: 'AI waits for the top plan',
+        body: 'Updatrr lists its AI chatbot with human handover and AI voice calling only on Pro AI at $99.99 a month. TopEdge AI lets you bring your own AI key on every plan.',
+      },
+      {
+        title: 'Billed in US dollars',
+        body: 'Updatrr’s Shopify listing says all charges are billed in USD, and its website shows country prices only inside the dashboard. TopEdge AI bills in INR with a GST invoice on topedgeai.com.',
+      },
+      {
+        title: 'Yearly price only on request',
+        body: 'Updatrr’s pricing FAQ asks you to contact the team for annual plans. TopEdge AI publishes yearly prices: Launch is ₹1,599 a month billed yearly, including GST.',
+      },
+    ],
+    betterPick: [
+      'You want an AI voice call to confirm COD orders or chase abandoned carts: Updatrr Pro AI includes AI voice calling, and TopEdge AI does not make calls.',
+      'Review history matters to you: Updatrr is rated 5.0 from 45 reviews on the Shopify App Store (26 November 2026), and TopEdge AI has none yet.',
+    ],
+    priceRows: [
+      { label: 'Entry plan', topedge: 'Launch ₹1,999/mo incl. GST, or $19 on the App Store', competitor: 'Growth $29.99/mo, billed in USD' },
+      { label: 'Middle plan', topedge: 'Growth ₹3,999/mo incl. GST, or $39', competitor: 'Pro $49.99/mo' },
+      { label: 'Top plan', topedge: 'Scale ₹6,499/mo incl. GST, or $65', competitor: 'Pro AI $99.99/mo' },
+      { label: 'AI replies', topedge: 'Bring your own AI key, every plan', competitor: 'AI chatbot with human handover on Pro AI' },
+      { label: 'Meta message fees', topedge: 'Meta’s rate, 0% markup', competitor: 'Meta’s rate, no markup (Updatrr’s pricing FAQ)' },
+      { label: 'Free trial', topedge: '14 days, 20 orders, 200 sends', competitor: '7 days, no card (15 days on ProAI per its Shopify listing)' },
+      { label: 'Billed yearly', topedge: '₹1,599/mo billed yearly', competitor: 'On request' },
+    ],
+    priceNote:
+      'Sources: updatrr.com/pricing (one view; annual pricing on request) and Updatrr’s Shopify App Store listing, which bills in USD. TopEdge AI prices include 18% GST on our site.',
+    switchSteps: [
+      { title: 'List the Updatrr automations you run', body: 'Cart reminders, COD confirmation reminders, order and shipment updates and review reminders map to TopEdge AI journeys. Note anything that relies on AI voice calls, which has no TopEdge AI equivalent.' },
+      { title: 'Keep your WhatsApp Business Account', body: 'Templates approved on your number belong to your WhatsApp Business Account, not to Updatrr. Connect the same account to TopEdge AI.' },
+      { title: 'Pause each Updatrr flow as its twin goes live', body: 'Publish COD confirmation in TopEdge AI and pause Updatrr’s COD reminder the same hour, so no buyer gets two messages for one order.' },
+      { title: 'Cancel from your Shopify admin', body: 'Updatrr is billed by Shopify every 30 days and plans change from the Shopify admin. Cancel once your journeys have fired on real orders.' },
+    ],
+    faqs: [
+      {
+        question: 'How much does Updatrr cost?',
+        answer:
+          'Updatrr’s plans were Growth $29.99, Pro $49.99 and Pro AI $99.99 a month on 26 November 2026, billed in USD through Shopify, with annual pricing on request. TopEdge AI is ₹1,999 a month including GST, or $19 on the App Store. Our Updatrr alternatives guide compares more tools.',
+      },
+      {
+        question: 'Does Updatrr add a markup on WhatsApp messages?',
+        answer:
+          'No. Updatrr’s pricing FAQ says it adds no markup on Meta’s fees, which Meta bills separately. TopEdge AI also adds 0%, so the message line is the same on both and the difference is the plan price.',
+      },
+      {
+        question: 'Does Updatrr have a free trial?',
+        answer:
+          'Yes, 7 days with no card on its website, and its Shopify listing shows 15 days on ProAI. TopEdge AI’s trial runs 14 days with 20 orders and 200 sends.',
+      },
+      {
+        question: 'What do Shopify merchants rate Updatrr?',
+        answer:
+          'Updatrr WhatsApp AI Automation was rated 5.0 from 45 reviews on the Shopify App Store on 26 November 2026. TopEdge AI had no App Store reviews yet that day.',
+      },
+      {
+        question: 'Is Updatrr or TopEdge AI better for COD orders?',
+        answer:
+          'Both confirm COD orders on WhatsApp on their entry plan. TopEdge AI adds COD to prepaid from Growth at ₹3,999 and costs less at each tier; Updatrr adds AI voice calls for COD confirmation on Pro AI at $99.99.',
+      },
+    ],
+    closeTitle: 'Same Meta rates, a smaller plan',
+    closeHighlight: 'a smaller plan',
+  },
+
+  getgabs: {
+    updated: '2026-11-26',
+    heroSub:
+      'COD confirmation on every plan and a live Shopify App Store install, against a ₹699 broadcast plan with no COD flows on its plan table.',
+    verdict:
+      'For a Shopify store that ships COD, TopEdge AI is the closer fit: COD confirmation on every plan from ₹1,999 a month including GST, COD to prepaid from Growth, and an install on the Shopify App Store. Getgabs is cheaper to start at ₹699 and suits broadcast-heavy teams, but its Shopify listing was unavailable and its plan table names no COD flow. Both add 0% to Meta’s rates. Read 26 November 2026.',
+    switchReasons: [
+      {
+        title: 'COD confirmation from the first plan',
+        body: 'TopEdge AI Launch, ₹1,999 a month including GST, confirms every COD order on WhatsApp before dispatch. Getgabs’s plan table lists order updates and abandoned checkout reminders from Plus, and has no COD confirmation row (read 26 November 2026).',
+      },
+      {
+        title: 'Installs from the Shopify App Store',
+        body: 'Getgabs’s Shopify listing said “This app is not currently available on the Shopify App Store” on 26 November 2026. TopEdge AI installs there at $19 a month, or connects from topedgeai.com in INR.',
+      },
+      {
+        title: 'Priced by orders, not broadcasts',
+        body: 'Getgabs meters broadcasts (30,000, 5,00,000 and 15,00,000 a month), contacts and API calls by tier. TopEdge AI plans are sized by Shopify orders: 100, 800 or 1,500 a month.',
+      },
+    ],
+    fallsShort: [
+      {
+        title: 'Basic leaves Shopify out',
+        body: 'On the ₹699 Basic plan the Shopify app is an add-on, and order updates and abandoned checkout reminders start on Plus at ₹1,499. TopEdge AI includes Shopify cart recovery and COD confirmation on Launch.',
+      },
+      {
+        title: 'No COD to prepaid',
+        body: 'Getgabs’s plans name no flow that moves a COD buyer to prepaid. TopEdge AI offers a prepaid link in the confirmation from Growth and replaces the COD order with a paid one.',
+      },
+      {
+        title: 'Budget per message, not per conversation',
+        body: 'Getgabs’s pricing page still says Meta charges per conversation. Meta has billed per delivered message since 1 July 2025, at ₹0.8631 marketing and ₹0.1150 utility in India, which is how TopEdge AI shows the cost.',
+      },
+    ],
+    betterPick: [
+      'You mainly send broadcasts on a tight budget: Basic is ₹699 a month with 30,000 broadcasts, under TopEdge AI’s ₹1,999 entry.',
+      'A large team works the inbox: Getgabs Plus includes 10 users and Business 20.',
+      'You run Instagram automation rules next to WhatsApp, from 30 rules on Basic to 500 on Business.',
+    ],
+    priceRows: [
+      { label: 'Entry plan', topedge: 'Launch ₹1,999/mo incl. GST, or $19 on the App Store', competitor: 'Basic ₹699/mo, admin only' },
+      { label: 'First plan with Shopify automation', topedge: 'Launch, ₹1,999/mo', competitor: 'Plus ₹1,499/mo' },
+      { label: 'Top self-serve plan', topedge: 'Scale ₹6,499/mo incl. GST', competitor: 'Business ₹2,999/mo' },
+      { label: 'Billed yearly', topedge: '₹1,599/mo billed yearly', competitor: '₹6,990, ₹14,990 or ₹29,990 a year' },
+      { label: 'Meta markup', topedge: '0%', competitor: '0%' },
+      { label: 'COD confirmation', topedge: 'Every plan', competitor: 'Not on its plan table' },
+      { label: 'Shopify App Store', topedge: 'Live, $19, $39 or $65 a month', competitor: 'Listing not available' },
+    ],
+    priceNote:
+      'Sources: getgabs.com/pricing on the monthly and annual views, and Getgabs’s Shopify App Store listing. TopEdge AI prices include 18% GST on our site.',
+    switchSteps: [
+      { title: 'Check how your store connects today', body: 'With the Shopify listing unavailable, confirm whether your Getgabs account reaches Shopify through its own integration page, and which order events it receives.' },
+      { title: 'Export contacts with their opt-in', body: 'Take your broadcast lists out with the opt-in source for each number. Meta requires opt-in before you message anyone, on any tool.' },
+      { title: 'Connect your WhatsApp Business Account', body: 'Your approved templates sit in your own WhatsApp Business Account. Connect it to TopEdge AI and Meta keeps billing that account directly.' },
+      { title: 'Start with COD confirmation and order updates', body: 'Turn on the two journeys Getgabs did not run for you, watch a COD order get confirmed, then move your campaigns across.' },
+    ],
+    faqs: [
+      {
+        question: 'How much does Getgabs cost?',
+        answer:
+          'Getgabs listed Basic ₹699, Plus ₹1,499 and Business ₹2,999 a month on 26 November 2026, or ₹6,990, ₹14,990 and ₹29,990 a year, with Enterprise on request. TopEdge AI is ₹1,999 a month including GST. Our Getgabs alternatives guide compares more tools.',
+      },
+      {
+        question: 'Does Getgabs add a markup on WhatsApp messages?',
+        answer:
+          'No. Every Getgabs plan is labelled 0% markup and lists Meta’s India rates of ₹0.8631 marketing and ₹0.115 utility. TopEdge AI also adds 0%, so the difference is in plans and COD features.',
+      },
+      {
+        question: 'Is Getgabs on the Shopify App Store?',
+        answer:
+          'Not on 26 November 2026: its listing read “This app is not currently available on the Shopify App Store”. Its website still offers a Shopify integration. TopEdge AI installs from the App Store at $19 a month.',
+      },
+      {
+        question: 'Does Getgabs confirm COD orders?',
+        answer:
+          'Its pricing page does not list COD confirmation; it lists order update notifications and abandoned checkout reminders from the Plus plan. TopEdge AI confirms COD orders on every plan and adds COD to prepaid from Growth.',
+      },
+      {
+        question: 'Which is better for an Indian Shopify store, Getgabs or TopEdge AI?',
+        answer:
+          'TopEdge AI if COD is a large share of your orders and you want confirmation and COD to prepaid run from Shopify. Getgabs if you mainly need low-cost broadcasts and a large shared inbox from ₹699 a month.',
+      },
+    ],
+    closeTitle: 'Confirm your next COD order first',
+    closeHighlight: 'COD order first',
+  },
+
+  kanal: {
+    updated: '2026-11-26',
+    heroSub:
+      'Rupee plans built for Indian COD orders, against Kanal’s euro plans built for European Shopify brands.',
+    verdict:
+      'For an Indian Shopify store that ships COD, TopEdge AI costs less and does more of the COD work: ₹1,999 a month including GST, or $19 on the App Store against Kanal’s $89, with COD to prepaid from Growth. Kanal suits brands selling across Europe that want EU hosting, RCS and iMessage, or a team to run their flows. Read 26 November 2026.',
+    switchReasons: [
+      {
+        title: 'A fifth of the entry price',
+        body: 'Kanal Pro is €89 a month on getkanal.com, about ₹9,300 at the ECB’s 6 November rate, or $89 through Shopify. TopEdge AI Launch is ₹1,999 including GST, or $19 on the App Store.',
+      },
+      {
+        title: 'COD to prepaid built in',
+        body: 'Kanal’s Shopify listing names COD verification, but neither its pricing page nor its listing names a COD to prepaid flow. TopEdge AI confirms COD orders on every plan and offers the prepaid switch from Growth.',
+      },
+      {
+        title: 'Profit after RTO, not only revenue',
+        body: 'Kanal’s dashboard reports revenue, orders and ROAS attributed to WhatsApp. TopEdge AI reports net profit after COD fees, RTO and ad spend, order by order, which is the number a COD store is judged on.',
+      },
+    ],
+    fallsShort: [
+      {
+        title: 'AI agent from Scale',
+        body: 'Kanal’s AI agent starts on Scale at €149 a month, or $149 through Shopify. TopEdge AI lets you bring your own AI key on every plan.',
+      },
+      {
+        title: 'No message rate published',
+        body: 'Kanal’s pricing page publishes no per-message rate and no markup statement. TopEdge AI passes Meta’s India rates through at 0%: ₹0.8631 marketing, ₹0.1150 utility.',
+      },
+      {
+        title: 'Priced in euros or dollars',
+        body: 'Kanal bills in EUR on its site and in USD through Shopify, where each extra market adds $50 a month. TopEdge AI bills Indian stores in INR with a GST invoice.',
+      },
+    ],
+    betterPick: [
+      'You sell across Europe and want EU hosting and GDPR, with the app in French, Spanish, Italian, German or Portuguese.',
+      'You want RCS, iMessage and SMS campaigns next to WhatsApp, or Kanal’s experts to build and run your flows on Business at €350 a month.',
+      'Review history matters to you: Kanal is rated 5.0 from 153 reviews on the Shopify App Store (26 November 2026), and TopEdge AI has none yet.',
+    ],
+    priceRows: [
+      { label: 'Entry plan', topedge: 'Launch ₹1,999/mo incl. GST, or $19 on the App Store', competitor: 'Pro €89/mo, or $89 on the App Store' },
+      { label: 'AI agent', topedge: 'Bring your own AI key, every plan', competitor: 'Scale €149/mo, or $149' },
+      { label: 'India message rate', topedge: '₹0.8631 marketing, ₹0.1150 utility, 0% markup', competitor: 'Not published on its pricing page' },
+      { label: 'Billing currency', topedge: 'INR with GST, or USD through Shopify', competitor: 'EUR on its site, USD through Shopify' },
+      { label: 'Selling in more countries', topedge: 'Same plan', competitor: '+$50/mo per market on its Shopify listing' },
+      { label: 'Free option', topedge: '14-day trial, 20 orders, 200 sends', competitor: 'Free demo plan on its Shopify listing' },
+    ],
+    priceNote:
+      'Sources: getkanal.com/pricing (one view, no commitment) and Kanal’s Shopify App Store listing, billed in USD. The rupee figure uses the ECB reference rate of 6 November 2026 and is an estimate. TopEdge AI prices include 18% GST on our site.',
+    switchSteps: [
+      { title: 'Note which Kanal flows earn', body: 'Kanal’s dashboard shows revenue by cart recovery, campaigns and upsell. Rebuild the flows that earn first; TopEdge AI journeys cover cart recovery, order updates and COD.' },
+      { title: 'Move Klaviyo-triggered flows last', body: 'If a flow starts from Klaviyo, Gorgias or Recharge on Kanal, check the trigger exists for you before you switch it off.' },
+      { title: 'Connect your WhatsApp Business Account', body: 'Templates you had approved belong to your WhatsApp Business Account. Connect it to TopEdge AI and Meta bills that account at its own rate.' },
+      { title: 'Cancel with no notice period', body: 'Kanal plans carry no commitment, so cancel once COD confirmation and cart recovery have fired on real orders in TopEdge AI.' },
+    ],
+    faqs: [
+      {
+        question: 'How much does Kanal cost?',
+        answer:
+          'Kanal listed Pro €89, Scale €149, Business €350 and Agency €1,900 a month on 26 November 2026, with no commitment; its Shopify listing bills Pro and Scale at $89 and $149. TopEdge AI is ₹1,999 a month including GST, or $19 on the App Store.',
+      },
+      {
+        question: 'Is Kanal free?',
+        answer:
+          'Partly. Kanal’s Shopify listing shows a free Demo plan; automated cart recovery and campaigns start on Pro at $89 a month. TopEdge AI has no free plan but a 14-day trial with 20 orders and 200 sends.',
+      },
+      {
+        question: 'Does Kanal work with Shopify?',
+        answer:
+          'Yes. Kanal: WhatsApp Marketing & AI is on the Shopify App Store, by KANAL SAS, and lists cart recovery, order confirmation on WhatsApp, COD verification and campaigns. It also works with Klaviyo, Gorgias and Recharge from Scale.',
+      },
+      {
+        question: 'What do Shopify merchants rate Kanal?',
+        answer:
+          'Kanal was rated 5.0 from 153 reviews on the Shopify App Store on 26 November 2026. TopEdge AI had no App Store reviews yet that day.',
+      },
+      {
+        question: 'Is Kanal or TopEdge AI better for an Indian COD store?',
+        answer:
+          'TopEdge AI: INR plans from ₹1,999, COD confirmation on every plan and COD to prepaid from Growth. Kanal fits a brand selling mainly in Europe. Our Kanal alternatives guide compares more tools.',
+      },
+    ],
+    closeTitle: 'Run your COD store on rupee plans',
+    closeHighlight: 'rupee plans',
   },
 };

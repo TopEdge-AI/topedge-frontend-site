@@ -40,8 +40,8 @@ export const SOURCES = {
     label: 'Meta’s WhatsApp Business Platform pricing documentation',
     publisher: 'Meta',
     claim:
-      'Per-message pricing since 1 July 2025, charged on delivery, by message category (marketing, utility, authentication, service) and the recipient’s country calling code. Carries the live rate card and the volume tiers. Effective 1 October 2026 by messaging account timezone, every business phone number gets a free tier of 1,000 service messages a month and Meta charges from the 1,001st service message onward. Meta Business Agent moved to token billing on 1 August 2026 at $2.00 per million tokens. Utility and authentication volume tiers start at 25,000,000 and 750,000 messages a month, with the India utility rate falling to ₹0.1081 above the utility tier. India card: ₹0.8631 marketing, ₹0.1150 utility and authentication, ₹2.4971 authentication-international, all per delivered message. Re-read 16 November 2026: the page shows “Updated: Sep 30, 2026”, the free tier of 1,000 service messages and the INR deadline of 31 December 2026 for eligible customers, and the linked INR list-rates sheet (“effective October 1, 2026”) still lists India at ₹0.8631 marketing, ₹0.115 utility, authentication and service, ₹2.4971 authentication-international.',
-    verified: '2026-11-16',
+      'Per-message pricing since 1 July 2025, charged on delivery, by message category (marketing, utility, authentication, service) and the recipient’s country calling code. Carries the live rate card and the volume tiers. Effective 1 October 2026 by messaging account timezone, every business phone number gets a free tier of 1,000 service messages a month and Meta charges from the 1,001st service message onward. Meta Business Agent moved to token billing on 1 August 2026 at $2.00 per million tokens. Utility and authentication volume tiers start at 25,000,000 and 750,000 messages a month, with the India utility rate falling to ₹0.1081 above the utility tier. India card: ₹0.8631 marketing, ₹0.1150 utility and authentication, ₹2.4971 authentication-international, all per delivered message. Re-read 16 November 2026: the page shows “Updated: Sep 30, 2026”, the free tier of 1,000 service messages and the INR deadline of 31 December 2026 for eligible customers, and the linked INR list-rates sheet (“effective October 1, 2026”) still lists India at ₹0.8631 marketing, ₹0.115 utility, authentication and service, ₹2.4971 authentication-international. Re-read 26 November 2026: the page now resolves to developers.facebook.com/documentation/business-messaging/whatsapp/pricing and shows “Updated: Nov 18, 2026”; the free tier of 1,000 service messages per business phone number a month (since 1 October 2026) is unchanged; eligible Indian businesses must migrate Messaging accounts to INR by 31 December 2026, after which Meta stops delivering messages of non-INR accounts. The INR list-rate file is an .xlsx download and was not opened that day.',
+    verified: '2026-11-26',
   },
   metaTemplates: {
     id: 'metaTemplates',
@@ -103,8 +103,8 @@ export const SOURCES = {
     label: 'Unicommerce’s India D2C Report 2026',
     publisher: 'Unicommerce',
     claim:
-      'RTO of 39.2% at the November 2025 festive peak falling to 25.6% in January 2026 and 21.0% by March 2026 among brands running prepaid incentives, pincode-level courier routing and pre-dispatch address verification, built from 410M+ shipments across 6,000+ brands. Festive-quarter COD returns around 58% against under 15% for prepaid. Tier-2 and Tier-3 cities drove 66% of incremental order volume in FY26.',
-    verified: '2026-10-21',
+      'RTO of 39.2% at the November 2025 festive peak falling to 25.6% in January 2026 and 21.0% by March 2026 among brands running prepaid incentives, pincode-level courier routing and pre-dispatch address verification, built from 410M+ shipments across 6,000+ brands. Festive-quarter COD returns around 58% against under 15% for prepaid. Tier-2 and Tier-3 cities drove 66% of incremental order volume in FY26. Re-read 26 November 2026: 6,000+ brands, 410M+ shipments, FY2026; RTO 39.2% at the November 2025 festive peak, 25.6% January, 21.0% March 2026 for brands running all three changes (prepaid incentive at checkout, pin-code-level courier routing on delivery performance, address verification before dispatch); “During the festive quarter, COD orders returned at 58%. Prepaid orders? Under 15%.”; a prepaid incentive “converts 20 to 30% of COD intenders”; “66% of your next wave of customers lives outside a metro” (the Tier 2 and 3 finding itself is behind the report download).',
+    verified: '2026-11-26',
   },
   amazonShippingRto: {
     id: 'amazonShippingRto',
@@ -112,8 +112,8 @@ export const SOURCES = {
     label: 'Amazon Shipping India’s RTO cost breakdown',
     publisher: 'Amazon Shipping India',
     claim:
-      'One RTO parcel costs ₹180 to ₹240 in direct logistics: forward shipping ₹60 to ₹100, reverse logistics ₹50 to ₹80, repackaging and quality check ₹20 to ₹40, inventory holding in transit ₹10 to ₹20. That total excludes acquisition cost, and the page notes ₹450 to ₹680 spent acquiring a customer who then refuses at the door. Orders attempted within 1 to 2 days had 22% RTO, rising to 35% when attempted after 5+ days. Vadodara recorded the lowest city RTO at 18%.',
-    verified: '2026-10-21',
+      'One RTO parcel costs ₹180 to ₹240 in direct logistics: forward shipping ₹60 to ₹100, reverse logistics ₹50 to ₹80, repackaging and quality check ₹20 to ₹40, inventory holding in transit ₹10 to ₹20. That total excludes acquisition cost, and the page notes ₹450 to ₹680 spent acquiring a customer who then refuses at the door. Orders attempted within 1 to 2 days had 22% RTO, rising to 35% when attempted after 5+ days. Vadodara recorded the lowest city RTO at 18%. Re-read 26 November 2026: ₹180 to ₹240 logistics-only cost per RTO (forward, reverse, handling), labelled an illustrative industry estimate from bepragma.ai 2025; ₹450 to ₹680 acquisition cost for a buyer who refuses at the door; Shipway ShipNotes FY25: about 26% RTO on COD and non-prepaid orders against under 2% prepaid, as high as about 35% in some cohorts and cities; orders attempted within 1 to 2 days 22% RTO, 35% after 5+ days (Shipway). The Vadodara 18% line is no longer on the page.',
+    verified: '2026-11-26',
   },
   amazonShippingTrueCost: {
     id: 'amazonShippingTrueCost',
@@ -121,8 +121,8 @@ export const SOURCES = {
     label: 'Amazon Shipping India’s true cost per order breakdown',
     publisher: 'Amazon Shipping India',
     claim:
-      'Worked ₹799 women’s cotton kurta example. Packaging ₹13 (₹10 mailer, ₹2 tape, ₹1 label). Volumetric weight (32 x 25 x 5) / 5,000 = 0.80 kg billed at the 1 kg slab, so ₹85 national freight on a 300g product. COD remittance fee ₹30. Amortised RTO cost ₹38 (30% x ₹125 incremental reverse cost). Support time ₹13 (40% touch rate x ₹32 per interaction, being 20 minutes at ₹96/hr). Visible costs ₹128, true total ₹179 against the ₹85 the seller sees.',
-    verified: '2026-10-21',
+      'Worked ₹799 women’s cotton kurta example. Packaging ₹13 (₹10 mailer, ₹2 tape, ₹1 label). Volumetric weight (32 x 25 x 5) / 5,000 = 0.80 kg billed at the 1 kg slab, so ₹85 national freight on a 300g product. COD remittance fee ₹30. Amortised RTO cost ₹38 (30% x ₹125 incremental reverse cost). Support time ₹13 (40% touch rate x ₹32 per interaction, being 20 minutes at ₹96/hr). Visible costs ₹128, true total ₹179 against the ₹85 the seller sees. Re-read 26 November 2026: unchanged, including the ₹32 per support interaction (20 minutes at ₹96 an hour for entry-level support at ₹20,000 a month) and the note that this cost falls near zero with automated tracking notifications and WhatsApp delivery confirmations; COD remittance ₹30 per parcel or 1.5% of product value, whichever is higher.',
+    verified: '2026-11-26',
   },
   amazonShippingNdr: {
     id: 'amazonShippingNdr',
@@ -130,8 +130,8 @@ export const SOURCES = {
     label: 'Amazon Shipping India’s NDR resolution guide',
     publisher: 'Amazon Shipping India',
     claim:
-      'Nearly every failed delivery not resolved within 36 hours of the NDR being raised ends in cancellation and RTO. Indian courier SLAs typically allow 24 to 48 hours between delivery attempts, most couriers make two to three attempts, and the page advises contacting the buyer within 2 to 4 hours of the NDR.',
-    verified: '2026-10-21',
+      'Nearly every failed delivery not resolved within 36 hours of the NDR being raised ends in cancellation and RTO. Indian courier SLAs typically allow 24 to 48 hours between delivery attempts, most couriers make two to three attempts, and the page advises contacting the buyer within 2 to 4 hours of the NDR. Re-read 26 November 2026: the 36-hour rule is now attributed to ClickPost’s NDR and RTO guide; contact the buyer within 2 to 4 hours; most couriers make two to three attempts; 24 to 48 hours between attempts.',
+    verified: '2026-11-26',
   },
   firstResortReturns: {
     id: 'firstResortReturns',
@@ -139,8 +139,8 @@ export const SOURCES = {
     label: 'First Resort’s 2026 India fashion returns and RTO research',
     publisher: 'First Resort',
     claim:
-      'Citing ClickPost: ₹150 to ₹300 direct logistics per RTO parcel and ₹450 to ₹900 fully loaded once written-off acquisition spend is counted. Category RTO bands: fashion and apparel 25% to 40%, beauty and personal care 18% to 25%, furniture and large goods 15% to 20%, electronics 10% to 15%, FMCG and consumables 8% to 12%. Citing GoKwik: COD RTO near 26% against prepaid under 2%, with 60% to 70% of RTOs stemming from low buying intent rather than logistics failure.',
-    verified: '2026-10-21',
+      'Citing ClickPost: ₹150 to ₹300 direct logistics per RTO parcel and ₹450 to ₹900 fully loaded once written-off acquisition spend is counted. Category RTO bands: fashion and apparel 25% to 40%, beauty and personal care 18% to 25%, furniture and large goods 15% to 20%, electronics 10% to 15%, FMCG and consumables 8% to 12%. Citing GoKwik: COD RTO near 26% against prepaid under 2%, with 60% to 70% of RTOs stemming from low buying intent rather than logistics failure. Re-read 26 November 2026: GoKwik attributes 60-70% of RTOs to low buying intent and only 20-25% to genuine logistics issues; GoKwik puts India’s average RTO at 23.18% across 180M+ shoppers; COD RTO near 26%, prepaid under 2%; ClickPost estimates 58-65% of Indian e-commerce orders are still cash-paid; ClickPost ₹150-300 direct and ₹450-900 fully loaded per RTO parcel.',
+    verified: '2026-11-26',
   },
   aisensyPricing: {
     id: 'aisensyPricing',
@@ -247,8 +247,8 @@ export const SOURCES = {
     label: 'Updatrr’s published pricing page',
     publisher: 'Updatrr',
     claim:
-      'Growth $29.99/month, Pro $49.99/month, Pro AI $99.99/month, all with a 7-day free trial and no card required. Updatrr states it does not add a markup on Meta’s conversation fees and that Meta bills WhatsApp conversations separately. Pro lists a “Custom No-code Chatbot”, shown as “No-code AI Chatbot” in the plan comparison table. “AI Chatbot with Smart Human Handover”, AI voice calling and the unified WhatsApp, Instagram and Facebook inbox are on Pro AI only. Team members: 1 on Growth, 3 on Pro, 10 on Pro AI. No order limit is published on any plan, and the page publishes no per-message AI fee. It says country-wise pricing is available inside the dashboard and annual pricing is on request. Re-read 9 November 2026, unchanged. Re-read 24 November 2026: Growth $29.99, Pro $49.99, Pro AI $99.99 a month, 7-day free trial on every plan, no card; “AI Chatbot with Human Handover” ticked only on Pro AI; “Country-wise pricing available inside the dashboard”. The page no longer carries a no-markup line on Meta fees.',
-    verified: '2026-11-24',
+      'Growth $29.99/month, Pro $49.99/month, Pro AI $99.99/month, all with a 7-day free trial and no card required. Updatrr states it does not add a markup on Meta’s conversation fees and that Meta bills WhatsApp conversations separately. Pro lists a “Custom No-code Chatbot”, shown as “No-code AI Chatbot” in the plan comparison table. “AI Chatbot with Smart Human Handover”, AI voice calling and the unified WhatsApp, Instagram and Facebook inbox are on Pro AI only. Team members: 1 on Growth, 3 on Pro, 10 on Pro AI. No order limit is published on any plan, and the page publishes no per-message AI fee. It says country-wise pricing is available inside the dashboard and annual pricing is on request. Re-read 9 November 2026, unchanged. Re-read 24 November 2026: Growth $29.99, Pro $49.99, Pro AI $99.99 a month, 7-day free trial on every plan, no card; “AI Chatbot with Human Handover” ticked only on Pro AI; “Country-wise pricing available inside the dashboard”. (Correction, 25 and 26 November 2026: the no-markup line is in the pricing FAQ; the earlier note that it was gone was wrong.) Re-read 26 November 2026, single view (no billing toggle): Growth $29.99, Pro $49.99, Pro AI $99.99 a month; 7-day free trial, no card; country-wise pricing inside the dashboard; annual pricing on request (“Contact the Updatrr team”). The pricing FAQ and its FAQPage markup say “Updatrr does not add a markup on Meta’s conversation fees.” Team members 1, 3 and 10. Pro AI alone lists AI Chatbot with Smart Human Handover, AI Voice Calling, the unified WA, Instagram and FB inbox and the iOS and Android app.',
+    verified: '2026-11-26',
   },
   littledataConversion: {
     id: 'littledataConversion',
@@ -463,8 +463,8 @@ export const SOURCES = {
     label: 'Getgabs’s published pricing page',
     publisher: 'Getgabs',
     claim:
-      'Read from India: Basic ₹699, Plus ₹1,499 and Pro ₹4,499 a month, or ₹6,990, ₹14,990 and ₹44,990 a year, each plan labelled “0% Markup”, with free onboarding and setup. Broadcast limits are 30,000, 500,000 and unlimited a month. Lists Meta messaging cost as marketing ₹0.8631, authentication ₹0.115, utility ₹0.115 and service ₹0.115 after 1,000 messages a month. Re-read 24 November 2026, monthly view: Basic ₹699, Plus ₹1,499, Business ₹2,999 a month, each “0% Markup”, Enterprise custom; Meta cost listed as marketing ₹0.8631, utility ₹0.115, service ₹0.115 after 1,000 a month; annual billing gives 2 months free.',
-    verified: '2026-11-24',
+      'Read from India: Basic ₹699, Plus ₹1,499 and Pro ₹4,499 a month, or ₹6,990, ₹14,990 and ₹44,990 a year, each plan labelled “0% Markup”, with free onboarding and setup. Broadcast limits are 30,000, 500,000 and unlimited a month. Lists Meta messaging cost as marketing ₹0.8631, authentication ₹0.115, utility ₹0.115 and service ₹0.115 after 1,000 messages a month. Re-read 24 November 2026, monthly view: Basic ₹699, Plus ₹1,499, Business ₹2,999 a month, each “0% Markup”, Enterprise custom; Meta cost listed as marketing ₹0.8631, utility ₹0.115, service ₹0.115 after 1,000 a month; annual billing gives 2 months free. Re-read 26 November 2026: monthly Basic ₹699 (admin only, 30,000 broadcasts), Plus ₹1,499 (10 users, 5,00,000 broadcasts), Business ₹2,999 (20 users, 15,00,000 broadcasts), Enterprise custom; annual view ₹6,990, ₹14,990 and ₹29,990 a year (“2 Months Free”); every plan “0% Markup”; Shopify App an add-on on Basic and included on Plus and Business; order update notifications and abandoned checkout reminders ticked from Plus; no COD confirmation or COD to prepaid row; the page still says Meta charges “on a per-conversation basis”.',
+    verified: '2026-11-26',
   },
   getgabsListing: {
     id: 'getgabsListing',
@@ -472,8 +472,35 @@ export const SOURCES = {
     label: 'Getgabs’s Shopify App Store listing',
     publisher: 'Shopify',
     claim:
-      'Getgabs: WhatsApp Chat Widget, by GETGABS LLP, rated 4.4 from 15 reviews. Free to install, with the note that a Getgabs subscription is required to unlock all features. Served to an Indian store: Plus ₹1,033.72 a month (₹10,243.21 a year) with 500,000 broadcasts and 3 inbox agents, Pro ₹5,544.49 a month (₹55,350.90 a year) with unlimited broadcasts and 10 agents. External charges may be billed by GETGABS LLP separately from the Shopify invoice. Re-read 24 November 2026: the listing says “This app is not currently available on the Shopify App Store”. getgabs.com/integrations/shopify still offers the integration.',
-    verified: '2026-11-24',
+      'Getgabs: WhatsApp Chat Widget, by GETGABS LLP, rated 4.4 from 15 reviews. Free to install, with the note that a Getgabs subscription is required to unlock all features. Served to an Indian store: Plus ₹1,033.72 a month (₹10,243.21 a year) with 500,000 broadcasts and 3 inbox agents, Pro ₹5,544.49 a month (₹55,350.90 a year) with unlimited broadcasts and 10 agents. External charges may be billed by GETGABS LLP separately from the Shopify invoice. Re-read 24 November 2026: the listing says “This app is not currently available on the Shopify App Store”. getgabs.com/integrations/shopify still offers the integration. Re-read 26 November 2026: still “This app is not currently available on the Shopify App Store.”',
+    verified: '2026-11-26',
+  },
+  updatrrListing: {
+    id: 'updatrrListing',
+    url: 'https://apps.shopify.com/prizma-updatrr',
+    label: 'Updatrr’s Shopify App Store listing',
+    publisher: 'Shopify App Store',
+    claim:
+      'Read 26 November 2026: Updatrr WhatsApp AI Automation by Prizma Commerce (Gurgaon), launched 10 December 2024, rated 5.0 from 45 reviews (44 five-star, 1 three-star). Growth $29.99, Pro $49.99, ProAI $99.99 a month; “All charges are billed in USD”; 7-day free trial on Growth and Pro, 15-day on ProAI. Names COD confirmation on WhatsApp or by AI voice call, cart recovery with WhatsApp and AI voice follow-ups, order updates, review and repeat-purchase reminders; works with GoKwik, Shiprocket, Razorpay, Shopflo, Breeze and Flexype checkouts.',
+    verified: '2026-11-26',
+  },
+  kanalPricing: {
+    id: 'kanalPricing',
+    url: 'https://getkanal.com/pricing',
+    label: 'Kanal’s published pricing page',
+    publisher: 'Kanal',
+    claim:
+      'Read 26 November 2026, one view, “No commitment”: Pro 89€ a month (1 user, widget chat and inbox, abandoned cart recovery, WhatsApp campaigns), Scale 149€ (5 users, segments, unlimited and advanced automations, Kanal MCP, AI agent, Klaviyo, Gorgias, Recharge, Crisp, Loyoly and Splio integrations), Business 350€ (done for you: flow setup by Kanal’s experts, continuous optimisation, campaigns on demand, unlimited users, dedicated account manager), Agency 1,900€. Channels WhatsApp, RCS, iMessage and SMS. Every plan includes the performance dashboard (revenue, orders and ROAS attributed to WhatsApp). EU hosting, GDPR, Official Meta Business Partner; founded 2023. No per-message rate or markup statement on the page.',
+    verified: '2026-11-26',
+  },
+  kanalListing: {
+    id: 'kanalListing',
+    url: 'https://apps.shopify.com/kanal-marketing-ai',
+    label: 'Kanal’s Shopify App Store listing',
+    publisher: 'Shopify App Store',
+    claim:
+      'Read 26 November 2026: Kanal: WhatsApp Marketing & AI by KANAL SAS, rated 5.0 from 153 reviews (all five-star). Demo free; Pro $89 a month (cart recovery, campaigns, chat widget and shared inbox, order confirmation on WhatsApp, revenue dashboard, 1 user); Scale $149 (everything in Pro with unlimited users, WhatsApp, SMS, iMessage and RCS campaigns, AI agent, upsell automations, segments, A/B tests, carousels, “Multi-market: +$50/month per market”, Kanal MCP, Klaviyo, Gorgias, Recharge, Crisp); “All charges are billed in USD”. Feature list includes COD verification. Languages French, English, Spanish, Italian, German, Portuguese.',
+    verified: '2026-11-26',
   },
   metaWhatsAppShopifyApp: {
     id: 'metaWhatsAppShopifyApp',

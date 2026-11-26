@@ -6,7 +6,7 @@ import MarketingSEO, { canonicalUrlForPath } from '../marketing/components/Marke
 import MarketingPage from '../marketing/components/MarketingPage';
 import { SITE_URL } from '../marketing/data/marketingSeo';
 import { ORG_REF, authorJsonLd, breadcrumbJsonLd, DEFAULT_AUTHOR, TEAM } from '../marketing/data/pageSeo';
-import { blogPosts } from '../data/blogPosts';
+import { blogIndex, readBlogPost } from '../data/blogContent';
 import { filterMarketingBlogPosts, relatedBlogPosts } from '../marketing/data/blog';
 import { groupForCategory } from '../marketing/data/blogCategories';
 import type { BlogPost as BlogPostModel } from '../types/blog';
@@ -27,7 +27,8 @@ import BlogToc from '../marketing/components/blog/BlogToc';
 import '../marketing/styles/blog.css';
 import '../marketing/styles/calculator.css';
 
-const allBlogPosts = filterMarketingBlogPosts([...blogPosts] as BlogPostModel[]);
+// Card fields only: each post's body is its own chunk (finding H7), read below.
+const allBlogPosts = filterMarketingBlogPosts([...blogIndex] as BlogPostModel[]);
 
 function Chevron() {
   return (
@@ -49,7 +50,8 @@ function formatDate(date: string) {
 
 export default function BlogPost() {
   const { slug } = useParams<{ slug: string }>();
-  const post = allBlogPosts.find((p) => p.slug === slug);
+  // Suspends until this post's body chunk is in; the prerender waits for the <h1>.
+  const post = allBlogPosts.some((p) => p.slug === slug) ? readBlogPost(slug) : undefined;
   const contentHtml = useMemo(
     () => enhanceBlogHtml(post?.content || '', post?.inlineImages ?? []),
     [post?.content, post?.inlineImages],
@@ -118,6 +120,14 @@ export default function BlogPost() {
         ]}
       />
       <Helmet>
+        {/* The cover is the LCP element: fetch it with the HTML, not after the scripts (H7). */}
+        <link
+          rel="preload"
+          as="image"
+          href={post.imageWebp || post.image}
+          {...(post.imageWebp ? { type: 'image/webp' } : {})}
+          fetchPriority="high"
+        />
         <script type="application/ld+json">
           {JSON.stringify({
             '@context': 'https://schema.org',
@@ -248,6 +258,7 @@ export default function BlogPost() {
                     width={1200}
                     height={675}
                     loading="eager"
+                    fetchPriority="high"
                     decoding="async"
                   />
                 </picture>

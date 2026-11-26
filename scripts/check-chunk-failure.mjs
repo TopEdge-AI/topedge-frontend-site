@@ -33,6 +33,8 @@ const CASES = [
   ['/features/cod-confirmation', 'CodConfirmationPage'],
   ['/pricing', 'PricingPage'],
   ['/blog/whatsapp-abandoned-cart-recovery-shopify', 'BlogPost'],
+  // Since H7 (26 Nov 2026) each post's body is its own chunk, named after the slug.
+  ['/blog/how-to-reduce-rto-with-whatsapp-cod-confirmation', 'how-to-reduce-rto-with-whatsapp-cod-confirmation'],
 ];
 const MIN_RATIO = 0.8;
 const ERROR_TEXT = 'The page failed to load';

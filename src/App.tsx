@@ -39,7 +39,12 @@ const SignupRedirect = React.lazy(() => import('./marketing/pages/SignupRedirect
 const LoginRedirect = React.lazy(() => import('./marketing/pages/LoginRedirect'));
 const DocsPage = React.lazy(() => import('./marketing/pages/DocsPage'));
 const Blog = React.lazy(() => import('./pages/Blog'));
-const BlogPost = React.lazy(() => import('./pages/BlogPost'));
+// Start the post's own body chunk in parallel with the page chunk (finding H7).
+const BlogPost = React.lazy(() => {
+  const m = typeof window !== 'undefined' ? window.location.pathname.match(/^\/blog\/([^/]+)\/?$/) : null;
+  if (m) void import('./data/blogContent').then((b) => b.preloadBlogBody(decodeURIComponent(m[1])));
+  return import('./pages/BlogPost');
+});
 /*
  * The paginated and category archives render the same Blog component with
  * different props. Wrapped here rather than reading params inside Blog so the

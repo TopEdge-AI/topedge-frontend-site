@@ -516,6 +516,7 @@ const FOOT_COLUMNS = [
       ['WhatsApp abandoned cart recovery app', '/whatsapp-abandoned-cart-recovery-app'],
       ['WhatsApp app for Shopify', '/whatsapp-app-for-shopify'],
       ['Shopify WhatsApp order notifications', '/shopify-whatsapp-order-notifications'],
+      ['RTO reduction for Shopify', '/rto-reduction-shopify'],
       ['Shopify WhatsApp integration', '/shopify-whatsapp-integration'],
     ],
   },
@@ -1345,6 +1346,77 @@ const ORDERS = {
 };
 
 /**
+ * The RTO reduction page (keyword map #5, PLAN-AND-LOG section 3b, Day 9,
+ * 26 Nov 2026). Product facts come from the docs (docs/guides/cod-confirmation:
+ * Order placed trigger filtered to COD, Confirm and Cancel quick replies, a
+ * 5 to 15 minute wait, branch on the answer from Growth, one follow-up for
+ * silence, COD to prepaid from Growth that voids the COD order and creates a
+ * paid one, about 25 minutes to set up). Outside figures were re-read on
+ * 26 Nov 2026: GoKwik's intent split via First Resort (sources.ts
+ * firstResortReturns), Unicommerce's festive COD and prepaid return rates and
+ * prepaid conversion (unicommerceRto), Amazon Shipping India's ₹32 support
+ * touchpoint (amazonShippingTrueCost). The blog post owns "how to reduce rto";
+ * this page owns "rto reduction".
+ */
+const RTO = {
+  hero: {
+    lead: 'RTO Reduction for ',
+    mark: 'Shopify Stores',
+    sub: 'RTO reduction that starts before dispatch: every COD order confirmed on WhatsApp, one reminder for silent buyers, and a prepaid offer.',
+  },
+  film: {
+    lg: homeFilm('cod').lg,
+    sm: homeFilm('cod').lg,
+    poster: homeFilm('cod').poster,
+    label: 'TopEdge AI COD film: a cash on delivery order is confirmed on WhatsApp before dispatch, and the order is tagged in Shopify',
+  },
+  pillars: [
+    'Every COD order gets Confirm and Cancel buttons on WhatsApp within minutes, on every plan',
+    'From Growth, the same thread offers a prepaid link that replaces the COD order with a paid one',
+    'RTO, COD fees and ad spend in one profit view, order by order, so you see what each fix saved',
+  ],
+  steps: [
+    { h: 'Start from the COD confirmation playbook', p: 'It creates a journey on the Order placed trigger. Add a payment method rule set to COD, so prepaid buyers are never asked to confirm.' },
+    { h: 'Get a Confirm and Cancel template approved', p: 'A utility template with quick-reply buttons, sent 5 to 15 minutes after the order. Keep it factual: one offer in the copy turns it into marketing.' },
+    { h: 'Branch on the answer and follow up once', p: 'Confirmed orders are tagged for dispatch, cancelled ones stop. Silence gets one more message a few hours later. Branching is on Growth; on Launch you act from the Orders screen.' },
+    { h: 'Offer the prepaid switch', p: 'On Growth and above, a payment link in the confirmation replaces the COD order with a paid one, tagged as a conversion so it is not counted twice.' },
+  ],
+  bento: [
+    { w: true, h: 'Every COD order confirmed before it ships', p: 'Confirm and Cancel buttons in an approved utility template, answered in one tap and written back to the Shopify order.', film: 'cod', label: 'A cash on delivery order is confirmed on WhatsApp before dispatch, and the order is tagged in Shopify' },
+    { w: true, h: 'See what RTO cost you, order by order', p: 'Net profit after cost of goods, COD fees, RTO and ad spend, so a fix shows up as money, not as message opens.', film: 'profit', label: 'Net profit after cost of goods, COD fees, RTO, gateway charges and ad spend' },
+    { w: false, h: 'Address questions reach a person', p: 'Delivery and COD questions in the chat are spotted and routed.', film: 'intent', label: 'A shipping question in the WhatsApp chat is detected and routed to the right flow' },
+    { w: false, h: 'One buyer, every number', p: 'The order history sits beside the chat, across every number and email.', film: 'identity', label: 'Two phone numbers and an email resolve to one customer profile' },
+    { w: false, h: 'Change the waits on a canvas', p: 'Tune the follow-up and the hold to your category.', film: 'flow', label: 'A WhatsApp journey is built by dragging steps onto a canvas' },
+  ],
+  them: 'Calling every COD buyer',
+  switch: [
+    { icon: 'percent', topic: 'Cost per order checked', them: 'Staff time: Amazon Shipping India prices a support touchpoint at ₹32 (20 minutes at ₹96 an hour)', us: '₹0.1150, Meta’s utility rate, plus your plan, with 0% markup' },
+    { icon: 'flow', topic: 'When it happens', them: 'When the shift is on and the buyer picks up', us: '5 to 15 minutes after every order, day or night' },
+    { icon: 'identity', topic: 'Where the answer goes', them: 'A note someone has to type into the order', us: 'Written to the Shopify order, with the thread beside it' },
+    { icon: 'ret', topic: 'Moving buyers to prepaid', them: 'Read a payment link out on the phone', us: 'A prepaid link in the same WhatsApp thread, from Growth' },
+  ],
+  migration: {
+    h: 'When calling is enough',
+    p: 'Under about 100 COD orders a month, a founder confirming each order by phone or WhatsApp Business is a fair start, and our own docs suggest a call for high-value orders nobody confirms. Automate when the calls start running behind dispatch.',
+  },
+  cost: {
+    h: 'Why the prepaid switch matters most',
+    p: 'In Unicommerce’s 2025 festive quarter, COD orders came back at 58% and prepaid ones at under 15%. The same report says a prepaid incentive converts 20% to 30% of COD intenders, which is why the offer sits inside the confirmation thread.',
+    stat: '58%',
+    statLabel: 'of COD orders came back in the 2025 festive quarter, against under 15% of prepaid orders',
+    src: 'Unicommerce India D2C Report 2026 (410M+ shipments, 6,000+ brands), read 26 November 2026. Support cost: Amazon Shipping India, true cost of shipping per order, read 26 November 2026.',
+  },
+  faqs: [
+    { q: 'What is RTO reduction?', a: 'RTO reduction is the work of stopping COD parcels from coming back to you undelivered. Most of it happens before dispatch: confirming the buyer still wants the order, fixing the address and moving buyers to prepaid. GoKwik puts 60% to 70% of RTOs down to low buying intent, the share a WhatsApp confirmation catches.' },
+    { q: 'Which Shopify app helps with RTO reduction?', a: 'An app that confirms COD orders on WhatsApp before dispatch and offers prepaid, such as TopEdge AI, which does both. Courier-side tools handle failed deliveries and courier choice, and checkout apps handle COD fees and part payment. TopEdge AI integrates with GoKwik and Shiprocket.' },
+    { q: 'Does COD confirmation actually reduce RTO?', a: 'Yes, for the share caused by impulse, duplicate and mistaken orders, which is the largest part you can remove. It cannot fix wrong addresses found at the door or a buyer who changes their mind after dispatch, so measure RTO on confirmed against unconfirmed orders.' },
+    { q: 'Does TopEdge AI handle NDR and failed deliveries?', a: 'No. TopEdge AI confirms COD orders and converts them to prepaid before dispatch; NDR calls and reattempts stay with your courier or shipping aggregator. It also does not offer partial COD.' },
+    { q: 'How much does RTO reduction cost on TopEdge AI?', a: 'Plans start at ₹1,999 a month including GST, or $19 on the Shopify App Store, with COD confirmation on every plan and the prepaid switch from Growth at ₹3,999. Meta charges ₹0.1150 per confirmation message in India, with 0% markup from us.' },
+    { q: 'Should I turn off COD to cut RTO?', a: 'No. Cash still pays for most Indian ecommerce orders, so turning it off loses real buyers. Confirm every COD order, offer prepaid in the same thread, and remove COD only for past refusers or PIN codes that keep failing.' },
+  ],
+};
+
+/**
  * Pages built from this generator. `index: true` pages are search landing pages
  * as well as ad pages: canonical, in the sitemap, with schema. The ad page that
  * lived at /lp/shopify-whatsapp moved to /whatsapp-app-for-shopify on 20 Nov 2026
@@ -1407,6 +1479,25 @@ const PAGES = [
     steps: ORDERS.steps.map((x, i) => ({ mark: `<span class="stp-n">${i + 1}</span>`, h: x.h, p: x.p })),
     faqs: ORDERS.faqs,
     extra: ORDERS,
+  },
+  {
+    slug: 'rto-reduction-shopify',
+    attr: 'rto-reduction',
+    template: 'rto-reduction-shopify',
+    out: 'rto-reduction-shopify',
+    index: true,
+    title: 'RTO Reduction for Shopify: Cut COD Returns | TopEdge AI',
+    description:
+      'RTO reduction for Shopify stores in India: confirm every COD order on WhatsApp at ₹0.1150, remind silent buyers and offer prepaid. 14-day free trial.',
+    name: 'RTO Reduction for Shopify Stores',
+    hero: RTO.hero,
+    variants: {},
+    film: RTO.film,
+    pillars: RTO.pillars,
+    bento: RTO.bento,
+    steps: RTO.steps.map((x, i) => ({ mark: `<span class="stp-n">${i + 1}</span>`, h: x.h, p: x.p })),
+    faqs: RTO.faqs,
+    extra: RTO,
   },
 ];
 

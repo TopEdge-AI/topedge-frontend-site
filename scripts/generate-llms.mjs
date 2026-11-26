@@ -207,6 +207,7 @@ const CORE = [
   ['WhatsApp app for Shopify', '/whatsapp-app-for-shopify'],
   ['WhatsApp abandoned cart recovery app', '/whatsapp-abandoned-cart-recovery-app'],
   ['Shopify WhatsApp order notifications', '/shopify-whatsapp-order-notifications'],
+  ['RTO reduction for Shopify', '/rto-reduction-shopify'],
   ['Integrations', '/integrations'],
   ['Customers', '/customers'],
   ['About', '/about'],

@@ -454,12 +454,12 @@ const RTO_MEANING_FAQS: Faq[] = [
   {
     question: 'How much does one RTO cost a seller in India?',
     answer:
-      '₹180 to ₹240 in direct logistics per parcel, per Amazon Shipping India: forward shipping, the return leg, repackaging and inventory held in transit. Counting the ad spend that won the order, ClickPost puts the fully loaded loss at ₹450 to ₹900 per RTO order, via First Resort. Both were read on 21 October 2026.',
+      '₹180 to ₹240 in direct logistics per parcel, per Amazon Shipping India: forward shipping, the return leg, repackaging and inventory held in transit. Counting the ad spend that won the order, ClickPost puts the fully loaded loss at ₹450 to ₹900 per RTO order, via First Resort. Both were re-read on 26 November 2026.',
   },
   {
     question: 'What is a normal RTO rate in India?',
     answer:
-      'It depends on payment mode and season. Unicommerce puts national RTO at 39.2% at the November 2025 festive peak and 21.0% by March 2026 among brands that verify orders before dispatch. GoKwik, via First Resort, reports COD RTO near 26% against under 2% for prepaid.',
+      'It depends on payment mode and season. Unicommerce puts national RTO at 39.2% at the November 2025 festive peak and 21.0% by March 2026 among brands that combined prepaid incentives, pin-code courier routing and address verification. GoKwik, via First Resort, reports COD RTO near 26% against under 2% for prepaid.',
   },
   {
     question: 'Who pays for RTO, the seller or the courier?',
@@ -2964,13 +2964,13 @@ ${faqHtml(AISENSY_PRICING_FAQS)}
 <h2>5 ways to reduce RTO on COD orders</h2>
 <p>Each fix acts before the parcel ships or inside the NDR window. The full operating playbook, with message timings and warehouse hold rules, is <a href="/blog/how-to-reduce-rto-with-whatsapp-cod-confirmation">our WhatsApp COD confirmation SOP</a>.</p>
 <ol>
-<li><strong>Confirm every COD order on WhatsApp.</strong> Send an approved utility template within minutes of checkout with Confirm and Cancel buttons, and hold the parcel until a reply lands. At ₹0.1150 a message it is the cheapest line on this page. <a href="/features/cod-confirmation">TopEdge AI’s COD confirmation</a> is on <a href="/pricing">every plan</a>.</li>
+<li><strong>Confirm every COD order on WhatsApp.</strong> Send an approved utility template within minutes of checkout with Confirm and Cancel buttons, and hold the parcel until a reply lands. At ₹0.1150 a message it is the cheapest line on this page. <a href="/features/cod-confirmation">TopEdge AI’s COD confirmation</a> is on <a href="/pricing">every plan</a>, and the whole RTO toolset is on <a href="/rto-reduction-shopify">RTO reduction for Shopify</a>.</li>
 <li><strong>Check the address before dispatch.</strong> Ask for a landmark or a corrected address in the same thread, above all for buyers in pincodes that often return. The <a href="/whatsapp-journey-examples/cod-confirmation">COD confirmation journey</a> shows the message and each reply branch.</li>
 <li><strong>Move COD buyers to prepaid.</strong> A prepaid order is worth about ₹68 more than the same order on COD once the remittance fee and RTO risk are counted. Send the offer as a separate message after confirmation, because a discount inside the confirmation turns a ₹0.1150 utility message into a ₹0.8631 marketing one. See <a href="/blog/cod-to-prepaid-whatsapp-shopify-india">COD to prepaid on WhatsApp</a>; on TopEdge AI it starts on the Growth plan.</li>
 <li><strong>Follow up every NDR within hours.</strong> Message the buyer as soon as the NDR lands, offering a new slot or an address fix, and treat anything still silent at hour 24 as an escalation. Keeping buyers updated with tracking before the first attempt, as in the <a href="/whatsapp-journey-examples/order-status-updates">order status journey</a>, means fewer surprises at the door.</li>
-<li><strong>Set rules for risky pincodes.</strong> RTO varies widely by city: Amazon Shipping India recorded the lowest, 18%, in Vadodara, with Patna, Jaipur and Guwahati among the high end. Pull RTO by pincode from your courier reports and, for the worst ones, require a confirmation or prepaid payment before you ship. The <a href="/blog/cod-rto-benchmark-india-2026#rto-by-verification">benchmark</a> has the spread.</li>
+<li><strong>Set rules for risky pincodes.</strong> RTO varies widely by place: Amazon Shipping India, quoting Shipway’s ShipNotes FY25 report, puts COD RTO near 26% overall and as high as about 35% in some cohorts and cities. Pull RTO by pincode from your courier reports and, for the worst ones, require a confirmation or prepaid payment before you ship. The <a href="/blog/cod-rto-benchmark-india-2026#rto-by-verification">benchmark</a> has the spread.</li>
 </ol>
-<p>Speed matters too: orders first attempted within one to two days had <strong>22%</strong> RTO in Amazon Shipping India’s data, against <strong>35%</strong> after five days or more. Message costs by category are in <a href="/blog/whatsapp-business-api-pricing-india">WhatsApp Business API pricing in India</a>.</p>
+<p>Speed matters too: orders first attempted within one to two days had <strong>22%</strong> RTO in Shipway’s FY25 data quoted by Amazon Shipping India, against <strong>35%</strong> after five days or more. Message costs by category are in <a href="/blog/whatsapp-business-api-pricing-india">WhatsApp Business API pricing in India</a>.</p>
 
 ${faqHtml(RTO_MEANING_FAQS)}
 

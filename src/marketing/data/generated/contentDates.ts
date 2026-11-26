@@ -4,11 +4,11 @@
  */
 export const CONTENT_DATES = {
   /** Last edit of compare competitor data (+ feature matrix). */
-  compareTwoWay: '2026-11-25',
+  compareTwoWay: '2026-11-26',
   /** Last edit of 3-way compare page (+ feature matrix). */
-  compareThreeWay: '2026-11-25',
+  compareThreeWay: '2026-11-26',
   /** Last edit of blogPosts.ts (used as Article dateModified fallback). */
-  blogPosts: '2026-11-25',
+  blogPosts: '2026-11-26',
   /** Last edit of feature / product page content. */
   featurePages: '2026-11-25',
   /** Last edit of published plan catalog (pricing Offers). */
@@ -23,7 +23,7 @@ export const BLOG_DATES_BY_SLUG = {
   "whatsapp-shared-inbox-shopify-order-context": "2026-10-21",
   "shopify-automation-checklist-whatsapp-cart-recovery": "2026-10-21",
   "best-whatsapp-automation-tools-shopify-india": "2026-11-07",
-  "how-to-reduce-rto-with-whatsapp-cod-confirmation": "2026-11-17",
+  "how-to-reduce-rto-with-whatsapp-cod-confirmation": "2026-11-26",
   "what-is-ecommerce-automation-shopify-whatsapp": "2026-10-21",
   "ai-whatsapp-chatbot-for-shopify-india": "2026-10-21",
   "zoko-alternative-shopify-india": "2026-11-12",

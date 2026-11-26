@@ -76,8 +76,97 @@ function docsShots(): Plugin {
 }
 
 // https://vitejs.dev/config/
+/**
+ * `virtual:blog-index` and `virtual:blog-body/<slug>` (finding H7, 24 Nov 2026 audit).
+ *
+ * src/data/blogPosts.ts (with blogPostsQ4.ts and blogPostsRoundups.ts) holds every
+ * post's full HTML, about 1 MB of source. Imported directly, the whole of it shipped
+ * in one chunk to every blog page, so a reader of one post downloaded all of them.
+ * The data files stay the one source of truth; this plugin evaluates them at build
+ * time and serves two kinds of module:
+ *
+ *   - `virtual:blog-index`: every post's card fields (title, description, dates,
+ *     image, category, keywords) and a map of slug -> () => import(body). The blog
+ *     index, archives and related-posts use only this.
+ *   - `virtual:blog-body/<slug>`: one post's content, FAQs, summary, item list,
+ *     inline images and FAQ heading. Rollup emits one small chunk per post.
+ *
+ * Nothing about the rendered HTML changes: BlogPost suspends until its body chunk
+ * is in, and the prerender waits for the <h1>, which only renders after that.
+ */
+function blogSplit(): Plugin {
+  const INDEX_ID = 'virtual:blog-index';
+  const BODY_PREFIX = 'virtual:blog-body/';
+  const dataFiles = ['blogPosts.ts', 'blogPostsQ4.ts', 'blogPostsRoundups.ts', 'faqHtml.ts'].map((f) =>
+    path.resolve(__dirname, 'src', 'data', f),
+  );
+  const BODY_KEYS = ['content', 'faqs', 'summary', 'itemList', 'inlineImages', 'faqHeading'];
+  let cache: Promise<Record<string, unknown>[]> | null = null;
+
+  const loadPosts = () => {
+    cache ??= (async () => {
+      const { build } = await import('esbuild');
+      const os = await import('node:os');
+      const { pathToFileURL } = await import('node:url');
+      const outDir = fs.mkdtempSync(path.join(os.tmpdir(), 'topedge-blog-split-'));
+      const outfile = path.join(outDir, 'blogPosts.mjs');
+      try {
+        await build({
+          entryPoints: [dataFiles[0]],
+          bundle: true,
+          format: 'esm',
+          platform: 'node',
+          outfile,
+          logLevel: 'error',
+        });
+        const mod = await import(`${pathToFileURL(outfile).href}?t=${Date.now()}`);
+        return mod.blogPosts as Record<string, unknown>[];
+      } finally {
+        fs.rmSync(outDir, { recursive: true, force: true });
+      }
+    })();
+    return cache;
+  };
+
+  return {
+    name: 'blog-split',
+    resolveId(source) {
+      if (source === INDEX_ID || source.startsWith(BODY_PREFIX)) return `\0${source}`;
+      return null;
+    },
+    async load(id) {
+      if (!id.startsWith('\0virtual:blog-')) return null;
+      for (const f of dataFiles) this.addWatchFile(f);
+      const posts = await loadPosts();
+      if (id === `\0${INDEX_ID}`) {
+        const index = posts.map((p) => Object.fromEntries(Object.entries(p).filter(([k]) => !BODY_KEYS.includes(k))));
+        const loaders = posts
+          .map((p) => `${JSON.stringify(p.slug)}: () => import(${JSON.stringify(BODY_PREFIX + String(p.slug))})`)
+          .join(',\n  ');
+        return `export const blogIndex = ${JSON.stringify(index)};\nexport const blogBodies = {\n  ${loaders}\n};\n`;
+      }
+      const slug = id.slice(`\0${BODY_PREFIX}`.length);
+      const post = posts.find((p) => p.slug === slug);
+      if (!post) this.error(`blog-split: no post with slug "${slug}"`);
+      const body = Object.fromEntries(BODY_KEYS.filter((k) => k in post!).map((k) => [k, post![k]]));
+      return `export default ${JSON.stringify(body)};\n`;
+    },
+    configureServer(server) {
+      const reload = (changed: string) => {
+        if (!dataFiles.includes(path.resolve(changed))) return;
+        cache = null;
+        for (const mod of server.moduleGraph.idToModuleMap.values()) {
+          if (mod.id?.startsWith('\0virtual:blog-')) server.moduleGraph.invalidateModule(mod);
+        }
+        server.ws.send({ type: 'full-reload' });
+      };
+      server.watcher.on('change', reload);
+    },
+  };
+}
+
 export default defineConfig(({ mode }) => {
-  const plugins = [react(), legalStaticHtml(), docsShots()];
+  const plugins = [react(), legalStaticHtml(), docsShots(), blogSplit()];
 
   // Only add visualizer in development mode
   if (mode === 'development') {

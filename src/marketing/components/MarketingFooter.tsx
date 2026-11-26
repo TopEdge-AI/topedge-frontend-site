@@ -74,6 +74,7 @@ const columns: { title: string; links: FootLink[] }[] = [
       { label: 'WhatsApp app for Shopify', href: '/whatsapp-app-for-shopify' },
       { label: 'WhatsApp cart recovery app', href: '/whatsapp-abandoned-cart-recovery-app' },
       { label: 'WhatsApp order notifications', href: '/shopify-whatsapp-order-notifications' },
+      { label: 'RTO reduction for Shopify', href: '/rto-reduction-shopify' },
       { label: 'Integrations', href: '/integrations' },
       { label: 'Meta India rate card', href: '/pricing/meta-rates' },
       { label: 'All playbooks', href: '/blog' },
