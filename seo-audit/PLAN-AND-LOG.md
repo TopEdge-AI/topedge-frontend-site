@@ -187,7 +187,7 @@ Stop rule (kept from 15 Nov): if India commercial impressions are flat two weeks
 - [ ] G2: edit the claimed listing description (unsourced "up to 5x" claim, no canonical sentence); suggested text in `2026-11-26/03-day-9-off-page.md`.
 - [ ] Crunchbase: open crunchbase.com/organization/topedge-ai yourself (bot check blocks Claude) and check description, founders and website.
 - [ ] Request indexing: `2026-11-26/04-gsc-request-indexing.md` (8 URLs, the new RTO page first).
-- [ ] Answer (26 Nov): did TopEdge AI ever pay for a backlink, DR or guest-post package (April to September 2026)? Ahrefs shows hundreds of SPAM link-farm domains first seen then. No: keep the disavow on hold. Yes: those domains get disavowed (`2026-11-26/06-referring-domains-plan.md` section 2).
+- [x] Answered 26 Nov: owner says TopEdge AI never bought links. The spam domains are unsolicited; disavow stays on hold unless a manual action appears. Original question: did TopEdge AI ever pay for a backlink, DR or guest-post package (April to September 2026)? Ahrefs shows hundreds of SPAM link-farm domains first seen then. No: keep the disavow on hold. Yes: those domains get disavowed (`2026-11-26/06-referring-domains-plan.md` section 2).
 - [ ] Confirm or remove the "Meta Business Partner" badge (H4); it is also printed inside blog cover images, starting with the RTO post cover.
 - [ ] Send the 2 list-inclusion drafts and paste the directory text in `2026-11-26/06-referring-domains-plan.md` section 5; send the 24 Nov correction requests to the spa and salon listings that use topedgeai.com as their website.
 - [ ] Decide on rahuldsarker.co (link-exchange partner): its site returns 402 "Payment required" to readers on 26 Nov; it is linked twice from /blog/shopify-seo-experts.
