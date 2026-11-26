@@ -54,3 +54,6 @@ Every landing page uses the static design that was the Google Ads page (`/lp/sho
 
 ## Ads
 The same URL serves Meta and Google ads with UTM tags. The platform page swaps its hero by `utm_content` prefix (`HERO_VARIANTS`), which is the same for every visitor with that URL, not cloaking. Old ad URLs `/lp/shopify-whatsapp` and `/lp/cod-confirmation` 301 to `/whatsapp-app-for-shopify` with the query string kept.
+
+## Penalty-safety gate (owner, 26 Nov 2026)
+Before shipping, run the gate in `.claude/skills/google-search-policies/SKILL.md`: `node seo-audit/tools/fact-check.mjs dist <route>` with every untraced number resolved, people-first and `content_quality.py`, the spam table for this page type, and the technical checks.

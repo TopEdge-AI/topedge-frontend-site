@@ -1,0 +1,113 @@
+{
+  "url": "https://topedgeai.com/blog/how-to-reduce-rto-with-whatsapp-cod-confirmation",
+  "source": "file",
+  "status_code": null,
+  "headers_available": false,
+  "facts": {
+    "title": "How to Reduce RTO in Ecommerce (2027): COD SOP | TopEdge AI",
+    "title_length": 59,
+    "title_count": 1,
+    "meta_description": "How to reduce RTO in ecommerce: confirm COD orders on WhatsApp at \u20b90.1150, hold silent ones, push prepaid and act on failed deliveries in 36 hours.",
+    "meta_description_length": 147,
+    "h1": [
+      "How to Reduce RTO in Ecommerce (2027): COD SOP"
+    ],
+    "h1_count": 1,
+    "heading_level_skips": 0,
+    "template_heading_level_skips": 0,
+    "canonical": "https://topedgeai.com/blog/how-to-reduce-rto-with-whatsapp-cod-confirmation",
+    "canonical_status": "self",
+    "canonical_note": null,
+    "meta_robots": "robots: index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+    "x_robots_tag": null,
+    "x_robots_other_agents": [],
+    "hreflang_count": 2,
+    "lang": "en-IN",
+    "has_doctype": true,
+    "meta_charset": "utf-8",
+    "header_charset": null,
+    "has_viewport": true,
+    "images": {
+      "total": 9,
+      "missing_alt": 0,
+      "empty_alt": 0,
+      "missing_dimensions": 0,
+      "first_image_lazy": false
+    },
+    "links": {
+      "total": 138,
+      "without_text": 0,
+      "generic_anchor": 0,
+      "http_on_https": 0
+    },
+    "mixed_content": 0,
+    "url": {
+      "length": 75,
+      "query_params": []
+    },
+    "html_bytes": 117818,
+    "dom": {
+      "nodes": 1268,
+      "max_depth": 21,
+      "max_children": 149,
+      "widest_element": "div"
+    },
+    "open_graph": {
+      "og:type": "article",
+      "og:site_name": "TopEdge AI",
+      "og:locale": "en_IN",
+      "og:url": "https://topedgeai.com/blog/how-to-reduce-rto-with-whatsapp-cod-confirmation",
+      "og:title": "How to Reduce RTO in Ecommerce (2027): COD SOP | TopEdge AI",
+      "og:description": "How to reduce RTO in ecommerce: confirm COD orders on WhatsApp at \u20b90.1150, hold silent ones, push prepaid and act on failed deliveries in 36 hours.",
+      "og:image": "https://topedgeai.com/blog/how-to-reduce-rto-with-whatsapp-cod-confirmation.jpg",
+      "og:image:alt": "How to reduce RTO on a COD order: a WhatsApp confirmation for a \u20b91,249 Shopify order and a warehouse hold until the buyer replies"
+    },
+    "jsonld_blocks": 4,
+    "jsonld_invalid": 0,
+    "word_count": 4774,
+    "words_measured": true,
+    "title_relevance": 1.0,
+    "description_relevance": 0.94
+  },
+  "findings": [
+    {
+      "id": "wide-dom-node",
+      "severity": "Low",
+      "message": "One element has more than 60 direct children, which is slow to lay out (Lighthouse guidance).",
+      "evidence": "<div> has 149 direct children"
+    }
+  ],
+  "not_checked": [
+    {
+      "id": "noindex-header",
+      "reason": "no response headers were supplied"
+    },
+    {
+      "id": "charset-mismatch",
+      "reason": "no response headers were supplied"
+    }
+  ],
+  "thresholds": {
+    "title_min_chars": 30,
+    "title_max_chars": 60,
+    "meta_description_min_chars": 120,
+    "meta_description_max_chars": 160,
+    "url_max_chars": 100,
+    "html_max_bytes": 2000000,
+    "thin_content_min_words": 200,
+    "dom_max_depth": 32,
+    "dom_max_children": 60,
+    "title_relevance_min": 0.3,
+    "description_relevance_min": 0.2,
+    "relevance_min_words": 50,
+    "evidence_max_chars": 200
+  },
+  "summary": {
+    "Critical": 0,
+    "High": 0,
+    "Medium": 0,
+    "Low": 1,
+    "total": 1,
+    "checks_run": 45
+  }
+}

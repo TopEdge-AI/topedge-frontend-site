@@ -36,3 +36,6 @@ Owner request, 24 Nov 2026: make every comparison page as strong as wati.io/wati
 - Our facts only from the billing catalog and DAILY-PROMPT section 2: plans ₹1,999 / ₹3,999 / ₹6,499 + GST or $19 / $39 / $65 via Shopify, caps 100 / 800 / 1,500 orders, trial 14 days / 20 orders / 200 sends, COD confirmation on every plan, COD to prepaid and Journey Branch from Growth, 0% markup. Never state seats per plan, AI pricing or NDR / partial COD / Meta Flows support.
 - TopEdge AI App Store reviews: state the live count (0 on 24 Nov 2026) when a board mentions the competitor's rating.
 - Each board's text must differ in substance: no shared paragraphs across boards beyond the CTA lines (doorway and scaled-content policy).
+
+## Penalty-safety gate (owner, 26 Nov 2026)
+Before shipping, run the gate in `.claude/skills/google-search-policies/SKILL.md`: `node seo-audit/tools/fact-check.mjs dist <route>` with every untraced number resolved, people-first and `content_quality.py`, the spam table for this page type, and the technical checks.

@@ -22,6 +22,7 @@ The plan and log live in `seo-audit/PLAN-AND-LOG.md`. The prompt the owner paste
 - Question-first structure (owner, 24 Nov 2026): research real questions (GSC queries, People Also Ask, `get_keyword_metrics`); the first H2 above the list or body is the main searched question with a one-line direct answer; list entries are numbered "1. Name: best for Y" with a spec box; a "Which X is best for your Y?" section answers long-tail queries in one line each; FAQ heading is "Frequently asked questions about <topic>" (`faqHeading`), numbered questions, answers start with Yes/No or the answer. Full rule: DAILY-PROMPT 5.16.
 
 ## 1. Data (free first, then credits)
+- Google Search Status Dashboard (Ranking history): note any core or spam update in progress before reading Search Console numbers; never judge a page inside a rollout window.
 - Search Console through OpenSEO (project `852f0ce0-39cf-43e3-9b80-84ff3449a4a8`): `inspect_urls` for yesterday's pages; striking-distance list (query + page, country `ind`, last 28 days, minPosition 8, minImpressions 3, query notContains `spa`). Ignore local junk (restaurants, salons, massage).
 - `whoami` for credits. One `get_keyword_metrics` call per day for the day's families (locationCode 2356, languageCode "en"). `get_serp_results` mobile, India, `finalUrls: true`, collect again after 2 to 3 minutes. Large outputs: parse the saved file with python, do not read it whole.
 - Ahrefs site audit in the built-in browser: `https://app.ahrefs.com/site-audit/10574646/overview`. If it shows the public site with "Sign in", tell the owner and move on.
@@ -46,6 +47,7 @@ Use the `topedge-compare-board` skill and the schedule in PLAN-AND-LOG section 3
 The day's item from the table. Drafts only; the owner sends, submits and signs in. At most 20 sends a week. Do-not-approach list: `seo-audit/2026-11-05/24-outreach-templates.md`.
 
 ## 5. Ship
+0. **Penalty-safety gate first** (`.claude/skills/google-search-policies/SKILL.md`, owner 26 Nov 2026): update calendar read, `fact-check.mjs` on every changed page with every UNTRACED line resolved, people-first and `content_quality.py`, spam table for the page type, honesty and technical checks. A page that fails any step does not ship.
 1. `npm run build:netlify` must exit 0 (run in background; it takes a few minutes).
 2. Dist audit of every changed page: title (≤65, ≤60 preferred with suffix), description 110 to 160, one H1, canonical, JSON-LD parses, no Product type, no missing alt, no bare "TopEdge", no em dash.
 3. Preview: `preview_start` name `topedge-dist` (port 4190); check each changed page renders, console clean.

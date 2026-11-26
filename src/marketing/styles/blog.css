@@ -1058,6 +1058,13 @@
   font-variant-numeric: tabular-nums;
 }
 
+/* SOP 9C: the punchline row of a cost or volume matrix (mark it with class="mkt-blog-row-key"). */
+.mkt-blog-prose tr.mkt-blog-row-key td {
+  background: #f5f3ff;
+  font-weight: 600;
+  color: #1e293b;
+}
+
 /* SOP 1A: a rank column never absorbs width; the name beside it is the anchor. */
 .mkt-blog-prose .mkt-blog-table--ranked :is(th, td):first-child {
   width: 40px;

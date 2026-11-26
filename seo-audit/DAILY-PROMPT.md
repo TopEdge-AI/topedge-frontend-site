@@ -99,6 +99,7 @@ Before changing anything, tell me in a few lines: what the log says is done, tod
    - **"Which X is best for your Y?" H2** with one H3 per real long-tail query ("Best X for COD orders") and a one or two sentence answer under each.
    - **FAQ like a printed FAQ:** H2 "Frequently asked questions about <topic>" (post field `faqHeading`), questions numbered 1, 2, 3 (CSS adds the number, schema text stays clean), five to eight questions from the research list, each answer starting with "Yes.", "No." or the direct answer, two or three sentences, naming the product or number instead of "it". No question repeated from another post.
    - Never pad: a question with no search demand and no reader value is cut, whatever the template says.
+17. Penalty-safety gate (owner, 26 Nov 2026). No page ships until it passes the gate in `.claude/skills/google-search-policies/SKILL.md`: read the Google Search Status Dashboard (never judge or rewrite a page inside a core or spam rollout), run `node seo-audit/tools/fact-check.mjs dist <route>` and resolve every untraced number, run the people-first audit and claude-seo `content_quality.py`, walk the spam table for the page type, keep bylines and Updated dates honest, show no unverified badge or partnership, and pass the technical checks. Evidence: `seo-audit/2026-11-26/05-penalty-safety.md`.
 
 ## 6. AEO AND GEO RULES
 

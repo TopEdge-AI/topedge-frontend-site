@@ -1412,12 +1412,12 @@ export const blogPosts: BlogPost[] = [
 <table>
 <thead><tr><th>Lever</th><th>What it stops</th><th>What it costs you</th><th>The number behind it</th></tr></thead>
 <tbody>
-<tr><td><strong>WhatsApp COD confirmation</strong></td><td>Impulse, duplicate and mistaken orders</td><td>₹0.1150 per utility message, before GST</td><td>60% to 70% of RTOs come from low intent (GoKwik)</td></tr>
-<tr><td><strong>Prepaid offer</strong></td><td>The COD risk itself</td><td>Free shipping or a small discount</td><td>Festive-quarter COD returned at 58%, prepaid under 15%; an incentive converts 20% to 30% of COD intenders (Unicommerce)</td></tr>
-<tr><td><strong>Address and PIN check</strong></td><td>Parcels that cannot be delivered</td><td>Agent time on flagged orders</td><td>One of the three changes behind 39.2% to 21.0% (Unicommerce)</td></tr>
+<tr><td><strong>WhatsApp COD confirmation</strong></td><td>Impulse, duplicate and mistaken orders</td><td>₹0.1150 per utility message, before GST</td><td>60% to 70% of RTOs come from low intent (GoKwik, via <a href="https://www.firstresort.in/blogs/research/fashion-ecommerce-returns-rto-india-2026" target="_blank" rel="noopener noreferrer">First Resort</a>)</td></tr>
+<tr><td><strong>Prepaid offer</strong></td><td>The COD risk itself</td><td>Free shipping or a small discount</td><td>Festive-quarter COD returned at 58%, prepaid under 15%; an incentive converts 20% to 30% of COD intenders (<a href="https://unicommerce.com/india-d2c-report-2026-april/" target="_blank" rel="noopener noreferrer">Unicommerce</a>)</td></tr>
+<tr><td><strong>Address and PIN check</strong></td><td>Parcels that cannot be delivered</td><td>Agent time on flagged orders</td><td>One of the three changes behind 39.2% to 21.0% (<a href="https://unicommerce.com/india-d2c-report-2026-april/" target="_blank" rel="noopener noreferrer">Unicommerce</a>)</td></tr>
 <tr><td><strong>COD fee, COD value cap, no COD for past refusers</strong></td><td>Careless and repeat refusals</td><td>Some lost COD sales</td><td>No published effect size we could verify: test it on your own orders</td></tr>
-<tr><td><strong>Faster first attempt</strong></td><td>Intent that fades in transit</td><td>Courier choice and dispatch speed</td><td>22% RTO when attempted in 1 to 2 days, 35% after 5+ days (Shipway, via Amazon Shipping India)</td></tr>
-<tr><td><strong>Fast NDR follow-up</strong></td><td>Second and third failed attempts</td><td>Agent or courier tool time</td><td>Unresolved after 36 hours, a failed delivery almost always ends in RTO (ClickPost, via Amazon Shipping India)</td></tr>
+<tr><td><strong>Faster first attempt</strong></td><td>Intent that fades in transit</td><td>Courier choice and dispatch speed</td><td>22% RTO when attempted in 1 to 2 days, 35% after 5+ days (Shipway, via <a href="https://shipping.amazon.in/blog/what-is-rto-how-to-reduce-return-to-origin" target="_blank" rel="noopener noreferrer">Amazon Shipping India</a>)</td></tr>
+<tr><td><strong>Fast NDR follow-up</strong></td><td>Second and third failed attempts</td><td>Agent or courier tool time</td><td>Unresolved after 36 hours, a failed delivery almost always ends in RTO (ClickPost, via <a href="https://shipping.amazon.in/blog/what-is-ndr-in-shipping-india" target="_blank" rel="noopener noreferrer">Amazon Shipping India</a>)</td></tr>
 </tbody>
 </table>
 </div>
@@ -1429,10 +1429,10 @@ export const blogPosts: BlogPost[] = [
 <table>
 <thead><tr><th>Line</th><th>Amount</th><th>Source</th></tr></thead>
 <tbody>
-<tr><td>One WhatsApp utility confirmation template, India</td><td><strong>₹0.1150</strong></td><td>Meta India rate card</td></tr>
+<tr><td>One WhatsApp utility confirmation template, India</td><td><strong>₹0.1150</strong></td><td><a href="https://developers.facebook.com/docs/whatsapp/pricing/" target="_blank" rel="noopener noreferrer">Meta India rate card</a></td></tr>
 <tr><td>Same template with a prepaid discount bundled in (reclassified as marketing)</td><td><strong>₹0.8631</strong>, a 7.5x jump</td><td>Meta India rate card</td></tr>
-<tr><td>Direct logistics loss on one RTO parcel</td><td><strong>₹180 to ₹240</strong></td><td>Amazon Shipping India (illustrative estimate)</td></tr>
-<tr><td>Fully loaded loss once acquisition spend is written off</td><td><strong>₹450 to ₹900</strong></td><td>ClickPost, via First Resort</td></tr>
+<tr><td>Direct logistics loss on one RTO parcel</td><td><strong>₹180 to ₹240</strong></td><td><a href="https://shipping.amazon.in/blog/what-is-rto-how-to-reduce-return-to-origin" target="_blank" rel="noopener noreferrer">Amazon Shipping India</a> (illustrative estimate)</td></tr>
+<tr><td>Fully loaded loss once acquisition spend is written off</td><td><strong>₹450 to ₹900</strong></td><td>ClickPost, via <a href="https://www.firstresort.in/blogs/research/fashion-ecommerce-returns-rto-india-2026" target="_blank" rel="noopener noreferrer">First Resort</a></td></tr>
 </tbody>
 </table>
 </div>
@@ -1440,7 +1440,7 @@ export const blogPosts: BlogPost[] = [
 <p>So the message cost is never the reason not to do this. The real cost is friction: some genuine buyers will not reply, and your hold policy decides whether you lose those orders or ship them anyway. That trade-off is the whole design problem below. The full rate card is in the <a href="/blog/whatsapp-business-api-pricing-india">India WhatsApp API pricing guide</a>.</p>
 
 <h3>The bill at 100, 500 and 1,500 COD orders</h3>
-<p>The messages are cheap; the software is not free. This is what COD confirmation costs on TopEdge AI against the returns it has to prevent, using GoKwik’s 26% COD RTO as the illustration rate. It is our arithmetic, not measured customer data.</p>
+<p>The messages are cheap; the software is not free. This is what COD confirmation costs on TopEdge AI against the returns it has to prevent, using GoKwik’s 26% COD RTO (via <a href="https://www.firstresort.in/blogs/research/fashion-ecommerce-returns-rto-india-2026" target="_blank" rel="noopener noreferrer">First Resort</a>) as the illustration rate. It is our arithmetic, not measured customer data.</p>
 <div class="mkt-blog-table-wrap">
 <table>
 <thead><tr><th>COD orders a month</th><th>100</th><th>500</th><th>1,500</th></tr></thead>
@@ -1449,7 +1449,7 @@ export const blogPosts: BlogPost[] = [
 <tr><td>Direct loss at ₹180 to ₹240 each</td><td>₹4,680 to ₹6,240</td><td>₹23,400 to ₹31,200</td><td>₹70,200 to ₹93,600</td></tr>
 <tr><td>Meta fees, confirmation plus one reminder at most (before GST)</td><td>₹23</td><td>₹115</td><td>₹345</td></tr>
 <tr><td>TopEdge AI plan for that many orders (incl. GST)</td><td>Launch ₹1,999</td><td>Growth ₹3,999</td><td>Scale ₹6,499</td></tr>
-<tr><td>Returns it must prevent to pay for itself, at ₹180 each</td><td><strong>12 of 26</strong></td><td><strong>23 of 130</strong></td><td><strong>39 of 390</strong></td></tr>
+<tr class="mkt-blog-row-key"><td>Returns it must prevent to pay for itself, at ₹180 each</td><td><strong>12 of 26</strong></td><td><strong>23 of 130</strong></td><td><strong>39 of 390</strong></td></tr>
 </tbody>
 </table>
 </div>
@@ -1556,11 +1556,11 @@ export const blogPosts: BlogPost[] = [
 <h3>Under 100 COD orders a month</h3>
 <p>Confirm by hand first. At this volume the plan costs more than the messages (Launch has to stop about 12 of 26 returns to pay for itself, in the bill above), so a founder confirming each COD order from WhatsApp Business is a fair start. Automate when the manual check starts running behind dispatch.</p>
 <h3>How to avoid RTO in dropshipping</h3>
-<p>Confirm before you pay the supplier, not just before dispatch, because the confirmation is the only checkpoint you control. Speed hurts more here: Shipway’s FY25 data, quoted by Amazon Shipping India, shows 22% RTO on orders attempted within 1 to 2 days against 35% after 5+ days, and long supplier lead times push you toward the second number. State the delivery window on the product page.</p>
+<p>Confirm before you pay the supplier, not just before dispatch, because the confirmation is the only checkpoint you control. Speed hurts more here: Shipway’s FY25 data, quoted by <a href="https://shipping.amazon.in/blog/what-is-rto-how-to-reduce-return-to-origin" target="_blank" rel="noopener noreferrer">Amazon Shipping India</a>, shows 22% RTO on orders attempted within 1 to 2 days against 35% after 5+ days, and long supplier lead times push you toward the second number. State the delivery window on the product page.</p>
 <h3>High-value COD orders</h3>
 <p>Call them. Hold high-value unconfirmed COD orders for a phone call and dispatch low-value ones on your silence rule, because the shipping cost of being wrong on a small order is less than the lost sale. Set the line from your own refusal data, not someone else’s threshold.</p>
 <h3>Should you stop offering COD to cut RTO?</h3>
-<p>No, tighten it by risk. Cash still converts: ClickPost estimates 58% to 65% of Indian ecommerce orders are paid in cash (via First Resort). Turn COD off for past refusers and for PIN codes with repeated failures, add a small COD fee, and keep it for everyone else.</p>
+<p>No, tighten it by risk. Cash still converts: ClickPost estimates 58% to 65% of Indian ecommerce orders are paid in cash (via <a href="https://www.firstresort.in/blogs/research/fashion-ecommerce-returns-rto-india-2026" target="_blank" rel="noopener noreferrer">First Resort</a>). Turn COD off for past refusers and for PIN codes with repeated failures, add a small COD fee, and keep it for everyone else.</p>
 
 <h2>Layer adjacent automations</h2>
 <ul>
@@ -1574,7 +1574,7 @@ export const blogPosts: BlogPost[] = [
 <p><strong>Shipping updates reduce refusals mainly by managing the gap.</strong> Doorstep refusal often comes down to the parcel arriving later than the buyer expected, when the purchase no longer feels current. Three accurate updates keep the order present in their mind, which is cheaper than arguing about it after the courier has been turned away.</p>
 
 <h2>Hinglish WhatsApp COD confirmation templates for Tier-2 and Tier-3 buyers</h2>
-<p>Most of your COD risk is not in the metros. Unicommerce says <strong>66%</strong> of the next wave of D2C customers lives outside a metro, which is where COD share is highest. If your buyer reads Hinglish faster than English, a Hinglish confirmation gets a reply and an English one gets ignored, and an ignored confirmation is an unverified order.</p>
+<p>Most of your COD risk is not in the metros. <a href="https://unicommerce.com/india-d2c-report-2026-april/" target="_blank" rel="noopener noreferrer">Unicommerce</a> says <strong>66%</strong> of the next wave of D2C customers lives outside a metro, which is where COD share is highest. If your buyer reads Hinglish faster than English, a Hinglish confirmation gets a reply and an English one gets ignored, and an ignored confirmation is an unverified order.</p>
 <p>Write the template in the language the buyer actually uses, keep it factual so it stays a utility template, and never bundle an offer into it. Approved-style copy, with Meta variables in place:</p>
 <div class="mkt-blog-table-wrap">
 <table>
