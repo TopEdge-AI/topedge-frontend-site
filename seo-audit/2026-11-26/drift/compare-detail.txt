@@ -1,0 +1,12 @@
+== https://topedgeai.com/blog/how-to-reduce-rto-with-whatsapp-cod-confirmation
+   h1_changed | CRITICAL | H1 changed significantly (similarity: 45%). Verify keyword targeting is preserved.
+   title_changed | WARNING | Title tag text has changed. Monitor CTR in Search Console over 2 weeks.
+   meta_description_changed | WARNING | Meta description has changed. Verify it includes target keywords and CTA.
+   schema_modified | WARNING | Schema/JSON-LD content has been modified. Validate with /seo schema.
+   h2_structure_changed | INFO | H2 heading structure changed (15 -> 19 headings).
+   content_hash_changed | INFO | Page content has changed (HTML body hash differs from baseline).
+== https://topedgeai.com/features/cod-confirmation
+   content_hash_changed | INFO | Page content has changed (HTML body hash differs from baseline).
+== https://topedgeai.com/tools/rto-cost-calculator
+   schema_modified | WARNING | Schema/JSON-LD content has been modified. Validate with /seo schema.
+   content_hash_changed | INFO | Page content has changed (HTML body hash differs from baseline).

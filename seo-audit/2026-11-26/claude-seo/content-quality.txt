@@ -1,0 +1,39 @@
+== dist/blog/how-to-reduce-rto-with-whatsapp-cod-confirmation.html
+Overall quality:       96/100
+  Filler score:        0/100 (higher = worse)
+  AI-pattern score:    0/100 (higher = worse)
+  Information density: 1.00
+  Repetition:          29/100 (higher = worse)
+  Tokens:              14747 (1871 unique)
+== dist/rto-reduction-shopify/index.html
+Overall quality:       95/100
+  Filler score:        0/100 (higher = worse)
+  AI-pattern score:    0/100 (higher = worse)
+  Information density: 1.00
+  Repetition:          35/100 (higher = worse)
+  Tokens:              11563 (1346 unique)
+  Flags:               repetitive
+== dist/compare/updatrr.html
+Overall quality:       95/100
+  Filler score:        0/100 (higher = worse)
+  AI-pattern score:    0/100 (higher = worse)
+  Information density: 1.00
+  Repetition:          31/100 (higher = worse)
+  Tokens:              12265 (1284 unique)
+  Flags:               repetitive
+== dist/compare/getgabs.html
+Overall quality:       95/100
+  Filler score:        0/100 (higher = worse)
+  AI-pattern score:    0/100 (higher = worse)
+  Information density: 1.00
+  Repetition:          33/100 (higher = worse)
+  Tokens:              11192 (1134 unique)
+  Flags:               repetitive
+== dist/compare/kanal.html
+Overall quality:       95/100
+  Filler score:        0/100 (higher = worse)
+  AI-pattern score:    0/100 (higher = worse)
+  Information density: 1.00
+  Repetition:          33/100 (higher = worse)
+  Tokens:              11219 (1150 unique)
+  Flags:               repetitive
