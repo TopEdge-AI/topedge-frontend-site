@@ -322,3 +322,17 @@ html .mkt-nav .mkt-nav__mega-promo-cta {
   color: #c4b5fd;
 }
 html .mkt-nav .mkt-nav__mega-promo:hover .mkt-nav__mega-promo-cta { color: #ddd6fe; }
+
+/* Owner, 27 Nov 2026: no purple on the icons. An older layer in marketing.css
+   gave the icon a violet tile and colour on hover; the icon now stays the same
+   grey line icon in every state, on desktop and in the phone sheet. */
+html .mkt-nav .mkt-nav__mega-link:hover .mkt-nav__mega-link-icon,
+html .mkt-nav .mkt-nav__mega-link:focus-visible .mkt-nav__mega-link-icon,
+html .mkt-nav .mkt-nav__mobile-item:hover .mkt-nav__mobile-item-icon,
+html .mkt-nav .mkt-nav__mobile-item:active .mkt-nav__mobile-item-icon,
+html .mkt-nav .mkt-nav__mobile-item:focus-visible .mkt-nav__mobile-item-icon {
+  background: none;
+  color: #5b6474;
+  transform: none;
+  box-shadow: none;
+}

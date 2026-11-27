@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef, type CSSProperties } from 'react';
+import { useState, useEffect, useRef, type CSSProperties, type PointerEvent as ReactPointerEvent } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { AnimatePresence, motion, useReducedMotion } from 'framer-motion';
 import { ChevronDown, Menu, X } from 'lucide-react';
@@ -187,9 +187,35 @@ export default function MarketingNavbar() {
   // Transparent (ghost) until scroll, solid capsule after scroll / mobile menu open
   const capsule = scrolled || open;
 
-  // The Products menu opens on a click, never on hover or focus: a menu that
-  // appears because the pointer drifted past it covers the page underneath.
-  const toggleProduct = () => setProductOpen((v) => !v);
+  // Products menu (owner, 27 Nov 2026): opens on mouse hover as well as click.
+  // It closes 200 ms after the pointer leaves, so crossing the gap between the
+  // button and the panel does not shut it. Touch and keyboard still toggle on
+  // click; a mouse click only ever opens it, so hovering then clicking does
+  // not close the menu the hover just opened.
+  const hoverCloseTimer = useRef<number | null>(null);
+  const lastPointerType = useRef<string>('');
+  const cancelHoverClose = () => {
+    if (hoverCloseTimer.current !== null) {
+      window.clearTimeout(hoverCloseTimer.current);
+      hoverCloseTimer.current = null;
+    }
+  };
+  useEffect(() => cancelHoverClose, []);
+  const onProductPointerEnter = (e: ReactPointerEvent) => {
+    if (e.pointerType !== 'mouse') return;
+    cancelHoverClose();
+    setProductOpen(true);
+  };
+  const onProductPointerLeave = (e: ReactPointerEvent) => {
+    if (e.pointerType !== 'mouse') return;
+    cancelHoverClose();
+    hoverCloseTimer.current = window.setTimeout(() => setProductOpen(false), 200);
+  };
+  const toggleProduct = () => {
+    if (lastPointerType.current === 'mouse') setProductOpen(true);
+    else setProductOpen((v) => !v);
+    lastPointerType.current = '';
+  };
 
   const toggleMobileProduct = () => {
     setMobileProductOpen((v) => !v);
@@ -222,6 +248,8 @@ export default function MarketingNavbar() {
               <div
                 className="mkt-nav__product"
                 ref={productRef}
+                onPointerEnter={onProductPointerEnter}
+                onPointerLeave={onProductPointerLeave}
                 onBlur={(e) => {
                   if (!e.currentTarget.contains(e.relatedTarget as Node)) {
                     setProductOpen(false);
@@ -233,6 +261,9 @@ export default function MarketingNavbar() {
                   className={cn('mkt-nav__link mkt-nav__link--btn', productOpen && 'is-active')}
                   aria-expanded={productOpen}
                   aria-haspopup="true"
+                  onPointerDown={(e) => {
+                    lastPointerType.current = e.pointerType;
+                  }}
                   onClick={toggleProduct}
                 >
                   Products
