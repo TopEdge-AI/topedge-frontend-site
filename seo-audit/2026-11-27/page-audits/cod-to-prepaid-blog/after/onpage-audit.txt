@@ -1,0 +1,942 @@
+On-page audit: https://topedgeai.com/blog/cod-to-prepaid-whatsapp-shopify-india?v=2026-11-27
+Keyword: cod to prepaid
+Competitors: https://www.bepragma.ai/blogs/cod-to-prepaid, https://support.myoperator.com/portal/en/kb/articles/how-can-i-convert-cash-on-delivery-orders-to-prepaid-payments-in-shopify-via-whatsapp-links-using-myoperator, https://blog.fship.in/cod-vs-prepaid-orders/
+Run: 2026-11-27T13:33:42.941Z
+
+
+===== Overview =====
+Download CSV
+Save as PDF
+New audit
+Overview
+Keyword
+Competitors
+Full audit
+Links & images
+Structure
+Previews
+AI & tech
+On-page score
+
+Weighted share of checks passed. Warnings count half, info items do not count. It measures on-page setup, not backlinks or authority.
+
+96
+YOU
+topedgeai.com
+55 pass · 3 warn · 0 fail
+93
+COMP 1
+bepragma.ai
+37 pass · 7 warn · 1 fail
+40
+COMP 2
+support.myoperator.com
+11 pass · 15 warn · 12 fail
+76
+COMP 3
+blog.fship.in
+33 pass · 13 warn · 4 fail
+Page at a glance
+2,750
+Content words
+11
+Exact keyword uses
+63
+Internal pages linked
+16
+Images
+0
+Broken links
+760 ms
+HTML download time
+99 KB
+HTML size
+17
+Schema types
+Fix these first
+
+Your biggest issues, ordered by the weight each check carries in this audit.
+
+Meta description: "COD to prepaid conversion on WhatsApp for Shopify India: about ₹68 saved per converted order, the two-message...
+Too wide. Google will cut it on desktop.
+Medium impact
+Page in XML sitemap: Not listed in 1 sitemap file(s), 172 URLs
+Important pages belong in the sitemap you submit to Search Console.
+Medium impact
+Canonical tag: https://topedgeai.com/blog/cod-to-prepaid-whatsapp-shopify-india (points to another URL)
+This page tells Google another URL is the main version. Confirm it is intended.
+Medium impact
+Your Google result
+
+An estimate of how your title and description may look. Widths are measured in Arial on your device; Google’s real cut-off varies by device and query.
+
+TopEdge AI
+https://topedgeai.com › blog › cod-to-prepaid-whatsapp-shopify-india
+COD to Prepaid Conversion on WhatsApp (2027) | TopEdge AI
+COD to prepaid conversion on WhatsApp for Shopify India: about ₹68 saved per converted order, the two-message flow, and the bill at 100 to ...
+Title: 557 px of about 600 px
+Description: 961 px of about 920 px (cut off)
+
+Google may rewrite titles and descriptions. A clear, matching title and H1 lowers that chance.
+
+Want these fixed and ranking?
+
+I turn audits like this into a clear plan and do the work: on-page, technical, content and links.
+
+Get a free SEO consultation
+
+How it works: the tool downloads the HTML your server sends, the same first copy Googlebot gets, and checks it in your browser. Content added later by JavaScript is not counted. Link and image checks use live HTTP requests. Scores cover on-page setup only; rankings also depend on backlinks, authority and search intent.
+
+===== Keyword =====
+Download CSV
+Save as PDF
+New audit
+Overview
+Keyword
+Competitors
+Full audit
+Links & images
+Structure
+Previews
+AI & tech
+Keyword placement map
+
+Exact matches of “cod to prepaid” in every spot Google reads. Red cells are spots where the keyword is missing.
+
+PAGE	TITLE	META DESC	URL	H1	H2-H6	FIRST 100 WORDS	BODY	IMAGE ALT	LINK ANCHORS
+You: topedgeai.com	1	1	yes	1	5	1	11	1	1
+Comp 1: bepragma.ai	1	1	yes	1	5	3	17	0	0
+Comp 2: support.myoperator.com	0	0	no	0	0	0	0	0	0
+Comp 3: blog.fship.in	0	0	no	0	0	0	2	0	0
+missing
+low
+medium
+highest
+Keyword numbers
+Exact
+11 uses in 2,750 words (1.20%)
+Word
+“cod” appears 70 times
+Word
+“to” appears 70 times
+Word
+“prepaid” appears 34 times
+Anchors
+1 links use the keyword
+What your page talks about
+
+Most used phrases and words. If your topic is not near the top, Google may see the page as being about something else.
+
+cod order
+14×
+cod orders
+10×
+rto cost
+5×
+rto rate
+5×
+fully loaded
+5×
+cod confirmation
+5×
+worth converting
+4×
+converted order
+4×
+amortised rto
+4×
+indian d2c
+4×
+payment link
+4×
+shopify order
+4×
+cod
+69×
+order
+44×
+prepaid
+33×
+rto
+32×
+orders
+26×
+offer
+20×
+shopify
+20×
+whatsapp
+19×
+cost
+18×
+payment
+16×
+month
+16×
+confirmation
+15×
+Want these fixed and ranking?
+
+I turn audits like this into a clear plan and do the work: on-page, technical, content and links.
+
+Get a free SEO consultation
+
+How it works: the tool downloads the HTML your server sends, the same first copy Googlebot gets, and checks it in your browser. Content added later by JavaScript is not counted. Link and image checks use live HTTP requests. Scores cover on-page setup only; rankings also depend on backlinks, authority and search intent.
+
+===== Competitors =====
+Download CSV
+Save as PDF
+New audit
+Overview
+Keyword
+Competitors
+Full audit
+Links & images
+Structure
+Previews
+AI & tech
+You vs competitors
+
+Your real numbers against the average of the competitor pages that loaded.
+
+Content depth
+You have 2,750 words. Competitors average 1,487.
+Sections
+You use 15 H2 sections. Competitors average 10.
+Internal linking
+You link to 63 internal pages. Competitors average 8.
+Schema types
+Competitors use ProfessionalService. You do not.
+Keyword placement
+You use the keyword in every spot competitors do.
+Question headings
+You have 14. Competitors average 9.
+METRIC	YOU
+topedgeai.com	COMP 1
+bepragma.ai	COMP 2
+support.myoperator.com	COMP 3
+blog.fship.in
+On-page score	96	93	40	76
+Content words	2,750	2,626	16	1,819
+Exact keyword uses	11	17	0	2
+Keyword density %	1.2	1.94	0	0.33
+Title width px	557	591	159	432
+Keyword in title	✓ yes	✓ yes	✕ no	✕ no
+Meta description chars	152	145	0	135
+Keyword in meta	✓ yes	✓ yes	✕ no	✕ no
+Keyword in URL	✓ yes	✓ yes	✕ no	✕ no
+H1 count	1	1	0	1
+Keyword in H1	✓ yes	✓ yes	✕ no	✕ no
+H2 sections	15	17	0	12
+H3 sections	10	25	0	7
+Question headings	14	14	0	13
+Images	16	14	0	8
+Images missing alt	0	0	0	0
+Videos	0	0	0	0
+Unique internal links	63	10	1	12
+Unique external links	26	0	0	16
+Lists / tables	18 / 5	3 / 0	0 / 0	16 / 2
+Schema types	FAQPage, Question, Answer, BreadcrumbList, ListItem	BlogPosting, WebPage, Person, Organization, ImageObject	none	ProfessionalService, Organization, ImageObject, WebSite, BreadcrumbList
+Readability (Flesch)	72	10	n/a	34
+HTML size KB	99	51	12	121
+HTML download ms	760	568	139	1,613
+Last updated	2026-11-27	Sep 27, 20	n/a	2026-10-28
+Tech	n/a	Google Tag Manager, Meta Pixel, Cloudflare	n/a	WordPress, Elementor, Rank Math
+Sections competitors have, you do not
+
+Competitor H2 and H3 headings whose main words barely appear on your page. Each one is a sub-topic to consider adding.
+
+Comp 1 · H2
+Contents
+Comp 1 · H3
+2. Immediately After Order Placement
+Comp 1 · H3
+4. High RTO Risk Profiles without Additional Confidence Signals
+Comp 1 · H3
+5. Time-Sensitive or Critical Fulfilments
+Comp 1 · H2
+Why Do Standard Prepaid Incentives Fail So Badly?
+Comp 1 · H2
+What Makes COD-to-Prepaid Nudges Actually Convert?
+Comp 1 · H3
+Here's how comprehensive nudging transforms payment method adoption:
+Comp 1 · H2
+How Do You Identify Which Customers Will Convert?
+Comp 1 · H2
+Which Nudging Messages Drive Highest Conversion?
+Comp 1 · H3
+1. Converts Hesitation to Commitment
+Comp 1 · H3
+2. Decreases Failed Delivery Attempts
+Comp 1 · H3
+3. Optimises Operational Planning
+Comp 1 · H3
+4. Improves Inventory Flow
+Comp 1 · H3
+5. Enhances Customer Experience
+Comp 1 · H2
+How Do You Time Nudges for Maximum Impact?
+Comp 1 · H2
+Advanced Nudging Techniques
+Comp 1 · H3
+Social Proof Integration
+Comp 1 · H3
+Social proof nudging strategies:
+Comp 1 · H3
+Gamification Elements
+Comp 1 · H2
+Conversion Retention Strategies
+Comp 1 · H3
+Post-Conversion Experience Optimisation
+Comp 1 · H3
+Gradual Habit Formation
+Comp 1 · H2
+To Summarise
+Comp 1 · H2
+Wrap It Up
+Comp 1 · H3
+1. How aggressive should COD-to-prepaid nudging be without annoying customers?
+Comp 1 · H3
+2. What's the typical ROI timeline for prepaid conversion nudging investments?
+Comp 1 · H3
+3. Should we offer the same nudging incentives to all customer segments?
+Comp 1 · H3
+4. How do we handle customers who convert once but revert to COD?
+Comp 1 · H2
+RTO vs RVP in E-commerce: Key Differences Explained
+Comp 1 · H2
+WhatsApp Zoho Integration: Guide for Efficient Automation
+Missing terms
+
+Words and phrases repeated on competitor pages that never appear on yours. Use the ones that fit your topic.
+
+Phrases
+cash flow
+2/3 · ~6×
+failed delivery
+2/3 · ~3×
+prepaid payments
+2/3 · ~3×
+Words
+customer
+2/3 · ~32×
+customers
+2/3 · ~27×
+risk
+2/3 · ~7×
+failed
+2/3 · ~6×
+address
+2/3 · ~6×
+success
+2/3 · ~5×
+identify
+2/3 · ~5×
+deliveries
+2/3 · ~4×
+processing
+2/3 · ~4×
+successful
+2/3 · ~4×
+prefer
+2/3 · ~3×
+
+Format: used by X of Y competitors · average uses per page.
+
+Want these fixed and ranking?
+
+I turn audits like this into a clear plan and do the work: on-page, technical, content and links.
+
+Get a free SEO consultation
+
+How it works: the tool downloads the HTML your server sends, the same first copy Googlebot gets, and checks it in your browser. Content added later by JavaScript is not counted. Link and image checks use live HTTP requests. Scores cover on-page setup only; rankings also depend on backlinks, authority and search intent.
+
+===== Full audit =====
+Download CSV
+Save as PDF
+New audit
+Overview
+Keyword
+Competitors
+Full audit
+Links & images
+Structure
+Previews
+AI & tech
+Full audit of your page
+
+64 checks on topedgeai.com
+
+All
+Fails (0)
+Warnings (3)
+Passed (55)
+Info (6)
+Meta & URL
+5/6 passed
+✓
+Title tag
+"COD to Prepaid Conversion on WhatsApp (2027) | TopEdge AI" (57 chars, 557 px)
+Likely fits in Google results.
+✓
+Keyword in title
+Exact match at the start
+Good placement.
+!
+Meta description
+"COD to prepaid conversion on WhatsApp for Shopify India: about ₹68 saved per converted order, the two-message flow, and the bill at 100 to 1,500 orders." (152 chars, 961 px)
+Too wide. Google will cut it on desktop.
+✓
+Keyword in meta description
+Found
+Google bolds matching words in the snippet. Use the keyword once.
+✓
+Keyword in URL
+Exact slug match
+Use short keyword slugs for new pages. Do not change live URLs without a 301 redirect.
+✓
+URL length
+77 chars
+Keep URLs short and readable.
+Headings
+5/5 passed
+✓
+H1 tag
+1 H1: "COD to Prepaid Conversion on WhatsApp (2027)"
+One clear H1.
+✓
+Keyword in H1
+Found
+Put the keyword, or a close variant, in the H1.
+✓
+Subheadings (H2)
+15 H2, 10 H3, 0 H4-H6
+Split content into sections with H2s that match sub-topics people search.
+✓
+Keyword in an H2
+3 H2 contain it
+Use the keyword or a variant in at least one H2.
+✓
+Heading order
+No skipped levels
+Go H1 > H2 > H3 in order. Style with CSS, not heading tags.
+Content & keyword
+6/7 passed
+✓
+Content length
+2,750 words in main content (3,416 incl. header/footer), about 13 min read
+No magic number. Compare with pages that rank and cover every sub-topic they cover.
+✓
+Keyword in first 100 words
+Found
+Say what the page is about early.
+✓
+Keyword usage
+11 exact uses, 1.20% density
+Natural usage. Write for readers, not a density target.
+i
+Keyword words used separately
+"cod" 70x, "to" 70x, "prepaid" 34x
+Shows partial matches and variations Google also understands.
+✓
+Readability (Flesch, English)
+72 / 100, average 20 words per sentence
+Short sentences and simple words help. Estimate for English text.
+✓
+Text to HTML ratio
+19.4% of the HTML is visible text
+Low ratio means heavy code. Page builders and inline scripts add bulk.
+✓
+Content freshness
+Last date found: 2026-11-27 (0 days ago)
+Review key pages at least once a year and update the modified date honestly.
+Links
+6/6 passed
+✓
+Internal links
+96 links, 63 unique pages
+Link to related service, case study and blog pages with descriptive anchors.
+✓
+External links
+29 links, 26 unique, 5 nofollow/sponsored/ugc
+Cite trusted sources where it helps the reader.
+✓
+Links without anchor text
+0 found
+Give every link visible text or an aria-label.
+✓
+Generic anchors
+0 like "click here" or "read more"
+Describe the destination: "see SEO case studies", not "click here".
+✓
+Broken links
+None in 40 checked links (of 89)
+Fix or remove broken links. They waste crawl budget and hurt users.
+✓
+Internal links that redirect
+None
+Point internal links straight to the final URL.
+Images
+5/6 passed
+✓
+Images missing alt
+0 of 16 have no alt (7 empty alt="")
+Describe meaningful images. Empty alt is fine only for decoration.
+✓
+Keyword in an image alt
+1 image(s)
+Describe one relevant image using the keyword naturally.
+✓
+Modern formats (WebP/AVIF)
+9 of 16
+WebP or AVIF files are smaller and load faster.
+✓
+Width and height set
+0 image(s) without both
+Set width and height to stop layout shift (CLS).
+i
+First image in HTML lazy loaded
+No
+If this is your main above-the-fold image, remove lazy loading. It delays LCP. If it is a logo or icon, ignore this.
+✓
+Heavy images (over 200 KB)
+None in 16 measured
+Compress and resize. Aim for under 200 KB for most content images.
+Technical & indexing
+13/15 passed
+✓
+HTTP status
+200
+Page loads.
+✓
+Indexable
+robots: index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1
+Search engines can index this page.
+✓
+robots.txt (Googlebot)
+Allowed, sitemap declared
+Good.
+!
+Page in XML sitemap
+Not listed in 1 sitemap file(s), 172 URLs
+Important pages belong in the sitemap you submit to Search Console.
+!
+Canonical tag
+https://topedgeai.com/blog/cod-to-prepaid-whatsapp-shopify-india (points to another URL)
+This page tells Google another URL is the main version. Confirm it is intended.
+✓
+HTTPS
+Secure
+Serve every page on HTTPS.
+✓
+Mixed content
+None
+Load every file over https:// or browsers block it.
+✓
+Mobile viewport
+width=device-width, initial-scale=1.0
+Add <meta name="viewport" content="width=device-width, initial-scale=1">.
+✓
+Language attribute
+en-IN
+Set <html lang="en-IN"> or your language.
+✓
+Doctype and charset
+Doctype ok, charset ok
+Start with <!DOCTYPE html> and <meta charset="utf-8">.
+✓
+HTML size and DOM
+99 KB HTML, 1,054 elements
+Heavy HTML and big DOMs slow rendering. Page builders add extra wrappers.
+✓
+Page download time
+760 ms to download the full HTML from the audit server
+Includes connection and full HTML download, not just TTFB. Use page caching and good hosting.
+✓
+Render-blocking scripts in head
+0 blocking, 1 external scripts, 7 stylesheets
+Add defer or async to scripts that do not need to run first.
+✓
+Compression
+br
+Enable gzip or brotli on the server.
+✓
+HSTS security header
+Enabled
+Strict-Transport-Security forces HTTPS for returning visitors.
+AI search readiness
+5/6 passed
+✓
+AI search crawlers allowed
+ChatGPT search, Perplexity, Bing/Copilot and Claude search can crawl
+Blocking AI search bots removes you from their answers and citations.
+i
+AI training crawlers
+Not blocked (GPTBot, ClaudeBot, Google-Extended, CCBot)
+Your choice. Blocking training bots does not affect Google rankings.
+✓
+llms.txt file
+Found at /llms.txt (40 KB)
+An optional summary file for AI tools. Low effort, low impact today.
+✓
+Question-style headings
+14 found
+Headings phrased as real questions, answered right below, are easy for AI Overviews and ChatGPT to quote.
+✓
+Lists and tables
+18 lists, 5 tables
+Lists and tables are easy to scan and easy for AI answers to quote.
+✓
+FAQ structured data
+FAQPage found
+FAQ rich results are limited now, but the markup still helps machines read Q&A.
+Schema & trust
+4/4 passed
+✓
+Structured data
+FAQPage, Question, Answer, BreadcrumbList, ListItem, Organization, ImageObject, Person, PostalAddress, Country, Offer, PriceSpecification
+Add JSON-LD that matches the page: LocalBusiness, Service, Article, FAQPage, BreadcrumbList.
+✓
+Breadcrumbs markup
+BreadcrumbList found
+Breadcrumbs show your site path in Google results.
+✓
+Author and dates
+Author: Moksh Patel | Published: 2026-10-22 | Updated: 2026-11-27
+Show who wrote it and when it was updated. Supports E-E-A-T.
+✓
+Trust page links
+About yes, Contact yes, Privacy yes
+Link to About, Contact and Privacy pages from every page.
+Local SEO
+3/6 passed
+✓
+Click-to-call phone
++919429784875
+Local visitors call from mobile. Add a tel: link.
+i
+LocalBusiness schema
+Not found
+For local services add LocalBusiness with name, address, phone, hours and geo.
+✓
+Address on page
+Found (schema or <address>)
+Show the same name, address and phone as your Google Business Profile.
+i
+Map link or embed
+Not found
+Link or embed your Google Maps location.
+i
+Reviews markup
+Not found
+Only mark up genuine reviews shown on the page.
+✓
+WhatsApp contact
+Found
+Useful if customers contact you on WhatsApp.
+Social sharing
+3/3 passed
+✓
+Open Graph tags
+og:title yes, og:description yes, og:image yes
+Controls the preview on WhatsApp, LinkedIn and Facebook.
+✓
+Twitter/X card
+summary_large_image
+Add twitter:card = summary_large_image.
+✓
+Favicon
+Found
+Google shows your favicon next to your results.
+Want these fixed and ranking?
+
+I turn audits like this into a clear plan and do the work: on-page, technical, content and links.
+
+Get a free SEO consultation
+
+How it works: the tool downloads the HTML your server sends, the same first copy Googlebot gets, and checks it in your browser. Content added later by JavaScript is not counted. Link and image checks use live HTTP requests. Scores cover on-page setup only; rankings also depend on backlinks, authority and search intent.
+
+===== Links & images =====
+Download CSV
+Save as PDF
+New audit
+Overview
+Keyword
+Competitors
+Full audit
+Links & images
+Structure
+Previews
+AI & tech
+Link health
+
+Live status of 40 unique links (first 40 of 89, internal first). 0 broken, 0 redirecting.
+
+STATUS	TYPE	ANCHOR	URL	NOTE
+200	internal	Signup 14-days trial	https://topedgeai.com/pricing	
+200	internal	TopEdge AI	https://topedgeai.com/	
+200	internal	JourneyAutomate WhatsApp from any Shopify event	https://topedgeai.com/features/journeys	
+200	internal	COD → PrepaidConfirm COD and nudge to prepaid	https://topedgeai.com/features/cod-confirmation	
+200	internal	Flow + Shopify ToolsBots that read live orders	https://topedgeai.com/features/flow-builder	
+200	internal	Opt-in toolsSpin, scratch and popups that grow a list	https://topedgeai.com/features/opt-in-tools	
+200	internal	Audience CampaignsBroadcasts with net-of-Meta revenue	https://topedgeai.com/features/campaigns	
+200	internal	Audience CRMOne profile for every shopper	https://topedgeai.com/features/audience-crm	
+200	internal	WarrantyQR registration and claims on WhatsApp	https://topedgeai.com/features/warranty	
+200	internal	Tracking PixelLive shopper intent from your store	https://topedgeai.com/features/analytics	
+200	internal	Intent detectionRoute Hinglish without AI spend	https://topedgeai.com/features/intent-detection	
+200	internal	AI BrainAnswers grounded in your policies	https://topedgeai.com/features/ai-brain	
+200	internal	Profit & costsTrue profit on every order	https://topedgeai.com/features/profit-loss	
+200	internal	Best Shopify App for Abandoned CartThe 2026 India shortlist, comparedRead the co	https://topedgeai.com/blog/best-shopify-app-for-abandoned-cart-recovery-india	
+200	internal	Docs	https://topedgeai.com/docs	
+200	internal	Customers	https://topedgeai.com/customers	
+200	internal	Partners	https://topedgeai.com/partners	
+200	internal	Log in	https://topedgeai.com/login	
+200	internal	Start free	https://topedgeai.com/signup	
+200	internal	Blog	https://topedgeai.com/blog	
+200	internal	COD & RTO	https://topedgeai.com/blog/category/cod-rto	
+200	internal	Moksh Patel	https://topedgeai.com/about	
+200	internal	RTO cost calculator	https://topedgeai.com/tools/rto-cost-calculator	
+200	internal	how to reduce RTO in ecommerce	https://topedgeai.com/blog/how-to-reduce-rto-with-whatsapp-cod-confirmation	
+200	internal	the 2026 India COD and RTO report	https://topedgeai.com/blog/cod-rto-benchmark-india-2026	
+200	internal	the India WhatsApp API pricing guide	https://topedgeai.com/blog/whatsapp-business-api-pricing-india	
+200	internal	the template rejection guide	https://topedgeai.com/blog/whatsapp-template-rejected-meta-shopify-fix	
+200	internal	COD to prepaid journey example	https://topedgeai.com/whatsapp-journey-examples/cod-to-prepaid	
+200	internal	RTO reduction for Shopify	https://topedgeai.com/rto-reduction-shopify	
+200	internal	what RTO means in ecommerce	https://topedgeai.com/blog/rto-meaning-ecommerce	
+200	internal	net profit after COD and RTO	https://topedgeai.com/blog/profitable-ecommerce-business-india	
+200	internal	COD10 Best Shipping Aggregators & Logistics Tools in India 202717 Nov 2026 · 11	https://topedgeai.com/blog/best-shipping-aggregators-logistics-tools-india	
+200	internal	Services	https://topedgeai.com/services	
+200	internal	Compare	https://topedgeai.com/compare	
+200	internal	Contact	https://topedgeai.com/contact	
+200	internal	Journey examples	https://topedgeai.com/whatsapp-journey-examples	
+200	internal	WhatsApp templates	https://topedgeai.com/whatsapp-templates	
+200	internal	Festival templatesNew	https://topedgeai.com/whatsapp-festival-templates	
+200	internal	Shopify WhatsApp integration	https://topedgeai.com/shopify-whatsapp-integration	
+200	internal	WhatsApp app for Shopify	https://topedgeai.com/whatsapp-app-for-shopify	
+
+Some sites block automated checks (403/999). Open those links by hand before removing them.
+
+Image weight
+
+File size of the first 16 images. Over 200 KB is heavy for most web images.
+
+SIZE	STATUS	ALT	IMAGE
+88 KB	200	10 best shipping aggregators in India: courier logos for Delhivery, Ekart, XpressBees and Ecom Express beside Courier Assigned and NDR Automated status cards	https://topedgeai.com/blog/best-shipping-aggregators-logistics-tools-india.jpg
+73 KB	200	COD and RTO benchmarks for Indian D2C in 2026, with an RTO loss of ₹180 to ₹240 per returned order shown beside order analytics	https://topedgeai.com/blog/cod-rto-benchmark-india-2026.jpg
+72 KB	200	A confirm, prepaid offer and paid sequence beside a WhatsApp message offering shipping savings with a secure pay link.	https://topedgeai.com/marketing/solutions/sol-cod-prepaid-saas.jpg
+70 KB	200	How to reduce RTO on a COD order: a WhatsApp confirmation for a ₹1,249 Shopify order and a warehouse hold until the buyer replies	https://topedgeai.com/blog/how-to-reduce-rto-with-whatsapp-cod-confirmation.jpg
+67 KB	200	COD to prepaid on WhatsApp for Shopify India, saving about ₹68 per order with a UPI prepaid upgrade before dispatch	https://topedgeai.com/blog/cod-to-prepaid-whatsapp-shopify-india.jpg
+39 KB	200	Best Shopify app for abandoned cart recovery in India, the TopEdge AI 2026 shortlist	https://topedgeai.com/blog/best-shopify-app-for-abandoned-cart-recovery-india.webp
+15 KB	200	(empty)	https://topedgeai.com/logo.png
+12 KB	200	(empty)	https://topedgeai.com/brand-mark-56.png
+9 KB	200	Meta Business Partner	https://topedgeai.com/badges/meta-business-partner.webp?v=5
+9 KB	200	Shopify Available on App Store	https://topedgeai.com/badges/shopify-app-store.webp?v=5
+9 KB	200	(empty)	https://topedgeai.com/ai/chatgpt.webp
+9 KB	200	WhatsApp Business Partner	https://topedgeai.com/badges/whatsapp-cloud-api.webp?v=6
+7 KB	200	(empty)	https://topedgeai.com/ai/gemini.webp
+5 KB	200	(empty)	https://topedgeai.com/ai/claude.webp
+4 KB	200	(empty)	https://topedgeai.com/ai/grok.webp
+4 KB	200	(empty)	https://topedgeai.com/ai/perplexity.webp
+All links and images on the page
+Links127 total, 63 internal pages, 26 external
+Images16 total, 0 missing alt
+Want these fixed and ranking?
+
+I turn audits like this into a clear plan and do the work: on-page, technical, content and links.
+
+Get a free SEO consultation
+
+How it works: the tool downloads the HTML your server sends, the same first copy Googlebot gets, and checks it in your browser. Content added later by JavaScript is not counted. Link and image checks use live HTTP requests. Scores cover on-page setup only; rankings also depend on backlinks, authority and search intent.
+
+===== Structure =====
+Download CSV
+Save as PDF
+New audit
+Overview
+Keyword
+Competitors
+Full audit
+Links & images
+Structure
+Previews
+AI & tech
+Heading outline
+
+The structure Google sees. Switch pages to compare how competitors split the topic.
+
+You: topedgeai.com (26)
+Comp 1: bepragma.ai (43)
+Comp 2: support.myoperator.com (0)
+Comp 3: blog.fship.in (24)
+H1
+COD to Prepaid Conversion on WhatsApp (2027)
+H2
+Read this first
+H2
+How do you convert COD orders to prepaid?
+H2
+What a converted order is worth: about ₹68
+H2
+COD vs prepaid: what the published data shows
+H2
+Why the offer must be a second message
+H2
+The flow, step by step
+H2
+What COD to prepaid costs at 100, 500 and 1,500 orders
+H2
+Which COD to prepaid setup fits your store?
+H3
+Under 100 COD orders a month
+H3
+Already on Razorpay Magic Checkout
+H3
+On the TopEdge AI Launch plan
+H3
+High-value orders
+H2
+Price it against your own COD volume
+H2
+Should you charge a COD fee or switch COD off?
+H2
+What we could not verify
+H2
+Where TopEdge AI fits
+H2
+Frequently asked questions about COD to prepaid
+H3
+How do you convert COD orders to prepaid?
+H3
+How big a prepaid discount can I offer without losing money?
+H3
+Does converting COD to prepaid reduce RTO?
+H3
+How do I set COD charges in Shopify?
+H3
+How do I remove the COD option from Shopify?
+H3
+Which TopEdge AI plan includes COD to prepaid?
+H2
+Run cart recovery on your Shopify store
+H2
+Related playbooks
+Want these fixed and ranking?
+
+I turn audits like this into a clear plan and do the work: on-page, technical, content and links.
+
+Get a free SEO consultation
+
+How it works: the tool downloads the HTML your server sends, the same first copy Googlebot gets, and checks it in your browser. Content added later by JavaScript is not counted. Link and image checks use live HTTP requests. Scores cover on-page setup only; rankings also depend on backlinks, authority and search intent.
+
+===== Previews =====
+Download CSV
+Save as PDF
+New audit
+Overview
+Keyword
+Competitors
+Full audit
+Links & images
+Structure
+Previews
+AI & tech
+Google preview
+
+Desktop and mobile estimates, truncated by measured pixel width. Google may also rewrite titles and descriptions.
+
+Desktop
+
+TopEdge AI
+https://topedgeai.com › blog › cod-to-prepaid-whatsapp-shopify-india
+COD to Prepaid Conversion on WhatsApp (2027) | TopEdge AI
+COD to prepaid conversion on WhatsApp for Shopify India: about ₹68 saved per converted order, the two-message flow, and the bill at 100 to ...
+
+Mobile
+
+TopEdge AI
+https://topedgeai.com › blog › cod-to-prepaid-whatsapp-shopify-india
+COD to Prepaid Conversion on WhatsApp (2027) | ...
+COD to prepaid conversion on WhatsApp for Shopify India: about ₹68 saved per converted order, ...
+Social share preview
+
+How a shared link looks on WhatsApp, Facebook and LinkedIn, built from your Open Graph tags.
+
+TOPEDGEAI.COM
+COD to Prepaid Conversion on WhatsApp (2027) | TopEdge AI
+COD to prepaid conversion on WhatsApp for Shopify India: about ₹68 saved per converted order, the two-message flow, and the bill at 100 to 1,500 orders.
+og:title
+COD to Prepaid Conversion on WhatsApp (2027) | TopEdge AI
+og:description
+COD to prepaid conversion on WhatsApp for Shopify India: about ₹68 saved per converted order, the two-message flow, and the bill at 100 to 1,500 orders.
+og:image
+https://topedgeai.com/blog/cod-to-prepaid-whatsapp-shopify-india.jpg
+og:type
+article
+twitter:card
+summary_large_image
+Want these fixed and ranking?
+
+I turn audits like this into a clear plan and do the work: on-page, technical, content and links.
+
+Get a free SEO consultation
+
+How it works: the tool downloads the HTML your server sends, the same first copy Googlebot gets, and checks it in your browser. Content added later by JavaScript is not counted. Link and image checks use live HTTP requests. Scores cover on-page setup only; rankings also depend on backlinks, authority and search intent.
+
+===== AI & tech =====
+Download CSV
+Save as PDF
+New audit
+Overview
+Keyword
+Competitors
+Full audit
+Links & images
+Structure
+Previews
+AI & tech
+AI crawler access
+
+What your robots.txt allows for this URL. Search bots decide if AI assistants can cite you. Training bots only collect data.
+
+BOT	USED FOR	TYPE	THIS PAGE	RULE
+OAI-SearchBot	ChatGPT search results	Search / answers	Allowed	Allow: /
+PerplexityBot	Perplexity answers	Search / answers	Allowed	Allow: /
+Bingbot	Bing and Copilot	Search / answers	Allowed	Allow: /
+Claude-SearchBot	Claude search	Search / answers	Allowed	Allow: /
+GPTBot	OpenAI model training	Training	Allowed	Allow: /
+ClaudeBot	Anthropic model training	Training	Allowed	Allow: /
+Google-Extended	Gemini training	Training	Allowed	Allow: /
+CCBot	Common Crawl dataset	Training	Allowed	Allow: /
+Applebot-Extended	Apple AI training	Training	Allowed	Allow: /
+Detected technology
+Nothing detected from the HTML.
+Head and server data
+Canonical
+https://topedgeai.com/blog/cod-to-prepaid-whatsapp-shopify-india
+Meta robots
+index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1
+X-Robots-Tag
+not found
+Lang
+en-IN
+hreflang
+en-IN, x-default
+AMP
+not found
+Cache-Control
+public,max-age=0,must-revalidate
+Compression
+br
+Preconnect / preload
+3 / 1
+Sitemaps
+https://topedgeai.com/sitemap.xml
+Social profiles linked
+developers.facebook.com, twitter.com, linkedin.com, facebook.com, instagram.com, youtube.com
+Want these fixed and ranking?
+
+I turn audits like this into a clear plan and do the work: on-page, technical, content and links.
+
+Get a free SEO consultation
+
+How it works: the tool downloads the HTML your server sends, the same first copy Googlebot gets, and checks it in your browser. Content added later by JavaScript is not counted. Link and image checks use live HTTP requests. Scores cover on-page setup only; rankings also depend on backlinks, authority and search intent.
