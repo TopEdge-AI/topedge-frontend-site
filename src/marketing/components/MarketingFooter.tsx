@@ -11,6 +11,7 @@ import {
   COMPANY_WHATSAPP_URL,
 } from '../legal/companyIdentity';
 import { FREE_TOOLS, TOOLS_PATH } from '../data/freeTools';
+import { isStaticLandingPath } from '../routes';
 import { TrustpilotScore } from './TrustpilotProof';
 import { ProductHuntBadge } from './ProductHuntProof';
 
@@ -260,6 +261,11 @@ export default function MarketingFooter() {
                           target="_blank"
                           rel="noopener noreferrer"
                         >
+                          {l.label}
+                        </a>
+                      ) : isStaticLandingPath(l.href) ? (
+                        // Static landing page: no React route, so load it from the server.
+                        <a href={l.href} className="mkt-foot__link">
                           {l.label}
                         </a>
                       ) : (

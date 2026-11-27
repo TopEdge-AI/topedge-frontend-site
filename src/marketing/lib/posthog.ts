@@ -78,6 +78,9 @@ function load(): void {
         // appear in Persons at all. The volume here is a rounding error against the
         // free tier's million events, so the trade is the wrong way round.
         person_profiles: 'always',
+        // M12 (24 Nov audit): the surveys bundle can go, so it is never loaded.
+        // The session recorder stays (owner: replays are read).
+        disable_surveys: true,
       });
     } catch {
       /* analytics must never break the page */

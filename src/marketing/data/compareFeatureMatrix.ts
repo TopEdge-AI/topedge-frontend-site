@@ -1112,7 +1112,7 @@ export const GUPSHUP_PAIRWISE_MATRIX: PairwiseFeatureRow[] = [
     topedge:
       '14-day free trial, then ₹1,999/month (₹1,599/month billed yearly) incl. 18% GST on topedgeai.com, or $19/month billed by Shopify in USD from the Shopify App Store',
     competitor:
-      'Pay-as-you-go model with no fixed entry-level SaaS tiers or public free trial (verify live / sales quote)',
+      '₹0 monthly platform fee: pay per message from a prepaid wallet, plus 18% GST. Shopify app free to install, charges billed in USD. Read 27 Nov 2026',
   },
   {
     id: 'template-markup',
@@ -1122,7 +1122,7 @@ export const GUPSHUP_PAIRWISE_MATRIX: PairwiseFeatureRow[] = [
     topedge:
       '0% WhatsApp API platform markup (Direct Meta API Billing on your Meta Business Account)',
     competitor:
-      'Applies a platform processing markup (Gupshup Fee) on every single template message sent; confirm the current fee card live',
+      'All-in India rates: ₹1.15 marketing, ₹0.145 utility, about 33% and 26% above Meta’s ₹0.8631 and ₹0.1150. Read 27 Nov 2026',
   },
   {
     id: 'opt-in-widgets',
@@ -1141,7 +1141,7 @@ export const GUPSHUP_PAIRWISE_MATRIX: PairwiseFeatureRow[] = [
     topedge:
       'Bring Your Own Key (BYOK) architecture with built-in RAG pipeline (est. ~₹0.10-₹0.30 per AI response, depending on selected AI model), available on all plans',
     competitor:
-      'Requires premium Auto Bot Builder modules, with AI usage costs bundled into enterprise contracts rather than transparent API key passthroughs (verify live)',
+      'AI Agents in the plan: 1,000 AI messages free a month, then ₹1.00 each. Read 27 Nov 2026',
   },
   {
     id: 'unified-identity',
@@ -1168,7 +1168,7 @@ export const GUPSHUP_PAIRWISE_MATRIX: PairwiseFeatureRow[] = [
     topedge:
       'Native integration for Shopify, compatible with 3rd-party checkout stacks (GoKwik, Razorpay, etc.). COD confirmation is on every plan; automated COD to prepaid is on Growth and Scale.',
     competitor:
-      'Requires custom developer integration or 3rd-party middleware (like n8n) to map payment links',
+      'Shopify app lists COD verification; no COD to prepaid flow named on its listing or pricing page. Read 27 Nov 2026',
   },
   {
     id: 'lead-dedupe',
@@ -1193,7 +1193,7 @@ export const GUPSHUP_PAIRWISE_MATRIX: PairwiseFeatureRow[] = [
       'Node-by-node No-code Chatbot builder equipped with advanced developer canvas controls for building customer support and marketing logic.',
     topedge: 'Advanced, all drag-and-drop nodes unlocked on all subscription plans',
     competitor:
-      'Basic chatbot configurations; advanced branching logic and custom flows require upgrading to their premium Conversation Studio module (verify live)',
+      'No-code bot builder and automated campaign journeys in the pay-as-you-go plan. Read 27 Nov 2026',
   },
   {
     id: 'flow-cap',

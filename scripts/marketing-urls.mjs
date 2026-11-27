@@ -79,14 +79,18 @@ export const COMPARE_MULTIWAY_SLUGS = [
   'topedge-vs-wati-vs-interakt-vs-aisensy',
 ];
 
-export const TOPIC_SLUGS = ['shopify-whatsapp-integration'];
+/**
+ * React topic pages. Empty since 27 Nov 2026: /shopify-whatsapp-integration moved to
+ * the static landing page design (STATIC_LANDING_PATHS below), same URL.
+ */
+export const TOPIC_SLUGS = [];
 
 /**
  * Static landing pages built by scripts/generate-landing-pages.mjs into
  * public/<path>/index.html. Indexable and in the sitemap, never prerendered
  * (prerendering would write a second copy beside the static file).
  */
-export const STATIC_LANDING_PATHS = ['/whatsapp-app-for-shopify', '/whatsapp-abandoned-cart-recovery-app', '/shopify-whatsapp-order-notifications', '/rto-reduction-shopify'];
+export const STATIC_LANDING_PATHS = ['/whatsapp-app-for-shopify', '/whatsapp-abandoned-cart-recovery-app', '/shopify-whatsapp-order-notifications', '/rto-reduction-shopify', '/shopify-whatsapp-integration'];
 
 export const BLOG_SLUGS = [
   'ecommerce-funnel-drop-off-benchmarks-visitor-identity-resolution',

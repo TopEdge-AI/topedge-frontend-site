@@ -814,3 +814,13 @@ html[data-v="switch"] .mig{display:block}
 @media (min-width:62rem){.steps--4{grid-template-columns:repeat(4,minmax(0,1fr))}}
 .cmp-note{margin-top:1.25rem;text-align:center;font-size:.8rem;opacity:.7}
 .mid-cta{display:flex;flex-wrap:wrap;gap:.75rem;justify-content:center}
+/* Two-column reference table (integration page permissions, 27 Nov 2026).
+   Two columns on purpose: it stays readable at 375px without sideways scroll. */
+.perm-wrap{max-width:52rem;margin:0 auto}
+.perm{width:100%;border-collapse:collapse;font-size:.95rem;text-align:left;background:#fff;border-radius:16px;box-shadow:inset 0 0 0 1px var(--line)}
+.perm caption{caption-side:top;text-align:left;padding:0 .2rem .7rem;font-size:.95rem;font-weight:500;color:var(--ink)}
+.perm th,.perm td{padding:.85rem 1rem;border-top:1px solid var(--line);vertical-align:top}
+.perm thead th{border-top:0;font-size:.8rem;font-weight:600;color:var(--muted)}
+.perm tbody th{width:36%;font-weight:500;color:var(--ink)}
+.perm td{color:var(--muted);text-wrap:pretty}
+.perm-note{margin:.9rem auto 0;max-width:52rem;font-size:.82rem;color:var(--muted)}

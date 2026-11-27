@@ -129,7 +129,7 @@ Setup guides and screen-by-screen reference, written for the person running the 
 - [TopEdge AI vs Kanal](https://topedgeai.com/compare/kanal): TopEdge AI vs Kanal for Shopify India, read 26 Nov 2026: INR plans from ₹1,999 with COD to prepaid vs Kanal’s €89 and €149 plans built for Europe.
 - [TopEdge AI vs Dondy](https://topedgeai.com/compare/dondy): TopEdge AI vs Dondy for Shopify India, read 25 Nov 2026: Meta’s ₹0.8631 rate at 0% markup vs Dondy’s $0.01888 India rate and $79.99 automation.
 - [TopEdge AI vs Updatrr](https://topedgeai.com/compare/updatrr): TopEdge AI vs Updatrr for Shopify India, read 26 Nov 2026: ₹1,999 INR plans and a 14-day trial vs Updatrr’s $29.99 USD plans, with AI on $99.99.
-- [TopEdge AI vs Gupshup](https://topedgeai.com/compare/gupshup): TopEdge AI vs Gupshup for Shopify India: self-serve ₹1,999/mo INR plans, 0% Meta markup and native COD journeys vs per-message enterprise CPaaS fees.
+- [TopEdge AI vs Gupshup](https://topedgeai.com/compare/gupshup): TopEdge AI vs Gupshup for Shopify India, read 27 Nov 2026: COD journeys at Meta’s rates against a ₹0 wallet charging ₹1.15 a marketing message.
 
 ## Playbooks
 
@@ -144,7 +144,7 @@ Setup guides and screen-by-screen reference, written for the person running the 
 - [Top 10 Shopify SEO Experts & Resources for 2027](https://topedgeai.com/blog/shopify-seo-experts): The 10 Shopify SEO experts and resources worth your time, plus five Shopify-specific questions that tell you in a minute whether a consultant is real.
 - [Ecommerce Funnel Drop-Off Benchmarks (2026) & Identity Guide](https://topedgeai.com/blog/ecommerce-funnel-drop-off-benchmarks-visitor-identity-resolution): Ecommerce funnel benchmarks from 436 Shopify stores: add to cart, checkout and conversion by industry, and how visitor identity resolution works.
 - [Best Shopify App for Abandoned Cart Recovery India (2027)](https://topedgeai.com/blog/best-shopify-app-for-abandoned-cart-recovery-india): Best Shopify app for abandoned cart recovery in India: 10 WhatsApp and email apps ranked on Meta markup, COD and price, read 25 Nov 2026.
-- [COD to Prepaid on WhatsApp: Shopify India 2026](https://topedgeai.com/blog/cod-to-prepaid-whatsapp-shopify-india): Convert Shopify India COD orders to prepaid on WhatsApp before dispatch: the ₹68 saved per order, the ₹0.1150 vs ₹0.8631 template split, and the flow.
+- [COD to Prepaid Conversion on WhatsApp (2027)](https://topedgeai.com/blog/cod-to-prepaid-whatsapp-shopify-india): COD to prepaid conversion on WhatsApp for Shopify India: about ₹68 saved per converted order, the two-message flow, and the bill at 100 to 1,500 orders.
 - [Best Updatrr Alternative for Shopify India 2026](https://topedgeai.com/blog/updatrr-alternative-shopify-india): Updatrr alternative for Shopify India: plans from ₹1,999/mo, a 14-day trial and BYOK AI on every plan, against USD tiers with AI handover at $99.99.
 - [Best WATI Alternative for Shopify India (2026)](https://topedgeai.com/blog/wati-alternative-shopify-india): WATI alternative for Shopify India: what to keep, what to fix (markup, AI access, COD), and how to test a switch in one afternoon.
 - [AiSensy Alternative (2027): AiSensy vs Gallabox](https://topedgeai.com/blog/aisensy-alternative-shopify-india): AiSensy alternative for Shopify India: AiSensy vs Gallabox priced at 100, 500 and 1,500 orders, plus Interakt, WATI and TopEdge AI. Read 19 Nov 2026.
@@ -227,7 +227,6 @@ All 172 indexable URLs on this domain, no trailing slash except the root.
 - https://topedgeai.com/compare/updatrr
 - https://topedgeai.com/compare/gupshup
 - https://topedgeai.com/compare/alternatives
-- https://topedgeai.com/shopify-whatsapp-integration
 - https://topedgeai.com/tools
 - https://topedgeai.com/tools/best-whatsapp-tool-for-shopify
 - https://topedgeai.com/tools/rto-cost-calculator
@@ -351,6 +350,7 @@ All 172 indexable URLs on this domain, no trailing slash except the root.
 - https://topedgeai.com/whatsapp-abandoned-cart-recovery-app
 - https://topedgeai.com/shopify-whatsapp-order-notifications
 - https://topedgeai.com/rto-reduction-shopify
+- https://topedgeai.com/shopify-whatsapp-integration
 - https://topedgeai.com/privacy
 - https://topedgeai.com/terms
 

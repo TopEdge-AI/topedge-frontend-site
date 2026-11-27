@@ -338,29 +338,34 @@ const OPTIN_FAQS: Faq[] = [
 
 const COD_PREPAID_FAQS: Faq[] = [
   {
-    question: 'How do you convert COD orders to prepaid on WhatsApp in Shopify India?',
+    question: 'How do you convert COD orders to prepaid?',
     answer:
-      'Send a plain utility confirmation the moment the Cash on Delivery order is placed, at \u20b90.1150 on Meta\u2019s India rate card. Branch on the reply, then send a separate marketing template with a UPI payment link and a small incentive only to the orders worth converting, at \u20b90.8631. Hold dispatch until the payment clears or the buyer confirms COD, and sync the paid status back to the Shopify order.',
+      'Confirm the COD order on WhatsApp first, then send a separate message with a UPI payment link and a small incentive to the orders worth converting. Hold dispatch until the payment clears or the buyer confirms COD, and mark the Shopify order as paid. On Meta’s India card the confirmation costs ₹0.1150 and the offer ₹0.8631.',
   },
   {
     question: 'How big a prepaid discount can I offer without losing money?',
     answer:
-      'Up to roughly ₹68 an order, which is what a prepaid order saves you. Amazon Shipping India puts the COD remittance fee at about ₹30 a parcel (or 1.5% of order value) and amortised RTO cost at about ₹38 per shipped COD order at a 30% RTO rate. An incentive below ₹68 is already paid for before you count the parcels that no longer come back at ₹180 to ₹240 each.',
+      'Up to about ₹68 an order, which is what a prepaid order saves you before any avoided return is counted. Amazon Shipping India puts the COD remittance fee at ₹30 a parcel (or 1.5% of product value) and the amortised RTO cost at ₹38 per shipped COD order at a 30% RTO rate. Each parcel that no longer comes back saves ₹180 to ₹240 more.',
   },
   {
-    question: 'Why not just put the prepaid discount inside the COD confirmation?',
+    question: 'Does converting COD to prepaid reduce RTO?',
     answer:
-      'Because it changes the Meta template category and the cost. A confirm-or-cancel message is a utility template at ₹0.1150; add a discount and Meta reclassifies it as marketing at ₹0.8631, which is 7.5 times the cost on every COD order you ship. Two sends cost less than one when only part of your COD base is worth an offer.',
+      'Yes. Unicommerce reports festive-quarter COD returns around 58% against under 15% for prepaid, and GoKwik reports COD RTO near 26% against under 2% for prepaid. No one publishes a verified conversion rate for post-order WhatsApp offers, so measure RTO on converted against unconverted orders in your own store.',
   },
   {
-    question: 'Does converting COD to prepaid actually reduce RTO?',
+    question: 'How do I set COD charges in Shopify?',
     answer:
-      'Published data says prepaid orders come back far less often. Unicommerce reports festive-quarter COD returns around 58% against under 15% for prepaid, and GoKwik reports COD RTO near 26% against prepaid under 2%, with 60% to 70% of RTOs coming from low buying intent rather than logistics failure. No one publishes a verified conversion rate for WhatsApp prepaid offers, so model the saving per converted order and measure your own rate.',
+      'Not from Shopify’s payment settings. Shopify treats cash on delivery as a manual payment method, and its Help Center describes no fee field for one (read 27 November 2026), so a COD charge comes from a checkout app or a fee app. A prepaid discount after the order is the gentler way to move the same buyers.',
+  },
+  {
+    question: 'How do I remove the COD option from Shopify?',
+    answer:
+      'Go to Settings, then Payments, click Manage next to Cash on Delivery under Manual payment methods and choose Deactivate payment method. You can reactivate it at any time. Most Indian stores keep COD and filter it with a WhatsApp confirmation instead, because cash still pays for most orders.',
   },
   {
     question: 'Which TopEdge AI plan includes COD to prepaid?',
     answer:
-      'Growth (₹3,999 a month, or ₹3,199 billed yearly) and Scale include the automated COD-to-prepaid journey. COD confirmation runs on every plan, including Launch at ₹1,999 a month. TopEdge AI is Shopify-native and compatible with third-party checkout stacks such as GoKwik and Razorpay, and Meta bills your own WhatsApp account directly at 0% markup either way.',
+      'Growth and Scale. Growth is ₹3,999 a month including GST (₹3,199 a month billed yearly) on topedgeai.com, or $39 a month billed by Shopify on the App Store. COD confirmation runs on every plan, including Launch at ₹1,999, and Meta bills your own WhatsApp account directly at 0% markup.',
   },
 ];
 
@@ -1636,9 +1641,9 @@ ${faqHtml(UPDATRR_FAQS)}
   },
   {
     id: 34,
-    title: 'COD to Prepaid on WhatsApp: Shopify India 2026',
+    title: 'COD to Prepaid Conversion on WhatsApp (2027)',
     description:
-      'Convert Shopify India COD orders to prepaid on WhatsApp before dispatch: the ₹68 saved per order, the ₹0.1150 vs ₹0.8631 template split, and the flow.',
+      'COD to prepaid conversion on WhatsApp for Shopify India: about ₹68 saved per converted order, the two-message flow, and the bill at 100 to 1,500 orders.',
     inlineImages: [
       {
         afterHeading: 'The flow, step by step',
@@ -1648,14 +1653,15 @@ ${faqHtml(UPDATRR_FAQS)}
       },
     ],
     summary: [
-      'A prepaid order is worth about ₹68 more than the same order on COD once RTO risk and the remittance fee are counted.',
-      'The prepaid offer belongs in a second message, after the confirmation, rather than bundled into the first.',
-      'The template split decides the cost: ₹0.1150 for a utility confirmation against ₹0.8631 if the same message is categorised as marketing.',
+      'COD to prepaid conversion means asking a buyer who chose cash on delivery to pay online before dispatch, usually with a WhatsApp payment link and a small incentive.',
+      'A converted order saves about ₹68 in COD fee and amortised RTO before any avoided return is counted, so a ₹30 to ₹50 incentive pays for itself.',
+      'Send the offer as a second message after a ₹0.1150 utility confirmation. Inside the confirmation it turns every COD message into ₹0.8631 marketing.',
+      'At 100 COD orders a month the ₹68 alone does not cover a plan with the prepaid switch; at 500 it needs 63 conversions, at 1,500 it needs 106.',
     ],
     slug: 'cod-to-prepaid-whatsapp-shopify-india',
     date: '2026-10-22',
-    updated: '2026-10-22',
-    readTime: '10 min',
+    updated: '2026-11-27',
+    readTime: '11 min',
     category: 'COD',
     author: 'Moksh Patel',
     image: '/blog/cod-to-prepaid-whatsapp-shopify-india.jpg',
@@ -1663,98 +1669,136 @@ ${faqHtml(UPDATRR_FAQS)}
     imageAlt:
       'COD to prepaid on WhatsApp for Shopify India, saving about ₹68 per order with a UPI prepaid upgrade before dispatch',
     keywords: [
-      'COD to prepaid WhatsApp',
+      'cod to prepaid',
+      'cod to prepaid conversion',
       'convert COD to prepaid Shopify',
-      'COD confirmation WhatsApp to prepaid India',
+      'COD to prepaid WhatsApp',
+      'how to convert COD to prepaid',
       'UPI prepaid conversion Shopify',
-      'reduce RTO COD prepaid India',
-      'WhatsApp payment link Shopify India',
     ],
+    faqHeading: 'Frequently asked questions about COD to prepaid',
     faqs: COD_PREPAID_FAQS,
     content: `
-${verdict(`<p><strong>To convert COD to prepaid on WhatsApp for a Shopify India store, send a ₹0.1150 utility confirmation to every COD order, then a separate ₹0.8631 marketing offer with a UPI link to the orders worth converting.</strong> Each converted order saves roughly ₹68: about ₹30 of COD remittance fee and ₹38 of amortised RTO cost. Hold dispatch until one comes back.</p>
-<p>To see what a returned parcel costs your store first, use the <a href="/tools/rto-cost-calculator">RTO cost calculator</a>, one of our <a href="/tools">free Shopify tools</a>.</p>`)}
+${verdict(`<p><strong>COD to prepaid conversion on WhatsApp works in two messages: a ₹0.1150 utility confirmation to every COD order, then a separate ₹0.8631 offer with a UPI link to the orders worth converting.</strong> Each converted order saves about ₹68 in COD fee and amortised RTO cost, before any avoided return is counted. Hold dispatch until one of the two replies comes back. Rates and costs read 26 and 27 November 2026.</p>
+<p>To see what a returned parcel costs your store first, use the <a href="/tools/rto-cost-calculator">RTO cost calculator</a>. The wider playbook is in <a href="/blog/how-to-reduce-rto-with-whatsapp-cod-confirmation">how to reduce RTO in ecommerce</a>.</p>`)}
 
-<p>Every Indian D2C brand knows prepaid orders behave better. Almost none can say what one is worth in rupees, which is why the prepaid discount is usually picked by feel and then quietly abandoned when nobody can prove it paid.</p>
-<p>This is the arithmetic, the message sequence that does not cost 7.5 times more than it needs to, and the part we cannot source.</p>
+<p>Every Indian D2C brand knows prepaid orders behave better. Few can say what one is worth in rupees, which is why the prepaid discount is usually picked by feel and quietly dropped when nobody can prove it paid.</p>
 
-<h2>The payment method is the largest RTO lever you control</h2>
-<p>Not category, not city, not courier. Payment method.</p>
-<div class="mkt-blog-table-wrap">
-<table>
-<thead><tr><th>Measure</th><th>COD</th><th>Prepaid</th><th>Source</th></tr></thead>
-<tbody>
-<tr><td>Festive-quarter return rate, FY26</td><td><strong>58%</strong></td><td><strong>under 15%</strong></td><td>Unicommerce India D2C Report 2026</td></tr>
-<tr><td>RTO across the GoKwik shopper network</td><td><strong>near 26%</strong></td><td><strong>under 2%</strong></td><td>GoKwik, via First Resort</td></tr>
-<tr><td>Share of RTOs caused by low buying intent</td><td colspan="2"><strong>60% to 70%</strong>, not logistics failure</td><td>GoKwik, via First Resort</td></tr>
-</tbody>
-</table>
-</div>
-<p>Read the last row with the first. If two thirds of your returns come from low intent rather than a courier problem, then the fix is a filter before dispatch, and a payment is the strongest filter there is. A buyer who has paid has already cleared it. Full benchmark set in <a href="/blog/cod-rto-benchmark-india-2026">the 2026 India COD and RTO report</a>.</p>
+<h2>How do you convert COD orders to prepaid?</h2>
+<p><strong>You confirm the COD order first, then offer a paid upgrade before the parcel ships.</strong></p>
+<ol>
+<li><strong>Confirm.</strong> A utility template with Confirm and Cancel buttons, minutes after the order.</li>
+<li><strong>Qualify.</strong> Pick the confirmed orders worth an offer: higher order values, pincodes that refuse often, repeat refusers.</li>
+<li><strong>Offer.</strong> A second message with a UPI payment link and an incentive under ₹68.</li>
+<li><strong>Hold and sync.</strong> Ship once the payment clears or the buyer confirms COD, and mark the Shopify order as paid.</li>
+</ol>
+<p>The rest of this guide is the arithmetic behind each step and the cost of getting the message split wrong.</p>
 
-<h2>What a prepaid order is actually worth: about ₹68</h2>
-<p>Two cost lines disappear the moment an order is paid for, and <a href="https://shipping.amazon.in/blog/true-cost-of-shipping-per-order-india" target="_blank" rel="noopener noreferrer">Amazon Shipping India publishes both</a> in its worked unit-economics breakdown.</p>
+<h2>What a converted order is worth: about ₹68</h2>
+<p>Two cost lines disappear the moment an order is paid for, and <a href="https://shipping.amazon.in/blog/true-cost-of-shipping-per-order-india" target="_blank" rel="noopener noreferrer">Amazon Shipping India publishes both</a> in its worked unit-economics breakdown (read 26 November 2026).</p>
 <div class="mkt-blog-table-wrap">
 <table>
 <thead><tr><th>Cost line on a COD order</th><th>Typical figure</th><th>Still there if prepaid?</th></tr></thead>
 <tbody>
-<tr><td>Courier COD remittance fee</td><td><strong>₹30</strong> a parcel, or 1.5% of order value, whichever is higher</td><td>No</td></tr>
+<tr><td>Courier COD remittance fee</td><td><strong>₹30</strong> a parcel, or 1.5% of product value, whichever is higher</td><td>No</td></tr>
 <tr><td>Amortised RTO cost, at a 30% COD RTO rate</td><td><strong>₹38</strong> per shipped order (30% of ₹125 incremental reverse cost)</td><td>Largely no</td></tr>
-<tr><td>Payment gateway fee</td><td>Charged on the paid order instead</td><td>New cost, typically under ₹20 on a ₹1,000 order</td></tr>
-<tr><td><strong>Net saved per converted order</strong></td><td><strong>About ₹68 before gateway fees</strong></td><td></td></tr>
+<tr><td>Payment gateway fee</td><td>Charged on the paid order instead</td><td>New cost: check your gateway’s rate</td></tr>
+<tr class="mkt-blog-row-key"><td>Net saved per converted order</td><td>About ₹68 before gateway fees</td><td></td></tr>
 </tbody>
 </table>
 </div>
-<p>So the discount question answers itself. An incentive of ₹30 to ₹50 sits inside what the conversion already saves. Above about ₹68 you are paying for the privilege, unless you are also counting the parcels that no longer come back, each of which costs <strong>₹180 to ₹240</strong> in direct logistics and ₹450 to ₹900 fully loaded.</p>
-<p>That second half is real money and it is also the part people over-claim, so keep the two separate on your own P&L. The ₹68 is arithmetic. The avoided RTO depends on a conversion rate you have not measured yet.</p>
+<p>So the discount question answers itself. An incentive of ₹30 to ₹50 sits inside what the conversion already saves. Above about ₹68 you are paying for the privilege, unless you also count the parcels that no longer come back, each of which costs <strong>₹180 to ₹240</strong> in direct logistics and ₹450 to ₹900 fully loaded.</p>
+<p>Keep those two halves apart on your own P&L. The ₹68 is arithmetic. The avoided returns depend on a conversion rate you have not measured yet.</p>
+
+<h2>COD vs prepaid: what the published data shows</h2>
+<p>Payment method is the largest RTO lever you control, ahead of category, city or courier.</p>
+<div class="mkt-blog-table-wrap">
+<table>
+<thead><tr><th>Measure</th><th>COD</th><th>Prepaid</th><th>Source</th></tr></thead>
+<tbody>
+<tr><td>Festive-quarter return rate, FY26</td><td><strong>58%</strong></td><td><strong>under 15%</strong></td><td><a href="https://unicommerce.com/india-d2c-report-2026-april/" target="_blank" rel="noopener noreferrer">Unicommerce India D2C Report 2026</a></td></tr>
+<tr><td>RTO across the GoKwik shopper network</td><td><strong>near 26%</strong></td><td><strong>under 2%</strong></td><td>GoKwik, via <a href="https://www.firstresort.in/blogs/research/fashion-ecommerce-returns-rto-india-2026" target="_blank" rel="noopener noreferrer">First Resort</a></td></tr>
+<tr><td>Share of RTOs caused by low buying intent</td><td colspan="2"><strong>60% to 70%</strong>, against 20% to 25% from logistics</td><td>GoKwik, via First Resort</td></tr>
+</tbody>
+</table>
+</div>
+<p>Read the last row with the first. If two thirds of returns come from low intent rather than a courier problem, the fix is a filter before dispatch, and a payment is the strongest filter there is. Full benchmark set in <a href="/blog/cod-rto-benchmark-india-2026">the 2026 India COD and RTO report</a>.</p>
 
 <h2>Why the offer must be a second message</h2>
-<p>This is the single most expensive formatting mistake in Indian D2C WhatsApp, and it is invisible until the invoice arrives.</p>
-<p>A confirm-or-cancel message is a <strong>utility</strong> template: ₹0.1150 per delivered message on Meta's India card. Add "pay by UPI now and get ₹50 off" to the same message and Meta reclassifies it as <strong>marketing</strong>: ₹0.8631. One line of copy, 7.5 times the cost, charged on every COD order you ship rather than on the ones worth converting.</p>
+<p>This is the most expensive formatting mistake in Indian D2C WhatsApp, and it stays invisible until Meta’s invoice arrives.</p>
+<p>A confirm-or-cancel message is a <strong>utility</strong> template: ₹0.1150 per delivered message on Meta’s India card. Add “pay by UPI now and get ₹50 off” to the same message and it becomes <strong>marketing</strong>: ₹0.8631. One line of copy, 7.5 times the cost, charged on every COD order you ship rather than on the ones worth converting.</p>
 <div class="mkt-blog-table-wrap">
 <table>
 <thead><tr><th>Approach on 500 COD orders a month</th><th>What gets sent</th><th>Meta cost</th></tr></thead>
 <tbody>
-<tr><td><strong>One step</strong>: confirmation with the offer inside it</td><td>500 marketing templates at ₹0.8631</td><td><strong>₹431.55</strong></td></tr>
-<tr><td><strong>Two steps</strong>: utility confirm to all, offer to the 40% worth converting</td><td>500 utility at ₹0.1150, then 200 marketing at ₹0.8631</td><td><strong>₹230.12</strong></td></tr>
+<tr><td>One step: confirmation with the offer inside it</td><td>500 marketing templates at ₹0.8631</td><td><strong>₹431.55</strong></td></tr>
+<tr class="mkt-blog-row-key"><td>Two steps: utility confirm to all, offer to the 40% worth converting</td><td>500 utility at ₹0.1150, then 200 marketing at ₹0.8631</td><td>₹230.12</td></tr>
 </tbody>
 </table>
 </div>
-<p>The two-step version is cheaper and it is also better operationally, because the confirmation reply tells you which orders deserve the offer. Against the ₹180 to ₹240 you lose on a single returned parcel, both numbers are rounding errors, which is the real point: the message is never the expensive part of this problem. The category rules are in <a href="/blog/whatsapp-business-api-pricing-india">the India WhatsApp API pricing guide</a>, and the reasons templates get rejected in <a href="/blog/whatsapp-template-rejected-meta-shopify-fix">the template rejection fixes</a>.</p>
+<p>The two-step version is cheaper and it is better operationally, because the confirmation reply tells you which orders deserve the offer. Against the ₹180 to ₹240 you lose on one returned parcel, both numbers are small: the message is never the expensive part of this problem. Category rules are in <a href="/blog/whatsapp-business-api-pricing-india">the India WhatsApp API pricing guide</a>, and rejection fixes in <a href="/blog/whatsapp-template-rejected-meta-shopify-fix">the template rejection guide</a>.</p>
 
 <h2>The flow, step by step</h2>
 <ol>
-<li><strong>Minute 0, order placed.</strong> Utility template with the order number and ₹ total, and a Confirm or Cancel button. ₹0.1150. This is the flow in <a href="/blog/how-to-reduce-rto-with-whatsapp-cod-confirmation">the COD confirmation SOP</a>, unchanged.</li>
-<li><strong>Branch on the reply.</strong> Cancel stops fulfillment. Confirm releases to pick and pack, unless the order qualifies for step 3.</li>
-<li><strong>Qualify, then offer.</strong> Send the prepaid offer only where the margin supports it: high-RTO pincodes, your higher order values, repeat refusers. A marketing template with a pre-filled payment link, ₹0.8631.</li>
-<li><strong>Hold dispatch until one of the two lands.</strong> Payment cleared, or an explicit COD confirmation. An unverified COD order sitting in a packed carton is the thing the whole program exists to prevent.</li>
-<li><strong>Sync back to Shopify.</strong> The order moves to paid, the COD tag comes off, and the warehouse sees one truth rather than two.</li>
-<li><strong>Cancel the offer on payment.</strong> Suppression matters here as much as in cart recovery. A buyer who has paid should never receive the follow-up, and you should not pay ₹0.8631 to annoy them.</li>
+<li><strong>Minute 0, order placed.</strong> Utility template with the order number, the ₹ total and Confirm or Cancel buttons. ₹0.1150. This is the flow in <a href="/blog/how-to-reduce-rto-with-whatsapp-cod-confirmation">the COD confirmation SOP</a>, unchanged.</li>
+<li><strong>Branch on the reply.</strong> Cancel stops fulfilment. Confirm releases the order to pick and pack, unless it qualifies for step 3.</li>
+<li><strong>Qualify, then offer.</strong> A marketing template with a pre-filled payment link, ₹0.8631, only where the margin supports it.</li>
+<li><strong>Hold dispatch until one of the two lands.</strong> Payment cleared, or an explicit COD confirmation. An unverified COD order in a packed carton is what the whole programme exists to prevent.</li>
+<li><strong>Sync back to Shopify.</strong> The order moves to paid and the warehouse sees one truth rather than two.</li>
+<li><strong>Cancel the offer on payment.</strong> A buyer who has paid should never get the follow-up, and you should not pay ₹0.8631 to annoy them.</li>
 </ol>
 <div class="mkt-blog-callout">
-<p>One rule worth writing into the SOP: never promise a discount you cannot apply to an order that is already placed. If your stack cannot re-price a Shopify order cleanly, make the incentive a credit on the next order instead. A broken promise at the payment step costs more than the RTO would have. The <a href="/whatsapp-journey-examples/cod-to-prepaid">COD to prepaid journey example</a> shows each message and what it costs.</p>
+<p>One rule for the SOP: never promise a discount you cannot apply to an order that is already placed. If your stack cannot re-price a Shopify order cleanly, make the incentive a credit on the next order. The <a href="/whatsapp-journey-examples/cod-to-prepaid">COD to prepaid journey example</a> shows each message and what it costs.</p>
 </div>
+
+<h2>What COD to prepaid costs at 100, 500 and 1,500 orders</h2>
+<p>The saving per converted order is fixed. The bill is not, so here it is on TopEdge AI at three store sizes, with the prepaid switch on (Growth or Scale), every COD order confirmed and the offer sent to 40% of them.</p>
+<div class="mkt-blog-table-wrap">
+<table>
+<thead><tr><th>Monthly COD orders</th><th>Plan that fits</th><th>Meta fees (confirm all, offer to 40%)</th><th>Monthly total</th><th>Conversions at ₹68 to cover it</th></tr></thead>
+<tbody>
+<tr><td>100</td><td>Growth ₹3,999</td><td>₹11.50 + ₹34.52 = ₹46.02</td><td>₹4,045.02</td><td>60 of 100</td></tr>
+<tr><td>500</td><td>Growth ₹3,999</td><td>₹57.50 + ₹172.62 = ₹230.12</td><td>₹4,229.12</td><td>63 of 500 (12.6%)</td></tr>
+<tr class="mkt-blog-row-key"><td>1,500</td><td>Scale ₹6,499</td><td>₹172.50 + ₹517.86 = ₹690.36</td><td>₹7,189.36</td><td>106 of 1,500 (7.1%)</td></tr>
+</tbody>
+</table>
+</div>
+<p>Plan prices are monthly, including GST, on topedgeai.com; Growth covers up to 800 orders a month, so 1,500 needs Scale. The same plan also runs cart recovery and order updates, so charging all of it to COD to prepaid is the strict view.</p>
+<p>The honest reading: at 100 COD orders, the ₹68 alone does not pay for the prepaid switch. It pays only through the returns it prevents, and one avoided parcel is worth ₹180 to ₹240. From a few hundred orders a month, the fee saving covers the plan by itself.</p>
+
+<h2>Which COD to prepaid setup fits your store?</h2>
+<h3>Under 100 COD orders a month</h3>
+<p>Confirm by hand from the WhatsApp Business app and paste a UPI link to the orders you want to convert. Automate when the replies start running behind dispatch.</p>
+<h3>Already on Razorpay Magic Checkout</h3>
+<p>Ask Razorpay to switch on its own conversion link. Its docs (read 27 November 2026) describe a WhatsApp link after a COD order, a flat or percentage discount and a validity window, enabled on request for Shopify and WooCommerce stores. <a href="https://razorpay.com/docs/payments/magic-checkout/order-settings/prepay-cod" target="_blank" rel="noopener noreferrer">Razorpay’s setup page</a> has the steps.</p>
+<h3>On the TopEdge AI Launch plan</h3>
+<p>Launch confirms every COD order but does not send the prepaid offer. Use the confirmation to filter, and move to Growth when the conversion maths above works for your volume.</p>
+<h3>High-value orders</h3>
+<p>Offer prepaid only above a minimum order value. A ₹50 incentive is small next to a ₹2,000 parcel, and those are the returns that hurt most.</p>
 
 <h2>Price it against your own COD volume</h2>
-<p>The saving per converted order is fixed arithmetic. What it is worth to you depends on how many COD orders you ship and how many come back, so put your own numbers in.</p>
+<p>Put your own numbers into the calculator. The example below uses 500 COD orders and a 25% RTO rate.</p>
 <div class="mkt-calc" data-calc="rto-cost">
-<p>At 500 COD orders a month and a 25% RTO rate, 125 parcels come back: <strong>₹22,500 to ₹30,000</strong> in direct logistics, or <strong>₹56,250 to ₹1,12,500</strong> fully loaded. Converting a quarter of those 500 orders to prepaid saves about <strong>₹8,500</strong> in COD fees and amortised RTO before a single parcel is counted.</p>
+<p>At 500 COD orders a month and a 25% RTO rate, 125 parcels come back: <strong>₹22,500 to ₹30,000</strong> in direct logistics, or <strong>₹56,250 to ₹1,12,500</strong> fully loaded. Converting a quarter of those 500 orders to prepaid saves about <strong>₹8,500</strong> in COD fees and amortised RTO before a single avoided parcel is counted.</p>
 </div>
 
+<h2>Should you charge a COD fee or switch COD off?</h2>
+<p>Both come up as soon as COD to prepaid is on the table. Shopify treats cash on delivery as a manual payment method: you can deactivate it under Settings, then Payments, but <a href="https://help.shopify.com/en/manual/payments/manual-payments" target="_blank" rel="noopener noreferrer">its Help Center</a> describes no fee setting for it (read 27 November 2026). A COD charge therefore needs a checkout app.</p>
+<p>A fee pushes buyers before they order; a prepaid offer rewards them after. Turning COD off loses the buyers who only order on cash, so most Indian stores keep it and filter it with a confirmation instead.</p>
+
 <h2>What we could not verify</h2>
-<p>Plenty of vendors publish a COD-to-prepaid conversion rate. We could not find one in a dataset that names its sample, so we are not repeating any of them, and you should treat the ones you see in a sales deck the same way.</p>
-<p>What is published and attributable is the return-rate gap between COD and prepaid, and the per-order cost lines above. That is enough to decide: the saving per converted order is known, so you only need your own conversion rate to finish the sum, and you will have that within a month of running it.</p>
-<p>Measure three things and nothing else at the start: share of COD orders that take the prepaid offer, RTO rate on converted orders against unconverted ones, and net margin after the incentive. The third one is the only one that settles it, and it is the one most dashboards cannot show you. <a href="/features/profit-loss">Profit and costs</a> builds that waterfall from your own Shopify data, and <a href="/blog/profitable-ecommerce-business-india">the India net profit guide</a> walks through the rest of the cost lines.</p>
+<p>No one we found publishes a conversion rate for post-order WhatsApp prepaid offers with a named sample. Unicommerce says a prepaid incentive converts 20% to 30% of COD intenders, and Razorpay’s docs say a discount raises the chance of conversion by up to 30%. Neither separates a WhatsApp offer after the order from a nudge at checkout, so we do not use either figure in the bill above.</p>
+<p>Measure three things in your first month: the share of COD orders that take the offer, RTO on converted against unconverted orders, and net margin after the incentive. <a href="/features/profit-loss">Profit and costs</a> builds that last number from your own Shopify data.</p>
 
-<h2>Where this runs</h2>
-<p>COD confirmation is on every TopEdge AI plan, from Launch at ₹1,999 a month. The automated COD-to-prepaid journey, with the payment link and the suppression rules above, sits on <strong>Growth</strong> at ₹3,999 a month (₹3,199 billed yearly) and on Scale. TopEdge AI is Shopify-native and compatible with third-party checkout stacks such as GoKwik and Razorpay.</p>
-<p>On the Meta side there is nothing to add: you connect your own WhatsApp Business Account, Meta bills that account directly at its published rates, and we take 0% of it. Plans and limits are on <a href="/pricing">pricing</a>, the flow itself on <a href="/features/cod-confirmation">COD confirmation</a>, and the branching on <a href="/features/journeys">Journeys</a>.</p>
-<p>While you are costing this, check one thing that has a deadline attached. Every eligible Indian WhatsApp Business Account has to be on INR billing by <strong>31 December 2026</strong> or Meta stops delivery on 1 January 2027, and that migration needs a new WABA rather than a settings change.</p>
+<h2>Where TopEdge AI fits</h2>
+<p>TopEdge AI is all-in-one D2C software for Shopify stores, built as one suite, and COD to prepaid is one module of it. COD confirmation is on every plan, from Launch at ₹1,999 a month including GST. The automated prepaid switch, with the payment link and the suppression rule above, is on <strong>Growth</strong> at ₹3,999 a month (₹3,199 billed yearly) and on Scale. On the Shopify App Store the same plans are $19, $39 and $65 a month, billed by Shopify in USD.</p>
+<p>Meta bills your own WhatsApp Business Account directly at its published rates, and we add 0%. TopEdge AI integrates with GoKwik and Shiprocket. Plans and limits are on <a href="/pricing">pricing</a>, the flow on <a href="/features/cod-confirmation">COD confirmation</a>, and the branching on <a href="/features/journeys">Journeys</a>.</p>
+<p>One deadline while you cost this: eligible Indian WhatsApp Business accounts must move to INR billing by <strong>31 December 2026</strong>, after which Meta stops delivering messages from accounts that have not.</p>
 
-${faqHtml(COD_PREPAID_FAQS)}
+${faqHtml(COD_PREPAID_FAQS, 'Frequently asked questions about COD to prepaid')}
 
-<p>Related: <a href="/blog/rto-meaning-ecommerce">what RTO means in ecommerce</a>, <a href="/blog/cod-rto-benchmark-india-2026">the 2026 India COD and RTO benchmark</a>, <a href="/blog/how-to-reduce-rto-with-whatsapp-cod-confirmation">the WhatsApp COD confirmation SOP</a>, <a href="/blog/whatsapp-business-api-pricing-india">India WhatsApp API pricing</a> and <a href="/blog/profitable-ecommerce-business-india">net profit after COD and RTO</a>.</p>
-<p class="mkt-blog-footnote">Sources, all read 21 October 2026. COD remittance fee (₹30 or 1.5%), amortised RTO cost (₹38 per shipped order at 30% RTO) and the itemised ₹180 to ₹240 loss per returned parcel: <a href="https://shipping.amazon.in/blog/true-cost-of-shipping-per-order-india" target="_blank" rel="noopener noreferrer">Amazon Shipping India's true cost per order breakdown</a> and its <a href="https://shipping.amazon.in/blog/what-is-rto-how-to-reduce-return-to-origin" target="_blank" rel="noopener noreferrer">RTO guide</a>. Festive COD and prepaid return rates: <a href="https://unicommerce.com/india-d2c-report-2026-april/" target="_blank" rel="noopener noreferrer">Unicommerce's India D2C Report 2026</a>. GoKwik's COD and prepaid RTO figures and the intent split: ClickPost and GoKwik data compiled by <a href="https://www.firstresort.in/blogs/research/fashion-ecommerce-returns-rto-india-2026" target="_blank" rel="noopener noreferrer">First Resort</a>. Per-message rates, template categories and the 31 December 2026 INR billing deadline: <a href="https://developers.facebook.com/docs/whatsapp/pricing/" target="_blank" rel="noopener noreferrer">Meta's WhatsApp Business Platform pricing documentation</a>. Gateway fees vary by provider and order value. Cost bands are national indicative ranges, not your rate card.</p>
+<p>Related: <a href="/rto-reduction-shopify">RTO reduction for Shopify</a>, <a href="/blog/rto-meaning-ecommerce">what RTO means in ecommerce</a>, <a href="/blog/cod-rto-benchmark-india-2026">the 2026 India COD and RTO benchmark</a>, <a href="/blog/whatsapp-business-api-pricing-india">India WhatsApp API pricing</a> and <a href="/blog/profitable-ecommerce-business-india">net profit after COD and RTO</a>.</p>
+<p class="mkt-blog-footnote">Sources. COD remittance fee (₹30 or 1.5% of product value), amortised RTO cost (₹38 per shipped order at 30% RTO): <a href="https://shipping.amazon.in/blog/true-cost-of-shipping-per-order-india" target="_blank" rel="noopener noreferrer">Amazon Shipping India’s true cost per order breakdown</a>; ₹180 to ₹240 per returned parcel: its <a href="https://shipping.amazon.in/blog/what-is-rto-how-to-reduce-return-to-origin" target="_blank" rel="noopener noreferrer">RTO guide</a>, labelled an illustrative estimate; both read 26 November 2026. Festive COD and prepaid return rates and the 20% to 30% incentive figure: <a href="https://unicommerce.com/india-d2c-report-2026-april/" target="_blank" rel="noopener noreferrer">Unicommerce’s India D2C Report 2026</a>, read 26 November 2026. GoKwik’s RTO figures, the intent split and ClickPost’s ₹450 to ₹900 fully loaded cost: <a href="https://www.firstresort.in/blogs/research/fashion-ecommerce-returns-rto-india-2026" target="_blank" rel="noopener noreferrer">First Resort</a>, read 26 November 2026. Per-message rates, categories and the 31 December 2026 INR deadline: <a href="https://developers.facebook.com/docs/whatsapp/pricing/" target="_blank" rel="noopener noreferrer">Meta’s WhatsApp Business Platform pricing</a>, read 26 November 2026. Razorpay Magic Checkout and Shopify manual payments: read 27 November 2026. The plan bill is our own arithmetic; gateway fees vary by provider.</p>
 `,
   },
   {
@@ -2180,7 +2224,7 @@ ${faqHtml(COD_PREPAID_FAQS)}
 <p>TopEdge AI is all-in-one D2C software for Shopify stores, built as one suite. Cart and checkout recovery is one of its modules, on <a href="/features/journeys">Journeys</a>, next to COD confirmation and COD-to-prepaid branching, consent capture through <a href="/features/opt-in-tools">opt-in tools</a>, replies in <a href="/features">Live Chat</a> with Shopify context, and template approval state gated in <a href="/features/meta-manager">Meta Manager</a> so a draft template cannot fire mid-sale. Recovery reports as recovered revenue attributed to the journey, not as messages delivered. Plans start at ₹1,999 a month including GST on topedgeai.com, or $19 on the Shopify App Store, Meta bills your own account at its published rates with 0% markup, and the trial is 14 days. Connecting the two sides is on <a href="/shopify-whatsapp-integration">Shopify WhatsApp integration</a>, and plan detail is on <a href="/pricing">pricing</a>.</p>
 <p>It is software, not an agency. Recovery results still depend on your opt-in rate, your offer, how broken your checkout is, and whether anyone answers the replies.</p>
 
-${faqHtml(BEST_CART_APP_FAQS)}
+${faqHtml(BEST_CART_APP_FAQS, 'Frequently asked questions about abandoned cart recovery apps for Shopify')}
 
 <p>Start with what you already have, then add the channel your customers actually answer. Put a recovery journey live from <a href="/features/journeys">Journeys</a>, size it with the <a href="/tools/cart-recovery-calculator">cart recovery calculator</a>, review <a href="/pricing">pricing</a>, or <a href="/signup">start free</a>.</p>
 <p>Related reading: <a href="/blog/whatsapp-abandoned-cart-recovery-shopify">the WhatsApp cart recovery playbook</a>, <a href="/blog/whatsapp-automation-for-shopify">WhatsApp automation for Shopify</a>, <a href="/blog/whatsapp-opt-in-shopify-india">opt-in for Shopify India</a>, <a href="/blog/whatsapp-business-api-pricing-india">India WhatsApp API pricing</a> and <a href="/blog/ecommerce-funnel-drop-off-benchmarks-visitor-identity-resolution">2026 funnel drop-off benchmarks by stage</a>.</p>
@@ -2493,7 +2537,7 @@ ${faqHtml(FUNNEL_FAQS)}
 </tbody>
 </table>
 </div>
-<p>Every tier carries a 14-day free trial and “additional WhatsApp conversation charges”. The listing showed a 4.3 rating from 233 reviews.</p>
+<p>Every tier carries a 14-day free trial and “additional WhatsApp conversation charges”. The listing showed a 4.3 rating from 233 reviews. Re-read on 27 November 2026, the same four plans were listed at <strong>$21, $41, $51 and $99 a month</strong> in USD (or $180, $296, $468 and $839 a year), rated 4.3 from 240 reviews; the rupee column above is Shopify’s 9 November estimate of those USD prices.</p>
 <p><strong>Which tier a cart-recovery store needs.</strong> The listing does not say which tier each automation sits on. A cart reminder is sent some time after the shopper leaves, not at once, and “notifications with delay” first appears on Growth. So we price Growth for a store that wants timed cart recovery, and Starter for a store that only needs instant order and COD messages. That is our reading of the listing, not Interakt’s statement, so ask them before you buy.</p>
 
 <h2>What Interakt charges per message, set against Meta’s rate</h2>
@@ -2549,7 +2593,7 @@ ${faqHtml(FUNNEL_FAQS)}
 <ul>
 <li><strong>You want Instagram and WhatsApp in one inbox.</strong> Growth and above include both channels, and Instagram conversations are listed as free.</li>
 <li><strong>You have a large support team.</strong> Every plan lists unlimited agents, where many tools in this category cap seats by plan.</li>
-<li><strong>You want a track record.</strong> Interakt’s Shopify listing showed 233 reviews at 4.3 on 9 November 2026. TopEdge AI’s listing showed none yet.</li>
+<li><strong>You want a track record.</strong> Interakt’s Shopify listing showed 240 reviews at 4.3 on 27 November 2026. TopEdge AI’s listing showed none yet.</li>
 <li><strong>You only need instant order and COD messages.</strong> On our assumptions the Shopify Starter plan is cheaper than TopEdge AI Growth from 500 orders up.</li>
 <li><strong>You send at enterprise volume.</strong> Enterprise is the one plan listed without template markups.</li>
 </ul>

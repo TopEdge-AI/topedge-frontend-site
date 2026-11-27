@@ -1,9 +1,29 @@
-import { Link } from 'react-router-dom';
+import { useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
+import { isStaticLandingPath } from '../routes';
 import MarketingPage from '../components/MarketingPage';
 import MarketingSEO from '../components/MarketingSEO';
 import '../styles/not-found.css';
 
 export default function NotFoundPage() {
+  const { pathname } = useLocation();
+
+  // A client-side link to a static landing page has no React route and lands
+  // here. Load the real page from the server. If that reload lands here again
+  // within 10 seconds (the static file is missing), stop, so it never loops.
+  useEffect(() => {
+    if (!isStaticLandingPath(pathname)) return;
+    const key = `te-static-reload:${pathname}`;
+    try {
+      const last = Number(sessionStorage.getItem(key) || 0);
+      if (Date.now() - last < 10_000) return;
+      sessionStorage.setItem(key, String(Date.now()));
+    } catch {
+      return;
+    }
+    window.location.reload();
+  }, [pathname]);
+
   return (
     <MarketingPage className="mkt-nf fx">
       <MarketingSEO

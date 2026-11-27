@@ -440,14 +440,14 @@ export const COMPARE_COMPETITORS: Record<string, CompareCompetitor> = {
     logoAlt: 'Gupshup logo',
     accent: '#00a651',
     brandTag: 'Enterprise WhatsApp CPaaS',
-    title: 'TopEdge AI vs Gupshup (2026): Shopify OS vs Enterprise CPaaS',
+    title: 'TopEdge AI vs Gupshup (2027): COD Suite vs Message Wallet',
     description:
-      'TopEdge AI vs Gupshup for Shopify India: self-serve ₹1,999/mo INR plans, 0% Meta markup and native COD journeys vs per-message enterprise CPaaS fees.',
+      'TopEdge AI vs Gupshup for Shopify India, read 27 Nov 2026: COD journeys at Meta’s rates against a ₹0 wallet charging ₹1.15 a marketing message.',
     keywords:
-      'TopEdge AI vs Gupshup, Gupshup alternative Shopify India, Gupshup WhatsApp markup, Gupshup vs TopEdge AI, Gupshup Conversation Studio, Gupshup COD prepaid',
+      'TopEdge AI vs Gupshup, Gupshup vs TopEdge AI, Gupshup WhatsApp markup, Gupshup Shopify, Gupshup COD prepaid',
     h1: 'TopEdge AI vs Gupshup',
-    subtitle: 'TopEdge AI vs Gupshup for Shopify India D2C brands, checked for 2026.',
-    researchAsOf: 'Sep 2026',
+    subtitle: 'TopEdge AI vs Gupshup for Shopify India D2C brands, read 27 November 2026.',
+    researchAsOf: 'Nov 2026',
     matrix: GUPSHUP_PAIRWISE_MATRIX.map(({ label, description, topedge, competitor }) => ({
       label,
       description,
@@ -455,7 +455,7 @@ export const COMPARE_COMPETITORS: Record<string, CompareCompetitor> = {
       competitor,
     })),
     matrixNote:
-      'Board compiled Sep 2026 from TopEdge AI product positioning vs publicly described Gupshup CPaaS / Conversation Studio / Auto Bot patterns. Gupshup enterprise quotes and fee cards move, so verify messaging fees, AI packaging, and module gates on gupshup.io (and any regional sales deck) before purchase.',
+      'Board compiled Sep 2026. Rows marked Read 27 Nov 2026 were re-read that day on gupshup.ai/pricing, its India rate card and its Shopify App Store listing; the other Gupshup cells are from the September reading. Check gupshup.ai before you buy.',
     related: [
       { label: 'All comparisons', href: '/compare' },
       { label: 'Alternatives index', href: '/compare/alternatives' },

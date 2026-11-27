@@ -84,7 +84,6 @@ const CompareThreeWayPage = React.lazy(() => import('./marketing/pages/CompareTh
 const CompareFourWayPage = React.lazy(() =>
   import('./marketing/pages/CompareThreeWayPage').then((m) => ({ default: m.CompareFourWayPage })),
 );
-const SeoTopicPage = React.lazy(() => import('./marketing/pages/SeoTopicPage'));
 const JourneyExamplesIndexPage = React.lazy(
   () => import('./marketing/pages/JourneyExamplesIndexPage'),
 );
@@ -287,10 +286,6 @@ const AnimatedRoutes = () => {
           />
           <Route path="/whatsapp-journey-examples" element={<JourneyExamplesIndexPage />} />
           <Route path="/whatsapp-journey-examples/:journey" element={<JourneyExampleRoute />} />
-          <Route
-            path="/shopify-whatsapp-integration"
-            element={<SeoTopicPage slug="shopify-whatsapp-integration" />}
-          />
           <Route path="/tools" element={<ToolsIndexPage />} />
           <Route path="/tools/best-whatsapp-tool-for-shopify" element={<ToolFinderPage />} />
           <Route path="/tools/rto-cost-calculator" element={<RtoCalculatorPage />} />

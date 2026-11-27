@@ -1,0 +1,30 @@
+== dist/blog/cod-to-prepaid-whatsapp-shopify-india.html
+Overall quality:       95/100
+  Filler score:        0/100 (higher = worse)
+  AI-pattern score:    0/100 (higher = worse)
+  Repetition:          33/100 (higher = worse)
+  Flags:               repetitive
+== dist/shopify-whatsapp-integration/index.html
+Overall quality:       95/100
+  Filler score:        0/100 (higher = worse)
+  AI-pattern score:    0/100 (higher = worse)
+  Repetition:          34/100 (higher = worse)
+  Flags:               repetitive
+== dist/compare/gupshup.html
+Overall quality:       95/100
+  Filler score:        0/100 (higher = worse)
+  AI-pattern score:    0/100 (higher = worse)
+  Repetition:          31/100 (higher = worse)
+  Flags:               repetitive
+== dist/compare/topedge-vs-wati-vs-aisensy.html
+Overall quality:       95/100
+  Filler score:        0/100 (higher = worse)
+  AI-pattern score:    0/100 (higher = worse)
+  Repetition:          34/100 (higher = worse)
+  Flags:               repetitive
+== dist/compare/topedge-vs-wati-vs-interakt-vs-aisensy.html
+Overall quality:       95/100
+  Filler score:        0/100 (higher = worse)
+  AI-pattern score:    0/100 (higher = worse)
+  Repetition:          36/100 (higher = worse)
+  Flags:               repetitive

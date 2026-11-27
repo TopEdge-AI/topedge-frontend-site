@@ -804,4 +804,88 @@ export const COMPARE_REFRESH: Record<string, CompareRefresh> = {
     closeTitle: 'Run your COD store on rupee plans',
     closeHighlight: 'rupee plans',
   },
+  gupshup: {
+    updated: '2026-11-27',
+    heroSub:
+      'Order-based rupee plans built around COD, against Gupshup’s ₹0 platform fee and all-in message rates.',
+    verdict:
+      'For a Shopify store in India that ships COD, TopEdge AI does more of the order work: COD confirmation on every plan from ₹1,999 a month including GST, COD to prepaid from Growth, and Meta’s rates with nothing added. Gupshup costs less to start, with no monthly fee, and suits brands that want WhatsApp, SMS, RCS and voice from one prepaid wallet. Read 27 November 2026.',
+    switchReasons: [
+      {
+        title: 'COD to prepaid as a built-in journey',
+        body: 'Gupshup’s Shopify app lists COD verification but names no COD to prepaid flow (listing read 27 November 2026). TopEdge AI confirms every COD order on every plan and sends the prepaid offer from Growth, with dispatch held until one of the two lands.',
+      },
+      {
+        title: 'Meta’s rate, not an all-in rate',
+        body: 'Gupshup’s India card charges ₹1.15 per marketing message and ₹0.145 per utility message, all-in. Meta’s own rates are ₹0.8631 and ₹0.1150, so that is about 33% and 26% more. TopEdge AI adds 0% and Meta bills your own Business Account.',
+      },
+      {
+        title: 'Profit after RTO, not delivery reports',
+        body: 'Gupshup’s plan lists delivery reports and a customer data platform. TopEdge AI reports net profit after cost of goods, COD fees, RTO and ad spend, order by order, which is the number a COD store is judged on.',
+      },
+    ],
+    fallsShort: [
+      {
+        title: 'Cart reminders cost a third more',
+        body: 'Cart recovery is marketing. 2,000 reminders a month cost ₹2,300 at Gupshup’s ₹1.15 against ₹1,726.20 at Meta’s ₹0.8631 through TopEdge AI, before GST on both.',
+      },
+      {
+        title: 'AI replies after 1,000 cost ₹1 each',
+        body: 'Gupshup includes 1,000 AI messages a month and charges ₹1.00 for each one after that, so 3,000 AI replies add ₹2,000. TopEdge AI lets you bring your own AI key on every plan.',
+      },
+      {
+        title: 'Service replies are on the card',
+        body: 'Gupshup’s India card lists service replies at ₹0.145 all-in and does not mention Meta’s free tier. Meta gives every business number 1,000 free service messages a month since 1 October 2026, and that tier passes straight through TopEdge AI.',
+      },
+    ],
+    betterPick: [
+      'You want WhatsApp, SMS, RCS, Truecaller and voice campaigns from one prepaid wallet, with no monthly platform fee.',
+      'Your volume is small. At 1,000 marketing and 1,500 utility messages a month, Gupshup’s wallet charge is ₹1,367.50 against ₹1,035.60 at Meta’s rates, a ₹331.90 difference that is well under any TopEdge AI plan.',
+      'You need voice AI agents or click-to-WhatsApp ads run from the same account, both on Gupshup’s pricing page.',
+    ],
+    priceRows: [
+      { label: 'Platform fee', topedge: 'Launch ₹1,999, Growth ₹3,999, Scale ₹6,499 a month incl. GST, or $19, $39, $65 on the App Store', competitor: '₹0, pay from a prepaid wallet, plus 18% GST' },
+      { label: 'India marketing message', topedge: '₹0.8631, Meta’s rate, 0% markup', competitor: '₹1.15 all-in' },
+      { label: 'India utility message', topedge: '₹0.1150', competitor: '₹0.145 all-in' },
+      { label: 'Service replies', topedge: '1,000 free a month per number from Meta, then ₹0.1150', competitor: '₹0.145 all-in on its India card' },
+      { label: 'AI replies', topedge: 'Bring your own AI key, every plan', competitor: '1,000 free a month, then ₹1.00 each' },
+      { label: '500 orders: 1,500 utility plus 1,000 marketing', topedge: 'Growth ₹3,999 plus ₹1,035.60 to Meta', competitor: '₹1,367.50 from the wallet, plus GST' },
+      { label: 'Shopify App Store', topedge: '$19, $39 or $65 a month, billed by Shopify', competitor: 'Free to install, message charges billed in USD' },
+    ],
+    priceNote:
+      'Sources: gupshup.ai/pricing and its India rate card (one view, no billing toggle) and Gupshup’s Shopify App Store listing. Message rates on both sides exclude GST; TopEdge AI plan prices include 18% GST on our site. 500 orders needs Growth, because Launch covers 100 orders a month.',
+    switchSteps: [
+      { title: 'Let the wallet run down', body: 'Gupshup bills from a prepaid wallet, so stop topping it up once you plan the move and switch when the balance is close to zero.' },
+      { title: 'Free your WhatsApp number', body: 'A number can sit on one WhatsApp API provider at a time. If Gupshup registered yours, ask it to release the number, then connect it in TopEdge AI through Meta’s embedded signup under Settings, WhatsApp.' },
+      { title: 'Rebuild order and cart journeys', body: 'Start from the Order placed and cart recovery playbooks, add the COD rule, and resubmit any template that was approved under a different WhatsApp Business Account.' },
+      { title: 'Uninstall Gupshup’s Shopify app last', body: 'Keep it until COD confirmation and cart recovery have fired on real orders in TopEdge AI, so no order goes out without a message.' },
+    ],
+    faqs: [
+      {
+        question: 'How much does Gupshup cost?',
+        answer:
+          'Gupshup charged no monthly platform fee on 27 November 2026; you pay per message from a prepaid wallet, plus 18% GST. Its India card lists ₹1.15 per marketing message and ₹0.145 per utility, authentication or service message, all-in. TopEdge AI is ₹1,999 a month including GST, with Meta’s rates passed through at 0% markup.',
+      },
+      {
+        question: 'Does Gupshup add a markup on WhatsApp messages?',
+        answer:
+          'Yes. Gupshup’s all-in India rates of ₹1.15 marketing and ₹0.145 utility are about 33% and 26% above Meta’s ₹0.8631 and ₹0.1150 (read 27 November 2026). Through TopEdge AI, Meta bills your own WhatsApp Business Account at its published rate.',
+      },
+      {
+        question: 'Does Gupshup work with Shopify?',
+        answer:
+          'Yes. “Gupshup: WhatsApp Marketing” by Gupshup INC is on the Shopify App Store, free to install, with cart recovery, order updates and COD verification. Its listing names no COD to prepaid flow, and its message charges are billed in USD.',
+      },
+      {
+        question: 'What do Shopify merchants rate Gupshup?',
+        answer:
+          'Gupshup’s Shopify app was rated 5.0 from 1 review on 27 November 2026, launched 22 March 2023. TopEdge AI had no App Store reviews yet that day.',
+      },
+      {
+        question: 'Is Gupshup or TopEdge AI better for a Shopify COD store?',
+        answer:
+          'TopEdge AI, once COD confirmation and the prepaid switch matter: both are built in, on order-based rupee plans. Gupshup fits a brand that wants many channels from one wallet and sends few messages. Our alternatives index lists more tools.',
+      },
+    ],
+  },
 };

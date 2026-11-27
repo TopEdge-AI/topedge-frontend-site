@@ -38,7 +38,32 @@ export type MultiWayConfig<K extends string> = {
   modifiedIso: string;
   /** Rendered under the board: the other multi-way boards and the hub. */
   alsoSee?: { label: string; href: string }[];
+  /**
+   * Refreshed layout (Track C, 27 Nov 2026): the two-way template's short
+   * answer, dated price table, "which one fits" and numbered FAQ, with one
+   * column per vendor. The capability board above is unchanged. When set,
+   * `refresh.updated` is the board's own date.
+   */
+  refresh?: MultiWayRefresh<K>;
 };
+
+export type MultiWayRefresh<K extends string> = {
+  /** ISO date every competitor fact on this board was last read. */
+  updated: string;
+  heroSub: string;
+  verdict: string;
+  priceRows: ({ label: string; topedge: string } & Record<K, string>)[];
+  priceNote: string;
+  /** One honest line per vendor, TopEdge AI first. */
+  fits: { name: string; body: string }[];
+  /** Phrase used in "Frequently asked questions about …". */
+  faqTopic: string;
+};
+
+function readLabel(iso: string) {
+  const d = new Date(`${iso}T00:00:00Z`);
+  return d.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' });
+}
 
 const TE_LOGO = '/logo.png';
 
@@ -54,8 +79,8 @@ export default function CompareMultiWayPage<K extends string>({
 }: {
   config: MultiWayConfig<K>;
 }) {
-  const { path, title, description, keywords, ways, shortName, peers, rows, faqs, modifiedIso } =
-    config;
+  const { path, title, description, keywords, ways, shortName, peers, rows, faqs, refresh } = config;
+  const modifiedIso = refresh?.updated ?? config.modifiedIso;
   const boardLabel = ['TopEdge AI', ...peers.map((p) => p.name)].join(' vs ');
 
   return (
@@ -133,11 +158,22 @@ export default function CompareMultiWayPage<K extends string>({
               </span>
             ))}
           </h1>
+          {refresh ? <p className="mkt-cmp__sub">{refresh.heroSub}</p> : null}
           <div className="mkt-cmp__proof">
             <ProofBadges compact />
           </div>
         </header>
 
+        {refresh ? (
+          <section className="mkt-cmp__block mkt-cmp__block--answer fx-sec fx-sec--tight" aria-labelledby="cmp-answer">
+            <div className="mkt-cmp__answer">
+              <h2 id="cmp-answer" className="mkt-cmp__answer-label">
+                {boardLabel}: the short answer
+              </h2>
+              <p>{refresh.verdict}</p>
+            </div>
+          </section>
+        ) : null}
         <section className="mkt-cmp__block mkt-cmp__block--board fx-sec" aria-labelledby="cmp-multi">
           <div className="mkt-cmp__block-head fx-head">
             <h2 id="cmp-multi" className="fx-head__title">
@@ -222,6 +258,76 @@ export default function CompareMultiWayPage<K extends string>({
           </nav>
         </div>
 
+        {refresh ? (
+          <>
+            <section className="mkt-cmp__block fx-sec" aria-labelledby="cmp-cost">
+              <div className="mkt-cmp__block-head fx-head">
+                <h2 id="cmp-cost" className="fx-head__title">
+                  What each one costs, <span className="mkt-cmp__hl">read {readLabel(refresh.updated)}</span>
+                </h2>
+              </div>
+              <div className="mkt-cmp__cost-wrap">
+                <table className="mkt-cmp__cost">
+                  <thead>
+                    <tr>
+                      <th scope="col">What you pay for</th>
+                      <th scope="col" className="is-te">TopEdge AI</th>
+                      {peers.map((peer) => (
+                        <th scope="col" key={peer.key}>
+                          {peer.name}
+                        </th>
+                      ))}
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {refresh.priceRows.map((r) => (
+                      <tr key={r.label}>
+                        <th scope="row">{r.label}</th>
+                        <td className="is-te">{r.topedge}</td>
+                        {peers.map((peer) => (
+                          <td key={peer.key}>{r[peer.key]}</td>
+                        ))}
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+              <p className="mkt-cmp__fine">{refresh.priceNote}</p>
+            </section>
+
+            <section className="mkt-cmp__block fx-sec" aria-labelledby="cmp-fits">
+              <div className="mkt-cmp__block-head fx-head">
+                <h2 id="cmp-fits" className="fx-head__title">
+                  Which one fits <span className="mkt-cmp__hl">which store</span>
+                </h2>
+              </div>
+              <div className="mkt-cmp__gaps fx-cells fx-cells--bleed">
+                {refresh.fits.map((f) => (
+                  <article key={f.name} className="mkt-cmp__gap fx-step">
+                    <h3 className="fx-step__title">{f.name}</h3>
+                    <p className="fx-step__copy">{f.body}</p>
+                  </article>
+                ))}
+              </div>
+            </section>
+
+            <section className="mkt-cmp__block mkt-cmp__block--faq fx-sec" aria-labelledby="cmp-faq">
+              <div className="mkt-cmp__block-head fx-head">
+                <h2 id="cmp-faq" className="fx-head__title">
+                  Frequently asked questions about <span className="mkt-cmp__hl">{refresh.faqTopic}</span>
+                </h2>
+              </div>
+              <ol className="mkt-cmp__qa">
+                {faqs.map((f) => (
+                  <li key={f.question} className="mkt-cmp__qa-item">
+                    <h3 className="mkt-cmp__qa-q">{f.question}</h3>
+                    <p className="mkt-cmp__qa-a">{f.answer}</p>
+                  </li>
+                ))}
+              </ol>
+            </section>
+          </>
+        ) : (
         <section className="mkt-cmp__block mkt-cmp__block--faq fx-sec" aria-labelledby="cmp-faq">
           <div className="mkt-cmp__block-head fx-head">
             <h2 id="cmp-faq" className="fx-head__title">
@@ -230,6 +336,7 @@ export default function CompareMultiWayPage<K extends string>({
           </div>
           <CompareFaq items={faqs} />
         </section>
+        )}
 
         <section className="mkt-cmp__block mkt-cmp__block--reviews fx-sec" aria-label="Reviews">
           <ReviewPlatforms />

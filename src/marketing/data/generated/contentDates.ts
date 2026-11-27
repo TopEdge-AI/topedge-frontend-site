@@ -4,11 +4,11 @@
  */
 export const CONTENT_DATES = {
   /** Last edit of compare competitor data (+ feature matrix). */
-  compareTwoWay: '2026-11-26',
+  compareTwoWay: '2026-11-27',
   /** Last edit of 3-way compare page (+ feature matrix). */
-  compareThreeWay: '2026-11-26',
+  compareThreeWay: '2026-11-27',
   /** Last edit of blogPosts.ts (used as Article dateModified fallback). */
-  blogPosts: '2026-11-26',
+  blogPosts: '2026-11-27',
   /** Last edit of feature / product page content. */
   featurePages: '2026-11-25',
   /** Last edit of published plan catalog (pricing Offers). */
@@ -47,7 +47,7 @@ export const BLOG_DATES_BY_SLUG = {
   "whatsapp-template-rejected-meta-shopify-fix": "2026-10-21",
   "whatsapp-opt-in-shopify-india": "2026-10-21",
   "updatrr-alternative-shopify-india": "2026-11-08",
-  "cod-to-prepaid-whatsapp-shopify-india": "2026-10-22",
+  "cod-to-prepaid-whatsapp-shopify-india": "2026-11-27",
   "best-shopify-app-for-abandoned-cart-recovery-india": "2026-11-25",
   "ecommerce-funnel-drop-off-benchmarks-visitor-identity-resolution": "2026-11-01",
   "interakt-pricing-india": "2026-11-15",

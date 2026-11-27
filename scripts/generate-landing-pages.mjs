@@ -1416,6 +1416,64 @@ const RTO = {
   ],
 };
 
+const INTEG = {
+  hero: {
+    lead: 'Shopify WhatsApp ',
+    mark: 'Integration',
+    sub: 'A Shopify WhatsApp integration that runs order updates, cart reminders and COD replies on live store data, set up in about 30 minutes.',
+  },
+  film: {
+    lg: homeFilm('flow').lg,
+    sm: homeFilm('flow').lg,
+    poster: homeFilm('flow').poster,
+    label: 'Shopify WhatsApp integration in TopEdge AI: a WhatsApp journey is built by dragging steps onto a canvas',
+  },
+  pillars: [
+    'One Shopify approval connects orders, checkouts, customers and products; you never type your store domain',
+    'Meta’s embedded signup connects your own WhatsApp Business Account, so Meta bills you directly at 0% markup',
+    'Order, cart and COD journeys start from playbooks and send only once a template shows Approved',
+  ],
+  steps: [
+    { h: 'Connect Shopify', p: 'Settings, Shopify, Connect, then approve the full permission list inside Shopify admin. A partial grant breaks features silently, so approve all of it.' },
+    { h: 'Connect WhatsApp', p: 'Settings, WhatsApp, Connect runs Meta’s embedded signup: pick the WhatsApp Business Account and verify the number. Use a number that is not active in the WhatsApp Business app.' },
+    { h: 'Sync orders and get a template approved', p: 'Press Sync on Orders and real orders appear within a minute or two. Submit the order template from the Blueprints tab and wait for Approved.' },
+    { h: 'Publish one journey and test it', p: 'Publish the Order placed playbook, then check out on your own store with your own phone. The WhatsApp message should arrive within seconds.' },
+  ],
+  bento: [
+    { w: true, h: 'Store activity on the shopper profile', p: 'The web pixel sends store visits, products viewed and checkout drop-off to the same profile as the WhatsApp thread.', film: 'pixel', label: 'Store visits, products viewed and checkout drop-off appear on the shopper profile' },
+    { w: true, h: 'COD orders branch on their own', p: 'The payment method on the order decides the path, so only COD buyers are asked to confirm.', film: 'cod', label: 'A cash on delivery order is confirmed on WhatsApp before dispatch, and the order is tagged in Shopify' },
+    { w: false, h: 'Checkouts come back', p: 'Abandoned checkouts sync with the cart and the phone number.', film: 'cart', label: 'An abandoned Shopify cart triggers a WhatsApp reminder with the product and a link back to checkout' },
+    { w: false, h: 'Customers merge', p: 'Every number and email a buyer used becomes one profile.', film: 'identity', label: 'Two phone numbers and an email resolve to one customer profile' },
+    { w: false, h: 'Campaigns from order history', p: 'Send to buyers by what and when they ordered.', film: 'campaigns', label: 'A WhatsApp campaign is sent to a segment built from Shopify order history' },
+  ],
+  them: 'Your own Cloud API build',
+  switch: [
+    { icon: 'flow', topic: 'Shopify connection', them: 'Your code subscribes to Shopify webhooks and keeps them alive', us: 'One approval in Shopify admin; webhooks register on install' },
+    { icon: 'identity', topic: 'WhatsApp account', them: 'Tokens from the Meta developer console that you store and renew', us: 'Meta’s embedded signup stores a long-lived token for you' },
+    { icon: 'percent', topic: 'Template approval', them: 'Checked by hand before a send fails', us: 'A journey sends only templates that show Approved' },
+    { icon: 'ret', topic: 'COD and prepaid', them: 'Branch logic and payment links you write', us: 'COD confirmation on every plan, prepaid switch from Growth' },
+  ],
+  migration: {
+    h: 'When your own build makes sense',
+    p: 'If you have a developer, one message type and a store that rarely changes, Meta’s Cloud API and Shopify webhooks are enough. Meta’s own free WhatsApp app for Shopify also sends order updates and cart reminders. Buy an integration when COD, branching and an inbox with the order beside each chat start to matter.',
+  },
+  cost: {
+    h: 'Replies in the inbox start free',
+    p: 'Since 1 October 2026 Meta gives every business phone number 1,000 free service messages a month, the replies you send inside the 24-hour window. Because TopEdge AI connects your own WhatsApp Business Account and adds 0% markup, that free tier reaches you as Meta sets it. Order updates are utility messages at ₹0.1150 each.',
+    stat: '1,000',
+    statLabel: 'free service messages a month per business phone number, from Meta, since 1 October 2026',
+    src: 'Meta WhatsApp Business Platform pricing, read 26 November 2026 (page updated 18 November 2026). Utility rate from Meta’s India card. Meta’s Shopify app: Shopify App Store listing, read 27 November 2026.',
+  },
+  faqs: [
+    { q: 'How do I connect WhatsApp to Shopify?', a: 'Install an app that links both, then approve it twice: once in Shopify admin for store data and once in Meta’s embedded signup for your WhatsApp Business Account. In TopEdge AI both steps are under Settings and the whole setup, with one approved template and a test order, takes about 30 minutes.' },
+    { q: 'Is there a free Shopify WhatsApp integration?', a: 'Yes. Meta’s own WhatsApp app for Shopify is free to install and sends order updates and cart reminders, rated 4.4 from 998 reviews (27 November 2026). Meta still charges per message on any app; TopEdge AI starts at ₹1,999 a month including GST and adds COD confirmation and branching.' },
+    { q: 'Do I need the WhatsApp Business API for Shopify?', a: 'Yes, for automated messages. Order updates and cart reminders go through Meta’s WhatsApp Cloud API from a WhatsApp Business Account, not the WhatsApp Business app on your phone. TopEdge AI connects that account for you through Meta’s embedded signup.' },
+    { q: 'Can I use my existing WhatsApp number?', a: 'Yes, if it is not active in the WhatsApp Business app, or if coexistence is enabled for it. Otherwise move the number off the app first or use a new one; the number needs to receive an SMS or call to verify.' },
+    { q: 'What does a Shopify WhatsApp integration cost in India?', a: 'Two parts: the app’s plan and Meta’s fee per message. TopEdge AI is ₹1,999, ₹3,999 or ₹6,499 a month including GST, or $19, $39 or $65 on the Shopify App Store; Meta charges ₹0.1150 per utility message and ₹0.8631 per marketing message in India, with 0% markup from us.' },
+    { q: 'What store data does the integration read?', a: 'Orders, checkouts, customers, products and inventory, fulfilments, draft orders and discounts, and the web pixel’s cart events. Each permission powers a named feature, such as COD to prepaid payment links from draft orders; the full list is in the table on this page.' },
+  ],
+};
+
 /**
  * Pages built from this generator. `index: true` pages are search landing pages
  * as well as ad pages: canonical, in the sitemap, with schema. The ad page that
@@ -1498,6 +1556,25 @@ const PAGES = [
     steps: RTO.steps.map((x, i) => ({ mark: `<span class="stp-n">${i + 1}</span>`, h: x.h, p: x.p })),
     faqs: RTO.faqs,
     extra: RTO,
+  },
+  {
+    slug: 'shopify-whatsapp-integration',
+    attr: 'shopify-integration',
+    template: 'shopify-whatsapp-integration',
+    out: 'shopify-whatsapp-integration',
+    index: true,
+    title: 'Shopify WhatsApp Integration India | Meta Cloud API',
+    description:
+      'A Shopify WhatsApp integration connects your store by OAuth and the Meta Cloud API, syncing carts, orders and the COD flag. India rates at 0% markup.',
+    name: 'Shopify WhatsApp Integration',
+    hero: INTEG.hero,
+    variants: {},
+    film: INTEG.film,
+    pillars: INTEG.pillars,
+    bento: INTEG.bento,
+    steps: INTEG.steps.map((x, i) => ({ mark: `<span class="stp-n">${i + 1}</span>`, h: x.h, p: x.p })),
+    faqs: INTEG.faqs,
+    extra: INTEG,
   },
 ];
 
@@ -1627,7 +1704,7 @@ const phKey = String(viteEnv.VITE_POSTHOG_KEY || '').trim();
 const phHost = String(viteEnv.VITE_POSTHOG_HOST || '').trim() || 'https://us.i.posthog.com';
 const posthog = phKey
   ? `<script>
-addEventListener('load',function(){var s=document.createElement('script');s.async=true;s.src='${phHost}/static/array.js';s.onload=function(){try{posthog.init('${phKey}',{api_host:'${phHost}',cross_subdomain_cookie:true,autocapture:true,capture_pageview:true,person_profiles:'always'})}catch(e){}};document.head.appendChild(s)});
+addEventListener('load',function(){var go=function(){var s=document.createElement('script');s.async=true;s.src='${phHost}/static/array.js';s.onload=function(){try{posthog.init('${phKey}',{api_host:'${phHost}',cross_subdomain_cookie:true,autocapture:true,capture_pageview:true,person_profiles:'always',disable_surveys:true})}catch(e){}};document.head.appendChild(s)};if(window.requestIdleCallback){requestIdleCallback(go,{timeout:4000})}else{setTimeout(go,1500)}});
 </script>
 `
   : '';

@@ -1,0 +1,1612 @@
+{
+ "base": "https://topedgeai.com",
+ "date": "2026-11-27",
+ "results": [
+  {
+   "route": "/",
+   "hard": [],
+   "soft": [],
+   "words": [
+    395,
+    395
+   ]
+  },
+  {
+   "route": "/pricing",
+   "hard": [],
+   "soft": [],
+   "words": [
+    901,
+    901
+   ]
+  },
+  {
+   "route": "/pricing/meta-rates",
+   "hard": [],
+   "soft": [],
+   "words": [
+    740,
+    740
+   ]
+  },
+  {
+   "route": "/features",
+   "hard": [],
+   "soft": [],
+   "words": [
+    531,
+    531
+   ]
+  },
+  {
+   "route": "/services",
+   "hard": [],
+   "soft": [],
+   "words": [
+    1235,
+    1235
+   ]
+  },
+  {
+   "route": "/integrations",
+   "hard": [],
+   "soft": [],
+   "words": [
+    368,
+    368
+   ]
+  },
+  {
+   "route": "/customers",
+   "hard": [],
+   "soft": [],
+   "words": [
+    356,
+    356
+   ]
+  },
+  {
+   "route": "/compare",
+   "hard": [],
+   "soft": [],
+   "words": [
+    419,
+    419
+   ]
+  },
+  {
+   "route": "/compare/topedge-vs-wati-vs-aisensy",
+   "hard": [
+    "title: \"TopEdge AI vs WATI vs AiSensy (2026): Shopify India\" → \"TopEdge AI vs WATI vs AiSensy (2027): Shopify India\"",
+    "description: \"3-way Shopify India WhatsApp comparison: TopEdge AI vs WATI vs AiSensy on Meta template markup, BYOK AI cost, COD to prepaid funnels and chatflow limits.\" → \"TopEdge AI vs WATI vs AiSensy for Shopify India, read 27 Nov 2026: entry plans from ₹1,500, India message rates up to 30% above Meta’s, and COD work.\""
+   ],
+   "soft": [
+    "ogTitle: \"TopEdge AI vs WATI vs AiSensy (2026): Shopify India\" → \"TopEdge AI vs WATI vs AiSensy (2027): Shopify India\"",
+    "h2 removed (1): Common questions",
+    "h2 added (4): TopEdge AI vs WATI vs AiSensy: the short answer · What each one costs, read 27 November 2026 · Which one fits which store · Frequently asked questions about TopEdge AI vs WATI vs AiSensy",
+    "h3 added (7): TopEdge AI · WATI · AiSensy · How does TopEdge AI differ from WATI and AiSensy on Meta markup? · Who should pick TopEdge AI in this three-way shortlist? · When do WATI or AiSensy still fit? …",
+    "words: 928 → 1248 (+320)"
+   ],
+   "words": [
+    928,
+    1248
+   ]
+  },
+  {
+   "route": "/compare/topedge-vs-wati-vs-interakt-vs-aisensy",
+   "hard": [
+    "title: \"WATI vs Interakt vs AiSensy vs TopEdge AI (2026)\" → \"TopEdge AI vs WATI vs Interakt vs AiSensy (2027)\"",
+    "description: \"WATI vs Interakt vs AiSensy for Shopify India, with TopEdge AI on one board: Meta template markup, AI message cost, COD to prepaid gating and flow limits.\" → \"WATI, Interakt, AiSensy and TopEdge AI on one board for Shopify India, read 27 Nov 2026: marketing rates from ₹0.8631 to ₹1.09 and who fits which store.\""
+   ],
+   "soft": [
+    "ogTitle: \"WATI vs Interakt vs AiSensy vs TopEdge AI (2026)\" → \"TopEdge AI vs WATI vs Interakt vs AiSensy (2027)\"",
+    "h2 removed (1): Common questions",
+    "h2 added (4): TopEdge AI vs WATI vs Interakt vs AiSensy: the short answer · What each one costs, read 27 November 2026 · Which one fits which store · Frequently asked questions about TopEdge AI vs WATI vs Interakt vs AiSensy",
+    "h3 added (10): TopEdge AI · WATI · Interakt · AiSensy · Which of WATI, Interakt and AiSensy charges a markup over Meta? · What does Meta itself charge in India in 2026? …",
+    "words: 1350 → 1672 (+322)"
+   ],
+   "words": [
+    1350,
+    1672
+   ]
+  },
+  {
+   "route": "/about",
+   "hard": [],
+   "soft": [],
+   "words": [
+    209,
+    209
+   ]
+  },
+  {
+   "route": "/contact",
+   "hard": [],
+   "soft": [],
+   "words": [
+    120,
+    120
+   ]
+  },
+  {
+   "route": "/blog",
+   "hard": [],
+   "soft": [
+    "h2 removed (1): COD to Prepaid on WhatsApp: Shopify India 2026",
+    "h2 added (1): COD to Prepaid Conversion on WhatsApp (2027)"
+   ],
+   "words": [
+    561,
+    561
+   ]
+  },
+  {
+   "route": "/blog/page/2",
+   "hard": [],
+   "soft": [],
+   "words": [
+    537,
+    537
+   ]
+  },
+  {
+   "route": "/blog/page/3",
+   "hard": [],
+   "soft": [],
+   "words": [
+    528,
+    528
+   ]
+  },
+  {
+   "route": "/blog/page/4",
+   "hard": [],
+   "soft": [],
+   "words": [
+    317,
+    317
+   ]
+  },
+  {
+   "route": "/blog/category/comparisons",
+   "hard": [],
+   "soft": [],
+   "words": [
+    698,
+    698
+   ]
+  },
+  {
+   "route": "/blog/category/automation",
+   "hard": [],
+   "soft": [],
+   "words": [
+    284,
+    284
+   ]
+  },
+  {
+   "route": "/blog/category/cod-rto",
+   "hard": [],
+   "soft": [
+    "h2 removed (1): COD to Prepaid on WhatsApp: Shopify India 2026",
+    "h2 added (1): COD to Prepaid Conversion on WhatsApp (2027)"
+   ],
+   "words": [
+    272,
+    272
+   ]
+  },
+  {
+   "route": "/blog/category/meta-templates",
+   "hard": [],
+   "soft": [],
+   "words": [
+    217,
+    217
+   ]
+  },
+  {
+   "route": "/blog/category/ai-and-inbox",
+   "hard": [],
+   "soft": [],
+   "words": [
+    128,
+    128
+   ]
+  },
+  {
+   "route": "/blog/category/growth",
+   "hard": [],
+   "soft": [],
+   "words": [
+    453,
+    453
+   ]
+  },
+  {
+   "route": "/features/journeys",
+   "hard": [],
+   "soft": [],
+   "words": [
+    474,
+    474
+   ]
+  },
+  {
+   "route": "/features/flow-builder",
+   "hard": [],
+   "soft": [],
+   "words": [
+    438,
+    438
+   ]
+  },
+  {
+   "route": "/features/ai-brain",
+   "hard": [],
+   "soft": [],
+   "words": [
+    429,
+    429
+   ]
+  },
+  {
+   "route": "/features/campaigns",
+   "hard": [],
+   "soft": [],
+   "words": [
+    381,
+    381
+   ]
+  },
+  {
+   "route": "/features/analytics",
+   "hard": [],
+   "soft": [],
+   "words": [
+    382,
+    382
+   ]
+  },
+  {
+   "route": "/features/meta-manager",
+   "hard": [],
+   "soft": [],
+   "words": [
+    463,
+    463
+   ]
+  },
+  {
+   "route": "/features/audience-crm",
+   "hard": [],
+   "soft": [],
+   "words": [
+    362,
+    362
+   ]
+  },
+  {
+   "route": "/features/chat-rules",
+   "hard": [],
+   "soft": [],
+   "words": [
+    390,
+    390
+   ]
+  },
+  {
+   "route": "/features/warranty",
+   "hard": [],
+   "soft": [],
+   "words": [
+    449,
+    449
+   ]
+  },
+  {
+   "route": "/features/opt-in-tools",
+   "hard": [],
+   "soft": [],
+   "words": [
+    417,
+    417
+   ]
+  },
+  {
+   "route": "/features/profit-loss",
+   "hard": [],
+   "soft": [],
+   "words": [
+    925,
+    925
+   ]
+  },
+  {
+   "route": "/features/intent-detection",
+   "hard": [],
+   "soft": [],
+   "words": [
+    386,
+    386
+   ]
+  },
+  {
+   "route": "/features/cod-confirmation",
+   "hard": [],
+   "soft": [],
+   "words": [
+    468,
+    468
+   ]
+  },
+  {
+   "route": "/compare/wati",
+   "hard": [],
+   "soft": [],
+   "words": [
+    1644,
+    1644
+   ]
+  },
+  {
+   "route": "/compare/aisensy",
+   "hard": [],
+   "soft": [],
+   "words": [
+    1629,
+    1629
+   ]
+  },
+  {
+   "route": "/compare/interakt",
+   "hard": [],
+   "soft": [],
+   "words": [
+    1914,
+    1914
+   ]
+  },
+  {
+   "route": "/compare/bitespeed",
+   "hard": [],
+   "soft": [],
+   "words": [
+    1820,
+    1820
+   ]
+  },
+  {
+   "route": "/compare/zoko",
+   "hard": [],
+   "soft": [],
+   "words": [
+    1721,
+    1721
+   ]
+  },
+  {
+   "route": "/compare/getgabs",
+   "hard": [],
+   "soft": [],
+   "words": [
+    1463,
+    1463
+   ]
+  },
+  {
+   "route": "/compare/kanal",
+   "hard": [],
+   "soft": [],
+   "words": [
+    1491,
+    1491
+   ]
+  },
+  {
+   "route": "/compare/dondy",
+   "hard": [],
+   "soft": [],
+   "words": [
+    1576,
+    1576
+   ]
+  },
+  {
+   "route": "/compare/updatrr",
+   "hard": [],
+   "soft": [],
+   "words": [
+    1841,
+    1841
+   ]
+  },
+  {
+   "route": "/compare/gupshup",
+   "hard": [
+    "title: \"TopEdge AI vs Gupshup (2026): Shopify OS vs Enterprise CPaaS\" → \"TopEdge AI vs Gupshup (2027): COD Suite vs Message Wallet\"",
+    "description: \"TopEdge AI vs Gupshup for Shopify India: self-serve ₹1,999/mo INR plans, 0% Meta markup and native COD journeys vs per-message enterprise CPaaS fees.\" → \"TopEdge AI vs Gupshup for Shopify India, read 27 Nov 2026: COD journeys at Meta’s rates against a ₹0 wallet charging ₹1.15 a marketing message.\""
+   ],
+   "soft": [
+    "ogTitle: \"TopEdge AI vs Gupshup (2026): Shopify OS vs Enterprise CPaaS\" → \"TopEdge AI vs Gupshup (2027): COD Suite vs Message Wallet\"",
+    "h2 removed (2): Common questions · Try TopEdge AI on your store",
+    "h2 added (10): TopEdge AI vs Gupshup: the short answer · Why Shopify brands switch from Gupshup to TopEdge AI · Test it against Gupshup on your own orders · Where Gupshup falls short and TopEdge AI does better · Where Gupshup is the better pick · TopEdge AI vs Gupshup pricing …",
+    "h3 added (15): COD to prepaid as a built-in journey · Meta’s rate, not an all-in rate · Profit after RTO, not delivery reports · Cart reminders cost a third more · AI replies after 1,000 cost ₹1 each · Service replies are on the card …",
+    "words: 1101 → 1860 (+759)"
+   ],
+   "words": [
+    1101,
+    1860
+   ]
+  },
+  {
+   "route": "/compare/alternatives",
+   "hard": [],
+   "soft": [],
+   "words": [
+    1027,
+    1027
+   ]
+  },
+  {
+   "route": "/tools",
+   "hard": [],
+   "soft": [],
+   "words": [
+    315,
+    315
+   ]
+  },
+  {
+   "route": "/tools/best-whatsapp-tool-for-shopify",
+   "hard": [],
+   "soft": [],
+   "words": [
+    697,
+    697
+   ]
+  },
+  {
+   "route": "/tools/rto-cost-calculator",
+   "hard": [],
+   "soft": [],
+   "words": [
+    906,
+    906
+   ]
+  },
+  {
+   "route": "/tools/cart-recovery-calculator",
+   "hard": [],
+   "soft": [],
+   "words": [
+    761,
+    761
+   ]
+  },
+  {
+   "route": "/tools/whatsapp-link-generator",
+   "hard": [],
+   "soft": [],
+   "words": [
+    1092,
+    1092
+   ]
+  },
+  {
+   "route": "/whatsapp-templates",
+   "hard": [],
+   "soft": [],
+   "words": [
+    2245,
+    2245
+   ]
+  },
+  {
+   "route": "/whatsapp-festival-templates",
+   "hard": [],
+   "soft": [],
+   "words": [
+    3604,
+    3604
+   ]
+  },
+  {
+   "route": "/whatsapp-festival-templates/new-year",
+   "hard": [],
+   "soft": [],
+   "words": [
+    1271,
+    1271
+   ]
+  },
+  {
+   "route": "/whatsapp-festival-templates/makar-sankranti-pongal",
+   "hard": [],
+   "soft": [],
+   "words": [
+    1235,
+    1235
+   ]
+  },
+  {
+   "route": "/whatsapp-festival-templates/vasant-panchami",
+   "hard": [],
+   "soft": [],
+   "words": [
+    1178,
+    1178
+   ]
+  },
+  {
+   "route": "/whatsapp-festival-templates/maha-shivaratri",
+   "hard": [],
+   "soft": [],
+   "words": [
+    1171,
+    1171
+   ]
+  },
+  {
+   "route": "/whatsapp-festival-templates/holi",
+   "hard": [],
+   "soft": [],
+   "words": [
+    1190,
+    1190
+   ]
+  },
+  {
+   "route": "/whatsapp-festival-templates/ugadi-gudi-padwa",
+   "hard": [],
+   "soft": [],
+   "words": [
+    1182,
+    1182
+   ]
+  },
+  {
+   "route": "/whatsapp-festival-templates/eid-ul-fitr",
+   "hard": [],
+   "soft": [],
+   "words": [
+    1190,
+    1190
+   ]
+  },
+  {
+   "route": "/whatsapp-festival-templates/rama-navami",
+   "hard": [],
+   "soft": [],
+   "words": [
+    1152,
+    1152
+   ]
+  },
+  {
+   "route": "/whatsapp-festival-templates/good-friday",
+   "hard": [],
+   "soft": [],
+   "words": [
+    1170,
+    1170
+   ]
+  },
+  {
+   "route": "/whatsapp-festival-templates/easter",
+   "hard": [],
+   "soft": [],
+   "words": [
+    1132,
+    1132
+   ]
+  },
+  {
+   "route": "/whatsapp-festival-templates/akshaya-tritiya",
+   "hard": [],
+   "soft": [],
+   "words": [
+    1197,
+    1197
+   ]
+  },
+  {
+   "route": "/whatsapp-festival-templates/eid-ul-adha",
+   "hard": [],
+   "soft": [],
+   "words": [
+    1152,
+    1152
+   ]
+  },
+  {
+   "route": "/whatsapp-festival-templates/onam",
+   "hard": [],
+   "soft": [],
+   "words": [
+    1146,
+    1146
+   ]
+  },
+  {
+   "route": "/whatsapp-festival-templates/milad-un-nabi",
+   "hard": [],
+   "soft": [],
+   "words": [
+    1104,
+    1104
+   ]
+  },
+  {
+   "route": "/whatsapp-festival-templates/raksha-bandhan",
+   "hard": [],
+   "soft": [],
+   "words": [
+    1206,
+    1206
+   ]
+  },
+  {
+   "route": "/whatsapp-festival-templates/krishna-janmashtami",
+   "hard": [],
+   "soft": [],
+   "words": [
+    1112,
+    1112
+   ]
+  },
+  {
+   "route": "/whatsapp-festival-templates/ganesh-chaturthi",
+   "hard": [],
+   "soft": [],
+   "words": [
+    1151,
+    1151
+   ]
+  },
+  {
+   "route": "/whatsapp-festival-templates/navratri-durga-puja",
+   "hard": [],
+   "soft": [],
+   "words": [
+    1207,
+    1207
+   ]
+  },
+  {
+   "route": "/whatsapp-festival-templates/dussehra",
+   "hard": [],
+   "soft": [],
+   "words": [
+    1139,
+    1139
+   ]
+  },
+  {
+   "route": "/whatsapp-festival-templates/karwa-chauth",
+   "hard": [],
+   "soft": [],
+   "words": [
+    1204,
+    1204
+   ]
+  },
+  {
+   "route": "/whatsapp-festival-templates/dhanteras",
+   "hard": [],
+   "soft": [],
+   "words": [
+    1154,
+    1154
+   ]
+  },
+  {
+   "route": "/whatsapp-festival-templates/diwali",
+   "hard": [],
+   "soft": [],
+   "words": [
+    1259,
+    1259
+   ]
+  },
+  {
+   "route": "/whatsapp-festival-templates/bhai-dooj",
+   "hard": [],
+   "soft": [],
+   "words": [
+    1200,
+    1200
+   ]
+  },
+  {
+   "route": "/whatsapp-festival-templates/chhath-puja",
+   "hard": [],
+   "soft": [],
+   "words": [
+    1180,
+    1180
+   ]
+  },
+  {
+   "route": "/whatsapp-festival-templates/christmas",
+   "hard": [],
+   "soft": [],
+   "words": [
+    1207,
+    1207
+   ]
+  },
+  {
+   "route": "/whatsapp-journey-examples",
+   "hard": [],
+   "soft": [],
+   "words": [
+    703,
+    703
+   ]
+  },
+  {
+   "route": "/whatsapp-journey-examples/abandoned-cart-recovery",
+   "hard": [],
+   "soft": [],
+   "words": [
+    1317,
+    1317
+   ]
+  },
+  {
+   "route": "/whatsapp-journey-examples/cod-confirmation",
+   "hard": [],
+   "soft": [],
+   "words": [
+    1269,
+    1269
+   ]
+  },
+  {
+   "route": "/whatsapp-journey-examples/cod-to-prepaid",
+   "hard": [],
+   "soft": [],
+   "words": [
+    1181,
+    1181
+   ]
+  },
+  {
+   "route": "/whatsapp-journey-examples/order-status-updates",
+   "hard": [],
+   "soft": [],
+   "words": [
+    1153,
+    1153
+   ]
+  },
+  {
+   "route": "/blog/ecommerce-funnel-drop-off-benchmarks-visitor-identity-resolution",
+   "hard": [],
+   "soft": [],
+   "words": [
+    4204,
+    4204
+   ]
+  },
+  {
+   "route": "/blog/whatsapp-abandoned-cart-recovery-shopify",
+   "hard": [],
+   "soft": [],
+   "words": [
+    5745,
+    5745
+   ]
+  },
+  {
+   "route": "/blog/best-shopify-app-for-abandoned-cart-recovery-india",
+   "hard": [],
+   "soft": [],
+   "words": [
+    8028,
+    8028
+   ]
+  },
+  {
+   "route": "/blog/whatsapp-automation-for-shopify",
+   "hard": [],
+   "soft": [],
+   "words": [
+    4414,
+    4414
+   ]
+  },
+  {
+   "route": "/blog/best-whatsapp-apps-for-shopify",
+   "hard": [],
+   "soft": [],
+   "words": [
+    4306,
+    4306
+   ]
+  },
+  {
+   "route": "/blog/shopify-whatsapp-automation-what-to-automate-first",
+   "hard": [],
+   "soft": [],
+   "words": [
+    1231,
+    1231
+   ]
+  },
+  {
+   "route": "/blog/ecommerce-automation-whatsapp-vs-email-india",
+   "hard": [],
+   "soft": [],
+   "words": [
+    1451,
+    1451
+   ]
+  },
+  {
+   "route": "/blog/meta-whatsapp-cloud-api-shopify-templates",
+   "hard": [],
+   "soft": [],
+   "words": [
+    1391,
+    1391
+   ]
+  },
+  {
+   "route": "/blog/whatsapp-shared-inbox-shopify-order-context",
+   "hard": [],
+   "soft": [],
+   "words": [
+    1941,
+    1941
+   ]
+  },
+  {
+   "route": "/blog/shopify-automation-checklist-whatsapp-cart-recovery",
+   "hard": [],
+   "soft": [],
+   "words": [
+    1651,
+    1651
+   ]
+  },
+  {
+   "route": "/blog/best-whatsapp-automation-tools-shopify-india",
+   "hard": [],
+   "soft": [],
+   "words": [
+    2592,
+    2592
+   ]
+  },
+  {
+   "route": "/blog/how-to-reduce-rto-with-whatsapp-cod-confirmation",
+   "hard": [],
+   "soft": [],
+   "words": [
+    4761,
+    4760
+   ]
+  },
+  {
+   "route": "/blog/what-is-ecommerce-automation-shopify-whatsapp",
+   "hard": [],
+   "soft": [],
+   "words": [
+    1488,
+    1488
+   ]
+  },
+  {
+   "route": "/blog/ai-whatsapp-chatbot-for-shopify-india",
+   "hard": [],
+   "soft": [],
+   "words": [
+    2578,
+    2578
+   ]
+  },
+  {
+   "route": "/blog/zoko-alternative-shopify-india",
+   "hard": [],
+   "soft": [],
+   "words": [
+    3439,
+    3474
+   ]
+  },
+  {
+   "route": "/blog/getgabs-alternative-shopify-whatsapp",
+   "hard": [],
+   "soft": [],
+   "words": [
+    1654,
+    1654
+   ]
+  },
+  {
+   "route": "/blog/kanal-whatsapp-alternative-shopify",
+   "hard": [],
+   "soft": [],
+   "words": [
+    2048,
+    2048
+   ]
+  },
+  {
+   "route": "/blog/how-to-choose-whatsapp-app-shopify-app-store",
+   "hard": [],
+   "soft": [],
+   "words": [
+    2432,
+    2432
+   ]
+  },
+  {
+   "route": "/blog/whatsapp-business-api-pricing-india",
+   "hard": [],
+   "soft": [],
+   "words": [
+    3827,
+    3827
+   ]
+  },
+  {
+   "route": "/blog/dondy-alternative-shopify-india",
+   "hard": [],
+   "soft": [],
+   "words": [
+    1708,
+    1708
+   ]
+  },
+  {
+   "route": "/blog/organic-vs-paid-ecommerce-marketing-2026",
+   "hard": [],
+   "soft": [],
+   "words": [
+    3730,
+    3730
+   ]
+  },
+  {
+   "route": "/blog/cod-rto-benchmark-india-2026",
+   "hard": [],
+   "soft": [],
+   "words": [
+    2830,
+    2829
+   ]
+  },
+  {
+   "route": "/blog/profitable-ecommerce-business-india",
+   "hard": [],
+   "soft": [],
+   "words": [
+    4585,
+    4585
+   ]
+  },
+  {
+   "route": "/blog/how-to-automate-ecommerce-store-india",
+   "hard": [],
+   "soft": [],
+   "words": [
+    2862,
+    2862
+   ]
+  },
+  {
+   "route": "/blog/organic-ecommerce-leads-short-form-video",
+   "hard": [],
+   "soft": [],
+   "words": [
+    3100,
+    3100
+   ]
+  },
+  {
+   "route": "/blog/trending-products-to-sell-online-india-2026",
+   "hard": [],
+   "soft": [],
+   "words": [
+    2765,
+    2765
+   ]
+  },
+  {
+   "route": "/blog/wati-alternative-shopify-india",
+   "hard": [],
+   "soft": [],
+   "words": [
+    2246,
+    2246
+   ]
+  },
+  {
+   "route": "/blog/aisensy-alternative-shopify-india",
+   "hard": [],
+   "soft": [],
+   "words": [
+    5072,
+    5072
+   ]
+  },
+  {
+   "route": "/blog/interakt-alternative-shopify-india",
+   "hard": [],
+   "soft": [],
+   "words": [
+    2155,
+    2155
+   ]
+  },
+  {
+   "route": "/blog/interakt-pricing-india",
+   "hard": [],
+   "soft": [],
+   "words": [
+    2661,
+    2708
+   ]
+  },
+  {
+   "route": "/blog/wati-pricing-india",
+   "hard": [],
+   "soft": [],
+   "words": [
+    2272,
+    2272
+   ]
+  },
+  {
+   "route": "/blog/aisensy-pricing-india",
+   "hard": [],
+   "soft": [],
+   "words": [
+    2043,
+    2043
+   ]
+  },
+  {
+   "route": "/blog/bitespeed-alternative-shopify-india",
+   "hard": [],
+   "soft": [],
+   "words": [
+    2107,
+    2107
+   ]
+  },
+  {
+   "route": "/blog/whatsapp-template-rejected-meta-shopify-fix",
+   "hard": [],
+   "soft": [],
+   "words": [
+    1316,
+    1316
+   ]
+  },
+  {
+   "route": "/blog/whatsapp-opt-in-shopify-india",
+   "hard": [],
+   "soft": [],
+   "words": [
+    1217,
+    1217
+   ]
+  },
+  {
+   "route": "/blog/updatrr-alternative-shopify-india",
+   "hard": [],
+   "soft": [],
+   "words": [
+    2614,
+    2614
+   ]
+  },
+  {
+   "route": "/blog/cod-to-prepaid-whatsapp-shopify-india",
+   "hard": [
+    "title: \"COD to Prepaid on WhatsApp: Shopify India 2026 | TopEdge AI\" → \"COD to Prepaid Conversion on WhatsApp (2027) | TopEdge AI\"",
+    "description: \"Convert Shopify India COD orders to prepaid on WhatsApp before dispatch: the ₹68 saved per order, the ₹0.1150 vs ₹0.8631 template split, and the flow.\" → \"COD to prepaid conversion on WhatsApp for Shopify India: about ₹68 saved per converted order, the two-message flow, and the bill at 100 to 1,500 orders.\"",
+    "h1: \"COD to Prepaid on WhatsApp: Shopify India 2026\" → \"COD to Prepaid Conversion on WhatsApp (2027)\""
+   ],
+   "soft": [
+    "ogTitle: \"COD to Prepaid on WhatsApp: Shopify India 2026 | TopEdge AI\" → \"COD to Prepaid Conversion on WhatsApp (2027) | TopEdge AI\"",
+    "h2 removed (3): The payment method is the largest RTO lever you control · What a prepaid order is actually worth: about ₹68 · Where this runs",
+    "h2 added (7): How do you convert COD orders to prepaid? · What a converted order is worth: about ₹68 · COD vs prepaid: what the published data shows · What COD to prepaid costs at 100, 500 and 1,500 orders · Which COD to prepaid setup fits your store? · Should you charge a COD fee or switch COD off? …",
+    "h3 removed (3): How do you convert COD orders to prepaid on WhatsApp in Shopify India? · Why not just put the prepaid discount inside the COD confirmation? · Does converting COD to prepaid actually reduce RTO?",
+    "h3 added (8): Under 100 COD orders a month · Already on Razorpay Magic Checkout · On the TopEdge AI Launch plan · High-value orders · How do you convert COD orders to prepaid? · Does converting COD to prepaid reduce RTO? …",
+    "internal links added (1): /blog/best-shipping-aggregators-logistics-tools-india",
+    "words: 2355 → 2820 (+465)"
+   ],
+   "words": [
+    2355,
+    2820
+   ]
+  },
+  {
+   "route": "/blog/best-shopify-upsell-apps",
+   "hard": [],
+   "soft": [],
+   "words": [
+    7588,
+    7588
+   ]
+  },
+  {
+   "route": "/blog/shopify-seo-experts",
+   "hard": [],
+   "soft": [],
+   "words": [
+    5212,
+    5212
+   ]
+  },
+  {
+   "route": "/blog/rto-meaning-ecommerce",
+   "hard": [],
+   "soft": [],
+   "words": [
+    1814,
+    1816
+   ]
+  },
+  {
+   "route": "/blog/add-whatsapp-chat-button-shopify",
+   "hard": [],
+   "soft": [],
+   "words": [
+    1386,
+    1386
+   ]
+  },
+  {
+   "route": "/blog/best-shipping-aggregators-logistics-tools-india",
+   "hard": [],
+   "soft": [
+    "internal links added (1): /blog/cod-to-prepaid-whatsapp-shopify-india"
+   ],
+   "words": [
+    3276,
+    3270
+   ]
+  },
+  {
+   "route": "/blog/best-shopify-development-companies-india",
+   "hard": [],
+   "soft": [],
+   "words": [
+    3750,
+    3750
+   ]
+  },
+  {
+   "route": "/docs",
+   "hard": [],
+   "soft": [],
+   "words": [
+    622,
+    622
+   ]
+  },
+  {
+   "route": "/docs/quickstart",
+   "hard": [],
+   "soft": [],
+   "words": [
+    860,
+    860
+   ]
+  },
+  {
+   "route": "/docs/connect-whatsapp",
+   "hard": [],
+   "soft": [],
+   "words": [
+    997,
+    997
+   ]
+  },
+  {
+   "route": "/docs/connect-shopify",
+   "hard": [],
+   "soft": [],
+   "words": [
+    934,
+    934
+   ]
+  },
+  {
+   "route": "/docs/go-live-checklist",
+   "hard": [],
+   "soft": [],
+   "words": [
+    876,
+    876
+   ]
+  },
+  {
+   "route": "/docs/guides/abandoned-cart-recovery",
+   "hard": [],
+   "soft": [],
+   "words": [
+    1617,
+    1617
+   ]
+  },
+  {
+   "route": "/docs/guides/cod-confirmation",
+   "hard": [],
+   "soft": [],
+   "words": [
+    1192,
+    1192
+   ]
+  },
+  {
+   "route": "/docs/guides/order-status-updates",
+   "hard": [],
+   "soft": [],
+   "words": [
+    1044,
+    1044
+   ]
+  },
+  {
+   "route": "/docs/guides/turn-journeys-on-off",
+   "hard": [],
+   "soft": [],
+   "words": [
+    486,
+    486
+   ]
+  },
+  {
+   "route": "/docs/guides/create-whatsapp-template",
+   "hard": [],
+   "soft": [],
+   "words": [
+    662,
+    662
+   ]
+  },
+  {
+   "route": "/docs/guides/whatsapp-broadcast",
+   "hard": [],
+   "soft": [],
+   "words": [
+    988,
+    988
+   ]
+  },
+  {
+   "route": "/docs/guides/website-opt-in",
+   "hard": [],
+   "soft": [],
+   "words": [
+    1123,
+    1123
+   ]
+  },
+  {
+   "route": "/docs/guides/shared-inbox-handover",
+   "hard": [],
+   "soft": [],
+   "words": [
+    943,
+    943
+   ]
+  },
+  {
+   "route": "/docs/guides/build-your-first-flow",
+   "hard": [],
+   "soft": [],
+   "words": [
+    1037,
+    1037
+   ]
+  },
+  {
+   "route": "/docs/guides/train-your-ai-brain",
+   "hard": [],
+   "soft": [],
+   "words": [
+    932,
+    932
+   ]
+  },
+  {
+   "route": "/docs/guides/segment-your-customers",
+   "hard": [],
+   "soft": [],
+   "words": [
+    748,
+    748
+   ]
+  },
+  {
+   "route": "/docs/guides/warranty-registration",
+   "hard": [],
+   "soft": [],
+   "words": [
+    667,
+    667
+   ]
+  },
+  {
+   "route": "/docs/reference/journeys",
+   "hard": [],
+   "soft": [],
+   "words": [
+    1120,
+    1120
+   ]
+  },
+  {
+   "route": "/docs/reference/flow-builder",
+   "hard": [],
+   "soft": [],
+   "words": [
+    615,
+    615
+   ]
+  },
+  {
+   "route": "/docs/reference/live-chat",
+   "hard": [],
+   "soft": [],
+   "words": [
+    496,
+    496
+   ]
+  },
+  {
+   "route": "/docs/reference/orders",
+   "hard": [],
+   "soft": [],
+   "words": [
+    483,
+    483
+   ]
+  },
+  {
+   "route": "/docs/reference/audience-crm",
+   "hard": [],
+   "soft": [],
+   "words": [
+    486,
+    486
+   ]
+  },
+  {
+   "route": "/docs/reference/campaigns",
+   "hard": [],
+   "soft": [],
+   "words": [
+    457,
+    457
+   ]
+  },
+  {
+   "route": "/docs/reference/email",
+   "hard": [],
+   "soft": [],
+   "words": [
+    384,
+    384
+   ]
+  },
+  {
+   "route": "/docs/reference/meta-manager",
+   "hard": [],
+   "soft": [],
+   "words": [
+    587,
+    587
+   ]
+  },
+  {
+   "route": "/docs/reference/opt-in-tools",
+   "hard": [],
+   "soft": [],
+   "words": [
+    471,
+    471
+   ]
+  },
+  {
+   "route": "/docs/reference/ai-brain",
+   "hard": [],
+   "soft": [],
+   "words": [
+    446,
+    446
+   ]
+  },
+  {
+   "route": "/docs/reference/chat-rules",
+   "hard": [],
+   "soft": [],
+   "words": [
+    288,
+    288
+   ]
+  },
+  {
+   "route": "/docs/reference/analytics",
+   "hard": [],
+   "soft": [],
+   "words": [
+    414,
+    414
+   ]
+  },
+  {
+   "route": "/docs/reference/store-growth",
+   "hard": [],
+   "soft": [],
+   "words": [
+    541,
+    541
+   ]
+  },
+  {
+   "route": "/docs/reference/commerce",
+   "hard": [],
+   "soft": [],
+   "words": [
+    298,
+    298
+   ]
+  },
+  {
+   "route": "/docs/reference/warranty-hub",
+   "hard": [],
+   "soft": [],
+   "words": [
+    295,
+    295
+   ]
+  },
+  {
+   "route": "/docs/reference/settings-billing",
+   "hard": [],
+   "soft": [],
+   "words": [
+    452,
+    452
+   ]
+  },
+  {
+   "route": "/docs/platform/whatsapp-service-window",
+   "hard": [],
+   "soft": [],
+   "words": [
+    518,
+    518
+   ]
+  },
+  {
+   "route": "/docs/platform/message-templates",
+   "hard": [],
+   "soft": [],
+   "words": [
+    600,
+    600
+   ]
+  },
+  {
+   "route": "/docs/platform/conversation-pricing",
+   "hard": [],
+   "soft": [],
+   "words": [
+    601,
+    601
+   ]
+  },
+  {
+   "route": "/docs/platform/limits-and-quotas",
+   "hard": [],
+   "soft": [],
+   "words": [
+    671,
+    671
+   ]
+  },
+  {
+   "route": "/docs/troubleshooting",
+   "hard": [],
+   "soft": [],
+   "words": [
+    1415,
+    1415
+   ]
+  },
+  {
+   "route": "/partners",
+   "hard": [],
+   "soft": [],
+   "words": [
+    796,
+    796
+   ]
+  },
+  {
+   "route": "/whatsapp-app-for-shopify",
+   "hard": [],
+   "soft": [],
+   "words": [
+    1700,
+    1700
+   ]
+  },
+  {
+   "route": "/whatsapp-abandoned-cart-recovery-app",
+   "hard": [],
+   "soft": [],
+   "words": [
+    1262,
+    1262
+   ]
+  },
+  {
+   "route": "/shopify-whatsapp-order-notifications",
+   "hard": [],
+   "soft": [],
+   "words": [
+    1318,
+    1318
+   ]
+  },
+  {
+   "route": "/rto-reduction-shopify",
+   "hard": [],
+   "soft": [],
+   "words": [
+    1422,
+    1422
+   ]
+  },
+  {
+   "route": "/shopify-whatsapp-integration",
+   "hard": [
+    "robots: \"index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1\" → \"index,follow,max-image-preview:large\"",
+    "h1: \"Shopify WhatsApp integration for Indian D2C stores\" → \"Shopify WhatsApp Integration for Indian D2C Stores\""
+   ],
+   "soft": [
+    "h2 removed (11): Shopify brands connected to WhatsApp with TopEdge AI · What a Shopify WhatsApp integration actually connects · What syncs from Shopify, and what each object drives · What Meta charges in India, and what we add · Why Indian stores connect WhatsApp first · Why this matters most for COD stores …",
+    "h2 added (8): Why brands choose TopEdge AI · What is a Shopify WhatsApp integration? · See each part working · TopEdge AI vs Your own Cloud API build · Replies in the inbox start free · What sellers say on Trustpilot …",
+    "h3 removed (13): Install TopEdge AI and authorise Shopify · Connect your WhatsApp Business account · Clear Meta business verification · Submit your message templates · Publish the first journey · How do I connect Shopify to WhatsApp? …",
+    "h3 added (16): One Shopify approval connects orders, checkouts, customers and products; you never type your store domain · Meta’s embedded signup connects your own WhatsApp Business Account, so Meta bills you directly at 0% markup · Order, cart and COD journeys start from playbooks and send only once a template shows Approved · Connect Shopify · Connect WhatsApp · Sync orders and get a template approved …",
+    "internal links removed (37): /blog, /blog/best-shopify-app-for-abandoned-cart-recovery-india, /blog/shopify-whatsapp-automation-what-to-automate-first, /blog/whatsapp-business-api-pricing-india, /compare, /compare/aisensy, /compare/alternatives, /compare/bitespeed …",
+    "internal links added (2): /blog/how-to-reduce-rto-with-whatsapp-cod-confirmation, /marketing/feature-clips/home/flow.mp4",
+    "words: 2149 → 1529 (-620)"
+   ],
+   "words": [
+    2149,
+    1529
+   ]
+  },
+  {
+   "route": "/privacy",
+   "hard": [],
+   "soft": [],
+   "words": [
+    1376,
+    1376
+   ]
+  },
+  {
+   "route": "/terms",
+   "hard": [],
+   "soft": [],
+   "words": [
+    912,
+    912
+   ]
+  }
+ ]
+}
