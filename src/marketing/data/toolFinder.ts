@@ -77,7 +77,7 @@ export const VENDORS: Record<VendorId, Vendor> = {
     name: 'AiSensy',
     logo: '/marketing/compare/compare-logo-aisensy.png',
     comparePath: '/compare/aisensy',
-    website: 'https://www.aisensy.com',
+    website: 'https://aisensy.com',
     pickIf: 'Broadcast campaigns are your main use and you are not on Shopify.',
     price: 'Plan plus Meta charges and metered AI credits',
     caveat: 'Pricing depends on credits and tiers, so confirm the current India plan on aisensy.com.',

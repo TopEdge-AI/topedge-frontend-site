@@ -144,7 +144,7 @@ export const SOURCES = {
   },
   aisensyPricing: {
     id: 'aisensyPricing',
-    url: 'https://www.aisensy.com/pricing',
+    url: 'https://aisensy.com/pricing',
     label: 'AiSensy’s published pricing page',
     publisher: 'AiSensy',
     claim:

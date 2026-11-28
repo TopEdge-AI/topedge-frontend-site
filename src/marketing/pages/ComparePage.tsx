@@ -22,6 +22,7 @@ import { COMPARE_REFRESH } from '../data/compareRefresh';
 import CompareRefreshed, { CompareRefreshedClose } from '../components/compare/CompareRefreshed';
 import { PrimaryButton, GhostButton } from '../components/ui';
 import { COMPANY_SHOPIFY_APP_URL, COMPANY_WHATSAPP_URL } from '../legal/companyIdentity';
+import { isStaticLandingPath } from '../routes';
 import '../styles/compare.css';
 
 type Props = { competitor?: string };
@@ -573,11 +574,26 @@ export default function ComparePage({ competitor: competitorProp }: Props) {
             </h2>
           ) : null}
           <nav className="mkt-cmp__more fx-cells fx-links" aria-label="Related">
-            {data.related.map((r) => (
-              <Link key={r.href} to={r.href} className="fx-link">
-                {brandLabel(r.label)}
-              </Link>
-            ))}
+            {/* The Shopify WhatsApp app landing page is the page a buyer on any
+                board is choosing between; it had one body link on the whole site
+                (28 Nov 2026), so every board links it. Static landing pages are
+                plain links: a router Link to them renders the 404 route. */}
+            {[
+              ...data.related,
+              ...(data.related.some((r) => r.href === '/whatsapp-app-for-shopify')
+                ? []
+                : [{ href: '/whatsapp-app-for-shopify', label: 'WhatsApp app for Shopify' }]),
+            ].map((r) =>
+              isStaticLandingPath(r.href) ? (
+                <a key={r.href} href={r.href} className="fx-link">
+                  {brandLabel(r.label)}
+                </a>
+              ) : (
+                <Link key={r.href} to={r.href} className="fx-link">
+                  {brandLabel(r.label)}
+                </Link>
+              ),
+            )}
           </nav>
         </section>
 

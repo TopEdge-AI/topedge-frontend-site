@@ -144,7 +144,7 @@ export const COMPARE_COMPETITORS: Record<string, CompareCompetitor> = {
     slug: 'aisensy',
     name: 'AiSensy',
     shortName: 'AiSensy',
-    website: 'https://www.aisensy.com',
+    website: 'https://aisensy.com',
     logo: '/marketing/compare/compare-logo-aisensy.png',
     logoAlt: 'AiSensy logo',
     accent: '#0f766e',
@@ -163,7 +163,7 @@ export const COMPARE_COMPETITORS: Record<string, CompareCompetitor> = {
       competitor,
     })),
     matrixNote:
-      'Read 24 Nov 2026 on www.aisensy.com/pricing (monthly view): Basic ₹1,500, Pro ₹3,200, Premium ₹9,100, Unlimited ₹45,000; Chatbot Flows ₹2,500/mo extra; AI ₹1,350/mo per 1,000 AI messages; marketing ₹1.09, utility and service ₹0.145 (after 1,000 free service messages), about 26% above Meta’s ₹0.8631 and ₹0.1150. Shopify App Store listing: 4.1 from 56 reviews, $1 one-time charge.',
+      'Read 24 Nov 2026 on aisensy.com/pricing (monthly view): Basic ₹1,500, Pro ₹3,200, Premium ₹9,100, Unlimited ₹45,000; Chatbot Flows ₹2,500/mo extra; AI ₹1,350/mo per 1,000 AI messages; marketing ₹1.09, utility and service ₹0.145 (after 1,000 free service messages), about 26% above Meta’s ₹0.8631 and ₹0.1150. Shopify App Store listing: 4.1 from 56 reviews, $1 one-time charge.',
     researchAsOf: 'Nov 2026',
     related: [
       { label: 'AiSensy alternative guide', href: '/blog/aisensy-alternative-shopify-india' },

@@ -356,6 +356,9 @@ export default function CompareAlternativesPage() {
             <Link to="/blog/best-whatsapp-automation-tools-shopify-india" className="fx-link">
               Best tools pillar
             </Link>
+            <a href="/whatsapp-app-for-shopify" className="fx-link">
+              WhatsApp app for Shopify
+            </a>
             <Link to="/pricing" className="fx-link">
               TopEdge AI pricing
             </Link>

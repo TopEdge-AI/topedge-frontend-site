@@ -1,0 +1,419 @@
+
+> topedge-frontend@1.0.0 build:netlify
+> npm run check:pricing && npm run check:partner-offer && npm run check:blog && npm run check:festivals && npm run check:links && npm run check:crops && node scripts/generate-content-dates.mjs && node scripts/generate-landing-pages.mjs && node scripts/generate-sitemap.mjs && node scripts/generate-llms.mjs && node scripts/generate-partner-destinations.mjs && node scripts/generate-redirects.mjs && vite build && node build-static.js && node scripts/prerender-marketing.mjs && node scripts/retain-old-assets.mjs && node scripts/check-dist.mjs && node scripts/check-chunk-failure.mjs && node scripts/check-image-weight.mjs && node scripts/check-structured-data.mjs && node scripts/check-video-markup.mjs && node scripts/check-llms.mjs && node scripts/check-partner-offer.mjs --dist
+
+
+> topedge-frontend@1.0.0 check:pricing
+> node scripts/check-catalog-drift.mjs && node scripts/check-llms-pricing.mjs
+
+✓ catalog drift check passed — FALLBACK_CATALOG prices, limits, plan names and feature flags all match https://api.topedgeai.com/api/billing/catalog
+✓ llms.txt pricing check passed — every value matches the billing catalog
+
+> topedge-frontend@1.0.0 check:partner-offer
+> node scripts/check-partner-offer.mjs
+
+✅ partner offer check passed — 20% from 1, 30% from 5, 40% from 10; 7-day check period; paid on day 1; matches live policy v1; 8 file(s) free of refund wording and emoji
+
+> topedge-frontend@1.0.0 check:blog
+> node scripts/check-blog-links.mjs && node scripts/check-blog-sources.mjs
+
+✓ blog content check passed — 43 posts, budgets and internal links clean
+✓ blog source check passed — 43 posts, 80 external hosts, 162 registered primary sources, 0 em dashes
+
+> topedge-frontend@1.0.0 check:festivals
+> node scripts/check-festival-templates.mjs
+
+✓ festival templates check passed — 25 festivals, 100 templates, budgets and routes clean
+
+> topedge-frontend@1.0.0 check:links
+> node scripts/check-internal-links.mjs
+
+✅ internal links: 1117 checked (site source + docs content) — none hit a redirect, a trailing slash, the old dashboard docs host, or a missing doc page/anchor
+
+> topedge-frontend@1.0.0 check:crops
+> node scripts/make-mobile-crops.mjs --check
+
+✓ mobile crop check passed — 8 crops present and current
+✅ Wrote /Users/patelmoksh/Downloads/topedge netlify final/topedge-frontend-site-update-pricing/src/marketing/data/generated/contentDates.ts
+✅ Wrote /Users/patelmoksh/Downloads/topedge netlify final/topedge-frontend-site-update-pricing/src/marketing/data/generated/contentDates.json (40 blog lastmods)
+   compareTwoWay=2026-11-28  compareThreeWay=2026-11-27  blogPosts=2026-11-28  featurePages=2026-11-25  pricing=2026-11-25
+✅ public/whatsapp-app-for-shopify/index.html (99.1 KB)
+✅ public/whatsapp-abandoned-cart-recovery-app/index.html (85.5 KB)
+✅ public/shopify-whatsapp-order-notifications/index.html (86.3 KB)
+✅ public/rto-reduction-shopify/index.html (86.4 KB)
+✅ public/shopify-whatsapp-integration/index.html (88.6 KB)
+✅ Wrote /Users/patelmoksh/Downloads/topedge netlify final/topedge-frontend-site-update-pricing/public/sitemap.xml (172 URLs, truthful lastmod)
+✅ public/llms.txt (39.7 KB, 172 canonical URLs) and public/llms-full.txt (189.1 KB, 13 features, 10 boards, 43 posts, 38 docs)
+✅ public/partner-destinations.json (67 destinations: main 3, features 14, tools 6, blog 44)
+✅ Updated /Users/patelmoksh/Downloads/topedge netlify final/topedge-frontend-site-update-pricing/public/_redirects (SPA shells + soft-404; no slash 301s)
+vite v4.5.13 building for production...
+transforming...
+✓ 8042 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                                                                             3.17 kB │ gzip:  1.43 kB
+dist/assets/auth-redirect-320602d6.css                                                      0.43 kB │ gzip:  0.28 kB
+dist/assets/animations-1a72e316.css                                                         0.46 kB │ gzip:  0.23 kB
+dist/assets/NotFoundPage-e55de5e0.css                                                       1.27 kB │ gzip:  0.56 kB
+dist/assets/FaqAccordion-30975eb2.css                                                       1.62 kB │ gzip:  0.70 kB
+dist/assets/BlogPost-dc90b22f.css                                                           2.11 kB │ gzip:  0.77 kB
+dist/assets/PhoneMock-7df55336.css                                                          4.54 kB │ gzip:  1.44 kB
+dist/assets/ServicesPage-503ff534.css                                                       4.93 kB │ gzip:  1.44 kB
+dist/assets/calculator-0a06c5eb.css                                                         5.12 kB │ gzip:  1.52 kB
+dist/assets/demo-video-84a1366b.css                                                         5.93 kB │ gzip:  1.50 kB
+dist/assets/ProofWall-9410e0ca.css                                                          6.99 kB │ gzip:  2.11 kB
+dist/assets/legal-page-9df45e8a.css                                                         8.16 kB │ gzip:  1.98 kB
+dist/assets/Contact-7555f0f9.css                                                            8.92 kB │ gzip:  2.18 kB
+dist/assets/About-a92673f7.css                                                             10.86 kB │ gzip:  2.95 kB
+dist/assets/FeaturesPage-db8234b4.css                                                      11.87 kB │ gzip:  2.95 kB
+dist/assets/MetaRatesPage-bf426bcc.css                                                     14.12 kB │ gzip:  2.95 kB
+dist/assets/optin-scenes-043963f2.css                                                      15.21 kB │ gzip:  4.18 kB
+dist/assets/IntegrationsPage-7e0a5591.css                                                  16.25 kB │ gzip:  3.72 kB
+dist/assets/topic-blocks-483d94b8.css                                                      17.36 kB │ gzip:  3.44 kB
+dist/assets/CustomersPage-6be070de.css                                                     17.96 kB │ gzip:  3.69 kB
+dist/assets/partners-74b10f91.css                                                          23.57 kB │ gzip:  5.23 kB
+dist/assets/festival-templates-246dd6bd.css                                                31.59 kB │ gzip:  5.85 kB
+dist/assets/TrustBand-3e75735c.css                                                         32.02 kB │ gzip:  6.00 kB
+dist/assets/DocsPage-f1a6a9d9.css                                                          38.45 kB │ gzip:  7.26 kB
+dist/assets/ToolFrame-43227163.css                                                         41.04 kB │ gzip:  7.16 kB
+dist/assets/pricing-479da25d.css                                                           42.95 kB │ gzip:  7.81 kB
+dist/assets/blog-97994642.css                                                              47.79 kB │ gzip:  8.98 kB
+dist/assets/compare-a040e85d.css                                                           62.53 kB │ gzip: 10.21 kB
+dist/assets/ProductFeaturePage-1e653743.css                                                83.53 kB │ gzip: 17.46 kB
+dist/assets/index-bae890bb.css                                                            213.84 kB │ gzip: 39.48 kB
+dist/assets/check-02df4057.js                                                               0.13 kB │ gzip:  0.14 kB
+dist/assets/arrow-left-75b5a750.js                                                          0.16 kB │ gzip:  0.16 kB
+dist/assets/arrow-up-right-947d3b67.js                                                      0.16 kB │ gzip:  0.16 kB
+dist/assets/megaphone-83413456.js                                                           0.19 kB │ gzip:  0.18 kB
+dist/assets/lock-4df6e670.js                                                                0.20 kB │ gzip:  0.18 kB
+dist/assets/link-2-b0cec4c9.js                                                              0.24 kB │ gzip:  0.20 kB
+dist/assets/wallet-e2e1a88e.js                                                              0.25 kB │ gzip:  0.19 kB
+dist/assets/alert-triangle-7c876a5f.js                                                      0.26 kB │ gzip:  0.21 kB
+dist/assets/info-71086908.js                                                                0.27 kB │ gzip:  0.21 kB
+dist/assets/external-link-99073a94.js                                                       0.28 kB │ gzip:  0.23 kB
+dist/assets/receipt-5638f065.js                                                             0.29 kB │ gzip:  0.20 kB
+dist/assets/mouse-pointer-click-6f6cb2e6.js                                                 0.31 kB │ gzip:  0.23 kB
+dist/assets/refresh-cw-5a669eb2.js                                                          0.32 kB │ gzip:  0.22 kB
+dist/assets/CostCalculator-8a394a53.js                                                      0.32 kB │ gzip:  0.24 kB
+dist/assets/HomeTestimonials-3db16ffc.js                                                    0.43 kB │ gzip:  0.30 kB
+dist/assets/workflow-636f0d4d.js                                                            0.46 kB │ gzip:  0.30 kB
+dist/assets/HomeClose-8efdf473.js                                                           0.54 kB │ gzip:  0.36 kB
+dist/assets/CodConfirmationPage-c2f539ae.js                                                 0.55 kB │ gzip:  0.33 kB
+dist/assets/users-541fcc5e.js                                                               0.56 kB │ gzip:  0.31 kB
+dist/assets/highlight-0be17322.js                                                           0.63 kB │ gzip:  0.39 kB
+dist/assets/contentDates-8e97a23b.js                                                        0.77 kB │ gzip:  0.36 kB
+dist/assets/charts-c2550fdd.js                                                              0.79 kB │ gzip:  0.53 kB
+dist/assets/homeFeatureMedia-bf7b36cb.js                                                    0.98 kB │ gzip:  0.48 kB
+dist/assets/PricingSalesCta-035eec96.js                                                     1.07 kB │ gzip:  0.57 kB
+dist/assets/LoginRedirect-66c7208c.js                                                       1.13 kB │ gzip:  0.62 kB
+dist/assets/partners-3c913d2e.js                                                            1.13 kB │ gzip:  0.61 kB
+dist/assets/FaqAccordion-e597adf8.js                                                        1.18 kB │ gzip:  0.61 kB
+dist/assets/ToolPageLayout-e8716baf.js                                                      1.21 kB │ gzip:  0.60 kB
+dist/assets/HowItWorks-0f9c01cc.js                                                          1.22 kB │ gzip:  0.61 kB
+dist/assets/NotFoundPage-456d5a2e.js                                                        1.30 kB │ gzip:  0.68 kB
+dist/assets/SignupRedirect-b6bab0b3.js                                                      1.35 kB │ gzip:  0.74 kB
+dist/assets/MarketingCtaBand-6ec4511b.js                                                    1.41 kB │ gzip:  0.63 kB
+dist/assets/HomeCrmSurface-420e866e.js                                                      1.50 kB │ gzip:  0.61 kB
+dist/assets/TrustBand-eecb308b.js                                                           1.67 kB │ gzip:  0.74 kB
+dist/assets/PriceRoll-d06344f5.js                                                           1.93 kB │ gzip:  0.85 kB
+dist/assets/blog-9f412f8d.js                                                                2.36 kB │ gzip:  1.20 kB
+dist/assets/ToolsIndexPage-6318bbd1.js                                                      2.56 kB │ gzip:  1.19 kB
+dist/assets/compare-0d413daa.js                                                             2.82 kB │ gzip:  1.04 kB
+dist/assets/DemoProductVideoFrame-a72f995f.js                                               2.98 kB │ gzip:  1.36 kB
+dist/assets/productDemoVideos-37011134.js                                                   3.33 kB │ gzip:  1.09 kB
+dist/assets/CompareStatus-6f7bf055.js                                                       3.36 kB │ gzip:  1.39 kB
+dist/assets/PhoneMock-b01be30c.js                                                           3.50 kB │ gzip:  1.10 kB
+dist/assets/CartRecoveryCalculatorPage-9697dd7d.js                                          4.16 kB │ gzip:  1.88 kB
+dist/assets/FeatureDetailPage-52fc9a20.js                                                   4.35 kB │ gzip:  1.76 kB
+dist/assets/HomeStickyStories-190f6f01.js                                                   4.87 kB │ gzip:  1.81 kB
+dist/assets/RtoCalculatorPage-6f1362cb.js                                                   5.20 kB │ gzip:  2.26 kB
+dist/assets/JourneyExamplePage-2f88bf19.js                                                  6.02 kB │ gzip:  2.28 kB
+dist/assets/JourneyExamplesIndexPage-ab9f4c44.js                                            6.17 kB │ gzip:  2.58 kB
+dist/assets/Contact-7f386c00.js                                                             6.21 kB │ gzip:  2.49 kB
+dist/assets/legal-page-834c43f3.js                                                          6.23 kB │ gzip:  1.91 kB
+dist/assets/ProofWall-cbb7740a.js                                                           6.25 kB │ gzip:  2.36 kB
+dist/assets/intent-detection-56d8c588.js                                                    6.45 kB │ gzip:  2.14 kB
+dist/assets/ToolFrame-606ba557.js                                                           6.59 kB │ gzip:  2.18 kB
+dist/assets/whatsappTemplates-f7de899b.js                                                   6.73 kB │ gzip:  2.31 kB
+dist/assets/CustomersPage-dd147648.js                                                       7.26 kB │ gzip:  2.50 kB
+dist/assets/profit-loss-28bd955d.js                                                         7.34 kB │ gzip:  2.51 kB
+dist/assets/warranty-c7833e53.js                                                            7.36 kB │ gzip:  2.43 kB
+dist/assets/audience-crm-01a1c7bf.js                                                        7.39 kB │ gzip:  2.40 kB
+dist/assets/About-34cbb5e6.js                                                               7.59 kB │ gzip:  2.75 kB
+dist/assets/FestivalTemplatePage-8504e708.js                                                7.76 kB │ gzip:  2.96 kB
+dist/assets/flow-builder-e101d3b6.js                                                        7.98 kB │ gzip:  2.56 kB
+dist/assets/ai-brain-06de0573.js                                                            8.04 kB │ gzip:  2.63 kB
+dist/assets/CompareIndexPage-3e46dae7.js                                                    8.22 kB │ gzip:  2.94 kB
+dist/assets/features-d00915db.js                                                            8.27 kB │ gzip:  3.51 kB
+dist/assets/FramedBlocks-42b62338.js                                                        8.34 kB │ gzip:  2.50 kB
+dist/assets/shopify-whatsapp-automation-what-to-automate-first-3a08a6b4.js                  8.36 kB │ gzip:  3.54 kB
+dist/assets/meta-manager-05bbb31a.js                                                        8.75 kB │ gzip:  2.70 kB
+dist/assets/index-d89c7cba.js                                                               8.83 kB │ gzip:  3.94 kB
+dist/assets/chat-rules-01c50925.js                                                          8.90 kB │ gzip:  2.82 kB
+dist/assets/campaigns-5ba27ccb.js                                                           8.95 kB │ gzip:  3.01 kB
+dist/assets/tracking-pixel-4e4e3c2f.js                                                      8.98 kB │ gzip:  2.90 kB
+dist/assets/MetaRatesPage-12bbb927.js                                                       9.02 kB │ gzip:  3.30 kB
+dist/assets/Blog-f21f2b3c.js                                                                9.07 kB │ gzip:  2.85 kB
+dist/assets/ecommerce-automation-whatsapp-vs-email-india-2080e44b.js                        9.13 kB │ gzip:  3.93 kB
+dist/assets/journeys-02bf6916.js                                                            9.39 kB │ gzip:  3.22 kB
+dist/assets/whatsapp-opt-in-shopify-india-4aa1c9c0.js                                       9.50 kB │ gzip:  3.38 kB
+dist/assets/meta-whatsapp-cloud-api-shopify-templates-f8238a0c.js                           9.65 kB │ gzip:  4.03 kB
+dist/assets/PartnersTermsPage-5d663a97.js                                                   9.80 kB │ gzip:  3.85 kB
+dist/assets/FeaturesPage-0784cccc.js                                                        9.90 kB │ gzip:  3.68 kB
+dist/assets/whatsapp-template-rejected-meta-shopify-fix-ac29a87f.js                         9.92 kB │ gzip:  3.59 kB
+dist/assets/what-is-ecommerce-automation-shopify-whatsapp-8b2c5a4b.js                       9.93 kB │ gzip:  4.05 kB
+dist/assets/IntegrationsPage-3a0ffac5.js                                                   10.23 kB │ gzip:  3.18 kB
+dist/assets/calculator-0a103df0.js                                                         11.30 kB │ gzip:  4.31 kB
+dist/assets/shopify-automation-checklist-whatsapp-cart-recovery-ba6073ce.js                11.52 kB │ gzip:  4.79 kB
+dist/assets/add-whatsapp-chat-button-shopify-8f04f898.js                                   11.59 kB │ gzip:  3.67 kB
+dist/assets/getgabs-alternative-shopify-whatsapp-d42ff543.js                               12.31 kB │ gzip:  4.53 kB
+dist/assets/ServicesPage-ac250edc.js                                                       12.71 kB │ gzip:  4.62 kB
+dist/assets/whatsapp-shared-inbox-shopify-order-context-055cdea4.js                        12.86 kB │ gzip:  5.39 kB
+dist/assets/dondy-alternative-shopify-india-16059246.js                                    14.00 kB │ gzip:  4.72 kB
+dist/assets/kanal-whatsapp-alternative-shopify-adaa19cf.js                                 15.01 kB │ gzip:  5.58 kB
+dist/assets/opt-in-tools-2ae1b640.js                                                       15.14 kB │ gzip:  4.35 kB
+dist/assets/WhatsAppTemplatesPage-f9c3b411.js                                              15.33 kB │ gzip:  5.56 kB
+dist/assets/how-to-choose-whatsapp-app-shopify-app-store-82ac1e00.js                       15.37 kB │ gzip:  6.27 kB
+dist/assets/rto-meaning-ecommerce-9940a774.js                                              15.58 kB │ gzip:  4.64 kB
+dist/assets/CompareAlternativesPage-c58e7fc2.js                                            16.96 kB │ gzip:  5.17 kB
+dist/assets/ai-whatsapp-chatbot-for-shopify-india-63c922e8.js                              17.96 kB │ gzip:  7.04 kB
+dist/assets/interakt-alternative-shopify-india-cc11e7fa.js                                 18.35 kB │ gzip:  5.51 kB
+dist/assets/CompareThreeWayPage-ac4b394d.js                                                18.56 kB │ gzip:  5.52 kB
+dist/assets/trending-products-to-sell-online-india-2026-4c983ad5.js                        18.66 kB │ gzip:  7.35 kB
+dist/assets/wati-alternative-shopify-india-9362e5e7.js                                     18.84 kB │ gzip:  6.22 kB
+dist/assets/aisensy-pricing-india-ab837310.js                                              18.91 kB │ gzip:  5.30 kB
+dist/assets/FestivalTemplatesPage-a740da4e.js                                              19.40 kB │ gzip:  6.96 kB
+dist/assets/wati-pricing-india-dbf50ee5.js                                                 19.48 kB │ gzip:  5.70 kB
+dist/assets/PricingPage-33d7e408.js                                                        20.12 kB │ gzip:  6.97 kB
+dist/assets/organic-ecommerce-leads-short-form-video-31fa4f7e.js                           20.12 kB │ gzip:  7.71 kB
+dist/assets/bitespeed-alternative-shopify-india-4cd8eba6.js                                20.35 kB │ gzip:  5.64 kB
+dist/assets/how-to-automate-ecommerce-store-india-fb79a8f0.js                              20.70 kB │ gzip:  7.75 kB
+dist/assets/PrivacyPolicy-7129a61f.js                                                      20.80 kB │ gzip:  7.20 kB
+dist/assets/cod-to-prepaid-whatsapp-shopify-india-049bf1d2.js                              21.35 kB │ gzip:  6.72 kB
+dist/assets/updatrr-alternative-shopify-india-56d2980a.js                                  21.40 kB │ gzip:  6.67 kB
+dist/assets/best-whatsapp-automation-tools-shopify-india-5fdc6026.js                       21.59 kB │ gzip:  7.46 kB
+dist/assets/PartnersPage-5cc1ab1f.js                                                       21.77 kB │ gzip:  7.70 kB
+dist/assets/ComparePage-cfa33d7b.js                                                        22.13 kB │ gzip:  5.36 kB
+dist/assets/TermsPage-d4117726.js                                                          23.06 kB │ gzip:  8.42 kB
+dist/assets/interakt-pricing-india-2f5fa072.js                                             23.83 kB │ gzip:  6.61 kB
+dist/assets/cod-rto-benchmark-india-2026-acddc6a7.js                                       23.95 kB │ gzip:  7.05 kB
+dist/assets/whatsapp-business-api-pricing-india-642afb72.js                                25.58 kB │ gzip:  8.62 kB
+dist/assets/zoko-alternative-shopify-india-3d6d91ee.js                                     25.88 kB │ gzip:  8.69 kB
+dist/assets/organic-vs-paid-ecommerce-marketing-2026-e509bc64.js                           26.41 kB │ gzip: 10.02 kB
+dist/assets/ToolFinderPage-dad067fd.js                                                     27.22 kB │ gzip:  9.31 kB
+dist/assets/BlogPost-5ea949a5.js                                                           27.74 kB │ gzip:  9.67 kB
+dist/assets/best-shipping-aggregators-logistics-tools-india-395522e6.js                    31.15 kB │ gzip:  8.75 kB
+dist/assets/best-whatsapp-apps-for-shopify-08040c5d.js                                     31.44 kB │ gzip:  9.92 kB
+dist/assets/profitable-ecommerce-business-india-f82f6b3a.js                                32.27 kB │ gzip: 11.66 kB
+dist/assets/JourneyCard-cb06371b.js                                                        33.42 kB │ gzip: 10.58 kB
+dist/assets/ecommerce-funnel-drop-off-benchmarks-visitor-identity-resolution-b2a37ccd.js   33.48 kB │ gzip: 10.45 kB
+dist/assets/WhatsAppLinkGeneratorPage-32f7f2ef.js                                          33.92 kB │ gzip: 12.53 kB
+dist/assets/how-to-reduce-rto-with-whatsapp-cod-confirmation-d8a39ee1.js                   33.92 kB │ gzip: 11.56 kB
+dist/assets/whatsapp-automation-for-shopify-3935cb35.js                                    36.36 kB │ gzip: 11.29 kB
+dist/assets/best-shopify-development-companies-india-1c08722e.js                           36.78 kB │ gzip:  9.35 kB
+dist/assets/aisensy-alternative-shopify-india-ced05928.js                                  44.01 kB │ gzip: 11.89 kB
+dist/assets/blogContent-6e680078.js                                                        45.74 kB │ gzip: 10.79 kB
+dist/assets/whatsapp-abandoned-cart-recovery-shopify-324c538b.js                           47.37 kB │ gzip: 15.07 kB
+dist/assets/shopify-seo-experts-e5688fcd.js                                                49.25 kB │ gzip: 14.26 kB
+dist/assets/compareFeatureMatrix-a21eae6b.js                                               55.26 kB │ gzip: 11.61 kB
+dist/assets/best-shopify-app-for-abandoned-cart-recovery-india-65396a81.js                 64.41 kB │ gzip: 19.41 kB
+dist/assets/best-shopify-upsell-apps-86f05b63.js                                           68.14 kB │ gzip: 19.02 kB
+dist/assets/compareRefresh-6fe859ba.js                                                     74.45 kB │ gzip: 18.31 kB
+dist/assets/sources-1c26641a.js                                                           115.52 kB │ gzip: 34.64 kB
+dist/assets/festival-templates-adda32ef.js                                                149.00 kB │ gzip: 33.65 kB
+dist/assets/ProductFeaturePage-2d3fc481.js                                                180.04 kB │ gzip: 52.77 kB
+dist/assets/vendor-01e7466e.js                                                            189.01 kB │ gzip: 61.93 kB
+dist/assets/index-154c859a.js                                                             222.22 kB │ gzip: 64.95 kB
+dist/assets/animations-5c5bd3ab.js                                                        238.43 kB │ gzip: 83.20 kB
+dist/assets/DocsPage-2f2068a4.js                                                          266.56 kB │ gzip: 79.15 kB
+✓ built in 17.55s
+✅ dist/signup.html created (noindex, follow · h1 + description)
+✅ dist/login.html created (noindex, follow · h1 + description)
+✅ dist/dev.html created (noindex, follow)
+✅ dist/404.html created (noindex baseline; prerender overwrites it)
+
+🔎 Prerendering 167 marketing URLs on :4179…
+   ↳ live catalog fetched for prerender (3 plans)
+  ✓ /  (h1=yes, ld=yes, head=clean)
+  ✓ /pricing  (h1=yes, ld=yes, head=clean)
+  ✓ /pricing/meta-rates  (h1=yes, ld=yes, head=clean)
+  ✓ /features  (h1=yes, ld=yes, head=clean)
+  ✓ /services  (h1=yes, ld=yes, head=clean)
+  ✓ /integrations  (h1=yes, ld=yes, head=clean)
+  ✓ /customers  (h1=yes, ld=yes, head=clean)
+  ✓ /compare  (h1=yes, ld=yes, head=clean)
+  ✓ /compare/topedge-vs-wati-vs-aisensy  (h1=yes, ld=yes, head=clean)
+  ✓ /compare/topedge-vs-wati-vs-interakt-vs-aisensy  (h1=yes, ld=yes, head=clean)
+  ✓ /about  (h1=yes, ld=yes, head=clean)
+  ✓ /contact  (h1=yes, ld=yes, head=clean)
+  ✓ /blog  (h1=yes, ld=yes, head=clean)
+  ✓ /blog/page/2  (h1=yes, ld=yes, head=clean)
+  ✓ /blog/page/3  (h1=yes, ld=yes, head=clean)
+  ✓ /blog/page/4  (h1=yes, ld=yes, head=clean)
+  ✓ /blog/category/comparisons  (h1=yes, ld=yes, head=clean)
+  ✓ /blog/category/automation  (h1=yes, ld=yes, head=clean)
+  ✓ /blog/category/cod-rto  (h1=yes, ld=yes, head=clean)
+  ✓ /blog/category/meta-templates  (h1=yes, ld=yes, head=clean)
+  ✓ /blog/category/ai-and-inbox  (h1=yes, ld=yes, head=clean)
+  ✓ /blog/category/growth  (h1=yes, ld=yes, head=clean)
+  ✓ /features/journeys  (h1=yes, ld=yes, head=clean)
+  ✓ /features/flow-builder  (h1=yes, ld=yes, head=clean)
+  ✓ /features/ai-brain  (h1=yes, ld=yes, head=clean)
+  ✓ /features/campaigns  (h1=yes, ld=yes, head=clean)
+  ✓ /features/analytics  (h1=yes, ld=yes, head=clean)
+  ✓ /features/meta-manager  (h1=yes, ld=yes, head=clean)
+  ✓ /features/audience-crm  (h1=yes, ld=yes, head=clean)
+  ✓ /features/chat-rules  (h1=yes, ld=yes, head=clean)
+  ✓ /features/warranty  (h1=yes, ld=yes, head=clean)
+  ✓ /features/opt-in-tools  (h1=yes, ld=yes, head=clean)
+  ✓ /features/profit-loss  (h1=yes, ld=yes, head=clean)
+  ✓ /features/intent-detection  (h1=yes, ld=yes, head=clean)
+  ✓ /features/cod-confirmation  (h1=yes, ld=yes, head=clean)
+  ✓ /compare/wati  (h1=yes, ld=yes, head=clean)
+  ✓ /compare/aisensy  (h1=yes, ld=yes, head=clean)
+  ✓ /compare/interakt  (h1=yes, ld=yes, head=clean)
+  ✓ /compare/bitespeed  (h1=yes, ld=yes, head=clean)
+  ✓ /compare/zoko  (h1=yes, ld=yes, head=clean)
+  ✓ /compare/getgabs  (h1=yes, ld=yes, head=clean)
+  ✓ /compare/kanal  (h1=yes, ld=yes, head=clean)
+  ✓ /compare/dondy  (h1=yes, ld=yes, head=clean)
+  ✓ /compare/updatrr  (h1=yes, ld=yes, head=clean)
+  ✓ /compare/gupshup  (h1=yes, ld=yes, head=clean)
+  ✓ /compare/alternatives  (h1=yes, ld=yes, head=clean)
+  ✓ /tools  (h1=yes, ld=yes, head=clean)
+  ✓ /tools/best-whatsapp-tool-for-shopify  (h1=yes, ld=yes, head=clean)
+  ✓ /tools/rto-cost-calculator  (h1=yes, ld=yes, head=clean)
+  ✓ /tools/cart-recovery-calculator  (h1=yes, ld=yes, head=clean)
+  ✓ /tools/whatsapp-link-generator  (h1=yes, ld=yes, head=clean)
+  ✓ /whatsapp-templates  (h1=yes, ld=yes, head=clean)
+  ✓ /whatsapp-festival-templates  (h1=yes, ld=yes, head=clean)
+  ✓ /whatsapp-festival-templates/new-year  (h1=yes, ld=yes, head=clean)
+  ✓ /whatsapp-festival-templates/makar-sankranti-pongal  (h1=yes, ld=yes, head=clean)
+  ✓ /whatsapp-festival-templates/vasant-panchami  (h1=yes, ld=yes, head=clean)
+  ✓ /whatsapp-festival-templates/maha-shivaratri  (h1=yes, ld=yes, head=clean)
+  ✓ /whatsapp-festival-templates/holi  (h1=yes, ld=yes, head=clean)
+  ✓ /whatsapp-festival-templates/ugadi-gudi-padwa  (h1=yes, ld=yes, head=clean)
+  ✓ /whatsapp-festival-templates/eid-ul-fitr  (h1=yes, ld=yes, head=clean)
+  ✓ /whatsapp-festival-templates/rama-navami  (h1=yes, ld=yes, head=clean)
+  ✓ /whatsapp-festival-templates/good-friday  (h1=yes, ld=yes, head=clean)
+  ✓ /whatsapp-festival-templates/easter  (h1=yes, ld=yes, head=clean)
+  ✓ /whatsapp-festival-templates/akshaya-tritiya  (h1=yes, ld=yes, head=clean)
+  ✓ /whatsapp-festival-templates/eid-ul-adha  (h1=yes, ld=yes, head=clean)
+  ✓ /whatsapp-festival-templates/onam  (h1=yes, ld=yes, head=clean)
+  ✓ /whatsapp-festival-templates/milad-un-nabi  (h1=yes, ld=yes, head=clean)
+  ✓ /whatsapp-festival-templates/raksha-bandhan  (h1=yes, ld=yes, head=clean)
+  ✓ /whatsapp-festival-templates/krishna-janmashtami  (h1=yes, ld=yes, head=clean)
+  ✓ /whatsapp-festival-templates/ganesh-chaturthi  (h1=yes, ld=yes, head=clean)
+  ✓ /whatsapp-festival-templates/navratri-durga-puja  (h1=yes, ld=yes, head=clean)
+  ✓ /whatsapp-festival-templates/dussehra  (h1=yes, ld=yes, head=clean)
+  ✓ /whatsapp-festival-templates/karwa-chauth  (h1=yes, ld=yes, head=clean)
+  ✓ /whatsapp-festival-templates/dhanteras  (h1=yes, ld=yes, head=clean)
+  ✓ /whatsapp-festival-templates/diwali  (h1=yes, ld=yes, head=clean)
+  ✓ /whatsapp-festival-templates/bhai-dooj  (h1=yes, ld=yes, head=clean)
+  ✓ /whatsapp-festival-templates/chhath-puja  (h1=yes, ld=yes, head=clean)
+  ✓ /whatsapp-festival-templates/christmas  (h1=yes, ld=yes, head=clean)
+  ✓ /whatsapp-journey-examples  (h1=yes, ld=yes, head=clean)
+  ✓ /whatsapp-journey-examples/abandoned-cart-recovery  (h1=yes, ld=yes, head=clean)
+  ✓ /whatsapp-journey-examples/cod-confirmation  (h1=yes, ld=yes, head=clean)
+  ✓ /whatsapp-journey-examples/cod-to-prepaid  (h1=yes, ld=yes, head=clean)
+  ✓ /whatsapp-journey-examples/order-status-updates  (h1=yes, ld=yes, head=clean)
+  ✓ /blog/ecommerce-funnel-drop-off-benchmarks-visitor-identity-resolution  (h1=yes, ld=yes, head=clean)
+  ✓ /blog/whatsapp-abandoned-cart-recovery-shopify  (h1=yes, ld=yes, head=clean)
+  ✓ /blog/best-shopify-app-for-abandoned-cart-recovery-india  (h1=yes, ld=yes, head=clean)
+  ✓ /blog/whatsapp-automation-for-shopify  (h1=yes, ld=yes, head=clean)
+  ✓ /blog/best-whatsapp-apps-for-shopify  (h1=yes, ld=yes, head=clean)
+  ✓ /blog/shopify-whatsapp-automation-what-to-automate-first  (h1=yes, ld=yes, head=clean)
+  ✓ /blog/ecommerce-automation-whatsapp-vs-email-india  (h1=yes, ld=yes, head=clean)
+  ✓ /blog/meta-whatsapp-cloud-api-shopify-templates  (h1=yes, ld=yes, head=clean)
+  ✓ /blog/whatsapp-shared-inbox-shopify-order-context  (h1=yes, ld=yes, head=clean)
+  ✓ /blog/shopify-automation-checklist-whatsapp-cart-recovery  (h1=yes, ld=yes, head=clean)
+  ✓ /blog/best-whatsapp-automation-tools-shopify-india  (h1=yes, ld=yes, head=clean)
+  ✓ /blog/how-to-reduce-rto-with-whatsapp-cod-confirmation  (h1=yes, ld=yes, head=clean)
+  ✓ /blog/what-is-ecommerce-automation-shopify-whatsapp  (h1=yes, ld=yes, head=clean)
+  ✓ /blog/ai-whatsapp-chatbot-for-shopify-india  (h1=yes, ld=yes, head=clean)
+  ✓ /blog/zoko-alternative-shopify-india  (h1=yes, ld=yes, head=clean)
+  ✓ /blog/getgabs-alternative-shopify-whatsapp  (h1=yes, ld=yes, head=clean)
+  ✓ /blog/kanal-whatsapp-alternative-shopify  (h1=yes, ld=yes, head=clean)
+  ✓ /blog/how-to-choose-whatsapp-app-shopify-app-store  (h1=yes, ld=yes, head=clean)
+  ✓ /blog/whatsapp-business-api-pricing-india  (h1=yes, ld=yes, head=clean)
+  ✓ /blog/dondy-alternative-shopify-india  (h1=yes, ld=yes, head=clean)
+  ✓ /blog/organic-vs-paid-ecommerce-marketing-2026  (h1=yes, ld=yes, head=clean)
+  ✓ /blog/cod-rto-benchmark-india-2026  (h1=yes, ld=yes, head=clean)
+  ✓ /blog/profitable-ecommerce-business-india  (h1=yes, ld=yes, head=clean)
+  ✓ /blog/how-to-automate-ecommerce-store-india  (h1=yes, ld=yes, head=clean)
+  ✓ /blog/organic-ecommerce-leads-short-form-video  (h1=yes, ld=yes, head=clean)
+  ✓ /blog/trending-products-to-sell-online-india-2026  (h1=yes, ld=yes, head=clean)
+  ✓ /blog/wati-alternative-shopify-india  (h1=yes, ld=yes, head=clean)
+  ✓ /blog/aisensy-alternative-shopify-india  (h1=yes, ld=yes, head=clean)
+  ✓ /blog/interakt-alternative-shopify-india  (h1=yes, ld=yes, head=clean)
+  ✓ /blog/interakt-pricing-india  (h1=yes, ld=yes, head=clean)
+  ✓ /blog/wati-pricing-india  (h1=yes, ld=yes, head=clean)
+  ✓ /blog/aisensy-pricing-india  (h1=yes, ld=yes, head=clean)
+  ✓ /blog/bitespeed-alternative-shopify-india  (h1=yes, ld=yes, head=clean)
+  ✓ /blog/whatsapp-template-rejected-meta-shopify-fix  (h1=yes, ld=yes, head=clean)
+  ✓ /blog/whatsapp-opt-in-shopify-india  (h1=yes, ld=yes, head=clean)
+  ✓ /blog/updatrr-alternative-shopify-india  (h1=yes, ld=yes, head=clean)
+  ✓ /blog/cod-to-prepaid-whatsapp-shopify-india  (h1=yes, ld=yes, head=clean)
+  ✓ /blog/best-shopify-upsell-apps  (h1=yes, ld=yes, head=clean)
+  ✓ /blog/shopify-seo-experts  (h1=yes, ld=yes, head=clean)
+  ✓ /blog/rto-meaning-ecommerce  (h1=yes, ld=yes, head=clean)
+  ✓ /blog/add-whatsapp-chat-button-shopify  (h1=yes, ld=yes, head=clean)
+  ✓ /blog/best-shipping-aggregators-logistics-tools-india  (h1=yes, ld=yes, head=clean)
+  ✓ /blog/best-shopify-development-companies-india  (h1=yes, ld=yes, head=clean)
+  ✓ /docs  (h1=yes, ld=yes, head=clean)
+  ✓ /docs/quickstart  (h1=yes, ld=yes, head=clean)
+  ✓ /docs/connect-whatsapp  (h1=yes, ld=yes, head=clean)
+  ✓ /docs/connect-shopify  (h1=yes, ld=yes, head=clean)
+  ✓ /docs/go-live-checklist  (h1=yes, ld=yes, head=clean)
+  ✓ /docs/guides/abandoned-cart-recovery  (h1=yes, ld=yes, head=clean)
+  ✓ /docs/guides/cod-confirmation  (h1=yes, ld=yes, head=clean)
+  ✓ /docs/guides/order-status-updates  (h1=yes, ld=yes, head=clean)
+  ✓ /docs/guides/turn-journeys-on-off  (h1=yes, ld=yes, head=clean)
+  ✓ /docs/guides/create-whatsapp-template  (h1=yes, ld=yes, head=clean)
+  ✓ /docs/guides/whatsapp-broadcast  (h1=yes, ld=yes, head=clean)
+  ✓ /docs/guides/website-opt-in  (h1=yes, ld=yes, head=clean)
+  ✓ /docs/guides/shared-inbox-handover  (h1=yes, ld=yes, head=clean)
+  ✓ /docs/guides/build-your-first-flow  (h1=yes, ld=yes, head=clean)
+  ✓ /docs/guides/train-your-ai-brain  (h1=yes, ld=yes, head=clean)
+  ✓ /docs/guides/segment-your-customers  (h1=yes, ld=yes, head=clean)
+  ✓ /docs/guides/warranty-registration  (h1=yes, ld=yes, head=clean)
+  ✓ /docs/reference/journeys  (h1=yes, ld=yes, head=clean)
+  ✓ /docs/reference/flow-builder  (h1=yes, ld=yes, head=clean)
+  ✓ /docs/reference/live-chat  (h1=yes, ld=yes, head=clean)
+  ✓ /docs/reference/orders  (h1=yes, ld=yes, head=clean)
+  ✓ /docs/reference/audience-crm  (h1=yes, ld=yes, head=clean)
+  ✓ /docs/reference/campaigns  (h1=yes, ld=yes, head=clean)
+  ✓ /docs/reference/email  (h1=yes, ld=yes, head=clean)
+  ✓ /docs/reference/meta-manager  (h1=yes, ld=yes, head=clean)
+  ✓ /docs/reference/opt-in-tools  (h1=yes, ld=yes, head=clean)
+  ✓ /docs/reference/ai-brain  (h1=yes, ld=yes, head=clean)
+  ✓ /docs/reference/chat-rules  (h1=yes, ld=yes, head=clean)
+  ✓ /docs/reference/analytics  (h1=yes, ld=yes, head=clean)
+  ✓ /docs/reference/store-growth  (h1=yes, ld=yes, head=clean)
+  ✓ /docs/reference/commerce  (h1=yes, ld=yes, head=clean)
+  ✓ /docs/reference/warranty-hub  (h1=yes, ld=yes, head=clean)
+  ✓ /docs/reference/settings-billing  (h1=yes, ld=yes, head=clean)
+  ✓ /docs/platform/whatsapp-service-window  (h1=yes, ld=yes, head=clean)
+  ✓ /docs/platform/message-templates  (h1=yes, ld=yes, head=clean)
+  ✓ /docs/platform/conversation-pricing  (h1=yes, ld=yes, head=clean)
+  ✓ /docs/platform/limits-and-quotas  (h1=yes, ld=yes, head=clean)
+  ✓ /docs/troubleshooting  (h1=yes, ld=yes, head=clean)
+  ✓ /partners  (h1=yes, ld=yes, head=clean)
+  ✓ /partners/terms  (h1=yes, ld=no, head=clean)
+  ✓ /404  (h1=yes, ld=no, head=clean)
+
+✅ Prerender done: 167 ok, 0 failed
+✅ retain-old-assets: 174 new chunks, 3311 older chunks carried over (93946 KB), 0 no longer fetchable
+✅ dist check passed — 167 prerendered pages, 404 document and every redirect target present
+  ✓ /tools/whatsapp-link-generator: 967 of 978 words with WhatsAppLinkGeneratorPage blocked (99%)
+  ✓ /features/cod-confirmation: 531 of 542 words with CodConfirmationPage blocked (98%)
+  ✓ /pricing: 818 of 829 words with PricingPage blocked (99%)
+  ✓ /blog/whatsapp-abandoned-cart-recovery-shopify: 6097 of 6108 words with BlogPost blocked (100%)
+  ✓ /blog/how-to-reduce-rto-with-whatsapp-cod-confirmation: 5114 of 5125 words with how-to-reduce-rto-with-whatsapp-cod-confirmation blocked (100%)
+✅ check-chunk-failure: pages keep their content when a route chunk 404s
+✓ image weight check passed — 211 referenced images, 10.0 MB total, none over 100 KB
+✓ structured data check passed — 811 JSON-LD blocks on 177 pages, every type and property defined by schema.org
+✓ video markup check passed — 0 VideoObject(s) on 0 page(s), each embedded in a real player, each unique to one URL
+✓ llms check passed — llms.txt 39.7 KB, llms-full.txt 189.1 KB, every URL canonical, every ₹ figure from the catalog
+✅ partner offer check passed — 20% from 1, 30% from 5, 40% from 10; 7-day check period; paid on day 1; matches live policy v1; 10 file(s) free of refund wording and emoji
+EXIT 0

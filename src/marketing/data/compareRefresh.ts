@@ -253,7 +253,7 @@ export const COMPARE_REFRESH: Record<string, CompareRefresh> = {
       { label: 'Shopify App Store rating', topedge: 'No reviews yet', competitor: '4.1 from 56 reviews' },
     ],
     priceNote:
-      'Sources: www.aisensy.com/pricing (monthly view) and apps.shopify.com/aisensy-whatsapp-marketing. TopEdge AI prices include 18% GST on our site.',
+      'Sources: aisensy.com/pricing (monthly view) and apps.shopify.com/aisensy-whatsapp-marketing. TopEdge AI prices include 18% GST on our site.',
     switchSteps: [
       { title: 'Count your monthly messages first', body: 'Pull last month’s marketing and utility counts from AiSensy. That number, times 26%, is what the markup cost you.' },
       { title: 'Install TopEdge AI on Shopify', body: 'Start the 14-day trial from topedgeai.com or the Shopify App Store.' },
