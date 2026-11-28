@@ -88,9 +88,9 @@ export const VENDORS: Record<VendorId, Vendor> = {
     logo: '/marketing/compare/compare-logo-bitespeed.png',
     comparePath: '/compare/bitespeed',
     website: 'https://www.bitespeed.co',
-    pickIf: 'You are a larger Shopify brand doing ₹5,00,000+ a month and budget is not the constraint.',
-    price: 'From about ₹15,000 a month',
-    caveat: 'Asks for ₹5,00,000+ in monthly revenue before it onboards a store.',
+    pickIf: 'You want AI voice calls, SMS and email alongside WhatsApp from one vendor, and budget is not the constraint.',
+    price: 'Not published: its pricing page redirects to a demo request (read 28 Nov 2026)',
+    caveat: 'Publishes no price, so you need a sales call and a written quote before you can compare.',
   },
 };
 
@@ -175,14 +175,14 @@ export const QUESTIONS: Question[] = [
         label: 'Under 100',
         points: { topedge: 2, interakt: 2, aisensy: 2, wati: 1, bitespeed: -3 },
         reasons: { topedge: 'The Launch plan covers up to 100 orders a month at ₹1,999.' },
-        cautions: { bitespeed: 'Asks for ₹5,00,000+ in monthly revenue before it onboards a store.' },
+        cautions: { bitespeed: 'Publishes no price, so a store this size has to book a sales demo just to see a quote.' },
       },
       {
         id: 'lt800',
         label: '100 to 800',
         points: { topedge: 3, interakt: 2, aisensy: 1, wati: 1 },
         reasons: { topedge: 'The Growth plan covers up to 800 orders a month at ₹3,999.' },
-        cautions: { bitespeed: 'Asks for ₹5,00,000+ in monthly revenue before it onboards a store.' },
+        cautions: { bitespeed: 'Publishes no price, so a store this size has to book a sales demo just to see a quote.' },
       },
       {
         id: 'lt1500',

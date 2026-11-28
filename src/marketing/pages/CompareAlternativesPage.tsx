@@ -5,7 +5,7 @@ import MarketingPage from '../components/MarketingPage';
 import MarketingCtaBand from '../components/MarketingCtaBand';
 import { COMPARE_ALTERNATIVES } from '../data/compareAlternatives';
 import { breadcrumbJsonLd, organizationJsonLd, webPageJsonLd } from '../data/pageSeo';
-import { compareTwoWayModifiedIso, updatedKicker } from '../data/contentDates';
+import { updatedKicker } from '../data/contentDates';
 import ProofBadges from '../components/ProofBadges';
 import ReviewPlatforms from '../components/ReviewPlatforms';
 import '../styles/compare.css';
@@ -16,15 +16,25 @@ import '../styles/topic-blocks.css';
  * 768px topic-blocks.css ignores this and restacks each row into a labelled
  * card, which is why every data cell carries a data-col attribute.
  */
-const ALT_TABLE_COLS = 'minmax(0, 0.8fr) minmax(0, 1.6fr) minmax(0, 1.4fr) minmax(0, 0.6fr)';
+const ALT_TABLE_COLS =
+  'minmax(0, 0.8fr) minmax(0, 1.5fr) minmax(0, 1.4fr) minmax(0, 0.8fr) minmax(0, 0.5fr)';
 
 const PATH = '/compare/alternatives';
-const TITLE = 'Top 10 WhatsApp Alternatives for Shopify India (2026)';
+const TITLE = 'Top 10 WhatsApp Alternatives for Shopify India (2027)';
 const DESCRIPTION =
-  'Compare 10 WhatsApp Business API platforms for Shopify India: WATI, AiSensy, Interakt, Bitespeed, Zoko, Gupshup, Getgabs, Kanal, Dondy and Updatrr.';
+  '10 WhatsApp tools for Shopify India read 25 to 28 Nov 2026: entry price, markup on Meta’s rates and billing currency for WATI, Interakt, Zoko and more.';
+/** The day this index was last re-checked against every vendor's own board. */
+const MODIFIED_ISO = '2026-11-28';
+
+/** "2026-11-28" → "28 Nov", for the table's Read column. */
+function shortDate(iso: string): string {
+  const [, m, d] = iso.split('-').map(Number);
+  const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+  return `${d} ${months[m - 1]}`;
+}
 
 export default function CompareAlternativesPage() {
-  const modifiedIso = compareTwoWayModifiedIso();
+  const modifiedIso = MODIFIED_ISO;
 
   return (
     <>
@@ -146,6 +156,9 @@ export default function CompareAlternativesPage() {
               <div role="columnheader" className="mkt-spec__cell">
                 Billed in
               </div>
+              <div role="columnheader" className="mkt-spec__cell">
+                Read
+              </div>
             </div>
 
             <div
@@ -157,13 +170,17 @@ export default function CompareAlternativesPage() {
                 TopEdge AI
               </div>
               <div role="cell" data-col="Entry price, as published" className="mkt-spec__cell mkt-spec__cell--mine">
-                ₹1,999/mo, or ₹1,599/mo billed yearly, including 18% GST. 14-day trial, no card.
+                ₹1,999/mo, or ₹1,599/mo billed yearly, including 18% GST; or $19/mo billed by
+                Shopify. 14-day trial.
               </div>
               <div role="cell" data-col="On top of Meta fees" className="mkt-spec__cell mkt-spec__cell--mine">
                 Nothing. Meta bills your own account direct at 0% markup.
               </div>
               <div role="cell" data-col="Billed in" className="mkt-spec__cell mkt-spec__cell--mine">
-                INR
+                INR on our site, USD through Shopify
+              </div>
+              <div role="cell" data-col="Read" className="mkt-spec__cell mkt-spec__cell--mine">
+                Our own prices
               </div>
             </div>
 
@@ -188,14 +205,18 @@ export default function CompareAlternativesPage() {
                 <div role="cell" data-col="Billed in" className="mkt-spec__cell">
                   {a.currency}
                 </div>
+                <div role="cell" data-col="Read" className="mkt-spec__cell">
+                  <time dateTime={a.read}>{shortDate(a.read)}</time>
+                </div>
               </div>
             ))}
           </div>
 
           <p className="mkt-spec__footnote">
-            Researched between September and October 2026; each platform&rsquo;s own board carries
-            the exact date and the footnotes. &ldquo;Not published&rdquo; means the vendor does not
-            state a figure publicly, not that it is free. Meta&rsquo;s own India rates are ₹0.8631
+            Each row was read on the date shown, in November 2026, on the vendor&rsquo;s own
+            pricing page or Shopify App Store listing, the same reading as its board.
+            &ldquo;Not published&rdquo; means the vendor does not state a figure publicly, not that
+            it is free. Markup percentages are our arithmetic against Meta&rsquo;s rates. Meta&rsquo;s own India rates are ₹0.8631
             per marketing message and ₹0.1150 per utility or authentication message, billed by Meta
             on delivery, and every platform above pays the same ones.
           </p>
@@ -230,6 +251,15 @@ export default function CompareAlternativesPage() {
               </li>
             ))}
           </ul>
+          <p className="mkt-spec__footnote">
+            Looking past one tool in particular? Each has its own guide to the alternatives:{' '}
+            {COMPARE_ALTERNATIVES.filter((a) => a.altPost).map((a, i, list) => (
+              <span key={a.slug}>
+                <Link to={a.altPost as string}>{a.name} alternatives</Link>
+                {i < list.length - 2 ? ', ' : i === list.length - 2 ? ' and ' : '.'}
+              </span>
+            ))}
+          </p>
         </section>
 
         {/*
@@ -260,9 +290,9 @@ export default function CompareAlternativesPage() {
                 <p className="mkt-steps__body fx-step__copy">
                   Meta charges every platform the same India rates: ₹0.8631 per delivered
                   marketing message, ₹0.1150 per utility or authentication message. Some platforms
-                  pass those straight through, some publish their own higher rate card. Read on
-                  7 November 2026, WATI Growth lists ₹0.1495 per India utility message, Interakt
-                  Growth ₹0.150 and AiSensy ₹0.145. At 20,000 utility messages a month that is
+                  pass those straight through, some publish their own higher rate card. Read
+                  between 27 and 28 November 2026, WATI Growth lists ₹0.1495 per India utility
+                  message, Interakt Growth ₹0.150 and AiSensy ₹0.145. At 20,000 utility messages a month that is
                   ₹600 to ₹700 more than Meta&rsquo;s own ₹2,300, which can exceed the difference
                   between two plan tiers. Ask for the all-in cost at your real volume, not the
                   plan price.
@@ -276,10 +306,10 @@ export default function CompareAlternativesPage() {
               <div>
                 <h3 className="mkt-steps__title fx-step__title">What currency are you actually billed in?</h3>
                 <p className="mkt-steps__body fx-step__copy">
-                  Five of the ten platforms above bill in USD or EUR: Zoko, Getgabs, Kanal, Dondy
-                  and Updatrr. A $49.99 plan is not a fixed Indian cost: it moves with the
-                  exchange rate, and your card may add a foreign transaction fee. If you budget
-                  in rupees, price the plan in rupees.
+                  Four of the ten platforms above bill only in USD or EUR: Zoko, Kanal, Dondy and
+                  Updatrr, and Interakt&rsquo;s Shopify app plans are in USD too. A $49.99 plan is
+                  not a fixed Indian cost: it moves with the exchange rate, and your card may add a
+                  foreign transaction fee. If you budget in rupees, price the plan in rupees.
                 </p>
               </div>
             </li>
@@ -288,13 +318,12 @@ export default function CompareAlternativesPage() {
                 3
               </span>
               <div>
-                <h3 className="mkt-steps__title fx-step__title">Is there a minimum you have to clear?</h3>
+                <h3 className="mkt-steps__title fx-step__title">Is the price published at all?</h3>
                 <p className="mkt-steps__body fx-step__copy">
-                  Not every platform will take your store. At least one in this list asks for a
-                  minimum monthly revenue before it will onboard you, and enterprise CPaaS vendors
-                  often publish no tiers at all and route you to a sales quote. If you are doing
-                  your first few hundred orders a month, check you are in the market before you
-                  spend a week evaluating.
+                  Nine of the ten publish a price you can read today. Bitespeed does not: on
+                  28 November 2026 its pricing page redirected to a demo request, so the only way
+                  to compare it is a written quote. Ask for the plan fee and the India message
+                  rates as numbers before you spend a week evaluating.
                 </p>
               </div>
             </li>

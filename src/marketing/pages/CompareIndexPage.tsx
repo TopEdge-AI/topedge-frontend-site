@@ -7,13 +7,15 @@ import MarketingCtaBand from '../components/MarketingCtaBand';
 import { allCompareCompetitors } from '../data/compareCompetitors';
 import ProofBadges from '../components/ProofBadges';
 import ReviewPlatforms from '../components/ReviewPlatforms';
+import { COMPARE_REFRESH } from '../data/compareRefresh';
+import { formatUpdatedLabel } from '../data/contentDates';
 import '../styles/compare.css';
 
 const FEATURED = [
   {
     href: '/compare/topedge-vs-wati-vs-interakt-vs-aisensy',
     title: 'WATI vs Interakt vs AiSensy vs TopEdge AI',
-    body: 'The four names on most Indian shortlists on one board: markup, AI cost, COD → prepaid gating, flow caps.',
+    body: 'The four names on most Indian shortlists on one board: markup, AI cost, which plan unlocks COD to prepaid, flow caps.',
     logos: [
       { src: '/logo.png', alt: 'TopEdge AI' },
       { src: '/marketing/compare/compare-logo-wati.png', alt: 'WATI' },
@@ -26,7 +28,7 @@ const FEATURED = [
   {
     href: '/compare/topedge-vs-wati-vs-aisensy',
     title: 'TopEdge AI vs WATI vs AiSensy',
-    body: 'Markup, AI cost, identity, COD → prepaid, and chatflow caps, one board.',
+    body: 'Markup, AI cost, identity, COD to prepaid and chatflow caps on one board.',
     logos: [
       { src: '/logo.png', alt: 'TopEdge AI' },
       { src: '/marketing/compare/compare-logo-wati.png', alt: 'WATI' },
@@ -62,25 +64,33 @@ const ORDER = [
   'gupshup',
 ];
 
-function latestResearchStamp(stamps: (string | undefined)[]): string | null {
-  const counts = new Map<string, number>();
-  for (const s of stamps) if (s) counts.set(s, (counts.get(s) ?? 0) + 1);
-  let best: string | null = null;
-  for (const [s, n] of counts) if (!best || n > (counts.get(best) ?? 0)) best = s;
-  return best;
+/**
+ * The span of read dates across the two-way boards, e.g. "24 to 27 Nov 2026".
+ * Each board carries its own `updated` date (compareRefresh.ts), so the hub
+ * states the real range instead of one shared month.
+ */
+function readRange(dates: string[]): string | null {
+  const sorted = dates.filter(Boolean).sort();
+  if (!sorted.length) return null;
+  const first = formatUpdatedLabel(sorted[0]);
+  const last = formatUpdatedLabel(sorted[sorted.length - 1]);
+  if (first === last) return first;
+  const [d1, m1, y1] = first.split(' ');
+  const [, m2, y2] = last.split(' ');
+  return m1 === m2 && y1 === y2 ? `${d1} to ${last}` : `${first} to ${last}`;
 }
 
 export default function CompareIndexPage() {
   const bySlug = Object.fromEntries(allCompareCompetitors().map((c) => [c.slug, c]));
   const competitors = ORDER.map((slug) => bySlug[slug]).filter(Boolean);
-  const researchAsOf = latestResearchStamp(competitors.map((c) => c.researchAsOf));
+  const researchAsOf = readRange(competitors.map((c) => COMPARE_REFRESH[c.slug]?.updated ?? ''));
 
   const method = [
     {
       icon: CalendarCheck,
       title: 'Dated research',
       body: researchAsOf
-        ? `Every board shows when it was checked. Current boards: ${researchAsOf}.`
+        ? `Every board shows the day its rival was read. Boards below were read ${researchAsOf}.`
         : 'Every board shows when it was checked.',
     },
     {
@@ -157,7 +167,7 @@ export default function CompareIndexPage() {
             platforms on Meta markup, AI cost, COD to prepaid and Shopify depth.
           </p>
           <ul className="mkt-cmpx__chips" aria-label="How these boards are built">
-            {researchAsOf ? <li>Checked {researchAsOf}</li> : null}
+            {researchAsOf ? <li>Read {researchAsOf}</li> : null}
             <li>Public sources</li>
             <li>Meta markup per tool</li>
           </ul>
@@ -218,6 +228,14 @@ export default function CompareIndexPage() {
                   <span className="mkt-cmpx-card__pre">TopEdge AI vs</span> {c.name}
                 </h3>
                 <p>{c.brandTag || 'WhatsApp platform'}</p>
+                {COMPARE_REFRESH[c.slug]?.updated ? (
+                  <p>
+                    Read{' '}
+                    <time dateTime={COMPARE_REFRESH[c.slug].updated}>
+                      {formatUpdatedLabel(COMPARE_REFRESH[c.slug].updated)}
+                    </time>
+                  </p>
+                ) : null}
               </Link>
             ))}
           </div>

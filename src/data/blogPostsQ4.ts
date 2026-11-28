@@ -264,29 +264,39 @@ const INTERAKT_FAQS: Faq[] = [
 
 const BITESPEED_FAQS: Faq[] = [
   {
-    question: 'Is Bitespeed a good fit for small Indian Shopify stores?',
+    question: 'What is the best Bitespeed alternative for Shopify in India?',
     answer:
-      'Usually not. Bitespeed publishes no price, but third-party figures from September 2026 describe a minimum monthly revenue to qualify for onboarding and baseline plans around ₹15,000 a month. That suits larger brands, while smaller D2C stores usually look for a plan sized to order volume instead.',
-  },
-  {
-    question: 'What is the best Bitespeed alternative for Shopify India?',
-    answer:
-      'A flat order-based plan like TopEdge AI is the practical alternative if you want WhatsApp cart recovery, COD confirmation and a shared inbox at a price a sub-₹5 lakh a month store can justify. If you want a full multi-channel AI agent stack and have the budget, Bitespeed stays relevant.',
-  },
-  {
-    question: 'Does Bitespeed charge extra for AI?',
-    answer:
-      'Yes, on the public information: listings and third-party summaries in September 2026 describe the AI chatbot and AI marketing agent as separate add-ons. Bitespeed’s pricing page now opens a demo form, so ask for the add-on price in writing before you compare.',
+      'For a Shopify store under 1,500 orders a month with a high COD share, TopEdge AI is the closest fit that publishes a price: ₹1,999 a month including GST, or $19 on the Shopify App Store, with COD confirmation on every plan. Updatrr adds AI voice calls on its $99.99 Pro AI plan, and Interakt covers WhatsApp and Instagram in one inbox.',
   },
   {
     question: 'How much does Bitespeed cost?',
     answer:
-      'Bitespeed does not publish a price: on 17 November 2026 its pricing page redirected to a demo request form. Its Shopify App Store listing is free to install with additional charges billed every 30 days. Third-party figures from September 2026 put baseline plans around ₹15,000 a month.',
+      'Bitespeed does not publish a price: on 28 November 2026 bitespeed.co/pricing redirected to a demo request form. Pages from two competing vendors quote about $250 a month for its WhatsApp plan and up to about $500 for the full stack, but Bitespeed confirms neither figure, so ask for a written quote.',
   },
   {
-    question: 'Can I keep my Shopify data when I change WhatsApp tools?',
+    question: 'Does Bitespeed add a markup on Meta’s WhatsApp rates?',
     answer:
-      'Yes. Orders, customers and carts live in Shopify, and a new platform re-syncs them over OAuth. What you must export from the old tool is conversation history, tags and any custom segments.',
+      'There is no public figure to check, because Bitespeed publishes no per-message rate. Ask for its India marketing and utility rates as numbers and compare them with Meta’s ₹0.8631 and ₹0.1150 per delivered message.',
+  },
+  {
+    question: 'Is Bitespeed on the Shopify App Store?',
+    answer:
+      'Yes. Its listing is “B: WhatsApp, Voice, SMS & Chat”, rated 4.6 from 408 reviews on 28 November 2026, and free to install with additional charges it does not list.',
+  },
+  {
+    question: 'Does Bitespeed do COD confirmation?',
+    answer:
+      'Yes. Bitespeed’s Shopify listing describes AI voice agents that call shoppers to confirm COD orders, and it names converting cash on delivery to prepaid. TopEdge AI confirms COD orders on WhatsApp on every plan and adds COD to prepaid from the Growth plan.',
+  },
+  {
+    question: 'Is there a Bitespeed alternative with rupee pricing?',
+    answer:
+      'Yes. TopEdge AI bills ₹1,999, ₹3,999 or ₹6,499 a month including GST on topedgeai.com, and Interakt’s web plans are priced in rupees plus taxes. Updatrr and Zoko bill in US dollars.',
+  },
+  {
+    question: 'Will my Shopify data move if I switch from Bitespeed?',
+    answer:
+      'Yes, because orders, customers and carts live in Shopify, and a new tool syncs them again when you connect the store. Journeys, segments and chatbot flows built inside Bitespeed do not move, so rebuild the one that earns most first.',
   },
 ];
 
@@ -393,7 +403,7 @@ const BEST_CART_APP_FAQS: Faq[] = [
   {
     question: 'Which abandoned cart app works best for COD orders?',
     answer:
-      'One that branches on payment method, so COD carts get COD copy and a placed COD order gets a confirmation. TopEdge AI confirms COD orders on every plan from ₹1,999 a month including GST and runs COD to prepaid from Growth at ₹3,999; Zoko, Interakt and BiteSpeed also list COD confirmation.',
+      'One that branches on payment method, so COD carts get COD copy and a placed COD order gets a confirmation. TopEdge AI confirms COD orders on every plan from ₹1,999 a month including GST and runs COD to prepaid from Growth at ₹3,999; Zoko, Updatrr and BiteSpeed also list COD confirmation on their own pages.',
   },
   {
     question: 'Can I build abandoned cart recovery with the Shopify API instead of buying an app?',
@@ -1139,166 +1149,175 @@ ${faqHtml(INTERAKT_FAQS)}
   },
   {
     id: 30,
-    title: 'Bitespeed Alternative for Shopify India (2026)',
+    title: 'Bitespeed Alternative for Shopify India (2027)',
     description:
-      'Bitespeed alternative for Shopify India: revenue minimums, USD-style pricing and AI add-ons, versus a flat plan sized to your order volume.',
+      'Bitespeed alternative for Shopify India, read 28 Nov 2026: Bitespeed publishes no price, so here are four apps that do, from ₹1,999 or $19 a month.',
     summary: [
-      'Bitespeed asks for about ₹5,00,000 monthly revenue before it will onboard you, with baseline plans from about ₹15,000 a month.',
-      'Below that floor the comparison is not features, it is whether you are in the market at all.',
-      'Across twelve months, a flat plan from ₹19,188 a year on our site ($182 on the Shopify App Store) is a different order of commitment.',
+      'Bitespeed publishes no price: on 28 November 2026 bitespeed.co/pricing redirected to a demo request form.',
+      'Pages from two competing vendors put its WhatsApp plan near $250 a month. Bitespeed confirms none of it, so get a written quote.',
+      'TopEdge AI, our own app, starts at ₹1,999 a month including GST, or $19 on the Shopify App Store, with COD confirmation on every plan.',
     ],
     slug: 'bitespeed-alternative-shopify-india',
     date: '2026-10-08',
-    updated: '2026-11-17',
+    updated: '2026-11-28',
     readTime: '8 min',
     category: 'Comparisons',
     author: 'Moksh Patel',
     image: '/blog/bitespeed-alternative-shopify-india.jpg',
     imageWebp: '/blog/bitespeed-alternative-shopify-india.webp',
-    imageAlt: 'Bitespeed alternative for Shopify India: WhatsApp automation linked to a Shopify store at zero Meta markup',
+    imageAlt: 'Cover reading Best BiteSpeed Alternative for Shopify, with linked WhatsApp and Shopify icons and a Flat INR Pricing label',
     keywords: [
       'Bitespeed alternative',
-      'Bitespeed alternative Shopify',
-      'Bitespeed pricing India',
+      'Bitespeed alternatives India',
+      'Bitespeed pricing',
+      'Bitespeed Shopify',
       'Bitespeed vs TopEdge AI',
-      'Shopify WhatsApp app INR pricing',
     ],
+    faqHeading: 'Frequently asked questions about Bitespeed alternatives',
     faqs: BITESPEED_FAQS,
     itemList: [
       {
         name: 'TopEdge AI',
         url: 'https://apps.shopify.com/topedge-ai',
         description:
-          'Shopify-native WhatsApp automation for Indian D2C on flat order-based plans, with COD confirmation, cart recovery and warranty built in and 0% markup on Meta rates.',
+          'All-in-one D2C software for Shopify stores, built as one suite: cart recovery, COD confirmation and COD to prepaid, WhatsApp and email journeys and profit reporting on flat INR plans, with 0% markup on Meta’s rates.',
         software: { category: 'BusinessApplication', operatingSystem: 'Web', offerFrom: 1999, currency: 'INR' },
       },
       {
+        name: 'Updatrr',
+        url: 'https://apps.shopify.com/prizma-updatrr',
+        description: 'Shopify WhatsApp automation billed in USD, with COD confirmation on WhatsApp or by AI voice call.',
+        software: { category: 'BusinessApplication', operatingSystem: 'Web' },
+      },
+      {
+        name: 'Interakt',
+        url: 'https://apps.shopify.com/interakt-marketing',
+        description: 'WhatsApp and Instagram marketing with a shared team inbox, sold as Shopify app plans in USD and web plans in INR.',
+        software: { category: 'BusinessApplication', operatingSystem: 'Web' },
+      },
+      {
+        name: 'Zoko',
+        url: 'https://apps.shopify.com/whatsapp-button-chat',
+        description: 'WhatsApp commerce for Shopify billed in USD, with every feature on every plan and free COD flows.',
+        software: { category: 'BusinessApplication', operatingSystem: 'Web' },
+      },
+      {
         name: 'Bitespeed',
+        url: 'https://apps.shopify.com/bitespeed-fb-messenger-chatbot',
         description:
-          'Omnichannel marketing and support suite for larger brands, covering WhatsApp, email, SMS and web chat with AI agents sold as add-ons.',
+          'AI marketing, sales and support platform for e-commerce brands across WhatsApp, AI voice, email and SMS, priced after a sales demo.',
         software: { category: 'BusinessApplication', operatingSystem: 'Web' },
       },
     ],
     content: `
-${verdict(`<p><strong>Bitespeed publishes no price:</strong> its pricing page now opens a demo form (checked 17 November 2026). Third-party figures from September 2026 put its floor near ₹5,00,000 monthly revenue and plans near ₹15,000 a month. TopEdge AI, our own app, starts at ₹1,999 a month including GST with no Meta markup. Past 1,500 orders a month, or for SMS and voice, Bitespeed still fits.</p>`)}
+${verdict(`<p><strong>Bitespeed publishes no price.</strong> On 28 November 2026 bitespeed.co/pricing redirected to a demo request form, so every comparison starts with a sales call. If you want a price you can read first, TopEdge AI (our own app) is ₹1,999 a month including GST, or $19 on the Shopify App Store, with COD confirmation on every plan and 0% markup on Meta’s rates. Bitespeed still fits brands that want AI voice calls, SMS and email from one vendor.</p>`)}
 
-<p>Most people searching for a <strong>Bitespeed alternative</strong> are not unhappy with the product. They have read the pricing page, found a revenue floor they do not clear yet, and are looking for something that will take their money today. That is a sizing problem, not a features problem, and it changes which questions are worth asking.</p>
-<p>Bitespeed is often named in roundups for WhatsApp-heavy markets including India. The question for a small or mid-size D2C brand is not whether it is good, but whether its pricing model fits your size.</p>
+<p>Most people searching for a <strong>Bitespeed alternative</strong> hit the same wall: there is no price to compare against. This guide lists the tools that do publish one, read on 28 November 2026, and says plainly where Bitespeed is still the better buy. For the wider field, see <a href="/blog/best-whatsapp-apps-for-shopify">the best WhatsApp apps for Shopify</a>.</p>
+<p>TopEdge AI is all-in-one D2C software for Shopify stores, built as one suite. We sell one of the tools below, so every rival figure links to the page we read it on.</p>
 
-<h2>When is a Bitespeed alternative the right call?</h2>
-<p>Four situations, and only the first is about money.</p>
-<ol>
-<li><strong>You are under the revenue floor.</strong> If onboarding needs roughly ₹5,00,000 monthly revenue and you are not there, the evaluation ends before it starts.</li>
-<li><strong>You only need one channel to work properly.</strong> Paying for email, SMS and web chat to get WhatsApp right is buying scope you will not switch on this quarter.</li>
-<li><strong>Your margin cannot absorb a markup on Meta.</strong> A platform percentage on conversation fees compounds with festive volume, which is exactly when you can least afford it.</li>
-<li><strong>COD is your main problem.</strong> If confirmation and RTO are what actually cost you money, judge tools on that journey rather than on channel count. The arithmetic is in <a href="/blog/cod-rto-benchmark-india-2026">the 2026 India COD and RTO benchmark</a>.</li>
-</ol>
-<p>If none of those apply, stay. Switching platforms costs a fortnight of attention, and that is real money too.</p>
-
-<h2>Bitespeed pricing for 2027: what is published</h2>
-<p>Nothing, on Bitespeed’s own site. <a href="https://www.bitespeed.co/pricing" target="_blank" rel="noopener noreferrer">bitespeed.co/pricing</a> now redirects to a demo request form that says its sales team will get in touch. We checked on 17 November 2026.</p>
-<p>The <a href="https://apps.shopify.com/bitespeed-fb-messenger-chatbot" target="_blank" rel="noopener noreferrer">Shopify App Store listing</a> says “Free to install. Additional charges may apply”, billed in USD or INR every 30 days. It is rated 4.6 from 406 reviews.</p>
-<p>Everything else is third-party, from September 2026, and not confirmed by Bitespeed:</p>
+<h2>What is the best Bitespeed alternative for a Shopify store in India?</h2>
+<p>For an Indian Shopify store under 1,500 orders a month with a high COD share, TopEdge AI is the closest fit that publishes a price. The other three are each better at one job:</p>
 <ul>
-<li><strong>Onboarding threshold.</strong> A minimum of about ₹5,00,000 monthly revenue, with baseline plans from about ₹15,000 a month.</li>
-<li><strong>AI add-ons.</strong> The AI chatbot and AI marketing agent described as separate add-ons of roughly $100 a month each.</li>
-<li><strong>Markup on Meta rates.</strong> Platform usage and conversation markup on top of Meta’s base rates.</li>
+<li><strong>TopEdge AI</strong> for COD confirmation, COD to prepaid and cart recovery on rupee plans from ₹1,999 a month.</li>
+<li><strong>Updatrr</strong> for COD confirmation by AI voice call as well as WhatsApp, from $29.99 a month, with voice on Pro AI at $99.99.</li>
+<li><strong>Interakt</strong> for WhatsApp and Instagram in one team inbox, from $21 a month on the Shopify App Store.</li>
+<li><strong>Zoko</strong> for selling inside the chat, from $49.99 a month in US dollars.</li>
 </ul>
-<p>Treat those as estimates and ask Bitespeed for a written quote at your order volume. One thing is not in doubt: warranty is not natively supported.</p>
-<p>What Bitespeed does well: native COD to prepaid, broad omnichannel coverage and opt-in widgets such as spin-the-wheel pop-ups.</p>
+<p>If you need AI voice calls, SMS and email under one contract, none of the four replaces all of that. Stay on Bitespeed.</p>
 
-<h2>Compared with a flat order-based plan</h2>
-<table>
-<thead><tr><th>Area</th><th>TopEdge AI</th><th>Bitespeed (public patterns)</th></tr></thead>
-<tbody>
-<tr><td>Who it is built for</td><td>Shopify D2C in India</td><td>Larger brands, omnichannel</td></tr>
-<tr><td>Entry price</td><td>₹1,999/mo incl. GST</td><td>Not published; about ₹15,000/mo per third parties</td></tr>
-<tr><td>AI</td><td>Bring your own key</td><td>Separate add-ons</td></tr>
-<tr><td>Meta billing</td><td>Meta rates, no markup</td><td>Platform markup, per third parties</td></tr>
-<tr><td>Warranty</td><td>Built in</td><td>Not native</td></tr>
-</tbody>
-</table>
-<p>Tradeoff: TopEdge AI is WhatsApp and Instagram first. If you need email, SMS and web chat in one suite, compare that scope honestly. Details are on <a href="/compare/bitespeed">TopEdge AI vs Bitespeed</a>.</p>
+<h2>Why do Shopify brands look for a Bitespeed alternative?</h2>
+<ol>
+<li><strong>No price before a sales call.</strong> <a href="https://www.bitespeed.co/pricing" target="_blank" rel="noopener noreferrer">bitespeed.co/pricing</a> returns a 301 redirect to a demo request page that says its sales team will get in touch. A founder who wants to model the bill first cannot.</li>
+<li><strong>Scope you may not switch on.</strong> Bitespeed’s Shopify listing is named “B: WhatsApp, Voice, SMS &amp; Chat” and leads with AI voice agents. If WhatsApp is the only channel you will run this quarter, you are evaluating a wider product than you need.</li>
+<li><strong>The Meta line is hard to check.</strong> Bitespeed publishes no per-message rate, so you cannot see what sits on top of Meta’s ₹0.8631 marketing and ₹0.1150 utility rates until you have a quote.</li>
+<li><strong>COD is your biggest cost.</strong> If confirmation and RTO are where the money goes, judge every tool on that one journey. The numbers are in <a href="/blog/cod-rto-benchmark-india-2026">the India COD and RTO benchmark</a>.</li>
+</ol>
+<p>If none of these apply and Bitespeed is working for you, stay. A switch costs a fortnight of attention, and that is real money too.</p>
 
-<h2>The twelve-month number</h2>
-<p>Monthly prices make a ₹13,000 gap look like a line item. Annualised, it is a hiring decision.</p>
+<h2>How much does Bitespeed cost in 2027?</h2>
+<p>Bitespeed does not publish a price. This is everything we could read on 28 November 2026, and who said it.</p>
 <div class="mkt-blog-table-wrap">
 <table>
-<thead><tr><th>Twelve-month platform cost</th><th>Monthly</th><th>Per year</th></tr></thead>
+<thead><tr><th>Where we read it</th><th>What it says</th><th>From Bitespeed?</th></tr></thead>
 <tbody>
-<tr><td>TopEdge AI Launch, billed yearly</td><td>₹1,599</td><td><strong>₹19,188</strong></td></tr>
-<tr><td>TopEdge AI Growth, billed yearly</td><td>₹3,199</td><td><strong>₹38,388</strong></td></tr>
-<tr><td>TopEdge AI Scale, billed yearly</td><td>₹5,199</td><td><strong>₹62,388</strong></td></tr>
-<tr><td>Bitespeed baseline (third-party estimate)</td><td>About ₹15,000</td><td><strong>About ₹1,80,000</strong></td></tr>
-<tr><td>Bitespeed baseline plus two AI add-ons at about $100 each (third-party estimate)</td><td>About ₹32,000</td><td><strong>About ₹3,84,000</strong></td></tr>
+<tr><td><a href="https://www.bitespeed.co/pricing" target="_blank" rel="noopener noreferrer">bitespeed.co/pricing</a></td><td>Redirects to a demo request form</td><td>Yes</td></tr>
+<tr><td><a href="https://apps.shopify.com/bitespeed-fb-messenger-chatbot" target="_blank" rel="noopener noreferrer">Bitespeed on the Shopify App Store</a></td><td>“Free to install. Additional charges may apply.” No plan prices, no trial length. Rated 4.6 from 408 reviews</td><td>Yes</td></tr>
+<tr><td><a href="https://www.quickreply.ai/others/bitespeed-pricing" target="_blank" rel="noopener noreferrer">QuickReply’s Bitespeed pricing page</a></td><td>Free plan, Business $249.99 a month, Enterprise $499.99 a month</td><td>No. QuickReply sells a competing WhatsApp tool, and the page is undated</td></tr>
+<tr><td><a href="https://chatmitra.com/chatmitra-vs-bitespeed/" target="_blank" rel="noopener noreferrer">ChatMitra’s comparison page</a></td><td>WhatsApp Stack about $250 a month, Full Stack up to about $500, AI chatbot and AI marketing about $100 a month each</td><td>No. ChatMitra also sells a competing tool; its page says it was last verified in August 2026</td></tr>
 </tbody>
 </table>
 </div>
-<p>On the Growth plan against a Bitespeed baseline, that is roughly <strong>₹1,40,000 a year</strong> of difference, and about ₹3,45,000 once the AI add-ons are counted. Meta’s per-message fees sit on top of both and are the same either way, except that a platform markup on the Meta line would widen the gap further.</p>
-<p>The reason to pay Bitespeed anyway is scope, and it is a real reason: email, SMS, web chat and a broader AI agent suite in one contract. The reason not to is that a store doing under ₹5,00,000 MRR is paying enterprise pricing for capacity it cannot yet use. Price the scope you will actually switch on this quarter, not the scope you might grow into.</p>
+<p>Treat the dollar figures as the most quoted estimate, not a price. Ask Bitespeed for a written quote at your order volume, with its India marketing and utility message rates written as numbers.</p>
+
+<h2>Bitespeed alternatives side by side, read 28 November 2026</h2>
+<div class="mkt-blog-table-wrap">
+<table>
+<thead><tr><th>Tool</th><th>Published entry price</th><th>Billed in</th><th>On top of Meta’s rates</th><th>COD on its own page</th></tr></thead>
+<tbody>
+<tr><td><strong>TopEdge AI</strong></td><td>₹1,999 a month incl. GST, or $19 on the App Store</td><td>INR on our site, USD through Shopify</td><td>0%</td><td>COD confirmation on every plan; COD to prepaid from Growth</td></tr>
+<tr><td><a href="/blog/updatrr-alternative-shopify-india">Updatrr</a></td><td>Growth $29.99 a month</td><td>USD</td><td>None, says <a href="https://www.updatrr.com/pricing" target="_blank" rel="noopener noreferrer">its pricing FAQ</a></td><td>COD confirmation on WhatsApp or by AI voice call</td></tr>
+<tr><td><a href="/blog/interakt-alternative-shopify-india">Interakt</a></td><td>$21 a month on the <a href="https://apps.shopify.com/interakt-marketing" target="_blank" rel="noopener noreferrer">Shopify App Store</a></td><td>USD through Shopify; INR on web plans</td><td>Web plans 10% to 39% above Meta</td><td>Order confirmations named; COD not named on the listing</td></tr>
+<tr><td><a href="/blog/zoko-alternative-shopify-india">Zoko</a></td><td>Starter $49.99 a month</td><td>USD</td><td>Starter $0.015 a conversation; Plus 5,000 free</td><td>Double-confirm COD and COD to prepaid in its free flows</td></tr>
+<tr><td>Bitespeed</td><td>Not published</td><td>Not published</td><td>Not published</td><td>COD confirmation by AI voice call, and COD to prepaid</td></tr>
+</tbody>
+</table>
+</div>
+<p>Interakt’s range is our arithmetic from <a href="https://www.interakt.shop/pricing/" target="_blank" rel="noopener noreferrer">its web rate card</a>: ₹0.949 marketing on Advanced is 10% above Meta’s ₹0.8631, and ₹0.160 utility on Starter is 39% above Meta’s ₹0.1150. Zoko’s plans and flows are on <a href="https://www.zoko.io/pricing" target="_blank" rel="noopener noreferrer">zoko.io/pricing</a>.</p>
+
+<h2>What does a Bitespeed alternative cost at 100, 500 and 1,500 orders?</h2>
+<p>Plan fee only. Meta’s message fees are the same on every tool unless the tool adds a markup, so they are left out of this table.</p>
+<div class="mkt-blog-table-wrap">
+<table>
+<thead><tr><th>Orders a month</th><th>TopEdge AI plan, monthly</th><th>Billed yearly, per year</th><th>On the App Store</th><th>Bitespeed</th></tr></thead>
+<tbody>
+<tr><td>100</td><td>Launch ₹1,999</td><td>₹19,188</td><td>$19 a month</td><td>No published price</td></tr>
+<tr><td>500</td><td>Growth ₹3,999, with COD to prepaid</td><td>₹38,388</td><td>$39 a month</td><td>No published price</td></tr>
+<tr class="mkt-blog-row-key"><td>1,500</td><td>Scale ₹6,499</td><td>₹62,388</td><td>$65 a month</td><td>No published price</td></tr>
+</tbody>
+</table>
+</div>
+<p>For scale only: the $250 a month that other vendors quote for Bitespeed’s WhatsApp plan is $3,000 a year before any AI add-on, and ChatMitra converts it to about ₹21,480 a month. That is an estimate from a competitor, so price your own quote against the TopEdge AI row for your volume, not against it.</p>
+
+<h2>Which Bitespeed alternative is best for your store?</h2>
+<h3>Best Bitespeed alternative for COD-heavy stores</h3>
+<p>TopEdge AI: COD confirmation on every plan and COD to prepaid from Growth at ₹3,999 a month. Zoko also includes COD flows on every plan, billed in US dollars.</p>
+<h3>Best Bitespeed alternative with rupee pricing</h3>
+<p>TopEdge AI bills in rupees including GST on topedgeai.com. Interakt’s web plans are in rupees too, at ₹7,699 a quarter plus taxes for Growth on the quarterly view.</p>
+<h3>Best Bitespeed alternative for AI voice calls</h3>
+<p>Updatrr Pro AI at $99.99 a month lists AI voice calling. TopEdge AI does not place calls.</p>
+<h3>Best Bitespeed alternative for WhatsApp and Instagram together</h3>
+<p>Interakt, whose Growth plan covers both channels in one inbox.</p>
+<h3>When no alternative fits</h3>
+<p>If SMS, email and AI voice all earn their keep today, Bitespeed’s breadth is worth paying for. Get the quote and stay.</p>
+
 <h2>What you give up by leaving Bitespeed</h2>
-<p>A comparison page written by one of the two products is worth reading sceptically, so here is the honest side of the ledger. Moving to a WhatsApp-first platform costs you real things:</p>
+<p>A comparison written by one of the vendors deserves a sceptical read, so here is the other side of the ledger.</p>
 <ul>
-<li><strong>Channel breadth.</strong> SMS and web chat leave the contract; email stays if you connect your own Gmail to TopEdge AI. If your flows genuinely span SMS, you are swapping one bill for two.</li>
-<li><strong>One vendor for everything.</strong> Two tools means two support queues and two places a journey can break.</li>
-<li><strong>A packaged AI agent suite.</strong> Bring-your-own-key is cheaper and more controllable, and it is also more setup than a toggle.</li>
-<li><strong>Whatever you have already built.</strong> Templates carry over if you keep the same WABA; segments and automations do not. Budget for rebuilding them.</li>
+<li><strong>AI voice agents.</strong> Bitespeed’s listing leads with AI calls for carts and COD orders. TopEdge AI has no voice calling.</li>
+<li><strong>SMS.</strong> TopEdge AI does not send SMS. Email journeys run through your own connected Gmail.</li>
+<li><strong>Reviews.</strong> Bitespeed is rated 4.6 from 408 reviews on the Shopify App Store. TopEdge AI had none on 28 November 2026.</li>
+<li><strong>What you built.</strong> Approved templates belong to your WhatsApp Business Account, so they stay if you keep the same account. Journeys, segments and chatbot flows built inside Bitespeed do not move.</li>
 </ul>
-<p>None of that is fatal, and for a store under the revenue floor it is mostly theoretical. But decide it deliberately rather than discovering it in week two.</p>
 
-<h2>How to migrate without losing a sale week</h2>
-<p>The order matters more than the speed. Run both platforms in parallel until the last step.</p>
+<h2>How to switch from Bitespeed without losing a sale week</h2>
 <ol>
-<li><strong>Export your consent list first.</strong> Opt-in records with timestamps are the one asset you cannot rebuild. Get them out before anything else, and read <a href="/blog/whatsapp-opt-in-shopify-india">WhatsApp opt-in for Shopify India</a> if yours are thin.</li>
-<li><strong>Submit templates early.</strong> Meta approval is the long pole, not the integration. Start it on day one and keep each template gated on APPROVED status. Common rejection causes: <a href="/blog/whatsapp-template-rejected-meta-shopify-fix">why Meta rejects WhatsApp templates</a>.</li>
-<li><strong>Rebuild one journey, not all of them.</strong> Pick the one that earns: cart recovery or COD confirmation. Prove it against your old numbers.</li>
-<li><strong>Run both for two weeks</strong> with the old platform's sends paused, so you can fail back without a gap.</li>
-<li><strong>Move the number last.</strong> A WhatsApp Business number can only be connected to one platform at a time, so this is the irreversible step. Do it after the journey is proven, not before.</li>
-<li><strong>Check the INR billing deadline</strong> while you are in there. Every eligible Indian WhatsApp Business Account has to be on INR billing by <strong>31 December 2026</strong> or Meta stops delivery on 1 January 2027, and that migration needs a new WABA rather than a settings change.</li>
+<li><strong>Export your consent list first.</strong> Opt-in records with timestamps are the one asset you cannot rebuild. Read <a href="/blog/whatsapp-opt-in-shopify-india">WhatsApp opt-in for Shopify India</a> if yours are thin.</li>
+<li><strong>Submit new templates on day one.</strong> Meta’s approval is the slow part, not the Shopify connection. Common rejection causes are in <a href="/blog/whatsapp-template-rejected-meta-shopify-fix">why Meta rejects WhatsApp templates</a>.</li>
+<li><strong>Rebuild the journey that earns most.</strong> Cart recovery or COD confirmation, not all of them at once. Prove it against your old numbers.</li>
+<li><strong>Pause, do not delete.</strong> Keep Bitespeed’s journeys paused for two weeks so you can fall back without a gap.</li>
+<li><strong>Check your Meta billing currency.</strong> Meta says eligible Indian businesses must move their messaging accounts to INR billing by 31 December 2026, after which it stops delivering messages from non-INR accounts (<a href="https://developers.facebook.com/docs/whatsapp/pricing/" target="_blank" rel="noopener noreferrer">Meta’s pricing page</a>, read 26 November 2026).</li>
 </ol>
-
-<h2>A ten-minute decision checklist</h2>
-<div class="mkt-blog-table-wrap">
-<table>
-<thead><tr><th>Question</th><th>If yes</th><th>If no</th></tr></thead>
-<tbody>
-<tr><td>Is your monthly revenue above ₹5,00,000?</td><td>Bitespeed will talk to you</td><td>The decision is already made</td></tr>
-<tr><td>Do email and SMS flows earn their keep today?</td><td>Breadth is worth paying for</td><td>You are buying unused scope</td></tr>
-<tr><td>Is COD more than half your orders?</td><td>Judge on the COD journey first</td><td>Judge on cart recovery first</td></tr>
-<tr><td>Can you quote your markup on Meta's rate?</td><td>Model it at festive volume</td><td>Ask for it in writing before signing</td></tr>
-<tr><td>Will anyone answer WhatsApp replies?</td><td>A shared inbox matters</td><td>Fix that before buying anything</td></tr>
-</tbody>
-</table>
-</div>
-<p>If you want the same questions asked across the whole category rather than one rival, use <a href="/blog/how-to-choose-whatsapp-app-shopify-app-store">how to choose a WhatsApp app on the Shopify App Store</a>.</p>
-
-<h2>Who else replaces Bitespeed? A short list</h2>
-<p>Bitespeed publishes no prices, so every comparison starts with a sales call. These four publish theirs. TopEdge AI is our own app, listed first.</p>
-<div class="mkt-blog-table-wrap">
-<table>
-<thead><tr><th>Alternative</th><th>Published price, as read</th><th>Best for</th></tr></thead>
-<tbody>
-<tr><td><strong>TopEdge AI</strong></td><td>₹1,999, ₹3,999 and ₹6,499 a month including GST, 0% on Meta’s rates</td><td>Indian Shopify stores up to 1,500 orders a month that want COD confirmation, cart recovery and a P&amp;L view in one app</td></tr>
-<tr><td><strong>Updatrr</strong></td><td>Growth $29.99 a month, no markup stated (read 9 Nov 2026)</td><td>The lowest bill on Shopify. <a href="/blog/updatrr-alternative-shopify-india">Updatrr comparison</a></td></tr>
-<tr><td><strong>Interakt</strong></td><td>Shopify plans from ₹1,973.48 a month, rates 10% to 39% above Meta (read 9 Nov 2026)</td><td>WhatsApp plus Instagram with unlimited agents. <a href="/blog/interakt-alternative-shopify-india">Interakt alternatives</a></td></tr>
-<tr><td><strong>Zoko</strong></td><td>Starter $49.99 and Plus $79.99 a month in US dollars (read 2 Nov 2026)</td><td>Selling inside the chat. <a href="/blog/zoko-alternative-shopify-india">Zoko alternatives</a></td></tr>
-</tbody>
-</table>
-</div>
 
 <h2>Where TopEdge AI is the stronger pick, and where Bitespeed is</h2>
-<p><strong>TopEdge AI is stronger</strong> when you want a price you can read before you talk to anyone, when your volume is under 1,500 orders a month, and when COD is most of your orders. COD confirmation is on every plan and COD to prepaid starts on Growth. You connect your own AI key, so there is no charge per AI reply.</p>
-<p><strong>Bitespeed is stronger</strong> when you are past 1,500 orders a month, when you need SMS and voice alongside WhatsApp, or when you want an app that already has Shopify reviews behind it. TopEdge AI has no App Store reviews yet and sends on WhatsApp and email only.</p>
+<p><strong>TopEdge AI is stronger</strong> when you want a price you can read before you talk to anyone, when you run under 1,500 orders a month, and when COD is most of your orders. It brings cart recovery, COD confirmation and COD to prepaid, WhatsApp and email journeys, a shopper CRM and profit reporting into one platform. You connect your own AI key, so there is no charge per AI reply. See <a href="/pricing">TopEdge AI pricing</a> for both ways to pay.</p>
+<p><strong>Bitespeed is stronger</strong> when you need AI voice, SMS and email from one vendor, when you are past 1,500 orders a month, or when you want an app with hundreds of Shopify reviews behind it. The row-by-row board is <a href="/compare/bitespeed">TopEdge AI vs Bitespeed</a>.</p>
 
-<p class="mkt-blog-footnote">TopEdge AI figures are our own published yearly plan prices. Bitespeed figures are indicative public patterns from our research converted at round rupee values, not a quote: Bitespeed prices on application and your number will differ. Confirm on bitespeed.co.</p>
+${faqHtml(BITESPEED_FAQS, 'Frequently asked questions about Bitespeed alternatives')}
 
-${faqHtml(BITESPEED_FAQS)}
+<p>Also compare: <a href="/blog/wati-alternative-shopify-india">WATI alternative</a>, <a href="/blog/aisensy-alternative-shopify-india">AiSensy alternative</a>, <a href="/blog/interakt-alternative-shopify-india">Interakt alternative</a>, <a href="/blog/zoko-alternative-shopify-india">Zoko alternative</a>, <a href="/blog/getgabs-alternative-shopify-whatsapp">Getgabs alternative</a>, <a href="/blog/kanal-whatsapp-alternative-shopify">Kanal alternative</a>, <a href="/blog/dondy-alternative-shopify-india">Dondy alternative</a> and <a href="/blog/updatrr-alternative-shopify-india">Updatrr alternative</a>.</p>
 
-
-<p>Also compare: <a href="/blog/wati-alternative-shopify-india">WATI alternative</a>, <a href="/blog/aisensy-alternative-shopify-india">AiSensy alternative</a>, <a href="/blog/interakt-alternative-shopify-india">Interakt alternative</a>, <a href="/blog/zoko-alternative-shopify-india">Zoko alternative</a>, <a href="/blog/getgabs-alternative-shopify-whatsapp">Getgabs alternative</a>, <a href="/blog/kanal-whatsapp-alternative-shopify">Kanal alternative</a> and <a href="/blog/dondy-alternative-shopify-india">Dondy alternative</a> and <a href="/blog/updatrr-alternative-shopify-india">Updatrr alternative</a>.</p>
-
-<p>Related: <a href="/blog/best-whatsapp-automation-tools-shopify-india">best WhatsApp automation tools for Shopify India</a>, <a href="/pricing">TopEdge AI pricing</a>, <a href="/features">Live Chat</a>.</p>
-<p class="mkt-blog-footnote">Bitespeed statements reflect public listings and third-party summaries as of September 2026. Confirm on bitespeed.co and the Shopify App Store before purchase. Per-message rates, categories and volume tiers: <a href="https://developers.facebook.com/docs/whatsapp/pricing/" target="_blank" rel="noopener noreferrer">Meta’s WhatsApp Business Platform pricing documentation</a>. Opt-in requirements: <a href="https://whatsappbusiness.com/policy/" target="_blank" rel="noopener noreferrer">the WhatsApp Business Messaging Policy</a>.</p>
+<p>Related: <a href="/blog/best-whatsapp-automation-tools-shopify-india">best WhatsApp automation tools for Shopify India</a>, <a href="/compare/alternatives">all ten WhatsApp tools compared</a>, <a href="/features">every TopEdge AI module</a>.</p>
+<p class="mkt-blog-footnote">Rival prices were read on 28 November 2026 on the pages linked above and change often, so check them before you buy. TopEdge AI prices include 18% GST on our site; App Store prices are billed by Shopify in USD. Per-message rates and categories: <a href="https://developers.facebook.com/docs/whatsapp/pricing/" target="_blank" rel="noopener noreferrer">Meta’s WhatsApp Business Platform pricing documentation</a>. Opt-in rules: <a href="https://whatsappbusiness.com/policy/" target="_blank" rel="noopener noreferrer">the WhatsApp Business Messaging Policy</a>.</p>
 `,
   },
   {
@@ -2124,7 +2143,7 @@ ${faqHtml(COD_PREPAID_FAQS, 'Frequently asked questions about COD to prepaid')}
 
 <h2>Which abandoned cart app is best for your store?</h2>
 <h3>Best abandoned cart app for COD orders</h3>
-<p>One that branches on payment method, so a COD cart gets a COD reminder and a placed COD order gets a confirmation. TopEdge AI, Zoko, Interakt and BiteSpeed all list COD confirmation; TopEdge AI has it on every plan from ₹1,999 a month including GST.</p>
+<p>One that branches on payment method, so a COD cart gets a COD reminder and a placed COD order gets a confirmation. TopEdge AI, Zoko, Updatrr and BiteSpeed all list COD confirmation on their own pages (read 28 November 2026); TopEdge AI has it on every plan from ₹1,999 a month including GST.</p>
 <h3>Best free abandoned cart app for Shopify</h3>
 <p>Shopify’s own abandoned checkout email, already in your plan. For a free sequence, Wiz AI allows 500 active contacts and Klaviyo and Omnisend 250.</p>
 <h3>Best WhatsApp abandoned cart app in India</h3>
